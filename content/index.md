@@ -1,1 +1,1 @@
-# Welcome to fraud-protection!
+# Welcome to fraud protection!
