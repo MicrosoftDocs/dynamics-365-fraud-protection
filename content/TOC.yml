@@ -4,15 +4,15 @@
      href: overview.md
      items:
       - name: How to subscribe to Dynamics 365 Fraud Protection
-        href: how-subscribe-dynamics365-fraud-protection.md
+        href: subscribe.md
       - name: How Dynamics 365 Fraud Protection works (Cloud, Scale, Intelligence)
         href: how-dynamics365-fraud-protection-works-cloud-scale-intelligence.md
       - name: What you need to get started
-        href: what-you-need-get-started.md
+        href: get-started.md
       - name: Grant and view access rights and provision
         href: grant-view-access-rights-provision.md
    - name: Be secure and compliant for data handling and privacy including GDPR
-     href: be-secure-compliant-data-handling-privacy-including-gdpr.md
+     href: data-handling-privacy-gdpr.md
    - name: Diagnose experience
      href: diagnose-experience.md
    - name: Evaluate experience
@@ -52,9 +52,9 @@
       - name: Graph explorer
         href: graph-explorer.md
       - name: Key Performance Indicator (KPI) dashboard
-        href: key-performance-indicator-kpi-dashboard.md
+        href: kpi-dashboard.md
       - name: Understand your decisions made in Dynamics 365 Fraud Protection
-        href: understand-decisions-made-dynamics365-fraud-protection.md
+        href: understand-decisions.md
    - name: Adopting and integrating device fingerprinting
      href: adopting-integrating-device-fingerprinting.md
    - name: Support your customers
