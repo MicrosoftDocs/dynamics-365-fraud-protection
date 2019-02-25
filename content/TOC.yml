@@ -3,49 +3,29 @@
    - name: Overview
      href: overview.md
      items:
-      - name: How to subscribe to Dynamics 365 Fraud Protection
-        href: subscribe.md
-      - name: How Dynamics 365 Fraud Protection works (Cloud, Scale, Intelligence)
-        href: how-dynamics365-fraud-protection-works-cloud-scale-intelligence.md
-      - name: What you need to get started
-        href: get-started.md
       - name: Grant and view access rights and provision
-        href: grant-view-access-rights-provision.md
+        href: access-permissions.md
    - name: Be secure and compliant for data handling and privacy including GDPR
-     href: data-handling-privacy-gdpr.md
+     href: security-compliance.md
    - name: Diagnose experience
      href: diagnose-experience.md
    - name: Evaluate experience
-     href: evaluate-experience.md
+     href: evaluate.md
      items:
-      - name: Implement real-time event APIs
-        href: implement-real-time-event-apis.md
       - name: Bootstrap and manage your historical data to tune machine learning
-        href: bootstrap-manage-historical-data-tune-machine-learning.md
+        href: bootstrap-data.md
       - name: Explore data using APIs
-        href: explore-data-using-apis.md
-      - name: Extend and tailor the product
-        href: extend-tailor-product.md
+        href: real-time-api.md
    - name: Protect experience
-     href: protect-experience.md
+     href: protect.md
    - name: Artificial intelligence and insights from the fraud protection network
-     href: artificial-intelligence-insights-fraud-protection-network.md
+     href: fraud-protection-network.md
    - name: Rules engine
-     href: rules-engine.md
-     items:
-      - name: Manage lists and cohorts
-        href: manage-lists-cohorts.md
-      - name: Order and manage risk rules
-        href: order-manage-risk-rules.md
+     href: rules-lists.md
    - name: Virtual fraud analyst
      href: virtual-fraud-analyst.md
-     items:
-      - name: Recommendations
-        href: recommendations.md
-      - name: Balance fraud loss versus opportunity loss
-        href: balance-fraud-loss-versus-opportunity-loss.md
    - name: Boost bank acceptance rates
-     href: boost-bank-acceptance-rates.md
+     href: transaction-acceptance-booster.md
    - name: Understand your business
      href: understand-business.md
      items:
@@ -53,9 +33,7 @@
         href: graph-explorer.md
       - name: Key Performance Indicator (KPI) dashboard
         href: kpi-dashboard.md
-      - name: Understand your decisions made in Dynamics 365 Fraud Protection
-        href: understand-decisions.md
    - name: Adopting and integrating device fingerprinting
-     href: adopting-integrating-device-fingerprinting.md
+     href: device-fingerprinting.md
    - name: Support your customers
-     href: support-customers.md
+     href: customer-support.md

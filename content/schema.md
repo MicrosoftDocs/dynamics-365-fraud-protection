@@ -1,13 +1,13 @@
 ---
 author: jackwi111
-description: Order and manage risk rules
+description: Schema
 ms.author: v-jowigh
 ms.date: 02/25/2019
 ms.service:
  - d365-fraud-protection
 ms.topic: conceptual
-title: Order and manage risk rules
+title: Schema
 ---
 
 
-# Order and manage risk rules
+# Schema
