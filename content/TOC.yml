@@ -1,2 +1,61 @@
-- name: Index
-  href: index.md
+- name: Dynamics 365 Fraud Protection
+  items:
+   - name: Overview
+     href: overview.md
+     items:
+      - name: How to subscribe to Dynamics 365 Fraud Protection
+        href: how-subscribe-dynamics365-fraud-protection.md
+      - name: How Dynamics 365 Fraud Protection works (Cloud, Scale, Intelligence)
+        href: how-dynamics365-fraud-protection-works-cloud-scale-intelligence.md
+      - name: What you need to get started
+        href: what-you-need-get-started.md
+      - name: Grant and view access rights and provision
+        href: grant-view-access-rights-provision.md
+   - name: Be secure and compliant for data handling and privacy including GDPR
+     href: be-secure-compliant-data-handling-privacy-including-gdpr.md
+   - name: Diagnose experience
+     href: diagnose-experience.md
+   - name: Evaluate experience
+     href: evaluate-experience.md
+     items:
+      - name: Implement real-time event APIs
+        href: implement-real-time-event-apis.md
+      - name: Bootstrap and manage your historical data to tune machine learning
+        href: bootstrap-manage-historical-data-tune-machine-learning.md
+      - name: Explore data using APIs
+        href: explore-data-using-apis.md
+      - name: Extend and tailor the product
+        href: extend-tailor-product.md
+   - name: Protect experience
+     href: protect-experience.md
+   - name: Artificial intelligence and insights from the fraud protection network
+     href: artificial-intelligence-insights-fraud-protection-network.md
+   - name: Rules engine
+     href: rules-engine.md
+     items:
+      - name: Manage lists and cohorts
+        href: manage-lists-cohorts.md
+      - name: Order and manage risk rules
+        href: order-manage-risk-rules.md
+   - name: Virtual fraud analyst
+     href: virtual-fraud-analyst.md
+     items:
+      - name: Recommendations
+        href: recommendations.md
+      - name: Balance fraud loss versus opportunity loss
+        href: balance-fraud-loss-versus-opportunity-loss.md
+   - name: Boost bank acceptance rates
+     href: boost-bank-acceptance-rates.md
+   - name: Understand your business
+     href: understand-business.md
+     items:
+      - name: Graph explorer
+        href: graph-explorer.md
+      - name: Key Performance Indicator (KPI) dashboard
+        href: key-performance-indicator-kpi-dashboard.md
+      - name: Understand your decisions made in Dynamics 365 Fraud Protection
+        href: understand-decisions-made-dynamics365-fraud-protection.md
+   - name: Adopting and integrating device fingerprinting
+     href: adopting-integrating-device-fingerprinting.md
+   - name: Support your customers
+     href: support-customers.md
