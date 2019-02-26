@@ -58,6 +58,6 @@ This topic describes:
 
 ## To adopt device fingerprinting 
 
-Note   Device fingerprinting does not require any software installation. 
+[!NOTE]   Device fingerprinting does not require any software installation. 
 
 
