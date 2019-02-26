@@ -1,13 +1,13 @@
 ---
 author: jackwi111
-description: Key Performance Indicator (KPI) dashboard
+description: Use the key performance indicators
 ms.author: v-jowigh
 ms.date: 02/25/2019
 ms.service:
  - d365-fraud-protection
 ms.topic: conceptual
-title: Key Performance Indicator (KPI) dashboard
+title: Use the key performance indicators
 ---
 
 
-# Key Performance Indicator (KPI) dashboard
+# Use the key performance indicators
