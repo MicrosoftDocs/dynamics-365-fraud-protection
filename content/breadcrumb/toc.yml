@@ -1,11 +1,7 @@
-- name: Docs
-  tocHref: /
-  topicHref: /
+- name: Dynamics 365
+  tocHref: /dynamics365/
+  topicHref: /dynamics365/
   items:
-  - name: Dynamics 365
-    tocHref: /dynamics365/
-    topicHref: /dynamics365/
-    items:
-    - name: Fraud Protection
-      tocHref: /dynamics365/fraud-protection
-      topicHref: /dynamics365/fraud-protection
+  - name: Fraud Protection
+    tocHref: /dynamics365/fraud-protection
+    topicHref: /dynamics365/fraud-protection

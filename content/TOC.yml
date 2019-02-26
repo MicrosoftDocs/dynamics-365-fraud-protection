@@ -1,34 +1,32 @@
-- name: Dynamics 365 Fraud Protection
-  items:
-   - name: Overview
-     href: overview.md
-   - name: Diagnose experience
-     href: diagnose-experience.md
-   - name: Evaluate experience
-     href: evaluate.md
-   - name: Protect experience
-     href: protect.md
-   - name: Artificial intelligence and insights from the fraud protection network
-     href: fraud-protection-network.md
-   - name: Data security and compliance
-     href: security-compliance.md
-   - name: Grant access rights and permissions
-     href: access-permissions.md
-   - name: Bootstrap and manage historical data
-     href: bootstrap-data.md
-   - name: Explore data using APIs
-     href: real-time-api.md
-   - name: Customize rules
-     href: rules-lists.md
-   - name: Use the virtual fraud analyst
-     href: virtual-fraud-analyst.md
-   - name: Boost bank acceptance rates
-     href: transaction-acceptance-booster.md
-   - name: Graph transactions
-     href: graph-explorer.md
-   - name: Use the key performance indicators
-     href: kpi-dashboard.md
-   - name: Adopt and integrate device fingerprinting
-     href: device-fingerprinting.md
-   - name: Support your customers
-     href: customer-support.md
+- name: Overview
+  href: overview.md
+- name: Diagnose experience
+  href: diagnose-experience.md
+- name: Evaluate experience
+  href: evaluate.md
+- name: Protect experience
+  href: protect.md
+- name: Artificial intelligence and insights from the fraud protection network
+  href: fraud-protection-network.md
+- name: Data security and compliance
+  href: security-compliance.md
+- name: Grant access rights and permissions
+  href: access-permissions.md
+- name: Bootstrap and manage historical data
+  href: bootstrap-data.md
+- name: Explore data using APIs
+  href: real-time-api.md
+- name: Customize rules
+  href: rules-lists.md
+- name: Use the virtual fraud analyst
+  href: virtual-fraud-analyst.md
+- name: Boost bank acceptance rates
+  href: transaction-acceptance-booster.md
+- name: Graph transactions
+  href: graph-explorer.md
+- name: Use the key performance indicators
+  href: kpi-dashboard.md
+- name: Adopt and integrate device fingerprinting
+  href: device-fingerprinting.md
+- name: Support your customers
+  href: customer-support.md
