@@ -40,3 +40,24 @@ characteristics during the Add PI, sign in, or checkout process.
 
 Uniqueness determination includes:
 
+- Device fingerprinting fuzzy device ID
+- HTTP fingerprinting
+- TCPIP fingerprinting
+- SSL fingerprinting
+
+Suspicious activity determination includes:
+
+- Mismatches between local transaction time and browser time.
+- Derogatory IP address information. 
+
+This topic describes:
+
+- Adopting and integrating device fingerprinting with your web portal, as well as back-end labels processing fraud detection systems.
+- Placing the code snippets in your web portal either on Add PI, sign in, checkout, or pages to initiate device profiling.
+- Using the API for deeper integration with your backend systems.
+
+## To adopt device fingerprinting 
+
+Note   Device fingerprinting does not require any software installation. 
+
+
