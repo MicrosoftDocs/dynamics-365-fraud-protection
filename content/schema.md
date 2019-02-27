@@ -11,7 +11,7 @@ title: Schema
 
 
 # Schemas
-The following outlines the required schemas for data that will be manually uploaded into Dynamics 365 Fraud Protection.
+The following document outlines the required schemas for data that will be manually uploaded into Dynamics 365 Fraud Protection.
 
 ## Purchase
 Used in the Diagnose, Evaluate, and Protect experiences.
