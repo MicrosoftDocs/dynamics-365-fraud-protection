@@ -158,8 +158,13 @@ Response payload:
       <td>GET</td>
     </tr>
     <tr>
+      <td>Request Payload</td>
+      <td>None</td>
+    </tr>
+    <tr>
       <td>Response Payload</td>
-      <td>{ time_zone_dst_offset: 60<br/>
+      <td>{<br/>
+      time_zone_dst_offset: 60<br/>
  time_zone: 480<br/>
 &nbsp;device_id: "a8d0e3ea-977a-4e90-899b-e350230f73b0"<br/>
 &#160;mime_type_number: 2<br/>
