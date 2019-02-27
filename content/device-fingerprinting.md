@@ -148,8 +148,7 @@ Response payload:
 | URL  | http://.../api/SessionForensics/{session_id} |
 | HTTP Verb  |GET   |
 |Request Payload   | None  |
-| Response Payload  |{
-time_zone_dst_offset: 60
+| Response Payload  |{ time_zone_dst_offset: 60
 time_zone: 480
 device_id: "a8d0e3ea-977a-4e90-899b-e350230f73b0"
 mime_type_number: 2
@@ -234,5 +233,6 @@ enabled_fl: "no"
 enabled_im: "yes"
 }
    |
+
 
 
