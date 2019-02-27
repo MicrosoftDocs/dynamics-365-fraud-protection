@@ -58,7 +58,7 @@ This topic describes:
 
 ## To adopt device fingerprinting 
 
-[!NOTE] Device fingerprinting does not require any software installation. 
+> [!NOTE] Device fingerprinting does not require any software installation. 
 
 1.	Insert HTML tags to engage device profiling. For more information, see 'To integrate device fingerprinting with your website.'
 1.	Create a public DNS record fpt.Your_Root_Domain.com pointing to fpt.microsoft.com.
@@ -142,6 +142,108 @@ Response payload:
     For a complete list, see Device labels.
 
 *Example*
+
+<table>
+    <tr>
+      <th>API Details</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>URL</td>
+      <td>http://.../api/SessionForensics/{session_id}</td>
+    </tr>
+    <tr>
+      <td>HTTP Verb</td>
+      <td>GET</td>
+    </tr>
+    <tr>
+      <td>Response Payload</td>
+      <td>{ time_zone_dst_offset: 60<br/>
+time_zone: 480<br/>
+device_id: "a8d0e3ea-977a-4e90-899b-e350230f73b0"<br/>
+mime_type_number: 2<br/>
+page_time_on: 157<br/>
+profiled_domain: "forensicswd.microsoft.com"<br/>
+profiled_url: "https://forensicswd.microsoft.com/"<br/>
+location_header:"https://df.cp.microsoft.com/check"<br/>
+profiling_datetime: 1422318249<br/>
+browser_string_anomaly: true<br/>
+browser_string_mismatch: true<br/>
+browser_language_anomaly : false<br/>
+plugin_number: 0<br/>
+plugin_hash: ""<br/>
+true_ip: "10.125.140.119"<br/>
+os_fonts_number: 0<br/>
+screen_dpi: 0<br/>
+session_id: "20b90bbf-bd85-4c70-b2ae-6db18f79cac3"<br/>
+session_anomaly: "yes"<br/>
+processorClass: ""<br/>
+session_control: 1030<br/>
+device_control: 0<br/>
+headers_name_value_hash: "F101A712C81F00861AF4603C54A43BDF"<br/>
+headers_order_string_hash: "D1EF717C7AFA27A32CC246323DDA64C0"<br/>
+browser_http_signature: "1:Connection=[Close],Content-Type=[application/json],Accept-Language=[en-US,en;q=0.8],?Cookie,Host,?Referer,User-Agent,api-version=[2014-09-30],x-ms-tracking-id=[0ede9403-849b-4336-b885-416718565cae],x-ms-correlation-id=[dcd9c043-1766-4c54-94fc-f3f4ec8852e"<br/>
+flash_headers_name_value_hash: ""<br/>
+flash_headers_order_string_hash: ""<br/>
+flash_headers_nvp: ""<br/>
+profiled_domain_first_seen: "1/26/2015 4:24:09 PM"<br/>
+flashcallback_ip: ""<br/>
+scriptcallback_ip: "10.125.140.119"<br/>
+flash_os: ""<br/>
+flash_lang: ""<br/>
+flash_version: ""<br/>
+flash_oem: ""<br/>
+os_fonts_hash: ""<br/>
+mime_type_hash: "N0ZGNkM2MTRBMzQwRkY1MjAwMzUxNjYwRkMyREE4ODI"<br/>
+proxy_ip: ""<br/>
+screen_color_depth: 0<br/>
+screen_res: "1920x1080"<br/>
+js_browser_string: ""<br/>
+scriptUserAgentHashcode: ""<br/>
+browser_string: "GreenID Client.exe"<br/>
+browser_string_hash: "58537642C2D5E63995C18E4C31A0DF53"<br/>
+browser_language: "en-gb,en"<br/>
+raw_tcpip_signature: "4:128+0:0:1460:8192,8:mss,nop,ws,sok,ts:df,id+:0"<br/>
+raw_tcpip_signature_hash: "80EE98730F3A1C1F8997A95CD840899B"<br/>
+raw_ssl_signature: "3.1:002F,0035,0005,000A,C013,C014,C009,C00A,0032,0038,0013,0004:0000:65281,0,10,11:3.1"<br/>
+raw_ssl_signature_hash: "026B0BEC6BF391EB7FE4F03FD5398768"<br/>
+canvas_hash: ""<br/>
+fuzzy_device_id: "0b4f2142-86d7-4373-b197-6c8b30601c50"<br/>
+fuzzy_device_id_confidence: 100<br/>
+fuzzy_device_result: "not found"<br/>
+fuzzy_device_match_result: "new_device"<br/>
+up_time: "0 Days 5 Hrs 7 Minutes"<br/>
+tcp_os_signature: "Windows:7 or 8"<br/>
+link-type: "Ethernet or modem"<br/>
+detected_fl: true<br/>
+plugin_flash: "true"<br/>
+plugin_windows_media_player: "12.0.7601.17514"<br/>
+plugin_adobe_acrobat: "7.0/later"<br/>
+plugin_silverlight: "5.1.20913.0"<br/>
+plugin_quicktime: "false"<br/>
+plugin_shockwave: "false"<br/>
+plugin_realplayer: "false"<br/>
+plugin_vlc_player: "false"<br/>
+plugin_devalvr: "false"<br/>
+plugin_svg_viewer: "false"<br/>
+plugin_java: "false"<br/>
+flash_anomaly: "yes"<br/>
+os: "other"<br/>
+ua_os: "Unknown"<br/>
+ua_browser: "Unknown"<br/>
+ua_platform: "Unknown"<br/>
+http_os_signature: "Unknown"<br/>
+ua_mobile: "False"<br/>
+agent_type: "browser_computer"<br/>
+ssl_os_signature: "Windows2008 R2"<br/>
+device_match_result: "known_device"<br/>
+enabled_ck: "yes"<br/>
+enabled_js: "yes"<br/>
+enabled_fl: "no"<br/>
+enabled_im: "yes"<br/>
+}</td>
+    </tr>
+</table>
 
 | API Details  |Description   |
 |---|---|
