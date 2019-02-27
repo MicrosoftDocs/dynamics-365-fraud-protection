@@ -160,9 +160,9 @@ Response payload:
     <tr>
       <td>Response Payload</td>
       <td>{ time_zone_dst_offset: 60<br/>
-time_zone: 480<br/>
-device_id: "a8d0e3ea-977a-4e90-899b-e350230f73b0"<br/>
-mime_type_number: 2<br/>
+ time_zone: 480<br/>
+&nbsp;device_id: "a8d0e3ea-977a-4e90-899b-e350230f73b0"<br/>
+&#160;mime_type_number: 2<br/>
 page_time_on: 157<br/>
 profiled_domain: "forensicswd.microsoft.com"<br/>
 profiled_url: "https://forensicswd.microsoft.com/"<br/>
@@ -245,13 +245,6 @@ enabled_im: "yes"<br/>
 }</td>
     </tr>
 </table>
-
-| API Details  |Description   |
-|---|---|
-| URL  | http://.../api/SessionForensics/{session_id} |
-| HTTP Verb  |GET   |
-|Request Payload   | None  |
-| Response Payload  |{ time_zone_dst_offset: 60 |
 
 ## Retrieve an IP address activity
 ```Get http://.../api/IpAddressActivity/{ip_address}```
