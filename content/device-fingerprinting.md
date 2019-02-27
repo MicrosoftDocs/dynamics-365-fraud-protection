@@ -231,8 +231,64 @@ enabled_ck: "yes"
 enabled_js: "yes"
 enabled_fl: "no"
 enabled_im: "yes"
-}
-   |
+}|
 
+## Retrieve an IP address activity
+```Get http://.../api/IpAddressActivity/{ip_address}```
 
+Request payload
 
+    Not applicable.
+    
+Response payload
+
+    Array of IP address activity.
+    
+|SI |Name  |Description  |
+|---|---|---|
+|1   |device_id   |Cookie-based device ID.   |
+|2   |fuzzy_device_id   |Device fuzzy ID.   |
+|3   |profiled_domain   |Application domain IP visited.   |
+
+*Example*
+
+|API Item   |Description   |
+|---|---|
+|URL   |http://.../api/   |
+|HTTP Verb   |GET   |
+|Request Payload   |None   |
+|Response Payload   |"[{\"device_id\":\"a6421486-3ea2-456d-94eb-23245aa21488\",\"fuzzy_device_id\":\"fb8ea081-96bb-4f25-a452-aab8cbf49060\",\"profiled_domain\":\"df.cp.microsoft.com\"}]"   |
+
+## Device labels 
+
+The labels query REST API return these labels.
+
+<insert table>
+
+## raw_tcpip_signature
+
+Device fingerprinting uses a passive fingerprinting technique to silently analyze TCP/IP communication; TCP SYN packet. Its signature format follows.
+
+```VER:TTL+dist:Options Size:MaximumSegmentSize:WindowSize,WindowScale:Options:Quirks```
+
+<insert table>
+ 
+ ## raw_ssl_signature
+ 
+The SSL signature is computed by analyzing the unencrypted ClientHello packet exchanged between device and Web Server as part of the SSL protocol handshake. The ClientHello TCP packet is unaltered by proxies or routers en route. The SSL signature format follows.
+ 
+ ```sslver:ciphers:extensions:sslflags```
+ 
+ <insert table>
+ 
+##  Error handling
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
