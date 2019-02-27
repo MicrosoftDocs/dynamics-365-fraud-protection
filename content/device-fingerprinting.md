@@ -58,7 +58,8 @@ This topic describes:
 
 ## To adopt device fingerprinting 
 
-> [!NOTE] Device fingerprinting does not require any software installation. 
+> [!NOTE]
+> Device fingerprinting does not require any software installation. 
 
 1.	Insert HTML tags to engage device profiling. For more information, see 'To integrate device fingerprinting with your website.'
 1.	Create a public DNS record fpt.Your_Root_Domain.com pointing to fpt.microsoft.com.
@@ -250,90 +251,7 @@ enabled_im: "yes"<br/>
 | URL  | http://.../api/SessionForensics/{session_id} |
 | HTTP Verb  |GET   |
 |Request Payload   | None  |
-| Response Payload  |{ time_zone_dst_offset: 60
-time_zone: 480
-device_id: "a8d0e3ea-977a-4e90-899b-e350230f73b0"
-mime_type_number: 2
-page_time_on: 157
-profiled_domain: "forensicswd.microsoft.com"
-profiled_url: "https://forensicswd.microsoft.com/"
-location_header:"https://df.cp.microsoft.com/check"
-profiling_datetime: 1422318249
-browser_string_anomaly: true
-browser_string_mismatch: true
-browser_language_anomaly : false
-plugin_number: 0
-plugin_hash: ""
-true_ip: "10.125.140.119"
-os_fonts_number: 0
-screen_dpi: 0
-session_id: "20b90bbf-bd85-4c70-b2ae-6db18f79cac3"
-session_anomaly: "yes"
-processorClass: ""
-session_control: 1030
-device_control: 0
-headers_name_value_hash: "F101A712C81F00861AF4603C54A43BDF"
-headers_order_string_hash: "D1EF717C7AFA27A32CC246323DDA64C0"
-browser_http_signature: "1:Connection=[Close],Content-Type=[application/json],Accept-Language=[en-US,en;q=0.8],?Cookie,Host,?Referer,User-Agent,api-version=[2014-09-30],x-ms-tracking-id=[0ede9403-849b-4336-b885-416718565cae],x-ms-correlation-id=[dcd9c043-1766-4c54-94fc-f3f4ec8852e"
-flash_headers_name_value_hash: ""
-flash_headers_order_string_hash: ""
-flash_headers_nvp: ""
-profiled_domain_first_seen: "1/26/2015 4:24:09 PM"
-flashcallback_ip: ""
-scriptcallback_ip: "10.125.140.119"
-flash_os: ""
-flash_lang: ""
-flash_version: ""
-flash_oem: ""
-os_fonts_hash: ""
-mime_type_hash: "N0ZGNkM2MTRBMzQwRkY1MjAwMzUxNjYwRkMyREE4ODI"
-proxy_ip: ""
-screen_color_depth: 0
-screen_res: "1920x1080"
-js_browser_string: ""
-scriptUserAgentHashcode: ""
-browser_string: "GreenID Client.exe"
-browser_string_hash: "58537642C2D5E63995C18E4C31A0DF53"
-browser_language: "en-gb,en"
-raw_tcpip_signature: "4:128+0:0:1460:8192,8:mss,nop,ws,sok,ts:df,id+:0"
-raw_tcpip_signature_hash: "80EE98730F3A1C1F8997A95CD840899B"
-raw_ssl_signature: "3.1:002F,0035,0005,000A,C013,C014,C009,C00A,0032,0038,0013,0004:0000:65281,0,10,11:3.1"
-raw_ssl_signature_hash: "026B0BEC6BF391EB7FE4F03FD5398768"
-canvas_hash: ""
-fuzzy_device_id: "0b4f2142-86d7-4373-b197-6c8b30601c50"
-fuzzy_device_id_confidence: 100
-fuzzy_device_result: "not found"
-fuzzy_device_match_result: "new_device"
-up_time: "0 Days 5 Hrs 7 Minutes"
-tcp_os_signature: "Windows:7 or 8"
-link-type: "Ethernet or modem"
-detected_fl: true
-plugin_flash: "true"
-plugin_windows_media_player: "12.0.7601.17514"
-plugin_adobe_acrobat: "7.0/later"
-plugin_silverlight: "5.1.20913.0"
-plugin_quicktime: "false"
-plugin_shockwave: "false"
-plugin_realplayer: "false"
-plugin_vlc_player: "false"
-plugin_devalvr: "false"
-plugin_svg_viewer: "false"
-plugin_java: "false"
-flash_anomaly: "yes"
-os: "other"
-ua_os: "Unknown"
-ua_browser: "Unknown"
-ua_platform: "Unknown"
-http_os_signature: "Unknown"
-ua_mobile: "False"
-agent_type: "browser_computer"
-ssl_os_signature: "Windows2008 R2"
-device_match_result: "known_device"
-enabled_ck: "yes"
-enabled_js: "yes"
-enabled_fl: "no"
-enabled_im: "yes"
-}|
+| Response Payload  |{ time_zone_dst_offset: 60 |
 
 ## Retrieve an IP address activity
 ```Get http://.../api/IpAddressActivity/{ip_address}```
