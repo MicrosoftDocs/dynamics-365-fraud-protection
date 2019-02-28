@@ -25,7 +25,7 @@ After signing in, upload your historical data for analysis. The data should refl
 - Products 
 - Chargebacks 
 
-Follow the required schemas to ensure the files can be properly interpreted by Dynamics 365 Fraud Protection.
+Follow the [required schemas](schema.md) to ensure the files can be properly interpreted by Dynamics 365 Fraud Protection.
 
 You can preview a sample of your data on the “Ready to upload your file” screen. If significant errors are detected with the file format, refer to this example to correct them before uploading the complete files. When ready, select **Upload**.
 
