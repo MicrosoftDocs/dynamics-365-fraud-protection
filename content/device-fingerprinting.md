@@ -126,7 +126,7 @@ After successfully profiling a user’s device, a REST API call is required to o
 analysis. This REST API call returns all the labels that describe a customer’s device collected during its profiling. You must pass in
 the session_id used to identify a profiling session.
 
-## HTTP content types
+### HTTP content types
 
 All request/response payloads must be in the form of application/json with UTF-8 encoding.
 
