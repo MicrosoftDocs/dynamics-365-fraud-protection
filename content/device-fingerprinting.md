@@ -10,33 +10,53 @@ title: Adopt and integrate device fingerprinting
 ---
 
 
-# Adopt and integrate device fingerprinting
+# Implement device fingerprinting
 
-## Device fingerprinting
+Based on cutting-edge machine learning and artificial intelligence, Dynamics 365 Fraud Protection offers device fingerprinting. This feature enables the service to identify the **devices** (not individuals) across multiple sessions or interactions that engage with your business, all while respecting customer privacy. By tracking elements related to a device (computer, Xbox, tablet, and so on), you can link individual devices to events. Using device fingerprinting, you can link seemingly unassociated events to each other by capturing and identifying unique device characteristics during the Add PI, sign in, or checkout processes.
 
-Based on cutting-edge machine learning and artificial intelligence, Dynamics 365 Fraud Protection offers device fingerprinting. This
-enables the service to identify the devices (not individuals) across multiple sessions or interactions that engage with your business,
-all while respecting customer privacy. By tracking elements related to a device (computer, Xbox, tablets, and so on), you can link
-individual devices to events. Using device fingerprinting, you can link seemingly unassociated events to each other by capturing and
-identifying unique device characteristics during the Add PI, sign in, or checkout processes. 
+Device fingerprinting runs on Azure. It is cloud-scalable, reliable, and provides enterprise-grade security. A major advantage over similar products in the marketplace is that device fingerprinting is being continually tested against the latest fingerprinting-evasion fraudster tools.
 
-Device fingerprinting runs on Azure. It is cloud-scalable, reliable, and provides enterprise-grade security. A major advantage over
-similar products in the marketplace is that device fingerprinting is being continually tested against the latest fingerprinting-evasion
-fraudster tools.
+Integrating device fingerprinting for Dynamics 365 Fraud Protection consists of:
 
-## Adopt and integrate device fingerprinting
+- Provisioning DNS
+- Integrating with your website
 
-Traditional fraud mitigation strategies have always focused on data elements relating to the user such as Credit Card (CC) information,
-billing address, shipping address, e-mail, phone number, name, and so on. These elements are valuable; however, they can be compromised
-via phishing and identity theft, and are increasingly difficult to detect in a world of the internet of things (IoT). 
+## Provision DNS
 
-By tracking elements related to a device (computer, Xbox, Tablets, and so on), we may more readily link individual fraudsters to events.
-In most cases, malicious fraudsters are unlikely to use a unique device for each unique payment instrument (PI) involved in an attempted
-fraud. 
+1.	Create a Canonical Name (CNAME) for fpt.Your_Root_Domain.com pointing to fpt.dfp.microsoft.com.
 
-Device fingerprinting technology detects variables not previously recorded within the risk engine. With this optimization, the engine
-can better identify fraudulent behavior, and link seemingly unassociated events to each other by capturing and identifying unique device
-characteristics during the Add PI, sign in, or checkout process. 
+*Example*
 
-Uniqueness determination includes:
+Merchant website: www.contoso.com
+DNS record: fpt.contso.com points to fpt.dfp.microsoft.com
+
+2.	For backend onboarding, inform the Dynamics 365 Fraud Protection team about your root domain. (fpt.Your_Root_Domain.com will be added to the SSL certificate managed by Microsoft.)
+
+## Integrate device fingerprinting with your website
+
+Your web application should serve the device fingerprinting before submitting a transaction (such as Add PI, checkout, or sign-in). Follow these steps to integrate device fingerprinting with your website.
+
+1.	Insert a script tag on the web pages where you will profile your user’s devices.
+
+```<script src="https://fpt.<Your_Root_Domain>.com/mdt.js?session_id=<session_id>&customerId=<customer_id>" type="text/javascript"></script>```
+
+- Your_Root_Domain: Merchant website root domain.
+- customer_id: Placeholder for the customer ID representing you. This will be provisioned during the Dynamics 365 Fraud Protection onboarding process.
+- session_id: Device user’s session identifier. It can be up to 128 characters long and can only contain the following characters: upper and lowercase English letters, digits, underscore or hyphen ([a-z], [A-Z], 0-9, _, -). Using the GUID is suggested for the session ID, but not required.
+
+*Example*
+
+```<script src="https://fpt.contoso.com/mdt.js?session_id=211d403b-2e65-480c-a231-fd1626c2560e&customerId=b472dbc3-0928-4577-a589-b80090117691" type="text/javascript"></script>```
+
+Sample response for mdt.js
+
+```var a={url:"https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};a.doFpt=function(a){var b=a.createElement("IFRAME");b.id="fpt_frame",b.style.width="1px",b.style.height="1px",b.style.position="absolute",b.style.visibility="hidden",b.style.left="10px",b.style.bottom="0px",b.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;left:-200;border:0px;display:none");var c="https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691";b.setAttribute("src",c),a.body.appendChild(b)};```
+
+2. Load device fingerprinting after the page elements are loaded.
+
+    a.doFpt(this.document);
+
+3. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/), do the following:
+ - Set session ID in **deviceContextId** field.
+ - Set a.dc from mdt.js response in the **deviceContextDC** field on the deviceContext object for the Purchase API.
 
