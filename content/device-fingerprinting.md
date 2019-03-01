@@ -57,5 +57,5 @@ Sample response for mdt.js
 
     a.doFpt(this.document);
 
-3. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/), set the session ID in deviceContextId field, and set a.dc from mdt.js response in the deviceContextDC field on the deviceContext object for the Purchase API.
+3. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/), set the session ID in **deviceContextId** field, and set a.dc from mdt.js response in the **deviceContextDC** field on the deviceContext object for the Purchase API.
 
