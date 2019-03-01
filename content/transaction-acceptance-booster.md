@@ -12,7 +12,7 @@ title: Boost bank acceptance rates
 
 # Boost bank acceptance rates
 
-Dynamics 365 Fraud Protection enables you to benefit from higher acceptance rate by sharing trust knowledge with banks. This is achieved using a Program MID program. 
+Dynamics 365 Fraud Protection enables you to benefit from higher acceptance rate by sharing trust knowledge with banks. This is achieved using a Program Merchant ID (MID) program. 
 
 ## Program MID
 
@@ -25,7 +25,3 @@ After integrating with Dynamics 365 Fraud Protection RESTful APIs, in the respon
 - Control: Provides a representative sample of performance before you start Dynamics 365 Fraud Protection, and will be used as baseline for measuring overall gain. 
 
 Your existing MID will be the default. The Dynamics 365 Fraud Protection team will communicate to you which MID is the Program and which one is the Control. Dynamics 365 Fraud Protection algorithms will be running in real time to optimize for maximizing your acceptance rate. Consequently, it is important that you comply with the flag received in the response payload, and report back the bank authorization outcome and chargeback in a timely manner.
-
-
-
-
