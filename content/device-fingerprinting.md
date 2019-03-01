@@ -14,13 +14,12 @@ title: Adopt and integrate device fingerprinting
 
 Device fingerprinting is a Microsoft-developed, anti-fraud system to identify unique devices across multiple sessions or interactions with Microsoft services. By tracking elements related to a device (computer, Xbox, tablet, and so on), you can link individual fraudsters to events. In most cases, fraudsters are unlikely to use a unique device for each unique payment instrument (PI) involved in an attempted fraud. 
 
-Device Fingerprinting technology detects variables not previously recorded within the risk decision engine. With this optimization, Device Fingerprinting can better identify fraudulent behavior, and link seemingly unassociated events to each other by capturing and identifying unique device characteristics during the Add PI, log in, sign in, or checkout processes.
+Device fingerprinting technology detects variables not previously recorded within the risk decision engine. With this optimization, device fingerprinting can better identify fraudulent behavior, and link seemingly unassociated events to each other by capturing and identifying unique device characteristics during the Add PI, log in, sign in, or checkout processes.
 
-Integrating Device Fingerprinting for Dynamics 365 Fraud Protection consists of:
+Integrating device fingerprinting for Dynamics 365 Fraud Protection consists of:
 
 - Provisioning DNS
 - Integrating with your website
-
 
 ## Provision DNS
 
@@ -58,6 +57,6 @@ Sample response for mdt.js
     a.doFpt(this.document);
 
 3. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/), do the following:
- - Set session ID in **deviceContextId** field
+ - Set session ID in **deviceContextId** field.
  - Set a.dc from mdt.js response in the **deviceContextDC** field on the deviceContext object for the Purchase API.
 
