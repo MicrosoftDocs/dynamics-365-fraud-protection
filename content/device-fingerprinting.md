@@ -53,9 +53,9 @@ Sample response for mdt.js
 
 ```var a={url:"https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};a.doFpt=function(a){var b=a.createElement("IFRAME");b.id="fpt_frame",b.style.width="1px",b.style.height="1px",b.style.position="absolute",b.style.visibility="hidden",b.style.left="10px",b.style.bottom="0px",b.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;left:-200;border:0px;display:none");var c="https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691";b.setAttribute("src",c),a.body.appendChild(b)};```
 
-1. Load device fingerprinting after the page elements are loaded.
+2. Load device fingerprinting after the page elements are loaded.
 
-a.doFpt(this.document);
+    a.doFpt(this.document);
 
-1. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/), set the session ID in deviceContextId field, and set a.dc from mdt.js response in the deviceContextDC field on the deviceContext object for the Purchase API.
+3. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/), set the session ID in deviceContextId field, and set a.dc from mdt.js response in the deviceContextDC field on the deviceContext object for the Purchase API.
 
