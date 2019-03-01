@@ -20,13 +20,13 @@ Microsoft Dynamics 365 Fraud Protection will initially focus on payment fraud pr
 
 Using Dynamics 365 Fraud Protection, you can help protect your business from fraud using innovative and advanced capabilities, including: 
 
-- Artificial intelligence and insights from the fraud protection network 
+- [Artificial intelligence and insights from the fraud protection network](fraud-protection-network.md)
 
-- A rules engine and virtual fraud analyst 
+- A [rules engine](rules-list.md) and [virtual fraud analyst](virtual-fraud-analyst) 
 
-- Graph explorer and KPI dashboard 
+- [Graph explorer](graph-explorer.md) and [KPI dashboard](kpi-dashboard.md)
 
-- Transaction acceptance booster 
+- [Transaction acceptance booster](transaction-acceptance-booster.md)
 
 These are part of a comprehensive set of features grouped into three user experiences that will accelerate your journey into full production. 
 
