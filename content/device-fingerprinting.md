@@ -12,9 +12,9 @@ title: Adopt and integrate device fingerprinting
 
 # Implement device fingerprinting
 
-Device fingerprinting is a Microsoft-developed, anti-fraud system to identify unique devices across multiple sessions or interactions with Microsoft services. By tracking elements related to a device (computer, Xbox, tablet, and so on), you can link individual fraudsters to events. In most cases, fraudsters are unlikely to use a unique device for each unique payment instrument (PI) involved in an attempted fraud. 
+Based on cutting-edge machine learning and artificial intelligence, Dynamics 365 Fraud Protection offers device fingerprinting. This feature enables the service to identify the **devices** (not individuals) across multiple sessions or interactions that engage with your business, all while respecting customer privacy. By tracking elements related to a device (computer, Xbox, tablet, and so on), you can link individual devices to events. Using device fingerprinting, you can link seemingly unassociated events to each other by capturing and identifying unique device characteristics during the Add PI, sign in, or checkout processes.
 
-Device fingerprinting technology detects variables not previously recorded within the risk decision engine. With this optimization, device fingerprinting can better identify fraudulent behavior, and link seemingly unassociated events to each other by capturing and identifying unique device characteristics during the Add PI, log in, sign in, or checkout processes.
+Device fingerprinting runs on Azure. It is cloud-scalable, reliable, and provides enterprise-grade security. A major advantage over similar products in the marketplace is that device fingerprinting is being continually tested against the latest fingerprinting-evasion fraudster tools.
 
 Integrating device fingerprinting for Dynamics 365 Fraud Protection consists of:
 
