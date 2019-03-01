@@ -12,7 +12,7 @@ title: Adopt and integrate device fingerprinting
 
 # Implement device fingerprinting
 
-Device Fingerprinting is a Microsoft-developed, anti-fraud system to identify unique devices across multiple sessions or interactions with Microsoft services. By tracking elements related to a device (computer, Xbox, tablets, and so on), you can link individual fraudsters to events. In most cases, fraudsters are unlikely to use a unique device for each unique payment instrument (PI) involved in an attempted fraud. 
+Device fingerprinting is a Microsoft-developed, anti-fraud system to identify unique devices across multiple sessions or interactions with Microsoft services. By tracking elements related to a device (computer, Xbox, tablet, and so on), you can link individual fraudsters to events. In most cases, fraudsters are unlikely to use a unique device for each unique payment instrument (PI) involved in an attempted fraud. 
 
 Device Fingerprinting technology detects variables not previously recorded within the risk decision engine. With this optimization, Device Fingerprinting can better identify fraudulent behavior, and link seemingly unassociated events to each other by capturing and identifying unique device characteristics during the Add PI, log in, sign in, or checkout processes.
 
@@ -28,22 +28,22 @@ Integrating Device Fingerprinting for Dynamics 365 Fraud Protection consists of:
 
 *Example*
 
-Merchant website: [Contoso](http://www.contso.com)
+Merchant website: www.contoso.com
 DNS record: fpt.contso.com points to fpt.dfp.microsoft.com
 
 2.	For backend onboarding, inform the Dynamics 365 Fraud Protection team about your root domain. (fpt.Your_Root_Domain.com will be added to the SSL certificate managed by Microsoft.)
 
-## Integrate Microsoft Device Fingerprinting with your website
+## Integrate device fingerprinting with your website
 
-Your web application should serve the Device Fingerprinting before submitting a transaction (such as Add PI, Checkout, or Sign-in). Follow these steps to integrate Device Fingerprinting with your website.
+Your web application should serve the device fingerprinting before submitting a transaction (such as Add PI, checkout, or sign-in). Follow these steps to integrate device fingerprinting with your website.
 
 1.	Insert a script tag on the web pages where you will profile your user’s devices.
 
 ```<script src="https://fpt.<Your_Root_Domain>.com/mdt.js?session_id=<session_id>&customerId=<customer_id>" type="text/javascript"></script>```
 
 - Your_Root_Domain: Merchant website root domain.
-- customer_id: Placeholder for the customer ID representing you. This will be provisioned during Dynamics 365 Fraud Protection onboarding process.
-- session_id: Device user’s session identifier. It can be up to 128 characters long and can only contain the following characters: upper and lowercase English letters, digits, underscore or hyphen ([a-z], [A-Z], 0-9, _, -). GUID is wise choice for session ID although session ID doesn’t have to be GUID.
+- customer_id: Placeholder for the customer ID representing you. This will be provisioned during the Dynamics 365 Fraud Protection onboarding process.
+- session_id: Device user’s session identifier. It can be up to 128 characters long and can only contain the following characters: upper and lowercase English letters, digits, underscore or hyphen ([a-z], [A-Z], 0-9, _, -). Using the GUID is suggested for the session ID, but not required.
 
 *Example*
 
@@ -57,5 +57,7 @@ Sample response for mdt.js
 
     a.doFpt(this.document);
 
-3. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/), set the session ID in **deviceContextId** field, and set a.dc from mdt.js response in the **deviceContextDC** field on the deviceContext object for the Purchase API.
+3. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/), do the following:
+ - Set session ID in **deviceContextId** field
+ - Set a.dc from mdt.js response in the **deviceContextDC** field on the deviceContext object for the Purchase API.
 
