@@ -36,4 +36,22 @@ These are part of a comprehensive set of features grouped into three user experi
 
 - Obtain recommendations for your eCommerce transaction decisions by customizing business rules using the **Protect** experience in Dynamics 365 Fraud Protection.
 
-[!Note]You can enter any of these three experiences at any time. 
+> [!Note]
+> You can enter any of these three experiences at any time. 
+
+| Capability | Diagnose | Evaluate | Protect |
+|------------|----------|----------|---------|
+| Be secure and compliant, and have full transparency on data handling and privacy. | X | X | X |
+| Understand the conditions of your business. Diagnose and analyze the state of your fraud protection.                                                                     | X        | X        |         |
+| Send transactions through APIs in real time and gain risk insights with inline evaluation, including explanations.                                                     |          | X        | X       |
+| Use the KPI dashboard to understand the performance of Dynamics 365 Fraud Protection. Compare it to your incumbent fraud solution.                                       |          | X        | X       |
+| Bootstrap your historical data to tune the machine learning model to your business scenarios. Extend and tailor Dynamics 365 Fraud Protection to the needs of your business.  |          | X        | X       |
+| Reap benefits of AI and derive insights from the fraud protection network.                                                                                               |          | X        | X       |
+| Configure the rules engine to create decision rules across safe, block, and watch lists. Customize rules and lists.                                                      |          | X        | X       |
+| Use the virtual fraud analyst to configure optimal risk score thresholds.                                                                                                |          | X        | X       |
+| Use the graph explorer to investigate fraud with linkage analysis.                                                                                                       |          | X        | X       |
+| Use device fingerprinting to help identify devices that engage with your business, while respecting customer privacy.                                                    |          | X        | X       |
+| Use the customer support tool to evaluate and act on customer escalations for risk-related rejections.                                                                   |          | X        | X       |
+| Use the transaction acceptance booster to help improve bank acceptance.                                                                                                |          |          | X       |
+| Make Dynamics 365 Fraud Protection your solution of record.                                                                                                              |          |          | X       |
+
