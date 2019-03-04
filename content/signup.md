@@ -1,13 +1,27 @@
-# Sign up for Dynamics 365 Fraud Protection
-
-To experience the simplicity and power of Dynamics 365 Fraud Protection, complete the Contact form from your promotional source. The form has minimal fields to complete. As Microsoft is committed to preserving your business, customer, and data privacy, we recommend you review the legal, privacy, and General Data Protection Regulation (GDPR) information for reassurance.
-
-![Screenshot of signup promotion form](media/signup-promotion-form.png)
-
-Upon qualifying for Dynamics 365 Fraud Protection, you will recieve an email notification with a promocode embedded in a sign-up link  detailing your next steps.
-
 > [!NOTE]
 > Dynamics 365 Fraud Protection Beta is a free service.
+
+# Sign up for Dynamics 365 Fraud Protection
+
+Upon qualifying for Dynamics 365 Fraud Protection, you will recieve an email notification with a promocode embedded in a sign-up link detailing your next steps. Select the link, and complete the steps to sign up.
+
+## Review legal agreement
+
+As Microsoft is committed to preserving your business, customer, and data privacy, we recommend you review the legal, privacy, and General Data Protection Regulation (GDPR) information for reassurance. Your acceptance of the terms is considered complete upon signing up for the service.
+
+## Use coupon code to sign up with existing tenant
+
+Using your coupon code, you can now sign up for Dynamics 365 Fraud Protection and sign into your existing tenant. If none exists, you have the option to create a new tenant. You can use the coupon code to provide access for up to 50 employees within the same tenant.
+
+# Resource provisioning
+
+After signing up, the Dynamics 365 Fraud Protection Diagnose portal appears. The Diagnose portal checks your status, determining whether your provisioning is complete through one of three scenarios:
+
+- Provisioning is complete providing an array of Dynamics 365 Fraud Protection resources and links.
+- Provisioning is not complete and the service automatically initiates the process displaying a progress bar.
+- Provisioning is in progress and provides a work-in-process screen until provisioning is complete.
+
+When provisionng is complete, log in to access the Diagnose portal is activated and shows resources and links to begin using the service. The provisioning service includes all the necessary resources to use the Evaluate and Protect portal, including the risk engine, fraud proterction network, device fingerprinitng, KPI reporting, the virtual fraud analyst, transaction acceptance booster, customer support, metering, monitoring and alerting. If you are not entirely provisioned, a progress bar appears showing the extent the provisioning process. Log in to access this portal. Upon successfully logging in, you will have link in the navigation bar to access the Evaluate and Protect portal. In addition, this same link is available from the Impact report. 
 
 
 
