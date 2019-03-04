@@ -23,7 +23,7 @@ After signing up, the Dynamics 365 Fraud Protection Diagnose portal appears. The
 
 When provisionng is complete, log in to access the Diagnose portal is activated and shows resources and links to begin using the service.
 
-[Signup-login screen](/media/signup-login.png)
+![Signup-login screen](/media/signup-login.png)
 
 
 The provisioning service includes all the necessary resources to use the Evaluate and Protect portal, including the risk engine, fraud proterction network, device fingerprinitng, KPI reporting, the virtual fraud analyst, transaction acceptance booster, customer support, metering, monitoring and alerting. If you are not entirely provisioned, a progress bar appears showing the extent the provisioning process. Log in to access this portal. Upon successfully logging in, you will have link in the navigation bar to access the Evaluate and Protect portal. In addition, this same link is available from the Impact report. 
