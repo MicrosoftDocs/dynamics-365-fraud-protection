@@ -20,7 +20,7 @@ The graph explorer is available under **Data engineering**.
 
 Opening the graph explorer shows the ontology structure. Selecting any category of data, called a *node*, displays its attributes. If your ontology has been edited to give nodes or attributes custom labels, like changing the name of “User” to “ValuedCustomer,” you will see those names here.
 
-Related nodes are connected by *edges*, which may have their own properties depending on the nature of the data. These allow you to navigate through the ontology and understand the connections between data.
+Related nodes are connected by *edges*, which may have their own properties depending on the nature of the data. These enable you to navigate through the ontology and understand the connections between data.
 
 ![Screenshot of the ontology as pictured in the graph explorer.](media/graph-explorer-images/ge-ontology.png)
  
