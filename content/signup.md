@@ -13,7 +13,7 @@ Get familiar with contact opportunities demonstrating how Dynamics 365 Fraud Pro
 
 Complete your sign up form and click **Submit.**
 
-![Signup-email-form](mediasignup-images//signup-email-form.png)
+![Signup-email-form](media/signup-images/signup-email-form.png)
 
 Upon qualifying for Dynamics 365 Fraud Protection, you will recieve an email notification with a coupon code embedded in a sign-up link detailing your next steps. Select the link, and complete the steps to sign up.
 
