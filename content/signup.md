@@ -5,15 +5,15 @@
 
 To preview Dynamics 365 Fraud Protection, from {Marketing preview page](https://dynamics.microsoft.com/en-us/ai/fraud-protection/),  select **Try Preview.**
 
-![Signup-marketing-intro](media/signup-marketing-intro.png)
+![Signup-marketing-intro](media/signup-images/signup-marketing-intro.png)
 
 Get familiar with contact opportunities demonstrating how Dynamics 365 Fraud Protection can improve yoru bottom line. Click **Next.**
 
-![Signup-product-intro](media/signup-product-intro.png)
+![Signup-product-intro](media/signup-images/signup-product-intro.png)
 
 Complete your sign up form and click **Submit.**
 
-![Signup-email-form](media/signup-email-form.png)
+![Signup-email-form](mediasignup-images//signup-email-form.png)
 
 Upon qualifying for Dynamics 365 Fraud Protection, you will recieve an email notification with a coupon code embedded in a sign-up link detailing your next steps. Select the link, and complete the steps to sign up.
 
@@ -35,11 +35,11 @@ After signing up, the Dynamics 365 Fraud Protection Diagnose portal appears. The
 
 When provisioning is complete, log in to access the Diagnose portal with the login information we provide.
 
-![Signup-login screen](media/signup-login.png)
+![Signup-login screen](media/signup-images/signup-login.png)
 
 The Diagnose portal provides you with links and resources to begin using the service and trying out its features. Select the link in the navigation bar to access the Evaluate and Protect portal. In addition, this same link is available from the Impact report.
 
-![Signup-signup-eval-protect-nav-bar](media/signup-eval-protect-nav-bar.png)
+![Signup-signup-eval-protect-nav-bar](media/signup-images/signup-eval-protect-nav-bar.png)
 
 The provisioning service includes all the necessary resources to directly access the Evaluate and Protect portal, including the risk engine, fraud protection network, device fingerprinitng, KPI reporting, the virtual fraud analyst, transaction acceptance booster, customer support, metering, monitoring and alerting. If you are not entirely provisioned, a progress bar appears showing the extent the provisioning process. 
 
