@@ -60,3 +60,4 @@ Sample response for mdt.js
  - Set session ID in **deviceContextId** field.
  - Set a.dc from mdt.js response in the **deviceContextDC** field on the deviceContext object for the Purchase API.
 
+4. Please remove this.
