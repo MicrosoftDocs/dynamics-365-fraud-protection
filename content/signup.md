@@ -3,11 +3,11 @@
 
 # Sign up for Dynamics 365 Fraud Protection
 
-To preview Dynamics 365 Fraud Protection, from {Marketing preview page](https://dynamics.microsoft.com/en-us/ai/fraud-protection/),  select **Try Preview.**
+To preview Dynamics 365 Fraud Protection, from [Marketing preview page](https://dynamics.microsoft.com/en-us/ai/fraud-protection/),  select **Try Preview.**
 
 ![Signup-marketing-intro](media/signup-images/signup-marketing-intro.png)
 
-Get familiar with contact opportunities demonstrating how Dynamics 365 Fraud Protection can improve yoru bottom line. Click **Next.**
+Discover the value of Dynamics 365 Fraud Protection through a free trial and demos as to how our service can improve your bottom line. Click **Next.**
 
 ![Signup-product-intro](media/signup-images/signup-product-intro.png)
 
@@ -23,7 +23,7 @@ As Microsoft is committed to preserving your business, customer, and data privac
 
 ## Use coupon code to sign up with existing tenant
 
-Using your coupon code, you can now sign up for Dynamics 365 Fraud Protection and sign into your existing tenant. If you have not tenant, you have the option to create a new one. You can use the coupon code to provide access for up to 50 employees within the same tenant.
+Using your coupon code, you can now sign up for Dynamics 365 Fraud Protection and sign into your existing tenant. If you have no tenant, you have the option to create a new one. Use the coupon code to provide access for up to 50 employees within the same tenant.
 
 # Resource provisioning
 
@@ -43,41 +43,29 @@ The Diagnose portal provides you with links and resources to begin using the ser
 
 The provisioning service includes all the necessary resources to directly access the Evaluate and Protect portal, including the risk engine, fraud protection network, device fingerprinitng, KPI reporting, the virtual fraud analyst, transaction acceptance booster, customer support, metering, monitoring and alerting. If you are not entirely provisioned, a progress bar appears showing the extent the provisioning process. 
 
-
-After successfuly completing these steps, to access the API documentation, follow these steps: 
-1. Navigate to Partner API Documentation. 
-2. Scroll down and select Sign in with the same work account you used to sign into the Azure portal to see more services. 
-3. Since you have already been provisioned a tenant, use those account credentials to sign in and view the Dynamics 365 Fraud Protection API documentation.  isn’t this the same work account that they should use from #1-2?   I would restate #3 as: “Navigate to the Dynamics 365 Fraud Protection API documentation and sign in using the the same work account you used to sign into the Azure portal”
-4. After signing in, select Dynamics 365 Fraud Protection API.
-
-
-
-### To sign up for Dynamics 365 Fraud Protection
-
-
 # Dynamics 365 Fraud Protection Azure resources and merchant logins
 
-See the following links to access Dynamics 365 Fraud Protection Azure resources and merchant logins
+See the following items to access the Dynamics 365 Fraud Protection Azure resources and logins.
 
 **Admin user logins**
 
-Username: user@merchant.onmicrosoft.com (this must be updated for a new merchant)
+Username: user@merchant.onmicrosoft.com (As a new merchant, this will be updated for you)
 
 Passwords can be set by a Global administrator in the merchant.onmicrosoft.com tenant.
 
-**Azure tenant poral URL**
+**Azure tenant portal URL**
 
 [Microsoft Azure](https://portal.azure.com/merchant.onmicrosoft.com)
 
-- This site manages user and Azure Active Directory (AAD) application access to Dynamics 365 Fraud Protection and uploading data via the Azure Data Lake.
-- We suggest you change your passwords and add two-factor authentication.
+- This site manages user and Azure Active Directory (AAD) application access to Dynamics 365 Fraud Protection and uploads data via the Azure Data Lake.
+- We recommend you change your passwords and add two-factor authentication.
 
 **Dynamics 365 Fraud Protection portal URL**
 
 [Sandbox](https://dfp.microsoft-int.com/merchant.onmicrosoft.com)
 [Prod](https://dfp.microsoft.com/merchant.onmicrosoft.com)
 
-- Use these URLS to access Dynamics 365 Fraud Protection, including data, metrics, rules, and so on.
+- Use these URLs to access Dynamics 365 Fraud Protection, including data, metrics, rules, and so on.
 - Use the same Admin user credentials to log into the Dynamics 365 Fraud Protection portal URL.
 
 **AAD Application so you can run Dynamics 365 Fraud Protection API**
@@ -91,12 +79,17 @@ Prod
 - Application Id: *appid goes here*
 
 **Your CustomerID to use for device fingerprinting**
-- **Device fingerprinting customer (environment id) goes here**
+- *Device fingerprinting customer (environment id) goes here*
 
-**Azure Data Lake for you to upload the historical data**
+**Azure Data Lake for you to upload your historical data**
 
 Sandbox: DFP-Data-Upload-Sandbox
-
 Prod: DFP-Data-Upload-Production
 
+**API documentation
 
+After successfuly completing these steps, to access the API documentation, follow these steps: 
+1. Navigate to [Partner API Documentation](https://apidocs.microsoft.com/services/). 
+2. Scroll down and select **Sign in with the same work account you used to sign into the Azure portal to see more services. 
+3. Since you have already been provisioned a tenant, use those account credentials to sign in and view the Dynamics 365 Fraud Protection API documentation.  isn’t this the same work account that they should use from #1-2?   I would restate #3 as: “Navigate to the Dynamics 365 Fraud Protection API documentation and sign in using the the same work account you used to sign into the Azure portal”
+4. After signing in, select Dynamics 365 Fraud Protection API.
