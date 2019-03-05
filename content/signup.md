@@ -3,7 +3,19 @@
 
 # Sign up for Dynamics 365 Fraud Protection
 
-Upon qualifying for Dynamics 365 Fraud Protection, you will recieve an email notification with a promocode embedded in a sign-up link detailing your next steps. Select the link, and complete the steps to sign up.
+To preview Dynamics 365 Fraud Protection, from {Marketing preview page](https://dynamics.microsoft.com/en-us/ai/fraud-protection/),  select **Try Preview.**
+
+![Signup-marketing-intro](media/signup-marketing-intro.png)
+
+Get familiar with contact opportunities demonstrating how Dynamics 365 Fraud Protection can improve yoru bottom line. Click **Next.**
+
+![Signup-product-intro](media/signup-product-intro.png)
+
+Complete your sign up form and click **Submit.**
+
+![Signup-email-form](media/signup-email-form.png)
+
+Upon qualifying for Dynamics 365 Fraud Protection, you will recieve an email notification with a coupon code embedded in a sign-up link detailing your next steps. Select the link, and complete the steps to sign up.
 
 ## Review legal agreement
 
@@ -11,7 +23,7 @@ As Microsoft is committed to preserving your business, customer, and data privac
 
 ## Use coupon code to sign up with existing tenant
 
-Using your coupon code, you can now sign up for Dynamics 365 Fraud Protection and sign into your existing tenant. If none exists, you have the option to create a new tenant. You can use the coupon code to provide access for up to 50 employees within the same tenant.
+Using your coupon code, you can now sign up for Dynamics 365 Fraud Protection and sign into your existing tenant. If you have not tenant, you have the option to create a new one. You can use the coupon code to provide access for up to 50 employees within the same tenant.
 
 # Resource provisioning
 
@@ -21,17 +33,18 @@ After signing up, the Dynamics 365 Fraud Protection Diagnose portal appears. The
 - Provisioning is not complete and the service automatically initiates the process displaying a progress bar.
 - Provisioning is in progress and provides a work-in-process screen until provisioning is complete.
 
-When provisioning is complete, log in to access the Diagnose portal is activated and shows resources and links to begin using the service.
+When provisioning is complete, log in to access the Diagnose portal with the login information we provide.
 
 ![Signup-login screen](media/signup-login.png)
 
+The Diagnose portal provides you with links and resources to begin using the service and trying out its features. Select the link in the navigation bar to access the Evaluate and Protect portal. In addition, this same link is available from the Impact report.
 
-The provisioning service includes all the necessary resources to use the Evaluate and Protect portal, including the risk engine, fraud proterction network, device fingerprinitng, KPI reporting, the virtual fraud analyst, transaction acceptance booster, customer support, metering, monitoring and alerting. If you are not entirely provisioned, a progress bar appears showing the extent the provisioning process. Log in to access this portal. Upon successfully logging in, you will have link in the navigation bar to access the Evaluate and Protect portal. In addition, this same link is available from the Impact report. 
+![Signup-signup-eval-protect-nav-bar](media/signup-eval-protect-nav-bar.png)
+
+The provisioning service includes all the necessary resources to directly access the Evaluate and Protect portal, including the risk engine, fraud protection network, device fingerprinitng, KPI reporting, the virtual fraud analyst, transaction acceptance booster, customer support, metering, monitoring and alerting. If you are not entirely provisioned, a progress bar appears showing the extent the provisioning process. 
 
 
-
-
-Once above complete, to access the API documentation, follow these steps: 
+After successfuly completing these steps, to access the API documentation, follow these steps: 
 1. Navigate to Partner API Documentation. 
 2. Scroll down and select Sign in with the same work account you used to sign into the Azure portal to see more services. 
 3. Since you have already been provisioned a tenant, use those account credentials to sign in and view the Dynamics 365 Fraud Protection API documentation.  isn’t this the same work account that they should use from #1-2?   I would restate #3 as: “Navigate to the Dynamics 365 Fraud Protection API documentation and sign in using the the same work account you used to sign into the Azure portal”
