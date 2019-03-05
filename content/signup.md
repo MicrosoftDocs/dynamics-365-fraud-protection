@@ -86,7 +86,7 @@ Prod
 Sandbox: DFP-Data-Upload-Sandbox
 Prod: DFP-Data-Upload-Production
 
-**API documentation
+**API documentation**
 
 After successfuly completing these steps, to access the API documentation, follow these steps: 
 1. Navigate to [Partner API Documentation](https://apidocs.microsoft.com/services/). 
