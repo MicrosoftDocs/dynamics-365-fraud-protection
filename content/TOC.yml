@@ -1,6 +1,6 @@
 - name: Overview
   href: overview.md
-  name: Signup
+- name: Signup
   href: signup.md
 - name: Diagnose experience
   href: diagnose-experience.md
