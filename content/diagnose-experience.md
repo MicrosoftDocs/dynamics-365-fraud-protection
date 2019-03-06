@@ -42,7 +42,7 @@ The risk diagnostic report enables you to assess your risk from fraudulent activ
 
 - **Model performance**: Visualize the number and value of blocked transactions that were charged back vs. the number of blocked legitimate transactions. Use the risk score slider to adjust the graphs and see what your detection and false positive rates would be at different thresholds of acceptable risk.
 - **Distribution of transactions by risk score**: See the fraud to non-fraud ratio of your transactions, plotted out by their risk score. Adjust the parameters to zoom in on selected ranges for details.
-- **Top risk factors**: View the most common types of fraud occurring in your business. Choose what percent of your transactions you wish to view, ranked by their risk scores, to see the concentration of behaviors.
+- **Top risk factors**: View the most common types of fraud occurring in your business. Choose what percent of your riskiest transactions you wish to view, ranked by risk scores, to see the concentration of behaviors.
 
 ## Review reports 
 Find your completed reports in the navigation at **Data diagnostic report** and **Risk diagnostic report**, or link to them from the dashboard. You can read the reports on the Dynamics 365 Fraud Protection website or download PDF summaries for offline viewing. 
