@@ -28,6 +28,7 @@ Integrating device fingerprinting for Dynamics 365 Fraud Protection consists of:
 *Example*
 
 Merchant website: www.contoso.com (this link is not live and meant for illustration only)
+
 DNS record: fpt.contso.com points to fpt.dfp.microsoft.com
 
 2.	For backend onboarding, inform the Dynamics 365 Fraud Protection team about your root domain. (fpt.Your_Root_Domain.com will be added to the SSL certificate managed by Microsoft.)
