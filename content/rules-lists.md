@@ -11,3 +11,5 @@ title: Customize rules
 
 
 # Customize rules
+
+For your convenience, Dynamics 365 Fraud Protection enables you set your own accept/reject rules for your transactions. 
