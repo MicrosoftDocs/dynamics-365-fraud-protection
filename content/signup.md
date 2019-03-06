@@ -41,7 +41,7 @@ The Diagnose portal provides you with links and resources to begin using the ser
 
 ![Signup-signup-eval-protect-nav-bar](media/signup-images/signup-eval-protect-nav-bar.png)
 
-The provisioning service includes all the necessary resources to directly access the Evaluate and Protect portal, including the risk engine, fraud protection network, device fingerprinting, KPI reporting, the virtual fraud analyst, transaction acceptance booster, customer support, metering, monitoring and alerting. If you are not entirely provisioned, a progress bar appears showing the extent the provisioning process. 
+The provisioning service includes all the necessary resources to directly access the Evaluate and Protect portal, including the [risk engine](rules-lists.md), [fraud protection network](fraud-protection-network.md), [device fingerprinting](device-fingerprinting.md), [KPI reporting](kpi-dashboard.md), the [virtual fraud analyst](virtual-fraud-analyst.md), [transaction acceptance booster](transaction-acceptance-booster.md), and [customer support](customer-support.md). If you are not entirely provisioned, a progress bar appears showing the extent the provisioning process. 
 
 # Dynamics 365 Fraud Protection Azure resources and merchant logins
 
