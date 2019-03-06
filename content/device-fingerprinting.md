@@ -27,7 +27,7 @@ Integrating device fingerprinting for Dynamics 365 Fraud Protection consists of:
 
 *Example*
 
-Merchant website: www.contoso.com
+Merchant website: www.contoso.com (this link is not live and meant for illustration only)
 DNS record: fpt.contso.com points to fpt.dfp.microsoft.com
 
 2.	For backend onboarding, inform the Dynamics 365 Fraud Protection team about your root domain. (fpt.Your_Root_Domain.com will be added to the SSL certificate managed by Microsoft.)
@@ -56,7 +56,7 @@ Sample response for mdt.js
 
     a.doFpt(this.document);
 
-3. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/), do the following:
+3. When submitting transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services), do the following:
  - Set session ID in **deviceContextId** field.
  - Set a.dc from mdt.js response in the **deviceContextDC** field on the deviceContext object for the Purchase API.
 
