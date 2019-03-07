@@ -31,7 +31,7 @@ After all four files are uploaded, select **Generate data diagnostic report** to
 
 ## Data diagnostic report
 
-The **Data diagnostic report** contains a detailed visual breakdown of your dataset to provide intelligence on the quality and completeness of its content. Key metrics include the match rate, which charts purchase and chargeback completion and indicates the minimum basis point for viable analysis. Others include missing dates, remaining formatting errors, the percentage of unique entities represented, and how many days of data were included in your files.
+The **Data diagnostic report** contains a detailed visual breakdown of your data to provide intelligence on the quality and completeness of its content. Key metrics include the match rate, which charts purchase and chargeback completion and indicates the minimum basis point for viable analysis. Others include missing dates, remaining formatting errors, the percentage of unique entities represented, and how many days of data were included in your files.
 
 To generate your risk diagnostic report, these aspects of your data must reach a minimum quality threshold. If the quality is too low to be accurately evaluated, you will be prompted to improve the indicated problems and try again.
 
