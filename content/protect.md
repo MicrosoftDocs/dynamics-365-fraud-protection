@@ -20,7 +20,7 @@ The Protect experience embeds Microsoft Dynamics 365 Fraud Protection into your 
 - [Use the KPI dashboard](kpi-dashboard.md)
 - [Customize rules](rules-lists.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)
-- [Graph transactions](graph-explorer.md)
+- [Visually explore your data](graph-explorer.md)
 - [Adopt and integrate device fingerprinting](device-fingerprinting.md)
 - [Support your customers](customer-support.md)
 - [Boost bank acceptance rates](transaction-acceptance-booster.md)
