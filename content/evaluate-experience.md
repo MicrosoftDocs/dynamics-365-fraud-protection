@@ -20,6 +20,6 @@ The Evaluate experience enables you to use your real-time transactional traffic 
 - [Use the KPI dashboard](kpi-dashboard.md)
 - [Customize rules](rules-lists.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)
-- [Graph transactions](graph-explorer.md)
+- [Visually explore your data](graph-explorer.md)
 - [Adopt and integrate device fingerprinting](device-fingerprinting.md)
 - [Support your customers](customer-support.md)
