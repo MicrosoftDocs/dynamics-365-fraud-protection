@@ -12,7 +12,7 @@ title: Support your customers
 
 # Support your customers
 
-Customer support within Microsoft Dynamics 365 Fraud Protection enables your support representative or fraud investigator to evaluate customer escalations, unblock customers whose purchase attempts are being improperly declined, and block suspicious purchases as appropriate. Your fraud investigators can search and investigate your customers’ past transactional history with your business, providing an accelerated turnaround for decisions. 
+Customer support within Microsoft Dynamics 365 Fraud Protection enables your agents to evaluate customer escalations, unblock customers whose purchase attempts are being improperly declined, and block suspicious purchases as appropriate. Your fraud investigators can search and investigate your customers’ past transactional history with your business, providing an accelerated turnaround for decisions. 
 
 ## Search and investigate
 
@@ -36,10 +36,10 @@ When evaluated by a fraud investigator, these results can provide insights into 
 
 ## Unblock customers
 
-Once a customer's transaction has been reviewed and a course of action has been determined, use **Actions** to resolve their support issue appropriately.
+Once a transaction has been reviewed and a course of action has been determined, use **Actions** to resolve the support issue appropriately.
 
-From here, a customer can be placed on the **Safe list** or **Block list**. List assignment can be changed if a decision was determined to be incorrect, an account was rehabilitated, or new suspicious activity occurs.
+From here, a customer or payment instrument can be placed on the **Safe list** or **Block list**. List assignment can be changed if a decision was determined to be incorrect, an account was rehabilitated, or new suspicious activity occurs.
 
-Assigning a customer to a list requires an expiry date and any comments that will be helpful to future reviewers of this case. View these at any time under **Activity log**. After a customer’s list assignment has expired, Dynamics 365 Fraud Protection will no longer whitelist or block them based on those lists.
+Adding an entry to a list requires an expiry date and any comments that will be helpful to future reviewers of this case. View these at any time under **Activity log**. After an expiry date has passed, Dynamics 365 Fraud Protection will no longer whitelist or block them based on those lists.
 
-Use **Comment only** to add notes without changing a customer’s status, and Remove from lists to delete any previous list assignments. 
+Use **Comment only** to add notes to an entry without changing its status, and Remove from lists to delete any previous list assignments. 
