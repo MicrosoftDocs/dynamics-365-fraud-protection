@@ -42,4 +42,4 @@ From here, a customer or payment instrument can be placed on the **Safe list** o
 
 Adding an entry to a list requires an expiry date and any comments that will be helpful to future reviewers of this case. View these at any time under **Activity log**. After an expiry date has passed, Dynamics 365 Fraud Protection will no longer whitelist or block them based on those lists.
 
-Use **Comment only** to add notes to an entry without changing its status, and Remove from lists to delete any previous list assignments. 
+Use **Comment only** to add notes to an entry without changing its status, and **Remove from lists** to delete any previous list assignments. 
