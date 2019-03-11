@@ -31,7 +31,7 @@ After all four files are uploaded, select **Generate data diagnostic report** to
 
 ## Data diagnostic report
 
-The **Data diagnostic report** contains a detailed visual breakdown of your data to provide intelligence on the quality and completeness of its content. Key metrics include the match rate, which charts purchase and chargeback completion and indicates the minimum basis point for viable analysis. Others include missing dates, remaining formatting errors, the percentage of unique entities represented, and how many days of data were included in your files.
+The **Data diagnostic report** contains a detailed visual breakdown of your data to provide intelligence on the quality and completeness of its content. Key metrics include the match rate, which charts purchase and chargeback completion and indicates the minimum basis point for viable analysis. Others include missing dates, formatting errors, the percentage of unique entities represented, and how many days of data were included in your files.
 
 To generate your risk diagnostic report, these aspects of your data must reach a minimum quality threshold. If the quality is too low to be accurately evaluated, you will be prompted to improve the indicated problems and try again.
 
@@ -42,7 +42,7 @@ The risk diagnostic report enables you to assess your risk from fraudulent activ
 
 - **Model performance**: Visualize the number and value of blocked transactions that were charged back vs. the number of blocked legitimate transactions. Use the risk score slider to adjust the graphs and see what your detection and false positive rates would be at different thresholds of acceptable risk.
 - **Distribution of transactions by risk score**: See the fraud to non-fraud ratio of your transactions, plotted out by their risk score. Adjust the parameters to zoom in on selected ranges for details.
-- **Top risk factors**: View the most common types of fraud occurring in your business. Choose what percent of your riskiest transactions you wish to view, ranked by risk scores, to see the concentration of behaviors.
+- **Top risk factors**: View the most common types of fraud occurring in your business. Choose what percent of your riskiest transactions you wish to view to see the concentration of behaviors.
 
 ## Review reports 
 Find your completed reports in the navigation at **Data diagnostic report** and **Risk diagnostic report**, or link to them from the dashboard. You can read the reports on the Dynamics 365 Fraud Protection website or download PDF summaries for offline viewing. 
