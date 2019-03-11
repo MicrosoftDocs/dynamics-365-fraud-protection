@@ -18,7 +18,7 @@ Participating in this network enables you to derive insights from the collective
 
 ## Participation and privacy
 
-Joining the fraud protection network through use of the Evaluate and Protect experiences of Dynamics 365 Fraud Protection requires sharing selected data. To protect the privacy of participating businesses and their customers, any data utilized by the network is always in the form of one of the following:
+Using Dynamics 365 Fraud Protection’s Evaluate and Protect experiences requires granting permission to share selected data with the fraud protection network. To protect the privacy of participating businesses and their customers, any data utilized by the network is always in the form of one of the following:
 
 - **Derived features of attributes of entities**. A plain text address would never be shared, for example, but the knowledge that it represents a post office box might be. These derivations cannot be reverse engineered to reveal the original values. 
 - **Irreversibly hashed tokens of entities**. Tokenization ensures that the fraud protection network can build up linkage information without storing the explicit details of the entities. This protects both customer and merchant privacy.
