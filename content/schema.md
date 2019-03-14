@@ -83,7 +83,7 @@ PurchaseId                    string
 ,Country                      string
 ```
 
-### Purchase: Products
+### Products
 Used in the Diagnose, Evaluate, and Protect experiences.
 ```
 PurchaseId   string
@@ -130,6 +130,7 @@ Used in the Evaluate and Protect experiences.
 "purchaseId": "string"
 "merchantLocalDate": "2019-01-24T02:37:09.371Z"
 ```
+
 ## Purchase status
 Used in the Evaluate and Protect experiences.
 ```
@@ -139,6 +140,7 @@ Used in the Evaluate and Protect experiences.
 "reason": "string"
 "merchantLocalDate": "2019-01-24T02:38:12.319Z"
 ```
+
 ## Bank event
 Used in the Evaluate and Protect experiences.
 ```
@@ -153,7 +155,10 @@ Used in the Evaluate and Protect experiences.
 "purchaseId": "string",
 "merchantLocalDate": "2019-01-24T02:28:53.997Z"
 ```
-## Update account
+
+## Account
+
+### Update account
 Used in the Evaluate and Protect experiences.
 ```
 "customerLocalDate": "2019-01-24T02:32:58.101Z",
@@ -180,9 +185,9 @@ Used in the Evaluate and Protect experiences.
 "ipAddress": "string"
 "merchantLocalDate": "2019-01-24T02:32:58.102Z"
 ```
-### Update account
 
-### Address
+
+### Update address
 Used in the Evaluate and Protect experiences.
 ```
 "userId": "string",
@@ -199,7 +204,8 @@ Used in the Evaluate and Protect experiences.
 "zipCode": "string",
 "country": "string"
 ```
-### Update account: Payment instruments
+
+### Update payment instruments
 Used in the Evaluate and Protect experiences.
 ```
 "userId": "string",
