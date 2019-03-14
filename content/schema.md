@@ -14,9 +14,9 @@ title: Schema
 The following document outlines the required schemas for data that will be manually uploaded into Dynamics 365 Fraud Protection.
 
 ## Transactions
+Used in the Diagnose, Evaluate, and Protect experiences.
 
 ### Purchase
-Used in the Diagnose, Evaluate, and Protect experiences.
 ```
 PurchaseId               string
 ,OriginalOrderId         string
@@ -52,7 +52,6 @@ PurchaseId               string
 ```
 
 ### Payment instruments
-Used in the Diagnose, Evaluate, and Protect experiences.
 ```
 PurchaseId                    string
 ,MerchantPaymentInstrumentId  string
@@ -84,7 +83,6 @@ PurchaseId                    string
 ```
 
 ### Products
-Used in the Diagnose, Evaluate, and Protect experiences.
 ```
 PurchaseId   string
 ,ProductId      string
@@ -157,9 +155,9 @@ Used in the Evaluate and Protect experiences.
 ```
 
 ## Account
+Used in the Evaluate and Protect experiences.
 
 ### Update account
-Used in the Evaluate and Protect experiences.
 ```
 "customerLocalDate": "2019-01-24T02:32:58.101Z",
 "userId": "string",
@@ -188,7 +186,6 @@ Used in the Evaluate and Protect experiences.
 
 
 ### Update address
-Used in the Evaluate and Protect experiences.
 ```
 "userId": "string",
 "addresstype": "string",
@@ -206,7 +203,6 @@ Used in the Evaluate and Protect experiences.
 ```
 
 ### Update payment instruments
-Used in the Evaluate and Protect experiences.
 ```
 "userId": "string",
 "merchantPaymentInstrumentId": "string",
