@@ -13,104 +13,96 @@ title: Schema
 # Schemas
 The following document outlines the required schemas for data that will be manually uploaded into Dynamics 365 Fraud Protection.
 
-## Purchase
+## Transactions
+
+### Purchase
 Used in the Diagnose, Evaluate, and Protect experiences.
 ```
-"PurchaseId": "SamplePurchaseId",
-"OriginalOrderId": "SampleOriginalOrderId",
-"CustomerLocalDate": "2018-09-24T11:54:32.9915288-07:00",
-"MerchantLocalDate": "2018-09-24T11:54:32.9915491-07:00",
-"TotalAmount": 0,
-"SalesTax": 0,
-"Currency": "string",
-"UserId": "SampleUserId",
-"UserCreationDate": "2018-09-24T11:54:32.9935576-07:00",
-"UserUpdateDate": "2018-09-24T11:54:32.9935693-07:00",
-"FirstName": "string",
-"LastName": "string",
-"Country": "string",
-"ZipCode": "string",
-"TimeZone": "string",
-"Language": "string",
-"PhoneNumber": "string",
-"Email": "string",
-"IsEmailValidated": true,
-"EmailValidatedDate": "2018-09-24T11:54:32.9936183-07:00",
-"IsPhoneNumberValidated": true,
-"PhoneNumberValidatedDate": "2018-09-24T11:54:32.9936366-07:00"
-"DeviceContextId": "SampleDeviceContextId",
-"DeviceContextDC": "string",
-"ExternalDeviceId": "SampleExternalDeviceId",
-"IPAddress": "string"
-"ShippingAddressFirstName": "string",
-"ShippingAddressLastName": "string",
-"ShippingAddressPhoneNumber": "string",
-"Street1": "string",
-"Street2": "string",
-"Street3": "string",
-"City": "string",
-"State": "string",
-"District": "string",
-"ZipCode": "string",
-"Country": "string"
+PurchaseId               string
+,OriginalOrderId         string
+,CustomerLocalDate       DateTime
+,MerchantLocalDate       DateTime
+,TotalAmount             string
+,SalesTax                string
+,Currency                string
+,DeviceContextId         string
+,IPAddress               string
+,UserId                  string
+,UserFirstName           string
+,UserLastName            string
+,UserEmail               string
+,UserCreationDate        DateTime
+,UserUpdateDate          DateTime
+,UserZipCode             string
+,UserCountry             string
+,UserTimeZone            string
+,UserLanguage            string
+,UserPhoneNumber         string
+,IsEmailValidated        bool
+,ShippingFirstName       string
+,ShippingLastName        string
+,ShippingPhoneNumber     string
+,Street1                 string
+,Street2                 string
+,Street3                 string
+,City                    string
+,State                   string
+,ZipCode                 string
+,Country                 string
 ```
 
-## Purchase: Payment instruments
+### Payment instruments
 Used in the Diagnose, Evaluate, and Protect experiences.
 ```
-"PurchaseId": "SamplePurchaseId",
-"MerchantPaymentInstrumentId": "string",
-"PaymentInstrumentType": "string",
-"PaymentInstrumentPurchaseAmount": 0,
-"PaymentInstrumentCreationDate": "2018-09-24T11:54:32.9938265-07:00",
-"PaymentInstrumentUpdateDate": "2018-09-24T11:54:32.9938370-07:00",
-"State": "string",
-"CardType": "string",
-"HolderName": "string",
-"BIN": "string",
-"ExpirationDate": "string",
-"LastFourDigits": "string",
-"Email": "string",
-"BillingAgreementId": "SampleBillingAgreementId",
-"PayerId": "SamplePayerId",
-"PayerStatus": "string",
-"AddressStatus": "string",
-"IMEI": "string",
-"BillingAddress": 
-"BillingAddressFirstName": "string",
-"BillingAddressLastName": "string",
-"BillingAddressPhoneNumber": "string",
-"Street1": "string",
-"Street2": "string",
-"Street3": "string",
-"City": "string",
-"State": "string",
-"District": "string",
-"ZipCode": "string",
-"Country": "string"
+PurchaseId                    string
+,MerchantPaymentInstrumentId  string
+,Type                         string
+,PurchaseAmount               string
+,CreationDate                 DateTime
+,UpdateDate                   DateTime
+,CardType                     string
+,HolderName                   string
+,BIN                          string
+,ExpirationDate               DateTime
+,LastFourDigits               string
+,Email                        string
+,BillingAgreementId           string
+,PayerId                      string
+,PayerStatus                  string
+,AddressStatus                string
+,IMEI                         string
+,FirstName                    string
+,LastName                     string
+,PhoneNumber                  string
+,Street1                      string
+,Street2                      string
+,Street3                      string
+,City                         string
+,State                        string
+,ZipCode                      string
+,Country                      string
 ```
 
-## Purchase: Products
+### Purchase: Products
 Used in the Diagnose, Evaluate, and Protect experiences.
 ```
-"PurchaseId": "SamplePurchaseId",
-"ProductId": "SampleProductId",
-"PurchasePrice": 0,
-"Margin": 0,
-"Quantity": 0,
-"ProductName": "string",
-"Type": "string",
-"Sku": "string",
-"Category": "string",
-"Market": "string",
-"SalesPrice": 0,
-"Currency": "string",
-"COGS": 0,
-"IsRecurring": true,
-"IsFree": true,
-"Language": "string",
-"MerchantLocalDate": "2019-01-31T22:24:31.521Z"
+PurchaseId   string
+,ProductId      string
+,PurchasePrice  string
+,Margin         string
+,Quantity       string
+,ProductName    string
+,Type           string
+,Category       string
+,Market         string
+,Sku            string
+,SalesPrice     string
+,Currency       string
+,COGS           string
+,IsRecurring    bool
+,IsFree         bool
 ```
+
 ## Chargeback
 Used in the Diagnose, Evaluate, and Protect experiences.
 ```
@@ -123,6 +115,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 "userId": "string"
 "purchaseId": "string"
 "merchantLocalDate": "2019-01-24T02:31:37.646Z"
+
 ```
 ## Refund
 Used in the Evaluate and Protect experiences.
@@ -187,7 +180,9 @@ Used in the Evaluate and Protect experiences.
 "ipAddress": "string"
 "merchantLocalDate": "2019-01-24T02:32:58.102Z"
 ```
-## Update account: Address
+### Update account
+
+### Address
 Used in the Evaluate and Protect experiences.
 ```
 "userId": "string",
@@ -204,7 +199,7 @@ Used in the Evaluate and Protect experiences.
 "zipCode": "string",
 "country": "string"
 ```
-## Update account: Payment instruments
+### Update account: Payment instruments
 Used in the Evaluate and Protect experiences.
 ```
 "userId": "string",
