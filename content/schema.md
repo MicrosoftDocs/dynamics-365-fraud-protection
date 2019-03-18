@@ -1,12 +1,12 @@
 ---
 author: jegrif
-description: Schema
+description: Schemas
 ms.author: v-jegrif
 ms.date: 02/25/2019
 ms.service:
  - d365-fraud-protection
 ms.topic: conceptual
-title: Schema
+title: Schemas
 ---
 
 
