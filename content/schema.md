@@ -88,38 +88,39 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 
 
 ### Products
-```
-PurchaseId   string
-,ProductId      string
-,PurchasePrice  string
-,Margin         string
-,Quantity       string
-,ProductName    string
-,Type           string
-,Category       string
-,Market         string
-,Sku            string
-,SalesPrice     string
-,Currency       string
-,COGS           string
-,IsRecurring    bool
-,IsFree         bool
-```
+
+| Attribute	                   | Type       | Description                                                                            |
+| ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| PurchaseId     	             | string	    | Transaction (or purchase/order) identifier.                                            |
+| ProductId	                   | string	    | Product identifier.                                                                    |
+| PurchasePrice	               | string	    | 	Price for line item of purchase.                                                      |
+| Margin		                     | string	    | 	Margin gained by sale of item.                                                        |
+| Quantity		                   | string	    | 	Number of items purchased.                                                            |
+| ProductName		                | string	    | 	Customer-readable product name.                                                       |
+| Category		                   | string	    | 	Category of product (for example, Apparel, Shoes, Accessories).                       |
+| Market		                     | string     | Market in which product is offered. ISO, 2-character country code (for example, US).   |
+| Sku		                        | string	    | Product SKU.                                                                           |
+| SalesPrice	                  | string	    | Price of item sold (not including tax). Provided by merchant.                          |
+| COGS		                       | string	    | 	Cost of Goods Sold – raw material cost of item. Provided by merchant.                 |
+| IsRecurring	                 | bool	      | Indicates whether product is recurring subscription.                                   |
+| IsFree		                     | bool	      | Indicates whether product is offered for free.                                         |
 
 ## Chargeback
 Used in the Diagnose, Evaluate, and Protect experiences.
-```
-"chargebackId": "string",
-"reason": "string",
-"status": "string",
-"bankEventTimestamp": "2019-01-24T02:31:37.646Z",
-"amount": 0,
-"currency": "string",
-"userId": "string"
-"purchaseId": "string"
-"merchantLocalDate": "2019-01-24T02:31:37.646Z"
 
-```
+| Attribute	                   | Type       | Description                                                                            |
+| ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| chargebackId                 | string	    | Chargeback identifier.                                                                 |
+| reason	                      | string	    | Reason provided by bank.                                                               |
+| status	                      | string	    | Status. "INITIATED", "LOST", "WON"                                                     |
+| bankEventTimestamp           | DateTime   | Timestamp from bank.                                                                   |
+| amount	                      | string	    | Chargeback amount.                                                                     |
+| currency: 	                  | string	    | Currency used for chargeback amount.                                                   |
+| userId: 	                    | string	    | Customer identifier.                                                                   |
+| purchaseId: 	                | string	    | Transaction (or purchase/order) identifier.                                            |
+| merchantLocalDate:           | DateTime   | Purchase ingestion date per merchant time zone. Format is ISO8601.  "2019-03-14T20:18:11.254Z" |
+
+
 ## Refund
 Used in the Evaluate and Protect experiences.
 ```
