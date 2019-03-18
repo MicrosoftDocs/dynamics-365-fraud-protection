@@ -16,9 +16,9 @@ Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce
 
 ## Upload data
 
-After signing in, upload your historical data for analysis. The data should reflect approved transactions that were previously provided to your bank. Your files must be in CSV format, must not exceed 10 GB in size, and should cover three months of data about each of the following entities:
+After signing in, upload your historical data for analysis. The data should reflect approved transactions that were previously provided to your bank, and should include three months of purchases and chargebacks. Upload CSV files for each of the following entities (maximum file size 10 GB each):
 
-- Transactions 
+- Purchases 
 - Payment instruments 
 - Products 
 - Chargebacks 
