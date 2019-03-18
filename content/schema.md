@@ -29,7 +29,8 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | Currency	             | string	   | Currency of the original purchase. 3-character currency code (for example, USD, aligns with OANDA currency code). Provided by merchant. |
 | DeviceContextId	      | string    |	Session ID of the particular event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if session is not available. |
 | IPAddress	            | string    |	Customer's IP address (provided by Microsoft Device Fingerprinting).                           |
-| UserId	               | string	   | Customer identifier provided by merchant.                                                      |    | UserFirstName         |	string	   | Customer-provided first name on customer account.                                              | 
+| UserId	               | string	   | Customer identifier provided by merchant.                                                      | 
+| UserFirstName         |	string	   | Customer-provided first name on customer account.                                              | 
 | UserLastName         	| string   	| Customer-provided last name on customer account.                                               |
 | UserEmail             |	string	   | Email of customer. Case insensitive.                                                           |
 | UserCreationDate     	| DateTime	 | Customer account creation date.                                                                |  
