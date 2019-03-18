@@ -16,17 +16,17 @@ Customer support within Microsoft Dynamics 365 Fraud Protection enables your age
 
 ## Search and investigate
 
-Select **Support dashboard** and search for transactions to get detailed information and see the reasoning behind Dynamics 365 Fraud Protection’s risk decisions.
+Select **Support** under **Risk decisioning** in the navigation, then search for transactions to get detailed information and see the reasoning behind Dynamics 365 Fraud Protection’s risk decisions.
 
 The available search methods include:
 
-- User.Email 
-- Purchase.PurchaseID 
-- PaymentInstrument.PaymentInstrumentID
+- User.Email  
+- Purchase.PurchaseID (unique ID of a purchase sent to Dynamics 365 Fraud Protection for risk evaluation) 
+- PaymentInstrument.PaymentInstrumentID (unique hash of a payment method associated with a transaction sent to Dynamics 365 Fraud Protection) 
 
 Searching by a customer's email address or payment instrument may reveal multiple transactions. Select any of them for expanded information in the following areas:
 
-- **Financial snapshot** summarizes the customer's spending, transaction, chargeback, and refund history, if any. This breakdown highlights activities that fall outside typical patterns, such as a recent spike in spending or an unusual number of transactions or chargebacks. 
+- **Financial snapshot** summarizes the customer's spending, transaction, chargeback, and refund history, if any. This breakdown can indicate activities that fall outside typical patterns, such as a recent spike in spending or an unusual number of transactions or chargebacks. 
 - **Transaction history** identifies individual transactions and highlights their key properties, including the results of risk decisions made in Dynamics 365 Fraud Protection. 
 - **Transaction details** show specifics about individual transactions, like the payment method, the device used, the originating IP address, and more. **Risk information** provides additional details about the risk decision, including the specific score. 
 - **Line items** itemizes everything purchased during the selected transaction, the price, and applicable taxes and fees. 
@@ -36,10 +36,10 @@ When evaluated by a fraud investigator, these results can provide insights into 
 
 ## Unblock customers
 
-Once a transaction has been reviewed and a course of action has been determined, use **Actions** to resolve the support issue appropriately.
+Once a transaction has been reviewed and a course of action has been determined, use **Actions** to resolve the customer's support issue appropriately.
 
-From here, a customer or payment instrument can be placed on the **Safe list** or **Block list**. List assignment can be changed if a decision was determined to be incorrect, an account was rehabilitated, or new suspicious activity occurs.
+From here, a customer or payment instrument can be placed on the **Safe list** or **Block list**. Choose the appropriate reason for your list choice from the provided dropdown.
 
-Adding an entry to a list requires an expiry date and any comments that will be helpful to future reviewers of this case. View these at any time under **Activity log**. After an expiry date has passed, Dynamics 365 Fraud Protection will no longer whitelist or block them based on those lists.
+Adding a customer to a list requires an expiry date and any comments that will be helpful to future reviewers of this case. View these at any time under **Activity log**. The log will also keep record of which agent made each change.
 
-Use **Comment only** to add notes to an entry without changing its status, and **Remove from lists** to delete any previous list assignments. 
+Note that after an expiry date has passed, Dynamics 365 Fraud Protection will remove the customer from the list. To delete a list entry at any time, select **Remove from lists**. 
