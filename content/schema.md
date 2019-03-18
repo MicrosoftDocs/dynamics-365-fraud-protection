@@ -167,79 +167,80 @@ Used in the Evaluate and Protect experiences.
 Used in the Evaluate and Protect experiences.
 
 ### Update account
-```
-"customerLocalDate": "2019-01-24T02:32:58.101Z",
-"userId": "string",
-"usercreationDate": "2019-01-24T02:32:58.102Z",
-"userupdateDate": "2019-01-24T02:32:58.102Z",
-"firstName": "string",
-"lastName": "string",
-"country": "string",
-"zipCode": "string",
-"timeZone": "string",
-"language": "string",
-"phoneNumber": "string",
-"email": "string",
-"isEmailValidated": true,
-"emailValidatedDate": "2019-01-24T02:32:58.102Z",
-"isPhoneNumberValidated": true,
-"phoneNumberValidatedDate": "2019-01-24T02:32:58.102Z",
-"deviceContextId": "string",
-"provider": "string",
-"deviceContextDC": "string",
-"externalDeviceId": "string",
-"externalDeviceType": "string",
-"ipAddress": "string"
-"merchantLocalDate": "2019-01-24T02:32:58.102Z"
-```
 
+| Attribute	                   | Type       | Description                                                                            |
+| ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| customerLocalDate            | DateTime   |                                                                                        |
+| userId                       | string	    |                                                                                        |
+| usercreationDate             | DateTime   |                                                                                        |
+| userupdateDate               | DateTime   |                                                                                        |
+| firstName                    | string	    |                                                                                        |
+| lastName                     | string	    |                                                                                        |
+| country                      | string	    |                                                                                        |
+| zipCode                      | string	    |                                                                                        |
+| timeZone                     | string	    |                                                                                        |
+| language                     | string	    |                                                                                        |
+| phoneNumber                  | string	    |                                                                                        |
+| email                        | string	    |                                                                                        |
+| isEmailValidated             | bool	      |                                                                                        |
+| emailValidatedDate           | DateTime   |                                                                                        |
+| isPhoneNumberValidated       | bool	      |                                                                                        |
+| phoneNumberValidatedDate     | DateTime   |                                                                                        |
+| deviceContextId              | string	    |                                                                                        |
+| provider                     | string	    |                                                                                        |
+| deviceContextDC              | string	    |                                                                                        |
+| externalDeviceId             | string	    |                                                                                        |
+| externalDeviceType           | string	    |                                                                                        |
+| ipAddress                    | string	    |                                                                                        |
+| merchantLocalDate            | DateTime   |                                                                                        |
 
 ### Update address
-```
-"userId": "string",
-"addresstype": "string",
-"firstName": "string",
-"lastName": "string",
-"phoneNumber": "string",
-"street1": "string",
-"street2": "string",
-"street3": "string",
-"city": "string",
-"state": "string",
-"district": "string",
-"zipCode": "string",
-"country": "string"
-```
+| Attribute	                   | Type       | Description                                                                            |
+| ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| userId                       | string	    |                                                                                        |
+| addresstype                  | string	    |                                                                                        |
+| firstName                    | string	    |                                                                                        |
+| lastName                     | string	    |                                                                                        |
+| phoneNumber                  | string	    |                                                                                        |
+| street1                      | string	    |                                                                                        |
+| street2                      | string	    |                                                                                        |
+| street3                      | string	    |                                                                                        |
+| city                         | string	    |                                                                                        |
+| state                        | string	    |                                                                                        |
+| district                     | string	    |                                                                                        |
+| zipCode                      | string	    |                                                                                        |
+| country                      | string	    |                                                                                        |
 
 ### Update payment instruments
-```
-"userId": "string",
-"merchantPaymentInstrumentId": "string",
-"PaymentInstrumenttype": "string",
-"PaymentInstrumentcreationDate": "2019-01-24T02:32:58.102Z",
-"PaymentInstrumentupdateDate": "2019-01-24T02:32:58.102Z",
-"state": "string",
-"cardType": "string",
-"holderName": "string",
-"bin": "string",
-"expirationDate": "string",
-"lastFourDigits": "string",
-"email": "string",
-"billingAgreementId": "string",
-"payerId": "string",
-"payerStatus": "string",
-"addressStatus": "string",
-"imei": "string",
-"billingAddress": {
-"BillingAddressfirstName": "string",
-"BillingAddresslastName": "string",
-"BillingAddressphoneNumber": "string",
-"street1": "string",
-"street2": "string",
-"street3": "string",
-"city": "string",
-"state": "string",
-"district": "string",
-"zipCode": "string",
-"country": "string"
-```
+
+| Attribute	                    | Type       | Description                                                                            |
+| ----------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| userId                        | string	    |                                                                                        |
+| merchantPaymentInstrumentId   | string	    |                                                                                        |
+| PaymentInstrumenttype         | string	    |                                                                                        |
+| PaymentInstrumentcreationDate | DateTime   |                                                                                        |
+| PaymentInstrumentupdateDate   | DateTime   |                                                                                        |
+| state                         | string	    |                                                                                        |
+| cardType                      | string	    |                                                                                        |
+| holderName                    | string	    |                                                                                        |
+| bin                           | string	    |                                                                                        |
+| expirationDate                | string	    |                                                                                        |
+| lastFourDigits                | string	    |                                                                                        |
+| email                         | string	    |                                                                                        |
+| billingAgreementId            | string	    |                                                                                        |
+| payerId                       | string	    |                                                                                        |
+| payerStatus                   | string	    |                                                                                        |
+| addressStatus                 | string	    |                                                                                        |
+| imei                          | string	    |                                                                                        |
+| billingAddress                | string	    |                                                                                        |
+| BillingAddressfirstName       | string	    |                                                                                        |
+| BillingAddresslastName        | string	    |                                                                                        |
+| BillingAddressphoneNumber     | string	    |                                                                                        |
+| street1                       | string	    |                                                                                        |
+| street2                       | string	    |                                                                                        |
+| street3                       | string	    |                                                                                        |
+| city                          | string	    |                                                                                        |
+| state                         | string	    |                                                                                        |
+| district                      | string	    |                                                                                        |
+| zipCode                       | string	    |                                                                                        |
+| country                       | string	    |                                                                                        |
