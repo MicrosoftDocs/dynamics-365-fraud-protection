@@ -123,42 +123,45 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 
 ## Refund
 Used in the Evaluate and Protect experiences.
-```
-"refundId": "string",
-"reason": "string",
-"status": "string",
-"bankEventTimestamp": "2019-01-24T02:37:09.371Z",
-"amount": 0,
-"currency": "string",
-"userId": "string"
-"purchaseId": "string"
-"merchantLocalDate": "2019-01-24T02:37:09.371Z"
-```
+
+| Attribute	                   | Type       | Description                                                                            |
+| ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| refundId                     | string     |                                                                                        |
+| reason	                      | string	    |                                                                                        |
+| status	                      | string	    |                                                                                        |
+| bankEventTimestamp           | DateTime   |                                                                                        |
+| amount	                      | string	    |                                                                                        |
+| currency: 	                  | string	    |                                                                                        |
+| userId: 	                    | string	    |                                                                                        |
+| purchaseId: 	                | string	    |                                                                                        |
+| merchantLocalDate:           | DateTime   |                                                                                        |
 
 ## Purchase status
 Used in the Evaluate and Protect experiences.
-```
-"purchaseId": "string",
-"statusType": "string",
-"statusDate": "2019-01-24T02:38:12.319Z",
-"reason": "string"
-"merchantLocalDate": "2019-01-24T02:38:12.319Z"
-```
+
+| Attribute	                   | Type       | Description                                                                            |
+| ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| purchaseId                   | string     |                                                                                        |
+| statusType                   | string     |                                                                                        |
+| statusDate                   | DateTime   |                                                                                        |
+| reason	                      | string	    |                                                                                        |
+| merchantLocalDate:           | DateTime   |                                                                                        |
 
 ## Bank event
 Used in the Evaluate and Protect experiences.
-```
-"bankEventId": "string",
-"type": "string",
-"bankEventTimestamp": "2019-01-24T02:28:53.997Z",
-"status": "string",
-"bankResponseCode": "string",
-"paymentProcessor": "string",
-"mrn": "string",
-"mid": "string",
-"purchaseId": "string",
-"merchantLocalDate": "2019-01-24T02:28:53.997Z"
-```
+
+| Attribute	                   | Type       | Description                                                                            |
+| ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
+| bankEventId                  | string	    |                                                                                        |
+| type                         | string	    |                                                                                        |
+| bankEventTimestamp           | DateTime   |                                                                                        |
+| status                       | string	    |                                                                                        |
+| bankResponseCode             | string	    |                                                                                        |
+| paymentProcessor             | string	    |                                                                                        |
+| mrn                          | string	    |                                                                                        |
+| mid                          | string	    |                                                                                        |
+| purchaseId                   | string	    |                                                                                        |
+| merchantLocalDate            | DateTime   |                                                                                        |
 
 ## Account
 Used in the Evaluate and Protect experiences.
