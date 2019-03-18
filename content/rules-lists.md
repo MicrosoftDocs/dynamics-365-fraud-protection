@@ -1,16 +1,16 @@
 ---
 author: jegrif
-description: Customize rules
+description: Customize rules and lists
 ms.author: v-jegrif
 ms.date: 03/18/2019
 ms.service:
  - d365-fraud-protection
 ms.topic: conceptual
-title: Customize rules
+title: Customize rules and lists
 ---
 
 
-# Customize rules
+# Customize rules and lists
 
 Help manage your risk decisions and tailor the behavior of Microsoft Dynamics 365 Fraud Protection to suit your business’s needs with the rules engine.
 
