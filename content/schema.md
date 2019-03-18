@@ -16,7 +16,7 @@ The following document outlines the required schemas for data that will be manua
 ## Transactions
 Used in the Diagnose, Evaluate, and Protect experiences.
 
-### Purchase
+### Purchases
 
 | Attribute	            | Type      | Description                                                                                    |
 | --------------------- | --------- | ---------------------------------------------------------------------------------------------- |
@@ -54,7 +54,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 
 
 
-### Payment instrument
+### Payment instruments
 
 | Attribute	                   | Type       | Description                                                                            |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
@@ -88,7 +88,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 
 
 
-### Product
+### Products
 
 | Attribute	                   | Type       | Description                                                                            |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
@@ -106,7 +106,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | IsRecurring	                 | bool	      | Indicates whether product is recurring subscription.                                   |
 | IsFree		                     | bool	      | Indicates whether product is offered for free.                                         |
 
-## Chargeback
+## Chargebacks
 Used in the Diagnose, Evaluate, and Protect experiences.
 
 | Attribute	                   | Type       | Description                                                                            |
@@ -122,7 +122,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | merchantLocalDate:           | DateTime   | Purchase ingestion date per merchant time zone. Format is ISO8601.  "2019-03-14T20:18:11.254Z" |
 
 
-## Refund
+## Refunds
 Used in the Evaluate and Protect experiences.
 
 | Attribute	                   | Type       | Description                                                                            |
@@ -148,7 +148,7 @@ Used in the Evaluate and Protect experiences.
 | reason	                      | string	    |                                                                                        |
 | merchantLocalDate:           | DateTime   |                                                                                        |
 
-## Bank event
+## Bank events
 Used in the Evaluate and Protect experiences.
 
 | Attribute	                   | Type       | Description                                                                            |
