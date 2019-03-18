@@ -54,7 +54,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 
 
 
-### Payment instruments
+### Payment instrument
 
 | Attribute	                   | Type       | Description                                                                            |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
@@ -88,7 +88,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 
 
 
-### Products
+### Product
 
 | Attribute	                   | Type       | Description                                                                            |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
@@ -212,7 +212,7 @@ Used in the Evaluate and Protect experiences.
 | zipCode                      | string	    |                                                                                        |
 | country                      | string	    |                                                                                        |
 
-### Update payment instruments
+### Update payment instrument
 
 | Attribute	                    | Type       | Description                                                                            |
 | ----------------------------- | ---------- | -------------------------------------------------------------------------------------- |
