@@ -22,7 +22,7 @@ To return to the ontology at any time and explore it in more detail, select **On
 
 ## Find data
 
-To find specific data in the Graph explorer, search using the fields and filters at the top of the screen. For example, searching by User:Email will display users associated with the specified email address and any nodes related to them, like their purchase activity. Specify date ranges to narrow your search.
+To find specific data in the Graph explorer, search using the fields and filters at the top of the screen. For example, searching by User:Email will display users associated with the specified email address and any nodes related to them, like the purchases they made. Specify date ranges to narrow your search.
 
 In the search results, select any node to see its attributes. If more than ten instances of a single node type exist, like multiple purchases, these will be clustered together. Double-click to expand this cluster and reveal the individual nodes.
 
