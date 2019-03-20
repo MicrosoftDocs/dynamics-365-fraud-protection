@@ -60,7 +60,7 @@ To obtain real-time fraud protection by integrating your transactional sales sys
 
 [!NOTE]   You must generate this token and provide it dynamically as it expires every x hours.
 
-
+![integrate TenantID](../media/integrate-apis-images/tenantID.png)
 
 
 
