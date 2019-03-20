@@ -10,7 +10,7 @@ title: Customize rules and lists
 ---
 
 
-# Customize rules and lists
+# Manage rules and lists
 
 Help manage your risk decisions and tailor the behavior of Microsoft Dynamics 365 Fraud Protection to suit your business’s needs with the rules engine.
 
