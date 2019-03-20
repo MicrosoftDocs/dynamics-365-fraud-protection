@@ -18,7 +18,7 @@
   href: bootstrap-data.md
 - name: Explore data using APIs
   href: real-time-api.md
-- name: Customize rules and lists
+- name: Manage rules and lists
   href: rules-lists.md
 - name: Use the virtual fraud analyst
   href: virtual-fraud-analyst.md
