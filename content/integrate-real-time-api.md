@@ -62,8 +62,23 @@ To obtain real-time fraud protection by integrating your transactional sales sys
 
 ![integrate TenantID](../media/integrate-apis-images/tenantID.png)
 
+3.	When calling Dynamics 365 Fraud Protection APIs, you must pass required HTTP headers on each request, as follows.
 
+| Header name  |Header value   |
+|---|---|
+|Authorization   |To obtain an access token, use the Azure AD App (configured for you when you signed up and registered for Dynamics 365 Fraud Protection).
+[!Note]   The access token will have a limited lifespan. We recommend that you cache it and re-use it until it is time to get a new one.
+Format for this header (replace token with the actual token value):
+- Bearer token
+   |
+|x-ms-correlation-id   |Send a new GUID value on each set of API calls that are made together.   |
 
+a.	Generate an event-based payload. To send events for fraud evaluation, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/).
 
+b.	Combine the access token + header + payload and send it to your specific Dynamics 365 Fraud Protection endpoint.
+
+c.	In the Dynamics 365 Fraud Protection Evaluate experience, you can send over transactions and analyze the results from Dynamics 365 Fraud Protection.
+
+d.	In the Dynamics 365 Fraud Protection Protect experience, you can send over transactions and honor decisions based on your configured rules.
 
 
