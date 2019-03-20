@@ -36,7 +36,7 @@ To access Dynamics 365 Fraud Protection sandbox APIs, assign an API role to an A
 
 a.	The following sample PowerShell script assigns your Azure AD app access to one of these Dynamics 365 Fraud Protection API roles:
 
-```# Enter merchant app name
+``` # Enter merchant app name
 # Enter merchant app name
 $c_app_name = "your Azure AD application display name here"
 
@@ -50,7 +50,7 @@ $sp = Get-AzureADServicePrincipal -Filter "displayName eq '$app_name'"
 #Assign AppRole
 $c_appRole = $sp.AppRoles | Where-Object { $_.DisplayName -eq $c_app_role_name }
 $c_sp = Get-AzureADServicePrincipal -Filter "displayName eq '$c_app_name'"
-New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.ObjectId -ResourceId $sp.ObjectId -Id $c_appRole.Id```
+New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.ObjectId -ResourceId $sp.ObjectId -Id $c_appRole.Id ```
 
 To obtain real-time fraud protection by integrating your transactional sales systems with a simple event-based call to Dynamics 365 Fraud Protection, follow these instructions.
 
