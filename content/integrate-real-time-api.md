@@ -43,7 +43,7 @@ $c_app_name = "your Azure AD application display name here"
 # Pick an Application AppRole to assign
 $c_app_role_name = "Risk_API"
 
-#Get 1st Party App with AppRoles
+# Get 1st Party App with AppRoles
 $app_name = "Dynamics 365 Fraud Protection"
 $sp = Get-AzureADServicePrincipal -Filter "displayName eq '$app_name'"
 
@@ -51,7 +51,6 @@ $sp = Get-AzureADServicePrincipal -Filter "displayName eq '$app_name'"
 $c_appRole = $sp.AppRoles | Where-Object { $_.DisplayName -eq $c_app_role_name }
 $c_sp = Get-AzureADServicePrincipal -Filter "displayName eq '$c_app_name'"
 New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.ObjectId -ResourceId $sp.ObjectId -Id $c_appRole.Id```
-
 
 To obtain real-time fraud protection by integrating your transactional sales systems with a simple event-based call to Dynamics 365 Fraud Protection, follow these instructions.
 
