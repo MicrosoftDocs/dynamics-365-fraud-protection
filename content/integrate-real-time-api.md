@@ -52,11 +52,13 @@ $c_appRole = $sp.AppRoles | Where-Object { $_.DisplayName -eq $c_app_role_name }
 $c_sp = Get-AzureADServicePrincipal -Filter "displayName eq '$c_app_name'"
 New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.ObjectId -ResourceId $sp.ObjectId -Id $c_appRole.Id```
 
+
 To obtain real-time fraud protection by integrating your transactional sales systems with a simple event-based call to Dynamics 365 Fraud Protection, follow these instructions.
 
 
-1.	Get your ID(s)   [TBD: where is this?] TenantID, AppID, ClientID, InstanceID?
-2.	To generate a token, see [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/client-assertion).
+1. Get your ID(s)   [TBD: where is this?] TenantID, AppID, ClientID, InstanceID?
+2. To generate a token, see [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/client-assertion).
+
 [!NOTE]   You must generate this token and provide it dynamically as it expires every x hours.
 
 
