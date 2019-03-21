@@ -1,0 +1,7 @@
+# Configure user access to Dynamics 365 Fraud Protection
+
+After signing up for Dynamics 365 Fraud Protection, the product’s services are configured to operate within your Azure tenant. When this process completes, you can log in with your Azure Active Directory (Azure AD) credentials within your tenant to access the Dynamics 365 Fraud Protection portal
+
+
+
+
