@@ -16,18 +16,26 @@ Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce
 
 ## Upload data
 
-After signing in, upload your historical data for analysis. The data should reflect approved transactions that were previously provided to your bank, and should include three months of purchases and chargebacks. Upload CSV files for each of the following entities (maximum file size 10 GB each):
+After signing in, upload your historical data for analysis. The data should reflect approved transactions that were approved by you (the merchant) and sent to your bank, and should include three months of purchases and chargebacks. Upload data for each of the following entities:  
 
 - Purchases 
 - Payment instruments 
 - Products 
 - Chargebacks 
 
-Follow the [required schemas](schema.md) to ensure the files can be properly interpreted by Dynamics 365 Fraud Protection.
+Each of your files must meet these requirements and should follow the [required schemas](schema.md) to ensure the files can be properly interpreted by Dynamics 365 Fraud Protection. 
 
-You can preview a sample of your data on the “Ready to upload your file” screen. If significant errors are detected with the file format, refer to this example to correct them before uploading the complete files. When ready, select **Upload**.
+- CSV (comma separated) format 
+- Maximum file size: 10 GB 
+- DateTime columns in ISO 8601 
+- Decimal precision up to 2 places 
+- Characters to be escaped: commas, new line characters, and multi-line characters in all columns 
 
-After all four files are uploaded, select **Generate data diagnostic report** to begin creating your report. Generation typically takes no longer than 48 hours, and may be shorter depending on the size of your uploads.
+Note that this data is sensitive, and you should take every care to upload it only from a secure network location. Please be aware that we only request partial payment instrument data (BIN and last 4 digits). We do not request highly sensitive data such as full payment instrument number or SSN, so ensure that you *do not* include such data in the uploaded files.
+
+You can preview a sample of your data on the **Ready to upload your file** screen. If significant errors are detected with the file format, refer to this example to correct them before uploading the complete files. When ready, select **Upload**.
+
+After all four files are uploaded, select **Generate data diagnostic report** to begin creating your report. Generation typically takes no longer than 24 hours, but may be shorter depending on the size of your uploads.
 
 ## Data diagnostic report
 
@@ -41,8 +49,8 @@ After the data diagnostic report returns satisfactory results, your **Risk diagn
 The risk diagnostic report enables you to assess your risk from fraudulent activity and evaluate its monetary impact to your business. Based on your data, Dynamics 365 Fraud Protection provides interactive charts about the following:
 
 - **Model performance**: With the Receiver Operating Characteristic curves, see the percentage of rejected transactions with chargebacks vs. the percentage of rejected legitimate transactions. Use the risk score slider to adjust the graphs and see what your detection and false positive rates would be at different thresholds of acceptable risk.
-- **Distribution of transactions by risk score**: See the fraudulent to non-fraudulent ratio of your historical transactions, plotted out by their risk score. Zoom in on selected ranges for details.
-- **Top five risk factors**: View the most common types of fraud occurring in your business. Choose what percent of your riskiest transactions to view.
+- **Distribution of transactions by risk score**: See the reported fraudulent to non-fraudulent ratio of your historical transactions, plotted out by their risk score. Zoom in on selected ranges for details.
+- **Top five risk factors**: View the most common types of fraud occurring in your business. Choose what percentage of your riskiest transactions to view.
 
 ## Review reports 
 Find your completed reports in the navigation at **Data diagnostic report** and **Risk diagnostic report**, or link to them from the dashboard. For a deeper analysis, download the full report as a PDF file.
