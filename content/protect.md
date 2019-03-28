@@ -18,7 +18,7 @@ The Protect experience builds upon the features of Evaluate by embedding Microso
 - [Bootstrap and manage historical data](bootstrap-data.md)
 - [Explore data using APIs](real-time-api.md)
 - [Use the KPI dashboard](kpi-dashboard.md)
-- [Customize rules](lists-model-operating-points.md)
+- [Manage lists and model operating points](lists-model-operating-points.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)
 - [Visually explore your data](graph-explorer.md)
 - [Adopt and integrate device fingerprinting](device-fingerprinting.md)
