@@ -25,4 +25,4 @@ Using Dynamics 365 Fraud Protection’s Evaluate and Protect experiences require
 
 The fraud protection network is owned and controlled exclusively by Microsoft, and is equipped with top-notch security and compliance capabilities. Participation in the fraud protection network does not reveal your data to other merchants or external entities, and no merchant can exploit business intelligence from any other merchant for competitive purchases. Only Dynamics 365 Fraud Protection and device fingerprinting applications that are explicitly devoted to fraud protection have access to the network.
 
-For more information about how your data is protected, see [Data security and compliance](security-compliance.md). 
+For more information about how your data is protected, see [Security, compliance, and data subject requests](security-compliance.md). 
