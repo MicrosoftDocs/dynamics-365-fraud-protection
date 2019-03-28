@@ -26,8 +26,8 @@
   href: transaction-acceptance-booster.md
 - name: Visually explore your data
   href: graph-explorer.md
-- name: Use the KPI dashboard
-  href: kpi-dashboard.md
+- name: Use the scorecard
+  href: scorecard.md
 - name: Adopt and integrate device fingerprinting
   href: device-fingerprinting.md
 - name: Support your customers
