@@ -26,10 +26,12 @@ If more than ten instances of a single node type exist, like multiple purchases,
 
 To pivot your search to a new node, double-click the node. While viewing any node, you can also select **Query** to run a new search against a specific entity or attribute.
 
-Select **Previous query** to step back to your last search. To navigate previous queries with more specificity, use the **Query history** feature. There, you can review a list of your recent queries, their type, and the values you entered. Re-run any search in this list with **Go to query**. 
+Select **Previous query** to step back to your last search. To navigate previous queries with more specificity, use the **Query history** feature. There, you can review a list of the queries you made during this session, their type, and the values you entered. Re-run any search in this list with **Go to query**. 
 
 ## View, sort, and filter attributes 
-In the search results, select any node to see its attributes. Click any column heading for sorting and filtering options. Choose **Default**, **Ascending**, or **Descending** to change the sorting order, or type your desired terms into the **Filter by** field. 
+In the search results, select any node to see its attributes. Select any other node in the **Entity list** to see the attributes of other nodes of the same type. 
+
+While viewing these details, click any column heading for sorting and filtering options. Choose **Default**, **Ascending**, or **Descending** to change the sorting order, or type your desired terms into the **Filter by** field. 
 
 ## Analyze results
 
