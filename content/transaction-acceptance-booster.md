@@ -12,7 +12,7 @@ title: Boost bank acceptance rates
 
 # Boost bank acceptance rates
 
-Dynamics 365 Fraud Protection offers a market differentiating featue, called *transaction acceptance booster*, that enables you to benefit from higher acceptance rates by sharing trust knowledge with banks. Initially, this is achieved using a Program Merchant ID (MID) program. 
+Dynamics 365 Fraud Protection offers a market differentiating feature, called *transaction acceptance booster*, that enables you to benefit from higher acceptance rates by sharing trust knowledge with banks. Initially, this is achieved using a Program Merchant ID (MID) program. 
 
 ## Program MID
 
