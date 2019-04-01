@@ -18,15 +18,11 @@ To configure API access to your Dynamics 365 Fraud Protection endpoint via the A
 
 ## Add app to the Dynamics 365 app role and configure your credentials
 
-To enable your apps to access Dynamics 365 Fraud Protection APIs in your tenant, you must set up service-to-service API access and service-to-service roles.
+To enable your apps to access Dynamics 365 Fraud Protection APIs in your tenant, you must set up service-to-service API access and service-to-service roles. Both the sandbox (test) and production (live) versions are available.
 
-<div class="alert">
-    <p class="alert-title"><span class="docon docon-status-error-outline"></span> Note</p>
-    <p>Sandbox (test) and production (live) versions are available.</p>
-</div>
 
 <ol>
-    <li>
+    <ul>
         To access Dynamics 365 Fraud Protection sandbox APIs, assign the Sandbox Risk_API role to the Azure AD app (you previously created) in the Dynamics 365 Fraud Protection sandbox environment.
         <table>
             <tr>
@@ -40,8 +36,8 @@ To enable your apps to access Dynamics 365 Fraud Protection APIs in your tenant,
                 <td>API access</td>
             </tr>
         </table>
-    </li>
-    <li>
+    </ul>
+    <ul>
         To access Dynamics 365 Fraud Protection production APIs, assign the Risk API role to the Azure AD appl (you previously created) in the Dynamics 365 Fraud Protection production environment.
         <table>
             <tr>
@@ -55,7 +51,7 @@ To enable your apps to access Dynamics 365 Fraud Protection APIs in your tenant,
                 <td>API access</td>
             </tr>
         </table>
-    </li>
+    </ul>
 </ol>
 
 ## Assign Azure AD app access using PowerShell
