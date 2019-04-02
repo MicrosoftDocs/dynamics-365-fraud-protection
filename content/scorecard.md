@@ -6,11 +6,11 @@ ms.date: 04/02/2019
 ms.service:
  - d365-fraud-protection
 ms.topic: conceptual
-title: Use the scorecard
+title: Learn from the scorecard
 ---
 
 
-# Use the scorecard
+# Learn from the scorecard
 
 Use the scorecard reports to review your key metrics and understand the month-by-month performance of your fraud protection. 
 In the Evaluate experience, your scorecard enables you to evaluate the capabilities of Microsoft Dynamics 365 Fraud Protection. In Protect, monitor the real-time performance of Dynamics 365 Fraud Protection as your system of record. To evaluate specific ranges of data in detail, filter and pivot the scorecards on pre-defined attributes, markets, and product categories. This knowledge can be leveraged to make well-informed risk management decisions for your business. 
