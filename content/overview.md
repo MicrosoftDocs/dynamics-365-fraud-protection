@@ -22,9 +22,9 @@ Using Dynamics 365 Fraud Protection, you can help protect your business from fra
 
 - [Artificial intelligence and insights from the fraud protection network](fraud-protection-network.md)
 
-- A [rules engine](rules-list.md) and [virtual fraud analyst](virtual-fraud-analyst.md) 
+- A [rules engine](lists-model-operating-points.md) and [virtual fraud analyst](virtual-fraud-analyst.md) 
 
-- [Graph explorer](graph-explorer.md) and [scorecard](kpi-dashboard.md)
+- [Graph explorer](graph-explorer.md) and [scorecard](scorecard.md)
 
 - [Transaction acceptance booster](transaction-acceptance-booster.md)
 
@@ -41,17 +41,17 @@ These are part of a comprehensive set of features grouped into three user experi
 
 | Capability | Diagnose | Evaluate | Protect |
 |------------|----------|----------|---------|
-| Be secure and compliant, and have full transparency on data handling and privacy. | X | X | X |
-| Understand the conditions of your business. Diagnose and analyze the state of your fraud protection.                                                                     | X        | X        |         |
-| Send transactions through APIs in real time and gain risk insights with inline evaluation, including explanations.                                                     |          | X        | X       |
-| Use the scorecard to understand the performance of Dynamics 365 Fraud Protection. Compare it to your existing fraud solution.                                       |          | X        | X       |
-| Upload your historical data to tune the machine learning model to your business scenarios. Extend and tailor Dynamics 365 Fraud Protection to the needs of your business.  |          | X        | X       |
-| Reap benefits of AI and derive insights from the fraud protection network.                                                                                               |          | X        | X       |
-| Configure model operating points and lists to shape real-time decision making.                                                      |          | X        | X       |
-| Use the virtual fraud analyst to configure optimal risk score thresholds.                                                                                                |          | X        | X       |
-| Use the graph explorer to investigate fraud with linkage analysis.                                                                                                       |          | X        | X       |
-| Use device fingerprinting to help identify devices that engage with your business, while respecting customer privacy.                                                    |          | X        | X       |
-| Use the customer support tool to evaluate and act on customer escalations for risk-related rejections.                                                                   |          | X        | X       |
-| Use the transaction acceptance booster to help improve bank acceptance.                                                                                                |          |          | X       |
-| Make Dynamics 365 Fraud Protection your solution of record.                                                                                                              |          |          | X       |
+| [Be secure and compliant, and have full transparency on data handling and privacy.](security-compliance.md) | X | X | X |
+| [Understand the conditions of your business. Diagnose and analyze the state of your fraud protection.](diagnose-experience.md)                                                                     | X        | X        |         |
+| [Send transactions through APIs in real time and gain risk insights with inline evaluation, including explanations.](real-time-api.md)                                                     |          | X        | X       |
+| [Use the scorecard to understand the performance of Dynamics 365 Fraud Protection. Compare it to your existing fraud solution.](scorecard.md)                                       |          | X        | X       |
+| [Upload your historical data to tune the machine learning model to your business scenarios. Extend and tailor Dynamics 365 Fraud Protection to the needs of your business.](bootstrap-data.md)  |          | X        | X       |
+| [Reap benefits of AI and derive insights from the fraud protection network.](fraud-protection-network.md)                                                                                               |          | X        | X       |
+| [Configure lists and model operating points to shape real-time decision making.](lists-modcel-operating-points.md)                                                      |          | X        | X       |
+| [Use the virtual fraud analyst to configure optimal risk score thresholds.](virtual-fraud-analyst.md)                                                                                                |          | X        | X       |
+| [Use the graph explorer to investigate fraud with linkage analysis.](graph-explorer.md)                                                                                                       |          | X        | X       |
+| [Use device fingerprinting to help identify devices that engage with your business, while respecting customer privacy.](device-fingerprinting.md)                                                    |          | X        | X       |
+| [Use the customer support tool to evaluate and act on customer escalations for risk-related rejections.](risk-suppoort.md)                                                                   |          | X        | X       |
+| [Use the transaction acceptance booster to help improve bank acceptance.](transaction-acceptance-booster.md)                                                                                                |          |          | X       |
+| [Make Dynamics 365 Fraud Protection your solution of record.](protect-experience.md)                                                                                                              |          |          | X       |
 
