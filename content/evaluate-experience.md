@@ -17,7 +17,7 @@ The Evaluate experience enables you to use your real-time transactional traffic 
 - [AI and insights from the fraud protection network](fraud-protection-network.md)
 - [Bootstrap and manage historical data](bootstrap-data.md)
 - [Explore data using APIs](real-time-api.md)
-- [Use the scorecard](scorecard.md)
+- [Learn from the scorecard](scorecard.md)
 - [Manage lists and model operating points](lists-model-operating-points.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)
 - [Visually explore your data](graph-explorer.md)
