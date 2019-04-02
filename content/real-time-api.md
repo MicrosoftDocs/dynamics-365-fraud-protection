@@ -10,22 +10,12 @@ title: Explore data using APIs
 ---
 
 
-# Explore data using APIs
+# Send real-time data using the Dynamics 365 Fraud Protection API
 
-The *Evaluate* experience enables you to use your real-time transactional traffic to compare Dynamics 365 Fraud Protection with your incumbent fraud solution. To ingest your real-time transaction data, Dynamics 365 Fraud Protection provides an event API. For fast ramp-up, we provide sample code that calls the risk event APIs, adds device fingerprinting tags, and enables you to configure decision rules in the rules engine. These rules can consume a risk score evaluated by the risk model in the fraud protection network. With minimal effort, you can implement Dynamics 365 Fraud Protection APIs to ensure your product is properly integrated. 
+The Evaluate experience enables you to use your real-time transaction data to compare Dynamics 365 Fraud Protection with your existing fraud solution. You can send this data to the [Dynamics 365 Fraud  Protection API](https://go.microsoft.com/fwlink/?linkid=2084942). 
 
-Using the following [Dynamics 365 Fraud Protection API sample application](https://aka.ms/FraudProtectionSampleApp) and accompanying documentation, you can inform Dynamics 365 Fraud Protection of events that happen in your system. Ultimately, this knowledge helps you reduce fraud. The sample application also covers other API calls like sending account updates through the API in real time and sending refunds and chargebacks through the API.
+To accelerate the process, we provide sample code that authenticates with and calls the Dynamics 365 Fraud Protection API, adds device fingerprinting data, and shows the intended use and best practices of the API. In addition, you can use the [Dynamics 365 Fraud Protection portal](https://dfp.microsoft.com) to configure decision rules. When you send transaction data, these rules act on risk scores calculated by Dynamics 365 Fraud Protection. Consequently, the rules affect the fraud recommendation returned by the API. With minimal effort, you can implement the API to ensure your product is properly integrated.
 
-The documents are largely based on a sample application developed to demonstrate how you can integrate your system with Dynamics 365 Fraud Protection. In general, the documents link to actual sample application code, where possible; otherwise, code samples exist directly in the documentation.
+## View API sample app
 
-**Track purchases**
-- Make a purchase - Approved purchase flow
-- Make a purchase - Handle Dynamics 365 Fraud Protection purchase response
-- Make a purchase - Rejected purchase flow
-- Make a purchase - Existing user
-- Make a purchase - Guest user
-
-**Refunds and Chargebacks**
-- Record a refund
-- Record a chargeback
-
+Using the [Dynamics 365 Fraud Protection API sample application](https://go.microsoft.com/fwlink/?linkid=2085137) and accompanying developer-oriented documentation, you can see how to inform Dynamics 365 Fraud Protection of events that happen in your system. Ultimately, this knowledge helps you reduce fraud. The sample app also covers other API events like sending customer account updates, refunds, and chargebacks in real time to the API. In general, the sample app documents link to actual sample code, where possible; otherwise, code samples exist directly in the documentation.
