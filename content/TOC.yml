@@ -12,8 +12,6 @@
   href: fraud-protection-network.md
 - name: Data security and compliance
   href: security-compliance.md
-- name: Grant access rights and permissions
-  href: access-permissions.md
 - name: Bootstrap and manage historical data
   href: bootstrap-data.md
 - name: Explore data using APIs

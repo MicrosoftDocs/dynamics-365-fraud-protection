@@ -35,6 +35,12 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "titleSuffix": "Dynamics 365 Fraud Protection",
+      "uhfHeaderId": "MSDocsHeader-Dynamics365",
+      "contributors_to_exclude": [
+        "buck1ey",
+        "bishalgoswami"
+      ],
       "breadcrumb_path": "/dynamics365/fraud-protection/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "None"
