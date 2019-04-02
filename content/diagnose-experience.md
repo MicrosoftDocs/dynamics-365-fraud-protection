@@ -50,7 +50,7 @@ The risk diagnostic report enables you to assess your risk from fraudulent activ
 
 - **Model performance**: With the Receiver Operating Characteristic curves, see the percentage of rejected transactions with chargebacks vs. the percentage of rejected legitimate transactions. Use the risk score slider to adjust the graphs and see what your detection and false positive rates would be at different thresholds of acceptable risk.
 - **Distribution of transactions by risk score**: See the reported fraudulent to non-fraudulent ratio of your historical transactions, plotted out by their risk score. Zoom in on selected ranges for details.
-- **Top five risk factors**: View the most common types of fraud occurring in your business. Choose what percentage of your riskiest transactions to view.
+- **Top 5 risk factors**: View the top risk factors for transactions with the highest risk scores. Use the dropdown to choose what percentage of your transactions to view.
 
 ## Review reports 
 Find your completed reports in the navigation at **Data diagnostic report** and **Risk diagnostic report**, or link to them from the dashboard. For a deeper analysis, download the full report as a PDF file.
