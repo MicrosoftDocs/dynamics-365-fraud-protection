@@ -58,7 +58,7 @@ New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.
 To obtain real-time fraud protection by integrating your transactional sales systems with Dynamics 365 Fraud Protection using an event-based call, follow these instructions.
 
 <ol>
-    <li>Get your ID(s): TenantID, AppID, ClientID, InstanceID?</li>
+    <li>Get your ID(s): TenantID, AppID, Azure AD ClientID, and InstanceID.</li>
     <li>
         To generate an access token, see <a href="https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion">Use client assertion to get access tokens from Azure AD</a>.
         <div class="alert">
@@ -90,7 +90,7 @@ To obtain real-time fraud protection by integrating your transactional sales sys
         </table>
     </li>
     <li>Generate an event-based payload. Populate the event data with the relevant information from your transactional system. All supported events are documented here <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>.</li>
-    <li>Combine the access token + header + payload, and send it to your specific Dynamics 365 Fraud Protection endpoint.</li>
+    <li>Combine the header (that includes the access token) and payload, and send it to your specific Dynamics 365 Fraud Protection endpoint.</li>
     <li>In the Dynamics 365 Fraud Protection Evaluate experience, you can send over transactions and analyze the results from Dynamics 365 Fraud Protection.</li>
     <li>In the Dynamics 365 Fraud Protection Protect experience, you can send over transactions and honor decisions based on your configured rules.</li>
 </ol>
