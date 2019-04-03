@@ -26,8 +26,8 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | OriginalOrderId	      | string    | Original order identifier for payments of recurring billing, like subscription monthly billing.|
 | CustomerLocalDate	    | DateTime  | Purchase creation date per customer local time zone. Format is ISO8601.                        |
 | MerchantLocalDate     |	DateTime  |	Purchase ingestion date per merchant time zone. Format is ISO8601.                             |
-| TotalAmount           |	string	   | Total amount charged to the customer; tax included. Provided by merchant.                      |
-| SalesTax	             | string	   | Sales tax charged for the transaction. Provided by merchant.                                   |
+| TotalAmount           |	double	   | Total amount charged to the customer; tax included. Provided by merchant.                      |
+| SalesTax	             | double	   | Sales tax charged for the transaction. Provided by merchant.                                   |
 | Currency	             | string	   | Currency of the original purchase. 3-character currency code (for example, USD, aligns with OANDA currency code). Provided by merchant. |
 | DeviceContextId	      | string    |	Session ID of the particular event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if session is not available. |
 | IPAddress	            | string    |	Customer's IP address (provided by Microsoft Device Fingerprinting).                           |
@@ -63,7 +63,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | PurchaseId                   | string     | Transaction (or purchase/order) identifier.                                            |
 | MerchantPaymentInstrumentId  | string     | PaymentInstrument Identifier provided by merchant.                                     |
 | Type                         | string     | Type of payment. "CreditCard", "Paypal", "Mobilepayment", "Giftcard"                   |
-| PurchaseAmount               | string     | Total purchase amount using this PI for the transaction.                               |
+| PurchaseAmount               | double     | Total purchase amount using this PI for the transaction.                               |
 | CreationDate                 | DateTime   | First entry date for PI in merchant system.                                            |
 | UpdateDate                   | DateTime   | Latest update date for PI in merchant system.                                          |
 | CardType                     | string     | For CREDITCARD only.                                                                   |
@@ -96,14 +96,14 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
 | PurchaseId     	             | string	    | Transaction (or purchase/order) identifier.                                            |
 | ProductId	                   | string	    | Product identifier.                                                                    |
-| PurchasePrice	               | string	    | Price for line item of purchase.                                                      |
+| PurchasePrice	               | double	    | Price for line item of purchase.                                                      |
 | Margin		                     | string	    | Margin gained by sale of item.                                                        |
-| Quantity		                   | string	    | Number of items purchased.                                                            |
+| Quantity		                   | Int32 	    | Number of items purchased.                                                            |
 | ProductName		                | string	    | Customer-readable product name.                                                       |
 | Category		                   | string	    | Category of product (for example, Apparel, Shoes, Accessories).                       |
 | Market		                     | string     | Market in which product is offered. ISO, 2-character country code (for example, US).   |
 | Sku		                        | string	    | Product SKU.                                                                           |
-| SalesPrice	                  | string	    | Price of item sold (not including tax). Provided by merchant.                          |
+| SalesPrice	                  | double	    | Price of item sold (not including tax). Provided by merchant.                          |
 | COGS		                       | string	    | Cost of Goods Sold – raw material cost of item. Provided by merchant.                 |
 | IsRecurring	                 | bool	      | Indicates whether product is recurring subscription.                                   |
 | IsFree		                     | bool	      | Indicates whether product is offered for free.                                         |
@@ -117,7 +117,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | reason	                      | string	    | Reason provided by bank.                                                               |
 | status	                      | string	    | Status. "INITIATED", "LOST", "WON"                                                     |
 | bankEventTimestamp           | DateTime   | Timestamp from bank.                                                                   |
-| amount	                      | string	    | Chargeback amount.                                                                     |
+| amount	                      | double	    | Chargeback amount.                                                                     |
 | currency: 	                  | string	    | Currency used for chargeback amount.                                                   |
 | userId: 	                    | string	    | Customer identifier.                                                                   |
 | purchaseId: 	                | string	    | Transaction (or purchase/order) identifier.                                            |
@@ -133,7 +133,7 @@ Used in the Evaluate and Protect experiences.
 | reason	                      | string	    | Customer-provided reason.                                                              |
 | status	                      | string	    | Refund status. "INITIATED", "COMPLETED"                                                |
 | bankEventTimestamp           | DateTime   | Timestamp from bank. Format is ISO8601.                                                |
-| amount	                      | string	    | Refund amount.                                                                         |
+| amount	                      | double	    | Refund amount.                                                                         |
 | currency: 	                  | string	    | Currency used for sales price amount.                                                  |
 | userId: 	                    | string	    | Customer identifier.                                                                   |
 | purchaseId: 	                | string	    | Transaction (or purchase/order) identifier.                                            |
@@ -200,50 +200,49 @@ Used in the Evaluate and Protect experiences.
 ### Update address
 | Attribute	                   | Type       | Description                                                                            |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
-| userId                       | string	    |                                                                                        |
-| addresstype                  | string	    |                                                                                        |
-| firstName                    | string	    |                                                                                        |
-| lastName                     | string	    |                                                                                        |
-| phoneNumber                  | string	    |                                                                                        |
-| street1                      | string	    |                                                                                        |
-| street2                      | string	    |                                                                                        |
-| street3                      | string	    |                                                                                        |
-| city                         | string	    |                                                                                        |
-| state                        | string	    |                                                                                        |
-| district                     | string	    |                                                                                        |
-| zipCode                      | string	    |                                                                                        |
-| country                      | string	    |                                                                                        |
+| userId                       | string	    | Customer identifier.                                                                   |
+| addresstype                  | string	    | Address type.  "BILLING", "SHIPPING", "ACCOUNT"                                        |
+| firstName                    | string	    | First name provided with address.                                                      |
+| lastName                     | string	    | Last name provided with address.                                                       |
+| phoneNumber                  | string	    | Phone number provided with address.                                                    |
+| street1                      | string	    | First row provided with address.                                                       |
+| street2                      | string	    | Second row provided with address (may be blank).                                       |
+| street3                      | string	    | Third row provided with address (may be blank).                                        |
+| city                         | string	    | City provided with address.                                                            |
+| state                        | string	    | State/Region provided with address.                                                    |
+| district                     | string	    | District provided with address (may be blank).                                         |
+| zipCode                      | string	    | Zip code provided with address.                                                        |
+| country                      | string	    | ISO country code provided with address. 2 alpha country code, e.g., “US”               |
 
 ### Update payment instrument
 
 | Attribute	                    | Type       | Description                                                                            |
 | ----------------------------- | ---------- | -------------------------------------------------------------------------------------- |
-| userId                        | string	    |                                                                                        |
-| merchantPaymentInstrumentId   | string	    |                                                                                        |
-| PaymentInstrumenttype         | string	    |                                                                                        |
-| PaymentInstrumentcreationDate | DateTime   |                                                                                        |
-| PaymentInstrumentupdateDate   | DateTime   |                                                                                        |
-| state                         | string	    |                                                                                        |
-| cardType                      | string	    |                                                                                        |
-| holderName                    | string	    |                                                                                        |
-| bin                           | string	    |                                                                                        |
-| expirationDate                | string	    |                                                                                        |
-| lastFourDigits                | string	    |                                                                                        |
-| email                         | string	    |                                                                                        |
-| billingAgreementId            | string	    |                                                                                        |
-| payerId                       | string	    |                                                                                        |
-| payerStatus                   | string	    |                                                                                        |
-| addressStatus                 | string	    |                                                                                        |
-| imei                          | string	    |                                                                                        |
-| billingAddress                | string	    |                                                                                        |
-| BillingAddressfirstName       | string	    |                                                                                        |
-| BillingAddresslastName        | string	    |                                                                                        |
-| BillingAddressphoneNumber     | string	    |                                                                                        |
-| street1                       | string	    |                                                                                        |
-| street2                       | string	    |                                                                                        |
-| street3                       | string	    |                                                                                        |
-| city                          | string	    |                                                                                        |
-| state                         | string	    |                                                                                        |
-| district                      | string	    |                                                                                        |
-| zipCode                       | string	    |                                                                                        |
-| country                       | string	    |                                                                                        |
+| userId                        | string	    | Customer identifier.                                                                   |
+| merchantPaymentInstrumentId   | string	    | PaymentInstrument Identifier provided by merchant.                                     |
+| PaymentInstrumenttype         | string	    | Type of payment. "CreditCard", "Paypal", "Mobilepayment", "Giftcard"                   |
+| PaymentInstrumentcreationDate | DateTime   | First entry date for PI in merchant system.                                            |
+| PaymentInstrumentupdateDate   | DateTime   | Latest update date for PI in merchant system.                                          |
+| state                         | string	    | State of the PI. "Active", "Block", "Expire"                                           |
+| cardType                      | string	    | For CREDITCARD only.                                                                   |
+| holderName                    | string	    | Name of the customer of the PI. For CREDITCARD only.                                   |
+| bin                           | string	    | For CREDITCARD only.                                                                   |
+| expirationDate                | string	    | Expiration date for PI in merchant system. For CREDITCARD only.                        |
+| lastFourDigits                | string	    | For CREDITCARD only.                                                                   |
+| email                         | string	    | Email associated with the PI. For PAYPAL only.                                         |
+| billingAgreementId            | string	    | For PAYPAL only.                                                                       |
+| payerId                       | string	    | For PAYPAL only.                                                                       |
+| payerStatus                   | string	    | Indicates whether PayPal has verified the payer. For PAYPAL only.                      |
+| addressStatus                 | string	    | Indicates whether PayPal has verified the payer’s address. For PAYPAL only.            |
+| imei                          | string	    | For MOBILEPAYMENT only.                                                                |
+| BillingAddressfirstName       | string	    | First name provided with address.                                                      |
+| BillingAddresslastName        | string	    | Last name provided with address.                                                       |
+| BillingAddressphoneNumber     | string	    | Phone number provided with address. Country code followed by phone number; with the country code and phone number separated by ‘-’ (for example, for US - +1-1234567890). |
+| street1                       | string	    | First row provided with address (may be blank).                                        |
+| street2                       | string	    | Second row provided with address (may be blank).                                       |
+| street3                       | string	    | Third row provided with address (may be blank).                                        |
+| city                          | string	    | City provided with address.                                                            |
+| state                         | string	    | State/Region provided with address.                                                    |
+| district                      | string	    | District provided with address (may be blank).                                         |
+| zipCode                       | string	    | Zip code provided with address.                                                        |
+| country                       | string	    | ISO country code provided with address. 2 alpha country code, e.g., "US"               |
