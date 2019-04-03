@@ -96,15 +96,15 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
 | PurchaseId     	             | string	    | Transaction (or purchase/order) identifier.                                            |
 | ProductId	                   | string	    | Product identifier.                                                                    |
-| PurchasePrice	               | string	    | 	Price for line item of purchase.                                                      |
-| Margin		                     | string	    | 	Margin gained by sale of item.                                                        |
-| Quantity		                   | string	    | 	Number of items purchased.                                                            |
-| ProductName		                | string	    | 	Customer-readable product name.                                                       |
-| Category		                   | string	    | 	Category of product (for example, Apparel, Shoes, Accessories).                       |
+| PurchasePrice	               | string	    | Price for line item of purchase.                                                      |
+| Margin		                     | string	    | Margin gained by sale of item.                                                        |
+| Quantity		                   | string	    | Number of items purchased.                                                            |
+| ProductName		                | string	    | Customer-readable product name.                                                       |
+| Category		                   | string	    | Category of product (for example, Apparel, Shoes, Accessories).                       |
 | Market		                     | string     | Market in which product is offered. ISO, 2-character country code (for example, US).   |
 | Sku		                        | string	    | Product SKU.                                                                           |
 | SalesPrice	                  | string	    | Price of item sold (not including tax). Provided by merchant.                          |
-| COGS		                       | string	    | 	Cost of Goods Sold – raw material cost of item. Provided by merchant.                 |
+| COGS		                       | string	    | Cost of Goods Sold – raw material cost of item. Provided by merchant.                 |
 | IsRecurring	                 | bool	      | Indicates whether product is recurring subscription.                                   |
 | IsFree		                     | bool	      | Indicates whether product is offered for free.                                         |
 
@@ -129,42 +129,42 @@ Used in the Evaluate and Protect experiences.
 
 | Attribute	                   | Type       | Description                                                                            |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
-| refundId                     | string     |                                                                                        |
-| reason	                      | string	    |                                                                                        |
-| status	                      | string	    |                                                                                        |
-| bankEventTimestamp           | DateTime   |                                                                                        |
-| amount	                      | string	    |                                                                                        |
-| currency: 	                  | string	    |                                                                                        |
-| userId: 	                    | string	    |                                                                                        |
-| purchaseId: 	                | string	    |                                                                                        |
-| merchantLocalDate:           | DateTime   |                                                                                        |
+| refundId                     | string     | Refund identifier.                                                                     |
+| reason	                      | string	    | Customer-provided reason.                                                              |
+| status	                      | string	    | Refund status. "INITIATED", "COMPLETED"                                                |
+| bankEventTimestamp           | DateTime   | Timestamp from bank. Format is ISO8601.                                                |
+| amount	                      | string	    | Refund amount.                                                                         |
+| currency: 	                  | string	    | Currency used for sales price amount.                                                  |
+| userId: 	                    | string	    | Customer identifier.                                                                   |
+| purchaseId: 	                | string	    | Transaction (or purchase/order) identifier.                                            |
+| merchantLocalDate:           | DateTime   | Format is ISO8601.                                                                     |
 
 ## Purchase status
 Used in the Evaluate and Protect experiences.
 
 | Attribute	                   | Type       | Description                                                                            |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
-| purchaseId                   | string     |                                                                                        |
-| statusType                   | string     |                                                                                        |
-| statusDate                   | DateTime   |                                                                                        |
-| reason	                      | string	    |                                                                                        |
-| merchantLocalDate:           | DateTime   |                                                                                        |
+| purchaseId                   | string     | Transaction (or purchase/order) identifier.                                            |
+| statusType                   | string     | Type of status. "APPROVED", "CANCELED", "HELD", "FULFILLED"                            |
+| statusDate                   | DateTime   | DateTime when status was applied. Format is ISO8601.                                   |
+| reason	                      | string	    | Reason for status transition.                                                          |
+| merchantLocalDate:           | DateTime   | Format is ISO8601.                                                                     |
 
 ## Bank events
 Used in the Evaluate and Protect experiences.
 
 | Attribute	                   | Type       | Description                                                                            |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
-| bankEventId                  | string	    |                                                                                        |
-| type                         | string	    |                                                                                        |
-| bankEventTimestamp           | DateTime   |                                                                                        |
-| status                       | string	    |                                                                                        |
-| bankResponseCode             | string	    |                                                                                        |
-| paymentProcessor             | string	    |                                                                                        |
-| mrn                          | string	    |                                                                                        |
-| mid                          | string	    |                                                                                        |
-| purchaseId                   | string	    |                                                                                        |
-| merchantLocalDate            | DateTime   |                                                                                        |
+| bankEventId                  | string	    | Bank event identifier.                                                                 |
+| type                         | string	    | Bank event type. "AUTH", "CHARGE"                                                      |
+| bankEventTimestamp           | DateTime   | Timestamp from bank.                                                                   |
+| status                       | string	    | Status.  "APPROVED", "REJECTED"                                                        |
+| bankResponseCode             | string	    | Bank code on response.                                                                 |
+| paymentProcessor             | string	    | Processor name. "FDC", "PAYPAL", …                                                     |
+| mrn                          | string	    | Merchant Reference Number used to identify the transaction from the merchant side.     |
+| mid                          | string	    | MID used for bank communication.                                                       |
+| purchaseId                   | string	    | Transaction (or purchase/order) identifier.                                            |
+| merchantLocalDate            | DateTime   | Format is ISO8601.                                                                     |
 
 ## Account
 Used in the Evaluate and Protect experiences.
@@ -173,29 +173,29 @@ Used in the Evaluate and Protect experiences.
 
 | Attribute	                   | Type       | Description                                                                            |
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
-| customerLocalDate            | DateTime   |                                                                                        |
-| userId                       | string	    |                                                                                        |
-| usercreationDate             | DateTime   |                                                                                        |
-| userupdateDate               | DateTime   |                                                                                        |
-| firstName                    | string	    |                                                                                        |
-| lastName                     | string	    |                                                                                        |
-| country                      | string	    |                                                                                        |
-| zipCode                      | string	    |                                                                                        |
-| timeZone                     | string	    |                                                                                        |
-| language                     | string	    |                                                                                        |
-| phoneNumber                  | string	    |                                                                                        |
-| email                        | string	    |                                                                                        |
-| isEmailValidated             | bool	      |                                                                                        |
-| emailValidatedDate           | DateTime   |                                                                                        |
-| isPhoneNumberValidated       | bool	      |                                                                                        |
-| phoneNumberValidatedDate     | DateTime   |                                                                                        |
-| deviceContextId              | string	    |                                                                                        |
-| provider                     | string	    |                                                                                        |
-| deviceContextDC              | string	    |                                                                                        |
-| externalDeviceId             | string	    |                                                                                        |
-| externalDeviceType           | string	    |                                                                                        |
-| ipAddress                    | string	    |                                                                                        |
-| merchantLocalDate            | DateTime   |                                                                                        |
+| customerLocalDate            | DateTime   | Format is ISO8601.                                                                     |
+| userId                       | string	    | Customer identifier.                                                                   |
+| usercreationDate             | DateTime   | Format is ISO8601.                                                                     |
+| userupdateDate               | DateTime   | Format is ISO8601.                                                                     |
+| firstName                    | string	    | Customer-provided first name on customer account.                                      |
+| lastName                     | string	    | Customer-provided last name on customer account.                                       |
+| country                      | string	    | Country of customer. 2 alpha country code, e.g., "US"                                  |
+| zipCode                      | string	    | Postal code of customer.                                                               |
+| timeZone                     | string	    | deprecated. Please provide empty string                                                |
+| language                     | string	    | Language of customer. Locale, Language-Territory (for example, EN-US).                 |
+| phoneNumber                  | string	    | Phone number of customer. Country code followed by phone number; with the country code and phone number separated by ‘-’ (for example, for US - +1-1234567890). |
+| email                        | string	    | Email of customer. Case insensitive.                                                   |
+| isEmailValidated             | bool	      | Whether customer-provided email has been verified to be owned by the customer.         |
+| emailValidatedDate           | DateTime   | Date when customer-provided email has been verified to be owned by the customer. Format is ISO8601.    |
+| isPhoneNumberValidated       | bool	      | Whether customer-provided phone number has been verified to be owned by the customer.  |
+| phoneNumberValidatedDate     | DateTime   | Date when customer-provided phone number date has been verified to be owned by the customer. Format is ISO8601.  |
+| deviceContextId              | string	    | Session ID of the particular event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if session is not available.  |
+| provider                     | string	    | Indicates whether "deviceContextId" is from "DFP Fingerprinting" or "Merchant"         |
+| deviceContextDC              | string	    | Microsoft Device Fingerprinting Datacenter for the customer’s session ID.              |
+| externalDeviceId             | string	    | Customer’s device ID (provided and mastered by merchant).                              |
+| externalDeviceType           | string	    | Device Type, identified by Merchant, e.g., "PC", "Mobile Device", etc.                 |
+| ipAddress                    | string	    | Customer’s IP address (provided by Microsoft Device Fingerprinting).                   |
+| merchantLocalDate            | DateTime   | Format is ISO8601.                                                                     |
 
 ### Update address
 | Attribute	                   | Type       | Description                                                                            |
