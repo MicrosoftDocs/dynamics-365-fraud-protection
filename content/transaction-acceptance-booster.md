@@ -16,7 +16,7 @@ Dynamics 365 Fraud Protection offers a market differentiating feature, called *t
 
 ## Program MID
 
-Program MID is a lightweight methodology for passing a transaction-based trust signal to the issuer. To fully benefit from the program and measure the gains, we require two new MIDs in addition to your existing MID. You will work with your payment processor to create these two new MIDs, and email them to the Dynamics 365 Fraud Protection team using the dfpissuersupport@microsoft.com alias. Microsoft representatives will work with participating banks to enroll these new MIDs into Dynamics 365 Fraud Protection. Because MID creation and communication with banks requires time and is not dependent on real-time risk evaluation, we advise that you start the process with your payment processor at least four weeks before using Dynamics 365 Fraud Protection for decisioning. 
+Program MID is a lightweight methodology for passing a transaction-based trust signal to the issuer. To fully benefit from the program and measure the gains, we require two new MIDs in addition to your existing MID. You will work with your payment processor to create these two new MIDs, and email them to the Dynamics 365 Fraud Protection team at dfpissuersupport@microsoft.com. Microsoft representatives will work with participating banks and issuers to enroll these new MIDs into the transaction booster acceptance program. Because MID creation and communication with banks requires time and is not dependent on real-time risk evaluation, we advise that you start the process with your payment processor at least four weeks before using Dynamics 365 Fraud Protection for decisioning. 
 
 When you are ready for live production using the Protect experience and the transaction acceptance booster, you must pass a flag to send the Protect assessment type in your Purchase API call. Do not send the Evaluate assessment type. To determine the appropriate flag, the attribute name in the Purchase API is identified as AssessmentType with either value:
 
@@ -25,7 +25,7 @@ When you are ready for live production using the Protect experience and the tran
 
 Only the purchase event is an assessment API, whereas all the other event APIs are not.
 
-In the response payload, you will receive a flag indicating which MID will be used in the call to your bank. The flag will contain one of three values:
+In the response payload, you will receive a flag indicating which MID is to be used in the call to your bank. The flag will contain one of three values:
 
 - Standard: Currently existing.
 - Program: Used for high-confidence transactions expected to return a higher acceptance yield.
