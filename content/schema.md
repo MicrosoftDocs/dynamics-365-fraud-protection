@@ -11,7 +11,9 @@ title: Schemas
 
 
 # Schemas
-The following document outlines the required schemas for data that will be manually uploaded into Dynamics 365 Fraud Protection.
+The following document outlines the required schemas for historical data that will be bulk uploaded into Dynamics 365 Fraud Protection as CSV files. Please see [Data upload](data-upload.md) for guidelines on the upload procedure. For data to be ingested via the API, see [Send real-time data](real-time-api.md).
+
+Note that all DateTime fields are formatted in ISO8601. Example: DateTime.UtcNow.ToString("o"), with a result of "2019-03-14T20:18:11.254Z". 
 
 ## Transactions
 Used in the Diagnose, Evaluate, and Protect experiences.
@@ -23,7 +25,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | PurchaseId            | string    | Transaction (or purchase/order) identifier.                                                    |
 | OriginalOrderId	      | string    | Original order identifier for payments of recurring billing, like subscription monthly billing.|
 | CustomerLocalDate	    | DateTime  | Purchase creation date per customer local time zone. Format is ISO8601.                        |
-| MerchantLocalDate     |	DateTime  |	Purchase ingestion date per merchant time zone. Format is ISO8601. "2019-03-14T20:18:11.254Z"  |
+| MerchantLocalDate     |	DateTime  |	Purchase ingestion date per merchant time zone. Format is ISO8601.                             |
 | TotalAmount           |	string	   | Total amount charged to the customer; tax included. Provided by merchant.                      |
 | SalesTax	             | string	   | Sales tax charged for the transaction. Provided by merchant.                                   |
 | Currency	             | string	   | Currency of the original purchase. 3-character currency code (for example, USD, aligns with OANDA currency code). Provided by merchant. |
@@ -119,7 +121,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | currency: 	                  | string	    | Currency used for chargeback amount.                                                   |
 | userId: 	                    | string	    | Customer identifier.                                                                   |
 | purchaseId: 	                | string	    | Transaction (or purchase/order) identifier.                                            |
-| merchantLocalDate:           | DateTime   | Purchase ingestion date per merchant time zone. Format is ISO8601.  "2019-03-14T20:18:11.254Z" |
+| merchantLocalDate:           | DateTime   | Purchase ingestion date per merchant time zone. Format is ISO8601.                     |
 
 
 ## Refunds
