@@ -18,8 +18,8 @@
   href: security-compliance.md
 - name: Upload and manage historical data
   href: data-upload.md
-- name: Send real-time data using APIs
-  href: real-time-api.md
+- name: Send real-time data using Dynamics 365 Fraud Protection API
+  href: send-real-time-api.md
 - name: Manage lists and model operating points
   href: lists-model-operating-points.md
 - name: Use the virtual fraud analyst
