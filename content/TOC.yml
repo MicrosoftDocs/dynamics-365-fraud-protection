@@ -30,7 +30,7 @@
   href: graph-explorer.md
 - name: Learn from the scorecard
   href: scorecard.md
-- name: Adopt and integrate device fingerprinting
+- name: Implement device fingerprinting
   href: device-fingerprinting.md
 - name: Support your customers
   href: risk-support.md
