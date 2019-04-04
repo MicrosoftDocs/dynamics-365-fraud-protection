@@ -43,7 +43,7 @@ These are part of a comprehensive set of features grouped into three user experi
 |------------|----------|----------|---------|
 | [Be secure and compliant, and have full transparency on data handling and privacy.](security-compliance.md) | X | X | X |
 | [Understand the conditions of your business. Diagnose and analyze the state of your fraud protection.](diagnose-experience.md)                                                                     | X        | X        |         |
-| [Send transactions through APIs in real time and gain risk insights with inline evaluation, including explanations.](real-time-api.md)                                                     |          | X        | X       |
+| [Send transactions through APIs in real time and gain risk insights with inline evaluation, including explanations.](send-real-time-api.md)                                                     |          | X        | X       |
 | [Use the scorecard to understand the performance of Dynamics 365 Fraud Protection. Compare it to your existing fraud solution.](scorecard.md)                                       |          | X        | X       |
 | [Upload your historical data to tune the machine learning model to your business scenarios. Extend and tailor Dynamics 365 Fraud Protection to the needs of your business.](data-upload.md)  |          | X        | X       |
 | [Reap benefits of AI and derive insights from the fraud protection network.](fraud-protection-network.md)                                                                                               |          | X        | X       |
