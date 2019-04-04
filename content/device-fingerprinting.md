@@ -32,8 +32,8 @@ Merchant website: www.contoso.com (this link is not live and meant for illustrat
 
 DNS record: f.contoso.com points to fpt.dfp.microsoft.com
 
-[!NOTE]
-Use the instance identifier (instance_id) provided during Dynamics 365 Fraud Protection setup process. Without this instance_id, you cannot integrate with device fingerprinting.
+> [!Note]
+> Use the instance identifier (instance_id) provided during Dynamics 365 Fraud Protection setup process. Without this instance_id, you cannot integrate with device fingerprinting.
 
 2.	For backend onboarding, provide the SSL certificate for this subdomain to the Dynamics 365 Fraud Protection team.
 
