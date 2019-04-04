@@ -21,8 +21,8 @@ Your Dashboard keeps you up to date on useful information, essential tasks to co
 Along with the first steps outlined on the Dashboard, Dynamics 365 Fraud Protection's Protect experience provides the following features: 
 
 - [AI and insights from the fraud protection network](fraud-protection-network.md)
-- [Bootstrap and manage historical data](bootstrap-data.md)
-- [Explore data using APIs](real-time-api.md)
+- [Upload historical data](data-upload.md)
+- [Send data using Dynamics 365 Fraud Protection API](send-real-time-api.md)
 - [Learn from the scorecard](scorecard.md)
 - [Manage lists and model operating points](lists-model-operating-points.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)
