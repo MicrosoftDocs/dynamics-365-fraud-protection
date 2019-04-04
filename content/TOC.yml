@@ -18,7 +18,7 @@
   href: security-compliance.md
 - name: Upload and manage historical data
   href: data-upload.md
-- name: Explore data using APIs
+- name: Send real-time data using APIs
   href: real-time-api.md
 - name: Manage lists and model operating points
   href: lists-model-operating-points.md
