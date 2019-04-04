@@ -1,12 +1,12 @@
 ---
 author: jackwi111
-description: Explore data using APIs
+description: Send real-time data using the Dynamics 365 Fraud Protection API
 ms.author: v-jowigh
 ms.date: 02/25/2019
 ms.service:
  - d365-fraud-protection
 ms.topic: conceptual
-title: Explore data using APIs
+title: Send real-time data using the Dynamics 365 Fraud Protection API
 ---
 
 
