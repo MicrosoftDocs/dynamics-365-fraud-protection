@@ -8,12 +8,16 @@
   href: evaluate-experience.md
 - name: Protect experience
   href: protect-experience.md
+- name: Configure user access
+  href: configure-user-access.md
+- name: Integrate Dynamics 365 Fraud Protection APIs
+  href: integrate-real-time-api.md 
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Data security and compliance
   href: security-compliance.md
-- name: Bootstrap and manage historical data
-  href: bootstrap-data.md
+- name: Upload and manage historical data
+  href: data-upload.md
 - name: Explore data using APIs
   href: real-time-api.md
 - name: Manage lists and model operating points
