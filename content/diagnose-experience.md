@@ -14,9 +14,13 @@ title: Diagnose experience
 
 Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce you to the product and accelerate your journey into full production. The *Diagnose* experience evaluates your own historical data and generates reports that provide valuable risk insights into existing fraud patterns in your business. These reports can identify opportunities to improve your fraud protection capabilities.
 
+## Dashboard
+
+Your Dashboard keeps you up to date on useful information, essential tasks to complete, and key settings to configure to get the most out of Dynamics 365 Fraud Protection. Critical steps are marked with Completed, In progress, or Not started to indicate your current setup status. 
+
 ## Upload data
 
-After signing in, upload your historical data for analysis. The data should reflect approved transactions that were approved by you (the merchant) and sent to your bank, and should include three months of purchases and chargebacks. Upload data for each of the following entities:  
+To begin, upload your historical data for analysis. The data should reflect approved transactions that were approved by you (the merchant) and sent to your bank, and should include three months of purchases and chargebacks. Upload data for each of the following entities:  
 
 - Purchases 
 - Payment instruments 
