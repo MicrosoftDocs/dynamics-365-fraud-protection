@@ -1,5 +1,5 @@
 ---
-author: jowigh
+author: jackwi111
 description: Integrate Dynamics 365 Fraud Protection real-time APIs
 ms.author: v-jowigh
 ms.date: 03/01/2019
