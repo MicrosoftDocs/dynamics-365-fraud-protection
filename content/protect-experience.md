@@ -27,6 +27,6 @@ Along with the first steps outlined on the Dashboard, Dynamics 365 Fraud Protect
 - [Manage lists and model operating points](lists-model-operating-points.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)
 - [Visually explore your data](graph-explorer.md)
-- [Adopt and integrate device fingerprinting](device-fingerprinting.md)
+- [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
 - [Boost bank acceptance rates](transaction-acceptance-booster.md)
