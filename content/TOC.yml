@@ -18,6 +18,8 @@
   href: device-fingerprinting.md  
 - name: Upload historical data
   href: data-upload.md
+- name: View schemas
+  href: schema.md
 - name: Send real-time data using the Dynamics 365 Fraud Protection API
   href: send-real-time-api.md
 - name: Manage lists and model operating points
