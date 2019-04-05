@@ -49,4 +49,4 @@ Use the **Upload** button to find your local file and submit it. After a success
 
 ## API upload
 
-In Evaluate and Protect, data can also be ingested through the API. Data uploaded in this manner will additionally return a risk score. For a more comprehensive overview, see [Send real-time data using APIs](real-time-api.md). 
+In Evaluate and Protect, data can also be ingested through the API. Data uploaded in this manner will additionally return a risk score. For a more comprehensive overview, see [Send real-time data using APIs](send-real-time-api.md). 
