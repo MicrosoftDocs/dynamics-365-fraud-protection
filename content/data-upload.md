@@ -31,7 +31,8 @@ Historical data about the following entities can be analyzed by Dynamics 365 Fra
     - Update account addresses 
     - Update account payment instruments 
 
-> [!NOTE] Note that this data is sensitive, and you should take every care to upload it only from a secure network location. Please be aware that we only request partial payment instrument data (BIN and last 4 digits). We do not request highly sensitive data such as full payment instrument number or SSN, so ensure that you do not include such data in the uploaded files. For more information on how data is utilized and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md). 
+> [!NOTE] 
+> Note that this data is sensitive, and you should take every care to upload it only from a secure network location. Please be aware that we only request partial payment instrument data (BIN and last 4 digits). We do not request highly sensitive data such as full payment instrument number or SSN, so ensure that you do not include such data in the uploaded files. For more information on how data is utilized and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md). 
 
 ## Website upload
 
