@@ -16,7 +16,7 @@
   href: fraud-protection-network.md
 - name: Security, compliance, and data subject requests
   href: security-compliance.md
-- name: Upload and manage historical data
+- name: Upload historical data
   href: data-upload.md
 - name: Send real-time data using Dynamics 365 Fraud Protection API
   href: send-real-time-api.md
