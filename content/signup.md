@@ -1,7 +1,18 @@
-> [!NOTE]
-> Dynamics 365 Fraud Protection Beta is a free service.
+---
+author: jowigh
+description: Sign up for Dynamics 365 Fraud Protection
+ms.author: v-jowigh
+ms.date: 03/01/2019
+ms.service:
+ - d365-fraud-protection
+ms.topic: conceptual
+title: Sign up for Dynamics 365 Fraud Protection
+---
 
 # Sign up for Dynamics 365 Fraud Protection
+
+> [!NOTE]
+> Dynamics 365 Fraud Protection Public Preview is a free service.
 
 Discover the value of Dynamics 365 Fraud Protection through a free trial describing how our product can improve your bottom line.
 
