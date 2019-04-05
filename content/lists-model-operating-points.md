@@ -14,7 +14,7 @@ title: Manage lists and model operating points
 
 Help manage your risk decisions and tailor the behavior of Microsoft Dynamics 365 Fraud Protection with lists and model operations. 
 
-*Model operating points* shape real-time decision-making by accepting or rejecting transactions based on your chosen conditions and risk score thresholds. The model operating points utilize *lists*, including the safe and block lists and custom lists of data that are relevant to your business. With these, you can help define and screen for risky transaction types, or to enforce various policies such as government-prescribed trade embargos, geofencing, and control of reseller activity. These capabilities are designed to help you manage the trade-offs inherent in preventing fraud while minimizing false positives. 
+*Model operating points* shape real-time decision-making by accepting or rejecting transactions based on your chosen conditions and risk score thresholds. The model operating points utilize *lists*, including the safe and block lists and custom lists of data that are relevant to your business. With these, you can help define and screen for risky transaction types, or enforce various policies such as government-prescribed trade embargos, geofencing, and control of reseller activity. These capabilities are designed to help you manage the trade-offs inherent in preventing fraud while minimizing false positives. 
 
 In the Evaluate experience, use lists and model operating points to make decisions on the transaction payload and learn how they can improve your fraud protection strategies. In Protect, apply them to your production environment for real-time results. 
 
