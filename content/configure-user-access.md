@@ -1,5 +1,5 @@
 ---
-author: jowigh
+author: jackwi111
 description: Configure user access to Dynamics 365 Fraud Protection
 ms.author: v-jowigh
 ms.date: 03/01/2019
