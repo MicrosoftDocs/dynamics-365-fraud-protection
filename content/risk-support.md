@@ -26,7 +26,7 @@ The available search methods include:
 
 Searching by a customer's email address or payment instrument may reveal multiple transactions. Select any of them for expanded information in the following areas:
 
-- **Financial snapshot** summarizes the customer's spending, transaction, chargeback, and refund history, if any. This breakdown can indicate activities that fall outside typical patterns, such as a recent spike in spending or an unusual number of transactions or chargebacks. 
+- **Financial snapshot** summarizes the customer's spending, transaction, chargeback, and refund history, if any. This breakdown can highlight activities that fall outside typical patterns, such as a recent spike in spending or an unusual number of transactions or chargebacks. 
 - **Transaction history** identifies individual transactions and highlights their key properties, including the results of risk decisions made in Dynamics 365 Fraud Protection. 
 - **Transaction details** shows specifics about individual transactions, like the payment method, the device used, the originating IP address, and more. **Risk information** provides additional details about the risk decision, including the specific score. 
 - **Line items** itemizes everything purchased during the selected transaction, the price, and applicable taxes and fees. 
@@ -36,7 +36,7 @@ When evaluated by a fraud investigator, these results can provide insights into 
 
 ## Unblock customers
 
-Once a transaction has been reviewed and a course of action has been determined, use **Actions** to resolve the customer's support issue appropriately.
+Once a transaction has been reviewed and a course of action has been determined, use **Actions** to resolve the customer's support issue.
 
 From here, a customer or payment instrument can be placed on the **Safe list** or **Block list**. Choose the appropriate reason for your  choice from the provided dropdown.
 
