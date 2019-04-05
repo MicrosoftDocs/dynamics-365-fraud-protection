@@ -1,16 +1,16 @@
 ---
 author: jegrif
-description: Schemas
+description: View schemas
 ms.author: v-jegrif
 ms.date: 02/25/2019
 ms.service:
  - d365-fraud-protection
 ms.topic: conceptual
-title: Schemas
+title: View schemas
 ---
 
 
-# Schemas
+# View schemas
 The following document outlines the required schemas for historical data that will be bulk uploaded into Dynamics 365 Fraud Protection as CSV files. Please see [Data upload](data-upload.md) for guidelines on the upload procedure. For data to be ingested via the API, see [Send real-time data](real-time-api.md).
 
 Note that all DateTime fields are formatted in ISO8601. Example: DateTime.UtcNow.ToString("o"), with a result of "2019-03-14T20:18:11.254Z". 
@@ -35,8 +35,8 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | UserFirstName         |	string	   | Customer-provided first name on customer account.                                              | 
 | UserLastName         	| string   	| Customer-provided last name on customer account.                                               |
 | UserEmail             |	string	   | Email of customer. Case insensitive.                                                           |
-| UserCreationDate     	| DateTime	 | Customer account creation date.                                                                |  
-| UserUpdateDate       	| DateTime 	| Latest date customer data has changed.                                                         | 
+| UserCreationDate     	| DateTime	 | Customer account creation date. Format is ISO8601.                                             |  
+| UserUpdateDate       	| DateTime 	| Latest date customer data has changed. Format is ISO8601.                                      | 
 | UserZipCode          	| string	   | Postal code of customer.                                                                       | 
 | UserCountry          	| string	   | Country of customer. 2 alpha country code, e.g., "US"                                          | 
 | UserTimeZone         	| string   	| Empty string                                                                                   | 
@@ -64,12 +64,12 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | MerchantPaymentInstrumentId  | string     | PaymentInstrument Identifier provided by merchant.                                     |
 | Type                         | string     | Type of payment. "CreditCard", "Paypal", "Mobilepayment", "Giftcard"                   |
 | PurchaseAmount               | double     | Total purchase amount using this PI for the transaction.                               |
-| CreationDate                 | DateTime   | First entry date for PI in merchant system.                                            |
-| UpdateDate                   | DateTime   | Latest update date for PI in merchant system.                                          |
+| CreationDate                 | DateTime   | First entry date for PI in merchant system. Format is ISO8601.                         |
+| UpdateDate                   | DateTime   | Latest update date for PI in merchant system. Format is ISO8601.                       |
 | CardType                     | string     | For CREDITCARD only.                                                                   |
 | HolderName                   | string     | Name of the customer of the PI. For CREDITCARD only.                                   |
 | BIN                          | string     | For CREDITCARD only.                                                                   |
-| ExpirationDate               | DateTime   | Expiration date for PI in merchant system. For CREDITCARD only.                        |
+| ExpirationDate               | DateTime   | Expiration date for PI in merchant system. For CREDITCARD only. Format is ISO8601.     |
 | LastFourDigits               | string     | For CREDITCARD only.                                                                   |
 | Email                        | string     | Email associated with the PI. For PAYPAL only.                                         |
 | BillingAgreementId           | string     | For PAYPAL only.                                                                       |
@@ -116,12 +116,12 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | chargebackId                 | string	    | Chargeback identifier.                                                                 |
 | reason	                      | string	    | Reason provided by bank.                                                               |
 | status	                      | string	    | Status. "INITIATED", "LOST", "WON"                                                     |
-| bankEventTimestamp           | DateTime   | Timestamp from bank.                                                                   |
+| bankEventTimestamp           | DateTime   | Timestamp from bank. Format is ISO8601.                                                |
 | amount	                      | double	    | Chargeback amount.                                                                     |
-| currency: 	                  | string	    | Currency used for chargeback amount.                                                   |
-| userId: 	                    | string	    | Customer identifier.                                                                   |
-| purchaseId: 	                | string	    | Transaction (or purchase/order) identifier.                                            |
-| merchantLocalDate:           | DateTime   | Purchase ingestion date per merchant time zone. Format is ISO8601.                     |
+| currency                     | string	    | Currency used for chargeback amount.                                                   |
+| userId  	                    | string	    | Customer identifier.                                                                   |
+| purchaseId  	                | string	    | Transaction (or purchase/order) identifier.                                            |
+| merchantLocalDate            | DateTime   | Purchase ingestion date per merchant time zone. Format is ISO8601.                     |
 
 
 ## Refunds
@@ -137,7 +137,7 @@ Used in the Evaluate and Protect experiences.
 | currency: 	                  | string	    | Currency used for sales price amount.                                                  |
 | userId: 	                    | string	    | Customer identifier.                                                                   |
 | purchaseId: 	                | string	    | Transaction (or purchase/order) identifier.                                            |
-| merchantLocalDate:           | DateTime   | Format is ISO8601.                                                                     |
+| merchantLocalDate            | DateTime   | Format is ISO8601.                                                                     |
 
 ## Purchase status
 Used in the Evaluate and Protect experiences.
@@ -148,7 +148,7 @@ Used in the Evaluate and Protect experiences.
 | statusType                   | string     | Type of status. "APPROVED", "CANCELED", "HELD", "FULFILLED"                            |
 | statusDate                   | DateTime   | DateTime when status was applied. Format is ISO8601.                                   |
 | reason	                      | string	    | Reason for status transition.                                                          |
-| merchantLocalDate:           | DateTime   | Format is ISO8601.                                                                     |
+| merchantLocalDate            | DateTime   | Format is ISO8601.                                                                     |
 
 ## Bank events
 Used in the Evaluate and Protect experiences.
@@ -157,7 +157,7 @@ Used in the Evaluate and Protect experiences.
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
 | bankEventId                  | string	    | Bank event identifier.                                                                 |
 | type                         | string	    | Bank event type. "AUTH", "CHARGE"                                                      |
-| bankEventTimestamp           | DateTime   | Timestamp from bank.                                                                   |
+| bankEventTimestamp           | DateTime   | Timestamp from bank. Format is ISO8601.                                                |
 | status                       | string	    | Status.  "APPROVED", "REJECTED"                                                        |
 | bankResponseCode             | string	    | Bank code on response.                                                                 |
 | paymentProcessor             | string	    | Processor name. "FDC", "PAYPAL", …                                                     |
@@ -221,8 +221,8 @@ Used in the Evaluate and Protect experiences.
 | userId                        | string	    | Customer identifier.                                                                   |
 | merchantPaymentInstrumentId   | string	    | PaymentInstrument Identifier provided by merchant.                                     |
 | PaymentInstrumenttype         | string	    | Type of payment. "CreditCard", "Paypal", "Mobilepayment", "Giftcard"                   |
-| PaymentInstrumentcreationDate | DateTime   | First entry date for PI in merchant system.                                            |
-| PaymentInstrumentupdateDate   | DateTime   | Latest update date for PI in merchant system.                                          |
+| PaymentInstrumentcreationDate | DateTime   | First entry date for PI in merchant system. Format is ISO8601.                         |
+| PaymentInstrumentupdateDate   | DateTime   | Latest update date for PI in merchant system. Format is ISO8601.                       |
 | state                         | string	    | State of the PI. "Active", "Block", "Expire"                                           |
 | cardType                      | string	    | For CREDITCARD only.                                                                   |
 | holderName                    | string	    | Name of the customer of the PI. For CREDITCARD only.                                   |
