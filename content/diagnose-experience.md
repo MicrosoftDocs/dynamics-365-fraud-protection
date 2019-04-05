@@ -40,7 +40,7 @@ Each of your files must meet these requirements and should follow the [required 
 
 You can preview a sample of your data on the **Ready to upload your file** screen. If significant errors are detected with the file format, correct them before uploading the complete files. When ready, select **Upload**.
 
-After all four files are uploaded, select **Generate data diagnostic report** to begin creating your report. Generation typically takes no longer than 24 hours, but may be shorter depending on the size of your uploads.
+After all four files are uploaded, select **Generate data diagnostic report** to begin creating your report. Generation typically takes no longer than 24 hours, but may be shorter or longer depending on the size of your uploads.
 
 ## Data diagnostic report
 
