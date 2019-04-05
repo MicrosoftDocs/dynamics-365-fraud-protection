@@ -35,7 +35,8 @@ Each of your files must meet these requirements and should follow the [required 
 - Decimal precision up to 2 places 
 - Characters to be escaped: commas, new line characters, and multi-line characters in all columns 
 
-Note that this data is sensitive, and you should take every care to upload it only from a secure network location. Please be aware that we only request partial payment instrument data (BIN and last 4 digits). We do not request highly sensitive data such as full payment instrument number or SSN, so ensure that you *do not* include such data in the uploaded files.  For more information on how data is utilized and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+> [!NOTE]
+> Note that this data is sensitive, and you should take every care to upload it only from a secure network location. Please be aware that we only request partial payment instrument data (BIN and last 4 digits). We do not request highly sensitive data such as full payment instrument number or SSN, so ensure that you *do not* include such data in the uploaded files.  For more information on how data is utilized and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
 You can preview a sample of your data on the **Ready to upload your file** screen. If significant errors are detected with the file format, refer to this example to correct them before uploading the complete files. When ready, select **Upload**.
 
