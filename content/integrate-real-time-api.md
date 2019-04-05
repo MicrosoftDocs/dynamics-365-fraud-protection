@@ -58,9 +58,9 @@ New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.
 To obtain real-time fraud protection by integrating your transactional sales systems with Dynamics 365 Fraud Protection using an event-based call, follow these instructions.
 
 <ol>
-    <li>Get your ID(s):
-      <ul><li>TenantID (see the following screenshot). The TenantID appears under the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard. It is obtained from the Azure portal and is the GUID for a tenant's domain in Azure.</li>
-            <li>AppID: See previous instructions in this topic.</li>
+    <li>Get your ID):
+      <ul><li>TenantID: Obtain it from the Azure portal. It is the GUID for a tenant's domain in Azure. Appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard. See the following screenshot for location.</li>
+            <li>Sandbox Resource URI or Production Resource URI: First-party app ID that appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.</li>
             <li>Azure AD ClientID: See previous instructions in this topic.</li>
             <li>InstanceID: Your ID for using [device fingerprinting](https://go.microsoft.com/fwlink/?linkid=2085697). This ID identifies the instance of Dynamics 365 Fraud Protection that you will enter data.<br/>
             <img src="media/integrate-apis-images/tenantID.png" alt="integrate TenantID" title="integrate TenantID" />
