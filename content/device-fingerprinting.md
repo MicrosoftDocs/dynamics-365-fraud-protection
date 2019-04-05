@@ -24,7 +24,7 @@ Integrating device fingerprinting for Dynamics 365 Fraud Protection consists of:
 ## Set up DNS
 
 1.	Choose a subdomain under your root domain (for example, f.contoso.com - can be any prefix).
-1. Create a Canonical Name (CNAME) for your subdomain pointing to fpt.dfp.microsoft.com.
+2. Create a Canonical Name (CNAME) for your subdomain pointing to fpt.dfp.microsoft.com.
 
 *Example*
 
@@ -35,7 +35,7 @@ DNS record: f.contoso.com points to fpt.dfp.microsoft.com
 > [!Note]
 > Use the instance identifier (instance_id) provided during Dynamics 365 Fraud Protection setup process. Without this instance_id, you cannot integrate with device fingerprinting.
 
-2.	For backend onboarding, provide the SSL certificate for this subdomain to the Dynamics 365 Fraud Protection team.
+3.	For backend onboarding, provide the SSL certificate for this subdomain to the Dynamics 365 Fraud Protection team.
 
 ## Integrate device fingerprinting with your website
 
@@ -55,7 +55,16 @@ Your web application should serve the device fingerprinting before submitting a 
 
 Sample response for mdt.js
 
-```var a={url:"https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};a.doFpt=function(a){var b=a.createElement("IFRAME");b.id="fpt_frame",b.style.width="1px",b.style.height="1px",b.style.position="absolute",b.style.visibility="hidden",b.style.left="10px",b.style.bottom="0px",b.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;left:-200;border:0px;display:none");var c="https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691";b.setAttribute("src",c),a.body.appendChild(b)};```
+```
+ var a={url:"https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&
+ CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",
+ customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};a.doFpt=function(a)
+ {var b=a.createElement("IFRAME");b.id="fpt_frame",b.style.width="1px",b.style.height="1px",
+ b.style.position="absolute",b.style.visibility="hidden",b.style.left="10px",b.style.bottom="0px",
+ b.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;
+ left:-200;border:0px;display:none");var c="https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-
+ fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691";b.setAttribute("src",c),a.body.appendChild(b)};
+ ```
 
 2. Load device fingerprinting after the page elements are loaded.
 
