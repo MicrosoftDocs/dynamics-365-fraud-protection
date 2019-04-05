@@ -22,7 +22,7 @@ Along with the first steps outlined on the Dashboard, Dynamics 365 Fraud Protect
 
 - [AI and insights from the fraud protection network](fraud-protection-network.md)
 - [Upload historical data](data-upload.md)
-- [Send data using Dynamics 365 Fraud Protection API](send-real-time-api.md)
+- [Send real-time data using Dynamics 365 Fraud Protection API](send-real-time-api.md)
 - [Learn from the scorecard](scorecard.md)
 - [Manage lists and model operating points](lists-model-operating-points.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)
