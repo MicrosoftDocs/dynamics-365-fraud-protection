@@ -58,10 +58,10 @@ New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.
 To obtain real-time fraud protection by integrating your transactional sales systems with Dynamics 365 Fraud Protection using an event-based call, follow these instructions.
 
 <ol>
-    <li>Get your ID):
+    <li>Get your ID:
       <ul><li>TenantID: Obtain it from the Azure portal. It is the GUID for a tenant's domain in Azure. Appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard. See the following screenshot for location.</li>
             <li>Sandbox Resource URI or Production Resource URI: First-party app ID that appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.</li>
-            <li>Azure AD ClientID: See previous instructions in this topic.</li>
+            <li>Azure AD ClientID: 34sdf123-1fds23-1-34230cfsdf999 (In the Azure portal, known as the Azure AD Application ID. For more information, in this topic, see <i>Create an app in the Azure portal</i>). </li>
             <li>InstanceID: Your ID for using [device fingerprinting](https://go.microsoft.com/fwlink/?linkid=2085697). This ID identifies the instance of Dynamics 365 Fraud Protection that you will enter data.<br/>
             <img src="media/integrate-apis-images/tenantID.png" alt="integrate TenantID" title="integrate TenantID" />
             </li>
@@ -71,7 +71,7 @@ To obtain real-time fraud protection by integrating your transactional sales sys
         To generate an access token, see <a href="https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion">Use client assertion to get access tokens from Azure AD</a>.
         <div class="alert">
             <p class="alert-title"><span class="docon docon-status-error-outline"></span> <b>Note</b></p>
-            <p>You must generate this token and provide it dynamically as it expires every x hours.</p>
+            <p>You must generate this token and provide it dynamically. See <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-configurable-token-lifetimes#configurable-token-lifetime-properties">Configure lifetime tokens</a>.</p>
         </div><br/>
     </li>
     <li>
