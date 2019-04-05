@@ -12,11 +12,11 @@ title: Visually explore your data
 
 # Visually explore your data
 
-The graph explorer in Microsoft Dynamics 365 Fraud Protection enables you to explore your data and navigate to the information you need. Understand the connections between data, search for specific data points, and view their specific attributes. 
+The graph explorer in Microsoft Dynamics 365 Fraud Protection enables you to explore your data and navigate to the information you need. Use it to understand the connections between data, search for specific data points, and view their specific attributes. 
 
 ## Visualize your ontology
 
-Selecting **Graph explorer** shows you the search and filtering options. When first opened, the graph explorer also shows the ontology to illustrate its structure. Each *node* shown represents an essential category of data. Select any node to see its attributes, which describe the node's specific properties. Related nodes are connected by *edges*, which may have their own properties depending on the nature of the data. For example, the Purchase node includes attributes like PurchaseId, TotalAmount, and Currency. It is connected to other nodes, like the Product being purchased, the User who bought it, and the Payment Instrument they used.
+Selecting **Graph explorer** displays the search and filtering options. When first opened, the graph explorer also shows the ontology to illustrate its structure. Each *node* shown represents an essential category of data. Select any node to see its attributes, which describe the node's specific properties. Related nodes are connected by *edges*, which may have their own properties depending on the nature of the data. For example, the Purchase node includes attributes like PurchaseId, TotalAmount, and Currency. It is connected to other nodes, like the Product being purchased, the User who bought it, and the Payment Instrument they used.
 
 ## Find data
 
