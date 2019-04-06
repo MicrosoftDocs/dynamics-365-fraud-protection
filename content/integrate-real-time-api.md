@@ -95,7 +95,7 @@ To obtain real-time fraud protection by integrating your transactional sales sys
             <tr>
                 <td>Authorization</td>
                 <td>
-                    To obtain an access token, use the Azure AD App (configured for you when you signed up and registered for Dynamics 365 Fraud Protection).<br /><br />
+                    To obtain an access token, use the Azure AD app. For instructions, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal)<br /><br />
                     <b>Note</b> The access token will have a limited lifespan. We recommend that you cache it and re-use it until it is time to get a new one.<br /><br />
                     Format for this header (replace <i>token</i> with the actual token value):<br />
                     <ul><li> Access <i>token</i></li></ul>
