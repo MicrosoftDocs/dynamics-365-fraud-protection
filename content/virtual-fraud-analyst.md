@@ -28,7 +28,7 @@ The following table defines the node and attribute combinations to build your li
 |Node   |Attribute   |
 |---|---|
 |User   |Country   |
-|Device   |DeviceType, IPCOuntry   |
+|Device   |DeviceType, IPCountry   |
 |Billing   |Country   |
 |PaymentInstrument   |Type   |
 |Product   |Type, Sku, Category, Market   |
