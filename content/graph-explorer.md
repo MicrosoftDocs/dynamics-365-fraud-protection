@@ -37,4 +37,4 @@ While viewing these details, click any column heading for sorting and filtering 
 
 Visualizing data in the graph explorer can help familiarize you with typical data relations. For instance, a single user may have multiple legitimate address nodes, such as a billing address and a shipping address, or more than one payment instrument, like a credit card and an electronic payment account. You can also evaluate these connections for signs of possible fraudulent activity. For example, a stolen payment instrument may have been used to make purchases across several user accounts. Viewing that payment instrument will show all the users connected to it.
 
-For deeper investigative options, see [Support your customers](customer-support.md). 
+For deeper investigative options, see [Support your customers](risk-support.md). 
