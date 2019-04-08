@@ -11,7 +11,7 @@ title: View schemas
 
 
 # View schemas
-The following document outlines the required schemas for historical data that will be bulk uploaded into Dynamics 365 Fraud Protection as CSV files. Please see [Data upload](data-upload.md) for guidelines on the upload procedure. For data to be ingested via the API, see [Send real-time data](real-time-api.md).
+The following document outlines the required schemas for historical data that will be bulk uploaded into Dynamics 365 Fraud Protection as CSV files. Please see [Data upload](data-upload.md) for guidelines on the upload procedure. For data to be ingested via the API, see [Send real-time data](send-real-time-api.md).
 
 Note that all DateTime fields are formatted in ISO8601. Example: DateTime.UtcNow.ToString("o"), with a result of "2019-03-14T20:18:11.254Z". 
 
