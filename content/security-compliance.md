@@ -27,6 +27,8 @@ For additional resources, see the following documents:
 
 - [Data Subject Requests](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr-data-subject-requests)
 
+- [Safeguarding individual privacy rights with the Microsoft Cloud](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr/gdpr-overview)
+
 - [Microsoft Dynamics 365 and GDPR](https://docs.microsoft.com/en-us/dynamics365/get-started/gdpr/index)
 
 - [Microsoft Power BI GDPR Whitepaper](https://powerbi.microsoft.com/en-us/blog/power-bi-gdpr-whitepaper-is-now-available/)
