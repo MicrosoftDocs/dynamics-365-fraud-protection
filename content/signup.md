@@ -19,4 +19,4 @@ Complete your request form. Upon qualifying for Dynamics 365 Fraud Protection, y
 
 ## Review legal agreements
 
-Microsoft is committed to preserving your business, customer, and data privacy. Before signing up for Dynamics 365 Fraud Protection, we recommend you review the [legal, privacy](https://privacy.microsoft.com/en-us/privacystatement), [subject request](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr/gdpr-overview), and [Terms of Use](https://go.microsoft.com/fwlink/?linkid=2084941). 
+Microsoft is committed to preserving your business, customer, and data privacy. We recommend you review the [Microsoft Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement), [data subject request information](https://www.microsoft.com/trustcenter/privacy/gdpr/gdpr-overview), and [Terms of Use](https://www.microsoft.com/legal/intellectualproperty/copyright/default.aspx). 
