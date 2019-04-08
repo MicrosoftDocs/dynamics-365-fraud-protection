@@ -108,6 +108,9 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | COGS		                       | string	    | Cost of Goods Sold – raw material cost of item. Provided by merchant.                  |
 | IsRecurring	                 | bool	      | Indicates whether product is recurring subscription.                                   |
 | IsFree		                     | bool	      | Indicates whether product is offered for free.                                         |
+| Language                     | string     | Locale , Language-Territory ( for example, EN-US )                                     |
+
+
 
 ## Chargebacks
 Used in the Diagnose, Evaluate, and Protect experiences.
