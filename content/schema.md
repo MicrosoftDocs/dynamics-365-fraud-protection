@@ -96,15 +96,16 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | ---------------------------- | ---------- | -------------------------------------------------------------------------------------- |
 | PurchaseId     	             | string	    | Transaction (or purchase/order) identifier.                                            |
 | ProductId	                   | string	    | Product identifier.                                                                    |
-| PurchasePrice	               | double	    | Price for line item of purchase.                                                      |
-| Margin		                     | string	    | Margin gained by sale of item.                                                        |
-| Quantity		                   | Int32 	    | Number of items purchased.                                                            |
-| ProductName		                | string	    | Customer-readable product name.                                                       |
-| Category		                   | string	    | Category of product (for example, Apparel, Shoes, Accessories).                       |
+| PurchasePrice	               | double	    | Price for line item of purchase.                                                       |
+| Margin		                     | string	    | Margin gained by sale of item.                                                         |
+| Quantity		                   | Int32 	    | Number of items purchased.                                                             |
+| ProductName		                | string	    | Customer-readable product name.                                                        |
+| Type       		                | string	    | Denotes physical or digital goods.                                                     |
+| Category		                   | string	    | Category of product (for example, Apparel, Shoes, Accessories).                        |
 | Market		                     | string     | Market in which product is offered. ISO, 2-character country code (for example, US).   |
 | Sku		                        | string	    | Product SKU.                                                                           |
 | SalesPrice	                  | double	    | Price of item sold (not including tax). Provided by merchant.                          |
-| COGS		                       | string	    | Cost of Goods Sold – raw material cost of item. Provided by merchant.                 |
+| COGS		                       | string	    | Cost of Goods Sold – raw material cost of item. Provided by merchant.                  |
 | IsRecurring	                 | bool	      | Indicates whether product is recurring subscription.                                   |
 | IsFree		                     | bool	      | Indicates whether product is offered for free.                                         |
 
