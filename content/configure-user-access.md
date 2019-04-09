@@ -32,7 +32,7 @@ You must be a tenant admin to administer the Azure Active Directory. If you have
 
 1.	Open the **Azure Active Directory** in the [Microsoft Azure portal](https://portal.azure.com/#home).
 1.	Click **Manage**, then **Enterprise Applications** within the **Azure Active Directory Overview** page.
-1.	Search for the **Dynamics 365 Fraud Protection BETA** enterprise app in your Azure AD by entering the DFP App GUID ‘bf04bdab-e06f-44f3-9821-d3af64fc93a9’.
+1.	Search for the **Dynamics 365 Fraud Protection** enterprise app in your Azure AD by entering the DFP App GUID ‘bf04bdab-e06f-44f3-9821-d3af64fc93a9’.
 1.	Within the Enterprise app, select **Getting Started**, and then select either **Assign a user for testing (required)** or **Deploy single sign-on to users and groups (recommended)**.
 1.	Add any Users or Groups from your Azure AD, and assign them to appropriate Dynamics 365 Fraud Protection BETA roles. For rights associated with these roles, see the following tables.
 
@@ -54,15 +54,15 @@ Use the following role membership to manage user access to the Dynamics 365 Frau
 > [!div class="mx-tableFixed"]
 > |App role   |Description   |Rights   |
 > |---|---|---|
-> |Sandbox_AllAreas_Admin   |Grants access rights to All Areas Viewer and All Areas Edit as well as enabling View, Create, Edit, and Delete access to content and APIs within all areas.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN |
-> |Sandbox_AllAreas_Edit   |View, Create, Edit, and Delete access to all areas.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
-> |Sandbox_AllAreas_Viewer   |View access to all areas.   |VIEW   |
-> |Sandbox_Data_Admin   |Grants access rights to Data Viewer and Data Edit as well as enabling View, Create, Edit, and Delete access to content and APIs within the Data Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN   |
-> |Sandbox_Data_Edit   |Enables View, Create, Edit, and Delete access to content and APIs within the Data Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE  |
-> |Sandbox_Data_Viewer   |Enables View access to the Data Management area and APIs.   |VIEW   |
-> |Sandbox_Risk_Admin   |Grants access rights to Risk Viewer and Risk Edit as well as enabling View, Create, Edit, and Delete access to content and APIs within the <Risk> area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN   |
-> |Sandbox_Risk_Edit   |View, Create, Edit, and Delete access to content and APIs within the Risk Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
-> |Sandbox_Risk_Viewer   |Enables View access to the Risk Management area.   |VIEW   |
+> |Sandbox_AllAreas_Admin   |Within all areas of the Dynamics 365 Fraud Protection portal, grants access rights to All Areas Edit and All Areas Viewer as well as enabling View, Create, Edit, and Delete access to content and APIs within all areas.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN |
+> |Sandbox_AllAreas_Edit   |Within all areas of the Dynamics 365 Fraud Protection portal, grants View, Create, Edit, and Delete access to all areas.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
+> |Sandbox_AllAreas_Viewer   |Within all areas of the Dynamics 365 Fraud Protection portal, grants View access to all areas.   |VIEW   |
+> |Sandbox_Data_Admin   |Within the **Data engineering** area of the Dynamics 365 Fraud Protection portal, grants access rights to Data Edit and Data Viewer as well as enabling View, Create, Edit, and Delete access to content and APIs within the Data Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN   |
+> |Sandbox_Data_Edit   |Within the **Data engineering** area of the Dynamics 365 Fraud Protection portal, grants View, Create, Edit, and Delete access to content and APIs within the Data Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE  |
+> |Sandbox_Data_Viewer   |Within the **Data engineering** area of the Dynamics 365 Fraud Protection portal, grants View access to the Data Management area and APIs.   |VIEW   |
+> |Sandbox_Risk_Admin   |Within the **Risk decisioning** and **Data engineering** (except subject requests) areas of the Dynamics 365 Fraud Protection portal, grants access rights to Risk Edit and Risk Viewer as well as enabling View, Create, Edit, and Delete access to content and APIs within the <Risk> area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN   |
+> |Sandbox_Risk_Edit   |Within the **Risk decisioning** and **Data engineering** (except subject requests) areas of the Dynamics 365 Fraud Protection portal, grants View, Create, Edit, and Delete access to content and APIs within the Risk Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
+> |Sandbox_Risk_Viewer   |Within the **Risk decisioning** and **Data engineering** (except subject requests) areas of the Dynamics 365 Fraud Protection portal, grants View access to the Risk Management area.   |VIEW   |
 
 ## Manage access to production environment through roles
 
@@ -73,12 +73,12 @@ Use the following role membership to manage user access to the Dynamics 365 Frau
 > [!div class="mx-tableFixed"]
 > |App role   |Description   |Rights   |
 > |---|---|---|
-> |AllAreas_Admin   |Grants access rights to All Areas Viewer and All Areas Edit as well as enabling View, Create, Edit, and Delete access to content and APIs within all areas.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN  |
-> |AllAreas_Edit   |View, Create, Edit, and Delete access to all areas.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
-> |AllAreas_Viewer   |View access to all areas.   |VIEW   |
-> | Data_Admin   |Grants access rights to Data Viewer and Data Edit as well as enabling View, Create, Edit, and Delete access to content and APIs within the Data Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN   |
-> | Data_Edit   |Enables View, Create, Edit, and Delete access to content and APIs within the Data Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
-> |Data_Viewer   |Enables View access to the Data Management area and APIs.   |VIEW   |
-> |Risk_Admin   |Grants access rights to Risk Viewer and Risk Edit as well as enabling View, Create, Edit, and Delete access to content and APIs within the <Risk> area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN   |
-> |Risk_Edit   |View, Create, Edit, and Delete access to content and APIs within the Risk Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
-> |Risk_Viewer   |Enables View access to the Risk Management area.   |VIEW   |
+> |AllAreas_Admin   |Within all areas of the Dynamics 365 Fraud Protection portal, grants access rights to All Areas Edit and All Areas Viewer as well as enabling View, Create, Edit, and Delete access to content and APIs within all areas.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN  |
+> |AllAreas_Edit   |Within all areas of the Dynamics 365 Fraud Protection portal, grants View, Create, Edit, and Delete access to all areas.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
+> |AllAreas_Viewer   |Within all areas of the Dynamics 365 Fraud Protection portal, grants View access to all areas.   |VIEW   |
+> | Data_Admin   |Within the **Data engineering** area of the Dynamics 365 Fraud Protection portal, grants access rights to Data Edit and Data Viewer as well as enabling View, Create, Edit, and Delete access to content and APIs within the Data Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN   |
+> | Data_Edit   |Within the **Data engineering** area of the Dynamics 365 Fraud Protection portal, grants View, Create, Edit, and Delete access to content and APIs within the Data Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
+> |Data_Viewer   |Within the **Data engineering** area of the Dynamics 365 Fraud Protection portal, grants View access to the Data Management area and APIs.   |VIEW   |
+> |Risk_Admin   |Within the **Risk decisioning** and **Data engineering** (except subject requests) areas of the Dynamics 365 Fraud Protection portal, grants access rights to Risk Edit and Risk Viewer as well as enabling View, Create, Edit, and Delete access to content and APIs within the <Risk> area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE<br/>- ADMIN   |
+> |Risk_Edit   |Within the **Risk decisioning** and **Data engineering** (except subject requests) areas of the Dynamics 365 Fraud Protection portal, grants View, Create, Edit, and Delete access to content and APIs within the Risk Management area.   |- VIEW<br/>- CREATE<br/>- EDIT<br/>- DELETE   |
+> |Risk_Viewer   |Within the **Risk decisioning** and **Data engineering** (except subject requests) areas of the Dynamics 365 Fraud Protection portal, grants View access to the Risk Management area.   |VIEW   |
