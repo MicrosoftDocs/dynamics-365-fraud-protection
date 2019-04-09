@@ -11,7 +11,7 @@ title: Sign up for Dynamics 365 Fraud Protection
 
 # Sign up for Dynamics 365 Fraud Protection
 
-Discover the value of Dynamics 365 Fraud Protection through a public preview demonstrating how our product can help protect your business and your customers and improve your bottom line.
+Discover the value of Dynamics 365 Fraud Protection through a public preview demonstrating how our product can help protect your business and your customers.
 
 To begin, visit our [Dynamics 365 Fraud Protection preview page](https://go.microsoft.com/fwlink/?linkid=2085136), select **Request Preview**, and complete your request form.
 
