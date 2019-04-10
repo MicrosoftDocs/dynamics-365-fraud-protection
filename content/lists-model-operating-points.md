@@ -4,7 +4,7 @@ description: Manage lists and model operating points
 ms.author: v-jegrif
 ms.date: 03/28/2019
 ms.service:
- - d365-fraud-protection
+- crm-online
 ms.topic: conceptual
 title: Manage lists and model operating points  
 ---

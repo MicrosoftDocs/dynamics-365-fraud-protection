@@ -4,7 +4,7 @@ description: Artificial intelligence and insights from the fraud protection netw
 ms.author: v-jegrif
 ms.date: 03/01/2019
 ms.service:
- - d365-fraud-protection
+- crm-online
 ms.topic: conceptual
 title: Artificial intelligence and insights from the fraud protection network
 ---

@@ -4,7 +4,7 @@ description: Configure user access to Dynamics 365 Fraud Protection
 ms.author: v-jowigh
 ms.date: 03/01/2019
 ms.service:
- - d365-fraud-protection
+- crm-online
 ms.topic: conceptual
 title: Configure user access to Dynamics 365 Fraud Protection
 ---

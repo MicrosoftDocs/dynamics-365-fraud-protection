@@ -4,7 +4,7 @@ description: View schemas
 ms.author: v-jegrif
 ms.date: 02/25/2019
 ms.service:
- - d365-fraud-protection
+- crm-online
 ms.topic: conceptual
 title: View schemas
 ---

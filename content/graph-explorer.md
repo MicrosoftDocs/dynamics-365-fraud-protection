@@ -4,7 +4,7 @@ description: Visually explore your data
 ms.author: v-jegrif
 ms.date: 02/25/2019
 ms.service:
- - d365-fraud-protection
+- crm-online
 ms.topic: conceptual
 title: Visually explore your data
 ---
