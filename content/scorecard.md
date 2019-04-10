@@ -25,10 +25,10 @@ Use the dropdowns and sliders as desired to customize your view of the interacti
 - **Aggregation level**: Show a daily, weekly, or monthly view of your data. 
 - **MID classification**: Show all program merchant IDs (MIDs) and/or standard MIDs. 
 - **Assessment type**: Show the assessments made within the Evaluate or Protect experiences. 
-- **Merchant decision**: Show approval and/or rejection decisions that resulted from the merchant's settings in Dynamics 365 Fraud Protection. 
+- **Merchant decision**: Show approval and/or rejection decisions that resulted from your settings in Dynamics 365 Fraud Protection. 
 - **Current purchase status**: Show the latest status of the purchase. 
 - **User country**: Show one, multiple, or all countries. 
-- **Product category**: Show one, multiple, or all defined product categories. 
+- **Product category**: Show one, multiple, or all product categories. 
 - **Transaction date**: Show transaction data by date. You can select dates from the calendar, enter them manually, or choose ranges with the slider.
 
 To clear previous selections, hover over the category name and select the eraser icon to the right. Note that Aggregation level must have one value selected. 
