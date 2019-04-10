@@ -48,7 +48,7 @@ After all four files are uploaded, select **Generate data diagnostic report** to
 
 The **Data diagnostic report** contains a detailed visual breakdown of your data to provide intelligence on the completeness of its content. Key metrics include the chargeback match rate, which shows purchase and chargeback completion and shows the optimum baseline chargeback basis points for analysis. Additional charts indicate any missing dates, formatting errors, the percentage of unique entities represented, and how many days of data were included in your files.
 
-To generate your risk diagnostic report, these aspects of your data must reach a minimum quality threshold. If the quality is too low to allow an accurate evaluation, you will be prompted to improve the indicated problems and try again.
+To generate your risk diagnostic report, these aspects of your data must reach a minimum quality threshold. If the quality is too low to allow an accurate evaluation, you will be prompted to improve the indicated problems and try again. Return to **Data upload** to submit your updated data.
 
 ### Risk diagnostic report
 After the data diagnostic report returns satisfactory results, your **Risk diagnostic report** will generate. This process should take no longer than 24 hours.
