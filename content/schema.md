@@ -227,7 +227,7 @@ Used in the Evaluate and Protect experiences.
 | PaymentInstrumenttype         | string	    | Type of payment. "CreditCard", "Paypal", "Mobilepayment", "Giftcard"                   |
 | PaymentInstrumentcreationDate | DateTime   | First entry date for PI in merchant system. Format is ISO8601.                         |
 | PaymentInstrumentupdateDate   | DateTime   | Latest update date for PI in merchant system. Format is ISO8601.                       |
-| state                         | string	    | State of the PI. "Active", "Block", "Expire"                                           |
+| PaymentInstrumentState        | string	    | State of the PI. "Active", "Block", "Expire"                                           |
 | cardType                      | string	    | For CREDITCARD only.                                                                   |
 | holderName                    | string	    | Name of the customer of the PI. For CREDITCARD only.                                   |
 | bin                           | string	    | For CREDITCARD only.                                                                   |
