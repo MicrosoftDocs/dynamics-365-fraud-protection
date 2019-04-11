@@ -42,7 +42,7 @@
         "bishalgoswami"
       ],
       "breadcrumb_path": "/dynamics365/fraud-protection/breadcrumb/toc.json",
-      "extendBreadcrumb": false,
+      "extendBreadcrumb": true,
       "feedback_system": "None"
     },
     "fileMetadata": {},
