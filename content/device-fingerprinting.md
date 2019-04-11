@@ -55,7 +55,7 @@ Your web application should serve the device fingerprinting before submitting a 
 
 Sample response for mdt.js
 
-```
+```javascript
  var a={url:"https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&
  CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",
  customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};a.doFpt=function(a)
