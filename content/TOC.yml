@@ -1,5 +1,4 @@
-- name: Fraud Protection
-  href: index.md
+- name: Dynamics 365 Fraud Protection
   expanded: true
   items:
   - name: Overview
