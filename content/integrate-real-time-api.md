@@ -82,7 +82,7 @@ To obtain real-time fraud protection by integrating your transactional sales sys
         To generate an access token, see <a href="https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion">Use client assertion to get access tokens from Azure AD</a>.
         <div class="alert">
             <p class="alert-title"><span class="docon docon-status-error-outline"></span> <b>Note</b></p>
-            <p>You must generate this token and provide it dynamically. See <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-configurable-token-lifetimes#configurable-token-lifetime-properties">Configure lifetime tokens</a>.</p>
+            <p>You must generate this token and provide it dynamically. See <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-configurable-token-lifetimes#configurable-token-lifetime-properties">Configure token lifetimes</a>.</p>
         </div><br/>
     </li>
     <li>
