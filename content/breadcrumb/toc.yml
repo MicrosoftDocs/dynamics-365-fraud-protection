@@ -1,11 +1,7 @@
-- name: Docs
-  href: /
-  homepage: /
+- name: Dynamics 365
+  href: /dynamics365/
+  homepage: /dynamics365/
   items:
-  - name: Dynamics 365
-    href: /dynamics365/
-    homepage: /dynamics365/
-    items:
-    - name: Fraud Protection
-      href: /dynamics365/fraud-protection/
-      homepage: /dynamics365/fraud-protection/
+  - name: Fraud Protection
+    href: /dynamics365/fraud-protection/
+    homepage: /dynamics365/fraud-protection/
