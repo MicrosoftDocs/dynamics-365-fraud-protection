@@ -12,15 +12,7 @@ title: Configure user access to Dynamics 365 Fraud Protection
 
 # Configure user access to Dynamics 365 Fraud Protection
 
-After signing up for Dynamics 365 Fraud Protection, the product’s services are configured within your Azure tenant. When this process completes, you can log in to your tenant with your Azure Active Directory (Azure AD) credentials to access the Dynamics 365 Fraud Protection portal.
-
-The Dynamics 365 Fraud Protection portal provides three experiences:
-
-- [Diagnose](diagnose-experience.md)
-- [Evaluate](evaluate-experience.md)
-- [Protect](protect-experience.md)
-
-Set up your company’s user access to Dynamics 365 Fraud Protection portal, using the following roles and permissions.
+After signing up for Dynamics 365 Fraud Protection, its services are configured within your Azure tenant. When this process completes, you can log in to your tenant with your Azure Active Directory (Azure AD) credentials to access the Dynamics 365 Fraud Protection portal.
 
 ## To configure user access via the Azure portal
 
@@ -28,22 +20,25 @@ You can configure users by assigning them to specific roles provided within Dyna
 
 To grant users access and add user roles to Dynamics 365 Fraud Protection via the Azure portal, see [Assign a user or group to an enterprise app in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/assign-user-or-group-access-portal).
 
+To add or delete users to Azure AD, see [Add or delete users using Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory).
+
 You must be a tenant admin to administer the Azure Active Directory. If you have that role, follow these instructions to configure user access to Dynamics 365 Fraud Protection. If you do not have the required permissions, ask your tenant admin for assistance.
 
-1.	Open the **Azure Active Directory** in the [Microsoft Azure portal](https://portal.azure.com/#home).
-1.	Click **Manage**, then **Enterprise Applications** within the **Azure Active Directory Overview** page.
-1.	Search for the **Dynamics 365 Fraud Protection** enterprise app in your Azure AD by entering the DFP App GUID ‘bf04bdab-e06f-44f3-9821-d3af64fc93a9’.
-1.	Within the Enterprise app, select **Getting Started**, and then select either **Assign a user for testing (required)** or **Deploy single sign-on to users and groups (recommended)**.
-1.	Add any Users or Groups from your Azure AD, and assign them to appropriate Dynamics 365 Fraud Protection BETA roles. For rights associated with these roles, see the following tables.
+1.	From the [Microsoft Azure portal](https://portal.azure.com/#home) in the navigation bar, select **Azure Active Directory**. The **Microsoft – Overview** page appears.
+1.	Under the **Manage** menu, select **Enterprise Applications**.
+1. Select **Application Type**>**Microsoft Applications**>**Apply**. The **Enterprise applications – All applications** page appears.
+1.	To find the **Dynamics 365 Fraud Protection** enterprise app in your Azure AD, in the search bar, enter **Dynamics 365 Fraud Protection**.
+1. Select **Dynamics 356 Fraud Protection** from the results pane. The **Dynamics 365 Fraud Protection – Overview** page appears.
+1.	Select **Getting Started**, and then select either **Assign a user for testing (required)** or **Deploy single sign-on to users and groups (recommended)**.
+1. Add any **Users** from your Azure AD, and assign them to appropriate Dynamics 365 Fraud Protection roles. To add **Users and Groups** from your Azure AD, sign up for [Azure AD Premium]( https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-get-started-premium). For rights associated with these roles, see the following tables.
 
-> [!TIP]
-> To access the Dynamics 365 Fraud Protection portal, add your account to the following:
+To access the Dynamics 365 Fraud Protection portal, add your account to the following:
 
 - [Sandbox portal](https://dfp.microsoft-int.com/)
 - [Production portal](https://dfp.microsoft.com/)
 
 > [!NOTE]
-> The Sandbox portal and roles are associated with your integration (test) environment. The Production portal and roles are associated with your production (live) environment.
+> The Dynamics 365 Fraud Protection sandbox portal and accompnaying roles are associated with your integration (test) environment. The Dynamics 365 production portal and accompanying roles are associated with your production (live) environment.
 
 ## Manage access to sandbox environment through roles
 
