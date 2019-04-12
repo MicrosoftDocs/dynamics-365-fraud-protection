@@ -69,7 +69,7 @@ Used in the Diagnose, Evaluate, and Protect experiences.
 | CardType                     | string     | For CREDITCARD only.                                                                   |
 | HolderName                   | string     | Name of the customer of the PI. For CREDITCARD only.                                   |
 | BIN                          | string     | For CREDITCARD only.                                                                   |
-| ExpirationDate               | DateTime   | Expiration date for PI in merchant system. For CREDITCARD only. Format is ISO8601.     |
+| ExpirationDate               | string   | Expiration date for PI in merchant system. For CREDITCARD only. Format is ISO8601.     |
 | LastFourDigits               | string     | For CREDITCARD only.                                                                   |
 | Email                        | string     | Email associated with the PI. For PAYPAL only.                                         |
 | BillingAgreementId           | string     | For PAYPAL only.                                                                       |
