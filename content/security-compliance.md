@@ -2,8 +2,8 @@
 author: jackwi111
 description: Security, compliance, and data subject requests
 ms.author: v-jowigh
+ms.service: fraud-protection
 ms.date: 02/25/2019
-ms.service:
 - crm-online
 ms.topic: conceptual
 title: Security, compliance, and data subject requests
