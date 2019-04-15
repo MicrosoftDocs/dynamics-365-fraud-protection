@@ -4,7 +4,7 @@ description: Upload historical data
 ms.author: v-jegrif
 ms.service: fraud-protection
 ms.date: 03/01/2019
-- crm-online
+
 ms.topic: conceptual
 title: Upload historical data
 ---

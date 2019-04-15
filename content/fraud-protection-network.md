@@ -4,7 +4,7 @@ description: Artificial intelligence and insights from the fraud protection netw
 ms.author: v-jegrif
 ms.service: fraud-protection
 ms.date: 03/01/2019
-- crm-online
+
 ms.topic: conceptual
 title: Artificial intelligence and insights from the fraud protection network
 ---

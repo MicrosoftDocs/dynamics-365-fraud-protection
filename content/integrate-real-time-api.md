@@ -4,7 +4,7 @@ description: Integrate Dynamics 365 Fraud Protection real-time APIs
 ms.author: v-jowigh
 ms.service: fraud-protection
 ms.date: 03/01/2019
-- crm-online
+
 ms.topic: conceptual
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
 ---

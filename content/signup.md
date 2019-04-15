@@ -4,7 +4,7 @@ description: Sign up for Dynamics 365 Fraud Protection
 ms.author: v-jowigh
 ms.service: fraud-protection
 ms.date: 03/01/2019
-- crm-online
+
 ms.topic: conceptual
 title: Sign up for Dynamics 365 Fraud Protection
 ---
