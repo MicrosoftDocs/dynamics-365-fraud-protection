@@ -26,7 +26,7 @@ During signup for Dynamics 365 Fraud Protection, you can either:
 
 - Use your existing one.
 
-After completing signup, links appear for the Diagnose experience in Dynamics 365 Fraud Protection. Before accessing the Diagnose experience in Dynamics 365 Fraud Protection, you must configure user access to Dynamics 365 Fraud Protection. For instructions, see the sub-topic, ‘To configure user access via the Azure portal’ in [Configure user access](configure-user-acess.md).
+After completing signup, links appear for the Diagnose experience in Dynamics 365 Fraud Protection. Before accessing the Diagnose experience in Dynamics 365 Fraud Protection, you must configure user access to Dynamics 365 Fraud Protection. For instructions, see the sub-topic, ‘To configure user access via the Azure portal’ in [Configure user access](configure-user-access.md).
 
 For more information, see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
