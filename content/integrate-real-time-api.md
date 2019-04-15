@@ -37,7 +37,8 @@ To assign the appropriate Dynamics 365 API role to your Azure AD Application, us
 
 Replace the *italicized* text with your Azure AD app name and the appropriate role name, as noted inline in the following script.
 
-```$c_app_name = "your Azure AD application display name here"
+```console
+$c_app_name = "your Azure AD application display name here"
 
 # Pick a role to assign; use Risk_API for production or Sandbox_Risk_API for sandbox (test) access.
 $c_app_role_name = "API role here"
@@ -63,11 +64,10 @@ To obtain real-time fraud protection by integrating your transactional sales sys
       <ul><li>Directory (tenant) ID: Obtain it from the Azure portal. It is the GUID for a tenant's domain in Azure. It appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard. See the following screenshot for location.</li>
             <img src="media/integrate-apis-images/tenantID.png" alt="integrate TenantID" title="integrate TenantID" />
             <li>Sandbox Resource URI or Production Resource URI: First-party app ID that appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.</li>
-            <ul><li>[Sandbox]: (https://api.dfp.microsoft-int.com)</li>
-                  <li>[Production]: (https://api.dfp.microsoft.com)</li></ul> 
+            <ol><li>[Sandbox]: (https://api.dfp.microsoft-int.com)</li>
+                  <li>[Production]: (https://api.dfp.microsoft.com)</li></ol> 
             <li>Application (client) ID: To create this ID, see <i>Create an app in the Azure portal</i> in this topic. In the Azure portal, this ID is known as the Application (client) ID. To find this Application ID in Azure AD, select <b>App registrations (Preview)</b>.</li>
-            <li>InstanceID: Your ID for using [device fingerprinting](https://go.microsoft.com/fwlink/?linkid=2085697). This ID identifies the instance of Dynamics 365 Fraud Protection that you will enter data. It appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.<br/>
-            
+            <li>InstanceID: Your ID for using [device fingerprinting](https://go.microsoft.com/fwlink/?linkid=2085697). This ID identifies the instance of Dynamics 365 Fraud Protection that you will enter data. It appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.            
             </li>
       </ul>
     </li>
