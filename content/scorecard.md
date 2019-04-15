@@ -2,9 +2,9 @@
 author: jegrif
 description: Use the key performance indicators
 ms.author: v-jegrif
+ms.service: fraud-protection
 ms.date: 04/02/2019
-ms.service:
-- crm-online
+
 ms.topic: conceptual
 title: Learn from the scorecard
 ---

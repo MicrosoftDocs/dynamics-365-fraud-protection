@@ -2,9 +2,9 @@
 author: jegrif
 description: View schemas
 ms.author: v-jegrif
+ms.service: fraud-protection
 ms.date: 02/25/2019
-ms.service:
-- crm-online
+
 ms.topic: conceptual
 title: View schemas
 ---

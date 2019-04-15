@@ -2,9 +2,9 @@
 author: jegrif
 description: Manage lists and model operating points  
 ms.author: v-jegrif
+ms.service: fraud-protection
 ms.date: 03/28/2019
-ms.service:
-- crm-online
+
 ms.topic: conceptual
 title: Manage lists and model operating points  
 ---
