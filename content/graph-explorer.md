@@ -2,7 +2,7 @@
 author: jegrif
 description: Visually explore your data
 ms.author: v-jegrif
-ms.service: fraud-protection
+ms.service: crm-online
 ms.date: 02/25/2019
 
 ms.topic: conceptual

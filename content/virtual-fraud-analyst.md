@@ -2,7 +2,7 @@
 author: jackwi111
 description: Use the virtual fraud analyst
 ms.author: v-jowigh
-ms.service: fraud-protection
+ms.service: crm-online
 ms.date: 02/25/2019
 
 ms.topic: conceptual

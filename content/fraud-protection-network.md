@@ -2,7 +2,7 @@
 author: jegrif
 description: Artificial intelligence and insights from the fraud protection network
 ms.author: v-jegrif
-ms.service: fraud-protection
+ms.service: crm-online
 ms.date: 03/01/2019
 
 ms.topic: conceptual
