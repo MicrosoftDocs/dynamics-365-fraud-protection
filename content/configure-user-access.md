@@ -41,7 +41,7 @@ You must be a tenant admin to administer the Azure Active Directory. If you have
 1. In the **Users** frame, select a member or invite an external user to join, and then select **Select**.
 1. After selecting a member, return to the **Add Assignment** frame, and select **Select Role**. The **Select Role** page appears.
 1. In the **Select Role** frame, select a role, and then select **Select**.
-1. To apply that role to the member you selected, in the **Add Assignment** frame, select **Assign**. In the **Users and groups** page, the user and their assigned role appear. Using these steps, you can continue to add and delete users and their role assignments.
+1. To apply that role to the member you selected, in the **Add Assignment** frame, select **Assign**. In the **Users** page, the user and their assigned role appear. Using these steps, you can continue to add and delete users and their role assignments.
 
 To access the Dynamics 365 Fraud Protection portal, add your account to the following:
 
