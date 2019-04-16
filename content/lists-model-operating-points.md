@@ -24,7 +24,7 @@ Add, remove, or edit large sets of information in your Safe list or Block list w
 
 Begin by searching the contents of your lists to find any existing matches. Choose your search parameters from the **Search lists** dropdown, then paste in the customer or payment instrument information you want to find. Up to 1,000 entries can be entered at a time. Each entry must be on a separate line. 
 
-Any matches appear under **Found on lists**, along with a summary of their key properties and their specific list assignment. Any entry not currently on an existing list appears under **Not found on lists**.  
+Any matches appear under **Found in lists**, along with a summary of their key properties and their specific list assignment. Any entry not currently in an existing list appears under **Not found in lists**.  
 
 To edit entries from either or both sections, select their checkboxes, then choose **Bulk list actions**. This screen enables you to add or remove list assignments, pick expiry dates, state your reason for the change, and add comments. 
 
