@@ -12,7 +12,10 @@ title: Configure user access to Dynamics 365 Fraud Protection
 
 # Configure user access to Dynamics 365 Fraud Protection
 
-After signing up for Dynamics 365 Fraud Protection, its services are configured within your Azure tenant. When this process completes, you can log in to your tenant with your Azure Active Directory (Azure AD) credentials to access the Dynamics 365 Fraud Protection portal.
+After signing up for Dynamics 365 Fraud Protection, its services are configured within your Azure tenant. When this process completes, you can log in to your tenant with your Azure Active Directory (Azure AD) credentials to access Dynamics 365 Fraud Protection.
+
+>[!IMPORTANT]
+>For Dynamics 365 Fraud Protection Public Preview, the product supports comprehensive access rights for all users. Updates to managing users, groups, and role assignments is forthcoming.
 
 ## To configure user access via the Azure portal
 
@@ -24,13 +27,21 @@ To add or delete users to Azure AD, see [Add or delete users using Azure Active 
 
 You must be a tenant admin to administer the Azure Active Directory. If you have that role, follow these instructions to configure user access to Dynamics 365 Fraud Protection. If you do not have the required permissions, ask your tenant admin for assistance.
 
+>[!NOTE]
+>To add Users and Groups from your Azure AD, sign up for [Azure AD Premium edition]( https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-get-started-premium). For rights associated with these roles, see the following tables.
+
 1.	From the [Microsoft Azure portal](https://portal.azure.com/#home) in the navigation bar, select **Azure Active Directory**. The **Microsoft – Overview** page appears.
 1.	Under the **Manage** menu, select **Enterprise Applications**.
 1. Select **Application Type**>**Microsoft Applications**>**Apply**. The **Enterprise applications – All applications** page appears.
 1.	To find the **Dynamics 365 Fraud Protection** enterprise app in your Azure AD, in the search bar, enter **Dynamics 365 Fraud Protection**.
 1. Select **Dynamics 356 Fraud Protection** from the results pane. The **Dynamics 365 Fraud Protection – Overview** page appears.
 1.	Select **Getting Started**, and then select either **Assign a user for testing (required)** or **Deploy single sign-on to users and groups (recommended)**.
-1. Add any **Users** from your Azure AD, and assign them to appropriate Dynamics 365 Fraud Protection roles. To add **Users and Groups** from your Azure AD, sign up for [Azure AD Premium]( https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-get-started-premium). For rights associated with these roles, see the following tables.
+1. To add users, select **Add user**. The **Add Assignment** page appears.
+1. In the **Add Assignment** frame, select **Users**. The **Users** page appears.
+1. In the **Users** frame, select a member or invite an external user to join, and then select **Select**.
+1. After selecting a member, return to the **Add Assignment** frame, and select **Select Role**. The **Select Role** page appears.
+1. In the **Select Role** frame, select a role, and then select **Select**.
+1. To apply that role to the member you selected, in the **Add Assignment** frame, select **Assign**. In the **Users and groups** page, the user and their assigned role appear. Using these steps, you can continue to add and delete users and their role assignments.
 
 To access the Dynamics 365 Fraud Protection portal, add your account to the following:
 
