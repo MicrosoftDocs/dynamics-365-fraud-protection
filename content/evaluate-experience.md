@@ -19,7 +19,7 @@ Your dashboard keeps you up to date about useful information, essential tasks th
 
 ## Features
 
-In addition to the first steps that are outlined on the dashboard, the Evaluate experience in Dynamics 365 Fraud Protection provides features that are described in the following topics:
+In addition to the first steps that are outlined on the dashboard, the Evaluate experience in Dynamics 365 Fraud Protection provides the features that are described in the following topics:
 
 - [Artificial intelligence (AI) and insights from the fraud protection network](fraud-protection-network.md)
 - [Upload historical data](data-upload.md)
