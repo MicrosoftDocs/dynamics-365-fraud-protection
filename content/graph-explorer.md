@@ -15,9 +15,9 @@ The graph explorer in Microsoft Dynamics 365 Fraud Protection enables you to und
 
 ## Visualize your ontology
 
-Select **Graph explorer** to show the search and filtering options. When the graph explorer is first opened, it also shows the ontology so that you can view its structure. Each *node* that is shown represents an essential category of data. Select any node to see its *attributes*. Attributes describe the node's specific properties.
+Select **Graph explorer** to show the search and filtering options. When the graph explorer is first opened, it also shows the ontology so that you can view its structure. Each *node* that is shown represents an essential category of data. Select any node to see its *attributes*. Attributes describe the node's specific properties. Related nodes are connected by *edges*, which may have their own properties depending on the nature of the data.
 
-Related nodes are connected by *edges*. For example, the **Purchase** node has attributes such as **PurchaseId**, **TotalAmount**, and **Currency**. It's connected to other nodes, such as the nodes for the product that was bought, the user who bought it, and the payment instrument that was used to buy it. Depending on the nature of the data, edges might have their own properties.
+For example, the **Purchase** node has attributes such as **PurchaseId**, **TotalAmount**, and **Currency**. It's connected to other nodes, such as the nodes for the product that was bought, the user who bought it, and the payment instrument that was used to buy it.
 
 ## Find data
 
