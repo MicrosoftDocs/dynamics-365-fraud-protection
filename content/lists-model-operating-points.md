@@ -27,7 +27,7 @@ To begin, search the contents of your lists to find any existing matches. Select
 
 Any matches appear in the **Found in lists** section. This shows a summary of the key properties of the entries and the lists that they are assigned to. Any entry that isn't currently assigned to an existing list appears in the **Not found in lists** section.
 
-To edit entries in one or both sections, select their check boxes, then select **Bulk list actions**. This screen lets you add or remove list assignments, select expiry dates, state your reason for the change, and add comments.
+To edit entries in one or both sections, select their check boxes, and then select **Bulk list actions**. This screen lets you add or remove list assignments, select expiry dates, state your reason for the change, and add comments.
 
 ### Create custom lists
 
@@ -43,8 +43,8 @@ After you save your new custom list, it can be viewed and edited under **Custom 
 
 Model operating points can be configured manually or by using the guidance of the virtual fraud analyst. To create a model operating point from scratch, open the **Model operation** page, and select **Create new model operating point**.
 
-Model operating points can be used on all transactions at the same time or just on specific subsets of transactions. For example, a model operating point can be applied only to products that are in a specific price range. To create a filter, select the appropriate node and attribute, then select the list that contains the corresponding dataset. Up to three filters can be applied simultaneously. For example, a model operating point can be set to screen for high-priced products that are being bought only by users in high-risk countries or regions.
+Model operating points can be used on all transactions at the same time or just on specific subsets of transactions. For example, a model operating point can be applied only to products that are in a specific price range. To create a filter, select the appropriate node and attribute, and then select the list that contains the corresponding dataset. Up to three filters can be applied simultaneously. For example, a model operating point can be set to screen for high-priced products that are being bought only by users in high-risk countries or regions.
 
 Continue to the next page to select the desired behavior. For example, you can reject all transactions that meet the conditions that you specify, or you can reject transactions only if they meet the specified conditions and exceed a specific risk score threshold. Name your model operating point, set its state (either active or inactive), and save it.
 
-Any model operating point can be edited after it's created. To inactivate a model operating point, set the option to **Inactive**. To delete a model operating point, select the vertical ellipsis on the right side of the page, then select **Delete**.
+Any model operating point can be edited after it's created. To inactivate a model operating point, set the option to **Inactive**. To delete a model operating point, select the vertical ellipsis on the right side of the page, and then select **Delete**.
