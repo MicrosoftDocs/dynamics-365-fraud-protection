@@ -32,7 +32,7 @@ To help guarantee that Dynamics 365 Fraud Protection can correctly interpret the
 - The maximum file size is 10 gigabytes (GB). 
 - The **DateTime** columns are in ISO 8601 format.
 - The decimal precision is two decimal places.
-- The following character are escaped in all columns: commas, new line characters, and multiline characters.
+- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
 > [!IMPORTANT]
 > This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request highly sensitive data, such as the full payment instrument number or Social Security number (SSN). Therefore, make sure that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
