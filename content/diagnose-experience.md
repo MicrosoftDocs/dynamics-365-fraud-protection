@@ -55,10 +55,10 @@ After the data diagnostic report returns satisfactory results, the *risk diagnos
 
 The risk diagnostic report lets you assess your risk from fraudulent activity and evaluate its monetary impact on your business. Based on your data, Dynamics 365 Fraud Protection provides interactive charts for the following information:
 
-- **Model performance** – The Receiver Operating Characteristic curves let you see the percentage of rejected transactions that have chargebacks versus the percentage of rejected legitimate transactions. By using the risk score slider to adjust the graphs, you can see what your detection and false positive rates would be at different thresholds of acceptable risk.
+- **Model performance** – The **Receiver operating characteristic** curves let you see the percentage of rejected transactions that have chargebacks versus the percentage of rejected legitimate transactions. By using the **risk score** slider to adjust the graphs, you can see what your detection and false positive rates would be at different thresholds of acceptable risk.
 - **Distribution of transactions by risk score** – See the reported ratio of fraudulent to non-fraudulent historical transactions. The transactions are plotted based on their risk score. You can zoom in on selected ranges to see details.
 - **Top 5 risk factors** – See the top risk factors for transactions that have the highest risk scores. Use the drop-down menu to select the percentage of your transactions to view.
 
 ## Review reports
 
-You can find your completed reports at **Data diagnostic report** and **Risk diagnostic report** in the navigation, or you can link to them from the dashboard. For deeper analysis, you can download the full reports as PDF files.
+You can find your completed reports at **Data diagnostic report** and **Risk diagnostic report** in the navigation bar, or you can link to them from the dashboard. For deeper analysis, you can download the full reports as PDF files.
