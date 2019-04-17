@@ -41,7 +41,7 @@ You can preview a sample of your data on the **Ready to upload your file** page.
 
 ## Generate reports
 
-After all four files are uploaded, select **Generate data diagnostic report** to begin to create your report. Report generation typically takes no longer than 24 hours. However, it might take more or less time, depending on the size of your upload files.
+After all four files are uploaded, select **Generate data diagnostic report** to begin to create your report. Report generation typically takes no longer than 24 hours. However, it might take more or less time, depending on the size of your files.
 
 ### Data diagnostic report
 
