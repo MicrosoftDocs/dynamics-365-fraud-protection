@@ -46,7 +46,7 @@ To help guarantee that Dynamics 365 Fraud Protection can correctly interpret the
 - The maximum file size is 10 gigabytes (GB).
 - The **DateTime** columns are in ISO 8601 format.
 - The decimal precision is two decimal places.
-- The following character are escaped in all columns: commas, new line characters, and multiline characters.
+- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
 Use the **Upload** button to find and submit your local files. After a successful upload, select **Process**. For related data types, such as purchase and account data, every file must be uploaded before you process the data.
 
