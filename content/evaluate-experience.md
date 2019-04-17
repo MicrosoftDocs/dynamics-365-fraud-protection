@@ -11,7 +11,7 @@ title: Evaluate experience
 
 # Evaluate experience
 
-Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce you to the product and accelerate your journey to full production. The *Evaluate experience* lets you use your real-time transactional traffic to compare Dynamics 365 Fraud Protection with your existing fraud solution. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation, and you can upload historical and asynchronous data to tune the model to your business scenarios. You can then use Dynamics 365 Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
+Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce you to the product and accelerate your journey toward embedding Dynamics 365 Fraud Protection into your full production environment. The *Evaluate experience* lets you use your real-time transactional traffic to compare Dynamics 365 Fraud Protection with your existing fraud solution. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation, and you can upload historical and asynchronous data to tune the model to your business scenarios. You can then use Dynamics 365 Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
 
 ## Dashboard
 
