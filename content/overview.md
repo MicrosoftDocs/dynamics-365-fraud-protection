@@ -12,41 +12,42 @@ title: Overview
 
 # Overview
 
-Today’s digitally transformed enterprise conducts most of its business online and in real time with little human intervention. This reduces costs and improves the customer experience, but it also exposes the enterprise to serious threats of fraud from sophisticated users who attempt to take advantage of the online channel’s relative anonymity and accessibility. For example, in eCommerce, some transactions are created maliciously via compromised accounts and stolen payment instruments. Other nefarious activities like account takeover, free trial abuse, fake product reviews, warranty fraud, refund fraud, reseller fraud, abuse of program discounts, and many more can be attempted—all of which impact the enterprise’s profitability and reputation. Some types of fraud even have grave consequences to society at large. Examples include laundering money and posting fake news. Because the ROI for online fraud is high, it is likely that most vulnerabilities of an enterprise will be discovered and exploited. Moreover, unlike during the nascent years of the internet, today’s fraudulent transactions can be orchestrated by well-funded and well-equipped rings of professionals. Fraud protection professionals are best equipped to fight this menace.
+Today's digitally transformed enterprise conducts most of its business online and in real time. Little human intervention is involved. Although this approachhelps reduce costs and improve the customer experience, it also exposes the enterprise to serious threats of fraud from sophisticated users who try to take advantage of the online channel's relative anonymity and accessibility. For example, in e-commerce, some transactions are maliciously created via compromised accounts and stolen payment instruments. Other malicious activities that users might try include account takeover, abuse of free trials, fake product reviews, warranty fraud, refund fraud, reseller fraud, abuse of program discounts. All these activities, and others, can affect the enterprise's profitability and reputation.
 
-*Our mission is to help digitally transformed enterprises fight fraud while keeping their doors open for genuine customers and partners.*
+Some types of fraud even have serious consequences for society at large. Examples include money laundering and posting fake news.
 
-Microsoft Dynamics 365 Fraud Protection will initially focus on payment fraud protection and related scenarios in eCommerce. It will help enable an eCommerce merchant to drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience of its customers. Microsoft has many years of experience protecting our own eCommerce businesses from fraud. We have developed a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time. We have core differentiators, such as device fingerprinting, operations research, a fraud protection network, and a trust knowledge exchange with banks.
+Because the return on investment (ROI) for online fraud is high, it's likely that most of an enterprise's vulnerabilities will be discovered and exploited. Additionally, unlike during the early years of the internet, today's fraudulent transactions can be orchestrated by well-funded and well-equipped rings of professionals. Fraud protection professionals are best equipped to fight this threat.
 
-Using Dynamics 365 Fraud Protection, you can help protect your business from fraud using innovative and advanced capabilities, including: 
+*Our mission is to help digitally transformed enterprises fight fraud while they keep their doors open for genuine customers and partners.*
 
-- [Artificial intelligence and insights from the fraud protection network](fraud-protection-network.md)
+At first, Microsoft Dynamics 365 Fraud Protection will focus on payment fraud protection and related scenarios in e-commerce. It will help e-commerce merchants drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience for its customers.
 
-- A [rules engine](lists-model-operating-points.md) and [virtual fraud analyst](virtual-fraud-analyst.md) 
+Microsoft has many years of experience protecting our own e-commerce businesses from fraud. We have developed a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time. We have core differentiators, such as device fingerprinting, operations research, a fraud protection network, and a trust knowledge exchange with banks.
 
-- [Graph explorer](graph-explorer.md) and [scorecard](scorecard.md)
+By using Dynamics 365 Fraud Protection, you can help protect your business from fraud through several innovative and advanced capabilities. Here are some examples: 
 
-- [Transaction acceptance booster](transaction-acceptance-booster.md)
+- [AI and insights from the fraud protection network](fraud-protection-network.md)
+- A [rules engine](lists-model-operating-points.md) and [virtual fraud analyst](virtual-fraud-analyst.md)
+- A [graph explorer](graph-explorer.md) and [scorecard](scorecard.md)
+- A [transaction acceptance booster](transaction-acceptance-booster.md)
 
-These are part of a comprehensive set of features grouped into three user experiences that will accelerate your journey into full production. 
+These capabilities are part of a comprehensive set of features that are grouped into three user experiences that will help accelerate your journey to full production: 
 
-- Gain insights into fraud issues in your environment using the **Diagnose** experience in Dynamics 365 Fraud Protection. 
+- **Diagnose** – Use this experience in Dynamics 365 Fraud Protection to gain insights into fraud issues in your environment.
+- **Evaluate** – Use this guided experience to assess and evaluate the effectiveness of Dynamics 365 Fraud Protection relative to your current fraud protection solution.
+- **Protect** – Use this experience to customize business rules to obtain recommendations for your e-commerce transaction decisions.
 
-- Assess and evaluate the effectiveness of Dynamics 365 Fraud Protection relative to your incumbent fraud protection solution using a guided **Evaluate** experience. 
-
-- Obtain recommendations for your eCommerce transaction decisions by customizing business rules using the **Protect** experience in Dynamics 365 Fraud Protection.
-
-> [!Note]
-> You can enter any of these three experiences at any time. 
+> [!NOTE]
+> You can enter any of the three experiences at any time. 
 
 | Capability | Diagnose | Evaluate | Protect |
 |------------|----------|----------|---------|
-| [Be secure and compliant, and have full transparency on data handling and privacy.](security-compliance.md) | X | X | X |
+| [Be secure and compliant, and have full transparency into data handling and privacy.](security-compliance.md) | X | X | X |
 | [Understand the conditions of your business. Diagnose and analyze the state of your fraud protection.](diagnose-experience.md)                                                                     | X        | X        |         |
-| [Send transactions through APIs in real time and gain risk insights with inline evaluation, including explanations.](send-real-time-api.md)                                                     |          | X        | X       |
-| [Use the scorecard to understand the performance of Dynamics 365 Fraud Protection. Compare it to your existing fraud solution.](scorecard.md)                                       |          | X        | X       |
+| [Send transactions through application programming interfaces (APIs) in real time, and gain risk insights through inline evaluation that includes explanations.](send-real-time-api.md)                                                     |          | X        | X       |
+| [Use the scorecard to understand the performance of Dynamics 365 Fraud Protection. Compare Dynamics 365 Fraud Protection to your existing fraud solution.](scorecard.md)                                       |          | X        | X       |
 | [Upload your historical data to tune the machine learning model to your business scenarios. Extend and tailor Dynamics 365 Fraud Protection to the needs of your business.](data-upload.md)  |          | X        | X       |
-| [Reap benefits of AI and derive insights from the fraud protection network.](fraud-protection-network.md)                                                                                               |          | X        | X       |
+| [Reap the benefits of AI, and derive insights from the fraud protection network.](fraud-protection-network.md)                                                                                               |          | X        | X       |
 | [Configure lists and model operating points to shape real-time decision making.](lists-model-operating-points.md)                                                      |          | X        | X       |
 | [Use the virtual fraud analyst to configure optimal risk score thresholds.](virtual-fraud-analyst.md)                                                                                                |          | X        | X       |
 | [Use the graph explorer to investigate fraud with linkage analysis.](graph-explorer.md)                                                                                                       |          | X        | X       |
@@ -54,4 +55,3 @@ These are part of a comprehensive set of features grouped into three user experi
 | [Use the customer support tool to evaluate and act on customer escalations for risk-related rejections.](risk-support.md)                                                                   |          | X        | X       |
 | [Use the transaction acceptance booster to help improve bank acceptance.](transaction-acceptance-booster.md)                                                                                                |          |          | X       |
 | [Make Dynamics 365 Fraud Protection your solution of record.](protect-experience.md)                                                                                                              |          |          | X       |
-
