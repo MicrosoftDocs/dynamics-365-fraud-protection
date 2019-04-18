@@ -51,7 +51,7 @@ These are part of a comprehensive set of features grouped into three user experi
 | [Use the virtual fraud analyst to configure optimal risk score thresholds.](virtual-fraud-analyst.md)                                                                                                |          | X        | X       |
 | [Use the graph explorer to investigate fraud with linkage analysis.](graph-explorer.md)                                                                                                       |          | X        | X       |
 | [Use device fingerprinting to help identify devices that engage with your business, while respecting customer privacy.](device-fingerprinting.md)                                                    |          | X        | X       |
-| [Use the customer support tool to evaluate and act on customer escalations for risk-related rejections.](risk-support.md)                                                                   |          | X        | X       |
+| [Use the customer (risk) support tool to evaluate and act on customer escalations for risk-related rejections.](risk-support.md)                                                                   |          | X        | X       |
 | [Use the transaction acceptance booster to help improve bank acceptance.](transaction-acceptance-booster.md)                                                                                                |          |          | X       |
 | [Make Dynamics 365 Fraud Protection your solution of record.](protect-experience.md)                                                                                                              |          |          | X       |
 
