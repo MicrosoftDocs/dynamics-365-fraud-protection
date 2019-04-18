@@ -1,40 +1,42 @@
 ---
 author: jegrif
-description: Visually explore your data
+description: This topic explains how you can visually explore your data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
-ms.service: fraud-protection
+ms.service: crm-online
 ms.date: 02/25/2019
 
 ms.topic: conceptual
 title: Visually explore your data
 ---
 
-
 # Visually explore your data
 
-The graph explorer in Microsoft Dynamics 365 Fraud Protection enables you to explore your data and navigate to the information you need. Use it to understand the connections between data, search for specific data points, and view their specific attributes. 
+The graph explorer in Microsoft Dynamics 365 Fraud Protection enables you to understand the connections between data, search for specific data points, and view the attributes of data points.
 
 ## Visualize your ontology
 
-Selecting **Graph explorer** displays the search and filtering options. When first opened, the graph explorer also shows the ontology to illustrate its structure. Each *node* shown represents an essential category of data. Select any node to see its attributes, which describe the node's specific properties. Related nodes are connected by *edges*, which may have their own properties depending on the nature of the data. For example, the Purchase node includes attributes like PurchaseId, TotalAmount, and Currency. It is connected to other nodes, like the Product being purchased, the User who bought it, and the Payment Instrument they used.
+Select **Graph explorer** to show the search and filtering options. When the graph explorer is first opened, it also shows the ontology so that you can view its structure. Each *node* that is shown represents an essential category of data. Select any node to see its *attributes*. Attributes describe the node's specific properties. Related nodes are connected by *edges*, which may have their own properties depending on the nature of the data.
+
+For example, the **Purchase** node has attributes such as **PurchaseId**, **TotalAmount**, and **Currency**. It's connected to other nodes, such as the nodes for the product that was bought, the user who bought it, and the payment instrument that was used to buy it.
 
 ## Find data
 
-To find specific data in the Graph explorer, search using the fields and filters at the top of the screen. For example, searching by User:Email will display users associated with the specified email address and any nodes related to them, like the purchases they made. Choose date ranges if desired to narrow your search.
+To find specific data in the graph explorer, search by using the fields and filters at the top of the page. For example, search by **User:Email** to show users who are associated with the specified email address and any nodes that are related to those users, such as the purchases that they made. You can also select date ranges to narrow your search.
 
-If more than ten instances of a single node type exist, like multiple purchases, these will be clustered together. Double-click to expand this cluster and reveal the individual nodes.
+If more than ten instances of a single node type exist (for example, if there are multiple purchases), the nodes are clustered together. Double-click a cluster to expand it and show the individual nodes.
 
-To pivot your search to a new node, double-click the node. While viewing any node, you can also select **Query** to run a new search against a specific entity or attribute.
+To pivot your search to a new node, double-click the node. While you're viewing any node, you can also select **Query** to run a new search against a specific entity or attribute.
 
-Select **Previous query** to step back to your last search. To navigate previous queries with more specificity, use the **Query history** feature. There, you can review a list of the queries you made during this session, their type, and the values you entered. Re-run any search in this list with **Go to query**. 
+To step back to your last search, select **Previous query**. To navigate your previous queries with more specificity, you can use the **Query history** feature. This feature lets you review a list of the queries that you've run during your current session, the type of each query, and the values that you entered. You can rerun any query in the list by selecting **Go to query**.
 
-## View, sort, and filter attributes 
-In the search results, select any node to see its attributes. Select any other node in the **Entity list** to see the attributes of other nodes of the same type. 
+## View, sort, and filter attributes
 
-While viewing these details, click any column heading for sorting and filtering options. Choose **Default**, **Ascending**, or **Descending** to change the sorting order, or type your desired terms into the **Filter by** field. 
+In the search results, you can select any node to see its attributes. To see the attributes of other nodes of the same type, select a node in the **Entity list**.
+
+While you're viewing these details, you can click any column heading to access the sorting and filtering options. Select **Default**, **Ascending**, or **Descending** to change the sort order, or enter search terms in the **Filter by** field.
 
 ## Analyze results
 
-Visualizing data in the graph explorer can help familiarize you with typical data relations. For instance, a single user may have multiple legitimate address nodes, such as a billing address and a shipping address, or more than one payment instrument, like a credit card and an electronic payment account. You can also evaluate these connections for signs of possible fraudulent activity. For example, a stolen payment instrument may have been used to make purchases across several user accounts. Viewing that payment instrument will show all the users connected to it.
+By visualizing data in the graph explorer, you can become familiar with typical data relations. For example, a single user might have multiple legitimate address nodes, such as a billing address and a shipping address, or multiple payment instruments, such as a credit card and an electronic payment account. You can also evaluate these connections for signs of possible fraudulent activity. For example, a stolen payment instrument might have been used to make purchases across several user accounts. By viewing the payment instrument, you can see all the users who are connected to it.
 
-For deeper investigative options, see [Support your customers](risk-support.md). 
+For information about the options that are available for doing deeper investigations, see [Support your customers](risk-support.md).

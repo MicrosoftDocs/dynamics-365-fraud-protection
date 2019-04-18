@@ -2,7 +2,7 @@
 author: jackwi111
 description: Send real-time data using the Dynamics 365 Fraud Protection API
 ms.author: v-jowigh
-ms.service: fraud-protection
+ms.service: crm-online
 ms.date: 02/25/2019
 
 ms.topic: conceptual

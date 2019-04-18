@@ -2,7 +2,7 @@
 author: jegrif
 description: View schemas
 ms.author: v-jegrif
-ms.service: fraud-protection
+ms.service: crm-online
 ms.date: 02/25/2019
 
 ms.topic: conceptual
@@ -14,10 +14,11 @@ title: View schemas
 The following document outlines the required schemas for historical data that will be bulk uploaded into Dynamics 365 Fraud Protection as CSV files. Please see [Data upload](data-upload.md) for instructions on the upload procedure. For data to be ingested via the API, see [Send real-time data](send-real-time-api.md).
 
 Note these formatting guidelines throughout: 
-- CSV (comma separated) format 
-- DateTime columns in ISO 8601. Example: DateTime.UtcNow.ToString("o"), with a result of "2019-03-14T20:18:11.254Z" 
-- Decimal precision up to 2 places 
-- Characters to be escaped: commas, new line characters, and multi-line characters in all columns 
+- The files are in CSV (comma-separated values) format.
+- The maximum file size is 10 gigabytes (GB).
+- The **DateTime** columns are in ISO 8601 format. Example: DateTime.UtcNow.ToString("o"), with a result of "2019-03-14T20:18:11.254Z" 
+- The decimal precision is two decimal places.
+- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
 ## Transactions
 Used in the Diagnose, Evaluate, and Protect experiences.

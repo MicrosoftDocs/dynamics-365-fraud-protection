@@ -2,7 +2,7 @@
 author: jackwi111
 description: Integrate Dynamics 365 Fraud Protection real-time APIs
 ms.author: v-jowigh
-ms.service: fraud-protection
+ms.service: crm-online
 ms.date: 03/01/2019
 
 ms.topic: conceptual
@@ -63,7 +63,7 @@ To obtain real-time fraud protection by integrating your transactional sales sys
     <li>Get your IDs:
       <ul><li>Directory (tenant) ID: Obtain it from the Azure portal. It is the GUID for a tenant's domain in Azure. It appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard. See the following screenshot for location.</li>
             <img src="media/integrate-apis-images/tenantID.png" alt="integrate TenantID" title="integrate TenantID" />
-            <li>Sandbox Resource URI or Production Resource URI: First-party app ID that appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.<br/>i. [Sandbox]: (https://api.dfp.microsoft-int.com)<br/>ii. [Production]: (https://api.dfp.microsoft.com)</li>
+            <li>Sandbox resource URI or Production resource URI: First-party app ID that appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.<br/>i. [Sandbox]: (https://api.dfp.microsoft-int.com)<br/>ii. [Production]: (https://api.dfp.microsoft.com)</li>
             <li>Application (client) ID: To create this ID, see <i>Create an app in the Azure portal</i> in this topic. In the Azure portal, this ID is known as the Application (client) ID. To find this Application ID in Azure AD, select <b>App registrations (Preview)</b>.</li>
             <li>InstanceID: Your ID for using [device fingerprinting](https://go.microsoft.com/fwlink/?linkid=2085697). This ID identifies the instance of Dynamics 365 Fraud Protection that you will enter data. It appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.            
             </li>
@@ -106,20 +106,19 @@ To obtain real-time fraud protection by integrating your transactional sales sys
 
 For additional information about access tokens, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal).
 
-## Add app to the Dynamics 365 app role and configure your credentials
+## Assign Dynamics 365 access role to your Azure AD App
 
 To enable your apps to access Dynamics 365 Fraud Protection APIs in your tenant, you must set up service-to-service API access and service-to-service roles. Both the sandbox (test) and production (live) versions are available.
 
-To access Dynamics 365 Fraud Protection sandbox APIs, assign the Sandbox Risk_API role to the Azure AD app (you previously created - see Create an app registration in the Azure portal in this topic) in the Dynamics 365 Fraud Protection sandbox environment.
+To access Dynamics 365 Fraud Protection sandbox APIs, assign the Sandbox Risk_API role to the Azure AD app (you previously created - see *Create an Azure AD App registration in the Azure portal* in this topic) in the Dynamics 365 Fraud Protection sandbox environment.
 
 |App role   |Description   |Rights   |
 |---|---|---|
-|Sandbox_Risk_API   |Enables access to the Sandbox Risk APIs.   |API access   |
+|Sandbox_Risk_API   |Grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal, including all APIs that the portal calls.   |API access   |
       
-To access Dynamics 365 Fraud Protection production APIs, assign the Risk API role to the Azure AD app (you previously created - see Create an app registration in the Azure portal in this topic) in the Dynamics 365 Fraud Protection production environment.
+To access Dynamics 365 Fraud Protection production APIs, assign the Risk API role to the Azure AD app (you previously created - see *Create an Azure AD App registration in the Azure portal* in this topic) in the Dynamics 365 Fraud Protection production environment.
         
 |App role   |Description   |Rights   |
 |---|---|---|
-|Risk_API   |Enables access to the Production Risk APIs.   |API access   |
-
+|Risk_API   |Grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal, including all APIs that the portal calls.   |API access   |
 
