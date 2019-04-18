@@ -1,6 +1,6 @@
 ---
 author: jegrif
-description: Upload historical data
+description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
 ms.service: crm-online
 ms.date: 03/01/2019
@@ -9,45 +9,47 @@ ms.topic: conceptual
 title: Upload historical data
 ---
 
-
 # Upload historical data
 
-In the Evaluate and Protect experiences of Dynamics 365 Fraud Protection, upload your historical data into the system to help increase the accuracy of your risk decisions. These uploads include purchase, chargeback, merchant and bank decisions, and account data. Using this historical data accelerates the process of priming our machine learning model and can improve the handling of your future transactions. 
+In the Evaluate and Protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your historical data into the system to help increase the accuracy of your risk decisions. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
 
 ## Data types
 
-Historical data about the following entities can be analyzed by Dynamics 365 Fraud Protection, and can be uploaded either through the website or via API. In Evaluate and Protect, at least six months of data are recommended. Any chargeback data submitted should correspond directly to your uploaded purchase data.
+Dynamics 365 Fraud Protection can analyze historical data about the following entities. This data can be uploaded through either the website or the application programming interface (API). In the Evaluate and Protect experiences, we recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
 
-- Purchase data 
-    - Purchases 
-    - Payment instruments 
-    - Products 
-- Chargebacks 
-- Refunds 
-- Purchase status 
-- Bank events 
-- Account data 
-    - Update accounts 
-    - Update account addresses 
-    - Update account payment instruments 
+- Purchase data
 
-> [!NOTE] 
-> Note that this data is sensitive, and you should take every care to upload it only from a secure network location. Please be aware that we only request partial payment instrument data (BIN and last 4 digits). We do not request highly sensitive data such as full payment instrument number or SSN, so ensure that you do not include such data in the uploaded files. For more information on how data is utilized and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md). 
+    - Purchases
+    - Payment instruments
+    - Products
+
+- Chargebacks
+- Refunds
+- Purchase status
+- Bank events
+- Account data
+
+    - Update accounts
+    - Update account addresses
+    - Update account payment instruments
+
+> [!IMPORTANT]
+> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request highly sensitive data, such as the full payment instrument number or Social Security number (SSN). Therefore, make sure that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
 ## Website upload
 
-Your historical data can be uploaded directly through the **Data upload** page.
+You can upload your historical data from the **Data upload** page.
 
-Each of your files must meet these requirements and should follow the [required schemas](schema.md) to ensure the files can be properly interpreted by Dynamics 365 Fraud Protection. 
+To help guarantee that Dynamics 365 Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](schema.md):
 
-- CSV (comma separated) format 
-- Maximum file size: 10 GB 
-- DateTime columns in ISO 8601 
-- Decimal precision up to 2 places 
-- Characters to be escaped: commas, new line characters, and multi-line characters in all columns
+- The files are in CSV (comma-separated values) format.
+- The maximum file size is 10 gigabytes (GB).
+- The **DateTime** columns are in ISO 8601 format.
+- The decimal precision is two decimal places.
+- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
-Use the **Upload** button to find your local file and submit it. After a successful upload, select **Process**. For related data types, like Purchase and Account, each individual file must be uploaded before processing the data. 
+Use the **Upload** button to find and submit your local files. After a successful upload, select **Process**. For related data types, such as purchase and account data, every file must be uploaded before you process the data.
 
 ## API upload
 
-In Evaluate and Protect, data can also be ingested through the API. Data uploaded in this manner will additionally return a risk score. For a more comprehensive overview, see [Send real-time data using APIs](send-real-time-api.md). 
+In the Evaluate and Protect experiences, data can also be ingested through the API. A risk score will be returned for data that you upload in this way. For a more comprehensive overview, see [Send real-time data using APIs](send-real-time-api.md).

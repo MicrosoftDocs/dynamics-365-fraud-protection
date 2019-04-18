@@ -1,6 +1,6 @@
 ---
 author: jegrif
-description: Evaluate experience
+description: This topic provides information about the Evaluate experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
 ms.service: crm-online
 ms.date: 03/05/2019
@@ -9,18 +9,19 @@ ms.topic: conceptual
 title: Evaluate experience
 ---
 
-
 # Evaluate experience
 
-The Evaluate experience enables you to use your real-time transactional traffic to compare Microsoft Dynamics 365 Fraud Protection with your incumbent fraud solution. Send transactions through real-time APIs to get an inline evaluation and upload historical and asynchronous data to tune the model to your business scenarios. Then utilize Dynamics 365 Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
+Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce you to the product and accelerate your journey toward embedding Dynamics 365 Fraud Protection into your full production environment. The *Evaluate experience* lets you use your real-time transactional traffic to compare Dynamics 365 Fraud Protection with your existing fraud solution. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation, and you can upload historical and asynchronous data to tune the model to your business scenarios. You can then use Dynamics 365 Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
 
-## Dashboard 
-Your dashboard keeps you up to date on useful information, essential tasks to complete, and key settings to configure to get the most out of Dynamics 365 Fraud Protection. Critical steps are marked with Completed, Not started, or the number of items remaining to indicate your current setup status.
+## Dashboard
 
-## Features 
-Along with the first steps outlined on the dashboard, Dynamics 365 Fraud Protection's Evaluate experience provides the following features: 
+Your dashboard keeps you up to date about useful information, essential tasks that you need to complete, and important settings that you should configure to get the most out of Dynamics 365 Fraud Protection. Critical steps are marked to indicate your current setup status. Steps might be marked as **Completed** or **Not started**, or they might show the number of items that still remain.
 
-- [AI and insights from the fraud protection network](fraud-protection-network.md)
+## Features
+
+In addition to the first steps that are outlined on the dashboard, the Evaluate experience in Dynamics 365 Fraud Protection provides the features that are described in the following topics:
+
+- [Artificial intelligence (AI) and insights from the fraud protection network](fraud-protection-network.md)
 - [Upload historical data](data-upload.md)
 - [Send real-time data using the Dynamics 365 Fraud Protection API](send-real-time-api.md)
 - [Learn from the scorecard](scorecard.md)
