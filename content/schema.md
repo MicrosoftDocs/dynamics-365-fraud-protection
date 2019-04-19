@@ -240,8 +240,8 @@ The following schemas are used in the Evaluate and Protect experiences.
 | expirationDate                | string   | The expiration date for the payment instrument in the merchant's system. This attribute is used only for payments of the **CreditCard** type. |
 | lastFourDigits                | string   | This attribute is used only for payments of the **CreditCard** type. |
 | email                         | string   | The email address that is associated with the payment instrument. This attribute is used only for payments of the **Paypal** type. |
-| billingAgreementId            | string   | This attribute is used only for payments of the **PayPal** type. |
-| payerId                       | string   | This attribute is used only for payments of the **PayPal** type. |
+| billingAgreementId            | string   | This attribute is used only for payments of the **Paypal** type. |
+| payerId                       | string   | This attribute is used only for payments of the **Paypal** type. |
 | payerStatus                   | string   | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **Paypal** type. |
 | addressStatus                 | string   | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **Paypal** type. |
 | imei                          | string   | This attribute is used only for payments of the **Mobilepayment** type. |
