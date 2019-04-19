@@ -30,3 +30,8 @@ In addition to the first steps that are outlined on the dashboard, the Evaluate 
 - [Visually explore your data](graph-explorer.md)
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
+
+
+## Switch experiences
+
+To move to the [Diagnose experience](diagnose-experience.md) from Evaluate, select **Switch to Diagnose** at the bottom of the navigation bar. Moving to the [Protect experience](protect-experience.md) from Evaluate or Diagnose is forthcoming.
