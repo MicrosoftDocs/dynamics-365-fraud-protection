@@ -11,7 +11,7 @@ title: Security, compliance, and data subject requests
 
 # Security, compliance, and data subject requests
 
-Microsoft runs on trust. Microsoft Dynamics 365 Fraud Protection is built on the four Microsoft Trusted Cloud foundational principles: security, privacy, compliance, and transparency. Microsoft safeguards your business knowledge as if it were its own.
+Microsoft runs on trust. Microsoft Dynamics 365 Fraud Protection is built on the four foundational principles that Microsoft has defined for a trusted cloud: security, privacy, compliance, and transparency. Microsoft safeguards your business knowledge as if it were its own.
 
 For more information, see the following resources:
 
@@ -29,7 +29,7 @@ For more information, see the following resources:
 - [Microsoft Dynamics 365 and GDPR](https://docs.microsoft.com/dynamics365/get-started/gdpr/index)
 - [Microsoft Power BI GDPR white paper](https://powerbi.microsoft.com/blog/power-bi-gdpr-whitepaper-is-now-available/)
 
-In the Diagnose experience for Dynamics 365 Fraud Protection, you can delete the offline data that you've uploaded into Dynamics 365 Fraud Protection. Under **Upload data**, for **Transactions**, **Payment Instruments**, **Products**, or **Chargebacks**, select the vertical ellipsis, and then select **Delete**. Alternatively, at the top of the page, select **Delete my data**.
+In the Diagnose experience for Dynamics 365 Fraud Protection, you can delete the offline data that you've uploaded into Dynamics 365 Fraud Protection. At the top of the page, select **Delete my data**.
 
 In the Evaluate and Protect experiences, for all entities that contain personal data, you can perform the following tasks:
 
@@ -37,7 +37,7 @@ In the Evaluate and Protect experiences, for all entities that contain personal 
 - Delete entities.
 - Export entities.
 
-## How to use data subject requests
+## Manage data subject requests
 
 On the left navigation bar, under **Data engineering**, select **Subject requests**. The **Search** tab provides the following selections to expedite your search:
 
