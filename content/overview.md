@@ -20,7 +20,7 @@ Because the return on investment (ROI) for online fraud is high, it's likely tha
 
 *Our mission is to help digitally transformed enterprises fight fraud while they keep their doors open for genuine customers and partners.*
 
-At first, Microsoft Dynamics 365 Fraud Protection will focus on payment fraud protection and related scenarios in e-commerce. It will help e-commerce merchants drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience for its customers.
+Microsoft Dynamics 365 Fraud Protection focuses on payment fraud protection and related scenarios in e-commerce. It helps e-commerce merchants drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience for its customers.
 
 Microsoft has many years of experience protecting our own e-commerce businesses from fraud. We have developed a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time. We have core differentiators, such as device fingerprinting, operations research, a fraud protection network, and a trust knowledge exchange with banks.
 
@@ -31,7 +31,7 @@ By using Dynamics 365 Fraud Protection, you can help protect your business from 
 - A [graph explorer](graph-explorer.md) and [scorecard](scorecard.md)
 - A [transaction acceptance booster](transaction-acceptance-booster.md)
 
-These capabilities are part of a comprehensive set of features that are grouped into three user experiences that will help accelerate your journey to full production: 
+These capabilities are part of a comprehensive set of features that are grouped into three user experiences to help accelerate your journey toward a more comprehensive fraud protection environment: 
 
 - **Diagnose** – Use this experience in Dynamics 365 Fraud Protection to gain insights into fraud issues in your environment.
 - **Evaluate** – Use this guided experience to assess and evaluate the effectiveness of Dynamics 365 Fraud Protection relative to your current fraud protection solution.
@@ -50,7 +50,7 @@ These capabilities are part of a comprehensive set of features that are grouped 
 | [Reap the benefits of AI, and derive insights from the fraud protection network.](fraud-protection-network.md)                                                                                               |          | X        | X       |
 | [Configure lists and model operating points to shape real-time decision making.](lists-model-operating-points.md)                                                      |          | X        | X       |
 | [Use the virtual fraud analyst to configure optimal risk score thresholds.](virtual-fraud-analyst.md)                                                                                                |          | X        | X       |
-| [Use the graph explorer to investigate fraud with linkage analysis.](graph-explorer.md)                                                                                                       |          | X        | X       |
+| [Use the graph explorer to investigate fraud and do linkage analysis.](graph-explorer.md)                                                                                                       |          | X        | X       |
 | [Use device fingerprinting to help identify devices that engage with your business, while respecting customer privacy.](device-fingerprinting.md)                                                    |          | X        | X       |
 | [Use the customer support tool to evaluate and act on customer escalations for risk-related rejections.](risk-support.md)                                                                   |          | X        | X       |
 | [Use the transaction acceptance booster to help improve bank acceptance.](transaction-acceptance-booster.md)                                                                                                |          |          | X       |
