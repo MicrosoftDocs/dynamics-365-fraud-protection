@@ -11,7 +11,7 @@ title: Learn from the scorecard
 
 # Learn from the scorecard
 
-You can use the scorecard reports to review your key metrics and understand the month-by-month performance of your fraud protection.
+You can use the scorecard reports to review your key metrics and understand the month-by-month performance of your fraud protection efforts.
 
 In the Evaluate experience, your scorecard lets you evaluate the capabilities of Microsoft Dynamics 365 Fraud Protection. In the Protect experience, you can monitor the real-time performance of Dynamics 365 Fraud Protection as your system of record. To evaluate specific ranges of data in detail, you can filter and pivot the scorecards on predefined attributes, markets, and product categories. You can then use the knowledge that you gain to make well-informed risk management decisions for your business.
 
@@ -28,7 +28,7 @@ You can use the drop-down menus and sliders to customize your view of the intera
 - **Current purchase status** – Show the latest status of the purchase.
 - **User country** – Show one, multiple, or all countries or regions.
 - **Product category** – Show one, multiple, or all product categories.
-- **Transaction date** – Show transaction data by date. You can select dates in the calendar, enter them manually, or use the slider to select ranges of dates.
+- **Transaction date** – Show transaction data by date. You can select dates in the calendar, enter them manually, or select ranges of dates.
 
 To clear previous selections, hover over the category name, and then select the eraser symbol on the right. Note that one value must be selected for the **Aggregation level** option.
 
@@ -37,8 +37,8 @@ To clear previous selections, hover over the category name, and then select the 
 The scorecard plots the following metrics:
 
 - **Transaction volume** – The total count of transactions that were sent for assessment.
-- **Approved rate** – The percentage of purchases that were approved over the total volume.
-- **Rejected rate** – The percentage of purchases that were rejected over the total volume.
-- **Settled rate** – The percentage of bank approvals over the total volume that was sent to banks.
-- **Chargeback rate** – The percentage of chargebacks over the total volume that was approved by banks on the chargeback receipt date and the transaction date.
-- **Refund rate** – The percentage of refunds over the total volume that was approved by banks.
+- **Approved rate** – The percentage of purchases that were approved out of the total volume.
+- **Rejected rate** – The percentage of purchases that were rejected out of the total volume.
+- **Settled rate** – The percentage of bank approvals out of the total volume that was sent to banks.
+- **Chargeback rate** – The percentage of chargebacks out of the total volume that was approved by banks on the chargeback receipt date and the transaction date.
+- **Refund rate** – The percentage of refunds out of the total volume that was approved by banks.
