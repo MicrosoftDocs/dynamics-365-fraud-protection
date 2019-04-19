@@ -13,8 +13,8 @@ title: Integrate Dynamics 365 Fraud Protection real-time APIs
 
 To securely integrate your existing systems with the Microsoft Dynamics 365 Fraud Protection real-time application programming interfaces (APIs), you must complete the following tasks:
 
-- Create an app registration in the Microsoft Azure portal, and use it to get an access token to your Dynamics 365 Fraud Protection API endpoints.
-- Call the Dynamic 365 Fraud Protection real-time APIs.
+1. Create an app registration in the Microsoft Azure portal, and use it to get an access token to your Dynamics 365 Fraud Protection API endpoints.
+1. Call the Dynamic 365 Fraud Protection real-time APIs.
 
 ## Create an Azure AD app registration in the Azure portal
 
@@ -33,8 +33,6 @@ Alternatively, if you prefer to use Microsoft Windows PowerShell to create an Az
 ## Grant your Azure AD app access to the Dynamic 365 Fraud Protection real-time APIs
 
 To assign the appropriate Dynamics 365 API role to your Azure AD app, use the [New-AzureADServiceAppRoleAssignment Windows PowerShell script](https://docs.microsoft.com/powershell/module/azuread/new-azureadserviceapproleassignment?view=azureadps-2.0), as shown in the following example.
-
-Be sure to replace the *italic* text with the name of your Azure AD app and the appropriate role name, as noted inline in the following example.
 
 ```console
 $c_app_name = "your Azure AD application display name here"
@@ -102,10 +100,10 @@ To get real-time fraud protection, you can use an event-based call to integrate 
     </tbody>
     </table>
 
-4. Generate an event-based payload. Fill in the event data with the relevant information from your transactional system. For documentation of all supported events, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/).
+4. Generate an event-based payload. Fill in the event data with the relevant information from your transactional system. For documentation about all supported events, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/).
 5. Combine the header (which includes the access token) and the payload, and send them to your Dynamics 365 Fraud Protection endpoint.
 6. In the Evaluate experience for Dynamics 365 Fraud Protection, you can send transactions over and analyze the results from Dynamics 365 Fraud Protection.
-7. In the Protect experience for Dynamics 365 Fraud Protection, you can send transactions over and honor decisions based on your configured rules.
+7. In the Protect experience for Dynamics 365 Fraud Protection, you can send transactions over and honor decisions that are based on your configured rules.
 
 For more information about access tokens, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal).
 
