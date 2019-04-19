@@ -39,12 +39,12 @@ To add users and groups from Azure AD, sign up for [Azure AD Premium edition](ht
 You can configure users by assigning them to the **Sandbox_AllAreas_Admin** or **AllAreas_Admin** role, depending on your sandbox (test) or production (live) environment.
 
 1. On the **Dynamics 365 Fraud Protection – Overview** page, in the left pane, select **Getting started**, and then select either **Assign a user for testing (required)** or **Deploy single sign-on to users and groups (recommended)**. The **Users and groups** page appears.
-1. To add users, select **Add user**. The **Add Assignment** frame appears.
-1. In the **Add Assignment** frame, select **Users**. The **Users** frame appears.
-1. In the **Users** frame, select a member, or invite an external user to join, and then select **Select**.
-1. Return to the **Add Assignment** frame, and select **Select Role**. The **Select Role** frame appears.
-1. In the **Select Role** frame, select a role, and then select **Select**.
-1. To apply the role to the member that you selected, in the **Add Assignment** frame, select **Assign**. In the **Users** frame, the user and its assigned role appear.
+1. To add users, select **Add user**. The **Add Assignment** blade appears.
+1. In the **Add Assignment** blade, select **Users**. The **Users** blade appears.
+1. In the **Users** blade, select a member, or invite an external user to join, and then select **Select**.
+1. Return to the **Add Assignment** blade, and select **Select Role**. The **Select Role** blade appears.
+1. In the **Select Role** blade, select a role, and then select **Select**.
+1. To apply the role to the member that you selected, in the **Add Assignment** blade, select **Assign**. In the **Users** blade, the user and its assigned role appear.
 
 By using these steps, you can continue to add users and their assignment to the **Sandbox_AllAreas_Admin** or **AllAreas_Admin** role. You can also use these steps to delete users and their role assignments.
 
@@ -62,10 +62,10 @@ The Dynamics 365 Fraud Protection sandbox environment lets your teams do integra
 
 Use the following role membership to manage user access to the Dynamics 365 Fraud Protection sandbox environment.
 
-> [!div class="mx-tableFixed"]
-> | App role | Description |
-> |---|---|
-> | Sandbox_AllAreas_Admin | This role grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal. |
+
+| App role | Description |
+|---|---|
+| Sandbox_AllAreas_Admin | This role grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal. |
 
 ## Manage access to a production environment by using roles
 
@@ -73,7 +73,6 @@ Members of the Dynamics 365 Fraud Protection team and merchant teams use the Dyn
 
 Use the following role membership to manage user access to the Dynamics 365 Fraud Protection production environment.
 
-> [!div class="mx-tableFixed"]
-> | App role | Description |
-> |---|---|
-> | AllAreas_Admin | This role grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal. |
+| App role | Description |
+|---|---|
+| AllAreas_Admin | This role grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal. |
