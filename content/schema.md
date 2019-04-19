@@ -47,7 +47,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | UserZipCode         | string   | The customer's postal code. |
 | UserCountry         | string   | The customer's country or region. The value should be a two-letter country/region code (for example, **US**). |
 | UserTimeZone        | string   | An empty string. |
-| UserLanguage        | string   | The customer's language. Locale, Language-Territory (for example, **EN-US**). |
+| UserLanguage        | string   | The customer's language and language territory (for example, **EN-US**). |
 | UserPhoneNumber     | string   | The customer's phone number. The format should be the country/region code followed by a hyphen (-) and then the phone number (for example, for the US, **+1-1234567890**). |
 | IsEmailValidated    | bool     | A **True**/**False** value that indicates whether the customer-provided email address has been verified as owned by the customer. |
 | ShippingFirstName   | string   | The first name that was provided for the address. |
@@ -111,7 +111,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | COGS          | string | The cost of goods sold (that is, the raw material cost of the item). This information is provided by the merchant. |
 | IsRecurring   | bool   | A value that indicates whether the product is a recurring subscription. |
 | IsFree        | bool   | A value that indicates whether the product is offered for free. |
-| Language      | string | Locale, Language-Territory (for example, **EN-US**). |
+| Language      | string | Locale and language territory (for example, **EN-US**). |
 
 ## Chargebacks
 
@@ -191,7 +191,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | country                  | string   | The customer's country or region. The value should be a two-letter country/region code (for example, **US**). |
 | zipCode                  | string   | The customer's postal code. |
 | timeZone                 | string   | This attribute is obsolete (deprecated). Provide an empty string as the value. |
-| language                 | string   | The customer's language. Locale, Language-Territory (for example, **EN-US**). |
+| language                 | string   | The customer's language and language territory (for example, **EN-US**). |
 | phoneNumber              | string   | The customer's phone number. The format should be the country/region code followed by a hyphen (-) and then the phone number (for example, for the US, **+1-1234567890**). |
 | email                    | string   | The customer's email address. This value is case-insensitive. |
 | isEmailValidated         | bool     | A value that indicates whether the customer-provided email has been verified as owned by the customer. |
