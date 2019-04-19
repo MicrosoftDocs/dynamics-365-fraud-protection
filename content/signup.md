@@ -25,7 +25,7 @@ During sign-up for Dynamics 365 Fraud Protection, you can use either of the foll
 - [Create a new tenant in Microsoft Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
 - Use your existing tenant.
 
-After you've signed up, links for the Diagnose experience appear in Dynamics 365 Fraud Protection. Before you access the Diagnose experience, you must configure user access to Dynamics 365 Fraud Protection. For instructions, see the "To configure user access via the Azure portal" section in [Configure users in Dynamics 365 Fraud Protection](configure-user-access.md).
+After you've signed up, links for the Diagnose experience appear in Dynamics 365 Fraud Protection. Before you access the Diagnose experience, you must configure user access to Dynamics 365 Fraud Protection. For instructions, see the "Configure users in Dynamics 365 Fraud Protection" topic in [Configure user access](configure-user-access.md).
 
 For more information, see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
