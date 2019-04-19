@@ -35,7 +35,8 @@ DNS record: f.contoso.com points to fpt.dfp.microsoft.com
 > [!Note]
 > Use the instance identifier (instance_id) provided during Dynamics 365 Fraud Protection setup process. Without this instance_id, you cannot integrate with device fingerprinting.
 
-3.	For backend onboarding, provide the SSL certificate for this subdomain to the Dynamics 365 Fraud Protection team.
+3.	For backend onboarding, generate the SSL certificate for this subdomain.
+4. To initiate the SSL certificate exchange process, contact DFPHelp@microsoft.com.
 
 ## Integrate device fingerprinting with your website
 
