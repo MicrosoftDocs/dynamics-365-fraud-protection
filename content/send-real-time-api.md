@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how you can send real-time data by using the Microsoft Dynamics 365 Fraud Protection application programming interface (API).
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 02/25/2019
+ms.date: 04/22/2019
 
 ms.topic: conceptual
 title: Send real-time data using the Dynamics 365 Fraud Protection API
