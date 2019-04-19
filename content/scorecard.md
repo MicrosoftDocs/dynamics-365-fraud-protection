@@ -41,4 +41,4 @@ The scorecard plots the following metrics:
 - **Rejected rate** – The percentage of purchases that were rejected over the total volume.
 - **Settled rate** – The percentage of bank approvals over the total volume that was sent to banks.
 - **Chargeback rate** – The percentage of chargebacks over the total volume that was approved by banks on the chargeback receipt date and the transaction date.
-- **Refund rate** – The percentage of refunds out of the total volume that was approved by banks.
+- **Refund rate** – The percentage of refunds over the total volume that was approved by banks.
