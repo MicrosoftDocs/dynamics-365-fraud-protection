@@ -30,7 +30,7 @@ You can use the drop-down menus and sliders to customize your view of the intera
 - **Product category** – Show one, multiple, or all product categories.
 - **Transaction date** – Show transaction data by date. You can select dates in the calendar, enter them manually, or select ranges of dates.
 
-To clear previous selections, hover over the category name, and then select the eraser symbol on the right. Note that one value must be selected for the **Aggregation level** option.
+To clear previous selections, hover over the category name, and then select the Clear selections icon (the eraser symbol). Note that one value must be selected for the **Aggregation level** option.
 
 ## KPI charts
 
