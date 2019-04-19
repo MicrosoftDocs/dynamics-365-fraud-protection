@@ -36,4 +36,4 @@ In addition to the first steps that are outlined on the dashboard, the Evaluate 
 
 To move to the [Diagnose experience](diagnose-experience.md) from Evaluate or Protect, select **Switch to Diagnose** at the bottom of the navigation bar.
 
-Protect is differentiated from Evaluate with additional features as described on the [Protect experience](protect-experience.md) page   by becoming your real-time risk decision tool in your full production environment.
+Protect is differentiated from Evaluate with additional features as described on [Protect experience](protect-experience.md) by becoming your real-time risk decision tool in your full production environment.
