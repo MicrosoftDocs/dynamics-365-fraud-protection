@@ -1,6 +1,6 @@
 ---
 author: jackwi111
-description: Security, compliance, and data subject requests
+description: This topic provides information about security, compliance, and data subject requests.
 ms.author: v-jowigh
 ms.service: crm-online
 ms.date: 02/25/2019
@@ -9,60 +9,48 @@ ms.topic: conceptual
 title: Security, compliance, and data subject requests
 ---
 
-
 # Security, compliance, and data subject requests
 
-Microsoft runs on trust. Dynamics 365 Fraud Protection is built upon the four Microsoft Trusted Cloud foundational principles: security, privacy, compliance, and transparency. Microsoft safeguards your business knowledge as if it were our own.
-For additional resources, see the following documents:
+Microsoft runs on trust. Microsoft Dynamics 365 Fraud Protection is built on the four foundational principles that Microsoft has defined for a trusted cloud: security, privacy, compliance, and transparency. Microsoft safeguards your business knowledge as if it were its own.
 
-- [Microsoft Trust Center](https://www.microsoft.com/en-us/trustcenter/default.aspx)
+For more information, see the following resources:
 
+- [Microsoft Trust Center](https://www.microsoft.com/trustcenter/default.aspx)
 - [Microsoft Runs on Trust](https://www.microsoft.com/en-us/legal/compliance/integrity)
 
 ## Data subject requests
 
 Dynamics 365 Fraud Protection provides tools to help you comply with requests from your customers (data subjects) to export or delete their personal data.
 
-For additional resources, see the following documents:
+For more information, see the following resources:
 
-- [Data Subject Requests](https://docs.microsoft.com/en-us/microsoft-365/compliance/gdpr-data-subject-requests)
+- [Data Subject Requests for the GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-data-subject-requests)
+- [Safeguard individual privacy with the Microsoft Cloud](https://www.microsoft.com/trustcenter/privacy/gdpr/gdpr-overview)
+- [Microsoft Dynamics 365 and GDPR](https://docs.microsoft.com/dynamics365/get-started/gdpr/index)
+- [Microsoft Power BI GDPR white paper](https://powerbi.microsoft.com/blog/power-bi-gdpr-whitepaper-is-now-available/)
 
-- [Safeguarding individual privacy rights with the Microsoft Cloud](https://www.microsoft.com/en-us/trustcenter/privacy/gdpr/gdpr-overview)
+In the Diagnose experience for Dynamics 365 Fraud Protection, you can delete the offline data that you've uploaded into Dynamics 365 Fraud Protection. At the top of the page, select **Delete my data**.
 
-- [Microsoft Dynamics 365 and GDPR](https://docs.microsoft.com/en-us/dynamics365/get-started/gdpr/index)
+In the Evaluate and Protect experiences, for all entities that contain personal data, you can perform the following tasks:
 
-- [Microsoft Power BI GDPR Whitepaper](https://powerbi.microsoft.com/en-us/blog/power-bi-gdpr-whitepaper-is-now-available/)
-
-In the Dynamics 365 Fraud Protection Diagnose experience, you can delete the offline data you have uploaded into Dynamics 365 Fraud Protection. Under **Upload data**, for **Transactions**, **Payment Instruments**, **Products**, or **Chargebacks**, select the vertical ellipsis, and then select **Delete**. Alternatively, at the top of the screen, select **Delete my data**.
-
-In the Evaluate and Protect experiences, for all entities containing personal data, you can:
-
-- Identify these entities.
-
+- Identify entities that contain personal data.
 - Delete entities.
-
 - Export entities.
 
-## How to use data subject requests
+## Manage data subject requests
 
-From the left navigation bar, under **Data engineering**, select **Subject requests**. The **Searc** tab provides the following selections to expedite your search:
+On the left navigation bar, under **Data engineering**, select **Subject requests**. The **Search** tab provides the following selections to expedite your search:
 
 - User.Email
-
 - User.UserId
-
 - Purchase.PurchaseId
-
 - PaymentInstrument.PaymentInstrumentId
 
-After making your selection, for more specificity, use the Search bar to enter keywords. From your search results, you can either **Export user and associated data** or **Delete user and associated data**.
+After you make your selection, if you require more specificity, you can use the search bar to enter keywords. From the search results, you can select either **Export user and associated data** or **Delete user and associated data**.
 
-Select the **Request** tab that identifies these properties for your particular search:
+Select the **Request** tab that identifies the following properties for your search:
 
 - Request IDs
-
 - Request types (delete or export)
-
 - Statuses (pending or complete)
-
 - Exported data links
