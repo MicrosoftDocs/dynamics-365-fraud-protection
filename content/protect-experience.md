@@ -31,3 +31,7 @@ In addition to the first steps that are outlined on the dashboard, The Protect e
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
 - [Boost bank acceptance rates](transaction-acceptance-booster.md)
+
+## Switch experiences
+
+To move to the [Diagnose experience](diagnose-experience.md) from Evaluate or Protect, select **Switch to Diagnose** at the bottom of the navigation bar.
