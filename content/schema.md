@@ -33,8 +33,8 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | OriginalOrderId     | string   | The original order identifier for payments of recurring billing, such as monthly subscription billing. |
 | CustomerLocalDate   | DateTime | The purchase creation date in the customer's local time zone. The format is ISO 8601. |
 | MerchantLocalDate   | DateTime | The purchase ingestion date in the merchant's time zone. The format is ISO 8601. |
-| TotalAmount         | double   | The total amount that was charged to the customer, including tax. This information is provided by merchant. |
-| SalesTax            | double   | The sales tax that was charged for the transaction. This information is provided by merchant. |
+| TotalAmount         | double   | The total amount that was charged to the customer, including tax. This information is provided by the merchant. |
+| SalesTax            | double   | The sales tax that was charged for the transaction. This information is provided by the merchant. |
 | Currency            | string   | The currency of the original purchase as a three-character currency code (for example, **USD**, which is aligned with the OANDA currency code). This information is provided by merchant. |
 | DeviceContextId     | string   | The session ID of the event's session (provided by Microsoft Device Fingerprinting), or the transaction ID if the session isn't available. |
 | IPAddress           | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
@@ -111,7 +111,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | COGS          | string | The cost of goods sold (that is, the raw material cost of the item). This information is provided by the merchant. |
 | IsRecurring   | bool   | A value that indicates whether the product is a recurring subscription. |
 | IsFree        | bool   | A value that indicates whether the product is offered for free. |
-| Language      | string | Locale and language territory (for example, **EN-US**). |
+| Language      | string | The language and language territory (for example, **EN-US**). |
 
 ## Chargebacks
 
@@ -240,8 +240,8 @@ The following schemas are used in the Evaluate and Protect experiences.
 | expirationDate                | string   | The expiration date for the payment instrument in the merchant's system. This attribute is used only for payments of the **CreditCard** type. |
 | lastFourDigits                | string   | This attribute is used only for payments of the **CreditCard** type. |
 | email                         | string   | The email address that is associated with the payment instrument. This attribute is used only for payments of the **Paypal** type. |
-| billingAgreementId            | string   | This attribute is used only for payments of the **Paypal** type. |
-| payerId                       | string   | This attribute is used only for payments of the **Paypal** type. |
+| billingAgreementId            | string   | This attribute is used only for payments of the **PayPal** type. |
+| payerId                       | string   | This attribute is used only for payments of the **PayPal** type. |
 | payerStatus                   | string   | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **Paypal** type. |
 | addressStatus                 | string   | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **Paypal** type. |
 | imei                          | string   | This attribute is used only for payments of the **Mobilepayment** type. |
