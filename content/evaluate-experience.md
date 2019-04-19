@@ -34,4 +34,4 @@ In addition to the first steps that are outlined on the dashboard, the Evaluate 
 
 ## Switch experiences
 
-To move to the [Diagnose experience](diagnose-experience.md) from Evaluate, select **Switch to Diagnose** at the bottom of the navigation bar. Moving to the [Protect experience](protect-experience.md) from Evaluate or Diagnose is forthcoming.
+To move to the [Diagnose experience](diagnose-experience.md) from Evaluate or Protect, select **Switch to Diagnose** at the bottom of the navigation bar.
