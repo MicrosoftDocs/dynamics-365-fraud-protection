@@ -15,7 +15,7 @@ The virtual fraud analyst uses innovative artificial intelligence (AI) technolog
 
 The virtual fraud analyst helps you balance acceptable levels of lost revenue and customer support costs against chargebacks, fees, and refunds. Its configuration experience implements and tests your model operating points against historical customer data.
 
-When you create your stack in the virtual fraud analyst, we recommend that you complete the steps in the following order:
+When you create your prioritizations in the virtual fraud analyst, we recommend that you complete the steps in the following order:
 
 1. **Create your most fine-grained model operating points.**
 
@@ -23,9 +23,9 @@ When you create your stack in the virtual fraud analyst, we recommend that you c
 
 2. **Create a "catch-all fraud" model operating point for all your traffic.**
 
-    Create custom lists, and add entries to them to suit your specific needs for all transactions. After these lists are created, you can use them by creating model operating points either manually or through the virtual fraud analyst. Because you've already built model operating points for high-risk locales and traffic, you can have a broader reach here.
+    Create custom lists, and add entries to them to suit your specific needs for all transactions. After these lists are created, you can use them by creating model operating points either manually or through the virtual fraud analyst. Because you've already built model operating points for high-risk locales and traffic, you can have more flexibility to analyze fraud here.
 
-In step 1, you select the target data (a combination of a node, attributes, and a list) to apply to your model operating point.
+In Step 1 of the Virtual Fraud Analyst, you select the target data (a combination of a node, attributes, and a list) to apply to your model operating point.
 
 The following table defines the node and attribute combinations that you can use to build your lists. You can create up to three filters per model operating point, and you can create a total of 30 model operating points.
 
@@ -39,7 +39,7 @@ The following table defines the node and attribute combinations that you can use
 
 When you've finished, select **Analyze**. Your interactive risk chart appears.
 
-In step 2, you select a date range for past transaction data and explore how different risk scores affect metrics for the fraud catch rate and customer friction. Select the line for a risk score in the bar chart, and examine the effect on your historical transaction data. Two sliders let you further refine your analysis in creating a model operating point. Use the **Transaction data** slider to adjust the risk range that is shown in the chart, and use the **Risk impact** slider to select a risk score between 0 (zero) and 100. In the transaction data drop-down list, you have three view options:
+In Step 2 of the Virtual Fraud Analyst, you select a date range for past transaction data and explore how different risk scores affect metrics for the fraud catch rate and customer friction. Select the line for a risk score in the bar chart, and examine the effect on your historical transaction data. Two sliders let you further refine your analysis when creating a model operating point. In the **Transaction data** pane, use the slider to adjust the risk range that is shown in the chart. In the **Risk impact** pane, use the slider to select a risk score between 0 (zero) and 100. In the **Transaction data** pane, use the dropdown for three view options:
 
 - Graph view – Percentage of transactions
 - Graph view – Total value of transactions
@@ -59,16 +59,16 @@ Based on the risk score, from 1 through 100, the interactive chart shows the fra
 
 Hover over any model operating point to see the representation of the values.
 
-At the same time, the risk impact pane shows the key metrics that are associated with the chart.
+At the same time, the **risk impact** pane shows the key metrics that are associated with the chart.
 
-| Impact | Definition |
+| Metric | Definition |
 |---|---|
 | Fraud catch rate | The fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
-| Customer friction | The good (non-fraudulent) transactions that have been blocked. Approvals are equal to or less than the score that you select. |
+| Customer friction | The number of good (non-fraudulent) transactions that have been blocked. Approvals are equal to or less than the score that you select. |
 
-In step 3, you create a model operating point that is based on a risk score that meets your needs.
+After you've selected a risk score, a **Model Operating Point Summary** appears that explicitly defines when transactions will be rejected.
 
-After you've selected a model operating point, a **Model Operating Point Summary** appears that explicitly defines when transactions will be rejected.
+In Step 3 of the Virtual Fraud Analyst, you name, select a status, and create your model operating point that is based on the risk score you previously selected.
 
 ## Recommendations
 
