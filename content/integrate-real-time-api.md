@@ -56,54 +56,52 @@ New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.
 
 To get real-time fraud protection, you can use an event-based call to integrate your transactional sales systems with Dynamics 365 Fraud Protection. Follow these steps.
 
-1. Get your IDs:
-
-    - **Directory (tenant) ID** – Get this ID from the Azure portal. It's the globally unique identifier (GUID) for a tenant's domain in Azure. It appears on the **Account Information** tile on the Dynamics 365 Fraud Protection dashboard. The following illustration shows the location.
-
-        ![Tenant ID](media/integrate-apis-images/tenantID.png)
-
-    - **Sandbox resource URI or production resource URI** – This first-party app ID appears on the **Account Information** tile on the Dynamics 365 Fraud Protection dashboard.
-
-        - **Sandbox:** `https://api.dfp.microsoft-int.com`
-        - **Production:** `https://api.dfp.microsoft.com`
-
-    - **Application (client) ID** – For information about how to create this ID, see the [Create an Azure AD App registration in the Azure portal](#create-an-azure-ad-app-registration-in-the-azure-portal) section of this topic. In the Azure portal, this ID is known as the application (client) ID. To find this application ID in Azure AD, select **App registrations (Preview)**.
-    - **InstanceID** – This ID is the ID that you use for [device fingerprinting](https://go.microsoft.com/fwlink/?linkid=2085697). It identifies the instance of Dynamics 365 Fraud Protection where you will enter data. It appears on the **Account Information** tile on the Dynamics 365 Fraud Protection dashboard.
-
-2. Generate an access token. For more information, see [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion).
-
-    > [!NOTE]
-    > You must generate this token and provide it dynamically. For more information, see [Configure token lifetimes](https://docs.microsoft.com/azure/active-directory/develop/active-directory-configurable-token-lifetimes#configurable-token-lifetime-properties).
-
-3. When you call Dynamics 365 Fraud Protection APIs, you must pass the following required HTTP headers on each request.
-
+<ol>
+    <li>Get your IDs:
+      <ul><li>Directory (tenant) ID – Get this ID from the Azure portal. It's the globally unique identifier (GUID) for a tenant's domain in Azure. It appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard. The following illustration shows the location.</li>
+         <img src="media/integrate-apis-images/tenantID.png" alt="integrate TenantID" title="integrate TenantID" />
+    <li>Sandbox resource URI or production resource URI – This first-party app ID appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.<br/>i [Sandbox]: (https://api.dfp.microsoft-int.com)<br/>ii [Production]: (https://api.dfp.microsoft.com)</li>
+    <li>Application (client) ID – For information about how to create this ID, see the <i>Create an Azure AD app registration in the Azure portal</i>(#create-an-azure-ad-app-registration-in-the-azure-portal) section of this topic. In the Azure portal, this ID is known as the application (client) ID. To find this application ID in Azure AD, select <b>App registrations (Preview)</b>.</li>
+    <li>InstanceID – This ID is the ID that you use for [device fingerprinting](https://go.microsoft.com/fwlink/?linkid=2085697). It identifies the instance of Dynamics 365 Fraud Protection where you will enter data. It appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.
+          </li>
+        </ul>
+    </li>
+    <li>
+       Generate an access token. For more information, see <a href="https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion">Use client assertion to get access tokens from Azure AD</a>.
+     <div class="alert">
+         <p class="alert-title"><span class="docon docon-status-error-outline"></span> <b>Note</b></p>
+         <p>You must generate this token and provide it dynamically. For more information, see (<a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-configurable-token-lifetimes#configurable-token-lifetime-properties">Configure token lifetimes</a>.
+</p>
+        </div><br/>
+    </li>
+    <li>
+        When you call Dynamics 365 Fraud Protection APIs, you must pass the following required HTTP headers on each request.
     <table>
-    <thead>
     <tr>
     <th>Header name</th>
     <th>Header value</th>
     </tr>
-    </thead>
-    <tbody>
     <tr>
     <td>Authorization</td>
     <td>
-    <p>To get an access token, use the Azure AD app.</p>
-    <blockquote>[!NOTE] The access token has a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token.</blockquote>
-    <p>Use the following format for this header: <b>Bearer <i>accesstoken</i></b>, where <i>accesstoken</i> is the token that is returned by Azure AD.</p>
+        To get an access token, use the Azure AD app. <br /><br />
+        <b>Note</b> The access token has a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token.<br /><br />
+    Use the following format for this header (replace <i>accesstoken</i> with the actual token value):<br />
+        <ul><li> Bearer <i>accesstoken</i>, where accesstoken is the token that is returned by Azure AD.</li></ul>
     </td>
     </tr>
     <tr>
     <td>x-ms-correlation-id</td>
     <td>Send a new GUID value on each set of API calls that are made together.</td>
     </tr>
-    </tbody>
     </table>
-
-4. Generate an event-based payload. Fill in the event data with the relevant information from your transactional system. For documentation about all supported events, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/).
-5. Combine the header (which includes the access token) and the payload, and send them to your Dynamics 365 Fraud Protection endpoint.
-6. In the Evaluate experience for Dynamics 365 Fraud Protection, you can send transactions over and analyze the results from Dynamics 365 Fraud Protection.
-7. In the Protect experience for Dynamics 365 Fraud Protection, you can send transactions over and honor decisions that are based on your configured rules.
+    </li>
+   <li>Generate an event-based payload. Fill in the event data with the relevant information from your transactional system. For documentation about all supported events, see <a href="https://apidocs.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>.
+    </li>
+   <li>Combine the header (which includes the access token) and the payload, and send them to your Dynamics 365 Fraud Protection endpoint.</li>
+   <li>In the Evaluate experience for Dynamics 365 Fraud Protection, you can send transactions over and analyze the results from Dynamics 365 Fraud Protection.</li>
+   <li>In the Protect experience for Dynamics 365 Fraud Protection, you can send transactions over and honor decisions that are based on your configured rules.</li>
+    </ol>
 
 For more information about access tokens, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal).
 
