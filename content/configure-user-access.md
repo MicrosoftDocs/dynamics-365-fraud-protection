@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 03/01/2019
+ms.date: 04/22/2019
 
 ms.topic: conceptual
 title: Configure user access to Dynamics 365 Fraud Protection
