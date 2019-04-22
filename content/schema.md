@@ -3,7 +3,7 @@ author: jegrif
 description: This topic outlines the schemas that are required for historical data View schemas
 ms.author: v-jegrif
 ms.service: crm-online
-ms.date: 02/25/2019
+ms.date: 04/22/2019
 
 ms.topic: conceptual
 title: View schemas

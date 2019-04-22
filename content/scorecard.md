@@ -3,7 +3,7 @@ author: jegrif
 description: This topic explains how you can use the key performance indicators (KPIs).
 ms.author: v-jegrif
 ms.service: crm-online
-ms.date: 04/02/2019
+ms.date: 04/22/2019
 
 ms.topic: conceptual
 title: Learn from the scorecard
