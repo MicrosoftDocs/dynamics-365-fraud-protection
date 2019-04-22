@@ -1,6 +1,6 @@
 ---
 author: jackwi111
-description: Boost bank acceptance rates
+description: This topic provides information about how you can boost bank acceptance rates.
 ms.author: v-jowigh
 ms.service: crm-online
 ms.date: 02/25/2019
@@ -9,26 +9,27 @@ ms.topic: conceptual
 title: Boost bank acceptance rates
 ---
 
-
 # Boost bank acceptance rates
 
-Dynamics 365 Fraud Protection offers a market differentiating feature, called *transaction acceptance booster*, that enables you to benefit from higher acceptance rates by sharing trust knowledge with banks. Initially, this is achieved using a Program Merchant ID (MID) program. 
+One feature that sets Microsoft Dynamics 365 Fraud Protection apart from other products in the market is named the transaction acceptance booster. This feature helps you benefit from higher acceptance rates by sharing trust knowledge with banks. Currently, a Program Merchant ID (MID) program is used to share trust knowledge.
 
 ## Program MID
 
-Program MID is a lightweight methodology for passing a transaction-based trust signal to the issuer. To fully benefit from the program and measure the gains, we require two new MIDs in addition to your existing MID. You will work with your payment processor to create these two new MIDs, and email them to the Dynamics 365 Fraud Protection team at dfpissuersupport@microsoft.com. Microsoft representatives will work with participating banks and issuers to enroll these new MIDs into the transaction booster acceptance program. Because MID creation and communication with banks requires time and is not dependent on real-time risk evaluation, we advise that you start the process with your payment processor at least four weeks before using Dynamics 365 Fraud Protection for decisioning. 
+Program MID is a lightweight methodology for passing a transaction-based trust signal to the issuer. To fully benefit from the program and measure the gains, we require two new MIDs in addition to your existing MID. Work with your payment processor to create the new MIDs, and then email them to the Dynamics 365 Fraud Protection team at <dfpissuersupport@microsoft.com>. Microsoft representatives will work with participating banks and issuers to enroll the new MIDs in the transaction booster acceptance program.
 
-When you are ready for live production using the Protect experience and the transaction acceptance booster, you must pass a flag to send the Protect assessment type in your Purchase API call. Do not send the Evaluate assessment type. To determine the appropriate flag, the attribute name in the Purchase API is identified as AssessmentType with either value:
+It takes time to create MIDs and communicate them to banks, but these tasks don't depend on real-time risk evaluation. Therefore, we recommend that you start them with your payment processor at least four weeks before you start to use Dynamics 365 Fraud Protection for decision making.
 
-- Evaluate for the Evaluate assessment type
-- Protect for the Protect assessment type
+When you're ready to use the Protect experience and the transaction acceptance booster in your live production environment, you must pass a flag to send the Protect assessment type in your call to the Purchase application programming interface (API). Don't send the Evaluate assessment type. To determine the appropriate flag, look at the **AssessmentType** attribute in the Purchase event API. It has one of the following values:
 
-Only the purchase event is an assessment API, whereas all the other event APIs are not.
+- **Evaluate** for the Evaluate assessment type
+- **Protect** for the Protect assessment type
 
-In the response payload, you will receive a flag indicating which MID is to be used in the call to your bank. The flag will contain one of three values:
+Only the Purchase event is an assessment API. No other event API is an assessment API.
 
-- Standard: Currently existing.
-- Program: Used for high-confidence transactions expected to return a higher acceptance yield.
-- Control: Provides a representative sample of performance before you start Dynamics 365 Fraud Protection, and will be used as baseline for measuring overall gain. 
+In the response payload, you will receive a flag that indicates which MID you should use in the call to your bank. The flag will have one of three values:
 
-Your existing MID will be the Standard. The Dynamics 365 Fraud Protection team will notify you which MID is the Program and which one is the Control. Dynamics 365 Fraud Protection algorithms will be running in real time to optimize for maximizing your acceptance rate. Consequently, it is important that you comply with the flag received in the response payload, and report back the bank authorization outcome and chargeback in a timely manner.
+- **Standard** – This MID is the MID that currently exists.
+- **Program** – This MID is used for high-confidence transactions that are expected to return a higher acceptance rate.
+- **Control** – This MID provides a representative sample of performance before you start Dynamics 365 Fraud Protection, and it will be used as a baseline to measure overall gain.
+
+Your existing MID will be the Standard MID. The Dynamics 365 Fraud Protection team will notify you which MID is the Program MID, and which is the Control MID. Dynamics 365 Fraud Protection algorithms will run in real time to optimize and maximize your acceptance rate. Therefore, it's important that you comply with the flag that you receive in the response payload. It's also important that you report back the bank authorization outcome and chargeback in a timely manner.

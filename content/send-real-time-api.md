@@ -1,21 +1,21 @@
 ---
 author: jackwi111
-description: Send real-time data using the Dynamics 365 Fraud Protection API
+description: This topic explains how you can send real-time data by using the Microsoft Dynamics 365 Fraud Protection application programming interface (API).
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 02/25/2019
+ms.date: 04/22/2019
 
 ms.topic: conceptual
 title: Send real-time data using the Dynamics 365 Fraud Protection API
 ---
 
 
-# Send real-time data using the Dynamics 365 Fraud Protection API
+# Send real-time data by using the Dynamics 365 Fraud Protection API
 
-The Evaluate experience enables you to use your real-time transaction data to compare Dynamics 365 Fraud Protection with your existing fraud solution. You can send this data to the [Dynamics 365 Fraud  Protection API](https://apidocs.microsoft.com/). 
+The Evaluate experience lets you use your real-time transaction data to compare Microsoft Dynamics 365 Fraud Protection with your existing fraud solution. You can send this data to the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/).
 
-To accelerate the process, we provide sample code that authenticates with and calls the Dynamics 365 Fraud Protection API, adds device fingerprinting data, and shows the intended use and best practices of the API. In addition, you can use the [Dynamics 365 Fraud Protection portal](https://dfp.microsoft.com) to configure decision rules. When you send transaction data, these rules act on risk scores calculated by Dynamics 365 Fraud Protection. Consequently, the rules affect the fraud recommendation returned by the API. With minimal effort, you can implement the API to ensure your product is properly integrated.
+To accelerate the process, Microsoft provides sample code that authenticates with and calls the Dynamics 365 Fraud Protection API, adds device fingerprinting data, and shows the intended use and best practices of the API. In addition, you can use the [Dynamics 365 Fraud Protection portal](https://dfp.microsoft.com) to configure decision rules. When you send transaction data, these rules act on risk scores that are calculated by Dynamics 365 Fraud Protection. Therefore, the rules affect the fraud recommendation that is returned by the API. With minimal effort, you can implement the API to help guarantee that your product is correctly integrated.
 
-## View sample merchant app
+## View the sample merchant app
 
-Use the [Dynamics 365 Fraud Protection sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137), and accompanying developer-oriented documentation, to call Dynamics 365 Fraud Protection APIs for events that happen in your system. Ultimately, this knowledge helps you reduce fraud. The sample app also covers other API events like sending customer account updates, refunds, and chargebacks in real time to the API. In general, the sample app documents link to actual sample code, where possible; otherwise, code samples exist directly in the documentation.
+Use the [Dynamics 365 Fraud Protection sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer-oriented documentation to call Dynamics 365 Fraud Protection APIs for events that occur in your system. Ultimately, the knowledge that you gain will help you reduce fraud. The sample app also covers other API events, such as sending customer account updates, refunds, and chargebacks to the API in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.

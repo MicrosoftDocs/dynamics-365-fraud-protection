@@ -50,6 +50,8 @@ To help guarantee that Dynamics 365 Fraud Protection can correctly interpret the
 
 Use the **Upload** button to find and submit your local files. After a successful upload, select **Process**. For related data types, such as purchase and account data, every file must be uploaded before you process the data.
 
+To overwrite a previous upload with new data, select **Reupload** to submit the new files, and then process the updated data.
+
 ## API upload
 
 In the Evaluate and Protect experiences, data can also be ingested through the API. A risk score will be returned for data that you upload in this way. For a more comprehensive overview, see [Send real-time data using APIs](send-real-time-api.md).

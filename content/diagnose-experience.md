@@ -47,8 +47,8 @@ After all four files are uploaded, select **Generate data diagnostic report** to
 
 The *data diagnostic report* contains a detailed visual breakdown of your data, so that you can determine how complete the content is. Key metrics include the chargeback match rate, which shows purchase and chargeback completion, and the optimum baseline chargeback basis points for analysis. Additional charts indicate any missing dates, formatting errors, the percentage of unique entities that are represented, and the number of days of data that were included in the uploaded files.
 
-Before you can generate your risk diagnostic report, the key metrics of your data must reach a minimum quality threshold. If the quality of the data is too low to allow for accurate evaluation, you will be prompted to improve the indicated issues and try again. Return to the **Data upload** page to submit your updated data.
-
+Before you can generate your risk diagnostic report, the key metrics of your data must reach a minimum quality threshold. If the quality of the data is too low to allow for accurate evaluation, you will be prompted to improve the indicated issues and try again. Return to the **Data upload** page and select **Reupload** to submit your updated data.
+ 
 ### Risk diagnostic report
 
 After the data diagnostic report returns satisfactory results, the *risk diagnostic report* is generated. This process should take no longer than 24 hours.
@@ -61,4 +61,8 @@ The risk diagnostic report lets you assess your risk from fraudulent activity an
 
 ## Review reports
 
-You can find your completed reports at **Data diagnostic report** and **Risk diagnostic report** in the navigation bar, or you can link to them from the dashboard. For deeper analysis, you can download the full reports.
+You can find your completed reports at **Data diagnostic report** and **Risk diagnostic report** in the navigation bar, or you can link to them from the dashboard. For deeper analysis, you can download the full reports as .docx files.
+
+## Switch experiences
+
+To move to the [Evaluate experience](evaluate-experience.md) from Diagnose, select **Switch to Evaluate** at the bottom of the navigation bar.
