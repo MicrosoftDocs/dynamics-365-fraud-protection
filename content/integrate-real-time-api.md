@@ -30,7 +30,7 @@ For more information about how to configure API access to your Dynamics 365 Frau
 
 Alternatively, if you prefer to use Microsoft Windows PowerShell to create an Azure AD app registration, see [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication?view=azurermps-6.13.0).
 
-## Grant your Azure AD app access to the Dynamic 365 Fraud Protection real-time APIs
+## Grant your Azure AD app access to the Dynamics 365 Fraud Protection real-time APIs
 
 To assign the appropriate Dynamics 365 API role to your Azure AD app, use the [New-AzureADServiceAppRoleAssignment Windows PowerShell script](https://docs.microsoft.com/powershell/module/azuread/new-azureadserviceapproleassignment?view=azureadps-2.0), as shown in the following example.
 
@@ -52,7 +52,7 @@ $c_sp = Get-AzureADServicePrincipal -Filter "displayName eq '$c_app_name'"
 New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.ObjectId -ResourceId $sp.ObjectId -Id $c_appRole.Id 
 ```
 
-## Call the Dynamic 365 Fraud Protection real-time APIs
+## Call the Dynamics 365 Fraud Protection real-time APIs
 
 To get real-time fraud protection, you can use an event-based call to integrate your transactional sales systems with Dynamics 365 Fraud Protection. Follow these steps.
 
