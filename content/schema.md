@@ -11,7 +11,7 @@ title: View schemas
 
 # View schemas
 
-This topic outlines the schemas for historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Data upload](data-upload.md). If data will be ingested via the application programming interface (API), see [Send real-time data](send-real-time-api.md).
+This topic outlines the schemas for historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Send real-time data](send-real-time-api.md).
 
 Note the following formatting guidelines throughout:
 
