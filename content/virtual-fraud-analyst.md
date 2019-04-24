@@ -47,11 +47,11 @@ In Step 2 of the Virtual Fraud Analyst, you select a date range for past transac
 
 In the chart, the x-axis represents the risk score. Depending on the view that you select, the y-axis represents either the percentage or number of transactions.
 
-The machine learning model in Dynamics 365 Fraud Protection evaluates every transaction by using cutting-edge AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a risk score range from 0 through 999. This approach resembles the approach that the fraud protection network uses. Microsoft, in turn, converts this risk score to a more manageable 1–100 range to simplify decision making and reporting.
+The machine learning model in Dynamics 365 Fraud Protection evaluates every transaction by using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a risk score range from 0 through 1000. This approach resembles the approach that the fraud protection network uses. Microsoft, in turn, converts this risk score to a more manageable 0–100 range to simplify decision making and reporting.
 
 Occasionally, a transaction has an unscored risk score. An unscored risk score indicates that the model hasn't yet scored the transaction. The virtual fraud analyst generates unscored risk scores to indicate that you should create model operating points for the unscored transactions if the volume of your traffic is high enough.
 
-Based on the risk score, from 1 through 100, the interactive chart shows the fraud impact on your revenue. The following categories are used:
+Based on the risk score, from 0 through 100, the interactive chart shows the fraud impact on your revenue. The following categories are used:
 
 - **Approved transactions** – Transactions in this category are shown in light blue.
 - **Confirmed fraud** – This category combines both chargebacks and refunds. Transactions in this category are shown in dark blue.
