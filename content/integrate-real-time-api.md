@@ -21,10 +21,10 @@ To securely integrate your existing systems with the Microsoft Dynamics 365 Frau
 Follow these steps to create an Azure Active Directory (Azure AD) app registration in the Azure portal.
 
 1. Open the [Azure portal](https://portal.azure.com).
-1. In the navigation pane, select **Azure Active Directory**.
-1. In the left pane, under **Manage**, select **App registrations (Preview)**. The **App registrations (Preview)** page appears. You can return to this page at any time to view your app registrations.
-1. Select **New registration**.
-1. Enter any name (for example, **API service account**). In the **Supported account types** field group, leave the **Accounts in this organizational directory only (\<your tenant name\>)** option selected. The Web URI is optional. It can be any URL that starts with **https://**.
+1. In the navigation pane, select **Azure Active Directory**. The **Microsoft – Overview** page appears.
+1. In the left pane, under **Manage**, select **App registrations**. The **Microsoft - App registrations** page appears. You can return to this page at any time to view your app registrations.
+1. Select **New registration**. The **Register an application** page appears.
+1. In the **Name** field, enter any name (for example, **API service account**). In the **Supported account types** field group, leave the **Accounts in this organizational directory only (\<your tenant name\>)** option selected. The Redirect (Web) URI is optional. It can be any URL that starts with **https://**.
 
 For more information about how to configure API access to your Dynamics 365 Fraud Protection endpoint via the Azure portal, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal).
 
