@@ -96,7 +96,7 @@ To get real-time fraud protection, you can use an event-based call to integrate 
     </tr>
     </table>
     </li>
-   <li>Generate an event-based payload. Fill in the event data with the relevant information from your transactional system. For documentation about all supported events, see <a href="https://apidocs.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>.
+   <li>Generate an event-based payload. Fill in the event data with the relevant information from your transactional system. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>.
     </li>
    <li>Combine the header (which includes the access token) and the payload, and send them to your Dynamics 365 Fraud Protection endpoint.</li>
    <li>In the Evaluate experience for Dynamics 365 Fraud Protection, you can send transactions over and analyze the results from Dynamics 365 Fraud Protection.</li>
