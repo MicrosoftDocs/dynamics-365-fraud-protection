@@ -17,4 +17,4 @@ The Metering page breaks out information into three tabs. **Assessment APIs** in
 
 Each tab shows usage charts and statistics for the APIs represented in that category. You can select specific date ranges, types of APIs, and the specific Dynamics 365 Fraud Protection experience you’re using to filter these charts.
 
-Counts appear under **Total API responses**. These include both successful and unsuccessful API responses. For a visual breakdown, see the API response charts. Each one shows the numbers of successful and unsuccessful calls to the specified API during your selected time period. To view one set or the other individually, select **Success** or **Bad request**. 
+Counts appear under **Total API responses**. These include both successful and unsuccessful API responses. The charts illustrate the numbers of successful and unsuccessful calls to the specified API during your selected time period. To view one set or the other individually, select **Success** or **Bad request**. To drill in and view specific data with more granularity, use the controls in the upper right of each chart.
