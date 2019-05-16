@@ -6,10 +6,10 @@ ms.service: crm-online
 ms.date: 05/15/2019
 
 ms.topic: conceptual
-title: Meter your usage
+title: Usage metering
 ---
 
-# Meter your usage
+# Usage metering
 
 Metering provides an overview of your usage of Microsoft Dynamics 365 Fraud Protection. You can view statistics about different API types over time and filter your view to highlight specific data and date ranges as needed. When your billing for Dynamics 365 Fraud Protection begins, you can use this information to assess any impact to your costs. Data on the Metering page is refreshed on an hourly basis.
 
