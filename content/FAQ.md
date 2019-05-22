@@ -13,136 +13,136 @@ title: FAQ
 
 ## General product FAQ
 
-1. Can we upload historical data to compare our results with what Dynamics 365 Fraud Protection thinks about the data before we go through the full integration process? 
+**Can we upload historical data to compare our results with what Dynamics 365 Fraud Protection thinks about the data before we go through the full integration process?**
 
-A: Yes. We have a Diagnosis experience that is designed exactly for this purpose. You upload historical data (which stays in your own merchant Azure tenant as we don’t have access to this data), and Dynamics 365 Fraud Protection will run that data through our ML and produce both a data diagnosis report and a risk diagnosis report. The data diagnosis report is designed to help you identify potential gaps or additional signals that would improve the risk score. The risk diagnosis report is designed to help you see how our ML would have performed, and to allow you to play with the risk score thresholds to understand the potential impact to your business in terms of both fraud prevention and overall profit. 
+Yes. We have a Diagnosis experience that is designed exactly for this purpose. You upload historical data (which stays in your own merchant Azure tenant as we don’t have access to this data), and Dynamics 365 Fraud Protection will run that data through our ML and produce both a data diagnosis report and a risk diagnosis report. The data diagnosis report is designed to help you identify potential gaps or additional signals that would improve the risk score. The risk diagnosis report is designed to help you see how our ML would have performed, and to allow you to play with the risk score thresholds to understand the potential impact to your business in terms of both fraud prevention and overall profit. 
 
-2. Can we pick and choose which orders are subject to a fraud check?
+**Can we pick and choose which orders are subject to a fraud check?**
 
-A: The quality of a Dynamics 365 Fraud Protection risk assessment improves with every transaction that is sent. While the decision to accept or reject a transaction is entirely up to you, we recommend that you assess all transactions to maximize the quality of the scores. 
+The quality of a Dynamics 365 Fraud Protection risk assessment improves with every transaction that is sent. While the decision to accept or reject a transaction is entirely up to you, we recommend that you assess all transactions to maximize the quality of the scores. 
 
-3. How does your network size compare to that of payment processors like Chase, Worldpay, and Adyen? 
+**How does your network size compare to that of payment processors like Chase, Worldpay, and Adyen?**
 
-A: While we cannot disclose the names of other customers operating within our fraud proteciton network, we have seeded it with Microsoft worldwide merchant data which covers billions of transactions with a wide variety of physical and digital goods in all major markets. 
+While we cannot disclose the names of other customers operating within our fraud proteciton network, we have seeded it with Microsoft worldwide merchant data which covers billions of transactions with a wide variety of physical and digital goods in all major markets. 
 
-4. What is the role of manual review in this solution? 
+**What is the role of manual review in this solution?**
 
-A: TBD
+TBD
 
-5. What role would a customer's purchase history play in the fraud models? Is the fraud engine stricter with new customers than it is with customers who have significant purchase history with our business? Would the fraud engine be more trusting of customers whose purchase behavior matches past behavior (same device, device location, IP, shipping address, etc.) and less trusting of customers whose behavior is irregular? 
+**What role would a customer's purchase history play in the fraud models? Is the fraud engine stricter with new customers than it is with customers who have significant purchase history with our business? Would the fraud engine be more trusting of customers whose purchase behavior matches past behavior (same device, device location, IP, shipping address, etc.) and less trusting of customers whose behavior is irregular? **
 
-A: TBD
+TBD
 
-6. How does your device fingerprinting solution work? Is it a script I link to? Can I self-host it? 
+**How does your device fingerprinting solution work? Is it a script I link to? Can I self-host it?**
 
-A: TBD
+TBD
 
-7. What type of latency guarantees do you offer?
+**What type of latency guarantees do you offer?**
 
-A: TBD
+TBD
 
-8. What payment types do you support?
+**What payment types do you support?**
 
-A: TBD
+TBD
 
-9. Does Dynamics 365 Fraud Protection provide a liability shift? 
+**Does Dynamics 365 Fraud Protection provide a liability shift? **
 
-A: TBD
+TBD
 
-10. How does this work with PSD2?
-
-A: TBD
-
-11. Do you provide reason codes or an explanation for a given risk assessment score?
+**How does this work with PSD2?**
 
 A: TBD
 
-12. How do you obtain quality fraud labels for model training?
+**Do you provide reason codes or an explanation for a given risk assessment score?**
 
-A: TBD
+TBD
 
-13. Do I need to upload chargeback data to you? How do I do that?
+**How do you obtain quality fraud labels for model training?**
 
-A: TBD
+TBD
 
-14. I’m an existing Dynamics 365 customer. What type of integration is available to me out of the box?
+**Do I need to upload chargeback data to you? How do I do that?**
 
-A: TBD
+TBD
+
+**I’m an existing Dynamics 365 customer. What type of integration is available to me out of the box?**
+
+TBD
 
 ## Privacy, security, and compliance FAQ
 
-1. Does Microsoft have access to my customer data?
+**Does Microsoft have access to my customer data?**
 
-A: TBD
+TBD
 
-2. What is your GDPR compliance story? Does this solution work in the EU?
+**What is your GDPR compliance story? Does this solution work in the EU?**
 
-A: TBD
+TBD
 
-3. How do you protect our data when we upload it? Do we need to hash everything before we upload it to you?
+**How do you protect our data when we upload it? Do we need to hash everything before we upload it to you?**
 
-A: Whenever you upload data (manually or via API calls), it lands in your own merchant space within your Azure tenant. This data is encrypted at rest, but can still be accessed by your risk support teams or other approved tenant users. Some of the data is then de-identified before crossing the trust boundary into our fraud protection network. This is where we compile data from across our merchant ecosystem and train some of the models. Whenever you call the transaction API for a risk assessment, the resulting score is based on a combination of context from within your merchant space, as well as context from the fraud protection network. 
+Whenever you upload data (manually or via API calls), it lands in your own merchant space within your Azure tenant. This data is encrypted at rest, but can still be accessed by your risk support teams or other approved tenant users. Some of the data is then de-identified before crossing the trust boundary into our fraud protection network. This is where we compile data from across our merchant ecosystem and train some of the models. Whenever you call the transaction API for a risk assessment, the resulting score is based on a combination of context from within your merchant space, as well as context from the fraud protection network. 
 
-4. Do you collect, use, or disclose “sensitive personal data" (for example, race, ethnicity, political opinions, religious or other beliefs, etc.)?
+**Do you collect, use, or disclose “sensitive personal data" (for example, race, ethnicity, political opinions, religious or other beliefs, etc.)?**
 
-A: TBD
+TBD
 
-5. I am an EU-based merchant. Will my customer’s data be shared outside of the EU? Where is this data hosted?
+**I am an EU-based merchant. Will my customer’s data be shared outside of the EU? Where is this data hosted?**
 
-A: TBD
+TBD
 
-6. Will you directly seek consent from individuals to use their data in the context of fraud protection?
+**Will you directly seek consent from individuals to use their data in the context of fraud protection?**
 
-A: TBD
+TBD
 
-7. Why do you need to collect personal data?
+**Why do you need to collect personal data?**
 
-A: Personal data collected and shared with the vendor in the context of processing a transaction is necessary to safeguard the integrity of the transaction prior to transmission to payment gateways, issuing banks, or credit card networks, for banking processing purposes. By the same token, and as processing occurs at the corresponding financial services institution, fraud protection processing improves the efficiency of the assessments conducted by merchants on a transactional level, helping alleviate processing time for legitimate transactions.    
+Personal data collected and shared with the vendor in the context of processing a transaction is necessary to safeguard the integrity of the transaction prior to transmission to payment gateways, issuing banks, or credit card networks, for banking processing purposes. By the same token, and as processing occurs at the corresponding financial services institution, fraud protection processing improves the efficiency of the assessments conducted by merchants on a transactional level, helping alleviate processing time for legitimate transactions.    
 
-8. Do you use tracking mechanisms (for example, cookies, pixels, etc.) to collect personal data?
+**Do you use tracking mechanisms (for example, cookies, pixels, etc.) to collect personal data?**
 
-A: Dynamics 365 Fraud Protection uses device-specific context technology that assists customers in collecting personal data from end users of the booking.com services at a transactional level. This enables customers to protect their financial transactions during the e-commerce flow and to identify potential transactions that could be fraudulent. 
+Dynamics 365 Fraud Protection uses device-specific context technology that assists customers in collecting personal data from end users of the booking.com services at a transactional level. This enables customers to protect their financial transactions during the e-commerce flow and to identify potential transactions that could be fraudulent. 
 
-9. How long do you retain collected personal data?
+**How long do you retain collected personal data?**
 
-A: The merchant retains ultimate control over the data pursuant to the licensing terms provided by the vendor. While offering Dynamics 365 Fraud Protection, Microsoft does not have standing access to tenant’s customer data. Control and management of the customer data, including personal data provided to process the services enabled by Dynamics 365 Fraud Protection, is exercised by the customer. Customers may delete data whenever they deem it necessary. 
+The merchant retains ultimate control over the data pursuant to the licensing terms provided by the vendor. While offering Dynamics 365 Fraud Protection, Microsoft does not have standing access to tenant’s customer data. Control and management of the customer data, including personal data provided to process the services enabled by Dynamics 365 Fraud Protection, is exercised by the customer. Customers may delete data whenever they deem it necessary. 
 
 Fractions of transactional data could be retained by Dynamics 365 Fraud Protection in a second-level repository of aggregated data to enrich (increase accuracy) processing at a transactional level. All data so retained is de-identified using robust hashing techniques which are further salted to prevent any possibility of re-identification after the customer has left the online service due to expiration or termination. 
 
-10. Can I delete personal data at any time while using Dynamics 365 Fraud Protection?
+**Can I delete personal data at any time while using Dynamics 365 Fraud Protection?**
 
-A: Fractions of transactional data could be retained by Dynamics 365 Fraud Protection in a second-level repository of aggregated data to enrich (increase accuracy) processing at a transactional level (continued calibration of the machine learning model across all tenants). All data so retained are de-identified using robust hashing techniques which are further salted to prevent any possibility of re-identification after the customer has left the online service due to expiration or termination. 
+Fractions of transactional data could be retained by Dynamics 365 Fraud Protection in a second-level repository of aggregated data to enrich (increase accuracy) processing at a transactional level (continued calibration of the machine learning model across all tenants). All data so retained are de-identified using robust hashing techniques which are further salted to prevent any possibility of re-identification after the customer has left the online service due to expiration or termination. 
 
-11. Do you provide independent periodic assurance reporting on the hosted environment, such as SOC 1/2 (AICPA), ISO 27001, Third-Party Trust, or other? 
+**Do you provide independent periodic assurance reporting on the hosted environment, such as SOC 1/2 (AICPA), ISO 27001, Third-Party Trust, or other?** 
 
-A: All underlying systems used by Dynamics 365 Fraud Protection comply with the list of certifications (including ISO 27001/27018, SSEA18 SOC 1 and 2) offered by Dynamics 365 Core Services. Certification of the corresponding application layers (for example, SaaS) is expected soon after the service is made generally available and Dynamics 365 Fraud Protection is added to the list of Dynamics 365 Core Services. During public preview, Dynamics 365 Fraud Protection is operated pursuant to security controls prescribed by ISO 27001/27018 standards.  
+All underlying systems used by Dynamics 365 Fraud Protection comply with the list of certifications (including ISO 27001/27018, SSEA18 SOC 1 and 2) offered by Dynamics 365 Core Services. Certification of the corresponding application layers (for example, SaaS) is expected soon after the service is made generally available and Dynamics 365 Fraud Protection is added to the list of Dynamics 365 Core Services. During public preview, Dynamics 365 Fraud Protection is operated pursuant to security controls prescribed by ISO 27001/27018 standards.  
 
 For more information, see [Microsoft Dynamics 365 Trust Center](https://www.microsoft.com/en-us/trustcenter/cloudservices/dynamics365).
 
-12. Do you do frequently do vulnerability scans or penetration testing on the hosted environment? Is this report available periodically? 
+**Do you do frequently do vulnerability scans or penetration testing on the hosted environment? Is this report available periodically?** 
 
-A: Microsoft performs frequent penetration testing and constant monitoring for vulnerabilities. Dynamics 365 Core Services are subject to annual penetration tests as described in the report posted to the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocumentsV3?command=Download&downloadType=Document&downloadId=25aa47b1-c510-43f2-84de-6b78ed3b1258&tab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913&docTab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913_Pen_Test_and_Security_Assessments).
+Microsoft performs frequent penetration testing and constant monitoring for vulnerabilities. Dynamics 365 Core Services are subject to annual penetration tests as described in the report posted to the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocumentsV3?command=Download&downloadType=Document&downloadId=25aa47b1-c510-43f2-84de-6b78ed3b1258&tab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913&docTab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913_Pen_Test_and_Security_Assessments).
 
 Dynamics 365 Fraud Protection is not covered under the scope of the current penetration test but it is expected to be covered soon after the application is made generally available.
 
-13. Do you have a vulnerability disclosure policy?
+**Do you have a vulnerability disclosure policy?**
 
-A: Microsoft performs and discloses frequent security assessments in combination with its penetration testing reports. Dynamics 365 Core Services are subject to annual penetration tests and security assessment as described in the report posted to the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocumentsV3?command=Download&downloadType=Document&downloadId=25aa47b1-c510-43f2-84de-6b78ed3b1258&tab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913&docTab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913_Pen_Test_and_Security_Assessments).
+Microsoft performs and discloses frequent security assessments in combination with its penetration testing reports. Dynamics 365 Core Services are subject to annual penetration tests and security assessment as described in the report posted to the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocumentsV3?command=Download&downloadType=Document&downloadId=25aa47b1-c510-43f2-84de-6b78ed3b1258&tab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913&docTab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913_Pen_Test_and_Security_Assessments).
 
 Dynamics 365 Fraud Protection is not covered under the scope of the current security assessment but it is expected to be covered soon after the application is made generally available.
 
-14. What are your business continuity or disaster recovery practices?
+**What are your business continuity or disaster recovery practices?**
 
-A: See [Dynamics 365 Business Recovery and Continuity Plan, and Security Incident Management policies](https://servicetrust.microsoft.com/ViewPage/TrustDocumentsV3?docTab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913_FAQ_and_White_Papers).
+See [Dynamics 365 Business Recovery and Continuity Plan, and Security Incident Management policies](https://servicetrust.microsoft.com/ViewPage/TrustDocumentsV3?docTab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913_FAQ_and_White_Papers).
 
-15. Do you have monitoring, audit logging controls, or other facilities on user access?
+**Do you have monitoring, audit logging controls, or other facilities on user access?**
 
-A: Dynamics 365 Fraud Protection has active monitoring and audit logging on user access of all components. See [Dynamics 365 Security Incident Management policies](https://servicetrust.microsoft.com/ViewPage/TrustDocumentsV3?docTab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913_FAQ_and_White_Papers).
+Dynamics 365 Fraud Protection has active monitoring and audit logging on user access of all components. See [Dynamics 365 Security Incident Management policies](https://servicetrust.microsoft.com/ViewPage/TrustDocumentsV3?docTab=7f51cb60-3d6c-11e9-b2af-7bb9f5d2d913_FAQ_and_White_Papers).
 
-16. Where can I find your terms and conditions or privacy statement?
+**Where can I find your terms and conditions or privacy statement?**
 
-A: See [Microsoft Licensing Terms](https://www.microsoft.com/en-us/licensing/product-licensing/products).
+See [Microsoft Licensing Terms](https://www.microsoft.com/en-us/licensing/product-licensing/products).
 
-17. Where can I find your privacy statement?
+**Where can I find your privacy statement?**
 
-A: See [Microsoft Privacy Statement](www.microsoft.com/privacy).
+See [Microsoft Privacy Statement](www.microsoft.com/privacy).
