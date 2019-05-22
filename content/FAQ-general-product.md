@@ -1,4 +1,4 @@
---
+---
 author: jackwi111
 description: This topic provides frequently asked product questions about Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jowigh
