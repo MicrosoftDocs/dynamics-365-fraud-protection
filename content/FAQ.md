@@ -11,7 +11,7 @@ title: FAQ
 
 # FAQ
 
-## General Product FAQ
+## General product FAQ
 
 1. Can we upload historical data to compare our results with what Dynamics 365 Fraud Protection thinks about the data before we go through the full integration process? 
 
@@ -69,7 +69,7 @@ A: TBD
 
 A: TBD
 
-## Privacy, Security, and Compliance FAQ
+## Privacy, security, and compliance FAQ
 
 1. Does Microsoft have access to my customer data?
 
