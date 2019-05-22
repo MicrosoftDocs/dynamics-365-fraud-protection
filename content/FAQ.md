@@ -29,7 +29,7 @@ While we cannot disclose the names of other customers operating within our fraud
 
 TBD
 
-**What role would a customer's purchase history play in the fraud models? Is the fraud engine stricter with new customers than it is with customers who have significant purchase history with our business? Would the fraud engine be more trusting of customers whose purchase behavior matches past behavior (same device, device location, IP, shipping address, etc.) and less trusting of customers whose behavior is irregular? **
+**What role would a customer's purchase history play in the fraud models? Is the fraud engine stricter with new customers than it is with customers who have significant purchase history with our business? Would the fraud engine be more trusting of customers whose purchase behavior matches past behavior (same device, device location, IP, shipping address, etc.) and less trusting of customers whose behavior is irregular?**
 
 TBD
 
@@ -45,7 +45,7 @@ TBD
 
 TBD
 
-**Does Dynamics 365 Fraud Protection provide a liability shift? **
+**Does Dynamics 365 Fraud Protection provide a liability shift?**
 
 TBD
 
