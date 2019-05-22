@@ -15,7 +15,7 @@ title: FAQ
 
 **Can we upload historical data to compare our results with what Dynamics 365 Fraud Protection thinks about the data before we go through the full integration process?**
 
-Yes. We have a Diagnosis experience that is designed exactly for this purpose. You upload historical data (which stays in your own merchant Azure tenant as we don’t have access to this data), and Dynamics 365 Fraud Protection will run that data through our ML and produce both a data diagnosis report and a risk diagnosis report. The data diagnosis report is designed to help you identify potential gaps or additional signals that would improve the risk score. The risk diagnosis report is designed to help you see how our ML would have performed, and to allow you to play with the risk score thresholds to understand the potential impact to your business in terms of both fraud prevention and overall profit. 
+Yes. We have a Diagnose experience that is designed exactly for this purpose. You upload historical data (which stays in your own merchant Azure tenant as we don’t have access to this data), and Dynamics 365 Fraud Protection will run that data through our ML and produce both a data diagnosis report and a risk diagnosis report. The data diagnosis report is designed to help you identify potential gaps or additional signals that would improve the risk score. The risk diagnosis report is designed to help you see how our ML would have performed, and to allow you to play with the risk score thresholds to understand the potential impact to your business in terms of both fraud prevention and overall profit. 
 
 **Can we pick and choose which orders are subject to a fraud check?**
 
