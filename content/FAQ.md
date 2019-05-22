@@ -1,6 +1,6 @@
 ---
 author: jackwi111
-description: This topic provide frequently asked questions about Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides frequently asked questions about Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jowigh
 ms.service: crm-online
 ms.date: 05/21/2019
