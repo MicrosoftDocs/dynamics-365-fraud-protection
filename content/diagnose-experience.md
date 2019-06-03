@@ -19,18 +19,19 @@ Your dashboard keeps you up to date about useful information, essential tasks th
 
 ## Upload data
 
-To begin, upload your historical data for analysis. The data should reflect approved transactions that were approved by you (the merchant) and sent to your bank, and it should include three months of purchases and chargebacks. Upload a data file for each of the following entities:
+To begin, upload your historical data for analysis. Your data files should reflect approved transactions that were approved by you (the merchant) and sent to your bank.
 
-- Purchases
-- Payment instruments
-- Products
-- Chargebacks
+To help guarantee that Dynamics 365 Fraud Protection can interpret the files that you upload, make sure that they meet the following requirements:
 
-To help guarantee that Dynamics 365 Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](schema.md):
+**Data requirements**
+- Upload files for each of the following entities: Purchases, Payment instruments, Products, and Chargebacks.
+- Your data must represent at least 100,000 transactions, 4,000 chargebacks, and 30 days of data. Three months of data are recommended.
+- Your chargeback basis point should be between 5 and 5,000.
 
-- The files are in CSV (comma-separated values) format.
-- The maximum file size is 10 gigabytes (GB). 
-- The **DateTime** columns are in ISO 8601 format.
+**Format requirements**
+- The files are in CSV (comma-separated values) format and follow the [required schemas](schema.md).
+- The maximum file size for each upload is 10 gigabytes (GB).
+- The DateTime columns are in ISO 8601 format.
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
