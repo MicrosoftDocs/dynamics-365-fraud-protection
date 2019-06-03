@@ -15,7 +15,7 @@ Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce
 
 ## Dashboard
 
-Your dashboard keeps you up to date about useful information, essential tasks that you need to complete, and important settings that you should configure to get the most out of Dynamics 365 Fraud Protection. Critical steps are marked to indicate your current setup status. Steps might be marked as **Completed** or **Not started**, or they might show the number of items that still remain.
+Your dashboard keeps you up to date about useful information, essential tasks, and important settings that you should configure to get the most out of Dynamics 365 Fraud Protection. Critical steps might be marked as **Completed** or **Not started**, or they might show the number of items that still remain.
 
 ## Upload data
 
@@ -24,8 +24,9 @@ To begin, upload your historical data for analysis. Your data files should refle
 To help guarantee that Dynamics 365 Fraud Protection can interpret the files that you upload, make sure that they meet the following requirements.
 
 ### Data requirements
-- Upload files for each of the following entities: Purchases, Payment instruments, Products, and Chargebacks.
+- Files should be uploaded for each of the following entities: Purchases, Payment instruments, Products, and Chargebacks.
 - The data must represent at least 100,000 transactions, 4,000 chargebacks, and 30 days of data. Three months of data are recommended.
+- The chargeback data should correspond directly to the purchase data.
 - The chargeback basis point should be between 5 and 5,000.
 
 ### Format requirements
@@ -42,7 +43,7 @@ You can preview a sample of your data on the **Ready to upload your file** page.
 
 ## Generate reports
 
-After all four files are uploaded, select **Generate data diagnostic report** to begin to create your report. Report generation typically takes no longer than 24 hours. However, it might take more or less time, depending on the size of your files.
+After all four files are uploaded, select **Generate data diagnostic report** to begin creating your report. Report generation typically takes no longer than 24 hours, but might take more or less time, depending on the size of your files.
 
 ### Data diagnostic report
 
