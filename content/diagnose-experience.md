@@ -15,7 +15,7 @@ Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce
 
 ## Dashboard
 
-Your dashboard keeps you up to date about useful information, essential tasks, and important settings that you should configure to get the most out of Dynamics 365 Fraud Protection. Critical steps might be marked as **Completed** or **Not started**, or they might show the number of items that still remain.
+Your dashboard keeps you up to date about useful information, essential tasks, and important settings that you should configure to get the most out of Dynamics 365 Fraud Protection. Critical steps are marked to indicate your progress. Steps might be marked as **Completed** or **Not started**, or they might show the number of items that still remain.
 
 ## Upload data
 
