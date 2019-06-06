@@ -11,7 +11,7 @@ title: Learn from the scorecard
 
 # Learn from the scorecard
 
-The scorecard reports provide a review of your key metrics and can help you understand the month-by-month performance of your fraud protection efforts.
+You can use the scorecard reports to review your key metrics and understand the month-by-month performance of your fraud protection efforts.
 
 In the Evaluate experience, your scorecard lets you evaluate the capabilities of Microsoft Dynamics 365 Fraud Protection. In the Protect experience, you can monitor the real-time performance of Dynamics 365 Fraud Protection as your system of record. To evaluate specific ranges of data in detail, you can filter and pivot the scorecards on predefined attributes, markets, and product categories. You can then use the knowledge that you gain to make well-informed risk management decisions for your business.
 
@@ -19,7 +19,7 @@ Your top-four key performance indicators (KPIs) are summarized across the top of
 
 ## Customize your view
 
-To filter your view of the interactive charts, use the drop-down menus and sliders. The following options are available:
+You can use the drop-down menus and sliders to filter your view of the interactive charts. The following options are available:
 
 - **Aggregation level** – Show a daily, weekly, or monthly view of your data.
 - **MID classification** – Show all program merchant IDs (MIDs) and/or standard MIDs.
