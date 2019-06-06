@@ -15,24 +15,25 @@ Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce
 
 ## Dashboard
 
-Your dashboard keeps you up to date about useful information, essential tasks that you need to complete, and important settings that you should configure to get the most out of Dynamics 365 Fraud Protection. Critical steps are marked to indicate your current setup status. Steps might be marked as **Completed** or **Not started**, or they might show the number of items that still remain.
+Your dashboard keeps you up to date about useful information, essential tasks, and important settings that you should configure to get the most out of Dynamics 365 Fraud Protection. Critical steps are marked to indicate your progress. Steps might be marked as **Completed** or **Not started**, or they might show the number of items that still remain.
 
 ## Upload data
 
-To begin, upload your historical data for analysis. The data should reflect approved transactions that were approved by you (the merchant) and sent to your bank, and it should include three months of purchases and chargebacks. Upload a data file for each of the following entities:
+To begin, upload your historical data for analysis. Your data files should reflect approved transactions that were approved by you (the merchant) and sent to your bank.
 
-- Purchases
-- Payment instruments
-- Products
-- Chargebacks
+To help guarantee that Dynamics 365 Fraud Protection can interpret the files that you upload, make sure that they meet the following requirements.
 
-To help guarantee that Dynamics 365 Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](schema.md):
+### Data requirements
+- Upload files for each of these entities: Purchases, Payment instruments, Products, and Chargebacks.
+- The files must include at least 100,000 transactions, 4,000 chargebacks, and 30 days of data. We recommend three months of data.
+- The chargeback data should correspond directly to the purchase data. For the best results, there should be at least 5 chargebacks associated with every 100 purchases.
 
-- The files are in CSV (comma-separated values) format.
-- The maximum file size is 10 gigabytes (GB). 
-- The **DateTime** columns are in ISO 8601 format.
+### Format requirements
+- The files must be in CSV (comma-separated values) format and follow the [required schemas](schema.md).
+- The maximum file size is 10 gigabytes (GB).
+- The DateTime columns are in ISO 8601 format.
 - The decimal precision is two decimal places.
-- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
+- The following characters should be escaped in all columns: commas, new line characters, and multiline characters.
 
 > [!IMPORTANT]
 > This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request highly sensitive data, such as the full payment instrument number or Social Security number (SSN). Therefore, make sure that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
@@ -41,7 +42,7 @@ You can preview a sample of your data on the **Ready to upload your file** page.
 
 ## Generate reports
 
-After all four files are uploaded, select **Generate data diagnostic report** to begin to create your report. Report generation typically takes no longer than 24 hours. However, it might take more or less time, depending on the size of your files.
+After all four files are uploaded, select **Generate data diagnostic report** to begin creating your report. Report generation typically takes no longer than 24 hours, but might take more or less time, depending on the size of your files.
 
 ### Data diagnostic report
 

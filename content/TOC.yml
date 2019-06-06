@@ -14,6 +14,8 @@
   href: protect-experience.md  
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
+- name: Security, compliance, and data subject requests
+  href: security-compliance.md  
 - name: Implement device fingerprinting
   href: device-fingerprinting.md  
 - name: Upload historical data
@@ -34,5 +36,3 @@
   href: transaction-acceptance-booster.md  
 - name: Support your customers
   href: risk-support.md
-- name: Security, compliance, and data subject requests
-  href: security-compliance.md

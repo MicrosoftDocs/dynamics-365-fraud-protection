@@ -13,12 +13,12 @@ title: Sign up for Dynamics 365 Fraud Protection
 
 You can discover the value of Microsoft Dynamics 365 Fraud Protection by using a public preview that shows how the product can help protect your business and your customers.
 
-To begin, go to the [Dynamics 365 Fraud Protection preview page](https://go.microsoft.com/fwlink/?linkid=2085136), select **Request Preview**, and then complete the request form.
-
 > [!IMPORTANT]
 > Before you set up your environment for Dynamics 365 Fraud Protection, we recommend that you be familiar with [Microsoft Azure Cloud Computing Platform and Services](https://azure.microsoft.com/).
 
-When you qualify for the preview, you will receive an email that includes a link and sign-up instructions. Select the link to sign up and create your Dynamics 365 Fraud Protection account.
+To begin, go to the [Dynamics 365 Fraud Protection preview page](https://go.microsoft.com/fwlink/?linkid=2085136), select **Request Preview**, and then complete the request form.
+
+When you qualify for the preview, you will receive an email that includes a link and sign-up instructions. Select the link and complete the sign-up forms to create your Dynamics 365 Fraud Protection account.
 
 During sign-up for Dynamics 365 Fraud Protection, you can use either of the following approaches:
 
