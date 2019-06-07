@@ -19,7 +19,7 @@ Your top-four key performance indicators (KPIs) are summarized across the top of
 
 ## Customize your view
 
-You can use the drop-down menus and sliders to customize your view of the interactive charts. The following options are available:
+You can use the drop-down menus and sliders to filter your view of the interactive charts. The following options are available:
 
 - **Aggregation level** – Show a daily, weekly, or monthly view of your data.
 - **MID classification** – Show all program merchant IDs (MIDs) and/or standard MIDs.

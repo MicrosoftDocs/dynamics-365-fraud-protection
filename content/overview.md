@@ -43,7 +43,7 @@ These capabilities are part of a comprehensive set of features that are grouped 
 | Capability | Diagnose | Evaluate | Protect |
 |------------|----------|----------|---------|
 | [Be secure and compliant, and have full transparency into data handling and privacy.](security-compliance.md) | X | X | X |
-| [Understand the conditions of your business. Diagnose and analyze the state of your fraud protection.](diagnose-experience.md)                                                                     | X        | X        |         |
+| [Understand the conditions of your business. Diagnose and analyze the state of your fraud protection.](diagnose-experience.md)                                                                     | X        | X        | X       |
 | [Send transactions through application programming interfaces (APIs) in real time, and gain risk insights through inline evaluation that includes explanations.](send-real-time-api.md)                                                     |          | X        | X       |
 | [Use the scorecard to understand the performance of Dynamics 365 Fraud Protection. Compare Dynamics 365 Fraud Protection to your existing fraud solution.](scorecard.md)                                       |          | X        | X       |
 | [Upload your historical data to tune the machine learning model to your business scenarios. Extend and tailor Dynamics 365 Fraud Protection to the needs of your business.](data-upload.md)  |          | X        | X       |
