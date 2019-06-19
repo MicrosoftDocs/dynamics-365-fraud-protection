@@ -50,6 +50,9 @@ After configuing access to users, integrate your existing systems with the Dynam
 
 To create and provision a new Azure tenant, see [Create and provision a new tenant in Microsoft Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant), and follow the steps.
 
+> [!NOTE]
+> When creating your user ID, enter both your username and company name. You cannot change the company name after it has been created. If a message appears stating that your company name is not available, this means your company already has an Azure tenant. Use that Azure tenant by following the steps under "Provision your existing Azure tenant" topic. 
+
 After you've signed up, links for the Diagnose experience appear in Dynamics 365 Fraud Protection. Before you access the Diagnose experience, you must configure user access to Dynamics 365 Fraud Protection. For instructions, see the "Configure users in Dynamics 365 Fraud Protection" topic in [Configure user access](configure-user-access.md).
 
 After configuing access to users, integrate your existing systems with the Dynamics 365 Fraud Protection real-time application programming interfaces (APIs). See [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md), and follow the steps.
