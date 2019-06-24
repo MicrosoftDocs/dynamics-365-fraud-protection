@@ -22,7 +22,7 @@ When you qualify for the preview, you will receive an email that includes a link
 
 ## Provision your Azure tenant
 
-An Azure tenant represents an organization within Azure Active Directory (Azure AD). It is a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for a Microsoft cloud service such as Azure, Microsoft Intune, or Office 365. Essentially, an Azure tenant is a way to control user access to Azure resources to ensure you control access to your data. 
+An Azure tenant represents an organization within Azure Active Directory (Azure AD). It is a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for a Microsoft cloud service such as Azure, Microsoft Intune, or Office 365. Essentially, an Azure tenant is a way to manage user access to Azure resources to ensure you control access to your data. 
 
 During sign-up for Dynamics 365 Fraud Protection, you can use either of the following approaches:
 
