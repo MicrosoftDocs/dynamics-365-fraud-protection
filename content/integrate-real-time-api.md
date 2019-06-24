@@ -58,6 +58,7 @@ For more information, please refer to the Azure documentation:
 - [Cache access tokens](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/token-cache)
 
 ### Call the APIs
+When calling the APIs, follow these steps.
 
 <ol>
  <li> 
