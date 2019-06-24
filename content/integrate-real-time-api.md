@@ -15,9 +15,9 @@ To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection f
 
 ## Create Azure Active Directory applications
 
-To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Azure Active Directory (Azure AD) applications. You can configure these by using the Real-time APIs tool, which leads you through the required steps. You can also manually configure your Azure AD applications if desired. 
+To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Azure Active Directory (Azure AD) applications. You can configure these by using the **Real-time APIs** tool, which leads you through the required steps. You can also [manually configure your Azure AD applications](azure-apps-portal-powershell.md) if desired. 
 
-To use the tool, select Configuration in the navigation, and then select Real-time APIs. Complete the form to create your app. We recommend creating one AAD application for each environment you operate. 
+To use the tool, select **Configuration** in the navigation, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one AAD application for each environment you operate. 
 
 The following fields are required: 
 
