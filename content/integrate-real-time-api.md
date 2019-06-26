@@ -38,7 +38,7 @@ Once your AAD apps have been created, they can be managed through the Azure port
 While using Dynamics 365 Fraud Protection, you can link to the portal from the **Real-time APIs** page by selecting **Visit the Azure portal** in the right column. 
 
 ## Call the Dynamics 365 Fraud Protection real-time APIs 
-To integrate your transactional sales systems with Dynamics 365 Fraud Protection, follow these steps. 
+To integrate your systems with Dynamics 365 Fraud Protection, follow these steps. 
 
 ### Get your IDs 
 The following IDs are required: 
@@ -46,7 +46,7 @@ The following IDs are required:
 - **Application (client) ID**: This identifies the Azure AD app you created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
 
 ### Identify your environment
-The resource URIs for Sandbox and Production can be found on the Account information tile on the Dynamics 365 Fraud Protection dashboard or as printed below: 
+The API URIs for Sandbox and Production can be found on the Account information tile on the Dynamics 365 Fraud Protection dashboard or as printed below: 
 - Sandbox: https://api.dfp.microsoft-int.com 
 - Production: https://api.dfp.microsoft.com
 
@@ -81,7 +81,7 @@ When calling the APIs, follow these steps.
     </tr> 
     </table> 
     </li> 
-   <li>Generate an event-based payload. Fill in the event data with the relevant information from your transactional system. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>. 
+   <li>Generate an event-based payload. Fill in the event data with the relevant information from your system. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>. 
     </li> 
    <li>Combine the header (which includes the access token) and the payload, and send them to your Dynamics 365 Fraud Protection endpoint.</li>
 </ol>
