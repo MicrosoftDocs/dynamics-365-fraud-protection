@@ -23,12 +23,12 @@ The following fields are required:
 
 - **Application display name**. Give your application a descriptive name. Maximum length is 93 characters. 
 - **Environment**. Choose whether this application should call your production or integration (sandbox) endpoint. 
-- **Authentication method**. Choose whether you would like to authenticate via certificate or a password. For the certificate method, use the **Choose file** button to upload the public key. You will need the matching private key when acquiring tokens. If you choose the **Password** method, a password will be generated for you after application creation. 
+- **Authentication method**. Choose whether you would like to authenticate via certificate or a secret (password). For the certificate method, use the **Choose file** button to upload the public key. You will need the matching private key when acquiring tokens. If you choose the **Secret** method, a password will be generated for you after application creation. 
 
-When all fields are filled in, select **Create application**. The confirmation screen summarizes the name of your app, the ID of your app, and the certificate thumbprint or password, depending on your authentication method. 
+When all fields are filled in, select **Create application**. The confirmation screen summarizes the name of your app, the ID of your app, and the certificate thumbprint or secret, depending on your authentication method. 
 
 > [!NOTE]
-> If you chose the password method, please save this password for future reference, as it will only display once.
+> If you chose the Secret method, please save the information for future reference, as it will only display once.
 
 To create an additional app, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
 
