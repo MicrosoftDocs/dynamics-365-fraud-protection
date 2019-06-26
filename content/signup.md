@@ -26,10 +26,10 @@ An Azure tenant represents an organization within Azure Active Directory (Azure 
 
 During sign-up for Dynamics 365 Fraud Protection, you can use either of the following approaches:
 
-- Provision your existing Azure tenant.
-- [Create and provision a new tenant in Microsoft Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
+- [Provision your existing Azure tenant](signup.md#provision-your-existing-azure-tenant).
+- [Create and provision a new tenant in Microsoft Azure Active Directory (Azure AD)](signup.md#create-and-provision-a-new-tenant-in-microsoft-azure-active-directory).
 
-If you are unsure if your company already has an Azure tenant, see [Create and provision a new tenant in Microsoft Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant), and follow the steps.
+If you are unsure if your company already has an Azure tenant, see the instructions for creating and provisioning a new tenant.
 
 You will need Azure tenant administrator permissions to complete provisioning. If you don't have an admin account, contact the tenant admin in your organization for support.
 
@@ -50,7 +50,7 @@ After configuing access to users, integrate your existing systems with the Dynam
 
 ### Create and provision a new tenant in Microsoft Azure Active Directory
 
-To create and provision a new Azure tenant, see [Create and provision a new tenant in Microsoft Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant), and follow the steps.
+To create and provision a new Azure tenant, see [Create and provision a new tenant in Microsoft Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) and follow the steps.
 
 > [!NOTE]
 > When creating your user ID, enter both your username and company name. You cannot change the company name after it has been created. If a message appears stating that your company name is not available, this means your company already has an Azure tenant. Use that Azure tenant by following the steps under the "Provision your existing Azure tenant" topic. 
