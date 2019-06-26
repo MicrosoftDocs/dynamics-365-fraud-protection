@@ -31,8 +31,7 @@ During sign-up for Dynamics 365 Fraud Protection, you can use either of the foll
 
 > [!NOTE]
 > To sign up with an existing Azure tenant, you will need Azure tenant administrator permissions. If you are unsure if your company already has an Azure tenant, see [Create and provision a new tenant in Microsoft Azure Active Directory (Azure AD)](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant), and follow the steps.
-
-> If your account has Azure tenant administrator permissions, see "Provision your existing Azure tenant" topic, and follow the steps. If no Azure tenant exists, to continue with the sign-up process, contact the individual in your organization with Azure tenant administrator permissions for support. Due to limitations migrating data between tenants, we recommend you select the tenant approach you would use if Dynamics 365 Fraud Protection were in production, which will avoid additional steps at a later stage.
+> If your account has Azure tenant administrator permissions, see the "Provision an existing Azure tenant" topic below, and follow the steps. If no Azure tenant exists, contact the individual in your organization with Azure tenant administrator permissions for support. Due to limitations migrating data between tenants, we recommend you select the tenant approach you would use if Dynamics 365 Fraud Protection were in production, which will avoid additional steps at a later stage.
 
 ### Provision an existing Azure tenant
 
