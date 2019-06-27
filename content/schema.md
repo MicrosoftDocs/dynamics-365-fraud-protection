@@ -120,15 +120,15 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
-| ChargebackId       | string   | The chargeback identifier. |
-| Reason             | string   | The reason that was provided by the bank. |
-| Status             | string   | The status: **CB_DISPUTE-INITIATED**, **CB_DISPUTE-LOSE**, **CB_DISPUTE-WIN**, **CHARGEBACK-CB1**, **CHARGEBACK-CB2**, **INQUIRY_DISPUTE-WIN**, or **INQUIRY-INITIATED**. |
-| BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Amount             | double   | The chargeback amount. |
-| Currency           | string   | The currency that is used for the chargeback amount. |
-| UserId             | string   | The customer identifier. |
-| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
-| MerchantLocalDate  | DateTime | The date when the purchase was ingested, in the merchant's time zone. The format is ISO 8601. |
+| chargebackId       | string   | The chargeback identifier. |
+| reason             | string   | The reason that was provided by the bank. |
+| status             | string   | The status: **CB_DISPUTE-INITIATED**, **CB_DISPUTE-LOSE**, **CB_DISPUTE-WIN**, **CHARGEBACK-CB1**, **CHARGEBACK-CB2**, **INQUIRY_DISPUTE-WIN**, or **INQUIRY-INITIATED**. |
+| bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
+| amount             | double   | The chargeback amount. |
+| currency           | string   | The currency that is used for the chargeback amount. |
+| userId             | string   | The customer identifier. |
+| purchaseId         | string   | The identifier of the transaction (or purchase or order). |
+| merchantLocalDate  | DateTime | The date when the purchase was ingested, in the merchant's time zone. The format is ISO 8601. |
 
 ## Refunds
 
@@ -136,15 +136,15 @@ The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
-| RefundId           | string   | The refund identifier. |
-| Reason             | string   | The customer-provided reason. |
-| Status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, **REVERSED**. |
-| BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Amount             | double   | The refund amount. |
-| Currency           | string   | The currency that is used for the sales price amount. |
-| UserId             | string   | The customer identifier. |
-| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
-| MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
+| refundId           | string   | The refund identifier. |
+| reason             | string   | The customer-provided reason. |
+| status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, **REVERSED**. |
+| bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
+| amount             | double   | The refund amount. |
+| currency           | string   | The currency that is used for the sales price amount. |
+| userId             | string   | The customer identifier. |
+| purchaseId         | string   | The identifier of the transaction (or purchase or order). |
+| merchantLocalDate  | DateTime | A date in ISO 8601 format. |
 
 ## PurchaseStatus
 
@@ -152,11 +152,11 @@ The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute         | Type     | Description |
 |-------------------|----------|-------------|
-| PurchaseId        | string   | The identifier of the transaction (or purchase or order). |
-| StatusType        | string   | The type of status: **Approved**, **Challenge**, **Rejected**, **Review**. |
-| StatusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
-| Reason            | string   | The reason for the status transition. |
-| MerchantLocalDate | DateTime | A date in ISO 8601 format. |
+| purchaseId        | string   | The identifier of the transaction (or purchase or order). |
+| statusType        | string   | The type of status: **Approved**, **Challenge**, **Rejected**, **Review**. |
+| statusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
+| reason            | string   | The reason for the status transition. |
+| merchantLocalDate | DateTime | A date in ISO 8601 format. |
 
 ## BankEvents
 
@@ -164,16 +164,16 @@ The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
-| BankEventId        | string   | The bank event identifier. |
-| Type               | string   | The bank event type: **authorize** or **charge**. |
-| BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Status             | string   | The status: **approved**, **declined**, **failed**, **pending**, or **unknown**. |
-| BankResponseCode   | string   | The bank code on the response. |
-| PaymentProcessor   | string   | The processor name (for example, **FDC** or **PAYPAL**). |
-| Mrn                | string   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
-| Mid                | string   | The merchant ID (MID) that is used for bank communication. |
-| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
-| MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
+| bankEventId        | string   | The bank event identifier. |
+| type               | string   | The bank event type: **authorize** or **charge**. |
+| bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
+| status             | string   | The status: **approved**, **declined**, **failed**, **pending**, or **unknown**. |
+| bankResponseCode   | string   | The bank code on the response. |
+| paymentProcessor   | string   | The processor name (for example, **FDC** or **PAYPAL**). |
+| mrn                | string   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
+| mid                | string   | The merchant ID (MID) that is used for bank communication. |
+| purchaseId         | string   | The identifier of the transaction (or purchase or order). |
+| merchantLocalDate  | DateTime | A date in ISO 8601 format. |
 
 ## Account
 
