@@ -67,7 +67,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 |-----------------------------|----------|-------------|
 | PurchaseId                  | string   | The identifier of the transaction (or purchase or order). |
 | MerchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. |
-| Type                        | string   | The type of payment: **credit_card**, **direct_debit**, **finance_leasing**, **invoice_credit**, **offline_bank_transfer**, **online_bank_transfer**, **paypal**, **stored_value**, **Mobilepayment**. |
+| Type                        | string   | The type of payment: **credit_card**, **direct_debit**, **finance_leasing**, **invoice_credit**, **offline_bank_transfer**, **online_bank_transfer**, **paypal**, **stored_value**, or **Mobilepayment**. |
 | PurchaseAmount              | double   | The total purchase amount that uses this payment instrument for the transaction. |
 | CreationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | UpdateDate                  | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
@@ -138,7 +138,7 @@ The following schema is used in the Evaluate and Protect experiences.
 |--------------------|----------|-------------|
 | refundId           | string   | The refund identifier. |
 | reason             | string   | The customer-provided reason. |
-| status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, **REVERSED**. |
+| status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, or **REVERSED**. |
 | bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | amount             | double   | The refund amount. |
 | currency           | string   | The currency that is used for the sales price amount. |
@@ -153,7 +153,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | Attribute         | Type     | Description |
 |-------------------|----------|-------------|
 | purchaseId        | string   | The identifier of the transaction (or purchase or order). |
-| statusType        | string   | The type of status: **Approved**, **Challenge**, **Rejected**, **Review**. |
+| statusType        | string   | The type of status: **Approved**, **Challenge**, **Rejected**, or **Review**. |
 | statusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
 | reason            | string   | The reason for the status transition. |
 | merchantLocalDate | DateTime | A date in ISO 8601 format. |
