@@ -61,13 +61,13 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | ZipCode             | string   | The postal code that was provided for the address. |
 | Country             | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
 
-### Payment instruments
+### PaymentInstruments
 
 | Attribute                   | Type     | Description |
 |-----------------------------|----------|-------------|
 | PurchaseId                  | string   | The identifier of the transaction (or purchase or order). |
 | MerchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. |
-| Type                        | string   | The type of payment: **CreditCard**, **Paypal**, **Mobilepayment**, or **Giftcard**. |
+| Type                        | string   | The type of payment: **credit_card**, **direct_debit**, **finance_leasing**, **invoice_credit**, **offline_bank_transfer**, **online_bank_transfer**, **paypal**, **stored_value**, **Mobilepayment**. |
 | PurchaseAmount              | double   | The total purchase amount that uses this payment instrument for the transaction. |
 | CreationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | UpdateDate                  | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
@@ -120,15 +120,15 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
-| chargebackId       | string   | The chargeback identifier. |
-| reason             | string   | The reason that was provided by the bank. |
-| status             | string   | The status: **INITIATED**, **LOST**, or **WON**. |
-| bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| amount             | double   | The chargeback amount. |
-| currency           | string   | The currency that is used for the chargeback amount. |
-| userId             | string   | The customer identifier. |
-| purchaseId         | string   | The identifier of the transaction (or purchase or order). |
-| merchantLocalDate  | DateTime | The date when the purchase was ingested, in the merchant's time zone. The format is ISO 8601. |
+| ChargebackId       | string   | The chargeback identifier. |
+| Reason             | string   | The reason that was provided by the bank. |
+| Status             | string   | The status: **CB_DISPUTE-INITIATED**, **CB_DISPUTE-LOSE**, **CB_DISPUTE-WIN**, **CHARGEBACK-CB1**, **CHARGEBACK-CB2**, **INQUIRY_DISPUTE-WIN**, or **INQUIRY-INITIATED**. |
+| BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
+| Amount             | double   | The chargeback amount. |
+| Currency           | string   | The currency that is used for the chargeback amount. |
+| UserId             | string   | The customer identifier. |
+| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
+| MerchantLocalDate  | DateTime | The date when the purchase was ingested, in the merchant's time zone. The format is ISO 8601. |
 
 ## Refunds
 
@@ -136,50 +136,50 @@ The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
-| refundId           | string   | The refund identifier. |
-| reason             | string   | The customer-provided reason. |
-| status             | string   | The refund status: **INITIATED** or **COMPLETED**. |
-| bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| amount             | double   | The refund amount. |
-| currency           | string   | The currency that is used for the sales price amount. |
-| userId             | string   | The customer identifier. |
-| purchaseId         | string   | The identifier of the transaction (or purchase or order). |
-| merchantLocalDate  | DateTime | A date in ISO 8601 format. |
+| RefundId           | string   | The refund identifier. |
+| Reason             | string   | The customer-provided reason. |
+| Status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, **REVERSED**. |
+| BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
+| Amount             | double   | The refund amount. |
+| Currency           | string   | The currency that is used for the sales price amount. |
+| UserId             | string   | The customer identifier. |
+| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
+| MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
 
-## Purchase status
+## PurchaseStatus
 
 The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute         | Type     | Description |
 |-------------------|----------|-------------|
-| purchaseId        | string   | The identifier of the transaction (or purchase or order). |
-| statusType        | string   | The type of status: **APPROVED**, **CANCELED**, **HELD**, or **FULFILLED**. |
-| statusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
-| reason            | string   | The reason for the status transition. |
-| merchantLocalDate | DateTime | A date in ISO 8601 format. |
+| PurchaseId        | string   | The identifier of the transaction (or purchase or order). |
+| StatusType        | string   | The type of status: **Approved**, **Challenge**, **Rejected**, **Review**. |
+| StatusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
+| Reason            | string   | The reason for the status transition. |
+| MerchantLocalDate | DateTime | A date in ISO 8601 format. |
 
-## Bank events
+## BankEvents
 
 The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
-| bankEventId        | string   | The bank event identifier. |
-| type               | string   | The bank event type: **AUTH** or **CHARGE**. |
-| bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| status             | string   | The status: **APPROVED** or **REJECTED**. |
-| bankResponseCode   | string   | The bank code on the response. |
-| paymentProcessor   | string   | The processor name (for example, **FDC** or **PAYPAL**). |
-| mrn                | string   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
-| mid                | string   | The merchant ID (MID) that is used for bank communication. |
-| purchaseId         | string   | The identifier of the transaction (or purchase or order). |
-| merchantLocalDate  | DateTime | A date in ISO 8601 format. |
+| BankEventId        | string   | The bank event identifier. |
+| Type               | string   | The bank event type: **authorize** or **charge**. |
+| BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
+| Status             | string   | The status: **approved**, **declined**, **failed**, **pending**, or **unknown**. |
+| BankResponseCode   | string   | The bank code on the response. |
+| PaymentProcessor   | string   | The processor name (for example, **FDC** or **PAYPAL**). |
+| Mrn                | string   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
+| Mid                | string   | The merchant ID (MID) that is used for bank communication. |
+| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
+| MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
 
 ## Account
 
 The following schemas are used in the Evaluate and Protect experiences.
 
-### Update account
+### UpdateAccount
 
 | Attribute                | Type     | Description |
 |--------------------------|----------|-------------|
@@ -207,7 +207,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | ipAddress                | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
 | merchantLocalDate        | DateTime | A date in ISO 8601 format. |
 
-### Update address
+### UpdateAddress
 
 | Attribute   | Type   | Description |
 |-------------|--------|-------------|
@@ -225,7 +225,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | zipCode     | string | The postal code that was provided for the address. |
 | country     | string | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
 
-### Update payment instrument
+### UpdatePaymentInstrument
 
 | Attribute                     | Type     | Description |
 | ----------------------------- |----------|-------------|
