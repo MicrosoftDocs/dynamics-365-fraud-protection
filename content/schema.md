@@ -35,7 +35,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | MerchantLocalDate   | DateTime | The purchase ingestion date in the merchant's time zone. The format is ISO 8601. |
 | TotalAmount         | double   | The total amount that was charged to the customer, including tax. This information is provided by the merchant. |
 | SalesTax            | double   | The sales tax that was charged for the transaction. This information is provided by the merchant. |
-| Currency            | string   | The currency of the original purchase as a three-character currency code (for example, **USD**, which is aligned with the OANDA currency code). This information is provided by merchant. |
+| Currency            | string   | The currency of the original purchase as a three-character currency code (for example, **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant. |
 | DeviceContextId     | string   | The session ID of the event's session (provided by Microsoft Device Fingerprinting), or the transaction ID if the session isn't available. |
 | IPAddress           | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
 | UserId              | string   | The customer identifier. This information is provided by the merchant. |
@@ -108,6 +108,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Market        | string | The market where the product is offered. The value should be a two-letter ISO country/region code (for example, **US**). |
 | Sku           | string | The product's stock keeping unit (SKU). |
 | SalesPrice    | double | The price of the item that was sold, excluding tax. This information is provided by the merchant. |
+| Currency      | string | The currency of the original purchase as a three-character currency code (for example, **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant.  | 
 | COGS          | string | The cost of goods sold (that is, the raw material cost of the item). This information is provided by the merchant. |
 | IsRecurring   | bool   | A value that indicates whether the product is a recurring subscription. |
 | IsFree        | bool   | A value that indicates whether the product is offered for free. |
