@@ -16,13 +16,12 @@ You can create Microsoft Azure Active Directory (Azure AD) apps within Microsoft
 ## Create an Azure AD app registration in the Azure portal 
  <!--note from editor: Please use the descriptive titles/names for the navigation and left panes.-->
  <!--note from editor: Checking that in "Redirect (Web) URI", you do mean URI and not URL.-->
-<ol>
-  <li>Open the [Azure portal](https://portal.azure.com).</li>
-  <li>In the navigation pane, select **Azure Active Directory**. The **Microsoft – Overview** page appears.  </li>
-  <li>In the left pane, under **Manage**, select **App registrations**. The **Microsoft - App registrations** page appears. You can return to this page at any time to view your app registrations.  </li>
-  <li>Select **New registration**. The **Register an application** page appears.  </li>
-  <li>In the **Name** field, enter any name (for example, **API service account**). In the **Supported account types** field group, leave the **Accounts in this organizational directory only (\<your tenant name\>)** option selected. The Redirect (Web) URI is optional. It can be any URL that starts with **https://**.  </li>
-</ol>
+ 
+1. Open the [Azure portal](https://portal.azure.com).
+2. In the navigation pane, select **Azure Active Directory**. The **Microsoft – Overview** page appears. 
+3. In the left pane, under **Manage**, select **App registrations**. The **Microsoft - App registrations** page appears. You can return to this page at any time to view your app registrations. 
+4. Select **New registration**. The **Register an application** page appears. 
+5. In the **Name** field, enter any name (for example, **API service account**). In the **Supported account types** field group, leave the **Accounts in this organizational directory only (\<your tenant name\>)** option selected. The Redirect (Web) URI is optional. It can be any URL that starts with **https://**. 
 
 ## Create an Azure AD app registration in PowerShell 
 If you prefer to use Microsoft Windows PowerShell to create an Azure AD app registration, see [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication?view=azurermps-6.13.0). 
