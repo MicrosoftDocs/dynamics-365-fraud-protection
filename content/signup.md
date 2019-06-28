@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to sign up for Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 04/22/2019
+ms.date: 07/01/2019
 
 ms.topic: conceptual
 title: Sign up for Dynamics 365 Fraud Protection
@@ -27,7 +27,7 @@ An Azure tenant represents an organization within Microsoft Azure Active Directo
 During sign-up for Dynamics 365 Fraud Protection, you can use either of the following approaches:
 
 - [Provision your existing Azure tenant](signup.md#provision-your-existing-azure-tenant).
-- [Create and provision a new tenant in Azure AD](signup.md#create-and-provision-a-new-tenant-in-microsoft-azure-active-directory).
+- [Create and provision a new tenant in Azure AD](signup.md#create-and-provision-a-new-tenant-in-azure-ad).
 
 If you are unsure if your company already has an Azure tenant, see the note below in the "Create and provision a new tenant in Azure AD" section for help.
 
