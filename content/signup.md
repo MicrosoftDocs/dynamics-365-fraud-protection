@@ -46,11 +46,11 @@ If your company already has an Azure tenant, add Dynamics 365 Fraud Protection t
 
 After you've signed in, links for the Diagnose experience appear in Dynamics 365 Fraud Protection. Before you access the Diagnose experience, you must configure user access to Dynamics 365 Fraud Protection. For instructions, see the "Configure users in Dynamics 365 Fraud Protection" topic in [Configure user access](configure-user-access.md).
 
-After configuing access to users, integrate your existing systems with the Dynamics 365 Fraud Protection real-time application programming interfaces (APIs). See [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md), and follow the steps.
+After configuing access to users, integrate your existing systems with the Dynamics 365 Fraud Protection real-time application programming interfaces (APIs). Follow the steps in [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
 ### Create and provision a new tenant in Azure AD
 
-To create and provision a new Azure tenant, see [Quickstart: Create a new tenant in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant) and follow the steps.
+To create and provision a new Azure tenant, follow the steps in [Quickstart: Create a new tenant in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
 
 > [!NOTE]
 > When you create your user ID, enter both your user name and company name. You cannot change the company name after it has been created. If a message appears stating that your company name is not available, this means your company already has an Azure tenant. Use that Azure tenant by following the steps under the "Provision your existing Azure tenant" topic. 
