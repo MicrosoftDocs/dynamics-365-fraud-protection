@@ -11,7 +11,7 @@ title: Sign up for Dynamics 365 Fraud Protection
 
 # Sign up for Dynamics 365 Fraud Protection
 
-You can discover the value of Microsoft Dynamics 365 Fraud Protection with a public preview that shows how the product can help protect your business and your customers.
+You can discover the value of Microsoft Dynamics 365 Fraud Protection by using a public preview that shows how the product can help protect your business and your customers.
 
 > [!IMPORTANT]
 > Before you set up your environment for Dynamics 365 Fraud Protection, we recommend that you be familiar with [Microsoft Azure Cloud Computing Platform and Services](https://azure.microsoft.com/).
