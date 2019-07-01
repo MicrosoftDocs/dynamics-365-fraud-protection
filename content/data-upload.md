@@ -54,4 +54,4 @@ To overwrite a previous upload with new data, select **Reupload** to submit the 
 
 ## API upload
 
-In the Evaluate and Protect experiences, data can also be ingested through the API. A risk score will be returned for data that you upload in this way. For a more comprehensive overview, see [Send real-time data using APIs](send-real-time-api.md).
+In the Evaluate and Protect experiences, data can also be ingested through the API. A risk score will be returned for data that you upload in this way. For a more comprehensive overview, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
