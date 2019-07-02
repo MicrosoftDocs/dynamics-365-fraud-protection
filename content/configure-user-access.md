@@ -34,7 +34,7 @@ You must be a tenant admin to administer Azure AD. If you have that role, follow
 > [!IMPORTANT]
 > Microsoft Dynamics 365 Fraud Protection Public Preview supports comprehensive access rights for all users. Upcoming updates will let you manage users, groups, and role assignments.
 
-To add users and groups from Azure AD, sign up for [Azure AD Premium edition](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-get-started-premium). For information about the rights that are associated with these roles, see the tables later in this topic.
+To add users from Azure AD, follow these steps. For information about the rights that are associated with these roles, see the tables later in this topic.
 
 You can configure users by assigning them to the **Sandbox_AllAreas_Admin** or **AllAreas_Admin** role, depending on your sandbox (test) or production (live) environment.
 
