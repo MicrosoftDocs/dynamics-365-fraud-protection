@@ -4,7 +4,7 @@
   href: signup.md
 - name: Integrate Dynamics 365 Fraud Protection APIs
   href: integrate-real-time-api.md  
-  name: Create Azure AD apps in Azure Portal or PowerShell
+- name: Create Azure AD apps in Azure Portal or PowerShell
   href: azure-apps-portal-powershell.md  
 - name: Configure user access
   href: configure-user-access.md
