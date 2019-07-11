@@ -15,7 +15,7 @@ This topic outlines the schemas for historical data that is bulk-uploaded into M
 
 Note the following formatting guidelines throughout:
 
-- The files are in CSV UTF-8 (Comma delimited) format.
+- The files are in CSV UTF-8 (comma delimited) format (\*.csv).
 - The maximum file size is 10 gigabytes (GB).
 - The **DateTime** columns are in ISO 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
 - The decimal precision is two decimal places.
