@@ -138,7 +138,7 @@ The following schema is used in the Evaluate and Protect experiences.
 |--------------------|----------|-------------|
 | refundId           | string   | The refund identifier. |
 | reason             | string   | The customer-provided reason. |
-| status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, **PENDING**, **REVERSED*, or **UNKNOWN**. |
+| status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, **PENDING**, **REVERSED**, or **UNKNOWN**. |
 | bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | amount             | double   | The refund amount. |
 | currency           | string   | The currency that is used for the sales price amount. |
