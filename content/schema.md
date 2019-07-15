@@ -122,7 +122,7 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 |--------------------|----------|-------------|
 | chargebackId       | string   | The chargeback identifier. |
 | reason             | string   | The reason that was provided by the bank. |
-| status             | string   | The status: **CB_DISPUTE-INITIATED**, **CB_DISPUTE-LOSE**, **CB_DISPUTE-WIN**, **CHARGEBACK-CB1**, **CHARGEBACK-CB2**, **INQUIRY_DISPUTE-WIN**, or **INQUIRY-INITIATED**. |
+| status             | string   | The status: **CB_DISPUTE-INITIATED**, **CB_DISPUTE-LOSE**, **CB_DISPUTE-WIN**, **CHARGEBACK-CB1**, **CHARGEBACK-CB2**, **INQUIRY_DISPUTE-WIN**, **INQUIRY-INITIATED**, or **UNKNOWN**. |
 | bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | amount             | double   | The chargeback amount. |
 | currency           | string   | The currency that is used for the chargeback amount. |
@@ -138,7 +138,7 @@ The following schema is used in the Evaluate and Protect experiences.
 |--------------------|----------|-------------|
 | refundId           | string   | The refund identifier. |
 | reason             | string   | The customer-provided reason. |
-| status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, or **REVERSED**. |
+| status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, **PENDING**, **REVERSED*, or **UNKNOWN**. |
 | bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | amount             | double   | The refund amount. |
 | currency           | string   | The currency that is used for the sales price amount. |
@@ -153,7 +153,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | Attribute         | Type     | Description |
 |-------------------|----------|-------------|
 | purchaseId        | string   | The identifier of the transaction (or purchase or order). |
-| statusType        | string   | The type of status: **Approved**, **Challenge**, **Rejected**, or **Review**. |
+| statusType        | string   | The type of status: **Approved**, **Challenge**, **Pending**, **Rejected**, **Review**, or **Unknown**.  |
 | statusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
 | reason            | string   | The reason for the status transition. |
 | merchantLocalDate | DateTime | A date in ISO 8601 format. |
@@ -165,9 +165,9 @@ The following schema is used in the Evaluate and Protect experiences.
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
 | bankEventId        | string   | The bank event identifier. |
-| type               | string   | The bank event type: **authorize** or **charge**. |
+| type               | string   | The bank event type: **authorize**, **charge**,  **refund**, **validate**, or **unknown**. |
 | bankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| status             | string   | The status: **approved**, **declined**, **failed**, **pending**, or **unknown**. |
+| status             | string   | The status: **approved**, **declined**, **failed**, **reversed**, **pending**, or **unknown**. |
 | bankResponseCode   | string   | The bank code on the response. |
 | paymentProcessor   | string   | The processor name (for example, **FDC** or **PAYPAL**). |
 | mrn                | string   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
@@ -212,7 +212,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | Attribute   | Type   | Description |
 |-------------|--------|-------------|
 | userId      | string | The customer identifier. |
-| addresstype | string | The address type: **BILLING**, **SHIPPING**, or **ACCOUNT**. |
+| addresstype | string | The address type: **BILLING**, **SHIPPING**, **ACCOUNT**, or **UNKNOWN**. |
 | firstName   | string | The first name that was provided for the address. |
 | lastName    | string | The last name that was provided for the address. |
 | phoneNumber | string | The phone number that was provided for the address. |
