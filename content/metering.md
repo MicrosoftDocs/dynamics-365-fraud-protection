@@ -3,7 +3,7 @@ author: jegrif
 description: This topic explains how to meter your usage of Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
 ms.service: crm-online
-ms.date: 05/15/2019
+ms.date: 07/18/2019
 
 ms.topic: conceptual
 title: Usage metering
