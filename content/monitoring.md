@@ -16,7 +16,7 @@ The monitoring tools in Microsoft Dynamics 365 Fraud Protection provide data abo
 
 ## API requests
 
-The **API requests** tab shows you an interactive chart of your service metrics so you can evaluate performance over time.
+The **API requests** tab shows an interactive chart of service metrics so you can evaluate performance over time.
 
 Use the drop-down menus and select date ranges to review API requests by time period, API name and type, and Dynamics 365 Fraud Protection experience. Changing your selections here will refresh your charts to show only the specified data.
 
