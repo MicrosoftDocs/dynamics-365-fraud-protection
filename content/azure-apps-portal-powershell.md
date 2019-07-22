@@ -15,7 +15,6 @@ You can create Microsoft Azure Active Directory (Azure AD) apps within Microsoft
 
 ## Create an Azure AD app registration in the Azure portal 
  <!--note from editor: Please use the descriptive titles/names for the navigation and left panes.-->
- <!--note from editor: Checking that in "Redirect (Web) URI", you do mean URI and not URL.-->
  
 1. Open the [Azure portal](https://portal.azure.com).
 2. In the navigation pane, select **Azure Active Directory**. The **Microsoft – Overview** page appears. 
