@@ -34,3 +34,7 @@
   href: transaction-acceptance-booster.md  
 - name: Support your customers
   href: risk-support.md
+- name: Monitor API calls
+  href: monitoring.md
+- name: Usage metering
+  href: metering.md
