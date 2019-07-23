@@ -3,7 +3,7 @@ author: jegrif
 description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
 ms.service: crm-online
-ms.date: 04/22/2019
+ms.date: 07/17/2019
 
 ms.topic: conceptual
 title: Upload historical data
@@ -42,7 +42,7 @@ You can upload your historical data from the **Data upload** page.
 
 To help guarantee that Dynamics 365 Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](schema.md):
 
-- The files are in CSV (comma-separated values) format.
+- The files are in CSV UTF-8 (comma delimited) format (\*.csv).
 - The maximum file size is 10 gigabytes (GB).
 - The **DateTime** columns are in ISO 8601 format.
 - The decimal precision is two decimal places.
