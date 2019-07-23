@@ -1,15 +1,15 @@
 ---
 author: jegrif
-description: This topic outlines the schemas that are required for historical data View schemas
+description: This topic outlines the schemas that are required for historical data upload
 ms.author: v-jegrif
 ms.service: crm-online
 ms.date: 04/22/2019
 
 ms.topic: conceptual
-title: View schemas
+title: View data upload schemas
 ---
 
-# View schemas
+# View data upload schemas
 
 This topic outlines the schemas for historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Send real-time data](send-real-time-api.md).
 
