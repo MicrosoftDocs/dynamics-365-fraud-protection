@@ -1,9 +1,9 @@
 ---
 author: jackwi111
-description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time application programming interfaces (APIs).
+description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 04/22/2019
+ms.date: 07/01/2019
 
 ms.topic: conceptual
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
@@ -11,112 +11,81 @@ title: Integrate Dynamics 365 Fraud Protection real-time APIs
 
 # Integrate Dynamics 365 Fraud Protection real-time APIs
 
-To securely integrate your existing systems with the Microsoft Dynamics 365 Fraud Protection real-time application programming interfaces (APIs), you must complete the following tasks:
+To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the Evaluate experience, this allows you to analyze the results of using Dynamics 365 Fraud Protection. In the Protect experience, you can also honor decisions based on the model operating points you have configured.
 
-1. Create an app registration in the Microsoft Azure portal, and use it to get an access token to your Dynamics 365 Fraud Protection API endpoints.
-1. Call the Dynamic 365 Fraud Protection real-time APIs.
+## Create Azure Active Directory applications
 
-## Create an Azure AD app registration in the Azure portal
+To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Microsoft Azure Active Directory (Azure AD) applications. You can configure these by using the Real-time APIs tool, which leads you through the required steps. Or, you can [manually configure your Azure AD applications](azure-apps-portal-powershell.md). 
 
-Follow these steps to create an Azure Active Directory (Azure AD) app registration in the Azure portal.
+To use the Real-time APIs tool, select **Configuration** in the left-hand navigation, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one Azure AD application for each environment you operate. 
 
-1. Open the [Azure portal](https://portal.azure.com).
-1. In the navigation pane, select **Azure Active Directory**. The **Microsoft – Overview** page appears.
-1. In the left pane, under **Manage**, select **App registrations**. The **Microsoft - App registrations** page appears. You can return to this page at any time to view your app registrations.
-1. Select **New registration**. The **Register an application** page appears.
-1. In the **Name** field, enter any name (for example, **API service account**). In the **Supported account types** field group, leave the **Accounts in this organizational directory only (\<your tenant name\>)** option selected. The Redirect (Web) URI is optional. It can be any URL that starts with **https://**.
+The following fields are required: 
 
-For more information about how to configure API access to your Dynamics 365 Fraud Protection endpoint via the Azure portal, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal).
+- **Application display name**. Give your application a descriptive name. Maximum length is 93 characters. 
+- **Environment**. Choose whether this application should call your production or integration (sandbox) endpoint. 
+- **Authentication method**. Choose whether you would like to authenticate via certificate or a secret (password). For the certificate method, use the **Choose file** button to upload the public key. You will need the matching private key when you acquire tokens. If you choose the **Secret** method, a password will be generated for you after application creation. 
 
-Alternatively, if you prefer to use Microsoft Windows PowerShell to create an Azure AD app registration, see [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication?view=azurermps-6.13.0).
+When you finish filling in the fields, select **Create application**. The confirmation screen summarizes your app's name, ID, and the certificate thumbprint or secret, depending on your authentication method. 
 
-## Grant your Azure AD app access to the Dynamics 365 Fraud Protection real-time APIs
+> [!IMPORTANT]
+> If you chose the secret method, please save the information for future reference, because it will only be displayed once.
 
-To assign the appropriate Dynamics 365 API role to your Azure AD app, use the [New-AzureADServiceAppRoleAssignment Windows PowerShell script](https://docs.microsoft.com/powershell/module/azuread/new-azureadserviceapproleassignment?view=azureadps-2.0), as shown in the following example.
+To create an additional app, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
 
-```console
-$c_app_name = "your Azure AD application display name here"
+### Manage existing Azure AD applications 
+Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more about the tool from the [Azure documentation site](https://docs.microsoft.com/en-us/azure/azure-portal/). 
 
-# Pick a role to assign; use Risk_API for production or Sandbox_Risk_API for sandbox (test) access.
-$c_app_role_name = "API role here"
+While using Dynamics 365 Fraud Protection, you can link to the Azure portal from the **Real-time APIs** page's Tip & help column by selecting **Visit the Azure portal**. 
 
-################################################################
-# -- there is no need to change the script below this line –- 
-################################################################
-$app_name = "Dynamics 365 Fraud Protection"
-$sp = Get-AzureADServicePrincipal -Filter "displayName eq '$app_name'"
+## Call the Dynamics 365 Fraud Protection real-time APIs 
+To integrate your systems with Dynamics 365 Fraud Protection, follow these steps. 
 
-#Assign AppRole
-$c_appRole = $sp.AppRoles | Where-Object { $_.DisplayName -eq $c_app_role_name }
-$c_sp = Get-AzureADServicePrincipal -Filter "displayName eq '$c_app_name'"
-New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.ObjectId -ResourceId $sp.ObjectId -Id $c_appRole.Id 
-```
+### Get your IDs 
+The following IDs are required: 
+- **Directory (tenant) ID**. The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard. 
+- **Application (client) ID**. This identifies the Azure AD app you created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
 
-## Call the Dynamics 365 Fraud Protection real-time APIs
+### Identify your environment
+You can find the API URIs for the sandbox and production environments on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard or as printed below: 
+- Sandbox: https://api.dfp.microsoft-int.com 
+- Production: https://api.dfp.microsoft.com
 
-To get real-time fraud protection, you can use an event-based call to integrate your transactional sales systems with Dynamics 365 Fraud Protection. Follow these steps.
+### Generate an access token
+You must generate this token and provide it dynamically. Note that access tokens have a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token. 
+
+For more information, please refer to the Azure documentation: 
+- [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion)
+- [Cache access tokens](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/token-cache)
+
+### Call the APIs
+When calling the APIs, follow these steps.
 
 <ol>
-    <li>Get your IDs:
-      <ul><li>Directory (tenant) ID – Get this ID from the Azure portal. It's the globally unique identifier (GUID) for a tenant's domain in Azure. It appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard. The following illustration shows the location.</li>
-         <img src="media/integrate-apis-images/tenantID.png" alt="integrate TenantID" title="integrate TenantID" />
-    <li>Sandbox resource URI or production resource URI – This first-party app ID appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.<br/>i.  Sandbox: https://api.dfp.microsoft-int.com<br/>ii.  Production: https://api.dfp.microsoft.com</li>
-    <li>Application (client) ID – For information about how to create this ID, see the <i><a href="#create-an-azure-ad-app-registration-in-the-azure-portal">Create an Azure AD app registration in the Azure portal</a></i> section of this topic. In the Azure portal, this ID is known as the application (client) ID. To find this application ID in Azure AD, select <b>App registrations (Preview)</b>.</li>
-    <li>InstanceID – This ID is the ID that you use for <a href="https://go.microsoft.com/fwlink/?linkid=2085697">Device fingerprinting</a>. It identifies the instance of Dynamics 365 Fraud Protection where you will enter data. It appears on the <b>Account Information</b> tile on the Dynamics 365 Fraud Protection dashboard.
-          </li>
-        </ul>
-    </li>
-    <li>
-       Generate an access token. For more information, see <a href="https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion">Use client assertion to get access tokens from Azure AD</a>.
-     <div class="alert">
-         <p class="alert-title"><span class="docon docon-status-error-outline"></span> <b>Note</b></p>
-         <p>You must generate this token and provide it dynamically. For more information, see <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-configurable-token-lifetimes#configurable-token-lifetime-properties">Configure token lifetimes</a>.
-</p>
-        </div><br/>
-    </li>
-    <li>
-        When you call Dynamics 365 Fraud Protection APIs, you must pass the following required HTTP headers on each request.
-    <table>
-    <tr>
-    <th>Header name</th>
-    <th>Header value</th>
-    </tr>
-    <tr>
-    <td>Authorization</td>
+ <li> 
+    Pass the following required HTTP headers on each request. 
+    <table> 
+    <tr> 
+    <th>Header name</th> 
+    <th>Header value</th> 
+    </tr> 
+    <tr> 
+    <td>Authorization</td> 
     <td>
-        To get an access token, use the Azure AD app. <br /><br />
-        <b>Note</b> The access token has a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token.<br /><br />
-    Use the following format for this header (replace <i>accesstoken</i> with the actual token value):<br />
-        <ul><li> Bearer <i>accesstoken</i>, where accesstoken is the token that is returned by Azure AD.</li></ul>
-    </td>
-    </tr>
-    <tr>
-    <td>x-ms-correlation-id</td>
-    <td>Send a new GUID value on each set of API calls that are made together.</td>
-    </tr>
-    </table>
-    </li>
-   <li>Generate an event-based payload. Fill in the event data with the relevant information from your transactional system. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>.
-    </li>
+    Use the following format for this header (replace <i>accesstoken</i> with the actual token value):<br /> 
+        <ul><li> Bearer <i>accesstoken</i>, where accesstoken is the token that is returned by Azure AD.</li></ul> 
+    </td> 
+    </tr> 
+    <tr> 
+    <td>x-ms-correlation-id</td> 
+    <td>Send a new GUID value on each set of API calls that are made together.</td> 
+    </tr> 
+    </table> 
+    </li> 
+   <li>Generate an event-based payload. Fill in the event data with the relevant information from your system. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>. 
+    </li> 
    <li>Combine the header (which includes the access token) and the payload, and send them to your Dynamics 365 Fraud Protection endpoint.</li>
-   <li>In the Evaluate experience for Dynamics 365 Fraud Protection, you can send transactions over and analyze the results from Dynamics 365 Fraud Protection.</li>
-   <li>In the Protect experience for Dynamics 365 Fraud Protection, you can send transactions over and honor decisions that are based on your configured rules.</li>
-    </ol>
+</ol>
 
-For more information about access tokens, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal).
 
-## Assign Dynamics 365 access role to your Azure AD app
-
-To enable your apps to access Dynamics 365 Fraud Protection APIs in your tenant, you must set up service-to-service API access and service-to-service roles. Both the sandbox (test) and production (live) versions are available.
-
-To access Dynamics 365 Fraud Protection sandbox APIs, in the Dynamics 365 Fraud Protection sandbox environment, assign the **Sandbox Risk\_API** role to the Azure AD app that you created earlier (see the [Create an Azure AD App registration in the Azure portal](#create-an-azure-ad-app-registration-in-the-azure-portal) section of this topic).
-
-| App role | Description | Rights |
-|---|---|---|
-| Sandbox\_Risk\_API | This role grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal, including all APIs that the portal calls. | API access |
-
-To access Dynamics 365 Fraud Protection production APIs, in the Dynamics 365 Fraud Protection production environment, assign the **Risk\_API** role to the Azure AD app that you created earlier.
-
-| App role | Description | Rights |
-|---|---|---|
-| Risk\_API | This role grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal, including all APIs that the portal calls. | API access |
+## View the sample app 
+For additional reference, view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer documentation. The sample app provides an example of how to call Dynamics 365 Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation. 

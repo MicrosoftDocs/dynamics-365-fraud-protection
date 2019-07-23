@@ -3,7 +3,7 @@
 - name: Sign up for Dynamics 365 Fraud Protection
   href: signup.md
 - name: Integrate Dynamics 365 Fraud Protection APIs
-  href: integrate-real-time-api.md  
+  href: integrate-real-time-api.md
 - name: Configure user access
   href: configure-user-access.md
 - name: Diagnose experience
@@ -22,8 +22,6 @@
   href: data-upload.md
 - name: View data upload schemas
   href: schema.md
-- name: Send real-time data using the Dynamics 365 Fraud Protection API
-  href: send-real-time-api.md
 - name: Manage lists and model operating points
   href: lists-model-operating-points.md
 - name: Use the virtual fraud analyst
