@@ -1,9 +1,9 @@
 ---
 author: jackwi111
-description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time application programming interfaces (APIs).
+description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 06/22/2019
+ms.date: 07/01/2019
 
 ms.topic: conceptual
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
@@ -15,38 +15,38 @@ To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection f
 
 ## Create Azure Active Directory applications
 
-To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Azure Active Directory (Azure AD) applications. You can configure these by using the **Real-time APIs** tool, which leads you through the required steps. You can also [manually configure your Azure AD applications](azure-apps-portal-powershell.md) if desired. 
+To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Microsoft Azure Active Directory (Azure AD) applications. You can configure these by using the Real-time APIs tool, which leads you through the required steps. Or, you can [manually configure your Azure AD applications](azure-apps-portal-powershell.md). 
 
-To use the tool, select **Configuration** in the navigation, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one AAD application for each environment you operate. 
+To use the Real-time APIs tool, select **Configuration** in the left-hand navigation, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one Azure AD application for each environment you operate. 
 
 The following fields are required: 
 
 - **Application display name**. Give your application a descriptive name. Maximum length is 93 characters. 
 - **Environment**. Choose whether this application should call your production or integration (sandbox) endpoint. 
-- **Authentication method**. Choose whether you would like to authenticate via certificate or a secret (password). For the certificate method, use the **Choose file** button to upload the public key. You will need the matching private key when acquiring tokens. If you choose the **Secret** method, a password will be generated for you after application creation. 
+- **Authentication method**. Choose whether you would like to authenticate via certificate or a secret (password). For the certificate method, use the **Choose file** button to upload the public key. You will need the matching private key when you acquire tokens. If you choose the **Secret** method, a password will be generated for you after application creation. 
 
-When all fields are filled in, select **Create application**. The confirmation screen summarizes the name of your app, the ID of your app, and the certificate thumbprint or secret, depending on your authentication method. 
+When you finish filling in the fields, select **Create application**. The confirmation screen summarizes your app's name, ID, and the certificate thumbprint or secret, depending on your authentication method. 
 
-> [!NOTE]
-> If you chose the Secret method, please save the information for future reference, as it will only display once.
+> [!IMPORTANT]
+> If you chose the secret method, please save the information for future reference, because it will only be displayed once.
 
 To create an additional app, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
 
-### Manage existing Azure Active Directory applications 
-Once your AAD apps have been created, they can be managed through the Azure portal. You can learn more about the tool from the [Azure documentation site](https://docs.microsoft.com/en-us/azure/azure-portal/). 
+### Manage existing Azure AD applications 
+Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more about the tool from the [Azure documentation site](https://docs.microsoft.com/en-us/azure/azure-portal/). 
 
-While using Dynamics 365 Fraud Protection, you can link to the portal from the **Real-time APIs** page by selecting **Visit the Azure portal** in the right column. 
+While using Dynamics 365 Fraud Protection, you can link to the Azure portal from the **Real-time APIs** page's Tip & help column by selecting **Visit the Azure portal**. 
 
 ## Call the Dynamics 365 Fraud Protection real-time APIs 
 To integrate your systems with Dynamics 365 Fraud Protection, follow these steps. 
 
 ### Get your IDs 
 The following IDs are required: 
-- **Directory (tenant) ID** – The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard. 
-- **Application (client) ID**: This identifies the Azure AD app you created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
+- **Directory (tenant) ID**. The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard. 
+- **Application (client) ID**. This identifies the Azure AD app you created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
 
 ### Identify your environment
-The API URIs for Sandbox and Production can be found on the Account information tile on the Dynamics 365 Fraud Protection dashboard or as printed below: 
+You can find the API URIs for the sandbox and production environments on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard or as printed below: 
 - Sandbox: https://api.dfp.microsoft-int.com 
 - Production: https://api.dfp.microsoft.com
 
@@ -88,4 +88,4 @@ When calling the APIs, follow these steps.
 
 
 ## View the sample app 
-For additional reference, view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer-oriented documentation. The sample app provides an example of how to call Dynamics 365 Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation. 
+For additional reference, view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer documentation. The sample app provides an example of how to call Dynamics 365 Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation. 

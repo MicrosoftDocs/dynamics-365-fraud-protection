@@ -3,7 +3,7 @@
 - name: Sign up for Dynamics 365 Fraud Protection
   href: signup.md
 - name: Integrate Dynamics 365 Fraud Protection APIs
-  href: integrate-real-time-api.md  
+  href: integrate-real-time-api.md
 - name: Configure user access
   href: configure-user-access.md
 - name: Diagnose experience
