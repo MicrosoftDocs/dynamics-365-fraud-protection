@@ -15,6 +15,7 @@
 - name: Protect experience
   href: protect-experience.md
 - name: Purchase assessment
+  items:
     - name: Diagnose experience
       href: diagnose-experience.md
     - name: Integrate Dynamics 365 Fraud Protection APIs
@@ -40,6 +41,7 @@
     - name: Usage metering
       href: metering.md        
 - name: Account creation assessment
+  items:
     - name: Integrate Dynamics 365 Fraud Protection APIs
       href: integrate-real-time-api.md
     - name: Implement device fingerprinting
