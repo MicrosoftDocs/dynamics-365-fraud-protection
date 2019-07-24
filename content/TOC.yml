@@ -2,39 +2,52 @@
   href: overview.md
 - name: Sign up for Dynamics 365 Fraud Protection
   href: signup.md
-- name: Integrate Dynamics 365 Fraud Protection APIs
-  href: integrate-real-time-api.md
 - name: Configure user access
   href: configure-user-access.md
-- name: Diagnose experience
-  href: diagnose-experience.md
-- name: Evaluate experience
-  href: evaluate-experience.md
-- name: Protect experience
-  href: protect-experience.md  
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Security, compliance, and data subject requests
   href: security-compliance.md  
-- name: Implement device fingerprinting
-  href: device-fingerprinting.md  
-- name: Upload historical data
-  href: data-upload.md
-- name: View data upload schemas
-  href: schema.md
-- name: Manage lists and model operating points
-  href: lists-model-operating-points.md
-- name: Use the virtual fraud analyst
-  href: virtual-fraud-analyst.md
 - name: Visually explore your data
   href: graph-explorer.md
-- name: Learn from the scorecard
-  href: scorecard.md
-- name: Boost bank acceptance rates
-  href: transaction-acceptance-booster.md  
-- name: Support your customers
-  href: risk-support.md
-- name: Monitor API calls
-  href: monitoring.md
-- name: Usage metering
-  href: metering.md
+- name: Evaluate experience
+  href: evaluate-experience.md
+- name: Protect experience
+  href: protect-experience.md
+- name: Purchase assessment
+items:
+    - name: Diagnose experience
+      href: diagnose-experience.md
+    - name: Integrate Dynamics 365 Fraud Protection APIs
+      href: integrate-real-time-api.md
+    - name: Implement device fingerprinting
+      href: device-fingerprinting.md    
+    - name: Upload historical data
+      href: data-upload.md
+    - name: View schemas
+      href: schema.md  
+    - name: Manage lists and model operating points
+      href: lists-model-operating-points.md
+    - name: Use the virtual fraud analyst
+      href: virtual-fraud-analyst.md   
+    - name: Learn from the scorecard
+      href: scorecard.md  
+    - name: Boost bank acceptance rates
+      href: transaction-acceptance-booster.md  
+    - name: Support your customers
+      href: risk-support.md
+    - name: Monitor API calls
+      href: monitoring.md
+    - name: Usage metering
+      href: metering.md        
+- name: Account creation assessment
+items:
+    - name: Integrate Dynamics 365 Fraud Protection APIs
+      href: integrate-real-time-api.md
+    - name: Implement device fingerprinting
+      href: device-fingerprinting.md    
+    - name: Monitor API calls
+      href: monitoring.md
+    - name: Usage metering
+      href: metering.md  
+      
