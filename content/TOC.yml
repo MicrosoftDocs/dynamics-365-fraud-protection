@@ -4,16 +4,6 @@
   href: signup.md
 - name: Configure user access
   href: configure-user-access.md
-- name: AI and insights from the fraud protection network
-  href: fraud-protection-network.md
-- name: Security, compliance, and data subject requests
-  href: security-compliance.md  
-- name: Visually explore your data
-  href: graph-explorer.md
-- name: Evaluate experience
-  href: evaluate-experience.md
-- name: Protect experience
-  href: protect-experience.md
 - name: Purchase assessment
   items:
     - name: Diagnose experience
@@ -50,4 +40,14 @@
       href: monitoring.md
     - name: Usage metering
       href: metering.md  
-      
+- name: AI and insights from the fraud protection network
+  href: fraud-protection-network.md
+- name: Security, compliance, and data subject requests
+  href: security-compliance.md  
+- name: Visually explore your data
+  href: graph-explorer.md
+- name: Evaluate experience
+  href: evaluate-experience.md
+- name: Protect experience
+  href: protect-experience.md
+
