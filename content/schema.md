@@ -6,10 +6,10 @@ ms.service: crm-online
 ms.date: 07/17/2019
 
 ms.topic: conceptual
-title: View data upload schemas
+title: View schemas
 ---
 
-# View data upload schemas
+# View schemas
 
 This topic outlines the schemas for historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
