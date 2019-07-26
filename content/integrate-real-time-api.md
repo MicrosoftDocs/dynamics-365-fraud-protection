@@ -50,7 +50,7 @@ You can find the API URIs for the sandbox and production environments on the **A
 - Sandbox: https://api.dfp.microsoft-int.com 
 - Production: https://api.dfp.microsoft.com
 
-## Authenticate with your environment
+### Authenticate with your environment
 Before using the sandbox environment, open https://dfp.microsoft-int.com in your browser, sign in, and accept the terms and conditions if prompted.
 
 ### Generate an access token
