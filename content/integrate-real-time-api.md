@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 07/01/2019
+ms.date: 07/26/2019
 
 ms.topic: conceptual
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
@@ -49,6 +49,9 @@ The following IDs are required:
 You can find the API URIs for the sandbox and production environments on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard or as printed below: 
 - Sandbox: https://api.dfp.microsoft-int.com 
 - Production: https://api.dfp.microsoft.com
+
+## Authenticate with your environment
+Before using the sandbox environment, open https://dfp.microsoft-int.com in your browser, sign in, and accept the terms and conditions if prompted.
 
 ### Generate an access token
 You must generate this token and provide it dynamically. Note that access tokens have a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token. 
