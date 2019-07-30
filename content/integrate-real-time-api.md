@@ -51,7 +51,7 @@ You can find the API URIs for the sandbox and production environments on the **A
 - Production: https://api.dfp.microsoft.com
 
 ### Authenticate with your environment
-Before using the sandbox environment, open https://dfp.microsoft-int.com in your browser, sign in, and accept the terms and conditions if prompted.
+To begin using the sandbox environment, open https://dfp.microsoft-int.com in your browser, sign in, and accept the terms and conditions when prompted. Your production environment will have gone through this step during initial setup.
 
 ### Generate an access token
 You must generate this token and provide it dynamically. Note that access tokens have a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token. 
