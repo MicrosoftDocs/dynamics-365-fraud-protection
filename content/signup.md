@@ -38,15 +38,9 @@ You will need Azure tenant administrator permissions to complete provisioning. I
 
 ### Provision your existing Azure tenant
 
-If your company already has an Azure tenant, add Dynamics 365 Fraud Protection to it. This enables access for the product to be managed centrally by your IT organization. 
+If your company already has an Azure tenant and you are an administrator, sign in to Dynamics 365 Fraud Protection using your company email address. After a successful sign-in, accept the terms and conditions. Dynamics 365 Fraud Protection will be provisioned for your Azure tenant, and you can [configure access for other users](configure-user-access.md) and begin [integrating your systems with the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
 
-1. Click the sign-up link included in your **Welcome** email.
-2. On the **Welcome** page, click **Sign in**.
-3. On the **Sign in** page, enter your company email address.
-
-After you've signed in, links for the Diagnose experience appear in Dynamics 365 Fraud Protection. Before you access the Diagnose experience, you must configure user access to Dynamics 365 Fraud Protection. For instructions, see the "Configure users in Dynamics 365 Fraud Protection" topic in [Configure user access](configure-user-access.md).
-
-After configuing access to users, integrate your existing systems with the Dynamics 365 Fraud Protection real-time application programming interfaces (APIs). Follow the steps in [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
+You will be prompted if there is no Azure tenant for your organization or if you are not an administrator for your existing tenant. If you need to configure a new tenant, see the instructions under "Create and provision a new tenant in Azure AD." If you have a tenant but do not have sufficient administrative privileges, contact your existing administrator for access.
 
 ### Create and provision a new tenant in Azure AD
 
