@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 07/01/2019
+ms.date: 07/26/2019
 
 ms.topic: conceptual
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
@@ -33,7 +33,7 @@ When you finish filling in the fields, select **Create application**. The confir
 To create an additional app, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
 
 ### Manage existing Azure AD applications 
-Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more about the tool from the [Azure documentation site](https://docs.microsoft.com/en-us/azure/azure-portal/). 
+Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more about the tool from the [Azure documentation site](https://docs.microsoft.com/azure/azure-portal/). 
 
 While using Dynamics 365 Fraud Protection, you can link to the Azure portal from the **Real-time APIs** page's Tip & help column by selecting **Visit the Azure portal**. 
 
@@ -49,6 +49,11 @@ The following IDs are required:
 You can find the API URIs for the sandbox and production environments on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard or as printed below: 
 - Sandbox: https://api.dfp.microsoft-int.com 
 - Production: https://api.dfp.microsoft.com
+
+### Authenticate with your environment
+To begin using the sandbox or production APIs, be sure you have visited each environment's portal, signed in, and accepted the terms and conditions.
+- Sandbox: https://dfp.microsoft-int.com 
+- Production: https://dfp.microsoft.com (You might already have completed this step in production during initial sign-up.)
 
 ### Generate an access token
 You must generate this token and provide it dynamically. Note that access tokens have a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token. 
