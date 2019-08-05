@@ -33,7 +33,7 @@ When you finish filling in the fields, select **Create application**. The confir
 To create an additional app, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
 
 ### Manage existing Azure AD applications 
-Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more about the tool from the [Azure documentation site](https://docs.microsoft.com/en-us/azure/azure-portal/). 
+Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more about the tool from the [Azure documentation site](https://docs.microsoft.com/azure/azure-portal/). 
 
 While using Dynamics 365 Fraud Protection, you can link to the Azure portal from the **Real-time APIs** page's Tip & help column by selecting **Visit the Azure portal**. 
 
