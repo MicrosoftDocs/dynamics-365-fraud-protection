@@ -48,3 +48,5 @@ Model operating points can be used on all transactions at the same time or just 
 Continue to the next page to select the desired behavior. For example, you can reject all transactions that meet the conditions that you specify, or you can reject transactions only if they meet the specified conditions and exceed a specific risk score threshold. Name your model operating point, set its state (either active or inactive), and save it.
 
 Any model operating point can be edited after it's created. To inactivate a model operating point, set the option to **Inactive**. To delete a model operating point, select the vertical ellipsis on the right side of the page, and then select **Delete**.
+
+Note that for model operating points that run against purchase transactions, the default decision returned is to accept the transaction. This is not a recommendation, only the default state if no defined rule conditions are met. This is intended to simplify your process so that you only have to configure model operating points for specific areas of concern.
