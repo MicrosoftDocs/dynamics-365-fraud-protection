@@ -49,4 +49,4 @@ Continue to the next page to select the desired behavior. For example, you can r
 
 Any model operating point can be edited after it's created. To inactivate a model operating point, set the option to **Inactive**. To delete a model operating point, select the vertical ellipsis on the right side of the page, and then select **Delete**.
 
-Note that for model operating points that run against purchase transactions, the default decision returned is to accept the transaction. This is not a recommendation, only the default state if no defined rule conditions are met. This is intended to simplify your process so that you only have to configure model operating points for specific areas of concern.
+Note that for purchase transactions, if no model operating points are configured yet, the default decision returned is to accept the transaction. This is not a recommendation, only a baseline intended to simplify your process when configuring new rule conditions. Once you have created model operating points, the decisions returned by Dynamics 365 Fraud Protection will reflect your chosen settings.
