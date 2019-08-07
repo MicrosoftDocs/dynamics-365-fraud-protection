@@ -72,7 +72,9 @@ In Step 3 of the Virtual Fraud Analyst, you name, select a status, and create yo
 
 ## Recommendations
 
-The machine learning models in the fraud protection network help find emerging fraud patterns and risky attributes across all participating merchants. The virtual fraud analyst can use these findings to recommendations ways that merchants who use Dynamics 365 Fraud Protection can improve the configuration of their model operating points. The virtual fraud analyst also makes recommendations about other attributes and information that can be added to the knowledge graph. This information might include chargeback data, margins, and the cost of goods sold (COGS). By augmenting existing data, you can maximize the impact of the product.
+The machine learning models in the fraud protection network help find emerging fraud patterns and risky attributes across all participating merchants. The virtual fraud analyst can use these findings to recommend ways that merchants who use Dynamics 365 Fraud Protection can improve the configuration of their model operating points. The virtual fraud analyst also makes recommendations about other attributes and information that can be added to the knowledge graph. This information might include chargeback data, margins, and the cost of goods sold (COGS). By augmenting existing data, you can maximize the impact of the product.
+
+Note that before model operating points are configured, either manually or by using guidance from the virtual fraud analyst, the default decision returned on purchase transactions is to accept the transaction. This is not a recommendation, only a baseline intended to simplify your process when configuring new rule conditions. Once you have created model operating points, the decisions returned by Dynamics 365 Fraud Protection will reflect your chosen settings.
 
 ## Balance fraud loss against opportunity loss
 
