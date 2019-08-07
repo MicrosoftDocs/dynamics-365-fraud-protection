@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 07/26/2019
+ms.date: 08/07/2019
 
 ms.topic: conceptual
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
@@ -15,7 +15,7 @@ To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection f
 
 ## Create Azure Active Directory applications
 
-To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Microsoft Azure Active Directory (Azure AD) applications. You can configure these by using the Real-time APIs tool, which leads you through the required steps. Or, you can [manually configure your Azure AD applications](azure-apps-portal-powershell.md). 
+To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Microsoft Azure Active Directory (Azure AD) applications. You can configure these by using the Real-time APIs tool, which leads you through the required steps. Or, you can [manually configure your Azure AD applications](azure-apps-portal-powershell.md). Note that to complete the process successfully, you must have the proper administrative privileges in your Azure tenant (Application Administrator, Cloud Application Administrator, or Global Administrator).
 
 To use the Real-time APIs tool, select **Configuration** in the left-hand navigation, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one Azure AD application for each environment you operate. 
 
@@ -35,7 +35,7 @@ To create an additional app, select **Create another application**. You can crea
 ### Manage existing Azure AD applications 
 Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more about the tool from the [Azure documentation site](https://docs.microsoft.com/azure/azure-portal/). 
 
-While using Dynamics 365 Fraud Protection, you can link to the Azure portal from the **Real-time APIs** page's Tip & help column by selecting **Visit the Azure portal**. 
+While using Dynamics 365 Fraud Protection, you can link to the Azure portal from the **Real-time APIs** page's Tips & help column by selecting **Visit the Azure portal**. 
 
 ## Call the Dynamics 365 Fraud Protection real-time APIs 
 To integrate your systems with Dynamics 365 Fraud Protection, follow these steps. 
