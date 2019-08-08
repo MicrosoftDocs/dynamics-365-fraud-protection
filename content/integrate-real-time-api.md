@@ -35,7 +35,7 @@ To create an additional app, select **Create another application**. You can crea
 ### Manage existing Azure AD applications 
 Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more about the tool from the [Azure documentation site](https://docs.microsoft.com/azure/azure-portal/). 
 
-While using Dynamics 365 Fraud Protection, you can link to the Azure portal from the **Real-time APIs** page's Tip & help column by selecting **Visit the Azure portal**. 
+While using Dynamics 365 Fraud Protection, you can link to the Azure portal from the **Real-time APIs** page's Tips & help column by selecting **Visit the Azure portal**. 
 
 ## Call the Dynamics 365 Fraud Protection real-time APIs 
 To integrate your systems with Dynamics 365 Fraud Protection, follow these steps. 
