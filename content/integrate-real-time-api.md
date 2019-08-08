@@ -25,7 +25,7 @@ You must be a Global Administrator in your Microsoft Azure tenant to complete th
 ### Create Azure Active Directory applications
 To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Azure Active Directory (Azure AD) applications. You can configure these by using the Real-time APIs tool, which leads you through the required steps. Or, you can [manually configure your Azure AD applications](azure-apps-portal-powershell.md). 
 
-Note that to complete the process successfully, you must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant.
+You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
 
 In Dynamics 365 Fraud Protection, select **Configuration** in the left-hand navigation, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one Azure AD application for each environment you operate. 
 
@@ -61,7 +61,7 @@ For more information, please refer to the Azure documentation:
 - [Cache access tokens](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/token-cache)
 
 ### Call the APIs
-When calling the APIs, follow these steps.
+To call the APIs, follow these steps.
 
 <ol>
  <li> 
