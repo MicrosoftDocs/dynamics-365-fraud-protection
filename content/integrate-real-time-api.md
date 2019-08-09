@@ -47,7 +47,7 @@ To create an additional app, select **Create another application**. You can crea
 Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more from the [Azure documentation site](https://docs.microsoft.com/azure/azure-portal/). 
 
 ## Call the Dynamics 365 Fraud Protection real-time APIs 
-To integrate your systems with Dynamics 365 Fraud Protection, follow these steps. 
+To integrate your systems with Dynamics 365 Fraud Protection, follow these steps.
 
 ### Required IDs and information
 - **Environment URI**. The URIs for your sandbox or production environment appear on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard.
@@ -56,7 +56,55 @@ To integrate your systems with Dynamics 365 Fraud Protection, follow these steps
 - **Certificate thumbprint or secret**. Get the thumbprint or secret from the Real-time APIs confirmation screen.
 
 ### Generate an access token
-You must generate this token and provide it dynamically. Note that access tokens have a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token. 
+You must generate this token and provide it dynamically. Note that access tokens have a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token.
+
+This C# code provides an example of acquiring a token. Replace the placeholders with your specific information.
+```cs
+    public async Task<string> AcquireTokenAsync(string resource)
+    {
+        var assertionCert = CertificateUtility.GetByThumbprint(<your certificate thumbprint or secret>);
+        var clientAssertion = new ClientAssertionCertificate(<your application (client) ID>, assertionCert);
+        
+        var context = new AuthenticationContext(<your directory (tenant) ID>);
+        var authenticationResult = await context.AcquireTokenAsync(resource, clientAssertion);
+
+        return authenticationResult.AccessToken;
+    }
+```
+Behind the scenes, the code above generates an HTTP request and receives a response like the following:
+
+**Request**
+```console
+POST <authority>/oauth2/token HTTP/1.1
+Accept: application/json
+Content-Type: application/x-www-form-urlencoded
+Content-Length: <content length>
+Host: login.microsoftonline.com
+
+resource=https://api.dfp.microsoft.com
+&client_id=<Azure Active Directory client app ID>
+&client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer
+&client_assertion=<your certificate thumbprint or secret>
+&grant_type=client_credentials
+```
+**Response**
+```console
+HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
+Date: <date>
+Content-Length: <content length>
+
+{
+  "token_type":"Bearer",
+  "expires_in":"3599",
+  "ext_expires_in":"3599",
+  "expires_on":"<date timestamp>",
+  "not_before":"<date timestamp>",
+  "resource":"https://api.dfp.microsoft.com",
+  "access_token":"<your access token; e.g.: eyJ0eXA...NFLCQ>"
+}
+```
+
 
 For more information, please refer to the Azure documentation: 
 - [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion)
