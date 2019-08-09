@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 08/07/2019
+ms.date: 08/09/2019
 
 ms.topic: conceptual
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
