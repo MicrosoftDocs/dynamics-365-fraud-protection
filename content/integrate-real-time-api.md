@@ -67,8 +67,8 @@ These C# code samples provide examples of acquiring a token with your certificat
 ```cs
 public async Task<string> AcquireTokenWithCertificateAsync()
 {
-    var assertionCert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
-    var clientAssertion = new ClientAssertionCertificate("<Client ID>", assertionCert);
+    var x509Cert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
+    var clientAssertion = new ClientAssertionCertificate("<Client ID>", x509Cert);
     var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
     var authenticationResult = await context.AcquireTokenAsync("<API endpoint for INT or PROD>", clientAssertion);
 
