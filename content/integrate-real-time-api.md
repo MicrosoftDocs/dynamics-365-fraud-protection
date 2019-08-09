@@ -91,20 +91,6 @@ public async Task<string> AcquireTokenWithSecretAsync()
 
 Behind the scenes, the code above generates an HTTP request and receives a response like the following:
 
-**Request**
-```http
-POST <authority>/oauth2/token HTTP/1.1
-Accept: application/json
-Content-Type: application/x-www-form-urlencoded
-Content-Length: <content length>
-Host: login.microsoftonline.com
-
-resource=https://api.dfp.microsoft.com
-&client_id=<Azure Active Directory client app ID>
-&client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer
-&client_assertion=<your certificate thumbprint or secret>
-&grant_type=client_credentials
-```
 **Response**
 ```http
 HTTP/1.1 200 OK
