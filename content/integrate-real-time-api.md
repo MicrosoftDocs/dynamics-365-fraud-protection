@@ -27,9 +27,9 @@ Visit the portal for each environment you intend to use, sign in, and accept the
 > [!NOTE]
 > You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
 
-To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Azure Active Directory (Azure AD) applications. You can configure these by using the Real-time APIs tool, which leads you through the required steps.  
+To acquire the tokens required to call the APIs, you will utilize Azure Active Directory (Azure AD) applications. You can configure these by using the **Real-time APIs** page in Dynamics 365 Fraud Protection.
 
-In Dynamics 365 Fraud Protection, select **Configuration** in the left-hand navigation, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one Azure AD application for each environment you operate. 
+Select **Configuration** in the left-hand navigation, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one Azure AD application for each environment you operate. 
 
 The following fields are required: 
 - **Application display name**. Give your application a descriptive name. Maximum length is 93 characters. 
@@ -47,7 +47,7 @@ To create an additional app, select **Create another application**. You can crea
 Once you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more from the [Azure documentation site](https://docs.microsoft.com/azure/azure-portal/). 
 
 ### Manually configure Azure AD applications
-If you would like to configure applications directly in Azure, see [manually configure your Azure AD applications](azure-apps-portal-powershell.md).
+If you would like to set up your applications directly in Azure, see [manually configure your Azure AD applications](azure-apps-portal-powershell.md).
 
 ## Call the Dynamics 365 Fraud Protection real-time APIs 
 To integrate your systems with Dynamics 365 Fraud Protection, follow these steps.
