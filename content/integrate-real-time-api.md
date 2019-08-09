@@ -16,16 +16,18 @@ To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection f
 ## Get set up
 
 ### Accept the terms of use
+> [!NOTE]
+> You must be a Global Administrator in your Microsoft Azure tenant to complete this step.
+
 Visit the portal for each environment you intend to use, sign in, and accept the terms and conditions.
 - Sandbox: https://dfp.microsoft-int.com 
 - Production: https://dfp.microsoft.com (You might already have completed this step in production during initial sign-up.)
 
-You must be a Global Administrator in your Microsoft Azure tenant to complete this step.
-
 ### Create Azure Active Directory applications
-To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Azure Active Directory (Azure AD) applications. You can configure these by using the Real-time APIs tool, which leads you through the required steps. Or, you can [manually configure your Azure AD applications](azure-apps-portal-powershell.md). 
+> [!NOTE]
+> You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
 
-You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
+To acquire the tokens required to call the Dynamics 365 Fraud Protection APIs, your services will utilize Azure Active Directory (Azure AD) applications. You can configure these by using the Real-time APIs tool, which leads you through the required steps. Or, you can [manually configure your Azure AD applications](azure-apps-portal-powershell.md). 
 
 In Dynamics 365 Fraud Protection, select **Configuration** in the left-hand navigation, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one Azure AD application for each environment you operate. 
 
