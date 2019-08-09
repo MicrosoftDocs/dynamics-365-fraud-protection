@@ -15,8 +15,8 @@ To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection f
 
 ## Get set up
 
-### Authenticate with your environment
-Before getting started with API configuration, be sure you have visited the portal for each environment you intend to use, sign in, and accept the terms and conditions.
+### Accept the terms of use
+Visit the portal for each environment you intend to use, sign in, and accept the terms and conditions.
 - Sandbox: https://dfp.microsoft-int.com 
 - Production: https://dfp.microsoft.com (You might already have completed this step in production during initial sign-up.)
 
@@ -51,7 +51,7 @@ To integrate your systems with Dynamics 365 Fraud Protection, follow these steps
 - **Environment URI**. The URIs for your sandbox or production environment appear on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard.
 - **Directory (tenant) ID**. The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard. 
 - **Application (client) ID**. This identifies the Azure AD app you created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
-- **Certificate thumbprint or secret**. Use the information generated when creating your Azure AD application.
+- **Certificate thumbprint or secret**. Get the thumbprint or secret from the Real-time APIs confirmation screen.
 
 ### Generate an access token
 You must generate this token and provide it dynamically. Note that access tokens have a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token. 
@@ -91,4 +91,6 @@ To call the APIs, follow these steps.
 
 
 ## View the sample app 
-For additional reference, view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer documentation. The sample app provides an example of how to call Dynamics 365 Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation. 
+For additional reference, view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer documentation. The sample app provides an example of how to call Dynamics 365 Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.
+
+For specific guidance on configuring the sample site for your use, view [Configure the sample site](https://go.microsoft.com/fwlink/?linkid=2100635&clcid=0x409).
