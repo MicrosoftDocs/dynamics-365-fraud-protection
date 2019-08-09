@@ -74,7 +74,7 @@ This C# code provides an example of acquiring a token. Replace the placeholders 
 Behind the scenes, the code above generates an HTTP request and receives a response like the following:
 
 **Request**
-```console
+```http
 POST <authority>/oauth2/token HTTP/1.1
 Accept: application/json
 Content-Type: application/x-www-form-urlencoded
@@ -88,7 +88,7 @@ resource=https://api.dfp.microsoft.com
 &grant_type=client_credentials
 ```
 **Response**
-```console
+```http
 HTTP/1.1 200 OK
 Content-Type: application/json; charset=utf-8
 Date: <date>
