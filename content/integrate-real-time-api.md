@@ -58,19 +58,34 @@ To integrate your systems with Dynamics 365 Fraud Protection, follow these steps
 ### Generate an access token
 You must generate this token and provide it dynamically. Note that access tokens have a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token.
 
-This C# code provides an example of acquiring a token. Replace the placeholders with your specific information.
-```cs
-    public async Task<string> AcquireTokenAsync(string resource)
-    {
-        var assertionCert = CertificateUtility.GetByThumbprint(<your certificate thumbprint or secret>);
-        var clientAssertion = new ClientAssertionCertificate(<your application (client) ID>, assertionCert);
-        
-        var context = new AuthenticationContext(<your directory (tenant) ID>);
-        var authenticationResult = await context.AcquireTokenAsync(resource, clientAssertion);
+These C# code samples provide examples of acquiring a token with your certificate or secret. Replace the placeholders with your specific information.
 
-        return authenticationResult.AccessToken;
-    }
+**Certificate thumbprint**
+```cs
+        public async Task<string> AcquireTokenWithCertificateAsync()
+        {
+            var assertionCert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
+            var clientAssertion = new ClientAssertionCertificate("<Client ID>", assertionCert);
+            var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
+            var authenticationResult = await context.AcquireTokenAsync("<API endpoint for INT or PROD>", clientAssertion);
+
+            return authenticationResult.AccessToken;
+        }
 ```
+
+**Secret**
+```cs
+        public async Task<string> AcquireTokenWithSecretAsync()
+        {
+            var clientAssertion = new ClientCredential("<Client ID>", "<Client secret>");
+            var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
+            var authenticationResult = await context.AcquireTokenAsync("<API endpoint for INT or PROD>", clientAssertion);
+
+            return authenticationResult.AccessToken;
+        }
+```
+
+
 Behind the scenes, the code above generates an HTTP request and receives a response like the following:
 
 **Request**
