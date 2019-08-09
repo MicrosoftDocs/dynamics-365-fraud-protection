@@ -93,4 +93,4 @@ To call the APIs, follow these steps.
 ## View the sample app 
 For additional reference, view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer documentation. The sample app provides an example of how to call Dynamics 365 Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.
 
-For specific guidance on configuring the sample site for your use, view [Configure the sample site](https://go.microsoft.com/fwlink/?linkid=2100635&clcid=0x409).
+For guidance on configuring the sample site for your use, view [Configure the sample site](https://go.microsoft.com/fwlink/?linkid=2100635).
