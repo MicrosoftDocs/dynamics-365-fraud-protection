@@ -44,8 +44,8 @@
   href: fraud-protection-network.md
 - name: Security, compliance, and data subject requests
   href: security-compliance.md
-- name: Data processing and protections
-  href: data-processing-protections.md
+- name: Data processing and protection
+  href: data-processing-protection.md
 - name: Visually explore your data
   href: graph-explorer.md
 - name: Evaluate experience
