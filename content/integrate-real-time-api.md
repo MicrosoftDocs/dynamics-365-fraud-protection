@@ -50,6 +50,7 @@ After you have created your Azure AD apps, you can manage them through the Azure
 ### Manually configure Azure AD applications
 If you would like to set up your applications directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md).
 
+
 ## Call the Dynamics 365 Fraud Protection real-time APIs 
 To integrate your systems with Dynamics 365 Fraud Protection, follow these steps.
 
