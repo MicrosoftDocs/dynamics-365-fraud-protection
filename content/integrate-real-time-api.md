@@ -11,7 +11,7 @@ title: Integrate Dynamics 365 Fraud Protection real-time APIs
 
 # Integrate Dynamics 365 Fraud Protection real-time APIs
 
-To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the Evaluate experience, this allows you to analyze the results of using Dynamics 365 Fraud Protection. In the Protect experience, you can also honor decisions based on the model operating points you have configured.
+To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the **Evaluate** experience, this allows you to analyze the results of using Dynamics 365 Fraud Protection. In the **Protect** experience, you can also honor decisions based on the model operating points you have configured.
 
 ## Get set up
 
@@ -27,7 +27,7 @@ Visit the portal for each environment you intend to use, sign in, and accept the
 > [!NOTE]
 > You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
 
-To acquire the tokens required to call the APIs, you will utilize Azure Active Directory (Azure AD) applications. You can configure these by using the **Real-time APIs** page in Dynamics 365 Fraud Protection.
+To acquire the tokens required to call the APIs, you will need to utilize Azure Active Directory (Azure AD) applications. You can configure these by using the **Real-time APIs** page in Dynamics 365 Fraud Protection.
 
 Select **Configuration** in the left navigation pane, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one Azure AD application for each environment that you operate. 
 
@@ -36,12 +36,13 @@ The following fields are required:
 - **Environment** - Choose whether this application should call your production or integration (sandbox) endpoint. 
 - **Authentication method** - Choose whether you would like to authenticate via certificate or a secret (password). For the certificate method, use the **Choose file** button to upload the public key. You will need the matching private key when you acquire tokens. If you select the **Secret** method, a password will be generated for you after application creation. 
 
+
 When you finish filling in the fields, select **Create application**. The confirmation screen summarizes your app's name, ID, and the certificate thumbprint or secret, depending on your authentication method. 
 
 > [!IMPORTANT]
 > Please save your secret or certificate thumbprint information for future reference. The secret will only be displayed once.
 
-To create an additional app, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
+To create an additional application, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
 
 ### Manage existing Azure AD applications 
 After you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more from the [Azure documentation site](https://docs.microsoft.com/azure/azure-portal/). 
@@ -115,7 +116,7 @@ For more information, refer to the Azure documentation:
 - [Cache access tokens](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/token-cache)
 
 ### Call the APIs
-To call the APIs, follow these steps.
+To call the APIs, follow these steps:
 
 <ol>
  <li> 
