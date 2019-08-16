@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to implement device fingerprinting.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 04/22/2019
+ms.date: 08/16/2019
 
 ms.topic: conceptual
 title: Implement device fingerprinting
@@ -11,11 +11,9 @@ title: Implement device fingerprinting
 
 # Implement device fingerprinting
 
-As one of its core differential features, Microsoft Dynamics 365 Fraud Protection offers device fingerprinting that is based on cutting-edge machine learning and artificial intelligence (AI), . This feature enables the service to identify **devices** (not individuals) across multiple sessions or interactions that engage with your business. At the same time, it respects customer privacy.
+As one of its core differential features, Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that is based on cutting-edge machine learning and artificial intelligence (AI). This feature enables the service to identify **devices** (not individuals) across multiple sessions or interactions that engage with your business. At the same time, it respects customer privacy. Device fingerprinting runs on Microsoft Azure. It's cloud-scalable and reliable, and provides enterprise-grade security.
 
 By tracking elements that are related to a device (computer, Xbox, tablet, and so on), you can link individual devices to events. Therefore, device fingerprinting lets you link seemingly unrelated events to each other by capturing and identifying unique device characteristics during the processes for adding a payment instrument, sign-in, and checkout.
-
-Device fingerprinting runs on Microsoft Azure. It's cloud-scalable and reliable, and provides enterprise-grade security. A major advantage that device fingerprinting has over similar products in the marketplace is that it's continually tested against the latest fingerprinting evasion tools that fraudsters use.
 
 The process of integrating device fingerprinting for Dynamics 365 Fraud Protection consists of the following tasks:
 
