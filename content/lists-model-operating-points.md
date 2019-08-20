@@ -19,7 +19,7 @@ You can use lists and model operations to help manage your risk decisions and ta
 
 To manage the Safe and Block lists, and to create your own custom lists, select **List management** in the navigation.
 
-Note that due to caching, any changes made and saved may take up to two minutes to become active.
+Note that due to caching, any changes saved may take up to two minutes to become active.
 
 ### Bulk list updates
 
@@ -33,11 +33,21 @@ To edit entries in one or both sections, select their check boxes, and then sele
 
 ### Create custom lists
 
-You can create custom lists and add entries to them to suit specific business needs. After these lists are created, they can be used by manually created model operating points or by the [virtual fraud analyst](virtual-fraud-analyst.md). To create a custom list, select the **Custom lists** tab.
+You can create any number of custom lists and add entries to them to suit specific business needs. After these lists are created, they can be used by manually created model operating points or by the [virtual fraud analyst](virtual-fraud-analyst.md). To create a custom list, select the **Custom lists** tab.
 
 Each list that you create comprises a collection of entities that you want to screen for, such as high-priced products or high-risk countries or regions. After you create a list, enter a name and a description to summarize its contents. Then select the appropriate node and attribute, and add entries to the attribute list. *Nodes* represent essential categories of data, and *attributes* describe specific properties of those categories. Only the nodes and attributes that are relevant to the transaction payload are available in list and model operations.
 
 For example, if you want to create a list that contains high-priced products, **Product** is the relevant node, and **SKU** is the main attribute type. To enter the individual SKUs of the highest-priced products in your inventory, paste these list items into the entry field. Each entry must be on a separate line.
+
+The following table defines the node and attribute combinations that you can use to build your lists.
+
+| Node | Attributes 
+|---|---|
+| User | Country |
+| Device | DeviceType, IPCountry |
+| Billing | Country |
+| PaymentInstrument | Type |
+| Product | Type, SKU, Category, Market |
 
 After you save your new custom list, it can be viewed and edited under **Custom lists** on the **List management** page. It can also be selected when model operating points are configured.
 
@@ -47,8 +57,8 @@ Model operating points can be configured manually or by using the guidance of th
 
 Model operating points can be used on all transactions at the same time or just on specific subsets of transactions. For example, a model operating point can be applied only to products that are in a specific price range. To create a filter, select the appropriate node and attribute, and then select the list that contains the corresponding dataset. Up to three filters can be applied simultaneously. For example, a model operating point can be set to screen for high-priced products that are being bought only by users in high-risk countries or regions.
 
-Continue to the next page to select the desired behavior. For example, you can reject all transactions that meet the conditions that you specify, or you can reject transactions only if they meet the specified conditions and exceed a specific risk score threshold. Name your model operating point, set its state (either active or inactive), and save it. Note that due to caching, any changes made and saved may take up to two minutes to become active.
+Continue to the next page to select the desired behavior. For example, you can reject all transactions that meet the conditions that you specify, or you can reject transactions only if they meet the specified conditions and exceed a specific risk score threshold. Name your model operating point, set its state (either active or inactive), and save it. You can create a total of 30 model operating points. Note that due to caching, any changes saved may take up to two minutes to become active.
 
-Any model operating point can be edited after it's created. To inactivate a model operating point, set the option to **Inactive**. To delete a model operating point, select the vertical ellipsis on the right side of the page, and then select **Delete**.
+A model operating point can be edited after it's created. To change its settings, select it in the list, make your changes, and save. To disable, enable, or delete a model operating point, select the vertical ellipsis on the right side of the page, and then select from the available options.
 
 Note that for purchase transactions, if no model operating points are configured yet, the default decision returned is to accept the transaction. This is not a recommendation, only a baseline intended to simplify your process when configuring new rule conditions. Once you have created model operating points, the decisions returned by Dynamics 365 Fraud Protection will reflect your chosen settings.
