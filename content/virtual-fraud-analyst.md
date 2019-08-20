@@ -61,12 +61,13 @@ Based on the risk score, from -1 through 99, the interactive chart shows the fra
 
 Hover over any model operating point to see the representation of the values.
 
-At the same time, the **risk impact** pane shows the key metrics that are associated with the chart.
+To the right, you can see the key metrics that are associated with the chart. The data shown reflects the bar you have selected.
 
 | Metric | Definition |
 |---|---|
-| Fraud catch rate | The fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
-| Customer friction | The number of good (non-fraudulent) transactions that have been blocked. Approvals are equal to or less than the score that you select. |
+| Espected fraud catch rate | The percentage of fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
+| Fraud transactions approved | The number of fraudulent transactions that were approved. |
+| Good transactions blocked | The number of good (non-fraudulent) transactions that have been blocked. Approvals are equal to or less than the score that you select. |
 
 After you've selected a risk score, a **Model Operating Point Summary** appears that explicitly defines when transactions will be rejected.
 
