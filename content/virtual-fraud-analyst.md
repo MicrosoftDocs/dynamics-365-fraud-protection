@@ -15,17 +15,20 @@ The virtual fraud analyst uses innovative artificial intelligence (AI) technolog
 
 The virtual fraud analyst helps you balance acceptable levels of lost revenue and customer support costs against chargebacks, fees, and refunds. Its configuration experience implements and tests your model operating points against historical customer data.
 
-When you create your prioritizations in the virtual fraud analyst, we recommend that you complete the steps in the following order:
+When you create your model operating points in the virtual fraud analyst, we recommend that you complete them in the following order:
 
 1. **Create your most fine-grained model operating points.**
 
-    For example, build a custom list of products that are currently in a specific price range, and use that list to build your model operating point. Use filters on [standard ontology nodes and attributes](graph-explorer.md), and then select an appropriate [list](lists-model-operating-points.md) that contains the corresponding dataset. For example, a model operating point can be set to screen for high-priced products that are bought only by users who are in high-risk countries or regions. The virtual fraud analyst gives you more control and helps you stop more fraud in these subsets of your traffic.
+For example, build a custom list of products that are currently in a specific price range, and use that list to build your model operating point. Use filters on [standard ontology nodes and attributes](graph-explorer.md), and then select an appropriate [list](lists-model-operating-points.md) that contains the corresponding dataset. For example, a model operating point can be set to screen for high-priced products that are bought only by users who are in high-risk countries or regions. The virtual fraud analyst gives you more control and helps you stop more fraud in these subsets of your traffic.
 
 2. **Create a "catch-all fraud" model operating point for all your traffic.**
 
-    Create custom lists, and add entries to them to suit your specific needs for all transactions. After these lists are created, you can use them by creating model operating points either manually or through the virtual fraud analyst. Because you've already built model operating points for high-risk locales and traffic, you can have more flexibility to analyze fraud here.
+Create custom lists, and add entries to them to suit your specific needs for all transactions. After these lists are created, you can use them by creating model operating points either manually or through the virtual fraud analyst. Because you've already built model operating points for high-risk locales and traffic, you can have more flexibility to analyze fraud here.
 
-In Step 1 of the Virtual Fraud Analyst, you select the target data (a combination of a node, attributes, and a list) to apply to your model operating point.
+## Virtual fraud analyst step by step
+
+### Step 1
+In Step 1, select the target data (a combination of a node, attributes, and a list) your model operating point will apply to. If you need to create a new list first, select **Create new list** to do so in the **List management** tool.
 
 The following table defines the node and attribute combinations that you can use to build your lists. You can create up to three filters per model operating point, and you can create a total of 30 model operating points.
 
@@ -37,9 +40,12 @@ The following table defines the node and attribute combinations that you can use
 | PaymentInstrument | Type |
 | Product | Type, SKU, Category, Market |
 
-When you've finished, select **Analyze**. Your interactive risk chart appears.
+When you've finished, select **Analyze**. This applies your settings to data from the purchase API and generates the interactive risk chart.
 
-In Step 2 of the Virtual Fraud Analyst, you select a date range for past transaction data and explore how different risk scores affect metrics for the fraud catch rate and customer friction. Select the line for a risk score in the bar chart, and examine the effect on your historical transaction data. Two sliders let you further refine your analysis when creating a model operating point. In the **Transaction data** pane, use the slider to adjust the risk range that is shown in the chart. In the **Risk impact** pane, use the slider to select a risk score between -1 and 99. In the **Transaction data** pane, use the dropdown for three view options:
+### Step 2
+In Step 2, select a risk score by clicking on a vertical bar in the chart to examine the effect of fraud upon your historical transaction data. You can choose a date range and a risk score range to filter your view. 
+
+Select the line for a risk score in the bar chart, and examine the effect on your historical transaction data. Two sliders let you further refine your analysis when creating a model operating point. In the **Transaction data** pane, use the slider to adjust the risk range that is shown in the chart. In the **Risk impact** pane, use the slider to select a risk score between -1 and 99. In the **Transaction data** pane, use the dropdown for three view options:
 
 - Graph view – Percentage of transactions
 - Graph view – Total value of transactions
@@ -68,7 +74,8 @@ At the same time, the **risk impact** pane shows the key metrics that are associ
 
 After you've selected a risk score, a **Model Operating Point Summary** appears that explicitly defines when transactions will be rejected.
 
-In Step 3 of the Virtual Fraud Analyst, you name, select a status, and create your model operating point that is based on the risk score you previously selected.
+### Step 3
+In Step 3, name your model operating point, select a status (active or inactive), and create it, using the risk score you previously selected.
 
 ## Recommendations
 
