@@ -3,7 +3,7 @@ author: jegrif
 description: This topic explains how to manage lists and model operating points in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
 ms.service: crm-online
-ms.date: 08/07/2019
+ms.date: 08/20/2019
 
 ms.topic: conceptual
 title: Manage lists and model operating points
@@ -18,6 +18,8 @@ You can use lists and model operations to help manage your risk decisions and ta
 ## List management
 
 To manage the Safe and Block lists, and to create your own custom lists, select **List management** in the navigation.
+
+Note that due to caching, any changes made and saved may take up to two minutes to become active.
 
 ### Bulk list updates
 
@@ -45,7 +47,7 @@ Model operating points can be configured manually or by using the guidance of th
 
 Model operating points can be used on all transactions at the same time or just on specific subsets of transactions. For example, a model operating point can be applied only to products that are in a specific price range. To create a filter, select the appropriate node and attribute, and then select the list that contains the corresponding dataset. Up to three filters can be applied simultaneously. For example, a model operating point can be set to screen for high-priced products that are being bought only by users in high-risk countries or regions.
 
-Continue to the next page to select the desired behavior. For example, you can reject all transactions that meet the conditions that you specify, or you can reject transactions only if they meet the specified conditions and exceed a specific risk score threshold. Name your model operating point, set its state (either active or inactive), and save it.
+Continue to the next page to select the desired behavior. For example, you can reject all transactions that meet the conditions that you specify, or you can reject transactions only if they meet the specified conditions and exceed a specific risk score threshold. Name your model operating point, set its state (either active or inactive), and save it. Note that due to caching, any changes made and saved may take up to two minutes to become active.
 
 Any model operating point can be edited after it's created. To inactivate a model operating point, set the option to **Inactive**. To delete a model operating point, select the vertical ellipsis on the right side of the page, and then select **Delete**.
 
