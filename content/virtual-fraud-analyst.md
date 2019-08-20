@@ -71,7 +71,7 @@ At the same time, the **risk impact** pane shows the key metrics that are associ
 After you've selected a risk score, a **Model Operating Point Summary** appears that explicitly defines when transactions will be rejected.
 
 ### Step 3
-In Step 3, name your model operating point, select a status (active or inactive), and create it based on the risk score you previously selected.
+After selecting the risk score, name your model operating point and set its status (active or inactive), then select **Create**.
 
 ## Recommendations
 
