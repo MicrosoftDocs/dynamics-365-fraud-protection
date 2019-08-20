@@ -32,7 +32,7 @@ In Step 1, select the target data (a combination of a node, attributes, and a li
 
 The following table defines the node and attribute combinations that you can use to build your lists. You can create up to three filters per model operating point, and you can create a total of 30 model operating points.
 
-| Node | Attributes |
+| Node | Attributes 
 |---|---|
 | User | Country |
 | Device | DeviceType, IPCountry |
@@ -75,7 +75,7 @@ At the same time, the **risk impact** pane shows the key metrics that are associ
 After you've selected a risk score, a **Model Operating Point Summary** appears that explicitly defines when transactions will be rejected.
 
 ### Step 3
-In Step 3, name your model operating point, select a status (active or inactive), and create it, using the risk score you previously selected.
+In Step 3, name your model operating point, select a status (active or inactive), and create it based on the risk score you previously selected.
 
 ## Recommendations
 
