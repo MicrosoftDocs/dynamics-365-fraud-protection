@@ -56,7 +56,7 @@ Occasionally, a transaction has an unscored risk score. An unscored risk score i
 Based on the risk score, from -1 through 99, the interactive chart shows the fraud impact on your revenue. The following categories are used:
 
 - **Approved transactions** – Transactions in this category are shown in light blue.
-- **Confirmed fraud** – This category combines both chargebacks and refunds. Transactions in this category are shown in dark blue.
+- **Confirmed fraud** – This category combines both chargebacks and refunds. Transactions in this category are shown in yellow.
 - **Rejected transactions** – Transactions in this category are shown in red.
 
 Hover over any model operating point to see the representation of the values.
