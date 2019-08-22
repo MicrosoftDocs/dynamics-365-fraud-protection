@@ -19,7 +19,7 @@ You can use lists and model operations to help manage your risk decisions and ta
 
 To manage the Safe and Block lists, and to create your own custom lists, select **List management** in the navigation.
 
-Note that due to caching, any changes saved may take up to two minutes to become active.
+Note that due to caching, any changes saved using the following steps may take up to two minutes to become active.
 
 ### Bulk list updates
 
