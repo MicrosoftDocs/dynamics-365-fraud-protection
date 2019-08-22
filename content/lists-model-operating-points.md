@@ -59,6 +59,6 @@ Model operating points can be used on all transactions at the same time or just 
 
 Continue to the next page to select the desired behavior. For example, you can reject all transactions that meet the conditions that you specify, or you can reject transactions only if they meet the specified conditions and exceed a specific risk score threshold. Name your model operating point, set its state (either active or inactive), and save it. You can create a total of 30 model operating points. Note that due to caching, any changes saved may take up to two minutes to become active.
 
-A model operating point can be edited after it's created. To change its settings, select it in the list, make your changes, and save. To disable, enable, or delete a model operating point, select the vertical ellipsis on the right side of the page, and then select from the available options.
+A model operating point can be edited after it's created. To change its settings, select it in the list, make your changes, and save. To delete a model operating point, select the vertical ellipsis on the right side of the page, and then select **Delete**.
 
 Note that for purchase transactions, if no model operating points are configured yet, the default decision returned is to accept the transaction. This is not a recommendation, only a baseline intended to simplify your process when configuring new rule conditions. Once you have created model operating points, the decisions returned by Dynamics 365 Fraud Protection will reflect your chosen settings.
