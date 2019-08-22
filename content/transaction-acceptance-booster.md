@@ -26,4 +26,5 @@ In the response payload, you will receive a flag that indicates which MID you sh
 - **Control** – This MID provides a representative sample of performance before you start Dynamics 365 Fraud Protection, and it will be used as a baseline to measure overall gain. 
 
 Your existing MID will be the Standard MID. You can choose which MID is the Program MID and which is the Control MID. Once you make this choice, your selection should be fixed and the MIDs should not be interchanged. 
+
 Dynamics 365 Fraud Protection algorithms will run in real time to optimize and maximize your acceptance rate. Therefore, it's important that you follow the recommendation that you receive in the response payload. It's also important that you report back the bank authorization outcome and chargeback in a timely manner. 
