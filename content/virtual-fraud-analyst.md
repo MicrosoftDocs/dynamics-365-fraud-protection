@@ -53,21 +53,14 @@ The machine learning model in Dynamics 365 Fraud Protection evaluates every tran
 
 Occasionally, a transaction has an unscored risk score. An unscored risk score indicates that the model hasn't yet scored the transaction. The virtual fraud analyst generates unscored risk scores to indicate that you should create model operating points for the unscored transactions if the volume of your traffic is high enough.
 
-Based on the risk score, from -1 through 99, the interactive chart shows the fraud impact on your revenue. The following categories are used:
+Based on the risk score, from -1 through 99, the interactive chart shows the fraud impact on your revenue. The following categories are used: **Approved transations**, **Confirmed fraud** (which combines both chargebacks and refunds), and **Rejected transactions**. Hover over any model operating point to see the representation of the values.
 
-- **Approved transactions** – Transactions in this category are shown in light blue.
-- **Confirmed fraud** – This category combines both chargebacks and refunds. Transactions in this category are shown in yellow.
-- **Rejected transactions** – Transactions in this category are shown in red.
-
-Hover over any model operating point to see the representation of the values.
-
-To the right, you can see the key metrics that are associated with the chart. The data shown reflects the bar you have selected.
+To the right, you can see the key metrics that are associated with the chart.
 
 | Metric | Definition |
 |---|---|
-| Expected fraud catch rate | The percentage of fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
-| Fraud transactions approved | The number of fraudulent transactions that were approved. |
-| Good transactions blocked | The number of good (non-fraudulent) transactions that have been blocked. Approvals are equal to or less than the score that you select. |
+| Fraud catch rate | The fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
+| Customer friction | The number of good (non-fraudulent) transactions that have been blocked. Approvals are equal to or less than the score that you select. |
 
 After you've selected a risk score, a **Model Operating Point Summary** appears that explicitly defines when transactions will be rejected.
 
