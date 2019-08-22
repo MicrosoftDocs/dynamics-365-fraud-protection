@@ -65,7 +65,7 @@ To the right, you can see the key metrics that are associated with the chart. Th
 
 | Metric | Definition |
 |---|---|
-| Espected fraud catch rate | The percentage of fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
+| Expected fraud catch rate | The percentage of fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
 | Fraud transactions approved | The number of fraudulent transactions that were approved. |
 | Good transactions blocked | The number of good (non-fraudulent) transactions that have been blocked. Approvals are equal to or less than the score that you select. |
 
