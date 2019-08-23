@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to implement device fingerprinting.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 08/16/2019
+ms.date: 08/23/2019
 
 ms.topic: conceptual
 title: Implement device fingerprinting
@@ -56,23 +56,16 @@ Your web application should serve the device fingerprinting before it submits a 
     Here is an example of a response for mdt.js.
 
     ```javascript
-    var a={url:"https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&
-    CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",
-    customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};a.doFpt=function(a)
-    {var b=a.createElement("IFRAME");b.id="fpt_frame",b.style.width="1px",b.style.height="1px",
-    b.style.position="absolute",b.style.visibility="hidden",b.style.left="10px",b.style.bottom="0px",
-    b.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;
-    left:-200;border:0px;display:none");var c="https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-
-    fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691";b.setAttribute("src",c),a.body.appendChild(b)};
+   window.dfp={url:"https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};window.dfp.doFpt=function(doc){var frm,src;true&&(frm=doc.createElement("IFRAME"),frm.id="fpt_frame",frm.style.width="1px",frm.style.height="1px",frm.style.position="absolute",frm.style.visibility="hidden",frm.style.left="10px",frm.style.bottom="0px",frm.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;left:-200;border:0px"),src="https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",frm.setAttribute("src",src),doc.body.appendChild(frm))};
     ```
 
 2. Load device fingerprinting after the page's elements are loaded.
 
     ```
-    a.doFpt(this.document);
+    window.dfp.doFpt(this.document);
     ```
 
 3. When you submit transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services), complete the following actions:
 
     1. In the **deviceContextId** field, set a session ID.
-    1. In the **deviceContextDC** field on the deviceContext object, set the a.dc variable from mdt.js response.
+    1. In the **deviceContextDC** field on the deviceContext object, set the window.dfp.dc variable from mdt.js response.
