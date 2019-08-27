@@ -15,7 +15,7 @@ One feature that sets Microsoft Dynamics 365 Fraud Protection apart from other p
 
 ## Program MID
 
-Program MID is a lightweight methodology for passing a transaction-based trust signal to the issuer. To fully benefit from the program and measure the gains, we require two new MIDs in addition to your existing MID. Work with your payment processor to create the new MIDs.
+Program MID is a lightweight methodology for passing a transaction-based trust signal to the issuer. To fully benefit from the program and measure the gains, you will need two new MIDs in addition to your existing MID. Work with your payment processor to create the new MIDs.
 
 It takes time to create MIDs and use them for authorization, but these tasks don't depend on real-time risk evaluation. Therefore, we recommend that you start them with your payment processor at least four weeks before you start to use Dynamics 365 Fraud Protection for decision making.
 
