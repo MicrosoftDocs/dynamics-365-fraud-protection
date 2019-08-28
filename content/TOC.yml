@@ -6,6 +6,8 @@
   href: configure-user-access.md
 - name: Purchase assessment
   items:
+    - name: Purchase assessment overview
+      href: purchase-assessment.md
     - name: Diagnose experience
       href: diagnose-experience.md
     - name: Integrate Dynamics 365 Fraud Protection APIs
