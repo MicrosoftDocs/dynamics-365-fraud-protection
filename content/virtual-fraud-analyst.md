@@ -60,9 +60,9 @@ To the right, you can see the key metrics that are associated with the chart.
 | Metric | Definition |
 |---|---|
 | Fraud catch rate | The fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
-| Customer friction | The number of good (non-fraudulent) transactions that have been blocked. Approvals are equal to or less than the score that you select. |
+| Customer friction | The number of transactions that have been blocked. Approvals are equal to or less than the score that you select. |
 
-After you've selected a risk score, a **Model Operating Point Summary** appears that explicitly defines when transactions will be rejected.
+After you've selected a risk score, a summary appears that explicitly defines when transactions will be rejected.
 
 ### Step 3
 After selecting the risk score, name your model operating point and set its status (active or inactive), then select **Create**.
