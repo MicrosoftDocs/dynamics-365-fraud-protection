@@ -36,7 +36,7 @@ To help guarantee that Dynamics 365 Fraud Protection can interpret the files tha
 - The following characters should be escaped in all columns: commas, new line characters, and multiline characters.
 
 > [!IMPORTANT]
-> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request highly sensitive data, such as the full payment instrument number or Social Security number (SSN). Therefore, make sure that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
 You can preview a sample of your data on the **Ready to upload your file** page. If significant errors are detected in the file format, correct them before you upload the complete files. When you're ready, select **Upload**.
 
