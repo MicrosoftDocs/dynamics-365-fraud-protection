@@ -43,17 +43,15 @@ The following table defines the node and attribute combinations that you can use
 When you've finished, select **Analyze**. This applies your settings to data from the purchase API and generates the interactive risk chart.
 
 ### Step 2
-In Step 2, select a risk score by clicking on a vertical bar in the chart to examine the effect of fraud upon your historical transaction data. You can choose a date range and a risk score range to filter your view.
-
-In the chart, the x-axis represents the risk score, and the y-axis represents the number of transactions.
+In Step 2, use the **Transaction data** graph to examine the effect of fraud upon your historical transaction data. You can choose a date range and a risk score range to filter your view. In the chart, the x-axis represents the risk score, and the y-axis represents the number of transactions.
 
 The machine learning model in Dynamics 365 Fraud Protection evaluates every transaction by using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a risk score range from 0 through 1000. This approach resembles the approach that the fraud protection network uses. Microsoft, in turn, converts this risk score to a more manageable -1 through 99 range to simplify decision making and reporting.
 
 Occasionally, a transaction has an unscored risk score. An unscored risk score indicates that the model hasn't yet scored the transaction. The virtual fraud analyst generates unscored risk scores to indicate that you should create model operating points for the unscored transactions if the volume of your traffic is high enough.
 
-Based on the risk score, from -1 through 99, the interactive chart shows the fraud impact on your revenue. The following categories are used: **Approved transations**, **Confirmed fraud** (which combines both chargebacks and refunds), and **Rejected transactions**. Hover over any model operating point to see the representation of the values.
+Based on the risk score, from -1 through 99, the interactive chart shows the fraud impact on your revenue. The following categories are used: **Approved transations**, **Confirmed fraud** (which combines both chargebacks and refunds), and **Rejected transactions**. Hover over any point to see a detailed representation of the values.
 
-To the right, you can see the key metrics that are associated with the chart.
+To the right, in **Risk impact**, you can see the key metrics that are associated with the chart. Select a risk score here to set your threshold.
 
 | Metric | Definition |
 |---|---|
