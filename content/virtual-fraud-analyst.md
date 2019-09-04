@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to use the virtual fraud analyst.
 ms.author: v-jowigh
 ms.service: crm-online
-ms.date: 08/20/2019
+ms.date: 09/04/2019
 
 ms.topic: conceptual
 title: Use the virtual fraud analyst
@@ -23,11 +23,11 @@ For example, build a custom list of products that are currently in a specific pr
 
 2. **Create a "catch-all fraud" model operating point for all your traffic.**
 
-Create custom lists, and add entries to them to suit your specific needs for all transactions. After these lists are created, you can use them by creating model operating points either manually or through the virtual fraud analyst. Because you've already built model operating points for high-risk locales and traffic, you can have more flexibility to analyze fraud here.
+You can create a catch-all rule for your traffic that suits your needs for all transactions, without tying it to a specific custom list. To do so through the virtual fraud analyst, simply skip step 1 in the instructions below and proceed to selecting a risk score.
 
 ## Virtual fraud analyst step by step
 
-### Step 1
+### Step 1 (optional)
 In Step 1, select the target data (a combination of a node, attributes, and a list) your model operating point will apply to. If you need to create a new list first, select **Create new list** to do so in the **List management** tool.
 
 The following table defines the node and attribute combinations that you can use to build your lists. You can create up to three filters per model operating point, and you can create a total of 30 model operating points.
@@ -43,26 +43,22 @@ The following table defines the node and attribute combinations that you can use
 When you've finished, select **Analyze**. This applies your settings to data from the purchase API and generates the interactive risk chart.
 
 ### Step 2
-In Step 2, select a risk score by clicking on a vertical bar in the chart to examine the effect of fraud upon your historical transaction data. You can choose a date range and a risk score range to filter your view. 
-
-Select the line for a risk score in the bar chart, and examine the effect on your historical transaction data. Two sliders let you further refine your analysis when creating a model operating point. Use the **Risk score range** slider to adjust the risk range that is shown in the chart. 
-
-In the chart, the x-axis represents the risk score, and the y-axis represents the number of transactions.
+In Step 2, select a risk score by clicking on a vertical bar in the **Transaction data** graph to examine the effect of fraud upon your historical transaction data. You can choose a date range and a risk score range to filter your view. In the chart, the x-axis represents the risk score, and the y-axis represents the number of transactions.
 
 The machine learning model in Dynamics 365 Fraud Protection evaluates every transaction by using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a risk score range from 0 through 1000. This approach resembles the approach that the fraud protection network uses. Microsoft, in turn, converts this risk score to a more manageable -1 through 99 range to simplify decision making and reporting.
 
 Occasionally, a transaction has an unscored risk score. An unscored risk score indicates that the model hasn't yet scored the transaction. The virtual fraud analyst generates unscored risk scores to indicate that you should create model operating points for the unscored transactions if the volume of your traffic is high enough.
 
-Based on the risk score, from -1 through 99, the interactive chart shows the fraud impact on your revenue. The following categories are used: **Approved transations**, **Confirmed fraud** (which combines both chargebacks and refunds), and **Rejected transactions**. Hover over any model operating point to see the representation of the values.
+Based on the risk score, from -1 through 99, the interactive chart shows the fraud impact on your revenue. The following categories are used: **Approved transations**, **Confirmed fraud** (which combines both chargebacks and refunds), and **Rejected transactions**. Hover over any point to see a detailed representation of the values.
 
-To the right, you can see the key metrics that are associated with the chart.
+To the right, in **Risk impact**, you can see the key metrics that are associated with the chart.
 
 | Metric | Definition |
 |---|---|
 | Fraud catch rate | The fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
-| Customer friction | The number of good (non-fraudulent) transactions that have been blocked. Approvals are equal to or less than the score that you select. |
+| Customer friction | The approved transactions that have been blocked. Approvals are equal to or less than the score that you select. |
 
-After you've selected a risk score, a **Model Operating Point Summary** appears that explicitly defines when transactions will be rejected.
+After you've selected a risk score, a summary appears that explicitly defines when transactions will be rejected.
 
 ### Step 3
 After selecting the risk score, name your model operating point and set its status (active or inactive), then select **Create**.
