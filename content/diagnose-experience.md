@@ -3,7 +3,7 @@ author: jegrif
 description: This topic provides information about the Diagnose experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
 ms.service: crm-online
-ms.date: 04/22/2019
+ms.date: 09/04/2019
 
 ms.topic: conceptual
 title: Diagnose experience
