@@ -45,7 +45,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | UserCreationDate    | DateTime | The creation date of the customer account. The format is ISO 8601. |
 | UserUpdateDate      | DateTime | The date when customer data was last changed. The format is ISO 8601. |
 | UserZipCode         | string   | The customer's postal code. |
-| UserCountry         | string   | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
+| UserCountryCode     | string   | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
 | UserTimeZone        | string   | An empty string. |
 | UserLanguage        | string   | The customer's language and language territory (for example: **EN-US**). |
 | UserPhoneNumber     | string   | The customer's phone number. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
@@ -59,7 +59,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | City                | string   | The city that was provided for the address. |
 | State               | string   | The state or province that was provided for the address. |
 | ZipCode             | string   | The postal code that was provided for the address. |
-| Country             | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| CountryCode         | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
 
 ### PaymentInstruments
 
@@ -91,7 +91,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | City                        | string   | The city that was provided for the address. |
 | State                       | string   | The state or province that was provided for the address. |
 | ZipCode                     | string   | The postal code that was provided for the address. |
-| Country                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| CountryCode                 | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
 
 ### Products
 
@@ -189,7 +189,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | UserupdateDate           | DateTime | A date in ISO 8601 format. |
 | FirstName                | string   | The customer-provided first name on the customer account. |
 | LastName                 | string   | The customer-provided last name on the customer account. |
-| Country                  | string   | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
+| CountryCode              | string   | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
 | ZipCode                  | string   | The customer's postal code. |
 | TimeZone                 | string   | This attribute is obsolete (deprecated). Provide an empty string as the value. |
 | Language                 | string   | The customer's language and language territory (for example: **EN-US**). |
@@ -209,21 +209,21 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 ### UpdateAddress
 
-| Attribute   | Type   | Description |
-|-------------|--------|-------------|
-| UserId      | string | The customer identifier. |
-| Addresstype | string | The address type: **BILLING**, **SHIPPING**, **ACCOUNT**, or **UNKNOWN**. |
-| FirstName   | string | The first name that was provided for the address. |
-| LastName    | string | The last name that was provided for the address. |
-| PhoneNumber | string | The phone number that was provided for the address. |
-| Street1     | string | The first row that was provided for the address. |
-| Street2     | string | The second row that was provided for the address. (This value can be blank.) |
-| Street3     | string | Third row that was provided for the address. (This value can be blank.) |
-| City        | string | The city that was provided for the address. |
-| State       | string | The state or province that was provided for the address. |
-| District    | string | The district that was provided for the address. (This value can be blank.) |
-| ZipCode     | string | The postal code that was provided for the address. |
-| Country     | string | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| Attribute       | Type   | Description |
+|-----------------|--------|-------------|
+| UserId          | string | The customer identifier. |
+| Addresstype     | string | The address type: **BILLING**, **SHIPPING**, **ACCOUNT**, or **UNKNOWN**. |
+| FirstName       | string | The first name that was provided for the address. |
+| LastName        | string | The last name that was provided for the address. |
+| PhoneNumber     | string | The phone number that was provided for the address. |
+| Street1         | string | The first row that was provided for the address. |
+| Street2         | string | The second row that was provided for the address. (This value can be blank.) |
+| Street3         | string | Third row that was provided for the address. (This value can be blank.) |
+| City            | string | The city that was provided for the address. |
+| State           | string | The state or province that was provided for the address. |
+| District        | string | The district that was provided for the address. (This value can be blank.) |
+| ZipCode         | string | The postal code that was provided for the address. |
+| CountryCode     | string | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
 
 ### UpdatePaymentInstrument
 
@@ -256,4 +256,4 @@ The following schemas are used in the Evaluate and Protect experiences.
 | State                         | string   | The state or province that was provided for the address. |
 | District                      | string   | The district that was provided for the address. (This value can be blank.) |
 | ZipCode                       | string   | The postal code that was provided for the address. |
-| Country                       | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| CountryCode                   | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
