@@ -61,7 +61,7 @@ To the right, in **Risk impact**, you can see the key metrics that are associate
 When you choose a risk score, a summary appears that explicitly defines when transactions will be rejected.
 
 ### Step 3
-After selecting the risk score in **Risk impact**, name your model operating point and set its status (active or inactive), then select **Create**. Note that due to caching, your new rule may take up to two minutes to become active.
+After selecting the risk score, name your model operating point and set its status (active or inactive), then select **Create**. Note that due to caching, your new rule may take up to two minutes to become active.
 
 ## Recommendations
 
