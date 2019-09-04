@@ -11,7 +11,7 @@ title: Purchase assessment
 
 # Purchase assessment
 
-Microsoft Dynamics 365 Fraud Protection provides merchants the capability to assess e-commerce purchase transactions for fraudulent activity, such as stolen payment instruments or illegitimate purchases. By using Dynamics 365 Fraud Protection to evaluate the current state of your systems, and then utilizing powerful tools like the customizable rules engine and the risk support toolset, you can fine-tune your fraud protection decisions and implement new strategies based on the knowledge shared through Microsoft’s fraud protection network. 
+Microsoft Dynamics 365 Fraud Protection provides merchants the capability to assess e-commerce transactions for fraudulent activity. By using Dynamics 365 Fraud Protection to review your historical data, and then using powerful tools like the customizable rules engine, the risk support toolset, and more, you can fine-tune your fraud protection decisions, support your customers, and implement new strategies based on the knowledge gained from Dynamics 365 Fraud Protection and Microsoft’s fraud protection network.
 
 Learn more about the following features utilized in purchase assessment:
 
