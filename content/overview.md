@@ -22,11 +22,12 @@ Because the return on investment (ROI) for online fraud is high, it's likely tha
 
 Microsoft Dynamics 365 Fraud Protection focuses on payment fraud protection and related scenarios in e-commerce. It helps e-commerce merchants drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience for its customers.
 
-Microsoft has many years of experience protecting our own e-commerce businesses from fraud. We have developed a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time. We have core differentiators, such as device fingerprinting, operations research, a fraud protection network, and transmission of trust knowledge to banks.
+Microsoft has many years of experience protecting our own e-commerce businesses from fraud. We have developed a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time.
 
 By using Dynamics 365 Fraud Protection, you can help protect your business from fraud through several innovative and advanced capabilities. Here are some examples: 
 
 - [AI and insights from the fraud protection network](fraud-protection-network.md)
+- [Device fingerprinting](device-fingerprinting.md)
 - A [rules engine](lists-model-operating-points.md) and [virtual fraud analyst](virtual-fraud-analyst.md)
 - A [graph explorer](graph-explorer.md) and [scorecard](scorecard.md)
 - A [transaction acceptance booster](transaction-acceptance-booster.md)
