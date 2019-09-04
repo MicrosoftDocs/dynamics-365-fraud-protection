@@ -23,11 +23,11 @@ For example, build a custom list of products that are currently in a specific pr
 
 2. **Create a "catch-all fraud" model operating point for all your traffic.**
 
-Create custom lists, and add entries to them to suit your specific needs for all transactions. After these lists are created, you can use them by creating model operating points either manually or through the virtual fraud analyst. Because you've already built model operating points for high-risk locales and traffic, you can have more flexibility to analyze fraud here.
+You can create a catch-all rule for your traffic that suits your needs for all transactions, without tying it to a specific custom list. To do so through the virtual fraud analyst, simply skip step 1 in the instructions below and proceed to selecting a risk score.
 
 ## Virtual fraud analyst step by step
 
-### Step 1
+### Step 1 (optional)
 In Step 1, select the target data (a combination of a node, attributes, and a list) your model operating point will apply to. If you need to create a new list first, select **Create new list** to do so in the **List management** tool.
 
 The following table defines the node and attribute combinations that you can use to build your lists. You can create up to three filters per model operating point, and you can create a total of 30 model operating points.
