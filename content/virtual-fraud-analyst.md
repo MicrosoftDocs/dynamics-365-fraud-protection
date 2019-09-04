@@ -58,7 +58,7 @@ To the right, in **Risk impact**, you can see the key metrics that are associate
 | Fraud catch rate | The fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
 | Customer friction | The approved transactions that have been blocked. Approvals are equal to or less than the score that you select. |
 
-After you've selected a risk score, a summary appears that explicitly defines when transactions will be rejected.
+When you choose a risk score, a summary appears that explicitly defines when transactions will be rejected.
 
 ### Step 3
 After selecting the risk score in **Risk impact**, name your model operating point and set its status (active or inactive), then select **Create**. Note that due to caching, your new rule may take up to two minutes to become active.
