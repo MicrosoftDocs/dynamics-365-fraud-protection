@@ -53,4 +53,3 @@ Note the following formatting guidelines throughout:
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
 | merchantPaymentInstrumentId | string | The identifier of the payment instrument. This information is provided by the merchant. |
-| --- | --- | --- |
