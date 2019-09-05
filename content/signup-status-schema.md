@@ -21,7 +21,7 @@ Note the following formatting guidelines throughout:
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
-## Signup schema
+## SignupStatus schema
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
