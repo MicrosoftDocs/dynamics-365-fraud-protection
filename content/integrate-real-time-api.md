@@ -19,7 +19,7 @@ To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection f
 > [!NOTE]
 > You must be a Global Administrator in your Microsoft Azure tenant to complete this step.
 
-Visit the portal for each environment you intend to use, sign in, and accept the terms and conditions.
+Visit the portal for each environment you intend to use, sign in, and accept the terms and conditions if prompted.
 - Sandbox - https://dfp.microsoft-int.com 
 - Production - https://dfp.microsoft.com (You might already have completed this step in production during initial sign-up.)
 
