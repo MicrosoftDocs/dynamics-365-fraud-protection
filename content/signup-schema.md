@@ -6,7 +6,7 @@ ms.service: crm-online
 ms.date: 09/04/2019
 
 ms.topic: conceptual
-title: View account creation assessment schemas - Sign-up
+title: View account creation assessment schemas -  Sign-up
 ---
 
 # View account creation assessment schemas - Sign-up
@@ -21,7 +21,7 @@ Note the following formatting guidelines throughout:
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Data Type | Description |
 | --- | --- | --- |
 | trackingId | string | The identifier of the Signup event. |
 
