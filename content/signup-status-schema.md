@@ -11,7 +11,7 @@ title: View account creation assessment schemas -  Sign-up status
 
 # View account creation assessment schemas - Sign-up status
 
-This topic outlines the schemas for the Signup status data for account creation assessment. For Signup, see [this accompanying page](signp-schema.md).
+This topic outlines the schemas for the Signup status data for account creation assessment. For Signup, see [this accompanying page](signup-schema.md).
 
 Note the following formatting guidelines throughout:
 
