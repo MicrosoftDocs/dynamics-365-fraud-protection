@@ -28,3 +28,4 @@ In addition to the first steps that are outlined on the dashboard, the Evaluate 
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
 
+The Protect experience is differentiated from Evaluate by additional features as described on [Protect experience](protect-experience.md), and becomes your real-time risk decision tool in your full production environment.
