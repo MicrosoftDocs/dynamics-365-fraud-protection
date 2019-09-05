@@ -1,7 +1,7 @@
 - name: Overview
   href: overview.md
-- name: Sign up for Dynamics 365 Fraud Protection
-  href: signup.md
+- name: Provision your Azure tenant
+  href: provision-azure-tenant.md
 - name: Configure user access
   href: configure-user-access.md
 - name: Purchase assessment
