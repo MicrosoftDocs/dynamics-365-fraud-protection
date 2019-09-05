@@ -3,7 +3,7 @@ author: jegrif
 description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
 ms.service: crm-online
-ms.date: 07/17/2019
+ms.date: 09/03/2019
 
 ms.topic: conceptual
 title: Upload historical data
@@ -34,7 +34,7 @@ Dynamics 365 Fraud Protection can analyze historical data about the following en
     - Update account payment instruments
 
 > [!IMPORTANT]
-> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request highly sensitive data, such as the full payment instrument number or Social Security number (SSN); therefore, make sure that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
 ## Website upload
 
