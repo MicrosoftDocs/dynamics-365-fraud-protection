@@ -1,17 +1,17 @@
 ---
 author: jegrif
-description: This topic outlines the schemas that are required for the fraud label API.
+description: This topic outlines the requred schema for the fraud label API.
 ms.author: v-jegrif
 ms.service: crm-online
 ms.date: 09/04/2019
 
 ms.topic: conceptual
-title: View fraud label schemas
+title: View fraud label schema
 ---
 
-# View fraud label schemas
+# View fraud label schema
 
-This topic outlines the schemas for the fraud label API.
+This topic outlines the schema for the fraud label API.
 
 Note the following formatting guidelines throughout:
 
