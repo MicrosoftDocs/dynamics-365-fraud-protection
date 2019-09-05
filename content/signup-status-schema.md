@@ -50,5 +50,7 @@ Note the following formatting guidelines throughout:
 
 #### UserDetails \ PaymentInstrument \ PaymentInstrumentDetails
 
-|             merchantPaymentInstrumentId | string | The identifier of the payment instrument. This information is provided by the merchant. |
+| **Attribute** | **Data Type** | **Description** |
+| --- | --- | --- |
+| merchantPaymentInstrumentId | string | The identifier of the payment instrument. This information is provided by the merchant. |
 | --- | --- | --- |
