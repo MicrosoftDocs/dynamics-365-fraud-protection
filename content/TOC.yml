@@ -20,8 +20,8 @@
       href: data-upload.md
     - name: View schemas
       href: schema.md  
-    - name: Manage lists and model operating points
-      href: lists-model-operating-points.md
+    - name: Manage lists and rules
+      href: lists-rules.md
     - name: Use the virtual fraud analyst
       href: virtual-fraud-analyst.md   
     - name: Learn from the scorecard
