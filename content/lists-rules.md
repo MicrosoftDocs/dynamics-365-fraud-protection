@@ -59,6 +59,6 @@ Rules can be used on all transactions at the same time or just on specific subse
 
 Continue to the next page to select the desired behavior. For example, you can reject all transactions that meet the conditions that you specify, or you can reject transactions only if they meet the specified conditions and exceed a specific risk score threshold. Name your rule, set its state (either active or inactive), and save it. You can create a total of 30 rules. Note that due to caching, any changes saved may take up to two minutes to become active.
 
-A rule can be edited after it's created. To change its settings, select it in the list, make your changes, and save. To delete a rule, select the vertical ellipsis on the right side of the page, and then select **Delete**.
+A rule can be edited after it's created. To change its settings, select it in the list, make your changes, and save. To enable, disable, or delete a rule, select the vertical ellipsis on the right side of the page and select from the available choices. Active rules are indicated in the list with a green dot.
 
 Note that for purchase transactions, if no rules are configured yet, the default decision returned is to accept the transaction. This is not a recommendation, only a baseline intended to simplify your process when configuring new rule conditions. Once you have created rules, the decisions returned by Dynamics 365 Fraud Protection will reflect your chosen settings.
