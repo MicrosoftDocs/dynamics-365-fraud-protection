@@ -34,7 +34,7 @@ Note the following formatting guidelines throughout:
 | --- | --- | --- |
 | signupId | string | The identifier of the Signup event. |
 
-### Status
+### Data \ Status
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
@@ -42,13 +42,13 @@ Note the following formatting guidelines throughout:
 | statusDate | DateTime | The date and time when the status was applied. The format is ISO 8601. |
 | reason | string | The reason for the status transition. |
 
-### User
+### Data \ User
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
 | userId | string | The user identifier. This information is provided by the merchant. |
 
-#### UserDetails \ PaymentInstrument \ PaymentInstrumentDetails
+### Data \ User \ UserDetails \ PaymentInstrument \ PaymentInstrumentDetails
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
