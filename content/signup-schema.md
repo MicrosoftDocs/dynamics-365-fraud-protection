@@ -23,7 +23,7 @@ Note the following formatting guidelines throughout:
 
 ## Signup schema
 
-| Attribute | Data Type | Description |
+| **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
 | trackingId | string | The identifier of the Signup event. |
 
@@ -36,13 +36,13 @@ Note the following formatting guidelines throughout:
 | customerLocalDate | dateTime | The Signup creation date in the customer's local time zone. The format is ISO 8601. |
 | merchantLocalDate | dateTime | The Signup ingestion date in the merchant's time zone. The format is ISO 8601. |
 
-### User
+### Data \ User
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
 | userId | string | The user identifier. This information is provided by the merchant. |
 
-#### UserDetails
+### Data \ User \ UserDetails
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
@@ -67,7 +67,7 @@ Note the following formatting guidelines throughout:
 | isPhoneNumberValidated | bool | A True/False value that indicates whether the user-provided phone number has been verified as owned by the user. |
 | phoneNumberValidatedDate | dateTime | The validation date of the user phone number. The format is ISO 8601. |
 
-#### SignUpAddress
+### Data \ User \ SignUpAddress
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
@@ -75,7 +75,7 @@ Note the following formatting guidelines throughout:
 | lastName | string | The user-provided last name associated with the address. |
 | phoneNumber | string | The user-provided phone number associated with the address. |
 
-#### SignUpAddressDetails
+### Data \ User \ SignUpAddressDetails
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
@@ -88,9 +88,9 @@ Note the following formatting guidelines throughout:
 | zipCode | string | The postal code that was provided for the address. |
 | country | string | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). |
 
-### PaymentInstrument
+### Data \ PaymentInstrument
 
-#### PaymentInstrumentDetails
+### Data \ PaymentInstrument \ PaymentInstrumentDetails
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
@@ -111,7 +111,7 @@ Note the following formatting guidelines throughout:
 | addressStatus | string | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the Paypal type. |
 | imei | string | This attribute is used only for payments of the Mobilepayment type. |
 
-#### BillingAddress
+### Data \ PaymentInstrument \ BillingAddress
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
@@ -119,7 +119,7 @@ Note the following formatting guidelines throughout:
 | lastName | string | The user-provided last name associated with the address. |
 | phoneNumber | string | The user-provided phone number associated with the address. |
 
-#### BillingAddressDetails
+### Data \ PaymentInstrument \  BillingAddressDetails
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
@@ -132,7 +132,7 @@ Note the following formatting guidelines throughout:
 | zipCode | string | The postal code that was provided for the address. |
 | country | string | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). |
 
-### MarketingContext
+### Data \ MarketingContext
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
@@ -141,7 +141,7 @@ Note the following formatting guidelines throughout:
 | incentiveType | string | The incentive type for the new user. Possible values: None, CashBack, Discount, FreeTrial, BonusPoints, Gift, Other |
 | incentiveOffer | string | The exact incentive offer name. Examples: $5 off on first order, free shipping, 5000 points |
 
-### StoreFrontContext
+### Data \ StoreFrontContext
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
@@ -149,14 +149,14 @@ Note the following formatting guidelines throughout:
 | storeName | string | The exact name of your storefront through which the customer is trying to sign up. |
 | marketingContext | string | The region or market. The value should be a two-letter ISO country/region code (for example, US). |
 
-### DeviceContext
+### Data \ DeviceContext
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
 | deviceContextId | string | The customer's Session ID (mastered by GreenId), or the event ID if the session is not available. |
 | ipAddress | string | The customer's IP address (as provided by the merchant). |
 
-#### DeviceContextDetails
+### Data \ DeviceContext \ DeviceContextDetails
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
