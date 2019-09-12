@@ -34,13 +34,11 @@ The following table defines the node and attribute combinations that you can use
 
 | Node | Attributes 
 |---|---|
-| User | Id, Country, ZipCode, Email |
-| Device | DeviceType, IPAddress, IPCity, IPCountry, IPState |
-| Billing Address | AddressId, City, State, District, ZipCode, Country |
-| Shipping Address | AddressId, Ciy, State, District, ZipCode, Country|
-| PaymentInstrument | PaymentInstrumentId, MerchantPaymentInstrumentId, Type, CardType, State, HolderName, Email |
-| Purchase | TotalAmount, TotalAmountInUSD, Currency |
-| Product | ProductId, ProductName, Type, SKU, Category, Market, SalesPrice, COGS |
+| User | Country |
+| Device | DeviceType, IPCountry |
+| Billing | Country |
+| PaymentInstrument | Type |
+| Product | Type, SKU, Category, Market |
 
 When you've finished, select **Analyze**. This applies your settings to data from the purchase API and generates the interactive risk chart.
 
