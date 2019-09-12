@@ -2,7 +2,7 @@
 author: jackwi111
 description: This topic explains how to sign up for Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jowigh
-ms.service: crm-online
+ms.service: fraud-protection
 ms.date: 07/01/2019
 
 ms.topic: conceptual

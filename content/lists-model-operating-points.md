@@ -2,7 +2,7 @@
 author: jegrif
 description: This topic explains how to manage lists and model operating points in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
-ms.service: crm-online
+ms.service: fraud-protection
 ms.date: 08/20/2019
 
 ms.topic: conceptual
