@@ -2,7 +2,7 @@
 author: jegrif
 description: This topic explains the account creation assessment capability of Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
-ms.service: crm-online
+ms.service: fraud-protection
 ms.date: 08/28/2019
 
 ms.topic: conceptual

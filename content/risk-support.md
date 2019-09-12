@@ -2,7 +2,7 @@
 author: jegrif
 description: This topic explains how you can use Microsoft Dynamics 365 Fraud Protection to support your customers.
 ms.author: v-jegrif
-ms.service: crm-online
+ms.service: fraud-protection
 ms.date: 04/22/2019
 
 ms.topic: conceptual
