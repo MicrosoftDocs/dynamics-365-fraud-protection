@@ -6,10 +6,10 @@
   href: provision-azure-tenant.md
 - name: Configure user access
   href: configure-user-access.md
-- name: Purchase assessment
+- name: Purchase protection
   items:
-    - name: Purchase assessment overview
-      href: purchase-assessment.md
+    - name: Purchase protection overview
+      href: purchase-protection.md
     - name: Diagnose experience
       href: diagnose-experience.md
     - name: Integrate Dynamics 365 Fraud Protection APIs
@@ -34,10 +34,10 @@
       href: monitoring.md
     - name: Usage metering
       href: metering.md        
-- name: Account creation assessment
+- name: Account protection
   items:
-    - name: Account creation assessment overview
-      href: account-creation-assessment.md
+    - name: Account protection overview
+      href: account-protection.md
     - name: Integrate Dynamics 365 Fraud Protection APIs
       href: integrate-real-time-api.md
     - name: Implement device fingerprinting
