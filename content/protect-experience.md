@@ -3,7 +3,7 @@ author: jegrif
 description: This topic provides information about the Protect experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
 ms.service: fraud-protection
-ms.date: 04/22/2019
+ms.date: 09/12/2019
 
 ms.topic: conceptual
 title: Protect experience
