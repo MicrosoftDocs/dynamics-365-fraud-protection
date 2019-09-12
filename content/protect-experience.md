@@ -21,7 +21,7 @@ Your dashboard keeps you up to date about useful information, essential tasks th
 
 In addition to the first steps that are outlined on the dashboard, The Protect experience in Dynamics 365 Fraud Protection provides the features that are described in the following topics:
 
-- [Purchase assessment](purchase-assessment.md)
+- [Purchase protection](purchase-protection.md)
 - [Artificial intelligence (AI) and insights from the fraud protection network](fraud-protection-network.md)
 - [Send real-time data using the Dynamics 365 Fraud Protection API](send-real-time-api.md)
 - [Visually explore your data](graph-explorer.md)
