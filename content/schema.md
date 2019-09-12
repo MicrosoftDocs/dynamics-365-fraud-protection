@@ -6,10 +6,10 @@ ms.service: fraud-protection
 ms.date: 09/04/2019
 
 ms.topic: conceptual
-title: View purchase assessment schemas
+title: View purchase protection schemas
 ---
 
-# View purchase assessment schemas
+# View purchase protection schemas
 
 This topic outlines the schemas for historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
@@ -122,7 +122,7 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 |--------------------|----------|-------------|
 | ChargebackId       | string   | The chargeback identifier. |
 | Reason             | string   | The reason that was provided by the bank. |
-| Status             | string   | The status: **CB_DISPUTE-INITIATED**, **CB_DISPUTE-LOSE**, **CB_DISPUTE-WIN**, **CHARGEBACK-CB1**, **CHARGEBACK-CB2**, **INQUIRY_DISPUTE-WIN**, **INQUIRY-INITIATED**, or **UNKNOWN**. |
+| Status             | string   | The status: **ACCEPTED**, **CB_DISPUTE-INITIATED**, **CB_DISPUTE-LOSE**, **CB_DISPUTE-WIN**, **CHARGEBACK-CB1**, **CHARGEBACK-CB2**, **INQUIRY_DISPUTE-WIN**, **INQUIRY-INITIATED**, **RESUBMITTEDREQUEST**, or **UNKNOWN**. |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The chargeback amount. |
 | Currency           | string   | The currency that is used for the chargeback amount. |
