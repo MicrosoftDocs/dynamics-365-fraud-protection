@@ -2,7 +2,7 @@
 author: jegrif
 description: This topic outlines the requred schema for the fraud label API.
 ms.author: v-jegrif
-ms.service: crm-online
+ms.service: fraud-protection
 ms.date: 09/04/2019
 
 ms.topic: conceptual

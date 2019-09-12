@@ -2,7 +2,7 @@
 author: jackwi111
 description: This topic explains how to implement device fingerprinting.
 ms.author: v-jowigh
-ms.service: crm-online
+ms.service: fraud-protection
 ms.date: 08/23/2019
 
 ms.topic: conceptual

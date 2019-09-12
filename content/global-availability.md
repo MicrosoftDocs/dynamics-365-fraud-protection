@@ -2,7 +2,7 @@
 author: jegrif
 description: This topic explains the global availability of Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
-ms.service: crm-online
+ms.service: fraud-protection
 ms.date: 09/05/2019
 
 ms.topic: conceptual
