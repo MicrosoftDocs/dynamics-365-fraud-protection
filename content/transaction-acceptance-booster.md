@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic provides information about how you can boost bank acceptance rates.
 ms.author: v-jowigh
 ms.service: fraud-protection
-ms.date: 09/22/2019
+ms.date: 09/12/2019
 
 ms.topic: conceptual
 title: Boost bank acceptance rates
