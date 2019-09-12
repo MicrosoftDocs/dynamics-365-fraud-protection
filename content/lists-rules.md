@@ -3,7 +3,7 @@ author: jegrif
 description: This topic explains how to manage lists and rules in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
 ms.service: fraud-protection
-ms.date: 09/06/2019
+ms.date: 09/12/2019
 
 ms.topic: conceptual
 title: Manage lists and rules
@@ -43,17 +43,19 @@ The following table defines the node and attribute combinations that you can use
 
 | Node | Attributes 
 |---|---|
-| User | Country |
-| Device | DeviceType, IPCountry |
-| Billing | Country |
-| PaymentInstrument | Type |
-| Product | Type, SKU, Category, Market |
+| User | Id, Country, ZipCode, Email |
+| Device | DeviceType, IPAddress, IPCity, IPCountry, IPState |
+| Billing Address | AddressId, City, State, District, ZipCode, Country |
+| Shipping Address | AddressID, Ciy, State, District, ZipCode, Country|
+| PaymentInstrument | PaymentInstrumentId, MerchantPaymentInstrument Id, Type, CardType, State, HolderName, Email |
+| Purchase | TotalAmount, TotalAmountInUSD, Currency |
+| Product | ProductId, ProductName, Type, SKU, Category, Market, SalesPrice, COGS |
 
 After you save your new custom list, it can be viewed and edited under **Custom lists** on the **List management** page. It can also be selected when rules are configured.
 
 ## Rules
 
-Rules can be configured manually or by using the guidance of the virtual fraud analyst. To create a rule from scratch, open the **Rules** page, and select **Create a new rule**.
+Rules can be configured manually or by using the guidance of the virtual fraud analyst. To create a rule from scratch, open the **Rules** page, and select **Create new rule**.
 
 Rules can be used on all transactions at the same time or just on specific subsets of transactions. For example, a rule can be applied only to products that are in a specific price range. To create a filter, select the appropriate node and attribute, and then select the list that contains the corresponding dataset. Up to three filters can be applied simultaneously. For example, a rule can be set to screen for high-priced products that are being bought only by users in high-risk countries or regions.
 
