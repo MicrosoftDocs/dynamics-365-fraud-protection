@@ -3,7 +3,7 @@ author: jackwi111
 description: This topic explains how to use the virtual fraud analyst.
 ms.author: v-jowigh
 ms.service: fraud-protection
-ms.date: 09/06/2019
+ms.date: 09/12/2019
 
 ms.topic: conceptual
 title: Use the virtual fraud analyst
@@ -11,7 +11,7 @@ title: Use the virtual fraud analyst
 
 # Use the virtual fraud analyst
 
-The virtual fraud analyst uses innovative artificial intelligence (AI) technology to provide a compelling historical view of your data, and to help you set up and adjust optimal [risk score thresholds](scorecard.md). This information can then be transformed into [rules](lists-rules.md) to help you decide, in real time, whether to accept or reject customer transactions.
+The virtual fraud analyst uses innovative artificial intelligence (AI) technology to provide a compelling historical view of your data and to help you set up and adjust optimal [risk score thresholds](scorecard.md). This information can then be transformed into [rules](lists-rules.md) to help you decide, in real time, whether to accept or reject customer transactions.
 
 The virtual fraud analyst helps you balance acceptable levels of lost revenue and customer support costs against chargebacks, fees, and refunds. Its configuration experience implements and tests your rules against historical customer data.
 
@@ -28,26 +28,28 @@ You can create a catch-all rule for your traffic that suits your needs for all t
 ## Virtual fraud analyst step by step
 
 ### Step 1 (optional)
-In Step 1, select the target data (a combination of a node, attributes, and a list) your rule will apply to. If you need to create a new list first, select **Create new list** to do so in the **List management** tool.
+In Step 1, select the target data (a combination of a node, attributes, and a list) that your rule will apply to. If you need to create a new list first, select **Create new list** to do so in the **List management** tool.
 
 The following table defines the node and attribute combinations that you can use to build your lists. You can create up to three filters per rule, and you can create a total of 30 rules.
 
 | Node | Attributes 
 |---|---|
-| User | Country |
-| Device | DeviceType, IPCountry |
-| Billing | Country |
-| PaymentInstrument | Type |
-| Product | Type, SKU, Category, Market |
+| User | Id, Country, ZipCode, Email |
+| Device | DeviceType, IPAddress, IPCity, IPCountry, IPState |
+| Billing Address | AddressId, City, State, District, ZipCode, Country |
+| Shipping Address | AddressId, Ciy, State, District, ZipCode, Country|
+| PaymentInstrument | PaymentInstrumentId, MerchantPaymentInstrumentId, Type, CardType, State, HolderName, Email |
+| Purchase | TotalAmount, TotalAmountInUSD, Currency |
+| Product | ProductId, ProductName, Type, SKU, Category, Market, SalesPrice, COGS |
 
 When you've finished, select **Analyze**. This applies your settings to data from the purchase API and generates the interactive risk chart.
 
 ### Step 2
 In Step 2, use the **Transaction data** graph to examine the effect of fraud upon your historical transaction data. You can choose a date range and a risk score range to filter your view. In the chart, the x-axis represents the risk score, and the y-axis represents the number of transactions.
 
-The machine learning model in Dynamics 365 Fraud Protection evaluates every transaction by using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a risk score range from 0 through 1000. This approach resembles the approach that the fraud protection network uses. Microsoft, in turn, converts this risk score to a more manageable -1 through 99 range to simplify decision making and reporting.
+The machine learning model in Dynamics 365 Fraud Protection evaluates every transaction by using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a risk score range from 0 through 1000. This approach resembles the approach that the fraud protection network uses. Microsoft, in turn, converts this risk score to a more manageable 0 through 99 range to simplify decision making and reporting.
 
-Occasionally, a transaction has an unscored risk score. An unscored risk score indicates that the model hasn't yet scored the transaction. The virtual fraud analyst generates unscored risk scores to indicate that you should create rules for the unscored transactions if the volume of your traffic is high enough.
+Occasionally, a transaction has an unscored risk score, -1. An unscored risk score indicates that the model hasn't yet scored the transaction. The virtual fraud analyst generates unscored risk scores to indicate that you should create rules for the unscored transactions if the volume of your traffic is high enough.
 
 Based on the risk score, from -1 through 99, the interactive chart shows the fraud impact on your revenue. The following categories are used: **Approved transations**, **Confirmed fraud** (which combines both chargebacks and refunds), and **Rejected transactions**. Hover over any point to see a detailed representation of the values.
 
@@ -62,12 +64,6 @@ When you choose a risk score, a summary appears that explicitly defines when tra
 
 ### Step 3
 After selecting the risk score with the slider on the right, name your rule and set its status (active or inactive), then select **Create**. Note that due to caching, your new rule may take up to two minutes to become active.
-
-## Recommendations
-
-The machine learning models in the fraud protection network help find emerging fraud patterns and risky attributes across all participating merchants. The virtual fraud analyst can use these findings to recommend ways that merchants who use Dynamics 365 Fraud Protection can improve the configuration of their rules. The virtual fraud analyst also makes recommendations about other attributes and information that can be added to the knowledge graph. This information might include chargeback data, margins, and the cost of goods sold (COGS). By augmenting existing data, you can maximize the impact of the product.
-
-Note that before rules are configured, either manually or by using guidance from the virtual fraud analyst, the default decision returned on purchase transactions is to accept the transaction. This is not a recommendation, only a baseline intended to simplify your process when configuring new rule conditions. Once you have created rules, the decisions returned by Dynamics 365 Fraud Protection will reflect your chosen settings.
 
 ## Balance fraud loss against opportunity loss
 
