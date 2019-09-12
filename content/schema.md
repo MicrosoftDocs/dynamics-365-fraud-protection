@@ -122,7 +122,7 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 |--------------------|----------|-------------|
 | ChargebackId       | string   | The chargeback identifier. |
 | Reason             | string   | The reason that was provided by the bank. |
-| Status             | string   | The status: **ACCEPTED**, **CB_DISPUTE-INITIATED**, **CB_DISPUTE-LOSE**, **CB_DISPUTE-WIN**, **CHARGEBACK-CB1**, **CHARGEBACK-CB2**, **INQUIRY_DISPUTE-WIN**, **INQUIRY-INITIATED**, **RESUBMITTEDREQUEST**, or **UNKNOWN**. |
+| Status             | string   | The status: **Accepted**, **CB_Dispute-Initiated**, **CB_Dispute-Lose**, **CB_Dispute-Win**, **Chargeback-CB1**, **Chargeback-CB2**, **Inquiry_Dispute-Win**, **Inquiry-Initiated**, **ResubmittedRequest**, or **Unknown**. |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The chargeback amount. |
 | Currency           | string   | The currency that is used for the chargeback amount. |
@@ -138,7 +138,7 @@ The following schema is used in the Evaluate and Protect experiences.
 |--------------------|----------|-------------|
 | RefundId           | string   | The refund identifier. |
 | Reason             | string   | The customer-provided reason. |
-| Status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, **PENDING**, **REVERSED**, or **UNKNOWN**. |
+| Status             | string   | The refund status: **Approved**, **Declined**, **Failed**, **Offline_Approved**, **Pending**, **Reversed**, or **Unknown**. |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The refund amount. |
 | Currency           | string   | The currency that is used for the sales price amount. |
@@ -212,7 +212,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | Attribute       | Type   | Description |
 |-----------------|--------|-------------|
 | UserId          | string | The customer identifier. |
-| Addresstype     | string | The address type: **BILLING**, **SHIPPING**, **ACCOUNT**, or **UNKNOWN**. |
+| Addresstype     | string | The address type: **Billing**, **Shipping**, **Account**, or **Unknown**. |
 | FirstName       | string | The first name that was provided for the address. |
 | LastName        | string | The last name that was provided for the address. |
 | PhoneNumber     | string | The phone number that was provided for the address. |
