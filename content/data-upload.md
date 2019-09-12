@@ -2,7 +2,7 @@
 author: jegrif
 description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-jegrif
-ms.service: crm-online
+ms.service: fraud-protection
 ms.date: 09/03/2019
 
 ms.topic: conceptual
