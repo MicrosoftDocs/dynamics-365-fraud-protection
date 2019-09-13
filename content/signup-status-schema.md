@@ -23,20 +23,20 @@ Note the following formatting guidelines throughout:
 
 ## SignupStatus schema
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | trackingID | string | The identifier of the SignupStatus event. |
 | merchantLocalDate | DateTime | The Signup ingestion date in the merchant's time zone. The format is ISO 8601. |
 
 ## Data
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | signupId | string | The identifier of the Signup event. |
 
 ### Data \ Status
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | statusType | string | The type of status: APPROVED, REJECTED, or HELD. |
 | statusDate | DateTime | The date and time when the status was applied. The format is ISO 8601. |
@@ -44,12 +44,12 @@ Note the following formatting guidelines throughout:
 
 ### Data \ User
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | userId | string | The user identifier. This information is provided by the merchant. |
 
 ### Data \ User \ UserDetails \ PaymentInstrument \ PaymentInstrumentDetails
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | merchantPaymentInstrumentId | string | The identifier of the payment instrument. This information is provided by the merchant. |
