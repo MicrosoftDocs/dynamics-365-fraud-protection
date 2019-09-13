@@ -257,3 +257,21 @@ The following schemas are used in the Evaluate and Protect experiences.
 | District                      | string   | The district that was provided for the address. (This value can be blank.) |
 | ZipCode                       | string   | The postal code that was provided for the address. |
 | CountryCode                   | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+
+## Fraud label
+
+The following schema is used in the Evaluate and Protect experiences.
+
+| Attribute | Type | Description |
+| --- | --- | --- |
+| TrackingId | String | The unique ID for each event/record. |
+| MerchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
+| EventTimeStamp | DateTime | The date and time of the event. Possible values: Chargeback Date or Review Date. The format is ISO 8601. |
+| LabelObjectType | String | This field indicates the type of label: Purchase, Signup, Generic Event, Account, Payment instrument, or Email. |
+| LabelObjectId | String | This is an identifier field for the type of object: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, or Email.  |
+| LabelSource | String | This field represents the source of the label: Customer Escalation, Chargeback, TC40_SAFE, Manual Review, Refund, Offline Analysis. |
+| LabelState | String | This field indicates the current status of the label: Inquiry Accepted, Fraud, Disputed, Reversed, Abuse, or Resubmitted Request.  |
+| LabelReasonCodes | String | This field indicates the reason codes associated with each type of label: Processor/Bank Response Code, Fraud Refund, Account TakeOver, Payment Instrument Fraud, Account Fraud, Abuse, or Friendly Fraud. |
+| Processor | String | The name of the bank or payment processor that is generating the TC40 or SAFE information. |
+| EffectiveStartDate | DateTime | The date from which this fraud label is effective. The format is ISO 8601. |
+| EffectiveEndDate | DateTime | The end date for this fraud label. The format is ISO 8601. |
