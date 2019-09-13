@@ -23,13 +23,13 @@ Note the following formatting guidelines throughout:
 
 ## Signup schema
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | trackingId | string | The identifier of the Signup event. |
 
 ## Data
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | signUpId | string | The identifier of the Signup event (can match trackingId). |
 | assessmentType | string | Indicates the assessment type for the event. Possible values are 'evaluate' or 'protect'. If not specified, the default is 'protect''. |
@@ -38,13 +38,13 @@ Note the following formatting guidelines throughout:
 
 ### Data \ User
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | userId | string | The user identifier. This information is provided by the merchant. |
 
 ### Data \ User \ UserDetails
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | userId | string | The user identifier. This information is provided by the merchant. |
 | creationDate | dateTime | The creation date of the user account. The format is ISO 8601. |
@@ -69,7 +69,7 @@ Note the following formatting guidelines throughout:
 
 ### Data \ User \ SignUpAddress
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | firstName | string | The user-provided first name associated with the address. |
 | lastName | string | The user-provided last name associated with the address. |
@@ -77,7 +77,7 @@ Note the following formatting guidelines throughout:
 
 ### Data \ User \ SignUpAddressDetails
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | street1 | string | The first row that was provided for the address. |
 | street2 | string | The second row that was provided for the address. (This value can be blank.) |
@@ -92,7 +92,7 @@ Note the following formatting guidelines throughout:
 
 ### Data \ PaymentInstrument \ PaymentInstrumentDetails
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | merchantPaymentInstrumentId | string | The identifier of the payment instrument. This information is provided by the merchant. |
 | type | string | The type of payment: CreditCard, Paypal, Mobilepayment, Giftcard, etc. |
@@ -113,7 +113,7 @@ Note the following formatting guidelines throughout:
 
 ### Data \ PaymentInstrument \ BillingAddress
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | firstName | string | The user-provided first name associated with the address. |
 | lastName | string | The user-provided last name associated with the address. |
@@ -121,7 +121,7 @@ Note the following formatting guidelines throughout:
 
 ### Data \ PaymentInstrument \  BillingAddressDetails
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | street1 | string | The first row that was provided for the address. |
 | street2 | string | The second row that was provided for the address. (This value can be blank.) |
@@ -134,7 +134,7 @@ Note the following formatting guidelines throughout:
 
 ### Data \ MarketingContext
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | type | string | The marketing type. Possible values: None, Email, Referral, SearchEngine, Direct, SocialNetwork, Other |
 | trafficSource | string | The source of this user if known. If via Referral, provide the MerchantUserId of the referrer. |
@@ -143,7 +143,7 @@ Note the following formatting guidelines throughout:
 
 ### Data \ StoreFrontContext
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | type | string | The type of the storefront. Possible values: None, Web, Console, MobileApp, ComputerApp, MobileWeb |
 | storeName | string | The exact name of your storefront through which the customer is trying to sign up. |
@@ -151,14 +151,14 @@ Note the following formatting guidelines throughout:
 
 ### Data \ DeviceContext
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | deviceContextId | string | The customer's Session ID (mastered by GreenId), or the event ID if the session is not available. |
 | ipAddress | string | The customer's IP address (as provided by the merchant). |
 
 ### Data \ DeviceContext \ DeviceContextDetails
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | provider | string | The provider of device info. Possible values are 'DFPFINGERPRINTING' or 'MERCHANT'. If not specified, the default is 'DFPFINGERPRINTING'. |
 | deviceContextDC | string | The GreenID datacenter for the Customer's Session ID. |
