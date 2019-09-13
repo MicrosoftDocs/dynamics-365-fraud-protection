@@ -26,11 +26,11 @@ Note the following formatting guidelines throughout:
 | trackingId | String | The unique ID for each event/record. |
 | merchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
 | eventTimeStamp | DateTime | The date and time of the event. Possible values: chargeback date or review date. The format is ISO 8601. |
-| LabelObjectType | String | Possible values: Purchase, Signup, User, UserEmail, PaymentInstrument   |
-| LabelObjectId | String | Possible values: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, Email   |
-| LabelSource | String | Possible values: Chargeback, TC40, SAFE, Manual Review, Offline Analysis, Customer Escalation, Other   |
-| LabelState | String | For Chargeback, the possible values are Enquiry, Received, Accepted, Disputed, Reversed, or ChargebackAfterReversal. For all others, the possible values are Fraud, Bad, Reversed, or Empty Value.  |
-| LabelReasonCodes | String | For Chargeback/TC40/SAFE send Processor/Bank Reason Codes, Fraud Refund/Account Take Over/PI Fraud/Account Fraud/Abuse/Friendly Fraud/Empty Value   |
+| LabelObjectType | String | This field indicates the type of label: Purchase, Signup, Generic Event, Account, Payment instrument, or Email. |
+| LabelObjectId | String | This is an identifier field for the type of object: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, or Email.  |
+| LabelSource | String | This field represents the source of the label: Customer Escalation, Chargeback, TC40_SAFE, Manual Review, Refund, Offline Analysis. |
+| LabelState | String | This field indicates the current status of the label: Inquiry Accepted, Fraud, Disputed, Reversed, Abuse, or Resubmitted Request.  |
+| LabelReasonCodes | String | This field indicates the reason codes associated with each type of label: Processor/Bank Response Code, Fraud Refund, Account TakeOver, Payment Instrument Fraud, Account Fraud, Abuse, or Friendly Fraud. |
 | Processor | String | The name of the bank or payment processor that is generating the TC40 or SAFE information. |
 | EffectiveStartDate | DateTime | The date from which this fraud label is effective. The format is ISO 8601. |
 | EffectiveEndDate | DateTime | The end date for this fraud label. The format is ISO 8601.    |
