@@ -84,7 +84,7 @@ By opting into this feature, a customer directs DFP to transmit Transaction Trus
 
 The Transaction Trust Knowledge is processed by participating banks in accordance with its agreements with a customer and applicable network rules.  
 
-DFP processes customer data to provide tools, such as graphical reports, to surface business intelligence related to fraud.  
+### DFP processes customer data to provide tools, such as graphical reports, to surface business intelligence related to fraud.  
 
 DFP uses customer data to provide tools to help customers understand how fraud is impacting its ecommerce business. Such tools include reporting functionality, graphical displays, and support services features.  
 
