@@ -25,12 +25,12 @@ Note the following formatting guidelines throughout:
 | --- | --- | --- |
 | trackingId | String | The unique ID for each event/record. |
 | merchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
-| eventTimeStamp | DateTime | The date and time of the event. Examples: chargeback date, review date. The format is ISO 8601. |
-| LabelObjectType | String | Examples: Purchase, Signup, User, UserEmail, PI   |
-| LabelObjectId | String | Examples: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, Email   |
-| LabelSource | String | Examples: Chargeback, TC40, SAFE, Manual Review, Offline Analysis, Customer Escalation, Other   |
+| eventTimeStamp | DateTime | The date and time of the event. Possible values: chargeback date or review date. The format is ISO 8601. |
+| LabelObjectType | String | Possible values: Purchase, Signup, User, UserEmail, PaymentInstrument   |
+| LabelObjectId | String | Possible values: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, Email   |
+| LabelSource | String | Possible values: Chargeback, TC40, SAFE, Manual Review, Offline Analysis, Customer Escalation, Other   |
 | LabelState | String | For Chargeback, the possible values are Enquiry, Received, Accepted, Disputed, Reversed, or ChargebackAfterReversal. For all others, the possible values are Fraud, Bad, Reversed, or Empty Value.  |
 | LabelReasonCodes | String | For Chargeback/TC40/SAFE send Processor/Bank Reason Codes, Fraud Refund/Account Take Over/PI Fraud/Account Fraud/Abuse/Friendly Fraud/Empty Value   |
-| Processor | String | Required to understand the Bank/Processor Reason codes. |
-| EffectiveStartDate | DateTime | The date from which this fraud label is effective. This is mainly used if account or PI is the fraud identifier. The format is ISO 8601. |
-| EffectiveEndDate | DateTime | The end date for this fraud label. This is mainly used if account or PI is the fraud identifier. The format is ISO 8601.    |
+| Processor | String | The name of the bank or payment processor that is generating the TC40 or SAFE information. |
+| EffectiveStartDate | DateTime | The date from which this fraud label is effective. The format is ISO 8601. |
+| EffectiveEndDate | DateTime | The end date for this fraud label. The format is ISO 8601.    |
