@@ -21,7 +21,7 @@ Note the following formatting guidelines throughout:
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
-| **Attribute** | **Data Type** | **Description** |
+| Attribute | Type | Description |
 | --- | --- | --- |
 | TrackingId | String | The unique ID for each event/record. |
 | MerchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
