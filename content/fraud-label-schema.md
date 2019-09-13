@@ -23,9 +23,9 @@ Note the following formatting guidelines throughout:
 
 | **Attribute** | **Data Type** | **Description** |
 | --- | --- | --- |
-| trackingId | String | The unique ID for each event/record. |
-| merchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
-| eventTimeStamp | DateTime | The date and time of the event. Possible values: chargeback date or review date. The format is ISO 8601. |
+| TrackingId | String | The unique ID for each event/record. |
+| MerchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
+| EventTimeStamp | DateTime | The date and time of the event. Possible values: Chargeback Date or Review Date. The format is ISO 8601. |
 | LabelObjectType | String | This field indicates the type of label: Purchase, Signup, Generic Event, Account, Payment instrument, or Email. |
 | LabelObjectId | String | This is an identifier field for the type of object: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, or Email.  |
 | LabelSource | String | This field represents the source of the label: Customer Escalation, Chargeback, TC40_SAFE, Manual Review, Refund, Offline Analysis. |
