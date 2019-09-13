@@ -41,7 +41,7 @@ Device Data is collected and transmitted to DFP when a customer installs a devic
 
 Dynamics 365 Fraud Protection processes the customer data described above for the sole purpose of providing the service, which includes generating fraud insights from deidentified data from all DFP customers within the Dynamics 365 Fraud Protection Network (the “Fraud Network”).  
 
-DFP enriches and normalizes customer data.  
+### DFP enriches and normalizes customer data.  
 
 Payment Transaction Data, Account Activity Data, and Device Data are enriched and normalized to aid the service’s application of machine learning and artificial intelligence. For example:
 
@@ -49,7 +49,7 @@ Payment Transaction Data, Account Activity Data, and Device Data are enriched an
 - Addresses, such as the billing or shipping address associated with a transaction, are converted into a canonical format. For example, "One Microsoft Wy" may become "1 Microsoft Way.” 
 - Device Data collected from a single device is converted to a fuzzy identifier.  
 
-DFP de-identifies customer data to be processed in the Fraud Network.  
+### DFP de-identifies customer data to be processed in the Fraud Network.  
 
 DFP hashes the customer data, which includes personal data, to de-identify it prior to transmitting into the Dynamics 365 Fraud Network where it is processed to generate fraud insights. The hashing technique used by DFP turns customer data into unique de-identified tokens and serves the following purposes:
 
@@ -61,15 +61,15 @@ The technique is practically irreversible. This process makes it practically imp
 
 The technique gives customers added assurance that their Customer Data will not be shared with other DFP customers.  The deidentified tokens in the Fraud Network cannot be linked to any specific DFP customer without access to the hash function, salt and raw data in that customer’s merchant space and a then a brute force attack.  
 
-DFP applies machine learning and artificial intelligence to the tokens in the Fraud Network to generate fraud insights for DFP customers.  
+### DFP applies machine learning and artificial intelligence to the tokens in the Fraud Network to generate fraud insights for DFP customers.  
 
 DFP uses machine learning and artificial intelligence to understand patterns of fraud which enables the service to generate fraud insights for new real-time payment transactions and account activities for customers. These fraud insights include a risk score for the real-time event and reason codes for the score.  For example, within the Fraud Network, DFP may detect a suspiciously high volume of payment transactions, within a very short period of time, associated with a particular token (which could represent a billing address or IP Address). If DFP detects that token in new, real-time payment transactions, it may provide the customer with a higher risk score and a reason code that indicates that DFP has detected a suspiciously high volume of transactions for a data attribute associated with the transaction.   
 
-DFP processes customer data in accordance with business rules set by the customer.                  
+### DFP processes customer data in accordance with business rules set by the customer.                  
 
 Customers can set business rules within DFP to automate its own analysis of a real-time transaction or account event, taking into account the risk score and reason codes. For example, in addition to the fraud insights provided by DFP, customers apply their own business rules to approve a payment transaction based on any number of factors, including the transaction amount, the payment instrument used, or the content of the order. Each customer’s business rules are treated as customer confidential information and customer data. DFP will process such data on behalf of the customer, in accordance with the business rules set, to make a recommendation on accepting or rejecting the transaction or event.  
 
-DFP enables customers to share Transaction Trust Knowledge with participating banks.  
+### DFP enables customers to share Transaction Trust Knowledge with participating banks.  
 
 Customers can choose to use the Transaction Acceptance Booster by opting into the feature. This feature allows customers to share certain customer data, called Transaction Trust Knowledge, with participating banks when a payment transaction is initiated with a payment instrument issued by the participating bank. Transaction Trust Knowledge is a small payload of customer data and includes: 
 
