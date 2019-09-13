@@ -40,6 +40,12 @@
       href: account-protection.md
     - name: Integrate Dynamics 365 Fraud Protection APIs
       href: integrate-real-time-api.md
+    - name: View fraud label schema
+      href: fraud-label-schema.md
+    - name: View sign-up schema
+      href: signup-schema.md
+    - name: View sign-up status schema
+      href: signup-status-schema.md
     - name: Implement device fingerprinting
       href: device-fingerprinting.md    
     - name: Monitor API calls
