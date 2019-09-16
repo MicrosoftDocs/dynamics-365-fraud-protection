@@ -6,6 +6,11 @@ ms.service: fraud-protection
 ms.date: 04/22/2019
 
 ms.topic: conceptual
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+  
 title: Artificial intelligence (AI) and insights from the fraud protection network
 ---
 
