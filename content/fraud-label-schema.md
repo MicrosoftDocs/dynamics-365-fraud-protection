@@ -6,6 +6,11 @@ ms.service: fraud-protection
 ms.date: 09/04/2019
 
 ms.topic: conceptual
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+
 title: View fraud label schema
 ---
 
