@@ -113,15 +113,15 @@ Content-Length: <content length>
   "ext_expires_in":"3599",
   "expires_on":"<date timestamp>",
   "not_before":"<date timestamp>",
-  "resource":"https://api.dfp.microsoft.com",
+  "resource":"https://api.dfp.dynamics.com",
   "access_token":"<your access token; e.g.: eyJ0eXA...NFLCQ>"
 }
 ```
 
 
 For more information, refer to the Azure documentation: 
-- [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion)
-- [Cache access tokens](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/token-cache)
+- <a href="https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion" target="_blank">Use client assertion to get access tokens from Azure AD</a>
+- <a href="https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/token-cache" target="_blank">Cache access tokens</a>
 
 ### Call the APIs
 To call the APIs, follow these steps:
