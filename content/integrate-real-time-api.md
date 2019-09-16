@@ -15,8 +15,10 @@ To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection f
 
 Depending on how you choose to use Dynamics 365 Fraud Protection, you may make use of different sets of APIs, as seen below: 
 
-- **Purchase assessment APIs**: Purchase, PurchaseStatus, BankEvent, Chargeback, Refund, UpdateAccount, FraudLabel
-- **Account creation assessment APIs**: SignUp, SignUpStatus, FraudLabel
+- **Purchase protection APIs**: Purchase, PurchaseStatus, BankEvent, Chargeback, Refund, UpdateAccount, FraudLabel
+- **Account protection APIs**: SignUp, SignUpStatus, FraudLabel
+
+For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>.
 
 ## Get set up
 
