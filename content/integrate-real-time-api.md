@@ -6,6 +6,11 @@ ms.service: fraud-protection
 ms.date: 09/06/2019
 
 ms.topic: conceptual
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
 ---
 
