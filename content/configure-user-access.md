@@ -1,9 +1,9 @@
 ---
-author: jackwi111
+author: jegrif
 description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-jowigh
+ms.author: v-jegrif
 ms.service: fraud-protection
-ms.date: 04/22/2019
+ms.date: 09/16/2019
 
 ms.topic: conceptual
 title: Configure user access to Dynamics 365 Fraud Protection
@@ -12,67 +12,54 @@ title: Configure user access to Dynamics 365 Fraud Protection
 
 # Configure user access to Dynamics 365 Fraud Protection
 
-After you sign up for Microsoft Dynamics 365 Fraud Protection, its services are configured in your Microsoft Azure tenant. When this process is completed, you can sign in to your tenant by using your Azure Active Directory (Azure AD) credentials and access Dynamics 365 Fraud Protection.
+Microsoft Dynamics 365 Fraud Protection allows you to grant users various levels of access to the tool based on logical or functional roles. Administrators can use the User access section to assign these roles.
 
-## Find your app
+## Assign roles 
 
-For information about how to grant access to users and add user roles to Dynamics 365 Fraud Protection via the Azure portal, see [Assign a user or group to an enterprise app in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/assign-user-or-group-access-portal).
+Initial user and role configuration should be done by your administrator as defined in your Azure tenant. Go to **Configuration** in the left-hand navigation and select **User access** to assign roles to existing users or groups of your tenant. 
 
-For information about how to add users to Azure AD or delete users from Azure AD, see [Add or delete users using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory).
+Select **Assign role** to grant access a to user or group in this environment. Type the name or the company email address of the person or group you want to edit. If it is recognized as a member of your Azure tenant, it will resolve and display their complete name. Select it to continue. 
 
-You must be a tenant admin to administer Azure AD. If you have that role, follow these steps to configure user access to Dynamics 365 Fraud Protection. If you don't have the required permissions, ask your tenant admin for help.
+To assign a specific role to the user, use the **Roles** dropdown and select one or more of the defined roles. Then select **Assign role** to create the user. 
 
-1. Open the [Azure portal](https://portal.azure.com/#home).
-1. In the navigation pane, select **Azure Active Directory**. The **Microsoft – Overview** page appears.
-1. In the left pane, under **Manage**, select **Enterprise Applications**. The **Enterprise applications – All applications** page appears.
-1. In the **Application Type** field, select **Microsoft Applications**. Then select **Apply**. 
-1. To find the **Dynamics 365 Fraud Protection** enterprise app, search for **Dynamics 365 Fraud Protection**.
-1. In the list of results, select **Dynamics 356 Fraud Protection**. The **Dynamics 365 Fraud Protection – Overview** page appears.
+To edit or delete existing users, select them by name in the **Member** list and then select **Edit** or **Remove**. Roles can be added or deleted from a member in this section. Note that editing your own account, for instance deleting your own administrative role, may interfere with your ability to use certain features of Dynamics 365 Fraud Protection. If you need to restore permissions, you can reset this in the [Azure portal](https://portal.azure.com/#home). 
 
-## Configure users in Dynamics 365 Fraud Protection
+To learn more about the available roles, see the “Dynamics 365 Fraud Protection roles” section of this document. 
 
-> [!IMPORTANT]
-> Microsoft Dynamics 365 Fraud Protection Public Preview supports comprehensive access rights for all users. Upcoming updates will let you manage users, groups, and role assignments.
+### User management in your Azure tenant 
 
-To add users from Azure AD, follow these steps. For information about the rights that are associated with these roles, see the tables later in this topic.
+Users and roles can also be managed through the Azure portal. For information about how to grant access to users via the Azure portal, see [Assign a user or group to an enterprise app in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/assign-user-or-group-access-portal). For information about how to add users to Azure AD or delete users from Azure AD, see [Add or delete users using Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/add-users-azure-active-directory). 
 
-You can configure users by assigning them to the **Sandbox_AllAreas_Admin** or **AllAreas_Admin** role, depending on your sandbox (test) or production (live) environment.
+## Dynamics 365 Fraud Protection roles 
 
-1. On the **Dynamics 365 Fraud Protection – Overview** page, in the left pane, select **Getting started**, and then select either **Assign a user for testing (required)** or **Deploy single sign-on to users and groups (recommended)**. The **Users and groups** page appears.
-1. To add users, select **Add user**. The **Add Assignment** blade appears.
-1. In the **Add Assignment** blade, select **Users**. The **Users** blade appears.
-1. In the **Users** blade, select a member, or invite an external user to join, and then select **Select**.
-1. Return to the **Add Assignment** blade, and select **Select Role**. The **Select Role** blade appears.
-1. In the **Select Role** blade, select a role, and then select **Select**.
-1. To apply the role to the member that you selected, in the **Add Assignment** blade, select **Assign**. In the **Users** blade, the user and its assigned role appear.
+Dynamics 365 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select these when assigning a user to Dynamics 365 Fraud Protection. 
 
-By using these steps, you can continue to add users and their assignment to the **Sandbox_AllAreas_Admin** or **AllAreas_Admin** role. You can also use these steps to delete users and their role assignments.
+All roles listed here are named as they would be in your production environment. To grant users access to these roles in your sandbox environment, choose the version of the role that begins with “Sandbox_” (for example, “Sandbox_AllAreas_Admin”). 
 
-To access the Dynamics 365 Fraud Protection portal, add your account to the following portals:
+### AllAreas_Admin 
+High-level administrative account. Full access to Dynamics 365 Fraud Protection. 
 
-- [Sandbox portal](https://dfp.microsoft-int.com/)
-- [Production portal](https://dfp.microsoft.com/)
+### AllAreasEditor 
+Power user. Can see all areas and has permissions to use key Dynamics 365 Fraud Protection tools. 
+- **Write**: Data upload, Model operating points, Virtual fraud analyst, Lists, Subject requests 
+- **Read**: Diagnostic reports, Support tool, Scorecard, Metrics, Ontology, Graph explorer, API configuration, Metering, Monitoring, Permissions, Transaction acceptance booster 
 
-> [!NOTE]
-> The Dynamics 365 Fraud Protection sandbox portal and accompanying roles are associated with your integration (test) environment. The Dynamics 365 production portal and accompanying roles are associated with your production (live) environment.
+### AllAreasViewer 
+Can view all areas of Dynamics 365 Fraud Protection and learn from the data. Will not be able to make uploads or change settings. 
+- **Write**: None 
+- **Read**: All areas 
 
-## Manage access to a sandbox environment by using roles
+### SupportAgent 
+Tailored access to Dynamics 365 Fraud Protection for support agents working with your customers. Can view and work within the support tool, see the ontology, and assign customers to safe or block lists. 
+- **Write**: Support lists 
+- **Read**: Lists, Support tool, Ontology 
+- **No access**: All other areas. Pages may be accessible in the navigation but cannot be used in full. 
 
-The Dynamics 365 Fraud Protection sandbox environment lets your teams do integration testing outside the production environment. This environment is available to users who have the appropriate access. The data in this environment isn't permanent. The code that runs in this environment is periodically updated and communicated to all participating merchants before updates occur.
+### FraudEngineer 
+Tailored access for fraud analysts and engineers in your organization working with Dynamics 365 Fraud Protection. Has similar access to the AllAreasEditor and provides access to the data engineering information, but does not have access to certain configuration options. 
+- **Write**: Data upload, Model operating points, Virtual fraud analyst, Lists, Subject requests 
+- **Read**: Diagnostic reports, Support tool, Scorecard, Metrics, Ontology, Graph explorer 
+- **No access**: API configuration, Metering, Monitoring, Permissions, Transaction acceptance booster. Pages may be accessible in the navigation but cannot be used in full. 
 
-Use the following role membership to manage user access to the Dynamics 365 Fraud Protection sandbox environment.
-
-
-| App role | Description |
-|---|---|
-| Sandbox_AllAreas_Admin | This role grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal. |
-
-## Manage access to a production environment by using roles
-
-Members of the Dynamics 365 Fraud Protection team and merchant teams use the Dynamics 365 Fraud Protection production environment to work in their production environment. This environment is available to users who have the appropriate access.
-
-Use the following role membership to manage user access to the Dynamics 365 Fraud Protection production environment.
-
-| App role | Description |
-|---|---|
-| AllAreas_Admin | This role grants access rights to all areas and functionality of the Dynamics 365 Fraud Protection portal. |
+### Server2ServerAPI 
+Used for Server2Server (S2S) communication. Provides no access to the user-facing tool. 
