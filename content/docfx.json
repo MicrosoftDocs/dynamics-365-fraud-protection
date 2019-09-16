@@ -37,7 +37,7 @@
     "globalMetadata": {
       "titleSuffix": "Dynamics 365 Fraud Protection",
       "uhfHeaderId": "MSDocsHeader-Dynamics365",
-      "search.appverid": "met150"
+      "search.appverid": "met150",
       "contributors_to_exclude": [
         "buck1ey",
         "bishalgoswami"
