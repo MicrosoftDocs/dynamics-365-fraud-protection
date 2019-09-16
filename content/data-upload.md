@@ -6,6 +6,11 @@ ms.service: fraud-protection
 ms.date: 09/03/2019
 
 ms.topic: conceptual
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+
 title: Upload historical data
 ---
 
