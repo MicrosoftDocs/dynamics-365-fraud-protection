@@ -14,6 +14,8 @@
       href: diagnose-experience.md
     - name: Integrate Dynamics 365 Fraud Protection APIs
       href: integrate-real-time-api.md
+    - name: Fraud label API
+      href: fraud-label-api.md
     - name: Implement device fingerprinting
       href: device-fingerprinting.md    
     - name: Upload historical data
@@ -40,6 +42,8 @@
       href: account-protection.md
     - name: Integrate Dynamics 365 Fraud Protection APIs
       href: integrate-real-time-api.md
+    - name: Fraud label API
+      href: fraud-label-api.md      
     - name: View fraud label schema
       href: fraud-label-schema.md
     - name: View sign-up schema
