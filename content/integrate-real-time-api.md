@@ -27,8 +27,8 @@ For documentation about all supported events, see <a href="https://go.microsoft.
 > You must be a Global Administrator in your Microsoft Azure tenant to complete the initial sign-in.
 
 Visit the portal for each environment you intend to use, sign in, and accept the terms and conditions if prompted.
-- Sandbox - https://dfp.microsoft-int.com 
-- Production - https://dfp.microsoft.com (You might already have completed this step in production during initial sign-up.)
+- Sandbox - <a href="https://dfp.microsoft-int.com" target="_blank">https://dfp.microsoft-int.com</a> 
+- Production - <a href="https://dfp.microsoft.com" target="_blank">https://dfp.microsoft.com</a> (You might already have completed this step in production during initial sign-up.)
 
 ### Create Azure Active Directory applications
 > [!NOTE]
@@ -52,7 +52,7 @@ When you finish filling in the fields, select **Create application**. The confir
 To create an additional application, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
 
 ### Manage existing Azure AD applications 
-After you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more from the [Azure documentation site](https://docs.microsoft.com/azure/azure-portal/). 
+After you have created your Azure AD apps, you can manage them through the Azure portal. You can learn more from the <a href="https://docs.microsoft.com/azure/azure-portal/" target="_blank">Azure documentation site</a>. 
 
 ### Manually configure Azure AD applications
 If you would like to set up your applications directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md).
@@ -154,8 +154,8 @@ To call the APIs, follow these steps:
 
 
 ## View the sample app 
-For additional reference, view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer documentation. The sample app provides an example of how to call Dynamics 365 Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.
+For additional reference, view the <a href="https://go.microsoft.com/fwlink/?linkid=2085137" target="_blank">sample merchant app</a> and the accompanying developer documentation. The sample app provides an example of how to call Dynamics 365 Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.
 
-For guidance on configuring the sample site for your use, view [Configure the sample site](https://go.microsoft.com/fwlink/?linkid=2100635).
+For guidance on configuring the sample site for your use, view <a href="https://go.microsoft.com/fwlink/?linkid=2100635" target="_blank">Configure the sample site</a>.
 
 
