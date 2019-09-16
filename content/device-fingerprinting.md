@@ -6,6 +6,11 @@ ms.service: fraud-protection
 ms.date: 08/23/2019
 
 ms.topic: conceptual
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+  
 title: Implement device fingerprinting
 ---
 

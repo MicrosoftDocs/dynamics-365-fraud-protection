@@ -6,6 +6,11 @@ ms.service: fraud-protection
 ms.date: 08/28/2019
 
 ms.topic: conceptual
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+  
 title: Account creation assessment
 ---
 

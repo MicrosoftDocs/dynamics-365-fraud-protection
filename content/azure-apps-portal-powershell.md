@@ -6,6 +6,11 @@ ms.service: fraud-protection
 ms.date: 07/01/2019
 
 ms.topic: conceptual
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+  
 title: Create Azure AD apps in Azure Portal or PowerShell 
 ---
 
