@@ -47,4 +47,4 @@ Your existing MID will be the Standard MID. You can choose which MID is the Prog
 Dynamics 365 Fraud Protection algorithms will run in real time to optimize and maximize your acceptance rate. Therefore, it's important that you follow the recommendation that you receive in the response payload. It's also important that you report back the bank authorization outcome and chargeback in a timely manner. Bank authorization outcomes and chargebacks can be reported via the API or by bulk upload of .csv files. Please refer to the [API documentation](integrate-real-time-api.md) and the [data upload documentation](data-upload.md) for more information on reporting these events.
 
 ### Reports
-To view a report of your Program MID activity, go to the **Scorecard** and use the Program MID filter.
+To view a report of your Program MID activity, go to the **Scorecard** and use the **MID classification** filter.
