@@ -43,7 +43,7 @@ Note the following formatting guidelines throughout:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| statusType | string | The type of status: APPROVED, REJECTED, or HELD. |
+| statusType | string | The type of status: Approved, Rejected, or Pending. |
 | statusDate | DateTime | The date and time when the status was applied. The format is ISO 8601. |
 | reason | string | The reason for the status transition. |
 
@@ -53,7 +53,7 @@ Note the following formatting guidelines throughout:
 | --- | --- | --- |
 | userId | string | The user identifier. This information is provided by the merchant. |
 
-### Data \ User \ UserDetails \ PaymentInstrument \ PaymentInstrumentDetails
+### Data \ User \ PaymentInstrument
 
 | Attribute | Type | Description |
 | --- | --- | --- |
