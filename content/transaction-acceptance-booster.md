@@ -6,10 +6,15 @@ ms.service: fraud-protection
 ms.date: 08/22/2019
 
 ms.topic: conceptual
-title: Boost bank acceptance rates
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+
+title: Boost bank acceptance rates with the transaction acceptance booster
 ---
 
-# Boost bank acceptance rates
+# Boost bank acceptance rates with the transaction acceptance booster
 
 One feature that sets Microsoft Dynamics 365 Fraud Protection apart from other products in the market is the transaction acceptance booster. This feature helps you benefit from higher acceptance rates by sharing trust knowledge with banks. Currently, a Program Merchant ID (MID) program is used to share trust knowledge.
 

@@ -6,6 +6,11 @@ ms.service: fraud-protection
 ms.date: 08/14/2019
 
 ms.topic: conceptual
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+  
 title: Data processing and protection
 ---
 
