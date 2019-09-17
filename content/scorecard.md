@@ -30,9 +30,7 @@ You can use the drop-down menus and sliders to filter your view of the interacti
 - **MID classification** – Show all program merchant IDs (MIDs) and/or standard MIDs.
 - **Assessment type** – Show the assessments that were made in the Evaluate or Protect experience.
 - **Merchant decision** – Show approval and/or rejection decisions that were the result of your settings in Dynamics 365 Fraud Protection.
-- **Current purchase status** – Show the latest status of the purchase.
-- **User country** – Show one, multiple, or all countries or regions.
-- **Product category** – Show one, multiple, or all product categories.
+- **Merchant final decision** – Show the latest status of the purchase.
 - **Transaction date** – Show transaction data by date. You can select dates in the calendar, enter them manually, or select ranges of dates.
 
 To clear previous selections, hover over the category name, and then select the Clear selections icon (the eraser symbol). Note that one value must be selected for the **Aggregation level** option.
@@ -43,7 +41,5 @@ The scorecard plots the following metrics:
 
 - **Transaction volume** – The total count of transactions that were sent for assessment.
 - **Approved rate** – The percentage of purchases that were approved out of the total volume.
-- **Rejected rate** – The percentage of purchases that were rejected out of the total volume.
 - **Settled rate** – The percentage of bank approvals out of the total volume that was sent to banks.
 - **Chargeback rate** – The percentage of chargebacks out of the total volume that was approved by banks on the chargeback receipt date and the transaction date.
-- **Refund rate** – The percentage of refunds out of the total volume that was approved by banks.
