@@ -11,7 +11,7 @@ search.app:
 search.audienceType:
   - admin
 
-title: Monitor API calls
+title: API call monitoring
 ---
 
 
