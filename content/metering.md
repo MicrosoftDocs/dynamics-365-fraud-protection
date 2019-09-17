@@ -21,7 +21,7 @@ Metering provides an overview of your Microsoft Dynamics 365 Fraud Protection us
 The Metering page breaks out information into four tabs:
 
 - **Consumption %** tracks how many assessments you have purchased that have been used within each billing period. 
-- **Assessment APIs** charts the activity of the APIs that return a risk score assessment like Purchase. These are the real-time APIs that are considered billable in your production environment. Note that successful assessments and bad requests are billed, but any assessments that fail due to service issues on Dynamics 365 Fraud Protection’s part will not be charged to you.
+- **Assessment APIs** charts the activity of the APIs that return a risk score assessment. These include the APIs for Purchase, SignUp, and CustomFraudEvaluation, which are the real-time APIs that are considered billable in your production environment. Note that successful assessments and bad requests are billed, but any assessments that fail due to service issues on Dynamics 365 Fraud Protection’s part will not be charged to you.
 - **Data update APIs** include the APIs that update information but do not return a risk assessment. 
 - **Other events** contains additional APIs that help power tools like the graph explorer, risk support, and device fingerprinting.
 
@@ -30,7 +30,7 @@ Each tab shows usage charts and statistics for the APIs represented in that cate
 ## Consumption
 The number of assessments available to you in a month are agreed upon in a subscription model. In the **Consumption %** tab, you can track how many of your purchased assessments have been consumed over time. The **Consumption%** line displays your consumption percentage within a single monthly billing period, while **AccumulatedConsumption%** shows your consumption percentages since the start of billing. 
 
-If your monthly usage reaches or passes the number of assessments you’ve paid for, you will receive alerts from your EA account managers or CSP partners. This will give you the opportunity to work out any adjustments before throttling occurs. 
+Billing arrangements are made via your enterprise account (EA) account managers or cloud solution provider (CSP) partners. If your monthly usage reaches or passes the number of assessments you’ve paid for, you will receive notifications from them. This will give you the opportunity to work out any adjustments needed.
 
 ## Assessment, Data update, and Other events 
 For **Assessment APIs**, **Data update APIs**, and **Other events**, specific statistics appear under **Total API responses**. These include both successful and unsuccessful API responses. The charts illustrate the numbers of successful and unsuccessful calls to the specified API during your selected time period. To view one set or the other individually, select **Success** or **Bad request**. To drill in and view specific data with more granularity, use the controls in the upper right of each chart. [Learn more about PowerBI controls](https://docs.microsoft.com/en-us/power-bi/consumer/end-user-drill)
