@@ -46,17 +46,11 @@ Note the following formatting guidelines throughout:
 | Attribute | Type | Description |
 | --- | --- | --- |
 | userId | string | The user identifier. This information is provided by the merchant. |
-
-### Data \ User \ UserDetails
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| userId | string | The user identifier. This information is provided by the merchant. |
 | creationDate | dateTime | The creation date of the user account. The format is ISO 8601. |
 | updateDate | dateTime | The date when user data was last changed. The format is ISO 8601. |
 | firstName | string | The user-provided first name on the account. |
 | lastName | string | The user-provided last name on the account. |
-| country | string | The user's country or region. The value should be a two-letter ISO country/region code (for example, US). |
+| country | string | The user's country. The value should be a two-letter ISO country code (for example, US). |
 | zipCode | string | The user's postal code. |
 | timeZone | string | The user's time zone. |
 | language | string | The user's language and territory (for example, EN-US). |
@@ -64,9 +58,9 @@ Note the following formatting guidelines throughout:
 | email | string | The user's email address. This value is case-insensitive. |
 | membershipId | string | The membership ID, if the user already has an existing membership with the merchant. |
 | profileType | string | The user's profile type. Possible values: Consumer, Developer, Seller, Publisher, Tenant |
-| profileName | string | The profile name, depending on profileType. |
+| profileName | string | The profile name, depending on profileType. For Consumer, a profile name is not required. For all other profile types, provide the developer's name. |
 | authenticationProvider | string | The user's authentication provider, if different from the merchant's. Examples include Windows Live, Facebook, Google, etc. |
-| displayName | string | The user's display name. Example: Xbox gamertag value |
+| displayName | string | The user's display name. Example: username from Windows Live, Facebook, or Google |
 | isEmailValidated | bool | A True/False value that indicates whether the user-provided email address has been verified as owned by the user. |
 | emailValidatedDate | dateTime | The validation date of the user email. The format is ISO 8601. |
 | isPhoneNumberValidated | bool | A True/False value that indicates whether the user-provided phone number has been verified as owned by the user. |
@@ -79,11 +73,6 @@ Note the following formatting guidelines throughout:
 | firstName | string | The user-provided first name associated with the address. |
 | lastName | string | The user-provided last name associated with the address. |
 | phoneNumber | string | The user-provided phone number associated with the address. |
-
-### Data \ User \ SignUpAddressDetails
-
-| Attribute | Type | Description |
-| --- | --- | --- |
 | street1 | string | The first row that was provided for the address. |
 | street2 | string | The second row that was provided for the address. (This value can be blank.) |
 | street3 | string | The third row that was provided for the address. (This value can be blank.) |
@@ -94,8 +83,6 @@ Note the following formatting guidelines throughout:
 | country | string | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). |
 
 ### Data \ PaymentInstrument
-
-### Data \ PaymentInstrument \ PaymentInstrumentDetails
 
 | Attribute | Type | Description |
 | --- | --- | --- |
@@ -123,11 +110,6 @@ Note the following formatting guidelines throughout:
 | firstName | string | The user-provided first name associated with the address. |
 | lastName | string | The user-provided last name associated with the address. |
 | phoneNumber | string | The user-provided phone number associated with the address. |
-
-### Data \ PaymentInstrument \  BillingAddressDetails
-
-| Attribute | Type | Description |
-| --- | --- | --- |
 | street1 | string | The first row that was provided for the address. |
 | street2 | string | The second row that was provided for the address. (This value can be blank.) |
 | street3 | string | The third row that was provided for the address. (This value can be blank.) |
@@ -135,7 +117,7 @@ Note the following formatting guidelines throughout:
 | state | string | The state or province that was provided for the address. |
 | district | string | The district that was provided for the address |
 | zipCode | string | The postal code that was provided for the address. |
-| country | string | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). |
+| country | string | The country code that was provided for the address. The value should be a two-letter ISO country code (for example, US). |
 
 ### Data \ MarketingContext
 
@@ -160,12 +142,7 @@ Note the following formatting guidelines throughout:
 | --- | --- | --- |
 | deviceContextId | string | The customer's Session ID (mastered by GreenId), or the event ID if the session is not available. |
 | ipAddress | string | The customer's IP address (as provided by the merchant). |
-
-### Data \ DeviceContext \ DeviceContextDetails
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| provider | string | The provider of device info. Possible values are 'DFPFINGERPRINTING' or 'MERCHANT'. If not specified, the default is 'DFPFINGERPRINTING'. |
-| deviceContextDC | string | The GreenID datacenter for the Customer's Session ID. |
+| provider | string | The provider of device info. Possible values are 'DFPFingerprinting' or 'Merchant'. If not specified, the default is 'DFPFingerprinting'. |
+| deviceContextDC | string | The GreenID datacenter for the Customer's Session ID. Provided for backward compatibility and no longer required. |
 | externalDeviceId | string | The customer's device ID, as provided and mastered by the merchant. |
 | externalDeviceType | string | The customer's device type, as provided and mastered by the merchant. |
