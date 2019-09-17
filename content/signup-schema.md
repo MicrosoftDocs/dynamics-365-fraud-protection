@@ -54,7 +54,7 @@ Note the following formatting guidelines throughout:
 | zipCode | string | The user's postal code. |
 | timeZone | string | The user's time zone. |
 | language | string | The user's language and territory (for example, EN-US). |
-| phoneNumber | string | The user's phone number. The format should be the country/region code followed by a hyphen (-) and then the phone number (for example, for the US, +1-1234567890). |
+| phoneNumber | string | The user's phone number. The format should be the country code followed by a hyphen (-) and then the phone number (for example, for the US, +1-1234567890). |
 | email | string | The user's email address. This value is case-insensitive. |
 | membershipId | string | The membership ID, if the user already has an existing membership with the merchant. |
 | profileType | string | The user's profile type. Possible values: Consumer, Developer, Seller, Publisher, Tenant |
@@ -80,7 +80,7 @@ Note the following formatting guidelines throughout:
 | state | string | The state or province that was provided for the address. |
 | district | string | The district that was provided for the address. |
 | zipCode | string | The postal code that was provided for the address. |
-| country | string | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). |
+| country | string | The country code that was provided for the address. The value should be a two-letter ISO country code (for example, US). |
 
 ### Data \ PaymentInstrument
 
@@ -134,7 +134,7 @@ Note the following formatting guidelines throughout:
 | --- | --- | --- |
 | type | string | The type of the storefront. Possible values: None, Web, Console, MobileApp, ComputerApp, MobileWeb |
 | storeName | string | The exact name of your storefront through which the customer is trying to sign up. |
-| marketingContext | string | The region or market. The value should be a two-letter ISO country/region code (for example, US). |
+| marketingContext | string | The country or market. The value should be a two-letter ISO country code (for example, US). |
 
 ### Data \ DeviceContext
 
