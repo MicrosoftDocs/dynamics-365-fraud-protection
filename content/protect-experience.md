@@ -23,7 +23,6 @@ Get started with Dynamics 365 Fraud Protection by completing the initial configu
 
 - [Integrate with the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md) and pass 'Protect' for the AssessmentType field in Purchase, Signup, and CustomFraudEvaluation API events.
 - Honor the Dynamics 356 Fraud Protection merchant rule decision to either approve or reject those same events.
-- Optionally, enlist in the [transaction acceptance booster](transaction-acceptance-booster.md) program.
 
 ## Features
 The Protect experience in Dynamics 365 Fraud Protection provides the features that are described in the following topics:
@@ -34,4 +33,4 @@ The Protect experience in Dynamics 365 Fraud Protection provides the features th
 - [Visually explore your data](graph-explorer.md)
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
-- [Boost bank acceptance rates](transaction-acceptance-booster.md)
+- [Boost bank acceptance rates with the transaction acceptance booster](transaction-acceptance-booster.md)
