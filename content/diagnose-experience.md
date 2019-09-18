@@ -18,10 +18,6 @@ title: Diagnose experience
 
 Microsoft Dynamics 365 Fraud Protection's *Diagnose experience* evaluates your historical data and generates reports that provide valuable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities.
 
-## Dashboard
-
-Your dashboard keeps you up to date about useful information, essential tasks that you need to complete, and important settings that you should configure to get the most out of Dynamics 365 Fraud Protection. Critical steps are marked to indicate your current setup status. Steps might be marked as **Completed** or **Not started**, or they might show the number of items that still remain.
-
 ## Upload data
 
 To begin, upload your historical data for analysis. Your data files should reflect approved transactions that were approved by you (the merchant) and sent to your bank.
@@ -67,4 +63,4 @@ The risk diagnostic report lets you assess your risk from fraudulent activity an
 
 ## Review reports
 
-You can find your completed reports at **Data diagnostic report** and **Risk diagnostic report** in the navigation bar, or you can link to them from the dashboard. For deeper analysis and additional information, you can download the full reports as .docx files.
+You can find your completed reports at **Data diagnostic report** and **Risk diagnostic report** in the navigation bar. For deeper analysis and additional information, you can download the full reports as .docx files.
