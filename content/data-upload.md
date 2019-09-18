@@ -29,6 +29,7 @@ Dynamics 365 Fraud Protection can analyze historical data about the following en
     - Products
 
 - Chargebacks
+- Labels
 - Refunds
 - Purchase status
 - Bank events
