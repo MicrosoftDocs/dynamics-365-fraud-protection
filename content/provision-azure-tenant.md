@@ -28,7 +28,7 @@ If you are unsure if your company already has an Azure tenant, see the note in t
 You will need Azure tenant administrator permissions to complete provisioning. If you don't have an admin account, contact the tenant admin in your organization for support.
 
 > [!NOTE]
->  Due to limitations migrating data between tenants, we recommend you select the tenant approach you would use if Dynamics 365 Fraud Protection were in production, which will avoid additional steps at a later stage.
+>  Due to limitations migrating data between tenants, we recommend you select the tenant approach you would use if Dynamics 365 Fraud Protection were being used in production, which will avoid additional steps at a later stage.
 
 ## Provision your existing Azure tenant
 
