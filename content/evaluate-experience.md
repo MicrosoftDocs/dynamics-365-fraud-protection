@@ -28,7 +28,7 @@ In addition to the first steps that are outlined on the dashboard, the Evaluate 
 
 - [Purchase assessment](purchase-assessment.md)
 - [Artificial intelligence (AI) and insights from the fraud protection network](fraud-protection-network.md)
-- [Integrate the Dynamics 365 Fraud Protection API](integrate-real-time-api.md)
+- [Integrate the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md)
 - [Visually explore your data](graph-explorer.md)
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
