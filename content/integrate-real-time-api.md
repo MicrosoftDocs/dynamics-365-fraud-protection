@@ -28,7 +28,7 @@ For documentation about all supported events, see <a href="https://go.microsoft.
 ## Get set up
 
 ### Sign in
-> [!NOTE]
+> [!IMPORTANT]
 > You must be a Global Administrator in your Microsoft Azure tenant to complete the initial sign-in.
 
 Visit the portal for each environment you intend to use, sign in, and accept the terms and conditions if prompted.
@@ -36,7 +36,7 @@ Visit the portal for each environment you intend to use, sign in, and accept the
 - Production - <a href="https://dfp.microsoft.com" target="_blank">https://dfp.microsoft.com</a> (You might already have completed this step in production during initial sign-up.)
 
 ### Create Azure Active Directory applications
-> [!NOTE]
+> [!IMPORTANT]
 > You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
 
 To acquire the tokens required to call the APIs, you will need to utilize Azure Active Directory (Azure AD) applications. You can configure these by using the **Real-time APIs** page in Dynamics 365 Fraud Protection.
