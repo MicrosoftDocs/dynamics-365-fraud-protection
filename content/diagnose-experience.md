@@ -64,7 +64,3 @@ The risk diagnostic report lets you assess your risk from fraudulent activity an
 ## Review reports
 
 You can find your completed reports at **Data diagnostic report** and **Risk diagnostic report** in the navigation bar. For deeper analysis and additional information, you can download the full reports as .docx files.
-
-## Switch experiences
-
-To move to the [Evaluate experience](evaluate-experience.md) from Diagnose, select **Switch to Evaluate** at the bottom of the navigation bar.
