@@ -40,7 +40,7 @@ By using Dynamics 365 Fraud Protection, you can help protect your business from 
 These capabilities are part of a comprehensive set of features that are grouped into three user experiences to help accelerate your journey toward a more comprehensive fraud protection environment: 
 
 - **Diagnose** – Use this experience in Dynamics 365 Fraud Protection to gain insights into fraud issues in your environment.
-- **Evaluate** – Use this guided experience to assess and evaluate the effectiveness of Dynamics 365 Fraud Protection relative to your current fraud protection solution.
+- **Evaluate** – Use this experience to assess and evaluate the effectiveness of Dynamics 365 Fraud Protection relative to your current fraud protection solution.
 - **Protect** – Use this experience to customize business rules to obtain recommendations for your e-commerce transaction decisions.
 
 > [!NOTE]
