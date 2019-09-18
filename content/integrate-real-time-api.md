@@ -73,7 +73,7 @@ To integrate your systems with Dynamics 365 Fraud Protection, follow these steps
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen.
 
 ### Generate an access token
-You must generate this token and provide it dynamically. Note that access tokens have a limited lifespan. We recommend that you cache it and reuse it until it's time to get a new access token.
+You must generate this token and provide it with each API call. Note that access tokens have a limited lifespan. We recommend that you cache and reuse it until it's time to get a new access token.
 
 The following C# code samples provide examples of acquiring a token with your certificate or secret. Replace the placeholders with your specific information.
 
