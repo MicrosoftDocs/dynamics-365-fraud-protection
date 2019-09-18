@@ -24,12 +24,12 @@ Your dashboard keeps you up to date about useful information, essential tasks th
 
 ## Features
 
-In addition to the first steps that are outlined on the dashboard, The Protect experience in Dynamics 365 Fraud Protection provides the features that are described in the following topics:
+In addition to the first steps that are outlined on the dashboard, the Protect experience in Dynamics 365 Fraud Protection provides the features that are described in the following topics:
 
 - [Purchase assessment](purchase-assessment.md)
 - [Artificial intelligence (AI) and insights from the fraud protection network](fraud-protection-network.md)
-- [Send real-time data using the Dynamics 365 Fraud Protection API](send-real-time-api.md)
+- [Integrate the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md)
 - [Visually explore your data](graph-explorer.md)
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
-- [Boost bank acceptance rates](transaction-acceptance-booster.md)
+- [Boost bank acceptance rates with the transaction acceptance booster](transaction-acceptance-booster.md)
