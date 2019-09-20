@@ -18,13 +18,17 @@ title: Evaluate experience
 
 Microsoft Dynamics 365 Fraud Protection's *Evaluate experience* lets you use your real-time transactional traffic to compare Dynamics 365 Fraud Protection with your existing fraud solution. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation, and you can upload historical and asynchronous data to tune the model to your business scenarios. You can then use Dynamics 365 Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
 
-## Dashboard
+## Using the Evalute experience
 
-Your dashboard keeps you up to date about useful information, essential tasks that you need to complete, and important settings that you should configure to get the most out of Dynamics 365 Fraud Protection. Critical steps are marked to indicate your current setup status. Steps might be marked as **Completed** or **Not started**, or they might show the number of items that still remain.
+Get started with Dynamics 365 Fraud Protection by completing the initial configuration steps outlined on the **Dashboard**. Then follow these steps to begin using the Evaluate experience:
+
+- [Integrate the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md) and pass 'Evaluate' for the AssessmentType field in Purchase, Signup, and CustomFraudEvaluation API events.
+- Observe, but don't necessarily honor, the Dynamics 365 Fraud Protection merchant rule decisions to either approve or reject those same events.
+- Evaluate your current fraud protection strategies by [uploading historical data](data-upload.md) and learn about Dynamics 365 Fraud Protection's performance via the [scorecard](scorecard.md).
 
 ## Features
 
-In addition to the first steps that are outlined on the dashboard, the Evaluate experience in Dynamics 365 Fraud Protection provides the features that are described in the following topics:
+The Evaluate experience in Dynamics 365 Fraud Protection provides the features that are described in the following topics:
 
 - [Purchase protection](purchase-protection.md)
 - [Artificial intelligence (AI) and insights from the fraud protection network](fraud-protection-network.md)
