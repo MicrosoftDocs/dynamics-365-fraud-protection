@@ -27,7 +27,7 @@ You can use the Dynamics 365 Fraud Protection labels API to send information abo
 - Any offline analysis (like behavior analysis or discovered connections to existing fraud cases) 
 - Chargebacks/refunds received 
 
-We recommend using the Chargeback and Refund API for providing information pertaining to chargebacks and refunds. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>.
+We recommend using the Chargeback and Refund API for providing information pertaining to chargebacks and refunds. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
 
 ## Account or payment instrument details 
 - Fraudulent account or payment instrument info identified by your review team 
