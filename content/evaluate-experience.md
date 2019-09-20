@@ -22,7 +22,7 @@ Microsoft Dynamics 365 Fraud Protection's *Evaluate experience* lets you use you
 
 Get started with Dynamics 365 Fraud Protection by completing the initial configuration steps outlined on the **Dashboard**. Then follow these steps to begin using the Evaluate experience:
 
-- [Integrate the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md) and pass 'Evaluate' for the AssessmentType field in Purchase, Signup, and CustomFraudEvaluation API events.
+- [Integrate the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md) and pass 'Evaluate' for the AssessmentType field in Purchase, Signup, and CustomFraudEvaluation API events. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
 - Observe, but don't necessarily honor, the Dynamics 365 Fraud Protection merchant rule decisions to either approve or reject those same events.
 - Evaluate your current fraud protection strategies by [uploading historical data](data-upload.md) and learn about Dynamics 365 Fraud Protection's performance via the [scorecard](scorecard.md).
 
