@@ -39,9 +39,9 @@ The following table defines the node and attribute combinations that you can use
 
 | Node | Attributes 
 |---|---|
-| User | Country |
-| Device | DeviceType, IPCountry |
-| Billing | Country |
+| User | CountryRegion |
+| Device | DeviceType, IPCountryRegion |
+| BillingAddress | CountryRegion |
 | PaymentInstrument | Type |
 | Product | Type, SKU, Category, Market |
 
