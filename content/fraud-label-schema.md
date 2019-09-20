@@ -11,12 +11,12 @@ search.app:
 search.audienceType:
   - admin
 
-title: View fraud label schema
+title: View labels schema
 ---
 
-# View fraud label schema
+# View labels schema
 
-This topic outlines the schema for the fraud label API.
+This topic outlines the schema for the labels API.
 
 Note the following formatting guidelines throughout:
 
