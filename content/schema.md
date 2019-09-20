@@ -263,7 +263,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | ZipCode                       | string   | The postal code that was provided for the address. |
 | CountryCode                   | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
 
-## Fraud label
+## Labels
 
 The following schema is used in the Evaluate and Protect experiences.
 
@@ -278,5 +278,5 @@ The following schema is used in the Evaluate and Protect experiences.
 | LabelState | String | This field indicates the current status of the label: Inquiry Accepted, Fraud, Disputed, Reversed, Abuse, or Resubmitted Request.  |
 | LabelReasonCodes | String | This field indicates the reason codes associated with each type of label: Processor/Bank Response Code, Fraud Refund, Account TakeOver, Payment Instrument Fraud, Account Fraud, Abuse, or Friendly Fraud. |
 | Processor | String | The name of the bank or payment processor that is generating the TC40 or SAFE information. |
-| EffectiveStartDate | DateTime | The date from which this fraud label is effective. The format is ISO 8601. |
-| EffectiveEndDate | DateTime | The end date for this fraud label. The format is ISO 8601. |
+| EffectiveStartDate | DateTime | The date from which this label is effective. The format is ISO 8601. |
+| EffectiveEndDate | DateTime | The end date for this label. The format is ISO 8601. |
