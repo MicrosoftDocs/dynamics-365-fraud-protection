@@ -48,10 +48,10 @@ The following table defines the node and attribute combinations that you can use
 
 | Node | Attributes 
 |---|---|
-| User | Id, Country, ZipCode, Email |
-| Device | DeviceType, IPAddress, IPCity, IPCountry, IPState |
-| Billing Address | AddressId, City, State, District, ZipCode, Country |
-| Shipping Address | AddressId, Ciy, State, District, ZipCode, Country|
+| User | Id, CountryRegion, ZipCode, Email |
+| Device | DeviceType, IPAddress, IPCity, IPCountryRegion, IPState |
+| Billing Address | AddressId, City, State, District, ZipCode, CountryRegion |
+| Shipping Address | AddressId, Ciy, State, District, ZipCode, CountryRegion |
 | PaymentInstrument | PaymentInstrumentId, MerchantPaymentInstrumentId, Type, CardType, State, HolderName, Email |
 | Purchase | TotalAmount, TotalAmountInUSD, Currency |
 | Product | ProductId, ProductName, Type, SKU, Category, Market, SalesPrice, COGS |
