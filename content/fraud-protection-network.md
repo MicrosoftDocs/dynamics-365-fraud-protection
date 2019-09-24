@@ -10,7 +10,6 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-  
 title: Artificial intelligence (AI) and insights from the fraud protection network
 ---
 

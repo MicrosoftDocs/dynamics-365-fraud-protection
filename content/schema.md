@@ -10,11 +10,11 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-  
-title: View schemas
+title: View purchase protection schemas
+
 ---
 
-# View schemas
+# View purchase protection schemas
 
 This topic outlines the schemas for historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
@@ -127,7 +127,7 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 |--------------------|----------|-------------|
 | ChargebackId       | string   | The chargeback identifier. |
 | Reason             | string   | The reason that was provided by the bank. |
-| Status             | string   | The status: **CB_DISPUTE-INITIATED**, **CB_DISPUTE-LOSE**, **CB_DISPUTE-WIN**, **CHARGEBACK-CB1**, **CHARGEBACK-CB2**, **INQUIRY_DISPUTE-WIN**, **INQUIRY-INITIATED**, or **UNKNOWN**. |
+| Status             | string   | The status: **Accepted**, **CB_Dispute-Initiated**, **CB_Dispute-Lose**, **CB_Dispute-Win**, **Chargeback-CB1**, **Chargeback-CB2**, **Inquiry_Dispute-Win**, **Inquiry-Initiated**, **ResubmittedRequest**, or **Unknown**. |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The chargeback amount. |
 | Currency           | string   | The currency that is used for the chargeback amount. |
@@ -143,7 +143,7 @@ The following schema is used in the Evaluate and Protect experiences.
 |--------------------|----------|-------------|
 | RefundId           | string   | The refund identifier. |
 | Reason             | string   | The customer-provided reason. |
-| Status             | string   | The refund status: **APPROVED**, **DECLINED**, **FAILED**, **OFFLINE_APPROVED**, **PENDING**, **REVERSED**, or **UNKNOWN**. |
+| Status             | string   | The refund status: **Approved**, **Declined**, **Failed**, **Offline_Approved**, **Pending**, **Reversed**, or **Unknown**. |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The refund amount. |
 | Currency           | string   | The currency that is used for the sales price amount. |
@@ -217,7 +217,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | Attribute       | Type   | Description |
 |-----------------|--------|-------------|
 | UserId          | string | The customer identifier. |
-| Addresstype     | string | The address type: **BILLING**, **SHIPPING**, **ACCOUNT**, or **UNKNOWN**. |
+| Addresstype     | string | The address type: **Billing**, **Shipping**, **Account**, or **Unknown**. |
 | FirstName       | string | The first name that was provided for the address. |
 | LastName        | string | The last name that was provided for the address. |
 | PhoneNumber     | string | The phone number that was provided for the address. |
@@ -262,3 +262,21 @@ The following schemas are used in the Evaluate and Protect experiences.
 | District                      | string   | The district that was provided for the address. (This value can be blank.) |
 | ZipCode                       | string   | The postal code that was provided for the address. |
 | CountryCode                   | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+
+## Labels
+
+The following schema is used in the Evaluate and Protect experiences.
+
+| Attribute | Type | Description |
+| --- | --- | --- |
+| TrackingId | String | The unique ID for each event/record. |
+| MerchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
+| EventTimeStamp | DateTime | The date and time of the event. Possible values: Chargeback Date or Review Date. The format is ISO 8601. |
+| LabelObjectType | String | This field indicates the type of label: Purchase, Signup, Custom Fraud Evaluation, Account, Payment instrument, or Email. |
+| LabelObjectId | String | This is an identifier field for the type of object: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, or Email.  |
+| LabelSource | String | This field represents the source of the label: Customer Escalation, Chargeback, TC40_SAFE, Manual Review, Refund, Offline Analysis. |
+| LabelState | String | This field indicates the current status of the label: Inquiry Accepted, Fraud, Disputed, Reversed, Abuse, or Resubmitted Request.  |
+| LabelReasonCodes | String | This field indicates the reason codes associated with each type of label: Processor/Bank Response Code, Fraud Refund, Account TakeOver, Payment Instrument Fraud, Account Fraud, Abuse, or Friendly Fraud. |
+| Processor | String | The name of the bank or payment processor that is generating the TC40 or SAFE information. |
+| EffectiveStartDate | DateTime | The date from which this label is effective. The format is ISO 8601. |
+| EffectiveEndDate | DateTime | The end date for this label. The format is ISO 8601. |
