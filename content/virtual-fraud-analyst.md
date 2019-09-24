@@ -4,7 +4,6 @@ description: This topic explains how to use the virtual fraud analyst.
 ms.author: v-jowigh
 ms.service: fraud-protection
 ms.date: 09/12/2019
-
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -12,6 +11,7 @@ search.audienceType:
   - admin
 
 title: Use the virtual fraud analyst
+
 ---
 
 # Use the virtual fraud analyst

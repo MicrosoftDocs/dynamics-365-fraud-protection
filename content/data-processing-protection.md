@@ -4,13 +4,11 @@ description: This topic explains data processing and protections in Dynamics 365
 ms.author: v-jegrif
 ms.service: fraud-protection
 ms.date: 09/13/2019
-
 ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
   - admin
-
 title: Data processing and protection
 ---
 

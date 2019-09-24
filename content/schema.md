@@ -10,8 +10,8 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-
 title: View purchase protection schemas
+
 ---
 
 # View purchase protection schemas

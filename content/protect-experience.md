@@ -4,13 +4,11 @@ description: This topic provides information about the Protect experience in Mic
 ms.author: v-jegrif
 ms.service: fraud-protection
 ms.date: 09/12/2019
-
 ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
   - admin
-
 title: Protect experience
 ---
 

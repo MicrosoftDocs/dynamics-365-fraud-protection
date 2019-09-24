@@ -10,7 +10,6 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-
 title: Create Azure AD apps in Azure Portal or PowerShell 
 ---
 

@@ -10,7 +10,6 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-
 title: Security, compliance, and data subject requests
 ---
 

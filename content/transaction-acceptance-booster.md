@@ -4,7 +4,6 @@ description: This topic provides information about how you can boost bank accept
 ms.author: v-jowigh
 ms.service: fraud-protection
 ms.date: 09/12/2019
-
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -16,12 +15,14 @@ title: Boost bank acceptance rates with the transaction acceptance booster
 
 # Boost bank acceptance rates with the transaction acceptance booster
 
+
 One feature that sets Microsoft Dynamics 365 Fraud Protection apart from other products in the market is the transaction acceptance booster. This feature helps you benefit from higher acceptance rates by sharing trust knowledge with banks. 
 
 You can opt to directly share Dynamics 365 Fraud Protection’s assessments with participating issuing banks and networks through the acceptance booster service. Another option is to receive MID recommendations from Dynamics 365 Fraud Protection and incorporate them into your authorization requests, resulting in a higher overall acceptance rate. While you can use both options on the same transactions where applicable, we recommend that you use the MID recommendation option on transactions from banks who are not participating in the acceptance booster service.
 
 ## Acceptance booster service
 The acceptance booster service provides a direct communication channel for contextual transaction data, called transaction trust knowledge, with participating issuing banks and networks. This transmission occurs at the time of transaction assessment by Dynamics 365 Fraud Protection. If the payment instrument used in that transaction was issued by a bank or network participating in the program, Dynamics 365 Fraud Protection will transmit transaction trust knowledge to that bank or network. 
+
 
 To enable this feature, go to the **Configuration section** of the navigation in Dynamics 365 Fraud Protection, then select the **Transaction acceptance booster** page. On the **Opt in** tab, you can select **Acceptance booster service** to consent to share transaction trust knowledge with participating banks and networks. You can review the Consent link on this page for details about terms and a list of participants in the program. Select **Save** to confirm your choice.
 

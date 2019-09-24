@@ -1,20 +1,20 @@
 ---
 author: jegrif
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
+
 ms.author: v-jegrif
 ms.service: fraud-protection
 ms.date: 09/06/2019
-
 ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
   - admin
-
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
 ---
 
 # Integrate Dynamics 365 Fraud Protection real-time APIs
+
 
 To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the *Evaluate* experience, this allows you to analyze the results of using Dynamics 365 Fraud Protection. In the *Protect* experience, you can also honor decisions based on the rules you have configured.
 
@@ -24,6 +24,7 @@ Depending on how you choose to use Dynamics 365 Fraud Protection, you may make u
 - **Account protection APIs**: SignUp, SignUpStatus, Label
 
 For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
+
 
 ## Get set up
 
