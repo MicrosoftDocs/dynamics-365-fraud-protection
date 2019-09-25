@@ -10,13 +10,13 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-  
 title: Diagnose experience
 ---
 
 # Diagnose experience
 
-Microsoft Dynamics 365 Fraud Protection offers multiple experiences to introduce you to the product and accelerate your journey toward embedding Dynamics 365 Fraud Protection into your full production environment. The *Diagnose experience* evaluates your historical data and generates reports that provide valuable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities.
+Microsoft Dynamics 365 Fraud Protection's *Diagnose experience* evaluates your historical data and generates reports that provide valuable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities.
+
 
 ## Upload data
 

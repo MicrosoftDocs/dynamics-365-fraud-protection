@@ -10,7 +10,6 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-  
 title: Security, compliance, and data subject requests
 ---
 
@@ -53,9 +52,10 @@ On the left navigation bar, under **Data engineering**, select **Subject request
 
 After you make your selection, if you require more specificity, you can use the search bar to enter keywords. From the search results, you can select either **Export user and associated data** or **Delete user and associated data**.
 
-Select the **Request** tab that identifies the following properties for your search:
+Select the **Requests** tab that identifies the following properties for your search:
 
-- Request IDs
+- Request ID
 - Request types (delete or export)
+- Subject ID
 - Statuses (pending or complete)
 - Exported data links

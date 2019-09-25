@@ -10,7 +10,6 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-  
 title: Implement device fingerprinting
 ---
 
