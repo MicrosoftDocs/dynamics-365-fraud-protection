@@ -57,7 +57,7 @@ When you finish filling in the fields, select **Create application**. The confir
 To create an additional application, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
 
 ### Manage existing Azure AD applications 
-After you have created your Azure AD apps, you can manage them through the <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank">Azure portal</a>. You can learn more from the <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-how-applications-are-added" target="_blank">Azure documentation site</a>. 
+After you have created your Azure AD apps, you can manage them through the <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank">Azure portal</a>. You can learn more from the <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-how-applications-are-added" target="_blank">Azure documentation site</a>. 
 
 ### Manually configure Azure AD applications
 If you would like to set up your applications directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md).
@@ -125,7 +125,7 @@ Content-Length: <content length>
 
 For more information, refer to the Azure documentation: 
 - <a href="https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion" target="_blank">Use client assertion to get access tokens from Azure AD</a>
-- <a href="https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/token-cache" target="_blank">Cache access tokens</a>
+- <a href="https://docs.microsoft.com/azure/architecture/multitenant-identity/token-cache" target="_blank">Cache access tokens</a>
 
 ### Call the APIs
 To call the APIs, follow these steps:

@@ -20,7 +20,7 @@ Microsoft runs on trust. Microsoft Dynamics 365 Fraud Protection is built on the
 For more information, see the following resources:
 
 - [Microsoft Trust Center](https://www.microsoft.com/trustcenter/default.aspx)
-- [Microsoft Runs on Trust](https://www.microsoft.com/en-us/legal/compliance/integrity)
+- [Microsoft Runs on Trust](https://www.microsoft.com/legal/compliance/integrity)
 
 ## Data subject requests
 
