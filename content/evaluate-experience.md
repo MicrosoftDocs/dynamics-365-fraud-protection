@@ -37,4 +37,4 @@ The Evaluate experience in Dynamics 365 Fraud Protection provides the features t
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
 
-The Protect experience is differentiated from Evaluate by additional features as described on [Protect experience](protect-experience.md), and becomes your real-time risk decision tool in your full production environment.
+The Protect experience is differentiated from Evaluate by additional features as described on [Protect experience](protect-experience.md), and becomes your real-time tool in your full production environment.

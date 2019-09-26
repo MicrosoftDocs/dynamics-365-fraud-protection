@@ -44,7 +44,7 @@ High-level administrative account. Full access to Dynamics 365 Fraud Protection.
 
 ### AllAreasEditor 
 Power user. Can see all areas and has permissions to use key Dynamics 365 Fraud Protection tools. 
-- **Write**: Data upload, Model operating points, Virtual fraud analyst, Lists, Subject requests 
+- **Write**: Data upload, Rules, Virtual fraud analyst, Lists, Subject requests 
 - **Read**: Diagnostic reports, Support tool, Scorecard, Metrics, Ontology, Graph explorer, API configuration, Metering, Monitoring, Permissions, Transaction acceptance booster 
 
 ### AllAreasViewer 
@@ -60,7 +60,7 @@ Tailored access to Dynamics 365 Fraud Protection for support agents working with
 
 ### FraudEngineer 
 Tailored access for fraud analysts and engineers in your organization working with Dynamics 365 Fraud Protection. Has similar access to the AllAreasEditor and provides access to the data engineering information, but does not have access to certain configuration options. 
-- **Write**: Data upload, Model operating points, Virtual fraud analyst, Lists, Subject requests 
+- **Write**: Data upload, Rules, Virtual fraud analyst, Lists, Subject requests 
 - **Read**: Diagnostic reports, Support tool, Scorecard, Metrics, Ontology, Graph explorer 
 - **No access**: API configuration, Metering, Monitoring, Permissions, Transaction acceptance booster. Pages may be accessible in the navigation but cannot be used in full. 
 
