@@ -19,9 +19,9 @@ Risk support in Microsoft Dynamics 365 Fraud Protection lets your agents evaluat
 
 ## Search and investigate
 
-In the navigation, under **Risk decisioning**, select **Risk support**. Then search for transactions to get detailed information and see the reasons behind the risk decisions that Dynamics 365 Fraud Protection has made.
+In the navigation, under **Purchase protection**, select **Support**. Then search for transactions to get detailed information.
 
-Here are the available search methods:
+These are the available search methods:
 
 - **User email address**
 - **Purchase ID** – The unique ID of a purchase that is sent to Dynamics 365 Fraud Protection for risk evaluation
@@ -30,8 +30,8 @@ Here are the available search methods:
 A search on the customer's email address or the payment instrument ID might return multiple transactions. Select one of the transactions in the search results to view expanded information in the following areas:
 
 - **Financial snapshot** – This area summarizes the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. This summary can highlight activities that fall outside typical patterns, such as a recent spike in spending, or an unusual number of transactions or chargebacks.
-- **Transaction history** – This area identifies individual transactions and highlights their key properties, such as the results of risk decisions that have been made in Dynamics 365 Fraud Protection.
-- **Transaction details** – This area shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address. **Risk information** provides additional details about the risk decision, such as the specific score.
+- **Transaction history** – This area identifies individual transactions and highlights their key properties.
+- **Transaction details** – This area shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address. **Risk information** provides additional details, such as the specific risk score.
 - **Line items** – This area itemizes everything that was purchased during the selected transaction. It shows the prices, and applicable taxes and fees.
 - **Transaction map** – This area lets you see the shipping address and billing address in relation to each other. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
