@@ -14,7 +14,7 @@ title: Protect experience
 
 # Protect experience
 
-Microsoft Dynamics 365 Fraud Protection's *Protect experience* builds on the features of the Evaluate experience by embedding Dynamics 365 Fraud Protection into your full production environment, where it becomes your real-time risk decision tool for fraud protection. You can take advantage of model scores to decide whether to accept or reject transactions, adjudicate escalations from customers, and share relevant information about transaction trustworthiness with participating banks and issuers to help boost their acceptance rates.
+Microsoft Dynamics 365 Fraud Protection's *Protect experience* builds on the features of the Evaluate experience by embedding Dynamics 365 Fraud Protection into your full production environment, where it becomes your real-time tool for fraud protection. You can take advantage of model scores to decide whether to accept or reject transactions, adjudicate escalations from customers, and share relevant information about transaction trustworthiness with participating banks and issuers to help boost their acceptance rates.
 
 ## Using the Protect experience
 Get started with Dynamics 365 Fraud Protection by completing the initial configuration steps outlined on the **Dashboard**. Then follow these steps to begin using the Protect experience:
