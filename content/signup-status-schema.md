@@ -11,12 +11,12 @@ search.app:
 search.audienceType:
   - admin
 
-title: View account creation assessment schemas -  Sign-up status
+title: View account protection schemas -  Sign-up status
 ---
 
-# View account creation assessment schemas - Sign-up status
+# View account protection schemas - Sign-up status
 
-This topic outlines the schemas for the Signup status data for account creation assessment. For Signup, see [this accompanying page](signup-schema.md).
+This topic outlines the schemas for the Signup status data for account protection. For Signup, see [this accompanying page](signup-schema.md).
 
 Note the following formatting guidelines throughout:
 
