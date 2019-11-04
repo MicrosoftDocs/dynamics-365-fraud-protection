@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic explains how to manage lists and rules in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/12/2019
+ms.date: 11/04/2019
 
 ms.topic: conceptual
 search.app: 
@@ -16,7 +16,7 @@ title: Manage lists and rules
 
 # Manage lists and rules
 
-You can use lists and rules to help manage your risk decisions and tailor the behavior of Microsoft Dynamics 365 Fraud Protection.
+You can use lists and rules to help manage your purchase protection and tailor the behavior of Microsoft Dynamics 365 Fraud Protection.
 
 *Rules* shape real-time decision making by accepting or rejecting transactions based on conditions and risk score thresholds that you select. The rules use *lists*, such as the Safe list, Block list, and custom lists of data that are relevant to your business. These capabilities help you define and screen for risky transaction types. They also help you enforce various policies, such as geofencing. These capabilities are designed to help you manage the trade-offs that are inherent when you must prevent fraud but also minimize false positives.
 
