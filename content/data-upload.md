@@ -1,9 +1,9 @@
 ---
 author: jegrif
 description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/03/2019
+ms.date: 11/04/2019
 
 ms.topic: conceptual
 search.app: 
@@ -15,7 +15,7 @@ title: Upload historical data
 
 # Upload historical data
 
-In the Evaluate and Protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your historical data into the system to help increase the accuracy of your risk decisions. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
+In the Evaluate and Protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your historical data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
 
 ## Data types
 
@@ -59,4 +59,4 @@ To upload additional data, select **Reupload** to submit more files, and then pr
 
 ## API upload
 
-In the Evaluate and Protect experiences, data can also be ingested through the API. A risk score will be returned for data that you upload in this way. For a more comprehensive overview, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
+In the Evaluate and Protect experiences, data can also be ingested through the API. A score will be returned for data that you upload in this way. For a more comprehensive overview, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
