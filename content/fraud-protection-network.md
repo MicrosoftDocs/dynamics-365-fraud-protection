@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic provides information about artificial intelligence (AI) and insights from the fraud protection network in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 04/22/2019
+ms.date: 11/07/2019
 
 ms.topic: conceptual
 search.app: 
