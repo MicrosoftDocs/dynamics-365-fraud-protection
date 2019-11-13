@@ -69,4 +69,4 @@ Continue to the next page to select the desired behavior. For example, you can r
 A rule can be edited after it's created. To change its settings, select it in the list, make your changes, and save. Active rules are indicated in the list with a green dot. To enable, disable, or delete a rule, select the vertical ellipsis on the right side of the page and select from the available choices. 
 
 > [!NOTE]
-> For purchase transactions, if no rules are configured yet or no configured rules reject a transaction, the default decision returned is to accept the transaction. This is not a recommendation, only a baseline intended to simplify your process when configuring new rule conditions. Once you have created rules, the decisions returned by Dynamics 365 Fraud Protection will reflect your chosen settings.
+> For purchase transactions, if no rules are configured yet the default recommendation returned is to accept the transaction. Once you have created rules, the recommendations returned by Dynamics 365 Fraud Protection will reflect your chosen settings.
