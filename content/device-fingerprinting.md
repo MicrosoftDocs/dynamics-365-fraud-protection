@@ -1,9 +1,9 @@
 ---
-author: jackwi111
+author: v-davido
 description: This topic explains how to implement device fingerprinting.
-ms.author: v-jowigh
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 08/23/2019
+ms.date: 11/14/2019
 
 ms.topic: conceptual
 search.app: 
@@ -15,7 +15,7 @@ title: Implement device fingerprinting
 
 # Implement device fingerprinting
 
-As one of its core differential features, Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that is based on cutting-edge machine learning and artificial intelligence (AI). This feature enables the service to identify **devices** (not individuals) across multiple sessions or interactions that engage with your business. Device fingerprinting runs on Microsoft Azure. It's cloud-scalable and reliable, and provides enterprise-grade security.
+As one of the most powerful features, Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that is based on cutting-edge machine learning and artificial intelligence (AI). This feature enables the service to identify **devices** (not individuals) across multiple sessions or interactions that engage with your business. Device fingerprinting runs on Microsoft Azure. It's cloud-scalable and reliable, and provides enterprise-grade security.
 
 By tracking elements that are related to a device (computer, Xbox, tablet, and so on), you can link individual devices to events. Therefore, device fingerprinting lets you link seemingly unrelated events to each other by capturing and identifying unique device characteristics during the processes for adding a payment instrument, sign-in, and checkout.
 
