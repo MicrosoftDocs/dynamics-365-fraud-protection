@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic explains the global availability of Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/05/2019
+ms.date: 11/18/2019
 
 ms.topic: conceptual
 search.app: 
@@ -11,11 +11,11 @@ search.app:
 search.audienceType:
   - admin
 
-title: Global availability
+title: Regional availability
 ---
 
 
-# Global availability
+# Regional availability
 
 Microsoft Dynamics 365 Fraud Protection is currently supported in the following regions (English-language only). 
 - US 

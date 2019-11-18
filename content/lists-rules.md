@@ -5,6 +5,7 @@ ms.author: v-davido
 ms.service: fraud-protection
 ms.date: 11/13/2019
 
+
 ms.topic: conceptual
 search.app: 
   - FraudProtection

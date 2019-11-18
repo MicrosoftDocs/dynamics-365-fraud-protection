@@ -1,0 +1,34 @@
+{
+  "redirections": [
+    {
+      "source_path": "content/account-creation-assessment.md",
+      "redirect_url": "account-protection",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/index.md",
+      "redirect_url": "overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/lists-model-operating-points.md",
+      "redirect_url": "lists-rules",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/purchase-assessment.md",
+      "redirect_url": "purchase-protection",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/send-real-time-api.md",
+      "redirect_url": "integrate-real-time-api",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/signup.md",
+      "redirect_url": "provision-azure-tenant",
+      "redirect_document_id": "false"
+    }
+  ]
+}
