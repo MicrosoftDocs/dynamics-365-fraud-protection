@@ -3,7 +3,8 @@ author: v-davido
 description: This topic explains how to implement device fingerprinting.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 11/14/2019
+ms.date: 11/18/2019
+
 
 ms.topic: conceptual
 search.app: 
@@ -15,7 +16,8 @@ title: Implement device fingerprinting
 
 # Implement device fingerprinting
 
-As one of the most powerful features, Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that is based on cutting-edge machine learning and artificial intelligence (AI). This feature enables the service to identify **devices** (not individuals) across multiple sessions or interactions that engage with your business. Device fingerprinting runs on Microsoft Azure. It's cloud-scalable and reliable, and provides enterprise-grade security.
+As one of its most powerful features, Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that is based on artificial intelligence (AI). This feature enables the service to identifcation **devices** (computer, Xbox, tablet, etc.) across multiple sessions or interactions that engage with your business and others' in the fraud network. Additionally, this feature allows the service to link seemingly unreltated events to each other in the fraud network to identity patterns of fraud. Device fingerprinting runs on Microsoft Azure. It is cloud-scalable, reliable, and provides enterprise-grade security.
+
 
 By tracking elements that are related to a device (computer, Xbox, tablet, and so on), you can link individual devices to events. Therefore, device fingerprinting lets you link seemingly unrelated events to each other by capturing and identifying unique device characteristics during the processes for adding a payment instrument, sign-in, and checkout.
 
@@ -48,7 +50,7 @@ Your web application should serve the device fingerprinting before it submits a 
     ```
 
     - **Your\_Root\_Domain** – The root domain of the merchant website.
-    - **session\_id** – The device user's session identifier. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that a globally unique identifier (GUID) be used for the session ID, this approach isn't required.
+    - **session\_id** – The unique session identifier of the device created by the merchant. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that a globally unique identifier (GUID) be used for the session ID, this approach isn't required.
     - **instance\_id** – A placeholder for the instance ID that represents you. Use the instance identifier (**instance\_id** value) listed on the **Account Information** dashboard tile in the Dynamics 365 Fraud Protection Evaluate experience. You must have this value to integrate device fingerprinting with your website.
 
     **Example**

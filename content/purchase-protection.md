@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic explains the purchase protection capability of Dynamics 365 Fraud Protection.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 08/28/2019
+ms.date: 11/18/2019
 
 ms.topic: conceptual
 search.app: 
@@ -22,6 +22,7 @@ Learn more about the following features used in purchase protection:
 
 - [Diagnose experience](diagnose-experience.md)
 - [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md)
+- [Labels API](labels-api.md)
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Upload historical data](data-upload.md)
 - [View schemas](schema.md)
