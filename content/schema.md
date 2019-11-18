@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic outlines the schemas that are required for historical data upload
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/04/2019
+ms.date: 11/18/2019
 
 ms.topic: conceptual
 search.app: 
@@ -280,3 +280,6 @@ The following schema is used in the Evaluate and Protect experiences.
 | Processor | String | The name of the bank or payment processor that is generating the TC40 or SAFE information. |
 | EffectiveStartDate | DateTime | The date from which this label is effective. The format is ISO 8601. |
 | EffectiveEndDate | DateTime | The end date for this label. The format is ISO 8601. |
+
+## Download sample data
+You can download our [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip) to explore options before using your own internal data.
