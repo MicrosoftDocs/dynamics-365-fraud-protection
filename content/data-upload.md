@@ -60,3 +60,6 @@ To upload additional data, select **Reupload** to submit more files, and then pr
 ## API upload
 
 In the Evaluate and Protect experiences, data can also be ingested through the API. A score will be returned for data that you upload in this way. For a more comprehensive overview, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
+
+## Download sample data
+You can download a [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip). 
