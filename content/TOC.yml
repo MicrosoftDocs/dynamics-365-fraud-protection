@@ -1,6 +1,6 @@
 - name: Overview
   href: overview.md
-- name: Global availability
+- name: Regional availability
   href: global-availability.md  
 - name: Provision your Azure tenant
   href: provision-azure-tenant.md
