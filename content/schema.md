@@ -282,4 +282,4 @@ The following schema is used in the Evaluate and Protect experiences.
 | EffectiveEndDate | DateTime | The end date for this label. The format is ISO 8601. |
 
 ## Download sample data
-We have sample data for download:[sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip). You can use this to explore options before using your own internal data.
+You can download our [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip) to explore options before using your own internal data.
