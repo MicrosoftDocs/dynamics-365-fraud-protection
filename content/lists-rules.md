@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains how to manage lists and rules in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 11/13/2019
+ms.date: 11/19/2019
 
 
 ms.topic: conceptual
@@ -63,7 +63,7 @@ After you save your new custom list, it can be viewed and edited under **Custom 
 
 Rules can be configured manually or by using the guidance of the virtual fraud analyst. To create a rule from scratch, open the **Rules** page, and select **Create new rule**.
 
-Rules can be used on all transactions at the same time or just on specific subsets of transactions. For example, a rule can be applied only to products that cost certain prices. To create a filter, select the appropriate node and attribute, and then select the list that contains the corresponding dataset. Up to three filters can be applied simultaneously. 
+Rules can be used on all transactions and events at the same time or just on specific subsets of transactions. For example, a rule can be applied only to products that cost certain prices. To create a filter, select the appropriate node and attribute, and then select the list that contains the corresponding dataset. Up to three filters can be applied simultaneously. 
 
 Continue to the next page to select the desired behavior. For example, you can reject all transactions that meet the conditions that you specify, or you can reject transactions only if they meet the specified conditions and exceed a specific risk score threshold. Name your rule, set its state (either active or inactive), and save it. You can create a total of 30 rules. Note that due to caching, any changes saved may take up to two minutes to become active.
 
