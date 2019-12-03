@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic describes the fraud label API.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/14/2019
+ms.date: 12/03/2019
 
 ms.topic: conceptual
 search.app: 
@@ -18,7 +18,7 @@ title: Labels API
 
 The labels API enables you to send additional information to Microsoft Dynamics 365 Fraud Protection in addition to the data that informs the virtual fraud analyst and scorecard features. The labels API provides the additional knowledge for model training based on an additional set of fraud signals.  
 
-You can use the Dynamics 365 Fraud Protection labels API to send information about the following: 
+You can use the Fraud Protection labels API to send information about the following: 
 
 ## Transaction (Purchase/Signup/GenericEvent) details 
 - TC40/SAFE signals received 
