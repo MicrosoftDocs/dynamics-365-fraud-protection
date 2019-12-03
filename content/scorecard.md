@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic explains how you can use the key performance indicators (KPIs).
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/22/2019
+ms.date: 12/03/2019
 
 ms.topic: conceptual
 search.app: 
@@ -17,7 +17,7 @@ title: Learn from the scorecard
 
 You can use the scorecard reports to review your key metrics and understand the month-by-month performance of your fraud protection efforts.
 
-In the Evaluate experience, your scorecard lets you evaluate the capabilities of Microsoft Dynamics 365 Fraud Protection. In the Protect experience, your scorecard reflects the real-time performance of Dynamics 365 Fraud Protection as your system of record. After evaluating the data presented in the scorecard, you can use the knowledge that you gain to make well-informed risk management decisions for your business.
+In the Evaluate experience, your scorecard lets you evaluate the capabilities of Microsoft Dynamics 365 Fraud Protection. In the Protect experience, your scorecard reflects the real-time performance of Fraud Protection as your system of record. After evaluating the data presented in the scorecard, you can use the knowledge that you gain to make well-informed risk management decisions for your business.
 
 Your top-four key performance indicators (KPIs) are summarized across the top of the page to provide a snapshot of your performance. You can fully investigate these metrics in the charts.
 
@@ -27,7 +27,7 @@ You can use the drop-down menus and sliders to filter your view of the interacti
 
 - **Measurement unit** - Toggle between dollar amount and count.
 - **Aggregation level** – Show a daily, weekly, or monthly view of your data.
-- **Merchant rule decision** – Show approval and/or rejection decisions that were the result of your settings in Dynamics 365 Fraud Protection.
+- **Merchant rule decision** – Show approval and/or rejection decisions that were the result of your settings in Fraud Protection.
 - **Merchant final decision** – Show the latest status of the purchase.
 - **MID classification** – Show all program merchant IDs (MIDs) and/or standard MIDs.
 - **Transaction date** – Show transaction data by date. You can select dates in the calendar, enter them manually, or select ranges of dates.
