@@ -1,9 +1,9 @@
 ---
-author: jackwi111
+author: v-davido
 description: This topic explains how to use the virtual fraud analyst.
-ms.author: v-jowigh
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/12/2019
+ms.date: 12/03/2019
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -70,4 +70,4 @@ After selecting the risk score with the slider on the right, name your rule and 
 
 ## Balance fraud loss against opportunity loss
 
-The goal of any world-class fraud protection system is to enable companies to maximize their bottom line. By using Dynamics 365 Fraud Protection, you can quickly find a risk threshold that helps protect against fraud but also minimizes the impact on your legitimate transactions.
+The goal of any world-class fraud protection system is to enable companies to maximize their bottom line. By using Fraud Protection, you can quickly find a risk threshold that helps protect against fraud but also minimizes the impact on your legitimate transactions.
