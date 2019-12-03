@@ -1,9 +1,9 @@
 ---
-author: jackwi111
+author: v-davido
 description: This topic provides information about security, compliance, and data subject requests.
-ms.author: v-jowigh
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 04/22/2019
+ms.date: 12/2/2019
 
 ms.topic: conceptual
 search.app: 
@@ -24,7 +24,7 @@ For more information, see the following resources:
 
 ## Data subject requests
 
-Dynamics 365 Fraud Protection provides tools to help you comply with requests from your customers (data subjects) to export or delete their personal data.
+Fraud Protection provides tools to help you comply with requests from your customers (data subjects) to export or delete their personal data.
 
 For more information, see the following resources:
 
@@ -33,7 +33,7 @@ For more information, see the following resources:
 - [Microsoft Dynamics 365 and GDPR](https://docs.microsoft.com/dynamics365/get-started/gdpr/index)
 - [Microsoft Power BI GDPR white paper](https://powerbi.microsoft.com/blog/power-bi-gdpr-whitepaper-is-now-available/)
 
-In the Diagnose experience for Dynamics 365 Fraud Protection, you can delete the offline data that you've uploaded into Dynamics 365 Fraud Protection. At the top of the page, select **Delete my data**.
+In the Diagnose experience for Fraud Protection, you can delete the offline data that you've uploaded. At the top of the page, select **Delete my data**.
 
 In the Evaluate and Protect experiences, for all entities that contain personal data, you can perform the following tasks:
 
