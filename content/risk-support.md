@@ -25,7 +25,7 @@ These are the available search methods:
 
 - **User email address**
 - **Purchase ID** – The unique ID of a purchase that is sent to Fraud Protection for risk evaluation
-- **Payment instrument ID** – The unique hash of a payment method that is associated with a transaction that is sent to Dynamics 365 Fraud Protection
+- **Payment instrument ID** – The unique hash of a payment method that is associated with a transaction that is sent to Fraud Protection
 
 A search on the customer's email address or the payment instrument ID might return multiple transactions. Select one of the transactions in the search results to view expanded information in the following areas:
 
