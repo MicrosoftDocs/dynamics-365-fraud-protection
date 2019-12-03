@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic explains how you can use Microsoft Dynamics 365 Fraud Protection to support your customers.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/22/2019
+ms.date: 12/03/2019
 
 ms.topic: conceptual
 search.app: 
@@ -24,7 +24,7 @@ In the navigation, under **Purchase protection**, select **Support**. Then searc
 These are the available search methods:
 
 - **User email address**
-- **Purchase ID** – The unique ID of a purchase that is sent to Dynamics 365 Fraud Protection for risk evaluation
+- **Purchase ID** – The unique ID of a purchase that is sent to Fraud Protection for risk evaluation
 - **Payment instrument ID** – The unique hash of a payment method that is associated with a transaction that is sent to Dynamics 365 Fraud Protection
 
 A search on the customer's email address or the payment instrument ID might return multiple transactions. Select one of the transactions in the search results to view expanded information in the following areas:
@@ -45,4 +45,4 @@ From here, you can add a customer or payment instrument to either the Safe list 
 
 If you add a customer to a list, you must specify an expiry date and enter any comments that will be helpful to future reviewers of this case. You can view this information at any time under **Activity log**. The log also keeps a record the agent who made each change.
 
-Note that after an expiry date has passed, Dynamics 365 Fraud Protection will remove the customer from the list. To delete a list entry at any time, select **Remove from lists**.
+Note that after an expiry date has passed, Fraud Protection will remove the customer from the list. To delete a list entry at any time, select **Remove from lists**.
