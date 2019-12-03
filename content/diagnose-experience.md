@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic provides information about the Diagnose experience in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/04/2019
+ms.date: 12/03/2019
 
 ms.topic: conceptual
 search.app: 
@@ -22,7 +22,7 @@ Microsoft Dynamics 365 Fraud Protection's *Diagnose experience* evaluates your h
 
 To begin, upload your historical data for analysis. Your data files should reflect approved transactions that were approved by you (the merchant) and sent to your bank.
 
-To help guarantee that Dynamics 365 Fraud Protection can interpret the files that you upload, make sure that they meet the following requirements.
+To help guarantee that Fraud Protection can interpret the files that you upload, make sure that they meet the following requirements.
 
 ### Data requirements
 - Upload files for each of these entities: Purchases, Payment instruments, Products, and Chargebacks.
@@ -37,7 +37,7 @@ To help guarantee that Dynamics 365 Fraud Protection can interpret the files tha
 - The following characters should be escaped in all columns: commas, new line characters, and multiline characters.
 
 > [!IMPORTANT]
-> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
 You can preview a sample of your data on the **Ready to upload your file** page. If significant errors are detected in the file format, correct them before you upload the complete files. When you're ready, select **Upload**.
 
@@ -55,7 +55,7 @@ Before you can generate your risk diagnostic report, the key metrics of your dat
 
 After the data diagnostic report returns satisfactory results, the *risk diagnostic report* is generated. This process should take no longer than 24 hours.
 
-The risk diagnostic report lets you assess your risk from fraudulent activity and evaluate its monetary impact on your business. Based on your data, Dynamics 365 Fraud Protection provides interactive charts for the following information:
+The risk diagnostic report lets you assess your risk from fraudulent activity and evaluate its monetary impact on your business. Based on your data, Fraud Protection provides interactive charts for the following information:
 
 - **Model performance** – The **Receiver operating characteristic** curves let you see the percentage of rejected transactions that have chargebacks versus the percentage of rejected legitimate transactions. By using the **risk score** slider to adjust the graphs, you can see what your detection and false positive rates would be at different thresholds of acceptable risk.
 - **Distribution of transactions by risk score** – See the reported ratio of fraudulent to non-fraudulent historical transactions. The transactions are plotted based on their risk score. You can zoom in on selected ranges to see details.
