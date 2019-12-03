@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic explains how to monitor API calls in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 07/18/2019
+ms.date: 12/02/2019
 
 ms.topic: conceptual
 search.app: 
@@ -22,7 +22,7 @@ The monitoring tools in Microsoft Dynamics 365 Fraud Protection provide data abo
 
 The **API requests** tab shows an interactive chart of service metrics so you can evaluate performance over time.
 
-Use the drop-down menus and select date ranges to review API requests by time period, API name and type, and Dynamics 365 Fraud Protection experience. Changing your selections here will refresh your charts to show only the specified data.
+Use the drop-down menus and select date ranges to review API requests by time period, API name and type, and Fraud Protection experience. Changing your selections here will refresh your charts to show only the specified data.
 
 The **Average requests/min** tiles provide a summary of API activity by type over time. The **Requests per minute** chart plots all activity in this timeframe for the API types you have chosen to view. Hover over points on the chart to see specific request totals by timestamp. 
 
