@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 11/04/2019
+ms.date: 12/03/2019
 
 ms.topic: conceptual
 search.app: 
@@ -19,7 +19,7 @@ In the Evaluate and Protect experiences in Microsoft Dynamics 365 Fraud Protecti
 
 ## Data types
 
-Dynamics 365 Fraud Protection can analyze historical data about the following entities. This data can be uploaded through either the website or the application programming interface (API). In the Evaluate and Protect experiences, we recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
+Fraud Protection can analyze historical data about the following entities. This data can be uploaded through either the website or the application programming interface (API). In the Evaluate and Protect experiences, we recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
 
 - Purchase data
 
@@ -39,13 +39,13 @@ Dynamics 365 Fraud Protection can analyze historical data about the following en
     - Update account payment instruments
 
 > [!IMPORTANT]
-> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
 ## Website upload
 
 You can upload your historical data from the **Data upload** page.
 
-To help guarantee that Dynamics 365 Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](schema.md):
+To help guarantee that Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](schema.md):
 
 - The files are in CSV UTF-8 (comma delimited) format (\*.csv).
 - The maximum file size is 10 gigabytes (GB).
