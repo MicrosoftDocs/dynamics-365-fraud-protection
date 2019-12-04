@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains the purchase protection capability of Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 11/18/2019
+ms.date: 12/04/2019
 
 ms.topic: conceptual
 search.app: 
@@ -16,7 +16,7 @@ title: Purchase protection
 
 # Purchase protection
 
-Microsoft Dynamics 365 Fraud Protection provides merchants the capability to assess e-commerce transactions for fraudulent activity. By using Dynamics 365 Fraud Protection to review your historical data, and then using powerful tools like the customizable rules engine, the risk support toolset, and more, you can fine-tune your fraud protection decisions, support your customers, and implement new strategies based on the knowledge gained from Dynamics 365 Fraud Protection and Microsoft’s fraud protection network.
+Microsoft Dynamics 365 Fraud Protection provides merchants the capability to assess e-commerce transactions for fraudulent activity. By using Fraud Protection to review your historical data, and then using powerful tools like the customizable rules engine, the risk support toolset, and more, you can fine-tune your fraud protection decisions, support your customers, and implement new strategies based on the knowledge gained from the Fraud Protection service and Microsoft’s fraud protection network.
 
 Learn more about the following features used in purchase protection:
 
