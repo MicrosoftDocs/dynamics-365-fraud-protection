@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: v-davido
 description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-jegrif
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/16/2019
+ms.date: 12/04/2019
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -25,7 +25,7 @@ Select **Assign role** to grant access a to user or group in this environment. T
 
 To assign a specific role to the user, use the **Roles** dropdown and select one or more of the defined roles. Then select **Assign role** to create the user. 
 
-To edit or delete existing users, select them by name in the **Member** list and then select **Edit** or **Remove**. Roles can be added or deleted from a member in this section. Note that editing your own account, for instance deleting your own administrative role, may interfere with your ability to use certain features of Dynamics 365 Fraud Protection. If you need to restore permissions, you can reset this in the [Azure portal](https://portal.azure.com/#home). 
+To edit or delete existing users, select them by name in the **Member** list and then select **Edit** or **Remove**. Roles can be added or deleted from a member in this section. Note that editing your own account, for instance deleting your own administrative role, may interfere with your ability to use certain features of Fraud Protection. If you need to restore permissions, you can reset this in the [Azure portal](https://portal.azure.com/#home). 
 
 To learn more about the available roles, see the “Dynamics 365 Fraud Protection roles” section of this document. 
 
@@ -35,7 +35,7 @@ Users and roles can also be managed through the Azure portal. For information ab
 
 ## Dynamics 365 Fraud Protection roles 
 
-Dynamics 365 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select these when assigning a user to Dynamics 365 Fraud Protection. 
+Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select these when assigning a user to the system. 
 
 All roles listed here are named as they would be in your production environment. To grant users access to these roles in your sandbox environment, choose the version of the role that begins with “Sandbox_” (for example, “Sandbox_AllAreas_Admin”). 
 
