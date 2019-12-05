@@ -1,9 +1,9 @@
 ---
-author: jackwi111
+author: v-davido
 description: Fraud Protection overview
-ms.author: v-jowigh
+ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 09/04/2019
+ms.date: 12/04/2019
 
 ms.topic: conceptual
 search.app: 
@@ -28,7 +28,7 @@ Microsoft Dynamics 365 Fraud Protection focuses on payment fraud protection and 
 
 Microsoft has many years of experience protecting our own e-commerce businesses from fraud. We have developed a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time.
 
-By using Dynamics 365 Fraud Protection, you can help protect your business from fraud through several innovative and advanced capabilities. Here are some examples: 
+By using Fraud Protection, you can help protect your business from fraud through several innovative and advanced capabilities. Here are some examples: 
 
 - [AI and insights from the fraud protection network](fraud-protection-network.md)
 - [Device fingerprinting](device-fingerprinting.md)
@@ -38,8 +38,8 @@ By using Dynamics 365 Fraud Protection, you can help protect your business from 
 
 These capabilities are part of a comprehensive set of features that are grouped into three user experiences to help accelerate your journey toward a more comprehensive fraud protection environment: 
 
-- **Diagnose** – Use this experience in Dynamics 365 Fraud Protection to gain insights into fraud issues in your environment.
-- **Evaluate** – Use this experience to assess and evaluate the effectiveness of Dynamics 365 Fraud Protection relative to your current fraud protection solution.
+- **Diagnose** – Use this experience in Fraud Protection to gain insights into fraud issues in your environment.
+- **Evaluate** – Use this experience to assess and evaluate the effectiveness of Fraud Protection relative to your current fraud protection solution.
 - **Protect** – Use this experience to customize business rules to obtain recommendations for your e-commerce transaction decisions.
 
 > [!NOTE]
