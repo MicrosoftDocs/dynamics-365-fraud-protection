@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains how to implement device fingerprinting.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 11/18/2019
+ms.date: 12/05/2019
 
 
 ms.topic: conceptual
@@ -16,12 +16,23 @@ title: Implement device fingerprinting
 
 # Implement device fingerprinting
 
-As one of its most powerful features, Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that is based on artificial intelligence (AI). This feature enables the service to identifcation **devices** (computer, Xbox, tablet, etc.) across multiple sessions or interactions that engage with your business and others' in the fraud network. Additionally, this feature allows the service to link seemingly unreltated events to each other in the fraud network to identity patterns of fraud. Device fingerprinting runs on Microsoft Azure. It is cloud-scalable, reliable, and provides enterprise-grade security.
+Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that is based on artificial intelligence (AI). This feature enables the identification of devices (computer, Xbox, tablet, and so on)  across multiple sessions or interactions that engage with your business and others’ in the fraud network. Additionally, this feature allows the service to link seemingly unrelated events to each other in the fraud network to identify patterns of fraud. Device fingerprinting runs on Microsoft Azure. It's cloud-scalable, reliable, and provides enterprise-grade security.
+When you implement Fraud Protection device fingerprinting by integrating the script on your online services, you direct Microsoft to collect the following types of data from the devices interacting with such services:
+
+•  Device attributes such as plugins installed, processor class etc.
+•  Operating system attributes, such as OS Information.
+•  Browser related attributes if applicable such as browser language, font etc.
+•  Network attributes, such as IP address, signature hash etc.
 
 
-By tracking elements that are related to a device (computer, Xbox, tablet, and so on), you can link individual devices to events. Therefore, device fingerprinting lets you link seemingly unrelated events to each other by capturing and identifying unique device characteristics during the processes for adding a payment instrument, sign-in, and checkout.
+It is your responsibility to:
 
-The process of integrating device fingerprinting for Dynamics 365 Fraud Protection consists of the following tasks:
+1. Inform your customers of your data processing practices, for example by disclosing the data you collect and how it is used. 
+2. Disclose your use of third parties working on your behalf to process the data you collect, including Fraud Protection service providers. 
+3. Comply with all laws and regulations applicable to its use of Fraud Protection, including data protection laws. 
+
+
+The process of integrating device fingerprinting for Fraud Protection consists of the following tasks:
 
 1. Set up Microsoft Azure DNS.
 1. Integrate device fingerprinting with your website.
@@ -39,11 +50,11 @@ The process of integrating device fingerprinting for Dynamics 365 Fraud Protecti
 3. For back-end onboarding, generate the Secure Sockets Layer (SSL) certificate for the selected subdomain.
 4. To start the process of exchanging SSL certificates, contact <DFPHelp@microsoft.com>.
 
-## Integrate device fingerprinting with your website
+## Integrate device fingerprinting with your website or Application
 
-Your web application should serve the device fingerprinting before it submits a transaction (such as a transaction for adding a payment instrument, sign-in, or checkout). Follow these steps to integrate device fingerprinting with your website.
+Your website or application should enable the device fingerprinting before it submits a transaction (such as a transaction for adding a payment instrument, sign-in, or checkout). Follow these steps to integrate device fingerprinting with your website.
 
-1. Insert a **script** element on the webpages where you will profile your user's devices.
+1. Insert a **script** on the webpage/application where you want collect device fingerprinting information    
 
     ```
     <script src="https://fpt.<Your_Root_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
