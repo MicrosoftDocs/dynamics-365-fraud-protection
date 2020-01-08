@@ -10,10 +10,10 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Security, compliance, and data subject requests
+title: Compliance
 ---
 
-# Security, compliance, and data subject requests
+# Compliance
 
 Microsoft runs on trust. Microsoft Dynamics 365 Fraud Protection is built on the four foundational principles that Microsoft has defined for a trusted cloud: security, privacy, compliance, and transparency. Microsoft safeguards your business knowledge as if it were its own.
 
