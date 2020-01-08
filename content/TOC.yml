@@ -60,6 +60,8 @@
   href: fraud-protection-network.md
 - name: Compliance
   href: security-compliance.md
+- name: Security
+  href: security.md
 - name: Data processing and protection
   href: data-processing-protection.md
 - name: Visually explore your data
