@@ -15,25 +15,31 @@ title: Compliance
 
 # Compliance
 
-Microsoft runs on trust. Microsoft Dynamics 365 Fraud Protection is built on the four foundational principles that Microsoft has defined for a trusted cloud: security, privacy, compliance, and transparency. Microsoft safeguards your business knowledge as if it were its own.
+Dynamics 365 Fraud Protection was designed with compliance, privacy, security, and confidentiality in mind and is only intended to be used to prevent fraud and help identify legitimate payment transactions. Microsoft offers Fraud Protection under the Microsoft Online Services Terms, which includes robust Data Protection Terms.
+
+To review the Microsoft Online Services Terms, which include Fraud Protection-specific provisions, to determine if Fraud Protection meets your requirements, please visit: https://www.microsoft.com/licensing/product-licensing/products.
+
+It is your responsibility to:
+
+- Inform your customers of your data processing practice, for example by disclosing the data you collect and how it is used. 
+- Disclose your use of third parties working on your behalf to process the data you collect, including Fraud Protection service providers. 
+- Comply with all laws and regulations applicable to its use of Fraud Protection, including data protection laws. 
+
+## Start with transparency 
+
+Prior to implementing Fraud Protection, be sure the privacy disclosures in your ecommerce experience describe how you use personal data, including how it is used to prevent and detect fraud. Leverage the Fraud Protection documentation to meet your transparency needs. 
+
+## Honor Data subject requests
+
+Fraud Protection provides tools to help you comply with data subject requests from your customers. These tools enable you to delete and export customer data from the service which has not been de-identified. De-identified personal data processed in the Fraud Network cannot be accessed, exported, viewed, or deleted. The process used to de-identify the data before it enters the Fraud Network renders the data practically impossible to reverse engineer. Therefore, personal data in the Fraud Network is unidentifiable for purposes of data subject requests.  
 
 For more information, see the following resources:
-
-- [Microsoft Trust Center](https://www.microsoft.com/trustcenter/default.aspx)
-- [Microsoft Runs on Trust](https://www.microsoft.com/en-us/legal/compliance/integrity)
-
-## Data subject requests
-
-Fraud Protection provides tools to help you comply with requests from your customers (data subjects) to export or delete their personal data.
-
-For more information, see the following resources:
-
 - [Data Subject Requests for the GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-data-subject-requests)
 - [Safeguard individual privacy with the Microsoft Cloud](https://www.microsoft.com/trustcenter/privacy/gdpr/gdpr-overview)
 - [Microsoft Dynamics 365 and GDPR](https://docs.microsoft.com/dynamics365/get-started/gdpr/index)
 - [Microsoft Power BI GDPR white paper](https://powerbi.microsoft.com/blog/power-bi-gdpr-whitepaper-is-now-available/)
 
-In the Diagnose experience for Fraud Protection, you can delete the offline data that you've uploaded. At the top of the page, select **Delete my data**.
+In the Diagnose experience for Dynamics 365 Fraud Protection, you can delete the offline data that you've uploaded into Dynamics 365 Fraud Protection. At the top of the page, select **Delete my data**.
 
 In the Evaluate and Protect experiences, for all entities that contain personal data, you can perform the following tasks:
 
@@ -58,4 +64,5 @@ Select the **Requests** tab that identifies the following properties for your se
 - Request types (delete or export)
 - Subject ID
 - Statuses (pending or complete)
-- Exported data links
+- Exported data links.
+
