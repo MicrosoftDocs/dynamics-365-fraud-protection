@@ -3,7 +3,7 @@ author: v-davido
 description: This topic provides information about security, compliance, and data subject requests.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 12/2/2019
+ms.date: 01/09/2020
 
 ms.topic: conceptual
 search.app: 
@@ -29,7 +29,7 @@ It is your responsibility to:
 
 Prior to implementing Fraud Protection, be sure the privacy disclosures in your ecommerce experience describe how you use personal data, including how it is used to prevent and detect fraud. Leverage the Fraud Protection documentation to meet your transparency needs. 
 
-## Honor Data subject requests
+## Honor data subject requests
 
 Fraud Protection provides tools to help you comply with data subject requests from your customers. These tools enable you to delete and export customer data from the service which has not been de-identified. De-identified personal data processed in the Fraud Network cannot be accessed, exported, viewed, or deleted. The process used to de-identify the data before it enters the Fraud Network renders the data practically impossible to reverse engineer. Therefore, personal data in the Fraud Network is unidentifiable for purposes of data subject requests.  
 
