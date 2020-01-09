@@ -41,3 +41,72 @@ Fraud Protection processes three types of Customer Data to provide the service:
   - Device attributes such as plugins installed, processor class etc. 
   - Operating system attributes, such as OS Information. 
   - Browser related attributes if applicable such as browser language, font etc.
+  - Network attributes, such as IP address, signature hash etc. 
+
+- **Device Data**. This is information about the devices visiting our customer’s e-commerce properties, such as:
+
+  - The account name and email address. 
+  - Information about when the account was created. 
+  - Information about events associated with the account, such as when the shipping address or email associated with the account changes.
+
+Both Payment Transaction Data and Account Activity Data are provided to Fraud Protection by customers two ways:
+
+  - Customers use the Fraud Protection API to transmit data associated with real-time payment transactions or account activities. 
+  - Customers upload data about past payment transactions and account activities to the service.
+  
+Device Data is collected and transmitted to Fraud Protection when a customer installs a device fingerprinting script into their e-commerce properties, which instructs Fraud Protection to collect data on its behalf from devices visiting the customer’s e-commerce properties. 
+
+## How does Fraud Protection process this data?  
+
+Fraud Protection processes the Customer Data described above for the sole purpose of providing the service pursuant to the instructions provided in the Microsoft Online Services Terms and those configured by the customer in its administration of the service. To provide the service, Microsoft uses Customer Data to secure, improve, and troubleshoot the service, as well as to generate fraud insights from hashed data (see below) from all Fraud Protection customers within the Fraud Protection Network (the “Fraud Network”).  
+
+### Fraud Protection enriches and normalizes customer data  
+
+Payment Transaction Data, Account Activity Data, and Device Data are enriched and normalized to aid the service’s application of machine learning and artificial intelligence. For example:
+
+  - Transaction amount is converted into US dollars using the current exchange rateTransaction amount is converted into US dollars using the current exchange rate. 
+  - Addresses, such as the billing or shipping address associated with a transaction, are converted into a canonical format. For example, "One Microsoft Wy" may become "1 Microsoft Way.”.
+  - Device Data collected from a single device is converted to a fuzzy identifier.
+
+
+### Dynamics 365 Fraud Protection hashes certain customer data to be processed in the Fraud Network  
+
+Fraud Protection hashes customer data containing personal data that can identify a data subject prior to transmitting it into the Fraud Network where it is processed to generate fraud insights. The hashing technique used by Fraud Protection turns this Customer dDta into unique tokens, or strings of characters. For example, the email address “JohnDoe@outlook.com” will always map to the same string of characters, like “TK239732.”  This technique serves the following purposes.
+
+The technique produces the same output for an input (it’s reproducible). The de-identification technique, which uses a salt specific to the Fraud Network and unique salts for each customer, ensures the same input value always maps to the same output token. For example, the email address “JohnDoe@outlook.com” will always map to “TK239732” (say) when the salt specific to the Fraud Network is used, no matter which customer provides the input and at what point in time. This property enables Fraud Protection to identify patterns of fraud, and make connections between tokens, across all customers of Fraud Protection within the Fraud Network. By processing Customer Data with a unique salt only assigned to one customer, Fraud Protection is also able to provide customers with information about their own patterns of fraud, as Fraud Protection can make connections between tokens for a single customer. In this context, a “salt” is a random value added to a one-way hashing technique that further randomizes the output.   
+
+The technique produces (practically) a one-to-one mapping. Although the hashing technique is technically not a one-is-to-one mapping for any given salt, the probability that two distinct input values will result in the same output value (called a “hash collision”) is vanishingly small. This means that for practical purposes we can rely on the connections made between the tokens. 
+
+The technique is practically irreversible. This process makes it practically impossible to reverse engineer a token back to the original input, identify a data subject from the tokens, or otherwise “rehydrate” this Customer Data without access to the hash function and the salt. Reversing engineering the technique to rehydrate the data, and render it identifiable, would require a highly sophisticated, brute force attack. 
+
+The technique gives customers added assurance that their Customer Data will not be shared with other Fraud Protection customers. The tokens in the Fraud Network cannot be linked to any specific Fraud Protection customer without access to the hash function, salt, and raw data in that customer’s merchant space and a then a brute force attack.  
+
+### Fraud Protection applies artifical intelligence to the tokens in the Fraud Network to generate fraud insights for Fraud Protection customers                 
+
+Fraud Protection uses artificial intelligence to understand patterns of fraud which enables the service to generate fraud insights for new real-time payment transactions and account activities for customers. These fraud insights include a risk score for the real-time event and reason codes for the score. For example, within the Fraud Network, Fraud Protection may detect a suspiciously high volume of payment transactions, within a noticeably short period of time, associated with a particular token (which could represent a billing address or IP Address). If Fraud Protection detects that token in new, real-time payment transactions, it may provide the customer with a higher risk score and a reason code that indicates that Fraud Protection has detected a suspiciously high volume of transactions for a data attribute associated with the transaction.  
+
+### Fraud Protection processes customer data in accordance with business rules set by the customer  
+
+Customers can set business rules within Fraud Protection to automate its own analysis of a real-time transaction or account event, regarding the risk score and reason codes. For example, in addition to the fraud insights provided by Fraud Protection, customers apply their own business rules to approve a payment transaction based on any number of factors, including the transaction amount, the payment instrument used, or the content of the order. Each customer’s business rules are treated as customer confidential information and Customer Data. Fraud Protection will process such data on behalf of the customer, in accordance with the business rules set, to make a recommendation on accepting or rejecting the transaction or event.  
+
+### Fraud Protection enables customers to share Transaction Trust Knowledge with participating banks
+Customers can choose to use the Transaction Acceptance Booster by opting into the feature. This feature allows customers to instruct Microsoft to share certain Customer Data, called Transaction Trust Knowledge, with participating banks when a payment transaction is initiated with a payment instrument issued by the participating bank. Transaction Trust Knowledge is a small payload of customer data and includes:
+
+- An ordinal variable generated by Fraud Protection that represents Fraud Protection’s risk assessment of the transaction.
+- The latitude-longitude (up to first decimal precision) representing the geolocation of the transaction initiator.
+- A device identifier associated with the transaction initiator.
+- The bank identification number (“BIN”).
+- the last four digits of the payment card used in the transaction.
+- The transaction amount.   
+
+By opting into this feature, a customer directs Fraud Protection to transmit Transaction Trust Knowledge on its behalf to a participating bank when a payment transaction is initiated on the customer’s ecommerce property with a payment card issued by such bank. For any given payment transaction, a customer’s Transaction Trust Knowledge is only shared with the participating bank when a payment card issued by that bank is used to initiate that payment transaction.  
+
+The Transaction Trust Knowledge is independently processed by participating banks in accordance with agreements with a customer and applicable network rules. For information about how banks process personal data sent by merchants, such as the Transaction Trust Knowledge, Fraud Protection customers are invited to directly contact the participating banks with which they do business.  
+
+### Fraud Protection processes customer data to provide tools, such as graphical reports, to surface business intelligence related to fraud  
+
+Fraud Protection uses customer data to provide tools to help customers understand how fraud is impacting its ecommerce business. Such tools include reporting functionality, graphical displays, and support services features.  
+
+## How long is data processed by Fraud Protection? 
+
+As outlined in the Microsoft Online Services Terms (OST), Microsoft will retain Customer Data that remains stored in Dynamics 365 Fraud Protection in a limited function account for 90 days after expiration or termination of customer’s subscription so that customer may extract the data. After the 90-day retention period ends, Microsoft will disable Customer’s account and delete the Customer Data and Personal Data within an additional 90 days, unless Microsoft is permitted or required by applicable law to retain such data or authorized in this agreement. Please note however that these data retention and deletion commitments do not apply to the tokens processed in the Fraud Network (see above) for the sole purpose of fraud detection. The tokens are processed for two years and then they are deleted. This means that the tokens in the Fraud Network may be deleted before or up to two years after expiration or termination of a customer’s subscription.  
