@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains privacy in Dynamics 365 Fraud Protection.
 ms.author: v-v-davido
 ms.service: fraud-protection
-ms.date: 01/09/2020
+ms.date: 01/10/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -71,7 +71,7 @@ Payment Transaction Data, Account Activity Data, and Device Data are enriched an
 
 ### Dynamics 365 Fraud Protection hashes certain customer data to be processed in the Fraud Network  
 
-Fraud Protection hashes customer data containing personal data that can identify a data subject prior to transmitting it into the Fraud Network where it is processed to generate fraud insights. The hashing technique used by Fraud Protection turns this Customer dDta into unique tokens, or strings of characters. For example, the email address “JohnDoe@outlook.com” will always map to the same string of characters, like “TK239732.”  This technique serves the following purposes.
+Fraud Protection hashes customer data containing personal data that can identify a data subject prior to transmitting it into the Fraud Network where it is processed to generate fraud insights. The hashing technique used by Fraud Protection turns this Customer Data into unique tokens, or strings of characters. For example, the email address “JohnDoe@outlook.com” will always map to the same string of characters, like “TK239732.”  This technique serves the following purposes.
 
 The technique produces the same output for an input (it’s reproducible). The de-identification technique, which uses a salt specific to the Fraud Network and unique salts for each customer, ensures the same input value always maps to the same output token. For example, the email address “JohnDoe@outlook.com” will always map to “TK239732” (say) when the salt specific to the Fraud Network is used, no matter which customer provides the input and at what point in time. This property enables Fraud Protection to identify patterns of fraud, and make connections between tokens, across all customers of Fraud Protection within the Fraud Network. By processing Customer Data with a unique salt only assigned to one customer, Fraud Protection is also able to provide customers with information about their own patterns of fraud, as Fraud Protection can make connections between tokens for a single customer. In this context, a “salt” is a random value added to a one-way hashing technique that further randomizes the output.   
 
@@ -107,6 +107,3 @@ The Transaction Trust Knowledge is independently processed by participating bank
 
 Fraud Protection uses customer data to provide tools to help customers understand how fraud is impacting its ecommerce business. Such tools include reporting functionality, graphical displays, and support services features.  
 
-## How long is data processed by Fraud Protection? 
-
-As outlined in the Microsoft Online Services Terms (OST), Microsoft will retain Customer Data that remains stored in Dynamics 365 Fraud Protection in a limited function account for 90 days after expiration or termination of customer’s subscription so that customer may extract the data. After the 90-day retention period ends, Microsoft will disable Customer’s account and delete the Customer Data and Personal Data within an additional 90 days, unless Microsoft is permitted or required by applicable law to retain such data or authorized in this agreement. Please note however that these data retention and deletion commitments do not apply to the tokens processed in the Fraud Network (see above) for the sole purpose of fraud detection. The tokens are processed for two years and then they are deleted. This means that the tokens in the Fraud Network may be deleted before or up to two years after expiration or termination of a customer’s subscription.  
