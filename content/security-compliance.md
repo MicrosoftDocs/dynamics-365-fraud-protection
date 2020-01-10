@@ -31,7 +31,7 @@ Prior to implementing Fraud Protection, be sure the privacy disclosures in your 
 
 ## Honor data subject requests
 
-Fraud Protection provides tools to help you comply with data subject requests from your customers. These tools enable you to delete and export customer data from the service which has not been processed using deidentification techniques in the fraud network. Data processed in the Fraud Network cannot be accessed, exported, viewed, or deleted. 
+Fraud Protection provides tools to help you comply with data subject requests from your customers. These tools enable you to delete and export customer data from the service which has not been processed using deidentification techniques in the fraud network. Data processed in the fraud network cannot be accessed, exported, viewed, or deleted. 
 
 For more information, see the following resources:
 - [Data Subject Requests for the GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-data-subject-requests)
