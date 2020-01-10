@@ -58,9 +58,11 @@
       href: metering.md  
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
-- name: Security, compliance, and data subject requests
+- name: Compliance
   href: security-compliance.md
-- name: Data processing and protection
+- name: Security
+  href: security.md
+- name: Privacy
   href: data-processing-protection.md
 - name: Visually explore your data
   href: graph-explorer.md
