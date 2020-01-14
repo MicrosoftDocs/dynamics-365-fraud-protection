@@ -9,10 +9,10 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - IT Pro
+  - admin
 title: Compliance
 
-# audience: IT Pro
+
 ---
 
 # Compliance
