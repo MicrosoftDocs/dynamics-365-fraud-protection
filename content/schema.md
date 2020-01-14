@@ -9,10 +9,9 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - IT Pro
+  - admin
 title: View purchase protection schemas
 
-# audience: IT Pro
 ---
 
 # View purchase protection schemas
