@@ -8,7 +8,7 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - admin
+  - IT Pro
 
 title: Use the virtual fraud analyst
 
