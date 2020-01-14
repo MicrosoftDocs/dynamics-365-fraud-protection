@@ -8,11 +8,10 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - IT Pro
+  - admin
 
 title: Use the virtual fraud analyst
 
-# audience: IT Pro
 ---
 
 # Use the virtual fraud analyst
