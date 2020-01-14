@@ -9,10 +9,9 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - IT Pro
+  - admin
 title: Artificial intelligence (AI) and insights from the fraud protection network
 
-# audience: IT Pro
 ---
 
 
