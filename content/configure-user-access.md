@@ -8,7 +8,7 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - admin
+  - IT Pro
 title: Configure user access to Dynamics 365 Fraud Protection
 
 # audience: IT Pro
