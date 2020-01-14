@@ -3,7 +3,7 @@ author: v-davido
 description: This topic outlines the schemas that are required for historical data upload
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 11/18/2019
+ms.date: 01/14/2020
 
 ms.topic: conceptual
 search.app: 
