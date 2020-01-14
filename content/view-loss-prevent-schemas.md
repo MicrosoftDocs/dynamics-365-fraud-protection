@@ -26,19 +26,6 @@ Note the following formatting guidelines throughout:
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
-## Transaction Staging
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| AMOUNTPOSTEDTOACCOUNT | numeric | Amount posted to account for GL posting. |
-| BATCHID | bigint | Not sure. May be deprecated. |
-| COSTAMOUNT | numeric | Cost for items. |
-| CREATEDOFFLINE | int | Was created offline w/o db connection. |
-| COSTAMOUNT | numeric | Cost for items. |
-
-
-
-## table test -- start
 
 ## TransactionStaging
 
@@ -250,35 +237,5 @@ Note the following formatting guidelines throughout:
 | DEFAULTFUNCTION     | [int] NOT NULL          | TBD                                                           |
 | NAME                | [nvarchar](60) NOT NULL | TBD                                                           |
 | PAYMENTMETHODNUMBER | [nvarchar](10) NOT NULL | TBD                                                           |
-
-
-
-
-
-## end table test
-
-## Transaction Sales Line Staging
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| trackingId | string | The identifier of the Signup event. |
-
-## Transaction Payment Line Staging
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| trackingId | string | The identifier of the Signup event. |
-
-## Payment Method
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| trackingId | string | The identifier of the Signup event. |
-
-## Transaction Staging
-
-| Attribute | Type | Description |
-| --- | --- | --- |
-| trackingId | string | The identifier of the Signup event. |
 
 
