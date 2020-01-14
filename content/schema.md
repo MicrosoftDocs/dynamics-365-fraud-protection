@@ -12,6 +12,7 @@ search.audienceType:
   - admin
 title: View purchase protection schemas
 
+# audience: IT Pro
 ---
 
 # View purchase protection schemas
