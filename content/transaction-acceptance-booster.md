@@ -3,7 +3,7 @@ author: v-davido
 description: This topic provides information about how you can boost bank acceptance rates.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 12/03/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -11,6 +11,7 @@ search.audienceType:
   - admin
 
 title: Boost bank acceptance rates with the transaction acceptance booster
+
 ---
 
 # Boost bank acceptance rates with the transaction acceptance booster
