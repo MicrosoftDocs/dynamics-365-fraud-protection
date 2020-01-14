@@ -38,7 +38,9 @@ Note the following formatting guidelines throughout:
 
 
 
-## table test
+## table test -- start
+
+## TransactionStaging
 
 | AMOUNTPOSTE+A2:C54DTOACCOUNT    | [numeric](32 6) NOT NULL  | Amount posted to account for GL posting                                                                                                                      |
 |---------------------------------|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -104,6 +106,107 @@ Note the following formatting guidelines throughout:
 | TRANSACTIONTYPE                 | [int] NOT NULL            | Cash and carry vs order                                                                                                                                      |
 | TRANSFERSTATUS                  | [int] NOT NULL            |                                                                                                                                                              |
 | WAREHOUSE                       | [nvarchar](10) NOT NULL   | Maps to Store 1:1                                                                                                                                            |
+
+## TransactionSalesLineStaging
+
+| Attribute                       | Type                      | Description                                                                                        |
+|---------------------------------|---------------------------|----------------------------------------------------------------------------------------------------|
+| BARCODE                         | [nvarchar](80) NOT NULL   | Bar code that was scanned                                                                          |
+| CASHDISCOUNTAMOUNT              | [numeric](32 6) NOT NULL  | Amount of cash disount, if applicable                                                              |
+| CATEGORYHIERARCHYNAME           | [nvarchar](128) NOT NULL  | Categrory hierarchy used to organize products                                                      |
+| CATEGORYNAME                    | [nvarchar](254) NOT NULL  | Name of the product category                                                                       |
+| CHANNELLISTINGID                | [nvarchar](50) NOT NULL   | ?                                                                                                  |
+| COSTAMOUNT                      | [numeric](32 6) NOT NULL  | Product cost                                                                                       |
+| CURRENCY                        | [nvarchar](3) NOT NULL    | Currency paid?                                                                                     |
+| CUSTOMERACCOUNT                 | [nvarchar](38) NOT NULL   | Customer account number                                                                            |
+| CUSTOMERDISCOUNT                | [numeric](32 6) NOT NULL  | Customer discount                                                                                  |
+| CUSTOMERINVOICEDISCOUNTAMOUNT   | [numeric](32 6) NOT NULL  | ?                                                                                                  |
+| DATAAREAID                      | [nvarchar](4) NOT NULL    |                                                                                                    |
+| DEFINITIONGROUP                 | [nvarchar](60) NOT NULL   |                                                                                                    |
+| DISCOUNTAMOUNTFORPRINTING       | [numeric](32 6) NOT NULL  | ?                                                                                                  |
+| DISCOUNTAMOUNTWITHOUTTAX        | [numeric](32 6) NOT NULL  |                                                                                                    |
+| ELECTRONICDELIVERYEMAIL         | [nvarchar](80) NOT NULL   | Email address                                                                                      |
+| EXECUTIONID                     | [nvarchar](90) NOT NULL   |                                                                                                    |
+| GIFTCARD                        | [int] NOT NULL            | Gift card number                                                                                   |
+| INVENTORYSTATUS                 | [int] NOT NULL            | ?                                                                                                  |
+| ISLINEDISCOUNTED                | [int] NOT NULL            | Is the txn line discounted                                                                         |
+| ISLINKEDPRODUCTNOTORIGINAL      | [int] NOT NULL            | If linked item was changed                                                                         |
+| ISORIGINALOFLINKEDPRODUCTLIST   | [int] NOT NULL            | ?                                                                                                  |
+| ISPRICECHANGE                   | [int] NOT NULL            | If price was changed manually                                                                      |
+| ISRETURNNOSALE                  | [int] NOT NULL            | ?                                                                                                  |
+| ISSCALEPRODUCT                  | [int] NOT NULL            | Is the connected scale used to get Qty                                                             |
+| ISSELECTED                      | [int] NOT NULL            |                                                                                                    |
+| ISWEIGHTMANUALLYENTERED         | [int] NOT NULL            | If scale is not connected, cashier can enter weight manually                                       |
+| ISWEIGHTPRODUCT                 | [int] NOT NULL            | Same as scale product?                                                                             |
+| ITEMCOLOR                       | [nvarchar](25) NOT NULL   | Color                                                                                              |
+| ITEMCONFIGID                    | [nvarchar](50) NOT NULL   | Configuration ID for kits                                                                          |
+| ITEMID                          | [nvarchar](20) NOT NULL   | Product ID                                                                                         |
+| ITEMRELATION                    | [nvarchar](20) NOT NULL   | ?                                                                                                  |
+| ITEMSALESTAXGROUP               | [nvarchar](10) NOT NULL   | Effective sales tax group for the item                                                             |
+| ITEMSIZE                        | [nvarchar](10) NOT NULL   | Size                                                                                               |
+| ITEMSTYLE                       | [nvarchar](10) NOT NULL   | Style, like color and size is another product dimension                                            |
+| KEYBOARDPRODUCTENTRY            | [int] NOT NULL            | If product ID was keyed in                                                                         |
+| LINEDISCOUNT                    | [numeric](32 6) NOT NULL  | Discount on line                                                                                   |
+| LINEMANUALDISCOUNTAMOUNT        | [numeric](32 6) NOT NULL  | If discount was manually entered, the amount                                                       |
+| LINEMANUALDISCOUNTPERCENTAGE    | [numeric](32 6) NOT NULL  | If manual percentage discount was applied, the percentage                                          |
+| LINENUMBER                      | [numeric](32 16) NOT NULL | Line number on the transaction                                                                     |
+| LINEPERCENTAGEDISCOUNT          | [numeric](32 6) NOT NULL  | Automatic percentage discount amount                                                               |
+| LOGISTICLOCATIONID              | [nvarchar](30) NOT NULL   | ?                                                                                                  |
+| LOGISTICSPOSTALADDRESSVALIDFROM | [datetime] NOT NULL       | ?                                                                                                  |
+| LOTID                           | [nvarchar](20) NOT NULL   | Not used                                                                                           |
+| MODEOFDELIVERY                  | [nvarchar](10) NOT NULL   | Method of delivery to the customer                                                                 |
+| NETAMOUNT                       | [numeric](32 6) NOT NULL  | Net amount for transaction                                                                         |
+| NETAMOUNTINCLUSIVETAX           | [numeric](32 6) NOT NULL  | Net amount with tax included                                                                       |
+| NETPRICE                        | [numeric](32 6) NOT NULL  | Net price for the line before discounts                                                            |
+| OFFERNUMBER                     | [nvarchar](40) NOT NULL   | ?                                                                                                  |
+| OPERATINGUNITNUMBER             | [nvarchar](30) NOT NULL   | Part of the reference data that comprises a store                                                  |
+| ORIGINALITEMSALESTAXGROUP       | [nvarchar](10) NOT NULL   | If tax is overridden, tracks what the original tax amt was.                                        |
+| ORIGINALPRICE                   | [numeric](32 6) NOT NULL  | Product price without sale pricing applied                                                         |
+| ORIGINALSALESTAXGROUP           | [nvarchar](10) NOT NULL   | Original sales tax group for the transaction                                                       |
+| PARTITION                       | [nvarchar](20) NOT NULL   |                                                                                                    |
+| PERIODICDISCOUNTAMOUNT          | [numeric](32 6) NOT NULL  | Discount amount for periodic discount(kind of like happy hour)                                     |
+| PERIODICDISCOUNTGROUP           | [nvarchar](10) NOT NULL   | Periodic discount group                                                                            |
+| PERIODICDISCOUNTPERCENTAGE      | [numeric](32 6) NOT NULL  | Periodic discount percentage                                                                       |
+| PRICE                           | [numeric](32 6) NOT NULL  | Price (I believe with discounts)                                                                   |
+| PRICEGROUPS                     | [nvarchar](10) NOT NULL   | Price group that products and customers belong to.                                                 |
+| PRICEINBARCODE                  | [int] NOT NULL            | If price embedded bar code was scanned                                                             |
+| PRODUCTSCANNED                  | [int] NOT NULL            | If the product was scanned                                                                         |
+| QUANTITY                        | [numeric](32 6) NOT NULL  | Quantity                                                                                           |
+| REASONCODEDISCOUNT              | [numeric](32 6) NOT NULL  | If a discount was applied, reason codes can be configured to prompt the cashier to select a reason |
+| RECEIPTNUMBER                   | [nvarchar](18) NOT NULL   | Receipt number                                                                                     |
+| REQUESTEDRECEIPTDATE            | [datetime] NOT NULL       | For customer orders, date that the customer requests arrival/pickup                                |
+| REQUESTEDSHIPDATE               | [datetime] NOT NULL       | Requested date for order to ship                                                                   |
+| RETAILEMAILADDRESSCONTENT       | [nvarchar](400) NOT NULL  | email address for receipt                                                                          |
+| RETURNLINENUMBER                | [numeric](32 16) NOT NULL | Line number from original transaction when returning from journal                                  |
+| RETURNOPERATINGUNITNUMBER       | [nvarchar](30) NOT NULL   | Store where the return is being processed                                                          |
+| RETURNQUANTITY                  | [numeric](32 6) NOT NULL  | Quantity being returned.                                                                           |
+| RETURNTERMINAL                  | [nvarchar](10) NOT NULL   | Terminal where txn is being returned.                                                              |
+| RETURNTRANSACTIONNUMBER         | [nvarchar](44) NOT NULL   | Original transaction number when returning from receipt/journal                                    |
+| RFIDTAGID                       | [nvarchar](24) NOT NULL   |                                                                                                    |
+| SALESTAXAMOUNT                  | [numeric](32 6) NOT NULL  | Amt of sales tax applied to the transaction                                                        |
+| SALESTAXGROUP                   | [nvarchar](10) NOT NULL   | Effective sales tax group for the transaction                                                      |
+| SECTIONNUMBER                   | [nvarchar](10) NOT NULL   | ?                                                                                                  |
+| SERIALNUMBER                    | [nvarchar](20) NOT NULL   | Serial number for the product                                                                      |
+| SHELFNUMBER                     | [nvarchar](10) NOT NULL   | Shelf number where the product is kept(not really used).                                           |
+| SITEID                          | [nvarchar](10) NOT NULL   | Category to which store belongs (i.e. Pacific Northwest stores)                                    |
+| SKIPREPORTS                     | [int] NOT NULL            |                                                                                                    |
+| STANDARDNETPRICE                | [numeric](32 6) NOT NULL  | Like original price?                                                                               |
+| SYNCSTARTDATETIME               | [datetime] NOT NULL       |                                                                                                    |
+| TERMINAL                        | [nvarchar](10) NOT NULL   |                                                                                                    |
+| TOTALDISCOUNT                   | [numeric](32 6) NOT NULL  | Amount of discount applied to order total.                                                         |
+| TOTALDISCOUNTINFOCODELINENUM    | [numeric](32 16) NOT NULL | If prompted for info code when applying total discount, reason code is saved here                  |
+| TOTALDISCOUNTPERCENTAGE         | [numeric](32 6) NOT NULL  | Discount percent applied to transaction total, if total discount by percent is used                |
+| TRANSACTIONCODE                 | [int] NOT NULL            | ?                                                                                                  |
+| TRANSACTIONNUMBER               | [nvarchar](44) NOT NULL   | Transaction number                                                                                 |
+| TRANSACTIONSTATUS               | [int] NOT NULL            | Posted indicates that the statement has been completed(amounts have hit the GL in the back office) |
+| TRANSFERSTATUS                  | [int] NOT NULL            |                                                                                                    |
+| UNIT                            | [nvarchar](10) NOT NULL   | Ea., Pcs, Gallons etc.                                                                             |
+| UNITPRICE                       | [numeric](32 6) NOT NULL  | Price per unit                                                                                     |
+| UNITQUANTITY                    | [numeric](32 6) NOT NULL  | Quantity of unit sold (not sure how this is different from unit)                                   |
+| VARIANTNUMBER                   | [nvarchar](10) NOT NULL   | ID for unit combination of color, size and style                                                   |
+| WAREHOUSE                       | [nvarchar](10) NOT NULL   | Reference data for store. Indicates physical location of the goods.                                |
+## PaymentLineStaging
+
 
 
 
