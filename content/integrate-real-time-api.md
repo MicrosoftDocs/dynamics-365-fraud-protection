@@ -9,10 +9,10 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - IT Pro
+  - admin
 title: Integrate Dynamics 365 Fraud Protection real-time APIs
 
-# audience: IT Pro
+
 ---
 
 # Integrate Dynamics 365 Fraud Protection real-time APIs
