@@ -66,4 +66,4 @@ Tailored access for fraud analysts and engineers in your organization working wi
 - **No access**: API configuration, Metering, Monitoring, Permissions, Transaction acceptance booster. Pages may be accessible in the navigation but cannot be used in full. 
 
 ### Risk_API
-Used for risk communications. Provides no access to the user-facing tool. 
+Grants API access. Provides no access to the user-facing tool. 
