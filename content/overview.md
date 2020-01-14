@@ -9,7 +9,7 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - sdmin
+  - admin
 title: Overview
 
 ---
