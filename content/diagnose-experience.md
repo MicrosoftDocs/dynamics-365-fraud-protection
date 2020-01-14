@@ -3,7 +3,7 @@ author: v-davido
 description: This topic provides information about the Diagnose experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 12/03/2019
+ms.date: 01/14/2020
 
 ms.topic: conceptual
 search.app: 
