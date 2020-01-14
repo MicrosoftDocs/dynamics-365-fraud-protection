@@ -8,11 +8,10 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - IT Pro
+  - admin
 
 title: Boost bank acceptance rates with the transaction acceptance booster
 
-# audience: IT Pro
 ---
 
 # Boost bank acceptance rates with the transaction acceptance booster
