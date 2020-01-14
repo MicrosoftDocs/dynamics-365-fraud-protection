@@ -9,10 +9,9 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - IT Pro
+  - admin
 title: Diagnose experience
 
-# audience: IT Pro
 ---
 
 # Diagnose experience
