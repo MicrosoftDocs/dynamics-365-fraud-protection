@@ -10,6 +10,8 @@ search.app:
 search.audienceType:
   - admin
 title: Configure user access to Dynamics 365 Fraud Protection
+
+# audience: IT Pro
 ---
 
 
