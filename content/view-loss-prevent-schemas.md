@@ -207,44 +207,49 @@ Note the following formatting guidelines throughout:
 | WAREHOUSE                       | [nvarchar](10) NOT NULL   | Reference data for store. Indicates physical location of the goods.                                |
 ## PaymentLineStaging
 
-| Attribute                        | Type                      | Customer's account number if named customer is on transaction                                                                       |
-|----------------------------------|---------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| ACCOUNTNUMBER                    | [nvarchar](30) NOT NULL   | Amount due for line                                                                                                                 |
-| AMOUNTINACCOUNTINGCURRENCY       | [numeric](32 6) NOT NULL  | amount tendered in currency (different if not store's currency)                                                                     |
-| AMOUNTINTENDEREDCURRENCY         | [numeric](32 6) NOT NULL  | Amount paid(?)                                                                                                                      |
-| AMOUNTTENDERED                   | [numeric](32 6) NOT NULL  |                                                                                                                                     |
-| AMOUNTTENDEREDADJUSTMENT         | [numeric](32 6) NOT NULL  | Truncated card no.                                                                                                                  |
-| CARDNUMBER                       | [nvarchar](30) NOT NULL   | Card name (AMEX, VISA, ETC)                                                                                                         |
-| CARDTYPEID                       | [nvarchar](10) NOT NULL   | If paid by voucher, the voucher number                                                                                              |
-| CREDITVOUCHERID                  | [nvarchar](30) NOT NULL   | Currency paid                                                                                                                       |
-| CURRENCYCODE                     | [nvarchar](3) NOT NULL    |                                                                                                                                     |
-| DATAAREAID                       | [nvarchar](4) NOT NULL    |                                                                                                                                     |
-| DEFINITIONGROUP                  | [nvarchar](60) NOT NULL   | Exchange rate                                                                                                                       |
-| EXCHANGERATEINACCOUNTINGCURRENCY | [numeric](32 16) NOT NULL | Exchange rate                                                                                                                       |
-| EXCHANGERATEINTENDEREDCURRENCY   | [numeric](32 16) NOT NULL |                                                                                                                                     |
-| EXECUTIONID                      | [nvarchar](90) NOT NULL   | Gift card number                                                                                                                    |
-| GIFTCARDID                       | [nvarchar](30) NOT NULL   | If payment is due back to customer due to overpayment                                                                               |
-| ISCHANGELINE                     | [int] NOT NULL            | Is a refund referencind previous transaction                                                                                        |
-| ISPREPAYMENT                     | [int] NOT NULL            |                                                                                                                                     |
-| ISSELECTED                       | [int] NOT NULL            | Payment line number                                                                                                                 |
-| LINENUMBER                       | [numeric](32 16) NOT NULL | Omni-channel? I think these linked fields are for when an order was created somewhere else and we pull in a tender line for capture |
-| LOYALTYCARDID                    | [nvarchar](30) NOT NULL   | Operating unit unique to store                                                                                                      |
-| OPERATINGUNITNUMBER              | [nvarchar](30) NOT NULL   |                                                                                                                                     |
-| PARTITION                        | [nvarchar](20) NOT NULL   | Capture reference provided by the processor                                                                                         |
-| QUANTITY                         | [numeric](32 6) NOT NULL  | Receipt ID. Different from Trasaction ID.                                                                                           |
-| RECEIPTID                        | [nvarchar](18) NOT NULL   | Amount for a capture that is refundable. Changes if a refund has already been processed against a tender line                       |
-| STAFF                            | [nvarchar](25) NOT NULL   |                                                                                                                                     |
-| SYNCSTARTDATETIME                | [datetime] NOT NULL       | Type of tender paid                                                                                                                 |
-| TENDERTYPE                       | [nvarchar](10) NOT NULL   |                                                                                                                                     |
-| TERMINAL                         | [nvarchar](10) NOT NULL   | Transaction number                                                                                                                  |
-| TRANSACTIONNUMBER                | [nvarchar](44) NOT NULL   | Status of payment line                                                                                                              |
-| TRANSACTIONSTATUS                | [int] NOT NULL            |                                                                                                                                     |
-| TRANSFERSTATUS                   | [int] NOT NULL            | If a tender line was voided prior to tendering the transaction                                                                      |
-| VOIDSTATUS                       | [int] NOT NULL            | If a tender line was voided prior to tendering the transaction                                                                      |
+| Attribute                        | Type                      | Description                                                     |
+|----------------------------------|---------------------------|-----------------------------------------------------------------|
+| ACCOUNTNUMBER                    | [nvarchar](30) NOT NULL   | Customer's account nubmer if named customer is on transaction   |
+| AMOUNTINACCOUNTINGCURRENCY       | [numeric](32 6) NOT NULL  | Amount due for line                                             |
+| AMOUNTINTENDEREDCURRENCY         | [numeric](32 6) NOT NULL  | amount tendered in currency (different if not store's currency) |
+| AMOUNTTENDERED                   | [numeric](32 6) NOT NULL  | Amount paid(?)                                                  |
+| AMOUNTTENDEREDADJUSTMENT         | [numeric](32 6) NOT NULL  |                                                                 |
+| CARDNUMBER                       | [nvarchar](30) NOT NULL   | Truncated card no.                                              |
+| CARDTYPEID                       | [nvarchar](10) NOT NULL   | Card name (AMEX, VISA, ETC)                                     |
+| CREDITVOUCHERID                  | [nvarchar](30) NOT NULL   | If paid by voucher, the voucher number                          |
+| CURRENCYCODE                     | [nvarchar](3) NOT NULL    | Currency paid                                                   |
+| DATAAREAID                       | [nvarchar](4) NOT NULL    |                                                                 |
+| DEFINITIONGROUP                  | [nvarchar](60) NOT NULL   |                                                                 |
+| EXCHANGERATEINACCOUNTINGCURRENCY | [numeric](32 16) NOT NULL | Exchange rate                                                   |
+| EXCHANGERATEINTENDEREDCURRENCY   | [numeric](32 16) NOT NULL | Exchange rate                                                   |
+| EXECUTIONID                      | [nvarchar](90) NOT NULL   |                                                                 |
+| GIFTCARDID                       | [nvarchar](30) NOT NULL   | Gift card number                                                |
+| ISCHANGELINE                     | [int] NOT NULL            | If payment is due back to customer due to overpayment           |
+| ISPREPAYMENT                     | [int] NOT NULL            | Is a deposit                                                    |
+| ISSELECTED                       | [int] NOT NULL            |                                                                 |
+| LINENUMBER                       | [numeric](32 16) NOT NULL | Payment line number                                             |
+| LOYALTYCARDID                    | [nvarchar](30) NOT NULL   | If paying with loyalty points, the card number provided         |
+| OPERATINGUNITNUMBER              | [nvarchar](30) NOT NULL   | Operating unit unique to store                                  |
+| PARTITION                        | [nvarchar](20) NOT NULL   |                                                                 |
+| QUANTITY                         | [numeric](32 6) NOT NULL  | ?                                                               |
+| RECEIPTID                        | [nvarchar](18) NOT NULL   | Receipt ID. Different from Trasaction ID.                       |
+| STAFF                            | [nvarchar](25) NOT NULL   | User ID                                                         |
+| SYNCSTARTDATETIME                | [datetime] NOT NULL       |                                                                 |
+| TENDERTYPE                       | [nvarchar](10) NOT NULL   | Type of tender paid                                             |
+| TERMINAL                         | [nvarchar](10) NOT NULL   |                                                                 |
+| TRANSACTIONNUMBER                | [nvarchar](44) NOT NULL   | Transaction number                                              |
+| TRANSACTIONSTATUS                | [int] NOT NULL            | Status of payment line                                          |
+| TRANSFERSTATUS                   | [int] NOT NULL            |                                                                 |
+| VOIDSTATUS                       | [int] NOT NULL            | If a tender line was voided prior to tendering the transaction  |
+
 
 ## PaymentMethod
 
-
+| Attribute           | Type                    | Description |
+|---------------------|-------------------------|---------------------------------------------------------------|
+| DEFAULTFUNCTION     | [int] NOT NULL          | TBD                                                           |
+| NAME                | [nvarchar](60) NOT NULL | TBD                                                           |
+| PAYMENTMETHODNUMBER | [nvarchar](10) NOT NULL | TBD                                                           |
 
 
 
