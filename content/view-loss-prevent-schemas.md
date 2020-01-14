@@ -30,7 +30,14 @@ Note the following formatting guidelines throughout:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| trackingId | string | The identifier of the Signup event. |
+| AMOUNTPOSTEDTOACCOUNT | numeric | Amount posted to account for GL posting. |
+| BATCHID | bigint | Not sure. May be deprecated. |
+| COSTAMOUNT | numeric | Cost for items. |
+| CREATEDOFFLINE | int | Was created offline w/o db connection. |
+| COSTAMOUNT | numeric | Cost for items. |
+
+
+
 
 ## Transaction Sales Line Staging
 
