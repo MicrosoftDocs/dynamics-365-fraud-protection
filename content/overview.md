@@ -9,10 +9,9 @@ ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
-  - IT Pro
+  - sdmin
 title: Overview
 
-# audience: IT Pro
 ---
 
 
