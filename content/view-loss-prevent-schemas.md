@@ -3,7 +3,7 @@ author: v-davido
 description: This topic outlines the requred schema for the loss prevention API.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/14/2020
+ms.date: 01/17/2020
 
 ms.topic: conceptual
 search.app: 
