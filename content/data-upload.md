@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains how to upload loss prevention historical data for Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/16/2020
+ms.date: 01/17/2020
 
 ms.topic: conceptual
 search.app: 
