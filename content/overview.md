@@ -17,6 +17,7 @@ title: Overview
 
 # Loss prevention overview
 
+Microsoft Dynamics 365 Fraud Protection has an add-in called loss prevention. This provides tools to illustrate trends and anomalies in operations of retail stores. 
 
 Microsoft Dynamics 365 Fraud Protection  Loss Prevention focuses on loss prevention practices and tools used in the physical locations of commerce. 
 
