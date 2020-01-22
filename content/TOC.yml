@@ -56,6 +56,10 @@
       href: monitoring.md
     - name: Usage metering
       href: metering.md  
+- name: Loss prevention
+  items:
+    - name: Loss prevention overview
+      href: overview.md
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance
