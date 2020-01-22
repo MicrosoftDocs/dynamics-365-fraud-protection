@@ -27,7 +27,7 @@ Note the following formatting guidelines throughout:
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
 
-## TransactionStaging
+## Transactions
 
 
 | AMOUNTPOSTE+A2:C54DTOACCOUNT    | [numeric](32 6) NOT NULL  | Amount posted to account for GL posting                                                                                                                      |
@@ -95,7 +95,7 @@ Note the following formatting guidelines throughout:
 | TRANSFERSTATUS                  | [int] NOT NULL            |                                                                                                                                                              |
 | WAREHOUSE                       | nvarchar (10) NOT NULL   | Maps to Store 1:1                                                                                                                                            |
 
-## TransactionSalesLineStaging
+## Sales
 
 | Attribute                       | Type                      | Description                                                                                        |
 |---------------------------------|---------------------------|----------------------------------------------------------------------------------------------------|
@@ -193,7 +193,7 @@ Note the following formatting guidelines throughout:
 | UNITQUANTITY                    | [numeric](32 6) NOT NULL  | Quantity of unit sold (not sure how this is different from unit)                                   |
 | VARIANTNUMBER                   | nvarchar (10) NOT NULL   | ID for unit combination of color, size and style                                                   |
 | WAREHOUSE                       | nvarchar (10) NOT NULL   | Reference data for store. Indicates physical location of the goods.                                |
-## PaymentLineStaging
+## Payments
 
 | Attribute                        | Type                      | Description                                                     |
 |----------------------------------|---------------------------|-----------------------------------------------------------------|
