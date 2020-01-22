@@ -30,8 +30,8 @@ Note the following formatting guidelines throughout:
 ## Transactions
 
 | Field Name           | Data Type     | Description |
+|---------------------|----------|-------------|
 | AMOUNTPOSTE+A2:C54DTOACCOUNT    | [numeric](32 6) NOT NULL  | Amount posted to account for GL posting                                                                                                                      |
-|---------------------------------|---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | BATCHID                         | [bigint] NOT NULL         | Not sure. May be deprecated                                                                                                                                  |
 | CHANNELREFERENCEID              | nvarchar (50) NOT NULL   | Deprecated?                                                                                                                                                  |
 | COMMENT_                        | nvarchar (60) NOT NULL   | Txn level comment                                                                                                                                            |
