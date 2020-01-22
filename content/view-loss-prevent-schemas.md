@@ -16,7 +16,7 @@ title: View loss prevention schema
 
 # View loss prevention schema
 
-This topic outlines the schema for the loss prevention API.
+This topic outlines the schema for the loss prevention capavbility.
 
 Note the following formatting guidelines throughout:
 
