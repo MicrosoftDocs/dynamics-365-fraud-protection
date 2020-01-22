@@ -61,4 +61,3 @@ These capabilities are part of a comprehensive set of features that are grouped 
 | [Use the customer (risk) support tool to evaluate and act on customer escalations for risk-related rejections.](risk-support.md)                                                                   |          | X        | X       |
 | [Use the transaction acceptance booster to help improve bank acceptance.](transaction-acceptance-booster.md)                                                                                                |          |          | X       |
 | [Make Dynamics 365 Fraud Protection your solution of record.](protect-experience.md)                                                                                                              |          |          | X       |
-
