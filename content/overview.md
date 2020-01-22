@@ -17,8 +17,6 @@ title: Overview
 
 # Loss prevention overview
 
-Microsoft Dynamics 365 Fraud Protection has additional functionalities beyound the inovative e-commerce fraud tools to include operations of retail stores. Called loss prevention, this add-in offers the ability to illustrate trends and anomalies based on transaction, sales and payment historical data, which can be used to generate reports to help guide analysts in reducing fraud in the retial stores. 
- 
+Microsoft Dynamics 365 Fraud Protection has additional functionalities beyound the advanced e-commerce fraud tools to include inovative systems to illustrate fraud in retail stores. Called loss revention, this add-in offers the ability to illustrate trends and anomalies based on transaction, sales and payment historical data, which is used to generate reports to help guide customers in reducing fraud in the retail stores.
 
-Microsoft has many years of experience protecting our own e-commerce businesses from fraud. We have developed a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time.
 
