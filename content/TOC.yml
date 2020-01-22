@@ -59,7 +59,7 @@
 - name: Loss prevention
   items:
     - name: Loss prevention overview
-      href: overview.md
+      href: loss-prevention-overview.md
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance
