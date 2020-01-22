@@ -15,7 +15,12 @@ title: Upload historical data
 
 # Upload data
 
-In the loss prevention experiences in Microsoft Dynamics 365 Fraud Protection, you upload your data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
+You can use the upload data service in the Dynamics 365 Fraud Protection system to quickly bulk-import CSV files of historical data to to be analyzied and used to generate reports. There are three kinds of data you can import:
+* Transactions
+* Sales
+* Payments
+
+The loss prevention add-on in Microsoft Dynamics 365 Fraud Protection, you upload your data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming tYou can use the Import service in the Security & Compliance Center to quickly bulk-import PST files to Exchange Online mailboxes in your Office 365 organization. There are two ways you can import PST files to Office 365he machine learning model and can help improve the handling of your future transactions.
 
 ## Data types
 
