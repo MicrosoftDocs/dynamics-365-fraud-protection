@@ -3,7 +3,7 @@ author: v-davido
 description: This topic outlines the requred schema for the loss prevention API.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/21/2020
+ms.date: 01/23/2020
 
 ms.topic: conceptual
 search.app: 
@@ -97,7 +97,7 @@ Note the following formatting guidelines throughout:
 
 ## Sales
 
-| Attribute                       | Type                      | Description                                                                                        |
+| Field Name                       | Data Type                      | Description                                                                                        |
 |---------------------------------|---------------------------|----------------------------------------------------------------------------------------------------|
 | BARCODE                         | nvarchar (80) NOT NULL   | Bar code that was scanned                                                                          |
 | CASHDISCOUNTAMOUNT              | [numeric](32 6) NOT NULL  | Amount of cash disount, if applicable                                                              |
@@ -195,7 +195,7 @@ Note the following formatting guidelines throughout:
 | WAREHOUSE                       | nvarchar (10) NOT NULL   | Reference data for store. Indicates physical location of the goods.                                |
 ## Payments
 
-| Attribute                        | Type                      | Description                                                     |
+| Field Name                        | Data Type                      | Description                                                     |
 |----------------------------------|---------------------------|-----------------------------------------------------------------|
 | ACCOUNTNUMBER                    | nvarchar (30) NOT NULL   | Customer's account nubmer if named customer is on transaction   |
 | AMOUNTINACCOUNTINGCURRENCY       | [numeric](32 6) NOT NULL  | Amount due for line                                             |
@@ -233,7 +233,7 @@ Note the following formatting guidelines throughout:
 
 ## PaymentMethod
 
-| Attribute           | Type                    | Description |
+| Field Name           | Data Type                    | Description |
 |---------------------|-------------------------|---------------------------------------------------------------|
 | DEFAULTFUNCTION     | [int] NOT NULL          | TBD                                                           |
 | NAME                | nvarchar (60) NOT NULL | TBD                                                           |
