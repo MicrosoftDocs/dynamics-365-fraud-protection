@@ -170,14 +170,14 @@ Note the following formatting guidelines throughout:
 | RETURNQUANTITY                  | [numeric](32 6) NOT NULL  | Quantity being returned.                                                                           |
 | RETURNTERMINAL                  | nvarchar (10) NOT NULL   | Terminal where txn is being returned.                                                              |
 | RETURNTRANSACTIONNUMBER         | nvarchar (44) NOT NULL   | Original transaction number when returning from receipt/journal                                    |
-| RFIDTAGID                       | nvarchar (24) NOT NULL   |                                                                                                    |
+| RFIDTAGID                       | nvarchar (24) NOT NULL   |  Identification for RFID. Not in Play yet.                                                                                                  |
 | SALESTAXAMOUNT                  | [numeric](32 6) NOT NULL  | Amt of sales tax applied to the transaction                                                        |
 | SALESTAXGROUP                   | nvarchar (10) NOT NULL   | Effective sales tax group for the transaction                                                      |
 | SECTIONNUMBER                   | nvarchar (10) NOT NULL   | ?                                                                                                  |
 | SERIALNUMBER                    | nvarchar (20) NOT NULL   | Serial number for the product                                                                      |
 | SHELFNUMBER                     | nvarchar (10) NOT NULL   | Shelf number where the product is kept(not really used).                                           |
 | SITEID                          | nvarchar (10) NOT NULL   | Category to which store belongs (i.e. Pacific Northwest stores)                                    |
-| SKIPREPORTS                     | [int] NOT NULL            |                                                                                                    |
+| SKIPREPORTS                     | [int] NOT NULL            | If set, the record is skipped in reports.                                                                                                   |
 | STANDARDNETPRICE                | [numeric](32 6) NOT NULL  | Like original price?                                                                               |
 | SYNCSTARTDATETIME               | [datetime] NOT NULL       |                                                                                                    |
 | TERMINAL                        | nvarchar (10) NOT NULL   |                                                                                                    |
@@ -201,6 +201,7 @@ Note the following formatting guidelines throughout:
 | AMOUNTINACCOUNTINGCURRENCY       | [numeric](32 6) NOT NULL  | Amount due for line                                             |
 | AMOUNTINTENDEREDCURRENCY         | [numeric](32 6) NOT NULL  | amount tendered in currency (different if not store's currency) |
 | AMOUNTTENDERED                   | [numeric](32 6) NOT NULL  | Amount paid(?)                                                  |
+| AMOUNTTENDEREDADJUSTMENT                   | [numeric](32 6) NOT NULL  | It's a new feature in the product that allows changes in the transactions, with full audit trail.                                                |
 | AMOUNTTENDEREDADJUSTMENT         | [numeric](32 6) NOT NULL  |                                                                 |
 | CARDNUMBER                       | nvarchar (30) NOT NULL    | Truncated card no.                                              |
 | CARDTYPEID                       | nvarchar (10) NOT NULL   | Card name (AMEX, VISA, ETC)                                     |
