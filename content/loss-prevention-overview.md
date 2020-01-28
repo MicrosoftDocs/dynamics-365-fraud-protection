@@ -11,8 +11,7 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Overview
-
+title: Loss prevention overview
 ---
 
 
