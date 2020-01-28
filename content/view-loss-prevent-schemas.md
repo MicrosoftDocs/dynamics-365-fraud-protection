@@ -3,7 +3,7 @@ author: v-davido
 description: This topic outlines the requred schema for the loss prevention API.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/23/2020
+ms.date: 01/28/2020
 
 ms.topic: conceptual
 search.app: 
@@ -16,7 +16,7 @@ title: View loss prevention schema
 
 # View loss prevention schema
 
-This topic outlines the schema for the loss prevention capavbility.
+This topic outlines the schemas used to define the data used in generating models and determining risk assessments. 
 
 Note the following formatting guidelines throughout:
 
