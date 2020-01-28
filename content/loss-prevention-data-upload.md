@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains how to upload data for Microsoft Dynamics 365 Fraud Protection Loss Prevention system.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/22/2020
+ms.date: 01/28/2020
 
 ms.topic: conceptual
 search.app: 
@@ -17,7 +17,7 @@ title: Upload historical data
 
 In the loss prevention add-in to Microsoft Dynamics 365 Fraud Protection, you upload your historical data into the system to be processed. These uploads include data form transactions, sales, and payments. This historical data is processed and used to generate reports illustrating trends and any anomalies. 
 
-You can use the upload data feature in the Fraud Protection loss prevention to quickly bulk-import CSV files of historical data to to be analyzied and used to generate reports. There are four entities from which the data needs to be imported:
+You can use the upload data feature in the Fraud Protection loss prevention to quickly bulk-import CSV files of historical data to  be analyzed and used to generate reports. There are four entities from which the data needs to be imported:
 
 * Transactions
 * Sales
