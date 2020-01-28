@@ -1,6 +1,6 @@
 ---
 author: v-davido
-description: Fraud Protection overview
+description: Loss prevention overview
 ms.author: v-davido
 ms.service: fraud-protection
 ms.date: 01/14/2020
