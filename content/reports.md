@@ -20,8 +20,8 @@ title: Viewing reports
 A variety of reports are available for loss prevention to help you see various risk factors generated from your historical data. 
 
 
-Loss prevention reports provide a comprehensive view of activity in your environment. The provided data enables you to:
+Loss prevention reports provide a comprehensive view of activity in your retial store environment. Your historical data processed by Microsoft's advanced AI algorithms enables you to:
 
-- Determine how your apps and services are utilized by your users
-- Detect potential risks affecting the health of your environment
-- Troubleshoot issues preventing your users from getting their work done
+- Determine possible risk factors associated with an employee, transaction, or terminal. 
+- Detect anomalies in transactions.
+- Troubleshoot issues with existing policies or procedures.
