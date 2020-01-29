@@ -190,7 +190,7 @@ Note the following formatting guidelines throughout:
 | TRANSFERSTATUS                  | int NOT NULL            |                                                                                                    |
 | UNIT                            | nvarchar (10) NOT NULL   | Ea., Pcs, Gallons etc.                                                                             |
 | UNITPRICE                       | numeric (32 6) NOT NULL  | Price per unit                                                                                     |
-| UNITQUANTITY                    | [numeric](32 6) NOT NULL  | Quantity of unit sold (not sure how this is different from unit)                                   |
+| UNITQUANTITY                    | numeric (32 6) NOT NULL  | Quantity of unit sold (not sure how this is different from unit)                                   |
 | VARIANTNUMBER                   | nvarchar (10) NOT NULL   | ID for unit combination of color, size and style                                                   |
 | WAREHOUSE                       | nvarchar (10) NOT NULL   | Reference data for store. Indicates physical location of the goods.                                |
 ## Payments
@@ -201,7 +201,7 @@ Note the following formatting guidelines throughout:
 | AMOUNTINACCOUNTINGCURRENCY       | numeric (32 6) NOT NULL  | Amount due for line                                             |
 | AMOUNTINTENDEREDCURRENCY         | numeric (32 6) NOT NULL  | amount tendered in currency (different if not store's currency) |
 | AMOUNTTENDERED                   | numeric (32 6) NOT NULL  | Amount paid(?)                                                  |
-| AMOUNTTENDEREDADJUSTMENT                   | [numeric](32 6) NOT NULL  | It's a new feature in the product that allows changes in the transactions, with full audit trail.                                                |
+| AMOUNTTENDEREDADJUSTMENT                   | numeric (32 6) NOT NULL  | It's a new feature in the product that allows changes in the transactions, with full audit trail.                                                |
 | AMOUNTTENDEREDADJUSTMENT         | numeric (32 6) NOT NULL  |                                                                 |
 | CARDNUMBER                       | nvarchar (30) NOT NULL    | Truncated card no.                                              |
 | CARDTYPEID                       | nvarchar (10) NOT NULL   | Card name (AMEX, VISA, ETC)                                     |
@@ -236,7 +236,7 @@ Note the following formatting guidelines throughout:
 
 | Field Name           | Data Type                    | Description |
 |---------------------|-------------------------|---------------------------------------------------------------|
-| DEFAULTFUNCTION     | [int] NOT NULL          | TBD                                                           |
+| DEFAULTFUNCTION     | int NOT NULL          | TBD                                                           |
 | NAME                | nvarchar (60) NOT NULL | TBD                                                           |
 | PAYMENTMETHODNUMBER | nvarchar (10) NOT NULL | TBD                                                           |
 
