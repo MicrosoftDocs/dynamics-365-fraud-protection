@@ -17,5 +17,4 @@ title: Overview
 
 # Loss prevention overview
 
-While Dynamics 365 Fraud Protection focus on e-commerence, the loss prevention add-in allows customers with physical retail stores to have the advanced AI and data analaysis tools available for all transactions related to instore purchases. 
-
+TBD
