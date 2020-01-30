@@ -34,7 +34,7 @@ Note the following formatting guidelines throughout:
 | AMOUNTPOSTE+A2:C54DTOACCOUNT    | numeric (32 6) NOT NULL  | Amount posted to account for GL posting                                                                                                                      |
 | BATCHID                         | bigint NOT NULL         | Not sure. May be deprecated                                                                                                                                  |
 | CHANNELREFERENCEID              | nvarchar (50) NOT NULL   | Deprecated?                                                                                                                                                  |
-| COMMENT_                        | nvarchar (60) NOT NULL   | Txn level comment                                                                                                                                            |
+| COMMENT                       | nvarchar (60) NOT NULL   | Transaction level comment                                                                                                                                            |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Cost for items                                                                                                                                               |
 | CREATEDOFFLINE                  | int NOT NULL            | Was created offline without channel db connection?                                                                                                           |
 | CURRENCY                        | nvarchar (3) NOT NULL    | Currency                                                                                                                                                     |
@@ -82,7 +82,7 @@ Note the following formatting guidelines throughout:
 | STAFF                           | nvarchar (25) NOT NULL   | Point of sale (POS) user ID                                                                                                                                                  |
 | SYNCSTARTDATETIME               | datetime NOT NULL       | Fields added to synchronization engine (DIXF) in Finance & Operations. They decline the export sequence.                                                                                                                                                              |
 | TAXCALCULATIONTYPE              | int NOT NULL            | If tax is based on Store, Customer, Destination                                                                                                              |
-| TERMINAL                        | nvarchar (10) NOT NULL   |                                                                                                                                                              |
+| TERMINAL                        | nvarchar (10) NOT NULL   |  The identifier for point of sale (POS)                                                                                                                                                           |
 | TOACCOUNT                       | int NOT NULL            | How much is being charged to customer's account                                                                                                              |
 | TOTALDISCOUNTAMOUNT             | numeric (32 6) NOT NULL  | Amount of discount applied to transaction total                                                                                                              |
 | TOTALMANUALDISCOUNTAMOUNT       | numeric (32 6) NOT NULL  | If manually applied vs automatic total discount                                                                                                              |
@@ -180,7 +180,7 @@ Note the following formatting guidelines throughout:
 | SKIPREPORTS                     | int NOT NULL            | If set, the record is skipped in reports.                                                                                                   |
 | STANDARDNETPRICE                | numeric (32 6) NOT NULL  | Like original price?                                                                               |
 | SYNCSTARTDATETIME               | datetime NOT NULL       |                                                                                                    |
-| TERMINAL                        | nvarchar (10) NOT NULL   |                                                                                                    |
+| TERMINAL                        | nvarchar (10) NOT NULL   |  The identifier for point of sale (POS)                                                                                                  |
 | TOTALDISCOUNT                   | numeric (32 6) NOT NULL  | Amount of discount applied to order total.                                                         |
 | TOTALDISCOUNTINFOCODELINENUM    | numeric (32 16) NOT NULL | If prompted for info code when applying total discount, reason code is saved here                  |
 | TOTALDISCOUNTPERCENTAGE         | numeric (32 6) NOT NULL  | Discount percent applied to transaction total, if total discount by percent is used                |
@@ -188,7 +188,7 @@ Note the following formatting guidelines throughout:
 | TRANSACTIONNUMBER               | nvarchar (44) NOT NULL   | Transaction number                                                                                 |
 | TRANSACTIONSTATUS               | int NOT NULL            | Posted indicates that the statement has been completed(amounts have hit the GL in the back office) |
 | TRANSFERSTATUS                  | int NOT NULL            |                                                                                                    |
-| UNIT                            | nvarchar (10) NOT NULL   | Ea., Pcs, Gallons etc.--spell out                                                                             |
+| UNIT                            | nvarchar (10) NOT NULL   | Measuring unit for the item. For example, gallons, oz, etc.                                                                        |
 | UNITPRICE                       | numeric (32 6) NOT NULL  | Price per unit                                                                                     |
 | UNITQUANTITY                    | numeric (32 6) NOT NULL  | Quantity of unit sold (not sure how this is different from unit)                                   |
 | VARIANTNUMBER                   | nvarchar (10) NOT NULL   | ID for unit combination of color, size and style                                                   |
