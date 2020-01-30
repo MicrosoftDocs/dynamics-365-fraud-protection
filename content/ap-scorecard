@@ -1,14 +1,20 @@
 ---
-author: v-davido
-description: This topic explains how you can use the key performance indicators (KPIs).
-ms.author: v-davido
+author: Lena
+description: This topic explains the scorecard capability of Dynamics 365 Fraud Protection Account Protection.
+ms.author: Lena
 ms.service: fraud-protection
-ms.date: 12/03/2019
+ms.date: 1/30/2020
 
 ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
   - admin
-title: Learn from the scorecard
+
+
+title: Account protection Scorecard
 ---
+
+# Account Proection Scorecard
+
+
