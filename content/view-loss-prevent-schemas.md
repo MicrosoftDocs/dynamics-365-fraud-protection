@@ -3,7 +3,7 @@ author: v-davido
 description: This topic outlines the requred schema for the loss prevention API.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/28/2020
+ms.date: 01/30/2020
 
 ms.topic: conceptual
 search.app: 
@@ -63,7 +63,7 @@ Note the following formatting guidelines throughout:
 | LOGISTICSPOSTALZIPCODE          | nvarchar (10) NOT NULL   | Loyalty card number                                                                                                                                          |
 | LOYALTYCARDID                   | nvarchar (30) NOT NULL   | Amount after taxes and discounts                                                                                                                             |
 | NETAMOUNT                       | numeric (32 6) NOT NULL  | price before discounts                                                                                                                                       |
-| NETPRICE                        | numeric (32 6) NOT NULL  | # of lines on the transaction                                                                                                                                |
+| NETPRICE                        | numeric (32 6) NOT NULL  | Number of lines on the transaction                                                                                                                                |
 | OPERATINGUNITNUMBER             | nvarchar (30) NOT NULL   |                                                                                                                                                              |
 | PARTITION                       | nvarchar (nvarchar 20) NOT NULL   | An identification of a data partition in Finance & Operations. It is a security feature we're not utilizing, so the value will be the same.                                                                                                                                                             |
 | PAYMENTAMOUNT                   | numeric (32 6) NOT NULL  | Payment amount                                                                                                                                               |
@@ -79,7 +79,7 @@ Note the following formatting guidelines throughout:
 | SHIFT                           | nvarchar (10) NOT NULL   | Shift is a set of transactions throughout the day for which cash and sales activity is calculated. Useful for determining how much cash should be in the til |
 | SHIPPINGDATEREQUESTED           | datetime NOT NULL       | Date when goods on customer order should be shipped                                                                                                          |
 | SITEID                          | nvarchar (10) NOT NULL   | Typically used for retail  stores to organize by region such as "Northwest US stores"                                                                        |
-| STAFF                           | nvarchar (25) NOT NULL   | POS user ID                                                                                                                                                  |
+| STAFF                           | nvarchar (25) NOT NULL   | Point of sale (POS) user ID                                                                                                                                                  |
 | SYNCSTARTDATETIME               | datetime NOT NULL       | Fields added to synchronization engine (DIXF) in Finance & Operations. They decline the export sequence.                                                                                                                                                              |
 | TAXCALCULATIONTYPE              | int NOT NULL            | If tax is based on Store, Customer, Destination                                                                                                              |
 | TERMINAL                        | nvarchar (10) NOT NULL   |                                                                                                                                                              |
@@ -188,7 +188,7 @@ Note the following formatting guidelines throughout:
 | TRANSACTIONNUMBER               | nvarchar (44) NOT NULL   | Transaction number                                                                                 |
 | TRANSACTIONSTATUS               | int NOT NULL            | Posted indicates that the statement has been completed(amounts have hit the GL in the back office) |
 | TRANSFERSTATUS                  | int NOT NULL            |                                                                                                    |
-| UNIT                            | nvarchar (10) NOT NULL   | Ea., Pcs, Gallons etc.                                                                             |
+| UNIT                            | nvarchar (10) NOT NULL   | Ea., Pcs, Gallons etc.--spell out                                                                             |
 | UNITPRICE                       | numeric (32 6) NOT NULL  | Price per unit                                                                                     |
 | UNITQUANTITY                    | numeric (32 6) NOT NULL  | Quantity of unit sold (not sure how this is different from unit)                                   |
 | VARIANTNUMBER                   | nvarchar (10) NOT NULL   | ID for unit combination of color, size and style                                                   |
