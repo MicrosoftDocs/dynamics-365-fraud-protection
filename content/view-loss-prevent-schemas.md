@@ -236,8 +236,6 @@ Note the following formatting guidelines throughout:
 
 | Field Name           | Data Type                    | Description |
 |---------------------|-------------------------|---------------------------------------------------------------|
-| DEFAULTFUNCTION     | int NOT NULL          | TBD                                                           |
-| NAME                | nvarchar (60) NOT NULL | TBD                                                           |
-| PAYMENTMETHODNUMBER | nvarchar (10) NOT NULL | TBD                                                           |
-
-
+| PAYMENTMETHODNUMBER | nvarchar (10) NOT NULL | Identifier for the payment method                            |
+| NAME                | nvarchar (60) NOT NULL | Name describing the payment method                           |
+| DEFAULTFUNCTION     | int NOT NULL          | Describes the type of payment method Eg:- Cash, Check, Credit Memo/Voucher, Currency|
