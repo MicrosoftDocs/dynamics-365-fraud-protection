@@ -1,9 +1,9 @@
 ---
-author: v-davido
-description: This topic outlines the requred schema for the loss prevention API.
-ms.author: v-davido
+author: veganesa
+description: This topic outlines the requred schema for the loss prevention feature.
+ms.author: veganesa
 ms.service: fraud-protection
-ms.date: 01/30/2020
+ms.date: 02/03/2020
 
 ms.topic: conceptual
 search.app: 
