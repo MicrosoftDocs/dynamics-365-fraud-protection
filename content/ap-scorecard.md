@@ -64,7 +64,7 @@ Risk decision section shows metrics from the automated decision rules. The rules
 - **Top rules** – Top rules shows a list of rules with highest volume of automated decisions.
 
 ## Related topics:
-Account protection
-Account protection API
-Rules
-Bot detection
+- Account protection
+- Account protection API
+- Rules
+- Bot detection
