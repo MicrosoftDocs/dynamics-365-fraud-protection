@@ -47,14 +47,14 @@ The scorecard shows metrics in the following sections:
 Bot model score section shows insights from the bot ML model. The bot score is a number within the range of 0 to 999, where lower score indicates low probability of bot attack and higher score indicates high probability of bot attack. The following metrics are available:
 
 - **Bot score distribution** – Bot score distribution chart shows the transaction volume aggregated by bot model score. 
-- **Top bot countries** – Top bot countries graph shows the geographic view of top 5 countries with a high percentage of bot attack, defined as a bot score higher than 900.
+- **Top bot countries and regions** – Top bot countries graph shows the geographic view of top 5 countries and regions with a high percentage of bot attack, defined as a bot score higher than 900.
 
 ### Risk Model Score
 
 Risk model score section shows insights from the fraud risk ML model. The risk score is a number within the range of 0 to 999, where lower score indicates low probability of fraud attack and higher score indicates high probability of fraud attack. The following metrics are available:
 
 - **Risk score distribution** – Risk score distribution chart shows the transaction volume aggregated by risk model score. 
-- **Top risk countries** – Top bot countries graph shows the geographic view of top 5 countries with a high percentage of fraud attack, defined as a risk score higher than 900.
+- **Top risk countries and regions** – Top bot countries graph shows the geographic view of top 5 countries and regions with a high percentage of fraud attack, defined as a risk score higher than 900.
 
 ### Rule Decision
 
@@ -63,7 +63,7 @@ Risk decision section shows metrics from the automated decision rules. The rules
 - **Rule decision trend** – Rule decision trend chart shows percentage of Approved, Rejected and Challenged decisions by rules. 
 - **Top rules** – Top rules shows a list of rules with highest volume of automated decisions.
 
-## Related topics:
+## Related topics: (link tbd)
 - Account protection
 - Account protection API
 - Rules
