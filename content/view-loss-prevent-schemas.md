@@ -31,7 +31,7 @@ Note the following formatting guidelines throughout:
 
 | Field name           | Data type     | Description |
 |---------------------|----------|-------------|
-| AMOUNTPOSTE+A2:C54DTOACCOUNT    | numeric (32 6) NOT NULL  | Amount posted to account for GL posting                                                                                                                      |
+| AMOUNTPOSTEDTOACCOUNT    | numeric (32 6) NOT NULL  | Amount posted to account for GL posting                                                                                                                      |
 | BATCHID                         | bigint NOT NULL         | Idenitifier for Batch or Shift                                                                                                                               |
 | COMMENT                       | nvarchar (60) NOT NULL   | Transaction level comment                                                                                                                                            |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Cost for items                                                                                                                                               |
