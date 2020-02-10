@@ -33,6 +33,7 @@ Note the following formatting guidelines throughout:
 |---------------------|----------|-------------|
 | AMOUNTPOSTEDTOACCOUNT    | numeric (32 6) NOT NULL  | Amount posted to account for GL posting                                                                                                                      |
 | BATCHID                         | bigint NOT NULL         | Idenitifier for Batch or Shift                                                                                                                               |
+| CHANNELREFERENCEID        | nvarchar (50) NOT NULL           | This field is not required                                                                                                                              |
 | COMMENT                       | nvarchar (60) NOT NULL   | Transaction level comment                                                                                                                                            |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Cost for items                                                                                                                                               |
 | CREATEDOFFLINE                  | int NOT NULL            | Was created offline without channel db connection?                                                                                                           |
@@ -102,6 +103,8 @@ Note the following formatting guidelines throughout:
 | CASHDISCOUNTAMOUNT              | numeric (32 6) NOT NULL  | Amount of cash disount, if applicable                                                              |
 | CATEGORYHIERARCHYNAME           | nvarchar (128) NOT NULL  | Categrory hierarchy used to organize products                                                      |
 | CATEGORYNAME                    | nvarchar (254) NOT NULL  | Name of the product category                                                                       |
+| CHANNELLISTINGID                | nvarchar (50) NOT NULL  | Applies only for e-commerce, not required for retail    
+                         |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Product cost                                                                                       |
 | CURRENCY                        | nvarchar (3) NOT NULL    | Currency of the sale                                                                                    |
 | CUSTOMERACCOUNT                 | nvarchar (38) NOT NULL   | Customer account number                                                                            |
@@ -139,6 +142,7 @@ Note the following formatting guidelines throughout:
 | LINEPERCENTAGEDISCOUNT          | numeric(32 6) NOT NULL  | Automatic percentage discount amount                                                               |
 | LOGISTICLOCATIONID              | nvarchar (30) NOT NULL   | Address ID in the global address book                                                                                                  |
 | LOGISTICSPOSTALADDRESSVALIDFROM | datetime NOT NULL       | Date effective of address id                                                                                                  |
+| LOTID   |  nvarchar (20) NOT NULL       | This field is not required                                                                                                 |
 | MODEOFDELIVERY                  | nvarchar (10) NOT NULL   | Method of delivery to the customer                                                                 |
 | NETAMOUNT                       | numeric (32 6) NOT NULL  | Net amount for transaction                                                                         |
 | NETAMOUNTINCLUSIVETAX           | numeric (32 6) NOT NULL  | Net amount with tax included                                                                       |
