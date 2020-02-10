@@ -32,8 +32,8 @@ Note the following formatting guidelines throughout:
 | Field name           | Data type     | Description |
 |---------------------|----------|-------------|
 | AMOUNTPOSTE+A2:C54DTOACCOUNT    | numeric (32 6) NOT NULL  | Amount posted to account for GL posting                                                                                                                      |
-| BATCHID                         | bigint NOT NULL         | Not sure. May be deprecated                                                                                                                                  |
-| CHANNELREFERENCEID              | nvarchar (50) NOT NULL   | Deprecated?                                                                                                                                                  |
+| BATCHID                         | bigint NOT NULL         | Idenitifier for Batch or Shift                                                                                                                               |
+
 | COMMENT                       | nvarchar (60) NOT NULL   | Transaction level comment                                                                                                                                            |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Cost for items                                                                                                                                               |
 | CREATEDOFFLINE                  | int NOT NULL            | Was created offline without channel db connection?                                                                                                           |
@@ -64,10 +64,10 @@ Note the following formatting guidelines throughout:
 | LOYALTYCARDID                   | nvarchar (30) NOT NULL   | Amount after taxes and discounts                                                                                                                             |
 | NETAMOUNT                       | numeric (32 6) NOT NULL  | price before discounts                                                                                                                                       |
 | NETPRICE                        | numeric (32 6) NOT NULL  | Number of lines on the transaction                                                                                                                                |
-| OPERATINGUNITNUMBER             | nvarchar (30) NOT NULL   |                                                                                                                                                              |
-| PARTITION                       | nvarchar (nvarchar 20) NOT NULL   | An identification of a data partition in Finance & Operations. It is a security feature we're not utilizing, so the value will be the same.                                                                                                                                                             |
+| OPERATINGUNITNUMBER             | nvarchar (30) NOT NULL   | Business Unit that the store maps to                                                                                                                                                      |
+| PARTITION                       | nvarchar (nvarchar 20) NOT NULL   | An identification of a data partition in Finance & Operations specific to D365                                                                                                                                                            |
 | PAYMENTAMOUNT                   | numeric (32 6) NOT NULL  | Payment amount                                                                                                                                               |
-| POSTASSHIPMENT                  | int NOT NULL            | ?                                                                                                                                                            |
+| POSTASSHIPMENT                  | int NOT NULL            | Indicates if this has a shipment associated                                                                                                                                                            |
 | REFUNDRECEIPTID                 | nvarchar (18) NOT NULL   | if refund, receipt id for original transaction                                                                                                               |
 | RETAILNCREXPORTED               | int NOT NULL            | In the beginning of our roll-out we were pushing transactions to an NCR BOS-system. This field is a flag for that.                                                                                                                                                              |
 | RRECEIPTID                      | nvarchar (18) NOT NULL   | Receipt number, different from transaction number                                                                                                            |
@@ -75,7 +75,7 @@ Note the following formatting guidelines throughout:
 | SALESINVOICEAMOUNT              | numeric (32 6) NOT NULL  | Amount for sales invoice if  customer is picking up a few items from an order                                                                                |
 | SALESORDERAMOUNT                | numeric (32 6) NOT NULL  | total amount for customer orders(which are different from cash and carry because they have shipping details)                                                 |
 | SALESORDERID                    | nvarchar (20) NOT NULL   | Order number(for those with shipping details                                                                                                                 |
-| SALESPAYMENTDIFFERENCE          | numeric (32 6) NOT NULL  | ?                                                                                                                                                            |
+| SALESPAYMENTDIFFERENCE          | numeric (32 6) NOT NULL  | Difference amount after Payment made by customer                                                                                                                                                            |
 | SHIFT                           | nvarchar (10) NOT NULL   | Shift is a set of transactions throughout the day for which cash and sales activity is calculated. Useful for determining how much cash should be in the til |
 | SHIPPINGDATEREQUESTED           | datetime NOT NULL       | Date when goods on customer order should be shipped                                                                                                          |
 | SITEID                          | nvarchar (10) NOT NULL   | Typically used for retail  stores to organize by region such as "Northwest US stores"                                                                        |
@@ -92,7 +92,7 @@ Note the following formatting guidelines throughout:
 | TRANSACTIONSTATUS               | int NOT NULL            | Fields added to synchronization engine (DIXF) in Finance & Operations. They decline the export sequence.                                                                                                                                          |
 | TRANSACTIONTIME                 | int NOT NULL            | Time                                                                                                                                                         |
 | TRANSACTIONTYPE                 | int NOT NULL            | Cash and carry vs order                                                                                                                                      |
-| TRANSFERSTATUS                  | int NOT NULL            |                                                                                                                                                              |
+| TRANSFERSTATUS                  | int NOT NULL            |    Used to track status of transfers between warehouses                                                                                                                                                          |
 | WAREHOUSE                       | nvarchar (10) NOT NULL   | Maps to Store 1:1                                                                                                                                            |
 
 ## Sales
@@ -103,33 +103,32 @@ Note the following formatting guidelines throughout:
 | CASHDISCOUNTAMOUNT              | numeric (32 6) NOT NULL  | Amount of cash disount, if applicable                                                              |
 | CATEGORYHIERARCHYNAME           | nvarchar (128) NOT NULL  | Categrory hierarchy used to organize products                                                      |
 | CATEGORYNAME                    | nvarchar (254) NOT NULL  | Name of the product category                                                                       |
-| CHANNELLISTINGID                | nvarchar (50) NOT NULL   | ?                                                                                                  |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Product cost                                                                                       |
-| CURRENCY                        | nvarchar (3) NOT NULL    | Currency paid?                                                                                     |
+| CURRENCY                        | nvarchar (3) NOT NULL    | Currency of the sale                                                                                    |
 | CUSTOMERACCOUNT                 | nvarchar (38) NOT NULL   | Customer account number                                                                            |
 | CUSTOMERDISCOUNT                | numeric (32 6) NOT NULL  | Customer discount                                                                                  |
-| CUSTOMERINVOICEDISCOUNTAMOUNT   | numeric (32 6) NOT NULL  | ?                                                                                                  |
-| DATAAREAID                      | nvarchar (4) NOT NULL    |                                                                                                    |
-| DEFINITIONGROUP                 | nvarchar (60) NOT NULL   |                                                                                                    |
-| DISCOUNTAMOUNTFORPRINTING       | numeric (32 6) NOT NULL  | ?                                                                                                  |
-| DISCOUNTAMOUNTWITHOUTTAX        | numeric (32 6) NOT NULL  |                                                                                                    |
+| CUSTOMERINVOICEDISCOUNTAMOUNT   | numeric (32 6) NOT NULL  | Discount associated at invoice level during fulfillment                                                                                                 |
+| DATAAREAID                      | nvarchar (4) NOT NULL    | Company identifier (Eg:- MSFT US)                                                                                                   |
+| DEFINITIONGROUP                 | nvarchar (60) NOT NULL   | Fields added by the synchronization engine (DIFX) in Finance & Operations to define the export sequence.                                                                                              |
+| DISCOUNTAMOUNTFORPRINTING       | numeric (32 6) NOT NULL  |Discount amount printed on the receipt                                                                                                   |
+| DISCOUNTAMOUNTWITHOUTTAX        | numeric (32 6) NOT NULL  |        Discount amount excluding tax                                                                                            |
 | ELECTRONICDELIVERYEMAIL         | nvarchar (80) NOT NULL   | Email address                                                                                      |
-| EXECUTIONID                     | nvarchar (90) NOT NULL   |                                                                                                    |
+| EXECUTIONID                     | nvarchar (90) NOT NULL   |     Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                               |
 | GIFTCARD                        | int NOT NULL            | Gift card number                                                                                   |
-| INVENTORYSTATUS                 | int NOT NULL            | ?                                                                                                  |
+| INVENTORYSTATUS                 | int NOT NULL            | Status of the inventory levels                                                                                                 |
 | ISLINEDISCOUNTED                | int NOT NULL            | Is the txn line discounted                                                                         |
 | ISLINKEDPRODUCTNOTORIGINAL      | int NOT NULL            | If linked item was changed                                                                         |
-| ISORIGINALOFLINKEDPRODUCTLIST   | int NOT NULL            | ?                                                                                                  |
+| ISORIGINALOFLINKEDPRODUCTLIST   | int NOT NULL            | Default linked products                                                                                                   |
 | ISPRICECHANGE                   | int NOT NULL            | If price was changed manually                                                                      |
-| ISRETURNNOSALE                  | int NOT NULL            | ?                                                                                                  |
+| ISRETURNNOSALE                  | int NOT NULL            | Is this transaction a return or void                                                                                                  |
 | ISSCALEPRODUCT                  | int NOT NULL            | Is the connected scale used to get Qty                                                             |
-| ISSELECTED                      | int NOT NULL            |                                                                                                    |
+| ISSELECTED                      | int NOT NULL            |Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                                    |
 | ISWEIGHTMANUALLYENTERED         | int NOT NULL            | If scale is not connected, cashier can enter weight manually                                       |
-| ISWEIGHTPRODUCT                 | int NOT NULL            | Same as scale product?                                                                             |
+| ISWEIGHTPRODUCT                 | int NOT NULL            | Is the connected scale used to get Qty                                                                              |
 | ITEMCOLOR                       | nvarchar (25) NOT NULL   | Color                                                                                              |
 | ITEMCONFIGID                    | nvarchar (50) NOT NULL   | Configuration ID for kits                                                                          |
 | ITEMID                          | nvarchar (20) NOT NULL   | Product ID                                                                                         |
-| ITEMRELATION                    | nvarchar (20) NOT NULL   | ?                                                                                                  |
+| ITEMRELATION                    | nvarchar (20) NOT NULL   | Grouping of related Items in a given product group                                                                                                  |
 | ITEMSALESTAXGROUP               | nvarchar (10) NOT NULL   | Effective sales tax group for the item                                                             |
 | ITEMSIZE                        | nvarchar (10) NOT NULL   | Size                                                                                               |
 | ITEMSTYLE                       | nvarchar (10) NOT NULL   | Style, like color and size is another product dimension                                            |
@@ -139,19 +138,18 @@ Note the following formatting guidelines throughout:
 | LINEMANUALDISCOUNTPERCENTAGE    | numeric (32 6) NOT NULL  | If manual percentage discount was applied, the percentage                                          |
 | LINENUMBER                      | numeric (32 16) NOT NULL | Line number on the transaction                                                                     |
 | LINEPERCENTAGEDISCOUNT          | numeric(32 6) NOT NULL  | Automatic percentage discount amount                                                               |
-| LOGISTICLOCATIONID              | nvarchar (30) NOT NULL   | ?                                                                                                  |
-| LOGISTICSPOSTALADDRESSVALIDFROM | datetime NOT NULL       | ?                                                                                                  |
-| LOTID                           | nvarchar (20) NOT NULL   | Not used                                                                                           |
+| LOGISTICLOCATIONID              | nvarchar (30) NOT NULL   | Address ID in the global address book                                                                                                  |
+| LOGISTICSPOSTALADDRESSVALIDFROM | datetime NOT NULL       | Date effective of address id                                                                                                  |
 | MODEOFDELIVERY                  | nvarchar (10) NOT NULL   | Method of delivery to the customer                                                                 |
 | NETAMOUNT                       | numeric (32 6) NOT NULL  | Net amount for transaction                                                                         |
 | NETAMOUNTINCLUSIVETAX           | numeric (32 6) NOT NULL  | Net amount with tax included                                                                       |
 | NETPRICE                        | numeric (32 6) NOT NULL  | Net price for the line before discounts                                                            |
-| OFFERNUMBER                     | nvarchar (40) NOT NULL   | ?                                                                                                  |
+| OFFERNUMBER                     | nvarchar (40) NOT NULL   | Unique identifier for the offer number                                                                                                  |
 | OPERATINGUNITNUMBER             | nvarchar (30) NOT NULL   | Part of the reference data that comprises a store                                                  |
 | ORIGINALITEMSALESTAXGROUP       | nvarchar (10) NOT NULL   | If tax is overridden, tracks what the original tax amt was.                                        |
 | ORIGINALPRICE                   | numeric (32 6) NOT NULL  | Product price without sale pricing applied                                                         |
 | ORIGINALSALESTAXGROUP           | nvarchar (10) NOT NULL   | Original sales tax group for the transaction                                                       |
-| PARTITION                       | nvarchar (20) NOT NULL   |                                                                                                    |
+| PARTITION                       | nvarchar (20) NOT NULL   | An identification of a data partition in Finance & Operations specific to D365                                                                                                                                                          |
 | PERIODICDISCOUNTAMOUNT          | numeric (32 6) NOT NULL  | Discount amount for periodic discount(kind of like happy hour)                                     |
 | PERIODICDISCOUNTGROUP           | nvarchar (10) NOT NULL   | Periodic discount group                                                                            |
 | PERIODICDISCOUNTPERCENTAGE      | numeric (32 6) NOT NULL  | Periodic discount percentage                                                                       |
@@ -173,21 +171,21 @@ Note the following formatting guidelines throughout:
 | RFIDTAGID                       | nvarchar (24) NOT NULL   |  Identification for RFID. Not in Play yet.                                                                                                  |
 | SALESTAXAMOUNT                  | numeric (32 6) NOT NULL  | Amt of sales tax applied to the transaction                                                        |
 | SALESTAXGROUP                   | nvarchar (10) NOT NULL   | Effective sales tax group for the transaction                                                      |
-| SECTIONNUMBER                   | nvarchar (10) NOT NULL   | ?                                                                                                  |
+| SECTIONNUMBER                   | nvarchar (10) NOT NULL   | Not used – physical location for a product in store                                                                                                  |
 | SERIALNUMBER                    | nvarchar (20) NOT NULL   | Serial number for the product                                                                      |
 | SHELFNUMBER                     | nvarchar (10) NOT NULL   | Shelf number where the product is kept(not really used).                                           |
 | SITEID                          | nvarchar (10) NOT NULL   | Category to which store belongs (i.e. Pacific Northwest stores)                                    |
 | SKIPREPORTS                     | int NOT NULL            | If set, the record is skipped in reports.                                                                                                   |
-| STANDARDNETPRICE                | numeric (32 6) NOT NULL  | Like original price?                                                                               |
-| SYNCSTARTDATETIME               | datetime NOT NULL       |                                                                                                    |
+| STANDARDNETPRICE                | numeric (32 6) NOT NULL  | Price without discount or trade agreements                                                                              |
+| SYNCSTARTDATETIME               | datetime NOT NULL       |  Fields added to synchronization engine (DIXF) in Finance & Operations. They decline the export sequence.                                                                                                   |
 | TERMINAL                        | nvarchar (10) NOT NULL   |  The identifier for point of sale (POS)                                                                                                  |
 | TOTALDISCOUNT                   | numeric (32 6) NOT NULL  | Amount of discount applied to order total.                                                         |
 | TOTALDISCOUNTINFOCODELINENUM    | numeric (32 16) NOT NULL | If prompted for info code when applying total discount, reason code is saved here                  |
 | TOTALDISCOUNTPERCENTAGE         | numeric (32 6) NOT NULL  | Discount percent applied to transaction total, if total discount by percent is used                |
-| TRANSACTIONCODE                 | int NOT NULL            | ?                                                                                                  |
+| TRANSACTIONCODE                 | int NOT NULL            | Indicator of transaction type                                                                                                  |
 | TRANSACTIONNUMBER               | nvarchar (44) NOT NULL   | Transaction number                                                                                 |
 | TRANSACTIONSTATUS               | int NOT NULL            | Posted indicates that the statement has been completed(amounts have hit the GL in the back office) |
-| TRANSFERSTATUS                  | int NOT NULL            |                                                                                                    |
+| TRANSFERSTATUS                  | int NOT NULL            |    Used to track status of transfers between warehouses                                                                                                 |
 | UNIT                            | nvarchar (10) NOT NULL   | Measuring unit for the item. For example, gallons, oz, etc.                                                                        |
 | UNITPRICE                       | numeric (32 6) NOT NULL  | Price per unit                                                                                     |
 | UNITQUANTITY                    | numeric (32 6) NOT NULL  | Quantity of unit sold (not sure how this is different from unit)                                   |
@@ -200,35 +198,34 @@ Note the following formatting guidelines throughout:
 | ACCOUNTNUMBER                    | nvarchar (30) NOT NULL   | Customer's account nubmer if named customer is on transaction   |
 | AMOUNTINACCOUNTINGCURRENCY       | numeric (32 6) NOT NULL  | Amount due for line                                             |
 | AMOUNTINTENDEREDCURRENCY         | numeric (32 6) NOT NULL  | amount tendered in currency (different if not store's currency) |
-| AMOUNTTENDERED                   | numeric (32 6) NOT NULL  | Amount paid(?)                                                  |
-| AMOUNTTENDEREDADJUSTMENT                   | numeric (32 6) NOT NULL  | It's a new feature in the product that allows changes in the transactions, with full audit trail.                                                |
-| AMOUNTTENDEREDADJUSTMENT         | numeric (32 6) NOT NULL  |                                                                 |
+| AMOUNTTENDERED                   | numeric (32 6) NOT NULL  | Amount in store currency                                                 |
+| AMOUNTTENDEREDADJUSTMENT         | numeric (32 6) NOT NULL  | It's a new feature in the product that allows changes in the transactions, with full audit trail.                                                |
 | CARDNUMBER                       | nvarchar (30) NOT NULL    | Truncated card no.                                              |
 | CARDTYPEID                       | nvarchar (10) NOT NULL   | Card name (AMEX, VISA, ETC)                                     |
 | CREDITVOUCHERID                  | nvarchar (30) NOT NULL   | If paid by voucher, the voucher number                          |
 | CURRENCYCODE                     | nvarchar (3) NOT NULL    | Currency paid                                                   |
-| DATAAREAID                       | nvarchar (4) NOT NULL    |                                                                 |
-| DEFINITIONGROUP                  | nvarchar (60) NOT NULL   |                                                                 |
+| DATAAREAID                       | nvarchar (4) NOT NULL    | Company identifier (Eg:- MSFT US)                                                                |
+| DEFINITIONGROUP                  | nvarchar (60) NOT NULL   |Fields added by the synchronization engine (DIFX) in Finance & Operations to define the export sequence.                                                                 |
 | EXCHANGERATEINACCOUNTINGCURRENCY | numeric (32 16) NOT NULL | Exchange rate                                                   |
 | EXCHANGERATEINTENDEREDCURRENCY   | numeric (32 16) NOT NULL | Exchange rate                                                   |
-| EXECUTIONID                      | nvarchar (90) NOT NULL   |                                                                 |
+| EXECUTIONID                      | nvarchar (90) NOT NULL   | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                |
 | GIFTCARDID                       | nvarchar (30) NOT NULL   | Gift card number                                                |
 | ISCHANGELINE                     | int NOT NULL            | If payment is due back to customer due to overpayment           |
 | ISPREPAYMENT                     | int NOT NULL            | Is a deposit                                                    |
-| ISSELECTED                       | int NOT NULL            |                                                                 |
+| ISSELECTED                       | int NOT NULL            | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                               |
 | LINENUMBER                       | numeric (32 16) NOT NULL | Payment line number                                             |
 | LOYALTYCARDID                    | nvarchar (30) NOT NULL   | If paying with loyalty points, the card number provided         |
 | OPERATINGUNITNUMBER              | nvarchar (30) NOT NULL   | Operating unit unique to store                                  |
-| PARTITION                        | nvarchar (20) NOT NULL   |                                                                 |
-| QUANTITY                         | numeric (32 6) NOT NULL  | ?                                                               |
+| PARTITION                        | nvarchar (20) NOT NULL   |An identification of a data partition in Finance & Operations specific to D365                                                                 |
+| QUANTITY                         | numeric (32 6) NOT NULL  | Units Sold                                                               |
 | RECEIPTID                        | nvarchar (18) NOT NULL   | Receipt ID. Different from Trasaction ID.                       |
 | STAFF                            | nvarchar (25) NOT NULL   | User ID                                                         |
-| SYNCSTARTDATETIME                | datetime NOT NULL       |                                                                 |
+| SYNCSTARTDATETIME                | datetime NOT NULL       | Fields added to synchronization engine (DIXF) in Finance & Operations. They decline the export sequence.                                                                |
 | TENDERTYPE                       | nvarchar (10) NOT NULL   | Type of tender paid                                             |
-| TERMINAL                         | nvarchar (10) NOT NULL   |                                                                 |
+| TERMINAL                         | nvarchar (10) NOT NULL   | Register ID/POS                                                                |
 | TRANSACTIONNUMBER                | nvarchar (44) NOT NULL   | Transaction number                                              |
 | TRANSACTIONSTATUS                | int NOT NULL            | Status of payment line                                          |
-| TRANSFERSTATUS                   | int NOT NULL            |                                                                 |
+| TRANSFERSTATUS                   | int NOT NULL            |   Used to track status of transfers between warehouses                                                              |
 | VOIDSTATUS                       | int NOT NULL            | If a tender line was voided prior to tendering the transaction  |
 
 
