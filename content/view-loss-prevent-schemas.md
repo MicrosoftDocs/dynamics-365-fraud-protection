@@ -103,8 +103,7 @@ Note the following formatting guidelines throughout:
 | CASHDISCOUNTAMOUNT              | numeric (32 6) NOT NULL  | Amount of cash disount, if applicable                                                              |
 | CATEGORYHIERARCHYNAME           | nvarchar (128) NOT NULL  | Categrory hierarchy used to organize products                                                      |
 | CATEGORYNAME                    | nvarchar (254) NOT NULL  | Name of the product category                                                                       |
-| CHANNELLISTINGID                | nvarchar (50) NOT NULL  | Applies only for e-commerce, not required for retail    
-                         |
+| CHANNELLISTINGID                | nvarchar (50) NOT NULL  | Applies only for e-commerce, not required for retail                     |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Product cost                                                                                       |
 | CURRENCY                        | nvarchar (3) NOT NULL    | Currency of the sale                                                                                    |
 | CUSTOMERACCOUNT                 | nvarchar (38) NOT NULL   | Customer account number                                                                            |
