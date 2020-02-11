@@ -25,7 +25,7 @@ You can use the scorecard reports to review your key metrics and understand the 
 
 Your account protection scorecard reflects the real-time performance of Account Protection as our system of record. After evaluating the data presented in the scorecard, you can use the knowledge that you gain to make well-informed risk management decisions for your online business.
 
-## Account Protection Assessment Type
+## Account protection assessment type
 
 You can select the Account Protection assessment type by clicking the tab menu on the top of the page. The following types are available:
 
@@ -42,21 +42,21 @@ You can use the drop-down menus to filter your view of the interactive charts. T
 
 The scorecard shows metrics in the following sections:
 
-### Bot Model Score
+### Bot model score
 
 Bot model score section shows insights from the bot ML model. The bot score is a number within the range of 0 to 999, where lower score indicates low probability of bot attack and higher score indicates high probability of bot attack. The following metrics are available:
 
 - **Bot score distribution**: Bot score distribution chart shows the transaction volume aggregated by bot model score. 
 - **Top bot countries and regions**: Top bot countries graph shows the geographic view of top 5 countries and regions with a high percentage of bot attack, defined as a bot score higher than 900.
 
-### Risk Model Score
+### Risk model score
 
 Risk model score section shows insights from the fraud risk ML model. The risk score is a number within the range of 0 to 999, where lower score indicates low probability of fraud attack and higher score indicates high probability of fraud attack. The following metrics are available:
 
 - **Risk score distribution**: Risk score distribution chart shows the transaction volume aggregated by risk model score. 
 - **Top risk countries and regions**: Top bot countries graph shows the geographic view of top 5 countries and regions with a high percentage of fraud attack, defined as a risk score higher than 900.
 
-### Rule Decision
+### Rule decision
 
 Risk decision section shows metrics from the automated decision rules. The rules are defined by the merchant to make automated decisions based on the business need such as policies, bot and fraud risk tolerance, etc. To learn more about rules, view rules documentation (link TBD) The following metrics are available:
 
