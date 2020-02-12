@@ -56,7 +56,7 @@ Your website or application should enable the device fingerprinting before it su
 
 1. Insert a **script** on the webpage/application where you want collect device fingerprinting information    
 
-    ```
+    ```javascript
     <script src="https://fpt.<Your_Root_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
     ```
 
@@ -66,7 +66,7 @@ Your website or application should enable the device fingerprinting before it su
 
     **Example**
 
-    ```
+    ```javascript
     <script src="https://fpt.contoso.com/mdt.js?session_id=211d403b-2e65-480c-a231-fd1626c2560e&instanceId=b472dbc3-0928-4577-a589-b80090117691" type="text/javascript"></script>
     ```
 
@@ -78,7 +78,7 @@ Your website or application should enable the device fingerprinting before it su
 
 2. Load device fingerprinting after the page's elements are loaded.
 
-    ```
+    ```javascript
     window.dfp.doFpt(this.document);
     ```
 
