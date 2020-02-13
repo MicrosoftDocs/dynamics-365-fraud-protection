@@ -1,6 +1,6 @@
 ---
 author: v-davido
-description: This topic outlines the schemas that are required for historical data upload
+description: Test of ap schema tables2
 ms.author: v-davido
 ms.service: fraud-protection
 ms.date: 01/14/2020
@@ -10,276 +10,286 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: View purchase protection schemas
+title: Test of ap schema tables2
 
 ---
 
-# View purchase protection schemas
+# Test of ap schema tables2
 
-This topic outlines the schemas for historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
+#
+# View account protection schemas
+
+This topic outlines the schemas for historical data that is bulk-uploadedpassed into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](https://docs.microsoft.com/en-us/dynamics365/fraud-protection/data-upload). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](https://docs.microsoft.com/en-us/dynamics365/fraud-protection/integrate-real-time-api).
 
 Note the following formatting guidelines throughout:
 
 - The files are in CSV UTF-8 (comma delimited) format (\*.csv).
 - The maximum file size is 10 gigabytes (GB).
-- The **DateTime** columns are in ISO 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
+- The  **DateTime**  columns are in ISO 8601 format. For example, **DateTime.UtcNow.ToString(&quot;o&quot;)** might have the result  **&quot;2019-03-14T20:18:11.254Z&quot;**.
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
-## Transactions
+## **AccountCreation**
 
-The following schemas are used in the Diagnose, Evaluate, and Protect experiences.
+AccountCreationAPI schema contains information and context about an incoming new account creation event for a risk assessment.
 
-### Purchases
+The following schemas are used in the Evaluate, andEvaluate and Protect experiences.
 
-| Attribute           | Type     | Description |
-|---------------------|----------|-------------|
-| PurchaseId          | string   | The identifier of the transaction (or purchase or order). |
-| OriginalOrderId     | string   | The original order identifier for payments of recurring billing, such as monthly subscription billing. |
-| CustomerLocalDate   | DateTime | The purchase creation date in the customer's local time zone. The format is ISO 8601. |
-| MerchantLocalDate   | DateTime | The purchase ingestion date in the merchant's local time zone. The format is ISO 8601. |
-| TotalAmount         | double   | The total amount that was charged to the customer including tax. This information is provided by the merchant. |
-| SalesTax            | double   | The sales tax that was charged for the transaction. This information is provided by the merchant. |
-| Currency            | string   | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant. |
-| DeviceContextId     | string   | The session ID of the event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if the session isn't available. |
-| IPAddress           | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
-| UserId              | string   | The customer identifier. This information is provided by the merchant. |
-| UserFirstName       | string   | The customer-provided first name on the customer account. |
-| UserLastName        | string   | The customer-provided last name on the customer account. |
-| UserEmail           | string   | The customer's email address. This value is case-insensitive. |
-| UserCreationDate    | DateTime | The creation date of the customer account. The format is ISO 8601. |
-| UserUpdateDate      | DateTime | The date when customer data was last changed. The format is ISO 8601. |
-| UserZipCode         | string   | The customer's postal code. |
-| UserCountryCode     | string   | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
-| UserTimeZone        | string   | An empty string. |
-| UserLanguage        | string   | The customer's language and language territory (for example: **EN-US**). |
-| UserPhoneNumber     | string   | The customer's phone number. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| IsEmailValidated    | bool     | A **True**/**False** value that indicates whether the customer-provided email address has been verified as owned by the customer. |
-| ShippingFirstName   | string   | The first name that was provided for the address. |
-| ShippingLastName    | string   | The last name that was provided for the address. |
-| ShippingPhoneNumber | string   | The phone number that was provided for the address. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| Street1             | string   | The first row that was provided for the address. |
-| Street2             | string   | The second row that was provided for the address. (This value can be blank.) |
-| Street3             | string   | The third row that was provided for the address. (This value can be blank.) |
-| City                | string   | The city that was provided for the address. |
-| State               | string   | The state or province that was provided for the address. |
-| ZipCode             | string   | The postal code that was provided for the address. |
-| CountryCode         | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| **Object** | **Attribute** | **Type** | **Description** |
+| --- | --- | --- | --- |
+|   | Name | string | &quot;AP.AccountCreation&quot; |
+| Version | string | &quot;0.5&quot; |
+| **MetaData** | trackingId | string | The identifier of the Signup event. |
+| signUpId | string | The identifier of the Signup event (can match trackingId). |
+| assessmentType | string | Indicates the assessment type for the event. Possible values are &#39;evaluate&#39; or &#39;protect&#39;. If not specified, the default is &#39;protect&#39;&#39;. |
+| customerLocalDate | dateTime | The Signup creation date in the customer&#39;s local time zone. The format is ISO 8601. |
+| merchantTimeStamp | dateTime | TimeStamp for the event. |
+| **DeviceContext** | SessionID | string | The customer&#39;s Session ID (mastered by DFP Device Fingerprinting Service). |
+| ipAddress | string | The customer&#39;s IP address (as provided by the merchant). |
+| provider | string | The provider of device info. Possible values are &#39;DFPFingerprinting&#39; or &#39;Merchant&#39;. If not specified, the default is &#39;DFPFingerprinting&#39;. |
+| externalDeviceId | string | The customer&#39;s device ID, as provided and mastered by the merchant. |
+| externalDeviceType | string | The customer&#39;s device type, as provided and mastered by the merchant. Possible values are &#39;Mobile&#39; , &#39;Computer&#39; , &#39;MerchantHardware&#39; , &#39;Tablet&#39; , &#39;GameConsole&#39;. |
+| User | userId | string | The user identifier. This information is provided by the merchant. |
+| userType | string | The user&#39;s profile type. Possible values are &#39;Consumer&#39;, &#39;Developer&#39;, &#39;Seller&#39;, &#39;Publisher&#39;, &#39;Tenant&#39;. |
+| UserName | string | The user-provided user name unique in the merchant system. |
+| passwordHash | string | The user-provided password hashed in the merchant system. |
+| firstName | string | The user-provided first name on the account. |
+| lastName | string | The user-provided last name on the account. |
+| country | string | The user&#39;s country. The value should be a two-letter ISO country code (for example, US). |
+| zipCode | string | The user&#39;s postal code. |
+| timeZone | string | The user&#39;s time zone. |
+| language | string | The user&#39;s language and territory (for example, EN-US). |
+| membershipId | string | The membership ID, if the user already has an existing membership with the merchant. |
+| isMembershipIdUserName | bool | membershipId can be used as user name, defaults to False. |
+| User \ phone | phoneType | enum | The values are:&#39;Primary&#39;, &#39;Alternative&#39;, default to primary. |
+| phoneNumber | string | The user&#39;s phone number. The format should be the country code followed by a hyphen (-) and then the phone number (for example, for the US, +1-1234567890). |
+| isPhoneNumberValidated | bool | A True/False value that indicates whether the user-provided phone number has been verified as owned by the user. |
+| phoneNumberValidatedDate | dateTime | The validation date of the user phone number. The format is ISO 8601. |
+| isPhoneUserName | bool | The phone number can be used as user name, defaults to False. |
+| User \ Email | emailType | enum | The values are:&#39;Primary&#39;, &#39;Alternative&#39; |
+| email | string | The user&#39;s email address. This value is case-insensitive. |
+| isEmailValidated | bool | A True/False value that indicates whether the user-provided email address has been verified as owned by the user. |
+| emailValidatedDate | dateTime | The validation date of the user email. The format is ISO 8601. |
+| isEmailUserName | bool | The email can be use as user name, defaults to False. |
+| User \ SSOAuthenticationProvider | authenticationProvider | string | The user&#39;s single sign-on (SSO) authentication provider, if different from the merchant&#39;s. Possible valuse are &#39;MSA&#39; , &#39;Facebook&#39; , &#39;PSN&#39; , &#39;MerchantAuth&#39; , &#39;Google&#39;. |
+| displayName | string | The user&#39;s display name with single sign-on (SSO) authentication provider. Example: username from Windows Live, Facebook, or Google |
+| User \ Address | addressType | enum | The values are:&#39;Primary&#39;,&#39;Billing&#39;,&#39;Shipping&#39;,&#39;Alternative&#39;, defaults to &#39;Primary&#39;. |
+| firstName | string | The user-provided first name associated with the address. |
+| lastName | string | The user-provided last name associated with the address. |
+| phoneNumber | string | The user-provided phone number associated with the address. |
+| street1 | string | The first row that was provided for the address. |
+| street2 | string | The second row that was provided for the address. (This value can be blank.) |
+| street3 | string | The third row that was provided for the address. (This value can be blank.) |
+| city | string | The city that was provided for the address. |
+| state | string | The state or province that was provided for the address. |
+| district | string | The district that was provided for the address. |
+| zipCode | string | The postal code that was provided for the address. |
+| country | string | The country code that was provided for the address. The value should be a two-letter ISO country code (for example, US). |
+| PaymentInstrument | merchantPaymentInstrumentId | string | The identifier of the payment instrument. This information is provided by the merchant. |
+| type | string | The type of payment. Possible values are &#39;CreditCard&#39; , &#39;DirectDebit&#39; , &#39;PayPal&#39; , &#39;MobileBilling&#39; , &#39;OnlineBankTransfer&#39; , &#39;Invoice&#39; , &#39;MerchantGiftCard&#39; , &#39;MerchantWallet&#39; , &#39;CashOnDelivery&#39; , &#39;Paytm&#39; , &#39;CCAvenue&#39;. |
+| creationDate | DateTime | The date of the first entry for the payment instrument in the merchant&#39;s system. The format is ISO 8601. |
+| updateDate | DateTime | The date of the last update for the payment instrument in the merchant&#39;s system. The format is ISO 8601. |
+| state | string | The current state of the PI in merchant&#39;s system. Sample: Active, Blocked, Expired |
+| cardType | string | This attribute is used only for payments of the Credit/Debit Card type. Possible values are &#39;Visa&#39; , &#39;Mastercard&#39; , &#39;Amex&#39; , &#39;ACH&#39; , &#39;SEPA&#39; , &#39;UnionPay&#39; , &#39;Inicis&#39; , &#39;MobileBillingCarrier&#39; , &#39;Discover&#39; , &#39;AllPay&#39; , &#39;JCB&#39; , &#39;DiscoverDiners&#39;. |
+| holderName | string | The name of the payment instrument&#39;s user. This attribute is used only for payments of the Credit/Debit Card type. |
+| bin | string | This attribute is used only for payments of the Credit/Debit Card type. |
+| expirationDate | string | The expiration date for the payment instrument in the merchant&#39;s system. The format is ISO 8601. This attribute is used only for payments of the Credit/Debit Card type. |
+| lastFourDigits | string | This attribute is used only for payments of the Credit/Debit Card type. |
+| email | string | The email address associated with the payment instrument. This attribute is used only for payments of the Paypal type. |
+| billingAgreementId | string | This attribute is used only for payments of the Paypal type. |
+| payerId | string | This attribute is used only for payments of the Paypal type. |
+| payerStatus | string | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the Paypal type. |
+| addressStatus | string | A value that indicates whether PayPal has verified the payer&#39;s address. This attribute is used only for payments of the Paypal type. |
+| imei | string | This attribute is used only for payments of the Mobilepayment type. |
+| PaymentInstrument \ BillingAddress | addressType | enum | The values are:&#39;Primary&#39;,&#39;Billing&#39;,&#39;Shipping&#39;,&#39;Alternative&#39;, defaults to &#39;Billing&#39;. |
+| firstName | string | The user-provided first name associated with the address. |
+| lastName | string | The user-provided last name associated with the address. |
+| phoneNumber | string | The user-provided phone number associated with the address. |
+| street1 | string | The first row that was provided for the address. |
+| street2 | string | The second row that was provided for the address. (This value can be blank.) |
+| street3 | string | The third row that was provided for the address. (This value can be blank.) |
+| city | string | The city that was provided for the address. |
+| state | string | The state or province that was provided for the address. |
+| district | string | The district that was provided for the address |
+| zipCode | string | The postal code that was provided for the address. |
+| country | string | The country code that was provided for the address. The value should be a two-letter ISO country code (for example, US). |
+| MarketingContext | campaignType | string | The marketing campaign type. Possible values are &#39;None&#39; , &#39;Email&#39; , &#39;Referral&#39; , &#39;SearchEngine&#39; , &#39;Direct&#39; , &#39;SocialNetwork&#39; , &#39;Other&#39;. |
+| trafficSource | string | The source of this user if known. If via Referral, provide the MerchantUserId of the referrer. |
+| incentiveType | string | The incentive type for the new user. Possible values are &#39;None&#39; , &#39;CashBack&#39; , &#39;Discount&#39; , &#39;FreeTrial&#39; , &#39;BonusPoints&#39; , &#39;Gift&#39; , &#39;Other&#39;. |
+| incentiveOffer | string | The exact incentive offer name. Examples: $5 off on first order, free shipping, 5000 points |
 
-### PaymentInstruments
+**AccountCreationStatus**
 
-| Attribute                   | Type     | Description |
-|-----------------------------|----------|-------------|
-| PurchaseId                  | string   | The identifier of the transaction (or purchase or order). |
-| MerchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. |
-| Type                        | string   | The type of payment: **credit_card**, **direct_debit**, **finance_leasing**, **invoice_credit**, **offline_bank_transfer**, **online_bank_transfer**, **Paypal**, **stored_value**, or **Mobilepayment**. |
-| PurchaseAmount              | double   | The total purchase amount that uses this payment instrument for the transaction. |
-| CreationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
-| UpdateDate                  | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
-| CardType                    | string   | This attribute is used only for payments of the **CreditCard** type. |
-| HolderName                  | string   | The name of the customer of the payment instrument. This attribute is used only for payments of the **CreditCard** type. |
-| BIN                         | string   | This attribute is used only for payments of the **CreditCard** type. |
-| ExpirationDate              | string   | The expiration date for the payment instrument in the merchant's system. The format is ISO 8601. This attribute is used only for payments of the **CreditCard** type. |
-| LastFourDigits              | string   | This attribute is used only for payments of the **CreditCard** type. |
-| Email                       | string   | The email address that is associated with the payment instrument. This attribute is used only for payments of the **Paypal** type. |
-| BillingAgreementId          | string   | This attribute is used only for payments of the **Paypal** type. |
-| PayerId                     | string   | This attribute is used only for payments of the **Paypal** type. |
-| PayerStatus                 | string   | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **Paypal** type. |
-| AddressStatus               | string   | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **Paypal** type. |
-| IMEI                        | string   | This attribute is used only for payments of the **Mobilepayment** type. |
-| FirstName                   | string   | The first name that was provided for the address. |
-| LastName                    | string   | The last name that was provided for the address. |
-| PhoneNumber                 | string   | The phone number that was provided for the address. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| Street1                     | string   | The first row that was provided for the address. |
-| Street2                     | string   | The second row that was provided for the address. (This value can be blank.) |
-| Street3                     | string   | The third row that was provided for the address. (This value can be blank.) |
-| City                        | string   | The city that was provided for the address. |
-| State                       | string   | The state or province that was provided for the address. |
-| ZipCode                     | string   | The postal code that was provided for the address. |
-| CountryCode                 | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
-
-### Products
-
-| Attribute     | Type   | Description |
-|---------------|--------|-------------|
-| PurchaseId    | string | The identifier of the transaction (or purchase or order). |
-| ProductId     | string | The product identifier. |
-| PurchasePrice | double | The price for the line item of the purchase. |
-| Margin        | string | The margin that was gained by the sale of the item. |
-| Quantity      | Int32  | The number of items that were purchased. |
-| ProductName   | string | The customer-readable product name. |
-| Type          | string | A value that indicates whether the goods were physical or digital. |
-| Category      | string | The category of product (for example: **Apparel**, **Shoes**, or **Accessories**). |
-| Market        | string | The market where the product is offered. The value should be a two-letter ISO country or region code (for example: **US**). |
-| Sku           | string | The product's stock keeping unit (SKU). |
-| SalesPrice    | double | The price of the item that was sold excluding tax. This information is provided by the merchant. |
-| Currency      | string | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant.  | 
-| COGS          | string | The cost of goods sold (that is, the raw material cost of the item). This information is provided by the merchant. |
-| IsRecurring   | bool   | A value that indicates whether the product is a recurring subscription. |
-| IsFree        | bool   | A value that indicates whether the product is offered for free. |
-| Language      | string | The language and language territory (for example: **EN-US**). |
-
-## Chargebacks
-
-The following schema is used in the Diagnose, Evaluate, and Protect experiences.
-
-| Attribute          | Type     | Description |
-|--------------------|----------|-------------|
-| ChargebackId       | string   | The chargeback identifier. |
-| Reason             | string   | The reason that was provided by the bank. |
-| Status             | string   | The status: **Accepted**, **CB_Dispute-Initiated**, **CB_Dispute-Lose**, **CB_Dispute-Win**, **Chargeback-CB1**, **Chargeback-CB2**, **Inquiry_Dispute-Win**, **Inquiry-Initiated**, **ResubmittedRequest**, or **Unknown**. |
-| BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Amount             | double   | The chargeback amount. |
-| Currency           | string   | The currency that is used for the chargeback amount. |
-| UserId             | string   | The customer identifier. |
-| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
-| MerchantLocalDate  | DateTime | The purchase ingestion date in the merchant's local time zone. The format is ISO 8601. |
-
-## Refunds
-
-The following schema is used in the Evaluate and Protect experiences.
-
-| Attribute          | Type     | Description |
-|--------------------|----------|-------------|
-| RefundId           | string   | The refund identifier. |
-| Reason             | string   | The customer-provided reason. |
-| Status             | string   | The refund status: **Approved**, **Declined**, **Failed**, **Offline_Approved**, **Pending**, **Reversed**, or **Unknown**. |
-| BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Amount             | double   | The refund amount. |
-| Currency           | string   | The currency that is used for the sales price amount. |
-| UserId             | string   | The customer identifier. |
-| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
-| MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
-
-## PurchaseStatus
-
-The following schema is used in the Evaluate and Protect experiences.
-
-| Attribute         | Type     | Description |
-|-------------------|----------|-------------|
-| PurchaseId        | string   | The identifier of the transaction (or purchase or order). |
-| StatusType        | string   | The type of status: **Approved**, **Challenge**, **Pending**, **Rejected**, **Review**, or **Unknown**. |
-| StatusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
-| Reason            | string   | The reason for the status transition. |
-| MerchantLocalDate | DateTime | A date in ISO 8601 format. |
-
-## BankEvents
-
-The following schema is used in the Evaluate and Protect experiences.
-
-| Attribute          | Type     | Description |
-|--------------------|----------|-------------|
-| BankEventId        | string   | The bank event identifier. |
-| Type               | string   | The bank event type: **authorize**, **charge**, **refund**, **validate**, or **unknown**. |
-| BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Status             | string   | The status: **approved**, **declined**, **failed**, **reversed**, **pending**, or **unknown**. |
-| BankResponseCode   | string   | The bank code on the response. |
-| PaymentProcessor   | string   | The processor name (for example: **FDC** or **Paypal**). |
-| MRN                | string   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
-| MID                | string   | The merchant ID (MID) that is used for bank communication. |
-| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
-| MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
-
-## Account
+AccountCreationStatus contains information and context about the status of an account creation event. This is a data ingestion event only.
 
 The following schemas are used in the Evaluate and Protect experiences.
 
-### UpdateAccount
+| **Object** | **Attribute** | **Type** | **Description** |
+| --- | --- | --- | --- |
+|   | Name | string | &quot;AP.AccountCreation.Status&quot; |
+| Version | string | &quot;0.5&quot; |
+| MetaData | trackingID | string | The identifier of the SignupStatus event. |
+| signupId | string | The identifier of the Signup event. |
+| merchantTimeStamp | DateTime | TimeStamp for the event. |
+| userId | string | The user identifier. This information is provided by the merchant. |
+| Status | statusType | string | The type of status: Approved, Rejected, or Pending. |
+| reasonType | enum | The type of reason: challenge abandoned, challenge failed, challenge passed, challenge pending,review failed, review passed, review pending, None. Defaults to None. |
+| challengeType | enum | The type of review status: SMS, Email, Phone, Other,None. Defaults to None. |
+| statusDate | DateTime | The date and time when the status was applied. The format is ISO 8601. |
 
-| Attribute                | Type     | Description |
-|--------------------------|----------|-------------|
-| CustomerLocalDate        | DateTime | A date in ISO 8601 format. |
-| UserId                   | string   | The customer identifier. |
-| UsercreationDate         | DateTime | A date in ISO 8601 format. |
-| UserupdateDate           | DateTime | A date in ISO 8601 format. |
-| FirstName                | string   | The customer-provided first name on the customer account. |
-| LastName                 | string   | The customer-provided last name on the customer account. |
-| CountryCode              | string   | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
-| ZipCode                  | string   | The customer's postal code. |
-| TimeZone                 | string   | This attribute is obsolete (deprecated). Provide an empty string as the value. |
-| Language                 | string   | The customer's language and language territory (for example: **EN-US**). |
-| PhoneNumber              | string   | The customer's phone number. The format should be the country/region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| Email                    | string   | The customer's email address. This value is case-insensitive. |
-| IsEmailValidated         | bool     | A value that indicates whether the customer-provided email has been verified as owned by the customer. |
-| EmailValidatedDate       | DateTime | The date when the customer-provided email was verified as owned by the customer. The format is ISO 8601. |
-| IsPhoneNumberValidated   | bool     | A value that indicates whether the customer-provided phone number has been verified as owned by the customer. |
-| PhoneNumberValidatedDate | DateTime | The date when the customer-provided phone number was verified as owned by the customer. The format is ISO 8601. |
-| DeviceContextId          | string   | The session ID of the event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if the session isn't available. |
-| Provider                 | string   | A value that indicates the source of the **deviceContextId** value: **DFP Fingerprinting** or **Merchant**. |
-| DeviceContextDC          | string   | The Microsoft Device Fingerprinting data center for the customer's session ID. |
-| ExternalDeviceId         | string   | The customer's device ID. This information is provided and mastered by the merchant. |
-| ExternalDeviceType       | string   | The device type as identified by the merchant (for example: **PC** or **Mobile Device**). |
-| IpAddress                | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
-| MerchantLocalDate        | DateTime | A date in ISO 8601 format. |
+## **AccountLog**** I ****i**** n**
 
-### UpdateAddress
+AccountLogIncontains information and context about an incoming log-in event for a risk assessment.
 
-| Attribute       | Type   | Description |
-|-----------------|--------|-------------|
-| UserId          | string | The customer identifier. |
-| Addresstype     | string | The address type: **Billing**, **Shipping**, **Account**, or **Unknown**. |
-| FirstName       | string | The first name that was provided for the address. |
-| LastName        | string | The last name that was provided for the address. |
-| PhoneNumber     | string | The phone number that was provided for the address. |
-| Street1         | string | The first row that was provided for the address. |
-| Street2         | string | The second row that was provided for the address. (This value can be blank.) |
-| Street3         | string | Third row that was provided for the address. (This value can be blank.) |
-| City            | string | The city that was provided for the address. |
-| State           | string | The state or province that was provided for the address. |
-| District        | string | The district that was provided for the address. (This value can be blank.) |
-| ZipCode         | string | The postal code that was provided for the address. |
-| CountryCode     | string | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+The following schemas are used in the Evaluate and Protect experiences.
 
-### UpdatePaymentInstrument
+| **Object** | **Attribute** | **Type** | **Description** |
+| --- | --- | --- | --- |
+|   | Name | string | &quot;AP.AccountLogin&quot; |
+| Version | string | &quot;0.5&quot; |
+| MetaData | trackingId | string | The identifier of the Signup event. |
+| LogInId | string | The identifier of the Signup event (can match trackingId). |
+| assessmentType | string | Indicates the assessment type for the event. Possible values are &#39;evaluate&#39; or &#39;protect&#39;. If not specified, the default is &#39;protect&#39;&#39;. |
+| customerLocalDate | dateTime | The Signup creation date in the customer&#39;s local time zone. The format is ISO 8601. |
+| merchantTimeStamp | dateTime | TimeStamp for the event. |
+| DeviceContext | SessionID | string | The customer&#39;s Session ID (mastered by DFP Device Fingerprinting Service). |
+| ipAddress | string | The customer&#39;s IP address (as provided by the merchant). |
+| provider | string | The provider of device info. Possible values are &#39;DFPFingerprinting&#39; or &#39;Merchant&#39;. If not specified, the default is &#39;DFPFingerprinting&#39;. |
+| externalDeviceId | string | The customer&#39;s device ID, as provided and mastered by the merchant. |
+| externalDeviceType | string | The customer&#39;s device type, as provided and mastered by the merchant. |
+| User | userId | string | The user identifier. This information is provided by the merchant. |
+| userType | string | The user&#39;s profile type. Possible values are &#39;Consumer&#39;, &#39;Developer&#39;, &#39;Seller&#39;, &#39;Publisher&#39;, &#39;Tenant&#39;. |
+| UserName | string | The user-provided user name unique in the merchant system. |
+| passwordHash | string | The user-provided password hashed in the merchant system. |
+| User \ SSOAuthenticationProvider | authenticationProvider | string | The user&#39;s single sign-on (SSO) authentication provider, if different from the merchant&#39;s. Possible valuse are &#39;MSA&#39; , &#39;Facebook&#39; , &#39;PSN&#39; , &#39;MerchantAuth&#39; , &#39;Google&#39;. |
+| displayName | string | The user&#39;s display name with single sign-on (SSO) authentication provider. Example: username from Windows Live, Facebook, or Google |
+| User \ RecentUpdate | lastPhoneNumberUpdate | dateTime | Most recent update or create date/time of any phone number   |
+| lastEmailUpdate | dateTime | Most recent update or create date/time of any email   |
+| lastAddressUpdate | dateTime | Most recent update or create date/time of any address   |
+| lastPaymentInstrumentUpdate | dateTime | Most recent update or create date/time of any PaymentInstrument |
 
-| Attribute                     | Type     | Description |
-| ----------------------------- |----------|-------------|
-| UserId                        | string   | The customer identifier. |
-| MerchantPaymentInstrumentId   | string   | The identifier of the payment instrument. This information is provided by the merchant. |
-| PaymentInstrumenttype         | string   | The type of payment: **CreditCard**, **Paypal**, **Mobilepayment**, or **Giftcard**. |
-| PaymentInstrumentcreationDate | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
-| PaymentInstrumentupdateDate   | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
-| PaymentInstrumentState        | string   | The state of the payment instrument: **Active**, **Block**, or **Expire**. |
-| CardType                      | string   | This attribute is used only for payments of the **CreditCard** type. |
-| HolderName                    | string   | The name of the customer of the payment instrument. This attribute is used only for payments of the **CreditCard** type. |
-| BIN                           | string   | This attribute is used only for payments of the **CreditCard** type. |
-| ExpirationDate                | string   | The expiration date for the payment instrument in the merchant's system. This attribute is used only for payments of the **CreditCard** type. |
-| LastFourDigits                | string   | This attribute is used only for payments of the **CreditCard** type. |
-| Email                         | string   | The email address that is associated with the payment instrument. This attribute is used only for payments of the **Paypal** type. |
-| BillingAgreementId            | string   | This attribute is used only for payments of the **Paypal** type. |
-| PayerId                       | string   | This attribute is used only for payments of the **Paypal** type. |
-| PayerStatus                   | string   | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **Paypal** type. |
-| AddressStatus                 | string   | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **Paypal** type. |
-| IMEI                          | string   | This attribute is used only for payments of the **Mobilepayment** type. |
-| BillingAddressfirstName       | string   | The first name that was provided for address. |
-| BillingAddresslastName        | string   | The last name that was provided for address. |
-| BillingAddressphoneNumber     | string   | The phone number that was provided for address. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| Street1                       | string   | The first row that was provided for the address. |
-| Street2                       | string   | The second row that was provided for the address. (This value can be blank.) |
-| Street3                       | string   | Third row that was provided for the address. (This value can be blank.) |
-| City                          | string   | The city that was provided for the address. |
-| State                         | string   | The state or province that was provided for the address. |
-| District                      | string   | The district that was provided for the address. (This value can be blank.) |
-| ZipCode                       | string   | The postal code that was provided for the address. |
-| CountryCode                   | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+**AccountLog**** In ****ina**** Status**
 
-## Labels
+AccountLogInStatus contains information and context about the status of an account log-in event. This is a data ingestion event only.
 
-The following schema is used in the Evaluate and Protect experiences.
+The following schemas are used in the Evaluate and Protect experiences.
 
-| Attribute | Type | Description |
-| --- | --- | --- |
-| TrackingId | String | The unique ID for each event/record. |
-| MerchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
-| EventTimeStamp | DateTime | The date and time of the event. Possible values: Chargeback Date or Review Date. The format is ISO 8601. |
-| LabelObjectType | String | This field indicates the type of label: Purchase, Signup, Custom Fraud Evaluation, Account, Payment instrument, or Email. |
-| LabelObjectId | String | This is an identifier field for the type of object: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, or Email.  |
-| LabelSource | String | This field represents the source of the label: Customer Escalation, Chargeback, TC40_SAFE, Manual Review, Refund, Offline Analysis. |
-| LabelState | String | This field indicates the current status of the label: Inquiry Accepted, Fraud, Disputed, Reversed, Abuse, or Resubmitted Request.  |
-| LabelReasonCodes | String | This field indicates the reason codes associated with each type of label: Processor/Bank Response Code, Fraud Refund, Account TakeOver, Payment Instrument Fraud, Account Fraud, Abuse, or Friendly Fraud. |
+| **Object** | **Attribute** | **Type** | **Description** |
+| --- | --- | --- | --- |
+|   | Name | string | &quot;AP.AccountLogin.Status&quot; |
+| Version | string | &quot;0.5&quot; |
+| MetaData | trackingID | string | The identifier of the SignupStatus event. |
+| logInId | string | The identifier of the Signup event. |
+| merchantTimeStamp | DateTime | TimeStamp for the event. |
+| userId | string | The user identifier. This information is provided by the merchant. |
+| Status | statusType | string | The type of status: Approved, Rejected, or Pending. |
+| reasonType | enum | The type of reason: challenge abandoned, challenge failed, challenge passed, challenge pending,review failed, review passed, review pending, None. Defaults to None. |
+| challengeType | enum | The type of review status: SMS, Email, Phone, Other,None. Defaults to None. |
+| statusDate | DateTime | The date and time when the status was applied. The format is ISO 8601. |
+
+**AccountUpdate**
+
+AccountUpdate contains account information updates, for example, edited/addeduser profile, address, payment Instrument, phone, email and single sign-on (SSO). This is a data ingestion event only.
+
+The following schemas are used in the Evaluate and Protect experiences.
+
+| **Object** | **Attribute** | **Type** | **Description** |
+| --- | --- | --- | --- |
+|   | Name | string | &quot;AP.AccountUpdate&quot; |
+| Version | string | &quot;0.5&quot; |
+| MetaData | trackingId | string | The identifier of the Signup event. |
+| signUpId | string | The identifier of the Signup event (can match trackingId). |
+| customerLocalDate | dateTime | The Signup creation date in the customer&#39;s local time zone. The format is ISO 8601. |
+| merchantTimeStamp | dateTime | TimeStamp for the event. |
+| DeviceContext | SessionID | string | The customer&#39;s Session ID (mastered by DFP Device Fingerprinting Service). |
+| ipAddress | string | The customer&#39;s IP address (as provided by the merchant). |
+| provider | string | The provider of device info. Possible values are &#39;DFPFingerprinting&#39; or &#39;Merchant&#39;. If not specified, the default is &#39;DFPFingerprinting&#39;. |
+| externalDeviceId | string | The customer&#39;s device ID, as provided and mastered by the merchant. |
+| externalDeviceType | string | The customer&#39;s device type, as provided and mastered by the merchant. Possible values are &#39;Mobile&#39; , &#39;Computer&#39; , &#39;MerchantHardware&#39; , &#39;Tablet&#39; , &#39;GameConsole&#39;. |
+| User | userId | string | The user identifier. This information is provided by the merchant. |
+| userType | string | The user&#39;s profile type. Possible values are &#39;Consumer&#39;, &#39;Developer&#39;, &#39;Seller&#39;, &#39;Publisher&#39;, &#39;Tenant&#39;. |
+| UserName | string | The user-provided user name unique in the merchant system. |
+| passwordHash | string | The user-provided password hashed in the merchant system. |
+| firstName | string | The user-provided first name on the account. |
+| lastName | string | The user-provided last name on the account. |
+| country | string | The user&#39;s country. The value should be a two-letter ISO country code (for example, US). |
+| zipCode | string | The user&#39;s postal code. |
+| timeZone | string | The user&#39;s time zone. |
+| language | string | The user&#39;s language and territory (for example, EN-US). |
+| membershipId | string | The membership ID, if the user already has an existing membership with the merchant. |
+| isMembershipIdUserName | bool | membershipId can be used as user name, defaults to False. |
+| User \ phone | phoneType | enum | The values are:&#39;Primary&#39;, &#39;Alternative&#39;, default to primary. |
+| phoneNumber | string | The user&#39;s phone number. The format should be the country code followed by a hyphen (-) and then the phone number (for example, for the US, +1-1234567890). |
+| isPhoneNumberValidated | bool | A True/False value that indicates whether the user-provided phone number has been verified as owned by the user. |
+| phoneNumberValidatedDate | dateTime | The validation date of the user phone number. The format is ISO 8601. |
+| isPhoneUserName | bool | The phone number can be used as user name, defaults to False. |
+| User \ Email | emailType | enum | The values are:&#39;Primary&#39;, &#39;Alternative&#39; |
+| email | string | The user&#39;s email address. This value is case-insensitive. |
+| isEmailValidated | bool | A True/False value that indicates whether the user-provided email address has been verified as owned by the user. |
+| emailValidatedDate | dateTime | The validation date of the user email. The format is ISO 8601. |
+| isEmailUserName | bool | The email can be use as user name, defaults to False. |
+| User \ SSOAuthenticationProvider | authenticationProvider | string | The user&#39;s single sign-on (SSO) authentication provider, if different from the merchant&#39;s. Possible valuse are &#39;MSA&#39; , &#39;Facebook&#39; , &#39;PSN&#39; , &#39;MerchantAuth&#39; , &#39;Google&#39;. |
+| displayName | string | The user&#39;s display name with single sign-on (SSO) authentication provider. Example: username from Windows Live, Facebook, or Google |
+| User \ Address | addressType | enum | The values are:&#39;Primary&#39;,&#39;Billing&#39;,&#39;Shipping&#39;,&#39;Alternative&#39;, defaults to &#39;Primary&#39;. |
+| firstName | string | The user-provided first name associated with the address. |
+| lastName | string | The user-provided last name associated with the address. |
+| phoneNumber | string | The user-provided phone number associated with the address. |
+| street1 | string | The first row that was provided for the address. |
+| street2 | string | The second row that was provided for the address. (This value can be blank.) |
+| street3 | string | The third row that was provided for the address. (This value can be blank.) |
+| city | string | The city that was provided for the address. |
+| state | string | The state or province that was provided for the address. |
+| district | string | The district that was provided for the address. |
+| zipCode | string | The postal code that was provided for the address. |
+| country | string | The country code that was provided for the address. The value should be a two-letter ISO country code (for example, US). |
+| PaymentInstrument | merchantPaymentInstrumentId | string | The identifier of the payment instrument. This information is provided by the merchant. |
+| type | string | The type of payment. Possible values are &#39;CreditCard&#39; , &#39;DirectDebit&#39; , &#39;PayPal&#39; , &#39;MobileBilling&#39; , &#39;OnlineBankTransfer&#39; , &#39;Invoice&#39; , &#39;MerchantGiftCard&#39; , &#39;MerchantWallet&#39; , &#39;CashOnDelivery&#39; , &#39;Paytm&#39; , &#39;CCAvenue&#39;. |
+| creationDate | DateTime | The date of the first entry for the payment instrument in the merchant&#39;s system. The format is ISO 8601. |
+| updateDate | DateTime | The date of the last update for the payment instrument in the merchant&#39;s system. The format is ISO 8601. |
+| state | string | The current state of the PI in merchant&#39;s system. Sample: Active, Blocked, Expired |
+| cardType | string | This attribute is used only for payments of the Credit/Debit Card type. Possible values are &#39;Visa&#39; , &#39;Mastercard&#39; , &#39;Amex&#39; , &#39;ACH&#39; , &#39;SEPA&#39; , &#39;UnionPay&#39; , &#39;Inicis&#39; , &#39;MobileBillingCarrier&#39; , &#39;Discover&#39; , &#39;AllPay&#39; , &#39;JCB&#39; , &#39;DiscoverDiners&#39;. |
+| holderName | string | The name of the payment instrument&#39;s user. This attribute is used only for payments of the Credit/Debit Card type. |
+| bin | string | This attribute is used only for payments of the Credit/Debit Card type. |
+| expirationDate | string | The expiration date for the payment instrument in the merchant&#39;s system. The format is ISO 8601. This attribute is used only for payments of the Credit/Debit Card type. |
+| lastFourDigits | string | This attribute is used only for payments of the Credit/Debit Card type. |
+| email | string | The email address associated with the payment instrument. This attribute is used only for payments of the Paypal type. |
+| billingAgreementId | string | This attribute is used only for payments of the Paypal type. |
+| payerId | string | This attribute is used only for payments of the Paypal type. |
+| payerStatus | string | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the Paypal type. |
+| addressStatus | string | A value that indicates whether PayPal has verified the payer&#39;s address. This attribute is used only for payments of the Paypal type. |
+| imei | string | This attribute is used only for payments of the Mobilepayment type. |
+| PaymentInstrument \ BillingAddress | addressType | enum | The values are:&#39;Primary&#39;,&#39;Billing&#39;,&#39;Shipping&#39;,&#39;Alternative&#39;, defaults to &#39;Billing&#39;. |
+| firstName | string | The user-provided first name associated with the address. |
+| lastName | string | The user-provided last name associated with the address. |
+| phoneNumber | string | The user-provided phone number associated with the address. |
+| street1 | string | The first row that was provided for the address. |
+| street2 | string | The second row that was provided for the address. (This value can be blank.) |
+| street3 | string | The third row that was provided for the address. (This value can be blank.) |
+| city | string | The city that was provided for the address. |
+| state | string | The state or province that was provided for the address. |
+| district | string | The district that was provided for the address |
+| zipCode | string | The postal code that was provided for the address. |
+| country | string | The country code that was provided for the address. The value should be a two-letter ISO country code (for example, US). |
+
+**Label**
+
+Labels API contains the additional knowledge for model training based on an additional set of fraud signals.This is a data ingestion event only.
+
+The following schemas are used in the Evaluate and Protect experiences.
+
+| **Category** | **Attribute** | **Type** | **Description** |
+| --- | --- | --- | --- |
+|   | Name | string | &quot;AP.AccountLabel&quot; |
+| Version | string | &quot;0.5&quot; |
+| MetaData | TrackingId | String | The unique ID for each event/record. |
+| merchantTimeStamp | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601. |
+| userId | string | The user identifier. This information is provided by the merchant. |
+| Label | EventTimeStamp | DateTime | The date and time of the event. Possible values: Chargeback Date or Review Date. The format is ISO 8601. |
+| LabelObjectType | String | This field indicates the type of label: Purchase, Account Creation, Account Login, Account Update, Custom Fraud Evaluation, Account, Payment instrument, or Email. |
+| LabelObjectId | String | This is an identifier field for the object: PurchaseId, AccountCreationId, AccountLoginId, AccountUpdateId, UserId, MerchantPaymentInstrumentId, or Email. |
+| LabelSource | String | This field represents the source of the label: Customer Escalation, Chargeback, TC40\_SAFE, Manual Review, Refund, Offline Analysis, Account Protection Review |
+| LabelState | String | This field indicates the current status of the label: Inquiry Accepted, Fraud, Disputed, Reversed, Abuse, Resubmitted Request, AccountCompromised, AccountNotCompromised |
+| LabelReasonCodes | String | This field indicates the reason codes associated with each type of label: Processor/Bank Response Code, Fraud Refund, Account TakeOver, Payment Instrument Fraud, Account Fraud, Abuse, Friendly Fraud, Account Credentials Leaked, Passed Account Protection Checks |
 | Processor | String | The name of the bank or payment processor that is generating the TC40 or SAFE information. |
 | EffectiveStartDate | DateTime | The date from which this label is effective. The format is ISO 8601. |
 | EffectiveEndDate | DateTime | The end date for this label. The format is ISO 8601. |
-
-## Download sample data
-You can download our [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip) to explore options before using your own internal data.
