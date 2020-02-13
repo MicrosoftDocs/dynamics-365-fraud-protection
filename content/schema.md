@@ -38,6 +38,18 @@ The following schemas are used in the Evaluate, andEvaluate and Protect experien
 AccountCreationStatus contains information and context about the status of an account creation event. This is a data ingestion event only.
 
 The following schemas are used in the Evaluate and Protect experiences.
+| Object   | Attribute         | Type     | Description                                                                                                                                                            |
+|----------|-------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|       | Name              | string   | "AP\.AccountCreation\.Status"                                                                                                                                          |
+|       | Version           | string   | "0\.5"                                                                                                                                                                 |
+| MetaData | trackingID        | string   | The identifier of the SignupStatus event\.                                                                                                                             |
+| MetaData | signupId          | string   | The identifier of the Signup event\.                                                                                                                                   |
+| MetaData | merchantTimeStamp | DateTime | TimeStamp for the event\.                                                                                                                                              |
+| MetaData | userId            | string   | The user identifier\. This information is provided by the merchant\.                                                                                                   |
+| Status   | statusType        | string   | The type of status: Approved, Rejected, or Pending\.                                                                                                                   |
+| Status   | reasonType        | enum     | The type of reason: challenge abandoned, challenge failed, challenge passed, challenge pending,review failed, review passed, review pending, None\. Defaults to None\. |
+| Status   | challengeType     | enum     | The type of review status: SMS, Email, Phone, Other,None\. Defaults to None\.                                                                                          |
+| Status   | statusDate        | DateTime | The date and time when the status was applied\. The format is ISO 8601\.                                                                                               |
 
 
 
