@@ -56,8 +56,8 @@ AccountLogInStatus contains information and context about the status of an accou
 The following schemas are used in the Evaluate and Protect experiences.
 | Object   | Attribute         | Type     | Description                                                                                                                                                            |
 |----------|-------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| N/A      | Name              | string   | "AP\.AccountLogin\.Status"                                                                                                                                             |
-| N/A      | Version           | string   | "0\.5"                                                                                                                                                                 |
+|       | Name              | string   | "AP\.AccountLogin\.Status"                                                                                                                                             |
+|       | Version           | string   | "0\.5"                                                                                                                                                                 |
 | MetaData | trackingID        | string   | The identifier of the SignupStatus event\.                                                                                                                             |
 | MetaData | logInId           | string   | The identifier of the Signup event\.                                                                                                                                   |
 | MetaData | merchantTimeStamp | DateTime | TimeStamp for the event\.                                                                                                                                              |
