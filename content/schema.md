@@ -41,17 +41,17 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 
 
-## **AccountLog**** I ****i**** n**
+## **AccountLogin**
 
-AccountLogIncontains information and context about an incoming log-in event for a risk assessment.
+AccountLogIn contains information and context about an incoming login event for a risk assessment.
 
 The following schemas are used in the Evaluate and Protect experiences.
 
 
 
-**AccountLog**** In ****ina**** Status**
+**AccountLogInStatus**
 
-AccountLogInStatus contains information and context about the status of an account log-in event. This is a data ingestion event only.
+AccountLogInStatus contains information and context about the status of an account login event. This is a data ingestion event only.
 
 The following schemas are used in the Evaluate and Protect experiences.
 
@@ -59,7 +59,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 **AccountUpdate**
 
-AccountUpdate contains account information updates, for example, edited/addeduser profile, address, payment Instrument, phone, email and single sign-on (SSO). This is a data ingestion event only.
+AccountUpdate contains account information updates, for example: edited/addeduser profile, address, payment Instrument, phone, email and single sign-on (SSO). This is a data ingestion event only.
 
 The following schemas are used in the Evaluate and Protect experiences.
 
