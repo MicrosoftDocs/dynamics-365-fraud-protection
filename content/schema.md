@@ -116,7 +116,8 @@ The following schemas are used in the Evaluate, andEvaluate and Protect experien
 
 
 
-**AccountCreationStatus**
+
+## **AccountCreationStatus**
 
 AccountCreationStatus contains information and context about the status of an account creation event. This is a data ingestion event only.
 
@@ -168,7 +169,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 
 
-**AccountLogInStatus**
+## **AccountLogInStatus**
 
 AccountLogInStatus contains information and context about the status of an account login event. This is a data ingestion event only.
 
@@ -188,7 +189,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 
 
-**AccountUpdate**
+## **AccountUpdate**
 
 AccountUpdate contains account information updates, for example: edited/addeduser profile, address, payment Instrument, phone, email and single sign-on (SSO). This is a data ingestion event only.
 
@@ -273,7 +274,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 
 
-**Label**
+## **Label**
 
 Labels API contains the additional knowledge for model training based on an additional set of fraud signals.This is a data ingestion event only.
 
