@@ -1,6 +1,6 @@
 ---
 author: v-davido
-description: Test of ap schema tables2
+description: This topic outlines the schemas that are used in account protection
 ms.author: v-davido
 ms.service: fraud-protection
 ms.date: 01/14/2020
