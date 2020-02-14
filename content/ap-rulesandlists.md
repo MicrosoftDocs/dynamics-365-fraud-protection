@@ -72,7 +72,9 @@ Common operation associated with the list are:
 - **Edit**: update an existing list (by updating the list offline).
 - **Delete**: remove a list.
 
-## Reference:  
+## Reference: 
+Please note that rule syntax is case sensitive.
+
 - Return statement 
 ```
 Approve (reason = "") 
