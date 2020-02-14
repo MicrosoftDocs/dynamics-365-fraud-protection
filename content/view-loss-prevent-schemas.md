@@ -179,7 +179,7 @@ Note the following formatting guidelines throughout:
 | SITEID                          | nvarchar (10)   | Category to which store belongs (i.e. PACNW)                                    |
 | SKIPREPORTS                     | int            | If set, the record is skipped in reports.                                                                                                   |
 | STANDARDNETPRICE                | numeric (32 6)  | Price without discount or trade agreements                                                                              |
-| SYNCSTARTDATETIME               | datetime NOT NULL       |  Fields added to synchronization engine (DIXF) in Finance & Operations. They decline the export sequence.                                                                                                   |
+| SYNCSTARTDATETIME               | datetime NOT NULL       |  Fields added to synchronization engine (DIXF) in Finance & Operations. They define the export sequence.                                                                                                   |
 | TERMINAL                        | nvarchar (10) NOT NULL   |  The identifier for point of sale (POS)                                                                                                  |
 | TOTALDISCOUNT                   | numeric (32 6)  | Amount of discount applied to order total.                                                         |
 | TOTALDISCOUNTINFOCODELINENUM    | numeric (32 16) | If prompted for info code when applying total discount, reason code is saved here                  |
