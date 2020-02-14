@@ -64,7 +64,7 @@ Fraud Protection processes the Customer Data described above for the sole purpos
 
 Payment Transaction Data, Account Activity Data, and Device Data are enriched and normalized to aid the service’s application of machine learning and artificial intelligence. For example:
 
-  - Transaction amount is converted into US dollars using the current exchange rateTransaction amount is converted into US dollars using the current exchange rate. 
+  - Transaction amount is converted into US dollars using the current exchange rate. 
   - Addresses, such as the billing or shipping address associated with a transaction, are converted into a canonical format. For example, "One Microsoft Wy" may become "1 Microsoft Way.”.
   - Device Data collected from a single device is converted to a fuzzy identifier.
 
