@@ -84,7 +84,6 @@ Reject (reason = "")
 Challenge (type = "", reason = "") 
 Review (reason = "") 
 ```
-- When: condition must evaluate to a boolean 
 - Logical operators 
 
 ```
