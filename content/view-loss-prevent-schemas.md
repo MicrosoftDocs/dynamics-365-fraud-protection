@@ -76,7 +76,7 @@ Note the following formatting guidelines throughout:
 | SALESORDERAMOUNT                | numeric (32 6)  | total amount for customer orders(which are different from cash and carry because they have shipping details)                                                 |
 | SALESORDERID                    | nvarchar (20)   | Order number(for those with shipping details                                                                                                                 |
 | SALESPAYMENTDIFFERENCE          | numeric (32 6)  | Difference amount after Payment made by customer                                                                                                                                                            |
-| SHIFT                           | nvarchar (10)   | Shift is a set of transactions throughout the day for which cash and sales activity is calculated. Useful for determining how much cash should be in the til |
+| SHIFT                           | nvarchar (10)   | Shift is a set of transactions throughout the day for which cash and sales activity is calculated. Useful for determining how much cash should be in the terminal |
 | SHIPPINGDATEREQUESTED           | datetime       | Date when goods on customer order should be shipped                                                                                                          |
 | SITEID                          | nvarchar (10)   | Typically used for retail  stores to organize by region such as "Northwest US stores"                                                                        |
 | STAFF                           | nvarchar (25)   | Point of sale (POS) user ID                                                                                                                                                  |
@@ -105,11 +105,11 @@ Note the following formatting guidelines throughout:
 | CATEGORYNAME                    | nvarchar (254)  | Name of the product category                                                                       |
 | CHANNELLISTINGID                | nvarchar (50)  | Applies only for e-commerce, not required for retail                     |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Product cost                                                                                       |
-| CURRENCY                        | nvarchar (3)    | Currency of the sale                                                                                    |
+| CURRENCY                        | nvarchar (3)    | Currency used for the sale (Eg:- USD)                                                                                  |
 | CUSTOMERACCOUNT                 | nvarchar (38) NOT NULL   | Customer account number                                                                            |
 | CUSTOMERDISCOUNT                | numeric (32 6)  | Customer discount                                                                                  |
 | CUSTOMERINVOICEDISCOUNTAMOUNT   | numeric (32 6)  | Discount associated at invoice level during fulfillment                                                                                                 |
-| DATAAREAID                      | nvarchar (4) NOT NULL    | Company identifier (Eg:- MSFT US)                                                                                                   |
+| DATAAREAID                      | nvarchar (4) NOT NULL    | Company identifier (Eg:- MSFT)                                                                                                   |
 | DEFINITIONGROUP                 | nvarchar (60)   | Fields added by the synchronization engine (DIFX) in Finance & Operations to define the export sequence.                                                                                              |
 | DISCOUNTAMOUNTFORPRINTING       | numeric (32 6)  |Discount amount printed on the receipt                                                                                                   |
 | DISCOUNTAMOUNTWITHOUTTAX        | numeric (32 6)  |        Discount amount excluding tax                                                                                            |
@@ -134,7 +134,7 @@ Note the following formatting guidelines throughout:
 | ITEMSIZE                        | nvarchar (10)   | Size                                                                                               |
 | ITEMSTYLE                       | nvarchar (10)   | Style, like color and size is another product dimension                                            |
 | KEYBOARDPRODUCTENTRY            | int            | If product ID was keyed in                                                                         |
-| LINEDISCOUNT                    | numeric (32 6)  | Discount on line                                                                                   |
+| LINEDISCOUNT                    | numeric (32 6)  | Discount Amount applied for the line item                                                                                  |
 | LINEMANUALDISCOUNTAMOUNT        | numeric (32 6)  | If discount was manually entered, the amount                                                       |
 | LINEMANUALDISCOUNTPERCENTAGE    | numeric (32 6)  | If manual percentage discount was applied, the percentage                                          |
 | LINENUMBER                      | numeric (32 16) NOT NULL | Line number on the transaction                                                                     |
@@ -155,7 +155,7 @@ Note the following formatting guidelines throughout:
 | PERIODICDISCOUNTAMOUNT          | numeric (32 6)  | Discount amount for periodic discount(kind of like happy hour)                                     |
 | PERIODICDISCOUNTGROUP           | nvarchar (10)   | Periodic discount group                                                                            |
 | PERIODICDISCOUNTPERCENTAGE      | numeric (32 6)  | Periodic discount percentage                                                                       |
-| PRICE                           | numeric (32 6)  | Price (I believe with discounts)                                                                   |
+| PRICE                           | numeric (32 6)  | Price of the item                                                                   |
 | PRICEGROUPS                     | nvarchar (10)   | Price group that products and customers belong to.                                                 |
 | PRICEINBARCODE                  | int            | If price embedded bar code was scanned                                                             |
 | PRODUCTSCANNED                  | int            | If the product was scanned                                                                         |
@@ -167,16 +167,16 @@ Note the following formatting guidelines throughout:
 | RETAILEMAILADDRESSCONTENT       | nvarchar (400)  | email address for receipt                                                                          |
 | RETURNLINENUMBER                | numeric (32 16) | Line number from original transaction when returning from journal                                  |
 | RETURNOPERATINGUNITNUMBER       | nvarchar (30)   | Store where the return is being processed                                                          |
-| RETURNQUANTITY                  | numeric(32 6)  | Quantity being returned.                                                                           |
-| RETURNTERMINAL                  | nvarchar (10)   | Terminal where txn is being returned.                                                              |
+| RETURNQUANTITY                  | numeric(32 6)  | Quantity being returned                                                                           |
+| RETURNTERMINAL                  | nvarchar (10)   | Terminal where return transaction is getting processed                                                             |
 | RETURNTRANSACTIONNUMBER         | nvarchar (44) NOT NULL   | Original transaction number when returning from receipt/journal                                    |
-| RFIDTAGID                       | nvarchar (24)   |  Identification for RFID. Not in Play yet.                                                                                                  |
+| RFIDTAGID                       | nvarchar (24)   |  Identification for RFID                                                                                                 |
 | SALESTAXAMOUNT                  | numeric (32 6)  | Amt of sales tax applied to the transaction                                                        |
 | SALESTAXGROUP                   | nvarchar (10)   | Effective sales tax group for the transaction                                                      |
 | SECTIONNUMBER                   | nvarchar (10)   | Not used – physical location for a product in store                                                                                                  |
 | SERIALNUMBER                    | nvarchar (20)   | Serial number for the product                                                                      |
-| SHELFNUMBER                     | nvarchar (10)   | Shelf number where the product is kept(not really used).                                           |
-| SITEID                          | nvarchar (10)   | Category to which store belongs (i.e. Pacific Northwest stores)                                    |
+| SHELFNUMBER                     | nvarchar (10)   | Shelf number where the product is kept                                          |
+| SITEID                          | nvarchar (10)   | Category to which store belongs (i.e. PACNW)                                    |
 | SKIPREPORTS                     | int            | If set, the record is skipped in reports.                                                                                                   |
 | STANDARDNETPRICE                | numeric (32 6)  | Price without discount or trade agreements                                                                              |
 | SYNCSTARTDATETIME               | datetime NOT NULL       |  Fields added to synchronization engine (DIXF) in Finance & Operations. They decline the export sequence.                                                                                                   |
@@ -190,9 +190,9 @@ Note the following formatting guidelines throughout:
 | TRANSFERSTATUS                  | int            |    Used to track status of transfers between warehouses                                                                                                 |
 | UNIT                            | nvarchar (10)   | Measuring unit for the item. For example, gallons, oz, etc.                                                                        |
 | UNITPRICE                       | numeric (32 6)  | Price per unit                                                                                     |
-| UNITQUANTITY                    | numeric (32 6)  | Quantity of unit sold (not sure how this is different from unit)                                   |
+| UNITQUANTITY                    | numeric (32 6)  | Quantity of unit sold                                   |
 | VARIANTNUMBER                   | nvarchar (10)   | ID for unit combination of color, size and style                                                   |
-| WAREHOUSE                       | nvarchar (10)   | Reference data for store. Indicates physical location of the goods.                                |
+| WAREHOUSE                       | nvarchar (10)   | Reference data for store. Indicates physical location of the goods                                |
 ## Payments
 
 | Field Name                        | Data Type                      | Description                                                     |
