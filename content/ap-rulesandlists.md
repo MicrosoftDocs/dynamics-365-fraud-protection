@@ -29,7 +29,7 @@ Common operations associated with a rule are:
 
 The common components of a rule are:
 - **Condition**: Conditions can be used to group related rules together. The rules will only be executed if the condition evaluates to true. 
-- **Clause**: Clauses are the components that return a decision based on certain conditions. Clauses are executed in sequential order. Some clauses are run prior to model execution, before any score has been generated. Some clauses are run after a score has been generated.
+- **Clause**: Clauses are the components that return a decision based on certain conditions. Clauses are executed in sequential order. Some clauses are run prior to ML model execution, before any ML model score has been generated. Some clauses are run after a score has been generated.
 - **Payload**: shows a sample of what the payload for account protection API look like for a given event. 
 
 Examples of a rule (code example is still in progress) 
