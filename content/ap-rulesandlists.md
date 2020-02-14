@@ -79,12 +79,12 @@ Common operation associated with the list are:
 ## Reference:  
 - Return statement 
 ```
-Approve (reason) 
-Reject (reason) 
-Challenge (type, reason) 
-Review (reason) 
+Approve (reason = "") 
+Reject (reason = "") 
+Challenge (type = "", reason = "") 
+Review (reason = "") 
 ```
-- When: Must evaluate to a boolean 
+- When: condition must evaluate to a boolean 
 - Logical operators 
 
 ```
