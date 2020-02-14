@@ -1,0 +1,27 @@
+---
+author: kelfu
+description: This topic provides information about the Evaluate experience in Microsoft Dynamics 365 Fraud Protection.
+ms.author: kelfu
+ms.service: fraud-protection
+ms.date: 2/14/2020
+ms.topic: conceptual
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+title: Account Protection Evaluate experience
+---
+
+# Account Protection Evaluate experience
+
+Dynamics 365 Fraud Protection offers Evaluate and Protect which are two different ways (modes) of using the same underlying product. There is no difference in the functionality or the feature capability in the two experiences. Evaluate mode allows you to “shadow” your incumbent solution without affecting its operation, and later compare the performance in the scorecard experience by toggling on the AssessmentType. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation. You can then use Dynamics 365 Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
+
+Important: It is up to you to respect the separation of modes and indicate it to the product via the AssessmentType in the assessment API calls. You are free to choose how you allocate traffic between the Protect and Evaluate modes at any given time.
+
+## Using the Evaluate experience
+
+Get started with Fraud Protection by completing the initial configuration steps outlined on the **Dashboard**. Then follow these steps to begin using the Evaluate experience:
+
+- [Integrate the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md) and pass 'Evaluate' for the AssessmentType field in AccountCreation and AccountLogIn API events. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
+- Observe, but don't necessarily honor, the Dynamics 365 Fraud Protection merchant rule decisions to approve, reject, challenge, or review those same events.
+
