@@ -228,7 +228,7 @@ Note the following formatting guidelines throughout:
 | TRANSACTIONNUMBER                | nvarchar (44) NOT NULL   | Transaction number                                              |
 | TRANSACTIONSTATUS                | int            | Status of payment line                                          |
 | TRANSFERSTATUS                   | int            |   Used to track status of transfers between warehouses                                                              |
-| VOIDSTATUS                       | int            | If a tender line was voided prior to tendering the transaction  |
+| VOIDSTATUS                       | int            | Indicates whether a tender line was voided prior to tendering the transaction  |
 
 
 ## PaymentMethod
