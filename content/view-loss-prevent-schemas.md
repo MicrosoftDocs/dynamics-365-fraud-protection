@@ -25,25 +25,25 @@ Note the following formatting guidelines throughout:
 - The **DateTime** columns are in ISO 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
-
+- Any field that has as a 'NOT NULL' constraint is a MANDATORY, all other fields are OPTIONAL
 
 ## Transactions
 
 | Field name           | Data type     | Description |
 |---------------------|----------|-------------|
 | AMOUNTPOSTEDTOACCOUNT    | numeric (32 6)  | Amount posted to account for GL posting                                                                                                                      |
-| BATCHID                         | bigint         | Idenitifier for Batch or Shift                                                                                                                               |
-| CHANNELREFERENCEID        | nvarchar (50)           | This field is not required                                                                                                                              |
+| BATCHID                         | bigint         | Identifier for Batch or Shift                                                                                                                               |
+| CHANNELREFERENCEID        | nvarchar (50)           | Used to indicate the channel used for puchase in omni-channel scenarios for e-commerce merchants                                                                                                                             |
 | COMMENT                       | nvarchar (60)   | Transaction level comment                                                                                                                                            |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Cost for items                                                                                                                                               |
 | CREATEDOFFLINE                  | int            | Was created offline without channel db connection?                                                                                                           |
-| CURRENCY                        | nvarchar (3)    | Currency                                                                                                                                                     |
+| CURRENCY                        | nvarchar (3)    | Currency Code (Eg:- USD)                                                                                                                                                    |
 | CUSTOMERACCOUNT                 | nvarchar (38) NOT NULL   | Account number                                                                                                                                               |
 | CUSTOMERDISCOUNTAMOUNT          | numeric (32 6)  | Discount mapped to customer, automatic for that customer                                                                                                     |
 | DATAAREAID                      | nvarchar (4) NOT NULL    | Identification legal entity in Finance & Operations                                                                                                                                                             |
 | DEFINITIONGROUP                 | nvarchar (60)   | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                                                                                             |
 | DELIVERYMODE                    | nvarchar (10)   | Mode of delivery if not cash and carry                                                                                                                       |
-| DISCOUNTAMOUNT                  | numeric (32 6)  | Discount amount                                                                                                                                              |
+| DISCOUNTAMOUNT                  | numeric (32 6)  | Discount amount in case of any discounts applied                                                                                                                                             |
 | DISCOUNTAMOUNTWITHOUTTAX        | numeric (32 6)  | Discount amount without tax                                                                                                                                  |
 | EXCHANGERATE                    | numeric (32 16) | Exchange rate if paying with non-store currency                                                                                                              |
 | EXECUTIONID                     | nvarchar (90)   | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                                                                                             |
@@ -52,8 +52,8 @@ Note the following formatting guidelines throughout:
 | INFOCODEDISCOUNTGROUP           | nvarchar (10)   | If discount is applied and info code is prompted to request why                                                                                              |
 | INVOICEID                       | nvarchar (20)   | Related to payments on customer accounts, invoice they are making a payment against                                                                          |
 | ISSELECTED                      | int            | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                                                                                             |
-| ITEMSPOSTED                     | int            | Delivery address effectivity- date when address becomes invalid                                                                                              |
-| LOGISTICPOSTALADDRESSVALIDTO    | datetime       | ID for customer address. They may have multiple                                                                                                              |
+| ITEMSPOSTED                     | int            | Count of items part of the shipment posted                                            |
+| LOGISTICPOSTALADDRESSVALIDTO    | datetime       | Delivery address effectivity based on the date when address becomes invalid for delivery of items                                                                                                                |
 | LOGISTICSLOCATIONID             | nvarchar (30)   | Delivery address effectivity- date when address valid                                                                                                        |
 | LOGISTICSPOSTALADDRESSVALIDFROM | datetime       | City                                                                                                                                                         |
 | LOGISTICSPOSTALCITY             | nvarchar (60)   | County                                                                                                                                                       |
@@ -88,12 +88,12 @@ Note the following formatting guidelines throughout:
 | TOTALMANUALDISCOUNTAMOUNT       | numeric (32 6)  | If manually applied vs automatic total discount                                                                                                              |
 | TOTALMANUALDISCOUNTPERCENTAGE   | numeric (32 6)  | Percentage of manually applied total discount                                                                                                                |
 | TRANSACTIONDATE                 | datetime       | Date                                                                                                                                                         |
-| TRANSACTIONNUMBER               | nvarchar (44) NOT NULL   | Transaction ID                                                                                                                                               |
+| TRANSACTIONNUMBER               | nvarchar (44) NOT NULL   | Transaction Identifier                                                                                                                                               |
 | TRANSACTIONSTATUS               | int            | Fields added to synchronization engine (DIXF) in Finance & Operations. They decline the export sequence.                                                                                                                                          |
-| TRANSACTIONTIME                 | int            | Time                                                                                                                                                         |
-| TRANSACTIONTYPE                 | int            | Cash and carry vs order                                                                                                                                      |
+| TRANSACTIONTIME                 | int            | Time of the transaction                                                                                                                                                        |
+| TRANSACTIONTYPE                 | int            | Indicates Cash and carry vs order                                                                                                                                      |
 | TRANSFERSTATUS                  | int            |    Used to track status of transfers between warehouses                                                                                                                                                          |
-| WAREHOUSE                       | nvarchar (10)   | Maps to Store 1:1                                                                                                                                            |
+| WAREHOUSE                       | nvarchar (10)   | Warehouse assoicated to a Store                                                                                                                                            |
 
 ## Sales
 
