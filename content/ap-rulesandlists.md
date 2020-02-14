@@ -70,6 +70,7 @@ Common operation associated with the list are:
 - **New list**: upload a new file (.csv with headers) that has been created offline.
 - **Download**: save a list as a file to local machine.
 - **Edit**: update an existing list (by updating the list offline).
+- **Delete**: remove a list.
 
 ## Reference:  
 - Return statement 
