@@ -3,7 +3,7 @@ author: v-davido
 description: Loss prevention overview
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/14/2020
+ms.date: 02/14/2020
 
 ms.topic: conceptual
 search.app: 
