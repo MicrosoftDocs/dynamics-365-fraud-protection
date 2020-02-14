@@ -25,7 +25,7 @@ Note the following formatting guidelines throughout:
 - The **DateTime** columns are in ISO 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
-- Any field that has as a 'NOT NULL' constraint is a MANDATORY, all other fields are OPTIONAL
+- Any field that has as a 'NOT NULL' constraint is MANDATORY, all other fields are OPTIONAL
 
 ## Transactions
 
