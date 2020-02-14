@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains how to upload data for Microsoft Dynamics 365 Fraud Protection Loss Prevention system.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/30/2020
+ms.date: 02/14/2020
 
 ms.topic: conceptual
 search.app: 
@@ -15,7 +15,7 @@ title: Upload historical data
 
 # Upload historical data
 
-Upload your historical data into the system so it can be processed. These uploads include data from transactions, sales, and payments. This historical data is processed and used to generate reports illustrating trends and any anomalies. There are four entities from which the data needs to be imported:
+You can upload the historical data into the system for the adaptive AI models to detect anamalies and generate reports that will provide actionable insights on the anamolies detected . These uploads include data from transactions, sales, payments and payment methods. This historical data is processed and used to generate reports illustrating trends and anomalies. There are four entities from which the data needs to be imported:
 
 * Transactions
 * Sales
@@ -33,12 +33,6 @@ You can upload your historical data from the **Data upload** page.
 
 To help guarantee that Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](schema.md):
 
-- The files are in CSV UTF-8 (comma delimited) format (\*.csv).
-- The maximum file size is 10 gigabytes (GB).
-- The **DateTime** columns are in ISO 8601 format.
-- The decimal precision is two decimal places.
-- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
-
-Use the **Upload** button to find and submit your local files. After a successful upload, select **Process**. For related data types, such as purchase and account data, every file must be uploaded before you process the data.
+Use the **Upload** button to find and submit your local files. After a successful upload, select **Generate Reports**. Every file must be uploaded before you process the data.
 
 To upload additional data, select **Reupload** to submit more files, and then process the new files. You can also select **Delete** to remove any data files. 
