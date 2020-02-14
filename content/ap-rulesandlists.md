@@ -71,11 +71,6 @@ Common operation associated with the list are:
 - **Download**: save a list as a file to local machine.
 - **Edit**: update an existing list (by updating the list offline).
 
-## Related topics: (link tbd) 
-- Account protection overview 
-- View Account protection schemas 
-- Account protection scorecard 
-
 ## Reference:  
 - Return statement 
 ```
@@ -123,3 +118,8 @@ Geo.MarketCode
 IN (@ip, "Dictionary://mylist?KeyValueField = IP)      
 MAP (@currentIP, "Dictionary://mylist?KeyValueField = IP
 ```
+
+## Related topics: (link tbd) 
+- Account protection overview 
+- View Account protection schemas 
+- Account protection scorecard 
