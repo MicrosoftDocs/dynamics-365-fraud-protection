@@ -202,14 +202,14 @@ Note the following formatting guidelines throughout:
 | AMOUNTINTENDEREDCURRENCY         | numeric (32 6)  | amount tendered in currency (different if not store's currency) |
 | AMOUNTTENDERED                   | numeric (32 6)  | Amount in store currency                                                 |
 | AMOUNTTENDEREDADJUSTMENT         | numeric (32 6)  | It's a new feature in the product that allows changes in the transactions, with full audit trail.                                                |
-| CARDNUMBER                       | nvarchar (30)    | Truncated card no.                                              |
+| CARDNUMBER                       | nvarchar (30)    |Card Number used to make payment                                              |
 | CARDTYPEID                       | nvarchar (10)   | Card name (AMEX, VISA, ETC)                                     |
 | CREDITVOUCHERID                  | nvarchar (30)   | If paid by voucher, the voucher number                          |
 | CURRENCYCODE                     | nvarchar (3)    | Currency paid                                                   |
-| DATAAREAID                       | nvarchar (4) NOT NULL    | Company identifier (Eg:- MSFT US)                                                                |
+| DATAAREAID                       | nvarchar (4) NOT NULL    | Company identifier (Eg:- MSFT)                                                                |
 | DEFINITIONGROUP                  | nvarchar (60)   |Fields added by the synchronization engine (DIFX) in Finance & Operations to define the export sequence.                                                                 |
-| EXCHANGERATEINACCOUNTINGCURRENCY | numeric (32 16) | Exchange rate                                                   |
-| EXCHANGERATEINTENDEREDCURRENCY   | numeric (32 16) | Exchange rate                                                   |
+| EXCHANGERATEINACCOUNTINGCURRENCY | numeric (32 16) | Exchange rate  in relation to USD                                                 |
+| EXCHANGERATEINTENDEREDCURRENCY   | numeric (32 16) | Exchange rate in relation to USD                                                  |
 | EXECUTIONID                      | nvarchar (90)   | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                |
 | GIFTCARDID                       | nvarchar (30)   | Gift card number                                                |
 | ISCHANGELINE                     | int            | If payment is due back to customer due to overpayment           |
