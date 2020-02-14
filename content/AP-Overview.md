@@ -13,3 +13,28 @@ search.audienceType:
   - admin
 title: Account Protection Overview
 ---
+# Account Protection Overview
+
+Dynamics 365 Fraud Protection (DFP) provides merchants the capability to assess the risk that attempts to create new accounts and attempts to login on merchant’s ecosystem are fraudulent. DFP’s risk assessment can be used block or challenge suspicious attempts to create new fake accounts or to compromise existing accounts.  
+
+Account Protection capabilities include APIs for real time risk assessment, rule and list experience to optimize risk strategy as per your business needs and scorecard to monitor fraud protection effectiveness and trends in your ecosystem.  
+
+Account Protection capability provides risk assessment on two types of Account lifecycle events: 
+
+- **Account Creation** 
+
+- **Account Login** 
+
+For each event type there are multiple layers of defense: 
+
+- **Efficient bot detection:** Fraudsters scale by automating attempts to create fake accounts or compromise existing accounts using a list of compromised credentials or through brute force. As the first line of defense, DFP’s advanced, adaptive AI enables dynamic and robust bot detection by quickly providing a score that maps to probability that a bot is initiating the event. Using this score, merchants can configure rules to block automated fraudulent account creation and login attempts or add additional verification on suspicious attempts. 
+
+- **Real time Reinforced Assessment:** as the next line of defense, DFP uses AI models to generate risk assessment scores for Account Creation and Account Login events. Merchant can leverage this score in rules and decide to approve, challenge, reject or review these Account Creation and Account Login attempts based on custom business needs. 
+
+Learn more about the following features used in account protection: 
+
+- Integrate account protection APIs (link to Kelsie's new AP doc on APIs) 
+
+- Manage account protection rules & lists (link to Lena's new AP doc on Rules ) 
+
+- Learn from Account Protection Scorecard (link to Lena's new AP doc on Scorecard) 
