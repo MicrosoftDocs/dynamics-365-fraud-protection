@@ -16,14 +16,10 @@ title: Account protection Scorecard
 ---
 
 
-# Learn from the scorecard
+# Learn from the Account Protection scorecard
 
 
-Your top-four key performance indicators (KPIs) are summarized across the top of the page to provide a snapshot of your performance. You can fully investigate these metrics in the charts.
-
-You can use the scorecard reports to review your key metrics and understand the recent performance of your account protection efforts. 
-
-Your account protection scorecard reflects the real-time performance of Account Protection as our system of record. After evaluating the data presented in the scorecard, you can use the knowledge that you gain to make well-informed risk management decisions for your online business.
+Dynamics 365 Fraud Protection with Account Protection helps protect your e-commerce business from fraud related to fake accounts and account compromise. Your account protection scorecard shows you, in real-time, how Account Protection is working. For example, the scorecard shows you how many events are high risk. You can use the scorecard to make well-informed risk management decisions for your online business. 
 
 ## Account protection assessment type
 
@@ -36,7 +32,7 @@ You can select the Account Protection assessment type by clicking the tab menu o
 
 You can use the drop-down menus to filter your view of the interactive charts. The following option is available:
 
-- **Transaction time**: Show transaction data by time. You can select to view transactions within last hour or last 24 hours. 
+- **Event time**: Show event data by time. You can select to view events within last hour or last 24 hours. 
 
 ## Key performance indicators (KPI) charts
 
@@ -44,27 +40,28 @@ The scorecard shows metrics in the following sections:
 
 ### Bot model score
 
-Bot model score section shows insights from the bot ML model. The bot score is a number within the range of 0 to 999, where lower score indicates low probability of bot attack and higher score indicates high probability of bot attack. The following metrics are available:
+The Bot model provides insights about how bots are engaging your e-commerce platform. The bot score is a number between 0 to 999 that indicates the probability that a bot, rather than a genuine person/consumer/customer, is attempting to create a new account or log-in to an account. A higher score indicates high probability that a bot is initiating the event. You can analyze the following:
 
-- **Bot score distribution**: Bot score distribution chart shows the transaction volume aggregated by bot model score. 
-- **Top bot countries and regions**: Top bot countries graph shows the geographic view of top 5 countries and regions with a high percentage of bot attack, defined as a bot score higher than 900.
+- **Bot score distribution**: The Bot score distribution chart shows the event volume aggregated by bot model score. 
+- **Top bot countries and regions**: Top bot countries graph shows the geographic view of the 5 countries and regions initiating the highest number of bot encounters, defined as percentage of total events initiated from that country or region that have a bot score higher than 900.
 
 ### Risk model score
 
-Risk model score section shows insights from the fraud risk ML model. The risk score is a number within the range of 0 to 999, where lower score indicates low probability of fraud attack and higher score indicates high probability of fraud attack. The following metrics are available:
+Risk model score, between 0 to 999, indicates the likelihood that an event is fraudulent. A low score indicates low probability of fraud. You can analyze the following:
 
-- **Risk score distribution**: Risk score distribution chart shows the transaction volume aggregated by risk model score. 
-- **Top risk countries and regions**: Top bot countries graph shows the geographic view of top 5 countries and regions with a high percentage of fraud attack, defined as a risk score higher than 900.
+- **Risk score distribution**: Risk score distribution chart shows the event volume aggregated by risk model score. 
+- **Top risk countries and regions**: Top risk countries graph shows the geographic view of the 5 countries and regions with the highest bot encounter rates, defined as events with a risk score higher than 900.
 
 ### Rule decision
 
-Risk decision section shows metrics from the automated decision rules. The rules are defined by the merchant to make automated decisions based on the business need such as policies, bot and fraud risk tolerance, etc. To learn more about rules, view rules documentation (link TBD) The following metrics are available:
+Risk decision section shows metrics from the automated decision rules you’ve created. You can define rules to automate your decisions about accepting or rejecting an event based on your business need. The following metrics are available:
 
-- **Rule decision trend**: Rule decision trend chart shows percentage of Approved, Rejected and Challenged decisions by rules. 
-- **Top rules**: Top rules shows a list of rules with highest volume of automated decisions.
+- **Rule decision trend**: Rule decision trend chart shows percentage of Approved, Rejected, Challenged and Reviewed decisions by rules. 
+- **Top rules**: List of rules that triggered the highest volume of automated decisions.
+
+To learn more about rules, view rules documentation (link TBD)
 
 ## Related topics: (link tbd)
-- Account protection
-- Account protection API
-- Rules
-- Bot detection
+- Account protection overview
+- View Account Protection Schemas
+- Manage Rules and Lists
