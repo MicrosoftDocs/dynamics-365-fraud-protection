@@ -73,7 +73,7 @@ Common operation associated with the list are:
 - **Delete**: remove a list.
 
 ## Reference: 
-Please note that rule syntax is case sensitive.
+Please note that rule syntax is case insensitive.
 
 - Return statement 
 ```
