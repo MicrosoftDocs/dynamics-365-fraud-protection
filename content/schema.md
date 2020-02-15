@@ -28,9 +28,8 @@ Note the following formatting guidelines throughout:
 
 ## **AccountCreation**
 
-AccountCreationAPI schema contains information and context about an incoming new account creation event for a risk assessment.
+AccountCreation API allows you to share information and context with Fraud Protection about incoming new account creation events for risk assessment. 
 
-The following schemas are used in the Evaluate, andEvaluate and Protect experiences.
 | Object                              | Attribute                   | Type     | Description                                                                                                                                                                                                                                        |
 |-------------------------------------|-----------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                  | Name                        | string   | "AP\.AccountCreation"                                                                                                                                                                                                                              |
@@ -119,9 +118,8 @@ The following schemas are used in the Evaluate, andEvaluate and Protect experien
 
 ## **AccountCreationStatus**
 
-AccountCreationStatus contains information and context about the status of an account creation event. This is a data ingestion event only.
+AccountCreationStatus API allows you to share information and context with Fraud Protection about the status of an account creation event. This is a data ingestion event only. 
 
-The following schemas are used in the Evaluate and Protect experiences.
 | Object   | Attribute         | Type     | Description                                                                                                                                                            |
 |----------|-------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |       | Name              | string   | "AP\.AccountCreation\.Status"                                                                                                                                          |
@@ -139,9 +137,8 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 ## **AccountLogin**
 
-AccountLogIn contains information and context about an incoming login event for a risk assessment.
+AccountLogIn API allows you to share information and context with Fraud Protection about an incoming log-in event for a risk assessment. 
 
-The following schemas are used in the Evaluate and Protect experiences.
 | Object                            | Attribute                   | Type     | Description                                                                                                                                                                 |
 |-----------------------------------|-----------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                | Name                        | string   | "AP\.AccountLogin"                                                                                                                                                          |
@@ -171,9 +168,8 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 ## **AccountLogInStatus**
 
-AccountLogInStatus contains information and context about the status of an account login event. This is a data ingestion event only.
+AccountLogInStatus API allows you to share information and context with Fraud Protection about the status of an account log-in event. This is a data ingestion event only. 
 
-The following schemas are used in the Evaluate and Protect experiences.
 | Object   | Attribute         | Type     | Description                                                                                                                                                            |
 |----------|-------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |       | Name              | string   | "AP\.AccountLogin\.Status"                                                                                                                                             |
@@ -191,9 +187,8 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 ## **AccountUpdate**
 
-AccountUpdate contains account information updates, for example: edited/addeduser profile, address, payment Instrument, phone, email and single sign-on (SSO). This is a data ingestion event only.
+AccountUpdate API allows you to share account information updates with Fraud Protection, for example, edited/added user profile, address, payment Instrument, phone, email and single sign-on (SSO). This is a data ingestion event only. 
 
-The following schemas are used in the Evaluate and Protect experiences.
 | Object                              | Attribute                   | Type     | Description                                                                                                                                                                                                                                        |
 |-------------------------------------|-----------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                  | Name                        | string   | "AP\.AccountUpdate"                                                                                                                                                                                                                                |
@@ -276,9 +271,9 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 ## **Label**
 
-Labels API contains the additional knowledge for model training based on an additional set of fraud signals.This is a data ingestion event only.
+Labels API allows you to share additional knowledge, including information you receive from banks, about the outcomes of transactions and events for model training based on an additional set of fraud signals. This is a data ingestion event only. 
 
-The following schemas are used in the Evaluate and Protect experiences.
+
 | Category | Attribute          | Type     | Description                                                                                                                                                                                                                                                          |
 |----------|--------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |       | Name               | string   | "AP\.AccountLabel"                                                                                                                                                                                                                                                   |
