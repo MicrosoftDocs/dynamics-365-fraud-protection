@@ -19,7 +19,7 @@ As incidents of data breaches and bot attacks increase, account takeover has bec
 With real-time telemetry through APIs, attributes associated with events such as account creation and account sign-in attempts are evaluated and return a risk assessment score with a reason code. Customers can leverage this information to make decisions and take proactive measures, such as blocking fraudulent attempts or challenging suspicious attempts with two-factor authentication.
 
 
-## Aditional resources 
+## Additional resources
 - Integrate account protection APIs (link to Kelsie's new AP doc on APIs) 
 
 - Manage account protection rules & lists (link to Lena's new AP doc on Rules ) 
