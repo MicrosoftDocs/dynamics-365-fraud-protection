@@ -1,5 +1,5 @@
 ---
-author: amirat
+author: v-davido
 description: This topic provides an overview of AP Preview offering.
 ms.author: amirat
 ms.service: fraud-protection
@@ -14,25 +14,12 @@ search.audienceType:
 title: Account Protection Overview
 ---
 # Account Protection Overview
+As incidents of data breaches and bot attacks increase, account takeover has become a significant risk for many companies, regardless of the industry. Account protection leverages Dynamics 365 Fraud Protection’s proprietary risk assessment engine, artificial intelligence learning capabilities, and Fraud Protection network. These features provide device forensics and bot detection capabilities. 
 
-Dynamics 365 Fraud Protection provides merchants the capability to assess the risk that attempts to create new accounts and attempts to login on merchant’s ecosystem are fraudulent. Fraud Protection’s risk assessment can be used by the customer to block or challenge suspicious attempts to create new fake accounts or to compromise existing accounts.    
+With real-time telemetry through APIs, attributes associated with events such as account creation and account sign-in attempts are evaluated and return a risk assessment score with a reason code. Customers can leverage this information to make decisions and take proactive measures, such as blocking fraudulent attempts or challenging suspicious attempts with two-factor authentication.
 
-Account Protection includes APIs for real time risk assessment, rule and list experience to optimize risk strategy as per your business needs, and a scorecard to monitor fraud protection effectiveness and trends in your ecosystem.
 
-Account Protection capability provides risk assessment on two types of Account lifecycle events: 
-
-- **Account Creation** 
-
-- **Account Login** 
-
-For each event type there are multiple layers of defense: 
-
-- **Efficient bot detection:** Merchants can encounter automated attempts to create fake accounts or to compromise existing accounts using a list of compromised credentials or through brute force. As the first line of defense, Fraud Protection’s advanced, adaptive AI enables dynamic and robust bot detection by quickly providing the merchant with a score that maps to the probability that a bot is initiating the event. merchants can use the score in conjunction with the rules they’ve configured to block automated fraudulent account creation and login attempts or add additional verification on suspicious attempts.
-
-- **Real time Reinforced Assessment:** as the next line of defense, Fraud Protection uses AI models to generate risk assessment scores for Account Creation and Account Login events. Merchant can leverage this score in conjunction with the rules they’ve configured to approve, challenge, reject or review these Account Creation and Account Login attempts based on custom business needs.
-
-Learn more about the following features used in account protection: 
-
+## Aditional resources 
 - Integrate account protection APIs (link to Kelsie's new AP doc on APIs) 
 
 - Manage account protection rules & lists (link to Lena's new AP doc on Rules ) 
