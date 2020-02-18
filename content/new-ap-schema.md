@@ -16,7 +16,7 @@ title: View account protection schemas
 
 # View account protection schemas
 
-This topic outlines the schemas for historical data that is bulk-uploadedpassed into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](https://docs.microsoft.com/en-us/dynamics365/fraud-protection/data-upload). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](https://docs.microsoft.com/en-us/dynamics365/fraud-protection/integrate-real-time-api).
+This topic outlines the schemas for historical data that is bulk-uploadedpassed into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](https://docs.microsoft.com/en-us/dynamics365/fraud-protection/data-upload). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api).
 
 Note the following formatting guidelines throughout:
 
