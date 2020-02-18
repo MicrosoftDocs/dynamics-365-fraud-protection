@@ -15,7 +15,7 @@ title: Account Protection Overview
 ---
 # Account Protection Overview
 
-Dynamics 365 Fraud Protection provides merchants the capability to assess the risk that attempts to create new accounts and attempts to login on merchant’s ecosystem are fraudulent. DFP’s risk assessment can be used by the customer to block or challenge suspicious attempts to create new fake accounts or to compromise existing accounts.    
+Dynamics 365 Fraud Protection provides merchants the capability to assess the risk that attempts to create new accounts and attempts to login on merchant’s ecosystem are fraudulent. Fraud Protection’s risk assessment can be used by the customer to block or challenge suspicious attempts to create new fake accounts or to compromise existing accounts.    
 
 Account Protection includes APIs for real time risk assessment, rule and list experience to optimize risk strategy as per your business needs, and a scorecard to monitor fraud protection effectiveness and trends in your ecosystem.
 
