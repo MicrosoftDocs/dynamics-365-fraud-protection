@@ -34,7 +34,7 @@ The common components of a rule are:
 
 Examples of a rule (code example is still in progress) 
 
-Condition should start with 'WHEN'. It can accept any valid expression if its result is a boolean.
+Condition should start with 'WHEN'. It can accept any valid expression if its result is a Boolean.
 
 Sample condition:
 ```
