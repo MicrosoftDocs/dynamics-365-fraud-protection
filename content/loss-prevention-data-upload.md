@@ -1,9 +1,9 @@
 ---
 author: v-davido
 description: This topic explains how to upload data for Microsoft Dynamics 365 Fraud Protection Loss Prevention system.
-ms.author: v-davido
+ms.author: veganesa 
 ms.service: fraud-protection
-ms.date: 02/14/2020
+ms.date: 02/20/2020
 
 ms.topic: conceptual
 search.app: 
@@ -15,7 +15,7 @@ title: Upload historical data
 
 # Upload historical data
 
-You can upload the historical data into the system for the adaptive AI models to detect anamalies and generate reports that will provide actionable insights on the anamolies detected . These uploads include data from transactions, sales, payments and payment methods. This historical data is processed and used to generate reports illustrating trends and anomalies. There are four entities from which the data needs to be imported:
+You can upload the historical data into the system for the adaptive AI models to detect anomalies and generate reports that will provide actionable insights on the anamalies detected . These uploads include data from transactions, sales, payments and payment methods. This historical data is processed and used to generate reports illustrating trends and anomalies. There are four entities from which the data needs to be imported:
 
 * Transactions
 * Sales
