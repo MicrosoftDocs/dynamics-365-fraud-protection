@@ -40,23 +40,23 @@ The scorecard shows metrics in the following sections:
 
 ### Bot model score
 
-The Bot model provides insights about how bots are engaging your e-commerce platform. The bot score is a number between 0 to 999 that indicates the probability that a bot, rather than a genuine person/consumer/customer, is attempting to create a new account or log-in to an account. A higher score indicates high probability that a bot is initiating the event. You can analyze the following:
+The Bot model provides insights about how bots are engaging your e-commerce platform. The bot score is a number between 0 to 999 that indicates the probability that a bot, rather than a person, is attempting to create a new account or log-in to an account. A higher score indicates high probability that a bot is initiating the event. You can analyze the following:
 
 - **Bot score distribution**: The Bot score distribution chart shows the event volume aggregated by bot model score. 
-- **Top bot countries and regions**: Top bot countries graph shows the geographic view of the 5 countries and regions initiating the highest number of bot encounters, defined as percentage of total events initiated from that country or region that have a bot score higher than 900.
+- **Top bot countries and regions**: Top bot countries graph shows the geographic view of the five countries and regions initiating the highest number of bot encounters, defined as percentage of total events initiated from that country or region that have a bot score higher than 900.
 
 ### Risk model score
 
 Risk model score, between 0 to 999, indicates the likelihood that an event is fraudulent. A low score indicates low probability of fraud. You can analyze the following:
 
 - **Risk score distribution**: Risk score distribution chart shows the event volume aggregated by risk model score. 
-- **Top risk countries and regions**: Top risk countries graph shows the geographic view of the 5 countries and regions with the highest bot encounter rates, defined as events with a risk score higher than 900.
+- **Top risk countries and regions**: Top risk countries graph shows the geographic view of the five countries and regions with the highest bot encounter rates, defined as events with a risk score higher than 900.
 
 ### Rule decision
 
 Risk decision section shows metrics from the automated decision rules you’ve created. You can define rules to automate your decisions about accepting or rejecting an event based on your business need. The following metrics are available:
 
-- **Rule decision trend**: Rule decision trend chart shows percentage of Approved, Rejected, Challenged and Reviewed decisions by rules. 
+- **Rule decision trend**: Rule decision trend chart shows percentage of Approved, Rejected, Challenged, and Reviewed decisions by rules. 
 - **Top rules**: List of rules that triggered the highest volume of automated decisions.
 
 To learn more about rules, view rules documentation (link TBD)
