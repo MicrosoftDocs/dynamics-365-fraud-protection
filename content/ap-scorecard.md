@@ -3,7 +3,7 @@ author: zhuoche
 description: This topic explains the scorecard capability of Dynamics 365 Fraud Protection account protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 02/11/2020
+ms.date: 02/20/2020
 
 ms.topic: conceptual
 search.app: 
@@ -12,11 +12,11 @@ search.audienceType:
   - admin
 
 
-title: Account protection Scorecard
+title: Learn from the account protection scorecard
 ---
 
 
-# Learn from the Account Protection scorecard
+# Learn from the account protection scorecard
 
 
 Dynamics 365 Fraud Protection with Account Protection helps protect your e-commerce business from fraud related to fake accounts and account compromise. Your account protection scorecard shows you, in real-time, how Account Protection is working. For example, the scorecard shows you how many events are high risk. You can use the scorecard to make well-informed risk management decisions for your online business. 
