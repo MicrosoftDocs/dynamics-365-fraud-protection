@@ -19,11 +19,11 @@ title: Learn from the account protection scorecard
 # Learn from the account protection scorecard
 
 
-Dynamics 365 Fraud Protection with Account Protection helps protect your e-commerce business from fraud related to fake accounts and account compromise. Your account protection scorecard shows you, in real-time, how Account Protection is working. For example, the scorecard shows you how many events are high risk. You can use the scorecard to make well-informed risk management decisions for your online business. 
+Dynamics 365 Fraud Protection with account protection helps protect your e-commerce business from fraud related to fake accounts and account compromise. Your account protection scorecard shows you, in real-time, how Account Protection is working. For example, the scorecard shows you how many events are high risk. You can use the scorecard to make well-informed risk management decisions for your online business. 
 
 ## Account protection assessment type
 
-You can select the Account Protection assessment type by clicking the tab menu on the top of the page. The following types are available:
+You can select the account protection assessment type by clicking the **tab** menu on the top of the page. The following types are available:
 
 - Account Creation 
 - Account Login
