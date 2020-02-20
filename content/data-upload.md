@@ -1,9 +1,9 @@
 ---
 author: v-davido
 description: This topic explains how to upload loss prevention historical data for Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-davido
+ms.author: veganesa 
 ms.service: fraud-protection
-ms.date: 01/17/2020
+ms.date: 02/20/2020
 
 ms.topic: conceptual
 search.app: 
@@ -19,8 +19,9 @@ In the Evaluate and Protect experiences in Microsoft Dynamics 365 Fraud Protecti
 
 ## Data types
 
-Fraud Protection can analyze loss prevention historical data about the following entities. This data can be uploaded through either the website or the application programming interface (API). In the Evaluate and Protect experiences, we recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
+Fraud Protection can analyze loss prevention historical data about several different entities. This data can be uploaded through either the website or the application programming interface (API). In the Evaluate and Protect experiences, we recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
 
+Entites:
 - Purchase data
 
     - Purchases
