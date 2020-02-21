@@ -3,7 +3,7 @@ author: veganesa
 description: This topic outlines the requred schema for the loss prevention feature.
 ms.author: veganesa
 ms.service: fraud-protection
-ms.date: 02/11/2020
+ms.date: 02/21/2020
 
 ms.topic: conceptual
 search.app: 
@@ -36,7 +36,7 @@ Note the following formatting guidelines throughout:
 | CHANNELREFERENCEID        | nvarchar (50)           | Used to indicate the channel used for puchase in omni-channel scenarios for e-commerce merchants                                                                                                                             |
 | COMMENT                       | nvarchar (60)   | Transaction level comment                                                                                                                                            |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Cost for items                                                                                                                                               |
-| CREATEDOFFLINE                  | int            | Was created offline without channel db connection?                                                                                                           |
+| CREATEDOFFLINE                  | int            | Was created offline without channel db connection                                                                                                           |
 | CURRENCY                        | nvarchar (3)    | Currency Code (Eg:- USD)                                                                                                                                                    |
 | CUSTOMERACCOUNT                 | nvarchar (38) NOT NULL   | Account number                                                                                                                                               |
 | CUSTOMERDISCOUNTAMOUNT          | numeric (32 6)  | Discount mapped to customer, automatic for that customer                                                                                                     |
@@ -47,7 +47,7 @@ Note the following formatting guidelines throughout:
 | DISCOUNTAMOUNTWITHOUTTAX        | numeric (32 6)  | Discount amount without tax                                                                                                                                  |
 | EXCHANGERATE                    | numeric (32 16) | Exchange rate if paying with non-store currency                                                                                                              |
 | EXECUTIONID                     | nvarchar (90)   | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                                                                                             |
-| GROSSAMOUNT                     | numeric (32 6)  | Total due before discounts(?)                                                                                                                                |
+| GROSSAMOUNT                     | numeric (32 6)  | Total due before discounts                                                                                                                                |
 | INCOMEEXPENSEAMOUNT             | numeric (32 6)  | If transaction is drawer related(add/remove money and not an actual transaction)                                                                             |
 | INFOCODEDISCOUNTGROUP           | nvarchar (10)   | If discount is applied and info code is prompted to request why                                                                                              |
 | INVOICEID                       | nvarchar (20)   | Related to payments on customer accounts, invoice they are making a payment against                                                                          |
