@@ -1,6 +1,6 @@
 ---
 author: veganesa
-description: This topic outlines the requred schema for the loss prevention feature.
+description: This topic outlines the required schema for the loss prevention feature.
 ms.author: veganesa
 ms.service: fraud-protection
 ms.date: 02/21/2020
@@ -33,7 +33,7 @@ Note the following formatting guidelines throughout:
 |---------------------|----------|-------------|
 | AMOUNTPOSTEDTOACCOUNT    | numeric (32 6)  | Amount posted to account for GL posting                                                                                                                      |
 | BATCHID                         | bigint         | Identifier for Batch or Shift                                                                                                                               |
-| CHANNELREFERENCEID        | nvarchar (50)           | Used to indicate the channel used for puchase in omni-channel scenarios for e-commerce merchants                                                                                                                             |
+| CHANNELREFERENCEID        | nvarchar (50)           | Used to indicate the channel used for purchase in omni-channel scenarios for e-commerce merchants                                                                                                                             |
 | COMMENT                       | nvarchar (60)   | Transaction level comment                                                                                                                                            |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Cost for items                                                                                                                                               |
 | CREATEDOFFLINE                  | int            | Was created offline without channel db connection                                                                                                           |
@@ -43,13 +43,13 @@ Note the following formatting guidelines throughout:
 | DATAAREAID                      | nvarchar (4) NOT NULL    | Identification legal entity in Finance & Operations                                                                                                                                                             |
 | DEFINITIONGROUP                 | nvarchar (60)   | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                                                                                             |
 | DELIVERYMODE                    | nvarchar (10)   | Mode of delivery if not cash and carry                                                                                                                       |
-| DISCOUNTAMOUNT                  | numeric (32 6)  | Discount amount in case of any discounts applied                                                                                                                                             |
+| DISCOUNTAMOUNT                  | numeric (32 6)  | Discount amount if any discounts applied                                                                                                                                             |
 | DISCOUNTAMOUNTWITHOUTTAX        | numeric (32 6)  | Discount amount without tax                                                                                                                                  |
 | EXCHANGERATE                    | numeric (32 16) | Exchange rate if paying with non-store currency                                                                                                              |
 | EXECUTIONID                     | nvarchar (90)   | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                                                                                             |
 | GROSSAMOUNT                     | numeric (32 6)  | Total due before discounts                                                                                                                                |
-| INCOMEEXPENSEAMOUNT             | numeric (32 6)  | If transaction is drawer related(add/remove money and not an actual transaction)                                                                             |
-| INFOCODEDISCOUNTGROUP           | nvarchar (10)   | If discount is applied and info code is prompted to request why                                                                                              |
+| INCOMEEXPENSEAMOUNT             | numeric (32 6)  | If, transaction is drawer related(add/remove money and not an actual transaction)                                                                             |
+| INFOCODEDISCOUNTGROUP           | nvarchar (10)   | If, discount is applied and info code is prompted to request why                                                                                              |
 | INVOICEID                       | nvarchar (20)   | Related to payments on customer accounts, invoice they are making a payment against                                                                          |
 | ISSELECTED                      | int            | Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                                                                                             |
 | ITEMSPOSTED                     | int            | Count of items part of the shipment posted                                            |
