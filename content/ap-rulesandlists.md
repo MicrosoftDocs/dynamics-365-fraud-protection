@@ -18,7 +18,7 @@ title: Manage Account Protection Rules and Lists
 # Manage account protection rules and lists
 
 ## Rules
-You can use lists and rules to help automate your account protection decisioning. Rules shape real-time decision making by accepting, rejecting, challenging, and reviewing account protection events based on the conditions and risk score thresholds that you select. The rules use lists of data that you create that are relevant to your business. These capabilities help you define the parameters that are right for your business to screen for risky account protection events. They also help you enforce various policies, such as geofencing. These capabilities are designed to help you manage the trade-offs that are inherent when you must prevent fraud. 
+You can use lists and rules to help automate your account protection decisioning. Rules shape real-time decisions from events based on the conditions and risk score threshold you have selected. Types of events include accepting, rejecting, challenging, and other user defined settings. The rules use lists of data that you create that are relevant to your business. These capabilities help you define the parameters that are right for your business to screen for risky account protection events. They also help you enforce various policies, such as geofencing. These capabilities are designed to help you manage the trade-offs that are inherent when you must prevent fraud. 
 
 Common operations associated with a rule are:
 - **New rule**: create a new rule.
