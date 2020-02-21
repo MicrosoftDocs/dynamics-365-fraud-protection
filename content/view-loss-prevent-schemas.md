@@ -37,7 +37,7 @@ Note the following formatting guidelines throughout:
 | COMMENT                       | nvarchar (60)   | Transaction level comment                                                                                                                                            |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Cost for items                                                                                                                                               |
 | CREATEDOFFLINE                  | int            | Was created offline without channel db connection                                                                                                           |
-| CURRENCY                        | nvarchar (3)    | Currency Code (Eg:- USD)                                                                                                                                                    |
+| CURRENCY                        | nvarchar (3)    | Currency Code (for example, USD)                                                                                                                                                    |
 | CUSTOMERACCOUNT                 | nvarchar (38) NOT NULL   | Account number                                                                                                                                               |
 | CUSTOMERDISCOUNTAMOUNT          | numeric (32 6)  | Discount mapped to customer, automatic for that customer                                                                                                     |
 | DATAAREAID                      | nvarchar (4) NOT NULL    | Identification legal entity in Finance & Operations                                                                                                                                                             |
@@ -105,11 +105,11 @@ Note the following formatting guidelines throughout:
 | CATEGORYNAME                    | nvarchar (254)  | Name of the product category                                                                       |
 | CHANNELLISTINGID                | nvarchar (50)  | Applies only for e-commerce, not required for retail                     |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Product cost                                                                                       |
-| CURRENCY                        | nvarchar (3)    | Currency used for the sale (Eg:- USD)                                                                                  |
+| CURRENCY                        | nvarchar (3)    | Currency used for the sale (for example, USD)                                                                                  |
 | CUSTOMERACCOUNT                 | nvarchar (38) NOT NULL   | Customer account number                                                                            |
 | CUSTOMERDISCOUNT                | numeric (32 6)  | Customer discount                                                                                  |
 | CUSTOMERINVOICEDISCOUNTAMOUNT   | numeric (32 6)  | Discount associated at invoice level during fulfillment                                                                                                 |
-| DATAAREAID                      | nvarchar (4) NOT NULL    | Company identifier (Eg:- MSFT)                                                                                                   |
+| DATAAREAID                      | nvarchar (4) NOT NULL    | Company identifier (for example, MSFT)                                                                                                   |
 | DEFINITIONGROUP                 | nvarchar (60)   | Fields added by the synchronization engine (DIFX) in Finance & Operations to define the export sequence.                                                                                              |
 | DISCOUNTAMOUNTFORPRINTING       | numeric (32 6)  |Discount amount printed on the receipt                                                                                                   |
 | DISCOUNTAMOUNTWITHOUTTAX        | numeric (32 6)  |        Discount amount excluding tax                                                                                            |
@@ -176,7 +176,7 @@ Note the following formatting guidelines throughout:
 | SECTIONNUMBER                   | nvarchar (10)   | Not used – physical location for a product in store                                                                                                  |
 | SERIALNUMBER                    | nvarchar (20)   | Serial number for the product                                                                      |
 | SHELFNUMBER                     | nvarchar (10)   | Shelf number where the product is kept                                          |
-| SITEID                          | nvarchar (10)   | Category to which store belongs (i.e. PACNW)                                    |
+| SITEID                          | nvarchar (10)   | Category to which store belongs for example, PACNW                                   |
 | SKIPREPORTS                     | int            | If set, the record is skipped in reports.                                                                                                   |
 | STANDARDNETPRICE                | numeric (32 6)  | Price without discount or trade agreements                                                                              |
 | SYNCSTARTDATETIME               | datetime NOT NULL       |  Fields added to synchronization engine (DIXF) in Finance & Operations. They define the export sequence.                                                                                                   |
@@ -206,7 +206,7 @@ Note the following formatting guidelines throughout:
 | CARDTYPEID                       | nvarchar (10)   | Card name (AMEX, VISA, ETC)                                     |
 | CREDITVOUCHERID                  | nvarchar (30)   | If paid by voucher, the voucher number                          |
 | CURRENCYCODE                     | nvarchar (3)    | Currency paid                                                   |
-| DATAAREAID                       | nvarchar (4) NOT NULL    | Company identifier (Eg:- MSFT)                                                                |
+| DATAAREAID                       | nvarchar (4) NOT NULL    | Company identifier (for example, MSFT)                                                                |
 | DEFINITIONGROUP                  | nvarchar (60)   |Fields added by the synchronization engine (DIFX) in Finance & Operations to define the export sequence.                                                                 |
 | EXCHANGERATEINACCOUNTINGCURRENCY | numeric (32 16) | Exchange rate  in relation to USD                                                 |
 | EXCHANGERATEINTENDEREDCURRENCY   | numeric (32 16) | Exchange rate in relation to USD                                                  |
@@ -237,4 +237,4 @@ Note the following formatting guidelines throughout:
 |---------------------|-------------------------|---------------------------------------------------------------|
 | PAYMENTMETHODNUMBER | nvarchar (10) NOT NULL | Identifier for the payment method                            |
 | NAME                | nvarchar (60) NOT NULL | Name describing the payment method                           |
-| DEFAULTFUNCTION     | int          | Describes the type of payment method Eg:- Cash, Check, Credit Memo/Voucher, Currency|
+| DEFAULTFUNCTION     | int          | Describes the type of payment method such as Cash, Check, Credit Memo/Voucher, Currency|
