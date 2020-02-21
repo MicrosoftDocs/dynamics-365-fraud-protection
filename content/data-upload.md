@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains how to upload loss prevention historical data for Microsoft Dynamics 365 Fraud Protection.
 ms.author: veganesa 
 ms.service: fraud-protection
-ms.date: 02/20/2020
+ms.date: 02/21/2020
 
 ms.topic: conceptual
 search.app: 
@@ -15,13 +15,13 @@ title: Upload loss prevention historical data
 
 # Upload loss prevention historical data
 
-In the Evaluate and Protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your loss prevention historical data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
+In the evaluate and protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your loss prevention historical data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
 
 ## Data types
 
-Fraud Protection can analyze loss prevention historical data about several different entities. This data can be uploaded through either the website or the application programming interface (API). In the Evaluate and Protect experiences, we recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
+Fraud Protection can analyze loss prevention historical data about several different entities. This data can be uploaded through either the website or the application programming interface (API). We recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
 
-Entites:
+Entities:
 - Purchase data
 
     - Purchases
