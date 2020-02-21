@@ -18,7 +18,7 @@ title: Manage Account Protection Rules and Lists
 # Manage account protection rules and lists
 
 ## Rules
-You can use lists and rules to help automate your account protection decisioning. Rules shape real-time decisions from events based on the conditions and risk score threshold you have selected. Types of events include accepting, rejecting, challenging, and other user defined settings. The rules use lists of data that you create that are relevant to your business. These capabilities help you define the parameters that are right for your business to screen for risky account protection events. They also help you enforce various policies, such as geofencing. These capabilities are designed to help you manage the trade-offs that are inherent when you must prevent fraud. 
+You can use lists and rules to help automate your account protection decisioning. Rules shape real-time decisions from events based on the conditions and risk score threshold you have selected. Types of events include accepting, rejecting, challenging, and other user defined settings. The rules use lists of data that you create that are relevant to your business. These capabilities help you define the parameters that apply to your unique business to screen for risky account protection events. They also help you enforce various policies, such as geofencing. These capabilities are designed to help you manage the trade-offs that are inherent when you must prevent fraud. 
 
 Common operations associated with a rule are:
 - **New rule**: create a new rule.
@@ -29,7 +29,7 @@ Common operations associated with a rule are:
 
 The common components of a rule are:
 - **Condition**: Conditions can be used to group related rules together. The rules will only be executed if the condition evaluates to true. 
-- **Clause**: Clauses are the components that return a decision based on certain conditions. Clauses are executed in sequential order. Some clauses are run prior to ML model execution, before any ML model score has been generated. Some clauses are run after a score has been generated.
+- **Clause**: Clauses are the components that return a decision based on certain conditions. Clauses are executed in sequential order. Some clauses are run before ML model execution, before any ML model score has been generated. Some clauses are run after a score has been generated.
 - **Payload**: shows a sample of what the payload for account protection API look like for a given event. 
 
 Examples of a rule (code example is still in progress) 
@@ -62,11 +62,11 @@ WHEN IN (@ip, "Dictionary://mylist?KeyValueField = IP)
 
 You can upload any number of lists to suit your specific business needs. After these lists are uploaded, you can use these lists within your rules to achieve the business results that you need. To upload a list, select the **lists** menu under Account protection.
 
-Each list that you upload comprises a collection of entities (a collection of data of one or more columns) that you have authored offline and want to screen for, such as high-risk countries. After you upload a list, you can give it a meaningful name and reference it in any rule.
+Each list that you upload includes a collection of entities (a collection of data of one or more columns) that you have authored offline and want to screen for, such as high-risk countries. After you upload a list, you can give it a meaningful name and reference it in any rule.
 
 An example of list usage will be decision based on whether payload data is in or not in a list.
 
-Common operation associated with the list are:
+Common operations associated with the list are:
 - **New list**: upload a new file (.csv with headers) that has been created offline.
 - **Download**: save a list as a file to local machine.
 - **Edit**: update an existing list (by updating the list offline).
