@@ -122,7 +122,7 @@ IN (@ip, "Dictionary://mylist?KeyValueField = IP)
 MAP (@currentIP, "Dictionary://mylist?KeyValueField = IP
 ```
 
-## Related topics: (link tbd) 
-- Account protection overview 
-- View Account protection schemas 
-- Account protection scorecard 
+## Related topics:
+- [Account protection overview](account-protection.md)
+- [View Account protection schemas](view-loss-prevent-schemas.md) 
+- [Account protection scorecard](ap-scorecard.md) 
