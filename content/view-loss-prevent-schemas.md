@@ -68,7 +68,7 @@ Note the following formatting guidelines throughout:
 | PARTITION                       | nvarchar (nvarchar 20) NOT NULL   | An identification of a data partition in Finance & Operations specific to D365                                                                                                                                                            |
 | PAYMENTAMOUNT                   | numeric (32 6)  | Payment amount                                                                                                                                               |
 | POSTASSHIPMENT                  | int            | Indicates if this has a shipment associated                                                                                                                                                            |
-| REFUNDRECEIPTID                 | nvarchar (18)   | if refund, receipt id for original transaction                                                                                                               |
+| REFUNDRECEIPTID                 | nvarchar (18)   | if refund, receipt ID for original transaction                                                                                                               |
 | RETAILNCREXPORTED               | int            | In the beginning of our roll-out we were pushing transactions to an NCR BOS-system. This field is a flag for that.                                                                                                                                                              |
 | RRECEIPTID                      | nvarchar (18)   | Receipt number, different from transaction number                                                                                                            |
 | SALEISRETURNSALE                | int            | If sale is return                                                                                                                                            |
@@ -93,15 +93,15 @@ Note the following formatting guidelines throughout:
 | TRANSACTIONTIME                 | int            | Time of the transaction                                                                                                                                                        |
 | TRANSACTIONTYPE                 | int            | Indicates Cash and carry vs order                                                                                                                                      |
 | TRANSFERSTATUS                  | int            |    Used to track status of transfers between warehouses                                                                                                                                                          |
-| WAREHOUSE                       | nvarchar (10)   | Warehouse assoicated to a Store                                                                                                                                            |
+| WAREHOUSE                       | nvarchar (10)   | Warehouse associated to a Store                                                                                                                                            |
 
 ## Sales
 
 | Field Name                       | Data Type                      | Description                                                                                        |
 |---------------------------------|---------------------------|----------------------------------------------------------------------------------------------------|
 | BARCODE                         | nvarchar (80)   | Bar code that was scanned                                                                          |
-| CASHDISCOUNTAMOUNT              | numeric (32 6)  | Amount of cash disount, if applicable                                                              |
-| CATEGORYHIERARCHYNAME           | nvarchar (128)  | Categrory hierarchy used to organize products                                                      |
+| CASHDISCOUNTAMOUNT              | numeric (32 6)  | Amount of cash discount, if applicable                                                              |
+| CATEGORYHIERARCHYNAME           | nvarchar (128)  | Category hierarchy used to organize products                                                      |
 | CATEGORYNAME                    | nvarchar (254)  | Name of the product category                                                                       |
 | CHANNELLISTINGID                | nvarchar (50)  | Applies only for e-commerce, not required for retail                     |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL  | Product cost                                                                                       |
@@ -117,7 +117,7 @@ Note the following formatting guidelines throughout:
 | EXECUTIONID                     | nvarchar (90)   |     Fields added by the synchronization engine (DIFX) in Finance & Operations. They define the export sequence.                                                                                               |
 | GIFTCARD                        | int            | Gift card number                                                                                   |
 | INVENTORYSTATUS                 | int            | Status of the inventory levels                                                                                                 |
-| ISLINEDISCOUNTED                | int            | Is the txn line discounted                                                                         |
+| ISLINEDISCOUNTED                | int            | Is the transaction line discounted                                                                         |
 | ISLINKEDPRODUCTNOTORIGINAL      | int            | If linked item was changed                                                                         |
 | ISORIGINALOFLINKEDPRODUCTLIST   | int            | Default linked products                                                                                                   |
 | ISPRICECHANGE                   | int            | If price was changed manually                                                                      |
@@ -140,7 +140,7 @@ Note the following formatting guidelines throughout:
 | LINENUMBER                      | numeric (32 16) NOT NULL | Line number on the transaction                                                                     |
 | LINEPERCENTAGEDISCOUNT          | numeric(32 6)  | Automatic percentage discount amount                                                               |
 | LOGISTICLOCATIONID              | nvarchar (30)   | Address ID in the global address book                                                                                                  |
-| LOGISTICSPOSTALADDRESSVALIDFROM | datetime       | Date effective of address id                                                                                                  |
+| LOGISTICSPOSTALADDRESSVALIDFROM | datetime       | Date effective of address ID                                                                                                  |
 | LOTID   |  nvarchar (20)       | This field is not required                                                                                                 |
 | MODEOFDELIVERY                  | nvarchar (10)   | Method of delivery to the customer                                                                 |
 | NETAMOUNT                       | numeric (32 6) NOT NULL  | Net amount for transaction                                                                         |
@@ -148,7 +148,7 @@ Note the following formatting guidelines throughout:
 | NETPRICE                        | numeric (32 6)  | Net price for the line before discounts                                                            |
 | OFFERNUMBER                     | nvarchar (40)   | Unique identifier for the offer number                                                                                                  |
 | OPERATINGUNITNUMBER             | nvarchar (30)   | Part of the reference data that comprises a store                                                  |
-| ORIGINALITEMSALESTAXGROUP       | nvarchar (10)   | If tax is overridden, tracks what the original tax amt was.                                        |
+| ORIGINALITEMSALESTAXGROUP       | nvarchar (10)   | If tax is overridden, tracks what the original tax amount was.                                        |
 | ORIGINALPRICE                   | numeric (32 6)  | Product price without sale pricing applied                                                         |
 | ORIGINALSALESTAXGROUP           | nvarchar (10)   | Original sales tax group for the transaction                                                       |
 | PARTITION                       | nvarchar (20) NOT NULL   | An identification of a data partition in Finance & Operations specific to D365                                                                                                                                                          |
@@ -171,7 +171,7 @@ Note the following formatting guidelines throughout:
 | RETURNTERMINAL                  | nvarchar (10)   | Terminal where return transaction is getting processed                                                             |
 | RETURNTRANSACTIONNUMBER         | nvarchar (44) NOT NULL   | Original transaction number when returning from receipt/journal                                    |
 | RFIDTAGID                       | nvarchar (24)   |  Identification for RFID                                                                                                 |
-| SALESTAXAMOUNT                  | numeric (32 6)  | Amt of sales tax applied to the transaction                                                        |
+| SALESTAXAMOUNT                  | numeric (32 6)  | Amount of sales tax applied to the transaction                                                        |
 | SALESTAXGROUP                   | nvarchar (10)   | Effective sales tax group for the transaction                                                      |
 | SECTIONNUMBER                   | nvarchar (10)   | Not used – physical location for a product in store                                                                                                  |
 | SERIALNUMBER                    | nvarchar (20)   | Serial number for the product                                                                      |
@@ -197,7 +197,7 @@ Note the following formatting guidelines throughout:
 
 | Field Name                        | Data Type                      | Description                                                     |
 |----------------------------------|---------------------------|-----------------------------------------------------------------|
-| ACCOUNTNUMBER                    | nvarchar (30)   | Customer's account nubmer if named customer is on transaction   |
+| ACCOUNTNUMBER                    | nvarchar (30)   | Customer's account number if named customer is on transaction   |
 | AMOUNTINACCOUNTINGCURRENCY       | numeric (32 6)  | Amount due for line                                             |
 | AMOUNTINTENDEREDCURRENCY         | numeric (32 6)  | amount tendered in currency (different if not store's currency) |
 | AMOUNTTENDERED                   | numeric (32 6)  | Amount in store currency                                                 |
@@ -220,7 +220,7 @@ Note the following formatting guidelines throughout:
 | OPERATINGUNITNUMBER              | nvarchar (30) NOT NULL   | Operating unit unique to store                                  |
 | PARTITION                        | nvarchar (20) NOT NULL   |An identification of a data partition in Finance & Operations specific to D365                                                                 |
 | QUANTITY                         | numeric (32 6) NOT NULL  | Units Sold                                                               |
-| RECEIPTID                        | nvarchar (18)   | Receipt ID. Different from Trasaction ID.                       |
+| RECEIPTID                        | nvarchar (18)   | Receipt ID. Different from Transaction ID.                       |
 | STAFF                            | nvarchar (25)   | User ID                                                         |
 | SYNCSTARTDATETIME                | datetime NOT NULL       | Fields added to synchronization engine (DIXF) in Finance & Operations. They decline the export sequence.                                                                |
 | TENDERTYPE                       | nvarchar (10)   | Type of tender paid                                             |
