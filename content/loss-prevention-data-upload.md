@@ -15,7 +15,7 @@ title: Upload historical data
 
 # Upload historical data
 
-You can upload the historical data into the system for the adaptive AI models to detect anomalies and generate reports that will provide actionable insights on the anamalies detected . These uploads include data from transactions, sales, payments and payment methods. This historical data is processed and used to generate reports illustrating trends and anomalies. There are four entities from which the data needs to be imported:
+You can upload the historical data into the system for the adaptive AI models to detect anomalies and generate reports that will provide actionable insights on the anomalies detected. These uploads include data from transactions, sales, payments, and payment methods. This historical data is processed and used to generate reports illustrating trends and anomalies. There are four entities from which the data needs to be imported:
 
 * Transactions
 * Sales
