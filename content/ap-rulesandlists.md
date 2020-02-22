@@ -48,14 +48,14 @@ WHEN @count < 10
 Example clause: throw a challenge if bot score is between 400 to 900:
 
 ```
-Return Challenge(type = “sms”, reason = “bot score”) 
-WHEN @modelData < 900 AND @modelData > 400 
+Return Challenge(challengeType = “sms”, reason = “bot score”) 
+WHEN @BotScore < 900 AND @BotScore > 400 
 ```
      
 Example clause: approve all users whose IP is in a list:
 ```
 Return Approve(reason = "") 
-WHEN IN (@ip, "Dictionary://mylist?KeyValueField = IP)
+WHEN ContainsKey(“iplist”, ”IPAddress”, @ip)
 ```
 
 ## Lists 
@@ -74,13 +74,14 @@ Common operations associated with the list are:
 
 ## Reference: 
 Please note that rule syntax is case insensitive.
+Please note that only one rule can return a decision.
 
 - Return statement 
 ```
-Approve (reason = "") 
-Reject (reason = "") 
-Challenge (type = "", reason = "") 
-Review (reason = "") 
+Approve (reason = "", supportMessage = "") 
+Reject (reason = "", supportMessage = "") 
+Challenge (*challengeType = "", reason = "", supportMessage = "") 
+Review (reason = "", supportMessage = "") 
 ```
 - Logical operators 
 
@@ -118,8 +119,8 @@ Geo.MarketCode
 ```
 - How to use lists 
 ```
-IN (@ip, "Dictionary://mylist?KeyValueField = IP)      
-MAP (@currentIP, "Dictionary://mylist?KeyValueField = IP
+ContainsKey(“dataset name”, ”index name”, @index_key)     
+lookup(“dataset name”, “index name”, @index_key, “value name”)
 ```
 
 ## Related topics:
