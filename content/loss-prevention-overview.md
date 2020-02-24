@@ -3,7 +3,7 @@ author: v-davido
 description: Loss prevention overview outlines tools, systems, and procedures to help prevent fraud in brick and mortar stores
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 02/20/2020
+ms.date: 02/24/2020
 
 ms.topic: conceptual
 search.app: 
