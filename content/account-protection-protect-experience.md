@@ -22,6 +22,6 @@ Important: It is up to you to respect the separation of modes and indicate it to
 
 To get started with Fraud Protection, complete the initial configuration steps that are outlined on the dashboard. Then follow these steps to begin to use the Protect experience:
 
-1. [Integrate the Fraud Protection application programming interfaces (APIs)](integrate-ap-api.md), and pass **'Protect'** for the **AssessmentType** field in **Account Creation** and **Account LogIn** API events. For documentation of all supported events, see [Dynamics 365 Fraud Protection API](integrate-ap-api.md).
+1. [Integrate the Fraud Protection application programming interfaces (APIs)](integrate-ap-api.md), and pass **'Protect'** for the **AssessmentType** field in **Account Creation** and **Account LogIn** API events. For documentation of all supported events, see [Dynamics 365 Fraud Protection API](tbd).
 2. Honor the decision of Fraud Protection merchant rules to either approve, reject, challenge, or review those same events.
 
