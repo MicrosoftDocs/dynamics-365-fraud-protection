@@ -1,6 +1,6 @@
 ---
 author: kelsiefu
-description: This topic provides information about the Evaluate experience in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kelsiefu
 ms.service: fraud-protection
 ms.date: 2/24/2020
@@ -18,7 +18,7 @@ Dynamics 365 Fraud Protection offers evaluate and protect which are two differen
 
 Important: It is up to you to respect the separation of modes and indicate it to the product via the AssessmentType in the assessment API calls. You are free to choose how you allocate traffic between the protect and evaluate modes at any given time.
 
-## Using the Evaluate experience
+## Using the evaluate experience
 
 Get started with Fraud Protection by completing the initial configuration steps outlined on the **Dashboard**. Then follow these steps to begin using the evaluate experience:
 
