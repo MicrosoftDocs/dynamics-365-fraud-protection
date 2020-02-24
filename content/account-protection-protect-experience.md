@@ -1,6 +1,6 @@
 ---
 author: kelsiefu
-description: This topic provides information about the Protect experience in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the protect experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kelsiefu
 ms.service: fraud-protection
 ms.date: 2/24/2020
@@ -14,9 +14,10 @@ title: Account protection protect experience
 
 # Account protection protect experience
 
-Dynamics 365 Fraud Protection offers Evaluate and Protect which are two different ways (modes) of using the same underlying product. There is no difference in the functionality or the feature capability in the two experiences. The Protect experience in Fraud Protection implies that you are using Fraud Protection to impact your final decisions in your production environment. You can take advantage of model scores to decide whether to accept or reject transactions, and adjudicate escalations from.
+Dynamics 365 Fraud Protection offers evaluate and protect which are two different ways (modes) of using the same underlying product. There is no difference in the functionality or the feature capability in the two experiences. The Protect experience in Fraud Protection implies that you are using Fraud Protection to impact your final decisions in your production environment. You can take advantage of model scores to decide whether to accept or reject transactions, and adjudicate escalations from.
 
-Important: It is up to you to respect the separation of modes and indicate it to the product via the AssessmentType in the assessment API calls. You are free to choose how you allocate traffic between the Protect and Evaluate modes at any given time.
+[!IMPORTANT]
+>It is up to you to respect the separation of modes and indicate it to the product via the AssessmentType in the assessment API calls. You are free to choose how you allocate traffic between the Protect and Evaluate modes at any given time.
 
 ## Using the protect experience
 
