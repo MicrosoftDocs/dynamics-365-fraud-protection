@@ -130,7 +130,7 @@ AccountCreationStatus API allows you to share information and context with Fraud
 | MetaData | userId            | string   | The user identifier\. This information is provided by the merchant\.                                                                                                   |
 | Status   | statusType        | string   | The type of status: Approved, Rejected, or Pending\.                                                                                                                   |
 | Status   | reasonType        | enum     | The type of reason: challenge abandoned, challenge failed, challenge passed, challenge pending,review failed, review passed, review pending, None\. Defaults to None\. |
-| Status   | challengeType     | enum     | The type of review status: SMS, Email, Phone, Other,None\. Defaults to None\.                                                                                          |
+| Status   | challengeType     | enum     | The type of review status: SMS, Email, Phone, Other, None\. Defaults to None\.                                                                                          |
 | Status   | statusDate        | DateTime | The date and time when the status was applied\. The format is ISO 8601\.                                                                                               |
 
 
@@ -180,14 +180,14 @@ AccountLogInStatus API allows you to share information and context with Fraud Pr
 | MetaData | userId            | string   | The user identifier\. This information is provided by the merchant\.                                                                                                   |
 | Status   | statusType        | string   | The type of status: Approved, Rejected, or Pending\.                                                                                                                   |
 | Status   | reasonType        | enum     | The type of reason: challenge abandoned, challenge failed, challenge passed, challenge pending,review failed, review passed, review pending, None\. Defaults to None\. |
-| Status   | challengeType     | enum     | The type of review status: SMS, Email, Phone, Other,None\. Defaults to None\.                                                                                          |
+| Status   | challengeType     | enum     | The type of review status: SMS, Email, Phone, Other, None\. Defaults to None\.                                                                                          |
 | Status   | statusDate        | DateTime | The date and time when the status was applied\. The format is ISO 8601\.                                                                                               |
 
 
 
 ## **AccountUpdate**
 
-AccountUpdate API allows you to share account information updates with Fraud Protection, for example, edited/added user profile, address, payment Instrument, phone, email and single sign-on (SSO). This is a data ingestion event only. 
+AccountUpdate API allows you to share account information updates with Fraud Protection, for example, edited/added user profile, address, payment Instrument, phone, email, and single sign-on (SSO). This is a data ingestion event only. 
 
 | Object                              | Attribute                   | Type     | Description                                                                                                                                                                                                                                        |
 |-------------------------------------|-----------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
