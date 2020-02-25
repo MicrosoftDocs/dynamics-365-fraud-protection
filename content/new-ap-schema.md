@@ -137,7 +137,7 @@ AccountCreationStatus API allows you to share information and context with Fraud
 
 ## **AccountLogin**
 
-AccountLogIn API allows you to share information and context with Fraud Protection about an incoming log-in event for a risk assessment. 
+AccountLogIn API allows you to share information and context with Fraud Protection about an incoming sign in event for a risk assessment. 
 
 | Object                            | Attribute                   | Type     | Description                                                                                                                                                                 |
 |-----------------------------------|-----------------------------|----------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -168,7 +168,7 @@ AccountLogIn API allows you to share information and context with Fraud Protecti
 
 ## **AccountLogInStatus**
 
-AccountLogInStatus API allows you to share information and context with Fraud Protection about the status of an account log-in event. This is a data ingestion event only. 
+AccountLogInStatus API allows you to share information and context with Fraud Protection about the status of an account sign in event. This is a data ingestion event only. 
 
 | Object   | Attribute         | Type     | Description                                                                                                                                                            |
 |----------|-------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
