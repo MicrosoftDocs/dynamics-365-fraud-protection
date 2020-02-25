@@ -45,9 +45,9 @@ To acquire the tokens required to call the APIs, you will need to utilize Azure 
 Select **Configuration** in the left navigation pane, and then select **Real-time APIs**. Complete the form to create your app.
 
 The following fields are required: 
-- **Application display name** - Give your application a descriptive name. Maximum length is 93 characters. 
+- **Application display name**: Give your application a descriptive name. Maximum length is 93 characters. 
 - **Environment** - Choose the production endpoint. 
-- **Authentication method** - Choose whether you would like to authenticate via certificate or a secret (password). For the certificate method, use the **Choose file** button to upload the public key. You will need the matching private key when you acquire tokens. If you select the **Secret** method, a password will be generated for you after application creation.
+- **Authentication method**: Choose whether you would like to authenticate via certificate or a secret (password). For the certificate method, use the **Choose file** button to upload the public key. You will need the matching private key when you acquire tokens. If you select the **Secret** method, a password will be generated for you after application creation.
 
 When you finish filling in the fields, select **Create application**. The confirmation screen summarizes your app's name, ID, and the certificate thumbprint or secret, depending on your authentication method. 
 
@@ -66,10 +66,10 @@ If you would like to set up your applications directly in Azure, see [Create Azu
 To integrate your systems with Fraud Protection, follow these steps.
 
 ### Required IDs and information
-- **API Endpoint** - The URI for your environment appear on the **Account information** tile on the Fraud Protection dashboard.
-- **Directory (tenant) ID** - The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard. 
-- **Application (client) ID** - This identifies the Azure AD app you created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
-- **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen.
+- **API Endpoint**: The URI for your environment appear on the **Account information** tile on the Fraud Protection dashboard.
+- **Directory (tenant) ID**: The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard. 
+- **Application (client) ID**: This identifies the Azure AD app you created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
+- **Certificate thumbprint or secret**: Get the thumbprint or secret from the Real-time APIs confirmation screen.
 
 ### Generate an access token
 You must generate this token and provide it with each API call. Note that access tokens have a limited lifespan. We recommend that you cache and reuse it until it's time to get a new access token.
