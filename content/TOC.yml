@@ -44,8 +44,8 @@
       href: integrate-real-time-api.md
     - name: Labels API
       href: labels-api.md
-    - name: new-ap-schema-tables
-      href: new-ap-schema-tables.md
+    - name: View account protection schemas
+      href: new-ap-schema.md
     - name: View labels schema
       href: labels-schema.md
     - name: View sign-up schema
