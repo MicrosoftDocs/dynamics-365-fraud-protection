@@ -3,7 +3,7 @@ author: kelsiefu
 description: This topic provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kelsiefu
 ms.service: fraud-protection
-ms.date: 2/24/2020
+ms.date: 2/25/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -14,7 +14,7 @@ title: Account protection evaluate experience
 
 # Account protection evaluate experience
 
-Dynamics 365 Fraud Protection offers evaluate and protect which are two different ways (modes) of using the same underlying product. There is no difference in the functionality or the feature capability in the two experiences. Evaluate mode allows you to “shadow” your incumbent solution without affecting its operation, and in protect mode, you can compare the performance in the scorecard experience by toggling on the AssessmentType. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation. You can then use Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
+Dynamics 365 Fraud Protection offers evaluate and protect which are two different ways (modes) of using the same underlying product. There is no difference in the functionality or the feature capability in the two experiences. Evaluate mode allows you to “shadow” your incumbent solution without affecting its operation. In protect mode, you can compare the performance in the scorecard experience by toggling on the AssessmentType. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation. You can then use Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
 
 [!IMPORTANT]
 > It is up to you to respect the separation of modes and indicate it to the product via the AssessmentType in the assessment API calls. You are free to choose how you allocate traffic between the protect and evaluate modes at any given time.
