@@ -3,7 +3,7 @@ author: zhuoche
 description: This topic explains the rule and list capabilities of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 02/11/2020
+ms.date: 03/01/2020
 
 ms.topic: conceptual
 search.app: 
