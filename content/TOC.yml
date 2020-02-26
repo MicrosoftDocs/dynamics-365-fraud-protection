@@ -66,6 +66,8 @@
   items:
   - name: Loss prevention overview
     href: loss-prevention-overview.md
+  - name: Reporting
+    href: reports.md
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance
