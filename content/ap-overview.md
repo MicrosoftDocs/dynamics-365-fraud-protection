@@ -1,6 +1,6 @@
 ---
 author: v-davido
-description: This topic provides an overview of AP Preview offering.
+description: This topic provides an overview of the account protection expereince wihtin the Dynamics 365 Fraud Protection system.
 ms.author: amirat
 ms.service: fraud-protection
 ms.date: 2/18/2020
@@ -20,7 +20,7 @@ title: Account protection overview
 
 As incidents of data breaches and bot attacks increase, account takeover has become a significant risk for many companies, regardless of the industry. Account protection leverages Dynamics 365 Fraud Protection’s proprietary risk assessment engine, artificial intelligence learning capabilities, and Fraud Protection network. These features provide device forensics and bot detection capabilities. 
 
-With real-time telemetry through APIs, attributes associated with events such as account creation and account sign-in attempts are evaluated and return a risk assessment score with a reason code. Customers can leverage this information to make decisions and take proactive measures, such as blocking fraudulent attempts or challenging suspicious attempts with two-factor authentication.
+With real-time telemetry through APIs, attributes associated with events such as account creation and account sign in attempts are evaluated and return a risk assessment score with a reason code. Customers can leverage this information to make decisions and take proactive measures, such as blocking fraudulent attempts or challenging suspicious attempts with two-factor authentication.
 
 
 ## Additional resources
