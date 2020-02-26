@@ -10,11 +10,12 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-
 title: View loss prevention schema
 ---
 
 # View loss prevention schema
+
+[!include [banner](includes/preview-banner.md)]
 
 This topic outlines the schemas used to define the data used in generating models and determining risk assessments. 
 
