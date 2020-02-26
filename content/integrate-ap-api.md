@@ -25,7 +25,7 @@ Depending on how you choose to use Fraud Protection, you may make use of differe
 - **Account protection APIs**: AccountCreation, AccountLogin,	AccountCreationStatus, AccountLoginStatus,	AccountUpdate, Label
 
 
-For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
+For documentation about all supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 
 
 ## Get set up
@@ -34,7 +34,7 @@ For documentation about all supported events, see <a href="https://go.microsoft.
 > [!IMPORTANT]
 > You must be a Global Administrator in your Microsoft Azure tenant to complete the initial API onboarding.
 
-Visit the portal located at <a href="https://dfp.microsoft.com" target="_blank">https://dfp.microsoft.com</a>, sign in, and accept the terms and conditions if prompted. This will make sure that Fraud Protection is properly configured within your Azure tenant. (You might already have completed this step during initial sign-up.)
+Visit the [portal](https://dfp.microsoft.com), sign in, and accept the terms and conditions if prompted. This will make sure that Fraud Protection is properly configured within your Azure tenant. (You might already have completed this step during initial sign-up.)
 
 ### Create Azure Active Directory applications
 > [!IMPORTANT]
@@ -57,7 +57,7 @@ When you finish filling in the fields, select **Create application**. The confir
 To create an additional application, select **Create another application**. You can create as many apps as necessary to run API calls in your production environments. 
 
 ### Manage existing Azure AD applications 
-After you have created your Azure AD apps, you can manage them through the <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank">Azure portal</a>. You can learn more from the <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-how-applications-are-added" target="_blank">Azure documentation site</a>. 
+After you have created your Azure AD apps, you can manage them through the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps). You can learn more from the [Azure documentation site](https://docs.microsoft.com/azure/active-directory/develop/active-directory-how-applications-are-added).
 
 ### Manually configure Azure AD applications
 If you would like to set up your applications directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md).
