@@ -10,12 +10,12 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-
-
 title: Manage account protection rules and lists
 ---
 
 # Manage account protection rules and lists
+
+[!include [banner](includes/preview-banner.md)]
 
 ## Rules
 
