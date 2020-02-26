@@ -50,7 +50,7 @@ The Bot model provides insights about how bots are engaging your e-commerce plat
 Risk model score, between 0 to 999, indicates the likelihood that an event is fraudulent. A low score indicates low probability of fraud. Elements you can analyze:
 
 - **Risk score distribution**: Risk score distribution chart shows the event volume aggregated by risk model score. 
-- **Top risk countries and regions**: Top risk countries graph shows the geographic view of the five countries and regions with the highest bot encounter rates, defined as events with a risk score higher than 900.
+- **Top risk countries and regions**: Top risk countries graph shows the geographic view of the five countries and regions with the highest risk encounter rates, defined as events with a risk score higher than 900.
 
 ### Rule decision
 
