@@ -43,14 +43,14 @@ The scorecard shows metrics in the following sections:
 The Bot model provides insights about how bots are engaging your e-commerce platform. The bot score is a number between 0 to 999 that indicates the probability that a bot, rather than a person, is attempting to create a new account or log-in to an account. A higher score indicates high probability that a bot is initiating the event. Elements you can analyze:
 
 - **Bot score distribution**: The Bot score distribution chart shows the event volume aggregated by bot model score. 
-- **Top bot countries and regions**: Top bot countries graph shows the geographic view of the five countries and regions initiating the highest number of bot encounters, defined as percentage of total events initiated from that country or region that have a bot score higher than 900.
+- **Top bot countries and regions with score > 900**: Top bot countries graph shows the geographic view of the five countries and regions initiating the highest number of bot encounters, defined as percentage of total events initiated from that country or region that have a bot score higher than 900.
 
 ### Risk model score
 
 Risk model score, between 0 to 999, indicates the likelihood that an event is fraudulent. A low score indicates low probability of fraud. Elements you can analyze:
 
 - **Risk score distribution**: Risk score distribution chart shows the event volume aggregated by risk model score. 
-- **Top risk countries and regions**: Top risk countries graph shows the geographic view of the five countries and regions with the highest risk encounter rates, defined as events with a risk score higher than 900.
+- **Top risk countries and regions with score > 900**: Top risk countries graph shows the geographic view of the five countries and regions with the highest risk encounter rates, defined as events with a risk score higher than 900.
 
 ### Rule decision
 
