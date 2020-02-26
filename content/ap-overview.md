@@ -11,10 +11,10 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Account Protection Overview
+title: Account protection overview
 ---
 
-# Account Protection Overview
+# Account protection overview
 
 [!include [banner](includes/preview-banner.md)]
 
@@ -24,8 +24,8 @@ With real-time telemetry through APIs, attributes associated with events such as
 
 
 ## Additional resources
-- Integrate account protection APIs (link to Kelsie's new AP doc on APIs) 
+- [Integrate account protection APIs](integrate-ap-api.md) 
 
-- Manage account protection rules & lists (link to Lena's new AP doc on Rules ) 
+- [Manage account protection rules & lists](ap-rulesandlists.md) 
 
-- Learn from Account Protection Scorecard (link to Lena's new AP doc on Scorecard) 
+- [Learn from Account Protection Scorecard](ap-scorecard.md) 
