@@ -10,10 +10,10 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Upload historical data
+title: Upload historical data for purchase protection
 ---
 
-# Upload historical data
+# Upload historical data for purchase protection
 
 In the Evaluate and Protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your historical data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
 
