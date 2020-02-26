@@ -133,4 +133,4 @@ The following operations are typically associated with lists:
 
 - [Account protection overview](account-protection.md)
 - [View account protection schemas](new-ap-schema.md)
-- [Account protection scorecard](ap-scorecard.md)
+- [Learn from the account protection scorecard](ap-scorecard.md)
