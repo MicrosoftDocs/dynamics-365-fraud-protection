@@ -14,6 +14,8 @@ title: Account protection evaluate experience
 
 # Account protection evaluate experience
 
+[!include [banner](includes/preview-banner.md)]
+
 Dynamics 365 Fraud Protection offers evaluate and protect which are two different ways (modes) of using the same underlying product. There is no difference in the functionality or the feature capability in the two experiences. Evaluate mode allows you to “shadow” your incumbent solution without affecting its operation. In protect mode, you can compare the performance in the scorecard experience by toggling on the AssessmentType. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation. You can then use Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
 
 [!IMPORTANT]
