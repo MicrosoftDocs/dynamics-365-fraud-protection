@@ -61,8 +61,8 @@ The **Risk decision** section shows metrics from the automated decision rules th
 
 For more information about rules, see the rules documentation (link TBD).
 
-## Related topics(link tbd)
+## Related topics
 
-- Account protection overview
-- View account protection schemas
-- Manage rules and lists
+- [Account protection overview](ap-overview.md)
+- [View account protection schemas](new-ap-schema.md)
+
