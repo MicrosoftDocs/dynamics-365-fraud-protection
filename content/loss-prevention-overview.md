@@ -1,6 +1,6 @@
 ---
 author: v-davido
-description: Loss prevention overview outlines tools, systems, and procedures to help prevent fraud in brick and mortar stores
+description: This topic outlines the tools, systems, and procedures that can help prevent fraud in brick-and-mortar stores.
 ms.author: v-davido
 ms.service: fraud-protection
 ms.date: 02/24/2020
@@ -13,14 +13,13 @@ search.audienceType:
 title: Loss prevention overview
 ---
 
-
 # Loss prevention overview
 
 [!include [banner](includes/preview-banner.md)]
 
-Microsoft Dynamics 365 Fraud Protection loss prevention identifies anomalies and patterns that might be indicative of in-store fraud.
+The loss prevention feature in Microsoft Dynamics 365 Fraud Protection identifies anomalies and patterns that might indicate in-store fraud.
 
-Microsoft has many years of experience protecting our own e-commerce businesses from fraud. We have developed a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time.
+Microsoft has many years of experience protecting its own e-commerce businesses from fraud. It has developed a sophisticated technology stack that uses connected big data across multiple lines of business, and that applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time.
 
 By using loss prevention, you can help protect your business from fraud through several innovative and advanced capabilities. Here are some examples:
 
