@@ -56,7 +56,7 @@
     href: monitoring.md
   - name: Usage metering
     href: metering.md  
-- name: Loss prevention
+- name: Loss prevention (preview)
   items:
   - name: Loss prevention overview
     href: loss-prevention-overview.md
