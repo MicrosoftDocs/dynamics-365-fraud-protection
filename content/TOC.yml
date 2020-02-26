@@ -68,6 +68,8 @@
     href: loss-prevention-overview.md
   - name: Reporting
     href: reports.md
+  - name: Upload historical data
+    href: loss-prevention-data-upload.md
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance
