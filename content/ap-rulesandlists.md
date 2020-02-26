@@ -17,8 +17,6 @@ title: Manage account protection rules and lists
 
 # Manage account protection rules and lists
 
-[!include [banner](includes/preview-banner.md)]
-
 ## Rules
 
 You can use lists and rules to help automate the decision-making process for account protection. Rules shape real-time decisions from events, based on conditions and risk score thresholds that you select. Types of events include acceptance, rejection, challenges, and other user-defined settings. The rules use lists that you create and that consist of data that is relevant to your business.
@@ -57,14 +55,14 @@ The following example shows a clause that throws a challenge if the bot score is
 
 ```
 Return Challenge(type = "sms", reason = "bot score") 
-WHEN @modelData < 900 AND @modelData > 400 
+WHEN @botScore < 900 AND @botScore > 400 
 ```
 
 The following example shows a clause that approves all users whose IP address is in a list.
 
 ```
-Return Approve(reason = "") 
-WHEN IN (@ip, "Dictionary://mylist?KeyValueField = IP)
+Return Approve() 
+WHEN ContainsKey(“iplist”, ”IPAddress”, @ip)
 ```
 
 ## Lists 
@@ -128,8 +126,8 @@ The following operations are typically associated with lists:
 
 - How to use lists:
 
-    - `IN (@ip, "Dictionary://mylist?KeyValueField = IP)`
-    - `MAP (@currentIP, "Dictionary://mylist?KeyValueField = IP`
+    - `ContainsKey(“dataset name”, ”index name”, @index_key)`
+    - `Lookup(“dataset name”, “index name”, @index_key, “value name”)`
 
 ## Related topics
 
