@@ -36,6 +36,10 @@
       href: monitoring.md
     - name: Usage metering
       href: metering.md        
+- name: Account protection (preview)
+  items:
+    - name: Manage account protection rules and lists
+      href: ap-rulesandlists.md
 - name: Account protection
   items:
     - name: Account protection overview
