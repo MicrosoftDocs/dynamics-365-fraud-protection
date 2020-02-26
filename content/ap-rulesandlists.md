@@ -132,5 +132,5 @@ The following operations are typically associated with lists:
 ## Related topics
 
 - [Account protection overview](account-protection.md)
-- [View Account protection schemas](view-loss-prevent-schemas.md)
+- [View account protection schemas](new-ap-schema.md)
 - [Account protection scorecard](ap-scorecard.md)
