@@ -65,4 +65,5 @@ For more information about rules, see the rules documentation (link TBD).
 
 - [Account protection overview](ap-overview.md)
 - [View account protection schemas](new-ap-schema.md)
+- [Manage account protection rules and lists](ap-rulesandlists.md)
 
