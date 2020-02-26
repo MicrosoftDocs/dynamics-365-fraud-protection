@@ -1,6 +1,6 @@
 ---
 author: zhuoche
-description: This topic explains the scorecard capability of Dynamics 365 Fraud Protection account protection.
+description: This topic explains the scorecard capability of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
 ms.date: 02/20/2020
@@ -15,53 +15,52 @@ search.audienceType:
 title: Learn from the account protection scorecard
 ---
 
-
 # Learn from the account protection scorecard
 
-
-Dynamics 365 Fraud Protection with account protection helps protect your e-commerce business from fraud related to fake accounts and account compromise. Your account protection scorecard shows you, in real-time, how account protection is working. For example, the scorecard shows you how many events are high risk. You can use the scorecard to make well-informed risk management decisions for your online business. 
+Microsoft Dynamics 365 Fraud Protection includes an account protection feature to help protect your e-commerce business from fraud that is related to fake accounts and account compromise. Your account protection scorecard shows you, in real time, how account protection is working. For example, the scorecard shows how many events are high-risk events. You can use the scorecard to make well-informed risk management decisions for your online business.
 
 ## Account protection assessment type
 
-You can select the account protection assessment type by clicking the **tab** menu on the top of the page. The following types are available:
+You can select the type of account protection assessment by using the **Tab** menu at the top of the page. The following types are available:
 
-- Account Creation 
+- Account Creation
 - Account Login
 
 ## Customize your view
 
 You can use the drop-down menus to filter your view of the interactive charts. The following option is available:
 
-- **Event time**: Show event data by time. You can select to view events within last hour or last 24 hours. 
+- **Event time** – Show event data by time. You can select whether to view events from last hour or the last 24 hours.
 
-## Key performance indicators (KPI) charts
+## Key performance indicator charts
 
-The scorecard shows metrics in the following sections:
+The scorecard shows metrics (key performance indicators \[KPIs\]) in the following sections.
 
 ### Bot model score
 
-The Bot model provides insights about how bots are engaging your e-commerce platform. The bot score is a number between 0 to 999 that indicates the probability that a bot, rather than a person, is attempting to create a new account or log-in to an account. A higher score indicates high probability that a bot is initiating the event. Elements you can analyze:
+The bot model score provides insight into how bots are engaging your e-commerce platform. This score is a number between 0 and 999 that indicates the probability that a bot, not a person, is trying to create a new account or sign in to an account. The higher the score, the higher the probability that a bot is initiating the event. You can analyze the following elements:
 
-- **Bot score distribution**: The Bot score distribution chart shows the event volume aggregated by bot model score. 
-- **Top bot countries and regions with score > 900**: Top bot countries graph shows the geographic view of the five countries and regions initiating the highest number of bot encounters, defined as percentage of total events initiated from that country or region that have a bot score higher than 900.
+- **Bot score distribution** – The **Bot score distribution** chart shows the event volume, aggregated by bot model score.
+- **Top bot countries and regions** – The **Top bot countries and regions** chart shows a geographic view of the five countries and regions that initiate the most bot encounters. That figure is defined as the percentage of total events that are initiated from a specific country or region, and that have a bot score that is above 900.
 
 ### Risk model score
 
-Risk model score, between 0 to 999, indicates the likelihood that an event is fraudulent. A low score indicates low probability of fraud. Elements you can analyze:
+The risk model score indicates the likelihood that an event is fraudulent. This score is a number between 0 and 999. The lower the score, the lower the probability of fraud. You can analyze the following elements:
 
-- **Risk score distribution**: Risk score distribution chart shows the event volume aggregated by risk model score. 
-- **Top risk countries and regions with score > 900**: Top risk countries graph shows the geographic view of the five countries and regions with the highest risk encounter rates, defined as events with a risk score higher than 900.
+- **Risk score distribution** – The **Risk score distribution** chart shows the event volume, aggregated by risk model score.
+- **Top risk countries and regions** – The **Top risk countries and regions** chart shows a geographic view of the five countries and regions that have the highest bot encounter rates. That figure is defined as events that have a risk score that is above 900.
 
 ### Rule decision
 
-Risk decision section shows metrics from the automated decision rules you’ve created. You can define rules to automate your decisions about accepting or rejecting an event based on your business need. The following metrics are available:
+The **Risk decision** section shows metrics from the automated decision rules that you've created. You can define rules to automate decisions about whether an event should be accepted or rejected, based on your business needs. The following metrics are available:
 
-- **Rule decision trend**: Rule decision trend chart shows percentage of Approved, Rejected, Challenged, and Reviewed decisions by rules. 
-- **Top rules**: List of rules that triggered the highest volume of automated decisions.
+- **Rule decision trend** – The **Rule decision trend** chart shows the percentage of decisions that have been approved, rejected, challenged, and reviewed by rules.
+- **Top rules** – The **Top rules** list shows the rules that triggered the highest volume of automated decisions.
 
-To learn more about rules, view rules documentation (link TBD)
+For more information about rules, see the rules documentation (link TBD).
 
-## Related topics: (link tbd)
+## Related topics(link tbd)
+
 - Account protection overview
-- View Account Protection Schemas
-- Manage Rules and Lists
+- View account protection schemas
+- Manage rules and lists
