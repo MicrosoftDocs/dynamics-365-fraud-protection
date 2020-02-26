@@ -19,9 +19,10 @@ In the evaluate and protect experiences in Microsoft Dynamics 365 Fraud Protecti
 
 ## Data types
 
-Fraud Protection can analyze loss prevention historical data about several different entities. This data can be uploaded through either the website or the application programming interface (API). We recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
+Fraud Protection can analyze loss prevention historical data about several entities. This data can be uploaded through either the website or the application programming interface (API). We recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
 
-Entities:
+**Entities:**
+
 - Purchase data
 
     - Purchases
@@ -63,4 +64,4 @@ To upload additional data, select **Reupload** to submit more files, and then pr
 In the Evaluate and Protect experiences, data can also be ingested through the API. A score will be returned for data that you upload in this way. For a more comprehensive overview, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
 
 ## Download sample data
-We have sample data for download:[sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip). You can use this to explore options before using your own internal data. 
+We have sample data for download: [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip). You can use this to explore options before using your own internal data. 
