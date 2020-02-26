@@ -40,6 +40,8 @@
   items:
     - name: Manage account protection rules and lists
       href: ap-rulesandlists.md
+    - name: Learn from the account protection scorecard
+      href: ap-scorecard.md
 - name: Account protection
   items:
     - name: Account protection overview
