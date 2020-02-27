@@ -38,7 +38,7 @@
       href: metering.md        
 - name: Account creation
   items:
-  - name: Account creation overview
+  - name: Account protection overview
     href: account-protection.md
   - name: Integrate Dynamics 365 Fraud Protection APIs
     href: integrate-real-time-api.md
