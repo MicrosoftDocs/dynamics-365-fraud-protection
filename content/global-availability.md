@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains the global availability of Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/31/2020
+ms.date: 02/27/2020
 
 ms.topic: conceptual
 search.app: 
