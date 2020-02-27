@@ -149,7 +149,7 @@ To call the APIs, follow these steps:
     </tr> 
     </table> 
     </li> 
-   <li>Generate an event-based payload. Fill in the event data with the relevant information from your system. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>. 
+   <li>Generate an event-based payload. Fill in the event data with the relevant information from your system. 
     </li> 
    <li>Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint.</li>
 </ol>
