@@ -26,9 +26,6 @@ Depending on how you choose to use Fraud Protection, you may make use of differe
 - **Account protection APIs**: AccountCreation, AccountLogin,	AccountCreationStatus, AccountLoginStatus,	AccountUpdate, Label
 
 
-For documentation about all supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
-
-
 ## Get set up
 
 ### Sign in
