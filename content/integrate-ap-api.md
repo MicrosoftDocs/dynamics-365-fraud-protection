@@ -72,7 +72,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 
 ### Required IDs and information
 
-- **API Endpoint** – The URIs for your environment appear on the **Account information** tile on the Fraud Protection dashboard.
+- **API Endpoint** – The URI for your environment appears on the **Account information** tile on the Fraud Protection dashboard.
 - **Directory (tenant) ID** – The directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard.
 - **Application (client) ID** – The application ID identifies the Azure AD app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **Real-time APIs** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you created.
 - **Certificate thumbprint or secret** – You can find the certificate thumbprint or the secret on the confirmation page that appears after you select **Create application** on the **Real-time APIs** page.
@@ -81,7 +81,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 
 You must generate this token and provide it with each API call. Note that access tokens have a limited lifespan. We recommend that you cache and reuse each access token until it's time to get a new access token.
 
-The following C\# code samples provide examples that show how to acquire a token with your certificate or secret. Replace the placeholders by using your own information.
+The following C\# code samples provide examples that show how to acquire a token by using your certificate or secret. Replace the placeholders by using your own information.
 
 **Certificate thumbprint**
 
