@@ -36,15 +36,9 @@
       href: monitoring.md
     - name: Usage metering
       href: metering.md        
-- name: Account protection (preview)
+- name: Account creation
   items:
-    - name: Manage account protection rules and lists
-      href: ap-rulesandlists.md
-    - name: Learn from the account protection scorecard
-      href: ap-scorecard.md
-- name: Account protection
-  items:
-  - name: Account protection overview
+  - name: Account creation overview
     href: account-protection.md
   - name: Integrate Dynamics 365 Fraud Protection APIs
     href: integrate-real-time-api.md
@@ -62,6 +56,12 @@
     href: monitoring.md
   - name: Usage metering
     href: metering.md  
+- name: Account protection (preview)
+  items:
+  - name: Manage account protection rules and lists
+    href: ap-rulesandlists.md
+  - name: Learn from the account protection scorecard
+    href: ap-scorecard.md
 - name: Loss prevention (preview)
   items:
   - name: Loss prevention overview
