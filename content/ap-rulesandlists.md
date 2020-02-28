@@ -44,11 +44,8 @@ Every condition should start with **WHEN**. It can accept any valid expression i
 Here is an example of a condition.
 
 ```
-WHEN Geo.CountryCode(@ip) == "BR"
-
-WHEN @id == 100 
-
-WHEN @count < 10 
+WHEN Geo.CountryCode(@ipAddress) == "BR"
+WHEN @username.endsWith("contoso.com")
 ```
 
 The following example shows a clause that throws a challenge if the bot score is between 400 and 900.
@@ -62,7 +59,7 @@ The following example shows a clause that approves all users whose IP address is
 
 ```
 Return Approve() 
-WHEN ContainsKey(“iplist”, ”IPAddress”, @ip)
+WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress)
 ```
 
 ## Lists 
