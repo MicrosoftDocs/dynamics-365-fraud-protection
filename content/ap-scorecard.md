@@ -59,11 +59,11 @@ The **Risk decision** section shows metrics from the automated decision rules th
 - **Rule decision trend** – The **Rule decision trend** chart shows the percentage of decisions that have been approved, rejected, challenged, and reviewed by rules.
 - **Top rules** – The **Top rules** list shows the rules that triggered the highest volume of automated decisions.
 
-For more information about rules, see the rules documentation (link TBD).
+For more information about rules, see the [rules documentation](ap-rulesandlists.md).
 
 ## Related topics
 
 - [Account protection overview](ap-overview.md)
 - [View account protection schemas](new-ap-schema.md)
-- [Manage account protection rules and lists](ap-rulesandlists.md)
+
 
