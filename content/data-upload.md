@@ -1,25 +1,29 @@
 ---
 author: v-davido
 description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-davido
+ms.author: veganesa 
 ms.service: fraud-protection
-ms.date: 12/03/2019
+ms.date: 03/01/2020
 
 ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
   - admin
-title: Upload historical data for purchase protection
+title: Upload historical data
 ---
 
-# Upload historical data for purchase protection
+# Upload historical data
 
-In the Evaluate and Protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your historical data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
+[!include [banner](includes/preview-banner.md)]
+
+In the evaluate and protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your loss prevention historical data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
 
 ## Data types
 
-Fraud Protection can analyze historical data about the following entities. This data can be uploaded through either the website or the application programming interface (API). In the Evaluate and Protect experiences, we recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
+Fraud Protection can analyze loss prevention historical data about several entities. This data can be uploaded through either the website or the application programming interface (API). We recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
+
+**Entities:**
 
 - Purchase data
 
@@ -62,4 +66,4 @@ To upload additional data, select **Reupload** to submit more files, and then pr
 In the Evaluate and Protect experiences, data can also be ingested through the API. A score will be returned for data that you upload in this way. For a more comprehensive overview, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
 
 ## Download sample data
-We have sample data for download:[sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip). You can use this to explore options before using your own internal data. 
+We have sample data for download: [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip). You can use this to explore options before using your own internal data. 
