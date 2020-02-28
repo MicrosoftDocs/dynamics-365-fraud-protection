@@ -3,7 +3,7 @@ author: v-davido
 description: This topic outlines the schemas that are used in account protection.
 ms.author: kelsiefu 
 ms.service: fraud-protection
-ms.date: 02/28/2020
+ms.date: 03/01/2020
 
 ms.topic: conceptual
 search.app: 
