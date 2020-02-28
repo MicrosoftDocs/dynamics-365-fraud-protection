@@ -91,7 +91,7 @@ Note the following formatting guidelines throughout:
 | TOTALMANUALDISCOUNTPERCENTAGE   | numeric (32 6)                  | The percentage of the manually applied total discount. |
 | TRANSACTIONDATE                 | datetime                        | The date. |
 | TRANSACTIONNUMBER               | nvarchar (44) NOT NULL          | The transaction identifier. |
-| TRANSACTIONSTATUS               | int                             | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Retail. They decline the export sequence. |
+| TRANSACTIONSTATUS               | int                             | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Retail. They define the export sequence. |
 | TRANSACTIONTIME                 | int                             | The time of the transaction. |
 | TRANSACTIONTYPE                 | int                             | A value that indicates whether the transaction is a cash-and-carry transaction or an order. |
 | TRANSFERSTATUS                  | int                             | This field is used to track the status of transfers between warehouses. |
