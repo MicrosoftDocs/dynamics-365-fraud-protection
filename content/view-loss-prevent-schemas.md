@@ -225,7 +225,7 @@ Note the following formatting guidelines throughout:
 | QUANTITY                         | numeric (32 6) NOT NULL  | The number of units that were sold. |
 | RECEIPTID                        | nvarchar (18)            | The receipt ID. This ID differs from the transaction ID. |
 | STAFF                            | nvarchar (25)            | The user ID. |
-| SYNCSTARTDATETIME                | datetime NOT NULL        | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Retail. They decline the export sequence. |
+| SYNCSTARTDATETIME                | datetime NOT NULL        | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Retail. They define the export sequence. |
 | TENDERTYPE                       | nvarchar (10)            | The type of tender that was paid. |
 | TERMINAL                         | nvarchar (10) NOT NULL   | The identifier of the register or Point of Sale (POS). |
 | TRANSACTIONNUMBER                | nvarchar (44) NOT NULL   | The transaction number. |
