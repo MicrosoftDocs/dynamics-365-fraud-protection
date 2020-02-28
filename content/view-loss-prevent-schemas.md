@@ -3,7 +3,7 @@ author: veganesa
 description: This topic outlines the required schema for the loss prevention feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: veganesa
 ms.service: fraud-protection
-ms.date: 02/27/2020
+ms.date: 02/28/2020
 
 ms.topic: conceptual
 search.app: 
@@ -11,10 +11,10 @@ search.app:
 search.audienceType:
   - admin
 
-title: Loss prevention schema
+title: Loss prevention schemas
 ---
 
-# Loss prevention schema
+# Loss prevention schemas
 
 [!include [banner](includes/preview-banner.md)]
 
@@ -38,7 +38,7 @@ Note the following formatting guidelines throughout:
 | CHANNELREFERENCEID              | nvarchar (50)                   | An identifier that indicates the channel that is used for purchases in omni-channel scenarios for e-commerce merchants. |
 | COMMENT                         | nvarchar (60)                   | A transaction-level comment. |
 | COSTAMOUNT                      | numeric (32 6) NOT NULL         | The cost for items. |
-| CREATEDOFFLINE                  | int                             | The transaction was created offline, without a channel database connection. |
+| CREATEDOFFLINE                  | int                             | This field indicates if the transaction was created offline without database connectivity. |
 | CURRENCY                        | nvarchar (3)                    | The currency code (for example, **USD**). |
 | CUSTOMERACCOUNT                 | nvarchar (38) NOT NULL          | The account number. |
 | CUSTOMERDISCOUNTAMOUNT          | numeric (32 6)                  | The discount that is mapped to the customer and automatically applied for that customer. |
@@ -50,26 +50,26 @@ Note the following formatting guidelines throughout:
 | EXCHANGERATE                    | numeric (32 16)                 | The exchange rate, if a non-store currency was used for payment. |
 | EXECUTIONID                     | nvarchar (90)                   | Fields that are added by the synchronization engine (DIFX) in Finance and Operations. They define the export sequence. |
 | GROSSAMOUNT                     | numeric (32 6)                  | The total amount that is due before discounts are applied. |
-| INCOMEEXPENSEAMOUNT             | numeric (32 6)                  | If the transaction is drawer-related (for example, to add or remove money) and not an actual transaction. |
-| INFOCODEDISCOUNTGROUP           | nvarchar (10)                   | If a discount is applied and an info code is prompted to request the reason. |
+| INCOMEEXPENSEAMOUNT             | numeric (32 6)                  | This field indicates the adjustment amount to refect drawer-related expenses if any.|
+| INFOCODEDISCOUNTGROUP           | nvarchar (10)                   |This is the informaiton code assoicated with the discount applied. |
 | INVOICEID                       | nvarchar (20)                   | This field is related to payments on customer accounts. It indicates the invoice that the customer is making a payment against. |
 | ISSELECTED                      | int                             | Fields that are added by the synchronization engine (DIFX) in Finance and Operations. They define the export sequence. |
 | ITEMSPOSTED                     | int                             | The count of items that are part of the shipment that is posted. |
 | LOGISTICPOSTALADDRESSVALIDTO    | datetime                        | Delivery address effectivity, based on the date when the address is no longer valid for the delivery of items. |
-| LOGISTICSLOCATIONID             | nvarchar (30)                   | Delivery address effectivity - the date when the address is valid. |
-| LOGISTICSPOSTALADDRESSVALIDFROM | datetime                        | The city. |
-| LOGISTICSPOSTALCITY             | nvarchar (60)                   | The county. |
-| LOGISTICSPOSTALCOUNTY           | nvarchar (10)                   | The state or province. |
-| LOGISTICSPOSTALSTATE            | nvarchar (10)                   | The street. |
-| LOGISTICSPOSTALSTREET           | nvarchar (250)                  | The postal code. |
-| LOGISTICSPOSTALZIPCODE          | nvarchar (10)                   | The loyalty card number. |
-| LOYALTYCARDID                   | nvarchar (30)                   | The amount after taxes and discounts are applied. |
+| LOGISTICSLOCATIONID             | nvarchar (30)                   | This field identifies the location to which the shipment is getting delivered to. |
+| LOGISTICSPOSTALADDRESSVALIDFROM | datetime                        | Delivery address effectivity, based on the date when the address is valid for the delivery of items. |
+| LOGISTICSPOSTALCITY             | nvarchar (60)                   | The city where the item is delivered to. |
+| LOGISTICSPOSTALCOUNTY           | nvarchar (10)                   | The county where the item is delivered to. |
+| LOGISTICSPOSTALSTATE            | nvarchar (10)                   | The state where the item is delivered to. |
+| LOGISTICSPOSTALSTREET           | nvarchar (250)                  | The street where the item is delivered to. |
+| LOGISTICSPOSTALZIPCODE          | nvarchar (10)                   | The zip code where the item is delivered to. |
+| LOYALTYCARDID                   | nvarchar (30)                   | The loality card number associated with the customer. |
 | NETAMOUNT                       | numeric (32 6 NOT NULL          | The price before discounts are applied. |
 | NETPRICE                        | numeric (32 6)                  | The number of lines on the transaction. |
 | OPERATINGUNITNUMBER             | nvarchar (30) NOT NULL          | The business unit that the store is mapped to. |
 | PARTITION                       | nvarchar (nvarchar 20) NOT NULL | The identifier of a data partition in Finance and Operations that is specific to Dynamics 365. |
 | PAYMENTAMOUNT                   | numeric (32 6)                  | The payment amount. |
-| POSTASSHIPMENT                  | int                             | A value that indicates whether a shipment is associated with this post. |
+| POSTASSHIPMENT                  | int                             | This field indicates whether or not an item has an assoicated shipment.  |
 | REFUNDRECEIPTID                 | nvarchar (18)                   | If the transaction is a refund, the receipt ID for the original transaction. |
 | RETAILNCREXPORTED               | int                             | At the beginning of the roll-out, this field was used as a flag to push transactions to an NCR BOS system. |
 | RRECEIPTID                      | nvarchar (18)                   | The receipt number. This number differs from the transaction number. |
@@ -87,7 +87,7 @@ Note the following formatting guidelines throughout:
 | TERMINAL                        | nvarchar (10) NOT NULL          | The identifier for the POS. |
 | TOACCOUNT                       | int                             | The amount that is being charged to the customer's account. |
 | TOTALDISCOUNTAMOUNT             | numeric (32 6)                  | The amount of the discount that is applied to the transaction total. |
-| TOTALMANUALDISCOUNTAMOUNT       | numeric (32 6)                  | If the total discount is manually applied instead automatic. |
+| TOTALMANUALDISCOUNTAMOUNT       | numeric (32 6)                  | This field indicates the total discount amount that is manually applied, not automatically calculated. |
 | TOTALMANUALDISCOUNTPERCENTAGE   | numeric (32 6)                  | The percentage of the manually applied total discount. |
 | TRANSACTIONDATE                 | datetime                        | The date. |
 | TRANSACTIONNUMBER               | nvarchar (44) NOT NULL          | The transaction identifier. |
@@ -120,9 +120,9 @@ Note the following formatting guidelines throughout:
 | GIFTCARD                        | int                      | The gift card number. |
 | INVENTORYSTATUS                 | int                      | The status of the inventory levels. |
 | ISLINEDISCOUNTED                | int                      | A value that indicates whether the transaction line is discounted. |
-| ISLINKEDPRODUCTNOTORIGINAL      | int                      | If the linked item was changed. |
+| ISLINKEDPRODUCTNOTORIGINAL      | int                      | This field indicates if there were any linked item within the same product group that were changed. |
 | ISORIGINALOFLINKEDPRODUCTLIST   | int                      | The default linked products. |
-| ISPRICECHANGE                   | int                      | If the price was manually changed. |
+| ISPRICECHANGE                   | int                      | This field indicates if there were any prices changes made manually to the list of products in the transaction. |
 | ISRETURNNOSALE                  | int                      | A value that indicates whether this transaction is a return or void. |
 | ISSCALEPRODUCT                  | int                      | A value that indicates whether the connected scale is used to get the quantity. |
 | ISSELECTED                      | int                      | Fields that are added by the synchronization engine (DIFX) in Finance and Operations. They define the export sequence. |
@@ -135,7 +135,7 @@ Note the following formatting guidelines throughout:
 | ITEMSALESTAXGROUP               | nvarchar (10)            | The effective sales tax group for the item. |
 | ITEMSIZE                        | nvarchar (10)            | The size. |
 | ITEMSTYLE                       | nvarchar (10)            | The style. Like color and size, style is a product dimension. |
-| KEYBOARDPRODUCTENTRY            | int                      | If the product ID was entered by using a keyboard. |
+| KEYBOARDPRODUCTENTRY            | int                      | This field indicates if the product ID was entered by the cashier manually on the keyboard at the POS. |
 | LINEDISCOUNT                    | numeric (32 6)           | The discount amount that is applied for the line item. |
 | LINEMANUALDISCOUNTAMOUNT        | numeric (32 6)           | If the discount was manually entered, the discount amount. |
 | LINEMANUALDISCOUNTPERCENTAGE    | numeric (32 6)           | If a manual percentage discount was applied, the discount percentage. |
@@ -159,8 +159,8 @@ Note the following formatting guidelines throughout:
 | PERIODICDISCOUNTPERCENTAGE      | numeric (32 6)           | The periodic discount percentage. |
 | PRICE                           | numeric (32 6)           | The price of the item. |
 | PRICEGROUPS                     | nvarchar (10)            | The price group that products and customers belong to. |
-| PRICEINBARCODE                  | int                      | If a price-embedded bar code was scanned. |
-| PRODUCTSCANNED                  | int                      | If the product was scanned. |
+| PRICEINBARCODE                  | int                      | This field indicates if a price-embedded bar code was scanned for a specific product within the transaction. |
+| PRODUCTSCANNED                  | int                      | This field indicates if the bar code in the product was scanned as part of the transaction. |
 | QUANTITY                        | numeric (32 6) NOT NULL  | The quantity. |
 | REASONCODEDISCOUNT              | numeric (32 6)           | If a discount was applied, reason codes can be configured to prompt the cashier to select a reason. |
 | RECEIPTNUMBER                   | nvarchar (18)            | The receipt number. |
@@ -202,7 +202,7 @@ Note the following formatting guidelines throughout:
 |----------------------------------|--------------------------|-------------|
 | ACCOUNTNUMBER                    | nvarchar (30)            | The customer account number, if a named customer appears on the transaction. |
 | AMOUNTINACCOUNTINGCURRENCY       | numeric (32 6)           | The amount that is due for the line. |
-| AMOUNTINTENDEREDCURRENCY         | numeric (32 6)           | The amount that was tendered in currency (different if not the store's currency). |
+| AMOUNTINTENDEREDCURRENCY         | numeric (32 6)           | The amount that was tendered in local currency as it applies to the country where the store is located. |
 | AMOUNTTENDERED                   | numeric (32 6)           | The amount in the store currency. |
 | AMOUNTTENDEREDADJUSTMENT         | numeric (32 6)           | A new feature in the product allows for changes to the transactions and provides a full audit trail. |
 | CARDNUMBER                       | nvarchar (30)            | The card number that was used to make a payment. |
@@ -215,7 +215,7 @@ Note the following formatting guidelines throughout:
 | EXCHANGERATEINTENDEREDCURRENCY   | numeric (32 16)          | The exchange rate in relation to USD. |
 | EXECUTIONID                      | nvarchar (90)            | Fields that are added by the synchronization engine (DIFX) in Finance and Operations. They define the export sequence. |
 | GIFTCARDID                       | nvarchar (30)            | The gift card number. |
-| ISCHANGELINE                     | int                      | If payment is due back to the customer because of overpayment. |
+| ISCHANGELINE                     | int                      | This field indicates if payment amount that is due back to the customer. |
 | ISPREPAYMENT                     | int                      | A value that indicates whether the payment is a deposit. |
 | ISSELECTED                       | int                      | Fields that are added by the synchronization engine (DIFX) in Finance and Operations. They define the export sequence. |
 | LINENUMBER                       | numeric (32 16) NOT NULL | The payment line number. |
@@ -227,7 +227,7 @@ Note the following formatting guidelines throughout:
 | STAFF                            | nvarchar (25)            | The user ID. |
 | SYNCSTARTDATETIME                | datetime NOT NULL        | Fields that are added to the synchronization engine (DIXF) in Finance and Operations. They decline the export sequence. |
 | TENDERTYPE                       | nvarchar (10)            | The type of tender that was paid. |
-| TERMINAL                         | nvarchar (10) NOT NULL   | The register ID/POS. |
+| TERMINAL                         | nvarchar (10) NOT NULL   | The identifier of the register or Point of Sale (POS). |
 | TRANSACTIONNUMBER                | nvarchar (44) NOT NULL   | The transaction number. |
 | TRANSACTIONSTATUS                | int                      | The status of the payment line. |
 | TRANSFERSTATUS                   | int                      | This field is used to track the status of transfers between warehouses. |
