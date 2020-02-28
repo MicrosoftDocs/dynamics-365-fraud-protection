@@ -18,7 +18,7 @@
       href: labels-api.md
     - name: Implement device fingerprinting
       href: device-fingerprinting.md    
-    - name: Upload loss prevention historical data
+    - name: Upload historical data
       href: data-upload.md
     - name: View schemas
       href: schema.md  
