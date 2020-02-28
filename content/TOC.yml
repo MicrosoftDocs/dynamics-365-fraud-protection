@@ -18,7 +18,7 @@
       href: labels-api.md
     - name: Implement device fingerprinting
       href: device-fingerprinting.md    
-    - name: Upload historical data for purchase protection
+    - name: Upload loss prevention historical data
       href: data-upload.md
     - name: View schemas
       href: schema.md  
@@ -76,6 +76,8 @@
     href: loss-prevention-overview.md
   - name: Reporting
     href: reports.md
+  - name: Loss prevention schemas
+    href: view-loss-prevent-schemas.md
   - name: Upload historical data for loss prevention
     href: loss-prevention-data-upload.md
 - name: AI and insights from the fraud protection network
