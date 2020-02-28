@@ -17,9 +17,7 @@ title: Loss prevention overview
 
 [!include [banner](includes/preview-banner.md)]
 
-The loss prevention feature in Microsoft Dynamics 365 Fraud Protection identifies anomalies and patterns that might indicate in-store fraud.
-
-Microsoft has many years of experience protecting its own e-commerce businesses from fraud. It has developed a sophisticated technology stack that uses connected big data across multiple lines of business, and that applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time.
+Dynamics 365 Fraud Protection loss prevention is a cloud-based solution designed to help brick and mortar retailers decrease in-store fraud costs and improve operational efficiencies and revenue. Using the power of AI, loss prevention identifies anomalies and patterns that might be indicative of in-store fraud. The solution provides retailers with the benefit of connected knowledge from fraud network. It allows you to combat fraud associated with returns, improper discounts, merchandise mishandling, and inventory turn-over with adaptive AI technology, continuously learning, and adapting to evolving fraud patterns.
 
 By using loss prevention, you can help protect your business from fraud through several innovative and advanced capabilities. Here are some examples:
 
