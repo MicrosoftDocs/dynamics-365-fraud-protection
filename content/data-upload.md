@@ -10,7 +10,7 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Upload loss prevention historical data
+title: Upload historical data
 ---
 
 # Upload historical data
