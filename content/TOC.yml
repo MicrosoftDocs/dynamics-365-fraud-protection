@@ -43,7 +43,7 @@
     - name: Integrate Dynamics 365 Fraud Protection APIs
       href: integrate-real-time-api.md
     - name: Labels API
-      href: labels-api.md
+      href: labels-api.md      
     - name: View labels schema
       href: labels-schema.md
     - name: View sign-up schema
