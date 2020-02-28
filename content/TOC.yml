@@ -18,7 +18,7 @@
       href: labels-api.md
     - name: Implement device fingerprinting
       href: device-fingerprinting.md    
-    - name: Upload historical data
+    - name: Upload historical data for purchase protection
       href: data-upload.md
     - name: View schemas
       href: schema.md  
@@ -36,26 +36,48 @@
       href: monitoring.md
     - name: Usage metering
       href: metering.md        
-- name: Account protection
+- name: Account creation
   items:
-    - name: Account protection overview
-      href: account-protection.md
-    - name: Integrate Dynamics 365 Fraud Protection APIs
-      href: integrate-real-time-api.md
-    - name: Labels API
-      href: labels-api.md      
-    - name: View labels schema
-      href: labels-schema.md
-    - name: View sign-up schema
-      href: signup-schema.md
-    - name: View sign-up status schema
-      href: signup-status-schema.md
-    - name: Implement device fingerprinting
-      href: device-fingerprinting.md    
-    - name: Monitor API calls
-      href: monitoring.md
-    - name: Usage metering
-      href: metering.md  
+  - name: Account creation overview
+    href: account-protection.md
+  - name: Integrate Dynamics 365 Fraud Protection APIs
+    href: integrate-real-time-api.md
+  - name: Labels API
+    href: labels-api.md      
+  - name: View labels schema
+    href: labels-schema.md
+  - name: View sign-up schema
+    href: signup-schema.md
+  - name: View sign-up status schema
+    href: signup-status-schema.md
+  - name: Implement device fingerprinting
+    href: device-fingerprinting.md    
+  - name: Monitor API calls
+    href: monitoring.md
+  - name: Usage metering
+    href: metering.md  
+- name: Account protection (preview)
+  items:
+  - name: Account protection evaluate experience
+    href: account-protection-evaluate-experience.md
+  - name: Account protection protect experience
+    href: account-protection-protect-experience.md
+  - name: Manage account protection rules and lists
+    href: ap-rulesandlists.md
+  - name: Learn from the account protection scorecard
+    href: ap-scorecard.md
+  - name: Account protection schemas
+    href: new-ap-schema.md
+  - name: Integrate account protection APIs
+    href: integrate-ap-api.md
+- name: Loss prevention (preview)
+  items:
+  - name: Loss prevention overview
+    href: loss-prevention-overview.md
+  - name: Reporting
+    href: reports.md
+  - name: Upload historical data for loss prevention
+    href: loss-prevention-data-upload.md
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance

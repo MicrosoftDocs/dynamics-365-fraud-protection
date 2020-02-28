@@ -3,13 +3,14 @@ author: v-davido
 description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 12/04/2019
+ms.date: 01/14/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
   - admin
 title: Configure user access to Dynamics 365 Fraud Protection
+
 ---
 
 
@@ -64,5 +65,5 @@ Tailored access for fraud analysts and engineers in your organization working wi
 - **Read**: Diagnostic reports, Support tool, Scorecard, Metrics, Ontology, Graph explorer 
 - **No access**: API configuration, Metering, Monitoring, Permissions, Transaction acceptance booster. Pages may be accessible in the navigation but cannot be used in full. 
 
-### Server2ServerAPI 
-Used for Server2Server (S2S) communication. Provides no access to the user-facing tool. 
+### Risk_API
+Grants API access. Provides no access to the user-facing tool. 
