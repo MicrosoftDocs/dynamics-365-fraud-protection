@@ -82,7 +82,7 @@ Note the following formatting guidelines throughout:
 | SHIPPINGDATEREQUESTED           | datetime                        | The date when goods on the customer order should be shipped. |
 | SITEID                          | nvarchar (10)                   | This field is typically used for retail stores. It's used to organize the stores by region (for example, **Northwest US stores**). |
 | STAFF                           | nvarchar (25)                   | The ID of the point of sale (POS) user. |
-| SYNCSTARTDATETIME               | datetime NOT NULL               | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Retail. They decline the export sequence. |
+| SYNCSTARTDATETIME               | datetime NOT NULL               | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Retail. They define the export sequence. |
 | TAXCALCULATIONTYPE              | int                             | A value that indicates whether tax is based on the store, customer, or destination. |
 | TERMINAL                        | nvarchar (10) NOT NULL          | The identifier for the POS. |
 | TOACCOUNT                       | int                             | The amount that is being charged to the customer's account. |
