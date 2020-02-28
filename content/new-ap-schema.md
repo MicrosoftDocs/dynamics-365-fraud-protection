@@ -3,7 +3,7 @@ author: v-davido
 description: This topic outlines the schemas that are used in account protection.
 ms.author: kelsiefu 
 ms.service: fraud-protection
-ms.date: 02/24/2020
+ms.date: 02/28/2020
 
 ms.topic: conceptual
 search.app: 
@@ -87,17 +87,17 @@ The **AccountCreation** API lets you share information and context with Fraud Pr
 | PaymentInstrument                   | creationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | PaymentInstrument                   | updateDate                  | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
 | PaymentInstrument                   | state                       | string   | The current state of the payment instrument in the merchant's system (for example, **Active**, **Blocked**, or **Expired**). |
-| PaymentInstrument                   | cardType                    | string   | This attribute is used only for payments of the **Credit/Debit Card** type. Possible values are **'Visa'**, **'Mastercard'**, **'Amex'**, **'ACH'**, **'SEPA'**, **'UnionPay'**, **'Inicis'**, **'MobileBillingCarrier'**, **'Discover'**, **'AllPay'**, **'JCB'**, and **'DiscoverDiners'**. |
-| PaymentInstrument                   | holderName                  | string   | The name of the payment instrument's user. This attribute is used only for payments of the **Credit/Debit Card** type. |
-| PaymentInstrument                   | bin                         | string   | This attribute is used only for payments of the **Credit/Debit Card** type. |
-| PaymentInstrument                   | expirationDate              | string   | The expiration date for the payment instrument in the merchant's system. The format is ISO 8601. This attribute is used only for payments of the **Credit/Debit Card** type. |
-| PaymentInstrument                   | lastFourDigits              | string   | This attribute is used only for payments of the **Credit/Debit Card** type. |
+| PaymentInstrument                   | cardType                    | string   | This attribute is used only for payments of the **CreditCard** or **DirectDebit** types. Possible values are **'Visa'**, **'Mastercard'**, **'Amex'**, **'ACH'**, **'SEPA'**, **'UnionPay'**, **'Inicis'**, **'MobileBillingCarrier'**, **'Discover'**, **'AllPay'**, **'JCB'**, and **'DiscoverDiners'**. |
+| PaymentInstrument                   | holderName                  | string   | The name of the payment instrument's user. This attribute is used only for payments of the **CreditCard** or **DirectDebit** types. |
+| PaymentInstrument                   | bin                         | string   | This attribute is used only for payments of the **CreditCard** or **DirectDebit** types. |
+| PaymentInstrument                   | expirationDate              | string   | The expiration date for the payment instrument in the merchant's system. The format is ISO 8601. This attribute is used only for payments of the **CreditCard** or **DirectDebit** types. |
+| PaymentInstrument                   | lastFourDigits              | string   | This attribute is used only for payments of the **CreditCard** or **DirectDebit** types. |
 | PaymentInstrument                   | email                       | string   | The email address that is associated with the payment instrument. This attribute is used only for payments of the **PayPal** type. |
 | PaymentInstrument                   | billingAgreementId          | string   | This attribute is used only for payments of the **PayPal** type. |
 | PaymentInstrument                   | payerId                     | string   | This attribute is used only for payments of the **PayPal** type. |
 | PaymentInstrument                   | payerStatus                 | string   | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **PayPal** type. |
 | PaymentInstrument                   | addressStatus               | string   | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **PayPal** type. |
-| PaymentInstrument                   | imei                        | string   | This attribute is used only for payments of the **Mobilepayment** type. |
+| PaymentInstrument                   | imei                        | string   | This attribute is used only for payments of the **MobileBilling** type. |
 | PaymentInstrument \\ BillingAddress | addressType                 | enum     | The type of address. Possible values are **'Primary'**, **'Billing'**, **'Shipping'**, and **'Alternative'**. The default value is **'Billing'**. |
 | PaymentInstrument \\ BillingAddress | firstName                   | string   | The user-provided first name that is associated with the address. |
 | PaymentInstrument \\ BillingAddress | lastName                    | string   | The user-provided last name that is associated with the address. |
@@ -236,17 +236,17 @@ The **AccountUpdate** API lets you share account information updates with Fraud 
 | PaymentInstrument                   | creationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | PaymentInstrument                   | updateDate                  | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
 | PaymentInstrument                   | state                       | string   | The current state of the payment instrument in the merchant's system (for example, **Active**, **Blocked**, or **Expired**). |
-| PaymentInstrument                   | cardType                    | string   | This attribute is used only for payments of the **Credit/Debit Card** type. Possible values are **'Visa'**, **'Mastercard'**, **'Amex'**, **'ACH'**, **'SEPA'**, **'UnionPay'**, **'Inicis'**, **'MobileBillingCarrier'**, **'Discover'**, **'AllPay'**, **'JCB'**, and **'DiscoverDiners'**. |
-| PaymentInstrument                   | holderName                  | string   | The name of the payment instrument's user. This attribute is used only for payments of the **Credit/Debit Card** type. |
-| PaymentInstrument                   | bin                         | string   | This attribute is used only for payments of the **Credit/Debit Card** type. |
-| PaymentInstrument                   | expirationDate              | string   | The expiration date for the payment instrument in the merchant's system. The format is ISO 8601. This attribute is used only for payments of the **Credit/Debit Card** type. |
-| PaymentInstrument                   | lastFourDigits              | string   | This attribute is used only for payments of the **Credit/Debit Card** type. |
+| PaymentInstrument                   | cardType                    | string   | This attribute is used only for payments of the **CreditCard** or **DirectDebit** types. Possible values are **'Visa'**, **'Mastercard'**, **'Amex'**, **'ACH'**, **'SEPA'**, **'UnionPay'**, **'Inicis'**, **'MobileBillingCarrier'**, **'Discover'**, **'AllPay'**, **'JCB'**, and **'DiscoverDiners'**. |
+| PaymentInstrument                   | holderName                  | string   | The name of the payment instrument's user. This attribute is used only for payments of the **CreditCard** **DirectDebit** types. |
+| PaymentInstrument                   | bin                         | string   | This attribute is used only for payments of the **CreditCard** or **DirectDebit** types. |
+| PaymentInstrument                   | expirationDate              | string   | The expiration date for the payment instrument in the merchant's system. The format is ISO 8601. This attribute is used only for payments of the **CreditCard** or **DirectDebit** types. |
+| PaymentInstrument                   | lastFourDigits              | string   | This attribute is used only for payments of the **CreditCard** or **DirectDebit** types. |
 | PaymentInstrument                   | email                       | string   | The email address that is associated with the payment instrument. This attribute is used only for payments of the **PayPal** type. |
 | PaymentInstrument                   | billingAgreementId          | string   | This attribute is used only for payments of the **PayPal** type. |
 | PaymentInstrument                   | payerId                     | string   | This attribute is used only for payments of the **PayPal** type. |
 | PaymentInstrument                   | payerStatus                 | string   | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **PayPal** type. |
 | PaymentInstrument                   | addressStatus               | string   | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **PayPal** type. |
-| PaymentInstrument                   | imei                        | string   | This attribute is used only for payments of the **Mobilepayment** type. |
+| PaymentInstrument                   | imei                        | string   | This attribute is used only for payments of the **MobileBilling** type. |
 | PaymentInstrument \\ BillingAddress | addressType                 | enum     | The type of address. Possible values are **'Primary'**, **'Billing'**, **'Shipping'**, and **'Alternative'**. The default value is **'Billing'**. |
 | PaymentInstrument \\ BillingAddress | firstName                   | string   | The user-provided first name that is associated with the address. |
 | PaymentInstrument \\ BillingAddress | lastName                    | string   | The user-provided last name that is associated with the address. |
