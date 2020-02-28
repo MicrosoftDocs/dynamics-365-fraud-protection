@@ -3,7 +3,7 @@ author: kelsiefu
 description: This topic provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kelsiefu
 ms.service: fraud-protection
-ms.date: 2/28/2020
+ms.date: 03/01/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -18,7 +18,7 @@ title: Account protection evaluate experience
 
 Microsoft Dynamics 365 Fraud Protection offers two operating modes: evaluate and protect. These operating modes provide two ways of using the same underlying product (that is, they provide two *experiences*). The same functionality and feature capabilities are available in both experiences.
 
-In evaluate mode, you can "shadow" your existing solution without affecting its operation. In protect mode, you can compare the analysis performance by switching the value of **AssessmentType** field (e.g. from 'Protect' to 'Evaluate'). The values in the scorecard will reflect your changes. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation. You can then use Fraud Protection to gain deeper insights into your data, customize your risk management strategies, and support your customers.
+In evaluate mode, you can "shadow" your existing solution without affecting its operation. In protect mode, you can compare the analysis performance by switching the value of **AssessmentType** field (e.g. from 'protect' to 'evaluate'). The values in the scorecard will reflect your changes. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation. You can then use Fraud Protection to gain deeper insights into your data, customize your risk management strategies, and support your customers.
 
 > [!IMPORTANT]
 > You're responsible for respecting the separation of modes. You're also responsible for indicating the operating mode to the product via the **AssessmentType** field in assessment API calls. You can choose how you want to allocate traffic between the protect and evaluate modes at any time.
