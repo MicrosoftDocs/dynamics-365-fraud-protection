@@ -60,10 +60,14 @@
   items:
   - name: Account protection evaluate experience
     href: account-protection-evaluate-experience.md
+  - name: Account protection protect experience
+    href: account-protection-protect-experience.md
   - name: Manage account protection rules and lists
     href: ap-rulesandlists.md
   - name: Learn from the account protection scorecard
     href: ap-scorecard.md
+  - name: Account protection schemas
+    href: new-ap-schema.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
 - name: Loss prevention (preview)
