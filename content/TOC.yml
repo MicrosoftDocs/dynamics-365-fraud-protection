@@ -64,6 +64,8 @@
     href: account-protection-evaluate-experience.md
   - name: Account protection protect experience
     href: account-protection-protect-experience.md
+  - name: Implement device fingerprinting
+    href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
   - name: Manage account protection rules and lists
@@ -72,8 +74,6 @@
     href: ap-scorecard.md
   - name: Account protection schemas
     href: new-ap-schema.md
-  - name: Implement device fingerprinting
-    href: device-fingerprinting.md    
 - name: Loss prevention (preview)
   items:
   - name: Loss prevention overview
