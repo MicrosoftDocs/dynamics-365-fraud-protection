@@ -3,7 +3,7 @@ author: v-davido
 description: Fraud Protection overview
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 01/14/2020
+ms.date: 03/01/2020
 
 ms.topic: conceptual
 search.app: 
@@ -24,6 +24,8 @@ Some types of fraud even have serious consequences for society at large. Example
 Because the return on investment (ROI) for online fraud is high, it's likely that most of an enterprise's vulnerabilities will be discovered and exploited. Additionally, unlike during the early years of the internet, today's fraudulent transactions can be orchestrated by well-funded and well-equipped rings of professionals. Fraud protection professionals are best equipped to fight this threat.
 
 *Our mission is to help enterprises fight fraud while they keep their doors open for genuine customers and partners.*
+
+Dynamics 365 Fraud Protection initially focused on payment fraud protection. It helped enable an e-commerce merchant drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience of its customers. In this release wave we are adding several new features to the product that enhance this capability. Based on customer feedback we are lighting up a new set of capabilities called **loss prevention** that help brick and mortar retail store operations fight fraud and abuse. This will help retailers reduce shrinkage losses and improve store efficiencies. While we had a basic account creation protection capability already available in the payment fraud protection product, we are significantly expanding the portfolio via a new set of capabilities called **account Protection**.
 
 Microsoft Dynamics 365 Fraud Protection focuses on payment fraud protection and related scenarios in e-commerce. It helps e-commerce merchants drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience for its customers.
 
