@@ -3,7 +3,7 @@ author: zhuoche
 description: This topic explains the rule and list capabilities of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 03/01/2020
+ms.date: 03/04/2020
 
 ms.topic: conceptual
 search.app: 
@@ -51,7 +51,7 @@ WHEN @username.endsWith("contoso.com")
 The following example shows a clause that throws a challenge if the bot score is between 400 and 900.
 
 ```
-Return Challenge(type = "sms", reason = "bot score") 
+Return Challenge(“challenge type", "reason") 
 WHEN @botScore < 900 AND @botScore > 400 
 ```
 
