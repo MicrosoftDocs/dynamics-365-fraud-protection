@@ -3,7 +3,7 @@ author: jegrif
 description: This topic outlines the schemas that are required for signup under account creation assessment.
 ms.author: v-jegrif
 ms.service: fraud-protection
-ms.date: 09/04/2019
+ms.date: 03/04/2020
 
 ms.topic: conceptual
 search.app: 
@@ -140,9 +140,9 @@ Note the following formatting guidelines throughout:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| deviceContextId | string | The customer's Session ID (mastered by GreenId), or the event ID if the session is not available. |
+| deviceContextId | string | The customer's Session ID (mastered by device fingerprinting), or the event ID if the session is not available. |
 | ipAddress | string | The customer's IP address (as provided by the merchant). |
 | provider | string | The provider of device info. Possible values are 'DFPFingerprinting' or 'Merchant'. If not specified, the default is 'DFPFingerprinting'. |
-| deviceContextDC | string | The GreenID datacenter for the Customer's Session ID. This field is provided for backward compatibility and is no longer required. |
+| deviceContextDC | string | The device fingerprinting datacenter for the customer's session ID. This field is provided for backward compatibility and is no longer required. |
 | externalDeviceId | string | The customer's device ID, as provided and mastered by the merchant. |
 | externalDeviceType | string | The customer's device type, as provided and mastered by the merchant. |
