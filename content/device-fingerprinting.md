@@ -3,7 +3,7 @@ author: v-davido
 description: This topic explains how to implement device fingerprinting.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 0305/2020
+ms.date: 03/05/2020
 
 
 ms.topic: conceptual
