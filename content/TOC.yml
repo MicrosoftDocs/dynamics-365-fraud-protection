@@ -8,34 +8,34 @@
   href: configure-user-access.md
 - name: Purchase protection
   items:
-    - name: Purchase protection overview
-      href: purchase-protection.md
-    - name: Diagnose experience
-      href: diagnose-experience.md
-    - name: Integrate Dynamics 365 Fraud Protection APIs
-      href: integrate-real-time-api.md
-    - name: Labels API
-      href: labels-api.md
-    - name: Implement device fingerprinting
-      href: device-fingerprinting.md    
-    - name: Upload historical data
-      href: data-upload.md
-    - name: View schemas
-      href: schema.md  
-    - name: Manage lists and rules
-      href: lists-rules.md
-    - name: Use the virtual fraud analyst
-      href: virtual-fraud-analyst.md   
-    - name: Learn from the scorecard
-      href: scorecard.md  
-    - name: Boost bank acceptance rates
-      href: transaction-acceptance-booster.md  
-    - name: Support your customers
-      href: risk-support.md
-    - name: Monitor API calls
-      href: monitoring.md
-    - name: Usage metering
-      href: metering.md        
+  - name: Purchase protection overview
+    href: purchase-protection.md
+  - name: Diagnose experience
+    href: diagnose-experience.md
+  - name: Integrate Dynamics 365 Fraud Protection APIs
+    href: integrate-real-time-api.md
+  - name: Labels API
+    href: labels-api.md
+  - name: Implement device fingerprinting
+    href: device-fingerprinting.md    
+  - name: Upload historical data
+    href: data-upload.md
+  - name: View schemas
+    href: schema.md  
+  - name: Manage lists and rules
+    href: lists-rules.md
+  - name: Use the virtual fraud analyst
+    href: virtual-fraud-analyst.md   
+  - name: Learn from the scorecard
+    href: scorecard.md  
+  - name: Boost bank acceptance rates
+    href: transaction-acceptance-booster.md  
+  - name: Support your customers
+    href: risk-support.md
+  - name: Monitor API calls
+    href: monitoring.md
+  - name: Usage metering
+    href: metering.md        
 - name: Account creation
   items:
   - name: Account creation overview
