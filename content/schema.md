@@ -65,6 +65,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | State               | string   | The state or province that was provided for the address. |
 | ZipCode             | string   | The postal code that was provided for the address. |
 | CountryCode         | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| CustomData          | object   | An optional user defined JSON property bag. It is populated when an API call is instantiated. These attributes can be referenced when you create purchase rules. <br> **Notes** <ul><li>The following primitive types are supported:  **String (Unicode)**, **Int32**, **UInt32**, **Double**, **Boolean**, and **DateTime** (in UTC time, conforming to .NET semantics). </li><li>The string data limit is 256 characters. </li><li> There is a limit of 100 custom attributes per payload. </li><li> Do not send sensitive or highly regulated data types. For example: <ul><li>Data that indicates a protected class (gender, race) or private/sensitive categories (religious views, sexual preferences). </li><li> Biometric data or any data related to health. The custom data retention policy matches that of the purchase event (6 months).</li></ul></ul>|
 
 ### PaymentInstruments
 
