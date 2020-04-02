@@ -61,17 +61,17 @@ When you add a customer to a list, you must specify an expiry date and enter any
 
 **To delete a list entry:**
 
-- Edit the payment instrument or user status and click **Remove**.
+- Select the payment instrument or user status and click **Remove**.
 
 ## Unblock a customer
 
 After you have reviewed a transaction and determined a course of action, return to the **Accounts** page to resolve the customer's support issue. On the **Accounts** page, you can add a customer or payment instrument to the **Safe list**, the **Watch list**, or the **Block list**. By default, DFP accepts users on the **Safe list** and rejects users on the **Block list**.
 
-**To update a rule:**
+**To update a customer's status:**
 
 1. Open the **Rules** management page and edit the **Default Support Rule**.
 
     You can also create a rule to identify a course of action for users with a status of **Watch**.
 
-2. Click the **Edit** icon next to the status of your user or payment instrument, and then select the reason for your choice.
+2. Click the **Edit** icon next to the status of your user or payment instrument, and then select the reason for your change.
 
