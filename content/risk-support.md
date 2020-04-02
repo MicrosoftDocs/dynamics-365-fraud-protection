@@ -5,7 +5,7 @@ ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 4/02/2020
 
-ms.topic: conceptual
+ms.topic: conceptual 
 search.app: 
   - FraudProtection
 search.audienceType:
