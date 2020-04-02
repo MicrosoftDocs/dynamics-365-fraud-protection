@@ -1,9 +1,9 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic explains how you can use Microsoft Dynamics 365 Fraud Protection to support your customers.
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 12/03/2019
+ms.date: 4/02/2020
 
 ms.topic: conceptual
 search.app: 
@@ -19,13 +19,19 @@ Risk support in Microsoft Dynamics 365 Fraud Protection lets your agents evaluat
 
 ## Search and investigate
 
-In the navigation, under **Purchase protection**, select **Support**. Then search for transactions to get detailed information.
+**To display a customer's transactions:**
+
+1. In the left navigation, click **Purchase protection** and then click **Support**.
+2. Enter criteria in the **Search** box to locate detailed information on the customer's transactions.
 
 These are the available search methods:
 
-- **User email address**
-- **Purchase ID** – The unique ID of a purchase that is sent to Fraud Protection for risk evaluation
-- **Payment instrument ID** – The unique hash of a payment method that is associated with a transaction that is sent to Fraud Protection
+- **User ID** - The unique ID assigned to the user.
+- **User email address**.
+- **Purchase ID** – The unique ID of a purchase that is sent to Fraud Protection for risk evaluation.
+- **Payment instrument ID** – The unique hash of a payment method that is associated with a transaction that is sent to Fraud Protection.
+
+### Search transactions
 
 A search on the customer's email address or the payment instrument ID might return multiple transactions. Select one of the transactions in the search results to view expanded information in the following areas:
 
@@ -37,12 +43,35 @@ A search on the customer's email address or the payment instrument ID might retu
 
 By evaluating the results in these areas, fraud investigators can gain insights into the legitimacy of a transaction and determine the appropriate type of resolution.
 
-## Unblock customers
+## View account information
 
-After a transaction has been reviewed, and a course of action has been determined, use **Actions** to resolve the customer's support issue.
+Select one of the transactions in the Search Results to view expanded information in the following areas:
 
-From here, you can add a customer or payment instrument to either the Safe list or the Block list. Then, on the drop-down menu, select the reason for your choice.
+- **Account Summary** – A summary of the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. This summary is aggregated over the last day as well as the last month.
+- **Payment Instruments** – A customer's payment instruments by issuer-last four digits. You can use this area to block individual payment instruments associated with a given customer.
+- **Transactions** – Details about individual transactions, such as the payment method, the device that was used, and the originating IP address. 
+Risk information provides additional details, such as the specific risk score.
+- **Activity Log** – This area captures any changes made to the customer as they were added to the safe/block/watch list. You can use this table to identify who made the changes as well as why and when the status of this customer was updated.
 
-If you add a customer to a list, you must specify an expiry date and enter any comments that will be helpful to future reviewers of this case. You can view this information at any time under **Activity log**. The log also keeps a record the agent who made each change.
+### Add a customer account
 
-Note that after an expiry date has passed, Fraud Protection will remove the customer from the list. To delete a list entry at any time, select **Remove from lists**.
+When you add a customer to a list, you must specify an expiry date and enter any comments that will be helpful to future reviewers of this case. You can view this information at any time under in the Activity log. The log also keeps a record of the agent who made each change. Note that DFP will automatically remove the customer from the list after the expiry date has passed.
+
+### Delete a customer account
+
+**To delete a list entry:**
+
+- Edit the payment instrument or user status and click **Remove**.
+
+## Unblock a customer
+
+After you have reviewed a transaction and determined a course of action, return to the **Accounts** page to resolve the customer's support issue. On the **Accounts** page, you can add a customer or payment instrument to the **Safe list**, the **Watch list**, or the **Block list**. By default, DFP accepts users on the **Safe list** and rejects users on the **Block list**.
+
+**To update a rule:**
+
+1. Open the **Rules** management page and edit the **Default Support Rule**.
+
+    You can also create a rule to identify a course of action for users with a status of **Watch**.
+
+2. Click the **Edit** icon next to the status of your user or payment instrument, and then select the reason for your choice.
+
