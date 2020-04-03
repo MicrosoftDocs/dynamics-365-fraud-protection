@@ -32,11 +32,11 @@ Rules shape real-time decision making by accepting or rejecting transactions bas
 #### To create and manage rules:
 
 - Click **Account protection** in the DFP left navigation, and then click * *Rules**.
-    For more information about rules, see [Using Rules](using-rules.md).
+    For more information about rules, see [Using Rules](rules.md).
 
 ### What are events
 
-Events may include acceptance, rejection, challenges, and other user-defined settings. For more information about syntax for valid rules, see the [DFP Language Reference Guide](lang-ref.md).
+Events may include acceptance, rejection, challenges, and other user-defined settings. For more information about syntax for valid rules, see the DFP Language Reference Guide.
 
 These capabilities help define the parameters that apply to your unique business so that you can screen for risky account protection events. They are designed to help you manage the trade-offs that are inherent when you must prevent fraud and also help you enforce various policies including geofencing.
 
@@ -45,7 +45,7 @@ These capabilities help define the parameters that apply to your unique business
 A *payload* is the actual information in transmitted data. When you create a clause, DFP displays pane on the right of the window with a sample of the payload data for the account protection API for a given event. Changes are verified as you make them.
 
 To create and manage rules, access the **Rules** page from **Account protection** in the DFP left navigation.
-For more information about rules, see [Using Rules](using-rules.md).
+For more information about rules, see [Using Rules](rules.md).
 
 ## What is a list
 
@@ -53,7 +53,7 @@ A *list* is a collection of data saved in a .CSV file to give DFP a flexible way
 
 #### To create and manage lists:
 - Click **Account protection** in the DFP left navigation, and then click * *List**.
-    For more information about lists, see [Using Lists](using-lists.md).
+    For more information about lists, see [Using Lists](lists.md).
 
 > [!NOTE]
 > Due to caching, changes saved to existing lists may take up to two minutes to become active.
