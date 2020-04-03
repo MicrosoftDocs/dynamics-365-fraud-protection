@@ -25,6 +25,7 @@ When you create a rule, you can add details that make it easily identifiable, fo
 ### Conditions
 
 A condition is an expression that evaluate to a *True* or *False* (Boolean) value. That means that when a specified condition is true, DFP performs the task you specify. A condition always starts with **WHEN** and is followed by any valid expression that results in a Boolean value. For example:
+
     WHEN Geo.CountryCode(@ipAddress) == "BR"
     WHEN @username.endsWith("contoso.com")
 
