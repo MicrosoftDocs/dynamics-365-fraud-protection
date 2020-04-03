@@ -1,0 +1,139 @@
+---
+author: yvonnedeq
+description: This topic provides details on how to use lists.
+ms.author: v-madeq
+ms.service: fraud-protection
+ms.date: 04/2/2020
+
+ms.topic: how to
+search.app: 
+  - FraudProtection
+search.audienceType:
+  - admin
+title: Lists
+
+---
+# Lists
+
+## Elements of a list
+
+Each list you create comprises a collection of entities that you want to screen for, such as high-priced products or high-risk countries or regions. After you create a list, you enter a list name and a brief description to summarize its contents.
+
+> [!NOTE]
+> To ensure that DFP can correctly interpret the data files you upload, files must be in CSV UTF-8 (comma delimited) format (*.csv).
+CSV files must also include column headers. For example, a list of Purchase data may include headings such as purchases, payment methods, zip codes, etc.
+When you download a list, DFP opens it in Excel.
+
+## Access the Lists management page
+
+You can manage existing lists and create custom lists in the List management tab.
+
+#### To access the Lists management page:
+
+- In DFP, click **Account Protection** and then click **Lists** in the left navigation bar.
+
+## How to use lists
+
+You can create data lists which contain values of any type. For example, you could create a list containing email addresses, IP addresses, product IDs, or names of countries. You can then use these lists in ways that are best suited to your business needs.
+For example, you can create a list of email addresses you consider risky based on their past transaction history:
+
+|Risky Emails |
+|--------------|
+|alia@gmail.com |
+|sarah@gmail.com |
+|michael@gmail.com |
+|jake@gmail.com |
+
+You can configure a rule such that if a transaction or login attempt is made using an email address on a specified list, the transaction will always be rejected. Or if a transaction is for a product on a different list, configure the rule so it will always be accepted.
+
+### Single- vs. multiple- column lists
+
+You can create a single-column list with values representing a specific key (for example, email address) or a multi-column list with values relevant to several keys. For example, instead of having one single column list with *Safe Emails* and another single column list with *Risky Emails*, you could combine these keys into one *Emails* List with both an *Email Addresses* column and a *Status* column to indicate whether each email address should be found **Safe** or **Risky**, as shown in the following example.
+
+|Emails|Status|
+|--------------|--------------|
+|alia@gmail.com |Safe|
+|sarah@gmail.com|Risky|
+|michael@gmail.com|Risky|
+|jake@gmail.com|Safe|
+
+You may also have a list product IDs, each of which are varying levels of risk. Therefore, in order To create a rule that is tailored perfectly to your business needs, you may want to evaluate each of these products against their own score threshold. (i.e., you want to reject product 123 only when it's risk score is greater than 950, but perhaps product 012 is inherently higher risk, and you want to reject anytime it's risk score is greater than  even 250).
+
+You can create rules that are tailored perfectly to your business. For example, if you have products with varying risk levels, and you want to evaluate each product against its own score threshold: 
+
+1. Create a list of product IDs, each of which indicates varying levels of risk. For example:
+
+    |Product ID    |Score Threshold|
+    |--------------|--------------|
+    |123    |950|
+    |456    |300|
+    |789    |675|
+    |012    |250|
+
+1. Create a rule where you set a higher rejection threshold for a lower-risk product by setting a risk score that is greater than 950.
+1. Within the same rule, set a lower rejection threshold for another inherently higher risk product by setting a risk score that is greater than 250.
+
+## Create a list
+
+Creating a new list in DFP is a two-step process:
+
+- First, create a .CSV file in Excel with all the criteria you want to include. For example, you can create a list with all the zip codes in your state, or all the country codes for the countries in which you do business.
+- Next, use the steps below to upload the .CSV file to DFP.
+
+> [!NOTE]
+> Due to caching, changes saved to existing lists may take up to two minutes to become active.
+
+#### To create a list:
+
+1. Create a file in Excel and save it as a CSV file. (Note that you must include column headers in your CSV file.)
+1. In DFP, click **Account Protection** and then click **Lists** in the left navigation bar.
+1. Click **Create a list**.
+1. Click **Browse** to locate and select the required file, and then click **Open**.
+1. DFP automatically displays the file for you to preview.
+    1. To upload this file, click **Continue**.
+    2. To upload a different file, click **Cancel** and then repeat Step 4.
+1. Add a name and description for your list, and then click **Create**.
+
+## Add a new list
+
+#### To add a new list:
+
+1. Create a file in Excel and save it as a CSV file. (Note that you must include column headers in your CSV file.)
+1. On the **Lists** tab, click **New List**.
+1. Click **Browse** to locate and select the required file, and then click **Open**.
+1. When DFP automatically displays the file for you to preview, click **Continue**.
+1. Add a name and description for your list, and then click **Create**.
+
+## Update a list
+
+#### To edit a list:
+
+1. Select the required list and then click **Edit**.
+    You can use the **Edit** pane to browse, preview, or download a list.
+1. Click **Browse** to locate the CSV file, and then click **Open** to open the file and and make changes.
+1. Click:
+    - **Preview** to display a limited preview of the selected file in a pop-up window.
+    - **Download** and then click the Excel icon displayed in the lower left of the window to open the file in Excel.
+1. To re-upload the modified file:
+    1. Click **Browse** to locate and select the updated file, and then click **Open**.
+    1. Click **Continue** and then click **Update**.
+
+## Manage lists
+
+#### To remove a list:
+
+1. Select the required list and then click **Remove**.
+1. To confirm you want to delete the list and all its data from DFP, click **Delete**.
+
+> [!NOTE]
+> When you delete a list, it is removed from DFP; however the CSV file itself is not deleted from your system.
+
+#### To download a list:
+
+1. Select the required list and click **Download**.
+    When the list has been downloaded, an Excel icon displays in the lower left corner of the window.
+1. Click the Excel icon on the lower left of the window to open the file.
+
+#### To search for a list:
+
+- Click **Search**, type a keyword in the **Search** text box, and then press Enter.
