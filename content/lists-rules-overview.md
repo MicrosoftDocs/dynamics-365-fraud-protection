@@ -1,9 +1,9 @@
 ---
 author: yvonnedeq
-description: This topic is an overview of how to use rules and lists.
+description: This topic provides an overview on how to use rules and lists.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 04/3/2020
+ms.date: 04/03/2020
 
 ms.topic: conceptual
 search.app: 
