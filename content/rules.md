@@ -1,20 +1,20 @@
-----
+---
 author: yvonnedeq
 description: This topic provides details on how to use rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 04/3/2020
+ms.date: 04/03/2020
 
-ms.topic: how to
-search.app:
+ms.topic: conceptual
+search.app: 
   - FraudProtection
 search.audienceType:
   - admin
-title: Rules
+title: Managing Rules
 
 ---
 
-# Rules
+# Managing Rules
 
 ## Elements of a Rule
 
@@ -33,6 +33,7 @@ Conditions can be used to group together related rules. These rules are  run onl
 ### Clauses
 
 A clause returns a decision, based on specific conditions. Clauses are run in sequential order, and you can change the order in which rules are run. For example, clauses can be run before the machine learning (ML) model (that is, before any ML model score has been generated) or after a score has been generated. For example:
+
     Return Challenge("challenge type", "reason")
     WHEN @botScore < 900 AND @botScore > 400:
 
@@ -43,14 +44,17 @@ This clause throws a challenge if the bot score is between 400 and 900.
 There are three types of clauses in DFP:
 
 - Pre-score clause: A clause executed prior to all scoring clauses in sequential order. For example:
+
     RETURN Approve()
     WHEN ContainsKey("iplist", "IPAddress", @ipAddress)
 
 - Post-bot model scoring clause: A clause executed in sequential order after bot model scoring. To use bot score in the clause, type @botScore. For example:
+
     RETURN Challenge("challenge type", "reason")
     WHEN @botScore < 900 AND @botScore > 400
 
 - Post risk model scoring clause: A clause executed in sequential order after risk model scoring. To use risk score in the clause, type @riskScore. For example:
+
     example @riskScore
     You can add multiple clauses to a rule.
 
@@ -121,15 +125,19 @@ If you enter code in your clause that is currently in the Payload, it highlights
 1. In the left navigation, click **Account Protection** and then click **Rules**.
 1. Click **Create a rule**.
 1. Click the **Condition** box and enter your condition. For example:
+
     WHEN Geo.CountryCode(@ipAddress) == "BR"
     WHEN @username.endsWith("contoso.com")
 1. Click the arrow to the left of **Prior to all scoring** and enter a clause in the box. For example:
+
     RETURN Approve()
     WHEN ContainsKey("iplist", "IPAddress", @ipAddress)
 1. Click the arrow to the left of **Post bot model scoring** and enter a clause in the box starting with @botScore. For example:
+
     RETURN Challenge("challenge type", "reason")
     WHEN @botScore < 900 AND @botScore > 400
 1. Click the arrow to the left of **Post risk model** scoring and enter a clause in the box starting with @riskScore. For example:
+
     example @riskScore
 1. Click **Rename** and enter a name and description for your rule. Then click **Done**.
 1. Click **Status** and then select:
@@ -145,15 +153,19 @@ If you enter code in your clause that is currently in the Payload, it highlights
 1. Click **New rule**.
 1. Click **Templates** if you want to use an layout sample to create your own rules.
 1. Click the **Condition** box and enter your condition. For example:
+
     WHEN Geo.CountryCode(@ipAddress) == "BR"
     WHEN @username.endsWith("contoso.com")
 1. Click the arrow to the left of **Prior to all scoring** and enter a clause in the box. For example:
+
     RETURN Approve() 
     WHEN ContainsKey("iplist", "IPAddress", @ipAddress)
 1. Click the arrow to the left of **Post bot model scoring** and enter a clause in the box starting with @botScore. For example:
+
     RETURN Challenge("challenge type", "reason")
     WHEN @botScore < 900 AND @botScore > 400
 1. Click the arrow to the left of **Post risk model** scoring and enter a clause in the box starting with @riskScore. For example:
+
     example @riskScore
 1. Click **Rename** and enter a name and description for your rule. Then click **Done** to save the name.
 1. Click **Status** and then select:
