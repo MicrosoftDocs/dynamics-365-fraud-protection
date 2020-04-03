@@ -29,7 +29,8 @@ A *rule* uses lists to shape real-time decision making by accepting or rejecting
 
 Rules shape real-time decision making by accepting or rejecting transactions based on conditions that you select.  They enable you to check transactions against custom lists which are relevant to your business.
 
-To create and manage rules:
+#### To create and manage rules:
+
 - Click **Account protection** in the DFP left navigation, and then click * *Rules**.
     For more information about rules, see [Using Rules](using-rules.md).
 
@@ -50,7 +51,7 @@ For more information about rules, see [Using Rules](using-rules.md).
 
 A *list* is a collection of data saved in a .CSV file to give DFP a flexible way to access organized data. You can create any number of custom lists with data that suits specific business needs, for example, a *Safe* list, a *Block* list, a *Location by postal codes* list, and so on.
 
-To create and manage lists:
+#### To create and manage lists:
 - Click **Account protection** in the DFP left navigation, and then click * *List**.
     For more information about lists, see [Using Lists](using-lists.md).
 
