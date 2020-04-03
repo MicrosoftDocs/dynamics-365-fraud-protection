@@ -3,17 +3,17 @@ author: yvonnedeq
 description: This topic provides details on how to use lists.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 04/2/2020
+ms.date: 04/03/2020
 
-ms.topic: how to
+ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
   - admin
-title: Lists
+title: Managing Lists
 
 ---
-# Lists
+# Managing Lists
 
 ## Elements of a list
 
