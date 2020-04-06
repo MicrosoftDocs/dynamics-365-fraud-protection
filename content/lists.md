@@ -77,7 +77,7 @@ When you are ready to upload the list to Fraud Protection, go to the **Lists** p
 
     Fraud Protection opens a preview of the file for you to review. The preview contains a maximum of 20 rows. 
     
-1. To upload the file, click **Continue**. To upload a different file, click **Cancel** and repeat Step 2. 
+1. To upload the file, click **Continue**. To upload a different file, click **Cancel** and repeat step 2. 
 1. Add a name and description that will make it easy for your team to know how to use the list. The name can't be changed after this step. 
 
 1. Click **Create**. Because of caching, it may take up to two minutes for the list to become active. 
@@ -87,40 +87,33 @@ When you are ready to upload the list to Fraud Protection, go to the **Lists** p
 > [!NOTE]
 >  Support lists can't be updated from the **Lists** page. Support lists can only be modified through the **Support** page. 
 
-#### To update the contents of a Custom List in DFP:
-1. Select the list you want to update, and click **Edit**. 
-1. If you have the most up to date version of the list saved on your computer, open this file. Otherwise, press **Download** and open the downloaded file. 
-1. Make all edits to the file directly. When you are finished editing, save the file to your machine. 
-1. In the DFP **Edit List** panel, click **Browse** to locate the file. Select the updated file from Step 3 and click **Open**. 
+To update the contents of a custom list, do the following.
+1. Select the list you want to update, and then click **Edit**. 
+1. If you have the most up to date version of the list saved on your computer, open the file. Otherwise, press **Download** and open the downloaded file. 
+1. Make all your edits to the file directly. When you are finished editing, save the file to your machine. 
+1. In the **Edit List** dialog, click **Browse** to locate the file. Select the updated file from Step 3 and then click **Open**. 
     
-    DFP opens a preview of the file for you to review. Note that this preview contains a maximum of 20 rows. 
+    Fraud Protection opens a preview of the file for you to review. The preview contains a maximum of 20 rows. 
 
-1. To upload this file, click **Continue**. (To upload a different file, click Cancel and repeat Step 4). 
-1.	Click **Update**. Note that due to caching, the list may take up to two minutes to update. 
+1. To upload the file, click **Continue**. To upload a different file, click **Cancel** and repeat step 4. 
+1.	Click **Update**. Because of caching, it may take up to two minutes to update. 
 
 
-## Manage lists
+## Delete a list
 
-#### To delete a list:
-
-1. Select the list you want to delete and click **Delete** in the command bar at the top. 
-
-   Note that any rules which use this list will no longer work. 
+To delete a list, select the list you want to delete, and then click **Delete**. Any rules which use this list will no longer work. 
    
-1. To confirm you still want to delete the list from DFP, click **Delete** in the confirmation dialog.
 
-#### To download a list:
+## Download a list
 
-- Select the list you want to download and click **Download** in the command bar at the top.
+To download and open a list, do the following.
 
-    When the list has been downloaded, an Excel icon displays in the lower left corner of the window.
+1. Select the list you want to download, and then click **Download**. When the list is downloaded, a Microsoft Excel icon displays in the lower left corner of the window.
 
-1. Click the Excel icon on the lower left of the window to open the file.
+1. Click the **Excel** icon to open the file.
 
-#### To search for a list:
+## Search for a list
 
-- Locate the **Search** box on the upper right, and type in a keyword. 
+To search for a list, type a keywordinto the **Search** box on the upper right side of the **Lists** page. All list names and descriptions will be searched, and the results will be filtered accordingly. 
 
-    This will search all List names and descriptions, and filter the results accordingly. 
-
-- To remove the filter, delete the keyword from the **Search** box, or press the **x** to the right.
+To remove the filter, delete the keyword from the **Search** box, or press the **x** to the right.
