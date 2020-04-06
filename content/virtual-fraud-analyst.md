@@ -75,9 +75,9 @@ In the chart on the left, the x-axis represents the risk score, and the y-axis r
 
 The machine learning model in Microsoft Dynamics 365 Fraud Protection evaluates every transaction using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a range of risk scores from 0 through 999. This approach resembles the approach that the fraud protection network uses.
 
-Based on the risk score, from 0 through 999, the interactive chart shows the fraud impact on your revenue. The following categories are used: **Approved transactions**, **Confirmed fraud**, and **Rejected transactions**. (The **Confirmed fraud** category combines chargebacks and refunds.) You can hover over any point in the chart to see a detailed representation of the values.
+Based on the risk score, from 0 through 999, the interactive chart shows the fraud impact on your revenue. The following categories are used: **Approved transactions**, **Confirmed fraud**, and **Rejected transactions**. The **Confirmed fraud** category combines chargebacks and refunds. You can hover over any point in the chart to see a detailed representation of the values.
 
-#### The Risk Impact metrics
+#### Understanding the Risk impact metrics
 
 On the right, in the **Risk impact** section, you can see the key metrics that are associated with the chart. Use the risk score slider to set your threshold, and then continue to refine the score in single-point increments after you create a rule in the next step.
 
