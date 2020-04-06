@@ -33,9 +33,9 @@ There are two types of rules you can create in the **Rules** editor after explor
 
 ## Create rules in VFA
 
-### Step 1 (optional)
+### Step 1 (optional): select what the rule applies to
 
-In step 1, select the target data that your rule will apply to. This data consists of a combination of a node, attributes, and a list. If you must first create a new list, you can do so in the Virtual fraud analyst page. (See below for information on how to create a list).
+In step 1, select the target data that your rule will apply to. This data consists of a combination of a node, attributes, and a list. If you must first create a new list, you can do so on the **Virtual fraud analyst** page. For more information on how to create a list, see step 2 below.
 
 The following table defines the node and attribute combinations you can use to build your lists. 
 
@@ -47,7 +47,7 @@ The following table defines the node and attribute combinations you can use to b
 | PaymentInstrument | Type |
 | Product | Type, SKU, Category, Market |
 
-**To create a filter for historical transaction data:**
+To create a filter for historical transaction data, do the following.
 
 1. In the left navigation, click **Virtual fraud analyst**.
 2. To create a new list:
@@ -59,17 +59,17 @@ The following table defines the node and attribute combinations you can use to b
 5. To add another filter, click **Add another filter** and then repeat steps 2-4.
 6. Click **Analyze**.
 
-### Step 2
+### Step 2: examine the effect of fraud
 
-In step 2, you use the **Transaction data** chart to examine the effect of fraud on your historical transaction data. You can filter your view by selecting a range of dates and a range of risk scores. 
+In step 2, use the **Transaction data** chart to examine the effect of fraud on your historical transaction data. You can filter your view by selecting a range of dates and a range of risk scores. 
 
-**To filter your view:**
+To filter your view, do the following.
 
 1. In the **Transaction date range** section, select a range of dates.
 2. In the **Transaction Data** section, enter values to adjust the impact of the risk score range on your historical data.
 3. In the **Risk Impact** section, use the risk score slider to set a risk score threshold between 0-999.
 
-#### The Transaction Data chart
+#### Understanding the Transaction data chart
 
 In the chart on the left, the x-axis represents the risk score, and the y-axis represents the number of transactions.
 
