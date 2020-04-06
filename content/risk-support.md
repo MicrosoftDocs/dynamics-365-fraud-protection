@@ -45,7 +45,7 @@ By evaluating the results in these areas, fraud investigators can gain insights 
 
 ## View account information
 
-Select one of the transactions in the Search Results to view expanded information in the following areas:
+Select one of the transactions in the sSearch results to view expanded information in the following areas:
 
 - **Account Summary** – A summary of the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. This summary is aggregated over the last day as well as the last month.
 - **Payment Instruments** – A customer's payment instruments by issuer-last four digits. You can use this area to block individual payment instruments associated with a given customer.
