@@ -85,7 +85,7 @@ When you are ready to upload the list to Fraud Protection, go to the **Lists** p
 ## Update a list
 
 > [!NOTE]
->  Support Lists cannot be updated from the DFP Lists page. Support Lists can only be modified through the **Support** Page. 
+>  Support lists can't be updated from the **Lists** page. Support lists can only be modified through the **Support** page. 
 
 #### To update the contents of a Custom List in DFP:
 1. Select the list you want to update, and click **Edit**. 
