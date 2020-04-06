@@ -15,125 +15,118 @@ title: Managing Lists
 ---
 # Managing Lists
 
-## Elements of a list
+## Overview
 
-Each list you create comprises a collection of entities that you want to screen for, such as high-priced products or high-risk countries or regions. After you create a list, you enter a list name and a brief description to summarize its contents.
+Custom Lists provide you with a flexible way to upload and access organized data within DFP. You can create any number of custom lists containing data specific to your business needs. For example, you could create a list containing a set of email addresses, IP addresses or product IDs. These lists can then be referenced within a rule (link) in order to help you execute your business logic/fraud strategy at scale.
 
 > [!NOTE]
-> To ensure that DFP can correctly interpret the data files you upload, files must be in CSV UTF-8 (comma delimited) format (*.csv).
-CSV files must also include column headers. For example, a list of Purchase data may include headings such as purchases, payment methods, zip codes, etc.
-When you download a list, DFP opens it in Excel.
+> Lists do not display in an INT environment.
 
-## Access the Lists management page
+## Using Lists to execute business logic
 
-You can manage existing lists and create custom lists in the List management tab.
-
-#### To access the Lists management page:
-
-- In DFP, click **Account Protection** and then click **Lists** in the left navigation bar.
-
-## How to use lists
-
-You can create data lists which contain values of any type. For example, you could create a list containing email addresses, IP addresses, product IDs, or names of countries. You can then use these lists in ways that are best suited to your business needs.
-For example, you can create a list of email addresses you consider risky based on their past transaction history:
+Rules (link) are where custom logic is defined in order to automate decisions in your business. To do this effectively, you may reference any custom list within a rule.  For example, you may create a list of email addresses which are considered to be risky  based on past transactions, as well as a list for those which are considered to be safe
 
 |Risky Emails |
 |--------------|
-|alia@gmail.com |
+|Kayla@contoso.com |
+|Jamie@bellowscollege.com |
+|Marie@atatum.com |
+
+|Safe Emails |
+|--------------|
+|Camille@fabrikam.com |
 |sarah@gmail.com |
-|michael@gmail.com |
-|jake@gmail.com |
+|Miguel@proseware.com |
+|Tyler@contoso.com |
 
-You can configure a rule such that if a transaction or login attempt is made using an email address on a specified list, the transaction will always be rejected. Or if a transaction is for a product on a different list, configure the rule so it will always be accepted.
+You can then configure a rule such that login attempts using an email on the Risky Emails list, it is rejected, while those using an email on the Safe Emails list are approved. 
 
-### Single- vs. multiple- column lists
+### Single- vs. multiple-column lists
 
-You can create a single-column list with values representing a specific key (for example, email address) or a multi-column list with values relevant to several keys. For example, instead of having one single column list with *Safe Emails* and another single column list with *Risky Emails*, you could combine these keys into one *Emails* List with both an *Email Addresses* column and a *Status* column to indicate whether each email address should be found **Safe** or **Risky**, as shown in the following example.
+As shown in the example above, you can create lists with a single column of values, representing some key (for example, email address). However, you can also also utilize additional columns to represent a set of values relevant to that key. For example, instead of having one single-column list containing *Safe Emails* and another single column-list containing *Risky Emails* you could combine this information into a single multi-column list, shown below:.
 
 |Emails|Status|
 |--------------|--------------|
-|alia@gmail.com |Safe|
-|sarah@gmail.com|Risky|
-|michael@gmail.com|Risky|
-|jake@gmail.com|Safe|
+|Kayla@contoso.com |Risky|
+|Jamie@bellowscollege.com|Risky|
+|Marie@atatum.com|Risky|
+|Camille@fabrikam.com|Safe|
+|Miguel@proseware.com |Safe |
+|Tyler@contoso.com |Safe |
 
-You may also have a list product IDs, each of which are varying levels of risk. Therefore, in order To create a rule that is tailored perfectly to your business needs, you may want to evaluate each of these products against their own score threshold. (i.e., you want to reject product 123 only when it's risk score is greater than 950, but perhaps product 012 is inherently higher risk, and you want to reject anytime it's risk score is greater than  even 250).
+You could then configure your rule such that all login attempts using an email on this list, with the status *Risky* are rejected, while those using an email with the status *Safe* are approved.
+In addition to utilizing multi-column lists to combine safe/block lists, they also may be utilized to specify the unique levels of risk associated with a set of products, emails, or countries. For example, if certain product types present different levels of risk to your business, you may want to make decisions for these products differently. Specifically, you may want to evaluate each product against its own score threshold (link to scoring). To do this, you’d first want to create a list to represent this information, such as the below: 
 
-You can create rules that are tailored perfectly to your business. For example, if you have products with varying risk levels, and you want to evaluate each product against its own score threshold: 
+|Product ID    |Score Threshold|
+|--------------|--------------|
+|Digital    |500|
+|Consumable    |600|
+|Physical    |750|
 
-1. Create a list of product IDs, each of which indicates varying levels of risk. For example:
+You could then configure a rule such that transactions involving products of each type are rejected when they are assigned a Risk Score (link) greater than the specified threshold. 
+Learn more (link) about how to create effective rules to customize your business logic. 
 
-    |Product ID    |Score Threshold|
-    |--------------|--------------|
-    |123    |950|
-    |456    |300|
-    |789    |675|
-    |012    |250|
+## Create a custom list
 
-1. Create a rule where you set a higher rejection threshold for a lower-risk product by setting a risk score that is greater than 950.
-1. Within the same rule, set a lower rejection threshold for another inherently higher risk product by setting a risk score that is greater than 250.
+To create a list within DFP, you must first create and save the list as a CSV file on your local machine. Note that the file must:
+- Be in CSV format
+-	Contain unique headers for every column 
+-	Be less than 20mb
 
-## Create a list
+When you are ready to upload the list to DFP, navigate to the Lists page and follow the below steps:
+1. Click **New list** on the upper left. 
+1. Click **Browse** to locate the file. When you have selected the file, click **Open**. 
 
-Creating a new list in DFP is a two-step process:
+    DFP will open a preview of the file for you to review. Note that this preview will contain a maximum of 20 rows. 
+    
+1. To upload this file, click **Continue**. (To upload a different file, click **Cancel** and repeat Step 2). 
+1. Add a name and description that will make it easy for your team to know how to use the List. 
 
-- First, create a .CSV file in Excel with all the criteria you want to include. For example, you can create a list with all the zip codes in your state, or all the country codes for the countries in which you do business.
-- Next, use the steps below to upload the .CSV file to DFP.
+    Note that this name cannot be changed after this step. 
 
-> [!NOTE]
-> Due to caching, changes saved to existing lists may take up to two minutes to become active.
+1. Click **Create**. 
 
-#### To create a list:
-
-1. Create a file in Excel and save it as a CSV file. (Note that you must include column headers in your CSV file.)
-1. In DFP, click **Account Protection** and then click **Lists** in the left navigation bar.
-1. Click **Create a list**.
-1. Click **Browse** to locate and select the required file, and then click **Open**.
-1. DFP automatically displays the file for you to preview.
-    1. To upload this file, click **Continue**.
-    2. To upload a different file, click **Cancel** and then repeat Step 4.
-1. Add a name and description for your list, and then click **Create**.
-
-## Add a new list
-
-#### To add a new list:
-
-1. Create a file in Excel and save it as a CSV file. (Note that you must include column headers in your CSV file.)
-1. On the **Lists** tab, click **New List**.
-1. Click **Browse** to locate and select the required file, and then click **Open**.
-1. When DFP automatically displays the file for you to preview, click **Continue**.
-1. Add a name and description for your list, and then click **Create**.
+    Note that due to caching, this list may take up to two minutes to become active. 
 
 ## Update a list
 
-#### To edit a list:
+> [!NOTE]
+>  Support Lists cannot be updated from the DFP Lists page. Support Lists can only be modified through the **Support** Page. 
 
-1. Select the required list and then click **Edit**.
-    You can use the **Edit** pane to browse, preview, or download a list.
-1. Click **Browse** to locate the CSV file, and then click **Open** to open the file and and make changes.
-1. Click:
-    - **Preview** to display a limited preview of the selected file in a pop-up window.
-    - **Download** and then click the Excel icon displayed in the lower left of the window to open the file in Excel.
-1. To re-upload the modified file:
-    1. Click **Browse** to locate and select the updated file, and then click **Open**.
-    1. Click **Continue** and then click **Update**.
+#### To update the contents of a Custom List in DFP:
+1. Select the list you want to update, and click **Edit**. 
+1. If you have the most up to date version of the list saved on your computer, open this file. Otherwise, press **Download** and open the downloaded file. 
+1. Make all edits to the file directly. When you are finished editing, save the file to your machine. 
+1. In the DFP **Edit List** panel, click **Browse** to locate the file. Select the updated file from Step 3 and click **Open**. 
+    
+    DFP opens a preview of the file for you to review. Note that this preview contains a maximum of 20 rows. 
+
+1. To upload this file, click **Continue**. (To upload a different file, click Cancel and repeat Step 4). 
+1.	Click **Update**. Note that due to caching, the list may take up to two minutes to update. 
+
 
 ## Manage lists
 
-#### To remove a list:
+#### To delete a list:
 
-1. Select the required list and then click **Remove**.
-1. To confirm you want to delete the list and all its data from DFP, click **Delete**.
+1. Select the list you want to delete and click **Delete** in the command bar at the top. 
 
-> [!NOTE]
-> When you delete a list, it is removed from DFP; however the CSV file itself is not deleted from your system.
+   Note that any rules which use this list will no longer work. 
+   
+1. To confirm you still want to delete the list from DFP, click **Delete** in the confirmation dialog.
 
 #### To download a list:
 
-1. Select the required list and click **Download**.
+- Select the list you want to download and click **Download** in the command bar at the top.
+
     When the list has been downloaded, an Excel icon displays in the lower left corner of the window.
+
 1. Click the Excel icon on the lower left of the window to open the file.
 
 #### To search for a list:
 
-- Click **Search**, type a keyword in the **Search** text box, and then press Enter.
+- Locate the **Search** box on the upper right, and type in a keyword. 
+
+    This will search all List names and descriptions, and filter the results accordingly. 
+
+- To remove the filter, delete the keyword from the **Search** box, or press the **x** to the right.
