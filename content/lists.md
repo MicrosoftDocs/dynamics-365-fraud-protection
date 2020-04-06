@@ -10,10 +10,10 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Managing lists
+title: Manage lists
 
 ---
-# Managing lists
+# Manage lists
 
 Custom lists provide you with a flexible way to upload and access organized data within Dynamics 365 Fraud Protection. You can create any number of custom lists containing data specific to your business needs. For example, you can create a list containing a set of email addresses, IP addresses, or product IDs. These lists can then be referenced within a rule (link) in order to help you execute your business logic and fraud strategy at scale.
 
