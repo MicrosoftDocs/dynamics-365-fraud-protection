@@ -10,14 +10,12 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Managing Lists
+title: Managing lists
 
 ---
-# Managing Lists
+# Managing lists
 
-## Overview
-
-Custom Lists provide you with a flexible way to upload and access organized data within DFP. You can create any number of custom lists containing data specific to your business needs. For example, you could create a list containing a set of email addresses, IP addresses or product IDs. These lists can then be referenced within a rule (link) in order to help you execute your business logic/fraud strategy at scale.
+Custom lists provide you with a flexible way to upload and access organized data within Dynamics 365 Fraud Protection. You can create any number of custom lists containing data specific to your business needs. For example, you can create a list containing a set of email addresses, IP addresses, or product IDs. These lists can then be referenced within a rule (link) in order to help you execute your business logic and fraud strategy at scale.
 
 > [!NOTE]
 > Lists do not display in an INT environment.
