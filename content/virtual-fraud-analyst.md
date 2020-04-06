@@ -88,4 +88,4 @@ On the right, in the **Risk impact** section, you can see the key metrics that a
 
 ## Balance fraud loss against opportunity loss
 
-The goal of any world-class fraud protection system is to help companies maximize their bottom line. By using Microsoft Dynamics  365 Fraud Protection (DFP), you can quickly find a risk threshold that helps protect your business against fraud and also minimizes the impact on your legitimate transactions.
+The goal of any world-class fraud protection system is to help companies maximize their bottom line. By using Fraud Protection, you can quickly find a risk threshold that helps protect your business against fraud and also minimizes the impact on your legitimate transactions.
