@@ -37,13 +37,13 @@ Rules (link) are used to define custom logic in order to automate decisions in y
 |Miguel@proseware.com |
 |Tyler@contoso.com |
 
-You can then configure a rule such that login attempts using an email on the Risky Emails list, it is rejected, while those using an email on the Safe Emails list are approved. 
+You can then configure a rule such that login attempts using an email on the "Risky email addresses" list is rejected, while those using an email on the "Safe email addresses" list are approved. 
 
-### Single- vs. multiple-column lists
+### Single and multiple-column lists
 
-As shown in the example above, you can create lists with a single column of values, representing some key (for example, email address). However, you can also also utilize additional columns to represent a set of values relevant to that key. For example, instead of having one single-column list containing *Safe Emails* and another single column-list containing *Risky Emails* you could combine this information into a single multi-column list, shown below:.
+As in the example above, you can create lists with a single column of values, representing some key (for example, email address). However, you can also also use additional columns to represent a set of values relevant to that key. For example, instead of having one single-column list containing "Safe email addresses" and another single column-list containing "Risky email addresses", you can combine this information into a single multi-column list, as shown below.
 
-|Emails|Status|
+|Email address|Status|
 |--------------|--------------|
 |Kayla@contoso.com |Risky|
 |Jamie@bellowscollege.com|Risky|
@@ -52,39 +52,35 @@ As shown in the example above, you can create lists with a single column of valu
 |Miguel@proseware.com |Safe |
 |Tyler@contoso.com |Safe |
 
-You could then configure your rule such that all login attempts using an email on this list, with the status *Risky* are rejected, while those using an email with the status *Safe* are approved.
-In addition to utilizing multi-column lists to combine safe/block lists, they also may be utilized to specify the unique levels of risk associated with a set of products, emails, or countries. For example, if certain product types present different levels of risk to your business, you may want to make decisions for these products differently. Specifically, you may want to evaluate each product against its own score threshold (link to scoring). To do this, you’d first want to create a list to represent this information, such as the below: 
+You can then configure your rule such that all login attempts using an email on this list with the status "Risky" are rejected, while those using an email with the status "Safe" are approved.
 
-|Product ID    |Score Threshold|
+In addition to utilizing multi-column lists to combine safe and block lists, you can also use multi-column lists to specify the unique levels of risk associated with a set of products, emails, or countries. For example, if certain product types present different levels of risk to your business, you may want to make decisions for these products differently. Specifically, you may want to evaluate each product against its own score threshold (link to scoring). To do this, you first need to create a list to represent this information, such as in the example below. 
+
+|Product ID    |Score threshold|
 |--------------|--------------|
 |Digital    |500|
 |Consumable    |600|
 |Physical    |750|
 
-You could then configure a rule such that transactions involving products of each type are rejected when they are assigned a Risk Score (link) greater than the specified threshold. 
-Learn more (link) about how to create effective rules to customize your business logic. 
+You can then configure a rule that enforces that transactions involving products of each type are rejected when they are assigned a risk score (link) greater than the specified threshold. Learn more (link) about how to create effective rules to customize your business logic. 
 
 ## Create a custom list
 
-To create a list within DFP, you must first create and save the list as a CSV file on your local machine. Note that the file must:
-- Be in CSV format
--	Contain unique headers for every column 
--	Be less than 20mb
+To create a list in Fraud Protection, you must first create and save the list as a CSV file on your local machine. The file must meet the follwing requirements.
+- Be in CSV format.
+-	Contain unique headers for every column.
+-	Be less than 20mb.
 
-When you are ready to upload the list to DFP, navigate to the Lists page and follow the below steps:
-1. Click **New list** on the upper left. 
-1. Click **Browse** to locate the file. When you have selected the file, click **Open**. 
+When you are ready to upload the list to Fraud Protection, go to the **Lists** page and follow the steps below.
+1. Click **New list**. 
+1. Click **Browse** to locate the file. Select the file, then click **Open**. 
 
-    DFP will open a preview of the file for you to review. Note that this preview will contain a maximum of 20 rows. 
+    Fraud Protection opens a preview of the file for you to review. The preview contains a maximum of 20 rows. 
     
-1. To upload this file, click **Continue**. (To upload a different file, click **Cancel** and repeat Step 2). 
-1. Add a name and description that will make it easy for your team to know how to use the List. 
+1. To upload the file, click **Continue**. To upload a different file, click **Cancel** and repeat Step 2. 
+1. Add a name and description that will make it easy for your team to know how to use the list. The name can't be changed after this step. 
 
-    Note that this name cannot be changed after this step. 
-
-1. Click **Create**. 
-
-    Note that due to caching, this list may take up to two minutes to become active. 
+1. Click **Create**. Because of caching, it may take up to two minutes for the list to become active. 
 
 ## Update a list
 
