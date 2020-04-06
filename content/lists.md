@@ -20,17 +20,17 @@ Custom lists provide you with a flexible way to upload and access organized data
 > [!NOTE]
 > Lists do not display in an INT environment.
 
-## Using Lists to execute business logic
+## Use lists to execute business logic
 
-Rules (link) are where custom logic is defined in order to automate decisions in your business. To do this effectively, you may reference any custom list within a rule.  For example, you may create a list of email addresses which are considered to be risky  based on past transactions, as well as a list for those which are considered to be safe
+Rules (link) are used to define custom logic in order to automate decisions in your business. You may reference any custom list within a rule. For example, you may create a list of email addresses which are considered to be risky based on past transactions, as well as a list for those which are considered to be safe
 
-|Risky Emails |
+|Risky email addresses |
 |--------------|
 |Kayla@contoso.com |
 |Jamie@bellowscollege.com |
 |Marie@atatum.com |
 
-|Safe Emails |
+|Safe email addresses |
 |--------------|
 |Camille@fabrikam.com |
 |sarah@gmail.com |
