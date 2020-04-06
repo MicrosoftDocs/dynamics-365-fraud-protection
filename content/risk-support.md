@@ -55,7 +55,7 @@ Risk information provides additional details, such as the specific risk score.
 
 ### Add a customer account
 
-When you add a customer to a list, you must specify an expiry date and enter any comments that will be helpful to future reviewers of this case. You can view this information at any time under in the Activity log. The log also keeps a record of the agent who made each change. Note that DFP will automatically remove the customer from the list after the expiry date has passed.
+When you add a customer to a list, you must specify an expiry date and enter any comments that will be helpful to future reviewers of this case. You can view this information at any time in the activity log. The log also keeps a record of the agent who made each change. Fraud Protection will automatically remove the customer from the list after the expiry date passes.
 
 ### Delete a customer account
 
