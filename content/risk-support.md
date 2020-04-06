@@ -57,17 +57,15 @@ Risk information provides additional details, such as the specific risk score.
 
 When you add a customer to a list, you must specify an expiry date and enter any comments that will be helpful to future reviewers of this case. You can view this information at any time in the activity log. The log also keeps a record of the agent who made each change. Fraud Protection will automatically remove the customer from the list after the expiry date passes.
 
-### Delete a customer account
+### Delete a list entry
 
-**To delete a list entry:**
-
-- Select the payment instrument or user status and click **Remove**.
+To delete an entry in a list, select the payment instrument or user status and click **Remove**.
 
 ## Unblock a customer
 
-After you have reviewed a transaction and determined a course of action, return to the **Accounts** page to resolve the customer's support issue. On the **Accounts** page, you can add a customer or payment instrument to the **Safe list**, the **Watch list**, or the **Block list**. By default, DFP accepts users on the **Safe list** and rejects users on the **Block list**.
+After you review a transaction and determine a course of action, return to the **Accounts** page to resolve the customer's support issue. On the **Accounts** page, you can add a customer or payment instrument to the **Safe list**, the **Watch list**, or the **Block list**. By default, Fraud Protection accepts users on the **Safe list** and rejects users on the **Block list**.
 
-**To update a customer's status:**
+To update a customer's status, do the following.
 
 1. Open the **Rules** management page and edit the **Default Support Rule**.
 
