@@ -68,8 +68,12 @@
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
-  - name: Manage account protection rules and lists
-    href: ap-rulesandlists.md
+  - name: Manage lists
+    href: lists.md
+  - name: Manage rules
+    href: rules.md
+  - name: Fraud Protection language reference guide
+    href: fpl-lang-ref.md
   - name: Learn from the account protection scorecard
     href: ap-scorecard.md
   - name: Account protection schemas
