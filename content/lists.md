@@ -27,11 +27,10 @@ Custom lists are created and defined by you. You can upload any number of custom
 
 ## Support lists
 
-Support lists are system-configured lists of emails and payment instruments with a *safe*, *block*, or *watch* status, as well as an associated expiration date for each entry. While these lists can be viewed and downloaded from the Lists page, they can only be modified through the [Support page](risk-support.md).
-
 > [!NOTE]
 > You cannot view or create lists in the INT environment. You must use the PROD environment.
 
+Support lists are system-configured lists of emails and payment instruments with a *safe*, *block*, or *watch* status, as well as an associated expiration date for each entry. While these lists can be viewed and downloaded from the Lists page, they can only be modified through the [Support page](risk-support.md).
 
 ## Using lists 
 
@@ -60,7 +59,7 @@ The example above results in two separate lists, *Risky Emails* and *Safe Emails
 
 </td></tr> </table>
 
-However, you can use additional columns to  hold values relevant to that key. For example, instead of the two separate lists above, you can combine this information into a single multi-column list, as shown below.
+However, you can use additional columns to  hold values relevant to that key. For example, instead of the two separate lists above, you can combine this information into a single multiple-column list, as shown below.
 
 |Email address|Status|
 |--------------|--------------|
@@ -75,7 +74,7 @@ You can then configure your rule so that all login attempts using an email on th
 
 In addition to using multi-column lists to combine safe and block lists, you can also use multi-column lists to specify the unique levels of risk associated with a set of products, emails, or countries. For example, if certain product types present different levels of risk to your business, you can make decisions for these products differently. Specifically, you can evaluate each product against its own [score threshold] (scorecard.md). To do this, you must first create a list to represent this information, as shown in the example below. 
 
-|Product ID    |Score threshold|
+|Product Type    |Score threshold|
 |--------------|--------------|
 |Digital    |500|
 |Consumable    |600|
@@ -105,10 +104,10 @@ To create a custom list in Fraud Protection, you must first create and save the 
 
 ## Update a list
 
-You can update a custom list at any time to include new information or change existing information. You can change the description of a list, but you cannot change its name.
-
 > [!NOTE]
 >  You cannot update support lists from the Fraud Protection **Lists** page. You can only modify them through the [Support page](risk-support.md). 
+
+You can update a custom list at any time to include new information or change existing information. You can change the description of a list, but you cannot change its name.
 
 **To update the contents of a custom list in Fraud Protection:**
 
