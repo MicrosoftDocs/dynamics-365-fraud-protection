@@ -18,42 +18,49 @@ title: Manage lists
 ## Overview
 
 Lists provide you with a flexible way to upload and access organized data within Dynamics 365 Fraud Protection. You can reference any list in  a [rule](rules.md) in order to help you execute your business logic and fraud strategy at scale.
+
 The Lists page has two tabs separating the two types of Lists you can create: **Custom lists** and **Support lists**. 
 
 ## Custom lists
 
-Custom lists are created and defined by you. You can upload any number of custom lists and fill these lists with data specific to your business needs or fraud protection strategy. For example, you can create a list containing a set of email addresses, IP addresses, or product IDs, as well as additional values associated with each entry. For more information, see [Using lists](lists.md#using-lists). 
+Custom lists are created and defined by you. You can upload any number of custom lists and fill these lists with data specific to your business needs or fraud protection strategy. For example, you can create a list containing a set of email addresses, IP addresses, or product IDs, as well as additional values associated with each entry. 
 
 ## Support lists
 
 Support lists are system-configured lists of emails and payment instruments with a *safe*, *block*, or *watch* status, as well as an associated expiration date for each entry. While these lists can be viewed and downloaded from the Lists page, they can only be modified through the [Support page](risk-support.md).
 
 > [!NOTE]
-> You cannot view or create rules or lists in the INT environment. You must use the PROD environment to display the Account Protection page and work with rules and lists.
+> You cannot view or create lists in the INT environment. You must use the PROD environment.
 
 
 ## Using lists 
 
-[Rules](rules.md) are used to define custom logic in order to automate decisions in your business. You can reference any custom list in a rule. For example, you can create a list of email addresses which are considered to be risky based on past transactions, as well as a list for those which are considered to be safe
+[Rules](rules.md) are used to define custom logic in order to automate decisions in your business. To help you define this logic, you can reference any list in a rule. For example, you can create a list of email addresses which are considered to be risky, and a separate list for those which are considered to be safe. You can then configure a rule so that login attempts using an email on the *Risky Emails* list is rejected, while those using an email on the *Safe Emails* list are approved. 
 
-|Risky email addresses |
+### Single and multiple-column lists
+
+The example above results in two separate lists, *Risky Emails* and *Safe Emails*, with a single column of values representing a key (in this case, email address). 
+
+<table>
+<tr><td>
+
+|Risky emails|
 |--------------|
 |Kayla@contoso.com |
 |Jamie@bellowscollege.com |
 |Marie@atatum.com |
 
-|Safe email addresses |
+</td><td>
+
+|Safe emails |
 |--------------|
 |Camille@fabrikam.com |
-|sarah@gmail.com |
 |Miguel@proseware.com |
 |Tyler@contoso.com |
 
-You can then configure a rule so that login attempts using an email on the *Risky email addresses* list is rejected, while those using an email on the *Safe email addresses* list are approved. 
+</td></tr> </table>
 
-### Single and multiple-column lists
-
-As shown in the example above, you can create lists with a single column of values representing a key (for example, email address). You can also also use additional columns to represent a set of values relevant to that key. For example, instead of having one single-column list containing *Safe email addresses* and another single column-list containing *Risky email addresses*, you can combine this information into a single multi-column list, as shown below.
+However, you can use additional columns to  hold values relevant to that key. For example, instead of the two separate lists above, you can combine this information into a single multi-column list, as shown below.
 
 |Email address|Status|
 |--------------|--------------|
@@ -66,7 +73,7 @@ As shown in the example above, you can create lists with a single column of valu
 
 You can then configure your rule so that all login attempts using an email on this list with the status *Risky* are rejected, while those using an email with the status *Safe* are approved.
 
-In addition to using multi-column lists to combine safe and block lists, you can also use multi-column lists to specify the unique levels of risk associated with a set of products, emails, or countries. For example, if certain product types present different levels of risk to your business, you can make decisions for these products differently. Specifically, you can evaluate each product against its own [score threshold] (scorecard.md). To do this, you must first create a list to represent this information, such as in the example below. 
+In addition to using multi-column lists to combine safe and block lists, you can also use multi-column lists to specify the unique levels of risk associated with a set of products, emails, or countries. For example, if certain product types present different levels of risk to your business, you can make decisions for these products differently. Specifically, you can evaluate each product against its own [score threshold] (scorecard.md). To do this, you must first create a list to represent this information, as shown in the example below. 
 
 |Product ID    |Score threshold|
 |--------------|--------------|
@@ -74,11 +81,11 @@ In addition to using multi-column lists to combine safe and block lists, you can
 |Consumable    |600|
 |Physical    |750|
 
-You can then configure a rule that enforces that transactions involving products of each type are rejected when they are assigned a [risk score](ap-scorecard.md#risk-model-score) greater than the specified threshold. For information on about how to create effective rules to customize your business logic, see [Rules](rules.md). 
+You can then configure a rule that enforces that transactions are rejected when they have a [risk score](ap-scorecard.md#risk-model-score) above the specified threshold for that product type. For information on about how to create effective rules to customize your business logic, see [Rules](rules.md). 
 
-## Create and upload a custom list
+## Upload a list
 
-To create a list in Fraud Protection, you must first create and save the list as a CSV file on your local machine. The file must meet the follwing requirements.
+To create a custom list in Fraud Protection, you must first create and save the list as a CSV file on your local machine. The file must meet the following requirements.
 - Must be in CSV UTF-8 (comma delimited) format (*.csv).
 -	Must contain unique headers for every column.
 -	Must be under the maximum file size of 20 megabytes (MB).
@@ -98,17 +105,17 @@ To create a list in Fraud Protection, you must first create and save the list as
 
 ## Update a list
 
-You can update a list at any time to include new information or change existing information. You can change the description of a list, but you cannot change its name.
+You can update a custom list at any time to include new information or change existing information. You can change the description of a list, but you cannot change its name.
 
 > [!NOTE]
 >  You cannot update support lists from the Fraud Protection **Lists** page. You can only modify them through the [Support page](risk-support.md). 
 
 **To update the contents of a custom list in Fraud Protection:**
 
-1. Select the list you want to update, and then click **Edit**. 
-1. If you have the most up to date version of the list saved on your computer, open the file. Otherwise, click **Download** to get the most up to date version and then open the downloaded file. 
+1. If you have the most up to date version of the list saved on your computer, open this file. Otherwise, select the list you want to update and click **Download** to get the most up to date version.
 1. Make all your edits to the file directly. When you have finished editing, save the file to your machine. 
-1. In the **Edit List** dialog, click **Browse** to locate the file. Select the file you just updated, and then click **Open**. 
+1. Select the list you want to update, and then click **Edit**.
+1. Click **Browse** to locate the file. Select the file you just updated, and then click **Open**.
     
     Fraud Protection opens a preview of the file for you to review. The preview contains a maximum of 20 rows. 
 
