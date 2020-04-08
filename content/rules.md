@@ -120,13 +120,13 @@ In post-bot-scoring clauses, you can make decisions using the score referenced w
     WHEN @email.EndsWith("@contoso.com") && @botScore > 700
 
 > [!NOTE]
->Post-bot-scoring clauses and the @botScore variable are only available for account creation and account login rules only. 
+>Post-bot-scoring clauses and the @botScore variable are available only for account creation and account login rules. 
 
 #### Post-risk-scoring clauses
 
 The machine learning model in Fraud Protection evaluates every transaction using advanced adaptive AI. It then assigns a risk score. This score is a number between 0 and 999. The higher the risk score, the higher the perceived risk.
 
-In post-risk-scoring clauses, you can use this score, which is referenced with @riskscore, in conjunction with other fields from the payload to make decisions. For example, the following clause enables you to reject expensive transactions that also have a high risk score. 
+In post-risk-scoring clauses, you can use this score, which is referenced with @riskscore, in conjunction with other fields from the payload to make decisions. For example, the following clause enables you to reject expensive transactions that also have a high-risk score. 
 
     RETURN Reject(“Risky US transaction”)
     WHEN @purchasePrice >= 199.99 && @riskScore > 700
