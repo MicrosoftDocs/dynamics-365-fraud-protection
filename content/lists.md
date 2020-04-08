@@ -22,7 +22,7 @@ The Lists page has two tabs separating the two types of Lists you can create: **
 
 ## Custom lists
 
-Custom lists are created and defined by you. You can upload any number of custom lists and fill these lists with data specific to your business needs or fraud protection strategy. For example, you can create a list containing a set of email addresses, IP addresses, or product IDs, as well as additional values associated with each entry. For more information, see [Using lists](lists.md#update-a-list). 
+Custom lists are created and defined by you. You can upload any number of custom lists and fill these lists with data specific to your business needs or fraud protection strategy. For example, you can create a list containing a set of email addresses, IP addresses, or product IDs, as well as additional values associated with each entry. For more information, see [Using lists](lists.md#using-lists). 
 
 ## Support lists
 
