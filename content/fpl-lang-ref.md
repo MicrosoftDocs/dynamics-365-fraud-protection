@@ -19,7 +19,7 @@ title: Fraud Protection language guide
 
 Fraud Protection [Rules](rules.md) enable you to write business logic for automated decision making. Rules are made up of [conditions]( rules.md#conditions) and [clauses](rules.md#clauses). Clauses are written in a rich and expressive language that enables you to customize the logic required to meet your unique business needs. 
 
-Fraud Protection language has significant overlap with C# and SQL. The **RETURN** and **WHERE** keywords define the clause and the *@field* syntax is used to extract fields from the payload. Most C# comparison and arithmetic operators are also available. Review the [language reference](link) for a complete list of available operators. 
+Fraud Protection language has significant overlap with C# and SQL. The **RETURN** and **WHERE** keywords define the clause and the *@field* syntax is used to extract fields from the payload. Most C# comparison and arithmetic operators are also available. Review the [language reference](fpl-lang-ref.md#language-reference) for a complete list of available operators. 
 
 ## Quick start guide
 
@@ -36,13 +36,13 @@ You can return a decision of *Approve*, *Reject*, *Challenge*, or *Review*, and 
       RETURN Reject(“email is on block list”)
       RETURN Reject(“email is on block list”, “do not escalate”)
 
-For information about how to use  decision types and their parameters, see [Decision types](link). 
+For information about how to use  decision types and their parameters, see [Decision types](fpl-lang-ref.md#decision-types). 
 
 Everything following the WHEN keyword must evaluate to a Boolean value. If a **WHEN** expression evaluates to *True*, the **RETURN** decision is executed. 
 
 ### WHEN
 
-A **WHEN** expression is made up of one or more Boolean expressions. You can string together multiple Boolean expressions using the [joining operators}(link) **AND (&&)** and **OR (||)**. 
+A **WHEN** expression is made up of one or more Boolean expressions. You can string together multiple Boolean expressions using the [joining operators](fpl-lang-ref.md#joining-operators) **AND (&&)** and **OR (||)**. 
 
 A Boolean expression is formed by checking and/or comparing variables. These variables come in two forms:
 
@@ -51,27 +51,27 @@ A Boolean expression is formed by checking and/or comparing variables. These var
 
 You can access all variables with the syntax *@variable*. To specify a variable is a part of an object, you can write *@”object.variable”*. 
 
-Fraud Protection language also provides functions that allow you to extract certain information from variables. For example, you can use a class of [Geo operators](link) to convert an IP address to a geographical address.
+Fraud Protection language also provides functions that allow you to extract certain information from variables. For example, you can use a class of [Geo operators](fpl-lang-ref.md#geo-operators) to convert an IP address to a geographical address.
 
 To use variables to form a Boolean expression, you can:
 
-- Compare variables to other variables, or to constants (link to comparison operators). 
+- [Compare](fpl-lang-ref.md#comparison-operators) variables to other variables, or to constants. 
 
       WHEN @email == “kayla@contoso.com”
       WHEN @”user.firstName” == @”shippingAddress.firstName”
       WHEN @riskscore > 700 
       WHEN Geo.CountryCode(@ipAddress) == “US”
 
-- Check if a variable is contained within a list (link to list operators)
+- Check if a variable is contained within a [list](fpl-lang-ref.md#list-operators-1).
 
       WHEN ContainsKey(“Safe List”, “Emails”, @email)
 
-- Check the value of a key within a list (link to list operators)
+- Check the value of a key within a [list](fpl-lang-ref.md#list-operators-1).
 
       WHEN Lookup(“Email List”, “Emails”, @email, “Status”) == “Safe”
       WHEN Lookup(“Country List”, “Country”, @country, “Score Cutoff”) < @riskScore
 
-- Evaluate a string (link to string operators)
+- Evaluate a [string](fpl-lang-ref.md#string-operators).
 
        WHEN @phoneNumber.startsWith(“1-“)
        WHEN @email.endsWith(“@contoso.com”)
@@ -85,10 +85,10 @@ To use variables to form a Boolean expression, you can:
 
 
 ### Supported operators
-FPL supports methods for [String operators](link), [Math operators](link), [Geo operators](link), and [DateTime](link) types. Click the links for information and examples.
+FPL supports methods for [String operators](fpl-lang-ref.md#string-operators), [Math operators](fpl-lang-ref.md#math-operators), [Geo operators](fpl-lang-ref.md#geo-operators), and [DateTime](fpl-lang-ref.md#datetime-types) types. Click the links for information and examples.
 
 ### Lists 
-You can create a rule with a previously created [custom list](rules.md) . To check if a specific value is contained in one of your lists, use the **ContainsKey** operation. Specify the list name, the column, and the key you want to check.
+You can create a rule with a previously created [custom list](rules.md). To check if a specific value is contained in one of your lists, use the **ContainsKey** operation. Specify the list name, the column, and the key you want to check.
 For example, if you have a single-column list of risky email addresses, titled *Risky email* list
 
 |Risky email |
