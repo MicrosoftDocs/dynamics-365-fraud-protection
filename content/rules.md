@@ -40,7 +40,7 @@ When you create a rule, you can add details that make it easily identifiable for
 Once a rule has been published, it can be set to either *Active* or *Inactive*. 
 - If a rule is *Active*, it affects real time production traffic. This means that all events of this type are evaluated against the rule. 
 - If a rule is *Inactive*, it does not affect production traffic. 
-For information on how to change the order in which Fraud Protection rules are run, see [Rule Ordering](rules.md#rules-ordering).
+For information on how to change the order in which Fraud Protection rules are run, see [Rule Ordering](rules.md#rule-ordering).
 
 #### Draft rules
 
@@ -171,7 +171,7 @@ The **Account protection Rules** page has two tabs:
 - On the **Account login** tab, you can create rules that check for fraudulent login credentials when someone logs into an existing account.
 
 You can view all the rules configured for an event type in the **Rules** management page. 
-The [order](link to ordering section) in which rules are displayed determines the order in which rules are executed. 
+The [order](rules.md#rules-ordering) in which rules are displayed determines the order in which rules are executed. 
 
 You can view the following information for each rule:
 -	The descriptive [Name](rules.md#details-name-and-description) of the rule.
