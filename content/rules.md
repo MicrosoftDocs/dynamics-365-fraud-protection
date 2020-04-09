@@ -57,11 +57,11 @@ When you create or edit a rule, the *Sample Payload* panel displays on the right
 The upper section of the **Payload** panel displays a sample of the API request code for the purchase, account creation, or account login event you are creating. This sample provides you with an example of the fields you can use to create a new rule. Sample payloads for purchase, account creation, and account login events are different and cannot be used interchangeably. When you create a rule, you may not use all the fields shown in the payload, or you may use additional fields not shown in the payload panel. 
 
 You can modify the sample payload to better reflect the data you want to send to Fraud Protection. When you change the payload, it has no impact on which data you are sending or not sending. It is provided as an example of the fields and the values you can use in the rule you are creating.
-For information on how to reference payload fields in rule clauses, see (link).
+For information on how to reference payload fields in rule clauses, see [Clauses](rules.md#clauses).
 
- The lower section of this panel contains the scores available to use from Fraud Protection’s adaptive AI. Note that the values shown are simply samples. The value itself can be edited and is not itself meaningful. Also, note that in prior-to-all scoring clauses (link) the scores shown here cannot be used. 
+ The lower section of this panel contains the scores available to use from Fraud Protection’s adaptive AI. Note that the values shown are simply samples. The value itself can be edited and is not itself meaningful. Also, note that in [prior-to-all scoring clauses](rules.md#prior-to-all-scoring-clauses) the scores shown here cannot be used. 
 
-For information on how to evaluate your rule against the sample payload and scores, see (link).
+For information on how to evaluate your rule against the sample payload and scores, see [Payload](rules.md#payload).
 
 ### Conditions
 
@@ -71,7 +71,7 @@ A condition starts with the keyword **WHEN** and is followed by a valid Boolean 
 
 Clauses that follow this condition can be used to configure fraud strategy pertaining to digital product transactions only. 
 
-Conditions are optional fields within a rule, and if you want the rule to apply to all events, do not enter a condition. For information on how conditions are used in rule ordering, see (link).
+Conditions are optional fields within a rule, and if you want the rule to apply to all events, do not enter a condition. For information on how conditions are used in rule ordering, see [Rule ordering](rules.md#rule-ordering).
 
 ### Clauses
 
@@ -82,9 +82,9 @@ Clauses are the core components of rules and contain the heart of your fraud str
 
 Where **x** represents a one of four types of decision: *Approve*, *Reject*, *Challenge*, and *Review*. This decision is executed only when **y** evaluates to *True*. 
 
-**y** represents a Boolean expression which can be formed using a combination of values from the [event payload](link), [user-defined lists](link), and [machine learning-based bot and risk scores](link). 
+**y** represents a Boolean expression which can be formed using a combination of values from the [event payload](rules.md#payload), [user-defined lists](lists.md), and [machine learning-based bot and risk scores](rules.md#post-bot-scoring-clauses). 
 
-For information about the syntax used for writing clauses see [Clauses](link).
+For information about the syntax used for writing clauses see the [Fraud Protection language guide](fpl-lang-ref.md).
 
 Clauses run sequentially in the order they are displayed on the page. Click the arrows to the right of each clause to re-order a clause. 
 
@@ -101,14 +101,14 @@ Once an event matches a condition, it is then run through the prior-to-all-scori
     RETURN Review("user location and product market mismatch") 
     WHEN Geo.MarketCode(“@device.ipAddress”) != “@productList.market”
 
-For information about supported geo operators, see (link). 
+For information about supported geo operators, see[Geo operators](fpl-lang-ref.md#geo-operators). 
 
 You can also use the clause in this section to reference lists. For example, if you have a custom list titled *Risky Emails* the following clause enables you to reject events if the user’s email appears on the list. 
 
     RETURN Reject ("email is on Risky Email list") 
     WHEN ContainsKey ("Risky Email List", "Emails", @username)
 
-For information about the syntax for referencing lists in rules, see (link).
+For information about the syntax for referencing lists in rules, the [Fraud Protection language guide](fpl-lang-ref.md).
 
 #### Post-bot-scoring clauses
 
@@ -174,11 +174,11 @@ You can view all the rules configured for an event type in the **Rules** managem
 The [order](link to ordering section) in which rules are displayed determines the order in which rules are executed. 
 
 You can view the following information for each rule:
--	The descriptive [Name](link) of the rule.
--	The [Condition](link) you creeated for the rule.
--	The [Status](link)of the rule (**Active**, **Inactive**, or **Draft**).
--	The [Description](link) of the rule.
--	The [Number of Clauses](link) in the rule.
+-	The descriptive [Name](rules.md#details-name-and-description) of the rule.
+-	The [Condition](rules.md#conditions) you creeated for the rule.
+-	The [Status](rules.md#status)of the rule (**Active**, **Inactive**, or **Draft**).
+-	The [Description](rules.md#details-name-and-description) of the rule.
+-	The [Number of Clauses](rules.md#clauses) in the rule.
 
 
 ## Create a new rule
@@ -198,7 +198,7 @@ You can create two types of rules to automatically accept, block, review, and ch
   
 1. Click **New Rule**, click **Rename**, and then add a name and description so that the rule is easily identifiable to you and your team.
 1. Add a [condition](link) to your rule.
-1. To create a new clause from scratch, click **+ new clause**, located under the appropriate [clause section](link).
+1. To create a new clause from scratch, click **+ new clause**, located under the appropriate clause section.
 
     Or, to create a new clause using a pre-existing template:
     
@@ -227,11 +227,11 @@ You can create two types of rules to automatically accept, block, review, and ch
 
 ## Manage existing rules
 You can perform the following operations on an existing rule on the Rules management page:
--	[Clone](link)
--	[Edit](link)
--	[Rename](link)
--	[Activate or Deactivate](link)
--	[Delete](link)
+-	[Clone](rules.md#clone-an-existing-rule)
+-	[Edit](rules.md#edit-an-existing-rule)
+-	[Rename](rules.md#update-the-name-and-description-of-a-rule)
+-	[Activate or Deactivate](rules.md#change-the-status-of-a-rule)
+-	[Delete](rules.md#delete-a-rule)
  
 ### Update the name and description of a rule
 
