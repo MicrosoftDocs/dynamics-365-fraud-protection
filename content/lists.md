@@ -21,11 +21,11 @@ Lists provide you with a flexible way to upload and access organized data within
 
 The Lists page has two tabs separating the two types of Lists you can create: **Custom lists** and **Support lists**. 
 
-## Custom lists
+### Custom lists
 
 Custom lists are created and defined by you. You can upload any number of custom lists and fill these lists with data specific to your business needs or fraud protection strategy. For example, you can create a list containing a set of email addresses, IP addresses, or product IDs, as well as additional values associated with each entry. 
 
-## Support lists
+### Support lists
 
 > [!NOTE]
 > You cannot view or create lists in the INT environment. You must use the PROD environment.
