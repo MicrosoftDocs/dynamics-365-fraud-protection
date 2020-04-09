@@ -88,7 +88,7 @@ To use variables to form a Boolean expression, you can:
 FPL supports methods for [String operators](fpl-lang-ref.md#string-operators), [Math operators](fpl-lang-ref.md#math-operators), [Geo operators](fpl-lang-ref.md#geo-operators), and [DateTime](fpl-lang-ref.md#datetime-types) types. Click the links for information and examples.
 
 ### Lists 
-You can create a rule with a previously created [custom list](rules.md). To check if a specific value is contained in one of your lists, use the **ContainsKey** operation. Specify the list name, the column, and the key you want to check.
+You can create a rule with a previously created [custom list](lists.md). To check if a specific value is contained in one of your lists, use the **ContainsKey** operation. Specify the list name, the column, and the key you want to check.
 For example, if you have a single-column list of risky email addresses, titled *Risky email* list
 
 |Risky email |
