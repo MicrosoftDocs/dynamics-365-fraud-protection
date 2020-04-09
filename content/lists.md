@@ -21,18 +21,18 @@ Lists provide you with a flexible way to upload and access organized data within
 
 The Lists page has two tabs separating the two types of Lists you can create: **Custom lists** and **Support lists**. 
 
+> [!NOTE]
+> You cannot view or create lists in the INT environment. You must use the PROD environment.
+
 ### Custom lists
 
 Custom lists are created and defined by you. You can upload any number of custom lists and fill these lists with data specific to your business needs or fraud protection strategy. For example, you can create a list containing a set of email addresses, IP addresses, or product IDs, as well as additional values associated with each entry. 
 
 ### Support lists
 
-> [!NOTE]
-> You cannot view or create lists in the INT environment. You must use the PROD environment.
-
 Support lists are system-configured lists of emails and payment instruments with a *safe*, *block*, or *watch* status, as well as an associated expiration date for each entry. While these lists can be viewed and downloaded from the Lists page, they can only be modified through the [Support page](risk-support.md).
 
-## Using lists 
+## Use lists 
 
 [Rules](rules.md) are used to define custom logic in order to automate decisions in your business. To help you define this logic, you can reference any list in a rule. For example, you can create a list of email addresses which are considered to be risky, and a separate list for those which are considered to be safe. You can then configure a rule so that login attempts using an email on the *Risky Emails* list is rejected, while those using an email on the *Safe Emails* list are approved. 
 
@@ -72,7 +72,7 @@ However, you can use additional columns to  hold values relevant to that key. Fo
 
 You can then configure your rule so that all login attempts using an email on this list with the status *Risky* are rejected, while those using an email with the status *Safe* are approved.
 
-In addition to using multi-column lists to combine safe and block lists, you can also use multi-column lists to specify the unique levels of risk associated with a set of products, emails, or countries. For example, if certain product types present different levels of risk to your business, you can make decisions for these products differently. Specifically, you can evaluate each product against its own [score threshold] (scorecard.md). To do this, you must first create a list to represent this information, as shown in the example below. 
+In addition to using multi-column lists to combine safe and block lists, you can also use multi-column lists to specify the unique levels of risk associated with a set of products, emails, or countries. For example, if certain product types present different levels of risk to your business, you can make decisions for these products differently. Specifically, you can evaluate each product against its own score threshold. To do this, you must first create a list to represent this information, as shown in the example below. 
 
 |Product Type    |Score threshold|
 |--------------|--------------|
@@ -113,7 +113,7 @@ You can update a custom list at any time to include new information or change ex
 
 1. If you have the most up to date version of the list saved on your computer, open this file. Otherwise, select the list you want to update and click **Download** to get the most up to date version.
 1. Make all your edits to the file directly. When you have finished editing, save the file to your machine. 
-1. Select the list you want to update, and then click **Edit**.
+1. In the **Lists** management page, select  the list you want to update, and then click **Edit**.
 1. Click **Browse** to locate the file. Select the file you just updated, and then click **Open**.
     
     Fraud Protection opens a preview of the file for you to review. The preview contains a maximum of 20 rows. 
