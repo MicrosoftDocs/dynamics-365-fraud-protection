@@ -20,14 +20,14 @@ title: Manage Rules
 
 Dynamics 365 Fraud Protection gives you the flexibility to create custom rules based on observed patterns, policies, or business objectives. Custom rules enable your analysts to write business logic for automated decision making and customize this logic to meet your unique business needs. Rules use a combination of inputs including values in the event response payload and machine learning-based scores to assess the risk of an event. You can configure rules to automatically accept, block, review, or challenge events based on these inputs. For example, you could create a rule that rejects account logins from certain email domains, when the risk score is high. 
 
+> [!NOTE]
+> You cannot view or create rules in the INT environment. You must use the PROD environment. 
+
 ### Purchase, account creation, and account login events
 
 You can create rules for *purchase*, *account creation*, and *account login* events in Fraud Protection. 
 - To access purchase rules, click **Purchase protection** on the left navigation. 
 - To access account creation and account login rules click **Account Protection (preview)** on the left navigation. There are two tabs on the **Account Protection** page, **Account Creation** and **Account Login**.
-
-> [!NOTE]
-> You cannot view or create rules or lists in the INT environment. You must use the PROD environment to display the Account Protection page and work with rules and lists. 
 
 ### Details (name and description)
 
@@ -160,15 +160,15 @@ If no conditions match the event, by default Fraud Protection executes:
 
 You can manage existing rules and create custom rules on the **Rules** management page. There are two rules management pages, one is for purchase protection and the other is for account protection. 
 
-  - To display rules related to purchases, click **Purchase protection** and then click **Rules** on the left navigation.
+- To display rules related to purchases, click **Purchase protection** and then click **Rules** on the left navigation.
 
-  - To display rules related to accounts, click **Account protection** and then click the **Rules** on the left navigation.
+- To display rules related to accounts, click **Account protection** and then click the **Rules** on the left navigation.
 
 The **Account protection Rules** page has two tabs:
 
-  - On the **Account creation** tab, you can create rules that check for fraud user credentials when someone is trying to create a new account.
+- On the **Account creation** tab, you can create rules that check for fraud user credentials when someone is trying to create a new account.
     
-  - On the **Account login** tab, you can create rules that check for fraudulent login credentials when someone logs into an existing account.
+- On the **Account login** tab, you can create rules that check for fraudulent login credentials when someone logs into an existing account.
 
 You can view all the rules configured for an event type in the **Rules** management page. 
 The [order](link to ordering section) in which rules are displayed determines the order in which rules are executed. 
@@ -191,7 +191,7 @@ You can create two types of rules to automatically accept, block, review, and ch
     - To create rules for protecting purchases, click **Purchase protection**. 
     - To create rules for protecting account creation and login, click **Account protection**. 
   
-1.	If you selected **Account protection**: 
+1. If you selected **Account protection**: 
 
     - To create a rule to protect account creation, click **Account Creation**.
     - To create a rule to protect account login, click **Account Login**.
@@ -203,7 +203,7 @@ You can create two types of rules to automatically accept, block, review, and ch
     Or, to create a new clause using a pre-existing template:
     
     1. Click the arrow to the right of **New Clause**. 
-          Fraud Protection displays a short list of templates. 
+        Fraud Protection displays a short list of templates. 
             
     1. To display the full selection of templates and their titles, descriptions, and contents, click **See all**. 
         
@@ -213,7 +213,7 @@ You can create two types of rules to automatically accept, block, review, and ch
             
 1. Review your rule.
 
-    You can add, remove, and re-order clauses using the controls to the right of the clause box. 
+  You can add, remove, and re-order clauses using the controls to the right of the clause box. 
     
 1. To publish your rule, click **Publish**. 
 1. (Optional) In the confirmation dialog, update the name and description.
@@ -251,20 +251,19 @@ When you clone a rule, you create a copy of an existing rule that you can modify
 
 #### To clone a rule:
 1. Select a rule, and then click **Clone**. 
-    This action creates a copy of the selected rule and automatically sets the status to **Inactive**. 
+  This action creates a copy of the selected rule and automatically sets the status to **Inactive**. 
 1. Update the rule, and then click **Publish**. 
   By default, the new rule displays at the bottom of the page.
 1. To move the rule to a new position: 
-    1.	Navigate to the **Rules** management page.
-    1.	Select the rule, drag it to its new position, and then click **Save order**. 
+  1. Navigate to the **Rules** management page.
+  1. Select the rule, drag it to its new position, and then click **Save order**. 
 
 ### Search for a rule
 
 When you search for a rule, all rule names and descriptions are searched, and the results are filtered accordingly. 
 
-	- To search for a rule, type a keyword into the **Search** box. 
-
-	- To remove the filter, delete the keyword from the **Search** box, or click the **x** to the right.
+- To search for a rule, type a keyword into the **Search** box. 
+- To remove the filter, delete the keyword from the **Search** box, or click the **x** to the right.
 
 ### Edit an existing rule
 
