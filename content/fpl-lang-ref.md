@@ -183,7 +183,7 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
 |**AND ( && )** |Logical **And** returns the Boolean value TRUE if either or both operands are TRUE and returns FALSE otherwise. |(x < 10 && y > 1) is true |
-|**OR (  )** |Logical **Or** returns the Boolean value TRUE if either or both operands are TRUE and returns FALSE otherwise. |(x == 5 OR y == 5) is false |
+|**OR ( \|\| )** |Logical **Or** returns the Boolean value TRUE if either or both operands are TRUE and returns FALSE otherwise. |(x == 5 \|\| y == 5) is false |
 
 #### Comparison operators
 
