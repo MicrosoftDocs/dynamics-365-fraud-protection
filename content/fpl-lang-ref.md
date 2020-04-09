@@ -10,125 +10,143 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Fraud Protection Language Reference Guide 
+title: Fraud Protection language guide 
 
 ---
-# Fraud Protection Language Reference Guide
+# Fraud Protection language guide 
 
-## Using Fraud Protection Language with Rules
+## Overview
 
-The Fraud Protection Language (FPL) includes two keywords that you use in every clause: **RETURN** and **WHEN**.
+Fraud Protection [Rules](rules.md) enable you to write business logic for automated decision making. Rules are made up of [conditions]( rules.md#conditions) and [clauses](rules.md#clauses). Clauses are written in a rich and expressive language that enables you to customize the logic required to meet your unique business needs. 
 
-### The RETURN keyword
+Fraud Protection language has significant overlap with C# and SQL. The **RETURN** and **WHERE** keywords define the clause and the *@field* syntax is used to extract fields from the payload. Most C# comparison and arithmetic operators are also available. Review the [language reference](link) for a complete list of available operators. 
 
-**RETURN** is a required element in any valid FPL clause. The keyword **RETURN** is followed by a decision type, which determines how a transaction is handled.
+## Quick start guide
 
-#### Decision Types
+### RETURN
 
-**RETURN** has four decision types.
+Clauses adhere to the following basic structure: 
 
-| Syntax           | Description     | Example |
-|------------------|-----------------|---------|
-|**Approve**|Accepts transaction based on user-defined settings.|Return Approve() WHEN ContainsKey("iplist", "IPAddress", @ipAddress)|
-|**Reject**    |Rejects transaction on user-defined settings.|Return Reject()WHEN ContainsKey("iplist", "IPAddress", @ipAddress)|
-|**Review**|   |(reason = "")
-|**Challenge** |Throws a challenge if user-defined settings are met or are not met.| Return Challenge("challenge type", "reason") WHEN @botScore < 900 AND @botScore > 400|
+      RETURN decision 
+      WHEN condition is true
 
-#### Parameters
+You can return a decision of *Approve*, *Reject*, *Challenge*, or *Review*, and include optional parameters to send more information about the decision. For example:
 
-Each decision type has at least two optional parameters: **Reason** and **SupportMessage**. Both parameters are represented with strings.
+      RETURN Reject()
+      RETURN Reject(“email is on block list”)
+      RETURN Reject(“email is on block list”, “do not escalate”)
 
-- The **Reason** parameter expresses the reason for the decision.
-- The **SupportMessage** parameter provides a space for additional text specific to that decision. For example, you can use this parameter to alert a support agent that a transaction was rejected due to geofencing laws, and should not be escalated (moved forward to the next rule).
+For information about how to use  decision types and their parameters, see [Decision types](link). 
 
-##### Using parameters with the Approve, Reject, and Review decision types
+Everything following the WHEN keyword must evaluate to a Boolean value. If a **WHEN** expression evaluates to *True*, the **RETURN** decision is executed. 
 
-For the **Approve**, **Reject**, and **Review** decision types, Reason is assumed to be the first parameter. and SupportMessage is assumed to be the second parameter. For example:
+### WHEN
 
-    RETURN Approve("myreason", "mymessage"). 
-You can specify a **Reason** without a **SupportMessage** by including only the first parameter:
+A **WHEN** expression is made up of one or more Boolean expressions. You can string together multiple Boolean expressions using the [joining operators}(link) **AND (&&)** and **OR (||)**. 
 
-    RETURN Approve("myreason"). 
-You can specify a **supportMessage** without a **Reason** by including only the second parameter:
+A Boolean expression is formed by checking and/or comparing variables. These variables come in two forms:
 
-    RETURN Approve(supportMessage="mymessage"). 
-And you can choose not to specify either parameter:
+- Payload values
+- Scores
 
-    RETURN Approve() 
+You can access all variables with the syntax *@variable*. To specify a variable is a part of an object, you can write *@”object.variable”*. 
 
-##### Using parameters with the Challenge decision type
+Fraud Protection language also provides functions that allow you to extract certain information from variables. For example, you can use a class of [Geo operators](link) to convert an IP address to a geographical address.
 
-For **Challenge**, the first parameter is always **challengeType** (for example, SMS), and is required.
+To use variables to form a Boolean expression, you can:
 
-**Reason** and **SupportMessage** are optional parameters and follow the same patterns as the examples above. For example:
+- Compare variables to other variables, or to constants (link to comparison operators). 
 
-    RETURN Challenge("SMS", "reason", "message") 
-or
+      WHEN @email == “kayla@contoso.com”
+      WHEN @”user.firstName” == @”shippingAddress.firstName”
+      WHEN @riskscore > 700 
+      WHEN Geo.CountryCode(@ipAddress) == “US”
 
-    Challenge("SMS"). 
+- Check if a variable is contained within a list (link to list operators)
 
-### THe WHEN keyword
+      WHEN ContainsKey(“Safe List”, “Emails”, @email)
 
-Everything that follows **WHEN** must evaluate to a Boolean value.
+- Check the value of a key within a list (link to list operators)
 
-If the **WHEN** expression evaluates to True, the RETURN decision is executed. 
-In constructing a **WHEN** expression, you can string together multiple Boolean expressions using the logical operators **AND (&&)** and **OR (||)**. Basic comparison operators such as **==**, **>**, **<**, **!=** are also supported.
+      WHEN Lookup(“Email List”, “Emails”, @email, “Status”) == “Safe”
+      WHEN Lookup(“Country List”, “Country”, @country, “Score Cutoff”) < @riskScore
 
-To reference a variable in the payload, or a variable returned from model evaluation, preface the variable name with the @ operator. For example:
-    @username
-or
-    @botscore)
+- Evaluate a string (link to string operators)
 
-This is an example of a valid clause:
-    RETURN Approve("whitelisted user")
-    WHEN @username == johndoe@gmail.com
+       WHEN @phoneNumber.startsWith(“1-“)
+       WHEN @email.endsWith(“@contoso.com”)
 
-### Using operators in rules
+## Advanced topics
 
-FPL also supports methods for **String** operators, **Math** operators, **Geo** operators, and **DateTime** types. Click the links for more information and examples about the operators.
-
-#### Using the Lookup operator in a rule
-
-You can create a rule with the Lookup operator to check the value of an entry within a specific list.
-
-First, you create a list of all email address marked either Safe or Risky. For example:
-
-|**Risky Emails**|**Status**|
-|---------|---------|
-|alia@gmail.com|Safe|
-|sarah@gmail.com|Risky|
-|michael@gmail.com|Risky|
-|jake@gmail.com|Safe|
-
-Then, you create a rule using the Lookup operator to check if an email address is marked either *Safe* or *Risky*. 
-In the Lookup clause, specify the List you want to check (****Email List*), the column heading within that list you want to check (*Emails*), the key you're looking for (*username*), and the column name of the value you'd like to extract (*Status*). For example:
-
-    Lookup("Email List", "Emails", @username, "Status")
-
-When you run the rule, if any username represented by @username is located, it will return the corresponding status. If @username is not contained within the list, it will return a default return ???. 
-
-This is an example of a clause using the Lookup operation:
-
-    RETURN Reject("email marked as risky")
-    WHEN Lookup("Email List", "Emails", @username, "Status") == "Risky"
-
-### Using lists in rules
-
-You can use any custom List you've previously created in your Rules. To check if a specific value is contained in one of your Lists, use the **ContainsKey** operation. Specify the **List** name you want to check, the column name within that *List* to look in, and the key to check for.
-For example, if you have a single-column **List** of risky email addresses, titled **Risky Email List**, as shown below:
-
-You can add a clause to your rule to check membership in the Risky Email List. For example:
-
-    RETURN Reject("in risky email list")
-    WHEN ContainsKey("Risky Email List", "Risky Emails", @username)
-
-When you run this rule, DFP checks if *@username* is contained in the *Risky Emails* column within the *Risky Email* List.
+### Typing
 
 
-## Fraud Protection Language Reference Guide
+### List operators
 
-> [!NOTE]
-> Rule syntax is not case-sensitive.
+
+### Supported operators
+FPL supports methods for [String operators](link), [Math operators](link), [Geo operators](link), and [DateTime](link) types. Click the links for information and examples.
+
+### Lists 
+You can create a rule with a previously created [custom list](rules.md) . To check if a specific value is contained in one of your lists, use the **ContainsKey** operation. Specify the list name, the column, and the key you want to check.
+For example, if you have a single-column list of risky email addresses, titled *Risky email* list
+
+|Risky email |
+|--------------|
+|Kayla@contoso.com |
+|Jamie@bellowscollege.com |
+|Marie@atatum.com |
+
+You can add a clause to your rule to check membership in the *Risky email* list. For example:
+
+      RETURN Reject(“in risky email list”) 
+      WHEN ContainsKey(“Risky Email List”, “Risky Emails”, @username) 
+
+When you run this rule, Fraud Protection checks if the *Risky emails* column in the Risky email list contains *@username*.
+
+### The Lookup operator
+
+You can create a rule with the **Lookup** operator to check the value of an entry in a specific list.  
+First, you create a list of all email address marked either *Safe* or *Risky*. For example: 
+
+|Email address|Status|
+|--------------|--------------|
+|Kayla@contoso.com |Risky|
+|Jamie@bellowscollege.com|Risky|
+|Marie@atatum.com|Risky|
+|Camille@fabrikam.com|Safe|
+|Miguel@proseware.com |Safe |
+|Tyler@contoso.com |Safe |
+
+Next, you create a rule using the Lookup operator to check if an email address is marked either *Safe* or *Risky*.
+When you write the **Lookup** clause, specify the list you want to check (*Email* list), the column heading you want to check (*Emails*), the key you’re looking for (*username*), and the column name of the value you want to extract (*Status*). For example: 
+
+      Lookup(“Email List”, “Emails”, @username, “Status”)
+
+When you run the rule, if any username represented by *@username* is located, Fraud Protection will return the corresponding status. For example:
+
+      RETURN Reject(“email marked as risky”) 
+      WHEN Lookup(“Email List”, “Emails”, @username, “Status”) == “Risky” 
+
+### Decision parameters
+
+
+
+
+### Examples of clauses
+
+
+
+
+
+
+
+
+
+
+
+
+## Language reference 
 
 ### Keywords
 
@@ -141,13 +159,26 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 | |Rejects transaction based on user-defined settings. |Return Reject() WHEN ContainsKey("iplist", "IPAddress", @ipAddress) |
 | |Throws a challenge if user-defined settings are met or not met. |Return Challenge("challenge type", "reason") WHEN @botScore < 900 AND @botScore > 400 |
 
-### Logical operators
+#### Decision types
 
-These operators take inputs that are either *True* (1) or *False* (0) and produce a single output value that is also either *True* or *False*.
+| Syntax   | Description     | Example|
+|-------|-----------------|--------|
+|Approve   |Accepts transaction based on user-defined settings.                 |Return Approve()   WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress) |
+|Reject    |Rejects transaction on user-defined settings.                       |Return Reject()   WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress) |
+|Review    |                                                                    |(reason = "") |
+|Challenge |Throws a challenge if user-defined settings are met or are not met. |Return Challenge(“challenge type", "reason")   WHEN @botScore < 900 AND @botScore > 400 |
+
+#### Variables
+
+| Syntax    | Description     | Example|
+|-------|-----------------|--------|
+|@          |Looks up a specified variable.                                    |@field @"findthis.thenthis.thenthis"|
+|@botscore  |A clause executed in sequential order after bot model scoring.    |RETURN Challenge(“challenge type", "reason") WHEN @botScore < 900 AND @botScore > 400 |
+|@riskscore |A clause executed in sequential order after risk model scoring.   |@riskscore |
+
+
 
 #### Joining operators
-
-These operators compare their operands.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
@@ -172,6 +203,7 @@ These operators compare their operands.
 |-------|-----------------|--------|
 |ContainsKey("dataset name", "index name", @index_key) |Checks whether a key is being mapped. | |
 |Lookup("dataset name", "index name", @index_key, "value name") |Returns a value from a one-row, a one-column range, or from an array. | |
+|In      |Finds the value of the specified variable and checks if its value exists in the list of comma-separated tokens. Search is not case-sensitive and does not require spaces after commas.|In(@hello, "abc,xyz,mag")|
 
 #### String operators
 
@@ -184,6 +216,7 @@ These operators verify that the object on the left side of the operator is equal
 |Contains |Returns a value indicating whether a specified character occurs within this string |(string)@ExceptionName.Contains("Argument") |
 |IndexOf | | |
 |IsNullOrEmpty | | |
+|Exists| Checks if the variable name exists in the string|@ext.Exists(@field)    select Exists(@ext)| 
 
 #### Math operators
 
@@ -215,24 +248,33 @@ These operators convert an IP address to a geographical address.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-| | | |
-| | | |
+|TruncateTo  |Rounds the DateTime toward the past based on the timeSpan. |(DateTime)@time.TruncateTo(TimeSpan.FromDays(1))|DateTime.UtcNow.TruncateTo(TimeSpan.FromMinutes(1))|
+|TruncateToMillisecond|Returns the DateTime rounded to the past millisecond. |(DateTime)@time.TruncateToMillisecond()|
+|TruncateToMinute|Returns the DateTime rounded to the past minute. |(DateTime)@time.TruncateToMinute()|
+|TruncateToHour|Returns the DateTime rounded to the past hour. |(DateTime)@time.TruncateToHour()|
+|TruncateToDay|Returns the DateTime rounded to the past day. |(DateTime)@time.TruncateToDay()|
+|TruncateToWeek|Returns the DateTime rounded to the past week. |(DateTime)@time.TruncateToWeek()|
+|TruncateToMonth|Returns the DateTime rounded to the past month. |(DateTime)@time.TruncateToMonth()|
+|TruncateToYear |Returns the DateTime rounded to the past year. |(DateTime)@time.TruncateToYear()|
 
 
-### Variables
+
+
+### Typing
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|@    |Looks up a specified variable.    |@field @"findthis.thenthis.thenthis"|
-|@botscore    |A clause executed in sequential order after bot model scoring.    |RETURN Challenge("challenge type", "reason") WHEN @botScore < 900 AND @botScore > 400|
-|@riskscore    |A clause executed in sequential order after risk model scoring.    |@riskScore|
+| | | |
+| | | |
 
-
-### Miscellaneous
+### Additional RETURN types
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|Exists    |Checks if the variable name exists in the string    |@ext.Exists(@field) select Exists(@ext)|
-|In    |Finds the value of the specified variable and checks if its value exists in the list of comma-separated tokens. Note that Search is not case-sensitive and does not require spaces after commas.    |In(@hello, "abc,xyz,mag")|
-|Other    |    | |
+|Other | | |
+| | | |
+
+
+
+
 
