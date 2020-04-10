@@ -38,7 +38,7 @@ The **AccountCreation** API lets you share information and context with Fraud Pr
 |                                     | Name                        | string   | The value is **"AP.AccountCreation"**. |
 |                                     | Version                     | string   | The value is **"0.5"**. |
 | MetaData                            | trackingId                  | string   | The identifier of the **AccountUpdateId** event. |
-| MetaData                            | SignUpId                    | string   | The identifier of the **AccountUpdateId** event. (This value can match the value of the **trackingId** attribute.) |
+| MetaData                            | SignupId                    | string   | The identifier of the **AccountUpdateId** event. (This value can match the value of the **trackingId** attribute.) |
 | MetaData                            | assessmentType              | string   | The assessment type for the event. Possible values are **'evaluate'** and **'protect'**. If no value is specified, the default value is **'protect'**. |
 | MetaData                            | customerLocalDate           | dateTime | The creation date of the **AccountUpdateId** event, in the customer's local time zone. The format is ISO 8601. |
 | MetaData                            | merchantTimeStamp           | dateTime | The time stamp for the event. |
@@ -150,7 +150,6 @@ The **AccountLogIn** API lets you share information and context with Fraud Prote
 | User                              | userId                      | string   | The user identifier. This information is provided by the merchant. |
 | User                              | userType                    | string   | The user's profile type. Possible values are **'Consumer'**, **'Developer'**, **'Seller'**, **'Publisher'**, and **'Tenant'**. |
 | User                              | UserName                    | string   | The user-provided user name that is unique in the merchant system. |
-| User                              | passwordHash                | string   | The user-provided password that is hashed in the merchant system. |
 | User \\ SSOAuthenticationProvider | authenticationProvider      | string   | The user's SSO authentication provider, if it differs from the merchant's SSO authentication provider. Possible values are **'MSA'**, **'Facebook'**, **'PSN'**, **'MerchantAuth'**, and **'Google'**. |
 | User \\ SSOAuthenticationProvider | displayName                 | string   | The user's display name for the SSO authentication provider (for example, the user name from a Microsoft account, Facebook, or Google). |
 | User \\ RecentUpdate              | lastPhoneNumberUpdate       | dateTime | The date/time of the most recent update or creation of any phone number. |
