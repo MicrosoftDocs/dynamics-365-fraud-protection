@@ -197,8 +197,8 @@ You can create two types of rules to automatically accept, block, review, and ch
     - To create a rule to protect account login, click **Account Login**.
   
 1. Click **New Rule**, click **Rename**, and then add a name and description so that the rule is easily identifiable to you and your team.
-1. Add a [condition](link) to your rule.
-1. To create a new clause from scratch, click **+ new clause**, located under the appropriate clause section.
+1. Add a [condition](rules.md#conditions) to your rule.
+1. To create a new [clause](rules.md#clauses) from scratch, click **+ new clause**, located under the appropriate clause section.
 
     Or, to create a new clause using a pre-existing template:
     
@@ -217,7 +217,7 @@ You can create two types of rules to automatically accept, block, review, and ch
     
 1. To publish your rule, click **Publish**. 
 1. (Optional) In the confirmation dialog, update the name and description.
-1. Set the status of the rule to either **Active** or **Inactive**, and then click **Publish**.
+1. Set the [status](rules.md#status) of the rule to either **Active** or **Inactive**, and then click **Publish**.
 
     By default, the new rule displays at the bottom of the page.
     
@@ -271,7 +271,7 @@ To edit an existing rule, select the rule, click **Edit**, make your changes, an
 
 ### Change the order of a rule
 
-The order in which rules display on the **Rules** page is significant because an event runs through each rule in the order in which it appears until a condition is matched. By moving more important rules to the top of the list, you a quicker response when you run your rules.
+The order in which rules display on the **Rules** page is significant because an event runs through each rule in the order in which it appears until a condition is matched. By moving more important rules to the top of the list, you receive a quicker response when you run your rules.
 
 #### To move a rule to a new position using a keyboard: 
 
