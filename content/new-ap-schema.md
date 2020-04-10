@@ -1,9 +1,9 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic outlines the schemas that are used in account protection.
-ms.author: kelsiefu 
+ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 03/01/2020
+ms.date: 04/09/2020
 
 ms.topic: conceptual
 search.app: 
