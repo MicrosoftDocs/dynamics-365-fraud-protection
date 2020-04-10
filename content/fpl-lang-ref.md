@@ -131,19 +131,7 @@ When you run the rule, if any username represented by *@username* is located, Fr
 ### Decision parameters
 
 
-
-
 ### Examples of clauses
-
-
-
-
-
-
-
-
-
-
 
 
 ## Language reference 
@@ -154,26 +142,26 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|**RETURN** |User defined clauses that return a decision based on specific conditions. Clauses run in sequential order based on user-defined settings.|Return Approve() WHEN ContainsKey("iplist", "IPAddress", @ipAddress)|
-|**WHEN** |Accepts transaction based on user-defined settings. |Return Approve() WHEN ContainsKey("iplist", "IPAddress", @ipAddress) |
-| |Rejects transaction based on user-defined settings. |Return Reject() WHEN ContainsKey("iplist", "IPAddress", @ipAddress) |
-| |Throws a challenge if user-defined settings are met or not met. |Return Challenge("challenge type", "reason") WHEN @botScore < 900 AND @botScore > 400 |
+|**RETURN** |User defined clauses that return a decision based on specific conditions. Clauses run in sequential order based on user-defined settings.|Return Approve()<br>WHEN ContainsKey("iplist", "IPAddress", @ipAddress)|
+|**WHEN** |Accepts transaction based on user-defined settings. |Return Approve()<br>WHEN ContainsKey("iplist", "IPAddress", @ipAddress) |
+| |Rejects transaction based on user-defined settings. |Return Reject()<br>WHEN ContainsKey("iplist", "IPAddress", @ipAddress) |
+| |Throws a challenge if user-defined settings are met or not met. |Return Challenge("challenge type", "reason")<br>WHEN @botScore < 900 AND @botScore > 400 |
 
 #### Decision types
 
 | Syntax   | Description     | Example|
 |-------|-----------------|--------|
-|Approve   |Accepts transaction based on user-defined settings.                 |Return Approve()   WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress) |
-|Reject    |Rejects transaction on user-defined settings.                       |Return Reject()   WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress) |
+|Approve   |Accepts transaction based on user-defined settings.                 |Return Approve()<br>WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress) |
+|Reject    |Rejects transaction on user-defined settings.                       |Return Reject()<br>WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress) |
 |Review    |                                                                    |(reason = "") |
-|Challenge |Throws a challenge if user-defined settings are met or are not met. |Return Challenge(“challenge type", "reason")   WHEN @botScore < 900 AND @botScore > 400 |
+|Challenge |Throws a challenge if user-defined settings are met or are not met. |Return Challenge(“challenge type", "reason")<br>WHEN @botScore < 900 AND @botScore > 400 |
 
 #### Variables
 
 | Syntax    | Description     | Example|
 |-------|-----------------|--------|
 |@          |Looks up a specified variable.                                    |@field @"findthis.thenthis.thenthis"|
-|@botscore  |A clause executed in sequential order after bot model scoring.    |RETURN Challenge(“challenge type", "reason") WHEN @botScore < 900 AND @botScore > 400 |
+|@botscore  |A clause executed in sequential order after bot model scoring.    |RETURN Challenge(“challenge type", "reason")<br>WHEN @botScore < 900 AND @botScore > 400 |
 |@riskscore |A clause executed in sequential order after risk model scoring.   |@riskscore |
 
 
@@ -248,7 +236,7 @@ These operators convert an IP address to a geographical address.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|TruncateTo  |Rounds the DateTime toward the past based on the timeSpan. |(DateTime)@time.TruncateTo(TimeSpan.FromDays(1))|DateTime.UtcNow.TruncateTo(TimeSpan.FromMinutes(1))|
+|TruncateTo  |Rounds the DateTime toward the past based on the timeSpan. |(DateTime)@time.TruncateTo(TimeSpan.FromDays(1))<br>DateTime.UtcNow.TruncateTo(TimeSpan.FromMinutes(1))|
 |TruncateToMillisecond|Returns the DateTime rounded to the past millisecond. |(DateTime)@time.TruncateToMillisecond()|
 |TruncateToMinute|Returns the DateTime rounded to the past minute. |(DateTime)@time.TruncateToMinute()|
 |TruncateToHour|Returns the DateTime rounded to the past hour. |(DateTime)@time.TruncateToHour()|
