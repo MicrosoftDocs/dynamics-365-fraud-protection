@@ -22,8 +22,9 @@
     href: data-upload.md
   - name: View schemas
     href: schema.md  
-  - name: Manage lists and rules
-    href: lists-rules.md
+    href: rules.md
+  - name: Fraud Protection language guide
+    href: fpl-lang-ref.md
   - name: Use the virtual fraud analyst
     href: virtual-fraud-analyst.md   
   - name: Learn from the scorecard
@@ -68,11 +69,9 @@
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
-  - name: Manage lists
-    href: lists.md
   - name: Manage rules
     href: rules.md
-  - name: Fraud Protection language reference guide
+  - name: Fraud Protection language guide
     href: fpl-lang-ref.md
   - name: Learn from the account protection scorecard
     href: ap-scorecard.md
@@ -88,6 +87,8 @@
     href: loss-prevention-data-upload.md
   - name: Loss prevention schemas
     href: view-loss-prevent-schemas.md
+- name: Manage lists
+  href: lists.md
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance
