@@ -22,6 +22,7 @@
     href: data-upload.md
   - name: View schemas
     href: schema.md  
+  - name: Manage rules
     href: rules.md
   - name: Fraud Protection language guide
     href: fpl-lang-ref.md
