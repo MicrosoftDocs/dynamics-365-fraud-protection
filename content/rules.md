@@ -171,7 +171,7 @@ The **Account protection Rules** page has two tabs:
 - On the **Account login** tab, you can create rules that check for fraudulent login credentials when someone logs into an existing account.
 
 You can view all the rules configured for an event type in the **Rules** management page. 
-The [order](rules.md#rules-ordering) in which rules are displayed determines the order in which rules are executed. 
+The [order](rules.md#rule-ordering) in which rules are displayed determines the order in which rules are executed. 
 
 You can view the following information for each rule:
 -	The descriptive [Name](rules.md#details-name-and-description) of the rule.
