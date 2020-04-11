@@ -44,7 +44,7 @@ The **Rules** page displays a list of all the rules configured for an event type
 -  The [Description](rules.md#details-name-and-description) of the rule.
 -  The [Number of Clauses](rules.md#clauses) in the rule.
 
-The [order](rules.md#rules-ordering) in which rules are listed on the Rules page determines the order in which the rules are executed. 
+The [order](rules.md#understand-rule-ordering) in which rules are listed on the Rules page determines the order in which the rules are executed. 
 
 ## Components of a rule
 
@@ -111,7 +111,7 @@ A condition starts with the keyword **WHEN** and is followed by a valid Boolean 
 
 Clauses that follow this condition can be used to configure fraud strategy pertaining to digital product transactions only. 
 
-Conditions are optional fields within a rule, and if you want the rule to apply to all events, do not enter a condition. For information on how conditions are used in rule ordering, see [Rule ordering](rules.md#rule-ordering).
+Conditions are optional fields within a rule, and if you want the rule to apply to all events, do not enter a condition. For information on how conditions are used in rule ordering, see [Rule ordering](rules.md#understand-rule-ordering).
 
 ### Clauses
 
@@ -122,7 +122,7 @@ Clauses are the building blocks of rules and contain the heart of your fraud str
 
 You can create a clause to return a decision of Approve, Reject, Challenge, or Review, and include optional parameters to send more information about the [decision](fpl-lang-ref.md).
 
-Everything following the WHEN keyword must evaluate to either True or False. This Boolean expression can be formed using a combination of values from the [event payload](rules.md#payload), [user-defined lists](lists.md), and [AI-based bot and risk scores](rules.md#post-bot-scoring-clauses). 
+Everything following the WHEN keyword must evaluate to either True or False. This Boolean expression can be formed using a combination of values from the [event payload](rules.md#clauses), [user-defined lists](lists.md), and [AI-based bot and risk scores](rules.md#post-bot-scoring-clauses). 
 
 For information about the syntax used for writing clauses see the [Fraud Protection language guide](fpl-lang-ref.md).
 
@@ -192,7 +192,7 @@ If no rules are evaluated because no conditions match the event, by default, Fra
 
     RETURN Approve(“NO_RULE_HIT”)
 
-For information on how to reorder rules, see [Understand rule ordering](rules.md#understand-rule-reordering).
+For information on how to reorder rules, see [Understand rule ordering](rules.md#understand-rule-ordering).
 
 ## Create a new rule
 You can create rules to automate decision-making for purchase, account creation, and account login events. 
@@ -217,7 +217,7 @@ You can create rules to automate decision-making for purchase, account creation,
         
     You can modify all values in the template to suit your business requirements. 
     
-1. To [evaluate your rule](rulesmd#) to ensure it works as expected, click **Expand** on the bottom right of the **Rules** page to expand the evaluation panel.
+1. To [evaluate your rule](rules.md#evaluate-a-rule) and ensure it works as expected, click **Expand** on the bottom right of the **Rules** page to expand the evaluation panel.
 1. To publish your rule, click **Publish**, change the name, description, and status in the confirmation dialog, and then click **Publish**.
     You can set the [status](rules.md#status) to either **Active** or **Inactive**.
 1. By default, the new rule displays at the bottom of the page. To move the rule to a new position on the order list: 
@@ -278,7 +278,7 @@ To edit an already-published rule:
 
 ### Change the order of a rule
 
-The [order in which rules](rules.md#rule-ordering) display on the **Rules** page has a signficant impact on how your events are evaluated. 
+The [order in which rules](rules.md#understand-rule-ordering) display on the **Rules** page has a signficant impact on how your events are evaluated. 
 
 #### To move a rule to a new position using drag-and-drop:
 
@@ -308,7 +308,7 @@ You can use the rule evaluation panel at the bottom of the **Rules** page to ens
   
 - To collapse the panel, click **Collapse**.
 
-When the evaluation panel is expanded, your can watch your rule being evaluated against the [sample payload](rules.md#sample-payload). As you make changes to the sample or to a clause, the content in the evaluation panel updates accordingly.
+When the evaluation panel is expanded, your can watch your rule being evaluated against the [sample payload](rules.md#sample). As you make changes to the sample or to a clause, the content in the evaluation panel updates accordingly.
 
 The evaluation panel displays the decision Fraud Protection returns for this sample event, as well as any values associated with the response. If a reason or support message was specified, it also appears here. The clause that triggers the decision is outlined in green. 
 
