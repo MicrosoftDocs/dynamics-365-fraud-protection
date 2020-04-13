@@ -17,24 +17,32 @@ title: Manage lists
 
 ## Overview
 
-Lists provide you with a flexible way to upload and access organized data within Dynamics 365 Fraud Protection. You can reference any list in  a [rule](rules.md) in order to help you execute your business logic and fraud strategy at scale.
+Lists allow you to upload and access organized data in Dynamics 365 Fraud Protection. You can reference any list in a [rule](rules.md) to help execute your business logic and fraud strategy.
 
-The Lists page has two tabs separating the two types of Lists you can create: **Custom lists** and **Support lists**. 
+The Lists page has two tabs separating the two types of lists you can create: **Custom lists** and **Support lists**. 
 
 > [!NOTE]
 > You cannot view or create lists in the INT environment. You must use the PROD environment.
 
 ### Custom lists
 
-Custom lists are created and defined by you. You can upload any number of custom lists and fill these lists with data specific to your business needs or fraud protection strategy. For example, you can create a list containing a set of email addresses, IP addresses, or product IDs, as well as additional values associated with each entry. 
+Custom lists are created and defined by you. You can upload any number of custom lists and fill these lists with data specific to your business needs or fraud protection strategy. For example, you can create a list containing email addresses, IP addresses, or product IDs, as well as additional values associated with each entry. 
 
 ### Support lists
 
-Support lists are system-configured lists of emails and payment instruments with a *safe*, *block*, or *watch* status, as well as an associated expiration date for each entry. While these lists can be viewed and downloaded from the Lists page, they can only be modified through the [Support page](risk-support.md).
+Support lists are system-defined lists of emails and payment instruments with a *safe*, *block*, or *watch* status, as well as an associated expiration date for each entry. While these lists can be viewed and downloaded from the Lists page, they can only be modified through the [Support page](risk-support.md).
+
+### Required list formats
+
+To upload a custom list in Fraud Protection, you must first create and save the list as a CSV file on your local machine. The file must meet the following requirements:
+
+- It must be in CSV UTF-8 (comma delimited) format (*.csv).
+-	It must contain unique headers for every column.
+-	It must be under the maximum file size of 20 megabytes (MB).
 
 ## Use lists 
 
-[Rules](rules.md) are used to define custom logic in order to automate decisions in your business. To help you define this logic, you can reference any list in a rule. For example, you can create a list of email addresses which are considered to be risky, and a separate list for those which are considered to be safe. You can then configure a rule so that login attempts using an email on the *Risky Emails* list is rejected, while those using an email on the *Safe Emails* list are approved. 
+[Rules](rules.md) define custom logic that automate business decisions. To help you define this logic, you can leverage any list in a rule. For example, you can create a list of email addresses which are considered to be risky, and a separate list for those which are considered to be safe. You can then configure a rule so that login attempts using an email on the *Risky Emails* list are rejected, while those using an email on the *Safe Emails* list are approved. 
 
 ### Single and multiple-column lists
 
@@ -83,11 +91,11 @@ In addition to using multi-column lists to combine safe and block lists, you can
 You can then configure a rule that enforces that transactions are rejected when they have a [risk score](ap-scorecard.md#risk-model-score) above the specified threshold for that product type. For information on about how to create effective rules to customize your business logic, see [Rules](rules.md). 
 
 ## Upload a list
+You can upload organized data in a list file to Fraud Protection and then reference the list in a [rule](rules.md).
 
-To create a custom list in Fraud Protection, you must first create and save the list as a CSV file on your local machine. The file must meet the following requirements.
-- Must be in CSV UTF-8 (comma delimited) format (*.csv).
--	Must contain unique headers for every column.
--	Must be under the maximum file size of 20 megabytes (MB).
+> [!IMPORTANT]
+> When working with sensitive personal data or highly regulated data types, take care to upload this data only from a secure network location. This type of data may include:<br>- Biometric data, genetic data, or any data related to health. <br>- Personal data revealing racial or ethnic origin or religious views; or <br>- Personal data, which by their nature, are sensitive or privacy, such as data concerning a person’s sexual orientation or philosophical beliefs.<br><br>We recommend that you do not include this type of data in the files that you upload. <br>For information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](data-upload.md#security-compliance).
+ 
 
 **To upload a list to Fraud Protection:**
 
@@ -104,10 +112,9 @@ To create a custom list in Fraud Protection, you must first create and save the 
 
 ## Update a list
 
-> [!NOTE]
->  You cannot update support lists from the Fraud Protection **Lists** page. You can only modify them through the [Support page](risk-support.md). 
+You can update a custom list from the **Lists** page at any time to add new information or change existing information. You can change the description of a custom list, but you cannot change its name. 
 
-You can update a custom list at any time to include new information or change existing information. You can change the description of a list, but you cannot change its name.
+To modify support lists, use the [Support page](risk-support.md).
 
 **To update the contents of a custom list in Fraud Protection:**
 
@@ -131,13 +138,17 @@ You can update a custom list at any time to include new information or change ex
 When you delete a list, any rules which use this list will no longer work.
 
 - To delete a list, select the list, and then click **Delete**.  
+-	To delete multiple lists, select the lists you want to remove, and then click **Delete**.
    
 ## Download a list
 
-You can download a list in Fraud Protection and then view it in Microsoft Excel. 
+You can download a list in Fraud Protection and then view it in any text editor. 
 
-- To download a list, select the list you want, and then click **Download**. 
-- To open a downloaded list, click the **Excel** icon in the left corner of the Fraud Protection window.
+- To download a list, select the list you want and click **Download**. Then click the icon in the left corner of the Fraud Protection window to view the list. 
+
+- To download multiple lists, select the lists you want to download, and then click **Download**.
+
+    When you download multiple files, they are downloaded as a zip file.
 
 ## Search for a list
 
@@ -147,8 +158,8 @@ When you search for a list, all list names and descriptions are searched, and th
 - To remove the filter, delete the keyword from the **Search** box, or click the **x** to the right.
 
 ## Preview a list
-You can preview a file in Fraud Protection. The preview contains a maximum of 20 rows. 
+You can preview a list in Fraud Protection. The preview panel displays a maximum of 20 rows. 
 
-- To preview a list, select the list you want and click **Preview**. 
-- To view the full list, click **Download** to download the list and then open the file in Excel.
+- To preview a list, select the list you want, and then click **Preview**. 
+- To view the full list, click **Download** to download the list, and then open the file in any text editor.
 
