@@ -28,14 +28,15 @@ There are two types of rules you can create in the **Rules** editor after explor
     
     For example, you can build a custom list of products that are currently in a specific price range and use that list to build your rule. Use filters on [standard ontology nodes and attributes](graph-explorer.md), and then select an appropriate [list](lists.md) that contains the corresponding dataset. 
     
-    Next, you can set up a rule to screen for high-priced products that are bought only by users who live in high-risk countries or regions.
+    Next, you can set up a [rule](rules.md) to screen for high-priced products that are bought only by users who live in high-risk countries or regions.
     
 2. **"Catch-all fraud" rules for all your traffic.**
 
     You can create a catch-all rule to meet your needs for all transactions without being linked to a specific custom list. To understand the impact of a catch-all rule on fraud protection, skip step 1 in the step-by-step instructions below and move directly to step 2, where you select a risk score. 
+    
     For more information on rules and lists, see [Manage rules](rules.md) and [Manage lists](lists.md).
 
-## Use rules in the Virtual fraud analyst 
+## Use rules in the virtual fraud analyst 
 
 ### Step 1 (optional)
 
@@ -71,7 +72,7 @@ In step 2, you use the **Transaction data** chart to examine the effect of fraud
 
 #### The Transaction data chart
 
-In the chart on the left of the **Virtual fraud analyst** page, the x-axis represents the risk score, and the y-axis represents the number of transactions.
+In the **Transaction data** chart on the left of the **Virtual fraud analyst** page, the x-axis represents the risk score, and the y-axis represents the number of transactions.
 
 The machine learning model in Microsoft Dynamics 365 Fraud Protection evaluates every transaction using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a range of risk scores from 0 through 999.
 
