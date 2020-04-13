@@ -20,7 +20,7 @@ The virtual fraud analyst (VFA) uses innovative artificial intelligence (AI) tec
 
 VFA helps you balance acceptable levels of lost revenue and customer support costs against chargebacks, fees, and refunds.  The configuration experience tests basic filters and risk score ranges against historical transactions.
 
-There are two types of rules you can create in the **Rules** editor after exploring the impact of a given filter/risk score on your historical data in VFA:
+These are two examples of rules you can create in the **Rules** editor after exploring the impact of a given filter/risk score on your historical data in VFA.
 
 1. **Fine-grained rules.**
 
