@@ -19,7 +19,7 @@ title: Manage lists
 
 Lists allow you to upload and access organized data in Dynamics 365 Fraud Protection. You can reference any list in a [rule](rules.md) to help execute your business logic and fraud strategy.
 
-The Lists page has two tabs separating the two types of lists you can create: **Custom lists** and **Support lists**. 
+The **Lists** page has two tabs separating the two types of lists you can create: **Custom lists** and **Support lists**. 
 
 > [!NOTE]
 > You cannot view or create lists in the INT environment. You must use the PROD environment.
@@ -94,7 +94,7 @@ You can then configure a rule that enforces that transactions are rejected when 
 You can upload organized data in a list file to Fraud Protection and then reference the list in a [rule](rules.md).
 
 > [!IMPORTANT]
-> When working with sensitive personal data or highly regulated data types, take care to upload this data only from a secure network location. This type of data may include:<br>- Biometric data, genetic data, or any data related to health. <br>- Personal data revealing racial or ethnic origin or religious views; or <br>- Personal data, which by their nature, are sensitive or privacy, such as data concerning a person’s sexual orientation or philosophical beliefs.<br><br>We recommend that you do not include this type of data in the files that you upload. <br>For information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](data-upload.md#security-compliance).
+> When working with sensitive personal data or highly regulated data types, take care to upload this data only from a secure network location. This type of data may include:<br><br>- Biometric data, genetic data, or any data related to health. <br>- Personal data revealing racial or ethnic origin or religious views; or <br>- Personal data, which by their nature, are sensitive or privacy, such as data concerning a person’s sexual orientation or philosophical beliefs.<br><br>We recommend that you do not include this type of data in the files that you upload. <br><br>For information on how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](data-upload.md#security-compliance).
  
 
 **To upload a list to Fraud Protection:**
@@ -102,10 +102,13 @@ You can upload organized data in a list file to Fraud Protection and then refere
 1. Click **New list**. 
 1. Click **Browse** to locate the file. Select the file, then click **Open**. 
 
-    Fraud Protection opens a preview of the file for you to review. The preview contains a maximum of 20 rows. 
+    Fraud Protection opens a preview of the file for you to review. The preview displays a maximum of 20 rows. 
     
 1. To upload the file, click **Continue**. To upload a different file, click **Cancel** and repeat step 2. 
-1. Add a name and description that will make it easy for your team to identify and use the list. A list name cannot be changed after this step. 
+1. Add a name and description that will make it easy for your team to identify and use the list. 
+
+    A list name cannot be changed after this step. 
+    
 1. Click **Create**.
 
     Because of caching, it may take up to two minutes for the list to become active. 
@@ -123,9 +126,9 @@ To modify support lists, use the [Support page](risk-support.md).
 1. In the **Lists** management page, select  the list you want to update, and then click **Edit**.
 1. Click **Browse** to locate the file. Select the file you just updated, and then click **Open**.
     
-    Fraud Protection opens a preview of the file for you to review. The preview contains a maximum of 20 rows. 
+    Fraud Protection opens a preview of the file for you to review. The preview displays a maximum of 20 rows. 
 
-1. To upload the file, click **Continue** and then click **Update**. 
+1. To upload the file, click **Continue**, and then click **Update**. 
   
   Because of caching, it may take up to two minutes for the list to become active. 
 
