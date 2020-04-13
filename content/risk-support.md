@@ -37,7 +37,8 @@ A search on the customer's email address or the payment instrument ID might retu
 
 - **Financial snapshot** – This area summarizes the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. This summary can highlight activities that fall outside typical patterns, such as a recent spike in spending, or an unusual number of transactions or chargebacks.
 - **Transaction history** – This area identifies individual transactions and highlights their key properties.
-- **Transaction details** – This area shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address. **Risk information** provides additional details, such as the specific risk score.
+- **Transaction details** – This area shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address. 
+- **Risk information** provides additional details, such as the specific risk score.
 - **Line items** – This area itemizes everything that was purchased during the selected transaction. It shows the prices, and applicable taxes and fees.
 - **Transaction map** – This area lets you see the shipping address and billing address in relation to each other. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
