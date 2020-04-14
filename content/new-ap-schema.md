@@ -182,9 +182,9 @@ The **AccountUpdate** API lets you share account information updates with Fraud 
 |-------------------------------------|-----------------------------|----------|---------------------------|
 |                                     | Name                        | string   | The value is **"AP.AccountUpdate"**. |
 |                                     | Version                     | string   | The value is **"0.5"**. |
-| MetaData                            | trackingId                  | string   | The identifier of the **AccountUpdate ** event. |
-| MetaData                            | SignupId                    | string   | The identifier of the **AccountUpdate ** event (This value can match the value of the **trackingId** attribute.). |
-| MetaData                            | customerLocalDate           | dateTime | The creation date of the **AccountUpdate ** event, in the customer's local time zone. The format is ISO 8601. |
+| MetaData                            | trackingId                  | string   | The identifier of the **AccountUpdate** event. |
+| MetaData                            | SignupId                    | string   | The identifier of the **AccountUpdateId** event (This value can match the value of the **trackingId** attribute.). |
+| MetaData                            | customerLocalDate           | dateTime | The creation date of the **AccountUpdate** event, in the customer's local time zone. The format is ISO 8601. |
 | MetaData                            | merchantTimeStamp           | dateTime | The time stamp for the event. |
 | DeviceContext                       | DeviceContextId                   | string   | The customer's session ID. This information is mastered by DFP Device Fingerprinting Service. |
 | DeviceContext                       | ipAddress                   | string   | The customer's IP address, as provided by the merchant. |
