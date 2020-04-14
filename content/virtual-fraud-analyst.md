@@ -82,7 +82,7 @@ You can hover over any point in the chart to see a detailed representation of th
 
 #### The Risk impact metrics
 
-In the **Risk impact** section on the right side of the **Virtual fraud analyst** page, you can view the key metrics that are associated with the chart. Use the risk score slider to set your threshold, and then continue to refine the score in single-point increments after you create a rule in the next step.
+In the **Risk impact** section on the right side of the **Virtual fraud analyst** page, you can view the key metrics that are associated with the chart. Use the risk score slider to set your threshold, and then continue to refine the score in single-point increments after you create a rule.
 
 | Metric | Definition |
 |---|---|
