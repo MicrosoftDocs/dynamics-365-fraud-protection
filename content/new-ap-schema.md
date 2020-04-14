@@ -52,7 +52,7 @@ The **AccountCreation** API lets you share information and context with Fraud Pr
 | User                                | UserName                    | string   | The user-provided user name that is unique in the merchant system. |
 | User                                | firstName                   | string   | The user-provided first name on the account. |
 | User                                | lastName                    | string   | The user-provided last name on the account. |
-| User                                | country                     | string   | The user's country or region. The value should be a two-letter ISO country/region code (for example, **US**). |
+| User                                | CountryRegion                     | string   | The user's country or region. The value should be a two-letter ISO country/region code (for example, **US**). |
 | User                                | zipCode                     | string   | The user's postal code. |
 | User                                | timeZone                    | string   | The user's time zone. |
 | User                                | language                    | string   | The user's language and territory (for example, **EN-US**). |
@@ -81,7 +81,7 @@ The **AccountCreation** API lets you share information and context with Fraud Pr
 | Address                     | state                       | string   | The state or province that was provided for the address. |
 | Address                     | district                    | string   | The district that was provided for the address. |
 | Address                     | zipCode                     | string   | The postal code that was provided for the address. |
-| Address                     | country                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
+| Address                     | CountryRegion                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
 | PaymentInstrument                   | merchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. |
 | PaymentInstrument                   | type                        | enum     | The type of payment. Possible values are **'CreditCard'**, **'DirectDebit'**, **'PayPal'**, **'MobileBilling'**, **'OnlineBankTransfer'**, **'Invoice'**, **'MerchantGiftCard'**, **'MerchantWallet'**, **'CashOnDelivery'**, **'Paytm'**, and **'CCAvenue'**. |
 | PaymentInstrument                   | creationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
@@ -109,7 +109,7 @@ The **AccountCreation** API lets you share information and context with Fraud Pr
 | PaymentInstrument \\ BillingAddress | state                       | string   | The state or province that was provided for the address. |
 | PaymentInstrument \\ BillingAddress | district                    | string   | The district that was provided for the address |
 | PaymentInstrument \\ BillingAddress | zipCode                     | string   | The postal code that was provided for the address. |
-| PaymentInstrument \\ BillingAddress | country                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
+| PaymentInstrument \\ BillingAddress | CountryRegion                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
 
 
 ## AccountCreationStatus
@@ -150,12 +150,12 @@ The **AccountLogIn** API lets you share information and context with Fraud Prote
 | User                              | userId                      | string   | The user identifier. This information is provided by the merchant. |
 | User                              | userType                    | string   | The user's profile type. Possible values are **'Consumer'**, **'Developer'**, **'Seller'**, **'Publisher'**, and **'Tenant'**. |
 | User                              | UserName                    | string   | The user-provided user name that is unique in the merchant system. |
-| User \\ SSOAuthenticationProvider | authenticationProvider      | string   | The user's SSO authentication provider, if it differs from the merchant's SSO authentication provider. Possible values are **'MSA'**, **'Facebook'**, **'PSN'**, **'MerchantAuth'**, and **'Google'**. |
-| User \\ SSOAuthenticationProvider | displayName                 | string   | The user's display name for the SSO authentication provider (for example, the user name from a Microsoft account, Facebook, or Google). |
-| User \\ RecentUpdate              | lastPhoneNumberUpdate       | dateTime | The date/time of the most recent update or creation of any phone number. |
-| User \\ RecentUpdate              | lastEmailUpdate             | dateTime | The date/time of the most recent update or creation of any email address. |
-| User \\ RecentUpdate              | lastAddressUpdate           | dateTime | The date/time of the most recent update or creation of any address. |
-| User \\ RecentUpdate              | lastPaymentInstrumentUpdate | dateTime | The date/time of the most recent update or creation any payment instrument. |
+| SSOAuthenticationProvider | authenticationProvider      | string   | The user's SSO authentication provider, if it differs from the merchant's SSO authentication provider. Possible values are **'MSA'**, **'Facebook'**, **'PSN'**, **'MerchantAuth'**, and **'Google'**. |
+| SSOAuthenticationProvider | displayName                 | string   | The user's display name for the SSO authentication provider (for example, the user name from a Microsoft account, Facebook, or Google). |
+| RecentUpdate              | lastPhoneNumberUpdate       | dateTime | The date/time of the most recent update or creation of any phone number. |
+| RecentUpdate              | lastEmailUpdate             | dateTime | The date/time of the most recent update or creation of any email address. |
+| RecentUpdate              | lastAddressUpdate           | dateTime | The date/time of the most recent update or creation of any address. |
+| RecentUpdate              | lastPaymentInstrumentUpdate | dateTime | The date/time of the most recent update or creation any payment instrument. |
 
 ## AccountLogInStatus
 
@@ -182,9 +182,9 @@ The **AccountUpdate** API lets you share account information updates with Fraud 
 |-------------------------------------|-----------------------------|----------|---------------------------|
 |                                     | Name                        | string   | The value is **"AP.AccountUpdate"**. |
 |                                     | Version                     | string   | The value is **"0.5"**. |
-| MetaData                            | trackingId                  | string   | The identifier of the **Signup** event. |
-| MetaData                            | signUpId                    | string   | The identifier of the **Signup** event (This value can match the value of the **trackingId** attribute.). |
-| MetaData                            | customerLocalDate           | dateTime | The creation date of the **Signup** event, in the customer's local time zone. The format is ISO 8601. |
+| MetaData                            | trackingId                  | string   | The identifier of the **AccountUpdate ** event. |
+| MetaData                            | SignupId                    | string   | The identifier of the **AccountUpdate ** event (This value can match the value of the **trackingId** attribute.). |
+| MetaData                            | customerLocalDate           | dateTime | The creation date of the **AccountUpdate ** event, in the customer's local time zone. The format is ISO 8601. |
 | MetaData                            | merchantTimeStamp           | dateTime | The time stamp for the event. |
 | DeviceContext                       | DeviceContextId                   | string   | The customer's session ID. This information is mastered by DFP Device Fingerprinting Service. |
 | DeviceContext                       | ipAddress                   | string   | The customer's IP address, as provided by the merchant. |
@@ -196,7 +196,7 @@ The **AccountUpdate** API lets you share account information updates with Fraud 
 | User                                | UserName                    | string   | The user-provided user name that is unique in the merchant system. |
 | User                                | firstName                   | string   | The user-provided first name on the account. |
 | User                                | lastName                    | string   | The user-provided last name on the account. |
-| User                                | country                     | string   | The user's country or region. The value should be a two-letter ISO country/region code (for example, **US**). |
+| User                                | CountryRegion                     | string   | The user's country or region. The value should be a two-letter ISO country/region code (for example, **US**). |
 | User                                | zipCode                     | string   | The user's postal code. |
 | User                                | timeZone                    | string   | The user's time zone. |
 | User                                | language                    | string   | The user's language and territory (for example, **EN-US**). |
@@ -225,7 +225,7 @@ The **AccountUpdate** API lets you share account information updates with Fraud 
 | Address                     | state                       | string   | The state or province that was provided for the address. |
 | Address                     | district                    | string   | The district that was provided for the address. |
 | Address                     | zipCode                     | string   | The postal code that was provided for the address. |
-| Address                     | country                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
+| Address                     | CountryRegion                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
 | PaymentInstrument                   | merchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. |
 | PaymentInstrument                   | type                        | enum   | The type of payment. Possible values are **'CreditCard'**, **'DirectDebit'**, **'PayPal'**, **'MobileBilling'**, **'OnlineBankTransfer'**, **'Invoice'**, **'MerchantGiftCard'**, **'MerchantWallet'**, **'CashOnDelivery'**, **'Paytm'**, and **'CCAvenue'**. |
 | PaymentInstrument                   | creationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
@@ -253,7 +253,7 @@ The **AccountUpdate** API lets you share account information updates with Fraud 
 | PaymentInstrument \\ BillingAddress | state                       | string   | The state or province that was provided for the address.|
 | PaymentInstrument \\ BillingAddress | district                    | string   | The district that was provided for the address. |
 | PaymentInstrument \\ BillingAddress | zipCode                     | string   | The postal code that was provided for the address. |
-| PaymentInstrument \\ BillingAddress | country                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
+| PaymentInstrument \\ BillingAddress | CountryRegion                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
 
 ## Labels
 
