@@ -32,7 +32,7 @@ Custom lists are created and defined by you. You can upload any number of custom
 
 Support lists are system-defined lists of emails and payment instruments with a *safe*, *block*, or *watch* status, as well as an associated expiration date for each entry. While these lists can be viewed and downloaded from the Lists page, they can only be modified through the [Support page](risk-support.md).
 
-### Required list formats
+### Required list format
 
 To upload a custom list in Fraud Protection, you must first create and save the list as a CSV file on your local machine. The file must meet the following requirements:
 
@@ -91,11 +91,7 @@ In addition to using multi-column lists to combine safe and block lists, you can
 You can then configure a rule that enforces that transactions are rejected when they have a [risk score](ap-scorecard.md#risk-model-score) above the specified threshold for that product type. For information on about how to create effective rules to customize your business logic, see [Rules](rules.md). 
 
 ## Upload a list
-You can upload organized data in a list file to Fraud Protection and then reference the list in a [rule](rules.md).
-
-> [!IMPORTANT]
-> When working with sensitive personal data or highly regulated data types, take care to upload this data only from a secure network location. This type of data may include:<br><br>- Biometric data, genetic data, or any data related to health. <br>- Personal data revealing racial or ethnic origin or religious views; or <br>- Personal data, which by their nature, are sensitive or privacy, such as data concerning a person’s sexual orientation or philosophical beliefs.<br><br>We recommend that you do not include this type of data in the files that you upload. <br><br>For information on how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
- 
+You can upload organized data in a list file to Fraud Protection and then reference the list in a [rule](rules.md). The file must adhere to the specifications described in [Required list format](lists.md#required-list-format).
 
 **To upload a list to Fraud Protection:**
 
@@ -112,6 +108,12 @@ You can upload organized data in a list file to Fraud Protection and then refere
 1. Click **Create**.
 
     Because of caching, it may take up to two minutes for the list to become active. 
+
+> [!IMPORTANT]
+> Do not include the following types of sensitive personal data or highly regulated data types in the files that you upload:<br><br>- Biometric data, genetic data, or any data related to health. <br>- Personal data revealing racial or ethnic origin or religious views; or <br>- Personal data, which by their nature, are sensitive or privacy, such as data concerning a person’s sexual orientation or philosophical beliefs.<br><br>For information on how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+ 
+
+
 
 ## Update a list
 
@@ -147,7 +149,7 @@ When you delete a list, any rules which use this list will no longer work.
 
 You can download a list in Fraud Protection and then view it in any text editor. 
 
-- To download a list, select the list you want and click **Download**. Then click the icon in the left corner of the Fraud Protection window to view the list. 
+- To download a list, select the list you want and click **Download**. Then click the icon in the bottom left corner of browser to view the list. 
 
 - To download multiple lists, select the lists you want to download, and then click **Download**.
 
