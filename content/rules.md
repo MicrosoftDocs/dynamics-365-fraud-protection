@@ -18,14 +18,14 @@ title: Manage Rules
 
 ## Overview
 
-Dynamics 365 Fraud Protection gives you the flexibility to create custom rules based on observed patterns, policies, or business objectives. Custom rules enable your analysts to write business logic for automated decision making and customize this logic to meet your unique business needs. Rules use a combination of inputs including values in the event response payload and machine learning-based scores to assess the risk of an event. You can configure rules to automatically accept, block, review, or challenge events based on these inputs.  
+Dynamics 365 Fraud Protection gives you the flexibility to create custom rules based on observed patterns, policies, or business objectives. Custom rules enable your analysts to write business logic for automated decision making and to customize this logic to meet your unique business needs. Rules use a combination of inputs including values in the event request payload and machine learning-based scores to assess the risk of an event. You can configure rules to automatically accept, block, review, or challenge events based on these inputs.  
 
 > [!NOTE]
 > You cannot view or create rules in the INT environment. You must use the PROD environment. 
 
 ##  Access the Rules management page
 
-You can create custom rules and manage existing rules on the Rules page to detect fraudulent activity. 
+You can create custom rules and manage existing rules on the Rules page. 
 
 - To create and manage rules related to purchases, click **Purchase protection** and then click **Rules** on the left navigation.
 
@@ -44,7 +44,7 @@ The **Rules** page displays a list of all the rules configured for an event type
 -  The [Description](rules.md#details-name-and-description) of the rule.
 -  The [Number of Clauses](rules.md#clauses) in the rule.
 
-The [order](rules.md#understand-rule-ordering) in which rules are listed on the Rules page determines the order in which the rules are executed. 
+The [order](rules.md#understand-rule-ordering) in which rules are listed on the **Rules** page determines the order in which the rules are executed. 
 
 ## Components of a rule
 
@@ -55,12 +55,9 @@ A rule is made up of several components:
 -  Components that enable you to build the logic to automatically approve, reject, challenge, and review certain events:
     -  [Condition](rules.md#conditions)
     -  [Clauses](rules.md#clauses)
-    -  [Prior to all scoring clauses](rules.md#prior-to-all-scoring-clauses
-)
-    -  [Post bot scoring clauses](rules.md#post-bot-scoring-clauses
-)
-    -  [Post risk scoring clauses](rules.md#post-risk-scoring-clauses
-)
+    -  [Prior to all scoring clauses](rules.md#prior-to-all-scoring-clause)
+    -  [Post bot scoring clauses](rules.md#post-bot-scoring-clauses)
+    -  [Post risk scoring clauses](rules.md#post-risk-scoring-clauses)
 
 ### Details (name and description)
 
@@ -83,8 +80,7 @@ When you create or modify rules, Fraud Protection automatically saves your work 
 
 Rules with draft status are accessible only to the author. If you want to share your rules with your team, you must publish them.
 
-#### Sample
-
+#### Samples
 When you create or edit a rule, the **Sample** panel displays on the right side of the page. This panel has two sections: *payload sample* and *score sample*. 
 
 ##### Payload sample 
@@ -101,7 +97,7 @@ You can also [evaluate](rules.md#evaluate-a-rule) a custom rule against this sam
 
 The score sample contains the scores generated from Fraud Protection’s AI models. You can reference these score variables in rules after the associated AI model generating the score has run. For example, you can use @botscore only after the bot evaluation has run, and @riskscore can be used only after the risk evaluation has run. For more information see [clauses](rules.md#clauses).
 
-The values for each score in the score sample can be modified in order to test how your rule works with different score values. For information on how to evaluate your rule against the sample payload and sample scores, see [Evaluate a rule]( rules.md#evaluate-a-rule).
+The values for each score in the score sample can be modified in order to test how your rule works with different score values. For information on how to evaluate your rule against the sample payload and sample scores, see [Evaluate a rule](rules.md#evaluate-a-rule).
 
 ### Conditions
 
@@ -124,7 +120,7 @@ You can create a clause to return a decision of Approve, Reject, Challenge, or R
 
 Everything following the WHEN keyword must evaluate to either True or False. This Boolean expression can be formed using a combination of values from the [event payload](rules.md#clauses), [user-defined lists](lists.md), and [AI-based bot and risk scores](rules.md#post-bot-scoring-clauses). 
 
-For information about the syntax used for writing clauses see the [Fraud Protection language guide](fpl-lang-ref.md).
+For information about the syntax used for writing clauses see the [Rules language guide](fpl-lang-ref.md).
 
 Clauses run sequentially in the order they are displayed on the page. Click the arrows to the right of each clause to re-order a clause. 
 
@@ -146,7 +142,7 @@ You can also use the clause in this section to reference lists. For example, if 
     RETURN Reject ("email is on Risky Email list") 
     WHEN ContainsKey ("Risky Email List", "Emails", @username)
 
-For information about the syntax for referencing lists in rules, the [Fraud Protection language guide](fpl-lang-ref.md).
+For information about the syntax for referencing lists in rules, the [Rules language guide](fpl-lang-ref.md).
 
 #### Post-bot-scoring clauses
 
@@ -158,7 +154,7 @@ In post-bot-scoring clauses, you can use this score (referenced with @botscore),
     WHEN @email.EndsWith("@contoso.com") && @botScore > 700
 
 > [!NOTE]
->Post-bot-scoring clauses and the @botScore variable are available only for account creation and account login rules. 
+>Post-bot-scoring clauses and the @botScore variable are available only for account protection rules. 
 
 #### Post-risk-scoring clauses
 
@@ -226,11 +222,11 @@ You can create rules to automate decision-making for purchase, account creation,
 
 ## Manage existing rules
 You can perform the following operations on an existing rule on the Rules management page:
--	[Clone](rules.md#clone-an-existing-rule)
--	[Edit](rules.md#edit-an-existing-rule)
 -	[Rename](rules.md#update-the-name-and-description-of-a-rule)
 -	[Activate or Deactivate](rules.md#change-the-status-of-a-rule)
 -	[Delete](rules.md#delete-a-rule)
+-	[Clone](rules.md#clone-an-existing-rule)
+-	[Edit](rules.md#edit-an-existing-rule)
  
 ### Update the name and description of a rule
 
@@ -256,13 +252,6 @@ When you clone a rule, you create a copy of an existing rule that you can modify
   1. Navigate to the **Rules** management page.
   1. Select the rule, drag it to its new position, and then click **Save order**. 
 
-### Search for a rule
-
-When you search for a rule, all rule names and descriptions are searched, and the results are filtered accordingly. 
-
-- To search for a rule, type a keyword into the **Search** box. 
-- To remove the filter, delete the keyword from the **Search** box, or click the **x** to the right.
-
 ### Edit an existing rule
 When you modify a rule that has been published, Fraud Protection saves the changes you make as a *draft* until you publish your changes. A draft is visible only to the person who creates it, until it is published.
 
@@ -275,6 +264,18 @@ To edit an already-published rule:
     When you publish a draft, Fraud Protection overwrites the original published version of the rule with the changes you made in the draft version of the rule. 
 1.	To discard your changes, click **Discard**. 
     When you discard your changes, Fraud Protection deletes the draft but retains the original published rule. 
+
+> [!NOTE]
+>If a teammate updates and publishes a rule while you are still editing it, your changes may be out of date. When this is the case, a warning appears asking if you still want to publish your changes.<br>If you click **Publish**, your changes overwrite all changes that were made previously.<br>If you click **Cancel**, you can review the changes others have made before you publish your version.  
+
+
+### Search for a rule
+
+When you search for a rule, all rule names and descriptions are searched, and the results are filtered accordingly.
+
+- To search for a rule, type a keyword into the **Search** box.
+
+- To remove the filter, delete the keyword from the **Search** box, or click the **x** to the right of the box.
 
 ### Change the order of a rule
 
