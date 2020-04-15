@@ -194,24 +194,33 @@ Fraud Protection supports all .NET’s standard [DateTime](https://docs.microsof
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|TruncateTo  |Rounds the DateTime toward the past based on the timeSpan. |(DateTime)@time.TruncateTo(TimeSpan.FromDays(1))<br>DateTime.UtcNow.TruncateTo(TimeSpan.FromMinutes(1))|
-|TruncateToMillisecond|Returns the DateTime rounded to the past millisecond. |(DateTime)@time.TruncateToMillisecond()|
-|TruncateToMinute|Returns the DateTime rounded to the past minute. |(DateTime)@time.TruncateToMinute()|
-|TruncateToHour|Returns the DateTime rounded to the past hour. |(DateTime)@time.TruncateToHour()|
-|TruncateToDay|Returns the DateTime rounded to the past day. |(DateTime)@time.TruncateToDay()|
-|TruncateToWeek|Returns the DateTime rounded to the past week. |(DateTime)@time.TruncateToWeek()|
-|TruncateToMonth|Returns the DateTime rounded to the past month. |(DateTime)@time.TruncateToMonth()|
-|TruncateToYear |Returns the DateTime rounded to the past year. |(DateTime)@time.TruncateToYear()|
+|UtcNow |Gets a DateTime object that is set to the current date and time on the computer, expressed as the Coordinated Universal Time.  |DateTime.UtcNow |
+|Today  |An object that is set to today’s date with the time component set to 00:00:00. |DateTime.UtcNow |
+|Year   |Gets the year component of the Date represented by this instance. |@creationDate.Year |
+|Date   |A new object with the same date as this instance, and the time value. |@creationDate.Date |
 
 
+### Type casting operators
 
-
-### Typing
+For more information about type inferencing, click [Type Inference](link). 
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-| | | |
-| | | |
+|ToDateTime() |Converts a string to a DateTime object. |@creationDate.ToDateTime() |
+|ToDouble()   |Converts a string to a Double. |@purchaseAmount.ToDouble() |
+|ToInt32()    |Converts a string to an Int32. |@riskScore.ToInt32() |
+
+
+## Type Inference
+
+The default type of variables extracted using the @ operator, as well as the variables extracted from Lists using the Lookup operation, is String. However, the extracted type may change depending on the lookup context. 
+For example
+•	In the expression WHEN @isEmailValidated, @isEmailValidated is interpreted as a Boolean value.
+•	In the expression @riskScore > 500, @riskScore is interpreted as a Double value. 
+•	In the expression @creationDate.Year < DateTime.UtcNow.Year, @creationDate is interpreted as a DateTime value. 
+You can specify the type of a variable you want by using a type casting operator (link). 
+
+
 
 ### Additional RETURN types
 
