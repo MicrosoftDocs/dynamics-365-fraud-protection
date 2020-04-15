@@ -77,8 +77,8 @@ To use variables to form a Boolean expression, you can:
 Review the [Language reference](fpl-lang-ref.md#language-reference) for a complete list of available operators, including:
 
 -	[Joining operators](fpl-lang-ref.md#joining-operators)
--	[Comparison operators](fpl-lang-ref.md#comparison-operators)
 -	[List operators](fpl-lang-ref.md#list-operators)
+-	[Comparison operators](fpl-lang-ref.md#comparison-operators)
 -	[Geo operators](fpl-lang-ref.md#geo-operators)
 -	[String operators](fpl-lang-ref.md#string-operators)
 -	[Math operators](fpl-lang-ref.md#math-operators)
@@ -188,7 +188,7 @@ Fraud Protection supports all .NET standard [String operators](https://docs.micr
 
 #### Math operators
 
-Fraud Protection supports all.NET’s standard [Math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8) as well as all [C# arithmetic operators](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods which may be useful to you.
+Fraud Protection supports all.NET’s standard [Math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8) as well as all [C# arithmetic operators](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods which may be useful to you.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
