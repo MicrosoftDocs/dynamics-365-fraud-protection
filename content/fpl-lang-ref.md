@@ -113,7 +113,7 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 
 #### Variables
 
-To learn more about how these variables are typed, click [type inference](link).
+For information on how these variables are typed, click [type inference](link).
 
 | Syntax    | Description     | Example|
 |-------|-----------------|--------|
@@ -133,43 +133,22 @@ To learn more about how these variables are typed, click [type inference](link).
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|- |Returns inputs that do not contain the specified value. | |
-|== |Checks for equality and returns *True* (1) if both operands have the same value; otherwise, it returns *False* (0). | |
-|!= |Checks for inequality and returns *True* (1) if the operands do not have the same value; otherwise, it returns *False* (0). | |
-|> |Checks if the first value is greater than the second value; otherwise, it returns *False* (0). | |
-|>= |Checks if the first value is greater than or equal to the second value; otherwise, it returns *False* (0). | |
-|<> |Checks if the first value is less than the second value; otherwise, it returns *False* (0). | |
-|<=> |Checks if the first value is less than or equal to the second value; otherwise, it returns *False* (0). | |
+|== |Checks for equality. |@"user.countryRegion" == @"shippingAddress.countryRegion" |
+|!= |Checks for inequality.  |@"user.countryRegion" != @"shippingAddress.countryRegion" |
+|> |Checks if the first value is greater than the second value. |@riskScore > 500 |
+|< |Checks if the first value is less than the second value. |@riskScore < 500 |
+|>= |Checks if the first value is greater than or equal to the second value. |@riskScore >= 500 |
+|<= |Checks if the first value is less than or equal to the second value. |@riskScore <= 500 |
 
 #### List operators
 
-| Syntax| Description     | Example|
-|-------|-----------------|--------|
-|ContainsKey("dataset name", "index name", @index_key) |Checks whether a key is being mapped. | |
-|Lookup("dataset name", "index name", @index_key, "value name") |Returns a value from a one-row, a one-column range, or from an array. | |
-|In      |Finds the value of the specified variable and checks if its value exists in the list of comma-separated tokens. Search is not case-sensitive and does not require spaces after commas.|In(@hello, "abc,xyz,mag")|
-
-#### String operators
-
-These operators verify that the object on the left side of the operator is equal to the string object on the right side.
+For information about using lists in rules, click [Using lists in rules](link).
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|StartsWith |Returns a value after determining that the beginning of this string instance matches the specified string. |(string)@ExceptionName.StartsWith("Argument") |
-|EndsWith |Returns a value after determining that the end of this string instance matches a specified string. |(string)@ExceptionName.EndsWith("Error") |
-|Contains |Returns a value indicating whether a specified character occurs within this string |(string)@ExceptionName.Contains("Argument") |
-|IndexOf | | |
-|IsNullOrEmpty | | |
-|Exists| Checks if the variable name exists in the string|@ext.Exists(@field)    select Exists(@ext)| 
-
-#### Math operators
-
-These operators use a symbol that indicates the operation to be performed.
-
-| Syntax| Description     | Example|
-|-------|-----------------|--------|
-|Math.Min |Computes the minimum of two values. |Math.Min(@number) |
-|Math.Max |Computes the maximum of two values. |Math.Max(@number) |
+|ContainsKey |Checks if a key is contained within specified column of a pre-defined [list](lists.md)<br>ContainsKey(String *listName*, String *columnName*, String *key*) |ContainsKey("Email Support List", “Emails”, @email)<br>This checks if the variable @email is contained in column “Emails” of list “Email Support List”  |
+|Lookup      |Looks up the value of a key in a list column.<br>If the key is not found, and *defaultValue* is not specified, “Unknown” is returned.<br>Overloads<br>Lookup(String *listName*, String *keyColumnName*, String *key*, String *valueColumnName*) <br>Lookup(String *listName*, String *keyColumnName*, String key, String valueColumnName, String defaultValue) |Lookup("Email Support List", “Emails”, @email, ”Status”) ==  ”Block”<br><br>This finds the variable @email in column “Emails” of list “Email Support List”, and returns its corresponding value in column “Status” |
+|In          |Checks if a key is contained within a comma-separated list of values<br>In(String *key*, String *list*)  |In(@countryRegion, "US, MX, CA")|
 
 
 #### Geo operators
@@ -178,17 +157,40 @@ These operators convert an IP address to a geographical address.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|Geo.RegionCode    |Converts an IPv4 address to its US region code. The region code is the abbreviation of the name of the state or territory. For example, an IP address from Washington State will turn into the region code "WA."    |What is the region code of the IP address at the field "ipAddr"? Geo.RegionCode(@ipAddr)|
-|Geo.Region    |Converts an IPv4 address to its US region code (the abbreviation of the name of the state or territory). For example, an IP address from Washington State will turn into the region code "WA."    |What is the region name of the IP address at the field "ipAddr"? Geo.Region(@ipAddr)|
-|Geo.CountryCode    |Converts an IPv4 address to its country code. For example, an IP address in Australia will turn into "AU."    |What is the country code of the IP address at the field "ipAddr"? Geo.CountryCode(@ipAddr)|
-|Geo.CountryRegion    |Converts an IP address to a region name.    |Geo.Region(@clientIp)|
-|Geo.City    |Converts an IPv4 address to a city name. For example, an IP address in New York City will turn into "New York City."    |What is the city of the IP address at the field "ipAddr"? Geo.City(@ipAddr)|
-|Geo.PostalCode    |Converts an IPv4 address to its postal code. For example, an IP address in Seattle might turn into "98106."    |What is the postal code of the IP address at the field "ipAddr"? Geo.PostalCode(@ipAddr)|
-|Geo.Isp    |Converts an IPv4 address to the Internet Service Provider (ISP) that manages that IP. For example, an IP address might turn into "Level 3 Communications."    |What is the ISP of the IP address at the field "ipAddr"? Geo.Isp(@ipAddr)|
-|Geo.MarketCode    |Converts an IPv4 address to the market code of the IP. For example, an IP address from Canada will turn into "NA" (North America).     |What is the market code of the IP address at the field "ipAddr"? Geo.MarketCode(@ipAddr)|
+|Geo.RegionCode    |Converts an IPv4 address to its US region code (the abbreviation of the name of the US state or territory)<br>For example, an IP address in Washington State will return "WA."  | Geo.RegionCode(@ipAddr)|
+|Geo.Region    |Converts an IPv4 address to its US region (the name of the US state or territory).<br>For example, an IP address in Washington State will return "Washington."    |Geo.Region(@ipAddr)|
+|Geo.CountryCode    |Converts an IPv4 address to its country code.<br>For example, an IP address in Australia will return "AU."| Geo.CountryCode(@ipAddr)|
+|Geo.CountryRegion    |Converts an IP address to a region name.<br>For example, an IP address in Australia will return “Australia”.|Geo.CountryRegion(@ipAddress)|
+|Geo.City    |Converts an IPv4 address to a city name. <br>For example, an IP address in New York City will return "New York City".|WGeo.City(@ipAddr)|
+|Geo.PostalCode    |Converts an IPv4 address to its postal code. <br>For example, an IP address in Seattle might return  "98106."|Geo.PostalCode(@ipAddr)|
+|Geo.Isp    |Converts an IPv4 address to the Internet Service Provider (ISP) that manages that IP. <br>For example, an IP address might return "Level 3 Communications."   |Geo.Isp(@ipAddr)|
+|Geo.MarketCode    |Converts an IPv4 address to the market code of the IP. <br>For example, an IP address from Canada will return "NA" (North America).     |Geo.MarketCode(@ipAddr)|
 
 
-### DateTime types
+#### String operators
+
+Fraud Protection supports all .NET standard [String operators] (https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.8). This table includes some examples of methods which may be useful to you.
+
+| Syntax| Description     | Example|
+|-------|-----------------|--------|
+|StartsWith |Checks if a string ends with a given suffix. <br>StartsWith(String *prefix*) |@phoneNumber.StartsWith("1-") |
+|EndsWith |Checks if a string ends with a given prefix. <br>EndsWith(String *suffix*) |@email.EndsWith("@contoso.com") |
+|Contains |Checks if a string contains another string. <br>Contains(String *substring*) |@productName.Contains("Xbox") |
+|Exists| Checks if a variable exists in the event payload. <br>Exists(String *variable*)|Exists(@email)| 
+
+#### Math operators
+
+Fraud Protection supports all.NET’s standard [Math methods](https://docs.microsoft.com/en-us/dotnet/api/system.math?view=netframework-4.8). This table includes some examples of methods which may be useful to you.
+
+| Syntax| Description     | Example|
+|-------|-----------------|--------|
+|Math.Min |Computes the minimum of two values.<br>Math.Min(Double value1, Double value2) |Math.Min(@riskScore,@botScore) |
+|Math.Max |Computes the maximum of two values.<br>Math.Max(Double value1, Double value2) |Math.Max(@riskScore,@botScore) |
+
+
+### DateTime operators
+
+Fraud Protection supports all .NET’s standard [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netframework-4.8) properties, methods, and operators. This table includes some examples of properties which may be useful to you.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
