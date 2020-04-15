@@ -24,7 +24,7 @@
     href: schema.md
   - name: Manage rules
     href: rules.md
-  - name: Fraud Protection language guide
+  - name: Rules language guide
     href: fpl-lang-ref.md
   - name: Use the virtual fraud analyst
     href: virtual-fraud-analyst.md   
@@ -72,7 +72,7 @@
     href: integrate-ap-api.md
   - name: Manage rules
     href: rules.md
-  - name: Fraud Protection language guide
+  - name: Rules language guide
     href: fpl-lang-ref.md
   - name: Learn from the account protection scorecard
     href: ap-scorecard.md
