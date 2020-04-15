@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic is a language reference guide to FDL.
+description: This topic is a language guide to DFP rules.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 04/6/2020
@@ -10,77 +10,81 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Fraud Protection language guide 
+title: Rules language guide 
 
 ---
-# Fraud Protection language guide 
+# Rules language guide 
 
 ## Overview
 
-Fraud Protection [Rules](rules.md) enable you to write business logic for automated decision making. Rules are made up of [conditions]( rules.md#conditions) and [clauses](rules.md#clauses). Conditions and clauses are written in a rich and expressive language that enables you to customize the logic required to meet your unique business needs. 
+Fraud Protection rules are written in a rich and expressive language. This language contains many similarities to C# and SQL, and is designed to provide you with the power and flexability you need to customize your fraud strategy and enforce unique business policies. 
 
-Fraud Protection language has significant overlap with C# and SQL. The **RETURN** and **WHERE** keywords define the clause, and the *@field* syntax is used to extract fields from the payload. Most C# comparison and arithmetic operators are also available.
-
-For a complete list of available operators, review the [language reference](fpl-lang-ref.md#language-reference). 
+To get started, read the [Quick start guide](fpl-lang-ref.md#quick-start-guide). For a complete list of available operators, review the [Language reference](fpl-lang-ref.md#language-reference). 
 
 ## Quick start guide
 
-### RETURN
-
-Clauses adhere to the following basic structure: 
+Rules are made up of [clauses](rules.md#clauses) which are defined by the **RETURN** and **WHEN** keywords. They adhere to the following basic structure: 
 
       RETURN *decision* 
       WHEN *condition is true*
 
-You can return a decision of *Approve*, *Reject*, *Challenge*, or *Review*, and include optional parameters to send more information about the decision. Here are some examples of valid RETURN statements:
+The **RETURN** decision is executed only if the **WHEN** expression evaluates to *True*. 
+
+### RETURN
+
+Your clause must return a decision of *Approve*, *Reject*, *Challenge*, or *Review*. You can also include optional parameters to send more information about the decision. Here are some examples of valid **RETURN** statements:
 
       RETURN Reject()
       RETURN Reject(“email is on block list”)
       RETURN Reject(“email is on block list”, “do not escalate”)
 
-Everything following the **WHEN** keyword must evaluate to a Boolean value. If a **WHEN** expression evaluates to *True*, the **RETURN** decision is executed. 
-
 For information on how to use decision types and their parameters, see [Decision types](fpl-lang-ref.md#decision-types). 
-
 
 ### WHEN
 
-A **WHEN** expression is made up of one or more Boolean expressions. You can string together multiple Boolean expressions using the [joining operators](fpl-lang-ref.md#joining-operators) **AND (&&)** and **OR (||)**. 
+A **WHEN** expression is made up of one or more Boolean expressions. You can string together multiple Boolean expressions using the [Joining operators](fpl-lang-ref.md#joining-operators), **AND (&&)** and **OR (||)**. 
 
 A Boolean expression is formed by checking and/or comparing variables. There are two types of variables:
 
 - Payload values
 - Scores
 
-You can access all variables with the syntax *@variable*. For example, to specify a variable is a part of an object, you can write *@”object.variable”*. 
-
-Fraud Protection language also provides functions that allow you to extract certain information from variables. For example, you can use a class of [Geo operators](fpl-lang-ref.md#geo-operators) to convert an IP address to a geographical address.
+You can access all variables with the syntax *@variable*. To specify the full path of a variable, you can write *@”object.variable”*. 
 
 To use variables to form a Boolean expression, you can:
 
-- [Compare](fpl-lang-ref.md#comparison-operators) variables to other variables, or to constants. 
+- Compare variables to other variables or constants. 
 
       WHEN @email == “kayla@contoso.com”
       WHEN @”user.firstName” == @”shippingAddress.firstName”
       WHEN @riskscore > 700 
       WHEN Geo.CountryCode(@ipAddress) == “US”
 
-- Check if a variable is contained within a [list](fpl-lang-ref.md#list-operators).
+- Check if a variable is contained within a list.
 
       WHEN ContainsKey(“Safe List”, “Emails”, @email)
 
-- Check the value of a key within a [list](fpl-lang-ref.md#list-operators).
+- Check the value of a key within a list.
 
       WHEN Lookup(“Email List”, “Emails”, @email, “Status”) == “Safe”
       WHEN Lookup(“Country List”, “Country”, @country, “Score Cutoff”) < @riskScore
 
-- Evaluate a [string](fpl-lang-ref.md#string-operators).
+- Evaluate a string.
 
        WHEN @phoneNumber.startsWith(“1-“)
        WHEN @email.endsWith(“@contoso.com”)
 
-### Supported operators
-FPL supports methods for [String operators](fpl-lang-ref.md#string-operators), [Math operators](fpl-lang-ref.md#math-operators), [Geo operators](fpl-lang-ref.md#geo-operators), and [DateTime](fpl-lang-ref.md#datetime-operators) types. Click the links for information and examples.
+Review the [Language reference](fpl-lang-ref.md#language-reference) for a complete list of available operators, including:
+
+-	[Joining operators](fpl-lang-ref.md#joining-operators)
+-	[Comparison operators](fpl-lang-ref.md#comparison-operators)
+-	[List operators](fpl-lang-ref.md#list-operators)
+-	[Geo operators](fpl-lang-ref.md#geo-operators)
+-	[String operators](fpl-lang-ref.md#string-operators)
+-	[Math operators](fpl-lang-ref.md#math-operators)
+-	[DateTime operators](fpl-lang-ref.md#datetime-operators)
+-	[Type casting operators](fpl-lang-ref.md#)
+
 
 ## Language reference 
 
@@ -108,7 +112,7 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 
 | Syntax    | Description     | Example|
 |-------|-----------------|--------|
-|Other  |Can be used to pass key value pairs to the response payload.|Other(key="test", username=@email, countryRegion=Geo.CountryRegion(@ipAddress))|
+|Other  |Can be used to pass key value pairs.|Other(key="test", username=@email, countryRegion=Geo.CountryRegion(@ipAddress))|
 
 
 #### Variables
@@ -131,6 +135,8 @@ For information on how these variables are typed, click [type inference](fpl-lan
 
 #### Comparison operators
 
+Fraud protection supports all standard C# comparison and equality operations. This table includes some examples of methods which may be useful to you.
+
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
 |== |Checks for equality. |@"user.countryRegion" == @"shippingAddress.countryRegion" |
@@ -142,7 +148,7 @@ For information on how these variables are typed, click [type inference](fpl-lan
 
 #### List operators
 
-For information about using lists in rules, click [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules).
+For additional information about using lists in rules, click [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules).
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
@@ -180,7 +186,7 @@ Fraud Protection supports all .NET standard [String operators](https://docs.micr
 
 #### Math operators
 
-Fraud Protection supports all.NET’s standard [Math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8). This table includes some examples of methods which may be useful to you.
+Fraud Protection supports all.NET’s standard [Math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8) as well as all [C# arithmetic operators](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods which may be useful to you.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
@@ -213,13 +219,13 @@ For more information about type inferencing, click [Type inference](fpl-lang-ref
 
 ## Type inference
 
-The default type of variables extracted using the @ operator, as well as the variables extracted from lists using the Lookup operation, is *String*. The extracted type may change depending on the lookup context. For example:
+The default type of variables extracted using the @ operator, as well as the variables extracted from lists using the Lookup operation, is *String*. The inferred type may change depending on the context. For example:
 
 -	In the expression WHEN @isEmailValidated, @isEmailValidated is interpreted as a Boolean value.
 -	In the expression @riskScore > 500, @riskScore is interpreted as a Double value. 
 - In the expression @creationDate.Year < DateTime.UtcNow.Year, @creationDate is interpreted as a DateTime value. 
 
-You can specify the type of a variable you want by using a [type casting operator](fpl-lang-ref.md#type-casting-operators). 
+You can also specify the type of a variable by using a [type casting operator](fpl-lang-ref.md#type-casting-operators). 
 
 
 ## Using lists in rules 
@@ -249,7 +255,7 @@ This clause  checks if the *Email* column in the *Risky email* list contains *@u
 
 To look up the value of a key in a list, use the **Lookup** operation.
 
-For example, if you have list titled Email list with a column for emails, and a column to indicate the status of that email:
+For example, if you have list titled *Email* list with a column for emails, and a column to indicate the status of that email:
 
 |Email address|Status|
 |--------------|--------------|
@@ -265,7 +271,7 @@ You can reject all transactions from emails in this list which are marked as ris
     RETURN Reject(“risky email”) 
     WHEN Lookup(“Email List”, “Email”, @username, “Status”) == “Risky”
 
-This clause finds the key @username in the Email column of the Email List, and checks if the value in the Status column is Risky. If it is, the transaction is rejected.
+This clause finds the key *@username* in the *Email* column of the *Email* list and checks if the value in the *Status* column is *Risky*. If it is, the transaction is rejected.
 
 If the key is not found in the list, by default, *Unknown* is returned. 
 
