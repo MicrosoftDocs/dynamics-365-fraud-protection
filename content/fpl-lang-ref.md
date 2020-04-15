@@ -213,23 +213,61 @@ For more information about type inferencing, click [Type Inference](link).
 
 ## Type Inference
 
-The default type of variables extracted using the @ operator, as well as the variables extracted from Lists using the Lookup operation, is String. However, the extracted type may change depending on the lookup context. 
-For example
-•	In the expression WHEN @isEmailValidated, @isEmailValidated is interpreted as a Boolean value.
-•	In the expression @riskScore > 500, @riskScore is interpreted as a Double value. 
-•	In the expression @creationDate.Year < DateTime.UtcNow.Year, @creationDate is interpreted as a DateTime value. 
-You can specify the type of a variable you want by using a type casting operator (link). 
+The default type of variables extracted using the @ operator, as well as the variables extracted from lists using the Lookup operation, is *String*. The extracted type may change depending on the lookup context. For example:
+
+-	In the expression WHEN @isEmailValidated, @isEmailValidated is interpreted as a Boolean value.
+-	In the expression @riskScore > 500, @riskScore is interpreted as a Double value. 
+- In the expression @creationDate.Year < DateTime.UtcNow.Year, @creationDate is interpreted as a DateTime value. 
+
+You can specify the type of a variable you want by using a [type casting operator](link). 
 
 
+## Using lists in rules 
 
-### Additional RETURN types
+You can create a rule with a previously created [list](lists.md) using either the **ContainsKey** or **Lookup** operators.
 
-| Syntax| Description     | Example|
-|-------|-----------------|--------|
-|Other | | |
-| | | |
+### ContainsKey
 
+To check if a specific value is contained in one of your lists, use the **ContainsKey** operation. Specify the list name, the column, and the key you want to check.
 
+For example, if you have a single-column list of risky email addresses, titled *Risky email* list
 
+|Email |
+|--------------|
+|Kayla@contoso.com |
+|Jamie@bellowscollege.com |
+|Marie@atatum.com |
 
+You can reject all transactions from emails in this list using the following syntax:
+
+     RETURN Reject(“risky email”) 
+     WHEN ContainsKey(“Risky email list”, “Email”, @username) 
+
+This clause  checks if the *Email* column in the *Risky email* list contains *@username*. If it does, the transaction is rejected.
+
+### Lookup
+
+To look up the value of a key in a list, use the **Lookup** operation.
+
+For example, if you have list titled Email list with a column for emails, and a column to indicate the status of that email:
+
+|Email address|Status|
+|--------------|--------------|
+|Kayla@contoso.com |Risky|
+|Jamie@bellowscollege.com|Risky|
+|Marie@atatum.com|Risky|
+|Camille@fabrikam.com|Safe|
+|Miguel@proseware.com |Safe |
+|Tyler@contoso.com |Safe |
+
+You can reject all transactions from emails in this list which are marked as risky using the below syntax:
+
+    RETURN Reject(“risky email”) 
+    WHEN Lookup(“Email List”, “Email”, @username, “Status”) == “Risky”
+
+This clause finds the key @username in the Email column of the Email List, and checks if the value in the Status column is Risky. If it is, the transaction is rejected.
+
+If the key is not found in the list, by default, *Unknown* is returned. 
+
+You can also specify your own default value as a fifth parameter. See [list operators](fpl-lang-ref.md#list-operators-1) for more information. 
 
