@@ -65,11 +65,11 @@ To use variables to form a Boolean expression, you can:
       WHEN @riskscore > 700 
       WHEN Geo.CountryCode(@ipAddress) == “US”
 
-- Check if a variable is contained within a [list](fpl-lang-ref.md#list-operators-1).
+- Check if a variable is contained within a [list](fpl-lang-ref.md#list-operators).
 
       WHEN ContainsKey(“Safe List”, “Emails”, @email)
 
-- Check the value of a key within a [list](fpl-lang-ref.md#list-operators-1).
+- Check the value of a key within a [list](fpl-lang-ref.md#list-operators).
 
       WHEN Lookup(“Email List”, “Emails”, @email, “Status”) == “Safe”
       WHEN Lookup(“Country List”, “Country”, @country, “Score Cutoff”) < @riskScore
@@ -113,7 +113,7 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 
 #### Variables
 
-For information on how these variables are typed, click [type inference](link).
+For information on how these variables are typed, click [type inference](fpl-lang-ref.md#type-inference).
 
 | Syntax    | Description     | Example|
 |-------|-----------------|--------|
@@ -142,7 +142,7 @@ For information on how these variables are typed, click [type inference](link).
 
 #### List operators
 
-For information about using lists in rules, click [Using lists in rules](link).
+For information about using lists in rules, click [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules).
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
@@ -169,7 +169,7 @@ These operators convert an IP address to a geographical address.
 
 #### String operators
 
-Fraud Protection supports all .NET standard [String operators] (https://docs.microsoft.com/en-us/dotnet/api/system.string?view=netframework-4.8). This table includes some examples of methods which may be useful to you.
+Fraud Protection supports all .NET standard [String operators](https://docs.microsoft.com/dotnet/api/system.string?view=netframework-4.8). This table includes some examples of methods which may be useful to you.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
@@ -180,7 +180,7 @@ Fraud Protection supports all .NET standard [String operators] (https://docs.mic
 
 #### Math operators
 
-Fraud Protection supports all.NET’s standard [Math methods](https://docs.microsoft.com/en-us/dotnet/api/system.math?view=netframework-4.8). This table includes some examples of methods which may be useful to you.
+Fraud Protection supports all.NET’s standard [Math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8). This table includes some examples of methods which may be useful to you.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
@@ -190,7 +190,7 @@ Fraud Protection supports all.NET’s standard [Math methods](https://docs.micro
 
 ### DateTime operators
 
-Fraud Protection supports all .NET’s standard [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netframework-4.8) properties, methods, and operators. This table includes some examples of properties which may be useful to you.
+Fraud Protection supports all .NET’s standard [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?view=netframework-4.8) properties, methods, and operators. This table includes some examples of properties which may be useful to you.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
@@ -202,7 +202,7 @@ Fraud Protection supports all .NET’s standard [DateTime](https://docs.microsof
 
 ### Type casting operators
 
-For more information about type inferencing, click [Type Inference](link). 
+For more information about type inferencing, click [Type inference](fpl-lang-ref.md#type-inference). 
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
@@ -211,7 +211,7 @@ For more information about type inferencing, click [Type Inference](link).
 |ToInt32()    |Converts a string to an Int32. |@riskScore.ToInt32() |
 
 
-## Type Inference
+## Type inference
 
 The default type of variables extracted using the @ operator, as well as the variables extracted from lists using the Lookup operation, is *String*. The extracted type may change depending on the lookup context. For example:
 
@@ -219,7 +219,7 @@ The default type of variables extracted using the @ operator, as well as the var
 -	In the expression @riskScore > 500, @riskScore is interpreted as a Double value. 
 - In the expression @creationDate.Year < DateTime.UtcNow.Year, @creationDate is interpreted as a DateTime value. 
 
-You can specify the type of a variable you want by using a [type casting operator](link). 
+You can specify the type of a variable you want by using a [type casting operator](fpl-lang-ref.md#type-casting-operators). 
 
 
 ## Using lists in rules 
@@ -269,5 +269,5 @@ This clause finds the key @username in the Email column of the Email List, and c
 
 If the key is not found in the list, by default, *Unknown* is returned. 
 
-You can also specify your own default value as a fifth parameter. See [list operators](fpl-lang-ref.md#list-operators-1) for more information. 
+You can also specify your own default value as a fifth parameter. See [list operators](fpl-lang-ref.md#list-operators) for more information. 
 
