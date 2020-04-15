@@ -17,9 +17,11 @@ title: Fraud Protection language guide
 
 ## Overview
 
-Fraud Protection [Rules](rules.md) enable you to write business logic for automated decision making. Rules are made up of [conditions]( rules.md#conditions) and [clauses](rules.md#clauses). Clauses are written in a rich and expressive language that enables you to customize the logic required to meet your unique business needs. 
+Fraud Protection [Rules](rules.md) enable you to write business logic for automated decision making. Rules are made up of [conditions]( rules.md#conditions) and [clauses](rules.md#clauses). Conditions and clauses are written in a rich and expressive language that enables you to customize the logic required to meet your unique business needs. 
 
-Fraud Protection language has significant overlap with C# and SQL. The **RETURN** and **WHERE** keywords define the clause and the *@field* syntax is used to extract fields from the payload. Most C# comparison and arithmetic operators are also available. Review the [language reference](fpl-lang-ref.md#language-reference) for a complete list of available operators. 
+Fraud Protection language has significant overlap with C# and SQL. The **RETURN** and **WHERE** keywords define the clause, and the *@field* syntax is used to extract fields from the payload. Most C# comparison and arithmetic operators are also available.
+
+For a complete list of available operators, review the [language reference](fpl-lang-ref.md#language-reference). 
 
 ## Quick start guide
 
@@ -27,29 +29,30 @@ Fraud Protection language has significant overlap with C# and SQL. The **RETURN*
 
 Clauses adhere to the following basic structure: 
 
-      RETURN decision 
-      WHEN condition is true
+      RETURN *decision* 
+      WHEN *condition is true*
 
-You can return a decision of *Approve*, *Reject*, *Challenge*, or *Review*, and include optional parameters to send more information about the decision. For example:
+You can return a decision of *Approve*, *Reject*, *Challenge*, or *Review*, and include optional parameters to send more information about the decision. Here are some examples of valid RETURN statements:
 
       RETURN Reject()
       RETURN Reject(“email is on block list”)
       RETURN Reject(“email is on block list”, “do not escalate”)
 
-For information about how to use  decision types and their parameters, see [Decision types](fpl-lang-ref.md#decision-types). 
+Everything following the **WHEN** keyword must evaluate to a Boolean value. If a **WHEN** expression evaluates to *True*, the **RETURN** decision is executed. 
 
-Everything following the WHEN keyword must evaluate to a Boolean value. If a **WHEN** expression evaluates to *True*, the **RETURN** decision is executed. 
+For information on how to use decision types and their parameters, see [Decision types](fpl-lang-ref.md#decision-types). 
+
 
 ### WHEN
 
 A **WHEN** expression is made up of one or more Boolean expressions. You can string together multiple Boolean expressions using the [joining operators](fpl-lang-ref.md#joining-operators) **AND (&&)** and **OR (||)**. 
 
-A Boolean expression is formed by checking and/or comparing variables. These variables come in two forms:
+A Boolean expression is formed by checking and/or comparing variables. There are two types of variables:
 
 - Payload values
 - Scores
 
-You can access all variables with the syntax *@variable*. To specify a variable is a part of an object, you can write *@”object.variable”*. 
+You can access all variables with the syntax *@variable*. For example, to specify a variable is a part of an object, you can write *@”object.variable”*. 
 
 Fraud Protection language also provides functions that allow you to extract certain information from variables. For example, you can use a class of [Geo operators](fpl-lang-ref.md#geo-operators) to convert an IP address to a geographical address.
 
@@ -76,63 +79,8 @@ To use variables to form a Boolean expression, you can:
        WHEN @phoneNumber.startsWith(“1-“)
        WHEN @email.endsWith(“@contoso.com”)
 
-## Advanced topics
-
-### Typing
-
-
-### List operators
-
-
 ### Supported operators
-FPL supports methods for [String operators](fpl-lang-ref.md#string-operators), [Math operators](fpl-lang-ref.md#math-operators), [Geo operators](fpl-lang-ref.md#geo-operators), and [DateTime](fpl-lang-ref.md#datetime-types) types. Click the links for information and examples.
-
-### Lists 
-You can create a rule with a previously created [custom list](lists.md). To check if a specific value is contained in one of your lists, use the **ContainsKey** operation. Specify the list name, the column, and the key you want to check.
-For example, if you have a single-column list of risky email addresses, titled *Risky email* list
-
-|Risky email |
-|--------------|
-|Kayla@contoso.com |
-|Jamie@bellowscollege.com |
-|Marie@atatum.com |
-
-You can add a clause to your rule to check membership in the *Risky email* list. For example:
-
-      RETURN Reject(“in risky email list”) 
-      WHEN ContainsKey(“Risky Email List”, “Risky Emails”, @username) 
-
-When you run this rule, Fraud Protection checks if the *Risky emails* column in the Risky email list contains *@username*.
-
-### The Lookup operator
-
-You can create a rule with the **Lookup** operator to check the value of an entry in a specific list.  
-First, you create a list of all email address marked either *Safe* or *Risky*. For example: 
-
-|Email address|Status|
-|--------------|--------------|
-|Kayla@contoso.com |Risky|
-|Jamie@bellowscollege.com|Risky|
-|Marie@atatum.com|Risky|
-|Camille@fabrikam.com|Safe|
-|Miguel@proseware.com |Safe |
-|Tyler@contoso.com |Safe |
-
-Next, you create a rule using the Lookup operator to check if an email address is marked either *Safe* or *Risky*.
-When you write the **Lookup** clause, specify the list you want to check (*Email* list), the column heading you want to check (*Emails*), the key you’re looking for (*username*), and the column name of the value you want to extract (*Status*). For example: 
-
-      Lookup(“Email List”, “Emails”, @username, “Status”)
-
-When you run the rule, if any username represented by *@username* is located, Fraud Protection will return the corresponding status. For example:
-
-      RETURN Reject(“email marked as risky”) 
-      WHEN Lookup(“Email List”, “Emails”, @username, “Status”) == “Risky” 
-
-### Decision parameters
-
-
-### Examples of clauses
-
+FPL supports methods for [String operators](fpl-lang-ref.md#string-operators), [Math operators](fpl-lang-ref.md#math-operators), [Geo operators](fpl-lang-ref.md#geo-operators), and [DateTime](fpl-lang-ref.md#datetime-operators) types. Click the links for information and examples.
 
 ## Language reference 
 
@@ -142,36 +90,44 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|**RETURN** |User defined clauses that return a decision based on specific conditions. Clauses run in sequential order based on user-defined settings.|Return Approve()<br>WHEN ContainsKey("iplist", "IPAddress", @ipAddress)|
-|**WHEN** |Accepts transaction based on user-defined settings. |Return Approve()<br>WHEN ContainsKey("iplist", "IPAddress", @ipAddress) |
-| |Rejects transaction based on user-defined settings. |Return Reject()<br>WHEN ContainsKey("iplist", "IPAddress", @ipAddress) |
-| |Throws a challenge if user-defined settings are met or not met. |Return Challenge("challenge type", "reason")<br>WHEN @botScore < 900 AND @botScore > 400 |
+|**RETURN** |Must be followed by a valid [Decision type](fpl-lang-ref.md#decision-types): Approve, Reject, Challenge, or Review.<br>The Decision can also be followed by [Other](fpl-lang-ref.md#additional-return-types), used to pass key value pairs.|RETURN Reject()<br>RETURN Reject(), Other(key=@username)|
+|**WHEN** |Must evaluate to a Boolean value. |WHEN @riskscore > 400|
+
 
 #### Decision types
 
 | Syntax   | Description     | Example|
 |-------|-----------------|--------|
-|Approve   |Accepts transaction based on user-defined settings.                 |Return Approve()<br>WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress) |
-|Reject    |Rejects transaction on user-defined settings.                       |Return Reject()<br>WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress) |
-|Review    |                                                                    |(reason = "") |
-|Challenge |Throws a challenge if user-defined settings are met or are not met. |Return Challenge(“challenge type", "reason")<br>WHEN @botScore < 900 AND @botScore > 400 |
+|Approve   |Approves the event.<br>Overloads:<br>Approve()<br>Approve(String *reason*)<br>Approve(String *reason*, String *supportMessage*)|Approve()<br><br>Approve("on safe list")<br>Approve ("on safe list", “do not escalate”) |
+|Reject    |Rejects the event.<br>Overloads:<br>Reject()<br>Reject(String *reason*)<br>Reject(String *reason*, String *supportMessage*) |Reject()<br><br>Reject("embargo country")<br><br>Return Reject() <br>  Reject("embargo country", “do not escalate”) |
+|Review    |Marks the transaction for further review.<br>Overloads:<br>Review()<br>Review(String *reason*)<br>Review(String *reason*, String *supportMessage*)|Review()<br><br>Review("user on watch list")<br><br>Review("user on watch list", “do not escalate”) |
+|Challenge |Marks the transaction for further verification using the specified challenge type.<br> Overloads:<br>Challenge(String *challengeType*)<br>Challenge(String *challengeType*, String *reason*)<br>Challenge(String *challengeType*, String *reason*, String *supportMessage*)|Challenge ("SMS")<br><br>Challenge ("SMS”, “suspected bot")<br><br>Challenge ("SMS”, suspected bot", “do not escalate”) |
 
-#### Variables
+
+#### Additional RETURN types
 
 | Syntax    | Description     | Example|
 |-------|-----------------|--------|
-|@          |Looks up a specified variable.                                    |@field @"findthis.thenthis.thenthis"|
-|@botscore  |A clause executed in sequential order after bot model scoring.    |RETURN Challenge(“challenge type", "reason")<br>WHEN @botScore < 900 AND @botScore > 400 |
-|@riskscore |A clause executed in sequential order after risk model scoring.   |@riskscore |
+|Other  |Can be used to pass key value pairs to the response payload.|Other(key="test", username=@email, countryRegion=Geo.CountryRegion(@ipAddress))|
 
+
+#### Variables
+
+To learn more about how these variables are typed, click [type inference](link).
+
+| Syntax    | Description     | Example|
+|-------|-----------------|--------|
+|@	|Used to reference an AI score or a variable from the event payload.<br>If city exists in multiple places in the payload, then @city will return the first occurrence.<br>To avoid this, specify the full path. For example @”address.city”<br>If the variable isn’t found in the event payload, the default value for that type is returned – 0.0 for double, empty string for strings, etc.|@city<br>@"address.city"|
+|@botscore    |Fraud Protection’s AI models generate a bot score between 0 and 999 for each Account Protection event, with a higher score indicating a higher probability that event was initiated by a bot.<br>You can reference this score in [post-bot-scoring clauses](rules.md#post-bot-scoring-clauses) and [post-risk-scoring clauses](rules.md#post-risk-scoring-clauses) with @botScore|@botScore|
+|@riskscore	|Fraud Protection's AI models generate a risk score between 0 and 999 for all Purchase and Account Protection events, with a higher score indicating a higher risk.<br>You can reference this score in post-risk-scoring clauses with @riskScore.	|@riskScore |
 
 
 #### Joining operators
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|**AND ( && )** |Logical **And** returns the Boolean value TRUE if either or both operands are TRUE and returns FALSE otherwise. |(x < 10 && y > 1) is true |
-|**OR ( \|\| )** |Logical **Or** returns the Boolean value TRUE if either or both operands are TRUE and returns FALSE otherwise. |(x == 5 \|\| y == 5) is false |
+|**AND ( && )**  |Logical **And** |@botScore > 500 && @riskScore > 500<br>@botScore > 500 AND @riskScore > 500 |
+|**OR ( \|\| )** |Logical **Or** |(@isEmailUsername == false  \|\| @isEmailValidated == false<br>@isEmailUsername == false OR @isEmailValidated == false |
 
 #### Comparison operators
 
