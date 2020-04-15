@@ -133,6 +133,18 @@ For information on how these variables are typed, click [type inference](fpl-lan
 |**AND ( && )**  |Logical **And** |@botScore > 500 && @riskScore > 500<br>@botScore > 500 AND @riskScore > 500 |
 |**OR ( \|\| )** |Logical **Or** |(@isEmailUsername == false  \|\| @isEmailValidated == false<br>@isEmailUsername == false OR @isEmailValidated == false |
 
+
+#### List operators
+
+For additional information about using lists in rules, click [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules).
+
+| Syntax| Description     | Example|
+|-------|-----------------|--------|
+|ContainsKey |Checks if a key is contained within specified column of a pre-defined [list](lists.md)<br>ContainsKey(String *listName*, String *columnName*, String *key*) |ContainsKey("Email Support List", “Emails”, @email)<br>This checks if the variable @email is contained in column “Emails” of list “Email Support List”  |
+|Lookup      |Looks up the value of a key in a list column.<br>If the key is not found, and *defaultValue* is not specified, “Unknown” is returned.<br>Overloads<br>Lookup(String *listName*, String *keyColumnName*, String *key*, String *valueColumnName*) <br>Lookup(String *listName*, String *keyColumnName*, String key, String valueColumnName, String defaultValue) |Lookup("Email Support List", “Emails”, @email, ”Status”) ==  ”Block”<br><br>This finds the variable @email in column “Emails” of list “Email Support List”, and returns its corresponding value in column “Status” |
+|In          |Checks if a key is contained within a comma-separated list of values<br>In(String *key*, String *list*)  |In(@countryRegion, "US, MX, CA")|
+
+
 #### Comparison operators
 
 Fraud protection supports all standard C# comparison and equality operations. This table includes some examples of methods which may be useful to you.
@@ -145,16 +157,6 @@ Fraud protection supports all standard C# comparison and equality operations. Th
 |< |Checks if the first value is less than the second value. |@riskScore < 500 |
 |>= |Checks if the first value is greater than or equal to the second value. |@riskScore >= 500 |
 |<= |Checks if the first value is less than or equal to the second value. |@riskScore <= 500 |
-
-#### List operators
-
-For additional information about using lists in rules, click [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules).
-
-| Syntax| Description     | Example|
-|-------|-----------------|--------|
-|ContainsKey |Checks if a key is contained within specified column of a pre-defined [list](lists.md)<br>ContainsKey(String *listName*, String *columnName*, String *key*) |ContainsKey("Email Support List", “Emails”, @email)<br>This checks if the variable @email is contained in column “Emails” of list “Email Support List”  |
-|Lookup      |Looks up the value of a key in a list column.<br>If the key is not found, and *defaultValue* is not specified, “Unknown” is returned.<br>Overloads<br>Lookup(String *listName*, String *keyColumnName*, String *key*, String *valueColumnName*) <br>Lookup(String *listName*, String *keyColumnName*, String key, String valueColumnName, String defaultValue) |Lookup("Email Support List", “Emails”, @email, ”Status”) ==  ”Block”<br><br>This finds the variable @email in column “Emails” of list “Email Support List”, and returns its corresponding value in column “Status” |
-|In          |Checks if a key is contained within a comma-separated list of values<br>In(String *key*, String *list*)  |In(@countryRegion, "US, MX, CA")|
 
 
 #### Geo operators
@@ -217,17 +219,6 @@ For more information about type inferencing, click [Type inference](fpl-lang-ref
 |ToInt32()    |Converts a string to an Int32. |@riskScore.ToInt32() |
 
 
-## Type inference
-
-The default type of variables extracted using the @ operator, as well as the variables extracted from lists using the Lookup operation, is *String*. The inferred type may change depending on the context. For example:
-
--	In the expression WHEN @isEmailValidated, @isEmailValidated is interpreted as a Boolean value.
--	In the expression @riskScore > 500, @riskScore is interpreted as a Double value. 
-- In the expression @creationDate.Year < DateTime.UtcNow.Year, @creationDate is interpreted as a DateTime value. 
-
-You can also specify the type of a variable by using a [type casting operator](fpl-lang-ref.md#type-casting-operators). 
-
-
 ## Using lists in rules 
 
 You can create a rule with a previously created [list](lists.md) using either the **ContainsKey** or **Lookup** operators.
@@ -276,4 +267,15 @@ This clause finds the key *@username* in the *Email* column of the *Email* list 
 If the key is not found in the list, by default, *Unknown* is returned. 
 
 You can also specify your own default value as a fifth parameter. See [list operators](fpl-lang-ref.md#list-operators) for more information. 
+
+## Type inference
+
+The default type of variables extracted using the @ operator, as well as the variables extracted from lists using the Lookup operation, is *String*. The inferred type may change depending on the context. For example:
+
+-	In the expression WHEN @isEmailValidated, @isEmailValidated is interpreted as a Boolean value.
+-	In the expression @riskScore > 500, @riskScore is interpreted as a Double value. 
+- In the expression @creationDate.Year < DateTime.UtcNow.Year, @creationDate is interpreted as a DateTime value. 
+
+You can also specify the type of a variable by using a [type casting operator](fpl-lang-ref.md#type-casting-operators). 
+
 
