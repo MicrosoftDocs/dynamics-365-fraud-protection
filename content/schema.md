@@ -284,3 +284,17 @@ The following schema is used in the Evaluate and Protect experiences.
 
 ## Download sample data
 You can download our [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip) to explore options before using your own internal data.
+
+### Custom data sample
+
+The following sample shows you how to use purchase APIs with a custom data object in Fraud protection.
+
+    { 
+        "CustomData": { 
+            "EngagementDuration": 120.4, 
+            "GamerScore": 10, 
+            "InApp": true, 
+            "MiscSampleA": "abc" 
+        } 
+    }
+
