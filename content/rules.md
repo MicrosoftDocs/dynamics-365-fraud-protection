@@ -25,7 +25,7 @@ Dynamics 365 Fraud Protection gives you the flexibility to create custom rules b
 
 ##  Access the Rules management page
 
-You can create custom rules and manage existing rules on the Rules page. 
+You can create custom rules and manage existing rules on the **Rules** page. 
 
 - To create and manage rules related to purchases, click **Purchase protection** and then click **Rules** on the left navigation.
 
@@ -197,7 +197,7 @@ For information on how to reorder rules, see [Understand rule ordering](rules.md
 You can create rules to make decisions for purchase, account creation, and account login events.
 
 > [!NOTE]
->When you create a new rule, it displays at the bottom of the Rules management page. You can move the rule to a different position on the list of rules at any time. For more information, see [Understand rule ordering](rules.md#understand-rule-ordering).
+>When you create a new rule, it displays at the bottom of the **Rules** management page. You can move the rule to a different position on the list of rules at any time. For more information, see [Understand rule ordering](rules.md#understand-rule-ordering).
 
 
 #### To create a new rule:
@@ -305,8 +305,9 @@ The [order in which rules](rules.md#understand-rule-ordering) display on the **R
 
 #### To move a rule to a new position using drag-and-drop:
 
-1.	Navigate to the **Rules** management page.
-1.	Select the rule you want to move, drag it to its new position, and then click **Save order.** 
+1. Select the rule you want to move, and then drag it to its new position.
+1. Repeat Step 1 to move as many rules as you want, and then click  **Save order.** 
+
     To cancel your changes, click **Cancel re-ordering**. 
     
 #### To move a rule to a new position using a keyboard: 
