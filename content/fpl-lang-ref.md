@@ -94,7 +94,7 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|**RETURN** |Must be followed by a valid [Decision type](fpl-lang-ref.md#decision-types): Approve, Reject, Challenge, or Review.<br>The Decision can also be followed by [Other](fpl-lang-ref.md#additional-return-types), used to pass key value pairs.|RETURN Reject()<br>RETURN Reject(), Other(key=@username)|
+|**RETURN** |<p>Must be followed by a valid [Decision type](fpl-lang-ref.md#decision-types): Approve, Reject, Challenge, or Review.</p><p>The Decision can also be followed by [Other](fpl-lang-ref.md#additional-return-types), used to pass key value pairs.|<p>RETURN Reject()</p><p>RETURN Reject(), Other(key=@username)|
 |**WHEN** |Must evaluate to a Boolean value. |WHEN @riskscore > 400|
 
 
@@ -102,10 +102,10 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 
 | Syntax   | Description     | Example|
 |-------|-----------------|--------|
-|Approve   |Approves the event.<br>Overloads:<br>Approve()<br>Approve(String *reason*)<br>Approve(String *reason*, String *supportMessage*)|Approve()<br><br>Approve("on safe list")<br>Approve ("on safe list", “do not escalate”) |
-|Reject    |Rejects the event.<br>Overloads:<br>Reject()<br>Reject(String *reason*)<br>Reject(String *reason*, String *supportMessage*) |Reject()<br><br>Reject("embargo country")<br><br>Return Reject() <br>  Reject("embargo country", “do not escalate”) |
-|Review    |Marks the transaction for further review.<br>Overloads:<br>Review()<br>Review(String *reason*)<br>Review(String *reason*, String *supportMessage*)|Review()<br><br>Review("user on watch list")<br><br>Review("user on watch list", “do not escalate”) |
-|Challenge |Marks the transaction for further verification using the specified challenge type.<br> Overloads:<br>Challenge(String *challengeType*)<br>Challenge(String *challengeType*, String *reason*)<br>Challenge(String *challengeType*, String *reason*, String *supportMessage*)|Challenge ("SMS")<br><br>Challenge ("SMS”, “suspected bot")<br><br>Challenge ("SMS”, suspected bot", “do not escalate”) |
+|Approve   |<p>Approves the event.</p><p>Overloads:<br>Approve()</p><p>Approve(String *reason*)</p><p>Approve(String *reason*, String *supportMessage*)|Approve()</p><p>Approve("on safe list")</p><p>Approve ("on safe list", “do not escalate”)</p>|
+|Reject    |<p>Rejects the event.</p><p>Overloads:</p><p>Reject()</p><p>Reject(String *reason*)</p><p>Reject(String *reason*, String *supportMessage*) |Reject()</p><p>Reject("embargo country")</p><p>Return Reject()</p><p>Reject("embargo country", “do not escalate”)</p> |
+|Review    |<p>Marks the transaction for further review.</p><p>Overloads:</p><p>Review()</p><p>Review(String *reason*)</p><p>Review(String *reason*, String *supportMessage*)|Review()</p><p>Review("user on watch list")</p><p>Review("user on watch list", “do not escalate”)</p>|
+|Challenge |<p>Marks the transaction for further verification using the specified challenge type.</p><p>Overloads:</p><p>Challenge(String *challengeType*)</p><p>Challenge(String *challengeType*, String *reason*)</p><p>Challenge(String *challengeType*, String *reason*, String *supportMessage*)|<p>Challenge ("SMS")</p><p>Challenge ("SMS”, “suspected bot")</p><p>Challenge ("SMS”, suspected bot", “do not escalate”) |
 
 
 #### Additional RETURN types
@@ -121,17 +121,17 @@ For information on how these variables are typed, click [type inference](fpl-lan
 
 | Syntax    | Description     | Example|
 |-------|-----------------|--------|
-|@	|Used to reference an AI score or a variable from the event payload.<br>If city exists in multiple places in the payload, then @city will return the first occurrence.<br>To avoid this, specify the full path. For example @”address.city”<br>If the variable isn’t found in the event payload, the default value for that type is returned – 0.0 for double, empty string for strings, etc.|@city<br>@"address.city"|
-|@botscore    |Fraud Protection’s AI models generate a bot score between 0 and 999 for each Account Protection event, with a higher score indicating a higher probability that event was initiated by a bot.<br>You can reference this score in [post-bot-scoring clauses](rules.md#post-bot-scoring-clauses) and [post-risk-scoring clauses](rules.md#post-risk-scoring-clauses) with @botScore|@botScore|
-|@riskscore	|Fraud Protection's AI models generate a risk score between 0 and 999 for all Purchase and Account Protection events, with a higher score indicating a higher risk.<br>You can reference this score in post-risk-scoring clauses with @riskScore.	|@riskScore |
+|@	|<p>Used to reference an AI score or a variable from the event payload.</p><p>If city exists in multiple places in the payload, then @city will return the first occurrence.</p><p>To avoid this, specify the full path. For example @”address.city”</p><p>If the variable isn’t found in the event payload, the default value for that type is returned – 0.0 for double, empty string for strings, etc.</p>|@city<br>@"address.city"|
+|@botscore    |<p>Fraud Protection’s AI models generate a bot score between 0 and 999 for each Account Protection event, with a higher score indicating a higher probability that event was initiated by a bot.</p><p>You can reference this score in [post-bot-scoring clauses](rules.md#post-bot-scoring-clauses) and [post-risk-scoring clauses](rules.md#post-risk-scoring-clauses) with @botScore</p>|@botScore|
+|@riskscore	|<p>Fraud Protection's AI models generate a risk score between 0 and 999 for all Purchase and Account Protection events, with a higher score indicating a higher risk.</p><p>You can reference this score in post-risk-scoring clauses with @riskScore.</p>	|@riskScore |
 
 
 #### Joining operators
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|**AND ( && )**  |Logical **And** |@botScore > 500 && @riskScore > 500<br>@botScore > 500 AND @riskScore > 500 |
-|**OR ( \|\| )** |Logical **Or** |(@isEmailUsername == false  \|\| @isEmailValidated == false<br>@isEmailUsername == false OR @isEmailValidated == false |
+|**AND ( && )**  |Logical **And** |<p>@botScore > 500 && @riskScore > 500</p><p>@botScore > 500 AND @riskScore > 500</p> |
+|**OR ( \|\| )** |Logical **Or** |<p>(@isEmailUsername == false  \|\| @isEmailValidated == false</p><p>@isEmailUsername == false OR @isEmailValidated == false</p> |
 
 
 #### List operators
@@ -140,8 +140,8 @@ For additional information about using lists in rules, click [Using lists in rul
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|ContainsKey |Checks if a key is contained within specified column of a pre-defined [list](lists.md)<br>ContainsKey(String *listName*, String *columnName*, String *key*) |ContainsKey("Email Support List", “Emails”, @email)<br>This checks if the variable @email is contained in column “Emails” of list “Email Support List”  |
-|Lookup      |Looks up the value of a key in a list column.<br>If the key is not found, and *defaultValue* is not specified, “Unknown” is returned.<br>Overloads<br>Lookup(String *listName*, String *keyColumnName*, String *key*, String *valueColumnName*) <br>Lookup(String *listName*, String *keyColumnName*, String key, String valueColumnName, String defaultValue) |Lookup("Email Support List", “Emails”, @email, ”Status”) ==  ”Block”<br><br>This finds the variable @email in column “Emails” of list “Email Support List”, and returns its corresponding value in column “Status” |
+|ContainsKey |<p>Checks if a key is contained within specified column of a pre-defined [list](lists.md).</p><p>ContainsKey(String *listName*, String *columnName*, String *key*)</p> |<p>ContainsKey("Email Support List", “Emails”, @email)</p><p>This checks if the variable @email is contained in column “Emails” of list “Email Support List” </p> |
+|Lookup      |<p>Looks up the value of a key in a list column.</p><p>If the key is not found, and *defaultValue* is not specified, “Unknown” is returned.</p><p>Overloads<br>Lookup(String *listName*, String *keyColumnName*, String *key*, String *valueColumnName*) </p><p>Lookup(String *listName*, String *keyColumnName*, String key, String valueColumnName, String defaultValue)</p> |<p>Lookup("Email Support List", “Emails”, @email, ”Status”) ==  ”Block”</p><p>This finds the variable @email in column “Emails” of list “Email Support List”, and returns its corresponding value in column “Status”</p> |
 |In          |Checks if a key is contained within a comma-separated list of values<br>In(String *key*, String *list*)  |In(@countryRegion, "US, MX, CA")|
 
 
@@ -165,14 +165,14 @@ These operators convert an IP address to a geographical address.
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|Geo.RegionCode    |Converts an IPv4 address to its US region code (the abbreviation of the name of the US state or territory)<br>For example, an IP address in Washington State will return "WA."  | Geo.RegionCode(@ipAddr)|
-|Geo.Region    |Converts an IPv4 address to its US region (the name of the US state or territory).<br>For example, an IP address in Washington State will return "Washington."    |Geo.Region(@ipAddr)|
-|Geo.CountryCode    |Converts an IPv4 address to its country code.<br>For example, an IP address in Australia will return "AU."| Geo.CountryCode(@ipAddr)|
-|Geo.CountryRegion    |Converts an IP address to a region name.<br>For example, an IP address in Australia will return “Australia”.|Geo.CountryRegion(@ipAddress)|
-|Geo.City    |Converts an IPv4 address to a city name. <br>For example, an IP address in New York City will return "New York City".|WGeo.City(@ipAddr)|
-|Geo.PostalCode    |Converts an IPv4 address to its postal code. <br>For example, an IP address in Seattle might return  "98106."|Geo.PostalCode(@ipAddr)|
-|Geo.Isp    |Converts an IPv4 address to the Internet Service Provider (ISP) that manages that IP. <br>For example, an IP address might return "Level 3 Communications."   |Geo.Isp(@ipAddr)|
-|Geo.MarketCode    |Converts an IPv4 address to the market code of the IP. <br>For example, an IP address from Canada will return "NA" (North America).     |Geo.MarketCode(@ipAddr)|
+|Geo.RegionCode    |<p>Converts an IPv4 address to its US region code (the abbreviation of the name of the US state or territory)</p><p>For example, an IP address in Washington State will return "WA."</p>| Geo.RegionCode(@ipAddr)|
+|Geo.Region    |<p>Converts an IPv4 address to its US region (the name of the US state or territory).</p><p>For example, an IP address in Washington State will return "Washington."</p>    |Geo.Region(@ipAddr)|
+|Geo.CountryCode    |<p>Converts an IPv4 address to its country code.</p><p>For example, an IP address in Australia will return "AU."</p>| Geo.CountryCode(@ipAddr)|
+|Geo.CountryRegion    |<p>Converts an IP address to a region name.</p><p>For example, an IP address in Australia will return “Australia”.</p>|Geo.CountryRegion(@ipAddress)|
+|Geo.City    |<p>Converts an IPv4 address to a city name. </p><p>For example, an IP address in New York City will return "New York City".</p>|WGeo.City(@ipAddr)|
+|Geo.PostalCode    |<p>Converts an IPv4 address to its postal code.</p><p>For example, an IP address in Seattle might return  "98106."|Geo.PostalCode(@ipAddr)</p>|
+|Geo.Isp    |<p>Converts an IPv4 address to the Internet Service Provider (ISP) that manages that IP. </p><p>For example, an IP address might return "Level 3 Communications." </p>  |Geo.Isp(@ipAddr)|
+|Geo.MarketCode    |<p>Converts an IPv4 address to the market code of the IP. </p><p>For example, an IP address from Canada will return "NA" (North America).</p><p>     |Geo.MarketCode(@ipAddr)|
 
 
 #### String operators
@@ -181,10 +181,10 @@ Fraud Protection supports all .NET standard [String operators](https://docs.micr
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|StartsWith |Checks if a string ends with a given suffix. <br>StartsWith(String *prefix*) |@phoneNumber.StartsWith("1-") |
-|EndsWith |Checks if a string ends with a given prefix. <br>EndsWith(String *suffix*) |@email.EndsWith("@contoso.com") |
-|Contains |Checks if a string contains another string. <br>Contains(String *substring*) |@productName.Contains("Xbox") |
-|Exists| Checks if a variable exists in the event payload. <br>Exists(String *variable*)|Exists(@email)| 
+|StartsWith |<p>Checks if a string ends with a given suffix.</p><p>StartsWith(String *prefix*)</p> |@phoneNumber.StartsWith("1-") |
+|EndsWith   |<p>Checks if a string ends with a given prefix.</p><p>EndsWith(String *suffix*)</p> |@email.EndsWith("@contoso.com") |
+|Contains   |<p>Checks if a string contains another string.</p><p>Contains(String *substring*)</p> |@productName.Contains("Xbox") |
+|Exists     |<p>Checks if a variable exists in the event payload.</p><p>Exists(String *variable*)</p>|Exists(@email)| 
 
 #### Math operators
 
@@ -192,8 +192,8 @@ Fraud Protection supports all.NET’s standard [Math methods](https://docs.micro
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
-|Math.Min |Computes the minimum of two values.<br>Math.Min(Double value1, Double value2) |Math.Min(@riskScore,@botScore) |
-|Math.Max |Computes the maximum of two values.<br>Math.Max(Double value1, Double value2) |Math.Max(@riskScore,@botScore) |
+|Math.Min |<p>Computes the minimum of two values.</p><p>Math.Min(Double value1, Double value2)</p> |Math.Min(@riskScore,@botScore) |
+|Math.Max |<p>Computes the maximum of two values.</p><p>Math.Max(Double value1, Double value2)</p> |Math.Max(@riskScore,@botScore) |
 
 
 ### DateTime operators
