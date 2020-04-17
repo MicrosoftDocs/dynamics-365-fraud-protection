@@ -52,11 +52,11 @@ The **Rules** page displays a list of all the rules configured for an event type
 A rule consists of:
 -  A [name and description](rules.md#details-name-and-description) that describe the purpose of the rule.
 -  A [status](rules.md#status) that indicate its current state.
--  A [sample](rules.md#sample) that assists you in writing and evaluating the rule.
+-  A [sample](rules.md#samples) that assists you in writing and evaluating the rule.
 -  Components that enable you to build the logic to automatically approve, reject, challenge, and review certain events. This includes:
     -  A [condition](rules.md#conditions).
     -  One or more of the following types of [clauses](rules.md#clauses):
-       -  [Prior to all scoring clauses](rules.md#prior-to-all-scoring-clause).
+       -  [Prior to all scoring clauses](rules.md#prior-to-all-scoring-clauses).
        -  [Post bot scoring clauses](rules.md#post-bot-scoring-clauses).
        -  [Post risk scoring clauses](rules.md#post-risk-scoring-clauses).
 
@@ -194,11 +194,16 @@ If no rules are evaluated because no conditions match the event, by default, Fra
 For information on how to reorder rules, see [Understand rule ordering](rules.md#understand-rule-ordering).
 
 ## Create a new rule
-You can create rules to automate decision-making for purchase, account creation, and account login events. 
+You can create rules to make decisions for purchase, account creation, and account login events.
+
+> [!NOTE]
+>When you create a new rule, it displays at the bottom of the Rules management page. You can move the rule to a different position on the list of rules at any time. For more information, see [Understand rule ordering](rules.md#understand-rule-ordering).
+
 
 #### To create a new rule:
 
-1. Navigate to the [Rules management page](rules.md#access-the-rules-management-page), and then click **New Rule**.
+1. Navigate to the [Rules management page](rules.md#access-the-rules-management-page).
+1. Click **New Rule**.
 1. (Optional) Click **Rename**, and then add a name and description so that the rule is easily identifiable to you and your team.
     Fraud Protection also prompts you to add a name and description when you publish your rule.
 1. Add a [condition](rules.md#conditions) to your rule.
@@ -218,8 +223,8 @@ You can create rules to automate decision-making for purchase, account creation,
     
 1. To [evaluate your rule](rules.md#evaluate-a-rule) and ensure it works as expected, click **Expand** on the bottom right of the **Rules** page to expand the evaluation panel.
 1. To publish your rule, click **Publish**, change the name, description, and status in the confirmation dialog, and then click **Publish**.
-    You can set the [status](rules.md#status) to either **Active** or **Inactive**.
-1. By default, the new rule displays at the bottom of the page. To move the rule to a new position on the order list: 
+ 1. You can set the [status](rules.md#status) to either **Active** or **Inactive**.
+1. To move the rule to a new position on the order list: 
     1. Navigate to the **Rules** management page.
     1. Select the rule, drag it to its new position, and then click **Save order**. 
 
@@ -287,17 +292,17 @@ The [order in which rules](rules.md#understand-rule-ordering) display on the **R
 #### To move a rule to a new position using drag-and-drop:
 
 1.	Navigate to the **Rules** management page.
-2.	Select the rule you want to move, drag it to its new position, and then click **Save order.** 
+1.	Select the rule you want to move, drag it to its new position, and then click **Save order.** 
     To cancel your changes, click **Cancel re-ordering**. 
     
 #### To move a rule to a new position using a keyboard: 
 
-1.	Navigate to the **Rules** management page.
-2.	Select the rule you want to move, and then click **Reorder**.
-    Fraud Protection displays the rules as draggable tiles.
-3.	Press the **Tab** key to choose a tile and then press **Spacebar** to activate the tile. 
-4.	Use the arrow keys to move the tile up or down the list, and then press **Spacebar** to accept the new position.
-5.	To save your changes, click **Save order**. 
+1. Click **Reorder**.
+   Fraud Protection displays the rules as draggable tiles.
+1. Press the **Tab** key to choose a tile and then press **Spacebar** to activate the tile. 
+1. Use the arrow keys to move the tile up or down the list
+1. Press  **Spacebar** to accept the new position, or press the **ESC** key to return the tile to its original position.
+1. To save your changes, click **Save order**. 
     If you want to cancel your changes, click **Cancel re-ordering**. 
 
 ## Evaluate a Rule
@@ -312,7 +317,7 @@ You can use the rule evaluation panel at the bottom of the **Rules** page to ens
   
 - To collapse the panel, click **Collapse**.
 
-When the evaluation panel is expanded, your can watch your rule being evaluated against the [sample payload](rules.md#sample). As you make changes to the sample or to a clause, the content in the evaluation panel updates accordingly.
+When the evaluation panel is expanded, your can watch your rule being evaluated against the [payload sample](rules.md#samples). As you make changes to the sample or to a clause, the content in the evaluation panel updates.
 
 The evaluation panel displays the decision Fraud Protection returns for this sample event, as well as any values associated with the response. If a reason or support message was specified, it also appears here. The clause that triggers the decision is outlined in green. 
 
@@ -336,7 +341,7 @@ WHEN @isEmailValidated == false && @riskscore > 700
 RETURN Review()<br>
 WHEN @isEmailValidated == false && @riskscore > 400
 
-Your sample payload contains the following user object:
+Your payload sample contains the following user object:
 
     "email": {
         "email": "Primary",
