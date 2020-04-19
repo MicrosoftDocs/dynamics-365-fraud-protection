@@ -17,7 +17,7 @@ title: Rules language guide
 
 ## Overview
 
-Fraud Protection rules are written in a rich and expressive language. This language contains many similarities to C# and SQL and is designed to provide you with the power and flexability you need to customize your fraud strategy and enforce unique business policies. 
+Fraud Protection [rules](rules.md) are written in a rich and expressive language. This language contains many similarities to C# and SQL and is designed to provide you with the power and flexability you need to customize your fraud strategy and enforce unique business policies. 
 
 To get started, read the [Quick start guide](fpl-lang-ref.md#quick-start-guide). For a complete list of available operators, review the [Language reference](fpl-lang-ref.md#language-reference). 
 
@@ -136,7 +136,7 @@ For information on how these variables are typed, click [type inference](fpl-lan
 
 #### List operators
 
-For additional information about using lists in rules, click [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules).
+For additional information about using lists in rules, click [Using lists in rules](fpl-lang-ref.md#use-lists-in-rules).
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
