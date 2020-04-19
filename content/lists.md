@@ -91,7 +91,7 @@ In addition to using multi-column lists to combine safe and block lists, you can
 You can then configure a rule that enforces that transactions are rejected when they have a [risk score](ap-scorecard.md#risk-model-score) above the specified threshold for that product type. For information on about how to create effective rules to customize your business logic, see [Rules](rules.md). 
 
 ## Upload a list
-You can upload organized data in a list file to Fraud Protection and then reference the list in a [rule](rules.md). The file must adhere to the specifications described in [Required list format](lists.md#required-list-format).
+You can upload organized data in a list file to Fraud Protection and then reference the list in a [rule](rules.md). The file must adhere to the specifications described in [Required list format](lists.md#format-requirements).
 
 **To upload a list to Fraud Protection:**
 
