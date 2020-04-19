@@ -23,7 +23,7 @@ Dynamics 365 Fraud Protection gives you the flexibility to create custom rules b
 > [!NOTE]
 > You cannot view or create rules in the INT environment. You must use the PROD environment. 
 
-##  Access the Rules management page
+##  Access the Rules page
 
 You can create custom rules and manage existing rules on the **Rules** page. 
 
@@ -38,10 +38,10 @@ The **Rules** page for **Account protection** has a tab for each assessment type
 
 The **Rules** page displays a list of all the rules configured for an event assessment type. You can view the following information for each rule:
 
--  The  [name](rules.md#details-name-and-description) of the rule.
+-  The  [name](rules.md#name-and-description) of the rule.
 -  The [condition](rules.md#conditions) you created for the rule.
 -  The [status](rules.md#status) of the rule (*active*, *inactive*, or *draft*).
--  The [description](rules.md#details-name-and-description) of the rule.
+-  The [description](rules.md#name-and-description) of the rule.
 -  The [number of clauses](rules.md#clauses) in the rule.
 
 > [!NOTE]
@@ -60,7 +60,7 @@ A rule consists of:
        -  [Post bot scoring clauses](rules.md#post-bot-scoring-clauses).
        -  [Post risk scoring clauses](rules.md#post-risk-scoring-clauses).
 
-### Name and description)
+### Name and description
 
 When you create a rule, you can add a name and description that make it easily identifiable for you and your team. Rule names must be unique.
  
@@ -84,7 +84,7 @@ Rules with draft status are accessible only to the author. If you want to share 
 #### Samples
 When you create or edit a rule, the **Sample** panel displays on the right side of the page. This panel has two sections: *payload sample* and *score sample*.
 
-- To see only the sample variables you use in your rule, click **Show used variables** at the top of the panel. 
+- To view the sample variables you have used in your rule, click **Show used variables** at the top of the panel. 
 
 - To view all variables, click **Show all variables**.
 
@@ -96,10 +96,14 @@ The payload sample is provided as an example and may not accurately reflect the 
 
 ##### Score Sample
 
-The score sample contains the scores generated from Fraud Protection’s AI models. You can reference these score variables in rules after the associated AI model generating the score has run. For example, you can use @botScore only after the *bot* evaluation has run, and @riskScore only after the *risk* evaluation has run. For more information see [Clauses](rules.md#clauses).
+The score sample contains the scores generated from Fraud Protection’s AI models. You can reference these score variables in rules after the associated AI model generating the score has run. For example, you can use @botScore only after the *bot* evaluation has run, and @riskScore only after the *risk* evaluation has run. For more information, see [Clauses](rules.md#clauses).
 
 #### Edit the sample
-In order to test that your rule works as expected on a variety of events, you can modify the sample, and [evaluate your rule](rules.md#evaluate-example) against it. All values in both the payload sample and score sample can be modified. However, note that when you change the sample, it has no impact on which data you are or are not sending to Fraud Protection. Any changes you make to the sample are saved and persisted as part of the rule. 
+To confirm that your rule works as expected on a variety of events, you can modify the sample and [evaluate your rule](rules.md#evaluate-example) against it. 
+
+All values in both the payload sample and score sample can be modified. However, note that when you change the sample, it has no impact on which data you are or are not sending to Fraud Protection. 
+
+Any changes you make to the sample are saved and persisted as part of the rule. 
 
 - To undo all changes made to the sample by you or anyone else, click **Revert**. 
 
@@ -111,7 +115,7 @@ A condition starts with the keyword **WHEN** and is followed by a valid Boolean 
 
 Clauses that follow this condition can be used to configure fraud strategy pertaining to digital product transactions only. 
 
-Conditions are optional fields within a rule, and if you want the rule to apply to all events, do not enter a condition. For information on how conditions are used in rule ordering, see [Rule ordering](rules.md#understand-rule-ordering).
+Conditions are optional fields within a rule, and if you want the rule to apply to all events, do not enter a condition. For information about how conditions are used in rule ordering, see [Rule ordering](rules.md#understand-rule-ordering).
 
 ### Clauses
 
@@ -124,7 +128,7 @@ You can create a clause to return a decision of *Approve*, *Reject*, *Challenge*
 
 Everything following the **WHEN** keyword must evaluate to either True or False. This Boolean expression can be formed using a combination of values from the [event payload](rules.md#clauses), [user-defined lists](lists.md), and [AI-based bot and risk scores](rules.md#post-bot-scoring-clauses). 
 
-For information about the syntax used for writing clauses see the [Rules language guide](fpl-lang-ref.md).
+For information about the syntax used for writing clauses, see the [Rules language guide](fpl-lang-ref.md).
 
 When a clause is triggered (that is, the **WHEN** statement returns True), the *decision* specified in the **RETURN** statement is returned, and no subsequent clauses are run. If a condition matches the decision but no clause within the rule is triggered, by default, Fraud Protection then executes: 
 
@@ -164,7 +168,7 @@ In post-bot-scoring clauses, you can use this score (referenced with @botScore),
 
 Post-risk-scoring clauses are run after Fraud Protection’s AI models have generated a risk assessment score for the event. This score is a number between 0 and 999,with a higher score indicating a higher perceived risk.
 
-In post-risk-scoring clauses, you can use this score, (referenced with @riskScore), in conjunction with other fields from the payload and in Lists to make decisions. For example, the following clause enables you to reject expensive transactions with a risk score greater than 700. 
+In post-risk-scoring clauses, you can use this score, referenced with @riskScore, in conjunction with other fields from the payload and in Lists to make decisions. For example, the following clause enables you to reject expensive transactions with a risk score greater than 700. 
 
     RETURN Reject(“high price and risk score”)
     WHEN @purchasePrice >= 199.99 && @riskScore > 700
@@ -182,17 +186,19 @@ For example, if you configure the following three purchase rules:
 |Rule3 	|WHEN @product == “Xbox”    |Active|
 
 The following behavior would hold true:
--  Since Rule2 has a status of *Inactive*, it is never evaluated against real time production traffic.
--  If a customer in the US makes a purchase, only Rule1 is evaluated.
--  If a customer in the US makes an Xbox purchase, only Rule1 is evaluated.
--  If a customer outside the US makes an Xbox purchase, only Rule3 is evaluated.
--  If a customer outside the US makes a non-Xbox purchase, no rules are evaluated.
+
+-  Since Rule2 has a status of Inactive, it is never evaluated against real time production traffic.
+-  Rule1 is evaluated only if a customer in the US makes a purchase .
+-  Rule1 is evaluated only if a customer in the US makes an Xbox purchase.
+-  Rule3 is evaluated only if a customer outside the US makes an Xbox purchase .
+-  No rules are evaluated if a customer outside the US makes a non-Xbox purchase.
+
 
 If no rules are evaluated because no conditions match the event, by default, Fraud Protection then executes: 
 
     RETURN Approve(“NO_RULE_HIT”)
 
-For information on how to reorder rules, see [Change the order of a rule](rules.md#change-the-order-of-a-rule).
+For information about how to reorder rules, see [Change the order of a rule](rules.md#change-the-order-of-a-rule).
 
 ## Create a new rule
 You can create rules to automate decision-making for purchase, account creation, and account login events.
@@ -302,7 +308,7 @@ When you search for a rule, all rule names and descriptions are searched, and th
 
 ### Change the order of a rule
 
-The [order in which rules](rules.md#understand-rule-ordering) display on the **Rules** page has a signficant impact on how your events are evaluated. 
+The order in which rules display on the **Rules** page has a signficant impact on how your events are evaluated. 
 
 #### To move a rule to a new position using drag-and-drop:
 
