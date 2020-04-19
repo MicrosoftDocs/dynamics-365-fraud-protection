@@ -110,7 +110,7 @@ You can upload organized data in a list file to Fraud Protection and then refere
     Because of caching, it may take up to two minutes for the list to become active. 
 
 > [!IMPORTANT]
->Do not include the following sensitive personal data or highly regulated data types in the files that you upload:<br>- Biometric data, genetic data, or any data related to health.<br>- Personal data revealing racial or ethnic origin or religious views; or <br>- Personal data, which by their nature, are sensitive or private, such as data concerning a person’s sexual orientation or philosophical beliefs.<br>For information on how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+>Do not include the following sensitive personal data or highly regulated data types in the files that you upload:<br>- Biometric data, genetic data, or any data related to health.<br>- Personal data revealing racial or ethnic origin or religious views.<br>- Personal data, which by their nature, are sensitive or private, such as data concerning a person’s sexual orientation or philosophical beliefs.<br><br>For information on how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
  
 ## Update a list
 
