@@ -17,7 +17,7 @@ title: Manage lists
 
 ## Overview
 
-Lists allow you to upload and access organized data in Dynamics 365 Fraud Protection. You can reference any list in a [rule](rules.md) to help execute your business logic and fraud strategy.
+Lists help you to manage information that you use to fight fraud and enforce business policies. For example, you could create a list to keep track of payment instruments you consider to be risky, or user emails you consider to be safe. You can upload this list as a CSV file, and reference it in a [rule](rules.md) to help automate decisions.
 
 The **Lists** page has two tabs separating the two types of lists you can create: **Custom lists** and **Support lists**. 
 
@@ -32,7 +32,7 @@ Custom lists are created and defined by you. You can upload any number of custom
 
 Support lists are system-defined lists of emails and payment instruments with a *safe*, *block*, or *watch* status, as well as an associated expiration date for each entry. While these lists can be viewed and downloaded from the Lists page, they can only be modified through the [Support page](risk-support.md).
 
-### Required list format
+### Format requirements
 
 To upload a custom list in Fraud Protection, you must first create and save the list as a CSV file on your local machine. The file must meet the following requirements:
 
@@ -42,7 +42,7 @@ To upload a custom list in Fraud Protection, you must first create and save the 
 
 ## Use lists 
 
-[Rules](rules.md) define custom logic that automate business decisions. To help you define this logic, you can leverage any list in a rule. For example, you can create a list of email addresses which are considered to be risky, and a separate list for those which are considered to be safe. You can then configure a rule so that login attempts using an email on the *Risky Emails* list are rejected, while those using an email on the *Safe Emails* list are approved. 
+[Rules](rules.md) define custom logic that automate business decisions. To help you define this logic, you can leverage any list in a rule. For example, you can create a list of email addresses you consider risky, and a separate list for those you consider safe. You can then configure a rule so that login attempts using an email on the *Risky Emails* list are rejected, while those using an email on the *Safe Emails* list are approved. 
 
 ### Single and multiple-column lists
 
@@ -110,11 +110,8 @@ You can upload organized data in a list file to Fraud Protection and then refere
     Because of caching, it may take up to two minutes for the list to become active. 
 
 > [!IMPORTANT]
-> Do not include the following types of sensitive personal data or highly regulated data types in the files that you upload:<br><br>- Biometric data, genetic data, or any data related to health. <br>- Personal data revealing racial or ethnic origin or religious views; or <br>- Personal data, which by their nature, are sensitive or privacy, such as data concerning a person’s sexual orientation or philosophical beliefs.<br><br>For information on how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+> Do not include the following sensitive personal data or highly regulated data types in the files that you upload:<br><br>- Biometric data, genetic data, or any data related to health. <br>- Personal data revealing racial or ethnic origin or religious views; or <br>- Personal data, which by their nature, are sensitive or private, such as data concerning a person’s sexual orientation or philosophical beliefs.<br><br>For information on how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
  
-
-
-
 ## Update a list
 
 You can update a custom list from the **Lists** page at any time to add new information or change existing information. You can change the description of a custom list, but you cannot change its name. 
