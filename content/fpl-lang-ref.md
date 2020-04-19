@@ -117,7 +117,7 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 
 #### Variables
 
-For information on how these variables are typed, click [type inference](fpl-lang-ref.md#type-inference-of-variables).
+For information on how these variables are typed, click [Type inference of variables](fpl-lang-ref.md#type-inference-of-variables).
 
 | Syntax    | Description     | Example|
 |-------|-----------------|--------|
@@ -265,7 +265,7 @@ You can reject all transactions from emails in this list which are marked as ris
 
 This clause finds the key *@email* in the *Email* column of the *Email* list and checks if the value in the *Status* column is *Risky*. If it is, the transaction is rejected.
 
-If the key is not found in the list, by default, *Unknown* is returned. 
+If the key is not found in the list, by default, Fraud protection returns  *Unknown*. 
 
 You can also specify your own default value as a fifth parameter. For more information, see [list operators](fpl-lang-ref.md#list-operators).
 
