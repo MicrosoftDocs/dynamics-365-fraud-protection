@@ -42,17 +42,17 @@ The **Rules** page displays a list of all the rules configured for an event asse
 -  The [condition](rules.md#conditions) you created for the rule.
 -  The [status](rules.md#status) of the rule (*active*, *inactive*, or *draft*).
 -  The [description](rules.md#name-and-description) of the rule.
--  The [number of clauses](rules.md#clauses) in the rule.
+-  The number of [clauses](rules.md#clauses) in the rule.
 
 > [!NOTE]
->The [order](rules.md#understand-rule-ordering) in which rules are listed on the **Rules** page determines the order in which the rules are executed. 
+>The order in which rules are listed on the **Rules** page determines the order in which the rules are executed. 
 
 ## Components of a rule
 
 A rule consists of:
 -  A [name and description](rules.md#name-and-description) that describe the purpose of the rule.
 -  A [status](rules.md#status) that indicate its current state.
--  A [sample](rules.md#samples) that assists you in writing and evaluating the rule.
+-  A [sample](rules.md#samples) that assists you to write and evaluate the rule.
 -  Components that enable you to build the logic to automatically approve, reject, challenge, and review certain events. This includes:
     -  A [condition](rules.md#conditions).
     -  One or more of the following types of [clauses](rules.md#clauses):
@@ -62,7 +62,7 @@ A rule consists of:
 
 ### Name and description
 
-When you create a rule, you can add a name and description that make it easily identifiable for you and your team. Rule names must be unique.
+When you create a rule, you can add a name and description that make the rule easily identifiable for you and your team. Rule names must be unique.
  
 ### Status
 
@@ -130,7 +130,9 @@ Everything following the **WHEN** keyword must evaluate to either True or False.
 
 For information about the syntax used for writing clauses, see the [Rules language guide](fpl-lang-ref.md).
 
-When a clause is triggered (that is, the **WHEN** statement returns True), the *decision* specified in the **RETURN** statement is returned, and no subsequent clauses are run. If a condition matches the decision but no clause within the rule is triggered, by default, Fraud Protection then executes: 
+When a clause is triggered (that is, the **WHEN** statement returns True), the *decision* specified in the **RETURN** statement is returned, and no subsequent clauses are run. 
+
+If a condition matches the decision but no clause within the rule is triggered, by default, Fraud Protection then executes: 
 
     RETURN Approve(“NO_CLAUSE_HIT”).
 
@@ -140,7 +142,7 @@ The sequential ordering of clauses is divided into three distinct sections: *Pre
 
 #### Prior-to-all-scoring clauses
 
-Prior-to-all-scoring clauses are run before Fraud Protection’s AI models are run, and thus before any bot or risk assessment scores have been generated. These clauses can use any combination of fields sent as part of the event payload, as well contained in [Lists](lists.md), and can be configured to implement embargo, geofencing, or other business policies. For example, the following clause enables you to review purchases whenever a user buys a product outside of the market in which they are located:
+Prior-to-all-scoring clauses are run before Fraud Protection’s AI models are run, and thus before any bot or risk assessment scores have been generated. These clauses can use any combination of fields sent as part of the event payload, as well contained in [Lists](lists.md), and can be configured to implement embargo, geofencing, or other business policies. For example, the following clause enables you to review purchases whenever a user buys a product outside of the market in which they are located.
 
     RETURN Review("location inconsistency") 
     WHEN Geo.MarketCode(“@device.ipAddress”) != “@productList.market”
@@ -150,7 +152,7 @@ You can also write a clause in this section to reference lists. For example, if 
     RETURN Reject ("risky email") 
     WHEN ContainsKey ("Risky Emails", "Emails", @email)
 
-For information about the syntax for referencing lists in rules, the [Rules language guide](fpl-lang-ref.md).
+For information about the syntax for referencing lists in rules, see the [Rules language guide](fpl-lang-ref.md).
 
 #### Post-bot-scoring clauses
 
@@ -187,11 +189,12 @@ For example, if you configure the following three purchase rules:
 
 The following behavior would hold true:
 
--  Since Rule2 has a status of Inactive, it is never evaluated against real time production traffic.
--  Rule1 is evaluated only if a customer in the US makes a purchase .
--  Rule1 is evaluated only if a customer in the US makes an Xbox purchase.
--  Rule3 is evaluated only if a customer outside the US makes an Xbox purchase .
--  No rules are evaluated if a customer outside the US makes a non-Xbox purchase.
+- Since Rule2 has a status of Inactive, it is never evaluated against real time production traffic.
+- Rule1 is evaluated only if a customer in the US makes a purchase.
+- Rule1 is evaluated only if a customer in the US makes an Xbox purchase.
+- Rule3 is evaluated only if a customer outside the US makes an Xbox purchase.
+- No rules are evaluated if a customer outside the US makes a non-Xbox purchase.
+
 
 
 If no rules are evaluated because no conditions match the event, by default, Fraud Protection then executes: 
@@ -205,7 +208,7 @@ You can create rules to automate decision-making for purchase, account creation,
 
 #### To create a new rule:
 
-1. Navigate to the [Rules management page](rules.md#access-the-rules-management-page).
+1. Navigate to the [Rules page](rules.md#access-the-rules-page).
 1. Click **New Rule**.
 1. (Optional) Click **Rename**, and then add a name and description so that the rule is easily identifiable to you and your team.
 
@@ -327,7 +330,7 @@ The order in which rules display on the **Rules** page has a signficant impact o
 1. Use the arrow keys to move the tile up or down the list.
 1. Press  **Spacebar** to accept the new position.
 
-   Press the **ESC** key to return the tile to its original position.
+   Press the **ESC** key to return the tiles to their original positions.
    
 1. To save your changes, click **Save order**. 
 
@@ -351,7 +354,7 @@ The evaluation panel displays the decision Fraud Protection returns for this sam
 
 Fraud Protection’s AI does not generate a true risk score or bot score for the sample event. Instead, it uses the placeholder values entered in the score sample (link) to run the rule. 
 
-If the condition does not find a match, the rule is not evaluated. If the condition finds a match but none of the clauses triggers a return, the default decision is Approve, with NO_CLAUSE_HIT as the reason. 
+If the condition does not find a match, the rule is not evaluated. If the condition finds a match but none of the clauses triggers a return, the default decision is *Approve*, with *NO_CLAUSE_HIT* as the reason. 
 
 ### Evaluate Example
 
