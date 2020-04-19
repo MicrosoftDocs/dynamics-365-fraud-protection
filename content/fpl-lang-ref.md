@@ -42,14 +42,14 @@ For information on how to use decision types and their parameters, see [Decision
 
 ### WHEN
 
-A **WHEN** expression is made up of one or more Boolean expressions. You can string together multiple Boolean expressions using the [Joining operators](fpl-lang-ref.md#joining-operators), **AND (&&)** and **OR (||)**. 
+A **WHEN** expression is made up of one or more Boolean expressions. You can string together multiple Boolean expressions using the [joining operators](fpl-lang-ref.md#joining-operators) **AND (&&)** and **OR (||)**. 
 
 A Boolean expression is formed by checking and/or comparing variables. There are two types of variables:
 
 - Payload values
 - Scores
 
-You can access all variables with the syntax *@variable*. To specify the full path of a variable, you can write *@”object.variable”*. 
+You can access all [variables](fpl-lang-ref.md#variables) with the syntax *@variable*. To specify the full path of a variable, you can write *@”object.variable”*. 
 
 To use variables to form a Boolean expression, you can:
 
@@ -67,7 +67,7 @@ To use variables to form a Boolean expression, you can:
 - Check the value of a key within a list.
 
       WHEN Lookup(“Email List”, “Emails”, @email, “Status”) == “Safe”
-      WHEN Lookup(“Country List”, “Country”, @country, “Score Cutoff”) < @riskScore
+      WHEN Lookup(“Product cutoff list”, “Product”, @productName, “Score Cutoff”).toDouble() < @riskScore
 
 - Evaluate a string.
 
@@ -112,7 +112,7 @@ The Fraud Protection Language (FPL) includes two keywords that you must use in e
 
 | Syntax    | Description     | Example|
 |-------|-----------------|--------|
-|Other  |Can be used to pass key value pairs.|Other(key="test", username=@email, countryRegion=Geo.CountryRegion(@ipAddress))|
+|Other  |Can be used to pass key value pairs.|Other(key="test", email=@email, countryRegion=Geo.CountryRegion(@ipAddress))|
 
 
 #### Variables
@@ -121,9 +121,9 @@ For information on how these variables are typed, click [type inference](fpl-lan
 
 | Syntax    | Description     | Example|
 |-------|-----------------|--------|
-|@	|<p>Used to reference an AI score or a variable from the event payload.</p><p>If city exists in multiple places in the payload, then @city will return the first occurrence.</p><p>To avoid this, specify the full path. For example @”address.city”</p><p>If the variable isn’t found in the event payload, the default value for that type is returned – 0.0 for double, empty string for strings, etc.</p>|@city<br>@"address.city"|
-|@botscore    |<p>Fraud Protection’s AI models generate a bot score between 0 and 999 for each Account Protection event, with a higher score indicating a higher probability that event was initiated by a bot.</p><p>You can reference this score in [post-bot-scoring clauses](rules.md#post-bot-scoring-clauses) and [post-risk-scoring clauses](rules.md#post-risk-scoring-clauses) with @botScore</p>|@botScore|
-|@riskscore	|<p>Fraud Protection's AI models generate a risk score between 0 and 999 for all Purchase and Account Protection events, with a higher score indicating a higher risk.</p><p>You can reference this score in post-risk-scoring clauses with @riskScore.</p>	|@riskScore |
+|@	|<p>Used to reference an AI score or a variable from the event payload.</p><p>If city exists in multiple places in the payload, then @city will return the first occurrence.</p><p>To avoid this, specify the full path. For example @”address.city”</p><p>The type of this variable will be inferred by the context in which it is used. If the variable is not found in the event payload, the default value for the inferred type is returned – 0.0 for double, empty string for strings, etc. If not enough context is provided, it will default to *String*</p><p>For information about type inference, see [Type inference of variables](fpl-lang-ref.md#type-inference-of-variables).|@city<br>@"address.city"|
+|@botScore    |<p>Fraud Protection’s AI models generate a bot score between 0 and 999 for each Account Protection event, with a higher score indicating a higher probability that event was initiated by a bot.</p><p>You can reference this score in [post-bot-scoring clauses](rules.md#post-bot-scoring-clauses) and [post-risk-scoring clauses](rules.md#post-risk-scoring-clauses) with @botScore</p>|@botScore|
+|@riskScore	|<p>Fraud Protection's AI models generate a risk score between 0 and 999 for all Purchase and Account Protection events, with a higher score indicating a higher risk.</p><p>You can reference this score in post-risk-scoring clauses with @riskScore.</p>	|@riskScore |
 
 
 #### Joining operators
@@ -141,8 +141,9 @@ For additional information about using lists in rules, click [Using lists in rul
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
 |ContainsKey |<p>Checks if a key is contained within specified column of a pre-defined [list](lists.md).</p><p>ContainsKey(String *listName*, String *columnName*, String *key*)</p> |<p>ContainsKey("Email Support List", “Emails”, @email)</p><p>This checks if the variable @email is contained in column “Emails” of list “Email Support List” </p> |
-|Lookup      |<p>Looks up the value of a key in a list column.</p><p>If the key is not found, and *defaultValue* is not specified, “Unknown” is returned.</p><p>Overloads<br>Lookup(String *listName*, String *keyColumnName*, String *key*, String *valueColumnName*) </p><p>Lookup(String *listName*, String *keyColumnName*, String key, String valueColumnName, String defaultValue)</p> |<p>Lookup("Email Support List", “Emails”, @email, ”Status”) ==  ”Block”</p><p>This finds the variable @email in column “Emails” of list “Email Support List”, and returns its corresponding value in column “Status”</p> |
-|In          |Checks if a key is contained within a comma-separated list of values<br>In(String *key*, String *list*)  |In(@countryRegion, "US, MX, CA")|
+|Lookup      |<p>Looks up the value of a key in a list column and returns the value as a String.</p><p>If the key is not found, and *defaultValue* is not specified, “Unknown” is returned.</p><p>Overloads<br>Lookup(String *listName*, String *keyColumnName*, String *key*, String *valueColumnName*) </p><p>Lookup(String *listName*, String *keyColumnName*, String key, String valueColumnName, String defaultValue)</p> |<p>Lookup("Email Support List", “Emails”, @email, ”Status”)</p><p>This finds the variable @email in column “Emails” of list “Email Support List”, and returns its corresponding value in column “Status”</p> |
+|LookupClosest |<p>Looks up the value of a key in a list column. If they key is not found, it will return the value for the key that is alphabetically closest to the one you are looking for.</p><p>Lookup(String *listName*, String *keyColumnName*, String *key*, String *valueColumnName*)</p>|<p>LookupClosest("IP Addresses", “IP”, @ipAddress, ”City”) ==  ”Seattle” </p><p>This finds the variable @ipAddress in column “IP” of list “IP Addresses” and returns its corresponding value in column “City”. If @ipAddress is not found in the list, it will return the value for the next closest IP address in the list.</p>|
+|In            |Checks if a key is contained within a comma-separated list of values<br>In(String *key*, String *list*)  |In(@countryRegion, "US, MX, CA")|
 
 
 #### Comparison operators
@@ -203,14 +204,14 @@ Fraud Protection supports all .NET’s standard [DateTime](https://docs.microsof
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
 |UtcNow |Gets a DateTime object that is set to the current date and time on the computer, expressed as the Coordinated Universal Time.  |DateTime.UtcNow |
-|Today  |An object that is set to today’s date with the time component set to 00:00:00. |DateTime.UtcNow |
+|Today  |An object that is set to today’s date with the time component set to 00:00:00. |DateTime.Today |
 |Year   |Gets the year component of the Date represented by this instance. |@creationDate.Year |
 |Date   |A new object with the same date as this instance, and the time value. |@creationDate.Date |
 
 
 ### Type casting operators
 
-For more information about type inferencing, click [Type inference](fpl-lang-ref.md#type-inference). 
+For more information about type inferencing, click [Type inference of variables](fpl-lang-ref.md#type-inference-of-variables). 
 
 | Syntax| Description     | Example|
 |-------|-----------------|--------|
@@ -238,9 +239,9 @@ For example, if you have a single-column list of risky email addresses, titled *
 You can reject all transactions from emails in this list using the following syntax:
 
      RETURN Reject(“risky email”) 
-     WHEN ContainsKey(“Risky email list”, “Email”, @username) 
+     WHEN ContainsKey(“Risky email list”, “Email”, @email) 
 
-This clause  checks if the *Email* column in the *Risky email* list contains *@username*. If it does, the transaction is rejected.
+This clause  checks if the *Email* column in the *Risky email* list contains *email*. If it does, the transaction is rejected.
 
 ### Lookup
 
@@ -260,22 +261,28 @@ For example, if you have list titled *Email* list with a column for emails, and 
 You can reject all transactions from emails in this list which are marked as risky using the below syntax:
 
     RETURN Reject(“risky email”) 
-    WHEN Lookup(“Email List”, “Email”, @username, “Status”) == “Risky”
+    WHEN Lookup(“Email List”, “Email”, @email, “Status”) == “Risky”
 
-This clause finds the key *@username* in the *Email* column of the *Email* list and checks if the value in the *Status* column is *Risky*. If it is, the transaction is rejected.
+This clause finds the key *@email* in the *Email* column of the *Email* list and checks if the value in the *Status* column is *Risky*. If it is, the transaction is rejected.
 
 If the key is not found in the list, by default, *Unknown* is returned. 
 
-You can also specify your own default value as a fifth parameter. See [list operators](fpl-lang-ref.md#list-operators) for more information. 
+You can also specify your own default value as a fifth parameter. For more information, see [list operators](fpl-lang-ref.md#list-operators).
 
-## Type inference
+Lookup will always return a String value. To convert this value to an Int, Double, or DateTime, use one of the [type casting operators](fpl-lang-ref.md#type-casting-operators).
 
-The default type of variables extracted using the @ operator, as well as the variables extracted from lists using the Lookup operation, is *String*. The inferred type may change depending on the context. For example:
+## Type inference of variables
 
--	In the expression WHEN @isEmailValidated, @isEmailValidated is interpreted as a Boolean value.
--	In the expression @riskScore > 500, @riskScore is interpreted as a Double value. 
-- In the expression @creationDate.Year < DateTime.UtcNow.Year, @creationDate is interpreted as a DateTime value. 
+Variable types are inferred by the context in which they are used. For example:
 
-You can also specify the type of a variable by using a [type casting operator](fpl-lang-ref.md#type-casting-operators). 
+- In the expression *WHEN @isEmailValidated*, the variable is interpreted as a Boolean value.
+- In the expression *@riskScore > 500*, the variable is interpreted as a Double value. 
+- In the expression *@creationDate.Year < DateTime.UtcNow.Year*, the variable is interpreted as a DateTime value. 
+
+If there is not enough context to infer the type of a variable, it is considered a String by default. For example:
+
+- In the expression *@riskScore < @botScore*, both variables are interpreted as Strings.
+
+To specify the type of a non-String variable, use a [type casting operator](fpl-lang-ref.md#type-casting-operators). 
 
 
