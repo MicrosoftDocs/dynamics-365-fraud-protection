@@ -18,7 +18,7 @@ title: Manage Rules
 
 ## Overview
 
-Dynamics 365 Fraud Protection gives you the flexibility to create custom rules based on observed patterns, policies, or business objectives. Custom rules enable your analysts to write business logic for automated decision making and to customize this logic to meet your unique business needs. Rules use a combination of inputs including values in the event request payload and AI-based scores to assess the risk of an event. You can configure rules to convert the assessment into a decision such as approve, reject, review, or challenge events based on these inputs.  
+Dynamics 365 Fraud Protection gives you the flexibility to create custom rules based on observed patterns, policies, or business objectives. Custom rules enable your analysts to write business logic for automated decision making and to customize this logic to meet your unique business needs. Rules use a combination of inputs including values in the event request payload and AI-based scores to assess the risk of an event. Based on these inputs, you can configure rules to convert the assessment into a decision, such as *approve*, *reject*, *review*, or *challenge*.  
 
 > [!NOTE]
 > You cannot view or create rules in the INT environment. You must use the PROD environment. 
@@ -33,10 +33,10 @@ You can create custom rules and manage existing rules on the **Rules** page.
 
 The **Rules** page for **Account protection** has a tab for each assessment type:
 
--  On the **Account creation** tab, you can create rules that run on account creation events.
+-  On the **Account creation** tab, you can create rules that run on account creation events when someone is trying to create a new account.
 -  On the **Account login** tab, you can create rules that run on account login events.
 
-The **Rules** page displays a list of all the rules configured for an event type. You can view the following information for each rule:
+The **Rules** page displays a list of all the rules configured for an event assessment type. You can view the following information for each rule:
 
 -  The  [name](rules.md#details-name-and-description) of the rule.
 -  The [condition](rules.md#conditions) you created for the rule.
@@ -50,7 +50,7 @@ The **Rules** page displays a list of all the rules configured for an event type
 ## Components of a rule
 
 A rule consists of:
--  A [name and description](rules.md#details-name-and-description) that describe the purpose of the rule.
+-  A [name and description](rules.md#name-and-description) that describe the purpose of the rule.
 -  A [status](rules.md#status) that indicate its current state.
 -  A [sample](rules.md#samples) that assists you in writing and evaluating the rule.
 -  Components that enable you to build the logic to automatically approve, reject, challenge, and review certain events. This includes:
@@ -60,19 +60,17 @@ A rule consists of:
        -  [Post bot scoring clauses](rules.md#post-bot-scoring-clauses).
        -  [Post risk scoring clauses](rules.md#post-risk-scoring-clauses).
 
-### Details (name and description)
+### Name and description)
 
-When you create a rule, you can add details that make it easily identifiable for you and your team, such as a name and description.
-
-Rule names must be unique and do not have to be case sensitive. However, you cannot create rules using the same text with a different case (for example, *riskycountry*, *RiskyCountry*, and *RISKYCOUNTRY*). Fraud Protection does not recognize case and therefore considers these examples to be the same name.
+When you create a rule, you can add a name and description that make it easily identifiable for you and your team. Rule names must be unique.
  
 ### Status
 
 #### Active or inactive rules
 
-Once a rule has been published, it can be set to either *Active* or *Inactive*. 
-- If a rule is *Active*, it affects real time production traffic. This means that all events of this type are evaluated against the rule. 
-- If a rule is *Inactive*, it does not affect production traffic. 
+Once a rule has been published, it can be set to either *active* or *inactive*. 
+- If a rule is active, it affects real time production traffic. This means that all events of this type are evaluated against the rule. 
+- If a rule is inactive, it does not affect production traffic. 
 
 #### Draft rules
 
@@ -84,23 +82,26 @@ When you create or modify rules, Fraud Protection automatically saves your work 
 Rules with draft status are accessible only to the author. If you want to share your rules with your team, you must publish them.
 
 #### Samples
-When you create or edit a rule, the **Sample** panel displays on the right side of the page. This panel has two sections: *payload sample* and *score sample*. 
+When you create or edit a rule, the **Sample** panel displays on the right side of the page. This panel has two sections: *payload sample* and *score sample*.
+
+- To see only the sample variables you use in your rule, click **Show used variables** at the top of the panel. 
+
+- To view all variables, click **Show all variables**.
 
 ##### Payload sample 
 
-The payload sample is an example of the fields that can be included in an API request for a purchase, account creation, or account login event, and can be used in your rule. 
+The payload sample is an example of the fields that can be included in an API request for a purchase, account creation, or account login event, and can be used in your rule.
 
-The payload sample is provided as an example and may not accurately reflect the data you send to Fraud Protection. For example, the sample may include fields you do not send, and may not include custom data fields that you do send. You can, however, still use these custom fields in your rules as you would any other payload variable. 
+The payload sample is provided as an example and may not accurately reflect the data you send to Fraud Protection. For example, the sample may include fields you do not send, and may not include custom data fields that you do send. You can, however, still use these custom fields in your rules as you would any other payload variable.
 
 ##### Score Sample
 
 The score sample contains the scores generated from Fraud Protection’s AI models. You can reference these score variables in rules after the associated AI model generating the score has run. For example, you can use @botScore only after the *bot* evaluation has run, and @riskScore only after the *risk* evaluation has run. For more information see [Clauses](rules.md#clauses).
 
 #### Edit the sample
-In order to test that your rule works as expected on a variety of events, you can modify the sample and [evaluate your rule](rules.md#evaluate-example) against it. All values in both the payload sample and score sample can be modified. However, when you change a sample, it does not affect which data yousend or do not send to Fraud Protection.
+In order to test that your rule works as expected on a variety of events, you can modify the sample, and [evaluate your rule](rules.md#evaluate-example) against it. All values in both the payload sample and score sample can be modified. However, note that when you change the sample, it has no impact on which data you are or are not sending to Fraud Protection. Any changes you make to the sample are saved and persisted as part of the rule. 
 
-Any changes you make to a sample are saved and become a part of the rule. This means that if someone else accesses the sample, it will include changes you made. To undo all changes that have ever been made to the sample at any time, by anyone, click **Revert**. 
-
+- To undo all changes made to the sample by you or anyone else, click **Revert**. 
 
 ### Conditions
 
@@ -125,17 +126,17 @@ Everything following the **WHEN** keyword must evaluate to either True or False.
 
 For information about the syntax used for writing clauses see the [Rules language guide](fpl-lang-ref.md).
 
-When a clause is triggered (that is, the **WHEN** statement returns True), the *decision* specified in the **RETURN** statement is returned, and no subsequent clauses are run. If a condition matches the decision but no clause within the rule is triggered, the rule executes by default. 
+When a clause is triggered (that is, the **WHEN** statement returns True), the *decision* specified in the **RETURN** statement is returned, and no subsequent clauses are run. If a condition matches the decision but no clause within the rule is triggered, by default, Fraud Protection then executes: 
 
     RETURN Approve(“NO_CLAUSE_HIT”).
 
-Clauses run sequentially in the order they are displayed on the page. Click the arrows to the right of each clause to change the position clause. 
+Clauses run sequentially in the order they are displayed on the page. Click the arrows to the right of each clause to change the position of a clause. 
 
 The sequential ordering of clauses is divided into three distinct sections: *Pre-Score*, *Post-Bot Score* (which is applicable only for account creation and account login rules), and *Post-Risk Score*. These sections indicate when the clause is run relative to Fraud Protection’s advanced,  AI score generation. 
 
 #### Prior-to-all-scoring clauses
 
-Prior-to-all-scoring clauses are run before Fraud Protection’s AI models are run, and thus before any bot or risk assessment scores have been generated. These clauses can use any combination of fields sent as part of the event payload, as well contained in [Lists](lists.md), and can be configured to implement embargo, geofencing, or other business policies. For example, the following clause enables you review purchases whenever a user buys a product outside of the market in which they are located:
+Prior-to-all-scoring clauses are run before Fraud Protection’s AI models are run, and thus before any bot or risk assessment scores have been generated. These clauses can use any combination of fields sent as part of the event payload, as well contained in [Lists](lists.md), and can be configured to implement embargo, geofencing, or other business policies. For example, the following clause enables you to review purchases whenever a user buys a product outside of the market in which they are located:
 
     RETURN Review("location inconsistency") 
     WHEN Geo.MarketCode(“@device.ipAddress”) != “@productList.market”
@@ -149,7 +150,7 @@ For information about the syntax for referencing lists in rules, the [Rules lang
 
 #### Post-bot-scoring clauses
 
-Post-bot-scoring clauses are run after Fraud Protection’s  AI models have generated a bot score for the event. This score maps to the probability that a bot initiated the event. This score is a number between 0 and 999, with a higher score indicating a higher bot probability. 
+Post-bot-scoring clauses are run after Fraud Protection’s AI models have generated a bot score for the event. This score maps to the probability that a bot initiated the event. This score is a number between 0 and 999, with a higher score indicating a higher bot probability. 
 
 In post-bot-scoring clauses, you can use this score (referenced with @botScore), in conjunction with other fields from the payload and in Lists to make decisions. For example, the following clause enables you to reject events from a specific email domain with a bot score greater than 700. 
 
@@ -182,23 +183,19 @@ For example, if you configure the following three purchase rules:
 
 The following behavior would hold true:
 -  Since Rule2 has a status of *Inactive*, it is never evaluated against real time production traffic.
--  If a customer makes a purchase and they are in the US, only Rule1 is evaluated.
--  If a customer makes an Xbox purchase and they are in the US, only Rule1 is evaluated.
--  If a customer makes an Xbox purchase and they are outside of the US, only Rule3 is evaluated.
--  If a customer makes a non-Xbox purchase and they are outside of the US, no rules are evaluated.
+-  If a customer in the US makes a purchase, only Rule1 is evaluated.
+-  If a customer in the US makes an Xbox purchase, only Rule1 is evaluated.
+-  If a customer outside the US makes an Xbox purchase, only Rule3 is evaluated.
+-  If a customer outside the US makes a non-Xbox purchase, no rules are evaluated.
 
 If no rules are evaluated because no conditions match the event, by default, Fraud Protection then executes: 
 
     RETURN Approve(“NO_RULE_HIT”)
 
-For information on how to reorder rules, see [Understand rule ordering](rules.md#understand-rule-ordering).
+For information on how to reorder rules, see [Change the order of a rule](rules.md#change-the-order-of-a-rule).
 
 ## Create a new rule
-You can create rules to make decisions for purchase, account creation, and account login events.
-
-> [!NOTE]
->When you create a new rule, it displays at the bottom of the **Rules** management page. You can move the rule to a different position on the list of rules at any time. For more information, see [Understand rule ordering](rules.md#understand-rule-ordering).
-
+You can create rules to automate decision-making for purchase, account creation, and account login events.
 
 #### To create a new rule:
 
@@ -215,7 +212,8 @@ You can create rules to make decisions for purchase, account creation, and accou
     Or, to create a new clause using a pre-existing template:
     
     1. Click the arrow to the right of **New Clause**. 
-        Fraud Protection displays a short list of templates. 
+    
+        Fraud Protection displays a list of available templates. 
             
     1. To display the full selection of templates and their titles, descriptions, and contents, click **See all**. 
         
@@ -225,7 +223,10 @@ You can create rules to make decisions for purchase, account creation, and accou
     
 1. To [evaluate your rule](rules.md#evaluate-a-rule) and ensure it works as expected, click **Expand** on the bottom right of the **Rules** page to expand the evaluation panel.
 1. To publish your rule, click **Publish**, change the name, description, and status in the confirmation dialog, and then click **Publish**.
- 1. Set the [status](rules.md#status) to either **Active** or **Inactive**.
+1. Set the [status](rules.md#status) to either **Active** or **Inactive**.
+
+    By default, the new rule displays at the bottom of the page. 
+      
 1. To move the rule to a new position on the order list: 
     1. Navigate to the **Rules** management page.
     1. Select the rule, drag it to its new position, and then click **Save order**. 
@@ -233,7 +234,7 @@ You can create rules to make decisions for purchase, account creation, and accou
 ## Manage existing rules
 You can perform the following operations on an existing rule on the Rules management page:
 -	[Rename](rules.md#update-the-name-and-description-of-a-rule)
--	[Activate or Deactivate](rules.md#change-the-status-of-a-rule)
+-	[Activate or deactivate](rules.md#change-the-status-of-a-rule)
 -	[Delete](rules.md#delete-a-rule)
 -	[Clone](rules.md#clone-an-existing-rule)
 -	[Edit](rules.md#edit-an-existing-rule)
@@ -317,8 +318,11 @@ The [order in which rules](rules.md#understand-rule-ordering) display on the **R
    Fraud Protection displays the rules as draggable tiles.
    
 1. Press the **Tab** key to choose a tile and then press **Spacebar** to activate the tile. 
-1. Use the arrow keys to move the tile up or down the list
-1. Press  **Spacebar** to accept the new position, or press the **ESC** key to return the tile to its original position.
+1. Use the arrow keys to move the tile up or down the list.
+1. Press  **Spacebar** to accept the new position.
+
+   Press the **ESC** key to return the tile to its original position.
+   
 1. To save your changes, click **Save order**. 
 
    To cancel your changes, click **Cancel re-ordering**. 
