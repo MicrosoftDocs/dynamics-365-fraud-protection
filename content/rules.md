@@ -62,14 +62,9 @@ A rule consists of:
 
 ### Name and description
 
-When you create a rule, you can add a name and description that make the rule easily identifiable for you and your team. Rule names must be unique.
-
-> [!NOTE]
->You cannot create rule names that are case sensitive because Fraud Protection does not differentiate between capital and lower case letters. For example, Fraud Protection considers *myrule*, *MyRule*, and *MYRULE* the same.
+When you create a rule, you can add a name and description that make the rule easily identifiable for you and your team. Rule names are not case sensitive, and must be unique.
 
 ### Status
-
-#### Active or inactive rules
 
 Once a rule has been published, it can be set to either *active* or *inactive*. 
 - If a rule is active, it affects real time production traffic. This means that all events of this type are evaluated against the rule. 
