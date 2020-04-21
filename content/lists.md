@@ -148,7 +148,7 @@ When you delete a list, any rules that use it will no longer work.
 
 You can download a list in Fraud Protection and then view it in any text editor.
 
-- To download a list, select it, and select **Download**. Then select the icon in the lower-left corner of the browser window to view the list.
+- To download a list, select it, and select **Download**. Then select the download button in the lower-left corner of the browser window to view the list.
 - To download multiple lists, select them, and then select **Download**. The files are downloaded as a zip file.
 
 ## Search for a list
