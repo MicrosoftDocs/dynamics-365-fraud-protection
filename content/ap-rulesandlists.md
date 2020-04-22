@@ -3,7 +3,7 @@ author: zhuoche
 description: This topic explains the rule and list capabilities of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-davido
 ms.service: fraud-protection
-ms.date: 03/04/2020
+ms.date: 04/22/2020
 
 ms.topic: conceptual
 search.app: 
@@ -43,21 +43,21 @@ Every condition should start with **WHEN**. It can accept any valid expression i
 
 Here is an example of a condition.
 
-```
+```plaintext
 WHEN Geo.CountryCode(@ipAddress) == "BR"
 WHEN @username.endsWith("contoso.com")
 ```
 
 The following example shows a clause that throws a challenge if the bot score is between 400 and 900.
 
-```
+```plaintext
 Return Challenge(“challenge type", "reason") 
 WHEN @botScore < 900 AND @botScore > 400 
 ```
 
 The following example shows a clause that approves all users whose IP address is in a list.
 
-```
+```plaintext
 Return Approve() 
 WHEN ContainsKey(“iplist”, “IPAddress”, @ipAddress)
 ```
