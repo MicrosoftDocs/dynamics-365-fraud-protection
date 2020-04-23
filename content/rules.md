@@ -69,7 +69,7 @@ When you create a rule, you can add a name and description to make the rule easi
 When you publish a rule, you can set the status to either *active* or *inactive*. 
 
 - If a rule is active, it affects real time production traffic, and all events of this type are evaluated against the rule. 
-- If a rule is inactive, it does not affect production traffic. 
+- If a rule is inactive, it doesn't affect production traffic. 
 
 #### Samples
 When you create or edit a rule, the **Sample** pane displays on the right side of the page. This pane has two sections: *payload sample* and *score sample*.
@@ -80,14 +80,14 @@ When you create or edit a rule, the **Sample** pane displays on the right side o
 
 The payload sample contains examples of fields you can use in an API request for a purchase, account creation, or account login event. If the fields in the sample don’t accurately reflect the data you want to send to Fraud Protection, you can replace them with custom data fields.
 
-The payload sample is provided as an example and may not accurately reflect the data you send to Fraud Protection. For example, the sample may include fields you do not send, and may not include custom data fields that you do send. You can, however, use custom fields in your rules as you would any other payload variable.
+The payload sample is provided as an example and may not accurately reflect the data you send to Fraud Protection. For example, the sample may include fields which you don't want to send, and may not include custom data fields which you do want to send. You can, however, use custom fields in your rules as you would any other payload variable.
 
 ##### Score Sample
 
 The score sample contains scores generated from Fraud Protection’s AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use **@botScore** after the *bot* evaluation has run, and @riskScore after the *risk* evaluation has run. For more information, see [Clauses](rules.md#clauses).
 
 #### Edit the sample
-To test that your rule works on a variety of events, you can modify the sample as required, and then [evaluate](rules.md#evaluate-example) the sample data against the rule. All values in both samples can be modified. When you change a sample, it has no impact on which data you send (or do not send) to Fraud Protection.
+To test that your rule works on a variety of events, you can modify the sample as required, and then [evaluate](rules.md#evaluate-example) the sample data against the rule. All values in both samples can be modified. When you change a sample, it has no impact on which data you send (or don't send) to Fraud Protection.
 
 When you publish a rule, changes you make to the sample are saved and persisted as part of the rule.
 
@@ -101,7 +101,7 @@ A condition starts with the keyword **WHEN** and is followed by a Boolean expres
 
 You can then create clauses that configure a fraud strategy related to digital product transactions.
 
-Adding a condition to a rule is optional.  if you want a rule to apply to all events, do not enter a condition. For information about how to use conditions to order rules, see [Rule ordering](rules.md#understand-rule-ordering).
+Adding a condition to a rule is optional.  if you want a rule to apply to all events, don't enter a condition. For information about how to use conditions to order rules, see [Rule ordering](rules.md#understand-rule-ordering).
 
 ### Clauses
 
@@ -241,7 +241,7 @@ To change the status of a rule, select a rule, and then select **Activate** or *
 
 ### Delete a rule
 
-To delete a rule, select a rule, and then select **Delete**. When you delete a rule, the action cannot be undone. 
+To delete a rule, select a rule, and then select **Delete**. When you delete a rule, the action can't be undone. 
 
 ### Clone an existing rule
 
@@ -274,8 +274,8 @@ Because rules display on the **Rules** page in the order in which they run, the 
 
 #### To move a rule to a new position using drag-and-drop:
 
-1. Select the rule you want to move, and then drag it to its new position.
-1. Repeat Step 1 to move as many rules as you want, and then select  **Save order.** 
+1. Select the rule you want to move, and then drag-and-drop it to a new position.
+1. Repeat Step 1 to move as many rules as you want, and then select **Save order.** 
 
     To cancel your changes, select **Cancel re-ordering**. 
     
@@ -283,14 +283,13 @@ Because rules display on the **Rules** page in the order in which they run, the 
 
 1. Select **Reorder**.
 
-   Fraud Protection displays the rules as tiles you can select and drag.
+   Fraud Protection displays the rules as tiles which you can select and move.
    
-1. Press the **Tab** key to find a tile, and then press **Spacebar** to select it. 
-1. Use the arrow keys to move the tile.
-1. Press **Spacebar** to accept the new position.
+1. Press the **Tab** key and then press **Spacebar** to select a tile, use the arrow keys to move it, and then press **Spacebar** to accept the new position. 
 
-   Press the **ESC** key to return the tile(s) to their original position.
-   
+   Press the **ESC** key to return the tile to its original position.
+
+1. Repeat Step 1 to move as many tiles as you want, and then select **Save order.** 
 1. To save your changes, select **Save order**. 
 
    To cancel your changes, select **Cancel re-ordering**. 
@@ -315,9 +314,9 @@ The evaluation pane displays:
 - Any specified reason or support message. 
 - The clause that triggers the decision, outlined in green. 
 
-Fraud Protection’s AI does not generate a true risk score or bot score to run the rule for the sample event. Instead, it uses placeholder values entered in the [score sample](rules.md#score-sample). 
+Fraud Protection’s AI doesn't generate a true risk score or bot score to run the rule for the sample event. Instead, it uses placeholder values entered in the [score sample](rules.md#score-sample). 
 
-If the condition does not find a match, the rule is not evaluated. 
+If the condition doesn't find a match, the rule is not evaluated. 
 If the condition finds a match but none of the clauses triggers a return, the default decision is *Approve*, with *NO_CLAUSE_HIT* as the reason. 
 
 ### Evaluate Example
