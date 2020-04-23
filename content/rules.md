@@ -84,7 +84,7 @@ The payload sample is provided as an example and may not accurately reflect the 
 
 ##### Score Sample
 
-The score sample contains scores generated from Fraud Protection’s AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use **@botScore** after the *bot* evaluation has run, and @riskScore after the *risk* evaluation has run. For more information, see [Clauses](rules.md#clauses).
+The score sample contains scores generated from Fraud Protection’s AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use **@botScore** after the *bot* evaluation has run, and **@riskScore** after the *risk* evaluation has run. For more information, see [Clauses](rules.md#clauses).
 
 #### Edit the sample
 To test that your rule works on a variety of events, you can modify the sample as required, and then [evaluate](rules.md#evaluate-example) the sample data against the rule. All values in both samples can be modified. When you change a sample, it has no impact on which data you send (or don't send) to Fraud Protection.
@@ -152,7 +152,7 @@ In post-bot-scoring clauses, you can use this score, referenced with **@botScore
     WHEN @email.EndsWith("@contoso.com") && @botScore > 700
 
 > [!NOTE]
->Post-bot-scoring clauses and the @botScore variable are available only for account protection rules. 
+>Post-bot-scoring clauses and the **@botScore** variable are available only for account protection rules. 
 
 #### Post-risk-scoring clauses
 
