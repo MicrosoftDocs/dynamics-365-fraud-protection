@@ -138,7 +138,7 @@ The **AccountLogIn** API lets you share information and context with Fraud Prote
 |                                   | Name                        | string   | The value is **"AP.AccountLogin"**. |
 |                                   | Version                     | string   | The value is **"0.5"**. |
 | MetaData                          | trackingId                  | string   | The identifier of the **Signup** event. |
-| MetaData                          | LogInId                     | string   | The identifier of the **Signup** event (This value can match the value of the **trackingId** attribute.) |
+| MetaData                          | LogInId                     | string   | The identifier of the **Signup** event. (This value can match the value of the **trackingId** attribute.) |
 | MetaData                          | assessmentType              | string   | The assessment type for the event. Possible values are **'evaluate'** and **'protect'**. If no value is specified, the default value is **'protect'**. |
 | MetaData                          | customerLocalDate           | dateTime | The creation date of the **Signup** event, in the customer's local time zone. The format is ISO 8601. |
 | MetaData                          | merchantTimeStamp           | dateTime | The time stamp for the event. |
@@ -155,7 +155,7 @@ The **AccountLogIn** API lets you share information and context with Fraud Prote
 | RecentUpdate              | lastPhoneNumberUpdate       | dateTime | The date/time of the most recent update or creation of any phone number. |
 | RecentUpdate              | lastEmailUpdate             | dateTime | The date/time of the most recent update or creation of any email address. |
 | RecentUpdate              | lastAddressUpdate           | dateTime | The date/time of the most recent update or creation of any address. |
-| RecentUpdate              | lastPaymentInstrumentUpdate | dateTime | The date/time of the most recent update or creation any payment instrument. |
+| RecentUpdate              | lastPaymentInstrumentUpdate | dateTime | The date/time of the most recent update or creation of any payment instrument. |
 
 ## AccountLogInStatus
 
@@ -183,7 +183,7 @@ The **AccountUpdate** API lets you share account information updates with Fraud 
 |                                     | Name                        | string   | The value is **"AP.AccountUpdate"**. |
 |                                     | Version                     | string   | The value is **"0.5"**. |
 | MetaData                            | trackingId                  | string   | The identifier of the **AccountUpdate** event. |
-| MetaData                            | SignupId                    | string   | The identifier of the **AccountUpdateId** event (This value can match the value of the **trackingId** attribute.). |
+| MetaData                            | SignupId                    | string   | The identifier of the **AccountUpdateId** event. (This value can match the value of the **trackingId** attribute.) |
 | MetaData                            | customerLocalDate           | dateTime | The creation date of the **AccountUpdate** event, in the customer's local time zone. The format is ISO 8601. |
 | MetaData                            | merchantTimeStamp           | dateTime | The time stamp for the event. |
 | DeviceContext                       | DeviceContextId                   | string   | The customer's session ID. This information is mastered by DFP Device Fingerprinting Service. |
