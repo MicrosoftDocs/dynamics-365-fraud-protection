@@ -89,23 +89,23 @@ This section contains a complete list of operators that are available in Fraud P
 
 ### Keywords
 
-| Syntax | Description | Example |
+| Keyword | Description | Example |
 |--------|-------------|---------|
 | RETURN | <p>This keyword must be followed by a valid [decision type](fpl-lang-ref.md#decision-types): *Approve*, *Reject*, *Challenge*, or *Review*.</p><p>The decision can be followed by the [Other](fpl-lang-ref.md#additional-return-types) type, which is used to pass key/value pairs.</p> | <p>RETURN Reject()</p><p>RETURN Reject(), Other(key=@username)</p> |
 | WHEN   | The expression must be able to be evaluated to a *Boolean* value. | WHEN @riskscore \> 400 |
 
 #### Decision types
 
-| Syntax    | Description | Example |
+| Decision type    | Description | Example |
 |-----------|-------------|---------|
 | Approve   | <p>This decision type approves the event.</p><p>Overloads:</p><ul><li>Approve()</li><li>Approve(String *reason*)</li><li>Approve(String *reason*, String *supportMessage*)</li></ul> | <p>Approve()</p><p>Approve("on safe list")</p><p>Approve ("on safe list", "do not escalate")</p> |
 | Reject    | <p>This decision type rejects the event.</p><p>Overloads:</p><ul><li>Reject()</li><li>Reject(String *reason*)</li><li>Reject(String *reason*, String *supportMessage*)</li></ul> | <p>Reject()</p><p>Reject("embargo country")</p><p>Return Reject()</p><p>Reject("embargo country", "do not escalate")</p> |
 | Review    | <p>This decision type marks the transaction for further review.</p><p>Overloads:</p><ul><li>Review()</li><li>Review(String *reason*)</li><li>Review(String *reason*, String *supportMessage*)</li></ul> | <p>Review()</p><p>Review("user on watch list")</p><p>Review("user on watch list", "do not escalate")</p> |
 | Challenge | <p>This decision type marks the transaction for further verification by using the specified challenge type.</p><p>Overloads:</p><ul><li>Challenge(String *challengeType*)</li><li>Challenge(String *challengeType*, String *reason*)</li><li>Challenge(String *challengeType*, String *reason*, String *supportMessage*)</li></ul> | <p>Challenge ("SMS")</p><p>Challenge ("SMS", "suspected bot")</p><p>Challenge ("SMS", suspected bot", "do not escalate")</p> |
 
-#### Additional RETURN types
+#### Additional return types
 
-| Syntax | Description | Example |
+| Return type | Description | Example |
 |--------|-------------|---------|
 | Other  | This type can be used to pass key/value pairs. | Other(key="test", email=@email, countryRegion=Geo.CountryRegion(@ipAddress)) |
 
@@ -113,7 +113,7 @@ This section contains a complete list of operators that are available in Fraud P
 
 For information about how to use variables, see the [Type inference of variables](fpl-lang-ref.md#type-inference-of-variables) section later in this topic.
 
-| Syntax          | Description | Example |
+| Variable          | Description | Example |
 |-----------------|-------------|---------|
 | @               | <p>This variable is used to reference an AI score or a variable from the event payload.</p><p>If **city**, for example, exists in multiple places in the payload, *@city* returns the first occurrence. To avoid this behavior, specify the full path. For example, specify **@"address.city"**.</p><p>The type of this variable is inferred from the context that it's used in. If the variable isn't found in the event payload, the default value for the inferred type is returned. For example, *0.0* is returned for a double, and an empty string is returned for a string. If not enough context is provided, *String* is used by default.</p><p>For information about type inference, see the [Type inference of variables](fpl-lang-ref.md#type-inference-of-variables) section.</p> | <p>@city</p><p>@"address.city"</p> |
 | @botScore       | <p>For every Account Protection event, Fraud Protection's AI models generate a bot score between 0 and 999. A higher score indicates a higher probability that the event was initiated by a bot.</p><p>You can use *@botScore* to reference this score in [post-bot-scoring clauses](rules.md#post-bot-scoring-clauses) and [post-risk-scoring clauses](rules.md#post-risk-scoring-clauses).</p> | @botScore |
@@ -121,7 +121,7 @@ For information about how to use variables, see the [Type inference of variables
 
 #### Joining operators
 
-| Syntax    | Description | Example |
+| Operator    | Description | Example |
 |-----------|-------------|---------|
 | AND (&&)  | Logical **And** | <p>@botScore \> 500 && @riskScore \> 500</p><p>@botScore \> 500 AND @riskScore \> 500</p> |
 | OR (\|\|) | Logical **Or** | <p>@isEmailUsername == false \|\| @isEmailValidated == false</p><p>@isEmailUsername == false OR @isEmailValidated == false</p> |
@@ -130,7 +130,7 @@ For information about how to use variables, see the [Type inference of variables
 
 For information about how to use lists in rules, see the [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules) section later in this topic.
 
-| Syntax        | Description | Example |
+| Operator        | Description | Example |
 |---------------|-------------|---------|
 | ContainsKey   | <p>This operator checks whether a key is contained in the specified column in a predefined [list](lists.md).</p><p>ContainsKey(String *listName*, String *columnName*, String *key*)</p> | <p>ContainsKey("Email Support List", "Emails", @email)</p><p>This example checks whether the "Emails" column in the "Email Support List" list contains the *@email* variable.</p> |
 | Lookup        | <p>This operator looks up the value of a key in a list column and returns the value as a *String* value.</p><p>If the key isn't found, and *defaultValue* isn't specified, "Unknown" is returned.</p><p>Overloads:</p><ul><li>Lookup(String *listName*, String *keyColumnName*, String *key*, String *valueColumnName*)</li><li>Lookup(String *listName*, String *keyColumnName*, String key, String valueColumnName, String defaultValue)</li></ul> | <p>Lookup("Email Support List", "Emails", @email, "Status")</p><p>This example looks for the *@email* variable in the "Emails" column of the "Email Support List" list and returns the corresponding value in the "Status" column.</p> |
@@ -141,7 +141,7 @@ For information about how to use lists in rules, see the [Using lists in rules](
 
 Fraud Protection supports all standard C# [comparison](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/comparison-operators) and [equality](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-operators) operations. This table includes some examples of methods that you might find useful.
 
-| Syntax | Description | Example |
+| Operator | Description | Example |
 |--------|-------------|---------|
 | ==     | This operator checks for equality. | @"user.countryRegion" == @"shippingAddress.countryRegion" |
 | !=     | This operator checks for inequality. | @"user.countryRegion" != @"shippingAddress.countryRegion" |
@@ -154,7 +154,7 @@ Fraud Protection supports all standard C# [comparison](https://docs.microsoft.co
 
 These operators convert an IP address to a geographical address.
 
-| Syntax            | Description | Example |
+| Operator            | Description | Example |
 |-------------------|-------------|---------|
 | Geo.RegionCode    | <p>This operator converts an IPv4 address to its US region code (that is, the abbreviation for the name of the US state or territory).</p><p>For example, for an IP address in Washington state, "WA" is returned.</p> | Geo.RegionCode(@ipAddr) |
 | Geo.Region        | <p>This operator converts an IPv4 address to its US region (that is, the name of the US state or territory).</p><p>For example, for an IP address in Washington state, "Washington" is returned.</p> | Geo.Region(@ipAddr) |
@@ -169,7 +169,7 @@ These operators convert an IP address to a geographical address.
 
 Fraud Protection supports all standard .NET [string operators](https://docs.microsoft.com/dotnet/api/system.string?view=netframework-4.8). This table includes some examples of methods that you might find useful.
 
-| Syntax     | Description | Example |
+| Operator     | Description | Example |
 |------------|-------------|---------|
 | StartsWith | <p>This operator checks whether a string begins with a specified prefix.</p><p>StartsWith(String *prefix*)</p> | @phoneNumber.StartsWith("1-") |
 | EndsWith   | <p>This operator checks whether a string ends with a specified suffix.</p><p>EndsWith(String *suffix*)</p> | @email.EndsWith("@contoso.com") |
@@ -180,7 +180,7 @@ Fraud Protection supports all standard .NET [string operators](https://docs.micr
 
 Fraud Protection supports all standard .NET [math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8) and all C# [arithmetic operators](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods that you might find useful.
 
-| Syntax   | Description | Example |
+| Operator   | Description | Example |
 |----------|-------------|---------|
 | Math.Min | <p>This operator computes the minimum of two values.</p><p>Math.Min(Double value1, Double value2)</p> | Math.Min(@riskScore,@botScore) |
 | Math.Max | <p>This operator computes the maximum of two values.</p><p>Math.Max(Double value1, Double value2)</p> | Math.Max(@riskScore,@botScore) |
@@ -189,7 +189,7 @@ Fraud Protection supports all standard .NET [math methods](https://docs.microsof
 
 Fraud Protection supports all standard .NET [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?view=netframework-4.8) properties, methods, and operators. This table includes some examples of properties that you might find useful.
 
-| Syntax | Description | Example |
+| Operator | Description | Example |
 |--------|-------------|---------|
 | UtcNow | This operator gets a DateTime object that is set to the current date and time on the computer, expressed as Coordinated Universal Time (UTC). | DateTime.UtcNow |
 | Today  | This operator gets an object that is set to the current date, where the time component is set to 00:00:00. | DateTime.Today |
@@ -200,7 +200,7 @@ Fraud Protection supports all standard .NET [DateTime](https://docs.microsoft.co
 
 For information about type inferencing, see the [Type inference of variables](fpl-lang-ref.md#type-inference-of-variables) section.
 
-| Syntax       | Description | Example |
+| Operator       | Description | Example |
 |--------------|-------------|---------|
 | ToDateTime() | This operator converts a string to a *DateTime* object. | @creationDate.ToDateTime() |
 | ToDouble()   | This operator converts a string to a *Double* value. | @purchaseAmount.ToDouble() |
@@ -208,11 +208,11 @@ For information about type inferencing, see the [Type inference of variables](fp
 
 ## Using lists in rules
 
-You can create a rule with a previously created [list](lists.md) with the **ContainsKey** or **Lookup** operators.
+You can use the **ContainsKey** and **Lookup** operators to create a rule with a previously created [list](lists.md).
 
 ### ContainsKey
 
-To check whether a one of your lists contains a specific value, use the **ContainsKey** operation. Specify the list name, the column, and the key that you want to check.
+To check whether a one of your lists contains a specific value, use the **ContainsKey** operator. Specify the list name, the column, and the key that you want to check.
 
 For example, you create a single-column list of risky email addresses and name it *Risky email list*.
 
@@ -231,7 +231,7 @@ This clause checks whether the "Email" column in the "Risky email list" list con
 
 ### Lookup
 
-You can use the **Lookup** operation to look up the value of a key in a list.
+You can use the **Lookup** operator to look up the value of a key in a list.
 
 For example, you create a list that has one column for email addresses and another column that indicates the status of those email addresses. You name this list *Email List*.
 
@@ -255,7 +255,7 @@ If the *@email* key isn't found in the list, Fraud Protection returns "Unknown."
 
 You can also specify your own default value as the fifth parameter. For more information, see the [List operators](fpl-lang-ref.md#list-operators) section earlier in this topic.
 
-The **Lookup** operation always returns a *String* value. To convert this value to an *Int*, *Double*, or *DateTime* value, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
+The **Lookup** operator always returns a *String* value. To convert this value to an *Int*, *Double*, or *DateTime* value, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
 ## Type inference of variables
 
