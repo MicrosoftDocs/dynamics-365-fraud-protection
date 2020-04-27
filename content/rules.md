@@ -126,7 +126,7 @@ If a condition matches the decision but doesn't trigger a clause, the rule then 
 
     RETURN Approve("NO_CLAUSE_HIT")
 
-Clauses run sequentially in the order in which they appear on the **Rules** page. You can use the arrow keys on the right side of a clause to change its position in the list.
+Clauses run sequentially in the order in which they appear on the **Rules** page. You can use the arrow buttons on the right side of a clause to change its position in the list.
 
 The sequential ordering of clauses has three sections: *Pre-Score*, *Post-Bot Score*, and *Post-Risk Score*. These sections indicate when the clause is run relative to Fraud Protection's advanced AI score generation. The *Post-Bot Score* section is applicable only to account creation and account login rules.
 
