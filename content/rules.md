@@ -91,7 +91,7 @@ The score sample contains scores that are generated from Fraud Protection's AI m
 
 #### Edit the sample
 
-To validate that your rule works on a variety of events, you can modify the sample as you require and then [evaluate](rules.md#evaluate-example) the sample data against the rule. All values in both the payload sample and the score sample can be modified. When you change a sample, the changes don't affect which data you send (or don't send) to Fraud Protection.
+To validate that your rule works on a variety of events, you can modify the sample as you require and then [evaluate](rules.md#evaluation-example) the sample data against the rule. All values in both the payload sample and the score sample can be modified. When you change a sample, the changes don't affect which data you send (or don't send) to Fraud Protection.
 
 When you publish a rule, any changes that you make to the sample are saved and persisted as part of the rule.
 
