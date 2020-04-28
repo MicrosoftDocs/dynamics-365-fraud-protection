@@ -1,9 +1,9 @@
 ---
-author: v-davido
-description: This topic outlines the schemas that are required for historical data upload
-ms.author: v-davido
+author: yvonnedeq
+description: This topic outlines the schemas that are required for historical data upload.
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/14/2020
+ms.date: 04/02/2020
 
 ms.topic: conceptual
 search.app: 
@@ -65,6 +65,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | State               | string   | The state or province that was provided for the address. |
 | ZipCode             | string   | The postal code that was provided for the address. |
 | CountryCode         | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| CustomData          | object   | An optional user-defined JavaScript Object Notation (JSON) property bag. It's filled in when an API call is instantiated. The attributes can be referenced when you create purchase rules.<p>**Note:**</p><ul><li>The following primitive types are supported: **String (Unicode)**, **Int32**, **UInt32**, **Double**, **Boolean**, and **DateTime** (in Coordinated Universal Time \[UTC\], in conformance to .NET semantics).</li><li>The string data limit is 256 characters.</li><li>There is a limit of 100 custom attributes per payload.</li><li>Don't send sensitive or highly regulated data types. Here are some examples:<ul><li>Data that indicates a protected class (such as gender or race) or private/sensitive categories (such as religious views or sexual preferences)</li><li>Biometric data or any data that is related to health</li></ul></li><li>The custom data retention policy matches the retention policy of the purchase event (six months).</li></ul><p>For a sample that shows how to use purchase APIs with a custom data object in Fraud Protection, see the [Custom data sample](schema.md#custom-data-sample) section at the end of this topic.</p>  |
 
 ### PaymentInstruments
 
@@ -283,3 +284,17 @@ The following schema is used in the Evaluate and Protect experiences.
 
 ## Download sample data
 You can download our [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip) to explore options before using your own internal data.
+
+### Custom data sample
+
+The following sample shows how to use purchase APIs with a custom data object in Fraud Protection.
+
+    { 
+        "CustomData": { 
+            "EngagementDuration": 120.4, 
+            "GamerScore": 10, 
+            "InApp": true, 
+            "MiscSampleA": "abc" 
+        } 
+    }
+
