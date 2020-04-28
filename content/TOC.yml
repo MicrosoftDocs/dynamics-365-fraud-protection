@@ -6,6 +6,14 @@
   href: provision-azure-tenant.md
 - name: Configure user access
   href: configure-user-access.md
+- name: Fraud Protection 5/1 INT -- FIX
+  items: 
+  - name: Rules language guide
+    href: fpl-lang-ref.md
+  - name: Manage rules
+    href: rules.md
+  - name: Manage lists
+    href: lists.md
 - name: Purchase protection
   items:
   - name: Purchase protection overview
@@ -22,10 +30,6 @@
     href: data-upload.md
   - name: View schemas
     href: schema.md
-  - name: Manage rules
-    href: rules.md
-  - name: Rules language guide
-    href: fpl-lang-ref.md
   - name: Use the virtual fraud analyst
     href: virtual-fraud-analyst.md   
   - name: Learn from the scorecard
@@ -70,10 +74,6 @@
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
-  - name: Manage rules
-    href: rules.md
-  - name: Rules language guide
-    href: fpl-lang-ref.md
   - name: Learn from the account protection scorecard
     href: ap-scorecard.md
   - name: Account protection schemas
@@ -88,8 +88,6 @@
     href: loss-prevention-data-upload.md
   - name: Loss prevention schemas
     href: view-loss-prevent-schemas.md
-- name: Manage lists
-  href: lists.md
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance
