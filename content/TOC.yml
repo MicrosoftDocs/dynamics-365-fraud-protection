@@ -6,7 +6,7 @@
   href: provision-azure-tenant.md
 - name: Configure user access
   href: configure-user-access.md
-- name: Fraud Protection 5/1 INT -- FIX
+- name: Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only)
   items: 
   - name: Manage lists
     href: lists.md
