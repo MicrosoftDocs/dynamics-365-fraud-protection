@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic explains what's new in the 5/2 release.
+description: This topic explains what's new in the May 2020 release.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 04/29/2020
