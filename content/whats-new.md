@@ -10,11 +10,11 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: What’s new in Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only)
+title: What’s new in the Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only)
 
 ---
 
-# What’s new in Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only)
+# What’s new in the Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only)
 
 > [!NOTE]
 > The Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only) updates customer INT environments only.
