@@ -18,6 +18,7 @@ title: What’s new in the Microsoft Dynamics 365 Fraud Protection May 2020 rele
 
 > [!NOTE]
 > The Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only) updates customer INT environments only.
+
 In response to the coronavirus (COVID-19) situation, this release is only in INT to avoid changes in customer environments related to PROD.
 
 ## Summary of changes
