@@ -16,6 +16,8 @@ title: Manage rules
 
 # Manage rules
 
+[!include [banner](includes/5-4-banner.md)]
+
 ## Overview
 
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create custom rules that are based on observed patterns, policies, or business objectives. Custom rules help your analysts write business logic for automated decision making and customize logic to meet your unique business needs. Rules use a combination of inputs to assess the risk of an event. These inputs include values in the event request payload and scores that are based on artificial intelligence (AI). Based on these inputs, you can configure rules to convert the assessment into a decision, such as *Approve*, *Reject*, *Review*, or *Challenge*.
