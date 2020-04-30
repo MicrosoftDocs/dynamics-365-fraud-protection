@@ -15,6 +15,8 @@ title: Rules language guide
 ---
 # Rules language guide
 
+[!include [banner](includes/5-4-banner.md)]
+
 ## Overview
 
 Microsoft Dynamics 365 Fraud Protection [rules](rules.md) are written in a rich and expressive language. This language has many similarities to C# and SQL, and is designed to give you the power and flexibility that you need to customize your fraud strategy and enforce unique business policies.
