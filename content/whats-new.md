@@ -23,11 +23,11 @@ title: What’s new in the Microsoft Dynamics 365 Fraud Protection May 2020 rele
 
 ### Extend and tailor merchant purchase ontology 
 
-There are several cases where a merchant may need capabilities beyond Fraud Protection’s core features: 
+There are several cases where a merchant might need capabilities beyond Fraud Protection’s core features: 
 
-- To extend the base ontology with custom knowledge in the marquee scenarios of payment fraud and account takeover. Merchants may want to use specialized data beyond the base ontology of Fraud Protection to improve the fraud protection capability of the product. For example, the seat class selection may be an important attribute to consider for airline ticket purchases. 
+- To extend the base ontology with custom knowledge in the marquee scenarios of payment fraud and account takeover. Merchants might want to use specialized data beyond the base ontology of Fraud Protection to improve the fraud protection capability of the product. For example, the seat class selection might be an important attribute to consider for airline ticket purchases. 
 
-- To bring specialized data into the product by extending the ontology as neede. Customers may have niche fraud protection scenarios, such as refunds, loyalty programs, and warranty programs, each of which has its own set of relevant data. 
+- To bring specialized data into the product by extending the ontology as neede. Customers might have niche fraud protection scenarios, such as refunds, loyalty programs, and warranty programs, each of which has its own set of relevant data. 
 
 - To define custom rules. Custom knowledge can be used to create and update the configuration of model operating points using specialized data. These model operating points can consume the full spectrum of available knowledge to produce decisions for each type of event
 
