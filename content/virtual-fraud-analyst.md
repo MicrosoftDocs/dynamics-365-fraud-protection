@@ -16,7 +16,7 @@ title: Use the virtual fraud analyst
 
 # Use the virtual fraud analyst
 
-The virtual fraud analyst (VFA) uses innovative artificial intelligence (AI) technology to provide a compelling historical view of your data, and to help you set up and adjust optimal [risk score thresholds](scorecard.md). This information can then be transformed into [rules](rules.md) that help you decide, in real time, whether to accept or reject customer transactions.
+The virtual fraud analyst (VFA) uses innovative artificial intelligence (AI) technology to provide a compelling historical view of your data, and to help you set up and adjust optimal [risk score thresholds](scorecard.md). This information can then be transformed into rules that help you decide, in real time, whether to accept or reject customer transactions.
 
 VFA helps you balance acceptable levels of lost revenue and customer support costs against chargebacks, fees, and refunds. The configuration experience tests basic filters and risk score ranges against historical transactions.
 
@@ -26,21 +26,25 @@ Here are two examples of rules that you can create in the Rules editor after you
 
     Fine-grained rules that you create by using VFA give you more control and help you stop more fraud in subsets of your transactions.
 
-    For example, you can build a custom list of products that are currently in a specific price range, and use that list to build your rule. You can use filters on [standard ontology nodes and attributes](graph-explorer.md), and then select an appropriate [list](lists.md) that contains the corresponding dataset.
+    For example, you can build a custom list of products that are currently in a specific price range, and use that list to build your rule. You can use filters on [standard ontology nodes and attributes](graph-explorer.md), and then select an appropriate list that contains the corresponding dataset.
 
-    Next, you can set up a [rule](rules.md) to screen for high-priced products that are bought only by users who live in high-risk countries or regions.
+    Next, you can set up a rule to screen for high-priced products that are bought only by users who live in high-risk countries or regions.
 
 - **"Catch-all" fraud rules for all your traffic**
 
     You can create a catch-all rule that meets your needs for all transactions and isn't linked to a specific custom list. To understand the impact of a catch-all rule on fraud protection, skip step 1 in the step-by-step instructions that follow, and go directly to step 2, where you select a risk score. 
 
-    For more information about rules and lists, see [Manage rules](rules.md) and [Manage lists](lists.md).
+    For more information about rules and lists:
+    
+    - If you’re a PROD user, see [Manage lists and rules](lists-rules.md).
+    
+    - If you’re an INT user, see [Manage rules](rules.md) and [Manage lists](lists.md).
 
 ## Use rules in VFA
 
 ### Step 1 (optional)
 
-In step 1, you select the target data that your rule will apply to. This data consists of a combination of a node, attributes, and a list. If you must first create a new list, see [Upload a list](lists.md#upload-a-list).
+In step 1, you select the target data that your rule will apply to. This data consists of a combination of a node, attributes, and a list. If you must first create a new list, create it offline and then upload it to Fraud Protection. The file must be a .csv file that includes headers.
 
 The following table defines the node and attribute combinations that you can use to build your lists. 
 
@@ -54,7 +58,7 @@ The following table defines the node and attribute combinations that you can use
 
 To create a filter for historical transaction data, follow these steps.
 
-1. [Create and upload a list](lists.md#upload-a-list).
+1. Create and upload a list.
 1. In the left navigation, select **Virtual fraud analyst**.
 1. Select a node, attribute, list, and column.
 1. To add another filter, select **Add another filter**, and then repeat step 3.
