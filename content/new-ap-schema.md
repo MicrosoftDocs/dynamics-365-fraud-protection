@@ -64,7 +64,7 @@ The **AccountCreation** API lets you share information and context with Fraud Pr
 | Phone                       | phoneNumberValidatedDate    | dateTime | The validation date of the user's phone number. The format is ISO 8601. |
 | Phone                       | isPhoneUserName             | bool     | A **True**/**False** value that indicates whether the phone number can be used as the user name. The default value is **False**. |
 | Email                       | emailType                   | enum     | The type of email address. Possible values are **'Primary'** and **'Alternative'**. |
-| Email                       | email                       | string   | The user's email address. This value is case-insensitive. |
+| Email                       | emailValue                       | string   | The user's email address. This value is case-insensitive. |
 | Email                       | isEmailValidated            | bool     | A **True**/**False** value that indicates whether the user-provided email address has been verified as owned by the user. |
 | Email                       | emailValidatedDate          | dateTime | The validation date of the user's email address. The format is ISO 8601. |
 | Email                       | isEmailUserName             | bool     | A **True**/**False** value that indicates whether the email address can be used as the user name. The default value is **False**. |
@@ -124,10 +124,10 @@ The **AccountCreationStatus** API lets you share information and context with Fr
 | MetaData | signupId          | string   | The identifier of the **Signup** event. |
 | MetaData | merchantTimeStamp | DateTime | The time stamp for the event. |
 | MetaData | userId            | string   | The user identifier. This information is provided by the merchant. |
-| Status   | statusType        | string   | The type of status: **Approved**, **Rejected**, or **Pending**. |
-| Status   | reasonType        | enum     | The type of reason: **challenge abandoned**, **challenge failed**, **challenge passed**, **challenge pending**, **review failed**, **review passed**, **review pending**, or **None**. The default value is **None**. |
-| Status   | challengeType     | enum     | The type of review status: **SMS**, **Email**, **Phone**, **Other**, or **None**. The default value is **None**. |
-| Status   | statusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
+| StatusDetails   | statusType        | string   | The type of status: **Approved**, **Rejected**, or **Pending**. |
+| StatusDetails   | reasonType        | enum     | The type of reason: **challenge abandoned**, **challenge failed**, **challenge passed**, **challenge pending**, **review failed**, **review passed**, **review pending**, or **None**. The default value is **None**. |
+| StatusDetails   | challengeType     | enum     | The type of review status: **SMS**, **Email**, **Phone**, **Other**, or **None**. The default value is **None**. |
+| StatusDetails   | statusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
 
 ## AccountLogIn
 
@@ -169,10 +169,10 @@ The **AccountLogInStatus** API lets you share information and context with Fraud
 | MetaData | logInId           | string   | The identifier of the **Signup** event. |
 | MetaData | merchantTimeStamp | DateTime | The time stamp for the event. |
 | MetaData | userId            | string   | The user identifier. This information is provided by the merchant. |
-| Status   | statusType        | string   | The type of status: **Approved**, **Rejected**, or **Pending**. |
-| Status   | reasonType        | enum     | The type of reason: **challenge abandoned**, **challenge failed**, **challenge passed**, **challenge pending**, **review failed**, **review passed**, **review pending**, or **None**. The default value is **None**. |
-| Status   | challengeType     | enum     | The type of review status: **SMS**, **Email**, **Phone**, **Other**, or **None**. The default value is **None**. |
-| Status   | statusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
+| StatusDetails   | statusType        | string   | The type of status: **Approved**, **Rejected**, or **Pending**. |
+| StatusDetails   | reasonType        | enum     | The type of reason: **challenge abandoned**, **challenge failed**, **challenge passed**, **challenge pending**, **review failed**, **review passed**, **review pending**, or **None**. The default value is **None**. |
+| StatusDetails   | challengeType     | enum     | The type of review status: **SMS**, **Email**, **Phone**, **Other**, or **None**. The default value is **None**. |
+| StatusDetails   | statusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
 
 ## AccountUpdate
 
@@ -208,7 +208,7 @@ The **AccountUpdate** API lets you share account information updates with Fraud 
 | Phone                       | phoneNumberValidatedDate    | dateTime | The validation date of the user's phone number. The format is ISO 8601. |
 | Phone                       | isPhoneUserName             | bool     | A **True**/**False** value that indicates whether the phone number can be used as the user name. The default value is **False**. |
 | Email                       | emailType                   | enum     | The type of email address. Possible values are **'Primary'** and **'Alternative'**. |
-| Email                       | email                       | string   | The user's email address. This value is case-insensitive. |
+| Email                       | emailValue                       | string   | The user's email address. This value is case-insensitive. |
 | Email                       | isEmailValidated            | bool     | A **True**/**False** value that indicates whether the user-provided email address has been verified as owned by the user. |
 | Email                       | emailValidatedDate          | dateTime | The validation date of the user's email address. The format is ISO 8601. |
 | Email                       | isEmailUserName             | bool     | A **True**/**False** value that indicates whether the email address can be used as the user name. The default value is **False**. |
