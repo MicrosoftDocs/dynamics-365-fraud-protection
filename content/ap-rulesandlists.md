@@ -18,7 +18,7 @@ title: Manage account protection rules and lists
 [!include [banner](includes/preview-banner.md)]
 
 > [!NOTE]
-> If you’re an INT user: For more information, see [Manage lists](lists.md), [Manage rules](rules.md), and the [Rules language guide](fpl-lang-ref.md).
+> For more information if you’re an INT user, see [Manage lists](lists.md), [Manage rules](rules.md), and the [Rules language guide](fpl-lang-ref.md).
 
 ## Rules
 
