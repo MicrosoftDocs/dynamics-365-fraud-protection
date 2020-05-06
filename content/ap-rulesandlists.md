@@ -1,9 +1,9 @@
 ---
-author: zhuoche
+author: yvonnedeq
 description: This topic explains the rule and list capabilities of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 04/22/2020
+ms.date: 05/06/2020
 
 ms.topic: conceptual
 search.app: 
@@ -16,6 +16,9 @@ title: Manage account protection rules and lists
 # Manage account protection rules and lists
 
 [!include [banner](includes/preview-banner.md)]
+
+> [!NOTE]
+> If you’re an INT user: For more information, see [Manage lists](lists.md), [Manage rules](rules.md), and the [Rules language guide](fpl-lang-ref.md).
 
 ## Rules
 
