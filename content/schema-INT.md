@@ -75,7 +75,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 |-----------------------------|----------|-------------|
 | PurchaseId                  | string   | The identifier of the transaction (or purchase or order). |
 | MerchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
-| Type                        | string   | The type of payment: **credit_card**, **direct_debit**, **finance_leasing**, **invoice_credit**, **offline_bank_transfer**, **online_bank_transfer**, **Paypal**, **stored_value**, or **Mobilepayment**. |
+| Type                        | string   | The type of payment. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | PurchaseAmount              | double   | The total purchase amount that uses this payment instrument for the transaction. |
 | CreationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | UpdateDate                  | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
@@ -130,7 +130,7 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 |--------------------|----------|-------------|
 | ChargebackId       | string   | The chargeback identifier. |
 | Reason             | string   | The reason that was provided by the bank. |
-| Status             | string   | The status: **Accepted**, **CB_Dispute-Initiated**, **CB_Dispute-Lose**, **CB_Dispute-Win**, **Chargeback-CB1**, **Chargeback-CB2**, **Inquiry_Dispute-Win**, **Inquiry-Initiated**, **ResubmittedRequest**, or **Unknown**. |
+| Status             | string   | The status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The chargeback amount. |
 | Currency           | string   | The currency that is used for the chargeback amount. |
@@ -146,7 +146,7 @@ The following schema is used in the Evaluate and Protect experiences.
 |--------------------|----------|-------------|
 | RefundId           | string   | The refund identifier. |
 | Reason             | string   | The customer-provided reason. |
-| Status             | string   | The refund status: **Approved**, **Declined**, **Failed**, **Offline_Approved**, **Pending**, **Reversed**, or **Unknown**. |
+| Status             | string   | The refund status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The refund amount. |
 | Currency           | string   | The currency that is used for the sales price amount. |
@@ -161,7 +161,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | Attribute         | Type     | Description |
 |-------------------|----------|-------------|
 | PurchaseId        | string   | The identifier of the transaction (or purchase or order). |
-| StatusType        | string   | The type of status: **Approved**, **Challenge**, **Pending**, **Rejected**, **Review**, or **Unknown**. |
+| StatusType        | string   | The type of status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | StatusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
 | Reason            | string   | The reason for the status transition. |
 | MerchantLocalDate | DateTime | A date in ISO 8601 format. |
@@ -173,9 +173,9 @@ The following schema is used in the Evaluate and Protect experiences.
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
 | BankEventId        | string   | The bank event identifier. |
-| Type               | string   | The bank event type: **authorize**, **charge**, **refund**, **validate**, or **unknown**. |
+| Type               | string   | The bank event type. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Status             | string   | The status: **approved**, **declined**, **failed**, **reversed**, **pending**, or **unknown**. |
+| Status             | string   | The status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | BankResponseCode   | string   | The bank code on the response. |
 | PaymentProcessor   | string   | The processor name (for example: **FDC** or **Paypal**). |
 | MRN                | string   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
@@ -274,13 +274,13 @@ The following schema is used in the Evaluate and Protect experiences.
 | --- | --- | --- |
 | TrackingId | String | The unique ID for each event/record. |
 | MerchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
-| EventTimeStamp | DateTime | The date and time of the event. Possible values: Chargeback Date or Review Date. The format is ISO 8601. |
+| EventTimeStamp | DateTime | The date and time of the event. The format is ISO 8601. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | LabelObjectType | String | This field indicates the type of label: Purchase, Signup, Custom Fraud Evaluation, Account, Payment instrument, or Email. |
 | LabelObjectId | String | This is an identifier field for the type of object: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, or Email.  |
-| LabelSource | String | This field represents the source of the label: Customer Escalation, Chargeback, TC40_SAFE, Manual Review, Refund, Offline Analysis. |
-| LabelState | String | This field indicates the current status of the label: Inquiry Accepted, Fraud, Disputed, Reversed, Abuse, or Resubmitted Request.  |
-| LabelReasonCodes | String | This field indicates the reason codes associated with each type of label: Processor/Bank Response Code, Fraud Refund, Account TakeOver, Payment Instrument Fraud, Account Fraud, Abuse, or Friendly Fraud. |
-| Processor | String | The name of the bank or payment processor that is generating the TC40 or SAFE information. |
+| LabelSource | String | This field represents the source of the label. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| LabelState | String | This field indicates the current status of the label. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost).  |
+| LabelReasonCodes | String | This field indicates the reason codes associated with each type of label. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| Processor | String | The name of the bank or payment processor. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | EffectiveStartDate | DateTime | The date from which this label is effective. The format is ISO 8601. |
 | EffectiveEndDate | DateTime | The end date for this label. The format is ISO 8601. |
 
