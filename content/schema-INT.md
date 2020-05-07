@@ -45,7 +45,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Currency            | string   | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant. |
 | DeviceContextId     | string   | The session ID of the event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if the session isn't available. |
 | IPAddress           | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
-| UserId              | string   | The customer identifier. This information is provided by the merchant. |
+| UserId              | string   | The customer identifier. This information is provided by the merchant. This is a required attribute.|
 | UserFirstName       | string   | The customer-provided first name on the customer account. |
 | UserLastName        | string   | The customer-provided last name on the customer account. |
 | UserEmail           | string   | The customer's email address. This value is case-insensitive. |
@@ -74,7 +74,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Attribute                   | Type     | Description |
 |-----------------------------|----------|-------------|
 | PurchaseId                  | string   | The identifier of the transaction (or purchase or order). |
-| MerchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. |
+| MerchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
 | Type                        | string   | The type of payment: **credit_card**, **direct_debit**, **finance_leasing**, **invoice_credit**, **offline_bank_transfer**, **online_bank_transfer**, **Paypal**, **stored_value**, or **Mobilepayment**. |
 | PurchaseAmount              | double   | The total purchase amount that uses this payment instrument for the transaction. |
 | CreationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
@@ -106,7 +106,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Attribute     | Type   | Description |
 |---------------|--------|-------------|
 | PurchaseId    | string | The identifier of the transaction (or purchase or order). |
-| ProductId     | string | The product identifier. |
+| ProductId     | string | The product identifier. This is a required attribute.|
 | PurchasePrice | double | The price for the line item of the purchase. |
 | Margin        | string | The margin that was gained by the sale of the item. |
 | Quantity      | Int32  | The number of items that were purchased. |
@@ -134,7 +134,7 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The chargeback amount. |
 | Currency           | string   | The currency that is used for the chargeback amount. |
-| UserId             | string   | The customer identifier. |
+| UserId             | string   | The customer identifier. This is a required attribute.|
 | PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
 | MerchantLocalDate  | DateTime | The purchase ingestion date in the merchant's local time zone. The format is ISO 8601. |
 
@@ -150,7 +150,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The refund amount. |
 | Currency           | string   | The currency that is used for the sales price amount. |
-| UserId             | string   | The customer identifier. |
+| UserId             | string   | The customer identifier. This is a required attribute.|
 | PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
 | MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
 
@@ -192,7 +192,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | Attribute                | Type     | Description |
 |--------------------------|----------|-------------|
 | CustomerLocalDate        | DateTime | A date in ISO 8601 format. |
-| UserId                   | string   | The customer identifier. |
+| UserId                   | string   | The customer identifier. This is a required attribute.|
 | UsercreationDate         | DateTime | A date in ISO 8601 format. |
 | UserupdateDate           | DateTime | A date in ISO 8601 format. |
 | FirstName                | string   | The customer-provided first name on the customer account. |
@@ -219,7 +219,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 | Attribute       | Type   | Description |
 |-----------------|--------|-------------|
-| UserId          | string | The customer identifier. |
+| UserId          | string | The customer identifier. This is a required attribute.|
 | Addresstype     | string | The address type: **Billing**, **Shipping**, **Account**, or **Unknown**. |
 | FirstName       | string | The first name that was provided for the address. |
 | LastName        | string | The last name that was provided for the address. |
@@ -237,8 +237,8 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 | Attribute                     | Type     | Description |
 | ----------------------------- |----------|-------------|
-| UserId                        | string   | The customer identifier. |
-| MerchantPaymentInstrumentId   | string   | The identifier of the payment instrument. This information is provided by the merchant. |
+| UserId                        | string   | The customer identifier. This is a required attribute.|
+| MerchantPaymentInstrumentId   | string   | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
 | PaymentInstrumenttype         | string   | The type of payment: **CreditCard**, **Paypal**, **Mobilepayment**, or **Giftcard**. |
 | PaymentInstrumentcreationDate | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | PaymentInstrumentupdateDate   | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
