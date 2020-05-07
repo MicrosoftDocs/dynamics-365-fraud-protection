@@ -18,6 +18,8 @@
     href: rules.md
   - name: Rules language guide
     href: fpl-lang-ref.md
+  - name: View purchase protection schemas
+    href: schema-INT.md
 - name: Purchase protection
   items:
   - name: Purchase protection overview

@@ -10,11 +10,13 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: View purchase protection schemas
+title: View purchase protection schemas (INT only)
 
 ---
 
-# View purchase protection schemas
+# View purchase protection schemas (INT only)
+
+[!include [banner](includes/5-4-banner.md)]
 
 This topic outlines the schemas for historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
@@ -43,7 +45,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Currency            | string   | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant. |
 | DeviceContextId     | string   | The session ID of the event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if the session isn't available. |
 | IPAddress           | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
-| UserId              | string   | The customer identifier. This information is provided by the merchant. This is a required attribute. |
+| UserId              | string   | The customer identifier. This information is provided by the merchant. This is a required attribute.|
 | UserFirstName       | string   | The customer-provided first name on the customer account. |
 | UserLastName        | string   | The customer-provided last name on the customer account. |
 | UserEmail           | string   | The customer's email address. This value is case-insensitive. |
@@ -65,14 +67,14 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | State               | string   | The state or province that was provided for the address. |
 | ZipCode             | string   | The postal code that was provided for the address. |
 | CountryCode         | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
-
+| CustomData          | object   | An optional user-defined JavaScript Object Notation (JSON) property bag. It's filled in when an API call is instantiated. The attributes can be referenced when you create purchase rules.<p>**Note:**</p><ul><li>The following primitive types are supported: **String (Unicode)**, **Int32**, **UInt32**, **Double**, **Boolean**, and **DateTime** (in Coordinated Universal Time \[UTC\], in conformance to .NET semantics).</li><li>The string data limit is 256 characters.</li><li>There is a limit of 100 custom attributes per payload.</li><li>Don't send sensitive or highly regulated data types. Here are some examples:<ul><li>Data that indicates a protected class (such as gender or race) or private/sensitive categories (such as religious views or sexual preferences)</li><li>Biometric data or any data that is related to health</li></ul></li><li>The custom data retention policy matches the retention policy of the purchase event (six months).</li></ul><p>For a sample that shows how to use purchase APIs with a custom data object in Fraud Protection, see the [Custom data sample](schema-INT.md#custom-data-sample) section at the end of this topic.</p>  |
 
 ### PaymentInstruments
 
 | Attribute                   | Type     | Description |
 |-----------------------------|----------|-------------|
 | PurchaseId                  | string   | The identifier of the transaction (or purchase or order). |
-| MerchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.  |
+| MerchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
 | Type                        | string   | The type of payment. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | PurchaseAmount              | double   | The total purchase amount that uses this payment instrument for the transaction. |
 | CreationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
@@ -104,7 +106,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Attribute     | Type   | Description |
 |---------------|--------|-------------|
 | PurchaseId    | string | The identifier of the transaction (or purchase or order). |
-| ProductId     | string | The product identifier. This is a required attribute. |
+| ProductId     | string | The product identifier. This is a required attribute.|
 | PurchasePrice | double | The price for the line item of the purchase. |
 | Margin        | string | The margin that was gained by the sale of the item. |
 | Quantity      | Int32  | The number of items that were purchased. |
@@ -132,7 +134,7 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The chargeback amount. |
 | Currency           | string   | The currency that is used for the chargeback amount. |
-| UserId             | string   | The customer identifier. This is a required attribute. |
+| UserId             | string   | The customer identifier. This is a required attribute.|
 | PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
 | MerchantLocalDate  | DateTime | The purchase ingestion date in the merchant's local time zone. The format is ISO 8601. |
 
@@ -148,7 +150,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The refund amount. |
 | Currency           | string   | The currency that is used for the sales price amount. |
-| UserId             | string   | The customer identifier. This is a required attribute.  |
+| UserId             | string   | The customer identifier. This is a required attribute.|
 | PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
 | MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
 
@@ -190,7 +192,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 | Attribute                | Type     | Description |
 |--------------------------|----------|-------------|
 | CustomerLocalDate        | DateTime | A date in ISO 8601 format. |
-| UserId                   | string   | The customer identifier. This is a required attribute.  |
+| UserId                   | string   | The customer identifier. This is a required attribute.|
 | UsercreationDate         | DateTime | A date in ISO 8601 format. |
 | UserupdateDate           | DateTime | A date in ISO 8601 format. |
 | FirstName                | string   | The customer-provided first name on the customer account. |
@@ -217,7 +219,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 | Attribute       | Type   | Description |
 |-----------------|--------|-------------|
-| UserId          | string | The customer identifier. This is a required attribute.  |
+| UserId          | string | The customer identifier. This is a required attribute.|
 | Addresstype     | string | The address type: **Billing**, **Shipping**, **Account**, or **Unknown**. |
 | FirstName       | string | The first name that was provided for the address. |
 | LastName        | string | The last name that was provided for the address. |
@@ -235,8 +237,8 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 | Attribute                     | Type     | Description |
 | ----------------------------- |----------|-------------|
-| UserId                        | string   | The customer identifier. This is a required attribute.  |
-| MerchantPaymentInstrumentId   | string   | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.  |
+| UserId                        | string   | The customer identifier. This is a required attribute.|
+| MerchantPaymentInstrumentId   | string   | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
 | PaymentInstrumenttype         | string   | The type of payment: **CreditCard**, **Paypal**, **Mobilepayment**, or **Giftcard**. |
 | PaymentInstrumentcreationDate | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | PaymentInstrumentupdateDate   | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
@@ -281,4 +283,20 @@ The following schema is used in the Evaluate and Protect experiences.
 | Processor | String | The name of the bank or payment processor. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | EffectiveStartDate | DateTime | The date from which this label is effective. The format is ISO 8601. |
 | EffectiveEndDate | DateTime | The end date for this label. The format is ISO 8601. |
+
+## Download sample data
+You can download our [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip) to explore options before using your own internal data.
+
+### Custom data sample
+
+The following sample shows how to use purchase APIs with a custom data object in Fraud Protection.
+
+    { 
+        "CustomData": { 
+            "EngagementDuration": 120.4, 
+            "GamerScore": 10, 
+            "InApp": true, 
+            "MiscSampleA": "abc" 
+        } 
+    }
 
