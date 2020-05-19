@@ -33,7 +33,7 @@ The acceptance booster service provides a direct communication channel for conte
 
 ### Reports
 
-To view a report of your transaction acceptance booster service, select **Configuration**, then select **Transaction acceptance booster**, and then select the **Report** tab.
+To view a report of your transaction acceptance booster service, select **Configuration**, select **Transaction acceptance booster**, and then select the **Report** tab.
 
 ## Program MID
 
@@ -57,7 +57,9 @@ Once enabled, you will receive a flag in the response payload of a purchase API 
 
 Your existing MID will be the Standard MID. You can choose which MID is the Program MID and which is the Control MID. Once you make this choice, your selection should be fixed and the MIDs should not be interchanged. 
 
-Fraud Protection algorithms will run in real time to optimize and maximize your acceptance rate. Therefore, it's important that you follow the recommendation that you receive in the response payload. It's also important that you report back the bank authorization outcome and chargeback in a timely manner. Bank authorization outcomes and chargebacks can be reported via the API or by bulk upload of .csv files. Please refer to the [API documentation](integrate-real-time-api.md) and the [data upload documentation](data-upload.md) for more information on reporting these events.
+Fraud Protection algorithms run in real time to optimize and maximize your acceptance rate. Therefore, it's important that you follow the recommendation that you receive in the response payload. It's also important that you report back the bank authorization outcome and chargeback in a timely manner. Bank authorization outcomes and chargebacks can be reported via the API or by bulk upload of .csv files. 
+
+See the [API documentation](integrate-real-time-api.md) and the [data upload documentation](data-upload.md) for more information on reporting these events.
 
 ### Reports
 To view a report of your Program MID activity, select **Scorecard** and then select the **MID classification** filter.
