@@ -36,4 +36,4 @@ To ensure that Fraud Protection can correctly interpret the files that you uploa
 - To find and submit your local files, select **Upload**. Every file must be uploaded before you process the data.
 - To generate a report after a successful data upload, select **Generate Reports**. 
 - To upload additional data or submit more files, select **Reupload**, and then process the new files. 
-- To remove data files, select **Delete** . 
+- To remove data files, select **Delete**. 
