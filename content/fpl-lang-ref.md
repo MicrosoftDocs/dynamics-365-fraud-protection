@@ -263,10 +263,10 @@ The **Lookup** operator always returns a *String* value. To convert this value t
 
 Variable types are inferred from the context that they are used in. Here are some examples:
 
-- In the expression **WHEN @isEmailValidated**, the variable is interpreted as a *Boolean* value.
-- In the expression **@riskScore \> 500**, the variable is interpreted as a *Double* value.
-- In the expression **@creationDate.Year \< DateTime.UtcNow.Year**, the variable is interpreted as a *DateTime* value.
+- In the expression **WHEN \@isEmailValidated**, the variable is interpreted as a *Boolean* value.
+- In the expression **\@riskScore \> 500**, the variable is interpreted as a *Double* value.
+- In the expression **\@creationDate.Year \< DateTime.UtcNow.Year**, the variable is interpreted as a *DateTime* value.
 
-If there isn't enough context to infer the type of a variable, it's considered a *String* value. For example, in the expression **@riskScore \< @botScore**, both variables are interpreted as strings.
+If there isn't enough context to infer the type of a variable, it's considered a *String* value. For example, in the expression **\@riskScore \< \@botScore**, both variables are interpreted as strings.
 
 To specify the type of a non-string variable, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
