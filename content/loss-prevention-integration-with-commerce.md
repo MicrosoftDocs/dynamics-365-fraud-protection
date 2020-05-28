@@ -10,15 +10,15 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Integration with Commerce
+title: Loss prevention integration with Dynamics 365 Commerce
 
 ---
 
 
-# Integration with Commerce
+# Loss prevention integration with Commerce
 
 
-## Enabling the Loss Prevention integration with Commerce
+## Enabling the Loss Prevention integration with Dynamics 365 Commerce
 
 ### 1.	Enable ADLS for your Commerce environment
 For the data to be available in ADLS, the service must be enabled for the Dynamics 365 Commerce environment. For details on enabling ADLS for your Commerce environment, see [Enable ADLS in a Dynamics 365 Commerce environment](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdocs.microsoft.com%2Fen-us%2Fdynamics365%2Fcommerce%2Fenable-adls-environment&data=02%7C01%7CVenkat.Ganesan%40microsoft.com%7Ccf5b733b8bfe4b0a8a5808d7f9bba9cd%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637252456709418649&sdata=yyr87Ca7vxWSiaHT9b5v6zqKsD1MTs3zORC%2B0UZFaRo%3D&reserved=0).
