@@ -15,7 +15,7 @@ title: Loss prevention integration with Dynamics 365 Commerce
 ---
 
 
-# Loss prevention integration with Commerce
+# Loss prevention integration with Dynamics 365 Commerce
 
 
 ## Enabling the Loss Prevention integration with Dynamics 365 Commerce
