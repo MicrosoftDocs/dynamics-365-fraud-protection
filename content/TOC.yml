@@ -88,10 +88,12 @@
     href: ap-scorecard.md
   - name: Account protection schemas
     href: new-ap-schema.md
-- name: Loss prevention (preview)
+- name: Loss prevention
   items:
   - name: Loss prevention overview
     href: loss-prevention-overview.md
+  - name: Integration with Dynamics 365 Commerce
+    href: loss-prevention-integration-with-commerce.md    
   - name: Reporting
     href: reports.md
   - name: Upload historical data for loss prevention
