@@ -52,7 +52,23 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 
 ### Business continuity and disaster recovery
 
-
+| Question| Response    |
+|---------|-------------|
+|Does the application / service allow unstructured data to be exported in bulk into a non-proprietary format such as CSV?          |GDPR Export functionality only.             |
+|  Does the unstructured data retain metadata?       | No            |
+|  Does the unstructured data retain security ACLs?       |No             |
+|  Note: Document the process.       |In product experience             |
+|Does the application / service allow databases to be exported in bulk into a non-proprietary format?         |No             |
+|  Note: Document the process.       |No             |
+|Within the Service Level Agreement, there exists language to remove any bandwidth or API throttling in the case of legal discovery?         |--             |
+|Provide a documented backup policy.         |There is no backup policy. Instead, we have multi-region data replication and resiliency strategy in place.             |
+|  The policy must contain 30 days of backup, 12-hour RTO, 24-hour RPO.       |NA             |
+|  Are the backups stored on the same Infrastructure vendor?       |NA             |
+|  Are the backups stored encrypted at rest?         |NA             |
+|  Note: Document the process.       |NA             |
+|Does the application / service have a documented Disaster Recovery plan?         |Yes             |
+|  Provide a business continuity runbook.       |Microsoft owned, available on request.             |
+|  Note: Document the process.       |Microsoft process.             |
 
 
 ### Data security
@@ -74,7 +90,7 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |Does the application / service use a thick client or physical appliance?         |No             |
 |  Is there a recent 3rd party security review available?         |N/A             |
 |  Does the application/ service use a secure communications method such as TLS?   |N/A             |
-|  Does the application support device pinning?       |             |N/A
+|  Does the application support device pinning?       |N/A             |
 |  Does the application log operational and security events?        |N/A             |
 |  Describe the authentication mechanism available for the client.       |N/A             |
 |  Is a secured subnet required for use?       |--             |
@@ -89,8 +105,8 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |Does the application / service support Database or File Activity monitoring?         |Can you clarify the question?             |
 |Does the application / service support network traffic baselining and alerting?         |Yes, through internal alerting and monitoring.             |
 |Does the application have traffic reporting & the ability to alert on anomalous traffic?         |Yes, through internal alerting and monitoring.             |
-|Does the application / service allow administrator control of 3rd party application integrations?
-Can the administrator control OAuth or other API access per application?    |N/A             |
+|Does the application / service allow administrator control of 3rd party application integrations?|N/A             |
+|  Can the administrator control OAuth or other API access per application?    |N/A             |
 |  Can the administrator control OAuth or other API access using a time-lock?      |N/A             |
 |  Can the administrator control OAuth or other API access using a time-lock?       |N/A             |
 |  Can the administrator control OAuth or other API access per-user?        |N/A             |
