@@ -42,10 +42,11 @@ Only one step is required to enable loss prevention integration.
 Next, register the Fraud Protection application ID.
 
 1. Select **Finance and Operations Preview**, and then select **Azure Active Directory applications**.
-1. To create a new first party app identity for the Fraud Protection, select **New**, and then add **bf04bdab-e06f-44f3-9821-d3af64fc93a9** as the **Client ID**.
+1. To create a new first party app identity for the Fraud Protection, select **New**.
+1. In the **Client ID** box, enter *bf04bdab-e06f-44f3-9821-d3af64fc93a9*.
 1. Assign the **User Id** to **RetailServiceAccount**.
 
-## 4.	Configure Loss Prevention in DFP
+## 4.	Configure loss prevention in Fraud Protection
 
 After configuring the ADLS environment and turning on loss prevention, the next step is to set up the Fraud Protection environment and configure the loss prevention settings to connect to ADLS in the Commerce environment. 
 
