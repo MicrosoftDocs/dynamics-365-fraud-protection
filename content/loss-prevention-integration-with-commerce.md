@@ -10,12 +10,12 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Integrate loss prevention with Dynamics 365 Commerce
+title: Loss prevention integration with Dynamics 365 Commerce
 
 ---
 
 
-# Integrate loss prevention with Dynamics 365 Commerce
+# Loss prevention integration with Dynamics 365 Commerce
 
 In Microsoft Dynamics 365 Fraud Protection, loss prevention is a cloud-based solution designed to help retailers like you decrease in-store fraud costs and improve operational efficiencies and revenue.  It allows you to combat fraud associated with returns, discounts, merchandise mishandling, and inventory turn-over.
 
