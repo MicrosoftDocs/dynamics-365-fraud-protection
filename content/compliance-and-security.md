@@ -40,7 +40,7 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 
 
 
-## Security assessment- FAQs
+## Security assessment FAQs
 
 ### Authentication and administration
 
@@ -57,7 +57,71 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 
 ### Data security
 
-
+| Question| Response    |
+|---------|-------------|
+|Does the vendor comply with the response expectations?          |Yes             |
+|  Critical - same-day remediation          |Yes          | 
+|  High - remediation in 5 business days    |             |
+|  Medium - remediation in 15 business days |             |
+|  Low - remediation in 30 business days    |             |
+|  Can the vendor disable the application instance in the event of a security incident?         |Yes            |
+|Does the application / service protect data using TLS encryption?         |Yes             |
+|  Has SSLv3 been disabled for the application?         |Yes; disabled on all VMSS by default.             |
+|  What level of encryption is being used?         |TLS 1.2             |
+|What are the procedures to allow me as a customer the resources required to perform security penetration scanning?         |CELA and Security Approval from Microsoft is required.             |
+|Does the application / service have a recent third-party network security penetration test? (The test must be less than 3 months old.)  |Yes, Azure             |
+|Does the application / service have a recent third-party application security penetration test? (The test must be less than 3 months old.) |Yes, in house       |
+|Does the application / service use a thick client or physical appliance?         |No             |
+|  Is there a recent 3rd party security review available?         |N/A             |
+|  Does the application/ service use a secure communications method such as TLS?   |N/A             |
+|  Does the application support device pinning?       |             |N/A
+|  Does the application log operational and security events?        |N/A             |
+|  Describe the authentication mechanism available for the client.       |N/A             |
+|  Is a secured subnet required for use?       |--             |
+|  Note: Provide documentation.       |--             |
+|Does the application / service have a mobile client?         |Web-based             |
+|  Does the mobile client should use a secure communications method such as TLS?       |Yes             |
+|  Does the application allow my own policies to enforce the presence of MDM before use?  |N/A         |
+|  Is the application able to enforce data encryption?       |N/A             |
+|  Is the application able to enforce a remote data wipe?       |N/A             |
+|Does the application / service have a firewall in place that does not permit the application from sending traffic with a source IP or MAC address other than its own?         |Can you clarify the question?           |
+|Can the application be limited to allow traffic only from trusted networks?         |It cannot be limited through the user interface, but it is possible to do so with a manual configuration.             |
+|Does the application / service support Database or File Activity monitoring?         |Can you clarify the question?             |
+|Does the application / service support network traffic baselining and alerting?         |Yes, through internal alerting and monitoring.             |
+|Does the application have traffic reporting & the ability to alert on anomalous traffic?         |Yes, through internal alerting and monitoring.             |
+|Does the application / service allow administrator control of 3rd party application integrations?
+Can the administrator control OAuth or other API access per application?    |N/A             |
+|  Can the administrator control OAuth or other API access using a time-lock?      |N/A             |
+|  Can the administrator control OAuth or other API access using a time-lock?       |N/A             |
+|  Can the administrator control OAuth or other API access per-user?        |N/A             |
+|  Can the administrator control OAuth or other API access per-content-type?        |N/A             |
+|  Can the application log an identifier to the application and user context under which it was authorized?       |N/A             |
+|If the application / service utilizes virtual machine provisioning, provide documentation for the virtual machine migration / high availability process.         |We utilize Azure, Service Fabric, and Elastic AP.  We will comply with any request to provide additional detail for more specific questions.             |
+|  Note: A virtual machine cannot be moved from a less-trusted environment to a more-trusted environment. Data should be exported, and the application built from the ground up on a trusted platform.       |--             |
+|  Mixed mode (PCI and non-PCI data on the same hypervisor) must not be allowed.       |N/A           |
+|If the application / service is PaaS / IaaS, my content must reside on a separate network segment and hypervisor.       |N/A             |
+|If the infrastructure does not support encryption at rest by default, does the application / service provide the ability to store data at rest in an encrypted format?         |It is encrypted at rest.             |
+|  All data at rest must be encrypted.    |Yes        |
+|  All PaaS / IaaS VM "snapshots" must be stored on an encrypted file system.       |N/A             |
+|  List the supported encryption formats.       |N/A             |
+|Are there any technical requirements that would prohibit the use of a gateway encryption system such as CipherCloud?         |N/A            |
+|Does the system have data retention and purge         |Yes            |
+|Does the system have general retention schedule, which means the data is purged after a period?          |Yes             |
+|Does the system have business justification to retain workforce data upon termination? If so, describe the justification and how long the data must be kept.           |N/A              |
+|Does the system have the capability to purge the data if needed to? Describe the capability.  |N/A          |
+|Do you have a well-defined security program? Provide a brief description.         |Yes             |
+|Do you have someone from senior management accountable for security? Provide a name and contact information.         |Yes             |
+|Does the vendor have established information security policies?         |Yes             |
+|  Note: Provide a copy of all related information security policies.       |Yes             |
+|Does the vendor have a third-party audit report for datacenter security and policies?         |--             |
+|Furnish a copy of the report (i.e. SSAE 16 SOC 2, SAS70 Type II, etc.)         |Azure Trust Center             |
+|Has the application / service performed the Cloud Security Alliance Cloud Controls Matrix (CCM) self-assessment?         |Yes             |
+|  Note: Furnish a copy of the self-assessment.       |Azure Trust Center             |
+|Does the vendor have a current change management policy document?         |Yes                         |
+|Does the application / service have established incident response and triage policy and processes?         |Yes                          |
+|  The policy must include dedicated out-of-band communications channels, incident definitions, roles and responsibilities, and resolution timelines.       |Yes                          |
+|  Note: Provide a copy for review         |IcM Policy DOC             |
+|Will the vendor share threat intelligence data with me?         |Yes, based on the TM not the Threat Intelligence from external bodies.             |
 
 ### Governance
 
@@ -71,7 +135,7 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |Furnish a copy of the report (i.e., SSAE 16 SOC 2, SAS70 Type II, etc.).  |Azure Trust Center             |
 |Has the application / service performed the Cloud Security Alliance Cloud Controls Matrix (CCM) self-assessment?         |Yes             |
 |Note: Furnish a copy of the self-assessment.	         |Azure Trust Center             |
-|Does the vendor have a current change management policy document?         |    Yes         |
+|Does the vendor have a current change management policy document?         |Yes         |
 |Does the application / service have established incident response and triage policy and processes?         |Yes             |
 |The policy must include dedicated out-of-band communications channels, incident definitions, roles and responsibilities, and resolution timelines.         |             |Yes
 |Note: Provide a copy for review.    |IcM Policy DOC    |
