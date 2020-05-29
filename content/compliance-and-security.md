@@ -61,5 +61,25 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 
 ### Governance
 
+| Question| Response    |
+|---------|-------------|
+|Do you have a well-defined security program? Provide a brief description. |Yes             |
+|Do you have someone from senior management accountable for security? Provide a name and contact information.|Yes             |
+|Does the vendor have established information security policies?  |Yes                         |
+|Note: Provide a copy of all related information security policies.    |Yes                          |
+|Does the vendor have a third-party audit report for datacenter security and policies?  |Yes             |
+|Furnish a copy of the report (i.e., SSAE 16 SOC 2, SAS70 Type II, etc.).  |Azure Trust Center             |
+|Has the application / service performed the Cloud Security Alliance Cloud Controls Matrix (CCM) self-assessment?         |Yes             |
+|Note: Furnish a copy of the self-assessment.	         |Azure Trust Center             |
+|Does the vendor have a current change management policy document?         |    Yes         |
+|Does the application / service have established incident response and triage policy and processes?         |Yes             |
+|The policy must include dedicated out-of-band communications channels, incident definitions, roles and responsibilities, and resolution timelines.         |             |Yes
+|Note: Provide a copy for review.    |IcM Policy DOC    |
+|Will the vendor share threat intelligence data with me?         |Yes; based on the TM not the Threat Intelligence from external bodies.             |
+
+
+
+
+
 
 
