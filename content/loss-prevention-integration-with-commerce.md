@@ -3,7 +3,7 @@ author: yvonnedeq
 description: Integrating loss prevention with Commerce
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/28/2020
+ms.date: 05/29/2020
 
 ms.topic: conceptual
 search.app: 
@@ -23,7 +23,7 @@ To integrate loss prevention with Dynamics 365 Commerce (Commerce), perform the 
 
 - Enable the Azure Data Lake Storage (ADLS) service for the Commerce environment.
 - Enable loss prevention in the Commerce environment.
-- Subscribe to Fraud Protection.
+- Add a service account and subscribe to Fraud Protection in the Commerce environment.
 - Configure loss prevention settings in Fraud Protection. 
 
 
@@ -37,9 +37,9 @@ Only one step is required to enable loss prevention integration.
 
 - Select **Feature management**, and then select **Dynamics 365 Fraud Protection (DFP) Loss Prevention**. 
 
-## 3.	Subscribe to Fraud Protection
+## 3.	Add a service account and subscribe to Fraud Protection
 
-Next, register the Fraud Protection application ID.
+Next, add a service account by registering the Fraud Protection application ID in the Commerce environment.
 
 1. Select **Finance and Operations Preview**, and then select **Azure Active Directory applications**.
 1. To create a new first party app identity for the Fraud Protection, select **New**.
@@ -48,10 +48,10 @@ Next, register the Fraud Protection application ID.
 
 ## 4.	Configure loss prevention in Fraud Protection
 
-After configuring the ADLS environment and turning on loss prevention, the next step is to set up the Fraud Protection environment and configure the loss prevention settings to connect to ADLS in the Commerce environment. 
+After configuring the ADLS environment and turning on loss prevention, the next step is to set up the Commerce/Fraud Protection environment and configure the loss prevention settings to connect to ADLS in the Commerce environment. 
 
-1. Navigate to the Fraud Protection portal. 
-1. To connect to the **Finance and Operations** environment, select **Connect to data**.
+1. Navigate to the Fraud Protection portal and sign in. 
+1. To connect to the Finance and Operations environment, select **Connect to data**.
 2. In the **Connect to Dynamics 365 Commerce** dialog, enter the URL for the Commerce environment.
 
     The URL is stored in the **Backend Configuration** service for your Fraud Protection environment.
