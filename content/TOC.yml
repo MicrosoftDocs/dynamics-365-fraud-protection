@@ -92,7 +92,7 @@
   items:
   - name: Loss prevention overview
     href: loss-prevention-overview.md
-  - name: Integration with Dynamics 365 Commerce
+  - name: Integrate loss prevention with Dynamics 365 Commerce
     href: loss-prevention-integration-with-commerce.md    
   - name: Reporting
     href: reports.md
