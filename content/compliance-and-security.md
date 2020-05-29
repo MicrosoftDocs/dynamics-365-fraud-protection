@@ -20,7 +20,7 @@ Microsoft Dynamics 365 Fraud Protection has implemented and will continue to mai
 
 For more information about Microsoft's security practice, please visit the [Microsoft Trust Center]https://www.microsoft.com/trust-center).
 
-## Fraud Protection compliance certificate URLs
+## Compliance certificate URLs
 
 Here is a list of compliance certificate URLs for Fraud Protection.
  
@@ -36,6 +36,30 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 
 -	[HITRUST](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=02eaae7a-9d65-42e6-aec8-a8e22de1a494&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_GRC_Assessment_Reports ): https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=02eaae7a-9d65-42e6-aec8-a8e22de1a494&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_GRC_Assessment_Reports 
 
+## Security documentation and SOP FAQs
+
+
+
+## Security assessment- FAQs
+
+### Authentication and administration
+
+
+
+### Auditing
+
+
+
+### Business continuity and disaster recovery
+
+
+
+
+### Data security
+
+
+
+### Governance
 
 
 
