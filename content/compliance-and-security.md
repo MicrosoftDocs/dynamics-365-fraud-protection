@@ -48,7 +48,22 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 
 ### Auditing
 
-
+| Question| Response    |
+|---------|-------------|
+|Does the application / service log information in an industry standard event format type, such as CSV, CEF, or Syslog?         |Log data is not shared by the product.  Service metrics and KPI's are surfaced via PowerBI views.             |
+|Does the application / service collect or provide the following data:         |--             |
+|User Login / Logoff / Password Change / Failed Login Attempts         |Yes.  See: Azure AD feature in merchant tenant https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/concept-audit-logs             |
+|Audit logs of administrator actions (user account Create / Update / Delete), or application-specific actions.         |An audit history of key changes such as rule or list updates is maintained by the application.  User account actions and corresponding audit history is controlled via AAD.  See: Overview: [Azure Active Directory reports and monitoring documentation](https://docs.microsoft.com/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/ azure/active-directory/reports-monitoring/concept-audit-logs).  For AZURE AD auditing, see core directory events for application role and group membership : [List of Azure Active Directory Audit Activities](https://blogs.technet.microsoft.com/motiba/2018/02/12/list-of-azure-active-directory-audit-activities/).  For access to audits from AAD Portal, see [Audit activity reports in the Azure Active Directory porta]( https://docs.microsoft.com/en-us/azure/active-directory/reports-monitoring/concept-audit-logs).               |
+|  Audit logs of user actions (document or content Create / Read / Update / Delete)       |N/A.  Only the admin role supported.             |
+|  Audit logs of metadata actions (Create / Read / Update / Delete).       |Yes.  Audit history of key changes such as list and rule updates are maintained.             |
+|  Creation and Destruction for system-level objects as required for PCI compliant applications only.        |N/A            |
+|  All logs must contain the source IP of the user.       |AAD has IP in its logs.  Certain internal logs do not have end-user IP but can be correlated with AAD information.             |
+|  Audit trails on any activities performed on PII.        |The only PII is in the audit history of rule and list changes.  This is read-only and cannot be modified.               |
+|Provide sample set of log data , Logs must be maintained for a period of 1 year and encrypted at rest by the vendor.         |Logs are maintained per standard Microsoft Azure Online Services policy.             |
+|Does the vendor have procedures in place to detect, report and alert on the downtime of the Customer instance within an hour of the instance of being down?     |Yes            |
+|  Will the application alert on unusual events, as determined by a baseline usage pattern determined by the vendor?       |Azure carve out, ISO Controls.             |
+|  What information is provided to customer to validate the negotiated SLA?       |As a customer, you'll make a server to server call to the service and be able to monitor SLA directly.             |
+|  How is this notification reported to me as a customer?       |No proactive downtime notification is in place. It's currently part of the roadmap.             |
 
 ### Business continuity and disaster recovery
 
@@ -153,7 +168,7 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |Note: Furnish a copy of the self-assessment.	         |Azure Trust Center             |
 |Does the vendor have a current change management policy document?         |Yes         |
 |Does the application / service have established incident response and triage policy and processes?         |Yes             |
-|The policy must include dedicated out-of-band communications channels, incident definitions, roles and responsibilities, and resolution timelines.         |             |Yes
+|The policy must include dedicated out-of-band communications channels, incident definitions, roles and responsibilities, and resolution timelines.         |Yes             |
 |Note: Provide a copy for review.    |IcM Policy DOC    |
 |Will the vendor share threat intelligence data with me?         |Yes; based on the TM not the Threat Intelligence from external bodies.             |
 
