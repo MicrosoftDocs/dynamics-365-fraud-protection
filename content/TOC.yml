@@ -92,14 +92,14 @@
   items:
   - name: Loss prevention overview
     href: loss-prevention-overview.md
-  - name: Integrate loss prevention with Dynamics 365 Commerce
-    href: loss-prevention-integration-with-commerce.md    
   - name: Reporting
     href: reports.md
   - name: Upload historical data for loss prevention
     href: loss-prevention-data-upload.md
   - name: Loss prevention schemas
     href: view-loss-prevent-schemas.md
+  - name: Loss Prevention Integration with Dynamics365 Commerce 
+    href: loss-prevention-integration-with-commerce.md     
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance
