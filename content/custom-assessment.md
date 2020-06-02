@@ -30,9 +30,9 @@ You can quickly create a new custom assessment when youâ€™ve decided on the spec
 
 #### To create a new assessment:
 
-1.	In the [Fraud Protection]( https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal, select **Custom Assessment link** on the left navigation.
+1.	In the [Fraud Protection]( https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal, select **Custom assessment link** on the left navigation.
 
-1.	Select **Create Assessment**.
+1.	Select **Create assessment**.
 
 1.	Enter a friendly name for the assessment. 
 
@@ -58,13 +58,13 @@ You can change the name, API name, or the sample payload for an assessment youâ€
 
 #### To edit an assessment:
 
-1.	Select **Custom Assessment**.
+1.	Select **Custom assessment**.
 
     All your current custom assessments are listed on this page.
 
 1.	Select the assessment you want to edit and then select **Edit**. 
 
-    This displays the **Edit Assessment** window.
+    This displays the **Edit assessment** window.
 1.	Make the required changes and then select **Save**. 
 
     The changes are effective as soon as they are saved. If you've made changes to the API name, we recommend that you pause the API calls, make the changes on the Fraud Protection portal, and then restart the API call with the changes incorporated in the API payload.
