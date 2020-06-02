@@ -70,7 +70,7 @@
     href: monitoring.md
   - name: Usage metering
     href: metering.md  
-- name: Account protection (preview)
+- name: Account protection
   items:
   - name: Account protection overview
     href: ap-overview.md
@@ -78,6 +78,8 @@
     href: account-protection-evaluate-experience.md
   - name: Account protection protect experience
     href: account-protection-protect-experience.md
+  - name: Custom assessment
+    href: custom-assessment.md
   - name: Implement device fingerprinting
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
