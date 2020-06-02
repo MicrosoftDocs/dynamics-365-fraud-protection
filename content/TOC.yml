@@ -36,8 +36,6 @@
     href: data-upload.md
   - name: View schemas
     href: schema.md
-  - name: Manage lists and rules
-    href: lists-rules.md
   - name: Use the virtual fraud analyst
     href: virtual-fraud-analyst.md   
   - name: Learn from the scorecard
@@ -84,8 +82,6 @@
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
-  - name: Manage account protection rules and lists
-    href: ap-rulesandlists.md
   - name: Learn from the account protection scorecard
     href: ap-scorecard.md
   - name: Account protection schemas
@@ -101,7 +97,15 @@
   - name: Loss prevention schemas
     href: view-loss-prevent-schemas.md
   - name: Loss prevention integration with Dynamics 365 Commerce 
-    href: loss-prevention-integration-with-commerce.md     
+    href: loss-prevention-integration-with-commerce.md
+- name: Manage rules and lists
+  items: 
+  - name: Manage lists
+    href: lists.md
+  - name: Manage rules
+    href: rules.md
+  - name: Rules language guide
+    href: fpl-lang-ref.md    
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance
