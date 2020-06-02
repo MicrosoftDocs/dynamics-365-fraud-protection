@@ -50,9 +50,9 @@ Next, add a service account by registering the Fraud Protection application ID i
 
 After configuring the ADLS environment and turning on loss prevention, the next step is to set up the Commerce/Fraud Protection environment and configure the loss prevention settings to connect to ADLS in the Commerce environment. 
 
-1. Navigate to the Fraud Protection portal and sign in. 
+1. Navigate to the [Fraud Protection]( https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal and sign in. 
 1. To connect to the Finance and Operations environment, select **Connect to data**.
-2. In the **Connect to Dynamics 365 Commerce** dialog, enter the URL for the Commerce environment.
+1. In the **Connect to Dynamics 365 Commerce** dialog, enter the URL for the Commerce environment.
 
     The URL is stored in the **Backend Configuration** service for your Fraud Protection environment.
 
