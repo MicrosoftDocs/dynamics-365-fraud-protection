@@ -10,12 +10,12 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Custom Assessment
+title: Custom assessment
 
 
 ---
 
-# Custom Assessment
+# Custom assessment
 
 ## Overview
 
