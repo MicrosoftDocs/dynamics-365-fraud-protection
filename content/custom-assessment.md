@@ -72,5 +72,6 @@ You can change the name, API name, or the sample payload for an assessment youâ€
 ## Related topics
 
 - [Account protection overview](ap-overview.md)
-- [Rules](ap-rulesandlists.md)
+- [Manage lists](lists.md)
+- [Manage rules](rules.md)
 - [Learn from the account protection scorecard](ap-scorecard.md)
