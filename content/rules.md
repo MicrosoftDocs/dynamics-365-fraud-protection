@@ -103,7 +103,9 @@ To undo all changes that you or someone else made to the sample, select **Revert
 
 Conditions start with the keyword **WHEN** and are followed by a Boolean expression that evaluates a statement to either *True* or *False*. A condition can be created to determine which rule is evaluated and to group related business logic. For example, the following condition is related to digital product transactions.
 
+    ```ruleslanguage
     WHEN @productType == "Digital"
+    ```
 
 You can then create clauses that configure a fraud strategy that is related to digital product transactions.
 
@@ -113,8 +115,10 @@ The addition of a condition to a rule is optional. If you want a rule to apply t
 
 Clauses are the building blocks of rules and contain the core standards of your fraud strategy. They use values in the event payload together with Fraud Protection's AI scores to approve, reject, review, or challenge events. Clauses have the following basic structure.
 
+    ```ruleslanguage
     RETURN *decision* 
     WHEN *condition is true*
+    ```
 
 You can use this structure to create a clause that returns a decision of *Approve*, *Reject*, *Challenge*, or *Review*. You can then add optional parameters that send more information about the decision.
 
@@ -126,7 +130,9 @@ When a clause is triggered (that is, the **WHEN** statement returns *True*), the
 
 If a condition matches the decision but doesn't trigger a clause, the rule then runs.
 
+    ```ruleslanguage
     RETURN Approve("NO_CLAUSE_HIT")
+    ```
 
 Clauses run sequentially in the order in which they appear on the **Rules** page. You can use the arrow buttons on the right side of a clause to change its position in the list.
 
@@ -138,13 +144,17 @@ Prior-to-all-scoring clauses run before Fraud Protection's AI models are run. Th
 
 The following example helps you review purchases when users buy a product in a market outside their geographical location.
 
+    ```ruleslanguage
     RETURN Review("location inconsistency") 
     WHEN Geo.MarketCode("@device.ipAddress") != "@productList.market"
+    ```
 
 In this section, you can also write a clause to cross-reference lists. For example, if you have a custom list that is named *Risky Emails*, the following clause rejects events if the user's email address appears in the list.
 
+    ```ruleslanguage
     RETURN Reject ("risky email") 
     WHEN ContainsKey ("Risky Emails", "Emails", @email)
+    ```
 
 For information about the syntax that is used to reference lists in rules, see the [Rules language guide](fpl-lang-ref.md).
 
@@ -154,8 +164,10 @@ Post-bot-scoring clauses run after Fraud Protection's AI models have generated a
 
 In post-bot-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You reference this score by using the *@botScore* variable. For example, the following clause rejects events from a specific email domain that has a bot score that is more than 700.
 
+    ```ruleslanguage
     RETURN Reject()
     WHEN @email.EndsWith("@contoso.com") && @botScore > 700
+    ```
 
 > [!NOTE]
 > Post-bot-scoring clauses and the *@botScore* variable are available only for account protection rules.
@@ -166,8 +178,10 @@ Post-risk-scoring clauses run after Fraud Protection's AI models have generated 
 
 In post-risk-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You referenced this score by using the *@riskScore* variable. For example, the following clause rejects expensive transactions that have a risk score that is more than 700.
 
+    ```ruleslanguage
     RETURN Reject("high price and risk score")
     WHEN @purchasePrice >= 199.99 && @riskScore > 700
+    ```
 
 ## Rule ordering
 
@@ -191,7 +205,9 @@ In this case, the following behavior occurs:
 
 If no rules are evaluated, because no conditions match the event, Fraud Protection runs the following.
 
+    ```ruleslanguage
     RETURN Approve("NO_RULE_HIT")
+    ```
 
 For information about how to reorder rules on the **Rules** page, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this topic.
 
@@ -337,8 +353,11 @@ You create a rule that has the following three clauses:
 `RETURN Review()`<br>
 `WHEN @isEmailValidated == false && @riskscore > 400`
 
+
+
 The payload sample contains the following user object.
 
+    ```ruleslanguage
     "email": {
         "email": "Primary",
         "emailValue": "kayla@contoso.com",
@@ -346,16 +365,21 @@ The payload sample contains the following user object.
         "emailValidatedDate": "2020-02-25T15:12:26.9733817-08:00",
         "isEmailUsername": true
     },
+    ```
 
 You can set the following risk score.
 
+    ```ruleslanguage
     "riskScore": 500,
+    ```
 
 When the evaluation pane is opened, clause 1 is triggered and is highlighted in green, and a decision of *Approve* is returned.
 
 You now change the **isEmailValidated** field in the payload.
 
+    ```ruleslanguage
     "isEmailValidated": false,
+    ```
 
 In this case, clause 2 is triggered and is highlighted in green, and a decision of *Review* is returned.
 
