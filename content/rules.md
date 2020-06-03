@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/04/2020
+ms.date: 06/03/2020
 
 ms.topic: conceptual
 search.app: 
@@ -31,6 +31,7 @@ You can create custom rules and manage existing rules on the **Rules** page.
 
 - To create and manage rules that are related to purchases, select **Purchase protection**, and then select **Rules** in the left navigation pane.
 - To create and manage rules that are related to accounts, select **Account protection**, and then select **Rules** in the left navigation pane.
+- To create and manage rules related to a custom assessment, select **Custom Assessments**, select a custom assessment, and then navigate to the **Rules** tab. 
 
 The **Rules** page for Account protection has tabs for two assessment types:
 
@@ -103,7 +104,9 @@ To undo all changes that you or someone else made to the sample, select **Revert
 
 Conditions start with the keyword **WHEN** and are followed by a Boolean expression that evaluates a statement to either *True* or *False*. A condition can be created to determine which rule is evaluated and to group related business logic. For example, the following condition is related to digital product transactions.
 
-    WHEN @productType == "Digital"
+    ```ruleslanguage
+    WHEN @"productList.type" == "Digital"
+    ```
 
 You can then create clauses that configure a fraud strategy that is related to digital product transactions.
 
@@ -113,8 +116,10 @@ The addition of a condition to a rule is optional. If you want a rule to apply t
 
 Clauses are the building blocks of rules and contain the core standards of your fraud strategy. They use values in the event payload together with Fraud Protection's AI scores to approve, reject, review, or challenge events. Clauses have the following basic structure.
 
+    ```ruleslanguage
     RETURN *decision* 
     WHEN *condition is true*
+    ```
 
 You can use this structure to create a clause that returns a decision of *Approve*, *Reject*, *Challenge*, or *Review*. You can then add optional parameters that send more information about the decision.
 
@@ -126,11 +131,18 @@ When a clause is triggered (that is, the **WHEN** statement returns *True*), the
 
 If a condition matches the decision but doesn't trigger a clause, the rule then runs.
 
+    ```ruleslanguage
     RETURN Approve("NO_CLAUSE_HIT")
+    ```
 
 Clauses run sequentially in the order in which they appear on the **Rules** page. You can use the arrow buttons on the right side of a clause to change its position in the list.
 
-The sequential ordering of clauses has three sections: *Pre-Score*, *Post-Bot Score*, and *Post-Risk Score*. These sections indicate when the clause is run relative to Fraud Protection's advanced AI score generation. The *Post-Bot Score* section is applicable only to account creation and account login rules.
+Clauses are organized into sections based on which AI models run and generate a score as part of the assessment. These sections differ per assessment, and indicate when the clause is run relative to the AI model.
+
+- For purchase protection, an AI risk model is run which generates a risk score for the transaction. As a result, these rules contain prior-to-all-scoring clauses as well as post-risk scoring clauses.
+- For account protection, a bot model is run in addition to a risk model. These models generate a bot score and risk score respectively. As a result, these rules contain prior-to-all-scoring clauses, post-bot-scoring clauses, and post-risk-scoring clauses.
+- For custom assessments, no AI models are run, and these rules contain only prior-to-all-scoring clauses.
+
 
 #### Prior-to-all-scoring clauses
 
@@ -138,13 +150,17 @@ Prior-to-all-scoring clauses run before Fraud Protection's AI models are run. Th
 
 The following example helps you review purchases when users buy a product in a market outside their geographical location.
 
+    ```ruleslanguage
     RETURN Review("location inconsistency") 
-    WHEN Geo.MarketCode("@device.ipAddress") != "@productList.market"
+    WHEN Geo.MarketCode(@"device.ipAddress") != "@productList.market"
+    ```
 
 In this section, you can also write a clause to cross-reference lists. For example, if you have a custom list that is named *Risky Emails*, the following clause rejects events if the user's email address appears in the list.
 
+    ```ruleslanguage
     RETURN Reject ("risky email") 
-    WHEN ContainsKey ("Risky Emails", "Emails", @email)
+    WHEN ContainsKey ("Risky Emails", "Emails", @"user.email")
+    ```
 
 For information about the syntax that is used to reference lists in rules, see the [Rules language guide](fpl-lang-ref.md).
 
@@ -154,11 +170,10 @@ Post-bot-scoring clauses run after Fraud Protection's AI models have generated a
 
 In post-bot-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You reference this score by using the *@botScore* variable. For example, the following clause rejects events from a specific email domain that has a bot score that is more than 700.
 
+    ```ruleslanguage
     RETURN Reject()
-    WHEN @email.EndsWith("@contoso.com") && @botScore > 700
-
-> [!NOTE]
-> Post-bot-scoring clauses and the *@botScore* variable are available only for account protection rules.
+    WHEN @"user.email".EndsWith("@contoso.com") && @"botScore" > 700
+    ```
 
 #### Post-risk-scoring clauses
 
@@ -166,8 +181,10 @@ Post-risk-scoring clauses run after Fraud Protection's AI models have generated 
 
 In post-risk-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You referenced this score by using the *@riskScore* variable. For example, the following clause rejects expensive transactions that have a risk score that is more than 700.
 
+    ```ruleslanguage
     RETURN Reject("high price and risk score")
     WHEN @purchasePrice >= 199.99 && @riskScore > 700
+    ```
 
 ## Rule ordering
 
@@ -183,15 +200,17 @@ For example, you configure the following three purchase rules.
 
 In this case, the following behavior occurs:
 
-- Rule2 has a status of *Inactive* and is never evaluated against real-time production traffic.
-- Rule1 is evaluated only if a customer in the US makes a purchase.
-- Rule1 is evaluated only if a customer in the US makes an Xbox purchase.
-- Rule3 is evaluated only if a customer outside the US makes an Xbox purchase.
-- No rules are evaluated if a customer outside the US makes a non-Xbox purchase.
+-	If a customer in the US makes a purchase, only **Rule1** is evaluated.
+-	If a customer in the US makes an Xbox purchase, only **Rule1** is evaluated.
+-	If a customer outside the US makes an Xbox purchase, only **Rule3** is evaluated
+-	If a customer outside the US makes a non-Xbox purchase, no rules will be evaluated.
+-	Since **Rule2** has a status of *Inactive*, it is never evaluated.
 
-If no rules are evaluated, because no conditions match the event, Fraud Protection runs the following.
+If no rules are evaluated, Fraud Protection executes the following clause by default: 
 
+    ```ruleslanguage
     RETURN Approve("NO_RULE_HIT")
+    ```
 
 For information about how to reorder rules on the **Rules** page, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this topic.
 
@@ -305,40 +324,44 @@ Because rules appear on the **Rules** page in the order that they run in, the po
 
 Before you publish your new rule, you can use the rule evaluation pane to make sure that it returns the results that you expect.
 
-To open the rule evaluation pane, at the bottom of the **Rules** page, select **Expand**. The evaluation pane appears at the bottom of the **Rules** page.
+- To open the rule evaluation pane, at the bottom of the **Rules** page, select **Expand**. 
 
-To close the pane, select **Collapse**.
+- To close the pane, select **Collapse**.
 
-When the evaluation pane is open, you can watch your rule being evaluated against the [payload sample](rules.md#samples). The content in the evaluation pane is automatically updated when you make changes to the sample or clause.
+When the evaluation panel is expanded, you can watch your rule being is evaluated against the [current payload sample and score sample](rules.md#samples). As you make changes to the sample or to the rule itself, the content in the evaluation panel updates. 
 
-The evaluation pane shows the following information:
+The evaluation panel displays the decision Fraud Protection returns for this sample event, as well as any values associated with the response, such as a reason or support message. The clause that triggers the decision is outlined in green outside of the pane. 
 
-- The decision that Fraud Protection returns for a sample event, and any values that are associated with the response.
-- Any specified reason or support message.
-- The clause that triggers the decision. This clause is outlined in green.
-
-Fraud Protection's AI doesn't generate a true risk score or bot score to run the rule for the sample event. Instead, it uses placeholder values that are entered in the [score sample](rules.md#score-sample).
-
-If the condition doesn't find a match, the rule isn't evaluated. If the condition finds a match, but none of the clauses triggers a return, the default decision is *Approve*, and the reason is *NO\_CLAUSE\_HIT*.
+If the payload sample does not match the condition, the rule is not evaluated. If the condition is matched but none of the clauses trigger a return, the default decision, the default decision is *Approve*, and the reason is *NO\_CLAUSE\_HIT*.
 
 ### Evaluation example
 
 You create a rule that has the following three clauses:
 
-1. `// Approves when email from contoso domain has been validated`<br>
-`RETURN Approve()`<br>
-`WHEN @isEmailValidated == true && @email.EndsWith("@contoso.com")`
+    ```ruleslanguage
+    `// Approves when email from contoso domain has been validated`<br>
+    `RETURN Approve()`<br>
+    `WHEN @"email.isEmailValidated" == true && @"email.emailValue".EndsWith("@contoso.com")`
+    ```
 
-2. `// Rejects when email has not been validated and high risk score`<br>
-`RETURN Reject()`<br>
-`WHEN @isEmailValidated == false && @riskscore > 700`
 
-3. `// Reviews when email has not been validated and medium risk score`<br>
-`RETURN Review()`<br>
-`WHEN @isEmailValidated == false && @riskscore > 400`
+    ```ruleslanguage
+    `// Rejects when email has not been validated and high risk score`<br>
+    `RETURN Reject()`<br>
+    `WHEN @"email.isEmailValidated" == false && @"riskscore" > 700`
+    ```
 
-The payload sample contains the following user object.
 
+    ```ruleslanguage
+    `// Reviews when email has not been validated and medium risk score`<br>
+    `RETURN Review()`<br>
+    `WHEN @"email.isEmailValidated" == false && @"riskscore" > 400`
+    ```
+
+
+The payload sample contains the following object:
+
+    ```ruleslanguage
     "email": {
         "email": "Primary",
         "emailValue": "kayla@contoso.com",
@@ -346,17 +369,22 @@ The payload sample contains the following user object.
         "emailValidatedDate": "2020-02-25T15:12:26.9733817-08:00",
         "isEmailUsername": true
     },
+    ```
 
-You can set the following risk score.
+The score sample contains the following value:
 
+    ```ruleslanguage
     "riskScore": 500,
+    ```
 
-When the evaluation pane is opened, clause 1 is triggered and is highlighted in green, and a decision of *Approve* is returned.
+When the evaluation pane is opened, clause 1 is triggered and a decision of *Approve* is returned.
 
-You now change the **isEmailValidated** field in the payload.
+In the sample payload, if you change the value of the **isEmailValidated** field in the payload from *true* to *false*:
 
+    ```ruleslanguage
     "isEmailValidated": false,
+    ```
 
-In this case, clause 2 is triggered and is highlighted in green, and a decision of *Review* is returned.
+In this case, clause 2 is triggered and a decision of *Review* is returned.
 
-If you set **"riskScore"** to **700** instead of **500**, clause 3 is triggered and is highlighted in green, and the decision is updated to *Reject*.
+In the sample score, if you change the value of **"riskScore"** to **700** instead of **500**, clause 3 is triggered and the decision is updated to *Reject*.
