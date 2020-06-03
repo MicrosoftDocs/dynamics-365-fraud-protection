@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use lists.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/04/2020
+ms.date: 06/03/2020
 
 ms.topic: conceptual
 search.app: 
@@ -141,10 +141,8 @@ To update the description of a custom list in Fraud Protection, follow these ste
 
 ## Delete a list
 
-When you delete a list, any rules that use it will no longer work.
-
-- To delete a list, select it, and then select **Delete**.
-- To delete multiple lists, select them, and then select **Delete**.
+- To delete a list, select the list, and then select **Delete**.
+- To delete multiple lists, select the lists you want to remove, and then select **Delete**.
 
 ## Download a list
 
