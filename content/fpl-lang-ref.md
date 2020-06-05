@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic is a language guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/04/2020
+ms.date: 06/02/2020
 
 ms.topic: conceptual
 search.app: 
@@ -27,8 +27,10 @@ To get started, read the [Quick start guide](fpl-lang-ref.md#quick-start-guide) 
 
 Rules consist of [clauses](rules.md#clauses), and are defined by the **RETURN** and **WHEN** keywords. They have the following basic structure.
 
+      ```ruleslanguage
       RETURN *decision* 
       WHEN *condition is true*
+      ```
 
 The **RETURN** decision is run only if the **WHEN** expression is evaluated to *True*.
 
@@ -36,9 +38,11 @@ The **RETURN** decision is run only if the **WHEN** expression is evaluated to *
 
 Your clause must return a decision of *Approve*, *Reject*, *Challenge*, or *Review*. You can also include optional parameters to send more information about the decision. Here are some examples of **RETURN** statements.
 
+      ```ruleslanguage
       RETURN Reject()
       RETURN Reject("email is on block list")
       RETURN Reject("email is on block list", "do not escalate")
+      ```
 
 For information about decision types and their parameters, see the [Decision types](fpl-lang-ref.md#decision-types) section later in this topic.
 
@@ -57,24 +61,32 @@ When you use variables in a Boolean expression, you can perform the following ta
 
 - Compare variables to other variables, or to constants.
 
+      ```ruleslanguage
       WHEN @email == "kayla@contoso.com"
       WHEN @"user.firstName" == @"shippingAddress.firstName"
       WHEN @riskscore > 700 
       WHEN Geo.CountryCode(@ipAddress) == "US"
+      ```
 
 - Check whether a variable is contained in a list.
 
+      ```ruleslanguage
       WHEN ContainsKey("Safe List", "Emails", @email)
+      ```
 
 - Check the value of a key in a list.
 
+      ```ruleslanguage
       WHEN Lookup("Email List", "Emails", @email, "Status") == "Safe"
       WHEN Lookup("Product cutoff list", "Product", @productName, "Score Cutoff").toDouble() < @riskScore
+      ```
 
 - Evaluate a string.
 
+      ```ruleslanguage
       WHEN @phoneNumber.StartsWith("1-")
       WHEN @email.EndsWith("@contoso.com")
+      ```
 
 ## Language reference
 
@@ -226,8 +238,10 @@ For example, you create a single-column list of risky email addresses and name i
 
 You can then use the following syntax to reject all transactions from the risky email addresses in this list.
 
+    ```ruleslanguage
     RETURN Reject("risky email") 
     WHEN ContainsKey("Risky email list", "Email", @email) 
+    ```
 
 This clause checks whether the "Email" column in the "Risky email list" list contains the *@email* key. If it does, the transaction is rejected.
 
@@ -248,8 +262,10 @@ For example, you create a list that has one column for email addresses and anoth
 
 You can then use the following syntax to reject all transactions from the email addresses in this list that have a status of *Risky*.
 
+    ```ruleslanguage
     RETURN Reject("risky email") 
     WHEN Lookup("Email List", "Email", @email, "Status") == "Risky"
+    ```
 
 This clause looks for the *@email* key in the "Email" column in the "Email List" list and checks whether the value in the "Status" column is *Risky*. If it is, the transaction is rejected.
 

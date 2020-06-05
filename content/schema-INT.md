@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the schemas that are required for historical data upload.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/07/2020
+ms.date: 06/05/2020
 
 ms.topic: conceptual
 search.app: 
@@ -291,6 +291,7 @@ You can download our [sample data file](https://download.microsoft.com/download/
 
 The following sample shows how to use purchase APIs with a custom data object in Fraud Protection.
 
+    ```json
     { 
         "CustomData": { 
             "EngagementDuration": 120.4, 
@@ -299,4 +300,5 @@ The following sample shows how to use purchase APIs with a custom data object in
             "MiscSampleA": "abc" 
         } 
     }
+    ```
 
