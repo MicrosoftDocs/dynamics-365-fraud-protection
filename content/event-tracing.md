@@ -27,17 +27,17 @@ There are the steps to start consuming some of our available events:
 
 1.	Select **New subscription**.
 
-1.	Fill out the form to provide the Event Hubs instance connection string [Get an Event Hubs connection string](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-get-connection-string) and select an event to forward to that Event Hubs instance. 
+1.	Fill out the form to provide the Event Hubs instance connection string [Get an Event Hubs connection string](https://docs.microsoft.com/azure/event-hubs/event-hubs-get-connection-string) and select an event to forward to that Event Hubs instance. 
 
     - When you see a description of the event as well as a sample of the schema/payload that is included, select **Save**. 
 
 1.	After one minute, check back in the portal to view the Events/Min count to ensure that data is being sent to Event Hubs. 
 
-    - For additional monitoring, navigate to the Azure Portal and setup Metrics [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/en-us/azure/event-hubs/event-hubs-metrics-azure-monitor).
+    - For additional monitoring, navigate to the Azure Portal and setup Metrics [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/azure/event-hubs/event-hubs-metrics-azure-monitor).
     
-1.	(Optional) Set up your own ingress pipeline from Event Hubs to Power BI. For information on how to begin developing custom reports, see [Stream Analytics and Power BI: A real-time analytics dashboard for streaming data](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-power-bi-dashboard).
+1.	(Optional) Set up your own ingress pipeline from Event Hubs to Power BI. For information on how to begin developing custom reports, see [Stream Analytics and Power BI: A real-time analytics dashboard for streaming data](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-power-bi-dashboard).
 
-1.	(Optional) Connect to Event Hubs from Power Automate to define custom workflows. For more information, see [Event Hubs](https://docs.microsoft.com/en-us/connectors/eventhubs/).
+1.	(Optional) Connect to Event Hubs from Power Automate to define custom workflows. For more information, see [Event Hubs](https://docs.microsoft.com/connectors/eventhubs/).
 
 ## Event Schemas
 
