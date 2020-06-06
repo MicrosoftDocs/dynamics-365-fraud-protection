@@ -54,7 +54,7 @@ There are currently four supported classifications of events available in Event 
 |UserAccess.PermissionsUpdate.Audit         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: PermissionsUpdate</p><p>  updateduser: </p><p>  updatedperm: </p><p>}</p>          |
 |**METERING/MONITORING EVENTS**         |             |
 |Used for metering/monitoring reporting outside of the DFP portal. |   |
-|        |             |
+|<p>PurchaseProtection.<**API NAME**>.Monitoring</p><p>AccountProtection.<**API NAME**>.Monitoring</p><p>PurchaseProtection.<**API NAME**>.Metering</p><p>AccountProtection.<**API NAME**>.Metering</p><p>API NAME: Purchase, PurchaseStatus, BankEvent, Chargeback, Refund, UpdateAccount, Label, SignUp, SignUpStatus, Label, etc.</p>        |             |
 |**TRANSACTIONAL EVENTS**    |   |
 |Used to create conditions in Power Automate as well as custom scorecards. Each payload will contain a subset of every existing API request and response.   |  |
 |<p>PurchaseProtection.<**API NAME**>.Evaluation</p> <p>AccountProtection.<**API NAME**>.Evaluation</p>         |<p>```json</p><p>{</p><p>  ver: </p><p>  apiver: </p><p>  request:{ </p><p>  }</p><p>  response{</p><p>  }</p><p>}</p>             |
