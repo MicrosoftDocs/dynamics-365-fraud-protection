@@ -201,7 +201,7 @@ Note the following formatting guidelines throughout:
 |----------------------------------|--------------------------|-------------|
 | ACCOUNTNUMBER                    | nvarchar (30)            | The customer account number, if a named customer appears on the transaction. |
 | AMOUNTINACCOUNTINGCURRENCY       | numeric (32 6)           | The amount that is due for the line. |
-| AMOUNTINTENDEREDCURRENCY         | numeric (32 6)           | The amount that was tendered in local currency as it applies to the country where the store is located. |
+| AMOUNTINTENDEREDCURRENCY         | numeric (32 6)           | The amount that was tendered in local currency as it applies to the country/region where the store is located. |
 | AMOUNTTENDERED                   | numeric (32 6)           | The amount in the store currency. |
 | AMOUNTTENDEREDADJUSTMENT         | numeric (32 6)           | A new feature in the product allows for changes to the transactions and provides a full audit trail. |
 | CARDNUMBER                       | nvarchar (30)            | The card number that was used to make a payment. |
