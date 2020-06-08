@@ -46,8 +46,8 @@ There are currently four supported classifications of events available in Event 
 | Event Namespace| Payload    |
 |---------|-------------|
 |**AUDIT EVENTS**<br>Used to track portal actions and develop an audit log.        |             |
-|Lists.All.Audit         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewList, EditList, DeleteList</p><p>  Listname:</p><p>}</p>             |
-|PurchaseProtection.All.Audit         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename:</p><p>}</p>             |
-|AccountCreation.All.Audit         |<p>```json</p><p>{</p><p>  ver:</p><p>  userID:</p><p>  tenantID:</p><p>  timestamp:</p><p>  eventname: NewRule, EditRule, DeleteRule</p><p> rulename:</p><p>}</p>             |
-|AccountLogin.All.Audit         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename: </p><p>}</p>             |
-|UserAccess.PermissionsUpdate.Audit         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: PermissionsUpdate</p><p>  updateduser: </p><p>  updatedperm: </p><p>}</p>          |
+|Lists.All.Audit         |<p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewList, EditList, DeleteList</p><p>  Listname:</p><p>}</p>             |
+|PurchaseProtection.All.Audit         |<p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename:</p><p>}</p>             |
+|AccountCreation.All.Audit         |<p>{</p><p>  ver:</p><p>  userID:</p><p>  tenantID:</p><p>  timestamp:</p><p>  eventname: NewRule, EditRule, DeleteRule</p><p> rulename:</p><p>}</p>             |
+|AccountLogin.All.Audit         |<p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename: </p><p>}</p>             |
+|UserAccess.PermissionsUpdate.Audit         |<p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: PermissionsUpdate</p><p>  updateduser: </p><p>  updatedperm: </p><p>}</p>          |
