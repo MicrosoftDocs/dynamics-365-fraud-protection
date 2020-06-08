@@ -17,9 +17,9 @@ title: Loss prevention integration with Dynamics 365 Commerce
 
 # Loss prevention integration with Dynamics 365 Commerce
 
-In Microsoft Dynamics 365 Fraud Protection, loss prevention is a cloud-based solution designed to help retailers like you decrease in-store fraud costs and improve operational efficiencies and revenue.  It allows you to combat fraud associated with returns, discounts, merchandise mishandling, and inventory turn-over.
+In Microsoft Dynamics 365 Fraud Protection, the loss prevention capability is a cloud-based solution that helps protect revenue by identifying potential fraud on returns and discounts arising from omni-channel purchases, enabling store managers and investigators to quickly take action to mitigate losses.
 
-To integrate loss prevention with Dynamics 365 Commerce (Commerce), perform the following steps:
+To integrate loss prevention capability with Dynamics 365 Commerce (Commerce), perform the following steps:
 
 - Enable the Azure Data Lake Storage (ADLS) service for the Commerce environment.
 - Enable loss prevention in the Commerce environment.
@@ -48,7 +48,7 @@ Next, add a service account by registering the Fraud Protection application ID i
 
 ## 4.	Configure loss prevention in Fraud Protection
 
-After configuring the ADLS environment and turning on loss prevention, the next step is to set up the Commerce/Fraud Protection environment and configure the loss prevention settings to connect to ADLS in the Commerce environment. 
+After configuring the ADLS environment and turning on the loss prevention capability, the next step is to set-up and configure the loss prevention capability settings to connect to ADLS in the Commerce environment. 
 
 1. Navigate to the [Fraud Protection]( https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal and sign in. 
 1. To connect to the Finance and Operations environment, select **Connect to data**.
@@ -56,6 +56,6 @@ After configuring the ADLS environment and turning on loss prevention, the next 
 
     The URL is stored in the **Backend Configuration** service for your Fraud Protection environment.
 
-For more information on integration with Fraud Protection's loss prevention, see [Dynamics 365 Fraud Protection integration with Dynamics 365 Commerce](https://docs.microsoft.com/dynamics365/commerce/dev-itpro/DFP#loss-prevention-in-commerce).
+For more information on how to integrate Commerce with with Fraud Protection's loss prevention capability, see [Dynamics 365 Fraud Protection integration with Dynamics 365 Commerce](https://docs.microsoft.com/dynamics365/commerce/dev-itpro/DFP#loss-prevention-in-commerce).
 
 
