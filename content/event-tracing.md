@@ -52,10 +52,7 @@ There are currently four supported classifications of events available in Event 
 |AccountCreation.All.Audit         |<p>```json</p><p>{</p><p>  ver:</p><p>  userID:</p><p>  tenantID:</p><p>  timestamp:</p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename:</p><p>}</p>             |
 |AccountLogin.All.Audit         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename: </p><p>}</p>             |
 |UserAccess.PermissionsUpdate.Audit         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: PermissionsUpdate</p><p>  updateduser: </p><p>  updatedperm: </p><p>}</p>          |
-|**METERING/MONITORING EVENTS**         |             |
-|Used for metering/monitoring reporting outside of the DFP portal. |   |
-|<p>PurchaseProtection.<**API NAME**>.Monitoring</p><p>AccountProtection.<**API NAME**>.Monitoring</p><p>PurchaseProtection.<**API NAME**>.Metering</p><p>AccountProtection.<**API NAME**>.Metering</p><p>API NAME: Purchase, PurchaseStatus, BankEvent, Chargeback, Refund, UpdateAccount, Label, SignUp, SignUpStatus, Label, etc.</p>        |<p>```json<\p><p>{  <\p><p>  name: "Sparta.Metric"<\p><p>  ver: "1.0",<\p><p>  TenantInfo:<\p><p>  {<\p><p>    environmentId:<\p><p>    namespace: <\p><p>    severity: "" <\p><p>  }<\p><p>PartB:  <\p><p>{  <\p><p>  name: "Monitoring"<\p><p>  counterName: "Monitoring"<\p><p>  dimVals: ["Val1", "Val2", "Val3"]<\p><p>  dimNames: ["Dim1", "Dim2", "Dim3"]<\p><p>  startTime: "",<\p><p>  endTime: "",<\p><p>  samples: 2,<\p><p>  min: 1.0,<\p><p>  max: 1.0,<\p><p>  numeric<\p><p>  {<\p><p>    value: 1.0,<\p><p>  }<\p><p>}  <\p><p>  PartC:<\p><p>  {<\p><p>  ["Key": "Value"]<\p><p>  }<\p><p>}  <\p>             |
-|**TRANSACTIONAL EVENTS**    |   |
-|Used to create conditions in Power Automate as well as custom scorecards. Each payload will contain a subset of every existing API request and response.   |  |
-|<p>PurchaseProtection.<**API NAME**>.Evaluation</p> <p>AccountProtection.<**API NAME**>.Evaluation</p>         |<p>```json</p><p>{</p><p>  ver: </p><p>  apiver: </p><p>  request:{ </p><p>  }</p><p>  response{</p><p>  }</p><p>}</p>             |
+
+
+
 
