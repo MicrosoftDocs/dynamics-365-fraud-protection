@@ -44,28 +44,16 @@ Here are the steps to start consuming some of our available events:
 There are currently four supported classifications of events available in Event Tracing. Each event includes the event version (ver: ) as well as the API version (apiver: ), if applicable.
 
 ### Audit events
+
 Use audit events to track portal actions and develop an audit log.
 
-| Event Namespace| Payload    |
-|---------|-------------|
-|<p>Lists.All.Audit</p>         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewList, EditList, DeleteList</p><p>  Listname:</p><p>}</p>             |
-|<p>PurchaseProtection.All.Audit</p>         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename:</p><p>}</p>             |
-|<p>AccountCreation.All.Audit</p>         |<p>```json</p><p>{</p><p>  ver:</p><p>  userID:</p><p>  tenantID:</p><p>  timestamp:</p><p>  eventname: NewRule, EditRule, DeleteRule</p><p> rulename:</p><p>}</p>             |
-|<p>AccountLogin.All.Audit</p>         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename: </p><p>}</p>             |
-|<p>UserAccess.PermissionsUpdate.Audit</p>         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: PermissionsUpdate</p><p>  updateduser: </p><p>  updatedperm: </p><p>}</p>        |
-
 ### Metering/monitoring events
+
 Use metering/monitoring events for metering/monitoring reporting outside of the DFP portal. 
 
-| Event Namespace| Payload    |
-|---------|-------------|
-|<p>PurchaseProtection.<**API NAME**>.Monitoring</p><p>AccountProtection.<**API NAME**>.Monitoring</p><p>PurchaseProtection.<**API NAME**>.Metering</p><p>AccountProtection.<**API NAME**>.Metering</p><p>API NAME: Purchase, PurchaseStatus, BankEvent, Chargeback, Refund, UpdateAccount, Label, SignUp, SignUpStatus, Label, etc.</p>        |<p>```json</p><p>{  </p><p>  name: "Sparta.Metric"</p><p>  ver: "1.0",</p><p>  TenantInfo:</p><p>  {</p><p>    environmentId:</p><p>    namespace: </p><p>    severity: "" </p><p>  }</p><p>PartB:  </p><p>{  </p><p>  name: "Monitoring"</p><p>  counterName: "Monitoring"</p><p>  dimVals: ["Val1", "Val2", "Val3"]</p><p>  dimNames: ["Dim1", "Dim2", "Dim3"]</p><p>  startTime: "",</p><p>  endTime: "",</p><p>  samples: 2,</p><p>  min: 1.0,</p><p>  max: 1.0,</p><p>  numeric</p><p>  {</p><p>    value: 1.0,</p><p>  }</p><p>}  </p><p>  PartC:</p><p>  {</p><p>  ["Key": "Value"]</p><p>  }</p><p>}  </p>             |
 
 ### Transactional events
 
 Use transactional events to create conditions in power automate as well as custom scorecards. Each payload will contain a subset of every existing API request and response.
 
-| Event Namespace| Payload    |
-|---------|-------------|
-|<p>PurchaseProtection.<**API NAME**>.Evaluation</p> <p>AccountProtection.<**API NAME**>.Evaluation</p>         |<p>```json</p><p>{</p><p>  ver: </p><p>  apiver: </p><p>  request:{ </p><p>  }</p><p>  response{</p><p>  }</p><p>}</p>             |
 
