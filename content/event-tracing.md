@@ -48,11 +48,11 @@ Use audit events to track portal actions and develop an audit log.
 
 | Event Namespace| Payload    |
 |---------|-------------|
-|Lists.All.Audit         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewList, EditList, DeleteList</p><p>  Listname:</p><p>}</p>             |
-|PurchaseProtection.All.Audit         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename:</p><p>}</p>             |
-|AccountCreation.All.Audit         |<p>```json</p><p>{</p><p>  ver:</p><p>  userID:</p><p>  tenantID:</p><p>  timestamp:</p><p>  eventname: NewRule, EditRule, DeleteRule</p><p> rulename:</p><p>}</p>             |
-|AccountLogin.All.Audit         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename: </p><p>}</p>             |
-|UserAccess.PermissionsUpdate.Audit         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: PermissionsUpdate</p><p>  updateduser: </p><p>  updatedperm: </p><p>}</p>        |
+|<p>Lists.All.Audit</p>         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewList, EditList, DeleteList</p><p>  Listname:</p><p>}</p>             |
+|<p>PurchaseProtection.All.Audit</p>         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename:</p><p>}</p>             |
+|<p>AccountCreation.All.Audit</p>         |<p>```json</p><p>{</p><p>  ver:</p><p>  userID:</p><p>  tenantID:</p><p>  timestamp:</p><p>  eventname: NewRule, EditRule, DeleteRule</p><p> rulename:</p><p>}</p>             |
+|<p>AccountLogin.All.Audit</p>         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename: </p><p>}</p>             |
+|<p>UserAccess.PermissionsUpdate.Audit</p>         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: PermissionsUpdate</p><p>  updateduser: </p><p>  updatedperm: </p><p>}</p>        |
 
 ### Metering/monitoring events
 Use metering/monitoring events for metering/monitoring reporting outside of the DFP portal. 
