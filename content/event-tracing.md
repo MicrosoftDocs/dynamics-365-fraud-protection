@@ -43,15 +43,6 @@ Here are the steps to start consuming some of our available events:
 
 There are currently four supported classifications of events available in Event Tracing. Each event includes the event version (ver: ) as well as the API version (apiver: ). if applicable.
 
-|Event Namespace   |Payload    |
-|---------|-------------|
-|**AUDIT EVENTS**|   
-|Used to track portal actions and develop an audit log. |    |
-|Lists.All.Audit         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewList, EditList, DeleteList</p><p>  Listname:</p><p>}</p>             |
-|PurchaseProtection.All.Audit         |<p>```json</p><p>{  ver: </p><p></p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename:</p><p>}</p>             |
-|AccountCreation.All.Audit         |<p>```json</p><p>{</p><p>  ver:</p><p>  userID:</p><p>  tenantID:</p><p>  timestamp:</p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename:</p><p>}</p>             |
-|AccountLogin.All.Audit         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>  rulename: </p><p>}</p>             |
-|UserAccess.PermissionsUpdate.Audit         |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>  tenantID: </p><p>  timestamp: </p><p>  eventname: PermissionsUpdate</p><p>  updateduser: </p><p>  updatedperm: </p><p>}</p>          |
 
 
 
