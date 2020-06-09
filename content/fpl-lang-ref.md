@@ -27,10 +27,10 @@ To get started, read the [Quick start guide](fpl-lang-ref.md#quick-start-guide) 
 
 Rules consist of [clauses](rules.md#clauses), and are defined by the **RETURN** and **WHEN** keywords. They have the following basic structure.
 
-      ```ruleslanguage
-      RETURN *decision* 
-      WHEN *condition is true*
-      ```
+```ruleslanguage
+RETURN *decision* 
+WHEN *condition is true*
+```
 
 The **RETURN** decision is run only if the **WHEN** expression is evaluated to *True*.
 
@@ -38,11 +38,11 @@ The **RETURN** decision is run only if the **WHEN** expression is evaluated to *
 
 Your clause must return a decision of *Approve*, *Reject*, *Challenge*, or *Review*. You can also include optional parameters to send more information about the decision. Here are some examples of **RETURN** statements.
 
-      ```ruleslanguage
-      RETURN Reject()
-      RETURN Reject("email is on block list")
-      RETURN Reject("email is on block list", "do not escalate")
-      ```
+```ruleslanguage
+RETURN Reject()
+RETURN Reject("email is on block list")
+RETURN Reject("email is on block list", "do not escalate")
+```
 
 For information about decision types and their parameters, see the [Decision types](fpl-lang-ref.md#decision-types) section later in this topic.
 
@@ -61,31 +61,31 @@ When you use variables in a Boolean expression, you can perform the following ta
 
 - Compare variables to other variables, or to constants.
 
-      ```ruleslanguage
-      WHEN @"user.email" == "kayla@contoso.com"
-      WHEN @"user.firstName" == @"shippingAddress.firstName"
-      WHEN @"riskscore" > 700 
-      WHEN Geo.CountryCode(@"device.ipAddress") == "US"
-      ```
+```ruleslanguage
+WHEN @"user.email" == "kayla@contoso.com"
+WHEN @"user.firstName" == @"shippingAddress.firstName"
+WHEN @"riskscore" > 700 
+WHEN Geo.CountryCode(@"device.ipAddress") == "US"
+```
 
 - Check whether a variable is contained in a list.
 
-      ```ruleslanguage
-      WHEN ContainsKey("Safe List", "Emails", @"user.email")
-      ```
+```ruleslanguage
+WHEN ContainsKey("Safe List", "Emails", @"user.email")
+```
 
 - Check the value of a key in a list.
 
-      ```ruleslanguage
-      WHEN Lookup("Email List", "Emails", @"user.email", "Status") == "Safe"
-      WHEN Lookup("Product cutoff list", "Product", @"productList.productName", "Score Cutoff").toDouble() < @"riskScore"
-      ```
+```ruleslanguage
+WHEN Lookup("Email List", "Emails", @"user.email", "Status") == "Safe"
+WHEN Lookup("Product cutoff list", "Product", @"productList.productName", "Score Cutoff").toDouble() < @"riskScore"
+```
 
 - Evaluate a string.
 
-      ```ruleslanguage
-      WHEN @"phone.phoneNumber".StartsWith("1-")
-      WHEN @"user.email".EndsWith("@contoso.com")
+```ruleslanguage
+WHEN @"phone.phoneNumber".StartsWith("1-")
+WHEN @"user.email".EndsWith("@contoso.com")
       ```
 
 ## Language reference
@@ -241,10 +241,10 @@ For example, you create a single-column list of risky email addresses and name i
 
 You can then use the following syntax to reject all transactions from the risky email addresses in this list.
 
-    ```ruleslanguage
-    RETURN Reject("risky email") 
-    WHEN ContainsKey("Risky email list", "Email", @"user.email") 
-    ```
+```ruleslanguage
+RETURN Reject("risky email") 
+WHEN ContainsKey("Risky email list", "Email", @"user.email") 
+```
 
 This clause checks whether the "Email" column in the "Risky email list" list contains the *@email* key. If it does, the transaction is rejected.
 
@@ -265,10 +265,10 @@ For example, you create a list that has one column for email addresses and anoth
 
 You can then use the following syntax to reject all transactions from the email addresses in this list that have a status of *Risky*.
 
-    ```ruleslanguage
-    RETURN Reject("risky email") 
-    WHEN Lookup("Email List", "Email", @"user.email", "Status") == "Risky"
-    ```
+```ruleslanguage
+RETURN Reject("risky email") 
+WHEN Lookup("Email List", "Email", @"user.email", "Status") == "Risky"
+```
 
 This clause looks for the *@"user.email"* key in the "Email" column in the "Email List" list and checks whether the value in the "Status" column is *Risky*. If it is, the transaction is rejected.
 
