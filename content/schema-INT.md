@@ -293,12 +293,13 @@ The following sample shows how to use purchase APIs with a custom data object in
 
 ```json
 { 
-   "CustomData": { 
-       "EngagementDuration": 120.4, 
-       "GamerScore": 10, 
-       "InApp": true, 
-       "MiscSampleA": "abc" 
-   } 
+"CustomData": 
+{ 
+   "EngagementDuration": 120.4, 
+   "GamerScore": 10, 
+   "InApp": true, 
+   "MiscSampleA": "abc" 
+} 
 }
 ```
 
