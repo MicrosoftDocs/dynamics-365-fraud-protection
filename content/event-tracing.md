@@ -49,7 +49,7 @@ Use audit events to track portal actions and develop an audit log.
 
 | Event Namespace| Payload    |
 |---------|-------------|
-|Lists.All.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  eventname: NewList, EditList, DeleteList</p><p>   listname: </p><p>}</p>           |
+|Lists.All.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  eventname: NewList, EditList, DeleteList</p><p>   listname: </p><p>}</p>             |
 |PurchaseProtection.All.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  eventRule: NewRule, EditRule, DeleteRule</p><p>   Rulename: </p><p>}</p>             |
 |AccountCreation.All.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>   Rulename: </p><p>}</p>             |
 |AccountLogin.All.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  NewRule, EditRule, DeleteRule</p><p>   Rulename: </p><p>}</p>             |
