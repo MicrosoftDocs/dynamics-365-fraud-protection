@@ -51,10 +51,10 @@ You can view the following information for each rule/draft:
 > [!NOTE]
 > Published rules are listed on the **Rules** page in the order that they are run.
 
-## Payload settings
-You can also access payload settings from the command menu on the **Rules page**. In the **Payload settings** panel, you can define what a sample payload displays for each assessment type. 
+### Payload settings
+You can also access payload settings from the command menu on the **Rules page**. In the **Payload settings** panel, you can define the sample payload for that assessment type. 
 
-For example, in your API request for a purchase event, you may not want to send optional fields from the [purchase protection schema](https://docs.microsoft.com/dynamics365/fraud-protection/schema), but you may want to send other additional custom fields. To do this, you can update the *sample payload* shown in Fraud Protection so that it reflects the data sent in the API request for this assessment. 
+For example, in your API request for a purchase event, you may choose not  to send optional fields from the [purchase protection schema](https://docs.microsoft.com/dynamics365/fraud-protection/schema), or you may choose to send other additional custom fields. The payload sample shown in the settings panel reflects the data sent in the API request for the assessment. 
 
 This payload sample is shown each time a new rule is created for this assessment (see [Payload sample](rules.md#payload-sample)). Note that changes you make here do not retroactively affect existing rules. 
 
@@ -77,29 +77,22 @@ A rule consists of the following components:
         - [Post-bot-scoring clauses](rules.md#post-bot-scoring-clauses)
         - [Post-risk-scoring clauses](rules.md#post-risk-scoring-clauses)
 
+A published rule may also have a [Draft version](rules.md#draft-rules).
+
 ### Name and description
 
 When you create a rule, you can add a name and description to help yourself and your team easily identify the rule. Rule names must be unique, and they are case-insensitive.
 
 ### Status
 
+When you create a rule for the first time, before it is published, the status will be set to *Draft only*.
+
 When you publish a rule, you can set the status to either *Active* or *Inactive*.
 
 - If a rule is active, it affects real-time production traffic, and all events of this type are evaluated against the rule.
 - If a rule is inactive, it doesn't affect production traffic.
 
-### Draft rules 
-
-When you create or modify rules, Fraud Protection automatically saves your work in progress with the status of *Draft*. 
-
--	If you create a new rule which has never been published before, Fraud Protection automatically sets the rule status to *Draft only*. 
--	If you make changes to a rule that has previously been published, Fraud Protection saves your modifications in progress as a draft. 
-
-Fraud Protection automatically sets the rule status as either *Active (with Draft)* or *Inactive (with Draft)*, depending on the status of the published rule. Both the published version of the selected rule as well as the draft version can be viewed as side-by-side tabs. 
-
-
-> [!NOTE]
-> Drafts are accessible only to the author. If you want to share your rules with your team, you must publish them. 
+When you modify an already-published rule, the rule will now be saved with the status as either *Active (with Draft)* or *Inactive (with Draft)*, depending on the status of the published rule. 
 
 ### Samples
 
@@ -111,11 +104,11 @@ To view the sample variables that are used in your rule, select **Show used vari
 
 The payload sample contains an example of the fields that may be sent in the request API for the assessment. These fields can be used as variables within your rule. 
 
-The payload sample is defined by assessment, in Payload Settings. If you edit the sample for an individual rule, select **Revert** go back to the sample defined for the assessment in **Payload settings**. 
+If you edit the sample for an individual rule, select **Revert** to go back to the sample defined for the assessment in [**Payload settings**](rules.md#payload-settings). 
 
 #### Score sample
 
-The score sample contains scores that are generated from Fraud Protection's AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use *@botScore* after the bot evaluation has run, and you can use *@riskScore* after the risk evaluation has run. For more information, see [clauses](rules.md#clauses) later in this topic.
+The score sample contains scores that are generated from Fraud Protection's AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use *@"botScore"* after the bot evaluation has run, and you can use *@"riskScore"* after the risk evaluation has run. For more information, see [clauses](rules.md#clauses) later in this topic.
 
 #### Edit the sample
 
@@ -211,6 +204,17 @@ In post-risk-scoring clauses, you can use this score together with fields from t
     RETURN Reject("high price and risk score")
     WHEN @purchasePrice >= 199.99 && @riskScore > 700
     ```
+### Draft  
+
+A rule can have both a published version and a draft version. These can be viewed as side-by-side tabs. 
+
+The published version is read-only, and can be viewed by anyone. The draft version is only visible to its author. It can be modified, and all changes are autosaved. 
+
+- To discard your draft, select **Discard**. 
+ To publish your draft, select **Publish**. 
+
+When you publish a draft, Fraud protection overwrites the published version of the rule with the draft. 
+
 
 ## Rule ordering
 
@@ -220,9 +224,9 @@ For example, you configure the following three purchase rules.
 
 | Name  | Condition | Status |
 |-------|-----------|--------|
-| Rule1 | WHEN @country == "US" | Active |
-| Rule2 | WHEN @username == "Kayla | Inactive |
-| Rule3 | WHEN @product == "Xbox" | Active |
+| Rule1 | WHEN @"user.countryRegion"  == "US" | Active |
+| Rule2 | WHEN @"user.firstName" == "Kayla | Inactive |
+| Rule3 | WHEN @"productList.productName" == "Xbox" | Active |
 
 In this case, the following behavior occurs:
 
@@ -245,11 +249,14 @@ For information about how to reorder rules on the **Rules** page, see the [Chang
 You can create rules that make decisions that are related to purchase, account creation, and account login events.
 
 > [!IMPORTANT]
-> By default, a new rule appears at the bottom of the list on the **Rules** page. For information about how to reposition the rule, see [Change the order of a rule](rules.md#change-the-order-of-a-rule).
+> By default, when a new rule is published, it appears at the bottom of the list of **Published rules** on the **Rules** page. For information about how to reposition the rule, see [Change the order of a rule](rules.md#change-the-order-of-a-rule).
 
 #### To create a new rule:
 
 1. On the [**Rules** page](rules.md#the-rules-page), select **New Rule**.
+
+    This creates a new draft rule. All changes made to drafts are autosaved.
+    
 1. Select **Rename**, and then add a name and description.
 1. Add a [condition](rules.md#conditions) to your rule.
 1. Add [clauses](rules.md#clauses) to express your business policies and fraud strategies.
@@ -284,7 +291,7 @@ To delete a rule, select it, and then select **Delete**. Be aware that this oper
 
 ### Edit an existing rule
 
-When you modify a rule that has been published, Fraud Protection saves the changes as a draft until you publish your changes. A draft is visible only to the person who creates it until it is published. 
+When you modify a rule that has been published, Fraud Protection saves the changes as a draft until you publish your changes. Both the published version of the selected rule as well as the draft version can be viewed as side-by-side tabs. A draft is visible only to the person who creates it until it is published. For more information, see [Draft](rules.md#draft ). 
 
 #### To edit an already-published rule: 
 
@@ -303,13 +310,10 @@ When you modify a rule that has been published, Fraud Protection saves the chang
 1.	To publish your changes, select **Publish**.  
 
     When you publish a draft, Fraud Protection overwrites the original published version of the rule with the changes you made in the draft version of the rule.  
-
-> [!NOTE]
-> If a teammate updates and publishes a rule while you are still editing it, your changes may be out of date. When this is the case, a warning appears asking if you still want to publish your changes.  
+    
+    If a teammate updates and publishes a rule while you are still editing it, your changes may be out of date. When this is the case, a warning appears asking if you still want to publish your changes.  
 -	If you select **Publish**, your changes overwrite all changes that were made previously.  
 -	If you select **Cancel**, you can review the changes others have made before you publish your version.   
-
-
 
 ### Search for a rule
 
@@ -321,18 +325,18 @@ To remove a filter, delete the keyword from the **Search** field, or select the 
 
 ### Change the order of a rule
 
-Because rules appear on the **Rules** page in the order that they run in, the position of a rule significantly affects how events are evaluated.
+Because published rules appear on the **Rules** page in the order that they run in, the position of a published rule significantly affects how events are evaluated.
 
-#### Move a rule to a new position by using a drag-and-drop operation
+#### Move a published rule to a new position by using a drag-and-drop operation
 
-1. Select the rule that you want to move, and then drag it to a new position.
+1. Select the published rule that you want to move, and then drag it to a new position.
 1. Repeat step 1 to move as many other rules as you want, and then select **Save order**.
 
     To cancel your changes, select **Cancel re-ordering**.
 
-#### Move a rule to a new position by using a keyboard
+#### Move a published rule to a new position by using a keyboard
 
-1. Select **Reorder**.
+1. At the top of the list of **Published Rules**, select **Reorder**.
 
     Fraud Protection shows the rules as tiles that you can select and move.
 
@@ -344,6 +348,9 @@ Because rules appear on the **Rules** page in the order that they run in, the po
 1. To save your changes, select **Save order**. 
 
     To cancel your changes, select **Cancel re-ordering**.
+
+> [!NOTE]
+> Rules in the **New Drafts** section cannot be re-ordered.
 
 ## Evaluate a rule
 
