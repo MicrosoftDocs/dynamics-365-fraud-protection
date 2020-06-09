@@ -42,53 +42,113 @@ Here are the steps to start consuming some of our available events:
 
 ## Event schemas
 
-There are currently four supported classifications of events available in Event Tracing. Each event includes the event version (ver: ) as well as the API version (apiver: ), if applicable.
+There are currently three supported classifications of events available in event tracing. Each event has a standard Part A and Part B schema, where Part A is consistent for all events (including event version, namespace, etc.), and Part B is unique to each event category.
 
 ### Audit events
 
 Use audit events to track portal actions and develop an audit log.
 
-#### Namespace: FraudProtection.Audit
-#### Sample Payload:
+  #### Namespace: FraudProtection.Audit
+  #### Sample Payload:
 
-'''json
-{
-"id": "ab40fbf1-d1a2-46b3-916c-0ed4a25c7067",
-"namespace": "FraudProtection.Audit",
-"description": "Rule and List Audit Events",
-"schema": {
-"version": "string",
-"tenantId": "string",
-"timestamp": "DateTime",
-"userId": "string",
-"entityType": "string",
-"entityId": "string",
-"operationName": "string"
-},
-"example": {
-"version": "1.0",
-"tenantId": "0a26b900-0a28-4ceb-ac38-de71b4775d6d",
-"timestamp": "2020-06-09T02:42:02.8878236Z",
-"userId": "userId",
-"entityType": "List or Rule",
-"entityId": "f73e52fa-2095-4857-a46e-a04dde1d78b3",
-"operationName": "NewRule or EditRule or DeleteRule"
-}
-}
-'''
+        ```json
+        {
+        "id": "ab40fbf1-d1a2-46b3-916c-0ed4a25c7067",
+        "namespace": "FraudProtection.Audit",
+        "description": "Rule and List Audit Events",
+        "schema": {
+        "version": "string",
+        "tenantId": "string",
+        "timestamp": "DateTime",
+        "userId": "string",
+        "entityType": "string",
+        "entityId": "string",
+        "operationName": "string"
+        },
+        "example": {
+        "version": "1.0",
+        "tenantId": "0a26b900-0a28-4ceb-ac38-de71b4775d6d",
+        "timestamp": "2020-06-09T02:42:02.8878236Z",
+        "userId": "userId",
+        "entityType": "List or Rule",
+        "entityId": "f73e52fa-2095-4857-a46e-a04dde1d78b3",
+        "operationName": "NewRule or EditRule or DeleteRule"
+        }
+        }
+        ```
 
+### Monitoring events
 
+Use metrics for metering/monitoring reporting outside of the DFP portal. Request counts and Latency distribution events are sent every 20s and include startTime and endTime fields to determine the aggregation period and dimension names and values to filter these metrics as needed.
 
+  #### Namespace: FraudProtection.Monitoring
+  #### Requests Sample Payload: 
 
-### Metering/monitoring events
-
-Use metering/monitoring events for metering/monitoring reporting outside of the DFP portal. 
-
-
-
+        ```json
+        {
+        version:
+        timestamp:
+        name: "FraudProtection.Monitoring"
+        counterName: "Request"
+        dimVals: ["Val1", "Val2", "Val3"]
+        dimNames: ["Dim1", "Dim2", "Dim3"]
+        startTime: "",
+        endTime: "",
+        samples: 2, 
+        min: 1.0,
+        max: 1.0,
+        numeric
+            {
+              value: 1.0,       
+             }
+        }
+        ```
+        
+  #### Latency Sample Payload:
+  
+        ```json
+        {
+        version:
+        timeStamp:
+        name: "FraudProtection.Monitoring”
+        counterName: "Latency"
+        dimVals: ["Val1", "Val2", "Val3"]
+        dimNames: ["Dim1", "Dim2", "Dim3"]
+        startTime: "",
+        endTime: "",
+        samples: 2,
+        min: 1.0,
+        max: 1.0,
+        distribution
+         {
+            "index": [1,2,3,4]
+            "samples": [100, 200, 300, 400]
+            "numberOfBuckets": 10000,
+            "minimumValue": 0,
+            "bucketSize": 10,
+        }
+        }
+        ```
 
 ### Transactional events
 
-Use transactional events to create conditions in power automate as well as custom scorecards. Each payload will contain a subset of every existing API request and response.
+Use transactional events to create conditions in power automate as well as custom scorecards. Each payload contains a **subset** of every existing API request and response.
 
-
+  #### Namespace: FraudProtection.PurchaseProtection.<APINAME>.Evaluation *or* FraudProtection.AccountProtection.<APINAME>.Evaluation**
+  
+  #### Sample Payload :
+  
+        ```json  
+        {
+        version: 
+        apiversion:
+        request 
+               {
+               //unique per API-preview a sample in the portal
+               }
+        response 
+               {
+               //unique per API-preview a sample in the portal
+               }
+        }
+        ```
