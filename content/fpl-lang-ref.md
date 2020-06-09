@@ -86,7 +86,7 @@ WHEN Lookup("Product cutoff list", "Product", @"productList.productName", "Score
 ```ruleslanguage
 WHEN @"phone.phoneNumber".StartsWith("1-")
 WHEN @"user.email".EndsWith("@contoso.com")
-      ```
+```
 
 ## Language reference
 
