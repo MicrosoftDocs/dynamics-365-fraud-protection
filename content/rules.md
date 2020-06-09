@@ -367,7 +367,7 @@ If the payload sample does not match the condition, the rule is not evaluated. I
 
 ### Evaluation example
 
-You create a rule that has the following three clauses:
+Create a rule that has the following three clauses:
 
     ```ruleslanguage
     `// Approves when email from contoso domain has been validated`<br>
