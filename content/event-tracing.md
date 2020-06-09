@@ -31,7 +31,7 @@ Here are the steps to start consuming some of our available events:
 
     You will see a description of the event as well as a sample of the schema/payload that is included before you save the form. 
 
-1. After 24 hours, navigate back to the portal to view the **Events/Min count** and ensure that data is being sent to Event Hubs. 
+1. After 24 hours, navigate back to the portal to view the **Events/Second count** and ensure that data is being sent to Event Hubs. 
 
     1. The **Events and Failures/Second metrics** will display an average over the past 24 hours.
     1. For additional monitoring, navigate to the Azure Portal and set up **Metrics**. For more information, see [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/azure/event-hubs/event-hubs-metrics-azure-monitor).
@@ -79,7 +79,7 @@ Use audit events to track portal actions and develop an audit log.
 
 ### Monitoring events
 
-Use metrics for metering/monitoring reporting outside of the DFP portal. Request counts and Latency distribution events are sent every 20s and include startTime and endTime fields to determine the aggregation period and dimension names and values to filter these metrics as needed.
+Use metrics for metering/monitoring reporting outside of the Fraud Protection portal. Request counts and latency distribution events are sent every 20 seconds and include **startTime** and **endTime** fields to determine the aggregation period and dimension names and values to filter these metrics as needed.
 
   #### Namespace: FraudProtection.Monitoring
   #### Requests Sample Payload: 
@@ -132,9 +132,9 @@ Use metrics for metering/monitoring reporting outside of the DFP portal. Request
 
 ### Transactional events
 
-Use transactional events to create conditions in power automate as well as custom scorecards. Each payload contains a **subset** of every existing API request and response.
+Use transactional events to create conditions in power automate and logic apps as well as custom scorecards. Each payload contains a **subset** of every existing API request and response.
 
-  #### Namespace: FraudProtection.PurchaseProtection.<APINAME>.Evaluation *or* FraudProtection.AccountProtection.<APINAME>.Evaluation**
+  #### Namespace: FraudProtection.PurchaseProtection.<APINAME>.Evaluation *or* FraudProtection.AccountProtection.<APINAME>.Evaluation
   
   #### Sample Payload :
   
