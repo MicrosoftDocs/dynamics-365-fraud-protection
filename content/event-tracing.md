@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event tracing.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/08/2020
+ms.date: 06/09/2020
 
 ms.topic: conceptual
 search.app: 
@@ -29,11 +29,12 @@ Here are the steps to start consuming some of our available events:
 
 1.	Fill out the form to provide the Event Hubs instance connection string and select an event to forward to that Event Hubs instance. For more information, see [Get an Event Hubs connection string](https://docs.microsoft.com/azure/event-hubs/event-hubs-get-connection-string).  
 
-    - When you see a description of the event and a sample of the schema/payload that is included, select **Save**. 
+    You will see a description of the event as well as a sample of the schema/payload that is included before you save the form. 
 
-1.	After one minute, check the portal to view the **Events/Min count** to ensure that data is being sent to Event Hubs. 
+1. After 24 hours, navigate back to the portal to view the **Events/Min count** and ensure that data is being sent to Event Hubs. 
 
-    - For additional monitoring, navigate to the Azure Portal and set up **Metrics**. For more information, see [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/azure/event-hubs/event-hubs-metrics-azure-monitor).
+    1. The **Events and Failures/Second metrics** will display an average over the past 24 hours.
+    1. For additional monitoring, navigate to the Azure Portal and set up **Metrics**. For more information, see [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/azure/event-hubs/event-hubs-metrics-azure-monitor).
     
 1.	(Optional) Set up your own ingress pipeline from Event Hubs to Power BI. For information on how to begin developing custom reports, see [Stream Analytics and Power BI: A real-time analytics dashboard for streaming data](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-power-bi-dashboard).
 
@@ -47,13 +48,35 @@ There are currently four supported classifications of events available in Event 
 
 Use audit events to track portal actions and develop an audit log.
 
-| Event Namespace| Payload    |
-|---------|-------------|
-|Lists.All.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  eventname: NewList, EditList, DeleteList</p><p>   listname: </p><p>}</p>             |
-|PurchaseProtection.All.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  eventRule: NewRule, EditRule, DeleteRule</p><p>   Rulename: </p><p>}</p>             |
-|AccountCreation.All.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  eventname: NewRule, EditRule, DeleteRule</p><p>   Rulename: </p><p>}</p>             |
-|AccountLogin.All.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  NewRule, EditRule, DeleteRule</p><p>   Rulename: </p><p>}</p>             |
-|UserAccess.PermissionsUpdate.Audit          |<p>```json</p><p>{</p><p>  ver: </p><p>  userID: </p><p>   tenantID: </p><p>  timestamp: </p><p>  eventname: PermissionsUpdate</p><p>   updateduser: </p>><p>   updatedperm: </p><p>}</p>            |
+#### Namespace: FraudProtection.Audit
+#### Sample Payload:
+
+'''json
+{
+"id": "ab40fbf1-d1a2-46b3-916c-0ed4a25c7067",
+"namespace": "FraudProtection.Audit",
+"description": "Rule and List Audit Events",
+"schema": {
+"version": "string",
+"tenantId": "string",
+"timestamp": "DateTime",
+"userId": "string",
+"entityType": "string",
+"entityId": "string",
+"operationName": "string"
+},
+"example": {
+"version": "1.0",
+"tenantId": "0a26b900-0a28-4ceb-ac38-de71b4775d6d",
+"timestamp": "2020-06-09T02:42:02.8878236Z",
+"userId": "userId",
+"entityType": "List or Rule",
+"entityId": "f73e52fa-2095-4857-a46e-a04dde1d78b3",
+"operationName": "NewRule or EditRule or DeleteRule"
+}
+}
+'''
+
 
 
 
@@ -61,16 +84,11 @@ Use audit events to track portal actions and develop an audit log.
 
 Use metering/monitoring events for metering/monitoring reporting outside of the DFP portal. 
 
-| Event Namespace| Payload    |
-|---------|-------------|
-|<p>PurchaseProtection.<**API NAME**>.Monitoring</p><p>AccountProtection.<**API NAME**>.Monitoring</p><p>PurchaseProtection.<**API NAME**>.Metering</p><p>AccountProtection.<**API NAME**>.Metering</p><p>API NAME: Purchase, PurchaseStatus, BankEvent, Chargeback, Refund, UpdateAccount, Label, SignUp, SignUpStatus, Label, etc.</p>        |<p>```json</p><p>{  </p><p>  name: "Sparta.Metric"</p><p>  ver: "1.0",</p><p>  TenantInfo:</p><p>  {</p><p>    environmentId:</p><p>    namespace: </p><p>    severity: "" </p><p>  }</p><p>PartB:  </p><p>{  </p><p>  name: "Monitoring"</p><p>  counterName: "Monitoring"</p><p>  dimVals: ["Val1", "Val2", "Val3"]</p><p>  dimNames: ["Dim1", "Dim2", "Dim3"]</p><p>  startTime: "",</p><p>  endTime: "",</p><p>  samples: 2,</p><p>  min: 1.0,</p><p>  max: 1.0,</p><p>  numeric</p><p>  {</p><p>    value: 1.0,</p><p>  }</p><p>}  </p><p>  PartC:</p><p>  {</p><p>  ["Key": "Value"]</p><p>  }</p><p>}  </p>             |
+
 
 
 ### Transactional events
 
 Use transactional events to create conditions in power automate as well as custom scorecards. Each payload will contain a subset of every existing API request and response.
 
-| Event Namespace| Payload    |
-|---------|-------------|
-|<p>PurchaseProtection.<**API NAME**>.Evaluation</p> <p>AccountProtection.<**API NAME**>.Evaluation</p>         |<p>```json</p><p>{</p><p>  ver: </p><p>  apiver: </p><p>  request:{ </p><p>  }</p><p>  response{</p><p>  }</p><p>}</p>             |
- 
+
