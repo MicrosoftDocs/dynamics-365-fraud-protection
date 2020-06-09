@@ -18,7 +18,7 @@ title: Event tracing
 ## Overview
 
 *Event tracing* gives you the ability to establish a real-time telemetry platform that will be extensible and operational outside the portal. You can subscribe to events for monitoring, metering, auditing, and transactional data and then send these events to Azure Event Hubs. You can also request events from multiple event tracing sessions simultaneously and the system delivers these events to Event Hubs in chronological order.
-Events can be aggregated and used to define metrics to monitor and manage your service costs and utilization. They can also be used to maintain system logs on actions taken in the portal (i.e., *user A* edited *list B* on *date C*) or develop custom reports using transactional data. When you use the Event Hubs connectors available in power automate and logic apps, you can also use the data you send to Event Hubs for alerting or highly customized workflows.
+Events can be aggregated and used to define metrics to monitor and manage your service costs and utilization. They can also be used to maintain system logs on actions taken in the portal (i.e., *user A* edited *list B* on *date C*) or develop custom reports using transactional data. When you use the Event Hubs connectors available in Power Automate and Logic Apps, you can also use the data you send to Event Hubs for alerting or highly customized workflows.
 
 ## Getting started
 
@@ -32,14 +32,14 @@ Here are the steps to start consuming some of our available events:
 
     You will see a description of the event as well as a sample of the schema/payload that is included before you save the form.
 
-1. After 24 hours, navigate back to the portal to view the **Events/Second count** and ensure that data is being sent to Event Hubs.
+1. After 24 hours, navigate back to the portal to view the Events/Second count and ensure that data is being sent to Event Hubs.
 
-    1. The **Events and Failures/Second metrics** will display an average over the past 24 hours.
-    1. For additional monitoring, navigate to the Azure Portal and set up **Metrics**. For more information, see [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/azure/event-hubs/event-hubs-metrics-azure-monitor).
+    1. The Events and Failures/Second metrics will display an average over the past 24 hours.
+    1. For additional monitoring, navigate to the Azure Portal and set up metrics. For more information, see [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/azure/event-hubs/event-hubs-metrics-azure-monitor).
 
 1. (Optional) Set up your own ingress pipeline from Event Hubs to Power BI. For information on how to begin developing custom reports, see [Stream Analytics and Power BI: A real-time analytics dashboard for streaming data](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-power-bi-dashboard).
 
-1. (Optional) Connect to Event Hubs from power automate to define custom workflows. For more information, see [Event Hubs](https://docs.microsoft.com/connectors/eventhubs/).
+1. (Optional) Connect to Event Hubs from Power Automate to define custom workflows. For more information, see [Event Hubs](https://docs.microsoft.com/connectors/eventhubs/).
 
 ## Event schemas
 
@@ -47,7 +47,7 @@ There are currently three supported classifications of events available in event
 
 ### Audit events
 
-Use audit events to track portal actions and develop an audit log.
+Use audit events to track portal actions and develop an audit log. Currently supporting: EditList/Rule, NewList/Rule, and DeleteList/Rule operations
 
 #### Namespace: FraudProtection.Audit
 
