@@ -135,7 +135,7 @@ distribution
 
 ### Transactional events
 
-Use transactional events to create conditions in power automate and logic apps as well as custom scorecards. Each payload contains a **subset** of every existing API request and response.
+Use transactional events to create conditions in Power Automate and Logic Apps as well as custom scorecards. Each payload contains a **subset** of every existing API request and response.
 
 #### Namespace: FraudProtection.PurchaseProtection.\<APINAME\>.Evaluation *or* FraudProtection.AccountProtection.\<APINAME\>.Evaluation
 
