@@ -291,14 +291,14 @@ You can download our [sample data file](https://download.microsoft.com/download/
 
 The following sample shows how to use purchase APIs with a custom data object in Fraud Protection.
 
-    ```json
-    { 
-        "CustomData": { 
-            "EngagementDuration": 120.4, 
-            "GamerScore": 10, 
-            "InApp": true, 
-            "MiscSampleA": "abc" 
-        } 
-    }
-    ```
+```json
+{ 
+   "CustomData": { 
+       "EngagementDuration": 120.4, 
+       "GamerScore": 10, 
+       "InApp": true, 
+       "MiscSampleA": "abc" 
+   } 
+}
+```
 
