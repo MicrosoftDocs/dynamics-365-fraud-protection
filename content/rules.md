@@ -25,7 +25,7 @@ Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create cust
 > [!NOTE]
 > You can't view or create rules in the INT environment. You must use the PROD environment.
 
-## The Rules page
+## Rules page
 
 You can create custom rules and manage existing rules on the **Rules** page.
 
@@ -38,7 +38,7 @@ The **Rules** page for **Account protection** has tabs for each assessment type:
 - On the **Account creation** tab, you can create rules that run on account creation events when someone tries to create a new account.
 - On the **Account login** tab, you can create rules that run on account login events.
 
-The **Rules** page displays a list of rules configured for an assessment type. These rules are divided into two sections: **Published Rules** and **New Drafts**. For information about drafts, see [Drafts]().
+The **Rules** page displays a list of rules configured for an assessment type. These rules are divided into two sections: **Published Rules** and **New Drafts**. For information about drafts, see [Drafts](rules.md#draft).
 
 You can view the following information for each rule/draft:
 
@@ -77,7 +77,7 @@ A rule consists of the following components:
         - [Post-bot-scoring clauses](rules.md#post-bot-scoring-clauses)
         - [Post-risk-scoring clauses](rules.md#post-risk-scoring-clauses)
 
-A published rule may also have a [Draft version](rules.md#draft-rules).
+A published rule may also have a [draft version](rules.md#draft).
 
 ### Name and description
 
@@ -92,7 +92,7 @@ When you publish a rule, you can set the status to either *Active* or *Inactive*
 - If a rule is active, it affects real-time production traffic, and all events of this type are evaluated against the rule.
 - If a rule is inactive, it doesn't affect production traffic.
 
-When you modify an already-published rule, the rule will now be saved with the status as either *Active (with Draft)* or *Inactive (with Draft)*, depending on the status of the published rule. 
+When you modify an already-published rule, the rule is saved with the status of either *Active (with Draft)* or *Inactive (with Draft)*, depending on the status of the published rule. 
 
 ### Samples
 
@@ -206,15 +206,14 @@ In post-risk-scoring clauses, you can use this score together with fields from t
     ```
 ### Draft  
 
-A rule can have both a published version and a draft version. These can be viewed as side-by-side tabs. 
+A rule can have both a *published* version and a *draft* version. Both versions can be viewed as side-by-side tabs on the **Rules** page. 
 
-The published version is read-only, and can be viewed by anyone. The draft version is only visible to its author. It can be modified, and all changes are autosaved. 
+The published version is read-only, and can be viewed by anyone. The draft version is only visible to its author. Drafts can be modified and all changes are autosaved. 
 
 - To discard your draft, select **Discard**. 
- To publish your draft, select **Publish**. 
+- To publish your draft, select **Publish**. 
 
-When you publish a draft, Fraud protection overwrites the published version of the rule with the draft. 
-
+When you publish a draft, Fraud Protection overwrites the published version of the rule with the draft version. 
 
 ## Rule ordering
 
@@ -253,9 +252,9 @@ You can create rules that make decisions that are related to purchase, account c
 
 #### To create a new rule:
 
-1. On the [**Rules** page](rules.md#the-rules-page), select **New Rule**.
+1. On the [**Rules** page](rules.md#rules-page), select **New Rule**.
 
-    This creates a new draft rule. All changes made to drafts are autosaved.
+    This creates a new **Draft**. All changes you make to your drafts are autosaved.
     
 1. Select **Rename**, and then add a name and description.
 1. Add a [condition](rules.md#conditions) to your rule.
