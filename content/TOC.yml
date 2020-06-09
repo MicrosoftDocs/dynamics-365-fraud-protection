@@ -106,6 +106,8 @@
     href: rules.md
   - name: Rules language guide
     href: fpl-lang-ref.md    
+- name: Event tracing
+  href: event-tracing.md
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Compliance
