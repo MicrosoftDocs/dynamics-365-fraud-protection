@@ -54,9 +54,9 @@ You can view the following information for each rule/draft:
 ## Payload settings
 You can also access payload settings from the command menu on the **Rules page**. In the **Payload settings** panel, you can define what a sample payload displays for each assessment type. 
 
-For example, in your API request for a purchase event, you may not want to send optional fields from the [purchase protection schema](https://docs.microsoft.com/en-us/dynamics365/fraud-protection/schema), but you may want to send other additional custom fields. To do this, you can update the *sample payload* shown in Fraud Protection so that it reflects the data sent in the API request for this assessment. 
+For example, in your API request for a purchase event, you may not want to send optional fields from the [purchase protection schema](https://docs.microsoft.com/dynamics365/fraud-protection/schema), but you may want to send other additional custom fields. To do this, you can update the *sample payload* shown in Fraud Protection so that it reflects the data sent in the API request for this assessment. 
 
-This payload sample is shown each time a new rule is created for this assessment (see [Payload sample]()). Note that changes you make here do not retroactively affect existing rules. 
+This payload sample is shown each time a new rule is created for this assessment (see [Payload sample](rules.md#payload-sample)). Note that changes you make here do not retroactively affect existing rules. 
 
 To undo all changes to the sample made by you or anyone else, select **Revert**. This reverts the sample payload to the system default. 
 
@@ -94,8 +94,8 @@ When you create or modify rules, Fraud Protection automatically saves your work 
 
 -	If you create a new rule which has never been published before, Fraud Protection automatically sets the rule status to *Draft only*. 
 -	If you make changes to a rule that has previously been published, Fraud Protection saves your modifications in progress as a draft. 
-- Fraud Protection automatically sets the rule status as either *Active (with Draft)* or *Inactive (with Draft)*, depending on the status of the published rule.  
-- Both the published version of the selected rule as well as the draft version can be viewed as side-by-side tabs. 
+
+Fraud Protection automatically sets the rule status as either *Active (with Draft)* or *Inactive (with Draft)*, depending on the status of the published rule. Both the published version of the selected rule as well as the draft version can be viewed as side-by-side tabs. 
 
 
 > [!NOTE]
@@ -111,11 +111,11 @@ To view the sample variables that are used in your rule, select **Show used vari
 
 The payload sample contains an example of the fields that may be sent in the request API for the assessment. These fields can be used as variables within your rule. 
 
-The payload sample is defined by assessment, in Payload Settings. If you edit the sample for an individual rule, select **Revert** go back to the sample defined for the assessment in **Payload Settings**. 
+The payload sample is defined by assessment, in Payload Settings. If you edit the sample for an individual rule, select **Revert** go back to the sample defined for the assessment in **Payload settings**. 
 
 #### Score sample
 
-The score sample contains scores that are generated from Fraud Protection's AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use *@botScore* after the bot evaluation has run, and you can use *@riskScore* after the risk evaluation has run. For more information, see the [Clauses](rules.md#clauses) section later in this topic.
+The score sample contains scores that are generated from Fraud Protection's AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use *@botScore* after the bot evaluation has run, and you can use *@riskScore* after the risk evaluation has run. For more information, see [clauses](rules.md#clauses) later in this topic.
 
 #### Edit the sample
 
@@ -123,7 +123,7 @@ To validate that your rule works on a variety of events, you can modify the samp
 
 When you publish a rule, any changes that you make to the sample are saved and persisted as part of the rule.
 
-To undo all changes that you or someone else has made to the sample, select **Revert**. This will revert the score sample to the system-default, and will revert the payload to the the user-defined sample in [Payload settings]().
+To undo all changes that you or someone else has made to the sample, select **Revert**. This will revert the score sample to the system-default, and will revert the payload to the the user-defined sample in [Payload settings](rules.md#payload-settings).
 
 ### Conditions
 
@@ -249,7 +249,7 @@ You can create rules that make decisions that are related to purchase, account c
 
 #### To create a new rule:
 
-1. On the [**Rules** page](rules.md#access-the-rules-page), select **New Rule**.
+1. On the [**Rules** page](rules.md#the-rules-page), select **New Rule**.
 1. Select **Rename**, and then add a name and description.
 1. Add a [condition](rules.md#conditions) to your rule.
 1. Add [clauses](rules.md#clauses) to express your business policies and fraud strategies.
@@ -290,9 +290,9 @@ When you modify a rule that has been published, Fraud Protection saves the chang
 
 1.	Select the rule and then select **Edit**. 
 
-    A **Draft** tab and a **Published** tab appears.
+    The **Draft** tab and the **Published** tab appear.
     
-1.	Select **Draft** and make your changes to the rule. 
+1.	Select **Draft** and then make your changes to the rule. 
 
     Fraud protection automatically saves all changes you make to the rule.
     
