@@ -200,7 +200,7 @@ Post-risk-scoring clauses run after Fraud Protection's AI models have generated 
 
 In post-risk-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You referenced this score by using the *@riskScore* variable. For example, the following clause rejects expensive transactions that have a risk score that is more than 700.
 
-```json
+```ruleslanguage
 RETURN Reject("high price and risk score")
 WHEN @purchasePrice >= 199.99 && @riskScore > 700
 ```
