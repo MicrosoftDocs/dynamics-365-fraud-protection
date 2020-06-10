@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the schemas that are required for historical data upload.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/05/2020
+ms.date: 06/10/2020
 
 ms.topic: conceptual
 search.app: 
@@ -14,9 +14,7 @@ title: View purchase protection schemas (INT only)
 
 ---
 
-# View purchase protection schemas (INT only)
-
-[!include [banner](includes/5-4-banner.md)]
+# View purchase protection schemas
 
 This topic outlines the schemas for historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
