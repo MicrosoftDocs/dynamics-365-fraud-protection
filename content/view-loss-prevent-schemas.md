@@ -15,8 +15,6 @@ title: Loss prevention schemas
 
 # Loss prevention schemas
 
-[!include [banner](includes/preview-banner.md)]
-
 This topic outlines the schemas that define the data that is used to generate models and determine risk assessments.
 
 Note the following formatting guidelines throughout:
