@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic is a language guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/03/2020
+ms.date: 06/10/2020
 
 ms.topic: conceptual
 search.app: 
@@ -14,8 +14,6 @@ title: Rules language guide
 
 ---
 # Rules language guide
-
-[!include [banner](includes/5-4-banner.md)]
 
 ## Overview
 
