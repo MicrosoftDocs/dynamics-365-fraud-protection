@@ -17,7 +17,7 @@ title: Event tracing
 
 ## Overview
 
-*Event tracing* gives you the ability to establish a real-time telemetry platform that will be extensible and operational outside the portal. You can subscribe to events for monitoring, metering, auditing, and transactional data and then send these events to Azure Event Hubs. You can also request events from multiple event tracing sessions simultaneously and the system delivers these events to Event Hubs in chronological order.
+*Event tracing* gives you the ability to establish a real-time telemetry platform that will be extensible and operational outside the Microsoft Dynamics 365 Fraud Protection portal. You can subscribe to events for monitoring, metering, auditing, and transactional data and then send these events to Azure Event Hubs. You can also request events from multiple event tracing sessions simultaneously and the system delivers these events to Event Hubs in chronological order.
 Events can be aggregated and used to define metrics to monitor and manage your service costs and utilization. They can also be used to maintain system logs on actions taken in the portal (i.e., *user A* edited *list B* on *date C*) or develop custom reports using transactional data. When you use the Event Hubs connectors available in Power Automate and Logic Apps, you can also use the data you send to Event Hubs for alerting or highly customized workflows.
 
 ## Getting started
@@ -51,7 +51,7 @@ Use audit events to track portal actions and develop an audit log. Currently sup
 
 #### Namespace: FraudProtection.Audit
 
-#### Sample Payload
+#### Sample payload
 
 ```json
 {
@@ -85,7 +85,7 @@ Use metrics for metering/monitoring reporting outside of the Fraud Protection po
 
 #### Namespace: FraudProtection.Monitoring
 
-#### Requests Sample Payload
+#### Requests sample payload
 
 ```json
 {
@@ -107,7 +107,7 @@ numeric
 }
 ```
 
-#### Latency Sample Payload
+#### Latency sample payload
 
 ```json
 {
@@ -139,7 +139,7 @@ Use transactional events to create conditions in Power Automate and Logic Apps a
 
 #### Namespace: FraudProtection.PurchaseProtection.\<APINAME\>.Evaluation *or* FraudProtection.AccountProtection.\<APINAME\>.Evaluation
 
-#### Sample Payload
+#### Sample payload
 
 ```json
 {
