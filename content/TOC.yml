@@ -2,7 +2,7 @@
   href: overview.md
 - name: What's new or changed
   items:
-  - name: Dynamics 365 Fraud Protection May 2020 release (INT only)
+  - name: Dynamics 365 Fraud Protection July 2020 release
     href: whats-new-5-4.md
 - name: Regional availability
   href: global-availability.md  
@@ -10,16 +10,6 @@
   href: provision-azure-tenant.md
 - name: Configure user access
   href: configure-user-access.md
-- name: Fraud Protection May 2020 release (INT only)
-  items: 
-  - name: Manage lists
-    href: lists.md
-  - name: Manage rules
-    href: rules.md
-  - name: Rules language guide
-    href: fpl-lang-ref.md
-  - name: View purchase protection schemas
-    href: schema-INT.md
 - name: Purchase protection
   items:
   - name: Purchase protection overview
@@ -34,6 +24,8 @@
     href: device-fingerprinting.md    
   - name: Upload historical data
     href: data-upload.md
+  - name: View purchase protection schemas
+    href: schema-INT.md
   - name: View schemas
     href: schema.md
   - name: Use the virtual fraud analyst
