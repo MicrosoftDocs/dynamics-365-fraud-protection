@@ -122,7 +122,7 @@ To undo all changes that you or someone else has made to the sample, select **Re
 
 Conditions start with the keyword **WHEN** and are followed by a Boolean expression that evaluates a statement to either *True* or *False*. A condition can be created to determine which rule is evaluated and to group related business logic. For example, the following condition is related to digital product transactions.
 
-```json
+```ruleslanguage
 WHEN @"productList.type" == "Digital"
 ```
 
@@ -136,7 +136,7 @@ Clauses contain the fraud logic and business policies relevant for the segment o
 
 Clauses have the following basic structure:
 
-```json
+```ruleslanguage
 RETURN *decision* 
 WHEN *condition is true*
 ```
@@ -151,7 +151,7 @@ When a clause is triggered (that is, the **WHEN** statement returns *True*), the
 
 If a condition matches the decision but doesn't trigger a clause, the rule then runs.
 
-```json
+```ruleslanguage
 RETURN Approve("NO_CLAUSE_HIT")
 ```
 
@@ -169,14 +169,14 @@ Prior-to-all-scoring clauses run before Fraud Protection's AI models are run. Th
 
 The following example helps you review purchases when users buy a product in a market outside their geographical location.
 
-```json
+```ruleslanguage
 RETURN Review("location inconsistency") 
 WHEN Geo.MarketCode(@"device.ipAddress") != "@productList.market"
 ```
 
 In this section, you can also write a clause to cross-reference lists. For example, if you have a custom list that is named *Risky Emails*, the following clause rejects events if the user's email address appears in the list.
 
-```json
+```ruleslanguage
 RETURN Reject ("risky email") 
 WHEN ContainsKey ("Risky Emails", "Emails", @"user.email")
 ```
@@ -189,7 +189,7 @@ Post-bot-scoring clauses run after Fraud Protection's AI models have generated a
 
 In post-bot-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You reference this score by using the *@botScore* variable. For example, the following clause rejects events from a specific email domain that has a bot score that is more than 700.
 
-```json
+```ruleslanguage
 RETURN Reject()
 WHEN @"user.email".EndsWith("@contoso.com") && @"botScore" > 700
 ```
@@ -237,7 +237,7 @@ In this case, the following behavior occurs:
 
 If no rules are evaluated, Fraud Protection executes the following clause by default: 
 
-```json
+```ruleslanguage
 RETURN Approve("NO_RULE_HIT")
 ```
 
@@ -369,21 +369,21 @@ If the payload sample does not match the condition, the rule is not evaluated. I
 
 Create a rule that has the following three clauses:
 
-```json
+```ruleslanguage
 `// Approves when email from contoso domain has been validated`<br>
 `RETURN Approve()`<br>
 `WHEN @"email.isEmailValidated" == true && @"email.emailValue".EndsWith("@contoso.com")`
 ```
 
 
-```json
+```ruleslanguage
 `// Rejects when email has not been validated and high risk score`<br>
 `RETURN Reject()`<br>
 `WHEN @"email.isEmailValidated" == false && @"riskscore" > 700`
 ```
 
 
-```json
+```ruleslanguage
 `// Reviews when email has not been validated and medium risk score`<br>
 `RETURN Review()`<br>
 `WHEN @"email.isEmailValidated" == false && @"riskscore" > 400`
