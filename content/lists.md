@@ -15,16 +15,12 @@ title: Manage lists
 ---
 # Manage lists
 
-[!include [banner](includes/5-4-banner.md)]
-
 ## Overview
 
 Lists help you manage information that you use to fight fraud and enforce business policies. For example, you can create a list to track payment instruments that you consider risky or user email addresses that you consider safe. You can then upload the list as a comma-separated values (CSV) file and then reference it in a [rule](rules.md) to help automate decisions.
 
 The **Lists** page has a separate tab for each of the two types of list that you can create: **Custom lists** and **Support lists**.
 
-> [!NOTE]
-> You can't view or create lists in the INT environment. You must use the PROD environment.
 
 ### Custom lists
 
