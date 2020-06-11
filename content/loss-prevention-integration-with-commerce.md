@@ -3,7 +3,7 @@ author: yvonnedeq
 description: Integrating loss prevention with Commerce
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/29/2020
+ms.date: 06/10/2020
 
 ms.topic: conceptual
 search.app: 
@@ -21,10 +21,10 @@ In Microsoft Dynamics 365 Fraud Protection, the loss prevention capability is a 
 
 To integrate loss prevention capability with Dynamics 365 Commerce (Commerce), perform the following steps:
 
-- Enable the Azure Data Lake Storage (ADLS) service for the Commerce environment.
-- Enable loss prevention in the Commerce environment.
-- Add a service account and subscribe to Fraud Protection in the Commerce environment.
-- Configure loss prevention settings in Fraud Protection. 
+1. [Enable the Azure Data Lake Storage (ADLS) service for the Commerce environment.](loss-prevention-integration-with-commerce.md#1enable-adls-for-your-commerce-environment)
+1. [Enable loss prevention in the Commerce environment.](loss-prevention-integration-with-commerce.md#2turn-on-the-loss-prevention-feature-in-your-commerce-environment)
+1. [Add a service account and subscribe to Fraud Protection in the Commerce environment.](loss-prevention-integration-with-commerce.md#3add-a-service-account-and-subscribe-to-fraud-protection)
+1. [Configure loss prevention settings in Fraud Protection.](loss-prevention-integration-with-commerce.md#4configure-loss-prevention-in-fraud-protection) 
 
 
 ## 1.	Enable ADLS for your Commerce environment
