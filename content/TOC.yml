@@ -100,8 +100,8 @@
   href: event-tracing.md
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
-- name: Security and Compliance
-  items:     
+- name: Security and compliance
+  items: 
   - name: Compliance overview
     href: security-compliance.md
   - name: Security overview
