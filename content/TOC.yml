@@ -26,8 +26,6 @@
     href: data-upload.md
   - name: View purchase protection schemas
     href: schema-INT.md
-  - name: View schemas
-    href: schema.md
   - name: Use the virtual fraud analyst
     href: virtual-fraud-analyst.md   
   - name: Learn from the scorecard
