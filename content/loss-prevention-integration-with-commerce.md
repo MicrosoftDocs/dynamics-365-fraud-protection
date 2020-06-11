@@ -3,7 +3,7 @@ author: yvonnedeq
 description: Integrating loss prevention with Commerce
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 
 ms.topic: conceptual
 search.app: 
