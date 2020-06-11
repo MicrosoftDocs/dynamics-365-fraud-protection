@@ -1,24 +1,24 @@
 ---
 author: yvonnedeq
-description: This topic explains security in Dynamics 365 Fraud Protection.
+description: This topic explains technical and organizational measures to protect customer data and personal data in Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/29/2020
+ms.date: 06/11/2020
 
 ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
   - admin
-title: Fraud Protection compliance and security
+title: Security measures to protect data 
 ---
 
 
-# Fraud Protection compliance and security 
+# Security measures to protect data 
 
-Microsoft Dynamics 365 Fraud Protection has implemented and will continue to maintain appropriate technical and organizational measures to protect customer data and personal data. These measures are set forth in  Microsoft Security Policy. This policy is available to customers, as well as descriptions of the security controls in place for Fraud Protection and other information reasonably requested by the customer regarding Microsoft security practices and policies. 
+Microsoft Dynamics 365 Fraud Protection has implemented, and will continue to maintain, appropriate technical and organizational measures to protect customer data and personal data. These measures are set forth in  Microsoft Security Policy. This policy is available to customers, as well as descriptions of the security controls in place for Fraud Protection and other information reasonably requested by the customer regarding Microsoft security practices and policies. 
 
-For more information about Microsoft's security practice, please visit the [Microsoft Trust Center](https://www.microsoft.com/trust-center).
+For more information about Microsoft's security practice, visit the [Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
 ## Compliance certificate URLs
 
@@ -44,13 +44,13 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |**Network Vulnerability Scan Report**         |A scan of the application or service network.          |Yes, part of the pen test is done.         |
 |**Network Security Policy**	|Policy for maintaining network and data security.	|Yes, eGRC, Microsoft Corp policy.|
 |**Information Security Policy**         |Policy on how data is kept and stored.  Covers employee access to data, i.e. existence of access to the internet, ability to download items to USB drives, etc.             |Yes, eGRC, Microsoft Corp policy. ISO Controls         |
-|**Data Flow Diagram**         |<p>Identifies how the application or service integrates with customer data and/or systems. </p><p>- If the solution is on premise, data flow diagram is REQUIRED and should be authored by a technology team member. </p><p>-If the solution is NOT on premise or includes cloud services, vendor’s data flow diagram is REQUIRED to visualize how data will be stored on and transferred to, from, and through the vendor’s systems.</p>             |Product documentation covers this information.         |
+|**Data Flow Diagram**         |<p>Identifies how the application or service integrates with customer data and/or systems. </p><p>- If the solution is on premise, data flow diagram is REQUIRED and should be authored by a technology team member. </p><p>- If the solution is NOT on premise or includes cloud services, vendor’s data flow diagram is REQUIRED to visualize how data will be stored on and transferred to, from, and through the vendor’s systems.</p>             |Product documentation covers this information.         |
 |**Incident Response and Triage Policies**         |Document defining what constitutes an incident and how the organization responds             |Yes, Microsoft SOP and ISO Controls.         |
 |**Third party audit reports**         |Audits such as SSAE 16 SOC 2, SAS70 Type II, etc.             |Refer to the URL in the compliance section.      |
 |**Backup policy**         |Document defining the company’s backup strategy.             |Azure multi region deployment strategy         |
 |**Disaster Recovery Document**         |Document defining company’s strategy for availability.             |Yes, Azure SOPs.         |
-|**Cloud Security Alliance Cloud Controls Matrix (CCM) self-assessment**         |See the assessment framework for cloud providers at [Cloud Security Alliance](https://cloudsecurityalliance.org)             |Microsoft Trust Portal.         |
-|**Change Management policy**         |Policy documenting how changes are introduced and approved in an environment.             |Yes, Azure SOPs     |
+|**Cloud Security Alliance Cloud Controls Matrix (CCM) self-assessment**         |See the assessment framework for cloud providers at [Cloud Security Alliance](https://cloudsecurityalliance.org)             |Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).         |
+|**Change Management policy**         |Policy documenting how changes are introduced and approved in an environment.             |Yes, Azure SOPs.     |
 
 ## Security assessment FAQs
 
@@ -85,8 +85,8 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |---------|-------------|
 |Does the application / service log information in an industry standard event format type, such as CSV, CEF, or Syslog?         |Log data is not shared by the product.  Service metrics and KPI's are surfaced via PowerBI views.             |
 |Does the application / service collect or provide the following data:         |--             |
-|User Login / Logoff / Password Change / Failed Login Attempts         |Yes.  For more information, see [Azure AD feature in merchant tenant](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs)             |
-|Audit logs of administrator actions (user account Create / Update / Delete), or application-specific actions.         |An audit history of key changes such as rule or list updates is maintained by the application.  User account actions and corresponding audit history is controlled via AAD.  For more information, see the overview: [Azure Active Directory reports and monitoring documentation(https://docs.microsoft.com/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs).  For AZURE AD auditing, see core directory events for application role and group membership: [List of Azure Active Directory Audit Activities](https://blogs.technet.microsoft.com/motiba/2018/02/12/list-of-azure-active-directory-audit-activities/) for core directory events for application role and group membership.  For access to audits from AAD Portal, see [Audit activity reports in the Azure Active Directory porta](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs).               |
+|User Login / Logoff / Password Change / Failed Login Attempts         |Yes.  For more information, see [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs).             |
+|Audit logs of administrator actions (user account Create / Update / Delete), or application-specific actions.         |<p>An audit history of key changes such as rule or list updates is maintained by the application.  User account actions and corresponding audit history is controlled via AAD.  For more information, see the overview: [Azure Active Directory reports and monitoring documentation](https://docs.microsoft.com/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs).</p><p>For AZURE AD auditing, see core directory events for application role and group membership: [List of Azure Active Directory Audit Activities](https://blogs.technet.microsoft.com/motiba/2018/02/12/list-of-azure-active-directory-audit-activities/) for core directory events for application role and group membership. </p><p>For access to audits from AAD Portal, see [Audit activity reports in the Azure Active Directory porta](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs).</p>               |
 |  Audit logs of user actions (document or content Create / Read / Update / Delete)       |N/A.  Only the admin role is supported.             |
 |  Audit logs of metadata actions (Create / Read / Update / Delete).       |Yes.  Audit history of key changes such as list and rule updates are maintained.             |
 |  Creation and Destruction for system-level objects as required for PCI compliant applications only.        |N/A            |
@@ -107,7 +107,7 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |Does the application / service allow databases to be exported in bulk into a non-proprietary format?         |No.             |
 |  Note: Document the process.       |No.             |
 |Within the Service Level Agreement, there exists language to remove any bandwidth or API throttling in the case of legal discovery?         |--     |
-|Provide a documented backup policy.         |There is a multi-region data replication and resiliency strategy in place. For more information on the backup and restore capability, see [Online backup and on-demand data restore in Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore).             |
+|Provide a documented backup policy.         |There is a multi-region data replication and resiliency strategy in place. For more information on the backup and restore capability, see [Online backup and on-demand data restore in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/online-backup-and-restore).             |
 |Does the application / service have a documented Disaster Recovery plan? |You can learn more about Microsoft's own EBCM plan in the [Enterprise Business Continuity Management Program whitepaper](https://go.microsoft.com/fwlink/?linkid=2121521). A login is required.     |
 
 ### Data security
@@ -156,7 +156,7 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 
 | Question| Response    |
 |---------|-------------|
-|Do you have a well-defined security program? Provide a brief description. |Yes, for information, see [the Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).             |
+|Do you have a well-defined security program? Provide a brief description. |Yes, see [the Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).             |
 |Do you have someone from senior management accountable for security? Provide a name and contact information.|Yes, the name and contact information will be provided on request. If you are an existing customer and need immediate assistance to a security topic, reach out through the CSS channel or your account manager.             |
 |Does the vendor have established information security policies?  |Yes.                  |
 |Note: Provide a copy of all related information security policies.    |Yes.              |
