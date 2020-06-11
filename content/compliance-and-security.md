@@ -140,8 +140,8 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |If the infrastructure does not support encryption at rest by default, does the application / service provide the ability to store data at rest in an encrypted format?         |All data is encrypted at rest. For more information see [Data encryption in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/database-encryption-at-rest).   |
 |Does the system have data retention and purge?         |Yes.            |
 |Does the system have general retention schedule, which means the data is purged after a period?          |Yes, refer to the OST guidelines for more information.             |
-|Do you have a well-defined security program? Provide a brief description.         |Yes, for information, see [the Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/)        |
-|Do you have someone from senior management accountable for security? Provide a name and contact information.         |Yes, the name and contact information will be provided on request. If you are an existing customer and need immediate assistance to a security topic, please reach out through the CSS channel or your account manager.             |
+|Do you have a well-defined security program? Provide a brief description.         |Yes, for information, see [the Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).        |
+|Do you have someone from senior management accountable for security? Provide a name and contact information.         |Yes, the name and contact information will be provided on request. If you are an existing customer and need immediate assistance to a security topic,  reach out through the CSS channel or your account manager.             |
 |Does the vendor have established information security policies?   |Yes.    |
 |  Note: Provide a copy of all related information security policies.       |Yes.             |
 |Does the vendor have a third-party audit report for datacenter security and policies?         |             |
@@ -156,19 +156,16 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 
 | Question| Response    |
 |---------|-------------|
-|Do you have a well-defined security program? Provide a brief description. |Yes             |
-|Do you have someone from senior management accountable for security? Provide a name and contact information.|Yes             |
-|Does the vendor have established information security policies?  |Yes                         |
-|Note: Provide a copy of all related information security policies.    |Yes                          |
-|Does the vendor have a third-party audit report for datacenter security and policies?  |Yes             |
-|Furnish a copy of the report (i.e., SSAE 16 SOC 2, SAS70 Type II, etc.).  |Azure Trust Center             |
+|Do you have a well-defined security program? Provide a brief description. |Yes, for information, see [the Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).             |
+|Do you have someone from senior management accountable for security? Provide a name and contact information.|Yes, the name and contact information will be provided on request. If you are an existing customer and need immediate assistance to a security topic, reach out through the CSS channel or your account manager.             |
+|Does the vendor have established information security policies?  |Yes.                  |
+|Note: Provide a copy of all related information security policies.    |Yes.              |
+|Does the vendor have a third-party audit report for datacenter security and policies?  |             |
+|Furnish a copy of the report (i.e., SSAE 16 SOC 2, SAS70 Type II, etc.).  |Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).          |
 |Has the application / service performed the Cloud Security Alliance Cloud Controls Matrix (CCM) self-assessment?         |Yes             |
-|Note: Furnish a copy of the self-assessment.	         |Azure Trust Center             |
+|Note: Furnish a copy of the self-assessment.	         |Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).           |
 |Does the vendor have a current change management policy document?         |Yes         |
-|Does the application / service have established incident response and triage policy and processes?         |Yes             |
-|The policy must include dedicated out-of-band communications channels, incident definitions, roles and responsibilities, and resolution timelines.         |Yes             |
-|Note: Provide a copy for review.    |IcM Policy DOC    |
-|Will the vendor share threat intelligence data with me?         |Yes; based on the TM not the Threat Intelligence from external bodies.             |
+|Does the application / service have established incident response and triage policy and processes?         |Yes.             |
 
 
 
