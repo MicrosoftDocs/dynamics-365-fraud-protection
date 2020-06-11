@@ -59,24 +59,24 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 | Question| Response    |
 |---------|-------------|
 |Does the application / service support SSO through SAML 1.1, SAML 2.0, or WS-Fed?         |Yes. Portal: SPA - Oauth 2.0 and OpenID Connect, with implicit flow Service to Service backend API: Oauth 2.0  Fingerprinting Service: Anonymous Azure Stack: SAS Token for storage.|
-|  Does the application support OKTA integration (SSO platform)         |Not by default.  Azure AD supports custom integrations.  Since the merchant owns the tenant, the merchant can leverage AAD identity integration points.             |
-|Is there a "backdoor" URL that allows users or administrators to bypass SSO?         |No             |
+|  Does the application support OKTA integration (SSO platform)         |Not by default.  Azure AD supports custom integrations.  Since the merchant owns the tenant, the merchant can leverage AAD identity integration points. For more information, see the [Azure Active Directory documentation](https://docs.microsoft.com/azure/active-directory/).|
+|Is there a "backdoor" URL that allows users or administrators to bypass SSO?         |No.             |
 |Does the application / service support two factor authentication?         |Yes - this is something merchant can enable in their Azure Active Directory             |
-|Describe the 2FA solution.         |This is an Azure AD feature. For more information, see [How it works: Azure Multi-Factor Authentication ](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks)             |
-|Does the application support application-level passwords?         |No, User and Application idenitities are managed within the customer Azure Active Directory.         |
-|Which hash or encryption algorithm is being used to protect passwords?  |N/A           |
-|Is hash salting being used?         |N/A             |
-|Does the application / service utilize automatic account provisioning? How is this accomplished? (On-demand via SAML, automated csv feed over secure transmission, API,etc.)  Provide documentation         |No and N/A             |
-|Does the application / service utilize an immediate account access termination, including closing open sessions?         |No             |
+|Describe the 2FA solution.         |This is an Azure AD feature. For more information, see [How it works: Azure Multi-Factor Authentication](https://docs.microsoft.com/azure/active-directory/authentication/concept-mfa-howitworks).             |
+|Does the application support application-level passwords?         |No, user and application identities are managed within the customer Azure Active Directory.         |
+|Which hash or encryption algorithm is being used to protect passwords?  |N/A.           |
+|Is hash salting being used?         |N/A.             |
+|Does the application / service utilize automatic account provisioning? How is this accomplished? (On-demand via SAML, automated CSV feed over secure transmission, API,etc.)  Provide documentation.         |No and N/A.        |
+|Does the application / service utilize an immediate account access termination, including closing open sessions?         |No, AAD token expiration aligns user access termination and not the session.             |
 |  If account terminations are not automatic, is this action performed within 1 hour of an account access termination request?       |Yes, per AAD policy.             |
-|  Note: Document the process.  All actions must be logged       |N/A             |
+|  Note: Document the process.  All actions must be logged       |For more information, see the [Azure Active Directory documentation](https://docs.microsoft.com/azure/active-directory/).             |
 |  What is the session idle timeout of your application?       |Per AAD policy, it is in line with token validity period.             |
-|Does the application / service utilize an automatic account deprovisioning process via an API?         |No             |
-|Does the application / service provide a disposition strategy for content attached to a user’s account upon deprovisioning?         |No, only audit logs are tracked and retained as features per policy.             |
+|Does the application / service utilize an automatic account deprovisioning process via an API?         |No.             |
+|Does the application / service provide a disposition strategy for content attached to a user’s account upon deprovisioning?         |No, only audit logs are tracked and retained as features per OST Guidelines and Microsoft Privacy Statement.             |
 |Does the application / service allow the administrator to explicitly grant authorization to data and capabilities following the least privilege model based on role and/or function?       |Yes, via AAD roles, Admin can grant access within their tenant.        |
-|  A minimum expectation is support for Administrator role, User role, Read-Only Administrator (log) role, and unprivileged Administrator (no access to content) role.       |The App/Service doesn't have any additional roles other than Admin role. Admin role takes the responsibility of spinning out additional roles within their tenant.          |
-|If there are sharing permissions within the application, does the application / service allow the administrator to review user requests for additional access to data?         |N/A             |
-|Does the application / service allow the administrator user the ability to distinguish  “administrator users” and “regular users”?         |No             |
+|  A minimum expectation is support for Administrator role, User role, Read-Only Administrator (log) role, and unprivileged Administrator (no access to content) role.       |The App/Service doesn't have any additional roles other than Admin role. Admin role takes the responsibility of spinning out additional roles within their tenant. For information about how to add and remove roles, refer to the  Fraud Protection documentation.          |
+|If there are sharing permissions within the application, does the application / service allow the administrator to review user requests for additional access to data?         |N/A.             |
+|Does the application / service allow the administrator user the ability to distinguish “administrator users” and “regular users”?         |No.         |
 |Document the rights that are available for the various roles within the application / service. Examples are read-only accounts, log audit role, etc.         |See the Fraud Protection onboarding guide.             |
 
 ### Auditing
@@ -86,15 +86,14 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |Does the application / service log information in an industry standard event format type, such as CSV, CEF, or Syslog?         |Log data is not shared by the product.  Service metrics and KPI's are surfaced via PowerBI views.             |
 |Does the application / service collect or provide the following data:         |--             |
 |User Login / Logoff / Password Change / Failed Login Attempts         |Yes.  For more information, see [Azure AD feature in merchant tenant](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs)             |
-|Audit logs of administrator actions (user account Create / Update / Delete), or application-specific actions.         |An audit history of key changes such as rule or list updates is maintained by the application.  User account actions and corresponding audit history is controlled via AAD.  For more information, see the overview: [Azure Active Directory reports and monitoring documentation(https://docs.microsoft.com/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs).  For AZURE AD auditing, see [List of Azure Active Directory Audit Activities](https://blogs.technet.microsoft.com/motiba/2018/02/12/list-of-azure-active-directory-audit-activities/) for core directory events for application role and group membership.  For access to audits from AAD Portal, see [Audit activity reports in the Azure Active Directory porta](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs).               |
-|  Audit logs of user actions (document or content Create / Read / Update / Delete)       |N/A.  Only the admin role supported.             |
+|Audit logs of administrator actions (user account Create / Update / Delete), or application-specific actions.         |An audit history of key changes such as rule or list updates is maintained by the application.  User account actions and corresponding audit history is controlled via AAD.  For more information, see the overview: [Azure Active Directory reports and monitoring documentation(https://docs.microsoft.com/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs).  For AZURE AD auditing, see core directory events for application role and group membership: [List of Azure Active Directory Audit Activities](https://blogs.technet.microsoft.com/motiba/2018/02/12/list-of-azure-active-directory-audit-activities/) for core directory events for application role and group membership.  For access to audits from AAD Portal, see [Audit activity reports in the Azure Active Directory porta](https://docs.microsoft.com/azure/active-directory/reports-monitoring/concept-audit-logs).               |
+|  Audit logs of user actions (document or content Create / Read / Update / Delete)       |N/A.  Only the admin role is supported.             |
 |  Audit logs of metadata actions (Create / Read / Update / Delete).       |Yes.  Audit history of key changes such as list and rule updates are maintained.             |
 |  Creation and Destruction for system-level objects as required for PCI compliant applications only.        |N/A            |
 |  All logs must contain the source IP of the user.       |AAD has IP in its logs.  Certain internal logs do not have end-user IP but can be correlated with AAD information.             |
 |  Audit trails on any activities performed on PII.        |The only PII is in the audit history of rule and list changes.  This is read-only and cannot be modified.               |
-|Provide sample set of log data , Logs must be maintained for a period of 1 year and encrypted at rest by the vendor.         |Logs are maintained per standard Microsoft Azure Online Services policy.             |
+|Provide sample set of log data, Logs must be maintained for a period of 1 year and encrypted at rest by the vendor.         |Logs are maintained per standard Microsoft Azure Online Services policy.             |
 |Does the vendor have procedures in place to detect, report and alert on the downtime of the Customer instance within an hour of the instance of being down?     |Yes            |
-|  Will the application alert on unusual events, as determined by a baseline usage pattern determined by the vendor?       |Azure carve out, ISO Controls.             |
 |  What information is provided to customer to validate the negotiated SLA?       |As a customer, you'll make a server to server call to the service and be able to monitor SLA directly.             |
 |  How is this notification reported to me as a customer?       |No proactive downtime notification is in place. It's currently part of the roadmap.             |
 
@@ -102,21 +101,14 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 
 | Question| Response    |
 |---------|-------------|
-|Does the application / service allow unstructured data to be exported in bulk into a non-proprietary format such as CSV?          |GDPR Export functionality only.             |
-|  Does the unstructured data retain metadata?       | No            |
-|  Does the unstructured data retain security ACLs?       |No             |
-|  Note: Document the process.       |In product experience             |
-|Does the application / service allow databases to be exported in bulk into a non-proprietary format?         |No             |
-|  Note: Document the process.       |No             |
-|Within the Service Level Agreement, there exists language to remove any bandwidth or API throttling in the case of legal discovery?         |--             |
-|Provide a documented backup policy.         |There is no backup policy. Instead, we have multi-region data replication and resiliency strategy in place.             |
-|  The policy must contain 30 days of backup, 12-hour RTO, 24-hour RPO.       |NA             |
-|  Are the backups stored on the same Infrastructure vendor?       |NA             |
-|  Are the backups stored encrypted at rest?         |NA             |
-|  Note: Document the process.       |NA             |
-|Does the application / service have a documented Disaster Recovery plan?         |Yes             |
-|  Provide a business continuity runbook.       |Microsoft owned, available on request.             |
-|  Note: Document the process.       |Microsoft process.             |
+|Does the application / service allow unstructured data to be exported in bulk into a non-proprietary format such as CSV?          |In the product, the GDPR Experience allows the user to export the data under the guidelines described in the Data Subject Rights section in the [Compliance documentation](https://docs.microsoft.com/dynamics365/fraud-protection/security-compliance).|
+|  Does the unstructured data retain metadata?       | No.            |
+|  Does the unstructured data retain security ACLs?       |No. For more information, see the [GDPR documentation listed here](https://docs.microsoft.com/dynamics365/fraud-protection/security-compliance#honor-data-subject-requests).            |
+|Does the application / service allow databases to be exported in bulk into a non-proprietary format?         |No.             |
+|  Note: Document the process.       |No.             |
+|Within the Service Level Agreement, there exists language to remove any bandwidth or API throttling in the case of legal discovery?         |--     |
+|Provide a documented backup policy.         |There is a multi-region data replication and resiliency strategy in place. For more information on the backup and restore capability, see [Online backup and on-demand data restore in Azure Cosmos DB](https://docs.microsoft.com/en-us/azure/cosmos-db/online-backup-and-restore).             |
+|Does the application / service have a documented Disaster Recovery plan? |You can learn more about Microsoft's own EBCM plan in the [Enterprise Business Continuity Management Program whitepaper](https://go.microsoft.com/fwlink/?linkid=2121521). A login is required.     |
 
 ### Data security
 
