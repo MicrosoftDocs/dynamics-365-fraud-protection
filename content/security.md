@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains security in Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/21/2020
+ms.date: 06/11/2020
 
 ms.topic: conceptual
 search.app: 
@@ -12,10 +12,10 @@ search.audienceType:
   - admin
 
 
-title: Security
+title: Security overview
 ---
 
-# Security
+# Security overview
 
 By providing Microsoft Dynamics 365 Fraud Protection, Microsoft has implemented, and will maintain, appropriate technical and organizational measures to protect Customer Data, which includes personal data. These measures are set forth in Microsoft Security Policy. Microsoft will make that policy available to customers, along with descriptions of the security controls in place for Fraud Protection, and other information reasonably requested by the customer regarding Microsoft security practices and policies. 
 
