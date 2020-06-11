@@ -102,12 +102,12 @@
   href: fraud-protection-network.md
 - name: Security and Compliance
   items:     
-- name: Compliance overview
-  href: security-compliance.md
-- name: Security overview
-  href: security.md
-- name: Security measures for protecting data  
-  href: compliance-and-security.md
+  - name: Compliance overview
+    href: security-compliance.md
+  - name: Security overview
+    href: security.md
+  - name: Security measures for protecting data  
+    href: compliance-and-security.md
 - name: Privacy
   href: data-processing-protection.md
 - name: Visually explore your data
