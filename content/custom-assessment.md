@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about creating and defining custom assessments.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/02/2020
+ms.date: 06/11/2020
 
 ms.topic: conceptual
 search.app: 
@@ -19,7 +19,7 @@ title: Custom assessment
 
 ## Overview
 
-Effectively managing fraud is a multi-tiered strategy. In order to effectively maximize fraud detection and minimize customer friction, interactions at various phases of a user’s journey must be assessed and decisions must be made whether to allow, challenge, or block the user from proceeding further. Each business model is different and so are the associated user interactions that transmit signals about potential fraud. Profile updates such as address change or payment information change may be a key event for an e-commerce business while submission of reviews might be for another. Updating a seat preference on a travel site, adding family and friends on a subscription or gaming service, raising a support ticket, or submitting a complaint are other examples of user events which are specific to each business model.
+Effectively managing fraud is a multi-tiered strategy. In order to effectively maximize fraud detection and minimize customer friction, interactions at various phases of a user’s journey must be assessed, and decisions must be made, whether to allow, challenge, or block the user from proceeding further. Each business model is different and so are the associated user interactions that transmit signals about potential fraud. Profile updates such as address change or payment information change may be a key event for an e-commerce business while submission of reviews might be for another. Updating a seat preference on a travel site, adding family and friends on a subscription or gaming service, raising a support ticket, or submitting a complaint are other examples of user events which are specific to each business model.
 
 Microsoft Dynamics 365 Fraud Protection understands the importance of including these types of business-specific events to help you in the overall fraud management strategy, and now offers the ability to add *custom assessments* in addition to the common assessment events such as account creation, account login, and purchase protection.
 With custom assessments, you can create and define an assessment, including its name, the API path, and a payload that is appropriate to the specific event. You can then configure rules for this assessment to return a decision such as *Approve*, *Reject*, *Review*, or *Challenge*.
@@ -54,7 +54,7 @@ When you integrate with the API, make sure you use the URI information you provi
 
 ## Edit assessments
 
-You can change the name, API name, or the sample payload for an assessment you’ve created at any time. Note that if you change the API name, you must make the same change in all your API calls as well, otherwise the API call will be unable to resolve and fail. Any changes made to the sample payload are reflected in the rules created after the change is saved. 
+You can change the name, API name, or the sample payload for an assessment you’ve created at any time. Note that if you change the API name, you must also make the same change in all your API calls, otherwise the API call will be unable to resolve and fail. Any changes made to the sample payload are reflected in the rules created after the change is saved. 
 
 #### To edit an assessment:
 
