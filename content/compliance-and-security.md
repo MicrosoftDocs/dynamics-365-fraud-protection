@@ -137,8 +137,7 @@ Here is a list of compliance certificate URLs for Fraud Protection.
 |  Can the administrator control OAuth or other API access per-user?        |N/A.             |
 |  Can the administrator control OAuth or other API access per-content-type?        |N/A.             |
 |  Can the application log an identifier to the application and user context under which it was authorized?       |N/A.             |
-|If the infrastructure does not support encryption at rest by default, does the application / service provide the ability to store data at rest in an encrypted format?         |All data is encrypted at rest. For more information see [Data encryption in Azure Cosmos DB](
-https://docs.microsoft.com/azure/cosmos-db/database-encryption-at-rest).   |
+|If the infrastructure does not support encryption at rest by default, does the application / service provide the ability to store data at rest in an encrypted format?         |All data is encrypted at rest. For more information see [Data encryption in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/database-encryption-at-rest).   |
 |Does the system have data retention and purge?         |Yes.            |
 |Does the system have general retention schedule, which means the data is purged after a period?          |Yes, refer to the OST guidelines for more information.             |
 |Do you have a well-defined security program? Provide a brief description.         |Yes, for information, see [the Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/)        |
