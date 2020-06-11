@@ -3,19 +3,19 @@ author: yvonnedeq
 description: This topic provides information about security, compliance, and data subject requests.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/21/2020
+ms.date: 06/11/2020
 
 ms.topic: conceptual
 search.app: 
   - FraudProtection
 search.audienceType:
   - admin
-title: Compliance
+title: Compliance overview
 
 
 ---
 
-# Compliance
+# Compliance overview
 
 Microsoft Dynamics 365 Fraud Protection was designed with compliance, privacy, security, and confidentiality in mind and is only intended to be used to prevent fraud and help identify legitimate payment transactions. Microsoft offers Fraud Protection under the Microsoft Online Services Terms, which includes robust Data Protection Terms.
 
