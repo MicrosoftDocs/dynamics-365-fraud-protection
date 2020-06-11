@@ -10,11 +10,11 @@ search.app:
   - FraudProtection
 search.audienceType:
   - admin
-title: Security measures to protect data 
+title: Security measures for protecting data 
 ---
 
 
-# Security measures to protect data 
+# Security measures for protecting data 
 
 Microsoft Dynamics 365 Fraud Protection has implemented, and will continue to maintain, appropriate technical and organizational measures to protect customer data and personal data. These measures are set forth in  Microsoft Security Policy. This policy is available to customers, as well as descriptions of the security controls in place for Fraud Protection and other information reasonably requested by the customer regarding Microsoft security practices and policies. 
 
