@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 
 ms.topic: conceptual
 search.app: 
@@ -47,9 +47,9 @@ You can view the following information for each rule/draft:
 > Published rules are listed on the **Rules** page in the order that they are run.
 
 ### Payload settings
-You can also access payload settings from the command menu on the **Rules page**. In the **Payload settings** panel, you can define the sample payload for that assessment type. 
+You can also access payload settings from the command menu on the **Rules page**. In the **Payload settings** panel, you can define the sample payload for that assessment type. The sample payload is meant to contain an example of the fields that will be sent in the request API for the assessment and can be used within your rule.  
 
-For example, in your API request for a purchase event, you may choose not  to send optional fields from the [purchase protection schema](https://docs.microsoft.com/dynamics365/fraud-protection/schema), or you may choose to send other additional custom fields. The payload sample shown in the settings panel reflects the data sent in the API request for the assessment. 
+In the API request, you may choose not to send optional fields from the assessment schema, or you may choose to send other additional custom fields. Whatever you decide, be sure to update the payload sample shown in the settings panel to reflect the specific fields you are sending. 
 
 This payload sample is shown each time a new rule is created for this assessment (see [Payload sample](rules.md#payload-sample)). Note the changes you make apply only to rules you create going forward. 
 
