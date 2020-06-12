@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic is a language guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/10/2020
+ms.date: 06/11/2020
 
 ms.topic: conceptual
 search.app: 
@@ -175,8 +175,6 @@ These operators convert an IP address to a geographical address.
 | Geo.CountryCode   | <p>This operator converts an IPv4 address to its country/region code.</p><p>For example, for an IP address in Australia, "AU" is returned.</p> | Geo.CountryCode(@"device.ipAddress") |
 | Geo.CountryRegion | <p>This operator converts an IP address to a region name.</p><p>For example, for an IP address in Australia, "Australia" is returned.</p> | Geo.CountryRegion(@"device.ipAddress") |
 | Geo.City          | <p>This operator converts an IPv4 address to a city name.</p><p>For example, for an IP address in New York City, "New York City" is returned.</p> | WGeo.City(@"device.ipAddress") |
-| Geo.PostalCode    | <p>This operator converts an IPv4 address to its postal code.</p><p>For example, for an IP address in Seattle, "98106" might be returned.</p> | Geo.PostalCode(@"device.ipAddress") |
-| Geo.Isp           | <p>This operator converts an IPv4 address to the internet service provider (ISP) that manages that IP address.</p><p>For example, "Level 3 Communications" might be returned.</p> | Geo.Isp(@"device.ipAddress") |
 | Geo.MarketCode    | <p>This operator converts an IPv4 address to the market code of the IP address.</p><p>For example, for an IP address from Canada, "NA" (North America) is returned.</p> | Geo.MarketCode(@"device.ipAddress") |
 
 #### String operators
