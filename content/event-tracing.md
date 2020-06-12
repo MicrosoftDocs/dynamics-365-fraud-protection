@@ -33,7 +33,9 @@ Here are the steps to start utilizing the event tracing functionality:
 
     You will see a description of the event as well as a sample of the schema/payload that is included before you save the form.
 
-1. Events will then instantaneously be sent to your Event Hubs instance and you can navigate back to the Fraud Protection portal to view the Events/Second count and ensure that data is being sent to Event Hubs.
+1. Events will then instantaneously be sent to your Event Hubs instance.
+
+  Navigate back to the [Fraud Protection](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal to view the Events/Second count and ensure that data is being sent to Event Hubs.
 
     1. The Events and Failures/Second metrics will display an average over the past 24 hours.
     1. For additional monitoring, navigate to the Azure Portal and set up metrics. For more information, see [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/azure/event-hubs/event-hubs-metrics-azure-monitor).
@@ -44,7 +46,7 @@ Here are the steps to start utilizing the event tracing functionality:
 
 ## Event schemas
 
-There are currently two supported classifications of events available in event tracing: audit events and monitoring events. Each event has a standardized schema with fields included in every event (namespace, event version, tenantId, and timestamp) as well as fields unique to each event classification.
+There are currently two supported classifications of events available in event tracing: *audit events* and *monitoring events*. Each event has a standardized schema with fields included in every event (namespace, event version, tenantId, and timestamp) as well as fields unique to each event classification.
 
 ### Audit events
 
