@@ -23,19 +23,19 @@ The **Metering** page breaks out information into two tabs:
 - The **Summary** tab shows a monthly comparison of the number of assessments you've purchased and the number of assessments you've used across different Fraud Protection capabilities. This includes loss prevention, purchase protection, account protection, and so on. You can view data across different subscription periods on this tab.
 - The **Details** tab allows you to dive deeper into your assessment usage data. This gives you the flexibility to choose any date range, and the ability to filter the data by different dimensions.
 
-## Assessments purchased
+## Assessments purchased metric
 
 The *assessments purchased* metric reflects the total assessments available to you for each capability based on the Fraud Protection SKUs you've purchased. For more information about Dynamics 365 Fraud Protection SKUs and the number of assessments they provide access to, see [Dynamics 365 Fraud Protection](https://dynamics.microsoft.com/ai/fraud-protection/).
 
-## Assessments used
+## Assessments used metric
 
 The *assessments used* metric reflects your usage of Fraud Protection. The table below explains which activities count towards the assessment used for each Fraud Protection capability.
 
 |Fraud Protection capability| What is included in the assessment used metric    |
 |---------------------------|-------------|
 |Account protection         |Real-time API calls where a risk assessment or decision is requested, namely: AccountCreation, AccountLogin, and CustomAssessments APIs.       |
-|Loss prevention            |The number of transactions processed for generating Loss prevention reports*             |
-|Purchase protection        |Real-time API calls for APIs where a risk assessment is requested, namely: Purchase, SignIn, SignUp, and CustomFraudEvaluation APIs    |         
+|Loss prevention            |The number of transactions processed for generating Loss prevention reports.*             |
+|Purchase protection        |Real-time API calls for APIs where a risk assessment is requested, namely: Purchase, SignIn, SignUp, and CustomFraudEvaluation APIs.    |         
 
 *The required number of assessments you should purchase for loss prevention capability is determined by the estimated in-store transactions required to be protected during the billing cycle. Sampling the data before sending it to Fraud Protection for assessment may result in variance between the assessments used metric and the asssessments purchased metric. This is expected because the assessments used metric only counts the number of transactions from the assessed data, and the magnitude of variance depends on the sampling rate. 
 For accurate reporting of assessments used and to generate higher quality loss prevention reports, we encourage a sampling rate of 100% (i.e., sharing all transactions that should be protected).
