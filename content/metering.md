@@ -31,16 +31,22 @@ The *assessments purchased* metric reflects the total assessments available to y
 
 The *assessments used* metric reflects your usage of Fraud Protection. The table below explains which activities count towards the assessment used for each Fraud Protection capability.
 
-<table>
+|Fraud Protection capability| Response    |
+|---------------------------|-------------|
+|Account protection         
+|Real-time API calls where a risk assessment or decision is requested, namely: AccountCreation, AccountLogin, and CustomAssessments APIs.       |
+|Loss prevention            |The number of transactions processed for generating Loss Prevention reports*             |
+|Purchase protection        |Real-time API calls for APIs where a risk assessment is requested, namely: Purchase, SignIn, SignUp, and CustomFraudEvaluation APIs    |         
 
-The required number of assessments you should purchase for loss prevention capability is determined by the estimated in-store transactions required to be protected during the billing cycle. Sampling the data before sending it to Fraud Protection for assessment may result in variance between the assessments used metric and the asssessments purchased metric. This is expected because the assessments used metric only counts the number of transactions from the assessed data, and the magnitude of variance depends on the sampling rate. 
+*The required number of assessments you should purchase for loss prevention capability is determined by the estimated in-store transactions required to be protected during the billing cycle. Sampling the data before sending it to Fraud Protection for assessment may result in variance between the assessments used metric and the asssessments purchased metric. This is expected because the assessments used metric only counts the number of transactions from the assessed data, and the magnitude of variance depends on the sampling rate. 
 
 For accurate reporting of assessments used and to generate higher quality loss prevention reports, we encourage a sampling rate of 100% (i.e., sharing all transactions that should be protected).
 
 > [!NOTE]
 > The **Accumulated Consumption %** metric shows a ratio of total assessments used and total assessments purchased since the start of a billing cycle. Billing arrangements are made via your Microsoft Account Executive or Microsoft Cloud Solution Provider partner. You will receive notifications from them if your accumulated consumption approaches 100% before the end of the current billing cycle. This will give you the opportunity to adjust your subscription as necessary.
 
-## Additional notes regarding Assessment Usage and Metering
+
+## Additional notes regarding assessment usage and metering
 
 - Only the activity within the Fraud Protection production environment counts towards the assessments used; activity in the integration environment does not count. This means that in the integration environment, the **Metering** page  does not display the **Summary** tab.
 - Any assessment API calls that fail due to service issues caused by Fraud Protection (HTTP response code 5xx) are not included in the calculation of assessments used. Only successful requests (HTTP response code 2xx) and Bad Requests (HTTP response code 4xx) count towards your assessment used calculation.
