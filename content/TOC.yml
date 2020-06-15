@@ -36,8 +36,6 @@
     href: risk-support.md
   - name: Monitor API calls
     href: monitoring.md
-  - name: Usage metering
-    href: metering.md        
 - name: Account creation
   items:
   - name: Account creation overview
@@ -55,9 +53,7 @@
   - name: Implement device fingerprinting
     href: device-fingerprinting.md    
   - name: Monitor API calls
-    href: monitoring.md
-  - name: Usage metering
-    href: metering.md  
+    href: monitoring.md 
 - name: Account protection
   items:
   - name: Account protection overview
@@ -98,6 +94,8 @@
     href: fpl-lang-ref.md    
 - name: Event tracing
   href: event-tracing.md
+- name: Usage metering
+  href: metering.md        
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
 - name: Security and compliance
