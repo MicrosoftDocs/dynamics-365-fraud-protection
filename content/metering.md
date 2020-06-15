@@ -1,9 +1,9 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic explains how to meter your usage of Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 12/02/2019
+ms.date: 06/15/2020
 
 
 ms.topic: conceptual
@@ -16,21 +16,32 @@ title: Usage metering
 
 # Usage metering
 
-Metering provides an overview of your Microsoft Dynamics 365 Fraud Protection usage. You can view statistics about different API types over time and filter your view to highlight specific data and date ranges as needed. When your billing for Fraud Protection begins, you can use this information to assess any impact to your costs. Data on the Metering page is refreshed hourly.
+When you purchase Microsoft Dynamics 365 Fraud Protection, you are entitled to a certain number of “assessments” for one or more Fraud Protection capabilities. The **Metering** page provides an overview of your Fraud Protection usage. For example, you can view statistics about different assessment API types, trends of assessments consumed for loss prevention reports over time, and filter your view to highlight the specific data and date ranges you need.  Data on this page is refreshed hourly. This information is useful to assess if any adjustments are required to your Fraud Protection subscription.
 
-The Metering page breaks out information into four tabs:
+The **Metering** page breaks out information into two tabs:
 
-- **Consumption %** tracks how many assessments you have purchased that have been used within each billing period. 
-- **Assessment APIs** charts the activity of the APIs that return a risk score assessment. These include the APIs for Purchase, SignUp, and CustomFraudEvaluation, which are the real-time APIs that are considered billable in your production environment. Note that successful assessments and bad requests are billed, but any assessments that fail due to service issues on Fraud Protection’s part will not be charged to you.
-- **Data update APIs** include the APIs that update information but do not return a risk assessment. 
-- **Other events** contains additional APIs that help power tools like the graph explorer, risk support, and device fingerprinting.
+- The **Summary** tab shows a monthly comparison of the number of assessments you've purchased and the number of assessments you've used across different Fraud Protection capabilities. This includes loss prevention, purchase protection, account protection, and so on. You can view data across different subscription periods on this tab.
+- The **Details** tab allows you to dive deeper into your assessment usage data. This gives you the flexibility to choose any date range, and the ability to filter the data by different dimensions.
 
-Each tab shows usage charts and statistics for the APIs represented in that category. You can select specific date ranges, types of APIs, and the specific Fraud Protection experience you’re using to filter these charts.
+## Assessments purchased
 
-## Consumption
-The number of assessments available to you in a month are agreed upon in a subscription model. In the **Consumption %** tab, you can track how many of your purchased assessments have been consumed over time. The **Consumption%** line displays your consumption percentage within a single monthly billing period, while **AccumulatedConsumption%** shows your consumption percentages since the start of billing. 
+The *assessments purchased* metric reflects the total assessments available to you for each capability based on the Fraud Protection SKUs you've purchased. For more information about Dynamics 365 Fraud Protection SKUs and the number of assessments they provide access to, see [Dynamics 365 Fraud Protection](https://dynamics.microsoft.com/ai/fraud-protection/).
 
-Billing arrangements are made via your enterprise account (EA) account managers or cloud solution provider (CSP) partners. If your monthly usage reaches or passes the number of assessments you’ve paid for, you will receive notifications from them. This will give you the opportunity to work out any adjustments needed.
+## Assessments used
 
-## Assessment, Data update, and Other events 
-For **Assessment APIs**, **Data update APIs**, and **Other events**, specific statistics appear under **Total API responses**. These include both successful and unsuccessful API responses. The charts illustrate the numbers of successful and unsuccessful calls to the specified API during your selected time period. To view one set or the other individually, select **Success** or **Bad request**. To drill in and view specific data with more granularity, use the controls in the upper right of each chart. [Learn more about PowerBI controls](https://docs.microsoft.com/power-bi/consumer/end-user-drill)
+The *assessments used* metric reflects your usage of Fraud Protection. The table below explains which activities count towards the assessment used for each Fraud Protection capability.
+
+<table>
+
+The required number of assessments you should purchase for loss prevention capability is determined by the estimated in-store transactions required to be protected during the billing cycle. Sampling the data before sending it to Fraud Protection for assessment may result in variance between the assessments used metric and the asssessments purchased metric. This is expected because the assessments used metric only counts the number of transactions from the assessed data, and the magnitude of variance depends on the sampling rate. 
+
+For accurate reporting of assessments used and to generate higher quality loss prevention reports, we encourage a sampling rate of 100% (i.e., sharing all transactions that should be protected).
+
+> [!NOTE]
+> The **Accumulated Consumption %** metric shows a ratio of total assessments used and total assessments purchased since the start of a billing cycle. Billing arrangements are made via your Microsoft Account Executive or Microsoft Cloud Solution Provider partner. You will receive notifications from them if your accumulated consumption approaches 100% before the end of the current billing cycle. This will give you the opportunity to adjust your subscription as necessary.
+
+## Additional notes regarding Assessment Usage and Metering
+
+- Only the activity within the Fraud Protection production environment counts towards the assessments used; activity in the integration environment does not count. This means that in the integration environment, the **Metering** page  does not display the **Summary** tab.
+- Any assessment API calls that fail due to service issues caused by Fraud Protection (HTTP response code 5xx) are not included in the calculation of assessments used. Only successful requests (HTTP response code 2xx) and Bad Requests (HTTP response code 4xx) count towards your assessment used calculation.
+- The filters named **Experience Type** and **Response Type** on the **Details** tab of the **Metering** page only apply for account protection and purchase protection capabilities.
