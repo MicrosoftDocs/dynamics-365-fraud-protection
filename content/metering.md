@@ -31,7 +31,7 @@ The *assessments purchased* metric reflects the total assessments available to y
 
 The *assessments used* metric reflects your usage of Fraud Protection. The table below explains which activities count towards the assessment used for each Fraud Protection capability.
 
-|Fraud Protection capability| Response    |
+|Fraud Protection capability| What is included in the assessment used metric    |
 |---------------------------|-------------|
 |Account protection         |Real-time API calls where a risk assessment or decision is requested, namely: AccountCreation, AccountLogin, and CustomAssessments APIs.       |
 |Loss prevention            |The number of transactions processed for generating Loss prevention reports*             |
