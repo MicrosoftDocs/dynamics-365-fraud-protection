@@ -33,13 +33,11 @@ The *assessments used* metric reflects your usage of Fraud Protection. The table
 
 |Fraud Protection capability| Response    |
 |---------------------------|-------------|
-|Account protection         
-|Real-time API calls where a risk assessment or decision is requested, namely: AccountCreation, AccountLogin, and CustomAssessments APIs.       |
-|Loss prevention            |The number of transactions processed for generating Loss Prevention reports*             |
+|Account protection         |Real-time API calls where a risk assessment or decision is requested, namely: AccountCreation, AccountLogin, and CustomAssessments APIs.       |
+|Loss prevention            |The number of transactions processed for generating Loss prevention reports*             |
 |Purchase protection        |Real-time API calls for APIs where a risk assessment is requested, namely: Purchase, SignIn, SignUp, and CustomFraudEvaluation APIs    |         
 
 *The required number of assessments you should purchase for loss prevention capability is determined by the estimated in-store transactions required to be protected during the billing cycle. Sampling the data before sending it to Fraud Protection for assessment may result in variance between the assessments used metric and the asssessments purchased metric. This is expected because the assessments used metric only counts the number of transactions from the assessed data, and the magnitude of variance depends on the sampling rate. 
-
 For accurate reporting of assessments used and to generate higher quality loss prevention reports, we encourage a sampling rate of 100% (i.e., sharing all transactions that should be protected).
 
 > [!NOTE]
