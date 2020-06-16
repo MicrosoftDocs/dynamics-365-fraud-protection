@@ -53,7 +53,7 @@ For detailed information on integrating with the API, see [Integrate Account Pro
 When you integrate with the API, make sure you use the URI information you provided under the API path in step 4 in the previous section. The payload must include `name: <api name>` where the *API name* should match the name you entered in step 4 above.
 
 > [!NOTE]
-> For a successful completion of the API call, you must have at least one active rule created for the respective assessment. For detailed information on creating rules, see [Rules](rules.md).
+> For a successful completion of the API call, you must have at least one active rule created for the respective assessment. For detailed information on creating rules, see [Manage Rules](rules.md).
 
 ## Edit assessments
 
