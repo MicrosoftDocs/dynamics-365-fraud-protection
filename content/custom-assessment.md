@@ -86,7 +86,7 @@ Note that once you delete an assessment, the rules and scorecard associated with
     The page displays a list of all your current custom assessments.
 
 1. Select the assessment you want to edit and then select **Delete**. 
-1. Select **Delete** again to confirm you want to delete the assessment.
+1. Select **Delete** again to confirm you want to delete the assessment, and then select **Save**.
 
     The changes are effective as soon as they are saved.
 
