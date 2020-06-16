@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about creating and defining custom assessments.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/15/2020
+ms.date: 06/16/2020
 
 ms.topic: conceptual
 search.app: 
@@ -50,11 +50,10 @@ You can quickly create a new custom assessment when you’ve decided on the spec
 
 For detailed information on integrating with the API, see [Integrate Account Protection API](https://go.microsoft.com/fwlink/?linkid=2132829).
 
-When you integrate with the API, make sure you use the URI information you provided under the API path in step 4 in the previous section. The payload must include: 
+When you integrate with the API, make sure you use the URI information you provided under the API path in step 4 in the previous section. The payload must include `name: <api name>` where the *API name* should match the name you entered in step 4 above.
 
-    name: <api name> section
-
-where the *API name* matches the name you entered in step 4 above.
+> [!NOTE]
+> For a successful completion of the API call, you must have at least one active rule created for the respective assessment. For detailed information on creating rules, see [Rules](rules.md).
 
 ## Edit assessments
 
