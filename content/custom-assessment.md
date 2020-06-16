@@ -30,9 +30,9 @@ You can quickly create a new custom assessment when youâ€™ve decided on the spec
 
 #### To create a new assessment:
 
-1.	In the [Fraud Protection]( https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal, select **Custom assessment link** on the left navigation.
+1.	In the [Fraud Protection]( https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal, select **Custom assessments** on the left navigation.
 
-1.	Select **Create assessment**.
+1.	Select **+new assessment**.
 
 1.	Enter a friendly name for the assessment. 
 
@@ -40,17 +40,17 @@ You can quickly create a new custom assessment when youâ€™ve decided on the spec
 
 1.	Enter an API name. 
 
-    This defines the name of the API that you include in the API call to receive assessment decisions in real-time. The API path is automatically populated and displayed when you enter the API name.
+    This is the name of the API that you include in the API call to receive assessment decisions in real-time. As you type, the API name populates the API path and sample payload.
 
 1.	Update the sample payload. 
 
-    As a starting point, the sample payload section is updated with the suggested API schema for an account profile update event. You can edit the payload and add any custom property bag that you include in your API call. This sample payload is used to provide a reference when youâ€™re creating rules after the assessment is created.
+    The sample payload defaults to a suggested schema payload resembling the API schema for an account profile update event. You can edit the payload and add any custom properties that you plan to include in your API calls. This sample payload is used to provide a reference when creating rules for the assessment.
 
 ## Call the custom assessment API
 
-For detailed information on integrating with the API, see [Integrate Account Protection API](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-ap-api).
+For detailed information on integrating with the API, see [Integrate Account Protection API](https://go.microsoft.com/fwlink/?linkid=2132829).
 
-When you integrate with the API, make sure you use the URI information you provided under the API path in step 4 in the previous section.
+When you integrate with the API, make sure you use the URI information you provided under the API path in step 4 in the previous section. The payload must include "name: <api name> section" where the *API name* matches the name you entered in step 4 above.
 
 ## Edit assessments
 
@@ -58,7 +58,7 @@ You can change the name, API name, or the sample payload for an assessment youâ€
 
 #### To edit an assessment:
 
-1.	Select **Custom assessment**.
+1.	Select **Custom assessments**.
 
     All your current custom assessments are listed on this page.
 
@@ -68,6 +68,22 @@ You can change the name, API name, or the sample payload for an assessment youâ€
 1.	Make the required changes and then select **Save**. 
 
     The changes are effective as soon as they are saved. If you've made changes to the API name, we recommend that you pause the API calls, make the changes on the Fraud Protection portal, and then restart the API call with the changes incorporated in the API payload.
+
+## Delete assessments
+
+Currently you can create up to 3 distinct assessments under custom assessments. If your business priorities or user scenarios have changed and you no longer want to use an assessment you've created , you can delete it.
+
+Note that once you delete an assessment, the rules and scorecard associated with that assessment will be deleted and cannot be revoked. If you continue to make an API call with the deleted assessment name, the API will not resolve and will result in failure.
+
+**** To delete an assessment:
+
+1.	Select **Custom assessments**.
+
+  A list of all your current custom assessments display on this page.
+
+1.	Select the assessment you want to edit and then select **Delete**, and then select **Delete** again to confirm you want to delete the assessment.
+
+  The changes are effective as soon as they are saved.
 
 ## Related topics
 
