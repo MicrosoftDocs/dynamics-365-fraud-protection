@@ -50,7 +50,11 @@ You can quickly create a new custom assessment when you’ve decided on the spec
 
 For detailed information on integrating with the API, see [Integrate Account Protection API](https://go.microsoft.com/fwlink/?linkid=2132829).
 
-When you integrate with the API, make sure you use the URI information you provided under the API path in step 4 in the previous section. The payload must include "name: <api name> section" where the *API name* matches the name you entered in step 4 above.
+When you integrate with the API, make sure you use the URI information you provided under the API path in step 4 in the previous section. The payload must include 
+
+    name: <api name> section
+
+where the *API name* matches the name you entered in step 4 above.
 
 ## Edit assessments
 
