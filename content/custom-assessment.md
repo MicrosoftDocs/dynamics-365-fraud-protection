@@ -57,7 +57,10 @@ When you integrate with the API, make sure you use the URI information you provi
 
 ## Edit assessments
 
-You can change the name, API name, or the sample payload for an assessment you’ve created at any time. Note that if you change the API name, you must also make the same change in all your API calls, otherwise the API call will be unable to resolve and will fail. Any changes made to the sample payload are reflected in the rules created after the change is saved. 
+You can change the name, API name, or the sample payload for an assessment you’ve created at any time. Any changes made to the sample payload are reflected in the rules created after the change is saved. 
+
+> [!NOTE]
+> If you change the API name, you must also make the same change in all your API calls, otherwise the API call will be unable to resolve and will fail. 
 
 #### To edit an assessment:
 
