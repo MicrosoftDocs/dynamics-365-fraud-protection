@@ -92,8 +92,8 @@ Here is a list of compliance certificate URLs related to Dynamics 365  Fraud Pro
 |Does the application / service collect or provide the following data: audit logs of user actions (document or content Create / Read / Update / Delete)       |N/A.  Only the admin role is supported.             |
 |Does the application / service collect or provide the following data: audit logs of metadata actions (Create / Read / Update / Delete).       |Yes.  Audit history of key changes such as list and rule updates are maintained.             |
 |Can Microsoft provide audit trails on any activities performed on PII.        |The only PII is in the audit history of rule and list changes.  This is read-only and cannot be modified.               |
-|Does Microsoft have the ability to store logs and encrypt at rest?          |Logs are maintained per standard Microsoft Azure Online Services policy.             |
-|Does the Microsoft have procedures in place to detect, report and alert on the downtime of the Customer instance within a reasonable time frame if the instance is down?     |Yes, we have advanced monitoring and alerting capabilities in place.            |
+|Does Microsoft have the ability to store logs and encrypted data at rest?          |Logs are maintained per standard Microsoft Azure Online Services policy.             |
+|Does Microsoft have procedures in place to detect, report, and alert on the downtime of the Customer instance within a reasonable time frame if the instance is down?     |Yes, we have advanced monitoring and alerting capabilities in place.            |
 |  What information is provided to customer to validate the negotiated SLA?       |As a customer, you can make a server-to-server call to the service and be able to monitor SLA directly.             |
 |  How is this notification reported to me as a customer?       |No proactive or auto downtime notification is in place. It's currently part of the roadmap. Customers are notified of ny incidents discovered via alerting through the standard communications channel.             |
 
@@ -122,8 +122,7 @@ Here is a list of compliance certificate URLs related to Dynamics 365  Fraud Pro
 |Can the application be limited to allow traffic only from trusted networks?         |It cannot be limited through the user interface; however, it is possible to do it with a manual configuration.             |
 |Does the application have traffic reporting and the ability to alert on normal traffic?         |Yes, through internal alerting and monitoring. For more information, see [API call monitoring](https://docs.microsoft.com/dynamics365/fraud-protection/monitoring).       |
 |If the infrastructure does not support encryption at rest by default, does the application / service provide the ability to store data at rest in an encrypted format?         |All data is encrypted at rest. For more information see [Data encryption in Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/database-encryption-at-rest).   |
-|Does the system have general retention schedule, which means the data is purged after a period?          |Yes, refer to the OST guidelines for more information.             |
-
+|Does the system have general retention schedule, which means the data is purged after a period?             |Yes, refer to the OST guidelines for more information.               |
 
 
 ### Governance
@@ -131,7 +130,7 @@ Here is a list of compliance certificate URLs related to Dynamics 365  Fraud Pro
 | Question| Response    |
 |---------|-------------|
 |Do you have a well-defined security program? Provide a brief description. |Yes, see [the Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).       |
-|Does Microsoft have established information security policies?  |Yes, visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers) for more information.             |
+|Does Microsoft have established information security policies?  |Yes, see [the Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).             |
 |Does Microsoft have a third-party audit report for datacenter security and policies?  |Yes, visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers) for more information.             |
 |Furnish a copy of the report (i.e., SSAE 16 SOC 2, SAS70 Type II, etc.).  |Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).          |
 |Has the application / service performed the Cloud Security Alliance Cloud Controls Matrix (CCM) self-assessment?         |Yes.             |
