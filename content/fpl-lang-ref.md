@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic is a language guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/11/2020
+ms.date: 06/17/2020
 
 ms.topic: conceptual
 search.app: 
@@ -278,7 +278,7 @@ The **Lookup** operator always returns a *String* value. To convert this value t
 
 Variable types are inferred from the context that they are used in. Here are some examples:
 
-- In the expression **WHEN @isEmailValidated**, the variable is interpreted as a *Boolean* value.
+- In the expression **WHEN \@isEmailValidated**, the variable is interpreted as a *Boolean* value.
 - In the expression **@"riskScore" \> 500**, the variable is interpreted as a *Double* value.
 - In the expression **@"user.creationDate".Year \< DateTime.UtcNow.Year**, the variable is interpreted as a *DateTime* value.
 
