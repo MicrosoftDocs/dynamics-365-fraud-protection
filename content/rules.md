@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/11/2020
+ms.date: 06/17/2020
 
 ms.topic: conceptual
 search.app: 
@@ -48,7 +48,7 @@ You can view the following information for each rule or draft:
 
 ### Payload settings
 
-You can access payload settings from the command menu on the **Rules** page. In the **Payload settings** pane, you can define the sample payload for the assessment type. The sample payload is intended to contain an example of the fields that will be sent in the request API for the assessment and can be used in your rule.
+You can access payload settings from the **Rules** page. In the **Payload settings** pane, you can define the sample payload for the assessment type. The sample payload is intended to contain an example of the fields that will be sent in the request API for the assessment and can be used in your rule.
 
 In the API request, you might choose not to send optional fields from the assessment schema. Alternatively, you might choose to send additional custom fields. In both cases, be sure to update the payload sample that is shown in the **Payload settings** pane, so that it reflects the specific fields that you're sending.
 
@@ -84,7 +84,7 @@ When you first create a rule, before it's published, the status is set to **Draf
 
 When you publish a rule, you can set the status to either **Active** or **Inactive**.
 
-- If a rule is active, it affects real-time production traffic, and all events of this type are evaluated against the rule.
+- If a rule is active, it affects real-time production traffic, and all events are evaluated against the rule.
 - If a rule is inactive, it doesn't affect production traffic.
 
 When you edit a previously published rule, the rule is saved with a status of either **Active (with Draft)** or **Inactive (with Draft)**, depending on the status of the published rule.
@@ -130,8 +130,8 @@ Clauses contain the fraud logic and business policies that are relevant to the s
 Clauses have the following basic structure.
 
 ```ruleslanguage
-RETURN *decision* 
-WHEN *condition is true*
+RETURN <decision> 
+WHEN <condition is true>
 ```
 
 You can use this structure to create a clause that returns a decision of **Approve**, **Reject**, **Challenge**, or **Review**. You can then add optional parameters that send more information about the decision.
@@ -288,7 +288,7 @@ When you edit a rule that has been published, Fraud Protection saves your change
 
     The **Draft** tab and the **Published** tab appear.
 
-1. Select **Draft**, and then make your changes to the rule.
+1. Select the **Draft** tab, and then make your changes to the rule.
 
     Fraud protection automatically saves all changes that you make to the rule.
 
@@ -333,7 +333,7 @@ Because published rules appear on the **Rules** page in the order that they are 
     Select the **Esc** key to return the tile to its original position.
 
 1. Repeat step 1 for many other tiles as you want to move, and then select **Save order**.
-1. To save your changes, select **Save order**. 
+1. To confirm your changes, select **Save order** again. 
 
     To cancel your changes, select **Cancel re-ordering**.
 
@@ -358,8 +358,8 @@ If the payload sample doesn't match the condition, the rule isn't evaluated. If 
 Create a rule that has the following three clauses.
 
 ```ruleslanguage
-`// Approves when email from contoso domain has been validated`<br>
-`RETURN Approve()`<br>
+`// Approves when email from contoso domain has been validated`
+`RETURN Approve()`
 `WHEN @"email.isEmailValidated" == true && @"email.emailValue".EndsWith("@contoso.com")`
 ```
 
