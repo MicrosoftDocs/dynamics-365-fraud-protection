@@ -35,10 +35,6 @@ Fraud Production has released an all-new rules experience that allows merchants 
 
 In addition to payload values and AI-based scores, rules can also leverage custom lists which merchants can create to manage data specific to their needs or fraud protection strategy.
 
-### Rules drafts
-
-The rules experience is extended so users can save changes to their rules as drafts before committing them to production.
-
 #### Expanded coverage for transaction acceptance booster
 
 The transaction acceptance booster feature has enabled the sharing of transaction trust knowledge with selected partner banks to help increase the acceptance rate and reduce fraud. In this release, more banks are added to the partner network. This change increases the market coverage and enables merchants to boost the acceptance rate on more transactions in the US and other countries and regions.
@@ -71,6 +67,10 @@ Microsoft understands the importance of including these types of business-specif
 ### Mobile reference implementation 
 
 Mobile device fingerprinting capability is a new addition to Fraud Protection's device fingerprinting capability. Merchants can now use this capability to enable device fingerprinting on their mobile applications. With the help of this reference implementation, developers and customers can learn to enable device fingerprinting capabilities in their mobile applications. 
+
+### Rules drafts
+
+The rules experience is extended so users can save changes to their rules as drafts before committing them to production.
 
 ### Additional language support
 
