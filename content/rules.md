@@ -364,14 +364,14 @@ Create a rule that has the following three clauses.
 ```
 
 ```ruleslanguage
-`// Rejects when email has not been validated and high risk score`<br>
-`RETURN Reject()`<br>
+`// Rejects when email has not been validated and high risk score`
+`RETURN Reject()`
 `WHEN @"email.isEmailValidated" == false && @"riskscore" > 700`
 ```
 
 ```ruleslanguage
-`// Reviews when email has not been validated and medium risk score`<br>
-`RETURN Review()`<br>
+`// Reviews when email has not been validated and medium risk score`
+`RETURN Review()`
 `WHEN @"email.isEmailValidated" == false && @"riskscore" > 400`
 ```
 
