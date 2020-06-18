@@ -39,6 +39,8 @@ The **Assessments used** metric reflects your usage of Fraud Protection. The fol
 
 \* The number of assessments that you should purchase for the loss prevention capability is determined by the estimated number of in-store transactions that must be protected during the billing cycle. If the data is sampled before it's sent to Fraud Protection for assessment, variance can occur between the **Assessments used** metric and the **Assessments purchased** metric. This result is expected, because the **Assessments used** metric counts the number of transactions from the assessed data only, and the magnitude of the variance depends on the sampling rate. For accurate reporting of the assessments that have been used, and to generate higher-quality loss prevention reports, we recommend that you use a sampling rate of 100 percent. In other words, we recommend that you share all transactions that should be protected.
 
+### Accumulated consumption % metric
+
 The **Accumulated Consumption %** metric shows the ratio of the total number of assessments that have been used to the total number of assessments that have been purchased since the start of a billing cycle, and resets to 0% at the beginning of a new billing cycle. 
 
 > [!NOTE]
