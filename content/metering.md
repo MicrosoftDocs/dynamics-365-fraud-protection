@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to meter your usage of Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/15/2020
+ms.date: 06/18/2020
 
 
 ms.topic: conceptual
@@ -40,7 +40,7 @@ The **Assessments used** metric reflects your usage of Fraud Protection. The fol
 \* The number of assessments that you should purchase for the loss prevention capability is determined by the estimated number of in-store transactions that must be protected during the billing cycle. If the data is sampled before it's sent to Fraud Protection for assessment, variance can occur between the **Assessments used** metric and the **Assessments purchased** metric. This result is expected, because the **Assessments used** metric counts the number of transactions from the assessed data only, and the magnitude of the variance depends on the sampling rate. For accurate reporting of the assessments that have been used, and to generate higher-quality loss prevention reports, we recommend that you use a sampling rate of 100 percent. In other words, we recommend that you share all transactions that should be protected.
 
 > [!NOTE]
-> The **Accumulated Consumption %** metric shows the ratio of the total number of assessments that have been used to the total number of assessments that have been purchased since the start of a billing cycle. Billing arrangements are made via your Microsoft Account Executive or Microsoft Cloud Solution Provider partner. You will receive notifications from them if your accumulated consumption approaches 100 percent before the end of the current billing cycle. Therefore, you will have an opportunity to adjust your subscription as required.
+> The **Accumulated Consumption %** metric shows the ratio of the total number of assessments that have been used to the total number of assessments that have been purchased since the start of a billing cycle, and resets to 0% at the beginning of a new billing cycle. Billing arrangements are made via your Microsoft Account Executive or Microsoft Cloud Solution Provider partner. You will receive notifications from them if your accumulated consumption approaches 100 percent before the end of the current billing cycle. Therefore, you will have an opportunity to adjust your subscription as required.
 
 ## Additional notes about assessment usage and metering
 
