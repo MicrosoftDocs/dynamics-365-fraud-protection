@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about custom assessments, and explains how to create and define them.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/16/2020
+ms.date: 06/17/2020
 
 ms.topic: conceptual
 search.app: 
@@ -26,7 +26,7 @@ Microsoft understands the importance of including these types of business-specif
 
 When you've determined the specific *event* that you want to assess and the *data* that you want to include, you can quickly create a new custom assessment in the API. 
 
-1. In the [Fraud Protection](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal, in the left navigation, select **Custom assessments**.
+1. In the [Fraud Protection](https://dfp.microsoft.com/) portal, in the left navigation, select **Custom assessments**.
 1. Select **New assessment**.
 1. Enter a friendly name for the assessment.
 
@@ -56,13 +56,13 @@ At any time, you can change the name, API name, or sample payload for an assessm
 > [!NOTE]
 > If you change the API name, you must make the same change in all your API calls. Otherwise, the API calls can't be resolved and will fail.
 
-1. In the [Fraud Protection](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal, in the left navigation, select **Custom assessments**.
+1. In the [Fraud Protection](https://dfp.microsoft.com/) portal, in the left navigation, select **Custom assessments**.
 
     All your current custom assessments are listed.
 
 1. Select the assessment to edit, and then select **Edit**.
 
-    The **Edit assessment** window appears.
+    The **Edit assessment** page appears.
 
 1. Make the required changes, and then select **Save**.
 
@@ -75,7 +75,7 @@ Currently, you can create up to three distinct assessments under custom assessme
 > [!NOTE]
 > If you delete an assessment, the rules and scorecard that are associated with it are also deleted and can't be restored. If you continue to make API calls that use the name of the deleted assessment, the API calls can't be resolved and will fail.
 
-1. In the [Fraud Protection](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal, in the left navigation, select **Custom assessments**.
+1. In the [Fraud Protection](https://dfp.microsoft.com/) portal, in the left navigation, select **Custom assessments**.
 
     All your current custom assessments are listed.
 
