@@ -20,20 +20,24 @@ title: What’s new in Dynamics 365 Fraud Protection July 2020 release
 ## Summary of changes
 
 ### May INT (only) features available in both INT and PROD
-In our May release we only updated features in INT, however for July both PROD and INT are both updated to be in parity. Features from our Mary release are now available in PROD.
+In our May release we only updated features in INT, however for July both PROD and INT are updated to be in parity. Features from our May release are now available in PROD.
                 
 #### Extend and tailor merchant purchase ontology 
 There are several cases where a merchant may need capabilities beyond the core features that Microsoft Dynamics 365 Fraud Protection provides. When merchants extend the base ontology with custom knowledge in the marquee scenarios of payment fraud and account takeover, they may want to use specialized data beyond the base ontology of Fraud Protection to help improve the fraud protection capability of the product. For example, for airline ticket purchases, the seat class may be an important attribute to consider. 
 
-Furthermore, customers may have niche fraud protection scenarios, for example, refunds, loyalty programs, and warranty programs; each of which has its own set of relevant data. Merchants are now able to bring specialized data into the product by extending the ontology as needed. 
+Furthermore, customers may have niche fraud protection scenarios, for example, refunds, loyalty programs, and warranty programs; each of which has its own set of relevant data. Merchants can now bring specialized data into the product by extending the ontology as needed. 
 
-Merchants can now define custom rules. Custom knowledge can be used to create and update the configuration of model operating points by using specialized data. These model operating points can consume the full spectrum of available knowledge to produce decisions for each type of event.
+Merchants can also define custom rules, using custom knowledge to create and update the configuration of model operating points by using specialized data. These model operating points can use the full spectrum of available knowledge to produce decisions for each type of event.
 
 #### More powerful rules and lists capabilities
 
-Fraud Production has released an all-new rules experience, allowing merchants to express their augmented custom fraud logic in a rich and expressive language. This language was designed to give merchants the power and flexibility they need to customize their fraud strategy and enforce their unique fraud business policies. The language is coupled with assistive technologies including reusable lists, rich intellisense, highlighting, real-time debugging, as well as commonly used templates to help merchants get started. 
+Fraud Production has released an all-new rules experience that allows merchants to express their augmented custom fraud logic in a rich and expressive language. This language is designed to give merchants the power and flexibility they need to customize their fraud strategy and enforce their unique fraud business policies. The language is coupled with assistive technologies including reusable lists, rich intellisense, highlighting, real-time debugging, and commonly used templates which help merchants get started. 
 
 In addition to payload values and AI-based scores, rules can also leverage custom lists which merchants can create to manage data specific to their needs or fraud protection strategy.
+
+### Rules drafts
+
+The rules experience is extended so users can save changes to their rules as drafts before committing them to production.
 
 #### Expanded coverage for transaction acceptance booster
 
@@ -41,7 +45,7 @@ The transaction acceptance booster feature has enabled the sharing of transactio
 
 ### Loss prevention 
 
-In Fraud Protection, the loss prevention capability is a cloud-based solution that helps protect revenue by identifying potential fraud on returns and discounts that arise from omni-channel purchases. This enables store managers and investigators to quickly take action to mitigate losses. 
+The loss prevention capability in Fraud Protection is a cloud-based solution that helps protect revenue by identifying potential fraud on returns and discounts that arise from omni-channel purchases. This enables store managers and investigators to quickly take action to mitigate losses. 
 
 To integrate loss prevention capability with Dynamics 365 Commerce (Commerce), perform the following steps:
 -	Enable the Azure Data Lake Storage (ADLS) service for the Commerce environment.
@@ -60,18 +64,14 @@ Merchants can also use the Event Hubs connectors that are available in Power Aut
 
 ### Custom assessments
 
-Effective fraud management is a multi-tier strategy. To maximize fraud detection and minimize customer friction, merchants must assess interactions at various phases of a user's journey, and decide whether the user should be allowed to continue, should be challenged, or should be blocked. Every business is different, and so are the associated user interactions that transmit signals about potential fraud. For example, profile updates, such as changes to a user's address or payment information, may be a key event for an e-commerce business. Other examples of user interactions that may be key events, depending on the business model, include submission of reviews, updates of seat preferences on a travel site, the addition of family and friends on a subscription or gaming service, and submission of a service support ticket or a complaint.
+Effective fraud management is a multi-tier strategy. To maximize fraud detection and minimize customer friction, merchants must assess interactions at various phases of a user's journey, and decide whether the user should be allowed to continue, should be challenged, or should be blocked. Every business is different, and so are the associated user interactions that transmit signals about potential fraud. For example, profile updates, such as changes to a user's address or payment information, may be a key event for an e-commerce business. Depending on the business model, other examples of user interactions that may be key events include submission of reviews, updates of seat preferences on a travel site, the addition of family and friends on a subscription or gaming service, and submission of a service support ticket or a complaint.
 
 Microsoft understands the importance of including these types of business-specific events to help merchants with their overall fraud management strategy. Therefore, Fraud Protection now enables merchants to add custom assessments in addition to common assessment events, for example, account creation, account login, and purchase protection events. Merchants can create and define a custom assessment, including its name, the API path, and a payload that is appropriate to the specific event. They can then configure rules that the assessment uses to return a decision, such as *Approve*, *Reject*, *Review*, or *Challenge*.
 
 ### Mobile reference implementation 
 
-Mobile Device fingerprinting capability is a new addition in device fingerprinting capability in Fraud Protection. Merchants can now use this capability to enable device fingerprinting on their mobile applications. With the help of this reference implementation   developers and customers can learn to enable device fingerprinting capabilities in their mobile applications. 
+Mobile device fingerprinting capability is a new addition to Fraud Protection's device fingerprinting capability. Merchants can now use this capability to enable device fingerprinting on their mobile applications. With the help of this reference implementation, developers and customers can learn to enable device fingerprinting capabilities in their mobile applications. 
 
-### Rules Drafts
-
-The rules experience is extended so users can save their changes to rules as drafts before committing them to production.
-
-### Additional Language Support
+### Additional language support
 
 Fraud Protection is now available in 7 languages: English, French, German, Brazilian Portuguese, Italian, Spanish, and Dutch.
