@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains the global availability of Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/12/2020
+ms.date: 06/18/2020
 
 ms.topic: conceptual
 search.app: 
@@ -17,7 +17,7 @@ title: Regional availability
 
 # Regional availability
 
-Microsoft Dynamics 365 Fraud Protection provides English, French, German, Brazilian Portuguese, Italian, Spanish, Danish, and Dutch languages and is currently supported in the following regions. 
+Microsoft Dynamics 365 Fraud Protection provides English, French, German, Brazilian Portuguese, Italian, Spanish, and Dutch languages and is currently supported in the following regions. 
 - US 
 - Canada
 - Western Europe (excluding Switzerland) 
