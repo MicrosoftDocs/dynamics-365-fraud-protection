@@ -22,8 +22,8 @@ title: What’s new in Dynamics 365 Fraud Protection July 2020 release
 ### May INT (only) features available in both INT and PROD
 In our May release we only updated features in INT, however for July both PROD and INT are both updated to be in parity. Features from our Mary release are now available in PROD.
                 
-#### Extend and tailor Merchant Purchase Ontology 
-There are several cases where a merchant might need capabilities beyond the core features that Microsoft Dynamics 365 Fraud Protection provides. When merchants extend the base ontology with custom knowledge in the marquee scenarios of payment fraud and account takeover, they may want to use specialized data beyond the base ontology of Fraud Protection to help improve the fraud protection capability of the product. For example, for airline ticket purchases, the seat class may be an important attribute to consider. 
+#### Extend and tailor merchant purchase ontology 
+There are several cases where a merchant may need capabilities beyond the core features that Microsoft Dynamics 365 Fraud Protection provides. When merchants extend the base ontology with custom knowledge in the marquee scenarios of payment fraud and account takeover, they may want to use specialized data beyond the base ontology of Fraud Protection to help improve the fraud protection capability of the product. For example, for airline ticket purchases, the seat class may be an important attribute to consider. 
 
 Furthermore, customers may have niche fraud protection scenarios, for example, refunds, loyalty programs, and warranty programs; each of which has its own set of relevant data. Merchants are now able to bring specialized data into the product by extending the ontology as needed. 
 
@@ -37,27 +37,41 @@ In addition to payload values and AI-based scores, rules can also leverage custo
 
 #### Expanded coverage for transaction acceptance booster
 
-The transaction acceptance booster feature has enabled sharing of transaction trust knowledge with selected partner banks to help increase the acceptance rate and reduce fraud. In this release, more banks will be added to the partner network. This change will increase the market coverage and enable merchants to boost the acceptance rate on more transactions in the US and other countries and regions.
+The transaction acceptance booster feature has enabled the sharing of transaction trust knowledge with selected partner banks to help increase the acceptance rate and reduce fraud. In this release, more banks are added to the partner network. This change increases the market coverage and enables merchants to boost the acceptance rate on more transactions in the US and other countries and regions.
 
-### Loss Prevention 
-In Microsoft Dynamics 365 Fraud Protection, the loss prevention capability is a cloud-based solution that helps protect revenue by identifying potential fraud on returns and discounts arising from omni-channel purchases, enabling store managers and investigators to quickly take action to mitigate losses. To integrate loss prevention capability with Dynamics 365 Commerce (Commerce), perform the following steps:
+### Loss prevention 
+
+In Fraud Protection, the loss prevention capability is a cloud-based solution that helps protect revenue by identifying potential fraud on returns and discounts that arise from omni-channel purchases. This enables store managers and investigators to quickly take action to mitigate losses. 
+
+To integrate loss prevention capability with Dynamics 365 Commerce (Commerce), perform the following steps:
 -	Enable the Azure Data Lake Storage (ADLS) service for the Commerce environment.
 -	Enable loss prevention in the Commerce environment.
 -	Add a service account and subscribe to Fraud Protection in the Commerce environment.
 -	Configure loss prevention settings in Fraud Protection.
 
-### Event Tracing 
-Event tracing establishes a real-time telemetry platform that is extensible and operational outside of the portal. Each event is either scheduled or triggered by a user/system-level action and forwarded to your own Azure Event Hubs. Events can be aggregated and used to define metrics to monitor and manage your service costs and utilization. They can also be used to maintain system logs on actions taken in the portal (i.e. rules/lists editing) or develop custom reports using Azure Stream Analytics and Power BI. Events can also be consumed using Event Hubs connectors available in Power Automate and Logic Apps to develop alerts or highly customized workflows.
+### Event tracing 
 
-### Custom Assessments
-Effective fraud management is a multi-tier strategy. To maximize fraud detection and minimize customer friction, you must assess interactions at various phases of a user's journey, and decide whether the user should be allowed to continue, should be challenged, or should be blocked. Every business is different, and so are the associated user interactions that transmit signals about potential fraud. For example, profile updates, such as changes to a user's address or payment information, might be a key event for an e-commerce business. Other examples of user interactions that might be key events, depending on the business model, include submission of reviews, updates of seat preferences on a travel site, the addition of family and friends on a subscription or gaming service, and submission of a service support ticket or a complaint.
-Microsoft understands the importance of including these types of business-specific events to help you with your overall fraud management strategy. Therefore, Microsoft Dynamics 365 Fraud Protection now lets you add custom assessments in addition to the common assessment events, such as account creation, account login, and purchase protection events. You can create and define a custom assessment, including its name, the API path, and a payload that is appropriate to the specific event. You can then configure rules that the assessment uses to return a decision, such as Approve, Reject, Review, or Challenge.
+The event tracing functionality enables merchants to  establish a real-time telemetry platform that is extensible and operational outside the portal. Each event is either scheduled or triggered by a user-level or system-level action and forwarded to the merchant's Azure Event Hubs. 
 
-### Mobile Reference Implementation 
-Mobile Device fingerprinting capability is a new addition in device fingerprinting capability in Dynamics 365 Fraud Protection. Merchants can now take the advantage of using this to enable device fingerprinting on their mobile applications. With the help of this reference Implementation   developers/customers can  learn and enable device fingerprinting capabilities in their mobile applications. 
+Events can be aggregated and used to define metrics that merchants can use to monitor and manage service costs and utilization. 
+They can also be used to maintain system logs on actions that are taken in the Fraud Protection portal (for example, to edit rules and lists) or to develop custom reports using Azure Stream Analytics and Microsoft Power BI. 
+
+Merchants can also use the Event Hubs connectors that are available in Power Automate and Logic Apps to use the data they send to Event Hubs to develop alerting or highly customized workflows.
+
+### Custom assessments
+
+Effective fraud management is a multi-tier strategy. To maximize fraud detection and minimize customer friction, merchants must assess interactions at various phases of a user's journey, and decide whether the user should be allowed to continue, should be challenged, or should be blocked. Every business is different, and so are the associated user interactions that transmit signals about potential fraud. For example, profile updates, such as changes to a user's address or payment information, may be a key event for an e-commerce business. Other examples of user interactions that may be key events, depending on the business model, include submission of reviews, updates of seat preferences on a travel site, the addition of family and friends on a subscription or gaming service, and submission of a service support ticket or a complaint.
+
+Microsoft understands the importance of including these types of business-specific events to help merchants with their overall fraud management strategy. Therefore, Fraud Protection now enables merchants to add custom assessments in addition to common assessment events, for example, account creation, account login, and purchase protection events. Merchants can create and define a custom assessment, including its name, the API path, and a payload that is appropriate to the specific event. They can then configure rules that the assessment uses to return a decision, such as *Approve*, *Reject*, *Review*, or *Challenge*.
+
+### Mobile reference implementation 
+
+Mobile Device fingerprinting capability is a new addition in device fingerprinting capability in Fraud Protection. Merchants can now use this capability to enable device fingerprinting on their mobile applications. With the help of this reference implementation   developers and customers can learn to enable device fingerprinting capabilities in their mobile applications. 
 
 ### Rules Drafts
-The rules experience is extended so Users can now save their changes to rules as Drafts, before committing them to production.
+
+The rules experience is extended so users can save their changes to rules as drafts before committing them to production.
 
 ### Additional Language Support
-Dynamics 365 Fraud Protection is now available in 8 languages: English, French, German, Brazilian Portuguese, Italian, Spanish, and Dutch
+
+Fraud Protection is now available in 7 languages: English, French, German, Brazilian Portuguese, Italian, Spanish, and Dutch.
