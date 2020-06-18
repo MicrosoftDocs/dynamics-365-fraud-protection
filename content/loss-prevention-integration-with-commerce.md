@@ -42,14 +42,14 @@ Next, you must add a service account by registering the application ID for Fraud
 1. Select **Finance and Operations Preview**, and then select **Azure Active Directory applications**.
 1. To create a new first-party app identity for Fraud Protection, select **New**.
 1. In the **Client ID** field, enter **bf04bdab-e06f-44f3-9821-d3af64fc93a9**.
-1. Assign the **User Id** to **RetailServiceAccount**.
+1. In the **RetailServiceAccount** field, enter the user ID.
 
 ## Configure loss prevention settings in Fraud Protection
 
 The next step is to configure the settings so that the loss prevention capability can connect to Azure Data Lake Storage in the Commerce environment.
 
-1. Go to the [Fraud Protection](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fdfp.microsoft.com%2F&data=02%7C01%7Cv-madeq%40microsoft.com%7C86e8b55e29fd42e1c32508d806c77c4c%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637266801155879313&sdata=ildJrF5HjZLm3iUmRDEkA09BCEtiTvGDMhRJIglVFB8%3D&reserved=0) portal, and sign in.
-1. To connect to the Finance and Operations environment, select **Connect to data**.
+1. Go to the [Fraud Protection](https://dfp.microsoft.com/) portal, and sign in.
+1. To connect to the Commerce environment, select **Connect to data**.
 1. In the **Connect to Dynamics 365 Commerce** dialog box, enter the URL of the Commerce environment.
 
     The URL is stored in the Backend Configuration service for your Fraud Protection environment.
