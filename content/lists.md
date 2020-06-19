@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use lists.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/04/2020
+ms.date: 06/10/2020
 
 ms.topic: conceptual
 search.app: 
@@ -15,16 +15,12 @@ title: Manage lists
 ---
 # Manage lists
 
-[!include [banner](includes/5-4-banner.md)]
-
 ## Overview
 
 Lists help you manage information that you use to fight fraud and enforce business policies. For example, you can create a list to track payment instruments that you consider risky or user email addresses that you consider safe. You can then upload the list as a comma-separated values (CSV) file and then reference it in a [rule](rules.md) to help automate decisions.
 
 The **Lists** page has a separate tab for each of the two types of list that you can create: **Custom lists** and **Support lists**.
 
-> [!NOTE]
-> You can't view or create lists in the INT environment. You must use the PROD environment.
 
 ### Custom lists
 
@@ -141,10 +137,11 @@ To update the description of a custom list in Fraud Protection, follow these ste
 
 ## Delete a list
 
-When you delete a list, any rules that use it will no longer work.
+- To delete a list, select the list, and then select **Delete**.
+- To delete multiple lists, select the lists you want to remove, and then select **Delete**.
 
-- To delete a list, select it, and then select **Delete**.
-- To delete multiple lists, select them, and then select **Delete**.
+> [!NOTE]
+> Lists which are referenced in rules cannot be deleted.
 
 ## Download a list
 

@@ -1,10 +1,10 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/14/2020
+ms.date: 05/20/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -42,35 +42,48 @@ Visit the portal for each environment you intend to use, sign in, and accept the
 > [!IMPORTANT]
 > You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
 
-To acquire the tokens required to call the APIs, you will need to utilize Azure Active Directory (Azure AD) applications. You can configure these by using the **Real-time APIs** page in Dynamics 365 Fraud Protection.
+To acquire the tokens required to call the APIs, you must use Azure Active Directory (Azure AD) applications. You can configure these by applications using the **Real-time APIs** page in Microsoft Dynamics 365 Fraud Protection.
 
-Select **Configuration** in the left navigation pane, and then select **Real-time APIs**. Complete the form to create your app. We recommend creating one Azure AD application for each environment that you operate. 
+#### To configure Azure AD applications:
 
-The following fields are required: 
-- **Application display name** - Give your application a descriptive name. Maximum length is 93 characters. 
-- **Environment** - Choose whether this application should call your production or integration (sandbox) endpoint. 
-- **Authentication method** - Choose whether you would like to authenticate via certificate or a secret (password). For the certificate method, use the **Choose file** button to upload the public key. You will need the matching private key when you acquire tokens. If you select the **Secret** method, a password will be generated for you after application creation.
+1. Select **Configuration** in the left navigation pane, and then select **Real-time APIs**. 
+1. Complete the form to create your app. We recommend creating one Azure AD application for each environment that you operate. 
 
-When you finish filling in the fields, select **Create application**. The confirmation screen summarizes your app's name, ID, and the certificate thumbprint or secret, depending on your authentication method. 
+   The following fields are required: 
+    - **Application display name** - Give your application a descriptive name. Maximum length is 93 characters. 
+    - **Environment** - Choose whether this application should call your production or integration (sandbox) endpoint. 
+    - **Authentication method** - Choose whether you would like to authenticate via certificate or a secret (password). 
+
+1. For the certificate method, select: 
+    1. **Choose file** to upload the public key. (The matching private key is required when you acquire tokens.) 
+    1. **Secret** to automatically generate a password after the application has been created.
+
+1. When you finish filling in the fields, select **Create application**. 
+
+  The confirmation screen summarizes your app's name, ID, and the certificate thumbprint or secret, depending on your authentication method. 
 
 > [!IMPORTANT]
 > Please save your secret or certificate thumbprint information for future reference. The secret will only be displayed once.
 
-To create an additional application, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
+#### To create an additional application:
+
+- Select **Create another application**. 
+
+You can create as many apps as necessary to run API calls in each of your environments. 
 
 ### Manage existing Azure AD applications 
-After you have created your Azure AD apps, you can manage them through the <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank">Azure portal</a>. You can learn more from the <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-how-applications-are-added" target="_blank">Azure documentation site</a>. 
+After you create your Azure AD apps, you can manage them through the <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank">Azure portal</a>. For more information, see <a href="https://docs.microsoft.com/azure/active-directory/develop/active-directory-how-applications-are-added" target="_blank">Azure documentation site</a>. 
 
 ### Manually configure Azure AD applications
-If you would like to set up your applications directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md).
+To set up your applications directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md).
 
 ## Call the Dynamics 365 Fraud Protection real-time APIs 
-To integrate your systems with Dynamics 365 Fraud Protection, follow these steps.
+To integrate your systems with Dynamics 365 Fraud Protection, complete the following sections.
 
 ### Required IDs and information
 - **Environment URI** - The URIs for your sandbox or production environment appear on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard.
 - **Directory (tenant) ID** - The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard. 
-- **Application (client) ID** - This identifies the Azure AD app you created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
+- **Application (client) ID** - This identifies the Azure AD app you've created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen.
 
 ### Generate an access token
@@ -104,7 +117,7 @@ public async Task<string> AcquireTokenWithSecretAsync()
 ```
 
 
-Behind the scenes, the code above generates an HTTP request and receives a response like the following.
+Behind the scenes, the code above generates an HTTP request and receives a response similar to the following.
 
 **Response**
 ```http
