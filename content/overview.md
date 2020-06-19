@@ -3,7 +3,7 @@ author: yvonnedeq
 description: Fraud Protection overview
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/18/2020
+ms.date: 07/1/2020
 
 ms.topic: conceptual
 search.app: 
@@ -35,7 +35,7 @@ By using Fraud Protection, you can help protect your business from fraud through
 
 - [AI and insights from the fraud protection network](fraud-protection-network.md)
 - [Device fingerprinting](device-fingerprinting.md)
-- A [rules engine](lists-rules.md) and [virtual fraud analyst](virtual-fraud-analyst.md)
+- A [rules engine](rules.md) and [virtual fraud analyst](virtual-fraud-analyst.md)
 - A [graph explorer](graph-explorer.md) and [scorecard](scorecard.md)
 - A [transaction acceptance booster](transaction-acceptance-booster.md)
 

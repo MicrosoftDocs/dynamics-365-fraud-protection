@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains the scorecard capability of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/10/2020
+ms.date: 07/01/2020
 
 ms.topic: conceptual
 search.app: 
@@ -57,7 +57,7 @@ The **Risk decision** section shows metrics from the automated decision rules th
 - **Rule decision trend** – The **Rule decision trend** chart shows the percentage of decisions that have been approved, rejected, challenged, and reviewed by rules.
 - **Top rules** – The **Top rules** list shows the rules that triggered the highest volume of automated decisions.
 
-For more information about rules, see the [rules documentation](ap-rulesandlists.md).
+For more information about rules, see the [rules documentation](rules.md).
 
 ## Custom assessment scorecard
 The scorecard shows metrics (key performance indicators [KPIs]) in the **Risk decision** section.
