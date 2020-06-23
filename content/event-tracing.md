@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event tracing.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/17/2020
+ms.date: 06/23/2020
 
 ms.topic: conceptual
 search.app:
@@ -130,3 +130,55 @@ distribution
     "bucketSize": 10,
 }
 ```
+
+##### [RequestLatencyMsDistribution]
+
+```json
+
+{
+"Index": [
+             1
+],
+"BucketSamples": [
+             2
+],
+"NumberOfBuckets": 10000,
+"BucketSize": 10,
+"MinimumValue": 0,
+"CounterName": "RequestLatencyMsDistribution",
+"DimensionNames": [
+   "EnvironmentId",
+   "TenantId",
+   "ApiName",
+   "ExperienceType",
+   "IsTestRequest",
+   "RequestType",
+   "HttpRequestStatus",
+   "HttpStatusCode"
+],
+"DimensionValues": [
+   "63f55d63-9653-4ed9-be77-294da21202ae",
+   "63f55d63-9653-4ed9-be77-294da21202ae",
+   "v1.0/Observe/Create",
+   "N/A",
+   "False",
+   "REALTIME",
+   "Success",
+   "200"
+],
+"StartTime": "2020-06-22T23:43:20",
+"EndTime": "2020-06-22T23:43:40",
+"Samples": 2,
+"Min": 3,
+"Max": 7,
+"name": "FraudProtection.Monitoring.RequestLatencyMsDistribution",
+"version": "1.0",
+"metadata": {
+   "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+   "timestamp": "2020-06-22T23:43:20.0947542Z"
+}
+}
+
+```
+
+The *Samples* field represents the request count per API.
