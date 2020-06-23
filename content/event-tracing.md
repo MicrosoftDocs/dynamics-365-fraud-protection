@@ -72,7 +72,7 @@ You use audit events to track portal actions and develop an audit log. Audit eve
 
 You use metrics for metering and monitoring reporting outside the Fraud Protection portal. Request counts and latency distribution events are sent every 20 seconds. These events include **startTime** and **endTime** fields that determine the aggregation period, and dimension names and values that can be used to filter the metrics as required.
 
-##### [FraudProtection.Monitoring.RequestLatencyMsDistribution]
+##### Namespace: FraudProtection.Monitoring.RequestLatencyMsDistribution
 
 ```json
 
