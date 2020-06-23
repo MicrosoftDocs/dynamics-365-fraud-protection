@@ -72,66 +72,7 @@ You use audit events to track portal actions and develop an audit log. Audit eve
 
 You use metrics for metering and monitoring reporting outside the Fraud Protection portal. Request counts and latency distribution events are sent every 20 seconds. These events include **startTime** and **endTime** fields that determine the aggregation period, and dimension names and values that can be used to filter the metrics as required.
 
-#### Namespace: FraudProtection.Monitoring
-
-##### [Requests sample payload]
-
-```json
-"name": "FraudProtection.Monitoring",
-"version": "1.0",
-"Metadata": {
-    "tenantId": "b271840c-c33d-4ba5-8d19-3db39dc8ab98",
-    "timestamp": "2020-05-08T00:22:00.000000Z"
-},
-"counterName": "Requests",
-"dimensionValues": [
-    "Val1",
-    "Val2",
-    "Val3"
-],
-"dimensionNames": [
-    "Dim1",
-    "Dim2",
-    "Dim3"
-],
-"startTime": "2020-05-08T00:22:00.000000Z",
-"endTime": "2020-05-08T00:22:20.000000Z",
-"samples": 2,
-"min": 1.0,
-"max": 1.0,
-"Numeric": {
-    "value": 1.0
-}
-```
-
-##### [Latency sample payload]
-
-```json
-"name": "FraudProtection.Monitoring",
-"version": "1.0",
-"Metadata": {
-    "tenantId": "b271840c-c33d-4ba5-8d19-3db39dc8ab98",
-    "timestamp": "2020-05-08T00:22:00.000000Z"
-},
-counterName: "Latency"
-dimVals: ["Val1", "Val2", "Val3"]
-dimNames: ["Dim1", "Dim2", "Dim3"]
-startTime: "",
-endTime: "",
-samples: 2,
-min: 1.0,
-max: 1.0,
-distribution
-{
-    "index": [1,2,3,4]
-    "samples": [100, 200, 300, 400]
-    "numberOfBuckets": 10000,
-    "minimumValue": 0,
-    "bucketSize": 10,
-}
-```
-
-##### [RequestLatencyMsDistribution]
+##### [FraudProtection.Monitoring.RequestLatencyMsDistribution]
 
 ```json
 
