@@ -202,7 +202,7 @@ Note the following formatting guidelines throughout:
 | AMOUNTINTENDEREDCURRENCY         | numeric (32 6)           | The amount that was tendered in local currency as it applies to the country/region where the store is located. |
 | AMOUNTTENDERED                   | numeric (32 6)           | The amount in the store currency. |
 | AMOUNTTENDEREDADJUSTMENT         | numeric (32 6)           | A new feature in the product allows for changes to the transactions and provides a full audit trail. |
-| CARDNUMBER                       | nvarchar (30)            | The card number that was used to make a payment. |
+| MERCHANTPAYMENTINSTRUMENTID      | nvarchar (30)            | The identifier of the payment instrument. This information is provided by the merchant. |
 | CARDTYPEID                       | nvarchar (10)            | The card name (for example, **AMEX** or **VISA**). |
 | CREDITVOUCHERID                  | nvarchar (30)            | If a voucher is used for payment, the voucher number. |
 | CURRENCYCODE                     | nvarchar (3)             | The currency that was paid. |
