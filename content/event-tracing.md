@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event tracing.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/17/2020
+ms.date: 06/23/2020
 
 ms.topic: conceptual
 search.app:
@@ -72,61 +72,54 @@ You use audit events to track portal actions and develop an audit log. Audit eve
 
 You use metrics for metering and monitoring reporting outside the Fraud Protection portal. Request counts and latency distribution events are sent every 20 seconds. These events include **startTime** and **endTime** fields that determine the aggregation period, and dimension names and values that can be used to filter the metrics as required.
 
-#### Namespace: FraudProtection.Monitoring
-
-##### [Requests sample payload]
+##### Namespace: FraudProtection.Monitoring.RequestLatencyMsDistribution
 
 ```json
-"name": "FraudProtection.Monitoring",
-"version": "1.0",
-"Metadata": {
-    "tenantId": "b271840c-c33d-4ba5-8d19-3db39dc8ab98",
-    "timestamp": "2020-05-08T00:22:00.000000Z"
-},
-"counterName": "Requests",
-"dimensionValues": [
-    "Val1",
-    "Val2",
-    "Val3"
-],
-"dimensionNames": [
-    "Dim1",
-    "Dim2",
-    "Dim3"
-],
-"startTime": "2020-05-08T00:22:00.000000Z",
-"endTime": "2020-05-08T00:22:20.000000Z",
-"samples": 2,
-"min": 1.0,
-"max": 1.0,
-"Numeric": {
-    "value": 1.0
-}
-```
 
-##### [Latency sample payload]
-
-```json
-"name": "FraudProtection.Monitoring",
-"version": "1.0",
-"Metadata": {
-    "tenantId": "b271840c-c33d-4ba5-8d19-3db39dc8ab98",
-    "timestamp": "2020-05-08T00:22:00.000000Z"
-},
-counterName: "Latency"
-dimVals: ["Val1", "Val2", "Val3"]
-dimNames: ["Dim1", "Dim2", "Dim3"]
-startTime: "",
-endTime: "",
-samples: 2,
-min: 1.0,
-max: 1.0,
-distribution
 {
-    "index": [1,2,3,4]
-    "samples": [100, 200, 300, 400]
-    "numberOfBuckets": 10000,
-    "minimumValue": 0,
-    "bucketSize": 10,
+"Index": [
+             1
+],
+"BucketSamples": [
+             2
+],
+"NumberOfBuckets": 10000,
+"BucketSize": 10,
+"MinimumValue": 0,
+"CounterName": "RequestLatencyMsDistribution",
+"DimensionNames": [
+   "EnvironmentId",
+   "TenantId",
+   "ApiName",
+   "ExperienceType",
+   "IsTestRequest",
+   "RequestType",
+   "HttpRequestStatus",
+   "HttpStatusCode"
+],
+"DimensionValues": [
+   "63f55d63-9653-4ed9-be77-294da21202ae",
+   "63f55d63-9653-4ed9-be77-294da21202ae",
+   "v1.0/Observe/Create",
+   "N/A",
+   "False",
+   "REALTIME",
+   "Success",
+   "200"
+],
+"StartTime": "2020-06-22T23:43:20",
+"EndTime": "2020-06-22T23:43:40",
+"Samples": 2,
+"Min": 3,
+"Max": 7,
+"name": "FraudProtection.Monitoring.RequestLatencyMsDistribution",
+"version": "1.0",
+"metadata": {
+   "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+   "timestamp": "2020-06-22T23:43:20.0947542Z"
 }
+}
+
 ```
+
+The *Samples* field represents the request count per API.
