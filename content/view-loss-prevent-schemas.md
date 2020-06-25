@@ -1,9 +1,9 @@
 ---
-author: veganesa
+author: yvonnedeq
 description: This topic outlines the required schema for the loss prevention feature in Microsoft Dynamics 365 Fraud Protection.
-ms.author: veganesa
+ms.author: madequ
 ms.service: fraud-protection
-ms.date: 06/10/2020
+ms.date: 06/24/2020
 
 ms.topic: conceptual
 search.app: 
@@ -203,7 +203,7 @@ Note the following formatting guidelines throughout:
 | AMOUNTTENDERED                   | numeric (32 6)           | The amount in the store currency. |
 | AMOUNTTENDEREDADJUSTMENT         | numeric (32 6)           | A new feature in the product allows for changes to the transactions and provides a full audit trail. |
 | MERCHANTPAYMENTINSTRUMENTID      | nvarchar (30)            | The identifier of the payment instrument. This information is provided by the merchant. |
-| CARDTYPEID                       | nvarchar (10)            | The card name (for example, **AMEX** or **VISA**). |
+| MERCHANTPAYMENTINSTRUMENTTYPEID  | nvarchar (10)            | The name of the payment instrument (for example, **AMEX** or **VISA**). |
 | CREDITVOUCHERID                  | nvarchar (30)            | If a voucher is used for payment, the voucher number. |
 | CURRENCYCODE                     | nvarchar (3)             | The currency that was paid. |
 | DATAAREAID                       | nvarchar (4) NOT NULL    | The company identifier (for example, **MSFT**). |
