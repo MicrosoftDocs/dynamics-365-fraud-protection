@@ -1,10 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "content/schema.md",
+      "redirect_url": "schema-int",
+      "redirect_document_id": "false"
+    },  
+    {
       "source_path": "content/lists-rules.md",
       "redirect_url": "rules",
       "redirect_document_id": "false"
-    },    {
+    },    
+    {
       "source_path": "content/ap-rulesandlists.md",
       "redirect_url": "rules",
       "redirect_document_id": "false"
