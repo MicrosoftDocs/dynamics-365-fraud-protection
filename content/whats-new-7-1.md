@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains what's new in the Microsoft Dynamics 365 Fraud Protection July 2020 release.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 06/18/2020
+ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 

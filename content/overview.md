@@ -3,7 +3,7 @@ author: yvonnedeq
 description: Fraud Protection overview
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/1/2020
+ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 

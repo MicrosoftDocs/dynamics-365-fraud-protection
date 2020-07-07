@@ -4,7 +4,7 @@ description: This topic explains how to integrate Microsoft Dynamics 365 Fraud P
 
 ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 06/10/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
