@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the required schema for the loss prevention feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: madequ
 ms.service: fraud-protection
-ms.date: 06/24/2020
+ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
