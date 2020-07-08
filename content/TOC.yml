@@ -2,7 +2,9 @@
   href: overview.md
 - name: What's new or changed
   items:
-  - name: Dynamics 365 Fraud Protection May 2020 release (INT only)
+  - name: Dynamics 365 Fraud Protection July 2020 release
+    href: whats-new-7-1.md
+  - name: May 2020 release (INT only)
     href: whats-new-5-4.md
 - name: Regional availability
   href: global-availability.md  
@@ -10,16 +12,6 @@
   href: provision-azure-tenant.md
 - name: Configure user access
   href: configure-user-access.md
-- name: Fraud Protection May 2020 release (INT only)
-  items: 
-  - name: Manage lists
-    href: lists.md
-  - name: Manage rules
-    href: rules.md
-  - name: Rules language guide
-    href: fpl-lang-ref.md
-  - name: View purchase protection schemas
-    href: schema-INT.md
 - name: Purchase protection
   items:
   - name: Purchase protection overview
@@ -34,10 +26,8 @@
     href: device-fingerprinting.md    
   - name: Upload historical data
     href: data-upload.md
-  - name: View schemas
-    href: schema.md
-  - name: Manage lists and rules
-    href: lists-rules.md
+  - name: View purchase protection schemas
+    href: schema-INT.md
   - name: Use the virtual fraud analyst
     href: virtual-fraud-analyst.md   
   - name: Learn from the scorecard
@@ -48,8 +38,6 @@
     href: risk-support.md
   - name: Monitor API calls
     href: monitoring.md
-  - name: Usage metering
-    href: metering.md        
 - name: Account creation
   items:
   - name: Account creation overview
@@ -67,10 +55,8 @@
   - name: Implement device fingerprinting
     href: device-fingerprinting.md    
   - name: Monitor API calls
-    href: monitoring.md
-  - name: Usage metering
-    href: metering.md  
-- name: Account protection (preview)
+    href: monitoring.md 
+- name: Account protection
   items:
   - name: Account protection overview
     href: ap-overview.md
@@ -78,17 +64,17 @@
     href: account-protection-evaluate-experience.md
   - name: Account protection protect experience
     href: account-protection-protect-experience.md
+  - name: Custom assessment
+    href: custom-assessment.md
   - name: Implement device fingerprinting
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
-  - name: Manage account protection rules and lists
-    href: ap-rulesandlists.md
   - name: Learn from the account protection scorecard
     href: ap-scorecard.md
   - name: Account protection schemas
     href: new-ap-schema.md
-- name: Loss prevention (preview)
+- name: Loss prevention
   items:
   - name: Loss prevention overview
     href: loss-prevention-overview.md
@@ -98,12 +84,30 @@
     href: loss-prevention-data-upload.md
   - name: Loss prevention schemas
     href: view-loss-prevent-schemas.md
+  - name: Loss prevention integration with Dynamics 365 Commerce 
+    href: loss-prevention-integration-with-commerce.md
+- name: Manage rules and lists
+  items: 
+  - name: Manage lists
+    href: lists.md
+  - name: Manage rules
+    href: rules.md
+  - name: Rules language guide
+    href: fpl-lang-ref.md    
+- name: Event tracing
+  href: event-tracing.md
+- name: Usage metering
+  href: metering.md        
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
-- name: Compliance
-  href: security-compliance.md
-- name: Security
-  href: security.md
+- name: Security and compliance
+  items: 
+  - name: Compliance overview
+    href: security-compliance.md
+  - name: Security overview
+    href: security.md
+  - name: Security measures for protecting data  
+    href: compliance-and-security.md
 - name: Privacy
   href: data-processing-protection.md
 - name: Visually explore your data

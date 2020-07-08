@@ -3,7 +3,7 @@ author: kelsiefu
 description: This topic provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kelsiefu
 ms.service: fraud-protection
-ms.date: 03/01/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -13,8 +13,6 @@ title: Account protection evaluate experience
 ---
 
 # Account protection evaluate experience
-
-[!include [banner](includes/preview-banner.md)]
 
 Microsoft Dynamics 365 Fraud Protection offers two operating modes: evaluate and protect. These operating modes provide two ways of using the same underlying product (that is, they provide two *experiences*). The same functionality and feature capabilities are available in both experiences.
 

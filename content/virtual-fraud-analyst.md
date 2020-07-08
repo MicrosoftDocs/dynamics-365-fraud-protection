@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use the virtual fraud analyst.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/04/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -34,11 +34,8 @@ Here are two examples of rules that you can create in the Rules editor after you
 
     You can create a catch-all rule that meets your needs for all transactions and isn't linked to a specific custom list. To understand the impact of a catch-all rule on fraud protection, skip step 1 in the step-by-step instructions that follow, and go directly to step 2, where you select a risk score. 
 
-    For more information about rules and lists:
-    
-    - If you’re a PROD user, see [Manage lists and rules](lists-rules.md).
-    
-    - If you’re an INT user, see [Manage rules](rules.md) and [Manage lists](lists.md).
+    For more information about rules and lists, see [Manage rules](rules.md) and [Manage lists](lists.md).
+
 
 ## Use rules in VFA
 

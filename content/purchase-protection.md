@@ -1,9 +1,9 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic explains the purchase protection capability of Dynamics 365 Fraud Protection.
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 12/04/2019
+ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
@@ -26,7 +26,8 @@ Learn more about the following features used in purchase protection:
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Upload historical data](data-upload.md)
 - [View schemas](schema.md)
-- [Manage lists and rules](lists-model-operating-points.md)
+- [Manage lists](lists.md)
+- [Manage rules](rules.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)
 - [Learn from the scorecard](scorecard.md)
 - [Boost bank acceptance rates](transaction-acceptance-booster.md)

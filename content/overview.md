@@ -1,9 +1,9 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: Fraud Protection overview
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/01/2020
+ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
@@ -17,7 +17,7 @@ title: Overview
 
 # Fraud protection overview
 
-Today's digitally transformed enterprise conducts most of its business online and in real time. Little human intervention is involved. Although this approach helps reduce costs and improve the customer experience, it also exposes the enterprise to serious threats of fraud from sophisticated users who try to take advantage of the online channel's relative anonymity and accessibility. For example, in e-commerce, some transactions are maliciously created via compromised accounts and stolen payment instruments. Other malicious activities that users might try include account takeover, abuse of free trials, fake product reviews, warranty fraud, refund fraud, reseller fraud, abuse of program discounts. All these activities, and others, can affect the enterprise's profitability and reputation.
+Today's digitally transformed enterprise conducts most of its business online and in real time. Little human intervention is involved. Although this approach helps reduce costs and improve the customer experience, it also exposes the enterprise to serious threats of fraud from sophisticated users who try to take advantage of the online channel's relative anonymity and accessibility. For example, in e-commerce, some transactions are maliciously created via compromised accounts and stolen payment instruments. Other malicious activities might include account takeover, abuse of free trials, fake product reviews, warranty fraud, refund fraud, reseller fraud, abuse of program discounts. All these activities, and others, can affect the enterprise's profitability and reputation.
 
 Some types of fraud even have serious consequences for society at large. Examples include money laundering and posting fake news.
 
@@ -25,9 +25,7 @@ Because the return on investment (ROI) for online fraud is high, it's likely tha
 
 *Our mission is to help enterprises fight fraud while they keep their doors open for genuine customers and partners.*
 
-Dynamics 365 Fraud Protection initially focused on payment fraud protection. It helped enable an e-commerce merchant drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience of its customers. In this release wave we are adding several new features to the product that enhance this capability. Based on customer feedback we are lighting up a new set of capabilities called **loss prevention** that help brick and mortar retail store operations fight fraud and abuse. This will help retailers reduce shrinkage losses and improve store efficiencies. While we had a basic account creation protection capability already available in the payment fraud protection product, we are significantly expanding the portfolio via a new set of capabilities called **account Protection**.
-
-Microsoft Dynamics 365 Fraud Protection focuses on payment fraud protection and related scenarios in e-commerce. It helps e-commerce merchants drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience for its customers.
+Microsoft Dynamics 365 Fraud Protection initially focused on payment fraud protection. It helped enable an e-commerce merchant drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience of its customers. In subsequent release waves, we have added several new features to enhance this capability based on customer feedback. We are lighting up a new set of capabilities called **loss prevention** that help brick and mortar retail store operations fight fraud and abuse by reducing shrinkage losses and improving store efficiencies. We have significantly expanded the account creation protection capability portfolio via a new set of capabilities called **account protection**.
 
 Microsoft has many years of experience protecting our own e-commerce businesses from fraud. We have developed a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time.
 
@@ -35,7 +33,7 @@ By using Fraud Protection, you can help protect your business from fraud through
 
 - [AI and insights from the fraud protection network](fraud-protection-network.md)
 - [Device fingerprinting](device-fingerprinting.md)
-- A [rules engine](lists-rules.md) and [virtual fraud analyst](virtual-fraud-analyst.md)
+- A [rules engine](rules.md) and [virtual fraud analyst](virtual-fraud-analyst.md)
 - A [graph explorer](graph-explorer.md) and [scorecard](scorecard.md)
 - A [transaction acceptance booster](transaction-acceptance-booster.md)
 

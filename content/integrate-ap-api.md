@@ -1,10 +1,10 @@
 ---
-author: kelsiefu
+author: yvonnedeq
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time application programming interfaces (APIs).
 
-ms.author: kelsiefu 
+ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 03/01/2020
+ms.date: 07/07/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -17,13 +17,9 @@ title: Integrate account protection APIs
 
 # Integrate account protection APIs
 
-[!include [banner](includes/preview-banner.md)]
+To take advantage of the full suite of features in Microsoft Dynamics 365 Fraud Protection, send your transaction data to the real-time application programming interfaces (APIs). In the evaluate experience, you can then analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions that are based on the rules that you've configured.
 
-To take advantage of the full suite of features in Microsoft Dynamics 365 Fraud Protection, you should send your transaction data to the real-time application programming interfaces (APIs). In the evaluate experience, you can then analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions that are based on the rules that you've configured.
-
-Depending on how you choose to use Fraud Protection, you use different APIs:
-
-- **Account protection APIs:** AccountCreation, AccountLogin, AccountCreationStatus, AccountLoginStatus, AccountUpdate, Label
+Depending on how you choose to use Fraud Protection, you can use different **account protection APIs**. For example, *AccountCreation*, *AccountLogin*, *AccountCreationStatus*, *AccountLoginStatus*, *AccountUpdate*, and *Label*.
 
 For information about all supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 
@@ -34,9 +30,11 @@ For information about all supported events, see [Dynamics 365 Fraud Protection A
 > [!IMPORTANT]
 > To complete the initial API onboarding, you must be a Global Administrator in your Microsoft Azure tenant.
 
-Go to the [Fraud Protection portal](https://dfp.microsoft.com), sign in, and accept the terms and conditions if you're prompted to accept them.
+#### To sign in to Fraud Protection:
 
-This step ensures that Fraud Protection is correctly configured in your Azure tenant. (You might already have completed this step during initial sign-up.)
+- Go to the [Fraud Protection portal](https://dfp.microsoft.com), sign in, and accept the terms and conditions if you're prompted to accept them.
+
+    This step ensures that Fraud Protection is correctly configured in your Azure tenant. (You might already have completed this step during initial sign-up.)
 
 ### Create Azure Active Directory applications
 
@@ -45,18 +43,29 @@ This step ensures that Fraud Protection is correctly configured in your Azure te
 
 To acquire the tokens that are required to call the APIs, you must use Azure Active Directory (Azure AD) applications. You can configure these apps by using the **Real-time APIs** page in Fraud Protection.
 
-In the left navigation pane, select **Configuration**, and then select **Real-time APIs**. Then fill in the fields to create your app. The following fields are required:
+#### To configure Azure AD apps:
 
-- **Application display name** – Enter a descriptive name for your app. The maximum length is 93 characters.
-- **Environment** – Select the production endpoint.
-- **Authentication method** – Select whether a certificate or a secret (password) is used for authentication. If you select **Certificate**, select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key. If you select **Secret**, a password is generated for you after the app is created.
+1. In the left navigation pane, select **Configuration**, and then select **Real-time APIs**. 
 
-When you've finished filling in the fields, select **Create application**. The confirmation page summarizes the app's name and ID, and either the certificate thumbprint or the secret, depending on the authentication method that you selected.
+1. Fill in the fields to create your app. The following fields are required:
+
+    - **Application display name** – Enter a descriptive name for your app. The maximum length is 93 characters.
+    - **Environment** – Select the production endpoint.
+    - **Authentication method** – Select whether a certificate or a secret (password) is used for authentication. If you select **Certificate**, select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key. If you select **Secret**, a password is generated for you after the app is created.
+
+1. When you've finished filling in the fields, select **Create application**. 
+
+    The confirmation page summarizes the app's name and ID, and either the certificate thumbprint or the secret, depending on the authentication method that you selected.
 
 > [!IMPORTANT]
 > Save the information about your certificate thumbprint or secret for future reference. The secret will be shown only one time.
 
-To create another app, select **Create another application**. You can create as many apps as you require to run API calls in your production environments.
+You can create as many apps as you require to run API calls in your production environments.
+
+#### To create another app:
+
+1. Select **Create another application**. 
+2. Fill in the fields to create your app, and then select **Create application**.
 
 ### Manage existing Azure AD applications
 
