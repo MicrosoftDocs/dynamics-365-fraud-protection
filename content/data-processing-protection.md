@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains privacy in Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/21/2020
+ms.date: 07/08/2020
 ms.topic: conceptual
 search.app: 
   - FraudProtection
@@ -36,14 +36,14 @@ Fraud Protection processes three types of customer data to provide the service:
   - The outcome of a payment transaction, such as a chargeback.
   - Information about the payment instrument. Note that Fraud Protection does not collect full payment instrument details, such as complete credit card number.      
 
-- **Account activity data**. This is information associated with a customer’s end users’ past and present account activities, such as requests to create a new customer account or updates to an existing customer account. Account activity data may include:
+- **Device data**. This is information associated with a customer’s end users’ past and present account activities, such as requests to create a new customer account or updates to an existing customer account. Account activity data may include:
 
   - Device attributes such as plugins installed, processor class, etc. 
   - Operating system attributes such as OS information. 
   - Browser related attributes if applicable, such as browser language, font etc.
   - Network attributes such as IP address, signature hash, etc. 
 
-- **Device data**. This is information about the devices visiting our customer’s e-commerce properties, for example:
+- **Account activity data**. This is information about the devices visiting our customer’s e-commerce properties, for example:
 
   - The account name and email address. 
   - Information about when the account was created. 
