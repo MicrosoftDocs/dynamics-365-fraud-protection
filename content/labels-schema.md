@@ -1,11 +1,10 @@
 ---
-author: jegrif
+author: yvonnedeq
 description: This topic provides a description of the required schema for the fraud label API.
 
-ms.author: v-jegrif
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/04/2019
-
+ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
