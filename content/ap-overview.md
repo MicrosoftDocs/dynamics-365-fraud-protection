@@ -20,10 +20,14 @@ Microsoft Dynamics 365 Fraud Protection provides merchants the capability to ass
 
 Account protection includes APIs for real-time risk assessment, rule and list experience to optimize risk strategy as per your business needs, and a scorecard to monitor fraud protection effectiveness and trends in your ecosystem.
 
+## Account lifecycle event types
+
 Account protection provides risk assessment on two types of account lifecycle events: 
 
 - **Account creation** 
 - **Account login**
+
+## Layers of defense
 
 For each event type there are multiple layers of defense: 
 
