@@ -1,6 +1,7 @@
 ---
 author: jegrif
-description: This topic outlines the requred schema for the fraud label API.
+description: This topic provides a description of the required schema for the fraud label API.
+
 ms.author: v-jegrif
 ms.service: fraud-protection
 ms.date: 09/04/2019
