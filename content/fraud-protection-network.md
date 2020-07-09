@@ -7,7 +7,7 @@ ms.date: 01/14/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Artificial intelligence (AI) and insights from the fraud protection network
