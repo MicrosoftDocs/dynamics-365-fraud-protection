@@ -27,9 +27,9 @@ Account protection provides risk assessment on two types of account lifecycle ev
 - **Account creation** 
 - **Account login**
 
-## Layers of defense
+### Layers of defense
 
-For each event type there are multiple layers of defense: 
+Each event type has multiple layers of defense: 
 
 - **Efficient bot detection:** Merchants can encounter automated attempts to create fake accounts or to compromise existing accounts using a list of compromised credentials or through brute force. As the first line of defense, Fraud Protection’s advanced, adaptive AI enables dynamic and robust bot detection by quickly providing the merchant with a score that maps to the probability that a bot is initiating the event. Merchants can use the score in conjunction with the rules they’ve configured to block automated fraudulent account creation and login attempts or add additional verification on suspicious attempts.
 
