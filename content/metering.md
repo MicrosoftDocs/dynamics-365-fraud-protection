@@ -11,10 +11,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Usage metering
+title: Assessment usage and metering
 ---
 
-# Usage metering
+# Assessment usage and metering
 
 When you purchase Microsoft Dynamics 365 Fraud Protection, you're entitled to a specific number of "assessments" for one or more Fraud Protection capabilities. The **Metering** page provides an overview of your Fraud Protection usage. For example, you can view statistics about different assessment API types, view trends of assessments that have been consumed for loss prevention reports over time, and filter your view to highlight the specific data and date ranges that you're interested in. The data on this page is updated every hour. You can use it to assess whether any adjustments are required to your Fraud Protection subscription. 
 
