@@ -12,10 +12,10 @@ search.app:
 search.audienceType:
   - admin
 
-title: View labels schema
+title: View the schema for the labels API
 ---
 
-# View labels schema
+# View the schema for the labels API
 
 This topic outlines the schema for the labels API.
 
