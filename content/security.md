@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic explains security in Dynamics 365 Fraud Protection.
+description: This topic explains how security in Dynamics 365 Fraud Protection is implemented.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/07/2020
