@@ -1,6 +1,7 @@
 ---
 author: yvonnedeq
-description: This topic explains how to use rules.
+description: This topic explains how to create and manage rules that protect account and purchase data.
+
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/07/2020
