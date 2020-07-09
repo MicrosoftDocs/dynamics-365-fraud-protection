@@ -19,6 +19,8 @@ title: View labels schema
 
 This topic outlines the schema for the labels API.
 
+## Formatting guidelines
+
 Note the following formatting guidelines throughout:
 
 - The files are in CSV UTF-8 (comma delimited) format (\*.csv).
@@ -26,6 +28,8 @@ Note the following formatting guidelines throughout:
 - The **DateTime** columns are in ISO 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
+
+## Attributes
 
 | Attribute | Type | Description |
 | --- | --- | --- |
