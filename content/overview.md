@@ -1,6 +1,7 @@
 ---
 author: yvonnedeq
-description: Fraud Protection overview
+description: This topic provides an overview of the fraud protection features and its mission.
+
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/07/2020
