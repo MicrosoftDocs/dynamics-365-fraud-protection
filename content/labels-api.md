@@ -1,6 +1,7 @@
 ---
 author: yvonnedeq
-description: This topic describes the fraud label API.
+description: This topic explains how the labels API enables you to send information to the virtual fraud analyst and scorecard.
+
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 05/20/2019
