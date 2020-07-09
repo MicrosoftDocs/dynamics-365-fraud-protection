@@ -7,7 +7,7 @@ ms.date: 05/06/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: What’s new in Dynamics 365 Fraud Protection May 2020 release (INT only)
