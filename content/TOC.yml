@@ -48,9 +48,9 @@
     href: labels-api.md      
   - name: View labels schema
     href: labels-schema.md
-  - name: View sign-up schema
+  - name: Sign-up data schemas for account protection
     href: signup-schema.md
-  - name: View sign-up status schema
+  - name: Sign-up status schemas for account protection
     href: signup-status-schema.md
   - name: Implement device fingerprinting
     href: device-fingerprinting.md    
