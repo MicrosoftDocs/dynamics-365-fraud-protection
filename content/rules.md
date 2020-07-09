@@ -11,11 +11,11 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Manage rules
+title: Manage rules for Fraud Protection
 
 ---
 
-# Manage rules
+# Manage rules for Fraud Protection
 
 ## Overview
 
