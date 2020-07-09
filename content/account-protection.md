@@ -7,7 +7,7 @@ ms.date: 12/2/2019
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Account creation overview
