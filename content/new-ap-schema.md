@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the schemas for historical data uploaded in bulk as CSV files.
 ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 07/09/2020
 
 ms.topic: conceptual
 search.app: 
