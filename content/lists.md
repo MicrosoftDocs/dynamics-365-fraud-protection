@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: How to use lists to manage information, fight fraud, and enforce business policies.
+description: This topic explains how to use lists to manage information, fight fraud, and enforce business policies.
 
 ms.author: v-madeq
 ms.service: fraud-protection
