@@ -10,10 +10,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Rules language guide 
+title: Language guide for Fraud Protection rules 
 
 ---
-# Rules language guide
+# Language guide for Fraud Protection rules
 
 ## Overview
 
