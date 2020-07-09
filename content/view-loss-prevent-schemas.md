@@ -10,10 +10,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Loss prevention schemas
+title: Data schemas for loss prevention
 ---
 
-# Loss prevention schemas
+# Data schemas for loss prevention
 
 This topic outlines the schemas that define the data that is used to generate models and determine risk assessments.
 
