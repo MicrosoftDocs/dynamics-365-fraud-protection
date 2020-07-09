@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about the Evaluate experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 7/07/2020
+ms.date: 7/09/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
