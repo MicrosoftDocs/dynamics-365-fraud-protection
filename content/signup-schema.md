@@ -1,9 +1,9 @@
 ---
-author: jegrif
+author: yvonnedeq
 description: This topic outlines the schemas that are required for signup under account creation assessment.
-ms.author: v-jegrif
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/04/2020
+ms.date: 07/09/2020
 
 ms.topic: conceptual
 search.app: 
@@ -16,7 +16,7 @@ title: Sign-up data schemas for account protection
 
 # Sign-up data schemas for account protection
 
-This topic outlines the schemas for the Signup data for account protection. For SignupStatus, see [this accompanying page](signup-status-schema.md).
+This topic outlines the Signup data schemas for account protection. For information about the SignupStatus schemas, see [this accompanying page](signup-status-schema.md).
 
 Note the following formatting guidelines throughout:
 
