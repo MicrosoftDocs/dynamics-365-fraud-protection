@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic provides information about the Diagnose experience in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the diagnose experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/09/2020
@@ -9,11 +9,11 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Diagnose experience with Fraud Protection
+title: The diagnose experience in Fraud Protection
 
 ---
 
-# Diagnose experience with Fraud Protection
+# The diagnose experience in Fraud Protection
 
 Microsoft Dynamics 365 Fraud Protection's *Diagnose experience* evaluates your historical data and generates reports that provide valuable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities.
 
