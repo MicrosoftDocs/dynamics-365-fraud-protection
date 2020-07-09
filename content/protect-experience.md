@@ -1,9 +1,9 @@
 ---
 author: yvonnedeq
-description: This topic provides information about the Protect experience in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the protect experience in Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
