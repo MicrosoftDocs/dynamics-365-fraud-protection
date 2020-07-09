@@ -7,7 +7,7 @@ ms.date: 05/21/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Visually explore your data
