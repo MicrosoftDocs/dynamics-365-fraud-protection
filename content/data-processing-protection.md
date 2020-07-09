@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic explains privacy in Dynamics 365 Fraud Protection.
+description: This topic describes how payment transaction, account activity, and device data are protected.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/08/2020
