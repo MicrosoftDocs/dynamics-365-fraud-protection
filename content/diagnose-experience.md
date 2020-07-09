@@ -7,7 +7,7 @@ ms.date: 05/18/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Diagnose experience
