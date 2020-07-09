@@ -6,7 +6,7 @@ ms.service: fraud-protection
 ms.date: 01/14/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Configure user access to Dynamics 365 Fraud Protection
