@@ -1,20 +1,18 @@
 ---
 author: yvonnedeq
 description: This topic explains how to use lists to manage information, fight fraud, and enforce business policies.
-
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/07/2020
-
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Manage lists
+title: Manage lists for Fraud Protection
 
 ---
-# Manage lists
+# Manage lists for Fraud Protection
 
 ## Overview
 
