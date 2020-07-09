@@ -10,11 +10,11 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Account protection schemas
+title: Account protection schemas for historical data
 
 ---
 
-# Account protection schemas
+# Account protection schemas for historical data
 
 This topic outlines the schemas for historical data that is uploaded in bulk into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](https://docs.microsoft.com/dynamics365/fraud-protection/data-upload). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api).
 
