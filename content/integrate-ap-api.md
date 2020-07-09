@@ -7,7 +7,7 @@ ms.service: fraud-protection
 ms.date: 07/07/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Integrate account protection APIs
