@@ -11,12 +11,12 @@ search.app:
 search.audienceType:
   - admin
 
-title: View account protection schemas -  Sign-up status
+title: Sign-up status schemas for account protection
 ---
 
-# View account protection schemas - Sign-up status
+# Sign-up status schemas for account protection
 
-This topic outlines the schemas for the Signup status data for account protection. For Signup, see [this accompanying page](signup-schema.md).
+This topic outlines the SignupStatus schemas for account protection. For information about the Signup data schemas, see [this accompanying page](signup-schema.md).
 
 Note the following formatting guidelines throughout:
 
