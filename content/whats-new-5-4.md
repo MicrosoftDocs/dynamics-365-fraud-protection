@@ -19,9 +19,8 @@ title: What’s new in Dynamics 365 Fraud Protection May 2020 release (INT only)
 > [!NOTE]
 > The Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only) updates customer INT environments only. In response to the coronavirus (COVID-19) situation, this release is in INT only to avoid changes in customer PROD environments.
 
-## Summary of changes
 
-### Extend and tailor merchant purchase ontology 
+## Extend and tailor merchant purchase ontology 
 
 There are several cases where a merchant might need capabilities beyond Fraud Protection’s core features: 
 
@@ -31,7 +30,7 @@ There are several cases where a merchant might need capabilities beyond Fraud Pr
 
 - To define custom rules. Custom knowledge can be used to create and update the configuration of model operating points using specialized data. These model operating points can consume the full spectrum of available knowledge to produce decisions for each type of event
 
-### More powerful rules and lists capabilities
+## More powerful rules and lists capabilities
 
 For purchase protection and account protection, Fraud Production has created a new rules experience to help merchants express their augmented custom fraud logic in a rich and expressive language. This language is designed to give merchants the power and flexibility they need to customize their fraud strategy and enforce their unique fraud business policies. It is coupled with assistive technologies such as reusable lists, rich IntelliSense, highlighting, real-time debugging, and commonly used templates to help them get started with creating custom rules. In addition to payload values and AI-based scores, rules also leverage custom lists which merchants create to manage data specific to their needs or fraud protection strategy.
 For more information, see [Manage lists](lists.md), [Manage rules](rules.md), and the [Rules language guide](fpl-lang-ref.md).
