@@ -1,6 +1,6 @@
 ---
 author: v-davido
-description: This topic explains how you can use the key performance indicators (KPIs).
+description: This topic explains how to review key metrics and understand the performance of fraud protection efforts.
 ms.author: v-davido
 ms.service: fraud-protection
 ms.date: 12/03/2019
