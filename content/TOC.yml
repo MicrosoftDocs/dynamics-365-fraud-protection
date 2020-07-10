@@ -60,9 +60,9 @@
   items:
   - name: Account protection overview
     href: ap-overview.md
-  - name: Account protection evaluate experience
+  - name: Evaluate experience
     href: account-protection-evaluate-experience.md
-  - name: Account protection protect experience
+  - name: Protect experience
     href: account-protection-protect-experience.md
   - name: Custom assessment
     href: custom-assessment.md
