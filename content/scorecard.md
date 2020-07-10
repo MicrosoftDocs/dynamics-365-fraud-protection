@@ -1,9 +1,9 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic explains how to review key metrics and understand the performance of fraud protection efforts.
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 12/03/2019
+ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
