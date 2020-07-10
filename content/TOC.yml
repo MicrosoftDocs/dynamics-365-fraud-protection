@@ -42,7 +42,7 @@
   items:
   - name: Account creation overview
     href: account-protection.md
-  - name: Integrate Fraud Protection real-time APIs
+  - name: Integrate real-time APIs
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md      
