@@ -30,7 +30,7 @@
     href: schema-INT.md
   - name: Use the virtual fraud analyst
     href: virtual-fraud-analyst.md   
-  - name: Learn from the scorecard
+  - name: Review key metrics with scorecard reports
     href: scorecard.md  
   - name: Boost bank acceptance rates
     href: transaction-acceptance-booster.md  
@@ -46,7 +46,7 @@
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md      
-  - name: View labels schema
+  - name: View schema for labels API
     href: labels-schema.md
   - name: Sign-up data schemas for account protection
     href: signup-schema.md
@@ -92,11 +92,11 @@
     href: lists.md
   - name: Manage rules
     href: rules.md
-  - name: Rules language guide
+  - name: Language guide for  rules
     href: fpl-lang-ref.md    
 - name: Event tracing
   href: event-tracing.md
-- name: Usage metering
+- name: Assessment usage and metering
   href: metering.md        
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
