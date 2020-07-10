@@ -10,10 +10,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Learn from the scorecard
+title: Review key metrics with scorecard reports
 ---
 
-# Learn from the scorecard
+# Review key metrics with scorecard reports
 
 You can use the scorecard reports to review your key metrics and understand the month-by-month performance of your fraud protection efforts.
 
