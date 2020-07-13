@@ -108,9 +108,9 @@
     href: security.md
   - name: Security measures for protecting data  
     href: compliance-and-security.md
-- name: Privacy
+- name: Privacy protection for data
   href: data-processing-protection.md
-- name: Visually explore your data
+- name: Visually explore data
   href: graph-explorer.md
 - name: Evaluate experience
   href: evaluate-experience.md
