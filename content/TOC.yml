@@ -70,7 +70,7 @@
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
-  - name: Learn from the account protection scorecard
+  - name: Review key metrics for account protection
     href: ap-scorecard.md
   - name: Account protection schemas
     href: new-ap-schema.md
