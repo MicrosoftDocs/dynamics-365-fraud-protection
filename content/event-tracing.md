@@ -3,8 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event tracing.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
-
+ms.date: 08/04/2020
 ms.topic: conceptual
 search.app:
   - FraudProtection
@@ -45,6 +44,31 @@ Follow these steps to start to use the event tracing functionality.
 ## Event schemas
 
 Two supported classifications of events are currently available in event tracing: *audit events* and *monitoring events*. Each event has a standardized schema that includes both fields that are included in every event (for example, **namespace**, **event version,** **tenantId**, and **timestamp**) and fields that are unique to the event classification.
+
+You use trace events to report and monitor the performance for all rules which include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule which triggered the event, the event type which correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, [click here](rules.md).
+
+#### Namespace: FraudProtection.Trace.Rule
+
+```json
+{
+    "name": "FraudProtection.Trace.Rule",
+    "version": "1.0",
+    "metadata":
+{
+    "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+    "timestamp": "2020-06-10T23:43:33.4526859Z" 
+},
+    "eventTime": "2020-06-10T23:43:33.4526859Z",
+    "ruleName": "Risk Score Policy",
+    "eventType": "Purchase",
+    "correlationId": "e49319e6-0bea-4567-9f3e-c9f873fc958a",
+    "eventId": "e75e703c-1e54-4d41-af4b-a4c1b8866f02",
+    "attributes":
+{
+    //key:value pairs defined in the Trace() return type
+}
+    }
+```
 
 ### Audit events
 
