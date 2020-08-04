@@ -45,6 +45,8 @@ Follow these steps to start to use the event tracing functionality.
 
 Two supported classifications of events are currently available in event tracing: *audit events* and *monitoring events*. Each event has a standardized schema that includes both fields that are included in every event (for example, **namespace**, **event version,** **tenantId**, and **timestamp**) and fields that are unique to the event classification.
 
+### Trace events
+
 You use trace events to report and monitor the performance for all rules which include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule which triggered the event, the event type which correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, [click here](fpl-lang-ref.md#additional-return-types).
 
 #### Namespace: FraudProtection.Trace.Rule
@@ -57,16 +59,16 @@ You use trace events to report and monitor the performance for all rules which i
 {
     "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
     "timestamp": "2020-06-10T23:43:33.4526859Z" 
-},
-    "eventTime": "2020-06-10T23:43:33.4526859Z",
+}
     "ruleName": "Risk Score Policy",
     "eventType": "Purchase",
     "correlationId": "e49319e6-0bea-4567-9f3e-c9f873fc958a",
     "eventId": "e75e703c-1e54-4d41-af4b-a4c1b8866f02",
     "attributes":
 {
-    //key:value pairs defined in the Trace() return type
-}
+      "example": "ManualReview” //key:value pairs defined in the Trace() return type
+} 
+
     }
 ```
 
