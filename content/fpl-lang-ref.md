@@ -42,6 +42,7 @@ RETURN Reject("email is on block list", "do not escalate")
 ```
 
 For information about decision types and their parameters, see the [Decision types](fpl-lang-ref.md#decision-types) section later in this topic.
+
 In addition to a decision type, you can also return additional functions, such as Other or Trace. For more information, see [Additional return types](fpl-lang-ref.md#additional-return-types) section later in this topic.
 
 ### WHEN
