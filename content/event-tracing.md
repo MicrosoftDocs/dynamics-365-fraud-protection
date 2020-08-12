@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event tracing.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 08/04/2020
+ms.date: 08/12/2020
 ms.topic: conceptual
 search.app:
   - FraudProtection
