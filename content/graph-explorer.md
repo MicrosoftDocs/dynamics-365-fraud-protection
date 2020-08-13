@@ -3,17 +3,16 @@ author: yvonnedeq
 description: This topic explains how you can visually explore your data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/21/2020
-
+ms.date: 07/13/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Visually explore your data
+title: Visually explore data with the graph explorer
 ---
 
-# Visually explore your data
+# Visually explore data with the graph explorer
 
 The graph explorer in Microsoft Dynamics 365 Fraud Protection enables you to understand the connections between data, search for specific data points, and view the attributes of data points.
 

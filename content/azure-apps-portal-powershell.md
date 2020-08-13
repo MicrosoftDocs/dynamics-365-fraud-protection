@@ -7,7 +7,7 @@ ms.date: 07/01/2019
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Create Azure AD apps in Azure Portal or PowerShell 

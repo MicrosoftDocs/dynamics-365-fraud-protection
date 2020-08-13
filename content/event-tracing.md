@@ -3,11 +3,10 @@ author: yvonnedeq
 description: This topic explains how to use event tracing.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
-
+ms.date: 08/12/2020
 ms.topic: conceptual
 search.app:
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Event tracing
@@ -20,7 +19,7 @@ title: Event tracing
 
 The *event tracing* functionality in the Microsoft Dynamics 365 Fraud Protection portal lets you establish a real-time telemetry platform that is extensible and operational outside the portal. Each event is either scheduled or triggered by a user-level or system-level action. You can subscribe to events that you're interested in and forward the event payloads to Azure Event Hubs. You can also request events from multiple event tracing sessions at the same time. The system will then deliver the events to Event Hubs in chronological order.
 
-Events can be aggregated and used to define metrics that that you can use to monitor and manage your service costs and utilization. Events can also be used to maintain system logs for actions that are taken in the Fraud Protection portal (for example, *user A* edited *list B* on *date C*) or to develop custom reports that use transactional data. When you use the Event Hubs connectors that are available in Power Automate and Logic Apps, you can also use the data that you send to Event Hubs for alerting or highly customized workflows.
+Events can be aggregated and used to define metrics that you can use to monitor and manage your service costs and utilization. Events can also be used to maintain system logs for actions that are taken in the Fraud Protection portal (for example, *user A* edited *list B* on *date C*) or to develop custom reports that use transactional data. When you use the Event Hubs connectors that are available in Power Automate and Logic Apps, you can also use the data that you send to Event Hubs for alerting or highly customized workflows.
 
 ## Getting started
 
@@ -45,6 +44,33 @@ Follow these steps to start to use the event tracing functionality.
 ## Event schemas
 
 Two supported classifications of events are currently available in event tracing: *audit events* and *monitoring events*. Each event has a standardized schema that includes both fields that are included in every event (for example, **namespace**, **event version,** **tenantId**, and **timestamp**) and fields that are unique to the event classification.
+
+### Trace events
+
+You use trace events to report and monitor the performance for all rules which include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule which triggered the event, the event type which correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, click [Rules language guide](fpl-lang-ref.md#additional-return-types).
+
+#### Namespace: FraudProtection.Trace.Rule
+
+```json
+{
+    "name": "FraudProtection.Trace.Rule",
+    "version": "1.0",
+    "metadata":
+{
+    "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+    "timestamp": "2020-06-10T23:43:33.4526859Z" 
+}
+    "ruleName": "Risk Score Policy",
+    "eventType": "Purchase",
+    "correlationId": "e49319e6-0bea-4567-9f3e-c9f873fc958a",
+    "eventId": "e75e703c-1e54-4d41-af4b-a4c1b8866f02",
+    "attributes":
+{
+      "example": "ManualReview” //key:value pairs defined in the Trace() return type
+} 
+
+    }
+```
 
 ### Audit events
 

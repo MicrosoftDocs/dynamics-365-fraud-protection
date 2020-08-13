@@ -7,7 +7,7 @@ ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Loss prevention integration with Dynamics 365 Commerce

@@ -1,20 +1,21 @@
 ---
 author: yvonnedeq
-description: This topic explains how to use rules.
+description: This topic explains how to create and manage rules that protect account and purchase data.
+
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Manage rules
+title: Manage rules for Fraud Protection
 
 ---
 
-# Manage rules
+# Manage rules for Fraud Protection
 
 ## Overview
 

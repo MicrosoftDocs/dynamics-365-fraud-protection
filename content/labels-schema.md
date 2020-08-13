@@ -1,22 +1,24 @@
 ---
-author: jegrif
-description: This topic outlines the requred schema for the fraud label API.
-ms.author: v-jegrif
-ms.service: fraud-protection
-ms.date: 09/04/2019
+author: yvonnedeq
+description: This topic provides a description of the required schema for the fraud label API.
 
+ms.author: v-madeq
+ms.service: fraud-protection
+ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 
-title: View labels schema
+title: View the schema for the labels API
 ---
 
-# View labels schema
+# View the schema for the labels API
 
 This topic outlines the schema for the labels API.
+
+## Formatting guidelines
 
 Note the following formatting guidelines throughout:
 
@@ -25,6 +27,8 @@ Note the following formatting guidelines throughout:
 - The **DateTime** columns are in ISO 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
+
+## Attributes
 
 | Attribute | Type | Description |
 | --- | --- | --- |

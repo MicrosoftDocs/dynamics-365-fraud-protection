@@ -1,12 +1,13 @@
 ---
 author: yvonnedeq
-description: This topic explains how to use the virtual fraud analyst.
+description: This topic explains how the virtual fraud analyst helps you set up and adjust risk score thresholds.
+
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/07/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 

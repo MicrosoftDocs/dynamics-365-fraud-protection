@@ -7,14 +7,14 @@ ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: API call monitoring
+title: Overview of API call monitoring tools
 ---
 
 
-# API call monitoring
+# Overview of API call monitoring tools
 
 The monitoring tools in Microsoft Dynamics 365 Fraud Protection provide data about the API calls you have made to the service. You can also consult the error logs to aid in identifying any issues. 
 

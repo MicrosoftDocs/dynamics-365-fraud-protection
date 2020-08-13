@@ -1,18 +1,18 @@
 ---
 author: yvonnedeq
-description: This topic provides information about the Protect experience in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the protect experience in Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Protect experience
+title: The protect experience in Fraud Protection
 ---
 
-# Protect experience
+# The protect experience in Fraud Protection
 
 The *protect experience* in Microsoft Dynamics 365 Fraud Protection builds on the features of the evaluate experience by embedding Fraud Protection into your full production environment, where it becomes your real-time tool for fraud protection. You can take advantage of model scores to decide whether to accept or reject transactions, adjudicate escalations from customers, and share relevant information about transaction trustworthiness with participating banks and issuers to help boost their acceptance rates.
 

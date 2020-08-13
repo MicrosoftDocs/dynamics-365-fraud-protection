@@ -3,17 +3,16 @@ author: yvonnedeq
 description: This topic is a language guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
-
+ms.date: 08/12/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Rules language guide 
+title: Language guide for Fraud Protection rules 
 
 ---
-# Rules language guide
+# Language guide for Fraud Protection rules
 
 ## Overview
 
@@ -43,6 +42,8 @@ RETURN Reject("email is on block list", "do not escalate")
 ```
 
 For information about decision types and their parameters, see the [Decision types](fpl-lang-ref.md#decision-types) section later in this topic.
+
+In addition to a decision type, you can also return additional functions, such as Other or Trace. For more information, see [Additional return types](fpl-lang-ref.md#additional-return-types) section later in this topic.
 
 ### WHEN
 
@@ -120,6 +121,7 @@ This section contains a complete list of operators that are available in Fraud P
 | Return type | Description | Example |
 |--------|-------------|---------|
 | Other  | This type can be used to pass key/value pairs. | Other(key="test", email=@"user.email", countryRegion=Geo.CountryRegion(@"device.ipAddress")) |
+|Trace   |Can be used to trigger a Trace event, and send key value pairs to the FraudProtection.Trace.Rule [Event Tracing namespace](event-tracing.md#event-schemas). |Trace(key=”Manual Review”, ip=@”device.ipAddress”) |
 
 #### Variables
 
