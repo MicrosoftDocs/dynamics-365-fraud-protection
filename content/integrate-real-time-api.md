@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/109/2020
+ms.date: 07/13/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
