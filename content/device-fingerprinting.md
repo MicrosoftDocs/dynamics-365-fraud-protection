@@ -22,7 +22,7 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 
 - Device attributes such as plugins installed, processor class etc.
 - Operating system attributes, such as OS Information.
-- Browser related attributes if applicable such as browser language, font etc.
+- Browser-related attributes if applicable such as browser language, font etc.
 - Network attributes, such as IP address, signature hash etc.
 
 
