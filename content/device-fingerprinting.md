@@ -1,10 +1,10 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic explains how to implement device fingerprinting based on artificial intelligence.
 
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/05/2020
+ms.date: 08/13/2020
 
 
 ms.topic: conceptual
@@ -87,3 +87,8 @@ Your website or application should enable the device fingerprinting before it su
 
     1. In the **deviceContextId** field, set a session ID.
     1. In the **deviceContextDC** field on the deviceContext object, set the window.dfp.dc variable from mdt.js response.
+
+> [!NOTE]
+> You can learn more about the Mobile Reference Implementation in the [DFP Mobile Reference Implementation Document](https://go.microsoft.com/fwlink/?linkid=2132646). A login is required.
+
+
