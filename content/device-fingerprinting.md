@@ -62,7 +62,7 @@ Your website or application should enable the device fingerprinting before it su
     ```
 
     - **Your\_Root\_Domain** – The root domain of the merchant website.
-    - **session\_id** – The unique session identifier of the device created by the merchant. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that a globally unique identifier (GUID) be used for the session ID, this approach isn't required.
+    - **session\_id** – The unique session identifier of the device created by the merchant. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that you use a globally unique identifier (GUID) for the session ID, this approach isn't required.
     - **instance\_id** – A placeholder for the instance ID that represents you. Use the instance identifier (**instance\_id** value) listed on the **Account Information** dashboard tile in the Dynamics 365 Fraud Protection Evaluate experience. You must have this value to integrate device fingerprinting with your website.
 
     **Example**
