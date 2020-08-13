@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about artificial intelligence (AI) and insights from the fraud protection network.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 08/13/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -20,3 +20,5 @@ Microsoft Dynamics 365 Fraud Protection takes advantage of the industry-leading 
 
 By participating in this network, you can benefit from insights derived from the collective experience of other merchants who use Fraud Protection. In this way, you can help your business handle emerging fraud vectors. 
 
+> [!NOTE]
+> You can learn more about the Model Reason Codes and Explainability Implementation in the [DFP Model Reason Codes and Explainability Document](https://go.microsoft.com/fwlink/?linkid=2132568). A login is required.
