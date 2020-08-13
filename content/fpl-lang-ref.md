@@ -7,13 +7,13 @@ ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Rules language guide 
+title: Language guide for Fraud Protection rules 
 
 ---
-# Rules language guide
+# Language guide for Fraud Protection rules
 
 ## Overview
 

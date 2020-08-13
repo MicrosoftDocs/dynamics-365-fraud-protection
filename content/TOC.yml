@@ -18,7 +18,7 @@
     href: purchase-protection.md
   - name: Diagnose experience
     href: diagnose-experience.md
-  - name: Integrate Dynamics 365 Fraud Protection APIs
+  - name: Integrate real-time APIs
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md
@@ -30,7 +30,7 @@
     href: schema-INT.md
   - name: Use the virtual fraud analyst
     href: virtual-fraud-analyst.md   
-  - name: Learn from the scorecard
+  - name: Review key metrics with scorecard reports
     href: scorecard.md  
   - name: Boost bank acceptance rates
     href: transaction-acceptance-booster.md  
@@ -42,15 +42,15 @@
   items:
   - name: Account creation overview
     href: account-protection.md
-  - name: Integrate Dynamics 365 Fraud Protection APIs
+  - name: Integrate real-time APIs
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md      
-  - name: View labels schema
+  - name: View schema for the labels API
     href: labels-schema.md
-  - name: View sign-up schema
+  - name: Sign-up data schemas for account protection
     href: signup-schema.md
-  - name: View sign-up status schema
+  - name: Sign-up status schemas for account protection
     href: signup-status-schema.md
   - name: Implement device fingerprinting
     href: device-fingerprinting.md    
@@ -60,9 +60,9 @@
   items:
   - name: Account protection overview
     href: ap-overview.md
-  - name: Account protection evaluate experience
+  - name: Evaluate experience
     href: account-protection-evaluate-experience.md
-  - name: Account protection protect experience
+  - name: Protect experience
     href: account-protection-protect-experience.md
   - name: Custom assessment
     href: custom-assessment.md
@@ -70,7 +70,7 @@
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
-  - name: Learn from the account protection scorecard
+  - name: Review key metrics for account protection
     href: ap-scorecard.md
   - name: Account protection schemas
     href: new-ap-schema.md
@@ -92,11 +92,11 @@
     href: lists.md
   - name: Manage rules
     href: rules.md
-  - name: Rules language guide
+  - name: Language guide for  rules
     href: fpl-lang-ref.md    
 - name: Event tracing
   href: event-tracing.md
-- name: Usage metering
+- name: Assessment usage and metering
   href: metering.md        
 - name: AI and insights from the fraud protection network
   href: fraud-protection-network.md
@@ -108,9 +108,9 @@
     href: security.md
   - name: Security measures for protecting data  
     href: compliance-and-security.md
-- name: Privacy
+- name: Privacy protection for data
   href: data-processing-protection.md
-- name: Visually explore your data
+- name: Visually explore data
   href: graph-explorer.md
 - name: Evaluate experience
   href: evaluate-experience.md

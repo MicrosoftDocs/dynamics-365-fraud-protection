@@ -1,19 +1,18 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
-ms.author: veganesa 
+ms.author:  v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
-
+ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Upload historical data
+title: Upload loss prevention historical data
 ---
 
-# Upload historical data
+# Upload loss prevention historical data
 
 In the evaluate and protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your loss prevention historical data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
 

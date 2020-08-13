@@ -7,7 +7,7 @@ ms.date: 05/20/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Upload historical data for loss prevention

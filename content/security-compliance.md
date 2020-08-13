@@ -7,15 +7,15 @@ ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Compliance overview
+title: Compliance overview for Fraud Protection
 
 
 ---
 
-# Compliance overview
+# Compliance overview for Fraud Protection
 
 Microsoft Dynamics 365 Fraud Protection was designed with compliance, privacy, security, and confidentiality in mind and is only intended to be used to prevent fraud and help identify legitimate payment transactions. Microsoft offers Fraud Protection under the Microsoft Online Services Terms, which includes robust Data Protection Terms.
 

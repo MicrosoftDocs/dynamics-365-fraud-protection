@@ -1,6 +1,7 @@
 ---
 author: v-davido
-description: This topic explains how to implement device fingerprinting.
+description: This topic explains how to implement device fingerprinting based on artificial intelligence.
+
 ms.author: v-davido
 ms.service: fraud-protection
 ms.date: 03/05/2020
@@ -8,7 +9,7 @@ ms.date: 03/05/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Implement device fingerprinting

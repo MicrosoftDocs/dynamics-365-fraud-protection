@@ -3,19 +3,18 @@ author: yvonnedeq
 description: This topic provides information about how you can boost bank acceptance rates.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/18/2020
+ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 
-title: Boost bank acceptance rates with the transaction acceptance booster
+title: Boost bank acceptance rates
 
 ---
 
-# Boost bank acceptance rates with the transaction acceptance booster
-
+# Boost bank acceptance rates
 
 One feature that sets Microsoft Dynamics 365 Fraud Protection apart from other products in the market is the transaction acceptance booster. This feature helps you benefit from higher acceptance rates by sharing trust knowledge with banks. 
 
