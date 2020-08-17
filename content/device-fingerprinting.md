@@ -1,10 +1,10 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic explains how to implement device fingerprinting based on artificial intelligence.
 
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/05/2020
+ms.date: 08/13/2020
 
 
 ms.topic: conceptual
@@ -22,7 +22,7 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 
 - Device attributes such as plugins installed, processor class etc.
 - Operating system attributes, such as OS Information.
-- Browser related attributes if applicable such as browser language, font etc.
+- Browser-related attributes if applicable such as browser language, font etc.
 - Network attributes, such as IP address, signature hash etc.
 
 
@@ -62,7 +62,7 @@ Your website or application should enable the device fingerprinting before it su
     ```
 
     - **Your\_Root\_Domain** – The root domain of the merchant website.
-    - **session\_id** – The unique session identifier of the device created by the merchant. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that a globally unique identifier (GUID) be used for the session ID, this approach isn't required.
+    - **session\_id** – The unique session identifier of the device created by the merchant. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that you use a globally unique identifier (GUID) for the session ID, this approach isn't required.
     - **instance\_id** – A placeholder for the instance ID that represents you. Use the instance identifier (**instance\_id** value) listed on the **Account Information** dashboard tile in the Dynamics 365 Fraud Protection Evaluate experience. You must have this value to integrate device fingerprinting with your website.
 
     **Example**
@@ -87,3 +87,8 @@ Your website or application should enable the device fingerprinting before it su
 
     1. In the **deviceContextId** field, set a session ID.
     1. In the **deviceContextDC** field on the deviceContext object, set the window.dfp.dc variable from mdt.js response.
+
+> [!NOTE]
+> You can learn more about the Mobile Reference Implementation in the [DFP Mobile Reference Implementation Document](https://go.microsoft.com/fwlink/?linkid=2132646). A login is required.
+
+
