@@ -48,4 +48,4 @@ Due to these requirements, the deadline of enforcing PSD2 moved from September 2
 
 TAB, one of DFP’s offers, helps merchants share risk assessment and information with issue banks. This helps banks to reduce false positive results and reduce customer frictions (challenges). This can also help issuer banks to identify more frauds. Controlling fraud risks at the lower level is always the correct direction for merchants to take, with or without PSD2, and DFP can help merchants to reach this goal.
 
-DFP currently does not request additional information from merchants for 3DSv2 transactions. Merchants can continue to send standard bank status and purchase status for every assessment event (purchase transactions) for DFP machine learning models. We will inform you if this arrangement changes. .
+DFP currently does not request additional information from merchants for 3DSv2 transactions. Merchants can continue to send standard bank status and purchase status for every assessment event (purchase transactions) for DFP machine learning models. We will inform you if this arrangement changes.
