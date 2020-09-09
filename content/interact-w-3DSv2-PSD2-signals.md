@@ -22,7 +22,7 @@ To the merchant, this basically means the bank can no longer send merchant fraud
 
 From very early on, Microsoft adopted the PSD2/3DSv2 protocols, and has been working extensively with various players in the PSD2 realm,.  We have set up various performance metrics to measure industry readiness for PSD2/SCA. 
 
-## Why "in Theory"?
+## Why say the liability has shifted to the banks "in theory"?
 
 3DSv2 was due to be released last year, but since neither the banking industry nor the merchants were ready for this, it was extended another 18 months. Many details have yet to be polished and further defined under the 3DS2 framework. And since the regulations and attitudes of each country are different, even today, banks can’t say when they will be ready to shift the liability until the entire banking industry is ready.
 
