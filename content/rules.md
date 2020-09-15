@@ -4,7 +4,7 @@ description: This topic explains how to create and manage rules that protect acc
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 09/15/2020
 
 ms.topic: conceptual
 search.app: 
@@ -47,9 +47,17 @@ You can view the following information for each rule or draft:
 > [!NOTE]
 > On the **Rules** page, published rules are listed in the order that they are run in.
 
-### Payload settings
+### Rules settings
 
-You can access payload settings from the **Rules** page. In the **Payload settings** pane, you can define the sample payload for the assessment type. The sample payload is intended to contain an example of the fields that will be sent in the request API for the assessment and can be used in your rule.
+You can access the rules settings from the **Rules** page for a particular assessment. From here, you can make changes to the rule evaluation behavior as well as the sample payload. Note that these changes only apply to rules for this particular assessment. 
+
+### Rule evaluation behavior
+
+Here you can update how you would like your rules to be evaluated. If you select **Run the first matching rule**, only one rule will ever be evaluated per transaction. If that rule does not return a decision, no further rules will be evaluated, and a default decision of *Approve* is returned. If you select **Run all matching rules until a decision is made**, multiple rules may be evaluated for a single transaction. If the first rule evaluated does not return a decision, then each subsequent  matching rule will be evaluated, and then the next, until a decision is returned. 
+
+### Sample payload
+
+In the **Payload settings** pane, you can define the sample payload for the assessment type. The sample payload is intended to contain an example of the fields that will be sent in the request API for the assessment and can be used in your rule.
 
 In the API request, you might choose not to send optional fields from the assessment schema. Alternatively, you might choose to send additional custom fields. In both cases, be sure to update the payload sample that is shown in the **Payload settings** pane, so that it reflects the specific fields that you're sending.
 
@@ -126,7 +134,7 @@ The addition of a condition to a rule is optional. If you want a rule to apply t
 
 ### Clauses
 
-Clauses contain the fraud logic and business policies that are relevant to the segment of traffic that is defined in the condition. Clauses use values in the event payload together with Fraud Protection's AI scores to accept, reject, review, or challenge events. Each rule must contain at least one clause.
+Clauses contain the fraud logic and business policies that are relevant to the segment of traffic that is defined in the condition. Clauses use values in the event payload together with Fraud Protection's AI scores to accept, reject, review, or challenge events. Each rule must contain at least one clause, and each clause  is assigned a unique name. You can click the name to customize it.
 
 Clauses have the following basic structure.
 
@@ -211,29 +219,7 @@ When you publish a draft, Fraud Protection overwrites the published version of t
 
 ## Rule ordering
 
-The **Rules** page shows a list of the published rules that are configured for the assessment. The order that the rules are listed in affects the order that they are evaluated in. An event runs through each rule condition, in order, until a condition is matched. The selected rule is then evaluated, and no subsequent rules are run.
-
-For example, you configure the following three purchase rules.
-
-| Name  | Condition | Status |
-|-------|-----------|--------|
-| Rule1 | WHEN @"user.countryRegion" == "US" | Active |
-| Rule2 | WHEN @"user.firstName" == "Kayla | Inactive |
-| Rule3 | WHEN @"productList.productName" == "Xbox" | Active |
-
-In this case, the following behavior occurs:
-
-- If a customer in the US makes a purchase, only **Rule1** is evaluated.
-- If a customer in the US makes an Xbox purchase, only **Rule1** is evaluated.
-- If a customer outside the US makes an Xbox purchase, only **Rule3** is evaluated
-- If a customer outside the US makes a non-Xbox purchase, no rules are evaluated.
-- Because **Rule2** has a status of **Inactive**, it's never evaluated.
-
-If no rules are evaluated, Fraud Protection runs the following clause by default.
-
-```ruleslanguage
-RETURN Approve("NO_RULE_HIT")
-```
+The **Rules** page shows a list of the published rules that are configured for the assessment. The order that the rules are listed in affects the order that they are evaluated in. An event runs through each rule condition, in order, until a condition is matched. The selected rule is then evaluated. If the rule returns a decision, no further rules are evaluated. If the rule does not return a decision, the behavior is dependent on what you previously selected as the **rule evaluation behavior** in **Rules settings**.
 
 For information about how to reorder rules on the **Rules** page, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this topic.
 
