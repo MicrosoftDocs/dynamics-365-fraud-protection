@@ -112,6 +112,8 @@
     href: compliance-and-security.md
 - name: Privacy protection for data
   href: data-processing-protection.md
+- name: Interacting with 3DSv2/PSD2 signals
+  href: interact-w-3DSv2-PSD2-signals.md  
 - name: Extensibility via Event Hubs
   items: 
   - name: Overview
