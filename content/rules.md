@@ -45,7 +45,7 @@ You can view the following information for each rule or draft:
 You can also click each rule tile to expand it, and view additional information, including:
 
 - The [description](rules.md#name-and-description)
-- The number of [clauses](rules.md#clauses)
+- The number of [clauses](rules.md#clauses) in that rule
 - Who last updated the rule
 - When the rule was last updated
 
