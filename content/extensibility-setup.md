@@ -29,7 +29,7 @@ To get started, you must setup the following:
 
 After completing the **Setup** section, you will have the basics required to work with Fraud Protection event data. The following data flow is also setup:
 
-![data flow](media/eventhubs/data-flow.png)
+![data flow](media/eventhubs/data-flow.html)
 
    Note that Fraud Protection sends events to Event Hubs, and we can use either **code via SDK kits** or **Power Platform** tools to work with those events from Event Hubs.
 
