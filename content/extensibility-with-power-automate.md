@@ -63,7 +63,7 @@ Storing event data in **CDS** as they come through your event hub is a great way
    Now we have a constantly updated database in CDS with our event data from which we can interact with through Power Platform tools like Power BI or Power Apps. 
 
 ## Related topics
-- [Extensibility via Event Hubs -  overview](extensibility-via-event-hubs-overview.md)
+- [Extensibility via Event Hubs - Overview](extensibility-via-event-hubs-overview.md)
 - [Setup extensibility via Event Hubs](extensibility-setup.md)	
 - [Working with code](extensibility-with-code.md)
 - [Working with Power BI](extensibility-with-power-bi.md)
