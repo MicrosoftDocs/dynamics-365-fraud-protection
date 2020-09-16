@@ -1,7 +1,7 @@
 ---
 author: jegrif
 description: This topic outlines the schemas that are required for signup status under account creation assessment.
-ms.author: v-jegrif
+ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 09/04/2019
 
