@@ -42,7 +42,7 @@ To acquire the tokens required to call the APIs, you must use Azure Active Direc
 
 #### To configure Azure AD applications:
 
-1. Select **Configuration** in the left navigation pane, and then select **Real-time APIs**. 
+1. Select **API management** under **Data** in the left navigation pane, and then select **Configuration**. 
 1. Complete the form to create your app. We recommend creating one Azure AD application for each environment that you operate. 
 
    The following fields are required: 
