@@ -1,5 +1,5 @@
 ---
-author: v-madeq
+author: yvonnedeq
 description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
