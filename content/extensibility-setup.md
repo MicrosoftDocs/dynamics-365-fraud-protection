@@ -34,7 +34,7 @@ After completing the **Setup** section, you will have the basics required to wor
    Note that Fraud Protection sends events to Event Hubs, and we can use either **code via SDK kits** or **Power Platform** tools to work with those events from Event Hubs.
 
 ## Related topics
-- [Extensibility via Event Hubs -  overview](extensibility-via-event-hubs-overview.md)
+- [Extensibility via Event Hubs - Overview](extensibility-via-event-hubs-overview.md)
 - [Working with code](extensibility-with-code.md)
 - [Working with Logic Apps/Power Automate](extensibility-with-power-automate.md)
 - [Working with Power BI](extensibility-with-power-bi.md)
