@@ -307,13 +307,13 @@ To remove a filter, delete the keyword from the **Search** field, or select the 
 
 ### Change the order of a rule
 
-Because published rules appear on the **Rules** page in the order that they are run in, the position of a published rule significantly affects how events are evaluated.
+Because published rules appear on the **Rules** page in the order that they are run, the position of a published rule significantly affects how events are evaluated.
 
 
 #### To reorder a published rule
 
-1. Select the published rule that you want to move, and then drag it to a new position.
-1. Repeat step 1 for a many other rules as you want to move, and then select **Save**.
+1. Select the published rule you want to move and drag it to a new position.
+1. Repeat step 1 for each rule you want to move, and then select **Save**.
 1. To cancel your changes, select **Cancel**.
 
 > [!NOTE]
