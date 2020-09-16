@@ -72,7 +72,7 @@ The following are useful resources for getting you up and running with producing
 You can reference and build a sample of a Power BI dashboard based on Fraud Protection **Latency Event** data [here](https://github.com/microsoft/Dynamics-365-Fraud-Protection-Samples/tree/master/power%20bi%20sample).
 
 ## Related topics
-- [Extensibility via Event Hubs - overview]( extensibility-via-event-hubs-overview.md)
+- [Extensibility via Event Hubs - Overview]( extensibility-via-event-hubs-overview.md)
 - [Setup extensibility via Event Hubs](extensibility-setup.md)	
 - [Working with code](extensibility-with-code.md)
 - [Working with Logic Apps/Power Automate]( extensibility-with-power-automate.md)
