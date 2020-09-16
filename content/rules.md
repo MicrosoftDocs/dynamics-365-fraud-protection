@@ -112,7 +112,7 @@ To view the sample variables that are used in your rule, select **Show used vari
 
 #### Payload sample
 
-The payload sample contains an example of the fields that can be sent in the request API for the assessment, as defined in the [**Payload settings** pane](rules.md#payload-settings). These fields can be used as variables in your rule.
+The payload sample contains an example of the fields that can be sent in the request API for the assessment, as defined in the [Payload settings pane](rules.md#rules-settings). These fields can be used as variables in your rule.
 
 #### Score sample
 
@@ -124,7 +124,7 @@ To verify that your rule works for a variety of events, you can edit the sample 
 
 When you publish a rule, any changes that you've made to the sample are saved and persisted as part of the rule.
 
-To undo all changes that you or other people have made to the sample, select **Revert**. The score sample will be reverted to the system's default score sample, and the payload sample will be reverted to the user-defined payload sample in the [**Payload settings** pane](rules.md#payload-settings).
+To undo all changes that you or other people have made to the sample, select **Revert**. The score sample will be reverted to the system's default score sample, and the payload sample will be reverted to the user-defined payload sample in the [Payload settings pane](rules.md#rules-settings).
 
 ### Conditions
 
