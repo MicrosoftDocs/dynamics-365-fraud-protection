@@ -27,7 +27,7 @@ The following are useful resources for getting started with developing your own 
 The [D365 Fraud Protection Portal Admin App](https://github.com/microsoft/Dynamics-365-Fraud-Protection-Samples/tree/master/power%20app%20sample) is integrated with Fraud Protection Event Tracing Data and CDS and serves as an admin toolbox application for the Fraud Protection Portal. The app is fully open-source and can be modified or simply used as a reference.
 
 ## Related topics
-- [Extensibility via Event Hubs -  overview]( extensibility-via-event-hubs-overview.md)
+- [Extensibility via Event Hubs - Overview]( extensibility-via-event-hubs-overview.md)
 - [Setup extensibility via Event Hubs](extensibility-setup.md)	
 - [Working with code](extensibility-with-code.md)
 - [Working with Logic Apps/Power Automate]( extensibility-with-power-automate.md)
