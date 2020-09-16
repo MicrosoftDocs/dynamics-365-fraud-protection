@@ -3,7 +3,7 @@ author: yvonnedeq
 description: How to setup event hubs to extend Fraud Protection functionality and incorporate Fraud Protection data into an organization’s processes and workflows.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/11/2020
+ms.date: 09/15/2020
 ms.topic: conceptual
 search.app:
   - Capaedac-fraudprotection
