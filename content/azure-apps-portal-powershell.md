@@ -26,12 +26,12 @@ You can create Microsoft Azure Active Directory (Azure AD) apps within Microsoft
 5. In the **Name** field, enter any name (for example, **API service account**). In the **Supported account types** field group, leave the **Accounts in this organizational directory only (\<your tenant name\>)** option selected. The Redirect (Web) URI is optional. It can be any URL that starts with **https://**. 
 
 ## Create an Azure AD app registration in PowerShell 
-If you prefer to use Microsoft Windows PowerShell to create an Azure AD app registration, see [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication?view=azurermps-6.13.0). 
+If you prefer to use Microsoft Windows PowerShell to create an Azure AD app registration, see [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication?view=azurermps-6.13.0&preserve-view=true). 
 
 ## Grant your Azure AD app access to the Dynamics 365 Fraud Protection real-time APIs 
 For more information about how to configure API access to your Dynamics 365 Fraud Protection endpoint via the Azure portal, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal). 
 
-To assign the appropriate Dynamics 365 API role to your Azure AD app using PowerShell, use the [New-AzureADServiceAppRoleAssignment Windows PowerShell script](https://docs.microsoft.com/powershell/module/azuread/new-azureadserviceapproleassignment?view=azureadps-2.0), as shown in the following example. 
+To assign the appropriate Dynamics 365 API role to your Azure AD app using PowerShell, use the [New-AzureADServiceAppRoleAssignment Windows PowerShell script](https://docs.microsoft.com/powershell/module/azuread/new-azureadserviceapproleassignment?view=azureadps-2.0&preserve-view=true), as shown in the following example. 
 
 ```console
 $c_app_name = "<your Azure AD application display name here>"
