@@ -29,11 +29,11 @@ There are many SDK kits available for working with events from event hubs.NET, J
 
 ### Sample Event Hubs sender and receiver code (JavaScript)
 
-If you want a sample of working code to send and receive events to and from Event Hubs via JavaScript, you can find it [here](https://github.com/microsoft/Dynamics-365-Fraud-Protection-Samples).
+You can find a sample of working code to send and receive events to and from Event Hubs via JavaScript [here](https://github.com/microsoft/Dynamics-365-Fraud-Protection-Samples).
 
 
 ## Related topics
-- [Extensibility via Event Hubs -  overview]( extensibility-via-event-hubs-overview.md)
+- [Extensibility via Event Hubs - Overview]( extensibility-via-event-hubs-overview.md)
 - [Setup extensibility via Event Hubs](extensibility-setup.md)	
 - [Working with Logic Apps/Power Automate]( extensibility-with-power-automate.md)
 - [Working with Power BI]( extensibility-with-power-bi.md)
