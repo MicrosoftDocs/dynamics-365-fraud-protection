@@ -46,7 +46,7 @@ The following is a sample pricing breakdown of a certain use case of **Event Hub
 For a pricing breakdown specific to your own organization’s needs and usages, use the following [cost calculator](https://azure.microsoft.com/pricing/calculator/).
 
 ## Related topics
-- [Extensibility via Event Hubs - overview]( extensibility-via-event-hubs-overview.md)
+- [Extensibility via Event Hubs - Overview]( extensibility-via-event-hubs-overview.md)
 - [Setup extensibility via Event Hubs](extensibility-setup.md)	
 - [Working with code](extensibility-with-code.md)
 - [Working with Logic Apps/Power Automate]( extensibility-with-power-automate.md)
