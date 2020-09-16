@@ -3,7 +3,7 @@ author: yvonnedeq
 description: How to use event hubs with code SDKs to extend Fraud Protection functionality and incorporate Fraud Protection data into an organization’s processes and workflows.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/11/2020
+ms.date: 09/16/2020
 ms.topic: conceptual
 search.app:
   - Capaedac-fraudprotection
@@ -29,7 +29,7 @@ There are many SDK kits available for working with events from event hubs.NET, J
 
 ### Sample Event Hubs sender and receiver code (JavaScript)
 
-You can find a sample of working code to send and receive events to and from Event Hubs via JavaScript [here](https://github.com/microsoft/Dynamics-365-Fraud-Protection-Samples).
+You can find a sample of working code to send and receive events to and from Event Hubs via JavaScript [here](https://docs.microsoft.com/azure/event-hubs/event-hubs-node-get-started-send).
 
 
 ## Related topics
