@@ -98,22 +98,6 @@
     href: fpl-lang-ref.md    
 - name: Event tracing
   href: event-tracing.md
-- name: Assessment usage and metering
-  href: metering.md        
-- name: AI and insights from the fraud protection network
-  href: fraud-protection-network.md
-- name: Security and compliance
-  items: 
-  - name: Compliance overview
-    href: security-compliance.md
-  - name: Security overview
-    href: security.md
-  - name: Security measures for protecting data  
-    href: compliance-and-security.md
-- name: Privacy protection for data
-  href: data-processing-protection.md
-- name: Interacting with 3DSv2/PSD2 signals
-  href: interact-w-3DSv2-PSD2-signals.md  
 - name: Extensibility via Event Hubs
   items: 
   - name: Overview
@@ -130,6 +114,22 @@
     href: extensibility-with-power-apps.md
   - name: Pricing
     href: extensibility-pricing.md  
+- name: Assessment usage and metering
+  href: metering.md        
+- name: AI and insights from the fraud protection network
+  href: fraud-protection-network.md
+- name: Security and compliance
+  items: 
+  - name: Compliance overview
+    href: security-compliance.md
+  - name: Security overview
+    href: security.md
+  - name: Security measures for protecting data  
+    href: compliance-and-security.md
+- name: Privacy protection for data
+  href: data-processing-protection.md
+- name: Interacting with 3DSv2/PSD2 signals
+  href: interact-w-3DSv2-PSD2-signals.md  
 - name: Visually explore data
   href: graph-explorer.md
 - name: Evaluate experience
