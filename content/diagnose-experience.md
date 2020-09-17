@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about the diagnose experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 09/17/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -39,14 +39,13 @@ To help guarantee that Fraud Protection can interpret the files that you upload,
 > [!IMPORTANT]
 > This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
-
 ## Generate reports
 
 1. In the left navigation, select the **Purchase** fraud assessment and select **Diagnose**. When you're ready to upload the data, select **Upload Data**.
 
 2. You can begin creating reports after all four data files (Purchases, Payment instruments, Products, and Chargebacks) are uploaded.
 
-- To generate a report, select **Generate reports**. 
+   - To generate a report, select **Generate reports**. 
 
   Report generation typically takes no longer than 24 hours, but might take more or less time depending on the size of your files.
 
