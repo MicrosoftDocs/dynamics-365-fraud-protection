@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the schemas that are required for historical data upload.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 09/17/2020
 
 ms.topic: conceptual
 search.app: 
@@ -132,7 +132,7 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | double   | The chargeback amount. |
 | Currency           | string   | The currency that is used for the chargeback amount. |
-| UserId             | string   | The customer identifier. This is a required attribute.|
+| UserId             | string   | The customer identifier.|
 | PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
 | MerchantLocalDate  | DateTime | The purchase ingestion date in the merchant's local time zone. The format is ISO 8601. |
 
