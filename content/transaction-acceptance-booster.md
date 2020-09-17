@@ -25,14 +25,14 @@ The acceptance booster service provides a direct communication channel for conte
 
 #### To enable the acceptance booster service:
 
-1. Select **Configuration**, and then select **Transaction acceptance booster**. 
+1. Select **Settings**, and then select **Transaction acceptance booster**. 
 1. On the **Opt in** tab, select **Acceptance booster service** to consent to share transaction trust knowledge with participating banks and networks. 
 1. Select **Consent** to review details about the terms and a list of participants in the program. 
 1. Select **Save** to confirm your choice.
 
 ### Reports
 
-To view a report of your transaction acceptance booster service, select **Configuration**, select **Transaction acceptance booster**, and then select the **Report** tab.
+To view a report of your transaction acceptance booster service, select **Settings**, select **Transaction acceptance booster**, and then select the **Report** tab.
 
 ## Program MID
 
@@ -42,7 +42,7 @@ It takes time to create MIDs and use them for authorization, but these tasks don
 
 #### To enable Program MID: 
 
-1. Select **Configuration**, and then select **Transaction acceptance booster**.
+1. Select **Settings**, and then select **Transaction acceptance booster**.
 1. On the **Opt in** tab, select **Program MID** to 
 receive MID recommendations. 
 1. Select **Consent** to review details about the terms and a list of participants in the program. 
