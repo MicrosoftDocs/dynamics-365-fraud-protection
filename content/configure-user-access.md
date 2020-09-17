@@ -20,7 +20,7 @@ Microsoft Dynamics 365 Fraud Protection allows you to grant users various levels
 
 ## Assign roles 
 
-Initial user and role configuration should be done by your administrator as defined in your Azure tenant. Go to **Configuration** in the left-hand navigation and select **User access** to assign roles to existing users or groups of your tenant. 
+Initial user and role configuration should be done by your administrator as defined in your Azure tenant. Go to **Settings** in the left-hand navigation and select **User access** to assign roles to existing users or groups of your tenant. 
 
 Select **Assign role** to grant access a to user or group in this environment. Type the name or the company email address of the person or group you want to edit. If it is recognized as a member of your Azure tenant, it will resolve and display their complete name. Select it to continue. 
 
