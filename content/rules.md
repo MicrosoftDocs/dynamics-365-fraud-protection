@@ -158,7 +158,7 @@ If a condition matches the decision but doesn't trigger a clause, the rule is th
 RETURN Approve("NO_CLAUSE_HIT")
 ```
 
-Clauses are run sequentially in the order in which they appear on the **Rules** page. You can use the arrow buttons on the right side of a clause to change its position in the list.
+Clauses are run sequentially in the order in which they appear on the **Rules** tab. You can use the arrow buttons on the right side of a clause to change its position in the list.
 
 Clauses are organized into sections. AI models are run based on these sections and generate a score as part of the assessment. The sections differ per assessment and indicate when the clause is run relative to the AI model.
 
@@ -209,7 +209,7 @@ WHEN @purchasePrice >= 199.99 && @riskScore > 700
 ```
 ### Drafts
 
-A rule can have both a *published* version and a *draft* version. Both versions can be viewed as side-by-side tabs on the **Rules** page.
+A rule can have both a *published* version and a *draft* version. Both versions can be viewed as side-by-side tabs on the **Rules** tab.
 
 The published version is read-only and can be viewed by anyone. The draft version is visible only to its author. Drafts can be edited, and all changes are automatically saved.
 
@@ -220,7 +220,7 @@ When you publish a draft, Fraud Protection overwrites the published version of t
 
 ## Rule ordering
 
-The **Rules** page shows a list of the published rules that are configured for the assessment. The order that the rules are listed in affects the order that they are evaluated in. To reorder the rules, simply drag and drop the rule in its desired position, and click **Save**.
+The **Rules** tab shows a list of the published rules that are configured for the assessment. The order that the rules are listed in affects the order that they are evaluated in. To reorder the rules, simply drag and drop the rule in its desired position, and click **Save**.
 
 An event is evaluated against each rule condition, in order, until a condition returns **True**. Each of the clauses in the selected rule are then evaluated. If one of these clauses returns a decision, no further rules are evaluated. If none of these clauses return a decision, then either the transaction will by default be approved, or the next published rule with a matching condition will be evaluated. This behavior is dependent on what is selected as the [rule evaluation behavior](rules.md#rule-evaluation-behavior) in **Rules settings**.
 
@@ -230,9 +230,9 @@ An event is evaluated against each rule condition, in order, until a condition r
 You can create rules that make decisions that are related to purchase, account creation, and account login events.
 
 > [!IMPORTANT]
-> By default, when a new rule is published, it appears at the bottom of the list in the **Published Rules** section of the **Rules** page. For information about how to reposition the rule, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this topic.
+> By default, when a new rule is published, it appears at the bottom of the list in the **Published Rules** section of the **Rules** tab. For information about how to reposition the rule, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this topic.
 
-1. On the [**Rules** page](rules.md#rules-page), select **New Rule**.
+1. On the [**Rules** tab](rules.md#rules-tab), select **New Rule**.
 
     A new draft rule is created. All changes that you make to your drafts are automatically saved.
 
@@ -243,14 +243,14 @@ You can create rules that make decisions that are related to purchase, account c
     - To create a new clause from scratch, select **New clause** in the appropriate clause section.
     - You can also start from an existing clause template by selecting the arrow to the right of **New clause**. To view a full list of templates and their contents, select **See all**.
 
-1. To [evaluate your rule](rules.md#evaluate-a-rule) and make sure that it works as you expect, select **Expand** in the lower right of the **Rules** page to open the rule evaluation pane.
+1. To [evaluate your rule](rules.md#evaluate-a-rule) and make sure that it works as you expect, select **Expand** in the lower right of the **Rules** tab to open the rule evaluation pane.
 1. To publish your rule, select **Publish**. In the confirmation dialog box, change the name, description, and status, and then select **Publish**.
 1. Set the [status](rules.md#status) to either **Active** or **Inactive**.
-1. To reposition the rule in the list on the **Rules** page, select the rule, drag it to its new position, and then select **Save order**.
+1. To reposition the rule in the list on the **Rules** tab, select the rule, drag it to its new position, and then select **Save order**.
 
 ## Manage existing rules
 
-On the **Rules** page, you can perform the following operations on an existing rule:
+On the **Rules** tab, you can perform the following operations on an existing rule:
 
 - [Rename](rules.md#update-the-name-and-description-of-a-rule)
 - [Activate or deactivate](rules.md#change-the-status-of-a-rule)
@@ -302,7 +302,7 @@ To remove a filter, delete the keyword from the **Search** field, or select the 
 
 ### Change the order of a rule
 
-Because published rules appear on the **Rules** page in the order that they are run, the position of a published rule significantly affects how events are evaluated.
+Because published rules appear on the **Rules** tab in the order that they are run, the position of a published rule significantly affects how events are evaluated.
 
 
 #### To reorder a published rule
@@ -318,7 +318,7 @@ Because published rules appear on the **Rules** page in the order that they are 
 
 Before you publish your new rule, you can use the rule evaluation pane to make sure that it returns the results that you expect.
 
-- To open the rule evaluation pane, select **Expand** in the lower right of the **Rules** page.
+- To open the rule evaluation pane, select **Expand** in the lower right of the **Rules** tab.
 - To close the pane, select **Collapse**.
 
 When the evaluation pane is open, you can watch your rule being is evaluated against the [current payload sample and score sample](rules.md#samples). As you make changes to the sample, or to the rule itself, the content in the evaluation pane is updated.
