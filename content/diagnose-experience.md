@@ -41,7 +41,7 @@ To help guarantee that Fraud Protection can interpret the files that you upload,
 
 ## Generate reports
 
-1. In the left navigation, select **Purchase** fraud assessment and then select **Diagnose**. 
+1. In the left navigation, select **Purchase** and then select **Diagnose**. 
 
 1. When you're ready to upload the data, select **Upload Data**.
 
