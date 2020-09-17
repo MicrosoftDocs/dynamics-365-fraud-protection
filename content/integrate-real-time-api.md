@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/13/2020
+ms.date: 09/17/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -42,7 +42,7 @@ To acquire the tokens required to call the APIs, you must use Azure Active Direc
 
 #### To configure Azure AD applications:
 
-1. Select **API management** under **Data** in the left navigation pane, and then select **Configuration**. 
+1. In the left navigation, select **Data**, select **API management**, and then select **Configuration**. 
 1. Complete the form to create your app. We recommend creating one Azure AD application for each environment that you operate. 
 
    The following fields are required: 
