@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic is a language guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 08/12/2020
+ms.date: 08/25/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -43,7 +43,14 @@ RETURN Reject("email is on block list", "do not escalate")
 
 For information about decision types and their parameters, see the [Decision types](fpl-lang-ref.md#decision-types) section later in this topic.
 
-In addition to a decision type, you can also return additional functions, such as Other or Trace. For more information, see [Additional return types](fpl-lang-ref.md#additional-return-types) section later in this topic.
+In addition to a decision type, you can also return additional functions, such as Other or Trace. 
+
+```ruleslanguage
+RETURN Approve(), Other(key="someValue")
+RETURN Review(), Trace(email=@"user.email")
+```
+
+For more information, see the [Additional return types](fpl-lang-ref.md#additional-return-types) section later in this topic.
 
 ### WHEN
 
@@ -104,7 +111,7 @@ This section contains a complete list of operators that are available in Fraud P
 
 | Keyword | Description | Example |
 |--------|-------------|---------|
-| RETURN | <p>This keyword must be followed by a valid [decision type](fpl-lang-ref.md#decision-types): *Approve*, *Reject*, *Challenge*, or *Review*.</p><p>The decision can be followed by the [Other](fpl-lang-ref.md#additional-return-types) type, which is used to pass key/value pairs.</p> | <p>RETURN Reject()</p><p>RETURN Reject(), Other(key=@"user.email")</p> |
+| RETURN | <p>This keyword must be followed by a valid [decision type](fpl-lang-ref.md#decision-types): *Approve*, *Reject*, *Challenge*, or *Review*.</p><p>The decision can be followed by an additional return type such as [Other or Trace](fpl-lang-ref.md#additional-return-types).</p> | <p>RETURN Reject()</p><p>RETURN Reject(), Other(key=@"user.email")</p><p>RETURN Reject(), Trace(ip=@”device.ipAddress”)</p> |
 | WHEN   | The expression must be able to be evaluated to a *Boolean* value. | WHEN @"riskscore" \> 400 |
 
 #### Decision types

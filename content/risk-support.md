@@ -20,7 +20,7 @@ Risk support in Microsoft Dynamics 365 Fraud Protection lets your agents evaluat
 
 To show a customer's transactions, follow these steps.
 
-1. In the left navigation, select **Purchase protection**, and then select **Support**.
+1. In the left navigation, select the **Purchase** fraud assessment, and then select the **Support** tab.
 2. In the **Search** field, enter criteria to find detailed information about the customer's transactions.
 
 These are the available search methods:
