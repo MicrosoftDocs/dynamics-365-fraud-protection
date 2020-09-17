@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how you can use Fraud Protection to support your customers.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 09/17/2020
 ms.topic: conceptual 
 search.app: 
   - Capaedac-fraudprotection
@@ -20,15 +20,15 @@ Risk support in Microsoft Dynamics 365 Fraud Protection lets your agents evaluat
 
 To show a customer's transactions, follow these steps.
 
-1. In the left navigation, select the **Purchase** fraud assessment, and then select the **Support** tab.
+1. In the left navigation, select **Purchase** and then select the **Support** tab.
 2. In the **Search** field, enter criteria to find detailed information about the customer's transactions.
 
-These are the available search methods:
+There are four available search methods:
 
-- **User ID** – The unique ID that is assigned to the user.
-- **User email address**
-- **Purchase ID** – The unique ID of a purchase that is sent to Fraud Protection for risk evaluation.
-- **Payment instrument ID** – The unique hash of a payment method that is associated with a transaction that is sent to Fraud Protection.
+- **User ID** – To search by the unique ID that is assigned to the user.
+- **User email address** – To search by the user's email address.
+- **Purchase ID** – To search by the  unique ID of a purchase that is sent to Fraud Protection for risk evaluation.
+- **Payment instrument ID** – To search by the  unique hash of a payment method that is associated with a transaction sent to Fraud Protection.
 
 ### Search transactions
 
