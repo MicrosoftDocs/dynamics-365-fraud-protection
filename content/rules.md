@@ -4,7 +4,7 @@ description: This topic explains how to create and manage rules that protect acc
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/15/2020
+ms.date: 09/17/2020
 
 ms.topic: conceptual
 search.app: 
