@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to monitor API calls in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 09/17/2020
 
 ms.topic: conceptual
 search.app: 
@@ -18,9 +18,11 @@ title: Overview of API call monitoring tools
 
 The monitoring tools in Microsoft Dynamics 365 Fraud Protection provide data about the API calls you have made to the service. You can also consult the error logs to aid in identifying any issues. 
 
-- To view the monitoring page, select **API management** under **Data** in the navigation bar, and then select the **API Requests** or **Errors** tabs. 
+#### To view the monitoring page
 
-Information on this page updates in real time.
+- In the left navigation, select **Data**, select **API management**, and then select the **API Requests** or **Errors** tabs. 
+
+    Information on this page updates in real time.
 
 ## API requests
 
