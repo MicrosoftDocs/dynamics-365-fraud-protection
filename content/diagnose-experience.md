@@ -41,11 +41,13 @@ To help guarantee that Fraud Protection can interpret the files that you upload,
 
 ## Generate reports
 
-1. In the left navigation, select the **Purchase** fraud assessment and select **Diagnose**. When you're ready to upload the data, select **Upload Data**.
+1. In the left navigation, select **Purchase** fraud assessment and then select **Diagnose**. 
 
-2. You can begin creating reports after all four data files (Purchases, Payment instruments, Products, and Chargebacks) are uploaded.
+1. When you're ready to upload the data, select **Upload Data**.
 
-   - To generate a report, select **Generate reports**. 
+1. You can begin creating reports after all four data files (Purchases, Payment instruments, Products, and Chargebacks) are uploaded.
+
+1. To generate a report, select **Generate reports**. 
 
   Report generation typically takes no longer than 24 hours, but might take more or less time depending on the size of your files.
 
@@ -73,5 +75,6 @@ The risk diagnostic report lets you assess your risk from fraudulent activity an
 
 You can review your completed data diagnostic and risk diagnostic reports in Fraud Protection. Depending on the type of report you want to review: 
 
-1. Select **Purchase** and then the **Diagnose** tab in the navigation bar. View your risk report and select **Check data quality** to review the data diagnostic report.
+1. Select **Purchase** and then select the **Diagnose** tab. 
+1. View the risk report and select **Check data quality** to review the data diagnostic report.
 1. For deeper analysis and additional information, download the full reports as .docx files.
