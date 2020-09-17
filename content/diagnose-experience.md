@@ -45,11 +45,11 @@ To help guarantee that Fraud Protection can interpret the files that you upload,
 
 1. When you're ready to upload the data, select **Upload Data**.
 
-1. You can begin creating reports after all four data files (Purchases, Payment instruments, Products, and Chargebacks) are uploaded.
+   You can begin creating reports after all four data files (Purchases, Payment instruments, Products, and Chargebacks) are uploaded.
 
 1. To generate a report, select **Generate reports**. 
 
-  Report generation typically takes no longer than 24 hours, but might take more or less time depending on the size of your files.
+   Report generation typically takes no longer than 24 hours, but might take more or less time depending on the size of your files.
 
 ### Data diagnostic report
 
