@@ -4,7 +4,7 @@ description: This topic explains how the virtual fraud analyst helps you set up 
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 09/17/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -57,7 +57,7 @@ The following table defines the node and attribute combinations that you can use
 To create a filter for historical transaction data, follow these steps.
 
 1. Create and upload a list.
-1. In the left navigation, select the **Purchase** Fraud assessment and then **Virtual fraud analyst**.
+1. In the left navigation, select **Purchase** and then select **Virtual fraud analyst**.
 1. Select a node, attribute, list, and column.
 1. To add another filter, select **Add another filter**, and then repeat step 3.
 1. Select **Analyze**.
