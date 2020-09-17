@@ -25,7 +25,7 @@ Events can be aggregated and used to define metrics that you can use to monitor 
 
 Follow these steps to start to use the event tracing functionality.
 
-1. In the [Fraud Protection]( https://dfp.microsoft.com/) portal, select **Configuration**, and then select **Event Tracing**.
+1. In the [Fraud Protection]( https://dfp.microsoft.com/) portal, select **Data**, and then select **Event Tracing**.
 1. Select **New subscription**.
 1. Provide the connection string for the instance of Event Hubs, and select an event to forward to that instance. For more information, see [Get an Event Hubs connection string](https://docs.microsoft.com/azure/event-hubs/event-hubs-get-connection-string).
 
