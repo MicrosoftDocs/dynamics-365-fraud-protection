@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic is a language guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 08/25/2020
+ms.date: 09/17/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -188,7 +188,7 @@ These operators convert an IP address to a geographical address.
 
 #### String operators
 
-Fraud Protection supports all standard .NET [string operators](https://docs.microsoft.com/dotnet/api/system.string?view=netframework-4.8). This table includes some examples of methods that you might find useful.
+Fraud Protection supports all standard .NET [string operators](https://docs.microsoft.com/dotnet/api/system.string?view=netframework-4.8&preserve-view=true). This table includes some examples of methods that you might find useful.
 
 | Operator     | Description | Example |
 |------------|-------------|---------|
@@ -199,7 +199,7 @@ Fraud Protection supports all standard .NET [string operators](https://docs.micr
 
 #### Math operators
 
-Fraud Protection supports all standard .NET [math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8) and all C# [arithmetic operators](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods that you might find useful.
+Fraud Protection supports all standard .NET [math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8&preserve-view=true) and all C# [arithmetic operators](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods that you might find useful.
 
 | Operator   | Description | Example |
 |----------|-------------|---------|
@@ -208,7 +208,7 @@ Fraud Protection supports all standard .NET [math methods](https://docs.microsof
 
 ### DateTime operators
 
-Fraud Protection supports all standard .NET [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?view=netframework-4.8) properties, methods, and operators. This table includes some examples of properties that you might find useful.
+Fraud Protection supports all standard .NET [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?view=netframework-4.8&preserve-view=true) properties, methods, and operators. This table includes some examples of properties that you might find useful.
 
 | Operator | Description | Example |
 |--------|-------------|---------|
