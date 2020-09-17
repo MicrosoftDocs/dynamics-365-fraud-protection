@@ -21,7 +21,7 @@ title: Manage rules for Fraud Protection
 
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create rules that use the score that Fraud Protection's state-of-the-art artificial intelligence (AI) model generates, together with additional parameters from the request payload. Based on these inputs, rules can convert an assessment into a decision, such as **Approve**, **Reject**, **Review**, or **Challenge**.
 
-## Rules page
+## Rules tab
 
 You can create custom rules and manage existing rules on the **Rules** tab.
 
