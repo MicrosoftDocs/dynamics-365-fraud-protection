@@ -23,18 +23,13 @@ Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create rule
 
 ## Rules page
 
-You can create custom rules and manage existing rules on the **Rules** page.
+You can create custom rules and manage existing rules on the **Rules** tab.
 
-- To create and manage rules that are related to purchases, select **Purchase protection**, and then select **Rules** in the left navigation pane.
-- To create and manage rules that are related to accounts, select **Account protection**, and then select **Rules** in the left navigation pane.
+- To create and manage rules that are related to purchases, select **Purchase**, and then select the **Rules** tab.
+- To create and manage rules that are related to accounts, select **Account creation** or **Account login**, and then select the **Rules** tab.
 - To create and manage rules that are related to a custom assessment, select **Custom assessments**, select a custom assessment, and then select the **Rules** tab.
 
-The **Rules** page for account protection has a tab for each assessment type:
-
-- **Account creation** – On this tab, you can create rules that are run on account creation events, when someone tries to create a new account.
-- **Account login** – On this tab, you can create rules that are run on account login events.
-
-The **Rules** page shows a list of the rules that have been configured for an assessment type. These rules are divided into two sections: **Published Rules** and **Drafts**. For information about drafts, see the [Drafts](rules.md#drafts) section later in this topic.
+The **Rules** tab shows a list of the rules that have been configured for an assessment type. These rules are divided into two sections: **Published Rules** and **Drafts**. For information about drafts, see the [Drafts](rules.md#drafts) section later in this topic.
 
 You can view the following information for each rule or draft:
 
@@ -51,11 +46,11 @@ You can also click each rule tile to expand it, and view additional information,
 
 
 > [!NOTE]
-> On the **Rules** page, published rules are listed in the order that they are run in.
+> On the **Rules** tab, published rules are listed in the order that they are run in.
 
 ### Rules settings
 
-You can access the rules settings from the **Rules** page for a particular assessment. From here, you can make changes to the rule evaluation behavior as well as the sample payload. Note that these changes only apply to rules for the assessment you are editing. 
+You can access the rules settings from the **Rules** tab for a particular assessment. From here, you can make changes to the rule evaluation behavior as well as the sample payload. Note that these changes only apply to rules for the assessment you are editing. 
 
 ### Rule evaluation behavior
 
