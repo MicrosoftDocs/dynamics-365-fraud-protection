@@ -4,7 +4,7 @@ description: This topic explains how to implement device fingerprinting based on
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 08/13/2020
+ms.date: 09/21/2020
 
 
 ms.topic: conceptual
@@ -35,10 +35,10 @@ It is your responsibility to:
 
 The process of integrating device fingerprinting for Fraud Protection consists of the following tasks:
 
-1. Set up Microsoft Azure DNS.
+1. Set up Microsoft  DNS.
 1. Integrate device fingerprinting with your website.
 
-## Set up Azure DNS
+## Set up DNS
 
 1. Select a subdomain under your root domain. (For example, select **f.contoso.com**. Any prefix can be used.)
 2. For the selected subdomain, create a canonical name (CNAME) that points to `fpt.dfp.microsoft.com`.
@@ -58,7 +58,7 @@ Your website or application should enable the device fingerprinting before it su
 1. Insert a **script** on the webpage/application where you want collect device fingerprinting information    
 
     ```javascript
-    <script src="https://fpt.<Your_Root_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
+    <script src="https://fpt.<Your_Sub_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
     ```
 
     - **Your\_Root\_Domain** – The root domain of the merchant website.
@@ -68,13 +68,13 @@ Your website or application should enable the device fingerprinting before it su
     **Example**
 
     ```javascript
-    <script src="https://fpt.contoso.com/mdt.js?session_id=211d403b-2e65-480c-a231-fd1626c2560e&instanceId=b472dbc3-0928-4577-a589-b80090117691" type="text/javascript"></script>
+    <script src="https://Your_Sub_Domain/mdt.js?session_id=211d403b-2e65-480c-a231-fd1626c2560e&instanceId=b472dbc3-0928-4577-a589-b80090117691" type="text/javascript"></script>
     ```
 
     Here is an example of a response for mdt.js.
 
     ```javascript
-   window.dfp={url:"https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};window.dfp.doFpt=function(doc){var frm,src;true&&(frm=doc.createElement("IFRAME"),frm.id="fpt_frame",frm.style.width="1px",frm.style.height="1px",frm.style.position="absolute",frm.style.visibility="hidden",frm.style.left="10px",frm.style.bottom="0px",frm.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;left:-200;border:0px"),src="https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",frm.setAttribute("src",src),doc.body.appendChild(frm))};
+   window.dfp={url:"https://Your_Sub_Domain/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};window.dfp.doFpt=function(doc){var frm,src;true&&(frm=doc.createElement("IFRAME"),frm.id="fpt_frame",frm.style.width="1px",frm.style.height="1px",frm.style.position="absolute",frm.style.visibility="hidden",frm.style.left="10px",frm.style.bottom="0px",frm.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;left:-200;border:0px"),src="https://Your_Sub_Domain/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",frm.setAttribute("src",src),doc.body.appendChild(frm))};
     ```
 
 2. Load device fingerprinting after the page's elements are loaded.
@@ -83,12 +83,23 @@ Your website or application should enable the device fingerprinting before it su
     window.dfp.doFpt(this.document);
     ```
 
-3. When you submit transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services), complete the following actions:
+3. When you submit transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection), complete the following action:
 
-    1. In the **deviceContextId** field, set a session ID.
-    1. In the **deviceContextDC** field on the deviceContext object, set the window.dfp.dc variable from mdt.js response.
+    - In the **deviceContextId** field, set a session ID.
+
+4. Set the 'device.ipAddress' field to the customer's IP address that your website receives when they use your site.
 
 > [!NOTE]
 > You can learn more about the Mobile Reference Implementation in the [DFP Mobile Reference Implementation Document](https://go.microsoft.com/fwlink/?linkid=2132646). A login is required.
 
+## Verify device fingerprinting
+
+1.	Send a transaction/signup/signin/etc to the Dynamics 365 Fraud Protection API, including the device fingerprinting deviceContextID.
+2.	Visit the [Dynamics 365 Fraud Protection Portal](add link).
+3.	Go to the [Graph Explorer](add link)
+4.	Search for the transaction/signup/signin that you submitted.
+5.	Select the **DeviceContext** node in the graph.
+6.	In the right panel, verify the additional details about your device (e.g. UserAgent, operating system version, etc.). 
+
+    Note that if you can see additional details beyond what was submitted in the API call, you have correctly setup device fingerprinting.
 
