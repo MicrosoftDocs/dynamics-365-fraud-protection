@@ -95,8 +95,8 @@ Your website or application should enable the device fingerprinting before it su
 ## Verify device fingerprinting
 
 1.	Send a transaction/signup/signin/etc to the Dynamics 365 Fraud Protection API, including the device fingerprinting deviceContextID.
-2.	Visit the [Dynamics 365 Fraud Protection Portal](add link).
-3.	Go to the [Graph Explorer](add link)
+2.	Visit the [Fraud Protection Portal](https://dfp.microsoft.com/).
+3.	In the left navigation, select **Graph Explorer**.
 4.	Search for the transaction/signup/signin that you submitted.
 5.	Select the **DeviceContext** node in the graph.
 6.	In the right panel, verify the additional details about your device (e.g. UserAgent, operating system version, etc.). 
