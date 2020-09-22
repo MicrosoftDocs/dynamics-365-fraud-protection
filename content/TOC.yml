@@ -24,7 +24,7 @@
     href: labels-api.md
   - name: Implement device fingerprinting
     href: device-fingerprinting.md    
-  - name: Upload historical data
+  - name: Upload historical data for purchase protection
     href: data-upload.md
   - name: View purchase protection schemas
     href: schema-INT.md
@@ -74,6 +74,8 @@
     href: ap-scorecard.md
   - name: Account protection schemas
     href: new-ap-schema.md
+  - name: Monitor API calls
+    href: monitoring.md    
 - name: Loss prevention
   items:
   - name: Loss prevention overview
