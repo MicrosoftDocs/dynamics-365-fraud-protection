@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/17/2020
+ms.date: 09/24/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -20,13 +20,26 @@ Microsoft Dynamics 365 Fraud Protection allows you to grant users various levels
 
 ## Assign roles 
 
-Initial user and role configuration should be done by your administrator as defined in your Azure tenant. Go to **Settings** in the left-hand navigation and select **User access** to assign roles to existing users or groups of your tenant. 
+The administrator defined in your Azure tenant sets up initial user and role configuration. 
 
-Select **Assign role** to grant access a to user or group in this environment. Type the name or the company email address of the person or group you want to edit. If it is recognized as a member of your Azure tenant, it will resolve and display their complete name. Select it to continue. 
+#### To assign roles to existing users or groups of your tenant
+- In the left-hand navigation, select **Settings**  and select **User access**. 
 
-To assign a specific role to the user, use the **Roles** dropdown and select one or more of the defined roles. Then select **Assign role** to create the user. 
+#### To grant access a to user or group in this environment
+1. Select **Assign role**. 
+1. Type the name or the company email address of the person or group you want to edit. 
 
-To edit or delete existing users, select them by name in the **Member** list and then select **Edit** or **Remove**. Roles can be added or deleted from a member in this section. Note that editing your own account, for instance deleting your own administrative role, may interfere with your ability to use certain features of Fraud Protection. If you need to restore permissions, you can reset this in the [Azure portal](https://portal.azure.com/#home). 
+   If the name is recognized as a member of your Azure tenant, it will resolve and display their complete name. 
+3. Select the name to continue. 
+
+#### To assign a specific role to the user
+1. From the **Roles** dropdown, select one or more of the defined roles. 
+1. Select **Assign role** to create the user. 
+
+#### To edit or delete existing users
+- Select the user name in the **Member** list and then select **Edit** or **Remove**. 
+
+Roles can be added or deleted from a member in this section. Note that editing your own account, for instance deleting your own administrative role, may interfere with your ability to use certain features of Fraud Protection. If you need to restore permissions, you can reset this in the [Azure portal](https://portal.azure.com/#home). 
 
 To learn more about the available roles, see the “Dynamics 365 Fraud Protection roles” section of this document. 
 
