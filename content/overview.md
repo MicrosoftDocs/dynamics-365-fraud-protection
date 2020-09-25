@@ -20,9 +20,9 @@ title: Overview of Fraud Protection features
 
 Today's digitally transformed enterprise conducts most of its business online and in real time. Little human intervention is involved. Although this approach helps reduce costs and improve the customer experience, it also exposes the enterprise to serious threats of fraud from sophisticated users who try to take advantage of the online channel's relative anonymity and accessibility. For example, in e-commerce, some transactions are maliciously created via compromised accounts and stolen payment instruments. Other malicious activities might include account takeover, abuse of free trials, fake product reviews, warranty fraud, refund fraud, reseller fraud, abuse of program discounts. All these activities, and others, can affect the enterprise's profitability and reputation.
 
-Some types of fraud even have serious consequences for society at large, for example, money laundering.
+Some types of fraud, such as money laundering, even have serious consequences for society at large.
 
-Because the return on investment reaped by fraudsters doing online fraud and abuse is high, it's likely that most of an enterprise's vulnerabilities will be discovered and exploited. Additionally, unlike during the early years of the internet, today's fraudulent transactions can be orchestrated by well-funded and well-equipped rings of professionals. Fraud protection professionals are best equipped to fight this threat.
+Because fraudsters who engage in online fraud and abuse reap a high return on investment, it's likely that most of an enterprise's vulnerabilities will be discovered and exploited. Additionally, unlike during the early years of the internet, today's fraudulent transactions can be orchestrated by well-funded and well-equipped rings of professionals. Fraud protection professionals are best equipped to fight this threat.
 
 ## Our mission
 
