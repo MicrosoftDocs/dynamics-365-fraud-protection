@@ -43,7 +43,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Currency            | string   | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant. |
 | DeviceContextId     | string   | The session ID of the event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if the session isn't available. |
 | IPAddress           | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
-| UserId              | string   | The customer identifier. This information is provided by the merchant. This is a required attribute.|
+| UserId              | string   | The customer identifier. This information is provided by the merchant. This attribute is required.|
 | UserFirstName       | string   | The customer-provided first name on the customer account. |
 | UserLastName        | string   | The customer-provided last name on the customer account. |
 | UserEmail           | string   | The customer's email address. This value is case-insensitive. |
