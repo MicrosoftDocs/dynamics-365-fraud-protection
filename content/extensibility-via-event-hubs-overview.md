@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: Overview on how to use Event Hubs to code SDKs and Power Platform to extend Fraud Protection functionality and incorporate Fraud Protection data into an organization’s processes and workflows.
+description: This topic provides an overview about how you can use Microsoft Azure Event Hubs with code software development kits (SDKs) and Microsoft Power Platform to extend the functionality of Dynamics 365 Fraud Protection and incorporate Fraud Protection data into an organization's processes and workflows.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 09/11/2020
@@ -9,26 +9,26 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Extensibility via Event Hubs - Overview
+title: Extensibility via Event Hubs
 
 ---
 
-# Extensibility via Event Hubs -  Overview
+# Extensibility via Event Hubs
 
-This documentation guides you through setting up and using the *event tracing data* available from Microsoft Dynamics 365 Fraud Protection. This includes, but is not limited to, **Audit Log**, **Latency**, and **Trace** events.
+This content guides you through the process of setting up and using the *event tracing data* that is available from Microsoft Dynamics 365 Fraud Protection. This data includes, but isn't limited to, data for *audit log events*, *latency events*, and *trace events*.
 
-Through pure-code SDKs, you can integrate this data with your own organization’s workflows and requirements  for granular control and custom needs. Additionally, you can take advantage of quick, fast-development tools such as **Logic Apps**, **Power BI**, and **Power Apps** for powerful automations, reports, and applications. 
+Through pure-code software development kits (SDKs), you can integrate this data with your own organization's workflows, requirements for granular control, and custom needs. Additionally, you can take advantage of fast-development tools such as Azure Logic Apps, Power BI, and Power Apps for powerful automation, reports, and applications.
 
-This guide is organized into the following main sections:
+This content is organized into the following main topics:
 
-- [Setup extensibility via Event Hubs](extensibility-setup.md)	
-- [Working with code](extensibility-with-code.md)
-- [Working with Logic Apps/Power Automate]( extensibility-with-power-automate.md)
-- [Working with Power BI]( extensibility-with-power-bi.md)
-- [Working with Power Apps]( extensibility-with-power-apps.md)
+- [Set up extensibility via Event Hubs](extensibility-setup.md)	
+- [Work with code](extensibility-with-code.md)
+- [Work with Logic Apps or Power Automate](extensibility-with-power-automate.md)
+- [Work with Power BI](extensibility-with-power-bi.md)
+- [Work with Power Apps](extensibility-with-power-apps.md)
 - [Pricing](extensibility-pricing.md)
 
-
-> [!NOTE]  
-> Only the **Setup** section is *required*. The rest of the content is optional depending on your organization's needs. Each section contains subsections so you can skip around and review only the parts you need. The phrases *events*, *eventing data*, and *event tracing data* are used interchangeably. 
-Read the **Notes** in each section *before* moving to another section. 
+> [!NOTE]
+> Only the [Set up extensibility via Event Hubs](extensibility-setup.md) topic is *required*. The remaining topics are optional, depending on your organization's needs. Each topic is divided into sections, so that you can skip around and review only the parts that you require. In these topics, the terms *events*, *eventing data*, and *event tracing data* are used interchangeably. 
+>
+> Be sure to read the notes in each topic *before* you move on to another topic.
