@@ -36,11 +36,11 @@ Customers in other areas may experience increased latency or lack of service, an
 
 ## Loss Prevention
 
-As you plan for future deployments and use of Dynamics 365 Fraud Protection in India, the following information is meant to equip you with some tools that will assist your assessment of adequacy.  
+As you plan for future deployments and use of Fraud Protection in India, the following information is meant to equip you with some tools that will assist your assessment of adequacy.  
  
-D365 Fraud Protection is hosted from data centers located in the US and Europe; this is fully described in our dashboard covering [Geographical Availability for Dynamics 365](https://dynamics.microsoft.com/en-us/geographic-availability/). This means that for services sold in India, Customer Data is processed and stored in the United States or Europe, depending on capacity availability. Currently, the online service is not hosted in our Indian data centers. Although we plan to address geo-location to offer D365 Fraud Protection primarily hosted from our data centers in India, this is not a configuration offered today. 
+Fraud Protection is hosted from data centers located in the US and Europe; this is fully described in our dashboard covering [Geographical Availability for Dynamics 365](https://dynamics.microsoft.com/en-us/geographic-availability/). This means that for services sold in India, customer data is processed and stored in the United States or Europe, depending on capacity availability. Currently, the online service is not hosted in our Indian data centers. Although we plan to address geo-location to offer Fraud Protection primarily hosted from our data centers in India, this is not a configuration offered today. 
  
-The data schema used by D365 Fraud Protection is available in our technical documentation, which you can find at:
+The data schema used by Fraud Protection is available in our technical documentation, which you can find in the following locations:
  
 - [Purchase Protection](https://docs.microsoft.com/en-us/dynamics365/fraud-protection/schema-int) 
 - [Account Creation](https://docs.microsoft.com/en-us/dynamics365/fraud-protection/labels-schema) 
@@ -51,6 +51,6 @@ The data schemas indicate the types of payment data per transaction that are typ
  
 As with any other AI models, accuracy is correlated to the number of values computed. Fewer values provided to the AI models will not affect the predictive capabilities of the online services in general, but it could affect its accuracy. As a user, you remain accountable for controlling the input and using the output in accordance with local regulations. 
   
-> [!Disclaimer]
+[!DISCLAIMER]
 > The purpose of this document is to inform the reader, not to provide legal advice. Readers are advised to consult with both technical and legal advisers in assessing compliance with Indian Laws.
 
