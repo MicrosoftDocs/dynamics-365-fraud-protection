@@ -43,7 +43,7 @@ The following table shows a sample pricing breakdown for a specific use case whe
 
 ### Cost calculator
 
-For a pricing breakdown that is specific to your organization's requirements and usage, use this [cost calculator](https://azure.microsoft.com/pricing/calculator/).
+For a pricing breakdown that is specific to your organization's requirements and usage, use [this cost calculator](https://azure.microsoft.com/pricing/calculator/).
 
 ## Related topics
 
