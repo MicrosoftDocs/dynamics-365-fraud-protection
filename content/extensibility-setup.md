@@ -32,7 +32,9 @@ After you complete the setup that is described in this topic, you will have the 
 
 ![Data flow](media/eventhubs/data-flow.png)
 
-Note that Fraud Protection sends events to Event Hubs. To work with those events from Event Hubs, you can use either code via software development kits (SDKs) or Microsoft Power Platform tools.
+Fraud Protection produces real-time events and sends them to your Event Hubs instance. They are then consumed by event receivers such as Power Automate, Logic Apps, etc.
+
+To work with these events from Event Hubs, you can use either code via software development kits (SDKs) or Microsoft Power Platform tools.
 
 ## Related topics
 
