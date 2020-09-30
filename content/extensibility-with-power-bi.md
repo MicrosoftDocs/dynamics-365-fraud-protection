@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event hubs with Microsoft Power BI to extend the functionality of Dynamics 365 Fraud Protection and incorporate Fraud Protection data into an organization's processes and workflows.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/11/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 search.app:
   - Capaedac-fraudprotection
@@ -18,13 +18,18 @@ title: Work with Power BI
 
 ## Getting started
 
-To get Fraud Protection event data into Power BI, you can use event data that is inside Common Data Service. Alternatively, you can select **Stream Analytics** to send data directly from Azure Event Hubs into Power BI.
+To get Fraud Protection event data into Power BI, you can use event data that is inside Common Data Service. Alternatively, you can configure [Azure Stream Analytics](https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-power-bi-dashboard) to send data directly from Azure Event Hubs into Power BI.
 
 For more information, see the following decision tree.
 
 ![Decision tree](media/eventhubs/decision-tree.png)
 
-For information about how to set up Common Data Service, see [Storing event data in the Common Data Service database (optional)](extensibility-with-power-automate.md#storing-event-data-in-the-common-data-service-database-optional).
+We recommend: 
+
+- Common Data Service (CDS) for use with other Power Platform products such as Logic Apps, Power Automate, and Power Apps. 
+- Azure Stream Analytics for sending Event Hubs data to only Power BI or Azure-hosted analytics and storage solutions.
+
+For information about how to set up CDS, see [Storing event data in the Common Data Service database (optional)](extensibility-with-power-automate.md#storing-event-data-in-the-common-data-service-database-optional).
 
 ### Set up Azure Stream Analytics
 
