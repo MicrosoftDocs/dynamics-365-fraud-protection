@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event hubs with code software development kits (SDKs) to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate Fraud Protection data into an organization's processes and workflows.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/16/2020
+ms.date: 09/30/2020
 ms.topic: conceptual
 search.app:
   - Capaedac-fraudprotection
@@ -23,7 +23,9 @@ You can use code for the following purposes:
 
 ## Getting started
 
-Many software development kits (SDKs) are available for working with events from event hubs.NET, Java, Python, JavaScript, Go, and Apache Storm. For an extensive tutorial about how to send and receive events from Azure Event Hubs, see [Send events to or receive events from event hubs by using JavaScript (azure/event-hubs version 5)](https://docs.microsoft.com/azure/event-hubs/get-started-node-send-v2). You can also access instructions for the remaining code SDKs from the left navigation in Fraud Protection.
+There are many software development kits (SDKs) available for working with events [from Event Hubs in .NET, Java, Python, JavaScript, Go, and Apache Storm](https://docs.microsoft.com/en-us/azure/event-hubs/sdks). 
+
+For an extensive tutorial about how to send and receive events from Azure Event Hubs, see [Send events to or receive events from event hubs by using JavaScript (azure/event-hubs version 5)](https://docs.microsoft.com/azure/event-hubs/get-started-node-send-v2). You can also access instructions for the remaining code SDKs from the left navigation in Fraud Protection.
 
 > [!NOTE]
 > To *receive* events, you must set up an Azure storage account and blob container. This process is explained in the previously mentioned [tutorial](https://docs.microsoft.com/azure/event-hubs/get-started-node-send-v2). You can use the resource group and event hub that you set up earlier.
