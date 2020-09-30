@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how Microsoft Dynamics 365 Fraud Protection identifies anomalies and patterns to help store managers investigate in-store fraud.
 ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 09/11/2020
+ms.date: 09/30/2020
 
 ms.topic: conceptual
 search.app: 
@@ -30,4 +30,4 @@ Loss prevention uses machine learning techniques to analyze the historical data 
 
 ## Who can view the loss prevention insights?
 
-The outliers that the adaptive AI models inference are presented as insights through interactive reports. Store managers can use these reports as part of an investigation of potential in-store fraud.
+The outliers that the adaptive AI models referenced are presented as insights through interactive reports. Store managers can use these reports as part of an investigation of potential in-store fraud.
