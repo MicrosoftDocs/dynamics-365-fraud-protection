@@ -4,7 +4,7 @@ description: This topic explains how to implement device fingerprinting based on
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/21/2020
+ms.date: 09/30/2020
 
 
 ms.topic: conceptual
@@ -98,5 +98,5 @@ Your website or application should enable the device fingerprinting before it su
 5. In the chart, select the **DeviceContext** node.
 6. In the right pane, verify the additional details about your device (for example, the **UserAgent** value and operating system version).
 
-    If you see additional details, beyond what was submitted in the API call, you've correctly set up device fingerprinting.
+    If you see additional details beyond what was submitted in the API call, you've set up device fingerprinting correctly.
 
