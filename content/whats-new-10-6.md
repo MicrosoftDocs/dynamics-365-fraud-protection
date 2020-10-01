@@ -14,11 +14,11 @@ title: What's new in Dynamics 365 Fraud Protection October 2020 release
 
 ---
 
-# What's new in Dynamics 365 Fraud Protection October 2020 release 
+# What's new in Dynamics 365 Fraud Protection October 2020 release (placeholder)
 
-## May INT (only) features available in both INT and PROD
+## 
 
-In the May release, only features in INT were updated. However, in the July release, both PROD and INT are updated so that they are in parity. Features from the May release are now available in PROD.
+
 
 ### 
 
