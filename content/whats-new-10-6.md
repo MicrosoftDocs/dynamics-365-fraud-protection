@@ -37,7 +37,7 @@ Key components of the preview version of the manual review capabilities include:
 ### Streamlined site navigation
 Fraud Protection organizes content on a site to define its identity, help customers find the information they’re looking for, and then process it meaningfully and intuitively. This process involves aligning the navigation with the customers' mental models and jobs to be done. 
 
-In this release, Fraud Protection introduces new groupings for assessments and features. Each assessment aligns to a category of fraud and has features, which are unique to them and available as tab pages. Features that are shared across multiple assessments are then grouped into **Data** and **Settings** sections: 
+In this release, Fraud Protection introduces new groupings for assessments and features. Each assessment aligns to a category of fraud and has features which are unique to them and available as tab pages. Features that are shared across multiple assessments are then grouped into **Data** and **Settings** sections: 
 
 - The **Data** section includes everything relevant for data exploration, ingress, and egress. 
 
