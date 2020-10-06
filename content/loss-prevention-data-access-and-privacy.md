@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how Microsoft Dynamics 365 Fraud Protection identifies anomalies and patterns to help store managers investigate in-store fraud.
 ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 09/30/2020
+ms.date: 10/08/2020
 
 ms.topic: conceptual
 search.app: 
