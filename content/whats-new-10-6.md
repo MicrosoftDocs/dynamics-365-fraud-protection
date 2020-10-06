@@ -24,38 +24,38 @@ Released as a preview in this version, manual review is a new capability that in
 
 Key components of the preview version of the manual review capabilities include:
 
-- **Queue management.** Customers can create workflows that route fraudulent transactions to different queues for manual review based on specific criteria. 
+- **Queue management** - Customers can create workflows that route fraudulent transactions to different queues for manual review based on specific criteria. 
   
-- **Review dashboard.** Customers can review a transaction and analyze the fraud pattern efficiently.
+- **Review dashboard**-  Customers can review a transaction and analyze the fraud pattern efficiently.
   
-- **Create customized actions.** Customers can dynamically create remedy actions such as decisions and fraud labeling that can be applied for tracking and analysis purposes.
+- **Create customized actions** - Customers can dynamically create remedy actions, such as decisions and fraud labeling, that can be applied for tracking and analysis purposes.
   
-- **A customized performance dashboard.** Customers have access to a dashboard which displays a list of reviewed orders, fraudulent orders, the false positive rate, and so on, calculated by the team or analyst, with daily and monthly views.
+- **A customized performance dashboard** - Customers have access to a dashboard that displays a list of reviewed orders, fraudulent orders, the false positive rate, and so on, calculated by the team or analyst, with daily and monthly views.
 
 ## Enhanced user experiences
 
 ### Streamlined site navigation
 Fraud Protection organizes content on a site to define its identity, help customers find the information they’re looking for, and then process it meaningfully and intuitively. This process involves aligning the navigation with the customers' mental models and jobs to be done. 
 
-In this release, Fraud Protection introduces new groupings for assessments and features. Each assessment aligns to a category of fraud and has features which are unique to them easily available as tab pages. Features which are shared across multiple assessments are then grouped into **Data** and **Settings** sections: 
+In this release, Fraud Protection introduces new groupings for assessments and features. Each assessment aligns to a category of fraud and has features, which are unique to them and available as tab pages. Features that are shared across multiple assessments are then grouped into **Data** and **Settings** sections: 
 
 - The **Data** section includes everything relevant for data exploration, ingress, and egress. 
 
-- The **Settings** section includes all the typical administrative and service-management related features such as metering and user access. 
+- The **Settings** section includes all the typical administrative and service-management related features, such as metering and user access. 
 
-This new navigational structure enables customers to ascertain why, how, and when to use Fraud Protection.
+This new navigational structure enables customers to determine why, how, and when to use Fraud Protection.
 
-### Redesigned homepage and guided tours
+### Redesigned home page and guided tours
 
 To further streamline first-time and ongoing use of the portal, Fraud Protection introduces an updated experience for the home page as well as feature-specific guided tours. 
 
-The Fraud Protection home page now includes tiles for each assessment which allow customers to select tours that cover features such as creating rules, generating the first loss prevention report, and so on. Each tour guides customers through the portal, explains the use cases, and provides high-level tips for getting started with the feature. 
+The Fraud Protection home page now includes tiles for each assessment, which allow customers to select tours that cover features such as creating rules and generating the first loss prevention report. Each tour guides customers through the portal, explains the use cases, and provides high-level tips for getting started with the feature. 
 
 The home page also includes:
 
 - A static list of steps for onboarding onto each assessment. 
 - A list of general administrative tasks and links to the user documentation. 
-- A link to the *ideas portal* where customers can engage with the Fraud Protection community and have an impact on the future of the Fraud Protection product by submitting and voting on new feature requests.
+- A link to the *Ideas portal* where customers can engage with the Fraud Protection community and have an impact on the future of the Fraud Protection product by submitting and voting on new feature requests.
 
 ## Enhancement to rules 
 
@@ -75,13 +75,13 @@ Fraud Protection has added a new setting called *Rule evaluation behavior*. This
 
 ## Dynamics 365 Commerce customer offer
 
-Starting October 01, 2020, a limited capacity of Fraud Protection is included in the Microsoft Dynamics 365 Commerce license. Commerce customers can now use Fraud Protection for no extra charge, up to the limits specified below:
+Starting October 1, 2020, a limited capacity of Fraud Protection is included in the Microsoft Dynamics 365 Commerce license. Commerce customers can now use Fraud Protection for no extra charge, up to the limits specified below:
 
-- **Purchase protection:** Up to 2,000 assessments per month.
-- **Account protection:** Up to 20,000 assessments per month. 
-- **Loss prevention:** Up to 8,000 transactions per month. 
+- **Purchase protection** - Up to 2,000 assessments per month.
+- **Account protection** - Up to 20,000 assessments per month. 
+- **Loss prevention** - Up to 8,000 transactions per month. 
 
 If their usage requires higher limits, Commerce customers have the option of purchasing additional Fraud Protection add-ons. This offer makes it easier for all existing and new Commerce customers to evaluate how Fraud Protection capabilities can help protect their organizations against fraudulent purchases, fake accounts creation, suspicious log-ins, and employee fraud in the form of inappropriate discounts or returns. 
 
-To start using Fraud Protection if you are an existing Commerce customer, visit the [Fraud Protection portal](https://dfp.microsoft.com/), sign in with tenant global administrator credentials, and complete a one-time setup for their environment.
+To start using Fraud Protection if you are an existing Commerce customer, visit the [Fraud Protection portal](https://dfp.microsoft.com/), sign in with tenant global administrator credentials, and complete a one-time setup for your environment.
 
