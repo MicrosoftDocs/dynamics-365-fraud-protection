@@ -34,7 +34,7 @@ Key components of the preview version of the manual review capabilities include:
 
 ## Enhanced user experiences
 
-### Enhanced workflow navigation and homepage
+### Streamlined site navigation
 Fraud Protection organizes content on a site to define its identity, help customers find the information they’re looking for, and then process it meaningfully and intuitively. This process involves aligning the navigation with the customers' mental models and jobs to be done. 
 
 In this release, Fraud Protection introduces new groupings for assessments and features. Each assessment aligns to a category of fraud and has features which are unique to them easily available as tab pages. Features which are shared across multiple assessments are then grouped into **Data** and **Settings** sections: 
@@ -45,7 +45,7 @@ In this release, Fraud Protection introduces new groupings for assessments and f
 
 This new navigational structure enables customers to ascertain why, how, and when to use Fraud Protection.
 
-### Guided tours
+### Redesigned homepage and guided tours
 
 To further streamline first-time and ongoing use of the portal, Fraud Protection introduces an updated experience for the home page as well as feature-specific guided tours. 
 
