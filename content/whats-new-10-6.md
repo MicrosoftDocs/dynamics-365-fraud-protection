@@ -25,30 +25,34 @@ Released as a preview, manual review is a new capability that introduces the abi
 Key components of the preview version of the manual review feature include:
 
 - **Queue management** 
+
   Customers can create workflows that route fraudulent transactions to different queues for manual review based on specific criteria. 
   
 - **Review dashboard** 
+
   Customers can review a transaction and analyze the fraud pattern efficiently.
   
 - **Create customized actions** 
+
   Customers can dynamically create remedy actions such as decisions and fraud labeling that can be applied for tracking and analysis purposes.
   
 - **A customized performance dashboard** 
+
   A dashboard capable of displaying a list of reviewed orders, fraud orders, the false positive rate, and so on, calculated by the team or analyst, with daily and monthly views.
 
-## Enhanced User Experiences
+## Enhanced user experiences
 
-### Enhanced Workflow Navigation and Homepage
+### Enhanced workflow navigation and homepage
 
 The way we organize content on a site defines its identity and helps you find the information you’re looking for and then process it meaningfully and intuitively. This involves aligning the navigation with your mental models and jobs to be done. To that extent we have introduced new groupings for our assessments and features. Each assessment aligns to a category of fraud and has features which are unique to them easily available as tabs underneath. Features which are shared across multiple assessments are then grouped under Data and Settings. Under Data you will find everything relevant for data exploration, ingress, and egress. And under Settings you will find all of the typical admin and service-management related features such as metering and user access. With this new navigational structure we hope to enable you enables you to ascertain why, how, and when to use our product.
 
-### Guided Tours
+### Guided tours
 
 To further streamline first-time and ongoing use of the portal we have introduced an updated experience for the homepage as well as feature-specific guided tours. The new homepage has tiles for each assessment and allows you to select tours that cover features such as creating rules, generating your first loss prevention report, so on and so forth. Each tour will guide you through the portal and explain the use cases and high-level tips to getting started with that feature. The new homepage will then also include a static list of steps for onboarding onto each assessment as well as general admin tasks. Lastly, also provided on the homepage are links to the documentation as well as the ideas portal where you can engage with the Dynamics 365 Fraud Protection community to make your mark on the product by submitting and voting on new feature requests.
 
-## Enhancement to Rules 
+## Enhancement to rules 
 
-### Clause Naming
+### Clause naming
 
 Rules are made up of clauses, each of which may express a different aspect of your fraud strategy. We now provide the option for customers to give each of these clauses a unique name. These clause names are surfaced not only in the rule itself, but are also exposed in the API response for an assessment. This means that for a given transaction, in addition to the rule that triggered a decision, we now provide the name of the clause that triggered the decision as well.  
 
@@ -56,12 +60,15 @@ Rules are made up of clauses, each of which may express a different aspect of yo
 
 We’ve introduced a new setting which provides customers with two distinct options for how they’d like their rules to be evaluated. In the case that no clauses within an individual rule return a decision, this setting allows customers to specify whether they’d like the transaction to be approved, or if the they’d like the next rule to be evaluated. We’ve also added a new section in the assessment API response, called “ruleEvaluations”, which lists each rule and clause that was evaluated for a particular transaction. 
 
-## Dynamics 365 Commerce Customer Offer
+## Dynamics 365 Commerce customer offer
 
-Starting October 01, 2020, a limited capacity of Microsoft Dynamics 365 Fraud Protection is included in the Dynamics 365 Commerce license. Commerce customers will be able to use Fraud Protection for no extra charge up to the limits specified below, and will have the option to purchase additional Fraud Protection add-ons if their usage requires higher limits:
-- Purchase protection up to 2,000 assessments per month 
-- Account protection up to 20,000 assessments per month 
-- Loss prevention up to 8,000 transactions per month 
+Starting October 01, 2020, a limited capacity of Fraud Protection is included in the Microsoft Dynamics 365 Commerce license. Commerce customers are now able to use Fraud Protection for no extra charge up to the limits specified below, and have the option to purchase additional Fraud Protection add-ons if their usage requires higher limits:
 
-This will make it easy for all existing and new Commerce customers to evaluate how Fraud Protection capabilities can help protect their organizations against fraudulent purchases, fake accounts creation, suspicious log-ins, and employee fraud in the form of inappropriate discounts or returns. Commerce customers can start using Fraud Protection in just a few minutes by visiting the [product portal](https://dfp.microsoft.com/), signing in with tenant Global Admin credentials and completing a one-time set up for their environment.
+- **Purchase protection** up to 2,000 assessments per month
+- **Account protection** up to 20,000 assessments per month 
+- **Loss prevention** up to 8,000 transactions per month 
+
+This makes it easier for all existing and new Commerce customers to evaluate how Fraud Protection capabilities can help protect their organizations against fraudulent purchases, fake accounts creation, suspicious log-ins, and employee fraud in the form of inappropriate discounts or returns. 
+
+Commerce customers can start using Fraud Protection in just a few minutes by visiting the [product portal](https://dfp.microsoft.com/), signing in with tenant Global Admin credentials, and completing a one-time setup for their environment.
 
