@@ -4,7 +4,7 @@ description: This topic explains how the virtual fraud analyst helps you set up 
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/17/2020
+ms.date: 10/08/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
