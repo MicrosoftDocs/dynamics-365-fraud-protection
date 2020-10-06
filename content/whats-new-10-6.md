@@ -16,18 +16,25 @@ title: What's new in Dynamics 365 Fraud Protection October 2020 release
 
 # What's new in Dynamics 365 Fraud Protection October 2020 release (placeholder)
 
-The October 2020 release of Dynamics 365  Fraud Product introduces several new capabilities and enhancements. 
+The October 2020 release of Microsoft Dynamics 365 Fraud Protection introduces several new capabilities and enhancements. 
 
-## Manual Review (preview) 
+## Manual review (preview) 
 
-Manual Review (preview)is a new capability  that introduces the ability for Dynamic Fraud Protection customers to augment their fraud workflows with manual review capabilities (also known as case review) .  This provides the customer with the ability to  author rules to identify  transactions that can benefit from further  further human review, and place them into a queue to facilitate and amplify  the review process.
+Released as a preview, manual review is a new capability that introduces the ability for Fraud Protection customers to augment their fraud workflows with manual review capabilities, also known as *case review*. This feature allows customers to  author rules to identify  transactions that may benefit from further further human review, and then place them into a queue to facilitate and amplify the review process.
 
-Key components of this Manual Review (preview) feature include:
+Key components of the preview version of the manual review feature include:
 
-- Queue Management. Ability to create workflows so that fraudulent transactions can be routed to different queues for manual review based on specific criteria.
-- Review Dashboard: Ability to review the transaction and analyze fraud pattern in an efficient way.
-- Customized Action Creation:  Ability to create remedy actions dynamically, such as decisions, fraud labeling, that are applied for tracking and analysis purposes
-- Customized Performance Dashboard:  Ability to display dashboard of reviewed orders, fraud orders, false positive rate and so on, calculated by team or analyst, per daily and per monthly.
+- **Queue management** 
+  Customers can create workflows that route fraudulent transactions to different queues for manual review based on specific criteria. 
+  
+- **Review dashboard** 
+  Customers can review a transaction and analyze the fraud pattern efficiently.
+  
+- **Create customized actions** 
+  Customers can dynamically create remedy actions such as decisions and fraud labeling that can be applied for tracking and analysis purposes.
+  
+- **A customized performance dashboard** 
+  A dashboard capable of displaying a list of reviewed orders, fraud orders, the false positive rate, and so on, calculated by the team or analyst, with daily and monthly views.
 
 ## Enhanced User Experiences
 
