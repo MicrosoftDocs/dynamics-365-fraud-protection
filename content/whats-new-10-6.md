@@ -54,21 +54,28 @@ To further streamline first-time and ongoing use of the portal we have introduce
 
 ### Clause naming
 
-Rules are made up of clauses, each of which may express a different aspect of your fraud strategy. We now provide the option for customers to give each of these clauses a unique name. These clause names are surfaced not only in the rule itself, but are also exposed in the API response for an assessment. This means that for a given transaction, in addition to the rule that triggered a decision, we now provide the name of the clause that triggered the decision as well.  
+Rules are made up of clauses, each of which may express a different aspect of a customer's fraud strategy. Fraud Protection now provides the option for customers to give each clause a unique name. Clause names are surfaced not only in the rule itself, but are also exposed in the API response for an assessment. 
+
+This means that for a given transaction, in addition to providing the rule that triggered a decision, Fraud Protection now provides the name of the specific clause that triggered the decision.  
 
 ### New rule evaluation behavior
 
-We’ve introduced a new setting which provides customers with two distinct options for how they’d like their rules to be evaluated. In the case that no clauses within an individual rule return a decision, this setting allows customers to specify whether they’d like the transaction to be approved, or if the they’d like the next rule to be evaluated. We’ve also added a new section in the assessment API response, called “ruleEvaluations”, which lists each rule and clause that was evaluated for a particular transaction. 
+Fraud Protection introduces a new setting which provides customers with two distinct options for how they’d like their rules to be evaluated. 
+
+- If no clauses within an individual rule returns a decision, this setting allows customers to specify whether they’d like the transaction to be approved, or if the they’d like to go to the next rule to be evaluated. 
+- A new section in the assessment API response called *ruleEvaluations* which provides a list of each rule and clause that was evaluated for a transaction. 
 
 ## Dynamics 365 Commerce customer offer
 
-Starting October 01, 2020, a limited capacity of Fraud Protection is included in the Microsoft Dynamics 365 Commerce license. Commerce customers are now able to use Fraud Protection for no extra charge up to the limits specified below, and have the option to purchase additional Fraud Protection add-ons if their usage requires higher limits:
+Starting October 01, 2020, a limited capacity of Fraud Protection is included in the Microsoft Dynamics 365 Commerce license. Commerce customers are now able to use Fraud Protection for no extra charge up to the limits specified below:
 
-- **Purchase protection** up to 2,000 assessments per month
-- **Account protection** up to 20,000 assessments per month 
-- **Loss prevention** up to 8,000 transactions per month 
+- **Purchase protection:** 2,000 assessments per month.
+- **Account protection:** 20,000 assessments per month. 
+- **Loss prevention:** 8,000 transactions per month. 
+
+If their usage requires higher limits, Commerce customers have the option of purchasing additional Fraud Protection add-ons. 
 
 This makes it easier for all existing and new Commerce customers to evaluate how Fraud Protection capabilities can help protect their organizations against fraudulent purchases, fake accounts creation, suspicious log-ins, and employee fraud in the form of inappropriate discounts or returns. 
 
-Commerce customers can start using Fraud Protection in just a few minutes by visiting the [product portal](https://dfp.microsoft.com/), signing in with tenant Global Admin credentials, and completing a one-time setup for their environment.
+To start using Fraud Protection in just a few minutes, Commerce customers can visit the [product portal](https://dfp.microsoft.com/), sign in with tenant global administrator credentials, and complete a one-time setup for their environment.
 
