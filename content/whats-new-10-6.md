@@ -14,41 +14,33 @@ title: What's new in Dynamics 365 Fraud Protection October 2020 release
 
 ---
 
-# What's new in Dynamics 365 Fraud Protection October 2020 release (placeholder)
+# What's new in Dynamics 365 Fraud Protection October 2020 release
 
 The October 2020 release of Microsoft Dynamics 365 Fraud Protection introduces several new capabilities and enhancements. 
 
 ## Manual review (preview) 
 
-Released as a preview, manual review is a new capability that introduces the ability for Fraud Protection customers to augment their fraud workflows with manual review capabilities, also known as *case review*. This feature allows customers to  author rules to identify  transactions that may benefit from further further human review, and then place them into a queue to facilitate and amplify the review process.
+Released as a preview, manual review is a new capability that introduces the ability for Fraud Protection customers to augment their fraud workflows with manual review capabilities. (This is also known as *case review*.) This feature allows customers to author rules to identify  transactions which might benefit from further human review, and then place the rules into a queue to facilitate and amplify the review process.
 
 Key components of the preview version of the manual review feature include:
 
-- **Queue management** 
-
-  Customers can create workflows that route fraudulent transactions to different queues for manual review based on specific criteria. 
+- **Queue management.** Customers can create workflows that route fraudulent transactions to different queues for manual review based on specific criteria. 
   
-- **Review dashboard** 
-
-  Customers can review a transaction and analyze the fraud pattern efficiently.
+- **Review dashboard.** Customers can review a transaction and analyze the fraud pattern efficiently.
   
-- **Create customized actions** 
-
-  Customers can dynamically create remedy actions such as decisions and fraud labeling that can be applied for tracking and analysis purposes.
+- **Create customized actions.** Customers can dynamically create remedy actions such as decisions and fraud labeling that can be applied for tracking and analysis purposes.
   
-- **A customized performance dashboard** 
-
-  A dashboard capable of displaying a list of reviewed orders, fraud orders, the false positive rate, and so on, calculated by the team or analyst, with daily and monthly views.
+- **A customized performance dashboard.** A dashboard capable of displaying a list of reviewed orders, fraud orders, the false positive rate, and so on, calculated by the team or analyst, with daily and monthly views.
 
 ## Enhanced user experiences
 
 ### Enhanced workflow navigation and homepage
 Fraud Protection organizes content on a site to define its identity, help customers find the information they’re looking for, and then process it meaningfully and intuitively. This process involves aligning the navigation with the customers' mental models and jobs to be done. 
-In this release, Fraud Protection introduces new groupings for assessments and features. Each assessment aligns to a category of fraud and has features which are unique to them easily available as tabs underneath. Features which are shared across multiple assessments are then grouped under **Data** and **Settings**. 
+In this release, Fraud Protection introduces new groupings for assessments and features. Each assessment aligns to a category of fraud and has features which are unique to them easily available as tabs underneath. Features which are shared across multiple assessments are then grouped into **Data** and **Settings** sections. 
 
-- **Data** includes everything relevant for data exploration, ingress, and egress. 
+- The **Data** section includes everything relevant for data exploration, ingress, and egress. 
 
-- **Settings** includes all of the typical administrative and service-management related features such as metering and user access. 
+- The **Settings** section includes all the typical administrative and service-management related features such as metering and user access. 
 
 This new navigational structure enables customers to ascertain why, how, and when to use Fraud Protection.
 
