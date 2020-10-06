@@ -20,7 +20,7 @@ The October 2020 release of Microsoft Dynamics 365 Fraud Protection introduces s
 
 ## Manual review (preview) 
 
-Released as a preview, manual review is a new capability that introduces the ability for Fraud Protection customers to augment their fraud workflows with manual review capabilities. (also known as *case review*.) This feature allows customers to author rules to identify  transactions which might benefit from further human review, and then place the rules into a queue to facilitate and amplify the review process.
+Released as a preview in this version, manual review is a new capability that introduces the ability for Fraud Protection customers to augment their fraud workflows with manual review capabilities (also known as *case review*.) This allows customers to author rules to identify  transactions which might benefit from further human review, and then place the rules into a queue to facilitate and amplify the review process.
 
 Key components of the preview version of the manual review capabilities include:
 
@@ -71,7 +71,7 @@ Fraud Protection has added a new setting called *Rule evaluation behavior*. This
 
 - If no clause within an individual rule returns a decision, this setting allows customers to specify whether they’d like the transaction to be approved or go to the next rule to be evaluated. 
 
-- A new section called *ruleEvaluations* is added to the assessment API response. This section provides a list of each rule and clause that was evaluated for a transaction. 
+- A new section called *ruleEvaluations* is now included in the assessment API response. This section provides a list of each rule and clause that was evaluated for a transaction. 
 
 ## Dynamics 365 Commerce customer offer
 
