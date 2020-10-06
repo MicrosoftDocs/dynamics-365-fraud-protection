@@ -67,11 +67,9 @@ This means that for a given transaction, in addition to providing the rule that 
 
 ### Rule evaluation behavior setting
 
-Fraud Protection has added a new setting called *Rule evaluation behavior*. This setting provides customers with two distinct options for how they’d like their rules to be evaluated: 
+Fraud Protection has added a new setting called *Rule evaluation behavior*. This setting provides customers with two distinct options for how they’d like their rules to be evaluated. If no clause within an individual rule returns a decision, this setting allows customers to specify whether they’d like the transaction to be approved or go to the next rule to be evaluated. 
 
-- If no clause within an individual rule returns a decision, this setting allows customers to specify whether they’d like the transaction to be approved or go to the next rule to be evaluated. 
-
-- A new section called *ruleEvaluations* is now included in the assessment API response. This section provides a list of each rule and clause that was evaluated for a transaction. 
+A new section called *ruleEvaluations* is now included in the assessment API response. This section provides a list of each rule and clause that was evaluated for a transaction. 
 
 ## Dynamics 365 Commerce customer offer
 
