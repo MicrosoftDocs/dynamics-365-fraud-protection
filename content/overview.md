@@ -4,8 +4,7 @@ description: This topic provides an overview of the fraud protection features an
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 09/16/2020
-
+ms.date: 10/08/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
