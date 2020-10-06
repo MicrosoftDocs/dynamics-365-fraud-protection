@@ -26,7 +26,7 @@ Key components of the preview version of the manual review capabilities include:
 
 - **Queue management** - Customers can create workflows that route fraudulent transactions to different queues for manual review based on specific criteria. 
   
-- **Review dashboard**-  Customers can review a transaction and analyze the fraud pattern efficiently.
+- **Review dashboard** -  Customers can review a transaction and analyze the fraud pattern efficiently.
   
 - **Create customized actions** - Customers can dynamically create remedy actions, such as decisions and fraud labeling, that can be applied for tracking and analysis purposes.
   
