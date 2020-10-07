@@ -2,6 +2,8 @@
   href: overview.md
 - name: What's new or changed
   items:
+  - name: Dynamics 365 Fraud Protection October 2020 release
+    href: whats-new-10-6.md
   - name: Dynamics 365 Fraud Protection July 2020 release
     href: whats-new-7-1.md
   - name: May 2020 release (INT only)
@@ -24,7 +26,7 @@
     href: labels-api.md
   - name: Implement device fingerprinting
     href: device-fingerprinting.md    
-  - name: Upload historical data
+  - name: Upload historical data for purchase protection
     href: data-upload.md
   - name: View purchase protection schemas
     href: schema-INT.md
@@ -74,6 +76,8 @@
     href: ap-scorecard.md
   - name: Account protection schemas
     href: new-ap-schema.md
+  - name: Monitor API calls
+    href: monitoring.md    
 - name: Loss prevention
   items:
   - name: Loss prevention overview
@@ -86,6 +90,8 @@
     href: view-loss-prevent-schemas.md
   - name: Loss prevention integration with Dynamics 365 Commerce 
     href: loss-prevention-integration-with-commerce.md
+  - name: Data access and privacy for loss prevention
+    href: loss-prevention-data-access-and-privacy.md
 - name: Manage rules and lists
   items: 
   - name: Manage lists
@@ -96,6 +102,22 @@
     href: fpl-lang-ref.md    
 - name: Event tracing
   href: event-tracing.md
+- name: Extensibility via Event Hubs
+  items: 
+  - name: Overview
+    href: extensibility-via-event-hubs-overview.md
+  - name: Setup extensibility via Event Hubs
+    href: extensibility-setup.md  
+  - name: Working with code
+    href: extensibility-with-code.md
+  - name: Working with Logic Apps / Power Automate
+    href: extensibility-with-power-automate.md    
+  - name: Working with Power BI
+    href: extensibility-with-power-bi.md   
+  - name: Working with Power Apps
+    href: extensibility-with-power-apps.md
+  - name: Pricing
+    href: extensibility-pricing.md  
 - name: Assessment usage and metering
   href: metering.md        
 - name: AI and insights from the fraud protection network
@@ -109,7 +131,7 @@
   - name: Security measures for protecting data  
     href: compliance-and-security.md
 - name: Privacy protection for data
-  href: data-processing-protection.md
+  href: data-processing-protection.md 
 - name: Visually explore data
   href: graph-explorer.md
 - name: Evaluate experience

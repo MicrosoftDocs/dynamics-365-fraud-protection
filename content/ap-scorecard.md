@@ -18,7 +18,7 @@ Microsoft Dynamics 365 Fraud Protection includes an account protection feature t
 
 ## Account protection assessment type
 
-You can select the type of account protection assessment by using the **Tab** menu at the top of the page. The following types are available:
+In the left navigation, select one of the following assessment types in the **Fraud assessment** field. Then select the **Scorecard** tab.
 
 - Account Creation
 - Account Login

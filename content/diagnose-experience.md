@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about the diagnose experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 10/08/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -39,22 +39,16 @@ To help guarantee that Fraud Protection can interpret the files that you upload,
 > [!IMPORTANT]
 > This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
-## Preview a data sample  
-You can preview a sample of your data on the **Data upload** page.
-
-1. In the left navigation, select **Data upload**.
-
-    If significant errors are detected in the file format, correct them before you upload the complete files. 
-
-1. When you're ready to upload the data, select **Upload**.
-
 ## Generate reports
 
-You can begin creating reports after all four data files (Purchases, Payment instruments, Products, and Chargebacks) are uploaded.
+1. In the left navigation, select **Purchase**, and then select **Diagnose**. 
+1. When you're ready to upload the data, select **Upload Data**.
 
-- To generate a report, select **Generate data diagnostic report**. 
+    After all four data files (Purchases, Payment instruments, Products, and Chargebacks) are uploaded, you can start to generate reports.
 
-  Report generation typically takes no longer than 24 hours, but might take more or less time depending on the size of your files.
+1. To generate a report, select **Generate reports**. 
+
+    Typically, report generation takes no longer than 24 hours. However, it might take more or less time, depending on the size of your files.
 
 ### Data diagnostic report
 
@@ -63,8 +57,8 @@ The *data diagnostic report* contains a detailed visual breakdown of your data, 
 Before you can generate your risk diagnostic report, the key metrics of your data must reach a minimum quality threshold. If the quality of the data is too low to allow for accurate evaluation, you will be prompted to improve the indicated issues and try again. 
 
 #### To upload updated data:
-1. Return to the **Data upload** page.
-2. To submit your updated data, select **Reupload**.
+1. Return to the **Diagnose** page.
+2. To submit your updated data, select **Upload data**.
  
 ### Risk diagnostic report
 
@@ -80,5 +74,6 @@ The risk diagnostic report lets you assess your risk from fraudulent activity an
 
 You can review your completed data diagnostic and risk diagnostic reports in Fraud Protection. Depending on the type of report you want to review: 
 
-1. Select **Data diagnostic report** or **Risk diagnostic report** in the navigation bar.
+1. Select **Purchase**, and then, on the **Diagnose** tab, view the risk report.
+1. To review the data diagnostic report, select **Check data quality**.
 1. For deeper analysis and additional information, download the full reports as .docx files.

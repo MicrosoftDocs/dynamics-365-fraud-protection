@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic is a language guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 08/25/2020
+ms.date: 10/08/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -111,7 +111,7 @@ This section contains a complete list of operators that are available in Fraud P
 
 | Keyword | Description | Example |
 |--------|-------------|---------|
-| RETURN | <p>This keyword must be followed by a valid [decision type](fpl-lang-ref.md#decision-types): *Approve*, *Reject*, *Challenge*, or *Review*.</p><p>The decision can be followed by an additional return type such as [Other or Trace](fpl-lang-ref.md#additional-return-types).</p> | <p>RETURN Reject()</p><p>RETURN Reject(), Other(key=@"user.email")</p><p>RETURN Reject(), Trace(ip=@”device.ipAddress”)</p> |
+| RETURN | <p>This keyword must be followed by a valid [decision type](fpl-lang-ref.md#decision-types): *Approve*, *Reject*, *Challenge*, or *Review*.</p><p>The decision can be followed by an additional return type such as [Other or Trace](fpl-lang-ref.md#additional-return-types).</p> | <p>RETURN Reject()</p><p>RETURN Reject(), Other(key=@"user.email")</p><p>RETURN Reject(), Trace(ip=@"device.ipAddress")</p> |
 | WHEN   | The expression must be able to be evaluated to a *Boolean* value. | WHEN @"riskscore" \> 400 |
 
 #### Decision types
@@ -128,7 +128,7 @@ This section contains a complete list of operators that are available in Fraud P
 | Return type | Description | Example |
 |--------|-------------|---------|
 | Other  | This type can be used to pass key/value pairs. | Other(key="test", email=@"user.email", countryRegion=Geo.CountryRegion(@"device.ipAddress")) |
-|Trace   |Can be used to trigger a Trace event, and send key value pairs to the FraudProtection.Trace.Rule [Event Tracing namespace](event-tracing.md#event-schemas). |Trace(key=”Manual Review”, ip=@”device.ipAddress”) |
+|Trace   |Can be used to trigger a Trace event, and send key value pairs to the FraudProtection.Trace.Rule [Event Tracing namespace](event-tracing.md#event-schemas). |Trace(key="Manual Review", ip=@"device.ipAddress") |
 
 #### Variables
 
@@ -136,7 +136,7 @@ For information about how to use variables, see the [Type inference of variables
 
 | Variable          | Description | Example |
 |-----------------|-------------|---------|
-| @               | <p>Used to reference a variable from the event payload.</p><p>After the @, specify the full path of the variable you would like to reference, surrounded by quotes. For example, @”address.city”.</p><p>If the variable referenced is not part of the event payload, the default value for that type is returned – 0.0 for double, empty string for strings, etc.</p><p>The type of the variable is inferred by the context in which it is used. If not enough context is provided, the type defaults to String.</p><p>For information about type inference, see [Type inference of variables](fpl-lang-ref.md#type-inference-of-variables).</p>| <p>@"address.city"</p> |
+| @               | <p>Used to reference a variable from the event payload.</p><p>After the @, specify the full path of the variable you would like to reference, surrounded by quotes. For example, @"address.city".</p><p>If the variable referenced is not part of the event payload, the default value for that type is returned – 0.0 for double, empty string for strings, etc.</p><p>The type of the variable is inferred by the context in which it is used. If not enough context is provided, the type defaults to String.</p><p>For information about type inference, see [Type inference of variables](fpl-lang-ref.md#type-inference-of-variables).</p>| <p>@"address.city"</p> |
 | @"botScore"       | <p>For every Account Protection event, Fraud Protection's AI models generate a bot score between 0 and 999. A higher score indicates a higher probability that the event was initiated by a bot.</p><p>You can use *@botScore* to reference this score in [post-bot-scoring clauses](rules.md#post-bot-scoring-clauses) and [post-risk-scoring clauses](rules.md#post-risk-scoring-clauses).</p> | @"botScore" |
 | @"riskScore"      | <p>For every Purchase and Account Protection event, Fraud Protection's AI models generate a risk score between 0 and 999. A higher score indicates a higher risk.</p><p>You can use *@riskScore* to reference this score in post-risk-scoring clauses.</p> | @"riskScore" |
 |@a[x]    |<p>Used to index array variables. </p><p>If the request payload for an assessment contains an array of items, you can access individual elements of the array using the following syntax: @"productList[0]". </p><p>To access an attribute of that element: @"productList[0].productId"</p>    |<p>@"productList[0].productId" </p><p>@"paymentInstrumentList[3].type"</p>
@@ -188,7 +188,7 @@ These operators convert an IP address to a geographical address.
 
 #### String operators
 
-Fraud Protection supports all standard .NET [string operators](https://docs.microsoft.com/dotnet/api/system.string?view=netframework-4.8). This table includes some examples of methods that you might find useful.
+Fraud Protection supports all standard .NET [string operators](https://docs.microsoft.com/dotnet/api/system.string?view=netframework-4.8&preserve-view=true). This table includes some examples of methods that you might find useful.
 
 | Operator     | Description | Example |
 |------------|-------------|---------|
@@ -199,7 +199,7 @@ Fraud Protection supports all standard .NET [string operators](https://docs.micr
 
 #### Math operators
 
-Fraud Protection supports all standard .NET [math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8) and all C# [arithmetic operators](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods that you might find useful.
+Fraud Protection supports all standard .NET [math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8&preserve-view=true) and all C# [arithmetic operators](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods that you might find useful.
 
 | Operator   | Description | Example |
 |----------|-------------|---------|
@@ -208,7 +208,7 @@ Fraud Protection supports all standard .NET [math methods](https://docs.microsof
 
 ### DateTime operators
 
-Fraud Protection supports all standard .NET [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?view=netframework-4.8) properties, methods, and operators. This table includes some examples of properties that you might find useful.
+Fraud Protection supports all standard .NET [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?view=netframework-4.8&preserve-view=true) properties, methods, and operators. This table includes some examples of properties that you might find useful.
 
 | Operator | Description | Example |
 |--------|-------------|---------|

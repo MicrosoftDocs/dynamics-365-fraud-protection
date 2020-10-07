@@ -4,8 +4,7 @@ description: This topic provides an overview of the fraud protection features an
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
-
+ms.date: 10/08/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -20,13 +19,13 @@ title: Overview of Fraud Protection features
 
 Today's digitally transformed enterprise conducts most of its business online and in real time. Little human intervention is involved. Although this approach helps reduce costs and improve the customer experience, it also exposes the enterprise to serious threats of fraud from sophisticated users who try to take advantage of the online channel's relative anonymity and accessibility. For example, in e-commerce, some transactions are maliciously created via compromised accounts and stolen payment instruments. Other malicious activities might include account takeover, abuse of free trials, fake product reviews, warranty fraud, refund fraud, reseller fraud, abuse of program discounts. All these activities, and others, can affect the enterprise's profitability and reputation.
 
-Some types of fraud even have serious consequences for society at large. Examples include money laundering and posting fake news.
+Some types of fraud, such as money laundering, even have serious consequences for society at large.
 
-Because the return on investment (ROI) for online fraud is high, it's likely that most of an enterprise's vulnerabilities will be discovered and exploited. Additionally, unlike during the early years of the internet, today's fraudulent transactions can be orchestrated by well-funded and well-equipped rings of professionals. Fraud protection professionals are best equipped to fight this threat.
+Because fraudsters who engage in online fraud and abuse reap a high return on investment, it's likely that most of an enterprise's vulnerabilities will be discovered and exploited. Additionally, unlike during the early years of the internet, today's fraudulent transactions can be orchestrated by well-funded and well-equipped rings of professionals. Fraud protection professionals are best equipped to fight this threat.
 
 ## Our mission
 
-*Our mission is to help enterprises fight fraud while they keep their doors open for genuine customers and partners.*
+*Our mission is to help enterprises fight fraud and abuse while they keep their doors open for genuine customers and partners.*
 
 Microsoft Dynamics 365 Fraud Protection initially focused on payment fraud protection. It helped enable an e-commerce merchant drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience of its customers. In subsequent release waves, we have added several new features to enhance this capability based on customer feedback. We are lighting up a new set of capabilities called **loss prevention** that help brick and mortar retail store operations fight fraud and abuse by reducing shrinkage losses and improving store efficiencies. We have significantly expanded the account creation protection capability portfolio via a new set of capabilities called **account protection**.
 
