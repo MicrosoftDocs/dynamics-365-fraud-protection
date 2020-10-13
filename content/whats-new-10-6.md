@@ -72,7 +72,7 @@ A new section called *ruleEvaluations* is now included in the assessment API res
 
 ## Dynamics 365 Commerce customer offer
 
-Starting October 1, 2020, a limited capacity of Fraud Protection is included in the Microsoft Dynamics 365 Commerce license. Commerce customers can now use Fraud Protection for no extra charge, up to the limits specified below:
+Starting October 2020, a limited capacity of Fraud Protection is included in the Microsoft Dynamics 365 Commerce license. Commerce customers can now use Fraud Protection for no extra charge, up to the limits specified below:
 
 - **Purchase protection** - Up to 2,000 assessments per month.
 - **Account protection** - Up to 20,000 assessments per month. 
