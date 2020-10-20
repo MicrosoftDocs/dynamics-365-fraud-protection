@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the schemas that are required for historical data upload.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/08/2020
+ms.date: 10/20/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -65,6 +65,35 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | ZipCode             | string   | The postal code that was provided for the address. |
 | CountryCode         | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
 | CustomData          | object   | An optional user-defined JavaScript Object Notation (JSON) property bag. It's filled in when an API call is instantiated. The attributes can be referenced when you create purchase rules.<p>**Note:**</p><ul><li>The following primitive types are supported: **String (Unicode)**, **Int32**, **UInt32**, **Double**, **Boolean**, and **DateTime** (in Coordinated Universal Time \[UTC\], in conformance to .NET semantics).</li><li>The string data limit is 256 characters.</li><li>There is a limit of 100 custom attributes per payload.</li><li>Don't send sensitive or highly regulated data types. Here are some examples:<ul><li>Data that indicates a protected class (such as gender or race) or private/sensitive categories (such as religious views or sexual orientation)</li><li>Biometric data or any data that is related to health</li></ul></li><li>The custom data retention policy matches the retention policy of the purchase event (six months).</li></ul><p>For a sample that shows how to use purchase APIs with a custom data object in Fraud Protection, see the [Custom data sample](schema-INT.md#custom-data-sample) section at the end of this topic.</p>  |
+|MerchantBusinessType  | string    |The business or industry vertical (for example: gaming).  |
+|MerchantIdentifier    |string     |The merchant ID (MID) that is used for bank communication with each transaction.  |
+|MerchantCategoryCode  |string     |The transaction category.  |
+|MerchantBusinessSegment |string   |The subsection of a merchant’s overall operations in which there is an established, separate product line (for example: Xbox, Surface).  |
+|MerchantProductCategory |string   |The merchant-defined type of product or service. |
+|StoreId               |string     |The store identifier.  |
+|StoreName             |string     |The store display name.  |
+|StoreAddress          |string     |The full address (street, city, state, zip) of the store.  |
+|IsTest               |bool        |A value that indicates whether the transaction is a test in production.  |
+|IsFreeProductIncluded |bool      |A value that indicates whether a free product is included in the transaction.|
+|IsGuestCheckout       |bool      |A value that indicates whether the purchase was made as a guest.  |
+|IsPostAuthCheck       |bool      |A value that indicates whether there was a post-authentication check.  |
+|IsRecurringCharge     |bool      |A value that indications whether the transaction was a subscription/recurring.  |
+|RecurringChargeFrequencyInDays  |double    |The number of recurring transactions.  |
+|RecurringChargeStartDate |DateTime         |The start date for a recurring transaction.  |
+|RecurringChargeEndDate   |DateTime         |The end date for a recurring transaction.  |
+|IsPostpaid               |bool             |A value that indicates whether a transaction is postpaid and charged at the end of the recurring period instead of upfront.  |
+|DiscountAmount           |double           |The discount applied to the transaction.  |
+|TipAmount                |double           |The tip applied to the transaction.  |
+|DistinctItemCount        |double           |The distinct/unique item count per transaction.  |
+|TotalItemCount           |double           |The total item count per transaction.  |
+|IsLowLiabilityPIType     |bool             |A value that indicates low liability payment instruments (for example: Apple Pay).  |
+|OrderType               |string            |The type of transaction (for example: takeout) .  |
+|IsRetryOrder             |bool	           |A value that indicates whether the order was retried.  |
+
+
+
+
+
 
 ### PaymentInstruments
 
@@ -97,6 +126,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | State                       | string   | The state or province that was provided for the address. |
 | ZipCode                     | string   | The postal code that was provided for the address. |
 | CountryCode                 | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| PISource                     | string   | The payment instrument source (for example: CustomerInput, FromSavedProfile, MobilePay). |
 
 ### Products
 
