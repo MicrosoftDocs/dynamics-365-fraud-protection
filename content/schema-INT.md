@@ -90,11 +90,6 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 |OrderType               |string            |The type of transaction (for example: takeout) .  |
 |IsRetryOrder             |bool	           |A value that indicates whether the order was retried.  |
 
-
-
-
-
-
 ### PaymentInstruments
 
 | Attribute                   | Type     | Description |
