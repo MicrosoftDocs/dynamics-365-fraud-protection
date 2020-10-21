@@ -65,11 +65,11 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | ZipCode             | string   | The postal code that was provided for the address. |
 | CountryCode         | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
 | CustomData          | object   | An optional user-defined JavaScript Object Notation (JSON) property bag. It's filled in when an API call is instantiated. The attributes can be referenced when you create purchase rules.<p>**Note:**</p><ul><li>The following primitive types are supported: **String (Unicode)**, **Int32**, **UInt32**, **Double**, **Boolean**, and **DateTime** (in Coordinated Universal Time \[UTC\], in conformance to .NET semantics).</li><li>The string data limit is 256 characters.</li><li>There is a limit of 100 custom attributes per payload.</li><li>Don't send sensitive or highly regulated data types. Here are some examples:<ul><li>Data that indicates a protected class (such as gender or race) or private/sensitive categories (such as religious views or sexual orientation)</li><li>Biometric data or any data that is related to health</li></ul></li><li>The custom data retention policy matches the retention policy of the purchase event (six months).</li></ul><p>For a sample that shows how to use purchase APIs with a custom data object in Fraud Protection, see the [Custom data sample](schema-INT.md#custom-data-sample) section at the end of this topic.</p>  |
-|MerchantBusinessType  | string    |The business or industry vertical (for example: gaming).  |
-|MerchantIdentifier    |string     |The merchant ID (MID) that is used for bank communication with each transaction.  |
-|MerchantCategoryCode  |string     |The transaction category.  |
-|MerchantBusinessSegment |string   |The subsection of a merchant’s overall operations in which there is an established, separate product line (for example: Xbox, Surface).  |
-|MerchantProductCategory |string   |The merchant-defined type of product or service. |
+|MerchantBusinessType  | string    |The business or industry vertical (for example: gaming, retail, dining, or social networking).  |
+|MerchantIdentifier    |string     |The merchant ID (MID) is a specific identification number attached to a business that tells the payment processing systems involved in a transaction where to send which funds. You can think of it like an address for your business. For example, if you don't have a merchant ID, the networks involved won't know where to send your money.  |
+|MerchantCategoryCode  |string     |The merchant category code (MCC) is a four-digit number listed in ISO 18245 for retail financial services. An MCC is used to classify a business by the types of goods or services it provides.  |
+|MerchantBusinessSegment |string   |The subsection of a merchant’s overall operations in which there is an established, separate product line, business line or child brand (for example: Xbox or Surface).  |
+|MerchantProductCategory |string   |The merchant-defined product or service category. |
 |StoreId               |string     |The store identifier.  |
 |StoreName             |string     |The store display name.  |
 |StoreAddress          |string     |The full address (street, city, state, zip) of the store.  |
@@ -78,16 +78,16 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 |IsGuestCheckout       |bool      |A value that indicates whether the purchase was made as a guest.  |
 |IsPostAuthCheck       |bool      |A value that indicates whether there was a post-authentication check.  |
 |IsRecurringCharge     |bool      |A value that indications whether the transaction was a subscription/recurring.  |
-|RecurringChargeFrequencyInDays  |double    |The number of recurring transactions.  |
+|RecurringChargeFrequencyInDays  |double    |How often the recurring purchase is being charged, for example, every 30 days, every half year, every year, etc.  |
 |RecurringChargeStartDate |DateTime         |The start date for a recurring transaction.  |
 |RecurringChargeEndDate   |DateTime         |The end date for a recurring transaction.  |
-|IsPostpaid               |bool             |A value that indicates whether a transaction is postpaid and charged at the end of the recurring period instead of upfront.  |
-|DiscountAmount           |double           |The discount applied to the transaction.  |
-|TipAmount                |double           |The tip applied to the transaction.  |
-|DistinctItemCount        |double           |The distinct/unique item count per transaction.  |
-|TotalItemCount           |double           |The total item count per transaction.  |
-|IsLowLiabilityPIType     |bool             |A value that indicates low liability payment instruments (for example: Apple Pay).  |
-|OrderType               |string            |The type of transaction (for example: takeout) .  |
+|IsPostpaid               |bool             |A value that indicates whether a transaction is postpaid or not.  |
+|DiscountAmount           |double           |The discount amount applied to the transaction.  |
+|TipAmount                |double           |The tip amount applied to the transaction.  |
+|DistinctItemCount        |double           |The distinct/unique item count per transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **1**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+1, or **6**. |
+|TotalItemCount           |double           |The total item count per transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **1**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+10, or **16**.  |
+|IsLowLiabilityPIType     |bool             |A value that indicates low liability payment instruments (for example: Apple Pay, Alipay, or UnionPay).  |
+|OrderType               |string           |The type of transaction (for example: takeout).  |
 |IsRetryOrder             |bool	           |A value that indicates whether the order was retried.  |
 
 ### PaymentInstruments
@@ -121,7 +121,6 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | State                       | string   | The state or province that was provided for the address. |
 | ZipCode                     | string   | The postal code that was provided for the address. |
 | CountryCode                 | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
-| PISource                     | string   | The payment instrument source (for example: CustomerInput, FromSavedProfile, MobilePay). |
 
 ### Products
 
