@@ -85,7 +85,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | DiscountAmount           |double           |The discount amount applied to the transaction.  |
 | TipAmount                |double           |The tip amount applied to the transaction.  |
 | DistinctItemCount        |double           |The distinct/unique item count per transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **1**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+1, or **6**.  |
-| TotalItemCount           |double           |The total item count per transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **1**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+10, or **16**. |
+| TotalItemCount           |double           |The total item count per transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **10**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+10, or **16**. |
 | IsLowLiabilityPIType     |bool             |A value that indicates low liability payment instruments (for example: Apple Pay , Alipay, or UnionPay).  |
 | OrderType                |string           |The type of transaction (for example: takeout) .  |
 | IsRetryOrder             |bool	            |A value that indicates whether the order was retried.  |
