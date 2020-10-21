@@ -68,7 +68,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 |MerchantBusinessType  | string    |The business or industry vertical (for example: gaming, retail, dining, or social networking).  |
 |MerchantIdentifier    |string     |The merchant ID (MID) is a specific identification number attached to a business that tells the payment processing systems involved in a transaction where to send which funds. You can think of it like an address for your business. For example, if you don't have a merchant ID, the networks involved won't know where to send your money.  |
 |MerchantCategoryCode  |string     |The merchant category code (MCC) is a four-digit number listed in ISO 18245 for retail financial services. An MCC is used to classify a business by the types of goods or services it provides.  |
-|MerchantBusinessSegment |string   |The subsection of a merchant’s overall operations in which there is an established, separate product line, business line or child brand (for example: Xbox or Surface).  |
+|MerchantBusinessSegment |string   |The subsection of a merchant’s overall operations in which there is an established, separate product line, business line, or child brand (for example: Xbox or Surface).  |
 |MerchantProductCategory |string   |The merchant-defined product or service category. |
 |StoreId               |string     |The store identifier.  |
 |StoreName             |string     |The store display name.  |
