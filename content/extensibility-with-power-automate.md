@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event hubs with Microsoft Azure Logic Apps or Power Automate to extend the functionality of Dynamics 365 Fraud Protection and incorporate Fraud Protection data into an organization's processes and workflows.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/08/2020
+ms.date: 10/23/2020
 ms.topic: conceptual
 search.app:
   - Capaedac-fraudprotection

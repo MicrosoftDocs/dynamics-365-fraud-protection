@@ -4,7 +4,7 @@ description: This topic explains how to implement device fingerprinting based on
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/08/2020
+ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
