@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the schemas for historical data uploaded in bulk as CSV files.
 ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 10/23/2020
 
 ms.topic: conceptual
 search.app: 
@@ -35,10 +35,10 @@ The **AccountCreation** API lets you share information and context with Fraud Pr
 |-------------------------------------|-----------------------------|----------|-------------|
 |                                     | Name                        | string   | The value is **"AP.AccountCreation"**. |
 |                                     | Version                     | string   | The value is **"0.5"**. |
-| MetaData                            | trackingId                  | string   | The identifier of the **AccountUpdateId** event. |
-| MetaData                            | SignupId                    | string   | The identifier of the **AccountUpdateId** event. (This value can match the value of the **trackingId** attribute.) |
+| MetaData                            | trackingId                  | string   | The identifier of the **AccountCreationId** event. |
+| MetaData                            | SignupId                    | string   | The identifier of the **AccountCreationId** event. (This value can match the value of the **trackingId** attribute but is different from the **userId** attribute.) |
 | MetaData                            | assessmentType              | string   | The assessment type for the event. Possible values are **'evaluate'** and **'protect'**. If no value is specified, the default value is **'protect'**. |
-| MetaData                            | customerLocalDate           | dateTime | The creation date of the **AccountUpdateId** event, in the customer's local time zone. The format is ISO 8601. |
+| MetaData                            | customerLocalDate           | dateTime | The creation date of the **AccountCreationId** event, in the customer's local time zone. The format is ISO 8601. |
 | MetaData                            | merchantTimeStamp           | dateTime | The time stamp for the event. |
 | DeviceContext                       | DeviceContextId                   | string   | The customer's session ID. This information is mastered by DFP Device Fingerprinting Service. |
 | DeviceContext                       | ipAddress                   | string   | The customer's IP address, as provided by the merchant. |
@@ -135,7 +135,7 @@ The **AccountLogIn** API lets you share information and context with Fraud Prote
 |-----------------------------------|-----------------------------|----------|-------------|
 |                                   | Name                        | string   | The value is **"AP.AccountLogin"**. |
 |                                   | Version                     | string   | The value is **"0.5"**. |
-| MetaData                          | trackingId                  | string   | The identifier of the **Signup** event. |
+| MetaData                          | trackingId                  | string   | The identifier of the **Login** event. |
 | MetaData                          | LogInId                     | string   | The identifier of the **Signup** event. (This value can match the value of the **trackingId** attribute.) |
 | MetaData                          | assessmentType              | string   | The assessment type for the event. Possible values are **'evaluate'** and **'protect'**. If no value is specified, the default value is **'protect'**. |
 | MetaData                          | customerLocalDate           | dateTime | The creation date of the **Signup** event, in the customer's local time zone. The format is ISO 8601. |
@@ -163,8 +163,8 @@ The **AccountLogInStatus** API lets you share information and context with Fraud
 |----------|-------------------|----------|-------------|
 |          | Name              | string   | The value is **"AP.AccountLogin.Status"**. |
 |          | Version           | string   | The value is **"0.5"**. |
-| MetaData | trackingID        | string   | The identifier of the **SignupStatus** event. |
-| MetaData | logInId           | string   | The identifier of the **Signup** event. |
+| MetaData | trackingID        | string   | The identifier of the **LoginStatus** event. |
+| MetaData | logInId           | string   | The identifier of the **Login** event. |
 | MetaData | merchantTimeStamp | DateTime | The time stamp for the event. |
 | MetaData | userId            | string   | The user identifier. This information is provided by the merchant. |
 | StatusDetails   | statusType        | string   | The type of status: **Approved**, **Rejected**, or **Pending**. |
