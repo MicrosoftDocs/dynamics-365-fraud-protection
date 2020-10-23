@@ -4,8 +4,7 @@ description: This topic explains how to create and manage rules that protect acc
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
-
+ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -21,35 +20,44 @@ title: Manage rules for Fraud Protection
 
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create rules that use the score that Fraud Protection's state-of-the-art artificial intelligence (AI) model generates, together with additional parameters from the request payload. Based on these inputs, rules can convert an assessment into a decision, such as **Approve**, **Reject**, **Review**, or **Challenge**.
 
-## Rules page
+## Rules tab
 
-You can create custom rules and manage existing rules on the **Rules** page.
+You can create custom rules and manage existing rules on the **Rules** tab.
 
-- To create and manage rules that are related to purchases, select **Purchase protection**, and then select **Rules** in the left navigation pane.
-- To create and manage rules that are related to accounts, select **Account protection**, and then select **Rules** in the left navigation pane.
+- To create and manage rules that are related to purchases, select **Purchase**, and then select the **Rules** tab.
+- To create and manage rules that are related to accounts, select **Account creation** or **Account login**, and then select the **Rules** tab.
 - To create and manage rules that are related to a custom assessment, select **Custom assessments**, select a custom assessment, and then select the **Rules** tab.
 
-The **Rules** page for account protection has a tab for each assessment type:
-
-- **Account creation** – On this tab, you can create rules that are run on account creation events, when someone tries to create a new account.
-- **Account login** – On this tab, you can create rules that are run on account login events.
-
-The **Rules** page shows a list of the rules that have been configured for an assessment type. These rules are divided into two sections: **Published Rules** and **New Drafts**. For information about drafts, see the [Drafts](rules.md#drafts) section later in this topic.
+The **Rules** tab shows a list of the rules that have been configured for an assessment type. These rules are divided into two sections: **Published Rules** and **Drafts**. For information about drafts, see the [Drafts](rules.md#drafts) section later in this topic.
 
 You can view the following information for each rule or draft:
 
 - The [name](rules.md#name-and-description)
 - The [condition](rules.md#conditions) that you created
 - The [status](rules.md#status): **Active** or **Inactive**
+
+You can also select the tile for each rule to expand it and show additional information. Here are some examples:
+
 - The [description](rules.md#name-and-description)
-- The number of [clauses](rules.md#clauses) that you created
+- The number of [clauses](rules.md#clauses) in the rule
+- Who last updated the rule
+- When the rule was last updated
+
 
 > [!NOTE]
-> On the **Rules** page, published rules are listed in the order that they are run in.
+> On the **Rules** tab, published rules are listed in the order that they are run in.
 
-### Payload settings
+### Rule settings
 
-You can access payload settings from the **Rules** page. In the **Payload settings** pane, you can define the sample payload for the assessment type. The sample payload is intended to contain an example of the fields that will be sent in the request API for the assessment and can be used in your rule.
+You can access the rule settings on the **Rules** tab for a specific assessment. There, you can change the rule evaluation behavior and the sample payload. Note that these changes apply to rules only for the assessment that you're editing. 
+
+### Rule evaluation behavior
+
+You can update how your rules are evaluated. If you select **Run the first matching rule**, only one rule will ever be evaluated per transaction. If that rule doesn't return a decision, no further rules will be evaluated, and a default decision of *Approve* is returned. If you select **Run all matching rules until a decision is made**, multiple rules can be evaluated for a single transaction. If the first rule that is evaluated doesn't return a decision, each subsequent matching rule will be evaluated until a decision is returned. 
+
+### Sample payload
+
+In the **Payload settings** pane, you can define the sample payload for the assessment type. The sample payload is intended to contain an example of the fields that will be sent in the request API for the assessment and can be used in your rule.
 
 In the API request, you might choose not to send optional fields from the assessment schema. Alternatively, you might choose to send additional custom fields. In both cases, be sure to update the payload sample that is shown in the **Payload settings** pane, so that it reflects the specific fields that you're sending.
 
@@ -98,7 +106,7 @@ To view the sample variables that are used in your rule, select **Show used vari
 
 #### Payload sample
 
-The payload sample contains an example of the fields that can be sent in the request API for the assessment, as defined in the [**Payload settings** pane](rules.md#payload-settings). These fields can be used as variables in your rule.
+The payload sample contains an example of the fields that can be sent in the request API for the assessment, as defined in the [**Payload settings** pane](rules.md#rule-settings). These fields can be used as variables in your rule.
 
 #### Score sample
 
@@ -110,7 +118,7 @@ To verify that your rule works for a variety of events, you can edit the sample 
 
 When you publish a rule, any changes that you've made to the sample are saved and persisted as part of the rule.
 
-To undo all changes that you or other people have made to the sample, select **Revert**. The score sample will be reverted to the system's default score sample, and the payload sample will be reverted to the user-defined payload sample in the [**Payload settings** pane](rules.md#payload-settings).
+To undo all changes that you or other people have made to the sample, select **Revert**. The score sample will be reverted to the system's default score sample, and the payload sample will be reverted to the user-defined payload sample in the [**Payload settings** pane](rules.md#rule-settings).
 
 ### Conditions
 
@@ -126,7 +134,7 @@ The addition of a condition to a rule is optional. If you want a rule to apply t
 
 ### Clauses
 
-Clauses contain the fraud logic and business policies that are relevant to the segment of traffic that is defined in the condition. Clauses use values in the event payload together with Fraud Protection's AI scores to accept, reject, review, or challenge events. Each rule must contain at least one clause.
+Clauses contain the fraud logic and business policies that are relevant to the segment of traffic that is defined in the condition. Clauses use values in the event payload together with Fraud Protection's AI scores to accept, reject, review, or challenge events. Each rule must contain at least one clause, and each a unique name is assigned to each clause. You can select the name to customize it.
 
 Clauses have the following basic structure.
 
@@ -149,7 +157,7 @@ If a condition matches the decision but doesn't trigger a clause, the rule is th
 RETURN Approve("NO_CLAUSE_HIT")
 ```
 
-Clauses are run sequentially in the order in which they appear on the **Rules** page. You can use the arrow buttons on the right side of a clause to change its position in the list.
+Clauses are run sequentially in the order in which they appear on the **Rules** tab. You can use the arrow buttons on the right side of a clause to change its position in the list.
 
 Clauses are organized into sections. AI models are run based on these sections and generate a score as part of the assessment. The sections differ per assessment and indicate when the clause is run relative to the AI model.
 
@@ -200,7 +208,7 @@ WHEN @purchasePrice >= 199.99 && @riskScore > 700
 ```
 ### Drafts
 
-A rule can have both a *published* version and a *draft* version. Both versions can be viewed as side-by-side tabs on the **Rules** page.
+A rule can have both a *published* version and a *draft* version. Both versions can be viewed as side-by-side tabs on the **Rules** tab.
 
 The published version is read-only and can be viewed by anyone. The draft version is visible only to its author. Drafts can be edited, and all changes are automatically saved.
 
@@ -211,40 +219,19 @@ When you publish a draft, Fraud Protection overwrites the published version of t
 
 ## Rule ordering
 
-The **Rules** page shows a list of the published rules that are configured for the assessment. The order that the rules are listed in affects the order that they are evaluated in. An event runs through each rule condition, in order, until a condition is matched. The selected rule is then evaluated, and no subsequent rules are run.
+The **Rules** tab shows a list of the published rules that are configured for the assessment. The order that the rules are listed in affects the order that they are evaluated in. To reorder the rules, just drag a rule to its desired position, and then select **Save**.
 
-For example, you configure the following three purchase rules.
+An event is evaluated against each rule condition, in order, until a condition returns **True**. Each clause in the selected rule is then evaluated. If one of these clauses returns a decision, no further rules are evaluated. If none of these clauses returns a decision, either the transaction will be approved by default, or the next published rule that has a matching condition will be evaluated. The behavior depends on the [rule evaluation behavior](rules.md#rule-evaluation-behavior) that is selected in the rule settings.
 
-| Name  | Condition | Status |
-|-------|-----------|--------|
-| Rule1 | WHEN @"user.countryRegion" == "US" | Active |
-| Rule2 | WHEN @"user.firstName" == "Kayla | Inactive |
-| Rule3 | WHEN @"productList.productName" == "Xbox" | Active |
-
-In this case, the following behavior occurs:
-
-- If a customer in the US makes a purchase, only **Rule1** is evaluated.
-- If a customer in the US makes an Xbox purchase, only **Rule1** is evaluated.
-- If a customer outside the US makes an Xbox purchase, only **Rule3** is evaluated
-- If a customer outside the US makes a non-Xbox purchase, no rules are evaluated.
-- Because **Rule2** has a status of **Inactive**, it's never evaluated.
-
-If no rules are evaluated, Fraud Protection runs the following clause by default.
-
-```ruleslanguage
-RETURN Approve("NO_RULE_HIT")
-```
-
-For information about how to reorder rules on the **Rules** page, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this topic.
 
 ## Create a new rule
 
 You can create rules that make decisions that are related to purchase, account creation, and account login events.
 
 > [!IMPORTANT]
-> By default, when a new rule is published, it appears at the bottom of the list in the **Published Rules** section of the **Rules** page. For information about how to reposition the rule, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this topic.
+> By default, when a new rule is published, it appears at the bottom of the list in the **Published Rules** section of the **Rules** tab. For information about how to reposition the rule, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this topic.
 
-1. On the [**Rules** page](rules.md#rules-page), select **New Rule**.
+1. On the [**Rules** tab](rules.md#rules-tab), select **New Rule**.
 
     A new draft rule is created. All changes that you make to your drafts are automatically saved.
 
@@ -255,14 +242,14 @@ You can create rules that make decisions that are related to purchase, account c
     - To create a new clause from scratch, select **New clause** in the appropriate clause section.
     - You can also start from an existing clause template by selecting the arrow to the right of **New clause**. To view a full list of templates and their contents, select **See all**.
 
-1. To [evaluate your rule](rules.md#evaluate-a-rule) and make sure that it works as you expect, select **Expand** in the lower right of the **Rules** page to open the rule evaluation pane.
+1. To [evaluate your rule](rules.md#evaluate-a-rule) and make sure that it works as you expect, select **Expand** in the lower right of the **Rules** tab to open the rule evaluation pane.
 1. To publish your rule, select **Publish**. In the confirmation dialog box, change the name, description, and status, and then select **Publish**.
 1. Set the [status](rules.md#status) to either **Active** or **Inactive**.
-1. To reposition the rule in the list on the **Rules** page, select the rule, drag it to its new position, and then select **Save order**.
+1. To reposition the rule in the list on the **Rules** tab, select the rule, drag it to its new position, and then select **Save order**.
 
 ## Manage existing rules
 
-On the **Rules** page, you can perform the following operations on an existing rule:
+On the **Rules** tab, you can perform the following operations on an existing rule:
 
 - [Rename](rules.md#update-the-name-and-description-of-a-rule)
 - [Activate or deactivate](rules.md#change-the-status-of-a-rule)
@@ -314,38 +301,23 @@ To remove a filter, delete the keyword from the **Search** field, or select the 
 
 ### Change the order of a rule
 
-Because published rules appear on the **Rules** page in the order that they are run in, the position of a published rule significantly affects how events are evaluated.
+Because published rules appear on the **Rules** tab in the order that they are run in, the position of a published rule significantly affects how events are evaluated.
 
-#### Move a published rule to a new position by using a drag-and-drop operation
 
-1. Select the published rule that you want to move, and then drag it to a new position.
-1. Repeat step 1 for a many other rules as you want to move, and then select **Save order**.
+#### Reorder a published rule
 
-    To cancel your changes, select **Cancel re-ordering**.
-
-#### Move a published rule to a new position by using a keyboard
-
-1. At the top of the **Published Rules** section, select **Reorder**.
-
-    Fraud Protection shows the rules as tiles that you can select and move.
-
-1. Select the **Tab** key, and then select the **Spacebar** to select a tile. Use the arrow keys to move the tile, and then select the **Spacebar** to accept the new position.
-
-    Select the **Esc** key to return the tile to its original position.
-
-1. Repeat step 1 for many other tiles as you want to move, and then select **Save order**.
-1. To confirm your changes, select **Save order** again. 
-
-    To cancel your changes, select **Cancel re-ordering**.
+1. Select the published rule that you want to move, and drag it to a new position.
+1. Repeat step 1 for every rule that you want to move, and then select **Save**.
+1. To cancel your changes, select **Cancel**.
 
 > [!NOTE]
-> Rules in the **New Drafts** section can't be reordered.
+> Rules in the **Drafts** section can't be reordered.
 
 ## Evaluate a rule
 
 Before you publish your new rule, you can use the rule evaluation pane to make sure that it returns the results that you expect.
 
-- To open the rule evaluation pane, select **Expand** in the lower right of the **Rules** page.
+- To open the rule evaluation pane, select **Expand** in the lower right of the **Rules** tab.
 - To close the pane, select **Collapse**.
 
 When the evaluation pane is open, you can watch your rule being is evaluated against the [current payload sample and score sample](rules.md#samples). As you make changes to the sample, or to the rule itself, the content in the evaluation pane is updated.

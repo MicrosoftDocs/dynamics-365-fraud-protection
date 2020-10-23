@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how you can visually explore your data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/13/2020
+ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -18,7 +18,7 @@ The graph explorer in Microsoft Dynamics 365 Fraud Protection enables you to und
 
 ## Visualize your ontology
 
-To display search and filtering options in Fraud Protection, select **Data engineering** and then select **Graph explorer**. 
+To display search and filtering options in Fraud Protection, select **Data**, and then select **Graph explorer**. 
 
 When the graph explorer first opens, it displays the ontology so you can view its structure. Each *node* represents an essential category of data. Select a node to see its *attributes*. Attributes describe the node's specific properties. Related nodes are connected by *edges*, which may have their own properties depending on the nature of the data.
 

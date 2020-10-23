@@ -4,7 +4,7 @@ description: This topic explains how the virtual fraud analyst helps you set up 
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -57,7 +57,7 @@ The following table defines the node and attribute combinations that you can use
 To create a filter for historical transaction data, follow these steps.
 
 1. Create and upload a list.
-1. In the left navigation, select **Virtual fraud analyst**.
+1. In the left navigation, select **Purchase**, and then select **Virtual fraud analyst**.
 1. Select a node, attribute, list, and column.
 1. To add another filter, select **Add another filter**, and then repeat step 3.
 1. Select **Analyze**.
@@ -74,7 +74,7 @@ To filter your view, follow these steps.
 
 #### The Transaction data chart
 
-In the **Transaction data** chart on the left side of the **Virtual fraud analyst** page, the x-axis represents the risk score, and the y-axis represents the number of transactions.
+In the **Transaction data** chart on the left side of the **Virtual fraud analyst** tab, the x-axis represents the risk score, and the y-axis represents the number of transactions.
 
 The machine learning model in Microsoft Dynamics 365 Fraud Protection evaluates every transaction by using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a range of risk scores from 0 (zero) through 999.
 
@@ -84,7 +84,7 @@ You can hover over any point in the chart to see a detailed representation of th
 
 #### The Risk impact metrics
 
-In the **Risk impact** section on the right side of the **Virtual fraud analyst** page, you can view the key metrics that are associated with the chart. Use the risk score slider to set your threshold, and then continue to refine the score in single-point increments after you create a rule.
+In the **Risk impact** section on the right side of the **Virtual fraud analyst** tab, you can view the key metrics that are associated with the chart. Use the risk score slider to set your threshold, and then continue to refine the score in single-point increments after you create a rule.
 
 | Metric | Definition |
 |---|---|

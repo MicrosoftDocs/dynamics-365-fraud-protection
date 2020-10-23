@@ -18,21 +18,21 @@ title: Boost bank acceptance rates
 
 One feature that sets Microsoft Dynamics 365 Fraud Protection apart from other products in the market is the transaction acceptance booster. This feature helps you benefit from higher acceptance rates by sharing trust knowledge with banks. 
 
-You can opt to directly share Fraud Protection’s assessments with participating issuing banks and networks through the acceptance booster service. Another option is to receive MID recommendations from Fraud Protection and incorporate them into your authorization requests, resulting in a higher overall acceptance rate. While you can use both options on the same transactions where applicable, we recommend that you use the MID recommendation option on transactions from banks who are not participating in the acceptance booster service.
+You can opt to directly share Fraud Protection's assessments with participating issuing banks and networks through the acceptance booster service. Another option is to receive MID recommendations from Fraud Protection and incorporate them into your authorization requests, resulting in a higher overall acceptance rate. While you can use both options on the same transactions where applicable, we recommend that you use the MID recommendation option on transactions from banks who are not participating in the acceptance booster service.
 
 ## Acceptance booster service
 The acceptance booster service provides a direct communication channel for contextual transaction data, called transaction trust knowledge, with participating issuing banks and networks. This transmission occurs at the time of transaction assessment by Fraud Protection. If the payment instrument used in that transaction was issued by a bank or network participating in the program, Fraud Protection will transmit transaction trust knowledge to that bank or network. 
 
 #### To enable the acceptance booster service:
 
-1. Select **Configuration**, and then select **Transaction acceptance booster**. 
+1. Select **Settings**, and then select **Transaction acceptance booster**. 
 1. On the **Opt in** tab, select **Acceptance booster service** to consent to share transaction trust knowledge with participating banks and networks. 
 1. Select **Consent** to review details about the terms and a list of participants in the program. 
 1. Select **Save** to confirm your choice.
 
 ### Reports
 
-To view a report of your transaction acceptance booster service, select **Configuration**, select **Transaction acceptance booster**, and then select the **Report** tab.
+To view a report of your transaction acceptance booster service, select **Settings**, select **Transaction acceptance booster**, and then select the **Report** tab.
 
 ## Program MID
 
@@ -42,7 +42,7 @@ It takes time to create MIDs and use them for authorization, but these tasks don
 
 #### To enable Program MID: 
 
-1. Select **Configuration**, and then select **Transaction acceptance booster**.
+1. Select **Settings**, and then select **Transaction acceptance booster**.
 1. On the **Opt in** tab, select **Program MID** to 
 receive MID recommendations. 
 1. Select **Consent** to review details about the terms and a list of participants in the program. 
