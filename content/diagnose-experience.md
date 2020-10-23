@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about the diagnose experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/08/2020
+ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
