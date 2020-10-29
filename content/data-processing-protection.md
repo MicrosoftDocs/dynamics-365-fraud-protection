@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how payment transaction, account activity, and device data are protected.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 10/29/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -101,7 +101,7 @@ Customers can choose to use the Transaction Acceptance Booster by opting into th
 
 By opting into this feature, a customer directs Fraud Protection to transmit Transaction Trust Knowledge on its behalf to a participating bank when a payment transaction is initiated on the customer’s ecommerce property with a payment card issued by such bank. For any given payment transaction, a customer’s Transaction Trust Knowledge is only shared with the participating bank when a payment card issued by that bank is used to initiate that payment transaction.  
 
-The Transaction Trust Knowledge is independently processed by participating banks in accordance with agreements with a customer and applicable network rules. For information about how banks process personal data sent by merchants, such as the Transaction Trust Knowledge, Fraud Protection customers are invited to directly contact the participating banks with which they do business.  
+Transaction Trust Knowledge is a small payload of customer data which includes Fraud Protection's assessment of the transaction, location, and device identifier along with transaction specific details including trimmed card number and amount that helps banks match against the right purchase transaction.  
 
 ### Fraud Protection processes customer data to provide tools, such as graphical reports, to surface business intelligence related to fraud  
 
