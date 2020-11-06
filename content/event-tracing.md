@@ -17,7 +17,7 @@ title: Event tracing
 
 ## Overview
 
-The *event tracing* functionality in the Microsoft Dynamics 365 Fraud Protection portal lets you establish a real-time telemetry platform that is extensible and operational outside the portal. Each event is either scheduled or triggered by a user-level or system-level action. You can subscribe to events that you're interested in and forward the event payloads to Azure Event Hubs or Blob Storage. You can also request events from multiple event tracing sessions at the same time. The system will then deliver the events to Event Hubs in chronological order.
+The *event tracing* functionality in the Microsoft Dynamics 365 Fraud Protection portal lets you establish a real-time telemetry platform that is extensible and operational outside the portal. Each event is either scheduled or triggered by a user-level or system-level action. You can subscribe to events that you're interested in and forward the event payloads to Azure Event Hubs or Blob Storage. You can also request events from multiple event tracing sessions at the same time. The system will then deliver the events in chronological order.
 
 Events can be aggregated and used to define metrics that you can use to monitor and manage your service costs and utilization. Events can also be used to maintain system logs for actions that are taken in the Fraud Protection portal (for example, *user A* edited *list B* on *date C*) or to develop custom reports that use transactional data. When you use the Event Hubs connectors that are available in Power Automate and Logic Apps, you can also use the data that you send to Event Hubs for alerting or highly customized workflows. Similarly, with Blob Storage you can create a new subscription which will copy all historical data into your cold storage account for further analysis.
 
@@ -37,7 +37,7 @@ Follow these steps to start to use the event tracing functionality.
 
 1.	Select an event and review the description and sample of the JSON payload before saving the subscription by selecting **Create**. 
 
-     Events are instantaneously sent to your Event Hubs instance from that point in time. If you selected Blob Storage the copy process to write all historical data will begin and then all events will be published to your container every 30 minutes. 
+     Events are instantaneously sent to your Event Hubs instance from that point in time. If you selected Blob Storage, the copy process to write all historical data will begin and all events will be published to your container every 30 minutes. 
    
 1.	Go back to the [Fraud Protection](https://dfp.microsoft.com/) portal to view the count for the **Events/Hr.** metric and make sure that data is being sent to Event Hubs and Blob Storage.
 
@@ -54,8 +54,8 @@ Follow these steps to start to use the event tracing functionality.
 
 Four supported classifications of events are currently available in event tracing: *trace events*, *audit events*, *monitoring events*, and *transactional events*.
 
-## Transactional events
-You use transactional events to create custom scorecards and automated workflows using the data available in your assessment and non-assessment API calls. Using blob storage, you can also copy the data from historical API calls to create a data warehouse for your business. The payload for this event includes the entire request and response for each API call.
+### Transactional events
+Use transactional events to create custom scorecards and automated workflows using the data available in your assessment and non-assessment API calls. Using blob storage, you can also copy the data from historical API calls to create a data warehouse for your business. The payload for this event includes the entire request and response for each API call.
 
 **Namespace: FraudProtection.Observe.<APIName> or FraudProtection.Assessment.<APIName>**
 
