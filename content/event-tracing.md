@@ -33,15 +33,13 @@ Follow these steps to start to use the event tracing functionality.
    
    1. **For Blob Storage**: Enter the connection string for your Azure storage account. Then enter a container name where your event tracing data will reside. For more information, see [View account access keys](https://docs.microsoft.com/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
-    Before you save the page, you will see a description of the event and a sample of the schema/payload that is included.
-
 1.	Select an event and review the description and sample of the JSON payload before saving the subscription by selecting **Create**. 
 
      Events are instantaneously sent to your Event Hubs instance from that point in time. If you selected Blob Storage, the copy process to write all historical data will begin and all events will be published to your container every 30 minutes. 
    
 1.	Go back to the [Fraud Protection](https://dfp.microsoft.com/) portal to view the count for the **Events/Hr.** metric and make sure that data is being sent to Event Hubs and Blob Storage.
 
-    The **Events/Second** and **Failures/Second** metrics show an average over the past 24 hours.
+    The **Events/Hr** and **Failures/Hr** metrics show an average over the past 24 hours.
 
     > [!TIP]
     > For additional monitoring for Event Hubs, go to the Azure portal, and set up metrics. For more information, see [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/azure/event-hubs/event-hubs-metrics-azure-monitor).
@@ -82,7 +80,7 @@ Use transactional events to create custom scorecards and automated workflows usi
 
 You use trace events to report and monitor the performance for all rules which include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule which triggered the event, the event type which correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, click [Rules language guide](fpl-lang-ref.md#additional-return-types).
 
-#### Namespace: FraudProtection.Trace.Rule
+#### Namespace: FraudProtection.Trace.Rule.<APIName>
 
 ```json
 {
@@ -109,7 +107,7 @@ You use trace events to report and monitor the performance for all rules which i
 
 You use audit events to track portal actions and develop an audit log. Audit events currently support EditList/EditRule, NewList/NewRule, and DeleteList/DeleteRule operations.
 
-#### Namespace: FraudProtection.Audit
+#### Namespace: FraudProtection.Audit.<APIName>
 
 ```json
 "audit": {
@@ -131,7 +129,7 @@ You use audit events to track portal actions and develop an audit log. Audit eve
 
 Use monitoring events for reporting and alerting on your API latency as well as errors outside the Fraud Protection portal. Request counts and latency distribution events are sent every 20 seconds. These events include **startTime** and **endTime** fields that determine the aggregation period and dimension names and values that can be used to filter the metrics as required.
 
-##### Namespace: FraudProtection.Monitoring.RequestLatencyMsDistribution
+##### Namespace: FraudProtection.Monitoring.RequestLatencyMsDistribution.<APIName>
 
 ```json
 
