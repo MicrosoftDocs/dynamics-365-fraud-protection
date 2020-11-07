@@ -55,7 +55,7 @@ Four supported classifications of events are currently available in event tracin
 ### Transactional events
 Use transactional events to create custom scorecards and automated workflows using the data available in your assessment and non-assessment API calls. Using blob storage, you can also copy the data from historical API calls to create a data warehouse for your business. The payload for this event includes the entire request and response for each API call.
 
-##### Namespace: FraudProtection.Observe.<APIName> or FraudProtection.Assessment.<APIName>**
+##### Namespace: FraudProtection.Observe.<APIName> or FraudProtection.Assessment.<APIName>
 
 ```json
 {
