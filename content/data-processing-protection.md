@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how payment transaction, account activity, and device data are protected.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/29/2020
+ms.date: 11/11/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
