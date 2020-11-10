@@ -55,7 +55,7 @@ Four supported classifications of events are currently available in event tracin
 ### Transactional events
 Use transactional events to create custom scorecards and automated workflows using the data available in your assessment and non-assessment API calls. Using blob storage, you can also copy the data from historical API calls to create a data warehouse for your business. The payload for this event includes the entire request and response for each API call.
 
-##### Namespace: FraudProtection.Observe.<APIName> or FraudProtection.Assessment.<APIName>
+##### Namespace: FraudProtection.Observe.\<API Name\> or FraudProtection.Assessment.\<API Name\>
 
 ```json
 {
@@ -80,7 +80,7 @@ Use transactional events to create custom scorecards and automated workflows usi
 
 You use trace events to report and monitor the performance for all rules which include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule which triggered the event, the event type which correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, click [Rules language guide](fpl-lang-ref.md#additional-return-types).
 
-##### Namespace: FraudProtection.Trace.Rule.<APIName>
+##### Namespace: FraudProtection.Trace.Rule.\<API Name\>
 
 ```json
 {
@@ -107,7 +107,7 @@ You use trace events to report and monitor the performance for all rules which i
 
 You use audit events to track portal actions and develop an audit log. Audit events currently support EditList/EditRule, NewList/NewRule, and DeleteList/DeleteRule operations.
 
-##### Namespace: FraudProtection.Audit.<APIName>
+##### Namespace: FraudProtection.Audit.\<API Name\>
 
 ```json
 "audit": {
@@ -129,7 +129,7 @@ You use audit events to track portal actions and develop an audit log. Audit eve
 
 Use monitoring events for reporting and alerting on your API latency as well as errors outside the Fraud Protection portal. Request counts and latency distribution events are sent every 20 seconds. These events include **startTime** and **endTime** fields that determine the aggregation period and dimension names and values that can be used to filter the metrics as required.
 
-##### Namespace: FraudProtection.Monitoring.RequestLatencyMsDistribution.<APIName>
+##### Namespace: FraudProtection.Monitoring.RequestLatencyMsDistribution.\<API Name\>
 
 ```json
 
