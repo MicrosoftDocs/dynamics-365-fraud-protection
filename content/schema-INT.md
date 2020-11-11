@@ -96,6 +96,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | OrderInitiatedChannelRegionORCountry |string        |The market where the transaction was created (for example: App market).  |
 | MerchantBusinessSubSegmentL2   |string       |The second level (L2) business or industry segment.  |
 
+
 ### PaymentInstruments
 
 | Attribute                   | Type     | Description |

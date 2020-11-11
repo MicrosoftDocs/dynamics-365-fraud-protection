@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains what's new in the Microsoft Dynamics 365 Fraud Protection October 2020 release.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/08/2020
+ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -72,7 +72,7 @@ A new section called *ruleEvaluations* is now included in the assessment API res
 
 ## Dynamics 365 Commerce customer offer
 
-Starting October 1, 2020, a limited capacity of Fraud Protection is included in the Microsoft Dynamics 365 Commerce license. Commerce customers can now use Fraud Protection for no extra charge, up to the limits specified below:
+Starting October 2020, a limited capacity of Fraud Protection is included in the Microsoft Dynamics 365 Commerce license. Commerce customers can now use Fraud Protection for no extra charge, up to the limits specified below:
 
 - **Purchase protection** - Up to 2,000 assessments per month.
 - **Account protection** - Up to 20,000 assessments per month. 
