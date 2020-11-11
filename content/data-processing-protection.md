@@ -40,7 +40,7 @@ Fraud Protection processes three types of customer data to provide the service:
 
   - Device attributes such as plugins installed, processor class, etc. 
   - Operating system attributes such as OS information. 
-  - Browser related attributes if applicable, such as browser language, font etc.
+  - Browser-related attributes if applicable, such as browser language, font etc.
   - Network attributes such as IP address, signature hash, etc. 
 
 - **Account activity data**. This is information about the devices visiting our customer’s e-commerce properties, for example:
@@ -81,7 +81,7 @@ The technique is practically irreversible. This process makes it practically imp
 
 The technique gives customers added assurance that their customer data will not be shared with other Fraud Protection customers. The tokens in the Fraud Network cannot be linked to any specific Fraud Protection customer without access to the hash function, salt, and raw data in that customer’s merchant space and a then a brute force attack.  
 
-### Fraud Protection applies artifical intelligence to the tokens in the Fraud Network to generate fraud insights for Fraud Protection customers                 
+### Fraud Protection applies artificial intelligence to the tokens in the Fraud Network to generate fraud insights for Fraud Protection customers                 
 
 Fraud Protection uses artificial intelligence to understand patterns of fraud which enables the service to generate fraud insights for new real-time payment transactions and account activities for customers. These fraud insights include a risk score for the real-time event and reason codes for the score. For example, within the Fraud Network, Fraud Protection may detect a suspiciously high volume of payment transactions, within a noticeably short period of time, associated with a particular token (which could represent a billing address or IP Address). If Fraud Protection detects that token in new, real-time payment transactions, it may provide the customer with a higher risk score and a reason code that indicates that Fraud Protection has detected a suspiciously high volume of transactions for a data attribute associated with the transaction.  
 
@@ -90,7 +90,7 @@ Fraud Protection uses artificial intelligence to understand patterns of fraud wh
 Customers can set business rules within Fraud Protection to automate its own analysis of a real-time transaction or account event, regarding the risk score and reason codes. For example, in addition to the fraud insights provided by Fraud Protection, customers apply their own business rules to approve a payment transaction based on any number of factors, including the transaction amount, the payment instrument used, or the content of the order. Each customer’s business rules are treated as customer confidential information and customer data. Fraud Protection will process such data on behalf of the customer, in accordance with the business rules set, to make a recommendation on accepting or rejecting the transaction or event.  
 
 ### Fraud Protection enables customers to share Transaction Trust Knowledge with participating banks
-Customers can choose to use the Transaction Acceptance Booster by opting into the feature. This feature allows customers to instruct Microsoft to share certain customer data, called Transaction Trust Knowledge, with participating banks when a payment transaction is initiated with a payment instrument issued by the participating bank. Transaction Trust Knowledge is a small payload of customer data which includes Fraud Protection's assessment of the transaction, location, and device identifier along with transaction specific details including trimmed card number and amount that helps banks match against the right purchase transaction.  
+Customers can choose to use the Transaction Acceptance Booster by opting into the feature. This feature allows customers to instruct Microsoft to share certain customer data, called Transaction Trust Knowledge, with participating banks when a payment transaction is initiated with a payment instrument issued by the participating bank. Transaction Trust Knowledge is a small payload of customer data which includes Fraud Protection's assessment of the transaction, location, and device identifier along with transaction-specific details including trimmed card number and amount that helps banks match against the right purchase transaction.  
 
 By opting into this feature, a customer directs Fraud Protection to transmit Transaction Trust Knowledge on its behalf to a participating bank when a payment transaction is initiated on the customer’s ecommerce property with a payment card issued by such bank. For any given payment transaction, a customer’s Transaction Trust Knowledge is only shared with the participating bank when a payment card issued by that bank is used to initiate that payment transaction.  
 
