@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event tracing.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 11/12/2020
+ms.date: 11/17/2020
 ms.topic: conceptual
 search.app:
   - Capaedac-fraudprotection
@@ -50,7 +50,31 @@ Follow these steps to start to use the event tracing functionality.
 
 ## Event schemas
 
-Two supported classifications of events are currently available in event tracing: *audit events* and *monitoring events*. Each event has a standardized schema that includes both fields that are included in every event (for example, **namespace**, **event version,** **tenantId**, and **timestamp**) and fields that are unique to the event classification.
+Four supported classifications of events are currently available in event tracing: *trace events*, *audit events*, *monitoring events*, and *transactional events*.
+
+### Transactional events
+
+Use transactional events to create custom scorecards and automated workflows using the data available in your assessment and non-assessment API calls. Using blob storage, you can also copy the data from historical API calls to create a data warehouse for your business. The payload for this event includes the entire request and response for each API call.
+
+##### Namespace: FraudProtection.Observe.\<API Name\> or FraudProtection.Assessment.\<API Name\>
+
+```json
+{
+    "uniqueId": "unique event id and used to deduplicate events",
+    "request": {
+        //API request payload
+    },
+    "response": {
+        //API response payload
+    },
+    "name": "FraudProtection.Observe.AccountLabel",
+    "version": "1.0",
+    "metadata": {
+        "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+        "timestamp": "2020-09-25T03:46:53.3716978Z"
+    }
+}
+```
 
 ### Trace events
 
