@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/23/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -77,8 +77,8 @@ To set up your applications directly in Azure, see [Create Azure AD apps in Azur
 To integrate your systems with Dynamics 365 Fraud Protection, complete the following sections.
 
 ### Required IDs and information
-- **Environment URI** - The URIs for your sandbox or production environment appear on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard.
-- **Directory (tenant) ID** - The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Dynamics 365 Fraud Protection dashboard. 
+- **Environment URI** - The URIs for your sandbox or production environment appear on the **Configuration** tab of the **API Management** page in the Fraud Protection portal.
+- **Directory (tenant) ID** - The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Configuration tab** of the **API Management** page in the Fraud Protection portal. 
 - **Application (client) ID** - This identifies the Azure AD app you've created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen.
 
