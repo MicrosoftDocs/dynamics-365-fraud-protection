@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the schemas that are required for historical data upload.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 11/12/2020
+ms.date: 11/19/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -89,13 +89,6 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | IsLowLiabilityPIType     |bool             |A value that indicates low liability payment instruments (for example: Apple Pay , Alipay, or UnionPay).  |
 | OrderType                |string           |The type of transaction (for example: takeout) .  |
 | IsRetryOrder             |bool	            |A value that indicates whether the order was retried.  |
-| AttemptId                |string           |The identifier for each transaction retry.  |
-| ShippingDate             |DateTime         |The date that the order was shipped.  |
-| OrderInitiatedChannel    |string           |The channel where the transaction was created (for example: ‘AppStore', 'Web', MobileWeb, 'App', ‘InGamePurchase’).  |
-| OrderInitiatedChannelName   |string        |The App Name or Web URL where the transaction was created.  |
-| OrderInitiatedChannelRegionORCountry |string        |The market where the transaction was created (for example: App market).  |
-| MerchantBusinessSubSegmentL2   |string       |The second level (L2) business or industry segment.  |
-
 
 ### PaymentInstruments
 
