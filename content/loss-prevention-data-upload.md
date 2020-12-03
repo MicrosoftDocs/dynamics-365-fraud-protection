@@ -30,7 +30,7 @@ The historical data must be imported from four entities:
 
 You can upload your historical data from the **Data upload** page.
 
-To ensure that Fraud Protection can correctly interpret the files that you upload, make sure that the files meet the following requirements, and that they follow the [required schemas](view-loss-prevent-schemas.md):
+To ensure that Fraud Protection can correctly interpret the files that you upload, make sure that the files meet the following requirements, and that they follow the [required schemas](https://go.microsoft.com/fwlink/?linkid=2131494):
 
 - To find and submit your local files, select **Upload**. Every file must be uploaded before you process the data.
 - To generate a report after a successful data upload, select **Generate Reports**. 
