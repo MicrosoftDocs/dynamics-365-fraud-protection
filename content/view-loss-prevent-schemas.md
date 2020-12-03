@@ -240,4 +240,3 @@ Note the following formatting guidelines throughout:
 | PAYMENTMETHODNUMBER      | nvarchar (10) NOT NULL      | The identifier for the payment method.  |
 | DEFAULTFUNCTION      | int      | A description of the type of payment method, such as **Cash**, **Check**, **Credit Memo/Voucher**, or **Currency**.      |
 | NAME      | nvarchar (60) NOT NULL      | The descriptive name for the payment method.      |
-  |
