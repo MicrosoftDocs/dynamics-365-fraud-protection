@@ -93,8 +93,6 @@ Note the following formatting guidelines throughout:
 | DATAAREAID      | nvarchar (4) NOT NULL      | The identifier of the legal entity in Dynamics 365 Commerce.      |
 | SYNCSTARTDATETIME      | datetime NOT NULL      | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Commerce. They define the export sequence.      |
 
-
-
 ## Sales
 
 | Field Name                      | Data Type                | Description |
@@ -194,7 +192,6 @@ Note the following formatting guidelines throughout:
 | DATAAREAID      | nvarchar (4) NOT NULL      | The company identifier (for example, MSFT).      |
 | SYNCSTARTDATETIME      | datetime NOT NULL      | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Commerce. They define the export sequence.      |
 
-
 ## Payments
 
 | Field Name                       | Data Type                | Description |
@@ -231,7 +228,6 @@ Note the following formatting guidelines throughout:
 | PARTITION      | nvarchar (20) NOT NULL      | The identifier of a data partition in Dynamics 365 Commerce that is specific to Dynamics 365.      |
 | DATAAREAID      | nvarchar (4) NOT NULL      | The company identifier (for example, MSFT).      |
 | SYNCSTARTDATETIME      | datetime NOT NULL      | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Commerce. They define the export sequence.      |
-
 
 ## PaymentMethod
 
