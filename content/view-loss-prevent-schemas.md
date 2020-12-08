@@ -47,13 +47,13 @@ Note the following formatting guidelines throughout:
 | TRANSACTIONSTATUS      | int  NOT NULL      | Fields that are added to the synchronization engine (DIXF) in Dynamics 365 Commerce. They define the export sequence.      |
 | EXCHANGERATE      | numeric (32 16)      | The exchange rate, if a non-store currency was used for payment.      |
 | GROSSAMOUNT      | numeric (32 6)      | The total amount that is due before discounts are applied.     |
-| INCOMEEXPENSEAMOUNT      | numeric (32 6)      | This field indicates the adjustment amount to refect drawer-related expenses if any.      |
-| INFOCODEDISCOUNTGROUP      | nvarchar (10)      | This is the informaiton code assoicated with the discount applied.      |
+| INCOMEEXPENSEAMOUNT      | numeric (32 6)      | This field indicates the adjustment amount to reflect drawer-related expenses if any.      |
+| INFOCODEDISCOUNTGROUP      | nvarchar (10)      | This is the information code associated with the discount applied.      |
 | WAREHOUSE      | nvarchar (10) NOT NULL      | The warehouse that is associated with a store.      |
 | SITEID      | nvarchar (10)      | This field is typically used for retail stores. It's used to organize the stores by region (for example, Northwest US stores).      |
 | INVOICEID      | nvarchar (20)      | This field is related to payments on customer accounts. It indicates the invoice that the customer is making a payment against.      |
 | ITEMSPOSTED      | int      | The count of items that are part of the shipment that is posted.      |
-| LOYALTYCARDID      | nvarchar (30)      | The loality card number associated with the customer.      |
+| LOYALTYCARDID      | nvarchar (30)      | The locality card number associated with the customer.      |
 | NETAMOUNT      | numeric (32 6 NOT NULL      | The price before discounts are applied.      |
 | PAYMENTAMOUNT      | numeric (32 6)      | The payment amount.      |
 | POSTASSHIPMENT      | int      | This field indicates whether or not an item has an associated shipment.|
