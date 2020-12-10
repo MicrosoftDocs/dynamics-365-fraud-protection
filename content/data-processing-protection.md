@@ -79,7 +79,8 @@ The technique produces (practically) a one-to-one mapping. Although the hashing 
 
 The technique is practically irreversible. This process makes it practically impossible to reverse engineer a token back to the original input, identify a data subject from the tokens, or otherwise “rehydrate” this customer data without access to the hash function and the salt. Reversing engineering the technique to rehydrate the data, and render it identifiable, would require a highly sophisticated, brute force attack. 
 
-The technique gives customers added assurance that their customer data will not be shared with other Fraud Protection customers. The tokens in the Fraud Network cannot be linked to any specific Fraud Protection customer without access to the hash function, salt, and raw data in that customer’s merchant space.  
+
+The technique gives customers added assurance that their customer data will not be shared with other Fraud Protection customers. The tokens in the Fraud Network cannot be linked to any specific Fraud Protection customer without access to the hash function, salt, and raw data in that customer’s merchant space.
 
 ### Fraud Protection applies artificial intelligence to the tokens in the Fraud Network to generate fraud insights for Fraud Protection customers                 
 
