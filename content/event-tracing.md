@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event tracing.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 11/19/2020
+ms.date: 12/10/2020
 ms.topic: conceptual
 search.app:
   - Capaedac-fraudprotection
@@ -53,7 +53,6 @@ Follow these steps to start to use the event tracing functionality.
 Four supported classifications of events are currently available in event tracing: *trace events*, *audit events*, *monitoring events*, and *transactional events*.
 
 ### Transactional events
-
 Use transactional events to create custom scorecards and automated workflows using the data available in your assessment and non-assessment API calls. Using blob storage, you can also copy the data from historical API calls to create a data warehouse for your business. The payload for this event includes the entire request and response for each API call.
 
 ##### Namespace: FraudProtection.Observe.\<API Name\> or FraudProtection.Assessment.\<API Name\>

@@ -3,8 +3,7 @@ author: yvonnedeq
 description: This topic explains how to upload data for the loss prevention feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 05/20/2020
-
+ms.date: 12/10/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -31,7 +30,7 @@ The historical data must be imported from four entities:
 
 You can upload your historical data from the **Data upload** page.
 
-To ensure that Fraud Protection can correctly interpret the files that you upload, make sure that the files meet the following requirements, and that they follow the [required schemas](schema.md):
+To ensure that Fraud Protection can correctly interpret the files that you upload, make sure that the files meet the following requirements, and that they follow the [required schemas](https://go.microsoft.com/fwlink/?linkid=2131494):
 
 - To find and submit your local files, select **Upload**. Every file must be uploaded before you process the data.
 - To generate a report after a successful data upload, select **Generate Reports**. 
