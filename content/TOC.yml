@@ -48,12 +48,6 @@
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md      
-  - name: View schema for the labels API
-    href: labels-schema.md
-  - name: Sign-up data schemas for account protection
-    href: signup-schema.md
-  - name: Sign-up status schemas for account protection
-    href: signup-status-schema.md
   - name: Implement device fingerprinting
     href: device-fingerprinting.md    
   - name: Monitor API calls
@@ -74,8 +68,6 @@
     href: integrate-ap-api.md
   - name: Review key metrics for account protection
     href: ap-scorecard.md
-  - name: Account protection schemas
-    href: new-ap-schema.md
   - name: Monitor API calls
     href: monitoring.md    
 - name: Loss prevention
@@ -86,8 +78,6 @@
     href: reports.md
   - name: Upload historical data for loss prevention
     href: loss-prevention-data-upload.md
-  - name: Loss prevention schemas
-    href: view-loss-prevent-schemas.md
   - name: Loss prevention integration with Dynamics 365 Commerce 
     href: loss-prevention-integration-with-commerce.md
   - name: Data access and privacy for loss prevention
