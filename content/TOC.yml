@@ -48,12 +48,6 @@
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md      
-  - name: View schema for the labels API
-    href: labels-schema.md
-  - name: Sign-up data schemas for account protection
-    href: signup-schema.md
-  - name: Sign-up status schemas for account protection
-    href: signup-status-schema.md
   - name: Implement device fingerprinting
     href: device-fingerprinting.md    
   - name: Monitor API calls
