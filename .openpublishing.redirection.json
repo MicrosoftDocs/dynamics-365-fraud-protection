@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "content/labels-schema.md",
+      "redirect_url": "overview",
+      "redirect_document_id": "false"
+    },  
+    {
+      "source_path": "content/signup-schema.md",
+      "redirect_url": "overview",
+      "redirect_document_id": "false"
+    },  
+    {
+      "source_path": "content/signup-status-schema.md",
+      "redirect_url": "overview",
+      "redirect_document_id": "false"
+    },  
+    {
+      "source_path": "content/new-ap-schema.md",
+      "redirect_url": "overview",
+      "redirect_document_id": "false"
+    },  
+    {
       "source_path": "content/schema.md",
       "redirect_url": "schema-int",
       "redirect_document_id": "false"
