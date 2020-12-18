@@ -78,6 +78,8 @@
     href: reports.md
   - name: Upload historical data for loss prevention
     href: loss-prevention-data-upload.md
+  - name: View loss prevention schemas
+    href: view-loss-prevent-schemas.md
   - name: Loss prevention integration with Dynamics 365 Commerce 
     href: loss-prevention-integration-with-commerce.md
   - name: Data access and privacy for loss prevention
