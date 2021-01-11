@@ -126,6 +126,8 @@
   href: data-processing-protection.md 
 - name: Visually explore data
   href: graph-explorer.md
+- name: Notifications for Fraud Protection service 
+  href: dfp-notifications.md
 - name: Evaluate experience
   href: evaluate-experience.md
 - name: Protect experience
