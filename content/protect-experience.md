@@ -1,27 +1,30 @@
 ---
-author: v-davido
-description: This topic provides information about the Protect experience in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-davido
+author: yvonnedeq
+description: This topic provides information about the protect experience in Fraud Protection.
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 12/18/2019
+ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Protect experience
+title: The protect experience in Fraud Protection
 ---
 
-# Protect experience
+# The protect experience in Fraud Protection
 
-The Protect experience in Microsoft Dynamics 365 Fraud Protection builds on the features of the Evaluate experience by embedding Fraud Protection into your full production environment, where it becomes your real-time tool for fraud protection. You can take advantage of model scores to decide whether to accept or reject transactions, adjudicate escalations from customers, and share relevant information about transaction trustworthiness with participating banks and issuers to help boost their acceptance rates.
+The *protect experience* in Microsoft Dynamics 365 Fraud Protection builds on the features of the evaluate experience by embedding Fraud Protection into your full production environment, where it becomes your real-time tool for fraud protection. You can take advantage of model scores to decide whether to accept or reject transactions, adjudicate escalations from customers, and share relevant information about transaction trustworthiness with participating banks and issuers to help boost their acceptance rates.
 
-## Using the Protect experience
+## Using the protect experience
 
-To get started with Fraud Protection, complete the initial configuration steps that are outlined on the dashboard. Then follow these steps to begin to use the Protect experience:
+To get started with Fraud Protection, complete the initial configuration steps that are outlined on the dashboard. Then follow these steps to begin to use the protect experience:
 
-1. [Integrate the Fraud Protection application programming interfaces (APIs)](integrate-real-time-api.md), and pass **'Protect'** for the **AssessmentType** field in **Purchase**, **Signup**, and **CustomFraudEvaluation** API events. For documentation of all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
-2. Honor the decision of Fraud Protection merchant rules to either approve or reject those same events.
+1. [Integrate the Fraud Protection application programming interfaces (APIs)](integrate-real-time-api.md), and pass **'Protect'** for the **AssessmentType** field in **Purchase**, **Signup**, and **CustomFraudEvaluation** API events. 
+
+    For documentation of all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
+    
+1. Honor the decision of Fraud Protection merchant rules to either approve or reject those same events.
 
 ## Features
 

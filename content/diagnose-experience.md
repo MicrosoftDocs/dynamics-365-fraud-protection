@@ -1,27 +1,26 @@
 ---
-author: v-davido
-description: This topic provides information about the Diagnose experience in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-davido
+author: yvonnedeq
+description: This topic provides information about the diagnose experience in Microsoft Dynamics 365 Fraud Protection.
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/14/2020
-
+ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Diagnose experience
+title: The diagnose experience in Fraud Protection
 
 ---
 
-# Diagnose experience
+# The diagnose experience in Fraud Protection
 
 Microsoft Dynamics 365 Fraud Protection's *Diagnose experience* evaluates your historical data and generates reports that provide valuable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities.
 
 
 ## Upload data
 
-To begin, upload your historical data for analysis. Your data files should reflect approved transactions that were approved by you (the merchant) and sent to your bank.
+To begin your diagnose experience, upload your historical data for analysis. Your data files should reflect approved transactions that were approved by you (the merchant) and sent to your bank.
 
 To help guarantee that Fraud Protection can interpret the files that you upload, make sure that they meet the following requirements.
 
@@ -40,17 +39,26 @@ To help guarantee that Fraud Protection can interpret the files that you upload,
 > [!IMPORTANT]
 > This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
-You can preview a sample of your data on the **Ready to upload your file** page. If significant errors are detected in the file format, correct them before you upload the complete files. When you're ready, select **Upload**.
-
 ## Generate reports
 
-After all four files are uploaded, select **Generate data diagnostic report** to begin creating your report. Report generation typically takes no longer than 24 hours, but might take more or less time, depending on the size of your files.
+1. In the left navigation, select **Purchase**, and then select **Diagnose**. 
+1. When you're ready to upload the data, select **Upload Data**.
+
+    After all four data files (Purchases, Payment instruments, Products, and Chargebacks) are uploaded, you can start to generate reports.
+
+1. To generate a report, select **Generate reports**. 
+
+    Typically, report generation takes no longer than 24 hours. However, it might take more or less time, depending on the size of your files.
 
 ### Data diagnostic report
 
 The *data diagnostic report* contains a detailed visual breakdown of your data, so that you can determine how complete the content is. Key metrics include the chargeback match rate, which shows purchase and chargeback completion, and the optimum baseline chargeback basis points for analysis. Additional charts indicate any missing dates, formatting errors, the percentage of unique entities that are represented, and the number of days of data that were included in the uploaded files.
 
-Before you can generate your risk diagnostic report, the key metrics of your data must reach a minimum quality threshold. If the quality of the data is too low to allow for accurate evaluation, you will be prompted to improve the indicated issues and try again. Return to the **Data upload** page and select **Reupload** to submit your updated data.
+Before you can generate your risk diagnostic report, the key metrics of your data must reach a minimum quality threshold. If the quality of the data is too low to allow for accurate evaluation, you will be prompted to improve the indicated issues and try again. 
+
+#### To upload updated data:
+1. Return to the **Diagnose** page.
+2. To submit your updated data, select **Upload data**.
  
 ### Risk diagnostic report
 
@@ -64,4 +72,8 @@ The risk diagnostic report lets you assess your risk from fraudulent activity an
 
 ## Review reports
 
-You can find your completed reports at **Data diagnostic report** and **Risk diagnostic report** in the navigation bar. For deeper analysis and additional information, you can download the full reports as .docx files.
+You can review your completed data diagnostic and risk diagnostic reports in Fraud Protection. Depending on the type of report you want to review: 
+
+1. Select **Purchase**, and then, on the **Diagnose** tab, view the risk report.
+1. To review the data diagnostic report, select **Check data quality**.
+1. For deeper analysis and additional information, download the full reports as .docx files.

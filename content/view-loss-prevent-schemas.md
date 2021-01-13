@@ -1,21 +1,19 @@
 ---
-author: veganesa
+author: yvonnedeq
 description: This topic outlines the required schema for the loss prevention feature in Microsoft Dynamics 365 Fraud Protection.
-ms.author: veganesa
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/01/2020
+ms.date: 07/07/2020
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Loss prevention schemas
+title: Data schemas for loss prevention
 ---
 
-# Loss prevention schemas
-
-[!include [banner](includes/preview-banner.md)]
+# Data schemas for loss prevention
 
 This topic outlines the schemas that define the data that is used to generate models and determine risk assessments.
 
@@ -201,11 +199,11 @@ Note the following formatting guidelines throughout:
 |----------------------------------|--------------------------|-------------|
 | ACCOUNTNUMBER                    | nvarchar (30)            | The customer account number, if a named customer appears on the transaction. |
 | AMOUNTINACCOUNTINGCURRENCY       | numeric (32 6)           | The amount that is due for the line. |
-| AMOUNTINTENDEREDCURRENCY         | numeric (32 6)           | The amount that was tendered in local currency as it applies to the country where the store is located. |
+| AMOUNTINTENDEREDCURRENCY         | numeric (32 6)           | The amount that was tendered in local currency as it applies to the country/region where the store is located. |
 | AMOUNTTENDERED                   | numeric (32 6)           | The amount in the store currency. |
 | AMOUNTTENDEREDADJUSTMENT         | numeric (32 6)           | A new feature in the product allows for changes to the transactions and provides a full audit trail. |
-| CARDNUMBER                       | nvarchar (30)            | The card number that was used to make a payment. |
-| CARDTYPEID                       | nvarchar (10)            | The card name (for example, **AMEX** or **VISA**). |
+| MERCHANTPAYMENTINSTRUMENTID      | nvarchar (30)            | The identifier of the payment instrument. This information is provided by the merchant. |
+| MERCHANTPAYMENTINSTRUMENTTYPEID  | nvarchar (10)            | The name of the payment instrument (for example, **AMEX** or **VISA**). |
 | CREDITVOUCHERID                  | nvarchar (30)            | If a voucher is used for payment, the voucher number. |
 | CURRENCYCODE                     | nvarchar (3)             | The currency that was paid. |
 | DATAAREAID                       | nvarchar (4) NOT NULL    | The company identifier (for example, **MSFT**). |

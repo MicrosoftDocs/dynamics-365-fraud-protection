@@ -1,19 +1,18 @@
 ---
 author: yvonnedeq
-description: This topic explains how you can use Microsoft Dynamics 365 Fraud Protection to support your customers.
+description: This topic explains how you can use Fraud Protection to support your customers.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/04/2020
-
+ms.date: 10/23/2020
 ms.topic: conceptual 
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Support your customers
+title: Support your customers with Fraud Protection
 ---
 
-# Support your customers
+# Support your customers with Fraud Protection
 
 Risk support in Microsoft Dynamics 365 Fraud Protection lets your agents evaluate customer escalations, unblock customers whose purchase attempts are being incorrectly declined, and block future purchases from suspicious users, as appropriate. Your fraud investigators can search and investigate the history of your customers' past transactions with your business. Therefore, they can provide faster turnaround for decisions.
 
@@ -21,15 +20,15 @@ Risk support in Microsoft Dynamics 365 Fraud Protection lets your agents evaluat
 
 To show a customer's transactions, follow these steps.
 
-1. In the left navigation, select **Purchase protection**, and then select **Support**.
-2. In the **Search** field, enter criteria to find detailed information about the customer's transactions.
+1. In the left navigation, select **Purchase**.
+2. On the **Support** tab, in the **Search** field, enter criteria to find detailed information about the customer's transactions.
 
-These are the available search methods:
+Four search methods are available:
 
-- **User ID** – The unique ID that is assigned to the user.
-- **User email address**
-- **Purchase ID** – The unique ID of a purchase that is sent to Fraud Protection for risk evaluation.
-- **Payment instrument ID** – The unique hash of a payment method that is associated with a transaction that is sent to Fraud Protection.
+- **User ID** – Search by the unique ID that is assigned to the user.
+- **User email address** – Search by the user's email address.
+- **Purchase ID** – Search by the unique ID of a purchase that is sent to Fraud Protection for risk evaluation.
+- **Payment instrument ID** – Search by the unique hash of a payment method that is associated with a transaction that is sent to Fraud Protection.
 
 ### Search transactions
 

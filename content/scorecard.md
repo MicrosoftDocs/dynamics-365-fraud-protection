@@ -1,19 +1,18 @@
 ---
-author: v-davido
-description: This topic explains how you can use the key performance indicators (KPIs).
-ms.author: v-davido
+author: yvonnedeq
+description: This topic explains how to review key metrics and understand the performance of fraud protection efforts.
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 12/03/2019
-
+ms.date: 07/15/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Learn from the scorecard
+title: Review key metrics with scorecard reports
 ---
 
-# Learn from the scorecard
+# Review key metrics with scorecard reports
 
 You can use the scorecard reports to review your key metrics and understand the month-by-month performance of your fraud protection efforts.
 
@@ -41,4 +40,4 @@ The scorecard plots the following metrics:
 - **Transaction volume** – The total count of transactions that were sent for assessment.
 - **Final approval rate** – The percentage of purchases that were approved out of the total volume.
 - **Settled rate** – The percentage of bank approvals out of the total volume that was sent to banks.
-- **Chargeback rate by receive date** – The percentage of chargebacks out of the total volume that was approved by banks on the chargeback receieve date and the transaction date.
+- **Chargeback rate by receive date** – The percentage of chargebacks out of the total volume that was approved by banks on the chargeback receive date and the transaction date.

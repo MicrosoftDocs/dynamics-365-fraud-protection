@@ -1,33 +1,34 @@
 ---
-author: v-davido
+author: yvonnedeq
 description: This topic provides information about the Evaluate experience in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-davido
+ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 12/2/2019
+ms.date: 7/09/2020
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Evaluate experience
+title: The evaluate experience in Fraud Protection 
 ---
 
-# Evaluate experience
+# The evaluate experience in Fraud Protection
 
-Microsoft Dynamics 365 Fraud Protection's *Evaluate experience* lets you use your real-time transactional traffic to compare Fraud Protection with your existing fraud solution. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation, and you can upload historical and asynchronous data to tune the model to your business scenarios. You can then use Dynamics 365 Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
+Microsoft Dynamics 365 Fraud Protection's *evaluate experience* allows you to use your real-time transactional traffic to compare Fraud Protection with your existing fraud solution. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation, and you can upload historical and asynchronous data to tune the model to your business scenarios. You can then use Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
 
-## Using the Evaluate experience
+## Using the evaluate experience
 
+Get started with Fraud Protection by completing the initial configuration steps outlined on the **Dashboard**. Then follow these steps to begin using the evaluate experience:
 
-Get started with Fraud Protection by completing the initial configuration steps outlined on the **Dashboard**. Then follow these steps to begin using the Evaluate experience:
+- [Integrate the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md) and pass 'Evaluate' for the AssessmentType field in Purchase, Signup, and CustomFraudEvaluation API events. 
 
-- [Integrate the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md) and pass 'Evaluate' for the AssessmentType field in Purchase, Signup, and CustomFraudEvaluation API events. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
-- Observe, but don't necessarily honor, the Dynamics 365 Fraud Protection merchant rule decisions to either approve or reject those same events.
-- Evaluate your current fraud protection strategies by [uploading historical data](data-upload.md) and learn about Dynamics 365 Fraud Protection's performance via the [scorecard](scorecard.md).
+    For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
+- Observe, but don't necessarily honor, the Fraud Protection merchant rule decisions to either approve or reject those same events.
+- Evaluate your current fraud protection strategies by [uploading historical data](data-upload.md) and learn about Fraud Protection's performance via the [scorecard](scorecard.md).
 
 ## Features
 
-The Evaluate experience in Fraud Protection provides the features that are described in the following topics:
+The evaluate experience in Fraud Protection provides the features that are described in the following topics:
 
 
 - [Purchase protection](purchase-protection.md)
