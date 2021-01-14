@@ -55,36 +55,44 @@ To ensure that Fraud Protection correctly interprets your files, follow these re
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
 **To browse and upload data files:**
-1. On the left navigation, select **Data**, then select **Data upload**.
+
+1. On the left navigation, select **Data**, and then select **Data upload**.
 1. On the **Data upload** page, select the **Purchase protection** tab, and then select **Select data source**. 
-1. Select the file type: **CSV** or **TSV** format. 
-1. If the file has no header, check the **This file doesn’t include column headers** option. The system will assign default column headers. 
-1. To go to the mapping interface, select **Next**, and then select the columns in your file that will be mapped to each schema attribute. 
-1. On the data preview pane at the bottom of the page, confirm that the mapping is correct. 
-1. When all attributes have been mapped, select **Save and close** to return to the **Data upload** page and then select **Process data**. 
+1. Select the file format type: **CSV** or **TSV**. 
+1. If the file has no column headers, select the **This file doesn’t include column headers** option. 
+
+   The system will automatically assign default column headers. 
+   
+1. To create data mapping, select **Next**, and then select the columns in your file that will be mapped to each schema attribute. 
+1. In the data preview pane at the bottom of the page, confirm that the mapping is correct. 
+1. When all the attributes are mapped, select **Save and close** to return to the **Data upload** page. 
+1. Select **Process data**. 
 
   You can save an incomplete mapping and return to the **Purchase protection** tab to complete it later. 
   
   For related data types, such as purchase and account data, every file must be uploaded before you process the data.
   
 **To upload additional data files:** 
+
 1. On the **Data upload** page, select the **Purchase protection** tab, and then select **Edit**.
 1. Select **Change data source** to upload more files. 
-1. To apply the saved mapping to the newly uploaded file, select **Keep the current mapping**. 
-1. After mapping is complete, select **Save and close**, and then select **Process data**.
+1. To apply the currently-saved mapping to the newly uploaded file, select **Keep the current mapping**. 
+1. After mapping is complete, select **Save and close**.
+1. On the **Data upload** page, select **Process data**.
  
-Data processing may take up to a few hours depending on the size of the file. You  can check the status of data processing for each data source. 
+Data processing may take up to a few hours depending on the size of the file. You can check the status of data processing for each data source. 
 If data processing encounters data errors, processing will fail, and the data import will be incomplete. Review the error file details and fix the noted data issue. After fixing the issues, re-upload the fixed file, re-map the attributes if needed, and retry data processing. 
 
 **To remove previously uploaded data files:**
-1. On the **Purchase protection** tab in the **Data upload** page, select the files you want to remove, and then select **Delete**.
+- On the **Purchase protection** tab in the **Data upload** page, select the files you want to remove, and then select **Delete**.
 
 
 ## API upload
 
-Data can also be ingested through the AP during the evaluate and protect experiences. A score will be returned for data that you upload in this way. For a more comprehensive overview, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
+Data can also be ingested through the AP during the evaluate and protect experiences. A score will be returned for data that you upload in this way. For a more comprehensive overview of this process, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
 
 ## Download sample data
 You can download  sample data and use this data to explore Fraud Protection options before using your internal data.
 
-To download sample data, select [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip).  
+**To download sample data:**
+- Select [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip).  
