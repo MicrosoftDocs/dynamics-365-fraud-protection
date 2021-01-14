@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines data schemas for loss prevention in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/15/2021
+ms.date: 01/28/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
