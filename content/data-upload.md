@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
 ms.author:  v-madeq
 ms.service: fraud-protection
-ms.date: 10/23/2020
+ms.date: 01/15/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -14,26 +14,26 @@ title: Upload historical data for purchase protection
 
 # Upload historical data for purchase protection 
 
-In the evaluate and protect experiences in Microsoft Dynamics 365 Fraud Protection, you upload your loss prevention historical data into the system to help increase the accuracy of your purchase protection. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts. This historical data helps accelerate the process of priming the machine learning model and can help improve the handling of your future transactions.
+In the evaluate and protect experiences in Microsoft Dynamics 365 Fraud Protection, you can upload your purchase protection historical data into the system to help train and improve the accuracy of our machine learning models. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts.
 
 ## Data types
 
-Fraud Protection can analyze loss prevention historical data about several entities. This data can be uploaded through either the website or the application programming interface (API). We recommend that you upload at least six months of data. Any chargeback data that is submitted should correspond directly to the purchase data that is uploaded.
+Historical data can be uploaded through the Fraud Protection portal or the application programming interface (API).  We recommend uploading at least six months of historical data.
 
 **Entities:**
 
-- Purchase data
+- Purchases
 
     - Purchases
     - Payment instruments
     - Products
 
-- Chargebacks
-- Labels
-- Refunds
 - Purchase status
 - Bank events
-- Account data
+- Chargebacks
+- Refunds
+- Labels
+- Account
 
     - Update accounts
     - Update account addresses
@@ -44,23 +44,47 @@ Fraud Protection can analyze loss prevention historical data about several entit
 
 ## Website upload
 
-You can upload your historical data from the **Data upload** page.
+Upload your historical data on the **Purchase protection** tab in the **Data upload** page.
 
-To help guarantee that Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](schema.md):
+To ensure that Fraud Protection correctly interprets your files, follow these requirements and review the [required schemas](schema.md):
 
 - The files are in CSV UTF-8 (comma delimited) format (\*.csv).
 - The maximum file size is 10 gigabytes (GB).
-- The **DateTime** columns are in ISO 8601 format.
+- **DateTime** columns are in ISO 8601 format.
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
-Use the **Upload** button to find and submit your local files. After a successful upload, select **Process**. For related data types, such as purchase and account data, every file must be uploaded before you process the data.
+**To browse and upload data files:**
+1. On the left navigation, select **Data**, then select **Data upload**.
+1. On the **Data upload** page, select the **Purchase protection** tab, and then select **Select data source**. 
+1. Select the file type: **CSV** or **TSV** format. 
+1. If the file has no header, check the **This file doesn’t include column headers** option. The system will assign default column headers. 
+1. To go to the mapping interface, select **Next**, and then select the columns in your file that will be mapped to each schema attribute. 
+1. On the data preview pane at the bottom of the page, confirm that the mapping is correct. 
+1. When all attributes have been mapped, select **Save and close** to return to the **Data upload** page and then select **Process data**. 
 
-To upload additional data, select **Reupload** to submit more files, and then process the new files.
+  You can save an incomplete mapping and return to the **Purchase protection** tab to complete it later. 
+  
+  For related data types, such as purchase and account data, every file must be uploaded before you process the data.
+  
+**To upload additional data files:** 
+1. On the **Data upload** page, select the **Purchase protection** tab, and then select **Edit**.
+1. Select **Change data source** to upload more files. 
+1. To apply the saved mapping to the newly uploaded file, select **Keep the current mapping**. 
+1. After mapping is complete, select **Save and close**, and then select **Process data**.
+ 
+Data processing may take up to a few hours depending on the size of the file. You  can check the status of data processing for each data source. 
+If data processing encounters data errors, processing will fail, and the data import will be incomplete. Review the error file details and fix the noted data issue. After fixing the issues, re-upload the fixed file, re-map the attributes if needed, and retry data processing. 
+
+**To remove previously uploaded data files:**
+1. On the **Purchase protection** tab in the **Data upload** page, select the files you want to remove, and then select **Delete**.
+
 
 ## API upload
 
-In the Evaluate and Protect experiences, data can also be ingested through the API. A score will be returned for data that you upload in this way. For a more comprehensive overview, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
+Data can also be ingested through the AP during the evaluate and protect experiences. A score will be returned for data that you upload in this way. For a more comprehensive overview, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
 
 ## Download sample data
-We have sample data for download: [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip). You can use this to explore options before using your own internal data. 
+You can download  sample data and use this data to explore Fraud Protection options before using your internal data.
+
+To download sample data, select [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip).  
