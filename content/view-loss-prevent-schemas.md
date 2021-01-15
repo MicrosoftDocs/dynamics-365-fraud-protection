@@ -57,7 +57,7 @@ Note the following formatting guidelines throughout:
 | NETAMOUNT      | numeric (32 6 NOT NULL      | The price before discounts are applied.      |
 | PAYMENTAMOUNT      | numeric (32 6)      | The payment amount.      |
 | POSTASSHIPMENT      | int      | This field indicates whether or not an item has an associated shipment.|
-| RRECEIPTID      | nvarchar (18)      | The receipt number. This number differs from the transaction number.      |
+| RECEIPTID      | nvarchar (18)      | The receipt number. This number differs from the transaction number.      |
 | REFUNDRECEIPTID      | nvarchar (18)      | If the transaction is a refund, the receipt ID for the original transaction.      |
 | SALEISRETURNSALE      | int      | A value that indicates whether the sale is a return.      |
 | SALESINVOICEAMOUNT      | numeric (32 6)      | The amount of the sales invoice if the customer is picking up just a few items from an order.      |
@@ -234,5 +234,5 @@ Note the following formatting guidelines throughout:
 | Field Name          | Data Type              | Description |
 |---------------------|------------------------|-------------|
 | PAYMENTMETHODNUMBER      | nvarchar (10) NOT NULL      | The identifier for the payment method.       |
-| DEFAULTFUNCTION          | int                         | The identifier for the payment method.       |
+| DEFAULTFUNCTION          | string                      | The identifier for the payment method.       |
 | NAME                     | nvarchar (60) NOT NULL      | The descriptive name for the payment method. |
