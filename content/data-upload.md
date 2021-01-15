@@ -14,11 +14,13 @@ title: Upload historical data for purchase protection
 
 # Upload historical data for purchase protection 
 
-In the evaluate and protect experiences in Microsoft Dynamics 365 Fraud Protection, you can upload your purchase protection historical data into the system to help train and improve the accuracy of our machine learning models. These uploads include data for purchases, chargebacks, merchant and bank decisions, and accounts.
+In Microsoft Dynamics 365 Fraud Protection's evaluate and protect experiences, you can upload your purchase protection historical data into the system to help train and improve the accuracy of our machine learning models. These uploads can include data for purchases, chargebacks, merchant and bank decisions, and accounts. 
+
+We recommend uploading at least six months of historical data for the best results.
 
 ## Data types
 
-Historical data can be uploaded through the Fraud Protection portal or the application programming interface (API).  We recommend uploading at least six months of historical data.
+You can upload historical data through the Fraud Protection portal or the application programming interface (API).  
 
 **Entities:**
 
@@ -40,7 +42,7 @@ Historical data can be uploaded through the Fraud Protection portal or the appli
     - Update account payment instruments
 
 > [!IMPORTANT]
-> This data is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+> This data is sensitive and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). We recommend that you do **not** include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
 ## Website upload
 
@@ -63,12 +65,12 @@ To ensure that Fraud Protection correctly interprets your files, follow these re
 
    The system will automatically assign default column headers. 
    
-1. To create data mapping, select **Next**, and then select the columns in your file that will be mapped to each schema attribute. 
+1. To begin data mapping, select **Next**, and then select the columns in your file that you want to map to each schema attribute. 
 1. In the data preview pane at the bottom of the page, confirm that the mapping is correct. 
 1. When all the attributes are mapped, select **Save and close** to return to the **Data upload** page. 
 1. Select **Process data**. 
 
-  You can save an incomplete mapping and return to the **Purchase protection** tab to complete it later. 
+  You can save an incomplete mapping and return to the **Purchase protection** tab later to complete it. 
   
   For related data types, such as purchase and account data, every file must be uploaded before you process the data.
   
