@@ -83,5 +83,5 @@ You can download  sample data and use this data to explore Fraud Protection opti
 
 ## Connect to Dynamics 365 Commerce
 
-In addition to uploading local files, you can connect to Dynamics 365 Commerce if this is an option for you. Please note connecting to Dynamics 365 Commerce will automatically import and map all required data for Loss Prevention reports. For detail, see [Loss prevention integration with Dynamics 365 Commerce](https://go.microsoft.com/fwlink/?linkid=2131495).
+In addition to uploading local files, you can connect to Dynamics 365 Commerce if this is an option available to you. Note that connecting to Dynamics 365 Commerce will automatically import and map all required data for Loss Prevention reports. For more information, see [Loss prevention integration with Dynamics 365 Commerce](https://go.microsoft.com/fwlink/?linkid=2131495).
 
