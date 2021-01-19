@@ -50,7 +50,7 @@ You upload your historical data on the **Purchase protection** tab of the **Data
 
 To ensure that Fraud Protection correctly interprets your files, follow these requirements, and review the [required schemas](schema.md):
 
-- The files are in CSV UTF-8 (comma delimited) format (\*.csv).
+- The files are in CSV UTF-8 (comma-delimited) format (\*.csv).
 - The maximum file size is 10 gigabytes (GB).
 - **DateTime** columns are in International Organization for Standardization (ISO) 8601 format.
 - The decimal precision is two decimal places.
@@ -82,7 +82,7 @@ For related data types, such as purchase and account data, every file must be up
 1. After mapping is completed, select **Save and close**.
 1. On the **Data upload** page, select **Process data**.
 
-Data processing might take up to a few hours, depending on the size of the file. You can check the status of data processing for each data source. If data processing encounters data errors, processing will fail, and the data import will be incomplete. Review the error file details, and fix the data issue that is noted. After you've finished fixing the issues, re-upload the file, remap the attributes, if remapping is required, and retry data processing.
+Data processing might take up to a few hours, depending on the size of the file. You can check the status of data processing for each data source. If data processing encounters data errors, processing will fail, and the data import will be incomplete. Review the error file details, and fix the data issue that is noted. After you've finished fixing the issues, re-upload the file, remap the attributes if remapping is required, and retry data processing.
 
 **To remove previously uploaded data files:**
 
