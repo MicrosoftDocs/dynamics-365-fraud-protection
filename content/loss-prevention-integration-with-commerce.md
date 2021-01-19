@@ -49,9 +49,9 @@ Next, you must add a service account by registering the application ID for Fraud
 The next step is to configure the settings so that the loss prevention capability can connect to Azure Data Lake Storage in the Commerce environment.
 
 1. Go to the [Fraud Protection](https://dfp.microsoft.com/) portal, and sign in.
-1. On the left navigation, select **Data**, and then select **Data upload**.
-1. On the **Data upload** page, select the **Loss prevention** tab, and then select **Select data source**.
-1. Select **Dynamics 365 Commerce** as the data source, then enter the URL for your Commerce environment.
+1. In the left navigation, select **Data**, and then select **Data upload**.
+1. On the **Data upload** page, on the **Loss prevention** tab, select **Select data source**.
+1. Select **Dynamics 365 Commerce** as the data source, and then enter the URL for your Commerce environment.
 1. Select **Connect**.
 
     The URL is stored in the Backend Configuration service for your Fraud Protection environment.
