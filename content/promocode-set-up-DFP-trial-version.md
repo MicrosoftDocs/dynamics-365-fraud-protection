@@ -53,7 +53,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 2.	Enter your email address, and then select **Next**. The domain name in the email address must match your existing Azure AD tenant.
 3.	After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**.
 
-  	The PromoCode and offer ID is automatically be entered on the page when you complete your setup.
+  	The PromoCode and offer ID are automatically be entered on the page when you complete your setup.
 
     (image)
 
