@@ -62,8 +62,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 6.	To accept the Terms of Use, select **I accept**.
 7.	In the **Geographic data storage region** field, select the region where you want to store your data, and then select **Next**.
 
-    > [!NOTE]
-    > You can't change the region after you've set it.
+    You can't change the region after you've set it.
 
 8.	The setup process is started and might take up to 20 minutes to run. If you prefer, you can sign out and then return after installation is completed.
 9.	After setup is completed, the **Congratulations** screen appears.
@@ -94,14 +93,12 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
 6.	Enter the required details, and then select **Next**.
 
-    > [!NOTE]
-    > You can use any valid work or school email address. It doesn't have to be the same one that you used in step 2.
+    You can use any valid work or school email address. It doesn't have to be the same one that you used in step 2.
 
 7.	In the username field, enter the username from the email address you entered in step 2.
 8.	In the company name field, enter the domain name from that email address. Then select **Next**.
 
-    > [!NOTE]
-    > You can't change the company name after the tenant is created.
+    You can't change the company name after the tenant is created.
 
 9.	After you've entered the company name and a green check mark appears, enter a password, and then select **Create my account**.
 
@@ -114,8 +111,7 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
     After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**.
   
-    > [!NOTE]
-    > The PromoCode and offer ID will automatically be entered on the page.
+    The PromoCode and offer ID is automatically entered on the page.
   
     (image)
 
@@ -124,8 +120,7 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 14.	To accept the Terms of Use, select **I accept**.
 15.	In the **Geographic data storage region** field, select the region where you want to store your data, and then select **Next.** 
 
-    > [!NOTE]
-    > You can't change the region after you've set it.
+    You can't change the region after you've set it.
     
     The setup process is starts and might take up to 20 minutes to run. If you prefer, you can sign out and then return after installation is completed.
     
