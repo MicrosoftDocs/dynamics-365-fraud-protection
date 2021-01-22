@@ -285,7 +285,10 @@ The following schema is used in the Evaluate and Protect experiences.
 | Currency         | string   | The currency of the original purchase as a three-character currency code. (For example: USD, which is aligned with the OANDA currency code). This information is provided by the merchant. |
 
 ## Download sample data
-You can download our [sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/DFP_External_Sample_Data.zip) to explore options before using your own internal data.
+You can download our sample data files to explore options before using your own internal data.
+- For samples you can use with loss prevention, select [Loss prevention sample data file](https://download.microsoft.com/download/3/1/6/316b5f40-287d-48a3-ab3c-bf4c7a171cfc/LP.zip).
+- For samples you can use with purchase protection, select [Purchase protection sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/PP.zip).
+
 
 ### Custom data sample
 
