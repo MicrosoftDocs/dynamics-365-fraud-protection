@@ -44,7 +44,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
   > [!NOTE]
   > To set up Fraud Protection in an existing Azure AD tenant, you must have **global administrator permissions**.
 
-- If you have global administrator permissions, follow the instructions in the [Setup process in an existing Azure AD tenant](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/new/promocode/content#set-up-fraud-protection-in-an-existing-azure-ad-tenant) section later in this topic.
+- If you have global administrator permissions, follow the instructions in the [Setup process in an existing Azure AD tenant](https://review.docs.microsoft.com/en-us/dynamics365/fraud-protection/promocode-set-up-dfp-trial-version?branch=promocode#setup-process-for-an-existing-aad-tenant) section later in this topic.
 - If you don't have global administrator permissions, find someone in your organization who does, so that they can help you with the setup process.
 
 ## Setup process for an existing AAD tenant
