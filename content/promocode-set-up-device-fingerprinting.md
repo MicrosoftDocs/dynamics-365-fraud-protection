@@ -117,7 +117,8 @@ A typical customer journey map might resemble the following illustration.
 
 (image)
 
-Note: To develop your own experience, map a customer environment that you're familiar with.
+  > [!NOTE]
+  > To develop your own experience, map a customer environment that you're familiar with.
 
 ### Step 2: Identify where device fingerprinting calls should be placed
 
