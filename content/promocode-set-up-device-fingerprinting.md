@@ -169,10 +169,7 @@ Next, add calls to the sample application.
 |----------------|------------------|
 | session_id 	   | A globally unique identifiable string, usually a globally unique identifier (GUID) |
 | instanceId 	   | The Azure AD tenant ID (GUID)    |
-| pageId         | SI – Sign In     |
-|                | SU – Sign Up     |
-|                | P – Purchase     |
-|                | tst – Test       |
+| pageId         | <p>SI – Sign In</p><p>SU – Sign Up</p><p>P – Purchase</p><p>tst – Test</p>       |
 
 2.	On the server side, construct the fingerprinting tag as shown in the following example:
 
