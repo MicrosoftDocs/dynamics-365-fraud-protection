@@ -148,7 +148,9 @@ Use the sample journey map from step 1 to identify the best pages for the device
 Although you can use any system for Domain Name System (DNS) management, this document uses Azure DNS.
 
 1.	Select a subdomain under your root domain.
-You can use any prefix, for example, select **f.contoso.com**.
+
+    You can use any prefix, for example, select **f.contoso.com**.
+
 2.	For the selected subdomain, create a canonical name (CNAME) that points to **fpt.dfp.microsoft.com**. For example:
 
     - Merchant website: **www.contoso.com**
@@ -175,15 +177,15 @@ Next, add calls to the sample application.
 
     <script src="https://ftp.contoso.com/mdt.js?session_id=20270d15-d27f-4a77-b94f-4df46be5c540&instanceId=80d509fb-a258-449a-9c06-a2c550a40b17&pageId=P" type="text/javascript"></script>
 
-3.	The system returns a response that resembles the following sample mdt.js call:
+  	The system returns a response that resembles the following sample mdt.js call:
 
 (image)
 
-4.	After the page is completely loaded, call the fingerprinting code as shown in the following example:
+3.	After the page is completely loaded, call the fingerprinting code as shown in the following example:
 
     window.dfp.doFpt(this.document);
 
-5.	In the Fraud Protection API, submit transactions that include the following information:
+4.	In the Fraud Protection API, submit transactions that include the following information:
 
     - In the **deviceContextId** field, set a session ID.
     - In the **deviceContextDC** field on the **deviceContext** object, set the **window.dfp.dc** variable from **mdt.js response**.
