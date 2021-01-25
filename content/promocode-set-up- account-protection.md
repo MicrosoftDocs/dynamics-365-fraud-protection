@@ -107,6 +107,7 @@ The following C# code samples show how you can acquire a token by using your cer
 
 **CERTIFICATE thumbprint**
 
+```json
 ```public async Task<string> AcquireTokenWithCertificateAsync()
      {
           var x509Cert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
@@ -115,9 +116,11 @@ The following C# code samples show how you can acquire a token by using your cer
           var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
           return authenticationResult.AccessToken;
      }
+```
 
 **Secret**
 
+```json
 ```public async Task<string> AcquireTokenWithSecretAsync()
      {
           var clientAssertion = new ClientCredential("<Client ID>", "<Client secret>");
@@ -125,11 +128,13 @@ The following C# code samples show how you can acquire a token by using your cer
           var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
           return authenticationResult.AccessToken;
      }
+```
 
 **Response**
 
 Behind the scenes, the preceding code generates an HTTP request and receives a response that resembles the following example.
 
+```json
 ```HTTP/1.1 200 OK
      Content-Type: application/json; charset=utf-8
      Date: <date>
@@ -143,6 +148,7 @@ Behind the scenes, the preceding code generates an HTTP request and receives a r
           "resource":"https://api.dfp.dynamics.com",
           "access_token":"<your access token; e.g.: eyJ0eXA...NFLCQ>"
      }
+```
 
 For more information about access tokens, see the following Azure documentation:
 
@@ -182,6 +188,7 @@ The value of **signUpId** should be unique per request. It should match the valu
 
 #### Sample payload
 
+```json
 ```{
           "device": {
                "deviceContextId": "2cf391cc-62d2-47d4-a9c1-78ec025293da",
@@ -259,6 +266,7 @@ The value of **signUpId** should be unique per request. It should match the valu
      "name": "AP.AccountCreation",
      "version": "0.5"
      }
+```
 
 ### Account Login
 
@@ -273,6 +281,7 @@ The value of userId must match the value in the payload. Each user must have a u
 
 #### Sample payload
 
+```json
   {
      "device": {
           "deviceContextId": "2ef10376-2ba8-4f36-a911-da438e5e5e27",
@@ -314,6 +323,7 @@ The value of userId must match the value in the payload. Each user must have a u
      "name": "AP.AccountLogin",
      "version": "0.5"
   }
+```
 
 ### Account Create Status
 
@@ -325,6 +335,7 @@ The value of **userId** must match the value in the payload. Each user must have
 
 #### Sample payload
 
+```json
   {
      "metadata":{
           "signUpId":"a6221a3f-c38c-429e-8fde-3026d8c29ed3",
@@ -341,6 +352,7 @@ The value of **userId** must match the value in the payload. Each user must have
      "name":"AP.AccountCreation.Status",
      "version":"0.5"
   }
+```
 
 ### Account Login Status
 
@@ -352,6 +364,7 @@ The value of **signUpId** must match the value in the payload. Each must have a 
 
 #### Sample payload
 
+```json
   {
      "metadata":{
           "loginId":"dc4ea331-a6e5-4aa0-8eba-16b4d516a07d",
@@ -368,6 +381,7 @@ The value of **signUpId** must match the value in the payload. Each must have a 
      "name":"AP.AccountLogin.Status",
      "version":"0.5"
   }
+```
 
 ### Label
 
@@ -379,6 +393,7 @@ The value of **userId** must match the value in the corresponding Account Login 
 
 #### Sample payload
 
+```json
   {
      "metadata": {
           "name": "AP.Label.Metadata",
@@ -442,6 +457,8 @@ The value of **userId** must match the value in the corresponding Account Login 
                AccountCredentialsLeaked,
                PassedAccountProtectionChecks
           }
+```
+
 
 Congratulations! You have successfully completed the training and are ready to use Fraud Protection's account protection capabilities.
 
