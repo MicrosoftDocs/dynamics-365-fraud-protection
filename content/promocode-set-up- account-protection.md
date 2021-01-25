@@ -107,46 +107,47 @@ The following C# code samples show how you can acquire a token by using your cer
 
 **CERTIFICATE thumbprint**
 
-public async Task<string> AcquireTokenWithCertificateAsync()
-{
-var x509Cert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
-var clientAssertion = new ClientAssertionCertificate("<Client ID>", x509Cert);
-var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
-var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
-return authenticationResult.AccessToken;
-}
+     public async Task<string> AcquireTokenWithCertificateAsync()
+     {
+          var x509Cert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
+          var clientAssertion = new ClientAssertionCertificate("<Client ID>", x509Cert);
+          var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
+          var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
+          return authenticationResult.AccessToken;
+     }
 
 **Secret**
 
-public async Task<string> AcquireTokenWithSecretAsync()
-{
-var clientAssertion = new ClientCredential("<Client ID>", "<Client secret>");
-var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
-var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
-return authenticationResult.AccessToken;
-}
+     public async Task<string> AcquireTokenWithSecretAsync()
+     {
+          var clientAssertion = new ClientCredential("<Client ID>", "<Client secret>");
+          var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
+          var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
+          return authenticationResult.AccessToken;
+     }
 
 **Response**
 
 Behind the scenes, the preceding code generates an HTTP request and receives a response that resembles the following example.
-HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
-Date: <date>
-Content-Length: <content length>
-{
-"token_type":"Bearer",
-"expires_in":"3599",
-"ext_expires_in":"3599",
-"expires_on":"<date timestamp>",
-"not_before":"<date timestamp>",
-"resource":"https://api.dfp.dynamics.com",
-"access_token":"<your access token; e.g.: eyJ0eXA...NFLCQ>"
-}
+
+     HTTP/1.1 200 OK
+     Content-Type: application/json; charset=utf-8
+     Date: <date>
+     Content-Length: <content length>
+     {
+          "token_type":"Bearer",
+          "expires_in":"3599",
+          "ext_expires_in":"3599",
+          "expires_on":"<date timestamp>",
+          "not_before":"<date timestamp>",
+          "resource":"https://api.dfp.dynamics.com",
+          "access_token":"<your access token; e.g.: eyJ0eXA...NFLCQ>"
+     }
 
 For more information about access tokens, see the following Azure documentation:
 
-- [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/client-assertion)
-- [Cache access tokens](https://docs.microsoft.com/en-us/azure/architecture/multitenant-identity/token-cache)
+- [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion)
+- [Cache access tokens](https://docs.microsoft.com/azure/architecture/multitenant-identity/token-cache)
 
 #### Call the APIs
 
@@ -181,82 +182,82 @@ The value of **signUpId** should be unique per request. It should match the valu
 
 #### Sample payload
 
-{
-"device": {
-"deviceContextId": "2cf391cc-62d2-47d4-a9c1-78ec025293da",
-"ipAddress": "192.168.8.214",
-"provider": "DFPFingerprinting",
-"externalDeviceId": "1234567890",
-"externalDeviceType": "Tablet"
-},
-"user": {
-"userId": " cf4e1d39-1100-4791-a6cf-98580f3d91cb",
-"userType": "Consumer",
-"username": "kayla@contoso.com",
-"firstName": "Kayla",
-"lastName": "Goderich",
-"countryRegion": "US",
-"zipCode": "44329",
-"timeZone": "-08:00",
-"language": "en-us",
-"membershipId": " CC004567",
-"isMembershipIdUsername": false
-},
-"email": [
-{
-"emailType": "Primary",
-"emailValue": "kayla@contoso.com",
-"isEmailValidated": true,
-"emailValidatedDate": "2018-11-27T15:12:26.9733817-08:00",
-"isEmailUsername": true
-}
-],
-"phone": [
-{
-"phoneType": "Alternative",
-"phoneNumber": "1-4985550190",
-"isPhoneNumberValidated": true,
-"phoneNumberValidatedDate": "2018-11-27T15:12:26.9739451-08:00",
-"isPhoneUsername": false
-}
-],
-"address": [
-{
-"addressType": "Primary",
-"firstName": "Kayla",
-"lastName": "Goderich",
-"phoneNumber": "1-4985550190",
-"street1": "0123 Bechtelar Loop",
-"street2": "",
-"street3": "",
-"city": "Kubtown",
-"state": "SC",
-"district": "",
-"zipCode": "44329",
-"countryRegion": "US"
-}
-],
-"paymentInstruments": [
-{
-"merchantPaymentInstrumentId": "6ac8406f-128a-41ce-a02d-1bbaa23fbe15",
-"type": "Credit Card",
-"creationDate": "2020-03-24T13:23:32.3247803-07:00",
-"updateDate": "2020-03-24T13:23:32.3248203-07:00"
-}
-],
-"ssoAuthenticationProvider": {
-"authenticationProvider": "MerchantAuth",
-"displayName": "Kayla Goderich"
-},
-"metadata": {
-"signUpId": "f5085b48-0f9d-47f5-85d1-2c95e7842d39",
-"customerLocalDate": "2020-02-25T15:12:26.9653975-08:00",
-"assessmentType": "Protect",
-"trackingId": "d65544f0-f8b4-4249-a5e0-94b32a25548f",
-"merchantTimeStamp": "2020-11-27T15:12:26.9721842-08:00"
-},
-"name": "AP.AccountCreation",
-"version": "0.5"
+     {
+          "device": {
+               "deviceContextId": "2cf391cc-62d2-47d4-a9c1-78ec025293da",
+               "ipAddress": "192.168.8.214",
+               "provider": "DFPFingerprinting",
+               "externalDeviceId": "1234567890",
+               "externalDeviceType": "Tablet"
+     },
+     "user": {
+          "userId": " cf4e1d39-1100-4791-a6cf-98580f3d91cb",
+          "userType": "Consumer",
+          "username": "kayla@contoso.com",
+          "firstName": "Kayla",
+          "lastName": "Goderich",
+          "countryRegion": "US",
+          "zipCode": "44329",
+          "timeZone": "-08:00",
+          "language": "en-us",
+          "membershipId": " CC004567",
+          "isMembershipIdUsername": false
+     },
+     "email": [
+          {
+          "emailType": "Primary",
+          "emailValue": "kayla@contoso.com",
+          "isEmailValidated": true,
+          "emailValidatedDate": "2018-11-27T15:12:26.9733817-08:00",
+          "isEmailUsername": true
+          }
+     ],
+     "phone": [
+          {
+               "phoneType": "Alternative",
+               "phoneNumber": "1-4985550190",
+               "isPhoneNumberValidated": true,
+               "phoneNumberValidatedDate": "2018-11-27T15:12:26.9739451-08:00",
+               "isPhoneUsername": false
+          }
+     ],
+     "address": [
+          {
+               "addressType": "Primary",
+               "firstName": "Kayla",
+               "lastName": "Goderich",
+               "phoneNumber": "1-4985550190",
+               "street1": "0123 Bechtelar Loop",
+               "street2": "",
+               "street3": "",
+               "city": "Kubtown",
+               "state": "SC",
+               "district": "",
+               "zipCode": "44329",
+               "countryRegion": "US"
+          }
+     ],
+     "paymentInstruments": [
+          {
+               "merchantPaymentInstrumentId": "6ac8406f-128a-41ce-a02d-1bbaa23fbe15",
+               "type": "Credit Card",
+               "creationDate": "2020-03-24T13:23:32.3247803-07:00",
+               "updateDate": "2020-03-24T13:23:32.3248203-07:00"
+          }
+     ],
+     "ssoAuthenticationProvider": {
+          "authenticationProvider": "MerchantAuth",
+          "displayName": "Kayla Goderich"
+     },
+     "metadata": {
+          "signUpId": "f5085b48-0f9d-47f5-85d1-2c95e7842d39",
+          "customerLocalDate": "2020-02-25T15:12:26.9653975-08:00",
+          "assessmentType": "Protect",
+          "trackingId": "d65544f0-f8b4-4249-a5e0-94b32a25548f",
+          "merchantTimeStamp": "2020-11-27T15:12:26.9721842-08:00"
+     },
+     "name": "AP.AccountCreation",
+     "version": "0.5"
 }
 
 ### Account Login
@@ -273,45 +274,45 @@ The value of userId must match the value in the payload. Each user must have a u
 #### Sample payload
 
 {
-"device": {
-"deviceContextId": "2ef10376-2ba8-4f36-a911-da438e5e5e27",
-"ipAddress": "192.168.8.214",
-"provider": "DFPFingerprinting",
-"externalDeviceId": "1234567890",
-"externalDeviceType": "Computer"
-},
-"user": {
-"userId": "cf4e1d39-1100-4791-a6cf-98580f3d91cb",
-"userType": "Consumer",
-"username": "kayla@contoso.com",
-"firstName": "Kayla",
-"lastName": "Goderich",
-"countryRegion": "US",
-"zipCode": "44329",
-"timeZone": "-08:00",
-"language": "en-us",
-"membershipId": "CC004567",
-"isMembershipIdUsername": false
-},
-"recentUpdate": {
-"lastPhoneNumberUpdateDate": "2018-11-127T15:22:42.3412611-08:00",
-"lastEmailUpdateDate": "2018-11-127T15:22:42.3412611-08:00 ",
-"lastAddressUpdateDate": "2018-11-127T15:22:42.3412611-08:00",
-"lastPaymentInstrumentUpdateDate": "2018-11-127T15:22:42.3412611-08:00"
-},
-"ssoAuthenticationProvider": {
-"authenticationProvider": "MerchantAuth",
-"displayName": "Kayla Goderich"
-},
-"metadata": {
-"LogInId": "a15d4a5d-fadc-49ab-8022-712fec597e22",
-"customerLocalDate": "2020-02-25T15:22:42.3397533-08:00",
-"assessmentType": "Protect",
-"trackingId": "a14ebdca-9447-49b4-951e-26f6ccc4445c",
-"merchantTimeStamp": "2020-11-27T15:22:42.3405921-08:00"
-},
-"name": "AP.AccountLogin",
-"version": "0.5"
+     "device": {
+          "deviceContextId": "2ef10376-2ba8-4f36-a911-da438e5e5e27",
+          "ipAddress": "192.168.8.214",
+          "provider": "DFPFingerprinting",
+          "externalDeviceId": "1234567890",
+     "externalDeviceType": "Computer"
+     },
+     "user": {
+          "userId": "cf4e1d39-1100-4791-a6cf-98580f3d91cb",
+          "userType": "Consumer",
+          "username": "kayla@contoso.com",
+          "firstName": "Kayla",
+          "lastName": "Goderich",
+          "countryRegion": "US",
+          "zipCode": "44329",
+          "timeZone": "-08:00",
+          "language": "en-us",
+          "membershipId": "CC004567",
+          "isMembershipIdUsername": false
+     },
+     "recentUpdate": {
+          "lastPhoneNumberUpdateDate": "2018-11-127T15:22:42.3412611-08:00",
+          "lastEmailUpdateDate": "2018-11-127T15:22:42.3412611-08:00 ",
+          "lastAddressUpdateDate": "2018-11-127T15:22:42.3412611-08:00",
+          "lastPaymentInstrumentUpdateDate": "2018-11-127T15:22:42.3412611-08:00"
+     },
+     "ssoAuthenticationProvider": {
+          "authenticationProvider": "MerchantAuth",
+          "displayName": "Kayla Goderich"
+     },
+     "metadata": {
+          "LogInId": "a15d4a5d-fadc-49ab-8022-712fec597e22",
+          "customerLocalDate": "2020-02-25T15:22:42.3397533-08:00",
+          "assessmentType": "Protect",
+          "trackingId": "a14ebdca-9447-49b4-951e-26f6ccc4445c",
+          "merchantTimeStamp": "2020-11-27T15:22:42.3405921-08:00"
+     },
+     "name": "AP.AccountLogin",
+     "version": "0.5"
 }
 
 ### Account Create Status
@@ -325,20 +326,20 @@ The value of **userId** must match the value in the payload. Each user must have
 #### Sample payload
 
 {
-"metadata":{
-"signUpId":"a6221a3f-c38c-429e-8fde-3026d8c29ed3",
-"userId":"34f47dc4-9781-4033-99fd-185649c4b001",
-"trackingId":"697a6bee-2d30-4132-92a6-c137aaf49c0a",
-"merchantTimeStamp":"2020-04-03T13:23:32.3226335-07:00"
-},
-"statusDetails":{
-"statusType":"Rejected",
-"reasonType":"ChallengeAbandoned",
-"challengeType":"Email",
-"statusDate":"2020-04-03T13:23:32.3817714-07:00"
-},
-"name":"AP.AccountCreation.Status",
-"version":"0.5"
+     "metadata":{
+          "signUpId":"a6221a3f-c38c-429e-8fde-3026d8c29ed3",
+          "userId":"34f47dc4-9781-4033-99fd-185649c4b001",
+          "trackingId":"697a6bee-2d30-4132-92a6-c137aaf49c0a",
+          "merchantTimeStamp":"2020-04-03T13:23:32.3226335-07:00"
+     },
+     "statusDetails":{
+          "statusType":"Rejected",
+          "reasonType":"ChallengeAbandoned",
+          "challengeType":"Email",
+          "statusDate":"2020-04-03T13:23:32.3817714-07:00"
+     },
+     "name":"AP.AccountCreation.Status",
+     "version":"0.5"
 }
 
 ### Account Login Status
@@ -352,20 +353,20 @@ The value of **signUpId** must match the value in the payload. Each must have a 
 #### Sample payload
 
 {
-"metadata":{
-"loginId":"dc4ea331-a6e5-4aa0-8eba-16b4d516a07d",
-"userId":"34f47dc4-9781-4033-99fd-185649c4b001",
-"trackingId":"dcd65c87-d3db-4a42-8ed3-3e59f443b994",
-"merchantTimeStamp":"2020-04-03T13:23:32.3759321-07:00"
-},
-"statusDetails":{
-"statusType":"Rejected",
-"reasonType":"ChallengeAbandoned",
-"challengeType":"Email",
-"statusDate":"2020-04-03T13:23:32.3884589-07:00"
-},
-"name":"AP.AccountLogin.Status",
-"version":"0.5"
+     "metadata":{
+          "loginId":"dc4ea331-a6e5-4aa0-8eba-16b4d516a07d",
+          "userId":"34f47dc4-9781-4033-99fd-185649c4b001",
+          "trackingId":"dcd65c87-d3db-4a42-8ed3-3e59f443b994",
+          "merchantTimeStamp":"2020-04-03T13:23:32.3759321-07:00"
+     },
+     "statusDetails":{
+          "statusType":"Rejected",
+          "reasonType":"ChallengeAbandoned",
+          "challengeType":"Email",
+          "statusDate":"2020-04-03T13:23:32.3884589-07:00"
+     },
+     "name":"AP.AccountLogin.Status",
+     "version":"0.5"
 }
 
 ### Label
@@ -379,68 +380,68 @@ The value of **userId** must match the value in the corresponding Account Login 
 #### Sample payload
 
 {
-"metadata": {
-"name": "AP.Label.Metadata",
-"userId": "34f47dc4-9781-4033-99fd-185649c4b001",
-"merchantTimeStamp": "2020-06-14T21:53:27.8822492-08:00",
-"trackingId": "34f47dc4-9781-4033-99fd-185649c4b001"
-},
-"label": {
-"eventTimeStamp": "2020-02-21T21:53:27.8822492-08:00",
-"labelObjectType": "Account",
-"labelObjectId": "userid",
-"labelSource": "ManualReview",
-"labelState": "AccountCompromised",
-"labelReasonCode": "AccountFraud"
-},
-"name": "AP.Label",
-"version": "0.5"
-}
-public enum LabelObjectTypeName
-{
-Purchase,
-AccountCreation,
-AccountLogin,
-AccountUpdate,
-CustomFraudEvaluation,
-Account,
-PaymentInstrument,
-Email
-}
-public enum LabelSourceName
-{
-CustomerEscalation,
-Chargeback,
-TC40_SAFE,
-ManualReview,
-Refund,
-OfflineAnalysis,
-AccountProtectionReview
-}
-public enum LabelStateName
-{
-InquiryAccepted,
-Fraud,
-Disputed,
-Reversed,
-Abuse,
-ResubmittedRequest,
-AccountCompromised,
-AccountNotCompromised
-}
-public enum LabelReasonCodeName
-{
-ProcessorResponseCode,
-BankResponseCode,
-FraudRefund,
-AccountTakeOver,
-PaymentInstrumentFraud,
-AccountFraud,
-Abuse,
-FriendlyFraud,
-AccountCredentialsLeaked,
-PassedAccountProtectionChecks
-}
+     "metadata": {
+          "name": "AP.Label.Metadata",
+          "userId": "34f47dc4-9781-4033-99fd-185649c4b001",
+          "merchantTimeStamp": "2020-06-14T21:53:27.8822492-08:00",
+          "trackingId": "34f47dc4-9781-4033-99fd-185649c4b001"
+     },
+     "label": {
+          "eventTimeStamp": "2020-02-21T21:53:27.8822492-08:00",
+          "labelObjectType": "Account",
+          "labelObjectId": "userid",
+          "labelSource": "ManualReview",
+          "labelState": "AccountCompromised",
+          "labelReasonCode": "AccountFraud"
+     },
+     "name": "AP.Label",
+     "version": "0.5"
+     }
+     public enum LabelObjectTypeName
+          {
+               Purchase,
+               AccountCreation,
+               AccountLogin,
+               AccountUpdate,
+               CustomFraudEvaluation,
+               Account,
+               PaymentInstrument,
+               Email
+          }
+     public enum LabelSourceName
+          {
+               CustomerEscalation,
+               Chargeback,
+               TC40_SAFE,
+               ManualReview,
+               Refund,
+               OfflineAnalysis,
+               AccountProtectionReview
+          }
+     public enum LabelStateName
+          {
+               InquiryAccepted,
+               Fraud,
+               Disputed,
+               Reversed,
+               Abuse,
+               ResubmittedRequest,
+               AccountCompromised,
+               AccountNotCompromised
+          }
+     public enum LabelReasonCodeName
+          {
+               ProcessorResponseCode,
+               BankResponseCode,
+               FraudRefund,
+               AccountTakeOver,
+               PaymentInstrumentFraud,
+               AccountFraud,
+               Abuse,
+               FriendlyFraud,
+               AccountCredentialsLeaked,
+               PassedAccountProtectionChecks
+          }
 
 Congratulations! You have successfully completed the training and are ready to use Fraud Protection's account protection capabilities.
 
