@@ -108,12 +108,13 @@ The following C# code samples show how you can acquire a token by using your cer
 **CERTIFICATE thumbprint**
 
 ```json
-```public async Task<string> AcquireTokenWithCertificateAsync()
+   public async Task<string> AcquireTokenWithCertificateAsync()
      {
           var x509Cert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
           var clientAssertion = new ClientAssertionCertificate("<Client ID>", x509Cert);
           var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
           var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
+          
           return authenticationResult.AccessToken;
      }
 ```
@@ -121,11 +122,12 @@ The following C# code samples show how you can acquire a token by using your cer
 **Secret**
 
 ```json
-```public async Task<string> AcquireTokenWithSecretAsync()
+   public async Task<string> AcquireTokenWithSecretAsync()
      {
           var clientAssertion = new ClientCredential("<Client ID>", "<Client secret>");
           var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
           var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
+          
           return authenticationResult.AccessToken;
      }
 ```
@@ -135,7 +137,7 @@ The following C# code samples show how you can acquire a token by using your cer
 Behind the scenes, the preceding code generates an HTTP request and receives a response that resembles the following example.
 
 ```json
-```HTTP/1.1 200 OK
+   HTTP/1.1 200 OK
      Content-Type: application/json; charset=utf-8
      Date: <date>
      Content-Length: <content length>
@@ -189,7 +191,7 @@ The value of **signUpId** should be unique per request. It should match the valu
 #### Sample payload
 
 ```json
-```{
+   {
           "device": {
                "deviceContextId": "2cf391cc-62d2-47d4-a9c1-78ec025293da",
                "ipAddress": "192.168.8.214",
