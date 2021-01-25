@@ -107,7 +107,7 @@ The following C# code samples show how you can acquire a token by using your cer
 
 **CERTIFICATE thumbprint**
 
-     public async Task<string> AcquireTokenWithCertificateAsync()
+```public async Task<string> AcquireTokenWithCertificateAsync()
      {
           var x509Cert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
           var clientAssertion = new ClientAssertionCertificate("<Client ID>", x509Cert);
@@ -118,7 +118,7 @@ The following C# code samples show how you can acquire a token by using your cer
 
 **Secret**
 
-     public async Task<string> AcquireTokenWithSecretAsync()
+```public async Task<string> AcquireTokenWithSecretAsync()
      {
           var clientAssertion = new ClientCredential("<Client ID>", "<Client secret>");
           var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
@@ -130,7 +130,7 @@ The following C# code samples show how you can acquire a token by using your cer
 
 Behind the scenes, the preceding code generates an HTTP request and receives a response that resembles the following example.
 
-     HTTP/1.1 200 OK
+```HTTP/1.1 200 OK
      Content-Type: application/json; charset=utf-8
      Date: <date>
      Content-Length: <content length>
@@ -182,7 +182,7 @@ The value of **signUpId** should be unique per request. It should match the valu
 
 #### Sample payload
 
-     {
+```{
           "device": {
                "deviceContextId": "2cf391cc-62d2-47d4-a9c1-78ec025293da",
                "ipAddress": "192.168.8.214",
@@ -258,7 +258,7 @@ The value of **signUpId** should be unique per request. It should match the valu
      },
      "name": "AP.AccountCreation",
      "version": "0.5"
-}
+     }
 
 ### Account Login
 
@@ -273,7 +273,7 @@ The value of userId must match the value in the payload. Each user must have a u
 
 #### Sample payload
 
-{
+  {
      "device": {
           "deviceContextId": "2ef10376-2ba8-4f36-a911-da438e5e5e27",
           "ipAddress": "192.168.8.214",
@@ -313,7 +313,7 @@ The value of userId must match the value in the payload. Each user must have a u
      },
      "name": "AP.AccountLogin",
      "version": "0.5"
-}
+  }
 
 ### Account Create Status
 
@@ -325,7 +325,7 @@ The value of **userId** must match the value in the payload. Each user must have
 
 #### Sample payload
 
-{
+  {
      "metadata":{
           "signUpId":"a6221a3f-c38c-429e-8fde-3026d8c29ed3",
           "userId":"34f47dc4-9781-4033-99fd-185649c4b001",
@@ -340,7 +340,7 @@ The value of **userId** must match the value in the payload. Each user must have
      },
      "name":"AP.AccountCreation.Status",
      "version":"0.5"
-}
+  }
 
 ### Account Login Status
 
@@ -352,7 +352,7 @@ The value of **signUpId** must match the value in the payload. Each must have a 
 
 #### Sample payload
 
-{
+  {
      "metadata":{
           "loginId":"dc4ea331-a6e5-4aa0-8eba-16b4d516a07d",
           "userId":"34f47dc4-9781-4033-99fd-185649c4b001",
@@ -367,7 +367,7 @@ The value of **signUpId** must match the value in the payload. Each must have a 
      },
      "name":"AP.AccountLogin.Status",
      "version":"0.5"
-}
+  }
 
 ### Label
 
@@ -379,7 +379,7 @@ The value of **userId** must match the value in the corresponding Account Login 
 
 #### Sample payload
 
-{
+  {
      "metadata": {
           "name": "AP.Label.Metadata",
           "userId": "34f47dc4-9781-4033-99fd-185649c4b001",
