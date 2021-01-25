@@ -72,8 +72,9 @@ To acquire the tokens that are required to call the APIs, use Fraud Protection t
     - **Environment** – Select the production endpoint.
     - **Authentication method** – Select whether a certificate or a secret (password protected) is used for authentication.
     
-      - If you select **Certificate**, select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
-      - If you select **Secret**, a password is generated for you after the app is created.
+        - If you select **Certificate**, select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
+        
+        - If you select **Secret**, a password is generated for you after the app is created.
 
 4.	When you've finished filling in the fields, select **Create application**.
 
