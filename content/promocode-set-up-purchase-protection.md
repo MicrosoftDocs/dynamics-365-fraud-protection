@@ -299,45 +299,56 @@ The following C# code samples show how you can acquire a token by using your cer
 
 **Certificate thumbprint**
 
-public async Task<string> AcquireTokenWithCertificateAsync()
-{
-var x509Cert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
-var clientAssertion = new ClientAssertionCertificate("<Client ID>", x509Cert);
-var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
-var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
-return authenticationResult.AccessToken;
-}
+```json
+   public async Task<string> AcquireTokenWithCertificateAsync()
+     {
+          var x509Cert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
+          var clientAssertion = new ClientAssertionCertificate("<Client ID>", x509Cert);
+          var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
+          var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
+
+          return authenticationResult.AccessToken;
+     }
+```
 
 **Secret**
 
-public async Task<string> AcquireTokenWithSecretAsync()
-{
-var clientAssertion = new ClientCredential("<Client ID>", "<Client secret>");
-var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
-var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
-return authenticationResult.AccessToken;
-}
+```json
+   public async Task<string> AcquireTokenWithSecretAsync()
+     {
+       var clientAssertion = new ClientCredential("<Client ID>", "<Client secret>");
+       var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
+       var authenticationResult = await context.AcquireTokenAsync("<API endpoint>", clientAssertion);
+
+       return authenticationResult.AccessToken;
+   }
+```
+
 **Response**
 
 Behind the scenes, the preceding code generates an HTTP request and receives a response that resembles the following example.
-HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
-Date: <date>
-Content-Length: <content length>
-{
-"token_type":"Bearer",
-"expires_in":"3599",
-"ext_expires_in":"3599",
-"expires_on":"<date timestamp>",
-"not_before":"<date timestamp>",
-"resource":"https://api.dfp.dynamics.com",
-"access_token":"<your access token; e.g.: eyJ0eXA...NFLCQ>"
-}
+
+```json
+   HTTP/1.1 200 OK
+   Content-Type: application/json; charset=utf-8
+   Date: <date>
+   Content-Length: <content length>
+
+   {
+    "token_type":"Bearer",
+    "expires_in":"3599",
+    "ext_expires_in":"3599",
+    "expires_on":"<date timestamp>",
+    "not_before":"<date timestamp>",
+    "resource":"https://api.dfp.dynamics.com",
+    "access_token":"<your access token; e.g.: eyJ0eXA...NFLCQ>"
+   }
+```
 
 For more information about access tokens, see the following Azure documentation:
 
--	Use client assertion to get access tokens from Azure AD
--	Cache access tokens
+-	[Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion)
+-	[Cache access tokens](https://docs.microsoft.com/azure/architecture/multitenant-identity/token-cache)
 
 #### Call the APIs
 
@@ -360,7 +371,7 @@ You use APIs to send risk evaluation events to Fraud Protection. These events bu
 -	For integration and testing, use the following endpoint: https://api.dfp.microsoft-int.com/
 -	For production, use the following endpoint: https://api.dfp.microsoft.com/
 
-For information about the required and optional fields, and their definitions, see Dynamics 365 Fraud Protection API.
+For information about the required and optional fields, and their definitions, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection).
 
 ## Step 5: Use common support tool and graph explorer scenarios
 
