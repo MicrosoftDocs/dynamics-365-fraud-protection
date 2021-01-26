@@ -341,10 +341,11 @@ For more information about access tokens, see the following Azure documentation:
 
 1.	Pass the following required HTTP headers on each request.
 
-Header name	Header value
-Authorization	Use the following format for this header: Bearer accesstokenIn this format, accesstoken is the token that is returned by Azure AD.
-x-ms-correlation-id	Send a new GUID value on each set of API calls that are made together.
-Content-Type	application/json
+| Header name	| Header value|
+|----------------|------------------|
+| Authorization	| <p>Use the following format for this header: Bearer *accesstoken*</p><p>In this format, accesstoken is the token that is returned by Azure AD.</p>| 
+| x-ms-correlation-id	| Send a new GUID value on each set of API calls that are made together.| 
+| Content-Type	| application/json| 
 
 1.	Generate an event-based payload. Fill in the event data with the relevant information from your system. For information about supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 2.	Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint. (The API endpoint is the URI for your environment and appears on the **Account information** tile on the Fraud Protection dashboard.)
