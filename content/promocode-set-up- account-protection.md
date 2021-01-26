@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to protect customer accounts with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/25/2021
+ms.date: 01/26/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -31,9 +31,9 @@ Account protection covers three types of account lifecycle events: *account crea
 
 This document guides you through the following activities:
 
-1.	Implement account protection APIs
-2.	Create Azure Active Directory (Azure AD) apps
-3.	Understand account protection events
+1.	[Implement account protection APIs](promocode-set-up-%20account-protection.md#step-1-implement-account-protection-apis)
+2.	[Create Azure Active Directory (Azure AD) apps](promocode-set-up-%20account-protection.md#step-2-create-azure-ad-apps)
+3.	[Understand account protection events](promocode-set-up-%20account-protection.md#step-3-understand-account-protection-events)
 
     After you complete these activities, you will be able to use account protection to block or challenge suspicious attempts to compromise existing accounts.
 
@@ -41,8 +41,8 @@ This document guides you through the following activities:
 
 Before you begin the activities in this document, you must complete the following tasks:
 
--	Set up Fraud Protection in an Azure AD tenant as described in Set up a trial version of Fraud Protection.
--	Implement device fingerprinting.
+-	Set up Fraud Protection in an Azure AD tenant as described in [Set up a trial version of Fraud Protection]().
+-	[Implement device fingerprinting]().
 
 ## Step 1: Implement account protection APIs
 
@@ -64,7 +64,7 @@ To acquire the tokens that are required to call the APIs, use Fraud Protection t
 
 ### Configure an Azure AD app
 
-1.	In the [Fraud Protection portal]( https://dfp.microsoft.com/), in the left navigation, select **Data**, and then select **API management**.
+1.	In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **Data**, and then select **API management**.
 2.	On the **API management** page, select **Configuration**.
 3.	Select **Creating applications**, and then fill in the fields to create your app. The following fields are required:
 
@@ -469,6 +469,6 @@ Congratulations! You have successfully completed the training and are ready to u
 
 For information about how to access and use other Fraud Protection capabilities, see the following documents:
 
--	Protect customer purchases with Fraud Protection
--	Implement device fingerprinting
--	Manage loss prevention with Fraud Protection
+-	[Protect customer purchases with Fraud Protection]()
+-	[Implement device fingerprinting]()
+-	[Manage loss prevention with Fraud Protection]()
