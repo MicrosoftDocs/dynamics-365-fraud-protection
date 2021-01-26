@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to set up a purchased version of Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/22/2021
+ms.date: 01/26/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -49,7 +49,9 @@ The following sign-in scenarios are intended for customers who purchased a licen
 3.	To accept the **Terms of Use**, select **I accept**.
 4.	In the **Geographic data storage region** field, select the region where you want to store your data, and then select **Next**.
 
- 	  Note that you can't change the region after you've set it.
+ 	  > [!NOTE]
+ 	  >You can't change the region after you've set it.
+    
  	  The setup process is started and might take up to 20 minutes to run. If you prefer, you can sign out and then return after installation is completed.
    	After setup is completed, the **Congratulations** page appears.
     
@@ -57,7 +59,7 @@ The following sign-in scenarios are intended for customers who purchased a licen
 6.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.
    	The Fraud Protection portal is opened.
 
-(image)
+![Data flow](media/DFP-Portal.jpg)
 
 Congratulations! You've successfully completed the setup process and are ready to use Fraud Protection to protect your business.
 
@@ -65,11 +67,11 @@ Congratulations! You've successfully completed the setup process and are ready t
 
 For information about how to access and use Fraud Protection's other capabilities, see the following documents:
 
-- Protect customer accounts with Fraud Protection
--	Protect customer purchases with Fraud Protection
--	Manage loss prevention with Fraud Protection
+- [Protect customer accounts with Fraud Protection]()
+-	[Protect customer purchases with Fraud Protection]()
+-	[Manage loss prevention with Fraud Protection]()
 
 ## Configure access for additional users (Optional)
 
 Fraud protection offers role-based access control (RBAC) for enhanced security and role management. Initial configuration of users and roles should be done by the global administrator of your Azure AD tenant. After an **AllAreas_Admin** account has been set up, you can use it to add additional users.
-For more information about how to configure user access, see [Configure user access to Fraud Protection in the Fraud Protection documentation]( https://docs.microsoft.com/dynamics365/fraud-protection/configure-user-access).
+For more information about how to configure user access, see [Configure user access to Fraud Protection in the Fraud Protection documentation](https://docs.microsoft.com/dynamics365/fraud-protection/configure-user-access).
