@@ -1,9 +1,9 @@
 ---
 author: yvonnedeq
-description: This topic describes how to Protect customer purchases with Fraud Protection.
+description: This topic describes how to protect customer purchases with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/25/2021
+ms.date: 01/26/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -91,8 +91,10 @@ Historical data is also known as *cold start data*.
 2.	On the **Diagnose analysis data** page, select each data type that you want to upload (**Purchases**, **Chargebacks**, **Labels**, **Refunds**, **Purchase status**, **Bank events**, or **Accounts**).
 3.	For each data type, select **Upload**, select the required data file, and then select **Open**.
 4.	On the **Data preview** page, select **Upload**.
-> [!NOTE]
->It might take several minutes to upload a data file, depending on its size.
+
+ 	> [!NOTE]
+ 	>It might take several minutes to upload a data file, depending on its size.
+
 5.	When all the files are uploaded, select **Process purchase data**.
 
 For more information about how to upload historic data, see [Upload historical data for purchase protection](https://docs.microsoft.com/dynamics365/fraud-protection/data-upload).
@@ -208,8 +210,8 @@ The next section of the report is named **Model performance**. It shows how the 
 -	If stopping 100 percent of the fraud comes at the cost of stopping 15 percent of the good transactions, you end up with no fraudulent transactions and 85 sales, or $85,000 in revenue and $21,250 in profit.
 -	Therefore, in this example, it's more profitable to allow a small amount of fraud to capture more good customer transactions.
 
-> [!NOTE]
-> These curves are generated from a historical analysis. When real-time assessment is introduced, the fraud detection rate (y-axis) will significantly improve.
+ 	> [!NOTE]
+ 	> These curves are generated from a historical analysis. When real-time assessment is introduced, the fraud detection rate (y-axis) will significantly improve.
 
 -	The section below the chart (labeled "22") shows the outcome of the > selected threshold. It shows the number and value of fraudulent > transactions that would have been rejected (known as true > positives) versus the total number and value of reported > fraudulent transactions. It also shows the ratio of the number and > value of good transactions that were accepted (known as true > negatives) to the total number and value of good transactions. > When you're interpreting the data, if there is high variability in > the product prices, the transaction amount curve can be more > valuable to your analysis. Also, if the **Transaction value >** chart is higher than the **Transaction count** chart, there is a > higher detection rate for high-value transactions. This result is > good because those transactions can often incur the highest > losses. If the **Transaction count** chart is higher than the **> Transaction value** chart, there is a higher detection rate for > lower-value transactions. This result can be good if there are > very high volumes of low-value transactions.
 
@@ -266,7 +268,7 @@ To acquire the tokens that are required to call the APIs, use Fraud Protection t
 -	If you select **Certificate**, select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
 -	If you select **Secret**, a password is generated for you after the app is created.
 
-1.	When you've finished filling in the fields, select **Create application**.
+4.	When you've finished filling in the fields, select **Create application**.
  	The confirmation page summarizes the app's name and ID, and either the certificate thumbprint or the secret, depending on the authentication method that you selected.
 
  	> [!IMPORTANT]
@@ -285,7 +287,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 
 #### Required IDs and information
 
--	**API Endpoint – The URI for your environment appears on the **Account information** tile on the Fraud Protection dashboard.
+-	**API Endpoint** – The URI for your environment appears on the **Account information** tile on the Fraud Protection dashboard.
 -	**Directory (tenant) ID** – The directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard.
 -	**Application (client) ID** – The application ID identifies the Azure AD app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **API Management** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you create.
 -	**Certificate thumbprint or secret** – You can find the certificate thumbprint or the secret on the confirmation page that appears after you select **Create application** on the **API Management** page.
@@ -347,8 +349,8 @@ For more information about access tokens, see the following Azure documentation:
 | x-ms-correlation-id	| Send a new GUID value on each set of API calls that are made together.| 
 | Content-Type	| application/json| 
 
-1.	Generate an event-based payload. Fill in the event data with the relevant information from your system. For information about supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
-2.	Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint. (The API endpoint is the URI for your environment and appears on the **Account information** tile on the Fraud Protection dashboard.)
+2.	Generate an event-based payload. Fill in the event data with the relevant information from your system. For information about supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
+3.	Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint. (The API endpoint is the URI for your environment and appears on the **Account information** tile on the Fraud Protection dashboard.)
 For more information about APIs, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection).
 
 ## Step 4: Understand purchase events
@@ -382,7 +384,7 @@ The Fraud Protection support tool lets your agents evaluate customer escalations
 
 (image)
 
-       By default, the **Accounts** tab is selected. It shows the following information:
+By default, the **Accounts** tab is selected. It shows the following information:
 
 -	The **Account summary** section (labeled "Box 1" in the previous screenshot) summarizes the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. Scroll down the list to view more information. When your own data is loaded into the support tool, look for activities that might fall outside typical patterns, such as a recent spike in spending, or an unusual number of transactions or chargebacks. This section also indicates whether the user is on a safe list, block list, or watch list.
 -	The **Payment instruments** section (labeled "Box 2" lists any payment instruments that have been associated with the account. It also indicates whether the payment instruments are on a safe list, block list, or watch list.
