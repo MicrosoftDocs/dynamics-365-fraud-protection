@@ -182,7 +182,7 @@ For more information about access tokens, see the following Azure documentation:
 
 Use the **Account Create** event to send information and context about an incoming attempt to create a new account. The response contains a decision for the Account Creation API.
 
-**URI**: *<API Endpoint>/v1.0/action/account/create/<signUpId>*
+**URI**: \<API Endpoint\>/v1.0/action/account/create/\<signUpId\>
 
 The value of **signUpId** should be unique per request. It should match the value in the metadata section in the sample that follows.
 
@@ -275,7 +275,7 @@ The value of **signUpId** should be unique per request. It should match the valu
 
 Use the **Account Login** event to send information and context about an incoming attempt to create a new account login. The response contains a decision for the Account Login API.
 
-**URI**: *<API Endpoint>/v1.0/action/account/login/< userId >*
+**URI**: \<API Endpoint\>/v1.0/action/account/login/<userId\>
 
 The value of userId must match the value in the payload. Each user must have a unique value. A GUID value can be used here.
 
@@ -332,7 +332,8 @@ The value of userId must match the value in the payload. Each user must have a u
 
 Use the **Account Create Status** event to send information and context about an incoming attempt to create a new account status. The response contains a decision for the Account Create Status API.
 
-**URI**: *<API Endpoint>/v1.0/observe/account/create/status/< signUpId >*
+**URI**: \<API Endpoint>/v1.0/observe/account/create/status/<signUpId\>
+  
 
 The value of **userId** must match the value in the payload. Each user must have a unique value. A GUID value can be used here.
 
@@ -361,7 +362,7 @@ The value of **userId** must match the value in the payload. Each user must have
 
 Use the **Account Login Status** event to send information and context about an incoming attempt to create a new account login status. The response contains a decision for the Account Login Status API.
 
-**URI**: *< API Endpoint>/v1.0/observe/account/login/status/<userId>*
+**URI**: \<API Endpoint>/v1.0/observe/account/login/status/<userId\>
 
 The value of **signUpId** must match the value in the payload. Each must have a unique value. A GUID value can be used here.
 
@@ -390,7 +391,7 @@ The value of **signUpId** must match the value in the payload. Each must have a 
 
 Use the **Label** event to send additional information to Fraud Protection, besides the data that informs the virtual fraud analyst and scorecard features. The **Labe**l API provides the additional information for model training that is based on an additional set of fraud signals. It also sends information about transactions, account or payment instrument details, and reversals.
 
-**URI**: *<API Endpoint>/v1.0/label/account/create/<userId>*
+**URI**: \<API Endpoint>/v1.0/label/account/create/<userId\>
 
 The value of **userId** must match the value in the corresponding Account Login API.
 
