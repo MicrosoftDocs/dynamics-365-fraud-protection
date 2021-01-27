@@ -208,7 +208,7 @@ This section provides the following information:
 The next section of the report is named **Model performance**. It shows how the model performed, based on the data that was received. It provides the following information:
 
 -	You can use the slider above the chart (labeled "20" in the following screenshot) to select the risk score threshold that you want to analyze. Any transaction where the score is more than the threshold will be recommended for rejection.
--	The chart (labeled "21") represents the receiver operating characteristic (ROC) curve. It shows the percentage of rejected transactions that have chargebacks (y-axis) versus the percentage of rejected legitimate transactions, also known as false positives (x-axis). This data is charted by transaction count on the left and transaction value on the right. The chart will always be a curve. However, notice how steeply the curve climbs, because the steepness indicates a high rate of fraud detection that involves a low number of false positives, which is the ultimate outcome. In an ideal scenario, you will observe a false positive rate of 1 percent. However, the actual rate depends on the cost of the loss of one item. Here is an example:
+-	The chart (labeled "21") represents the receiver operating characteristic (ROC) curve. It shows the percentage of rejected transactions that have chargebacks (y-axis) versus the percentage of rejected legitimate transactions, also known as false positives (x-axis). This data is charted by transaction count on the left and transaction value on the right. The chart will always be a curve. However, notice how steeply the curve climbs, because the steepness indicates a high rate of fraud detection that involves a low number of false positives, which is the ultimate outcome. In an ideal scenario, you will observe a false positive rate of 1 percent. However, the actual rate depends on the cost of the loss of one item. For example:
 
     -	You're protecting a product that sells for $1,000, and your profit margin is $250.
     -	The cost of allowing a fraudulent transaction is $1,000 if you, as the merchant, are liable for fraud (as is often the case for online "card not present" transactions).
@@ -431,20 +431,20 @@ By default, the **Accounts** tab is selected. It shows the following information
 
 The last two sections on the **Details** tab are named **Device information** and **IP information**.
 
-    -	The **Device information** section shows information that was captured by Device Fingerprinting. If Fraud Protection Device Fingerprinting isn't implemented (for example, in the case of historical data), this section will remain blank.
-    -	In the *IP information* section, the *IP address *is the physical location where the purchase was made.
+-	The **Device information** section shows information that was captured by Device Fingerprinting. If Fraud Protection Device Fingerprinting isn't implemented (for example, in the case of historical data), this section will remain blank.
+-	In the *IP information* section, the *IP address *is the physical location where the purchase was made.
 
 ![Data flow](media/promocode-images/pp-box5.png)
 
-    -	The **Line items** tab (labeled "Box 7" in the following screenshot) itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
+-	The **Line items** tab (labeled "Box 7" in the following screenshot) itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
 
 ![Data flow](media/promocode-images/pp-line-items.png)
 
-    -	On the **Map** tab (labeled "Box 8" in the following screenshot), the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
+-	On the **Map** tab (labeled "Box 8" in the following screenshot), the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
 ![Data flow](media/promocode-images/pp-map.png)
 
-    For more information about how to use the support tool, see [Support your customers with Fraud Protection]( https://docs.microsoft.com/dynamics365/fraud-protection/risk-support).
+For more information about how to use the support tool, see [Support your customers with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/risk-support).
 
 ### Block a customer or payment instrument in the support tool
 
@@ -513,8 +513,7 @@ The information and the linkages in the graph can be used for activities such as
 
 ![Data flow](media/promocode-images/pp-graph-explorer.png)
 
-
-    The **Product Node** pane on the right of the **Graph explorer** page displays details of the purchase.
+The **Product Node** pane on the right of the **Graph explorer** page displays details of the purchase.
 
 For more information about how to use the graph explorer, see [Visually explore data with the graph explorer]( https://docs.microsoft.com/dynamics365/fraud-protection/graph-explorer).
 
