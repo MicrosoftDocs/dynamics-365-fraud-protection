@@ -58,10 +58,7 @@ Use this schema guidance to produce files in comma-separated values (CSV) format
 
 -	The files are in CSV UTF-8 (comma-delimited) format (*.csv).
 -	The maximum file size is 10 gigabytes (GB).
--	The **DateTime** columns are in International Organization for Standardization (ISO) 8601 format.
-
- 	For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
-  
+-	The **DateTime** columns are in International Organization for Standardization (ISO) 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
 -	The decimal precision is two decimal places.
 -	The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
@@ -74,7 +71,7 @@ Because the loss prevention capability identifies anomalies and patterns that mi
 -	Payments
 -	PaymentMethods
 
-The [Schema Appendix]() provides detailed information about schemas that define the data that is used to generate models and determine risk assessments. Although all data fields are important, you can start with fewer mandatory fields and then onboard additional fields over time to improve model output.
+For detailed information about schemas that define the data that is used to generate models and determine risk assessments, see [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas). Although all data fields are important, you can start with fewer mandatory fields and then onboard additional fields over time to improve model output.
 
 > [!IMPORTANT]
 >The data that is used to analyze loss is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number [BIN] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). Therefore, don't include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](https://docs.microsoft.com/dynamics365/fraud-protection/security-compliance).
@@ -119,7 +116,7 @@ Before you connect your retail data to Fraud Protection, make sure that you have
 1.	In Commerce, open the dashboard and enter **System Parameters** in the search field at the top of the page.
 2.	On the **System parameters** page, select the **Data connection** tab.
 3.	Set the **Enable Data Lake integration** option to **Yes**.
-4.	Save the details of the data lake (the value of the** DNS name** field). You will need this information to reconnect if the data lake integration is ever disconnected.
+4.	Save the details of the data lake (the value of the **DNS name** field). You will need this information to reconnect if the data lake integration is ever disconnected.
 
 ![Data flow](media/promocode-images/commerce-data-connection.png)
 
@@ -161,12 +158,12 @@ After you've made the initial connection between Commerce and Fraud Protection, 
 1.	Select the three dots in the upper-right corner of the **Dynamics 365 Commerce connection** pane, and then select **Disconnect**.
 2.	Select **Continue** to disconnect.
 
- 	In the following screenshot, the data lake that was originally connected to this Fraud Protection loss prevention capability has been successfully disconnected.
+ 	The data lake that was originally connected to this Fraud Protection loss prevention capability is disconnected.
 
 #### Reconnect to Commerce
 
 1.	Select **Connect to data**.
-2.	Enter the details that were created for the Commerce environment (data lake) during the initial setup. (See step 4 in the Connect loss prevention to data from Commerce section earlier in this document.)
+2.	Enter the details that were created for the Commerce environment (data lake) during the initial setup. (See step 4 in the [Connect loss prevention to data from Commerce](promocode-set-up-loss-prevention.md#connect-loss-prevention-to-data-from-commerce) section earlier in this document.)
 3.	Select **Connect**.
 
 When the connection is successful, the process of syncing to acquire the data and update the reports immediately starts again.
@@ -188,7 +185,7 @@ When you sign in to your Fraud Protection portal, if **Loss prevention** appears
     -	Payment methods
 
     > [!NOTE]
-    >The data must be in .CVS format and must follow the schema that is provided in the [Schema Appendix]()  .
+    >The data must be in .CVS format and must follow the schema that is provided in [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas).
 
 3.	Select the data file to upload, and then select **Upload**.
 
@@ -274,7 +271,7 @@ The model uses five or six default events to generate the risk score. It conside
 
     If you're an existing Commerce customer, all the mandatory fields have a **NOT NULL** constraint in the data type. For reference, the schema is included in the appendix at the end of this document. However, you can configure Commerce to share data directly with Fraud Protection.
 
-For information about how to integrate Commerce with Fraud Connection and connect to Fraud Protection, see the Connect loss prevention to data from Commerce section earlier in this document. There is no prerequisite schema work for loss prevention.
+For information about how to integrate Commerce with Fraud Connection and connect to Fraud Protection, see the [Connect loss prevention to data from Commerce](promocode-set-up-loss-prevention.md#connect-loss-prevention-to-data-from-commerce) section earlier in this document. There is no prerequisite schema work for loss prevention.
 
 Congratulations! You've successfully completed the training and are ready to use your free trial of Fraud Protection's loss prevention capabilities.
 
