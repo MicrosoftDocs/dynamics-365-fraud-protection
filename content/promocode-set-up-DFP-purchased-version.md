@@ -59,7 +59,7 @@ The following sign-in scenarios are intended for customers who purchased a licen
 6.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.
    	The Fraud Protection portal is opened.
 
-![Data flow](media/DFP-Portal.jpg)
+![Data flow](media/promocode-images/DFP-Portal.png)
 
 Congratulations! You've successfully completed the setup process and are ready to use Fraud Protection to protect your business.
 
