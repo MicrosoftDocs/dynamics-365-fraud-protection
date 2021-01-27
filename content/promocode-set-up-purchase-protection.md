@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to protect customer purchases with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/26/2021
+ms.date: 01/27/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -71,7 +71,10 @@ We recommend that you upload files for related data types together before you pr
 
 ### Upload data and generate a Diagnose report
 
-1.	Sign in to the Fraud Protection portal, and then, in the left navigation, select **Purchase**.
+1.	Sign in to the [Fraud Protection portal](https://dfp.microsoft.com/), and then, in the left navigation, select **Purchase**.
+
+![Data flow](media/promocode-images/DFP-Portal.png)
+
 2.	On the **Purchase** page, on the **Diagnose** tab, select **Upload required data**.
 3.	On the **Diagnose > analysis data** page, select each type of data file that you want > to upload (**Purchases**, **Payment instruments**, **Products**, or **Chargebacks**).
 4.	For each data file type, select **Upload**, select the required data file, and then select **Open**.
@@ -107,7 +110,7 @@ You can use either your own generated reports or Fraud Protection's sample repor
  	> [!NOTE]
  	>Sample reports are generated from synthetic sample data.
 
-(image)
+![Data flow](media/promocode-images/pp-sample-report.png)
 
 ### Data diagnostic report – Summary
 
@@ -117,7 +120,6 @@ Before you can generate your risk diagnostic report, the key metrics of your dat
 
 You can download the data diagnostic report from the tool as a PDF file, and then share it with a broader audience or do offline analysis.
 
-(image)
 
 ### Data diagnostic report – Details
 
@@ -132,7 +134,7 @@ The following screenshot shows the top section of the data diagnostic report. Th
 
  	One basis point equals 0.01 percent (one one-hundredth of 1 percent). Therefore, for the chargeback rate, a basis point of 500 means that 5 percent of uploaded transactions have an associated chargeback.
 
-(image)
+![Data flow](media/promocode-images/pp-diagnostic-report.png)
 
 The next section of the report is the **Daily chargeback rate** section. This section provides the following information:
 
@@ -141,7 +143,7 @@ The next section of the report is the **Daily chargeback rate** section. This se
 
 You should very rarely see a chargeback rate that is less than the threshold of 5 chargeback basis points (bps). However, if you do, you're either missing data or something is wrong with the data. In these cases, we recommend that you do further investigation to identify and fix the root cause.
 
-(image)
+![Data flow](media/promocode-images/pp-chargeback.png)
 
 The bottom section of the report provides an assessment of some aspects of the data that could affect the risk diagnostic report: empty data values, the period of the data, formatting errors, and uniqueness of the data. This section provides the following information:
 
@@ -157,7 +159,7 @@ The bottom section of the report provides an assessment of some aspects of the d
  	For example, the schema that Fraud Protection uses requires a two-letter ISO country or region code, and a three-character currency code that is aligned with the OANDA currency code. If different codes are used for these attributes, there will be a 100-percent mismatch. However, in some cases, only a subset of the data has a formatting mismatch (as shown in the screenshot). This mismatch can be caused by errors that are introduced by some payment types or interface differences (web interface versus mobile app interface). Regardless, it's important that you understand the root cause of these formatting issues and fix them before you generate a risk diagnostic report.
 -	The **Unique entities** section (labeled "10") provides an assessment of the diversity of your data. It shows the percentage of unique data entities for **IP address**, **User ID**, and **User email** attributes. High diversity of data in these attributes enables good model performance and learning. These profiling entities are used to assess velocities for users. Fewer than one unique value for every 100 transactions (that is, a value of less than 1 percent) is a strong indicator of data mapping errors. In this case, you must investigate the issue and resolve it to help reduce the likelihood that the model's response will be skewed.
 
-(image)
+![Data flow](media/promocode-images/pp-empty-value.png)
 
 ### Risk diagnostic report – Summary
 
@@ -167,7 +169,7 @@ Keep in mind that the risk diagnostic report is a historical analysis. Therefore
 
 Therefore, the scores that are shown won't be as good as they would be in a real-time assessment. However, this report provides a directional indication of the effectiveness of your fraud protection solution that uses Fraud Protection. Note that report performance will also be better when you use Fraud Protection in real time.
 
-(image)
+![Data flow](media/promocode-images/pp-risk-diagnostic-summary.png)
 
 Instead of a "stopping **all** fraud (at all cost)" strategy, we recommend a strategy that is focused on **profit efficiency**. This type of strategy strikes a balance between the amount of fraud that is stopped and the number of false positives to optimize for the most profitable outcome. By approaching the issue in this way, you can get a much more efficient fraud system that can help deliver higher revenues and lower operating costs. The risk diagnostic report provides information and insights to help you analyze the trade-offs and understand the opportunity.
 
@@ -184,7 +186,7 @@ The following screenshot shows the top section of the risk diagnostic report. Th
 -	The **Total count of reported fraud events** section (labeled "15") shows the total number/count of reported fraud events that are available in the data diagnostic report.
 -	The **% of reported fraud events** section (labeled "16") shows the total count of reported fraud events as a percentage of the total count of reported transactions. The value is calculated as (Total count of reported fraud events ÷ Total count of reported transactions) × 100.
 
-(image)
+![Data flow](media/promocode-images/pp-risk-report.png)
 
 The next section of the report is named **Distribution of transactions by risk score**. Low scores represent lower-risk transactions. Therefore, in the chart, you should always expect to see a "left-heavy," long-tail distribution, **not** a bell-curve or "right-heavy" distribution. A left-heavy distribution indicates that most of your transactions are low-risk and therefore will be recommended for approval by Fraud Protection. As the risk scores increase along the x-axis, you should expect to see fewer and fewer transactions in the score bins. If the chart shows a very different type of distribution, contact Microsoft.
 
@@ -194,7 +196,7 @@ This section provides the following information:
 -	In the **Risk score range** fields (labeled "18"), you can select the range of score bins. Note that, although the score (bin) range that is shown in the screenshot is from 0 through 99, the risk scores are in the range from 0 through999.
 -	The chart (labeled "19") shows transaction distribution by risk score for the selected score range. Green represents good transactions, whereas red represents the reported fraudulent transactions.
 
-(image)
+![Data flow](media/promocode-images/pp-risk-transactions.png)
 
 The next section of the report is named **Model performance**. It shows how the model performed, based on the data that was received. It provides the following information:
 
@@ -215,11 +217,11 @@ The next section of the report is named **Model performance**. It shows how the 
 
 -	The section below the chart (labeled "22") shows the outcome of the > selected threshold. It shows the number and value of fraudulent > transactions that would have been rejected (known as true > positives) versus the total number and value of reported > fraudulent transactions. It also shows the ratio of the number and > value of good transactions that were accepted (known as true > negatives) to the total number and value of good transactions. > When you're interpreting the data, if there is high variability in > the product prices, the transaction amount curve can be more > valuable to your analysis. Also, if the **Transaction value >** chart is higher than the **Transaction count** chart, there is a > higher detection rate for high-value transactions. This result is > good because those transactions can often incur the highest > losses. If the **Transaction count** chart is higher than the **> Transaction value** chart, there is a higher detection rate for > lower-value transactions. This result can be good if there are > very high volumes of low-value transactions.
 
-(image)
+![Data flow](media/promocode-images/pp-risk-transactions2.png)
 
 -	At the bottom of the report, the **Top 5 risk factors** section > (labeled "23 in the following screenshot) shows the top-five risk > factors for the selected percentage of your transactions that have > the highest risk score. In the example that is shown, out of > 1 percent of the riskiest transactions (that is, the transactions > that have the highest risk scores, as assessed by Fraud > Protection), 20 percent had a suspicious device Internet Protocol > (IP) address, and 18.2 percent had a risky prepaid card. This > section of the report is helpful because, by indicating which data > attributes are showing the highest risk of being fraudulent, it > can show where you should focus your fraud detection efforts.
 
-(image)
+![Data flow](media/promocode-images/pp-top5.png)
 
 ## Step 3: Integrate purchase protection APIs
 
@@ -393,7 +395,7 @@ The Fraud Protection support tool lets your agents evaluate customer escalations
  	
  	There are two tabs in the search results. One tab contains information about accounts, and the other contains information about transactions that are associated with the accounts.
 
-(image)
+![Data flow](media/promocode-images/ )
 
 By default, the **Accounts** tab is selected. It shows the following information:
 
@@ -415,22 +417,23 @@ By default, the **Accounts** tab is selected. It shows the following information
  	
  	The next two sections on the **Details** tab are named **Shipping information** and **Payment information** (labeled "Box 6"). They show the shipping-related and billing-related information that were used when the purchase event occurred.
  	
-(image)
+(im![Data flow](media/promocode-images/ )
+
 
 The last two sections on the **Details** tab are named **Device information** and **IP information**.
 
 -	The **Device information** section shows information that was captured by Device Fingerprinting. If Fraud Protection Device Fingerprinting isn't implemented (for example, in the case of historical data), this section will remain blank.
 -	In the *IP information* section, the *IP address *is the physical location where the purchase was made.
 
-(image)
+![Data flow](media/promocode-images/ )
 
 -	The **Line items** tab (labeled "Box 7" in the following screenshot) itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
 
-(image)
+![Data flow](media/promocode-images/ )
 
 -	On the **Map** tab (labeled "Box 8" in the following screenshot), the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
-(image)
+![Data flow](media/promocode-images/ )
 
 For more information about how to use the support tool, see [Support your customers with Fraud Protection]( https://docs.microsoft.com/dynamics365/fraud-protection/risk-support).
 
@@ -438,7 +441,7 @@ For more information about how to use the support tool, see [Support your custom
 
 On the Accounts tab, you can add a user to the Accounts summary section and the associated payment instruments to the Payment instruments section (highlighted in the screenshot below).
 
-(image)
+![Data flow](media/promocode-images/ )
 
 #### Use lists and rules to drive actions
 
@@ -509,6 +512,6 @@ Congratulations! You have successfully completed the training and are ready to u
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
--	Protect customer accounts with Fraud Protection
--	Implement device fingerprinting
--	Manage loss prevention with Fraud Protection
+-	[Protect customer accounts with Fraud Protection]()
+-	[Implement device fingerprinting()
+-	[Manage loss prevention with Fraud Protection()
