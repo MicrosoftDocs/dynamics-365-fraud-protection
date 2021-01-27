@@ -12,8 +12,6 @@ search.audienceType:
 title: Set up a trial version of Fraud Protection
 ---
 
-
-
 # Set up a trial version of Fraud Protection
 
 ## Protect your business from fraudulent activity
@@ -130,7 +128,6 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 17.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.
 
     The Fraud Protection portal opens.
-
 
 Congratulations! You've successfully completed the setup process and are ready to use Fraud Protection to protect your business.
 
