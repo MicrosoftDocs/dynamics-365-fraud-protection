@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to set up a trial version of Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/22/2021
+ms.date: 01/26/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
