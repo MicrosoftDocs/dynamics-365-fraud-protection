@@ -42,7 +42,8 @@ After you complete these activities, you will be able to use the Fraud Protectio
 
 ## Prerequisites
 
--	Before you begin the activities in this document, you must complete the following tasks:
+Before you begin the activities in this document, you must complete the following tasks:
+
 -	Set up Fraud Protection in an Azure Active Directory (Azure AD) tenant, as described in [Set up a trial version of Fraud Protection]().
 -	[Implement device fingerprinting]().
 
@@ -67,7 +68,8 @@ The general process to upload historical data consists of the following steps:
 1.	Select **Upload** to select and submit your local files.
 2.	After a successful upload, select **Process**.
 3.	To upload additional data files, select **Reupload** to submit more files, and then select **Process** again.
-We recommend that you upload files for related data types together before you process the data. For example, upload purchase and account data together.
+
+    We recommend that you upload files for related data types together before you process the data. For example, upload purchase and account data together.
 
 ### Upload data and generate a Diagnose report
 
@@ -76,7 +78,7 @@ We recommend that you upload files for related data types together before you pr
 ![Data flow](media/promocode-images/DFP-Portal.png)
 
 2.	On the **Purchase** page, on the **Diagnose** tab, select **Upload required data**.
-3.	On the **Diagnose > analysis data** page, select each type of data file that you want > to upload (**Purchases**, **Payment instruments**, **Products**, or **Chargebacks**).
+3.	On the **Diagnose analysis data** page, select each type of data file that you want to upload (**Purchases**, **Payment instruments**, **Products**, or **Chargebacks**).
 4.	For each data file type, select **Upload**, select the required data file, and then select **Open**.
 5.	On the **Data preview** page, select **Upload**.
  	
@@ -153,9 +155,10 @@ The bottom section of the report provides an assessment of some aspects of the d
  	
  	When you look at the data diagnostic report, it's important that you review it in the context of your business scenarios. Here are a few examples that explain why:
  	
--	Your report shows that 15 percent of the values for the **BIN** attribute of the **PaymentInstrument** data field are empty. If 85 percent of the purchase transactions that are done with your business are credit card and debit card transactions, the remaining 15 percent of transactions don't require a bank identification number (BIN). Therefore, the percentage of empty values is accounted for. However, if 95 percent of your business's transactions are credit card and debit card transactions, the fact that 15 percent of the attribute values are empty indicates a problem.
--	Your report shows that 80 percent of the values for the **PayerStatus** or **IMEI** attribute of the **PaymentInstrument** data field are empty. However, because 30 percent of your payment transactions are done through PayPal or mobile payments, which typically use those attributes, you expect only 70 percent of the attribute values to be empty. Therefore, before you generate a risk diagnostic report, you must investigate why more values than expected are empty.
--	Your report shows that 50 percent of shipping address fields are incomplete. However, 80 percent of your business involves sales of physical goods that are shipped. The remaining 20 percent involves sales of digital goods. Therefore, because you know that 80 percent of your sales require a shipping address, you expect only 20 percent of shipping address fields to be incomplete.
+ 	-	Your report shows that 15 percent of the values for the **BIN** attribute of the **PaymentInstrument** data field are empty. If 85 percent of the purchase transactions that are done with your business are credit card and debit card transactions, the remaining 15 percent of transactions don't require a bank identification number (BIN). Therefore, the percentage of empty values is accounted for. However, if 95 percent of your business's transactions are credit card and debit card transactions, the fact that 15 percent of the attribute values are empty indicates a problem.
+ 	-	Your report shows that 80 percent of the values for the **PayerStatus** or **IMEI** attribute of the **PaymentInstrument** data field are empty. However, because 30 percent of your payment transactions are done through PayPal or mobile payments, which typically use those attributes, you expect only 70 percent of the attribute values to be empty. Therefore, before you generate a risk diagnostic report, you must investigate why more values than expected are empty.
+ 	-	Your report shows that 50 percent of shipping address fields are incomplete. However, 80 percent of your business involves sales of physical goods that are shipped. The remaining 20 percent involves sales of digital goods. Therefore, because you know that 80 percent of your sales require a shipping address, you expect only 20 percent of shipping address fields to be incomplete.
+  
 -	The **Data period** section (labeled "8") provides details about the data period that was used to generate the report. To generate a good directional indication in the risk diagnostic report, Fraud Protection requires at least 90 days' worth of historical data that meets data completeness and diversity criteria.
 -	The **Formatting errors** section (labeled "9") confirms that your data follows the required schema for the listed attributes. The information in this section is important because the specifications help ensure ML model performance.
  	For example, the schema that Fraud Protection uses requires a two-letter ISO country or region code, and a three-character currency code that is aligned with the OANDA currency code. If different codes are used for these attributes, there will be a 100-percent mismatch. However, in some cases, only a subset of the data has a formatting mismatch (as shown in the screenshot). This mismatch can be caused by errors that are introduced by some payment types or interface differences (web interface versus mobile app interface). Regardless, it's important that you understand the root cause of these formatting issues and fix them before you generate a risk diagnostic report.
@@ -190,7 +193,9 @@ The following screenshot shows the top section of the risk diagnostic report. Th
 
 ![Data flow](media/promocode-images/pp-risk-report.png)
 
-The next section of the report is named **Distribution of transactions by risk score**. Low scores represent lower-risk transactions. Therefore, in the chart, you should always expect to see a "left-heavy," long-tail distribution, **not** a bell-curve or "right-heavy" distribution. A left-heavy distribution indicates that most of your transactions are low-risk and therefore will be recommended for approval by Fraud Protection. As the risk scores increase along the x-axis, you should expect to see fewer and fewer transactions in the score bins. If the chart shows a very different type of distribution, contact Microsoft.
+The next section of the report is named **Distribution of transactions by risk score**. Low scores represent lower-risk transactions. You should always expect to see a "left-heavy," long-tail distribution; **not** a bell-curve or "right-heavy" distribution in the chart. A left-heavy distribution indicates that most of your transactions are low-risk and therefore will be recommended for approval by Fraud Protection. 
+
+As the risk scores increase along the x-axis, you should expect to see fewer and fewer transactions in the score bins. If the chart shows a very different type of distribution, contact Microsoft.
 
 This section provides the following information:
 
@@ -270,7 +275,7 @@ To acquire the tokens that are required to call the APIs, use Fraud Protection t
     -	**Environment** – Select the production endpoint.
     -	**Authentication method** – Select whether a certificate or a secret (password protected) is used for authentication.
     -	If you select **Certificate**, select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
--	If you select **Secret**, a password is generated for you after the app is created.
+    -	If you select **Secret**, a password is generated for you after the app is created.
 
 4.	When you've finished filling in the fields, select **Create application**.
  	The confirmation page summarizes the app's name and ID, and either the certificate thumbprint or the secret, depending on the authentication method that you selected.
@@ -366,6 +371,7 @@ For more information about access tokens, see the following Azure documentation:
 
 2.	Generate an event-based payload. Fill in the event data with the relevant information from your system. For information about supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 3.	Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint. (The API endpoint is the URI for your environment and appears on the **Account information** tile on the Fraud Protection dashboard.)
+
 For more information about APIs, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection).
 
 ## Step 4: Understand purchase events
@@ -385,7 +391,7 @@ This section uses support tool and graph explorer scenarios to increase your fam
 -	[Block a user in the support tool](promocode-set-up-purchase-protection#block-a-customer-or-payment-instrument-in-the-support-tool)
 -	[Unblock a customer or payment instrument in the support tool](promocode-set-up-purchase-protection#unblock-a-customer-or-payment-instrument-in-the-support-tool)
 -	[Search for a user in the graph explorer](promocode-set-up-purchase-protection#search-for-a-user-in-the-graph-explorer)
--	[Verify a purchase transaction in the graph explorer](fraud-protection/promocode-set-up-purchase-protection#verify-a-purchase-transaction-in-the-graph-explorer)
+-	[Verify a purchase transaction in the graph explorer](promocode-set-up-purchase-protection#verify-a-purchase-transaction-in-the-graph-explorer)
 
 For ease of explanation, screenshots in the description of each scenario are based on the demo data. When you load your own data into the system and use it to go through these scenarios, replace search fields with one of your customers or purchase transactions.
 
@@ -403,9 +409,9 @@ The Fraud Protection support tool lets your agents evaluate customer escalations
 
 By default, the **Accounts** tab is selected. It shows the following information:
 
-    -	The **Account summary** section (labeled "Box 1" in the previous screenshot) summarizes the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. Scroll down the list to view more information. When your own data is loaded into the support tool, look for activities that might fall outside typical patterns, such as a recent spike in spending, or an unusual number of transactions or chargebacks. This section also indicates whether the user is on a safe list, block list, or watch list.
-    -	The **Payment instruments** section (labeled "Box 2" lists any payment instruments that have been associated with the account. It also indicates whether the payment instruments are on a safe list, block list, or watch list.
-    -	The **Activity log** section (labeled "Box 3") logs user and payment instrument activity, such as when they are added to or removed from a list.
+  -	The **Account summary** section (labeled "Box 1" in the previous screenshot) summarizes the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. Scroll down the list to view more information. When your own data is loaded into the support tool, look for activities that might fall outside typical patterns, such as a recent spike in spending, or an unusual number of transactions or chargebacks. This section also indicates whether the user is on a safe list, block list, or watch list.
+  -	The **Payment instruments** section (labeled "Box 2" lists any payment instruments that have been associated with the account. It also indicates whether the payment instruments are on a safe list, block list, or watch list.
+  -	The **Activity log** section (labeled "Box 3") logs user and payment instrument activity, such as when they are added to or removed from a list.
 
 3.	Select the **Transactions** tab, and then, in the **Transaction > history** section, select the last transaction in the list.
  	
@@ -423,7 +429,7 @@ By default, the **Accounts** tab is selected. It shows the following information
  	
 ![Data flow](media/promocode-images/pp-details-tab.png)
 
-    The last two sections on the **Details** tab are named **Device information** and **IP information**.
+The last two sections on the **Details** tab are named **Device information** and **IP information**.
 
     -	The **Device information** section shows information that was captured by Device Fingerprinting. If Fraud Protection Device Fingerprinting isn't implemented (for example, in the case of historical data), this section will remain blank.
     -	In the *IP information* section, the *IP address *is the physical location where the purchase was made.
@@ -504,6 +510,9 @@ The information and the linkages in the graph can be used for activities such as
  	
 3.	Select the **Product** node to show details about the purchase.
 4.	A pane on the right of the **Graph explorer** page shows details about the purchase.
+
+![Data flow](media/promocode-images/pp-graph-explorer.png)
+
 
     The **Product Node** pane on the right of the **Graph explorer** page displays details of the purchase.
 
