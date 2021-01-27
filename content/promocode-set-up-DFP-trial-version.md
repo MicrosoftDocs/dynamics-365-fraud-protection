@@ -68,7 +68,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 9.	After setup is completed, the **Congratulations** screen appears.
 10.	Select **Continue**.
 11.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.
-12.	The Fraud Protection portal is opened.
+12.	The Fraud Protection portal opens.
 
 ![Data flow](media/promocode-images/DFP-Portal.png)
 
