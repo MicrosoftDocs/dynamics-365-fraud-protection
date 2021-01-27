@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to manage loss prevention with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/25/2021
+ms.date: 01/27/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -22,11 +22,11 @@ The loss prevention capability in Microsoft Dynamics 365 Fraud Protection (Fraud
 
 The loss prevention capability is designed to help loss prevention analysts, store managers, and loss prevention investigators identify fraudulent activity that typically involves discounts, returns, price overrides, voided transactions, gift card redemption, and so on, that employees improperly apply on point of sale (POS) terminals.
 
-(image)
+![Data flow](media/promocode-images/DFP-LP1.png)
 
 Loss prevention is based on anomaly detection that looks for patterns in POS data that is ingested into the system. It identifies outliers through unsupervised machine learning (ML), and provides a list of anomalous terminals, anomalous actors, and anomalous products. Store managers, loss prevention analysts, and loss prevention fraud investigators can then use this list to focus on specific areas that might represent fraud.
 
-(image)
+![Data flow](media/promocode-images/DFP-LP2.png)
 
 Loss prevention can help you drive down the cost and complexity that are associated with the process of taking huge amounts of data, analyzing it for fraud patterns, and gaining actionable insights from it. Therefore, you can quickly identify your areas of risk, such as the store, terminal, shift, and/or which employee that might be misusing your return and discount policies.
 
@@ -34,9 +34,9 @@ Loss prevention can help you drive down the cost and complexity that are associa
 
 The purpose of this document is to guide you through the following activities:
 
-1.	Prepare your historical data. This activity is also known as *data mapping*.
-2.	Upload data and generate a loss prevention report.
-3.	Analyze data in a loss prevention report.
+- [Step 1: Prepare your historical data](). This activity is also known as *data mapping*.
+- [Step 2: Upload data and generate a loss prevention report]().
+- [Step 3: Analyze data in a loss prevention report]().
 
 After you complete these steps in your own system by using your own data, you will have: an actionable loss prevention report. You will also be able to run loss prevention reports on a regular basis.
 
@@ -44,7 +44,7 @@ After you complete these steps in your own system by using your own data, you wi
 
 Before you begin the tasks in this document, you must:
 
--	Set up Fraud Protection in an AAD tenant, as described in Set up a trial version of Fraud Protection.
+-	Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Fraud Protection.]()
 
 ## Step 1: Prepare your historical data (data mapping)
 
@@ -64,7 +64,6 @@ Use this schema guidance to produce files in comma-separated values (CSV) format
   
 -	The decimal precision is two decimal places.
 -	The following characters are escaped in all columns: commas, new line characters, and multiline characters.
--	Any field that has a **"NOT NULL"** constraint is mandatory. All other fields are optional.
 
 ### Required data entities for data mapping
 
@@ -105,7 +104,7 @@ There are two ways to upload historical data into Fraud Protection for loss prev
 
 Use the data connection method that is appropriate for your situation.
 
-(image)
+![Data flow](media/promocode-images/data-connection.png)
 
 To connect loss prevention to Commerce, you must complete a series of one-time setup activities. After these activities are completed, you can easily disconnect and reconnect the systems.
 
@@ -121,6 +120,9 @@ Before you connect your retail data to Fraud Protection, make sure that you have
 2.	On the **System parameters** page, select the **Data connection** tab.
 3.	Set the **Enable Data Lake integration** option to **Yes**.
 4.	Save the details of the data lake (the value of the** DNS name** field). You will need this information to reconnect if the data lake integration is ever disconnected.
+
+![Data flow](media/promocode-images/commerce-data-connection.png)
+
 5.	Return to the dashboard and enter **Entity Store** in the search field at the top of the page.
 
     (An entity store is a collection of tables/view that have retail data in raw or aggregate form.)
@@ -130,7 +132,7 @@ Before you connect your retail data to Fraud Protection, make sure that you have
 
     Automatic refresh incrementally adds the most recent data from POS devices to the retail data lake.
 
-(image)
+![Data flow](media/promocode-images/Commerce-refresh.png)
 
 8.	Return to the dashboard and select the **Feature management** tile.
 9.	In the **Feature management** workspace, find the **Dynamics 365 Fraud Protection (DFP) Loss Prevention** feature, and enable it.
@@ -148,7 +150,7 @@ Before you connect your retail data to Fraud Protection, make sure that you have
 	
     In the following screenshot, the connection was successful, and the process of syncing to acquire data from Commerce and generate a loss prevention report has started.
 
-(image)
+![Data flow](media/promocode-images/lp-connect-sync.png)
 
 ### Disconnect from and reconnect to Commerce
 
@@ -173,7 +175,7 @@ When the connection is successful, the process of syncing to acquire the data an
 
 When you sign in to your Fraud Protection portal, if **Loss prevention** appears in the left navigation pane, the loss prevention capability is enabled.
 
-(image)
+![Data flow](media/promocode-images/DFP-Portal.png)
 
 1.	Select **Loss prevention**, and then select the **Data** tab.
 2.	Select **Upload** for a manual data upload.
@@ -221,11 +223,9 @@ When Fraud Protection has a data source, you can generate loss prevention report
     -	The **Anomalous staff count by month and score bin** and Anomalous terminals count by month and score bin** charts (labeled "5") show anomalous staff and terminal count distribution per month during the month range that you selected in the **Month range** fields at the top of the page.
     -	In the **Risk score range** fields at the top of the page (labeled "6"), you can set the risk score range. To view the full range of risk score distribution, set the "from" value to 0 (zero) and the "to" value to **999**.
 
-(image)
+![Data flow](media/promocode-images/lp-revenue-opp.png)
 
-4.	To drill deeper into possible fraudulent activities, adjust the values of the **Risk score rang**e fields so that they span only a high score range (**900** through **999** in the following screenshot).
-
-(image)
+4.	To drill deeper into possible fraudulent activities, adjust the values of the **Risk score rang**e fields so that they span only a high score range, for example, **900** through **999**.
 
 5.	Scroll down the report to the **Staff** tab. Here, the data set is sorted to show the staff, based on the risk score that the models have generated. Review the following information:
 
@@ -233,7 +233,7 @@ When Fraud Protection has a data source, you can generate loss prevention report
     -	In the search field in the **Top risk staff** section (labeled "8"), you can enter a staff ID to search for data that is related to a specific staff member.
     -	The grid in the **Top risk staff** section (labeled "9") lists all staff IDs that the model has analyzed. The list is sorted in descending order of risk score (that is, the highest-risk staff member appears at the top of the list). The grid also shows the average score for each staff member and the number of times that each staff member was deemed anomalous during the full data period that was assessed for the report. For example, if 12 months' worth of data was used to generate the report, a **Score count** value of **3** for a staff member indicates that the staff member was deemed anomalous for three of the 12 months. By selecting a staff ID, you can drill down to get more details about a specific staff member. More information about the drill-down report is provided later in this document.
 
-(image)
+![Data flow](media/promocode-images/lp-staff.png)
 
 6.	To see similar information based on terminal data, select the **Terminals** tab.
 7.	Review the following information:
@@ -242,7 +242,7 @@ When Fraud Protection has a data source, you can generate loss prevention report
     -	In the search field in the **Top risk terminals** section (labeled "11"), you can enter a terminal ID to search for data that is related to a specific terminal.
     -	The grid in the **Top risk terminals** section (labeled "12") lists all terminal IDs. The highest-risk terminal appears at the top of the list. The grid also shows the average score for each terminal and the number of times that each terminal was deemed anomalous during the full data period that was assessed for the report.
 
-(image)
+![Data flow](media/promocode-images/lp-terminals.png)
 
 8.	If you're interested in a specific terminal in the list, select the terminal ID to drill down into the details.
 9.	Review the following information:
@@ -251,13 +251,11 @@ When Fraud Protection has a data source, you can generate loss prevention report
     -	In the **Risk score range** fields (labeled "14"), you can set the risk score range. To drill deeper into possible fraudulent activities, keep the score range high.
     -	The **Terminal's risk score summary** section (labeled "15") provides a quick summary. It shows the maximum score, the average score, and the number of times that this specific store or terminal has been anomalous.
 
-(image)
+![Data flow](media/promocode-images/lp-months-range.png)
 
 If you want to better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
     
 When you hover over a specific data point in the chart, the terminal's risk score and the average risk score of the whole population are shown. In the following example, the sawtooth pattern is a good representation of the fact that this terminal has been moving back and forth in terms of anomalous behavior.
-
-(image)
 
 The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
 
@@ -267,7 +265,7 @@ The model uses five or six default events to generate the risk score. It conside
     -	In the **Reason** field in the **Reason details** section (labeled "17"), you can select any of the five reasons from the **All reasons affecting the score by percentile** grid to further analyze the impact of that reason on the risk score.
     -	The chart in the **Reason details** section (labeled "18") shows the value by month for the reason or event that you selected in the **Reason** field.
 
-(image)
+![Data flow](media/promocode-images/lp-reasons.png)
 
 11.	If you scroll down more, the **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months:
 
@@ -284,6 +282,6 @@ Congratulations! You've successfully completed the training and are ready to use
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
--	Protect customer accounts with Fraud Protection
--	Protect customer purchases with Fraud Protection
+-	[Protect customer accounts with Fraud Protection]()
+-	[Protect customer purchases with Fraud Protection]()
 
