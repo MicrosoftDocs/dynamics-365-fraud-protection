@@ -395,7 +395,7 @@ The Fraud Protection support tool lets your agents evaluate customer escalations
  	
  	There are two tabs in the search results. One tab contains information about accounts, and the other contains information about transactions that are associated with the accounts.
 
-![Data flow](media/promocode-images/ )
+![Data flow](media/promocode-images/pp-account-tab.png)
 
 By default, the **Accounts** tab is selected. It shows the following information:
 
@@ -417,23 +417,22 @@ By default, the **Accounts** tab is selected. It shows the following information
  	
  	The next two sections on the **Details** tab are named **Shipping information** and **Payment information** (labeled "Box 6"). They show the shipping-related and billing-related information that were used when the purchase event occurred.
  	
-(im![Data flow](media/promocode-images/ )
-
+(![Data flow](media/promocode-images/pp-details-tab.png)
 
 The last two sections on the **Details** tab are named **Device information** and **IP information**.
 
 -	The **Device information** section shows information that was captured by Device Fingerprinting. If Fraud Protection Device Fingerprinting isn't implemented (for example, in the case of historical data), this section will remain blank.
 -	In the *IP information* section, the *IP address *is the physical location where the purchase was made.
 
-![Data flow](media/promocode-images/ )
+![Data flow](media/promocode-images/pp-box5.png)
 
 -	The **Line items** tab (labeled "Box 7" in the following screenshot) itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
 
-![Data flow](media/promocode-images/ )
+![Data flow](media/promocode-images/pp-line-items.png)
 
 -	On the **Map** tab (labeled "Box 8" in the following screenshot), the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
-![Data flow](media/promocode-images/ )
+![Data flow](media/promocode-images/pp-map.png)
 
 For more information about how to use the support tool, see [Support your customers with Fraud Protection]( https://docs.microsoft.com/dynamics365/fraud-protection/risk-support).
 
@@ -441,7 +440,7 @@ For more information about how to use the support tool, see [Support your custom
 
 On the Accounts tab, you can add a user to the Accounts summary section and the associated payment instruments to the Payment instruments section (highlighted in the screenshot below).
 
-![Data flow](media/promocode-images/ )
+![Data flow](media/promocode-images/pp-account-summary.png)
 
 #### Use lists and rules to drive actions
 
@@ -513,5 +512,5 @@ Congratulations! You have successfully completed the training and are ready to u
 For information about how to access and use Fraud Protection's features, see the following documents:
 
 -	[Protect customer accounts with Fraud Protection]()
--	[Implement device fingerprinting()
--	[Manage loss prevention with Fraud Protection()
+-	[Implement device fingerprinting]()
+-	[Manage loss prevention with Fraud Protection]()
