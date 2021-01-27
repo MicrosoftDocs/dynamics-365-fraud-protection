@@ -32,11 +32,11 @@ After you configure real-time API calls with Fraud Protection, transaction data 
 
 This document guides you through the following activities:
 
-1.	Upload historical data, generate Diagnose reports, and view sample reports.
-2.	[Interpret diagnose data in diagnostic and risk reports]().
-3.	[Integrate purchase protection APIs]().
-4.	[Understand purchase events]().
-5.	[Use common support tool and graph explorer scenarios]().
+- [Step 1: Upload historical data, generate Diagnose reports, and view sample reports.](promocode-set-up-purchase-protection#step1-upload-historical-data-generate-diagnose-reports-and-view-sample-reports)
+- [Step 2: Interpret diagnose data in diagnostic and risk reports](promocode-set-up-purchase-protection#step-2-interpret-diagnose-data-in-diagnostic-and-risk-reports).
+- [Step 3: Integrate purchase protection APIs](promocode-set-up-purchase-protection#step-3-integrate-purchase-protection-apis).
+- [Step 4: Understand purchase events](promocode-set-up-purchase-protection#step-4-understand-purchase-events).
+- [Step 5: Use common support tool and graph explorer scenarios](promocode-set-up-purchase-protection#step-5-use-common-support-tool-and-graph-explorer-scenarios).
 
 After you complete these activities, you will be able to use the Fraud Protection tools and reports with your own data to develop a better understanding of your own risk posture.
 
@@ -119,6 +119,8 @@ The data diagnostic report contains a detailed visual breakdown of your historic
 Before you can generate your risk diagnostic report, the key metrics of your data must reach a minimum quality threshold. If the quality of the data is too low to allow for accurate evaluation, we recommend that you try to fill in those gaps before you generate the risk diagnostic report.
 
 You can download the data diagnostic report from the tool as a PDF file, and then share it with a broader audience or do offline analysis.
+
+![Data flow](media/promocode-images/pp-summary.png)
 
 
 ### Data diagnostic report – Details
@@ -203,23 +205,23 @@ The next section of the report is named **Model performance**. It shows how the 
 -	You can use the slider above the chart (labeled "20" in the following screenshot) to select the risk score threshold that you want to analyze. Any transaction where the score is more than the threshold will be recommended for rejection.
 -	The chart (labeled "21") represents the receiver operating characteristic (ROC) curve. It shows the percentage of rejected transactions that have chargebacks (y-axis) versus the percentage of rejected legitimate transactions, also known as false positives (x-axis). This data is charted by transaction count on the left and transaction value on the right. The chart will always be a curve. However, notice how steeply the curve climbs, because the steepness indicates a high rate of fraud detection that involves a low number of false positives, which is the ultimate outcome. In an ideal scenario, you will observe a false positive rate of 1 percent. However, the actual rate depends on the cost of the loss of one item. Here is an example:
 
--	You're protecting a product that sells for $1,000, and your profit margin is $250.
--	The cost of allowing a fraudulent transaction is $1,000 if you, as the merchant, are liable for fraud (as is often the case for online "card not present" transactions).
--	The cost of a false positive is only $250.
--	If you make 100 sales of the product, and there is no fraud, you make $100,000 in revenue and $25,000 in profit.
--	If your fraud rate is 10 percent or 10 transactions, you make $90,000 in revenue, but your profit drops to $15,000, because the fraud has increased your cost of goods sold (COGS) by the amount that you lost.
--	If stopping 70 percent of the fraud comes at the cost of stopping 1 percent of the good transactions, you end up with only three fraudulent transactions and 99 sales, or $99,000 in revenue and $21,750 in profit.
--	If stopping 100 percent of the fraud comes at the cost of stopping 15 percent of the good transactions, you end up with no fraudulent transactions and 85 sales, or $85,000 in revenue and $21,250 in profit.
--	Therefore, in this example, it's more profitable to allow a small amount of fraud to capture more good customer transactions.
+    -	You're protecting a product that sells for $1,000, and your profit margin is $250.
+    -	The cost of allowing a fraudulent transaction is $1,000 if you, as the merchant, are liable for fraud (as is often the case for online "card not present" transactions).
+    -	The cost of a false positive is only $250.
+    -	If you make 100 sales of the product, and there is no fraud, you make $100,000 in revenue and $25,000 in profit.
+    -	If your fraud rate is 10 percent or 10 transactions, you make $90,000 in revenue, but your profit drops to $15,000, because the fraud has increased your cost of goods sold (COGS) by the amount that you lost.
+    -	If stopping 70 percent of the fraud comes at the cost of stopping 1 percent of the good transactions, you end up with only three fraudulent transactions and 99 sales, or $99,000 in revenue and $21,750 in profit.
+    -	If stopping 100 percent of the fraud comes at the cost of stopping 15 percent of the good transactions, you end up with no fraudulent transactions and 85 sales, or $85,000 in revenue and $21,250 in profit.
+    -	Therefore, in this example, it's more profitable to allow a small amount of fraud to capture more good customer transactions.
 
  	> [!NOTE]
  	> These curves are generated from a historical analysis. When real-time assessment is introduced, the fraud detection rate (y-axis) will significantly improve.
 
--	The section below the chart (labeled "22") shows the outcome of the > selected threshold. It shows the number and value of fraudulent > transactions that would have been rejected (known as true > positives) versus the total number and value of reported > fraudulent transactions. It also shows the ratio of the number and > value of good transactions that were accepted (known as true > negatives) to the total number and value of good transactions. > When you're interpreting the data, if there is high variability in > the product prices, the transaction amount curve can be more > valuable to your analysis. Also, if the **Transaction value >** chart is higher than the **Transaction count** chart, there is a > higher detection rate for high-value transactions. This result is > good because those transactions can often incur the highest > losses. If the **Transaction count** chart is higher than the **> Transaction value** chart, there is a higher detection rate for > lower-value transactions. This result can be good if there are > very high volumes of low-value transactions.
+-	The section below the chart (labeled “22”) shows the outcome of the selected threshold. It shows the number and value of fraudulent transactions that would have been rejected (known as true positives) versus the total number and value of reported fraudulent transactions. It also shows the ratio of the number and value of good transactions that were accepted (known as true negatives) to the total number and value of good transactions. When you’re interpreting the data, if there is high variability in the product prices, the transaction amount curve can be more valuable to your analysis. Also, if the **Transaction value** chart is higher than the **Transaction count** chart, there is a higher detection rate for high-value transactions. This result is good because those transactions can often incur the highest losses. If the **Transaction count** chart is higher than the **Transaction value** chart, there is a higher detection rate for lower-value transactions. This result can be good if there are very high volumes of low-value transactions.
 
 ![Data flow](media/promocode-images/pp-risk-transactions2.png)
 
--	At the bottom of the report, the **Top 5 risk factors** section > (labeled "23 in the following screenshot) shows the top-five risk > factors for the selected percentage of your transactions that have > the highest risk score. In the example that is shown, out of > 1 percent of the riskiest transactions (that is, the transactions > that have the highest risk scores, as assessed by Fraud > Protection), 20 percent had a suspicious device Internet Protocol > (IP) address, and 18.2 percent had a risky prepaid card. This > section of the report is helpful because, by indicating which data > attributes are showing the highest risk of being fraudulent, it > can show where you should focus your fraud detection efforts.
+-	At the bottom of the report, the **Top 5 risk factors** section (labeled “23 in the following screenshot) shows the top-five risk factors for the selected percentage of your transactions that have the highest risk score. In the example that is shown, out of 1 percent of the riskiest transactions (that is, the transactions that have the highest risk scores, as assessed by Fraud Protection), 20 percent had a suspicious device Internet Protocol (IP) address, and 18.2 percent had a risky prepaid card. This section of the report is helpful because, by indicating which data attributes are showing the highest risk of being fraudulent, it can show where you should focus your fraud detection efforts.
 
 ![Data flow](media/promocode-images/pp-top5.png)
 
@@ -262,12 +264,12 @@ To acquire the tokens that are required to call the APIs, use Fraud Protection t
 2.	On the **API management** page, select **Configuration**.
 3.	Select **Creating applications**, and then fill in the fields to create your app.
 
- 	The following fields are required:
+    The following fields are required:
 
--	**Application display name** – Enter a descriptive name for your app. The maximum length is 93 characters.
--	**Environment** – Select the production endpoint.
--	**Authentication method** – Select whether a certificate or a secret (password protected) is used for authentication.
--	If you select **Certificate**, select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
+    -	**Application display name** – Enter a descriptive name for your app. The maximum length is 93 characters.
+    -	**Environment** – Select the production endpoint.
+    -	**Authentication method** – Select whether a certificate or a secret (password protected) is used for authentication.
+    -	If you select **Certificate**, select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
 -	If you select **Secret**, a password is generated for you after the app is created.
 
 4.	When you've finished filling in the fields, select **Create application**.
@@ -378,11 +380,13 @@ For information about the required and optional fields, and their definitions, s
 ## Step 5: Use common support tool and graph explorer scenarios
 
 This section uses support tool and graph explorer scenarios to increase your familiarity with the following features:
--	Search for a user in the support tool
--	Block a user in the support tool
--	Unblock a customer or payment instrument in the support tool
--	Search for a user in the graph explorer
--	Verify a purchase transaction in the graph explorer
+
+-	[Search for a user in the support tool](promocode-set-up-purchase-protection#search-for-a-user-in-the-support-tool)
+-	[Block a user in the support tool](promocode-set-up-purchase-protection#block-a-customer-or-payment-instrument-in-the-support-tool)
+-	[Unblock a customer or payment instrument in the support tool](promocode-set-up-purchase-protection#unblock-a-customer-or-payment-instrument-in-the-support-tool)
+-	[Search for a user in the graph explorer](promocode-set-up-purchase-protection#search-for-a-user-in-the-graph-explorer)
+-	[Verify a purchase transaction in the graph explorer](fraud-protection/promocode-set-up-purchase-protection#verify-a-purchase-transaction-in-the-graph-explorer)
+
 For ease of explanation, screenshots in the description of each scenario are based on the demo data. When you load your own data into the system and use it to go through these scenarios, replace search fields with one of your customers or purchase transactions.
 
 ### Search for a user in the support tool
@@ -399,46 +403,46 @@ The Fraud Protection support tool lets your agents evaluate customer escalations
 
 By default, the **Accounts** tab is selected. It shows the following information:
 
--	The **Account summary** section (labeled "Box 1" in the previous screenshot) summarizes the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. Scroll down the list to view more information. When your own data is loaded into the support tool, look for activities that might fall outside typical patterns, such as a recent spike in spending, or an unusual number of transactions or chargebacks. This section also indicates whether the user is on a safe list, block list, or watch list.
--	The **Payment instruments** section (labeled "Box 2" lists any payment instruments that have been associated with the account. It also indicates whether the payment instruments are on a safe list, block list, or watch list.
--	The **Activity log** section (labeled "Box 3") logs user and payment instrument activity, such as when they are added to or removed from a list.
+    -	The **Account summary** section (labeled "Box 1" in the previous screenshot) summarizes the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. Scroll down the list to view more information. When your own data is loaded into the support tool, look for activities that might fall outside typical patterns, such as a recent spike in spending, or an unusual number of transactions or chargebacks. This section also indicates whether the user is on a safe list, block list, or watch list.
+    -	The **Payment instruments** section (labeled "Box 2" lists any payment instruments that have been associated with the account. It also indicates whether the payment instruments are on a safe list, block list, or watch list.
+    -	The **Activity log** section (labeled "Box 3") logs user and payment instrument activity, such as when they are added to or removed from a list.
 
-1.	Select the **Transactions** tab, and then, in the **Transaction > history** section, select the last transaction in the list.
+3.	Select the **Transactions** tab, and then, in the **Transaction > history** section, select the last transaction in the list.
  	
- 	The **Transactions** tab shows the following information:
+    The **Transactions** tab shows the following information:
  	
--	The **Transaction history** section (labeled "Box 4" in the following screenshot) lists individual transactions and highlights their key properties.
--	By default, the **Details** tab is selected. It shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address.
+    -	The **Transaction history** section (labeled "Box 4" in the following screenshot) lists individual transactions and highlights their key properties.
+    -	By default, the **Details** tab is selected. It shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address.
  	
- 	The first two sections on this tab are named **Purchase information** and **Risk information** (labeled "Box 5").
+    The first two sections on this tab are named **Purchase information** and **Risk information** (labeled "Box 5").
  	
--	The **Purchase information** section shows purchase-related data, such as the date and time of the transaction, the transaction number, the bank status, and the purchase status. Note that the transaction number is an ID that you will create and send to Fraud Protection. The ID format isn't specified by Fraud Protection. It can be in any format that you prefer, such as a GUID or string.
--	The **Risk information** section shows several important pieces of information that are related to the transaction, such as its risk score, the merchant decision, and the decision reason. The merchant decision that is shown is based on the rules stack that is configured by the merchant. Fraud Protection decision reasons are codes that help your customer support agents quickly identify the reason behind Fraud Protection's recommendation for the transaction, so that they can take appropriate action. During the trial phase, you receive only group-level codes. However, after you're in Protect mode, you will receive unique codes that provide reason information at a more granular level. For more information about Fraud Protection decision reasons, see the product documentation.
+    -	The **Purchase information** section shows purchase-related data, such as the date and time of the transaction, the transaction number, the bank status, and the purchase status. Note that the transaction number is an ID that you will create and send to Fraud Protection. The ID format isn't specified by Fraud Protection. It can be in any format that you prefer, such as a GUID or string.
+    -	The **Risk information** section shows several important pieces of information that are related to the transaction, such as its risk score, the merchant decision, and the decision reason. The merchant decision that is shown is based on the rules stack that is configured by the merchant. Fraud Protection decision reasons are codes that help your customer support agents quickly identify the reason behind Fraud Protection's recommendation for the transaction, so that they can take appropriate action. During the trial phase, you receive only group-level codes. However, after you're in Protect mode, you will receive unique codes that provide reason information at a more granular level. For more information about Fraud Protection decision reasons, see the product documentation.
  	
- 	The next two sections on the **Details** tab are named **Shipping information** and **Payment information** (labeled "Box 6"). They show the shipping-related and billing-related information that were used when the purchase event occurred.
+    The next two sections on the **Details** tab are named **Shipping information** and **Payment information** (labeled "Box 6"). They show the shipping-related and billing-related information that were used when the purchase event occurred.
  	
-(![Data flow](media/promocode-images/pp-details-tab.png)
+![Data flow](media/promocode-images/pp-details-tab.png)
 
-The last two sections on the **Details** tab are named **Device information** and **IP information**.
+    The last two sections on the **Details** tab are named **Device information** and **IP information**.
 
--	The **Device information** section shows information that was captured by Device Fingerprinting. If Fraud Protection Device Fingerprinting isn't implemented (for example, in the case of historical data), this section will remain blank.
--	In the *IP information* section, the *IP address *is the physical location where the purchase was made.
+    -	The **Device information** section shows information that was captured by Device Fingerprinting. If Fraud Protection Device Fingerprinting isn't implemented (for example, in the case of historical data), this section will remain blank.
+    -	In the *IP information* section, the *IP address *is the physical location where the purchase was made.
 
 ![Data flow](media/promocode-images/pp-box5.png)
 
--	The **Line items** tab (labeled "Box 7" in the following screenshot) itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
+    -	The **Line items** tab (labeled "Box 7" in the following screenshot) itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
 
 ![Data flow](media/promocode-images/pp-line-items.png)
 
--	On the **Map** tab (labeled "Box 8" in the following screenshot), the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
+    -	On the **Map** tab (labeled "Box 8" in the following screenshot), the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
 ![Data flow](media/promocode-images/pp-map.png)
 
-For more information about how to use the support tool, see [Support your customers with Fraud Protection]( https://docs.microsoft.com/dynamics365/fraud-protection/risk-support).
+    For more information about how to use the support tool, see [Support your customers with Fraud Protection]( https://docs.microsoft.com/dynamics365/fraud-protection/risk-support).
 
 ### Block a customer or payment instrument in the support tool
 
-On the Accounts tab, you can add a user to the Accounts summary section and the associated payment instruments to the Payment instruments section (highlighted in the screenshot below).
+On the **Accounts** tab, you can add a user to the Accounts summary section and the associated payment instruments to the Payment instruments section (highlighted in the screenshot below).
 
 ![Data flow](media/promocode-images/pp-account-summary.png)
 
@@ -457,7 +461,7 @@ In the support tool, you can easily modify the default safe, block, and watch li
 3.	In the **Expiry date** field, set a future expiry date.
 4.	Enter a comment, select **Submit**, and then select **Yes** to continue.
 
- 	A message in the **Activity log** section indicates that the user has been successfully blocked. Additionally, the text **On block list** and the block period appear to the right of the user's email address.
+    A message in the **Activity log** section indicates that the user has been successfully blocked. Additionally, the text **On block list** and the block period appear to the right of the user's email address.
 
 #### Block a payment instrument
 
@@ -476,7 +480,7 @@ You can block a payment instrument by following the same steps after you click t
 2.	Select **Remove from lists**.
 3.	Enter a comment, such as **Account rehabilitated**, select **Submit**, and then select **Yes** to continue.
 
- 	A message in the **Activity log** section indicates that the user has been successfully unblocked. Additionally, as the text **Not on a list** appears to the right of the user's email address.
+    A message in the **Activity log** section indicates that the user has been successfully unblocked. Additionally, as the text **Not on a list** appears to the right of the user's email address.
 
 ### Search for a user in the graph explorer
 
@@ -496,12 +500,12 @@ The information and the linkages in the graph can be used for activities such as
 1.	In the left navigation, select **Data, ** and then select **Graph explorer**.
 2.	In the drop-down list, select **Purchase.PurchaseID**, and then enter a valid purchase ID, such as **6000345**.
  	
- 	This purchase ID is for a purchase that Rohana made. As the following screenshot shows, a lot more information is available about Rohana's transaction than was available for Manu in the previous section.
+    This purchase ID is for a purchase that Rohana made. As the following screenshot shows, a lot more information is available about Rohana's transaction than was available for Manu in the previous section.
  	
 3.	Select the **Product** node to show details about the purchase.
 4.	A pane on the right of the **Graph explorer** page shows details about the purchase.
 
-The **Product Node** pane on the right of the **Graph explorer** page displays details of the purchase.
+    The **Product Node** pane on the right of the **Graph explorer** page displays details of the purchase.
 
 For more information about how to use the graph explorer, see [Visually explore data with the graph explorer]( https://docs.microsoft.com/dynamics365/fraud-protection/graph-explorer).
 
