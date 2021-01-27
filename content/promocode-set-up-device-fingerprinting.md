@@ -89,17 +89,12 @@ The system receives this information and adds it to the graph in near-real-time.
 
 Here are the six steps that you follow in Fraud Protection to deploy device fingerprinting in your system:
 
-- [Step 1: Map the customer's journey.]()
-
-- [Step 2: Identify where device fingerprinting calls should be placed.]()
-
-- [Step 3: Set up Azure DNS for device fingerprinting.]()
-
-- [Step 4: Add device fingerprinting calls to the pages that are being monitored.]()
-
-- [Step 5: Confirm that Fraud Protection is receiving fingerprint information.]()
-
-- [Step 6: Check for latency throughout the system.]()
+- [Step 1: Map the customer's journey.](promocode-set-up-device-fingerprinting.md#step-1-map-the-customers-journey)
+- [Step 2: Identify where device fingerprinting calls should be placed.](promocode-set-up-device-fingerprinting.md#step-2-identify-where-device-fingerprinting-calls-should-be-placed)
+- [Step 3: Set up Azure DNS for device fingerprinting.](promocode-set-up-device-fingerprinting.md#step-3-set-up-azure-dns-for-device-fingerprinting)
+- [Step 4: Add device fingerprinting calls to the pages that are being monitored.](promocode-set-up-device-fingerprinting.md#step-4-add-device-fingerprinting-calls-to-the-pages-that-are-being-monitored)
+- [Step 5: Confirm that Fraud Protection is receiving fingerprint information.](promocode-set-up-device-fingerprinting.md#step-5-confirm-that-fraud-protection-is-receiving-fingerprint-information)
+- [Step 6: Check for latency throughout the system.](promocode-set-up-device-fingerprinting.md#step-6-check-for-latency-throughout-the-system)
 
 ### Step 1: Map the customer's journey
 
