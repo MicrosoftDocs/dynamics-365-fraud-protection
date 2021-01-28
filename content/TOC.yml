@@ -145,5 +145,5 @@
   - name: Prevent loss
     href: promocode-set-up-loss-prevention.md
   - name: Implement device fingerprinting
-    href: compliance-and-security.md
+    href: promocode-set-up-device-fingerprinting.md
 
