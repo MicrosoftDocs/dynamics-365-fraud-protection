@@ -1,18 +1,18 @@
 ---
 author: yvonnedeq
-description: This topic describes how to set up device fingerprinting in Fraud Protection.
+description: This topic describes how to set up device fingerprinting in Fraud Protection to help reduce fraud.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/26/2021
+ms.date: 01/28/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Implement device fingerprinting
+title: Implement device fingerprinting to help reduce fraud
 ---
 
-# Implement device fingerprinting
+# Implement device fingerprinting to help reduce fraud
 
 ## Overview
 
