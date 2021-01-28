@@ -134,16 +134,16 @@
   href: protect-experience.md
 - name: Set-up Fraud Protection to protect your business
   items: 
-  - name: Set up a trial version
+  - name: Set up a trial version of Fraud Protection
     href: promocode-set-up-DFP-trial-version.md
-  - name: Set up a purchased version
+  - name: Set up a purchased version of Fraud Protection
     href: promocode-set-up-DFP-purchased-version.md
-  - name: Protect customer accounts
+  - name: Protect customer accounts with Fraud Protection
     href: promocode-set-up-account-protection.md
-  - name: Protect purchases  
+  - name: Protect customer purchases with Fraud Protection
     href: promocode-set-up-purchase-protection.md
-  - name: Prevent loss
+  - name: Manage loss prevention with Fraud Protection
     href: promocode-set-up-loss-prevention.md
-  - name: Implement device fingerprinting
+  - name: Implement device fingerprinting to help reduce fraud
     href: promocode-set-up-device-fingerprinting.md
 
