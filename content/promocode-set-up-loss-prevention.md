@@ -34,9 +34,9 @@ Loss prevention can help you drive down the cost and complexity that are associa
 
 The purpose of this document is to guide you through the following activities:
 
-- [Step 1: Prepare your historical data](). This activity is also known as *data mapping*.
-- [Step 2: Upload data and generate a loss prevention report]().
-- [Step 3: Analyze data in a loss prevention report]().
+- [Step 1: Prepare your historical data](promocode-set-up-loss-prevention#step-1-prepare-your-historical-data-data-mapping). This activity is also known as *data mapping*.
+- [Step 2: Upload data and generate a loss prevention report](hpromocode-set-up-loss-prevention#step-2-upload-data-and-generate-a-loss-prevention-report).
+- [Step 3: Analyze data in a loss prevention report](promocode-set-up-loss-prevention#step-3-analyze-data-in-a-loss-prevention-report).
 
 After you complete these steps in your own system by using your own data, you will have: an actionable loss prevention report. You will also be able to run loss prevention reports on a regular basis.
 
@@ -50,7 +50,7 @@ Before you begin the tasks in this document, you must:
 
 When Fraud Protection assesses a transaction for potential purchase fraud, it uses a combination of AI, ML, and a data consortium. A vast amount of data powers the models that are used for assessment. Any data that is transmitted into the system for assessment or system learning must conform to a predefined schema. In the world of AI and ML, it's generally understood that the quality of the data that a model uses affects the quality of the results.
 
-*Data mapping* is a process that helps ensure that the correct values are assigned to the correct schema fields, and that your commerce system is correctly integrated with Fraud Protection.
+*Data mapping* is a process that helps ensure that the correct values are assigned to the correct schema fields, and that your commerce system is correctly integrated with Fraud Protection. For more information about schemas, see [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas). 
 
 ### Schema guidance for CSV files
 
@@ -61,6 +61,8 @@ Use this schema guidance to produce files in comma-separated values (CSV) format
 -	The **DateTime** columns are in International Organization for Standardization (ISO) 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
 -	The decimal precision is two decimal places.
 -	The following characters are escaped in all columns: commas, new line characters, and multiline characters.
+
+For more information about schemas you can use to generate models and determine risk assessments, see [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas). 
 
 ### Required data entities for data mapping
 
