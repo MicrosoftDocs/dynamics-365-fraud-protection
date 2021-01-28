@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to upload data for the loss prevention feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 12/10/2020
+ms.date: 01/28/2020
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -28,11 +28,60 @@ The historical data must be imported from four entities:
 
 ## Website upload
 
-You can upload your historical data from the **Data upload** page.
+You can upload your historical data from the **Loss prevention** tab of the **Data upload** page.
 
-To ensure that Fraud Protection can correctly interpret the files that you upload, make sure that the files meet the following requirements, and that they follow the [required schemas](https://go.microsoft.com/fwlink/?linkid=2131494):
+To ensure that Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](https://go.microsoft.com/fwlink/?linkid=2131494):
 
-- To find and submit your local files, select **Upload**. Every file must be uploaded before you process the data.
-- To generate a report after a successful data upload, select **Generate Reports**. 
-- To upload additional data or submit more files, select **Reupload**, and then process the new files. 
-- To remove data files, select **Delete**. 
+- The files are in CSV UTF-8 (comma-delimited) format (\*.csv).
+- The maximum file size is 10 gigabytes (GB).
+- **DateTime** columns are in International Organization for Standardization (ISO) 8601 format.
+- The decimal precision is two decimal places.
+- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
+
+**To browse and upload data files:**
+
+1. In the left navigation, select **Data**, and then select **Data upload**.
+1. On the **Data upload** page, on the **Loss prevention** tab, select **Select data source**.
+1. Select the file format type: **CSV** or **TSV**.
+1. If the file has no column headers, select the **This file doesn't include column headers** option.
+
+    The system will automatically assign default column headers.
+
+1. To begin data mapping, select **Next**, and then select the columns in your file that you want to map to each schema attribute.
+1. In the data preview pane at the bottom of the page, confirm that the mapping is correct.
+1. When all the attributes are mapped, select **Save and close** to return to the **Data upload** page.
+1. Select **Process data**.
+
+You can save an incomplete mapping and then return to the **Loss prevention** tab later to complete it.
+
+For related data types, such as purchase and account data, every file must be uploaded before you process the data.
+
+**To upload additional data files:**
+
+1. On the **Data upload** page, on the **Loss prevention** tab, select **Edit**.
+1. Select **Change data source** to upload more files.
+1. To apply the currently saved mapping to the newly uploaded file, select **Keep the current mapping**.
+1. After mapping is completed, select **Save and close**.
+1. On the **Data upload** page, select **Process data**.
+
+Data processing might take up to a few hours, depending on the size of the file. You can check the status of data processing for each data source. If data processing encounters data errors, processing will fail, and the data import will be incomplete. Review the error file details, and fix the data issue that is noted. After you've finished fixing the issues, re-upload the file, remap the attributes if remapping is required, and retry data processing.
+
+**To remove previously uploaded data files:**
+
+- On the **Data upload** page, on the **Loss prevention** tab, select the files to remove, and then select **Delete**.
+
+## API upload
+
+During the evaluate and protect experiences, data can also be ingested through the API. A score will be returned for data that you upload in this way. For a more comprehensive overview of this process, see [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
+
+## Download sample data
+
+Before you use your internal data, you can download sample data and use it to explore Fraud Protection options.
+
+**To download sample data:**
+
+- Select [Loss prevention sample data file](https://download.microsoft.com/download/3/1/6/316b5f40-287d-48a3-ab3c-bf4c7a171cfc/LP.zip).
+
+## Connect to Dynamics 365 Commerce
+
+In addition to uploading local files, you can connect to Dynamics 365 Commerce if this option is available to you. Note that when you connect to Commerce, all required data for Loss Prevention reports will automatically be imported and mapped. For more information, see [Loss prevention integration with Dynamics 365 Commerce](https://go.microsoft.com/fwlink/?linkid=2131495).

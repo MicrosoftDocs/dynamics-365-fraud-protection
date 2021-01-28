@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to integrate loss prevention with Microsoft Dynamics 365 Commerce.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 01/28/2020
 
 ms.topic: conceptual
 search.app: 
@@ -31,7 +31,7 @@ For information about how to turn on the Azure Data Lake Storage service for you
 
 ## Turn on the loss prevention feature in your Commerce environment
 
-Follow this step to turn on loss prevention integration.
+**To turn on loss prevention integration:**
 
 - Select **Feature management**, and then select **Dynamics 365 Fraud Protection (DFP) Loss Prevention**.
 
@@ -49,8 +49,10 @@ Next, you must add a service account by registering the application ID for Fraud
 The next step is to configure the settings so that the loss prevention capability can connect to Azure Data Lake Storage in the Commerce environment.
 
 1. Go to the [Fraud Protection](https://dfp.microsoft.com/) portal, and sign in.
-1. To connect to the Commerce environment, select **Connect to data**.
-1. In the **Connect to Dynamics 365 Commerce** dialog box, enter the URL of the Commerce environment.
+1. In the left navigation, select **Data**, and then select **Data upload**.
+1. On the **Data upload** page, on the **Loss prevention** tab, select **Select data source**.
+1. Select **Dynamics 365 Commerce** as the data source, and then enter the URL for your Commerce environment.
+1. Select **Connect**.
 
     The URL is stored in the Backend Configuration service for your Fraud Protection environment.
 
