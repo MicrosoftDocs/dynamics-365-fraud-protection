@@ -80,7 +80,7 @@ Before you use your internal data, you can download sample data and use it to ex
 
 **To download sample data:**
 
-- Select [Loss prevention sample data file](https://download.microsoft.com/download/3/1/6/316b5f40-287d-48a3-ab3c-bf4c7a171cfc/LP.zip).
+- Select [Loss prevention sample data file](https://download.microsoft.com/download/3/1/6/316b5f40-287d-48a3-ab3c-bf4c7a171cfc/LP1.zip).
 
 ## Connect to Dynamics 365 Commerce
 
