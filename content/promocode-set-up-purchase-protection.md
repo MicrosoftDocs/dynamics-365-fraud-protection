@@ -1,19 +1,19 @@
 ---
 author: yvonnedeq
-description: This topic describes how to protect customer purchases with Fraud Protection.
+description: This topic describes how to protect purchases with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/27/2021
+ms.date: 02/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Protect customer purchases with Fraud Protection
+title: Protect purchases with Fraud Protection
 ---
 
 
-# Protect customer purchases with Fraud Protection
+# Protect purchases with Fraud Protection
 
 ## Overview
 
@@ -515,7 +515,7 @@ The information and the linkages in the graph can be used for activities such as
 
 The **Product Node** pane on the right of the **Graph explorer** page displays details of the purchase.
 
-For more information about how to use the graph explorer, see [Visually explore data with the graph explorer]( https://docs.microsoft.com/dynamics365/fraud-protection/graph-explorer).
+For more information about how to use the graph explorer, see [Visually explore data with the graph explorer](https://docs.microsoft.com/dynamics365/fraud-protection/graph-explorer).
 
 Congratulations! You have successfully completed the training and are ready to use Fraud Protection's purchase protection capabilities.
 
@@ -523,6 +523,7 @@ Congratulations! You have successfully completed the training and are ready to u
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
--	[Protect customer accounts with Fraud Protection]()
--	[Implement device fingerprinting]()
--	[Manage loss prevention with Fraud Protection]()
+-	[Implement device fingerprinting](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-device-fingerprinting)
+-	[Protect customer accounts with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-account-protection)
+-	[Prevent loss with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-loss-prevention)
+
