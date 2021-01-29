@@ -32,11 +32,11 @@ After you configure real-time API calls with Fraud Protection, transaction data 
 
 This document guides you through the following activities:
 
-- [Step 1: Upload historical data, generate Diagnose reports, and view sample reports.](promocode-set-up-purchase-protection#step1-upload-historical-data-generate-diagnose-reports-and-view-sample-reports)
-- [Step 2: Interpret diagnose data in diagnostic and risk reports](promocode-set-up-purchase-protection#step-2-interpret-diagnose-data-in-diagnostic-and-risk-reports).
-- [Step 3: Integrate purchase protection APIs](promocode-set-up-purchase-protection#step-3-integrate-purchase-protection-apis).
-- [Step 4: Understand purchase events](promocode-set-up-purchase-protection#step-4-understand-purchase-events).
-- [Step 5: Use common support tool and graph explorer scenarios](promocode-set-up-purchase-protection#step-5-use-common-support-tool-and-graph-explorer-scenarios).
+- [Step 1: Upload historical data, generate Diagnose reports, and view sample reports.](promocode-set-up-purchase-protection.md#step1-upload-historical-data-generate-diagnose-reports-and-view-sample-reports)
+- [Step 2: Interpret diagnose data in diagnostic and risk reports](promocode-set-up-purchase-protection.md#step-2-interpret-diagnose-data-in-diagnostic-and-risk-reports).
+- [Step 3: Integrate purchase protection APIs](promocode-set-up-purchase-protection.md#step-3-integrate-purchase-protection-apis).
+- [Step 4: Understand purchase events](promocode-set-up-purchase-protection.md#step-4-understand-purchase-events).
+- [Step 5: Use common support tool and graph explorer scenarios](promocode-set-up-purchase-protection.md#step-5-use-common-support-tool-and-graph-explorer-scenarios).
 
 After you complete these activities, you will be able to use the Fraud Protection tools and reports with your own data to develop a better understanding of your own risk posture.
 
@@ -44,8 +44,8 @@ After you complete these activities, you will be able to use the Fraud Protectio
 
 Before you begin the activities in this document, you must complete the following tasks:
 
--	Set up Fraud Protection in an Azure Active Directory (Azure AD) tenant, as described in [Set up a trial version of Fraud Protection]().
--	[Implement device fingerprinting]().
+-	Set up Fraud Protection in an Azure Active Directory (Azure AD) tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
+-	[Implement device fingerprinting](promocode-set-up-device-fingerprinting.md).
 
 ## Step1: Upload historical data, generate Diagnose reports, and view sample reports
 
@@ -387,11 +387,11 @@ For information about the required and optional fields, and their definitions, s
 
 This section uses support tool and graph explorer scenarios to increase your familiarity with the following features:
 
--	[Search for a user in the support tool](promocode-set-up-purchase-protection#search-for-a-user-in-the-support-tool)
--	[Block a user in the support tool](promocode-set-up-purchase-protection#block-a-customer-or-payment-instrument-in-the-support-tool)
--	[Unblock a customer or payment instrument in the support tool](promocode-set-up-purchase-protection#unblock-a-customer-or-payment-instrument-in-the-support-tool)
--	[Search for a user in the graph explorer](promocode-set-up-purchase-protection#search-for-a-user-in-the-graph-explorer)
--	[Verify a purchase transaction in the graph explorer](promocode-set-up-purchase-protection#verify-a-purchase-transaction-in-the-graph-explorer)
+-	[Search for a user in the support tool](promocode-set-up-purchase-protection.md#search-for-a-user-in-the-support-tool)
+-	[Block a user in the support tool](promocode-set-up-purchase-protection.md#block-a-customer-or-payment-instrument-in-the-support-tool)
+-	[Unblock a customer or payment instrument in the support tool](promocode-set-up-purchase-protection.md#unblock-a-customer-or-payment-instrument-in-the-support-tool)
+-	[Search for a user in the graph explorer](promocode-set-up-purchase-protection.md#search-for-a-user-in-the-graph-explorer)
+-	[Verify a purchase transaction in the graph explorer](promocode-set-up-purchase-protection.md#verify-a-purchase-transaction-in-the-graph-explorer)
 
 For ease of explanation, screenshots in the description of each scenario are based on the demo data. When you load your own data into the system and use it to go through these scenarios, replace search fields with one of your customers or purchase transactions.
 
@@ -523,7 +523,8 @@ Congratulations! You have successfully completed the training and are ready to u
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
--	[Implement device fingerprinting](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-device-fingerprinting)
--	[Protect customer accounts with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-account-protection)
--	[Prevent loss with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-loss-prevention)
+- [Implement device fingerprinting](promocode-set-up-device-fingerprinting.md)
+- [Protect customer accounts with Fraud Protection](promocode-set-up-account-protection.md)
+- [Prevent loss with Fraud Protection](promocode-set-up-loss-prevention.md)
+
 
