@@ -51,7 +51,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 2.	Enter your email address, and then select **Next**. The domain name in the email address must match your existing Azure AD tenant.
 3.	After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**.
 
-  	The PromoCode and offer ID are automatically be entered on the page when you complete your setup.
+  	The PromoCode and offer ID are automatically entered on the page when you complete your setup.
 
 ![Data flow](media/promocode-images/get-started.png)
 
@@ -62,7 +62,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 
     You can't change the region after you've set it.
 
-8.	The setup process is started and might take up to 20 minutes to run. If you prefer, you can sign out and then return after installation is completed.
+8.	The setup process starts and might take up to 20 minutes to run. If you prefer, you can sign out and then return after installation is completed.
 9.	After setup is completed, the **Congratulations** screen appears.
 10.	Select **Continue**.
 11.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.
@@ -107,7 +107,9 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
 ![Data flow](media/promocode-images/sign-in.png)
 
-12. After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**. The PromoCode and offer ID is automatically entered on the page.
+12. After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**. 
+
+    The PromoCode and offer ID are automatically entered on the page.
   
 ![Data flow](media/promocode-images/get-started.png)
 
@@ -118,7 +120,7 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
     You can't change the region after you've set it.
     
-    The setup process is starts and might take up to 20 minutes to run. If you prefer, you can sign out and then return after installation is completed.
+    The setup process starts and might take up to 20 minutes to run. If you prefer, you can sign out and then return after installation is completed.
     
     After setup is completed, the **Congratulations** screen appears.
 
@@ -126,6 +128,8 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 18.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.
 
     The Fraud Protection portal opens.
+    
+![Data flow](media/promocode-images/DFP-Portal.png)
 
 Congratulations! You've successfully completed the setup process and are ready to use Fraud Protection to protect your business.
 
