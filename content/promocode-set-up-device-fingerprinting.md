@@ -1,18 +1,18 @@
 ---
 author: yvonnedeq
-description: This topic describes how to set up device fingerprinting in Fraud Protection to help reduce fraud.
+description: This topic describes how to set up device fingerprinting in Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/28/2021
+ms.date: 02/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Implement device fingerprinting to help reduce fraud
+title: Implement device fingerprinting
 ---
 
-# Implement device fingerprinting to help reduce fraud
+# Implement device fingerprinting
 
 ## Overview
 
@@ -226,6 +226,8 @@ Congratulations! You've successfully completed the training and are ready to use
 
 For information about how to access and use other Fraud Protection capabilities, see the following documents:
 
-- [Protect customer accounts with Fraud Protection]()
-- [Protect customer purchases with Fraud Protection]()
-- [Manage loss prevention with Fraud Protection]()
+-	[Protect customer accounts with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-account-protection)
+-	[Protect purchases with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
+-	[Prevent loss with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-loss-prevention)
+
+
