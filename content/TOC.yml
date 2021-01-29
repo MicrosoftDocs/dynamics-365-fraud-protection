@@ -138,12 +138,15 @@
     href: promocode-set-up-DFP-trial-version.md
   - name: Set up a purchased version of Fraud Protection
     href: promocode-set-up-DFP-purchased-version.md
+  - name: Configure user access
+    href: configure-user-access.md    
+  - name: Implement device fingerprinting
+    href: promocode-set-up-device-fingerprinting.md
   - name: Protect customer accounts with Fraud Protection
     href: promocode-set-up-account-protection.md
-  - name: Protect customer purchases with Fraud Protection
+  - name: Protect purchases with Fraud Protection
     href: promocode-set-up-purchase-protection.md
-  - name: Manage loss prevention with Fraud Protection
+  - name: Prevent loss with Fraud Protection
     href: promocode-set-up-loss-prevention.md
-  - name: Implement device fingerprinting to help reduce fraud
-    href: promocode-set-up-device-fingerprinting.md
+
 
