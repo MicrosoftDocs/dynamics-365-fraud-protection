@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to protect customer accounts with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/26/2021
+ms.date: 02/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -470,6 +470,7 @@ Congratulations! You have successfully completed the training and are ready to u
 
 For information about how to access and use other Fraud Protection capabilities, see the following documents:
 
--	[Protect customer purchases with Fraud Protection]()
--	[Implement device fingerprinting]()
--	[Manage loss prevention with Fraud Protection]()
+-	[Implement device fingerprinting]( https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-device-fingerprinting)
+-	[Protect purchases with Fraud Protection]( https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
+-	[Prevent loss with Fraud Protection]( https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-loss-prevention)
+
