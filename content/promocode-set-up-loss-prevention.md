@@ -44,7 +44,7 @@ After you complete these steps in your own system by using your own data, you wi
 
 Before you begin the tasks in this document, you must:
 
--	Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Fraud Protection.](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-dfp-trial-version)
+-	Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
 
 ## Step 1: Prepare your historical data (data mapping)
 
@@ -281,6 +281,7 @@ Congratulations! You've successfully completed the training and are ready to use
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
--	[Protect customer accounts with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-account-protection)
--	[Protect purchases with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
+- [Protect customer accounts with Fraud Protection](promocode-set-up-account-protection.md)
+- [Protect purchases with Fraud Protection](promocode-set-up-purchase-protection.md)
+
 
