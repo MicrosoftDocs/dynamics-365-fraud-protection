@@ -107,16 +107,14 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
 ![Data flow](media/promocode-images/sign-in.png)
 
-  After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**.
-  
-  The PromoCode and offer ID is automatically entered on the page.
+12. After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**. The PromoCode and offer ID is automatically entered on the page.
   
 ![Data flow](media/promocode-images/get-started.png)
 
-12.	Select **Get started**.
-13.	To review the Terms of Use, select **Microsoft Online Subscription Agreement**.
-14.	To accept the Terms of Use, select **I accept**.
-15.	In the **Geographic data storage region** field, select the region where you want to store your data, and then select **Next.** 
+13.	Select **Get started**.
+14.	To review the Terms of Use, select **Microsoft Online Subscription Agreement**.
+15.	To accept the Terms of Use, select **I accept**.
+16.	In the **Geographic data storage region** field, select the region where you want to store your data, and then select **Next.** 
 
     You can't change the region after you've set it.
     
@@ -124,8 +122,8 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
     
     After setup is completed, the **Congratulations** screen appears.
 
-16.	Select **Continue**.
-17.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.
+17.	Select **Continue**.
+18.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.
 
     The Fraud Protection portal opens.
 
