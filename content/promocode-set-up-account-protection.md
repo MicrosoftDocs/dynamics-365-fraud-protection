@@ -41,8 +41,8 @@ This document guides you through the following activities:
 
 Before you begin the activities in this document, you must complete the following tasks:
 
--	Set up Fraud Protection in an Azure AD tenant as described in [Set up a trial version of Fraud Protection]().
--	[Implement device fingerprinting]().
+-	Set up Fraud Protection in an Azure AD tenant as described in [Set up a trial version of Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-dfp-trial-version).
+-	[Implement device fingerprinting](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-device-fingerprinting).
 
 ## Step 1: Implement account protection APIs
 
