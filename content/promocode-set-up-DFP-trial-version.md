@@ -107,9 +107,9 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
 ![Data flow](media/promocode-images/sign-in.png)
 
-    After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**.
+  After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**.
   
-    The PromoCode and offer ID is automatically entered on the page.
+  The PromoCode and offer ID is automatically entered on the page.
   
 ![Data flow](media/promocode-images/get-started.png)
 
