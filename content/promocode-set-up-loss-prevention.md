@@ -35,7 +35,7 @@ Loss prevention can help you drive down the cost and complexity that are associa
 The purpose of this document is to guide you through the following activities:
 
 - [Step 1: Prepare your historical data](promocode-set-up-loss-prevention#step-1-prepare-your-historical-data-data-mapping). This activity is also known as *data mapping*.
-- [Step 2: Upload data and generate a loss prevention report](hpromocode-set-up-loss-prevention#step-2-upload-data-and-generate-a-loss-prevention-report).
+- [Step 2: Upload data and generate a loss prevention report](promocode-set-up-loss-prevention#step-2-upload-data-and-generate-a-loss-prevention-report).
 - [Step 3: Analyze data in a loss prevention report](promocode-set-up-loss-prevention#step-3-analyze-data-in-a-loss-prevention-report).
 
 After you complete these steps in your own system by using your own data, you will have: an actionable loss prevention report. You will also be able to run loss prevention reports on a regular basis.
@@ -44,7 +44,7 @@ After you complete these steps in your own system by using your own data, you wi
 
 Before you begin the tasks in this document, you must:
 
--	Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Fraud Protection.]()
+-	Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Fraud Protection.](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-dfp-trial-version)
 
 ## Step 1: Prepare your historical data (data mapping)
 
