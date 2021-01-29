@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to set up a trial version of Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/26/2021
+ms.date: 02/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -135,7 +135,6 @@ Congratulations! You've successfully completed the setup process and are ready t
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
-- [Protect customer accounts with Fraud Protection]()
-- [Protect customer purchases with Fraud Protection]()
-- [Manage loss prevention with Fraud Protection]()
-
+- [Protect customer accounts with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-account-protection)
+-	[Protect purchases with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
+-	[Prevent loss with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-loss-prevention)
