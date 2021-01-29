@@ -36,7 +36,7 @@ The purpose of this document is to help you complete the following steps in your
 
 ## Prerequisites
 
-Before you begin the tasks in this document, you must set up Fraud Protection in an Azure Active Directory (Azure AD) tenant, as described in [Set up a trial version of Fraud Protection](https://microsoft.sharepoint.com/:w:/t/DynDoc/EfPwl9fixxFMqGQS4HFNWD0BbK4Nqbs86YMozJ14nE_uPw?e=HfnVYC).
+Before you begin the tasks in this document, you must set up Fraud Protection in an Azure Active Directory (Azure AD) tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
 
 ## How device fingerprinting affects your business
 
@@ -226,8 +226,9 @@ Congratulations! You've successfully completed the training and are ready to use
 
 For information about how to access and use other Fraud Protection capabilities, see the following documents:
 
--	[Protect customer accounts with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-account-protection)
--	[Protect purchases with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
--	[Prevent loss with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-loss-prevention)
+- [Protect customer accounts with Fraud Protection](promocode-set-up-account-protection.md)
+- [Protect purchases with Fraud Protection](promocode-set-up-purchase-protection.md)
+- [Prevent loss with Fraud Protection](promocode-set-up-loss-prevention.md)
+
 
 
