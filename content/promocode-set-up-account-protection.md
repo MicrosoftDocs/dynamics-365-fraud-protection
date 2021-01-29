@@ -470,7 +470,7 @@ Congratulations! You have successfully completed the training and are ready to u
 
 For information about how to access and use other Fraud Protection capabilities, see the following documents:
 
--	[Implement device fingerprinting]( https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-device-fingerprinting)
--	[Protect purchases with Fraud Protection]( https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
--	[Prevent loss with Fraud Protection]( https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-loss-prevention)
+-	[Implement device fingerprinting](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-device-fingerprinting)
+-	[Protect purchases with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
+-	[Prevent loss with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/promocode-set-up-loss-prevention)
 
