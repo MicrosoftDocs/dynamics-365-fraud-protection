@@ -252,13 +252,13 @@ When Fraud Protection has a data source, you can generate loss prevention report
 
 ![Data flow](media/promocode-images/lp-months-range.png)
 
-If you want to better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
+10.	If you want to better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
     
-When you hover over a specific data point in the chart, the terminal's risk score and the average risk score of the whole population are shown. In the following example, the sawtooth pattern is a good representation of the fact that this terminal has been moving back and forth in terms of anomalous behavior.
+    When you hover over a specific data point in the chart, the terminal's risk score and the average risk score of the whole population are shown. In the following example, the sawtooth pattern is a good representation of the fact that this terminal has been moving back and forth in terms of anomalous behavior.
 
-The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
+    The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
 
-10.	To understand how each event or reason affected the risk scores, review the following information on the report:
+11.	To understand how each event or reason affected the risk scores, review the following information on the report:
 
     -	The grid in the **All reasons affecting the score by percentile** section (labeled "16" in the following screenshot) lists the specific reasons that affect the risk score, ranked by the percentile. Significant percentiles are highlighted.
     -	In the **Reason** field in the **Reason details** section (labeled "17"), you can select any of the five reasons from the **All reasons affecting the score by percentile** grid to further analyze the impact of that reason on the risk score.
@@ -266,7 +266,7 @@ The model uses five or six default events to generate the risk score. It conside
 
 ![Data flow](media/promocode-images/lp-reasons.png)
 
-11.	If you scroll down more, the **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months:
+12.	If you scroll down more, the **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months:
 
     -	As the column headings for the grid (labeled "19" in the following screenshot) show, the data in the grid includes the date of the transaction according to the receipt, the transaction ID, the staff ID, the purchase amount, the discount amount, the return amount, an indication of whether a return receipt was present, the payment method, and the category.
     -	As the example in the following screenshot shows, if the staff member who is associated with a transaction was tagged as anomalous by the model, a red caution sign appears next to their staff ID in the grid (labeled "20"). This caution sign identifies the staff member as a high risk.
