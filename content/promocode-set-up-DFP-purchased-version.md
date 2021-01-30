@@ -29,7 +29,7 @@ Here are some examples of the innovative and advanced ways Fraud Protection can 
 
 ## Goals for this document
 
-This document guides you through the process of setting up a purchased version of Fraud Protection.
+This document guides you through the prerequisites of setting up a purchased version of Fraud Protection.
 After you complete the tasks in this document, you will be ready to use Fraud Protection to protect your business.
 
 ## Prerequisites for setting up Fraud Protection
