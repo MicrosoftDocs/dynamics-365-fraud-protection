@@ -27,15 +27,13 @@ Here are some examples of the innovative and advanced ways that Fraud Protection
 
 ## Goals for this document
 
-This document guides you through the process of setting up a trial version of Fraud Protection.
+This document guides you through the prerequisites of setting up a trial version of Fraud Protection.
 After you complete the tasks in this document, you will be ready to use Fraud Protection to protect your business.
 
 ## Prerequisites for setting up Fraud Protection
 
 - To set up Fraud Protection and control user access to your data, you must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, you can sign up for one.
 - Before you can install a trial subscription of Fraud Protection, a Microsoft seller or partner must provide a PromoCode provided to you. If you don't have a PromoCode, contact Microsoft.
-
-
 
 ## Next steps
 
