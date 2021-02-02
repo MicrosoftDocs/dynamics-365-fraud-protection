@@ -3,13 +3,13 @@ author: yvonnedeq
 description: This topic outlines the schemas that are required for historical data upload.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/28/2021
+ms.date: 02/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: View purchase protection schemas (INT only)
+title: View purchase protection schemas
 
 ---
 

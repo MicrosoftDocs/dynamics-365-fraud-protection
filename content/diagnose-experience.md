@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about the diagnose experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/23/2020
+ms.date: 02/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -30,7 +30,7 @@ To help guarantee that Fraud Protection can interpret the files that you upload,
 - The chargeback data should correspond directly to the purchase data. For the best results, there should be at least 5 chargebacks associated with every 100 purchases.
 
 ### Format requirements
-- The files must be in CSV (comma-separated values) format and follow the [required schemas](schema.md).
+- The files must be in CSV (comma-separated values) format and follow the [required schemas](view-purchase-protection-schemas.md).
 - The maximum file size is 10 gigabytes (GB).
 - The DateTime columns are in ISO 8601 format.
 - The decimal precision is two decimal places.
