@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to protect customer accounts with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 02/01/2021
+ms.date: 02/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -72,9 +72,8 @@ To acquire the tokens that are required to call the APIs, use Fraud Protection t
     - **Environment** – Select the production endpoint.
     - **Authentication method** – Select whether a certificate or a secret (password protected) is used for authentication.
     
-        - If you select **Certificate**, select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
-        
-        - If you select **Secret**, a password is generated for you after the app is created.
+      - Select **Certificate**, and then select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
+      - Select **Secret** to automatically generate a password after the application has been created.
 
 4.	When you've finished filling in the fields, select **Create application**.
 
