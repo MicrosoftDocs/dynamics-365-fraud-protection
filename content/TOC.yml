@@ -6,7 +6,7 @@
     href: whats-new-10-6.md
   - name: Dynamics 365 Fraud Protection July 2020 release
     href: whats-new-7-1.md
-  - name: May 2020 release (INT only)
+  - name: May 2020 release
     href: whats-new-5-4.md
 - name: Regional availability
   href: global-availability.md  
@@ -29,7 +29,7 @@
   - name: Upload historical data for purchase protection
     href: data-upload.md
   - name: View purchase protection schemas
-    href: schema-INT.md
+    href: view-purchase-protection-schemas.md
   - name: Use the virtual fraud analyst
     href: virtual-fraud-analyst.md   
   - name: Review key metrics with scorecard reports

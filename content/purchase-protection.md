@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains the purchase protection capability of Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 02/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -23,7 +23,7 @@ Learn more about the following features used in purchase protection:
 - [Labels API](labels-api.md)
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Upload historical data](data-upload.md)
-- [View schemas](schema.md)
+- [View purchase protection schemas](view-purchase-protection-schemas.md)
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)

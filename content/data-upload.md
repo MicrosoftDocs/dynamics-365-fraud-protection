@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
 ms.author:  v-madeq
 ms.service: fraud-protection
-ms.date: 01/28/2020
+ms.date: 02/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -48,7 +48,7 @@ You can upload historical data through the Fraud Protection portal or the applic
 
 You upload your historical data on the **Purchase protection** tab of the **Data upload** page.
 
-To ensure that Fraud Protection correctly interprets your files, follow these requirements, and review the [required schemas](schema.md):
+To ensure that Fraud Protection correctly interprets your files, follow these requirements, and review the [required schemas](view-purchase-protection-schemas.md):
 
 - The files are in CSV UTF-8 (comma-delimited) format (\*.csv).
 - The maximum file size is 10 gigabytes (GB).

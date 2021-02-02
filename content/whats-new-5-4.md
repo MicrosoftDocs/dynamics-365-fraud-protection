@@ -1,24 +1,20 @@
 ---
 author: yvonnedeq
-description: This topic explains what's new in the Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only).
+description: This topic explains what's new in the Microsoft Dynamics 365 Fraud Protection May 2020 release.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 05/06/2020
+ms.date: 02/02/2021
 
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: What’s new in Dynamics 365 Fraud Protection May 2020 release (INT only)
+title: What’s new in Dynamics 365 Fraud Protection May 2020 release
 
 ---
 
-# What’s new in Dynamics 365 Fraud Protection May 2020 release (INT only)
-
-> [!NOTE]
-> The Microsoft Dynamics 365 Fraud Protection May 2020 release (INT only) updates customer INT environments only. In response to the coronavirus (COVID-19) situation, this release is in INT only to avoid changes in customer PROD environments.
-
+# What’s new in Dynamics 365 Fraud Protection May 2020 release
 
 ## Extend and tailor merchant purchase ontology 
 
