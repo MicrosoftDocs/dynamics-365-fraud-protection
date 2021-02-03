@@ -91,8 +91,8 @@ Fraud Protection uses a broad set of data entities, and sometimes data might be 
 
 Microsoft encourages you to try to map as many data fields as possible. However, keep the following points in mind if some fields can't be mapped:
 
-- You can always do the data uploads again at a later stage to improve the information that the system has access to.
-- To successfully do analysis and generate a report, you must have at least **one month's worth of transaction data**.
+- You can repeat data uploads as needed to improve the information that the system has access to.
+- To successfully generate a report for analysis purposes, you must have at least **one month** of transaction data.
 
 ### Connect, disconnect, and reconnect to Fraud Protection
 
@@ -101,13 +101,14 @@ There are two ways to upload historical data into Fraud Protection for loss prev
 - Use the D365 Connector to connect to the Dynamics 365 Commerce system and upload the data directly.
 - Upload data files in CSV format.
 
-Use the data connection method that is appropriate for your situation.
+Choose the data connection method that is appropriate for your situation.
 
 ![Data flow](media/promocode-images/data-connection.png)
 
-To connect loss prevention to Commerce, you must complete a series of one-time setup activities. After these activities are completed, you can easily disconnect and reconnect the systems.
 
-Before you connect your retail data to Fraud Protection, make sure that you have all three of the following prerequisites:
+To connect loss prevention to Commerce, you must complete a series of one-time setup activities. After these activities are completed, you can easily disconnect and reconnect the systems. For more information, see [Connect loss prevention to data from Commerce](promocode-set-up-loss-prevention.md#connect-loss-prevention-to-data-from-commerce).
+
+To connect your retail data to Fraud Protection, make sure that you have all three of the following prerequisites:
 
 - Access to the retail data lake.
 - Access to your Finance and Operations environment.
@@ -198,7 +199,7 @@ When you sign in to your Fraud Protection portal, if **Loss prevention** appears
       
       The **Data upload > Payments page** displays a preview of your data.
 	 
-   4. From the top navigation, select **Save and close**.
+   4. In the top navigation, select **Save and close**.
    5. Repeat steps 2 through 4 to upload all four types of data.
 
 4. After you've uploaded all your data files, select **Process loss prevention data**.
@@ -211,8 +212,7 @@ When you sign in to your Fraud Protection portal, if **Loss prevention** appears
     > [!NOTE]
     >Typically, loss prevention takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
 
-6. Your report shows in the **Loss prevention page**. 
-7.  To download a copy of your report, select **Download report**.
+6.  Your report displays in the **Loss prevention page**. To download a copy, select **Download report**.
    
 ## Step 3: Analyze data in a loss prevention report
 
@@ -220,13 +220,13 @@ When Fraud Protection has a data source, you can generate loss prevention report
 
 In the previous step, you ran your first loss prevention report. In this step, you use the findings on the report to identify return and discount anomalies, and then run additional loss prevention reports as new data becomes available.
 
-You can review the following information in the report on the **Loss prevention** page.
+You can review the following information in the report displayed on the **Loss prevention** page.
 
 #### Revenue opportunity based on staff data
 
-In the following screenshot you can review information based on the risk score 560 and above.
+In the following screenshot, you can review information based on the risk score of 560 and above.
 
-![Data flow](media/promocode-images/lp-anomalous-terminals.png)
+![Data flow](media/promocode-images/lp-revenue-opp.png)
 
 You can set the range of months for which you want to analyze the data in the **Month range** fields.
 You can set the risk score range in the **Risk score range** field. 
@@ -246,13 +246,16 @@ The **Anomalous staff count by month and score bin** chart shows anomalous staff
 
 In the following screenshot you can review information based on the risk score 760 and above.
 
-![Data flow](media/promocode-images/lp-revenue-opp.png)
+![Data flow](media/promocode-images/lp-anomalous-terminals.png)
 
-The ** Revenue opportunity based on terminal data** pane provides a summary of the returns, discounts and total.
+The **Revenue opportunity based on terminal data** pane provides a summary of the returns, discounts and total.
 
-The ** Anomalous terminals count by month and score bin** shows a monthly count of terminals that are very likely and unlikely to be fraudulent.
+The **Anomalous terminals count by month and score bin** shows a monthly count of terminals that are very likely and unlikely to be fraudulent.
+
 If you want to better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. 
+
 When you hover over a specific data point in the chart, the terminal's risk score and the average risk score of the whole population are shown. In the following example, the sawtooth pattern is a good representation of the fact that this terminal has been moving back and forth in terms of anomalous behavior.
+
 The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
 
 #### Top risk staff
@@ -271,7 +274,7 @@ The **Top risk staff** grid lists all staff IDs that the model has analyzed. The
 
 The **Score count** indicates the number of months they were above the threshold. For example, if 12 months' worth of data was used to generate the report, a **Score count** value of **3** for a staff member indicates that the staff member was deemed anomalous for three of the 12 months. 
 
-- To see more details about a specific staff member, select a listing in the **Staff ID** column.
+- To see more details about a specific staff member, select an ID in the **Staff ID** column.
 
 #### Staff's risk score summary
 
@@ -322,15 +325,6 @@ The **Top risk terminals** grid lists all terminal IDs. The highest-risk termina
 
 The **Reason value by month** chart shows you details for the reason or event that you selected.
 
-#### Transactions (last six months)
-
-![Data flow](media/promocode-images/lp-six-months.png)
-
-The Transactions (last six months) section of the report shows specific transactions that have occurred at the terminal during the last six months.
-
-As the column headings for the grid show, the data in the grid includes the date of the transaction according to the receipt, the transaction ID, the staff ID, the purchase amount, the discount amount, the return amount, an indication of whether a return receipt was present, the payment method, and the category.
-If the staff member associated with a transaction was tagged as anomalous by the model, a red caution sign appears next to their staff ID in the grid. This caution sign identifies the staff member as a high risk.
-
 #### Terminal's risk score summary
 
 To better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
@@ -357,11 +351,12 @@ The **Reason details** chart shows the value by month for the reason or event th
 
 #### Transactions (last six months)
 
-The **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months:
+The **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months.
 
 ![Data flow](media/promocode-images/lp-six-months.png)
 
 As the column headings for the grid show, the data in the grid includes the date of the transaction according to the receipt, the transaction ID, the staff ID, the purchase amount, the discount amount, the return amount, an indication of whether a return receipt was present, the payment method, and the category.
+
 If a staff member associated with a transaction is tagged as anomalous by the model, a red caution sign appears next to their staff ID in the grid. This caution sign identifies the staff member as a high risk.
 
 ## Note for existing Commerce customers
