@@ -218,76 +218,153 @@ When you sign in to your Fraud Protection portal, if **Loss prevention** appears
 
 ## Step 3: Analyze data in a loss prevention report
 
-In the previous step, you configured and ran your first loss prevention report. In this step, you can use the findings on the report to identify return and discount anomalies, and then run additional loss prevention reports as new data becomes available.
-
 When Fraud Protection has a data source, you can generate loss prevention reports as required. Depending on how you configured your environment, you can generate reports from either a direct connection to a Commerce system or from uploaded data files.
 
+In the previous step, you ran your first loss prevention report. In this step, you use the findings on the report to identify return and discount anomalies, and then run additional loss prevention reports as new data becomes available.
 
-#### The Loss prevention page
+You can review the following information in the report on the **Loss prevention** page.
 
-1. You can review the following information on the **Loss prevention** page:
+#### Revenue opportunity based on staff data
 
-    -	The **Dynamics 365 Commerce connection** pane provides a quick overview of the connection. It includes information about when the next refresh is expected, when the last refresh was completed, the status of the connection, and any errors that have occurred.
-    -	The **Ten recent syncs pane** shows a log of the ten most recent synchronizations and the status of each.
+In the following screenshot you can review information based on the risk score 560 and above.
 
-2. To generate a set of interactive reports, based on the data that the models have ingested and analyzed, select the **Reports** tab.
-3. Review the following information:
+![Data flow](media/promocode-images/ lp-anomalous-terminals.png)
 
-    -	The **Revenue opportunity based on staff data** pane (labeled "3" in the following screenshot) provides a quick summary of the total dollar amount of the potential fraud that Fraud Protection has detected in returns and discounts, and that could contribute to overall revenue gain.
-    -	The **Revenue opportunity based on terminal data** pane (labeled "4") provides a quick summary of the total amount of potential fraud that Fraud Protection has detected in returns and discounts, based on terminal data.
-    -	The **Anomalous staff count by month and score bin** and Anomalous terminals count by month and score bin** charts (labeled "5") show anomalous staff and terminal count distribution per month during the month range that you selected in the **Month range** fields at the top of the page.
-    -	In the **Risk score range** fields at the top of the page (labeled "6"), you can set the risk score range. To view the full range of risk score distribution, set the "from" value to 0 (zero) and the "to" value to **999**.
+In the **Month range** fields (labeled "13" in the following screenshot), you can set the range of months that you want to analyze the data for.
+In the **Risk score range** field, you can set the risk score range. 
+
+- To view the full range of risk score distribution, set the "from" value to 0 (zero) and the "to" value to **999**.
+- To drill deeper into possible fraudulent activities, keep the score range high.
+
+In the **Risk score range** fields, you can set the risk score range. 
+
+- To drill deeper into possible fraudulent activities, adjust the values of the **Risk score range** fields so that they span only a high score range, for example, **900** through **999**.
+
+The **Revenue opportunity based on staff data** pane provides a summary of the total dollar amount of the potential fraud that Fraud Protection has detected in returns and discounts, and that could contribute to overall revenue gain.
+
+The **Anomalous staff count by month and score bin** chart shows anomalous staff and terminal count distribution per month during the month range that you selected in the **Month range** fields at the top of the page.
+
+#### Revenue opportunity based on terminal data
+
+In the following screenshot you can review information based on the risk score 760 and above.
 
 ![Data flow](media/promocode-images/lp-revenue-opp.png)
 
-4. To drill deeper into possible fraudulent activities, adjust the values of the **Risk score range** fields so that they span only a high score range, for example, **900** through **999**.
+The ** Revenue opportunity based on terminal data** pane provides a summary of the returns, discounts and total.
 
-5. Scroll down the report to the **Staff** tab. Here, the data set is sorted to show the staff, based on the risk score that the models have generated. Review the following information:
+The ** Anomalous terminals count by month and score bin** shows a monthly count of terminals that are very likely and unlikely to be fraudulent.
+If you want to better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. 
+When you hover over a specific data point in the chart, the terminal's risk score and the average risk score of the whole population are shown. In the following example, the sawtooth pattern is a good representation of the fact that this terminal has been moving back and forth in terms of anomalous behavior.
+The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
 
-    -	The **Data summary** section (labeled "7" in the following screenshot) provides a summary of the staff assessment. It shows the total number of unique staff IDs, the number of times that the unique staffers were anomalous during the reporting data period, and the average risk score on a scale of 0 (zero) through 999.
-    -	In the search field in the **Top risk staff** section (labeled "8"), you can enter a staff ID to search for data that is related to a specific staff member.
-    -	The grid in the **Top risk staff** section (labeled "9") lists all staff IDs that the model has analyzed. The list is sorted in descending order of risk score (that is, the highest-risk staff member appears at the top of the list). The grid also shows the average score for each staff member and the number of times that each staff member was deemed anomalous during the full data period that was assessed for the report. For example, if 12 months' worth of data was used to generate the report, a **Score count** value of **3** for a staff member indicates that the staff member was deemed anomalous for three of the 12 months. By selecting a staff ID, you can drill down to get more details about a specific staff member. More information about the drill-down report is provided later in this document.
+#### Top risk staff
+- To view data on top risk staff, select the **Staff** tab.
+The following screenshot shows information that includes the staff which were at or above the threshold 560 for at least one month. The data set is sorted to show the staff, based on the risk score that the models have generated.
 
 ![Data flow](media/promocode-images/lp-staff.png)
 
-6. To see similar information based on terminal data, select the **Terminals** tab.
-7. Review the following information:
+The **Data summary** section provides a summary of the staff assessment. It shows the total number of unique staff IDs, the score count (number of times that the unique staffers were anomalous during the reporting data period), and the average risk score on a scale of 0 (zero) through 999.
 
-    -	The **Data summary** section (labeled "10" in the following screenshot) provides a summary of the terminal assessment. It shows the total number of unique terminal IDs that the model has analyzed, the number of times that the unique terminals were anomalous during the reporting data period, and the average risk score on a scale of 0 (zero) through 999.
-    -	In the search field in the **Top risk terminals** section (labeled "11"), you can enter a terminal ID to search for data that is related to a specific terminal.
-    -	The grid in the **Top risk terminals** section (labeled "12") lists all terminal IDs. The highest-risk terminal appears at the top of the list. The grid also shows the average score for each terminal and the number of times that each terminal was deemed anomalous during the full data period that was assessed for the report.
+- To search for data related to a specific staff member, enter a staff ID in the search field.
+
+The **Top risk staff** grid lists all staff IDs that the model has analyzed. The list is sorted in descending order of risk score (that is, the highest-risk staff member appears at the top of the list). The grid also shows the average score for each staff member and the number of times that each staff member was deemed anomalous during the full data period that was assessed for the report. 
+
+The **Score count** indicates the number of months they were above the threshold. For example, if 12 months' worth of data was used to generate the report, a **Score count** value of **3** for a staff member indicates that the staff member was deemed anomalous for three of the 12 months. 
+
+- To see more details about a specific staff member, select a listing in the **Staff ID** column.
+
+#### Staff's risk score summary
+- To view the risk score of a specific staff, select a **Staff ID**.
+The following screenshot shows information that includes the staff which were at or above the threshold 560 for at least one month. The data set is sorted to show the staff, based on the risk score that the models have generated.
+
+![Data flow](media/promocode-images/lp-staff-risk-score-by-month.png)
+
+- In the **Month range** fields, set the range of months for which you want to analyze the data.
+- In the **Risk score range** fields, set the risk score range. To drill deeper into possible fraudulent activities, keep the score range high.
+
+The **Risk score by month** chart indicates the likelihood that the events associated with the staff are fraudulent. Risk score ranges from 0-559 are unlikely to be fraudulent and 560-999 are very likely to be fraudulent. 
+The chart shows the risk score associated with the selected staff member compared to the average risk score of the entire staff.
+
+The **All reasons affecting risk score by percentile** lists the specific reasons that affect the risk score, ranked by the percentile. Significant percentiles are highlighted in the grid.
+
+#### Reason Details
+![Data flow](media/promocode-images/lp-staff-reason.png)
+
+- To review reason details and further analyze the impact of that reason on the risk score, select one of the five reasons from the **Reason** drop-down list.
+
+The **Reason value by month** chart shows you details for the reason or event that you selected.
+
+#### Top risk terminals
+- To view data on top risk terminals, select the **Terminals** tab.
 
 ![Data flow](media/promocode-images/lp-terminals.png)
 
-8. If you're interested in a specific terminal in the list, select the terminal ID to drill down into the details.
-9. Review the following information:
+This screenshot shows information that includes the top risk terminals which were at or above the threshold 760 for at least one month.
 
-    -	In the **Month range** fields (labeled "13" in the following screenshot), you can set the range of months that you want to analyze the data for.
-    -	In the **Risk score range** fields (labeled "14"), you can set the risk score range. To drill deeper into possible fraudulent activities, keep the score range high.
-    -	The **Terminal's risk score summary** section (labeled "15") provides a quick summary. It shows the maximum score, the average score, and the number of times that this specific store or terminal has been anomalous.
+- In the **Month range** fields, set the range of months for which you want to analyze the data.
+- In the **Risk score range** fields, set the risk score range. To drill deeper into possible fraudulent activities, keep the score range high.
 
-![Data flow](media/promocode-images/lp-months-range.png)
+The **Data summary** section provides a summary of the terminal assessment. It shows the total number of unique terminal IDs that the model has analyzed, the number of times that the unique terminals were anomalous during the reporting data period, and the average risk score on a scale of 0 (zero) through 999.
 
-10. If you want to better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
-    
-    When you hover over a specific data point in the chart, the terminal's risk score and the average risk score of the whole population are shown. In the following example, the sawtooth pattern is a good representation of the fact that this terminal has been moving back and forth in terms of anomalous behavior.
+- To search for data related to a specific terminal, enter a terminal ID in the search field.
 
-    The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
+The **Top risk terminals** grid lists all terminal IDs. The highest-risk terminal appears at the top of the list. The grid also shows the average score for each terminal and the number of times that each terminal was deemed anomalous during the full data period that was assessed for the report.
 
-11. To understand how each event or reason affected the risk scores, review the following information on the report:
+#### Reason Details
+![Data flow](media/promocode-images/lp-staff-reason.png)
 
-    -	The grid in the **All reasons affecting the score by percentile** section (labeled "16" in the following screenshot) lists the specific reasons that affect the risk score, ranked by the percentile. Significant percentiles are highlighted.
-    -	In the **Reason** field in the **Reason details** section (labeled "17"), you can select any of the five reasons from the **All reasons affecting the score by percentile** grid to further analyze the impact of that reason on the risk score.
-    -	The chart in the **Reason details** section (labeled "18") shows the value by month for the reason or event that you selected in the **Reason** field.
+- To review reason details and further analyze the impact of that reason on the risk score, select one of the five reasons from the **Reason** drop-down list.
 
-![Data flow](media/promocode-images/lp-reasons.png)
+The **Reason value by month** chart shows you details for the reason or event that you selected.
 
-12. If you scroll down more, the **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months:
+#### Transactions (last six months)
 
-    -	As the column headings for the grid (labeled "19" in the following screenshot) show, the data in the grid includes the date of the transaction according to the receipt, the transaction ID, the staff ID, the purchase amount, the discount amount, the return amount, an indication of whether a return receipt was present, the payment method, and the category.
-    -	As the example in the following screenshot shows, if the staff member who is associated with a transaction was tagged as anomalous by the model, a red caution sign appears next to their staff ID in the grid (labeled "20"). This caution sign identifies the staff member as a high risk.
+![Data flow](media/promocode-images/lp-six-months.png)
 
-    If you're an existing Commerce customer, all the mandatory fields have a **NOT NULL** constraint in the data type. For reference, the schema is included in the appendix at the end of this document. However, you can configure Commerce to share data directly with Fraud Protection.
+The Transactions (last six months) section of the report shows specific transactions that have occurred at the terminal during the last six months.
+
+As the column headings for the grid show, the data in the grid includes the date of the transaction according to the receipt, the transaction ID, the staff ID, the purchase amount, the discount amount, the return amount, an indication of whether a return receipt was present, the payment method, and the category.
+If the staff member associated with a transaction was tagged as anomalous by the model, a red caution sign appears next to their staff ID in the grid. This caution sign identifies the staff member as a high risk.
+
+#### Terminal's risk score summary
+To better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
+
+![Data flow](media/promocode-images/lp-terminal-risk-score-by-month.png)
+
+The **Terminal's risk score summary** section shows the maximum score, the average score, and the number of times that this specific store or terminal has been anomalous.
+
+When you hover over a specific data point in the chart, the terminal's risk score and the average risk score of the whole population are shown. In the following example, the sawtooth pattern is a good representation of the fact that this terminal has been moving back and forth in terms of anomalous behavior.
+
+The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
+
+#### Terminal's reasons summary
+To understand how each event or reason affected the risk scores, review the following information on the report.
+
+![Data flow](media/promocode-images/lp-terminal-reason.png)
+
+The grid in the **All reasons affecting the score by percentile** section (labeled "16" in the following screenshot) lists the specific reasons that affect the risk score, ranked by the percentile. Significant percentiles are highlighted.
+
+In the **Reason** field in the **Reason details** section (labeled "17"), you can select any of the five reasons from the **All reasons affecting the score by percentile** grid to further analyze the impact of that reason on the risk score.
+The **Reason details** chart shows the value by month for the reason or event that you selected in the **Reason** field.
+
+#### Transactions (last six months)
+The **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months:
+
+![Data flow](media/promocode-images/lp-six-months.png)
+
+As the column headings for the grid show, the data in the grid includes the date of the transaction according to the receipt, the transaction ID, the staff ID, the purchase amount, the discount amount, the return amount, an indication of whether a return receipt was present, the payment method, and the category.
+If a staff member associated with a transaction is tagged as anomalous by the model, a red caution sign appears next to their staff ID in the grid. This caution sign identifies the staff member as a high risk.
+
+
+
+
+
+
+
+
+
+
+If you're an existing Commerce customer, all the mandatory fields have a **NOT NULL** constraint in the data type. For reference, the schema is included in the appendix at the end of this document. However, you can configure Commerce to share data directly with Fraud Protection.
 
 For information about how to integrate Commerce with Fraud Connection and connect to Fraud Protection, see the [Connect loss prevention to data from Commerce](promocode-set-up-loss-prevention.md#connect-loss-prevention-to-data-from-commerce) section earlier in this document. There is no prerequisite schema work for loss prevention.
 
