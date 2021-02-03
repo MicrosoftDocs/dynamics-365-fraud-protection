@@ -205,25 +205,27 @@ When you sign in to your Fraud Protection portal, if **Loss prevention** appears
 
     Fraud Protection begins processing your data and building your loss prevention report.
 
-5. In the left navigation, select**Loss prevention** to see the status of your loss prevention report.
+5. In the left navigation, select **Loss prevention** to see the status of your loss prevention report.
+
 
     > [!NOTE]
     >Typically, loss prevention takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
 
-6. When the report has been built, select **Download report** to view the report.
+6. Your report shows in the **Loss prevention page**. 
+7  To download a copy of your report, select **Download report**.
    
 
 
 ## Step 3: Analyze data in a loss prevention report
 
-In the previous step, you configured and ran your first loss prevention report. You can now use the findings on the report to identify return and discount anomalies, and then run additional loss prevention reports as new data becomes available.
+In the previous step, you configured and ran your first loss prevention report. In this step, you can use the findings on the report to identify return and discount anomalies, and then run additional loss prevention reports as new data becomes available.
 
-When Fraud Protection has a data source, you can generate loss prevention reports. Depending on how you configured your environment, you should have reports that have been generated from either a direct connection to a Commerce system or uploaded from CSV files.
+When Fraud Protection has a data source, you can generate loss prevention reports as required. Depending on how you configured your environment, you can generate reports from either a direct connection to a Commerce system or from uploaded data files.
 
 
 #### The Loss prevention page
 
-1. On the **Data** tab of the **Loss prevention** page, review the following information:
+1. You can review the following information on the **Loss prevention** page:
 
     -	The **Dynamics 365 Commerce connection** pane provides a quick overview of the connection. It includes information about when the next refresh is expected, when the last refresh was completed, the status of the connection, and any errors that have occurred.
     -	The **Ten recent syncs pane** shows a log of the ten most recent synchronizations and the status of each.
@@ -238,7 +240,7 @@ When Fraud Protection has a data source, you can generate loss prevention report
 
 ![Data flow](media/promocode-images/lp-revenue-opp.png)
 
-4. To drill deeper into possible fraudulent activities, adjust the values of the **Risk score rang**e fields so that they span only a high score range, for example, **900** through **999**.
+4. To drill deeper into possible fraudulent activities, adjust the values of the **Risk score range** fields so that they span only a high score range, for example, **900** through **999**.
 
 5. Scroll down the report to the **Staff** tab. Here, the data set is sorted to show the staff, based on the risk score that the models have generated. Review the following information:
 
