@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to prevent loss with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 02/02/2021
+ms.date: 02/03/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -20,13 +20,13 @@ The loss prevention capability in Microsoft Dynamics 365 Fraud Protection (Fraud
 
 ## Identifying fraudulent activity
 
-The loss prevention capability is designed to help loss prevention analysts, store managers, and loss prevention investigators identify fraudulent activity that typically involves discounts, returns, price overrides, voided transactions, gift card redemption, and so on, that employees improperly apply on point of sale (POS) terminals.
-
 ![Data flow](media/promocode-images/DFP-LP1.png)
 
-Loss prevention is based on anomaly detection that looks for patterns in POS data that is ingested into the system. It identifies outliers through unsupervised machine learning (ML), and provides a list of anomalous terminals, anomalous actors, and anomalous products. Store managers, loss prevention analysts, and loss prevention fraud investigators can then use this list to focus on specific areas that might represent fraud.
+The loss prevention capability is designed to help loss prevention analysts, store managers, and loss prevention investigators identify fraudulent activity that typically involves discounts, returns, price overrides, voided transactions, gift card redemption, and so on, that employees improperly apply on point of sale (POS) terminals.
 
 ![Data flow](media/promocode-images/DFP-LP2.png)
+
+Loss prevention is based on anomaly detection that looks for patterns in POS data that is ingested into the system. It identifies outliers through unsupervised machine learning (ML), and provides a list of anomalous terminals, anomalous actors, and anomalous products. Store managers, loss prevention analysts, and loss prevention fraud investigators can then use this list to focus on specific areas that might represent fraud.
 
 Loss prevention can help you drive down the cost and complexity that are associated with the process of taking huge amounts of data, analyzing it for fraud patterns, and gaining actionable insights from it. Therefore, you can quickly identify your areas of risk, such as the store, terminal, shift, and/or which employee that might be misusing your return and discount policies.
 
@@ -228,7 +228,7 @@ You can review the following information in the report on the **Loss prevention*
 
 In the following screenshot you can review information based on the risk score 560 and above.
 
-![Data flow](media/promocode-images/ lp-anomalous-terminals.png)
+![Data flow](media/promocode-images/lp-anomalous-terminals.png)
 
 In the **Month range** fields (labeled "13" in the following screenshot), you can set the range of months that you want to analyze the data for.
 In the **Risk score range** field, you can set the risk score range. 
@@ -355,16 +355,9 @@ The **Transactions (last six months)** section of the report shows specific tran
 As the column headings for the grid show, the data in the grid includes the date of the transaction according to the receipt, the transaction ID, the staff ID, the purchase amount, the discount amount, the return amount, an indication of whether a return receipt was present, the payment method, and the category.
 If a staff member associated with a transaction is tagged as anomalous by the model, a red caution sign appears next to their staff ID in the grid. This caution sign identifies the staff member as a high risk.
 
+## Note for existing Commerce customers
 
-
-
-
-
-
-
-
-
-If you're an existing Commerce customer, all the mandatory fields have a **NOT NULL** constraint in the data type. For reference, the schema is included in the appendix at the end of this document. However, you can configure Commerce to share data directly with Fraud Protection.
+If you're an existing Commerce customer, all the mandatory fields have a **NOT NULL** constraint in the data type. For a schema reference, see [Data schemas for loss prevention in Fraud Protection](promocode-set-up-loss-prevention.md). However, you can also configure Commerce to share data directly with Fraud Protection.
 
 For information about how to integrate Commerce with Fraud Connection and connect to Fraud Protection, see the [Connect loss prevention to data from Commerce](promocode-set-up-loss-prevention.md#connect-loss-prevention-to-data-from-commerce) section earlier in this document. There is no prerequisite schema work for loss prevention.
 
