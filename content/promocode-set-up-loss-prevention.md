@@ -212,7 +212,7 @@ When you sign in to your Fraud Protection portal, if **Loss prevention** appears
     >Typically, loss prevention takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
 
 6. Your report shows in the **Loss prevention page**. 
-7  To download a copy of your report, select **Download report**.
+7.  To download a copy of your report, select **Download report**.
    
 
 
