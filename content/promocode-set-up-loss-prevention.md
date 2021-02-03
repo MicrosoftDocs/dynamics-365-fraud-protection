@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to prevent loss with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 02/01/2021
+ms.date: 02/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -44,7 +44,7 @@ After you complete these steps in your own system by using your own data, you wi
 
 Before you begin the tasks in this document, you must:
 
--	Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
+- Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
 
 ## Step 1: Prepare your historical data (data mapping)
 
@@ -56,11 +56,11 @@ When Fraud Protection assesses a transaction for potential purchase fraud, it us
 
 Use this schema guidance to produce files in comma-separated values (CSV) format:
 
--	The files are in CSV UTF-8 (comma-delimited) format (*.csv).
--	The maximum file size is 10 gigabytes (GB).
--	The **DateTime** columns are in International Organization for Standardization (ISO) 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
--	The decimal precision is two decimal places.
--	The following characters are escaped in all columns: commas, new line characters, and multiline characters.
+- The files are in CSV UTF-8 (comma-delimited) format (*.csv).
+- The maximum file size is 10 gigabytes (GB).
+- The **DateTime** columns are in International Organization for Standardization (ISO) 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
+- The decimal precision is two decimal places.
+- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
 For more information about schemas you can use to generate models and determine risk assessments, see [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas). 
 
@@ -68,10 +68,10 @@ For more information about schemas you can use to generate models and determine 
 
 Because the loss prevention capability identifies anomalies and patterns that might indicate in-store fraud, the ML model requires data from four entities to search for anomalies:
 
--	Transactions
--	Sales
--	Payments
--	PaymentMethods
+- Transactions
+- Sales
+- Payments
+- PaymentMethods
 
 For detailed information about schemas that define the data that is used to generate models and determine risk assessments, see [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas). Although all data fields are important, you can start with fewer mandatory fields and then onboard additional fields over time to improve model output.
 
@@ -82,24 +82,24 @@ For detailed information about schemas that define the data that is used to gene
 
 Fraud Protection uses a broad set of data entities, and sometimes data might be missing, or it can't be mapped cleanly to a field. Microsoft has found that the following factors can cause data quality issues:
 
--	Attributes are unavailable.
--	Attributes are available, but they either aren't set or are incorrectly set.
--	The schema is incorrectly interpreted.
--	Data is incorrect, and/or enumeration values are incorrect.
--	There is a mismatch on the same attributes.
--	There is a data encryption issue.
+- Attributes are unavailable.
+- Attributes are available, but they either aren't set or are incorrectly set.
+- The schema is incorrectly interpreted.
+- Data is incorrect, and/or enumeration values are incorrect.
+- There is a mismatch on the same attributes.
+- There is a data encryption issue.
 
 Microsoft encourages you to try to map as many data fields as possible. However, keep the following points in mind if some fields can't be mapped:
 
--	You can always do the data uploads again at a later stage to improve the information that the system has access to.
--	To successfully do analysis and generate a report, you must have at least **one month's worth of transaction data**.
+- You can always do the data uploads again at a later stage to improve the information that the system has access to.
+- To successfully do analysis and generate a report, you must have at least **one month's worth of transaction data**.
 
 ### Connect, disconnect, and reconnect to Fraud Protection
 
 There are two ways to upload historical data into Fraud Protection for loss prevention:
 
--	Use the D365 Connector to connect to the Dynamics 365 Commerce system and upload the data directly.
--	Upload data files in CSV format.
+- Use the D365 Connector to connect to the Dynamics 365 Commerce system and upload the data directly.
+- Upload data files in CSV format.
 
 Use the data connection method that is appropriate for your situation.
 
@@ -109,43 +109,43 @@ To connect loss prevention to Commerce, you must complete a series of one-time s
 
 Before you connect your retail data to Fraud Protection, make sure that you have all three of the following prerequisites:
 
--	Access to the retail data lake.
--	Access to your Finance and Operations environment.
--	A Fraud Protection license (trial or activated subscription).
+- Access to the retail data lake.
+- Access to your Finance and Operations environment.
+- A Fraud Protection license (trial or activated subscription).
 
 #### Connect loss prevention to data from Commerce
 
-1.	In Commerce, open the dashboard and enter **System Parameters** in the search field at the top of the page.
-2.	On the **System parameters** page, select the **Data connection** tab.
-3.	Set the **Enable Data Lake integration** option to **Yes**.
-4.	Save the details of the data lake (the value of the **DNS name** field). You will need this information to reconnect if the data lake integration is ever disconnected.
+1. In Commerce, open the dashboard and enter **System Parameters** in the search field at the top of the page.
+2. On the **System parameters** page, select the **Data connection** tab.
+3. Set the **Enable Data Lake integration** option to **Yes**.
+4. Save the details of the data lake (the value of the **DNS name** field). You will need this information to reconnect if the data lake integration is ever disconnected.
 
 ![Data flow](media/promocode-images/commerce-data-connection.png)
 
-5.	Return to the dashboard and enter **Entity Store** in the search field at the top of the page.
+5. Return to the dashboard and enter **Entity Store** in the search field at the top of the page.
 
-    (An entity store is a collection of tables/view that have retail data in raw or aggregate form.)
+   (An entity store is a collection of tables/view that have retail data in raw or aggregate form.)
  	
-6.	In the entity store, enter **RetailSales** in the search field.
-7.	Under **Refresh options**, set the **Automatic refresh enabled** option to **Yes**.
+6. In the entity store, enter **RetailSales** in the search field.
+7. Under **Refresh options**, set the **Automatic refresh enabled** option to **Yes**.
 
-    Automatic refresh incrementally adds the most recent data from POS devices to the retail data lake.
+   Automatic refresh incrementally adds the most recent data from POS devices to the retail data lake.
 
 ![Data flow](media/promocode-images/Commerce-refresh.png)
 
-8.	Return to the dashboard and select the **Feature management** tile.
-9.	In the **Feature management** workspace, find the **Dynamics 365 Fraud Protection (DFP) Loss Prevention** feature, and enable it.
-10.	Register the Fraud Protection app ID in the dashboard:
+8. Return to the dashboard and select the **Feature management** tile.
+9. In the **Feature management** workspace, find the **Dynamics 365 Fraud Protection (DFP) Loss Prevention** feature, and enable it.
+10. Register the Fraud Protection app ID in the dashboard:
 
-    a.	Open the **Azure Active Directory applications** page.
-    
-    b.	Create an entry for the first-party app ID for Fraud Protection (**bf04bdab-e06f44f3-9821-d3af64fc93a9**).
-    
-    c.	In the **User ID** field, select **RetailServiceAccount**.
+       1. Open the **Azure Active Directory applications** page.
+       
+       2. Create an entry for the first-party app ID for Fraud Protection. (For example, **bf04bdab-e06f44f3-9821-d3af64fc93a9**.)
+       
+       3. In the **User ID** field, select **RetailServiceAccount**.
 
     This setting authorizes Fraud Protection to access data from the data lake.
 
-11.	Open the [Fraud Protection portal](https://dfp.microsoft.com/) and connect your **Finance and Operations** environment to your **Fraud Protection** environment by using the URL for your Commerce environment.
+11. Open the [Fraud Protection portal](https://dfp.microsoft.com/) and connect your **Finance and Operations** environment to your **Fraud Protection** environment by using the URL for your Commerce environment.
 	
     In the following screenshot, the connection was successful, and the process of syncing to acquire data from Commerce and generate a loss prevention report has started.
 
@@ -157,16 +157,16 @@ After you've made the initial connection between Commerce and Fraud Protection, 
 
 #### Disconnect from Commerce
 
-1.	Select the three dots in the upper-right corner of the **Dynamics 365 Commerce connection** pane, and then select **Disconnect**.
-2.	Select **Continue** to disconnect.
+1. Select the three dots in the upper-right corner of the **Dynamics 365 Commerce connection** pane, and then select **Disconnect**.
+2. Select **Continue** to disconnect.
 
- 	The data lake that was originally connected to this Fraud Protection loss prevention capability is disconnected.
+   The data lake that was originally connected to this Fraud Protection loss prevention capability is disconnected.
 
 #### Reconnect to Commerce
 
-1.	Select **Connect to data**.
-2.	Enter the details that were created for the Commerce environment (data lake) during the initial setup. (See step 4 in the [Connect loss prevention to data from Commerce](promocode-set-up-loss-prevention.md#connect-loss-prevention-to-data-from-commerce) section earlier in this document.)
-3.	Select **Connect**.
+1. Select **Connect to data**.
+2. Enter the details that were created for the Commerce environment (data lake) during the initial setup. (See step 4 in the [Connect loss prevention to data from Commerce](promocode-set-up-loss-prevention.md#connect-loss-prevention-to-data-from-commerce) section earlier in this document.)
+3. Select **Connect**.
 
 When the connection is successful, the process of syncing to acquire the data and update the reports immediately starts again.
 
@@ -176,29 +176,43 @@ When you sign in to your Fraud Protection portal, if **Loss prevention** appears
 
 ![Data flow](media/promocode-images/DFP-Portal.png)
 
-1.	Select **Loss prevention**, and then select the **Data** tab.
-2.	Select **Upload** for a manual data upload.
+1. In the left navigation, select **Loss prevention**, and then select **Go to Data Upload**.
+2. Select the **Loss prevention** tab, and then select the **Loss prevention** button.     
 
-    This version of loss prevention is specifically focused on analyzing returns and discounts. It requires four types of data sets from sales terminals:
+   Loss prevention capabilities specifically focus on analyzing loss associated with returns and discounts. It requires four types of data sets from sales terminals:
+ 
+    - Transactions
+    - Sales
+    - Payments
+    - Payment methods
 
-    -	Transactions
-    -	Sales
-    -	Payments
-    -	Payment methods
 
     > [!NOTE]
     >The data must be in .CVS format and must follow the schema that is provided in [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas).
 
-3.	Select the data file to upload, and then select **Upload**.
+3. To upload your data files: 
 
-    After you've uploaded the data, the **Generate reports** button becomes available.
+   1. In the left navigation, select **Data**, select **Data upload**, and then select **Loss prevention**.
+   2. Select **Select data source**, select the type of file you want to upload (a .csv or .tst file), and then select **Browse**.
+   3. Select the file you want to upload, select **Open**, and then select **Next.**
+      
+      The **Data upload > Payments page** displays a preview of your data.
+	 
+   4. From the top navigation, select **Save and close**.
+   5. Repeat steps 2 through 4 to upload all four types of data.
 
-4.	Select **Generate reports**.
+4. After you've uploaded all your data files, select **Process loss prevention data**.
 
-    Fraud Protection starts to generate the report and shows it on the **Reports** tab of the **Loss prevention** page.
+    Fraud Protection begins processing your data and building your loss prevention report.
+
+5. In the left navigation, select**Loss prevention** to see the status of your loss prevention report.
 
     > [!NOTE]
     >Typically, loss prevention takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
+
+6. When the report has been built, select **Download report** to view the report.
+   
+
 
 ## Step 3: Analyze data in a loss prevention report
 
@@ -209,13 +223,13 @@ When Fraud Protection has a data source, you can generate loss prevention report
 
 #### The Loss prevention page
 
-1.	On the **Data** tab of the **Loss prevention** page, review the following information:
+1. On the **Data** tab of the **Loss prevention** page, review the following information:
 
     -	The **Dynamics 365 Commerce connection** pane provides a quick overview of the connection. It includes information about when the next refresh is expected, when the last refresh was completed, the status of the connection, and any errors that have occurred.
     -	The **Ten recent syncs pane** shows a log of the ten most recent synchronizations and the status of each.
 
-2.	To generate a set of interactive reports, based on the data that the models have ingested and analyzed, select the **Reports** tab.
-3.	Review the following information:
+2. To generate a set of interactive reports, based on the data that the models have ingested and analyzed, select the **Reports** tab.
+3. Review the following information:
 
     -	The **Revenue opportunity based on staff data** pane (labeled "3" in the following screenshot) provides a quick summary of the total dollar amount of the potential fraud that Fraud Protection has detected in returns and discounts, and that could contribute to overall revenue gain.
     -	The **Revenue opportunity based on terminal data** pane (labeled "4") provides a quick summary of the total amount of potential fraud that Fraud Protection has detected in returns and discounts, based on terminal data.
@@ -224,9 +238,9 @@ When Fraud Protection has a data source, you can generate loss prevention report
 
 ![Data flow](media/promocode-images/lp-revenue-opp.png)
 
-4.	To drill deeper into possible fraudulent activities, adjust the values of the **Risk score rang**e fields so that they span only a high score range, for example, **900** through **999**.
+4. To drill deeper into possible fraudulent activities, adjust the values of the **Risk score rang**e fields so that they span only a high score range, for example, **900** through **999**.
 
-5.	Scroll down the report to the **Staff** tab. Here, the data set is sorted to show the staff, based on the risk score that the models have generated. Review the following information:
+5. Scroll down the report to the **Staff** tab. Here, the data set is sorted to show the staff, based on the risk score that the models have generated. Review the following information:
 
     -	The **Data summary** section (labeled "7" in the following screenshot) provides a summary of the staff assessment. It shows the total number of unique staff IDs, the number of times that the unique staffers were anomalous during the reporting data period, and the average risk score on a scale of 0 (zero) through 999.
     -	In the search field in the **Top risk staff** section (labeled "8"), you can enter a staff ID to search for data that is related to a specific staff member.
@@ -234,8 +248,8 @@ When Fraud Protection has a data source, you can generate loss prevention report
 
 ![Data flow](media/promocode-images/lp-staff.png)
 
-6.	To see similar information based on terminal data, select the **Terminals** tab.
-7.	Review the following information:
+6. To see similar information based on terminal data, select the **Terminals** tab.
+7. Review the following information:
 
     -	The **Data summary** section (labeled "10" in the following screenshot) provides a summary of the terminal assessment. It shows the total number of unique terminal IDs that the model has analyzed, the number of times that the unique terminals were anomalous during the reporting data period, and the average risk score on a scale of 0 (zero) through 999.
     -	In the search field in the **Top risk terminals** section (labeled "11"), you can enter a terminal ID to search for data that is related to a specific terminal.
@@ -243,8 +257,8 @@ When Fraud Protection has a data source, you can generate loss prevention report
 
 ![Data flow](media/promocode-images/lp-terminals.png)
 
-8.	If you're interested in a specific terminal in the list, select the terminal ID to drill down into the details.
-9.	Review the following information:
+8. If you're interested in a specific terminal in the list, select the terminal ID to drill down into the details.
+9. Review the following information:
 
     -	In the **Month range** fields (labeled "13" in the following screenshot), you can set the range of months that you want to analyze the data for.
     -	In the **Risk score range** fields (labeled "14"), you can set the risk score range. To drill deeper into possible fraudulent activities, keep the score range high.
@@ -252,13 +266,13 @@ When Fraud Protection has a data source, you can generate loss prevention report
 
 ![Data flow](media/promocode-images/lp-months-range.png)
 
-10.	If you want to better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
+10. If you want to better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
     
     When you hover over a specific data point in the chart, the terminal's risk score and the average risk score of the whole population are shown. In the following example, the sawtooth pattern is a good representation of the fact that this terminal has been moving back and forth in terms of anomalous behavior.
 
     The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
 
-11.	To understand how each event or reason affected the risk scores, review the following information on the report:
+11. To understand how each event or reason affected the risk scores, review the following information on the report:
 
     -	The grid in the **All reasons affecting the score by percentile** section (labeled "16" in the following screenshot) lists the specific reasons that affect the risk score, ranked by the percentile. Significant percentiles are highlighted.
     -	In the **Reason** field in the **Reason details** section (labeled "17"), you can select any of the five reasons from the **All reasons affecting the score by percentile** grid to further analyze the impact of that reason on the risk score.
@@ -266,7 +280,7 @@ When Fraud Protection has a data source, you can generate loss prevention report
 
 ![Data flow](media/promocode-images/lp-reasons.png)
 
-12.	If you scroll down more, the **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months:
+12. If you scroll down more, the **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months:
 
     -	As the column headings for the grid (labeled "19" in the following screenshot) show, the data in the grid includes the date of the transaction according to the receipt, the transaction ID, the staff ID, the purchase amount, the discount amount, the return amount, an indication of whether a return receipt was present, the payment method, and the category.
     -	As the example in the following screenshot shows, if the staff member who is associated with a transaction was tagged as anomalous by the model, a red caution sign appears next to their staff ID in the grid (labeled "20"). This caution sign identifies the staff member as a high risk.
