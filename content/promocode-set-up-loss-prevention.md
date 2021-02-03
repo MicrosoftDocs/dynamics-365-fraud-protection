@@ -214,8 +214,6 @@ When you sign in to your Fraud Protection portal, if **Loss prevention** appears
 6. Your report shows in the **Loss prevention page**. 
 7.  To download a copy of your report, select **Download report**.
    
-
-
 ## Step 3: Analyze data in a loss prevention report
 
 When Fraud Protection has a data source, you can generate loss prevention reports as required. Depending on how you configured your environment, you can generate reports from either a direct connection to a Commerce system or from uploaded data files.
@@ -230,8 +228,8 @@ In the following screenshot you can review information based on the risk score 5
 
 ![Data flow](media/promocode-images/lp-anomalous-terminals.png)
 
-In the **Month range** fields (labeled "13" in the following screenshot), you can set the range of months that you want to analyze the data for.
-In the **Risk score range** field, you can set the risk score range. 
+You can set the range of months for which you want to analyze the data in the **Month range** fields.
+You can set the risk score range in the **Risk score range** field. 
 
 - To view the full range of risk score distribution, set the "from" value to 0 (zero) and the "to" value to **999**.
 - To drill deeper into possible fraudulent activities, keep the score range high.
@@ -258,7 +256,9 @@ When you hover over a specific data point in the chart, the terminal's risk scor
 The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
 
 #### Top risk staff
+
 - To view data on top risk staff, select the **Staff** tab.
+
 The following screenshot shows information that includes the staff which were at or above the threshold 560 for at least one month. The data set is sorted to show the staff, based on the risk score that the models have generated.
 
 ![Data flow](media/promocode-images/lp-staff.png)
@@ -274,7 +274,9 @@ The **Score count** indicates the number of months they were above the threshold
 - To see more details about a specific staff member, select a listing in the **Staff ID** column.
 
 #### Staff's risk score summary
+
 - To view the risk score of a specific staff, select a **Staff ID**.
+
 The following screenshot shows information that includes the staff which were at or above the threshold 560 for at least one month. The data set is sorted to show the staff, based on the risk score that the models have generated.
 
 ![Data flow](media/promocode-images/lp-staff-risk-score-by-month.png)
@@ -288,6 +290,7 @@ The chart shows the risk score associated with the selected staff member compare
 The **All reasons affecting risk score by percentile** lists the specific reasons that affect the risk score, ranked by the percentile. Significant percentiles are highlighted in the grid.
 
 #### Reason Details
+
 ![Data flow](media/promocode-images/lp-staff-reason.png)
 
 - To review reason details and further analyze the impact of that reason on the risk score, select one of the five reasons from the **Reason** drop-down list.
@@ -295,6 +298,7 @@ The **All reasons affecting risk score by percentile** lists the specific reason
 The **Reason value by month** chart shows you details for the reason or event that you selected.
 
 #### Top risk terminals
+
 - To view data on top risk terminals, select the **Terminals** tab.
 
 ![Data flow](media/promocode-images/lp-terminals.png)
@@ -311,6 +315,7 @@ The **Data summary** section provides a summary of the terminal assessment. It s
 The **Top risk terminals** grid lists all terminal IDs. The highest-risk terminal appears at the top of the list. The grid also shows the average score for each terminal and the number of times that each terminal was deemed anomalous during the full data period that was assessed for the report.
 
 #### Reason Details
+
 ![Data flow](media/promocode-images/lp-staff-reason.png)
 
 - To review reason details and further analyze the impact of that reason on the risk score, select one of the five reasons from the **Reason** drop-down list.
@@ -327,6 +332,7 @@ As the column headings for the grid show, the data in the grid includes the date
 If the staff member associated with a transaction was tagged as anomalous by the model, a red caution sign appears next to their staff ID in the grid. This caution sign identifies the staff member as a high risk.
 
 #### Terminal's risk score summary
+
 To better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
 
 ![Data flow](media/promocode-images/lp-terminal-risk-score-by-month.png)
@@ -338,16 +344,19 @@ When you hover over a specific data point in the chart, the terminal's risk scor
 The model uses five or six default events to generate the risk score. It considers the return ratio, which is the total number of returns that employees have initiated at a specific terminal, divided by the total number of sales at that terminal during a given period. It also considers the cash-to-card ratio and the number of employee-discounted purchases where multiple payment cards were used. Finally, it considers the ratio of returns without a receipt to returns with a receipt, and the number of discounted items that were sold without a discount.
 
 #### Terminal's reasons summary
+
 To understand how each event or reason affected the risk scores, review the following information on the report.
 
 ![Data flow](media/promocode-images/lp-terminal-reason.png)
 
-The grid in the **All reasons affecting the score by percentile** section (labeled "16" in the following screenshot) lists the specific reasons that affect the risk score, ranked by the percentile. Significant percentiles are highlighted.
+The grid in the **All reasons affecting the score by percentile** section lists the specific reasons that affect the risk score, ranked by the percentile. Significant percentiles are highlighted.
 
-In the **Reason** field in the **Reason details** section (labeled "17"), you can select any of the five reasons from the **All reasons affecting the score by percentile** grid to further analyze the impact of that reason on the risk score.
+In the **Reason** field in the **Reason details** section, you can select any of the five reasons from the **All reasons affecting the score by percentile** grid to further analyze the impact of that reason on the risk score.
+
 The **Reason details** chart shows the value by month for the reason or event that you selected in the **Reason** field.
 
 #### Transactions (last six months)
+
 The **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months:
 
 ![Data flow](media/promocode-images/lp-six-months.png)
