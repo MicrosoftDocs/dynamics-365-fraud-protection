@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to protect purchases with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 02/01/2021
+ms.date: 02/03/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -65,9 +65,9 @@ In both cases, you will create and upload comma-separated values (CSV) data file
 
 The general process to upload historical data consists of the following steps:
 
-1.	Select **Upload** to select and submit your local files.
-2.	After a successful upload, select **Process**.
-3.	To upload additional data files, select **Reupload** to submit more files, and then select **Process** again.
+1.	In the left navigation, select **Data**, select **Data Upload**, and then select and submit your local files.
+2.	After successfully uploading your files, select **Process data**.
+3.	To upload additional data files, select **Data Upload** to select and submit more files, and then select **Process data** again.
 
     We recommend that you upload files for related data types together before you process the data. For example, upload purchase and account data together.
 
@@ -77,14 +77,26 @@ The general process to upload historical data consists of the following steps:
 
 ![Data flow](media/promocode-images/DFP-Portal.png)
 
-2.	On the **Purchase** page, on the **Diagnose** tab, select **Upload required data**.
-3.	On the **Diagnose analysis data** page, select each type of data file that you want to upload (**Purchases**, **Payment instruments**, **Products**, or **Chargebacks**).
-4.	For each data file type, select **Upload**, select the required data file, and then select **Open**.
-5.	On the **Data preview** page, select **Upload**.
- 	
- 	> [!NOTE]
- 	>It might take several minutes to upload a data file, depending on its size.
-6.	When all your data files are uploaded, select **Generate reports** to create reports.
+2.	On the **Purchase** page, select **Diagnose**, and then select **Upload required data**.
+3. In the left navigation, select **Data**, select **Data upload**, and then select **Purchase protection**.
+4.	On the **Data upload** page, select each type of data file that you want to upload (**Purchases**, **Purchase status**, **Bank events**, **Chargebacks**, **Refunds**, **Labels**, or **Accounts**).
+5.  Select the type of file you want to upload (a .csv or .tst file), and then select **Browse**.
+
+    The **Data upload page** displays a preview of your data.
+
+7.  In the top navigation, select **Save and close**.
+8. Repeat steps 2 through 4 to upload all four types of data.
+
+9. After you've uploaded all your data files, select **Process purchase data**.
+     
+   Fraud Protection begins processing your data and building your loss prevention report.
+
+    > [!NOTE]
+    >Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
+
+10. In the left navigation, select **Purchase** and then select **Diagnose** to see your report. To download a copy, select **Download report**.
+   
+## Step 3: Analyze data in a loss prevention report
 
 For more information about reports, see [The diagnose experience in Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/diagnose-experience).
 
@@ -92,23 +104,38 @@ For more information about reports, see [The diagnose experience in Fraud Protec
 
 Historical data is also known as *cold start data*.
 
-1.	Sign in to the [Fraud Protection portal](https://dfp.microsoft.com/), then in the left navigation, select **Data**, and then select **Data upload**.
-2.	On the **Diagnose analysis data** page, select each data type that you want to upload (**Purchases**, **Chargebacks**, **Labels**, **Refunds**, **Purchase status**, **Bank events**, or **Accounts**).
-3.	For each data type, select **Upload**, select the required data file, and then select **Open**.
-4.	On the **Data preview** page, select **Upload**.
+1.	Sign in to the [Fraud Protection portal](https://dfp.microsoft.com/), then in the left navigation, select **Data**, select **Upload Data**, and then select **Purchase protection**.
+2.	On the **Diagnose analysis data** page, select each data type that you want to upload 
+(**Purchases**, **Purchase status**, **Bank events**, **Chargebacks**, **Refunds**, **Labels**, or **Accounts**)
+5.  Select the type of file you want to upload (a .csv or .tst file), and then select **Browse**.
 
- 	> [!NOTE]
- 	>It might take several minutes to upload a data file, depending on its size.
+    The **Data upload page** displays a preview of your data.
 
-5.	When all the files are uploaded, select **Process purchase data**.
+7.  In the top navigation, select **Save and close**.
+8.  Repeat steps 2 through 4 to upload other types of data.
+9. After you've uploaded all your data files, select **Process purchase protection data**.
+     
+   Fraud Protection begins processing your data and building your loss prevention report.
+
+    > [!NOTE]
+    >Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
+
+10. In the left navigation, select **Purchase** and then select **Diagnose** to see your report. 
+
+    -  To download a copy, in the top navigation, select **Download report**.
+    -  To check the quality of the data, in the top navigation, select **Check data quality**.
+    -  To upload additional data, in the top navigation, select **Upload data**.    
 
 For more information about how to upload historic data, see [Upload historical data for purchase protection](https://docs.microsoft.com/dynamics365/fraud-protection/data-upload).
 
 ## Step 2: Interpret diagnose data in diagnostic and risk reports
 
 You can use either your own generated reports or Fraud Protection's sample reports to interpret the two reports that are generated during the diagnose experience.
--	To view reports that were generated from your own data, in the left navigation, select **Purchase**, and then select **Data diagnostic report** or **Risk diagnostic report**.
+
+-	To view reports that were generated from your own data, in the left navigation, select **Purchase**, select **Diagnose**, and then select **Diagnose report** or **Risk report**.
 -	To view sample reports, in the left navigation, select **Purchase**, select **Diagnose**, and then select **View sample**.
+
+
  	> [!NOTE]
  	>Sample reports are generated from synthetic sample data.
 
