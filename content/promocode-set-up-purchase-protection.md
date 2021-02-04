@@ -175,8 +175,6 @@ The next section of the report is the **Daily chargeback rate** section. This se
 
 You should very rarely see a chargeback rate that is less than the threshold of 5 chargeback basis points (bps). However, if you do, you're either missing data or something is wrong with the data. In these cases, we recommend that you do further investigation to identify and fix the root cause.
 
-![Data flow](media/promocode-images/pp-chargeback.png)
-
 The bottom section of the report provides an assessment of some aspects of the data that could affect the risk diagnostic report: empty data values, the period of the data, formatting errors, and uniqueness of the data. This section provides the following information:
 
 -	The **Empty values** section provides an assessment of the completeness of your data and shows the percentage of values in the whole dataset that are empty. Fraud Protection ignores historical data that has a null value. Note that if too much of your historical data has a null value, it will affect model performance.
