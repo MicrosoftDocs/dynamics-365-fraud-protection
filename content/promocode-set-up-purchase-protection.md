@@ -217,7 +217,9 @@ The following screenshot shows the top section of the risk diagnostic report. Th
 
 ![Data flow](media/promocode-images/pp-risk-report.png)
 
-The next section of the report is named **Distribution of transactions by risk score**. Low scores represent lower-risk transactions. You should always expect to see a "left-heavy," long-tail distribution; **not** a bell-curve or "right-heavy" distribution in the chart. A left-heavy distribution indicates that most of your transactions are low-risk and therefore will be recommended for approval by Fraud Protection. 
+#### Distribution of transactions by risk score
+
+In the next section of the report, low scores represent lower-risk transactions. You should always expect to see a "left-heavy," long-tail distribution; **not** a bell-curve or "right-heavy" distribution in the chart. A left-heavy distribution indicates that most of your transactions are low-risk and therefore will be recommended for approval by Fraud Protection. 
 
 As the risk scores increase along the x-axis, you should expect to see fewer and fewer transactions in the score bins. If the chart shows a very different type of distribution, contact Microsoft.
 
@@ -227,9 +229,11 @@ This section provides the following information:
 -	In the **Risk score range** fields, you can select the range of score bins. Note that, although the score (bin) range that is shown in the screenshot is from 0 through 99, the risk scores are in the range from 0 through 999.
 -	The chart shows transaction distribution by risk score for the selected score range. Green represents good transactions, whereas red represents the reported fraudulent transactions.
 
-![Data flow](media/promocode-images/pp-risk-transactions.png)
+#### Model performance
 
 The next section of the report is named **Model performance**. It shows how the model performed, based on the data that was received. It provides the following information:
+
+![Data flow](media/promocode-images/pp-model-performance.png)
 
 -	You can use the slider above the chart to select the risk score threshold that you want to analyze. Any transaction where the score is more than the threshold will be recommended for rejection.
 -	The chart represents the receiver operating characteristic (ROC) curve. It shows the percentage of rejected transactions that have chargebacks (y-axis) versus the percentage of rejected legitimate transactions, also known as false positives (x-axis). This data is charted by transaction count on the left and transaction value on the right. The chart will always be a curve. However, notice how steeply the curve climbs, because the steepness indicates a high rate of fraud detection that involves a low number of false positives, which is the ultimate outcome. In an ideal scenario, you will observe a false positive rate of 1 percent. However, the actual rate depends on the cost of the loss of one item. For example:
