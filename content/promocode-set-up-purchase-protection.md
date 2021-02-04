@@ -254,9 +254,11 @@ The next section of the report is named **Model performance**. It shows how the 
 
 #### Top 5 risk factors
 
--	At the bottom of the report, the **Top 5 risk factors** section shows the top-five risk factors for the selected percentage of your transactions that have the highest risk score. In the example that is shown, out of 1 percent of the riskiest transactions (that is, the transactions that have the highest risk scores, as assessed by Fraud Protection), 20 percent had a suspicious device Internet Protocol (IP) address, and 18.2 percent had a risky prepaid card. This section of the report is helpful because, by indicating which data attributes are showing the highest risk of being fraudulent, it can show where you should focus your fraud detection efforts.
+-	At the bottom of the report, the **Top 5 risk factors** section shows the top-five risk factors for the selected percentage of your transactions that have the highest risk score. 
 
 ![Data flow](media/promocode-images/pp-top5.png)
+
+In the example that is shown, out of 1 percent of the riskiest transactions (that is, the transactions that have the highest risk scores, as assessed by Fraud Protection), 20 percent had a suspicious device Internet Protocol (IP) address, and 18.2 percent had a risky prepaid card. This section of the report is helpful because, by indicating which data attributes are showing the highest risk of being fraudulent, it can show where you should focus your fraud detection efforts.
 
 ## Step 3: Integrate purchase protection APIs
 
