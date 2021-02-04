@@ -137,8 +137,8 @@ You can use either your own generated reports or Fraud Protection's sample repor
 
 ![Data flow](media/promocode-images/pp-sample.png)
 
- 	> [!NOTE]
- 	>Sample reports are generated from synthetic sample data.
+> [!NOTE]
+>Sample reports are generated from synthetic sample data.
 
 ### Data diagnostic report – Summary
 
@@ -150,6 +150,8 @@ You can download the data diagnostic report from the tool as a PDF file, and the
 
 ![Data flow](media/promocode-images/pp-summary.png)
 
+> [!NOTE]
+>Sample reports are generated from synthetic sample data.
 
 ### Data diagnostic report – Details
 
@@ -444,17 +446,17 @@ By default, the **Accounts** tab is selected. It shows the following information
   -	The **Activity log** section logs user and payment instrument activity, such as when they are added to or removed from a list.
 
 3.	Select the **Transactions** tab, and then, in the **Transaction > history** section, select the last transaction in the list.
- 	
-![Data flow](media/promocode-images/pp-details-tab.png)
 
+![Data flow](media/promocode-images/pp-details-tab.png)
+ 	
 The **Transactions** tab shows the following information:
  	
-    -	The **Transaction history** section lists individual transactions and highlights their key properties.
-    -	By default, the **Details** tab is selected. It shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address.
+   -	The **Transaction history** section lists individual transactions and highlights their key properties.
+   -	By default, the **Details** tab is selected. It shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address.
 
 ![Data flow](media/promocode-images/pp-box5.png)
 
-The first two sections on this tab are named **Purchase information** and **Risk information**.
+The first two sections on the **Details** tab are named **Purchase information** and **Risk information**.
  	
 -	The **Purchase information** section shows purchase-related data, such as the date and time of the transaction, the transaction number, the bank status, and the purchase status. Note that the transaction number is an ID that you will create and send to Fraud Protection. The ID format isn't specified by Fraud Protection. It can be in any format that you prefer, such as a GUID or string.
 -	The **Risk information** section shows several important pieces of information that are related to the transaction, such as its risk score, the merchant decision, and the decision reason. The merchant decision that is shown is based on the rules stack that is configured by the merchant. Fraud Protection decision reasons are codes that help your customer support agents quickly identify the reason behind Fraud Protection's recommendation for the transaction, so that they can take appropriate action. During the trial phase, you receive only group-level codes. However, after you're in Protect mode, you will receive unique codes that provide reason information at a more granular level. For more information about Fraud Protection decision reasons, see the product documentation.
@@ -464,11 +466,15 @@ The next two sections on the **Details** tab are named **Shipping information** 
 The last two sections on the **Details** tab are named **Device information** and **IP information**.
 
 -	The **Device information** section shows information that was captured by Device Fingerprinting. If Fraud Protection Device Fingerprinting isn't implemented (for example, in the case of historical data), this section will remain blank.
--	In the *IP information* section, the *IP address *is the physical location where the purchase was made.
+-	The **IP information** section shows the IP address, the physical location where the purchase was made.
+
+4.	Select the **Line items** tab.
 
 -	The **Line items** tab itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
 
 ![Data flow](media/promocode-images/pp-line-items.png)
+
+4.	Select the **Map** tab.
 
 -	On the **Map** tab, the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
