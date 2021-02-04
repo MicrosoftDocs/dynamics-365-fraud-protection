@@ -47,7 +47,7 @@ Before you begin the activities in this document, you must complete the followin
 -	Set up Fraud Protection in an Azure Active Directory (Azure AD) tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
 -	[Implement device fingerprinting](promocode-set-up-device-fingerprinting.md).
 
-## Step1: Upload historical data, generate Diagnose reports, and view sample reports
+## Step 1: Upload historical data, generate Diagnose reports, and view sample reports
 
 The use of historical purchase transaction data is separated into two experiences:
 
@@ -96,7 +96,7 @@ The general process to upload historical data consists of the following steps:
 
 10. In the left navigation, select **Purchase** and then select **Diagnose** to see your report. To download a copy, select **Download report**.
    
-## Step 3: Analyze data in a loss prevention report
+### Analyze data in a loss prevention report
 
 For more information about reports, see [The diagnose experience in Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/diagnose-experience).
 
@@ -133,7 +133,7 @@ For more information about how to upload historic data, see [Upload historical d
 You can use either your own generated reports or Fraud Protection's sample reports to interpret the two reports that are generated during the diagnose experience.
 
 -	To view reports that were generated from your own data, in the left navigation, select **Purchase**, select **Diagnose**, and then select **Diagnose report** or **Risk report**.
--	To view sample reports, in the left navigation, select **Purchase**, select **Diagnose**, and then select **View sample**.
+-	To view sample reports, in the left navigation, select **Purchase**, select **Diagnose**, and then select **View sample report**.
 
 ![Data flow](media/promocode-images/pp-sample.png)
 
