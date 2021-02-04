@@ -135,11 +135,10 @@ You can use either your own generated reports or Fraud Protection's sample repor
 -	To view reports that were generated from your own data, in the left navigation, select **Purchase**, select **Diagnose**, and then select **Diagnose report** or **Risk report**.
 -	To view sample reports, in the left navigation, select **Purchase**, select **Diagnose**, and then select **View sample**.
 
+![Data flow](media/promocode-images/pp-sample.png)
 
  	> [!NOTE]
  	>Sample reports are generated from synthetic sample data.
-
-![Data flow](media/promocode-images/pp-sample-report.png)
 
 ### Data diagnostic report – Summary
 
@@ -200,8 +199,6 @@ The risk diagnostic report is generated after you've reviewed the data diagnosti
 Keep in mind that the risk diagnostic report is a historical analysis. Therefore, some real-time signals such as device fingerprinting can't be used in the assessment. Additionally, because of out-of-time analysis, the effect of the fraud protection network is also significantly limited.
 
 Therefore, the scores that are shown won't be as good as they would be in a real-time assessment. However, this report provides a directional indication of the effectiveness of your fraud protection solution that uses Fraud Protection. Note that report performance will also be better when you use Fraud Protection in real time.
-
-![Data flow](media/promocode-images/pp-risk-diagnostic-summary.png)
 
 Instead of a "stopping **all** fraud (at all cost)" strategy, we recommend a strategy that is focused on **profit efficiency**. This type of strategy strikes a balance between the amount of fraud that is stopped and the number of false positives to optimize for the most profitable outcome. By approaching the issue in this way, you can get a much more efficient fraud system that can help deliver higher revenues and lower operating costs. The risk diagnostic report provides information and insights to help you analyze the trade-offs and understand the opportunity.
 
