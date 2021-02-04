@@ -233,7 +233,7 @@ This section provides the following information:
 
 The next section of the report is named **Model performance**. It shows how the model performed, based on the data that was received. It provides the following information:
 
-![Data flow](media/promocode-images/pp-model-performance.png)
+![Data flow](media/promocode-images/pp-sample-model-performance.png)
 
 -	You can use the slider above the chart to select the risk score threshold that you want to analyze. Any transaction where the score is more than the threshold will be recommended for rejection.
 -	The chart represents the receiver operating characteristic (ROC) curve. It shows the percentage of rejected transactions that have chargebacks (y-axis) versus the percentage of rejected legitimate transactions, also known as false positives (x-axis). This data is charted by transaction count on the left and transaction value on the right. The chart will always be a curve. However, notice how steeply the curve climbs, because the steepness indicates a high rate of fraud detection that involves a low number of false positives, which is the ultimate outcome. In an ideal scenario, you will observe a false positive rate of 1 percent. However, the actual rate depends on the cost of the loss of one item. For example:
@@ -445,26 +445,26 @@ By default, the **Accounts** tab is selected. It shows the following information
 
 3.	Select the **Transactions** tab, and then, in the **Transaction > history** section, select the last transaction in the list.
  	
-    The **Transactions** tab shows the following information:
+![Data flow](media/promocode-images/pp-details-tab.png)
+
+The **Transactions** tab shows the following information:
  	
     -	The **Transaction history** section lists individual transactions and highlights their key properties.
     -	By default, the **Details** tab is selected. It shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address.
- 	
-    The first two sections on this tab are named **Purchase information** and **Risk information**.
- 	
-    -	The **Purchase information** section shows purchase-related data, such as the date and time of the transaction, the transaction number, the bank status, and the purchase status. Note that the transaction number is an ID that you will create and send to Fraud Protection. The ID format isn't specified by Fraud Protection. It can be in any format that you prefer, such as a GUID or string.
-    -	The **Risk information** section shows several important pieces of information that are related to the transaction, such as its risk score, the merchant decision, and the decision reason. The merchant decision that is shown is based on the rules stack that is configured by the merchant. Fraud Protection decision reasons are codes that help your customer support agents quickly identify the reason behind Fraud Protection's recommendation for the transaction, so that they can take appropriate action. During the trial phase, you receive only group-level codes. However, after you're in Protect mode, you will receive unique codes that provide reason information at a more granular level. For more information about Fraud Protection decision reasons, see the product documentation.
- 	
-    The next two sections on the **Details** tab are named **Shipping information** and **Payment information**. They show the shipping-related and billing-related information that were used when the purchase event occurred.
- 	
-![Data flow](media/promocode-images/pp-details-tab.png)
 
+![Data flow](media/promocode-images/pp-box5.png)
+
+The first two sections on this tab are named **Purchase information** and **Risk information**.
+ 	
+-	The **Purchase information** section shows purchase-related data, such as the date and time of the transaction, the transaction number, the bank status, and the purchase status. Note that the transaction number is an ID that you will create and send to Fraud Protection. The ID format isn't specified by Fraud Protection. It can be in any format that you prefer, such as a GUID or string.
+-	The **Risk information** section shows several important pieces of information that are related to the transaction, such as its risk score, the merchant decision, and the decision reason. The merchant decision that is shown is based on the rules stack that is configured by the merchant. Fraud Protection decision reasons are codes that help your customer support agents quickly identify the reason behind Fraud Protection's recommendation for the transaction, so that they can take appropriate action. During the trial phase, you receive only group-level codes. However, after you're in Protect mode, you will receive unique codes that provide reason information at a more granular level. For more information about Fraud Protection decision reasons, see the product documentation.
+ 	
+The next two sections on the **Details** tab are named **Shipping information** and **Payment information**. They show the shipping-related and billing-related information that were used when the purchase event occurred.
+ 	
 The last two sections on the **Details** tab are named **Device information** and **IP information**.
 
 -	The **Device information** section shows information that was captured by Device Fingerprinting. If Fraud Protection Device Fingerprinting isn't implemented (for example, in the case of historical data), this section will remain blank.
 -	In the *IP information* section, the *IP address *is the physical location where the purchase was made.
-
-![Data flow](media/promocode-images/pp-box5.png)
 
 -	The **Line items** tab itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
 
