@@ -157,10 +157,10 @@ This section describes each section of the data diagnostic report to help you le
 
 The following screenshot shows the top section of the data diagnostic report. This section provides the following information:
 
--	The **Date period** section (labeled "1" in the screenshot) shows the number of days' worth of data that is available on the report.
--	The **Number of transactions** section (labeled "2") shows the number of transactions that are available on the report.
--	The **Number of chargebacks** section (labeled "3") shows the number of chargebacks that are available on the report.
--	The **Chargeback basis point **section (labeled "4") shows the chargeback basis point, which indicates the percentage of uploaded transactions that have an associated chargeback. The value is calculated as (Chargebacks ÷ Purchases) × 10,000.
+-	The **Date period** section shows the number of days' worth of data that is available on the report.
+-	The **Number of transactions** section shows the number of transactions that are available on the report.
+-	The **Number of chargebacks** section shows the number of chargebacks that are available on the report.
+-	The **Chargeback basis point** section shows the chargeback basis point, which indicates the percentage of uploaded transactions that have an associated chargeback. The value is calculated as (Chargebacks ÷ Purchases) × 10,000.
 
  	One basis point equals 0.01 percent (one one-hundredth of 1 percent). Therefore, for the chargeback rate, a basis point of 500 means that 5 percent of uploaded transactions have an associated chargeback.
 
@@ -168,8 +168,8 @@ The following screenshot shows the top section of the data diagnostic report. Th
 
 The next section of the report is the **Daily chargeback rate** section. This section provides the following information:
 
--	In the three fields above the chart (labeled "5" in the following screenshot), you can select the start and end dates to set the date range for the chart and select a country or region to view specific segments of your data for the selected date range.
--	In the daily chargeback rate chart (labeled "6"), the red horizontal line represents the minimum threshold of 5 chargeback basis points (bps). This threshold is the minimum number of labels that are required for model training.
+-	In the three fields above the chart, you can select the start and end dates to set the date range for the chart and select a country or region to view specific segments of your data for the selected date range.
+-	In the daily chargeback rate chart, the red horizontal line represents the minimum threshold of 5 chargeback basis points (bps). This threshold is the minimum number of labels that are required for model training.
 
 You should very rarely see a chargeback rate that is less than the threshold of 5 chargeback basis points (bps). However, if you do, you're either missing data or something is wrong with the data. In these cases, we recommend that you do further investigation to identify and fix the root cause.
 
@@ -177,7 +177,7 @@ You should very rarely see a chargeback rate that is less than the threshold of 
 
 The bottom section of the report provides an assessment of some aspects of the data that could affect the risk diagnostic report: empty data values, the period of the data, formatting errors, and uniqueness of the data. This section provides the following information:
 
--	The **Empty values** section (labeled "7" in the following screenshot) provides an assessment of the completeness of your data and shows the percentage of values in the whole dataset that are empty. Fraud Protection ignores historical data that has a null value. Note that if too much of your historical data has a null value, it will affect model performance.
+-	The **Empty values** section provides an assessment of the completeness of your data and shows the percentage of values in the whole dataset that are empty. Fraud Protection ignores historical data that has a null value. Note that if too much of your historical data has a null value, it will affect model performance.
  	
  	When you look at the data diagnostic report, it's important that you review it in the context of your business scenarios. Here are a few examples that explain why:
  	
@@ -185,10 +185,10 @@ The bottom section of the report provides an assessment of some aspects of the d
  	-	Your report shows that 80 percent of the values for the **PayerStatus** or **IMEI** attribute of the **PaymentInstrument** data field are empty. However, because 30 percent of your payment transactions are done through PayPal or mobile payments, which typically use those attributes, you expect only 70 percent of the attribute values to be empty. Therefore, before you generate a risk diagnostic report, you must investigate why more values than expected are empty.
  	-	Your report shows that 50 percent of shipping address fields are incomplete. However, 80 percent of your business involves sales of physical goods that are shipped. The remaining 20 percent involves sales of digital goods. Therefore, because you know that 80 percent of your sales require a shipping address, you expect only 20 percent of shipping address fields to be incomplete.
   
--	The **Data period** section (labeled "8") provides details about the data period that was used to generate the report. To generate a good directional indication in the risk diagnostic report, Fraud Protection requires at least 90 days' worth of historical data that meets data completeness and diversity criteria.
--	The **Formatting errors** section (labeled "9") confirms that your data follows the required schema for the listed attributes. The information in this section is important because the specifications help ensure ML model performance.
+-	The **Data period** section provides details about the data period that was used to generate the report. To generate a good directional indication in the risk diagnostic report, Fraud Protection requires at least 90 days' worth of historical data that meets data completeness and diversity criteria.
+-	The **Formatting errors** section confirms that your data follows the required schema for the listed attributes. The information in this section is important because the specifications help ensure ML model performance.
  	For example, the schema that Fraud Protection uses requires a two-letter ISO country or region code, and a three-character currency code that is aligned with the OANDA currency code. If different codes are used for these attributes, there will be a 100-percent mismatch. However, in some cases, only a subset of the data has a formatting mismatch (as shown in the screenshot). This mismatch can be caused by errors that are introduced by some payment types or interface differences (web interface versus mobile app interface). Regardless, it's important that you understand the root cause of these formatting issues and fix them before you generate a risk diagnostic report.
--	The **Unique entities** section (labeled "10") provides an assessment of the diversity of your data. It shows the percentage of unique data entities for **IP address**, **User ID**, and **User email** attributes. High diversity of data in these attributes enables good model performance and learning. These profiling entities are used to assess velocities for users. Fewer than one unique value for every 100 transactions (that is, a value of less than 1 percent) is a strong indicator of data mapping errors. In this case, you must investigate the issue and resolve it to help reduce the likelihood that the model's response will be skewed.
+-	The **Unique entities** section provides an assessment of the diversity of your data. It shows the percentage of unique data entities for **IP address**, **User ID**, and **User email** attributes. High diversity of data in these attributes enables good model performance and learning. These profiling entities are used to assess velocities for users. Fewer than one unique value for every 100 transactions (that is, a value of less than 1 percent) is a strong indicator of data mapping errors. In this case, you must investigate the issue and resolve it to help reduce the likelihood that the model's response will be skewed.
 
 ![Data flow](media/promocode-images/pp-empty-value.png)
 
@@ -208,12 +208,12 @@ This section describes each section of the risk diagnostic report to help you le
 
 The following screenshot shows the top section of the risk diagnostic report. This section provides the following information:
 
--	The **Total dollar value of reported transactions** section (labeled "11" in the screenshot) shows the total dollar value of all transactions that are available in the data diagnostic report.
--	The **Total dollar value of reported fraud events** section (labeled "12") shows the total dollar value of all reported fraud events that are available in the data diagnostic report.
--	The **% of reported fraud events in dollars ($)** section (labeled "13") shows the dollar amount of fraud events as a percentage of the total dollar amount of all transactions. The value is calculated as (Total dollar value of reported fraud events ÷ Total dollar value of reported transactions) × 100.
--	The **Total count of reported transactions** section (labeled "14") shows the total number/count of reported transactions that are available in the data diagnostic report.
--	The **Total count of reported fraud events** section (labeled "15") shows the total number/count of reported fraud events that are available in the data diagnostic report.
--	The **% of reported fraud events** section (labeled "16") shows the total count of reported fraud events as a percentage of the total count of reported transactions. The value is calculated as (Total count of reported fraud events ÷ Total count of reported transactions) × 100.
+-	The **Total dollar value of reported transactions** section shows the total dollar value of all transactions that are available in the data diagnostic report.
+-	The **Total dollar value of reported fraud events** section shows the total dollar value of all reported fraud events that are available in the data diagnostic report.
+-	The **% of reported fraud events in dollars ($)** section shows the dollar amount of fraud events as a percentage of the total dollar amount of all transactions. The value is calculated as (Total dollar value of reported fraud events ÷ Total dollar value of reported transactions) × 100.
+-	The **Total count of reported transactions** section shows the total number/count of reported transactions that are available in the data diagnostic report.
+-	The **Total count of reported fraud events** section shows the total number/count of reported fraud events that are available in the data diagnostic report.
+-	The **% of reported fraud events** section shows the total count of reported fraud events as a percentage of the total count of reported transactions. The value is calculated as (Total count of reported fraud events ÷ Total count of reported transactions) × 100.
 
 ![Data flow](media/promocode-images/pp-risk-report.png)
 
@@ -223,16 +223,16 @@ As the risk scores increase along the x-axis, you should expect to see fewer and
 
 This section provides the following information:
 
--	In the **Show transaction** field (labeled "17" in the following screenshot), you can select to view transactions by count or by currency value.
--	In the **Risk score range** fields (labeled "18"), you can select the range of score bins. Note that, although the score (bin) range that is shown in the screenshot is from 0 through 99, the risk scores are in the range from 0 through999.
--	The chart (labeled "19") shows transaction distribution by risk score for the selected score range. Green represents good transactions, whereas red represents the reported fraudulent transactions.
+-	In the **Show transaction** field, you can select to view transactions by count or by currency value.
+-	In the **Risk score range** fields, you can select the range of score bins. Note that, although the score (bin) range that is shown in the screenshot is from 0 through 99, the risk scores are in the range from 0 through 999.
+-	The chart shows transaction distribution by risk score for the selected score range. Green represents good transactions, whereas red represents the reported fraudulent transactions.
 
 ![Data flow](media/promocode-images/pp-risk-transactions.png)
 
 The next section of the report is named **Model performance**. It shows how the model performed, based on the data that was received. It provides the following information:
 
--	You can use the slider above the chart (labeled "20" in the following screenshot) to select the risk score threshold that you want to analyze. Any transaction where the score is more than the threshold will be recommended for rejection.
--	The chart (labeled "21") represents the receiver operating characteristic (ROC) curve. It shows the percentage of rejected transactions that have chargebacks (y-axis) versus the percentage of rejected legitimate transactions, also known as false positives (x-axis). This data is charted by transaction count on the left and transaction value on the right. The chart will always be a curve. However, notice how steeply the curve climbs, because the steepness indicates a high rate of fraud detection that involves a low number of false positives, which is the ultimate outcome. In an ideal scenario, you will observe a false positive rate of 1 percent. However, the actual rate depends on the cost of the loss of one item. For example:
+-	You can use the slider above the chart to select the risk score threshold that you want to analyze. Any transaction where the score is more than the threshold will be recommended for rejection.
+-	The chart represents the receiver operating characteristic (ROC) curve. It shows the percentage of rejected transactions that have chargebacks (y-axis) versus the percentage of rejected legitimate transactions, also known as false positives (x-axis). This data is charted by transaction count on the left and transaction value on the right. The chart will always be a curve. However, notice how steeply the curve climbs, because the steepness indicates a high rate of fraud detection that involves a low number of false positives, which is the ultimate outcome. In an ideal scenario, you will observe a false positive rate of 1 percent. However, the actual rate depends on the cost of the loss of one item. For example:
 
     -	You're protecting a product that sells for $1,000, and your profit margin is $250.
     -	The cost of allowing a fraudulent transaction is $1,000 if you, as the merchant, are liable for fraud (as is often the case for online "card not present" transactions).
@@ -246,11 +246,11 @@ The next section of the report is named **Model performance**. It shows how the 
  	> [!NOTE]
  	> These curves are generated from a historical analysis. When real-time assessment is introduced, the fraud detection rate (y-axis) will significantly improve.
 
--	The section below the chart (labeled “22”) shows the outcome of the selected threshold. It shows the number and value of fraudulent transactions that would have been rejected (known as true positives) versus the total number and value of reported fraudulent transactions. It also shows the ratio of the number and value of good transactions that were accepted (known as true negatives) to the total number and value of good transactions. When you’re interpreting the data, if there is high variability in the product prices, the transaction amount curve can be more valuable to your analysis. Also, if the **Transaction value** chart is higher than the **Transaction count** chart, there is a higher detection rate for high-value transactions. This result is good because those transactions can often incur the highest losses. If the **Transaction count** chart is higher than the **Transaction value** chart, there is a higher detection rate for lower-value transactions. This result can be good if there are very high volumes of low-value transactions.
+-	The section below the chart shows the outcome of the selected threshold. It shows the number and value of fraudulent transactions that would have been rejected (known as true positives) versus the total number and value of reported fraudulent transactions. It also shows the ratio of the number and value of good transactions that were accepted (known as true negatives) to the total number and value of good transactions. When you’re interpreting the data, if there is high variability in the product prices, the transaction amount curve can be more valuable to your analysis. Also, if the **Transaction value** chart is higher than the **Transaction count** chart, there is a higher detection rate for high-value transactions. This result is good because those transactions can often incur the highest losses. If the **Transaction count** chart is higher than the **Transaction value** chart, there is a higher detection rate for lower-value transactions. This result can be good if there are very high volumes of low-value transactions.
 
 ![Data flow](media/promocode-images/pp-risk-transactions2.png)
 
--	At the bottom of the report, the **Top 5 risk factors** section (labeled “23 in the following screenshot) shows the top-five risk factors for the selected percentage of your transactions that have the highest risk score. In the example that is shown, out of 1 percent of the riskiest transactions (that is, the transactions that have the highest risk scores, as assessed by Fraud Protection), 20 percent had a suspicious device Internet Protocol (IP) address, and 18.2 percent had a risky prepaid card. This section of the report is helpful because, by indicating which data attributes are showing the highest risk of being fraudulent, it can show where you should focus your fraud detection efforts.
+-	At the bottom of the report, the **Top 5 risk factors** section shows the top-five risk factors for the selected percentage of your transactions that have the highest risk score. In the example that is shown, out of 1 percent of the riskiest transactions (that is, the transactions that have the highest risk scores, as assessed by Fraud Protection), 20 percent had a suspicious device Internet Protocol (IP) address, and 18.2 percent had a risky prepaid card. This section of the report is helpful because, by indicating which data attributes are showing the highest risk of being fraudulent, it can show where you should focus your fraud detection efforts.
 
 ![Data flow](media/promocode-images/pp-top5.png)
 
@@ -433,23 +433,23 @@ The Fraud Protection support tool lets your agents evaluate customer escalations
 
 By default, the **Accounts** tab is selected. It shows the following information:
 
-  -	The **Account summary** section (labeled "Box 1" in the previous screenshot) summarizes the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. Scroll down the list to view more information. When your own data is loaded into the support tool, look for activities that might fall outside typical patterns, such as a recent spike in spending, or an unusual number of transactions or chargebacks. This section also indicates whether the user is on a safe list, block list, or watch list.
-  -	The **Payment instruments** section (labeled "Box 2" lists any payment instruments that have been associated with the account. It also indicates whether the payment instruments are on a safe list, block list, or watch list.
-  -	The **Activity log** section (labeled "Box 3") logs user and payment instrument activity, such as when they are added to or removed from a list.
+  -	The **Account summary** section summarizes the history of the customer's spending, transactions, chargebacks, and refunds, if there is any history. Scroll down the list to view more information. When your own data is loaded into the support tool, look for activities that might fall outside typical patterns, such as a recent spike in spending, or an unusual number of transactions or chargebacks. This section also indicates whether the user is on a safe list, block list, or watch list.
+  -	The **Payment instruments** section lists any payment instruments that have been associated with the account. It also indicates whether the payment instruments are on a safe list, block list, or watch list.
+  -	The **Activity log** section logs user and payment instrument activity, such as when they are added to or removed from a list.
 
 3.	Select the **Transactions** tab, and then, in the **Transaction > history** section, select the last transaction in the list.
  	
     The **Transactions** tab shows the following information:
  	
-    -	The **Transaction history** section (labeled "Box 4" in the following screenshot) lists individual transactions and highlights their key properties.
+    -	The **Transaction history** section lists individual transactions and highlights their key properties.
     -	By default, the **Details** tab is selected. It shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address.
  	
-    The first two sections on this tab are named **Purchase information** and **Risk information** (labeled "Box 5").
+    The first two sections on this tab are named **Purchase information** and **Risk information**.
  	
     -	The **Purchase information** section shows purchase-related data, such as the date and time of the transaction, the transaction number, the bank status, and the purchase status. Note that the transaction number is an ID that you will create and send to Fraud Protection. The ID format isn't specified by Fraud Protection. It can be in any format that you prefer, such as a GUID or string.
     -	The **Risk information** section shows several important pieces of information that are related to the transaction, such as its risk score, the merchant decision, and the decision reason. The merchant decision that is shown is based on the rules stack that is configured by the merchant. Fraud Protection decision reasons are codes that help your customer support agents quickly identify the reason behind Fraud Protection's recommendation for the transaction, so that they can take appropriate action. During the trial phase, you receive only group-level codes. However, after you're in Protect mode, you will receive unique codes that provide reason information at a more granular level. For more information about Fraud Protection decision reasons, see the product documentation.
  	
-    The next two sections on the **Details** tab are named **Shipping information** and **Payment information** (labeled "Box 6"). They show the shipping-related and billing-related information that were used when the purchase event occurred.
+    The next two sections on the **Details** tab are named **Shipping information** and **Payment information**. They show the shipping-related and billing-related information that were used when the purchase event occurred.
  	
 ![Data flow](media/promocode-images/pp-details-tab.png)
 
@@ -460,11 +460,11 @@ The last two sections on the **Details** tab are named **Device information** an
 
 ![Data flow](media/promocode-images/pp-box5.png)
 
--	The **Line items** tab (labeled "Box 7" in the following screenshot) itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
+-	The **Line items** tab itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
 
 ![Data flow](media/promocode-images/pp-line-items.png)
 
--	On the **Map** tab (labeled "Box 8" in the following screenshot), the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
+-	On the **Map** tab, the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
 ![Data flow](media/promocode-images/pp-map.png)
 
