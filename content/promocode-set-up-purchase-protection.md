@@ -467,13 +467,13 @@ The last two sections on the **Details** tab are named **Device information** an
 
 4.	Select the **Line items** tab.
 
--	The **Line items** tab itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
+    This tab itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
 
 ![Data flow](media/promocode-images/pp-line-items.png)
 
 5.	Select the **Map** tab.
 
--	On the **Map** tab, the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
+    The transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
 ![Data flow](media/promocode-images/pp-map.png)
 
