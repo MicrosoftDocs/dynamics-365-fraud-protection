@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to protect purchases with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 02/03/2021
+ms.date: 02/04/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -445,7 +445,7 @@ By default, the **Accounts** tab is selected. It shows the following information
   -	The **Payment instruments** section lists any payment instruments that have been associated with the account. It also indicates whether the payment instruments are on a safe list, block list, or watch list.
   -	The **Activity log** section logs user and payment instrument activity, such as when they are added to or removed from a list.
 
-3.	Select the **Transactions** tab, and then, in the **Transaction > history** section, select the last transaction in the list.
+3.	Select the **Transactions** tab, and then, in the **Transaction history** section, select a transaction.
 
 ![Data flow](media/promocode-images/pp-details-tab.png)
  	
@@ -453,12 +453,11 @@ The **Transactions** tab shows the following information:
  	
    -	The **Transaction history** section lists individual transactions and highlights their key properties.
    -	By default, the **Details** tab is selected. It shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address.
+      The first two sections on the **Details** tab are named **Purchase information** and **Risk information**.
 
 ![Data flow](media/promocode-images/pp-box5.png)
 
-The first two sections on the **Details** tab are named **Purchase information** and **Risk information**.
- 	
--	The **Purchase information** section shows purchase-related data, such as the date and time of the transaction, the transaction number, the bank status, and the purchase status. Note that the transaction number is an ID that you will create and send to Fraud Protection. The ID format isn't specified by Fraud Protection. It can be in any format that you prefer, such as a GUID or string.
+- The **Purchase information** section shows purchase-related data, such as the date and time of the transaction, the transaction number, the bank status, and the purchase status. Note that the transaction number is an ID that you will create and send to Fraud Protection. The ID format isn't specified by Fraud Protection. It can be in any format that you prefer, such as a GUID or string.
 -	The **Risk information** section shows several important pieces of information that are related to the transaction, such as its risk score, the merchant decision, and the decision reason. The merchant decision that is shown is based on the rules stack that is configured by the merchant. Fraud Protection decision reasons are codes that help your customer support agents quickly identify the reason behind Fraud Protection's recommendation for the transaction, so that they can take appropriate action. During the trial phase, you receive only group-level codes. However, after you're in Protect mode, you will receive unique codes that provide reason information at a more granular level. For more information about Fraud Protection decision reasons, see the product documentation.
  	
 The next two sections on the **Details** tab are named **Shipping information** and **Payment information**. They show the shipping-related and billing-related information that were used when the purchase event occurred.
@@ -474,7 +473,7 @@ The last two sections on the **Details** tab are named **Device information** an
 
 ![Data flow](media/promocode-images/pp-line-items.png)
 
-4.	Select the **Map** tab.
+5.	Select the **Map** tab.
 
 -	On the **Map** tab, the transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
