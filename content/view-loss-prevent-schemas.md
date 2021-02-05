@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines data schemas for loss prevention in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/28/2021
+ms.date: 02/03/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -233,6 +233,6 @@ Note the following formatting guidelines throughout:
 | Field Name          | Data Type              | Description |
 |---------------------|------------------------|-------------|
 | PAYMENTMETHODNUMBER      | string       | The identifier for the payment method.       |
-| DEFAULTFUNCTION          | string       | The identifier for the payment method.       |
+| DEFAULTFUNCTION          | string       | A description of the type of payment method, such as Cash, Check, Credit Memo/Voucher, or Currency.       |
 | NAME                     | string       | The descriptive name for the payment method. |
 
