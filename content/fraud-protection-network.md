@@ -22,3 +22,6 @@ By participating in this network, you can benefit from insights derived from the
 
 > [!NOTE]
 > You can learn more about the Model Reason Codes and Explainability Implementation in the [DFP Model Reason Codes and Explainability Document](https://go.microsoft.com/fwlink/?linkid=2132568). A login is required.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

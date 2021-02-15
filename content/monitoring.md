@@ -46,3 +46,6 @@ The full list of errors shows HTTP status descriptions and codes, the APIs to wh
 
 - Filter results by selecting any of the column headers. 
 - Select a line to find that error in the chart, and click it again to deselect. Results may take a few seconds to render. 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

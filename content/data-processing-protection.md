@@ -99,3 +99,6 @@ By opting into this feature, a customer directs Fraud Protection to transmit Tra
 
 Fraud Protection uses customer data to provide tools to help customers understand how fraud is impacting its ecommerce business. Such tools include reporting functionality, graphical displays, and support services features.  
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

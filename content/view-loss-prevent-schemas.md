@@ -236,3 +236,6 @@ Note the following formatting guidelines throughout:
 | DEFAULTFUNCTION          | string       | A description of the type of payment method, such as Cash, Check, Credit Memo/Voucher, or Currency.       |
 | NAME                     | string       | The descriptive name for the payment method. |
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

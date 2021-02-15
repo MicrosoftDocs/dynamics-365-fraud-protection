@@ -86,3 +86,6 @@ You can reference and build a sample of a Power BI dashboard that is based on Fr
 - [Work with Logic Apps or Power Automate](extensibility-with-power-automate.md)
 - [Work with Power Apps](extensibility-with-power-apps.md)
 - [Pricing](extensibility-pricing.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

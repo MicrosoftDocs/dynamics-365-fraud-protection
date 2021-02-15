@@ -39,3 +39,6 @@ Each event type has multiple layers of defense:
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
 - [Learn from the account protection scorecard](ap-scorecard.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

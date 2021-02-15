@@ -72,3 +72,6 @@ To update a customer's status, follow these steps.
     You can also create a rule to identify a course of action for users who have a status of **Watch**.
 
 1. Select the **Edit** button next to the status of the user or payment instrument, and then select the reason for your change.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

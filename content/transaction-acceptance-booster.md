@@ -62,3 +62,6 @@ See the [API documentation](integrate-real-time-api.md) and the [data upload doc
 
 ### Reports
 To view a report of your Program MID activity, select **Scorecard** and then select the **MID classification** filter.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

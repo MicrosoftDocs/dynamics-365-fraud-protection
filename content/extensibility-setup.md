@@ -44,3 +44,6 @@ To work with these events from Event Hubs, you can use either code via software 
 - [Work with Power BI](extensibility-with-power-bi.md)
 - [Work with Power Apps](extensibility-with-power-apps.md)
 - [Pricing](extensibility-pricing.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

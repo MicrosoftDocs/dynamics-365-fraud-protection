@@ -57,3 +57,6 @@ As for any other artificial intelligence (AI) models, accuracy is correlated to 
 ### Disclaimer
 
 The purpose of this document is to inform the reader, not to provide legal advice. Readers are advised to consult with both technical and legal advisers in assessing compliance with Indian Laws.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

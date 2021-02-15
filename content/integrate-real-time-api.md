@@ -173,3 +173,6 @@ For additional reference, view the <a href="https://go.microsoft.com/fwlink/?lin
 
 For guidance on configuring the sample site for your use, view <a href="https://go.microsoft.com/fwlink/?linkid=2100635" target="_blank">Configure the sample site</a>.
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

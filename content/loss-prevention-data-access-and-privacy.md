@@ -31,3 +31,6 @@ Loss prevention uses machine learning techniques to analyze the historical data 
 ## Who can view the loss prevention insights?
 
 The outliers that the adaptive AI models referenced are presented as insights through interactive reports. Store managers can use these reports as part of an investigation of potential in-store fraud.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

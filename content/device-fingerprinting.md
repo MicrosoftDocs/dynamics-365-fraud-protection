@@ -98,3 +98,6 @@ Your website or application should enable the device fingerprinting before it su
 
     If you see additional details beyond what was submitted in the API call, you've set up device fingerprinting correctly.
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

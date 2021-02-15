@@ -50,3 +50,6 @@ $c_appRole = $sp.AppRoles | Where-Object { $_.DisplayName -eq $c_app_role_name }
 $c_sp = Get-AzureADServicePrincipal -Filter "displayName eq '$c_app_name'"
 New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.ObjectId -ResourceId $sp.ObjectId -Id $c_appRole.Id 
 ```
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

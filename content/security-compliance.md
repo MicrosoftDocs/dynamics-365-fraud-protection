@@ -74,3 +74,6 @@ A data subject request (DSR) is a request asking for modification of personal da
     - Statuses (pending or complete)
     - Exported data links.
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
