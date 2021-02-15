@@ -37,3 +37,6 @@ The Protect experience in Fraud Protection provides the features that are descri
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
 - [Boost bank acceptance rates with the transaction acceptance booster](transaction-acceptance-booster.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

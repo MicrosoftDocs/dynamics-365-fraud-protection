@@ -81,3 +81,6 @@ Tailored access for fraud analysts and engineers in your organization working wi
 
 ### Risk_API
 Grants API access. Provides no access to the user-facing tool. 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

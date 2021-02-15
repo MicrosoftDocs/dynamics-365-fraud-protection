@@ -90,3 +90,6 @@ Currently, you can create up to three distinct assessments under custom assessme
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
 - [Learn from the account protection scorecard](ap-scorecard.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

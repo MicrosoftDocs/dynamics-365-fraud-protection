@@ -305,3 +305,6 @@ The following sample shows how to use purchase APIs with a custom data object in
 }
 ```
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

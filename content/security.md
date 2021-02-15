@@ -18,3 +18,6 @@ By providing Microsoft Dynamics 365 Fraud Protection, Microsoft has implemented,
 
 To learn more about Microsoft's security practice, visit the [Microsoft Trust Center](https://www.microsoft.com/en-us/trust-center). 
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -162,3 +162,6 @@ You can preview a list in Fraud Protection. The preview pane shows a maximum of 
 
 - To preview a list, select it, and then select **Preview**.
 - To view the full list, select **Download** to download the list, and then open the file in any text editor.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

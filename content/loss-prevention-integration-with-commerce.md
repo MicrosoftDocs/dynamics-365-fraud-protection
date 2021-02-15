@@ -57,3 +57,6 @@ The next step is to configure the settings so that the loss prevention capabilit
     The URL is stored in the Backend Configuration service for your Fraud Protection environment.
 
 For more information about how to integrate Fraud Protection's loss prevention capability with Commerce, see [Loss prevention in Commerce](https://docs.microsoft.com/dynamics365/commerce/dev-itpro/DFP#loss-prevention-in-commerce).
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

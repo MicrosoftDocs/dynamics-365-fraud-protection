@@ -130,3 +130,6 @@ Here is a list of compliance certificate URLs for Fraud Protection:
 | Provide a copy of the self-assessment. | Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers). |
 | Does Microsoft have a current change management policy document? | Yes. |
 | Does the application or service have an established incident response and triage policy and established processes? | Yes. |
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

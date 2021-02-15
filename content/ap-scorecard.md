@@ -77,3 +77,6 @@ The **Risk decision** section shows metrics from the automated decision rules th
 - [Custom assessment](custom-assessment.md)
 
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

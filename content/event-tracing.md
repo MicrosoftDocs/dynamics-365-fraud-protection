@@ -179,3 +179,6 @@ Use monitoring events for reporting and alerting on your API latency as well as 
 ```
 
 The *Samples* field represents the request count per API.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

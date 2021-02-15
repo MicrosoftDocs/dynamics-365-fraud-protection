@@ -44,3 +44,6 @@ To create and provision a new Azure tenant, follow the steps in [Quickstart: Cre
 After you've signed up, you can proceed to configuring user access to Fraud Protection. For instructions, see the "Configure users in Dynamics 365 Fraud Protection" topic in [Configure user access](configure-user-access.md).
 
 After configuring access to users, integrate your existing systems with the Fraud Protection real-time application programming interfaces (APIs). See [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md), and follow the steps.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

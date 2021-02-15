@@ -74,3 +74,6 @@ The rules experience is extended so that users can save changes to their rules a
 ## Additional language support
 
 Fraud Protection is now available in seven languages: English, French, German, Brazilian Portuguese, Italian, Spanish, and Dutch.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
