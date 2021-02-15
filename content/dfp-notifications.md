@@ -26,3 +26,6 @@ The [Service Health Dashboard](https://docs.microsoft.com/office365/enterprise/v
 
 Additionally, you can configure your email preferences to receive messages posted on the Message Center and Service Health Dashboard by e-mail. For information on how to set this up, see [Message center Preferences](https://docs.microsoft.com/microsoft-365/admin/manage/message-center?view=o365-worldwide#preferences&preserve-view=true).
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -30,3 +30,6 @@ There are several cases where a merchant might need capabilities beyond Fraud Pr
 
 For purchase protection and account protection, Fraud Production has created a new rules experience to help merchants express their augmented custom fraud logic in a rich and expressive language. This language is designed to give merchants the power and flexibility they need to customize their fraud strategy and enforce their unique fraud business policies. It is coupled with assistive technologies such as reusable lists, rich IntelliSense, highlighting, real-time debugging, and commonly used templates to help them get started with creating custom rules. In addition to payload values and AI-based scores, rules also leverage custom lists which merchants create to manage data specific to their needs or fraud protection strategy.
 For more information, see [Manage lists](lists.md), [Manage rules](rules.md), and the [Rules language guide](fpl-lang-ref.md).
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -164,3 +164,6 @@ To call the APIs, follow these steps.
 For additional reference, view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and see the accompanying developer documentation. The sample app provides an example that shows how to call Fraud Protection APIs in real time. The documentation for the sample app is linked to actual sample code whenever links are possible. Otherwise, code samples are included directly in the documentation.
 
 For information about how to configure the sample site so that you can use it, see [Configure the sample site](https://go.microsoft.com/fwlink/?linkid=2100635).
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

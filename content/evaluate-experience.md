@@ -39,3 +39,6 @@ The evaluate experience in Fraud Protection provides the features that are descr
 - [Support your customers](risk-support.md)
 
 The Protect experience is differentiated from Evaluate by additional features as described on [Protect experience](protect-experience.md), and becomes your real-time tool in your full production environment.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

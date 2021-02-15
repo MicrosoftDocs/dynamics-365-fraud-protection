@@ -41,3 +41,6 @@ The scorecard plots the following metrics:
 - **Final approval rate** – The percentage of purchases that were approved out of the total volume.
 - **Settled rate** – The percentage of bank approvals out of the total volume that was sent to banks.
 - **Chargeback rate by receive date** – The percentage of chargebacks out of the total volume that was approved by banks on the chargeback receive date and the transaction date.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

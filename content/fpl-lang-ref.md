@@ -294,3 +294,6 @@ Variable types are inferred from the context that they are used in. Here are som
 If there isn't enough context to infer the type of a variable, it's considered a *String* value. For example, in the expression **@"riskScore" \< @"botScore"**, both variables are interpreted as strings.
 
 To specify the type of a non-string variable, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

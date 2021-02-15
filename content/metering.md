@@ -51,3 +51,6 @@ The **Accumulated Consumption %** metric shows the ratio of the total number of 
 - Only activity in the Fraud Protection production environment counts toward the assessments that have been used. Activity in the integration environment doesn't count. Therefore, in the integration environment, the **Metering** page doesn't show the **Summary** tab.
 - The calculation of assessments that have been used excludes any assessment API calls that fail because of service issues that are caused by Fraud Protection (HTTP response code 5xx). The calculation includes only successful requests (HTTP response code 2xx) and bad requests (HTTP response code 4xx).
 - The **Experience Type** and **Response Type** filters on the **Details** tab of the **Metering** page apply only to the account protection and purchase protection capabilities.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -82,3 +82,6 @@ If their usage requires higher limits, Commerce customers have the option of pur
 
 To start using Fraud Protection if you are an existing Commerce customer, visit the [Fraud Protection portal](https://dfp.microsoft.com/), sign in with tenant global administrator credentials, and complete a one-time setup for your environment.
 
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

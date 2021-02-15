@@ -377,3 +377,6 @@ In the sample payload, you change the value of the **isEmailValidated** field in
 In this case, clause 2 is triggered, and a decision of **Review** is returned.
 
 In the sample score, if you change the value of **"riskScore"** from **500** to **700**, clause 3 is triggered, and the decision is updated to **Reject**.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -11,3 +11,6 @@ title: Understand your business
 
 
 # Understand your business
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

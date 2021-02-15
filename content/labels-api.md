@@ -35,3 +35,6 @@ We recommend using the Chargeback and Refund API for providing information perta
 - Transaction details that update the status of reversed chargeback or fraud signals 
 
  
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

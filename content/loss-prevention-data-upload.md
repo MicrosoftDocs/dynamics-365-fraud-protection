@@ -85,3 +85,6 @@ Before you use your internal data, you can download sample data and use it to ex
 ## Connect to Dynamics 365 Commerce
 
 In addition to uploading local files, you can connect to Dynamics 365 Commerce if this option is available to you. Note that when you connect to Commerce, all required data for Loss Prevention reports will automatically be imported and mapped. For more information, see [Loss prevention integration with Dynamics 365 Commerce](https://go.microsoft.com/fwlink/?linkid=2131495).
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

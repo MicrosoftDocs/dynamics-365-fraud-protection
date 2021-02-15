@@ -32,3 +32,6 @@ Learn more about the following features used in purchase protection:
 - [Support your customers](risk-support.md)
 - [Monitor API calls](monitoring.md)
 - [Usage metering](metering.md)
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]

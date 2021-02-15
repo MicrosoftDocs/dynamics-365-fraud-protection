@@ -77,3 +77,6 @@ You can review your completed data diagnostic and risk diagnostic reports in Fra
 1. Select **Purchase**, and then, on the **Diagnose** tab, view the risk report.
 1. To review the data diagnostic report, select **Check data quality**.
 1. For deeper analysis and additional information, download the full reports as .docx files.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
