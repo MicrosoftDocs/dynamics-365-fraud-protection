@@ -32,7 +32,7 @@ After you configure real-time API calls with Fraud Protection, transaction data 
 
 This document guides you through the following activities:
 
-- [Step 1: Upload historical data, generate Diagnose reports, and view sample reports.](promocode-set-up-purchase-protection.md#step1-upload-historical-data-generate-diagnose-reports-and-view-sample-reports)
+- [Step 1: Upload historical data, generate Diagnose reports, and view sample reports.](promocode-set-up-purchase-protection.md#step-1-upload-historical-data-generate-diagnose-reports-and-view-sample-reports)
 - [Step 2: Interpret diagnose data in diagnostic and risk reports](promocode-set-up-purchase-protection.md#step-2-interpret-diagnose-data-in-diagnostic-and-risk-reports).
 - [Step 3: Integrate purchase protection APIs](promocode-set-up-purchase-protection.md#step-3-integrate-purchase-protection-apis).
 - [Step 4: Understand purchase events](promocode-set-up-purchase-protection.md#step-4-understand-purchase-events).
