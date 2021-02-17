@@ -1,0 +1,58 @@
+---
+author: yvonnedeq
+description: This topic describes how to set up a purchased version of Fraud Protection.
+ms.author: v-madeq
+ms.service: fraud-protection
+ms.date: 02/01/2021
+ms.topic: conceptual
+search.app: 
+  - Capaedac-fraudprotection
+search.audienceType:
+  - admin
+title: Set up a purchased version of Fraud Protection
+---
+
+
+
+# Set up a purchased version of Fraud Protection
+
+## Protect your business from fraudulent activity
+
+Microsoft Dynamics 365 Fraud Protection (Fraud Protection) is a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time.
+Here are some examples of the innovative and advanced ways Fraud Protection can help protect your business:
+
+- AI and insights from the fraud protection network
+- Device fingerprinting
+- A rules engine and virtual fraud analyst
+- A graph explorer and scorecard
+- A transaction acceptance booster
+
+## Goals for this document
+
+This document guides you through the prerequisites of setting up a purchased version of Fraud Protection.
+After you complete the tasks in this document, you will be ready to use Fraud Protection to protect your business.
+
+## Prerequisites for setting up Fraud Protection
+
+To set up Fraud Protection and control user access to your data, you must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, you can sign up for one.
+
+## Sign in scenarios
+
+The following sign-in scenarios are intended for customers who purchased a license for Fraud Protection.
+- When you purchase a license through a Microsoft Cloud Solution Provider (CSP), the CSP determines which Azure AD tenant you will use. To get started with that tenant, go to [Access your Dynamics 365 Fraud Protection account](https://dfp.microsoft.com/), and sign in by using global administrator credentials.
+- If you purchase a license through a Volume Licensing (VL) channel, follow the instructions in the email that you received to activate your subscription in the desired tenant. Then, to get started, go to [Access your Dynamics 365 Fraud Protection account](https://dfp.microsoft.com/), and sign in by using global administrator credentials.
+
+
+## Next steps
+
+For information about how to access and use Fraud Protection's other capabilities, see the following documents:
+
+- [Protect customer accounts with Fraud Protection](promocode-set-up-account-protection.md)
+- [Protect purchases with Fraud Protection](promocode-set-up-purchase-protection.md)
+- [Prevent loss with Fraud Protection](promocode-set-up-loss-prevention.md)
+
+
+## Configure access for additional users (Optional)
+
+Fraud protection offers role-based access control (RBAC) for enhanced security and role management. Initial configuration of users and roles should be done by the global administrator of your Azure AD tenant. After an **AllAreas_Admin** account has been set up, you can use it to add additional users.
+For more information about how to configure user access, see [Configure user access to Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/configure-user-access) in the Fraud Protection documentation.

@@ -12,8 +12,22 @@
   href: global-availability.md  
 - name: Provision your Azure tenant
   href: provision-azure-tenant.md
-- name: Configure user access
-  href: configure-user-access.md
+- name: Set-up Fraud Protection to protect your business
+  items: 
+  - name: Set up a trial version of Fraud Protection
+    href: promocode-set-up-DFP-trial-version.md
+  - name: Set up a purchased version of Fraud Protection
+    href: promocode-set-up-DFP-purchased-version.md
+  - name: Configure user access
+    href: configure-user-access.md    
+  - name: Implement device fingerprinting
+    href: promocode-set-up-device-fingerprinting.md
+  - name: Protect customer accounts with Fraud Protection
+    href: promocode-set-up-account-protection.md
+  - name: Protect purchases with Fraud Protection
+    href: promocode-set-up-purchase-protection.md
+  - name: Prevent loss with Fraud Protection
+    href: promocode-set-up-loss-prevention.md
 - name: Purchase protection
   items:
   - name: Purchase protection overview
@@ -132,4 +146,6 @@
   href: evaluate-experience.md
 - name: Protect experience
   href: protect-experience.md
+
+
 
