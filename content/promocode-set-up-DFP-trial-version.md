@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to set up a trial version of Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 02/18/2021
+ms.date: 02/19/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -13,19 +13,6 @@ title: Set up a trial version of Fraud Protection
 ---
 
 # Set up a trial version of Fraud Protection
-
-## Protect your business from fraudulent activity
-
-Microsoft Dynamics 365 Fraud Protection (Fraud Protection) is a sophisticated technology stack that uses connected big data across multiple lines of business and applies cutting-edge artificial intelligence (AI) to help provide more accurate decisions in real time.
-Here are some examples of the innovative and advanced ways that Fraud Protection can help protect your business:
-
-- AI and insights from the fraud protection network
-- Device fingerprinting
-- A rules engine and virtual fraud analyst
-- A graph explorer and scorecard
-- A transaction acceptance booster
-
-## Goals for this document
 
 This document guides you through the prerequisites of setting up a trial version of Fraud Protection.
 After you complete the tasks in this document, you will be ready to use Fraud Protection to protect your business.
@@ -63,7 +50,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 
     You can't change the region after you've set it.	
 
-8.	The setup process starts and might take up to 20 minutes to run. If you prefer, you can sign out and then return after installation is completed.	
+8.	The setup process starts and might take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
 9.	After setup is completed, the **Congratulations** screen appears.	
 10.	Select **Continue**.	
 11.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.	
@@ -121,7 +108,7 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
     You can't change the region after you've set it.	
 
-    The setup process starts and might take up to 20 minutes to run. If you prefer, you can sign out and then return after installation is completed.	
+    The setup process starts and might take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
 
     After setup is completed, the **Congratulations** screen appears.	
 
