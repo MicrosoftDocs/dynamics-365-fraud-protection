@@ -108,6 +108,8 @@
     href: fpl-lang-ref.md    
 - name: Event tracing
   href: event-tracing.md
+- name: External calls
+  href: external-calls.md 
 - name: Extensibility via Event Hubs
   items: 
   - name: Overview
