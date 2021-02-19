@@ -50,7 +50,7 @@ Before you create an external call, there are a few restrictions you should know
       - If you select **Anonymous**, no authorization header will be sent. 
       - If you select **AAD**, an AAD token will be generated in your tenant, and *Bearer <token>* is used as the authorization header. 
       
-         For more information about authentication, authorization, and AAD tokens, see [Understanding authentication and authorization]().
+         For more information about authentication, authorization, and AAD tokens, see [Understanding authentication and authorization](external-calls.md#understanding-authentication-and-authorization).
       
       **Application ID**: If you select AAD authentication, you must provide the application ID of an existing Azure Active Directory application within your Fraud Protection subscription tenant. For more information about creating and managing Azure AD applications, see [Create Azure Active Directory Applications](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#create-azure-active-directory-applications).
 
@@ -83,7 +83,7 @@ Before you create an external call, there are a few restrictions you should know
 
       Specify the default response that should be returned when your request fails or exceeds the specified timeout. This must be valid JSON object or JSON element. 
 
-3. (Optional) To send a sample request to your API endpoint and view the response, select **Test**. For more information, see [Test an external call]().
+3. (Optional) To send a sample request to your API endpoint and view the response, select **Test**. For more information, see [Test an external call](external-calls.md#test-an-external-call).
 
 4. When you’ve completed the required fields, select **Create**.
 
@@ -108,16 +108,16 @@ Fraud Protection sends a request to your external call using the endpoint and pa
 
 Fraud Protection displays a tile containing three metrics for each external call you define: 
 
--	Requests per second: The total number of requests divided by the total number of minutes in the selected time frame.
--	Average latency: The total number of requests divided by the total number of minutes in the selected time frame.
--	Success rate: The total number of successful requests divided by the total number of requests made.
+-	**Requests per second**: The total number of requests divided by the total number of minutes in the selected time frame.
+-	**Average latency**: The total number of requests divided by the total number of minutes in the selected time frame.
+-	**Success rate**: The total number of successful requests divided by the total number of requests made.
 
 The numbers and charts shown on this tile includes only data for the timeframe you select in the timeframe dropdown in the upper right corner of the page. 
 
 > [!NOTE]
 > Metrics display only when your external call is used in an active rule. 
 
-1. To dive deeper into the data about your external call, select Performance in the right corner of the tile. 
+1. To dive deeper into the data about your external call, select **Performance** in the right corner of the tile. 
 
    Fraud Protection displays a new page with a more in-depth view of these metrics. 
 
@@ -161,7 +161,7 @@ For information on how to integrate this data with your own organization’s wor
 1.	To edit an existing external call, select **Edit** on the card header. 
 
    > [!NOTE]
-   > You can’t change the name and parameters of an external call after you use it in a rule
+   > You can’t change the name and parameters of an external call after you use it in a rule.
 
 2.	To delete an existing external call, select the ellipses, and then select **Delete**. 
 
@@ -175,11 +175,11 @@ For information on how to integrate this data with your own organization’s wor
 ## Use an external call with rules
 
 1.	To use your external calls to make decisions, reference them from your rules.
-2.	To reference an external call named, myCall, in your rule, use the following syntax:
+2.	To reference an external call named, **myCall**, in your rule, use the following syntax:
 
      External.myCall()
 
-3.	Use the following syntax if myCall requires a parameter, for example IPaddress:
+3.	Use the following syntax if **myCall** requires a parameter, for example IPaddress:
 
      External.myCall(@”device.ipAddress”)
 
@@ -196,7 +196,7 @@ If you select **Anonymous**, the **Authorization** header in the HTTP request to
 
 If you select AAD, the **Authorization** header in the the HTTP request to the target endpoint will include a Bearer token. A Bearer token is a JSON Web Token (JWT) issued by Azure Active Directory. For information about JWTs, see Microsoft identity platform access tokens. Fraud Protection appends the token value to the text Bearer in the required format to the request Authorization header as follows:
 
-     Bearer <token>
+   Bearer <token>
 
 ### Token claims
 The following table lists the claims that you can expect in Bearer tokens issued by Fraud Protection. 
