@@ -183,7 +183,7 @@ For information on how to integrate this data with your own organization’s wor
 
      External.myCall(@”device.ipAddress”)
 
-For information about the rules language and how you can use external calls in rules, see the [Language guide for Fraud Protection rules](pl-lang-ref.md). 
+For information about the rules language and how you can use external calls in rules, see the [Language guide for Fraud Protection rules](fpl-lang-ref.md). 
 
 > [!NOTE]
 > Using external calls in your rule may increase the latency of the rule. 
@@ -208,7 +208,7 @@ The following table lists the claims that you can expect in Bearer tokens issued
 | Application ID                  | appid              | This is Fraud Protection’s application id: bf04bdab-e06f-44f3-9821-d3af64fc93a9. This ID is owned solely by Fraud Protection, and only we can request a token on behalf of it.                                                        |
       
 When your API receives a token, it should open the token, and validate the each of the above claims match their description. 
-Here is an example of how you can authenticate an incoming request using the [JwtSecurityTokenHandler](https://docs.microsoft.comdotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?view=azure-dotnet).
+Here is an example of how you can authenticate an incoming request using the [JwtSecurityTokenHandler](https://docs.microsoft.com/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?view=azure-dotnet).
 
 
 ```json
