@@ -148,13 +148,13 @@ For information on how to integrate this data with your own organization’s wor
 
 1.	To edit an existing external call, select **Edit** on the card header. 
 
-   > [!NOTE]
-   > You can’t change the name and parameters of an external call after you use it in a rule.
+      > [!NOTE]
+      > You can’t change the name and parameters of an external call after you use it in a rule.
 
 2.	To delete an existing external call, select the ellipses, and then select **Delete**. 
 
-   > [!NOTE]
-   > You can’t delete an external call after it is referenced in a rule. 
+      > [!NOTE]
+      > You can’t delete an external call after it is referenced in a rule. 
 
 3.	To view detailed performance metrics for an external call, select **Performance**. 
 
