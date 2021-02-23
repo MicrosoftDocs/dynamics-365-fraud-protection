@@ -41,7 +41,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 
   	The PromoCode and offer ID are automatically entered on the page when you complete your setup.	
 
-![Data flow](media/promocode-images/get-started.png)	
+![Get started](media/promocode-images/get-started.png)	
 
 4.	Select **Get started**.	
 5.	To review the Terms of Use, select **Microsoft Online Subscription Agreement**.	
@@ -56,7 +56,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 11.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.	
 12.	The Fraud Protection portal opens.	
 
-![Data flow](media/promocode-images/DFP-Portal.png)	
+![DFP Portal](media/promocode-images/DFP-Portal.png)	
 
 Congratulations! You've successfully completed the setup process and are ready to use Fraud Protection to protect your business.	
 
@@ -75,7 +75,7 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 4.	If the tenant name is already being used, you're prompted to create a new tenant. In this case, repeat steps 2 and 3	
 5.	If the tenant name is accepted, select **Click here to create an Azure tenant**.	
 
-![Data flow](media/promocode-images/create-azure-tenant.png)	
+![Azure tenant](media/promocode-images/create-azure-tenant.png)	
 
 6.	Enter the required details, and then select **Next**.	
 
@@ -88,18 +88,18 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
 9.	After you've entered the company name and a green check mark appears, enter a password, and then select **Create my account**.	
 
-![Data flow](media/promocode-images/create-account.png)    	
+![Create account](media/promocode-images/create-account.png)    	
 
 10.	Select the **Sign in** link below the text box.	
 11.	In the **Sign in** dialog box, enter your credentials, and then select **Next**.	
 
-![Data flow](media/promocode-images/sign-in.png)	
+![Sign in](media/promocode-images/sign-in.png)	
 
 12. After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**. 	
 
     The PromoCode and offer ID are automatically entered on the page.	
 
-![Data flow](media/promocode-images/get-started.png)	
+![Get started2](media/promocode-images/get-started.png)	
 
 13.	Select **Get started**.	
 14.	To review the Terms of Use, select **Microsoft Online Subscription Agreement**.	
@@ -117,7 +117,7 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
     The Fraud Protection portal opens.	
 
-![Data flow](media/promocode-images/DFP-Portal.png)	
+![DFP Portal2](media/promocode-images/DFP-Portal.png)	
 
 Congratulations! You've successfully completed the setup process and are ready to use Fraud Protection to protect your business.	
 
