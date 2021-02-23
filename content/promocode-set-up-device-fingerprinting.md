@@ -9,10 +9,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Implement device fingerprinting
+title: Set up device fingerprinting
 ---
 
-# Implement device fingerprinting
+# Set up device fingerprinting
 
 ## Overview
 
@@ -42,7 +42,7 @@ Before you begin the tasks in this document, you must set up Fraud Protection in
 
 ### Example 1: Cloud computing service
 
-![Data flow](media/promocode-images/cloud-computing-service.png)
+![Cloud computing](media/promocode-images/cloud-computing-service.png)
 
 - Figure 1.1 shows that device fingerprinting contributed an impact of about 25.14 percent for this business, compared to an identical model that didn't use device fingerprinting (shown by the dotted line).
 - Figure 1.2 shows that the model that uses device fingerprinting features can detect fraud at a false positive rate of 1 percent.
@@ -50,7 +50,7 @@ Before you begin the tasks in this document, you must set up Fraud Protection in
 
 ### Example 2: Retail service
 
-![Data flow](media/promocode-images/retail-service.png)
+![Retail service](media/promocode-images/retail-service.png)
 
 - Figure 2.1 shows that device fingerprinting contributes 15.32 percent of the total information in an assessment, compared to the same model that doesn't use device fingerprinting (shown by the dotted line).
 - Figure 2.2 shows that the model that uses device fingerprinting can detect more fraud at a false positive rate, compared to the same model that doesn't use device fingerprinting.
@@ -58,7 +58,7 @@ Before you begin the tasks in this document, you must set up Fraud Protection in
 
 ### Example 3: Online advertising service
 
-![Data flow](media/promocode-images/online-ad-service.png)
+![Online ad](media/promocode-images/online-ad-service.png)
 
 - Figure 3.1 shows that device fingerprinting contributes 6.79 percent of the total information in an assessment, compared to the same model that doesn't use fingerprinting (shown by the dotted line). 
 - Figure 3.2 shows that, at a false positive rate of 0.2 percent, the model that uses device fingerprinting can detect 4.34 percent more fraud than the same model that doesn't use device fingerprinting.
@@ -75,7 +75,7 @@ The device fingerprinting collects device information and then associates that i
 
 The following screenshot shows the device fingerprinting call sequence.
 
-![Data flow](media/promocode-images/device-fingerprinting-call-sequence.png)
+![Call sequence](media/promocode-images/device-fingerprinting-call-sequence.png)
 
 The system receives this information and adds it to the graph in near-real-time.
 
@@ -83,7 +83,7 @@ The system receives this information and adds it to the graph in near-real-time.
 
 - While you're viewing a transaction in the Fraud Protection graph explorer, select the **DeviceContext Node** pane.
 
-![Data flow](media/promocode-images/device-context-node.png)
+![Device context](media/promocode-images/device-context-node.png)
 
 ## Deploy device fingerprinting in your system
 
@@ -110,7 +110,7 @@ To determine where device fingerprinting should be deployed, develop a customer 
 
 A typical customer journey map might resemble the following illustration.
 
-![Data flow](media/promocode-images/journey-map.png)
+![Journey map](media/promocode-images/journey-map.png)
 
   > [!NOTE]
   > To develop your own experience, map a customer environment that you're familiar with.
@@ -137,7 +137,7 @@ Next, use the journey map from the previous step and the following guidance to i
 
 Use the sample journey map from step 1 to identify the best pages for the device fingerprinting calls. The following illustration shows our recommendation.
 
-![Data flow](media/promocode-images/journey-map-recommended.png)
+![Recommended journey map](media/promocode-images/journey-map-recommended.png)
 
 
 ### Step 3: Set up Azure DNS for device fingerprinting
@@ -176,7 +176,7 @@ Next, add calls to the sample application.
 
   	The system returns a response that resembles the following sample mdt.js call:
 
-![Data flow](media/promocode-images/system-response.png)
+![System response](media/promocode-images/system-response.png)
 
 3.	After the page is completely loaded, call the fingerprinting code as shown in the following example:
 
@@ -194,7 +194,7 @@ There are two ways to check whether your device fingerprinting implementation is
 - When you implement device fingerprinting on a webpage, you will see a response for the mdt.js call. If the response is empty, at least one parameter isn't valid. Try again.
 - For customers who use purchase protection, if device fingerprinting is correctly implemented, the values of portal device attributes will start to fill in the **DeviceContext** node in Fraud Protection, as shown in the following screenshot.
 
-![Data flow](media/promocode-images/device-context-node.png)
+![Device context node](media/promocode-images/device-context-node.png)
 
 #### Troubleshooting tips
 
@@ -218,7 +218,7 @@ Most Fraud Protection customers are concerned that incremental latency might aff
 
 We also strongly recommend that you reuse SSL connections to help avoid additional latency.
 
-![Data flow](media/promocode-images/latency.png)
+![Latency](media/promocode-images/latency.png)
 
 Congratulations! You've successfully completed the training and are ready to use your free trial of Fraud Protection's device fingerprinting capabilities.
 
