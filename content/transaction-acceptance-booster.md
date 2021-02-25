@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about how you can boost bank acceptance rates.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 02/25/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -21,14 +21,15 @@ One feature that sets Microsoft Dynamics 365 Fraud Protection apart from other p
 You can opt to directly share Fraud Protection's assessments with participating issuing banks and networks through the acceptance booster service. Another option is to receive MID recommendations from Fraud Protection and incorporate them into your authorization requests, resulting in a higher overall acceptance rate. While you can use both options on the same transactions where applicable, we recommend that you use the MID recommendation option on transactions from banks who are not participating in the acceptance booster service.
 
 ## Acceptance booster service
-The acceptance booster service provides a direct communication channel for contextual transaction data, called transaction trust knowledge, with participating issuing banks and networks. This transmission occurs at the time of transaction assessment by Fraud Protection. If the payment instrument used in that transaction was issued by a bank or network participating in the program, Fraud Protection will transmit transaction trust knowledge to that bank or network. 
+The acceptance booster service provides a direct communication channel with participating issuing banks and networks for contextual transaction data, called transaction trust knowledge, as well as select additional raw attributes about the transaction. This transmission occurs at the time of transaction assessment by Fraud Protection. If the payment instrument used in that transaction was issued by a bank or network participating in the program, Fraud Protection will transmit transaction trust knowledge to that bank or network. 
 
 #### To enable the acceptance booster service:
 
 1. Select **Settings**, and then select **Transaction acceptance booster**. 
-1. On the **Opt in** tab, select **Acceptance booster service** to consent to share transaction trust knowledge with participating banks and networks. 
-1. Select **Consent** to review details about the terms and a list of participants in the program. 
-1. Select **Save** to confirm your choice.
+2. On the **Opt in** tab, select **Acceptance booster service** to consent to share transaction trust knowledge with participating banks and networks. 
+3. Once you have opted-in you can choose to transmit only the standard transaction trust knowledge or in addition select to share select raw attributes about the transaction. 
+4. Select **Consent** to review details about the terms and a list of participants in the program. 
+5. Select **Save** to confirm your choice.
 
 ### Reports
 
