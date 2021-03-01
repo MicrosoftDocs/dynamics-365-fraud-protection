@@ -4,7 +4,7 @@ description: This topic explains how to use external calls to ingest data from A
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 02/22/2021
+ms.date: 03/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -18,7 +18,10 @@ title: External calls
 
 ## Overview
 
-External calls enable you to ingest data from APIs outside of Microsoft Dynamics 365 Fraud Protection (Fraud Protection) and then use that data to make informed decisions in real-time. For example, third-party address and phone verification services, or your own custom scoring models, may provide critical input in determining the risk-level of an event. With external calls, you can connect to any API endpoint, make a request to that endpoint from within your rule, and use the response from that endpoint to make a decision. 
+External calls enable you to ingest data from APIs outside of Microsoft Dynamics 365 Fraud Protection (Fraud Protection) and then use that data to make informed decisions in real-time. For example, third-party address and phone verification services, or your own custom scoring models, may provide critical input in determining the risk-level for some events. With external calls, you can connect to any API endpoint, make a request to that endpoint when necessary from within your rule, and use the response from that endpoint to make a decision. 
+
+> [!NOTE]
+> If this additional data will be needed for all events, you can also send it as part of the assessment schema. For more information about how to send custom data as part of your API request, see [Custom data sample](https://docs.microsoft.com/dynamics365/fraud-protection/view-purchase-protection-schemas#custom-data-sample).
 
 ## Types of APIs you can use in an external call
 
@@ -191,7 +194,7 @@ The following table lists the claims that you can expect in Bearer tokens issued
 
 | Name                            | Claim              | Description |
 |---------------------------------|--------------------|-------------|
-| Tenant ID                       | tid                | Identifies the Azure tenant ID of the subscription associated with your Fraud Protection account. To find your tenant ID in the Fraud Protection Portal, select the **Configuration** tab on the **API Management** page and view **Directory ID**. To find your tenant ID in the Azure Portal, see [How to find your Azure Active Directory tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).         |
+| Tenant ID                       | tid                | Identifies the Azure tenant ID of the subscription associated with your Fraud Protection account. To find your tenant ID in the Fraud Protection Portal, see [Required IDs and information](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#required-ids-and-information). To find your tenant ID in the Azure Portal, see [How to find your Azure Active Directory tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).      |
 | Audience                        | aud                | Identifies the intended recipient of the token. This value will reflect exactly the application ID provided when you configure your external call on the Fraud Protection portal.                                                   |
 | Application ID                  | appid              | This is Fraud Protection’s application id: bf04bdab-e06f-44f3-9821-d3af64fc93a9. This ID is owned solely by Fraud Protection, and only we can request a token on behalf of it.                                                        |
       
