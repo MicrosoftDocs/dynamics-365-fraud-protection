@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to protect customer accounts with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 02/02/2021
+ms.date: 03/11/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
