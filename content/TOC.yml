@@ -82,6 +82,8 @@
     href: integrate-ap-api.md
   - name: Review key metrics for account protection
     href: ap-scorecard.md
+  - name: Account protection schemas
+    href: new-ap-schema.md 
   - name: Monitor API calls
     href: monitoring.md    
 - name: Loss prevention
