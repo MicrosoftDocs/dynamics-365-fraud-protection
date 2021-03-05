@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the account protection schemas for data uploaded in bulk as CSV files.
 ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 03/04/2021
+ms.date: 03/05/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -170,6 +170,7 @@ The **AccountLogIn** API lets you share information and context with Fraud Prote
 ## AccountLogInStatus
 
 The **AccountLogInStatus** API lets you share information and context with Fraud Protection about the status of an account sign-in event. This event is a data ingestion event only.
+
 | Object   | Attribute         | Type     | Description |
 |----------|-------------------|----------|-------------|
 |          | Name              | string   | The value is **AP.AccountLogin.Status**. |
