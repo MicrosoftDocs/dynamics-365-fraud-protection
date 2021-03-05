@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic outlines the account protection schemas for historical data uploaded in bulk as CSV files.
+description: This topic outlines the account protection schemas for data uploaded in bulk as CSV files.
 ms.author: v-madeq 
 ms.service: fraud-protection
 ms.date: 03/04/2020
@@ -9,20 +9,13 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Account protection schemas for historical data
+title: Account protection schemas
 ---
 
-# Account protection schemas for historical data
+# Account protection schemas
 
-This topic outlines the schemas for historical data that is uploaded in bulk into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](https://docs.microsoft.com/dynamics365/fraud-protection/data-upload). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api).
+This topic outlines the schema via the application programming interface (API). For more information, see [Integrate Dynamics 365 Fraud Protection real-time APIs](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api).
 
-Note the following formatting guidelines throughout:
-
-- The files are in CSV UTF-8 (comma-delimited) format (\*.csv).
-- The maximum file size is 10 gigabytes (GB).
-- The **DateTime** columns are in International Organization for Standardization (ISO) 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **2019-03-14T20:18:11.254Z**.
-- The decimal precision is two decimal places.
-- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
 ## AccountCreation
 
