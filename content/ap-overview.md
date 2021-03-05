@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides an overview of the account protection experience in the Microsoft Dynamics 365 Fraud Protection system.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 03/05/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -39,6 +39,7 @@ Each event type has multiple layers of defense:
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
 - [Learn from the account protection scorecard](ap-scorecard.md)
+- [Account protection schemas](ap-schema.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
