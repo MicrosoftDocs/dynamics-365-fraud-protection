@@ -218,7 +218,7 @@ Most Fraud Protection customers are concerned that incremental latency might aff
 
 We also strongly recommend that you reuse SSL connections to help avoid additional latency.
 
-![Latency](media/promocode-images/latency.png)
+![Incremental latency](media/promocode-images/latency.png)
 
 Congratulations! You've successfully completed the training and are ready to use your free trial of Fraud Protection's device fingerprinting capabilities.
 
