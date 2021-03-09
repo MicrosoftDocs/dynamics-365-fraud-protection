@@ -29,9 +29,9 @@ Follow these steps to start to use the event tracing functionality.
 1. Select **New subscription**.
 1. Enter a subscription display name.
 1. Select a storage location:
-   1. **For Event Hubs**: Enter the connection string for the Event Hubs instance. Make sure that this is not the namespace connection string, and that it includes **Manage**, **Send**, and **Listen** privileges. For more information, see [Get an Event Hubs connection string](https://docs.microsoft.com/azure/event-hubs/event-hubs-get-connection-string).
+   1. **For Event Hubs**: Enter the connection string for the Event Hubs instance. Make sure that this is not the namespace connection string, and that it includes **Manage**, **Send**, and **Listen** privileges. For more information, see [Get an Event Hubs connection string](/azure/event-hubs/event-hubs-get-connection-string).
    
-   1. **For Blob Storage**: Enter the connection string for your Azure storage account. Then enter a container name where your event tracing data will reside. For more information, see [View account access keys](https://docs.microsoft.com/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
+   1. **For Blob Storage**: Enter the connection string for your Azure storage account. Then enter a container name where your event tracing data will reside. For more information, see [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
 1.	Select an event and review the description and sample of the JSON payload before saving the subscription by selecting **Create**. 
 
@@ -42,11 +42,11 @@ Follow these steps to start to use the event tracing functionality.
     The **Events/Hr** and **Failures/Hr** metrics show an average over the past 24 hours.
 
     > [!TIP]
-    > For additional monitoring for Event Hubs, go to the Azure portal, and set up metrics. For more information, see [Azure Event Hubs metrics in Azure Monitor](https://docs.microsoft.com/azure/event-hubs/event-hubs-metrics-azure-monitor).
+    > For additional monitoring for Event Hubs, go to the Azure portal, and set up metrics. For more information, see [Azure Event Hubs metrics in Azure Monitor](/azure/event-hubs/event-hubs-metrics-azure-monitor).
 
-1. Optional: Set up your own ingress pipeline from Event Hubs to Power BI. For information about how to start to develop custom reports, see [Work with Power BI](https://docs.microsoft.com/dynamics365/fraud-protection/extensibility-with-power-bi).
+1. Optional: Set up your own ingress pipeline from Event Hubs to Power BI. For information about how to start to develop custom reports, see [Work with Power BI](./extensibility-with-power-bi.md).
 
-1. Optional: Connect to Event Hubs from Power Automate to define custom workflows. For more information, see [Work with Logic Apps or Power Automate](https://docs.microsoft.com/dynamics365/fraud-protection/extensibility-with-power-automate).
+1. Optional: Connect to Event Hubs from Power Automate to define custom workflows. For more information, see [Work with Logic Apps or Power Automate](./extensibility-with-power-automate.md).
 
 ## Event schemas
 

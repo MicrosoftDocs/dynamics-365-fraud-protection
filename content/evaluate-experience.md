@@ -33,7 +33,7 @@ The evaluate experience in Fraud Protection provides the features that are descr
 
 - [Purchase protection](purchase-protection.md)
 - [Artificial intelligence (AI) and insights from the fraud protection network](fraud-protection-network.md)
-- [Send real-time data using the Dynamics 365 Fraud Protection API](send-real-time-api.md)
+- [Send real-time data using the Dynamics 365 Fraud Protection API](./integrate-real-time-api.md)
 - [Visually explore your data](graph-explorer.md)
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)

@@ -14,11 +14,11 @@ title: Work with Power BI
 ---
 # Work with Power BI
 
-[Microsoft Power BI](https://docs.microsoft.com/power-bi/) makes the process of working with event data from Dynamics 365 Fraud Protection customizable and easy. Power BI lets you produce informative and interactive data visualizations.
+[Microsoft Power BI](/power-bi/) makes the process of working with event data from Dynamics 365 Fraud Protection customizable and easy. Power BI lets you produce informative and interactive data visualizations.
 
 ## Getting started
 
-To get Fraud Protection event data into Power BI, you can use event data that is inside Common Data Service (CDS). Alternatively, you can configure [Azure Stream Analytics](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-power-bi-dashboard) to send data directly from Azure Event Hubs into Power BI.
+To get Fraud Protection event data into Power BI, you can use event data that is inside Common Data Service (CDS). Alternatively, you can configure [Azure Stream Analytics](/azure/stream-analytics/stream-analytics-power-bi-dashboard) to send data directly from Azure Event Hubs into Power BI.
 
 For more information, see the following decision tree.
 
@@ -71,7 +71,7 @@ For information about how to set up CDS, see [Storing event data in the Common D
 The following resources will help you start to produce your own Power BI reports:
 
 - [Power BI beginner tutorial](https://www.youtube.com/watch?v=AGrl-H87pRU)
-- [Official Power BI documentation](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-powerbi-connector)
+- [Official Power BI documentation](/powerapps/maker/common-data-service/data-platform-powerbi-connector)
 - [Building Power BI reports for the Common Data Service for Apps](https://powerapps.microsoft.com/blog/cds-for-apps-powerbi/)
 
 ## Sample Power BI reports

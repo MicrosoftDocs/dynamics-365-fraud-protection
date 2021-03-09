@@ -50,7 +50,7 @@ Before you begin the tasks in this document, you must:
 
 When Fraud Protection assesses a transaction for potential purchase fraud, it uses a combination of AI, ML, and a data consortium. A vast amount of data powers the models that are used for assessment. Any data that is transmitted into the system for assessment or system learning must conform to a predefined schema. In the world of AI and ML, it's generally understood that the quality of the data that a model uses affects the quality of the results.
 
-*Data mapping* is a process that helps ensure that the correct values are assigned to the correct schema fields, and that your commerce system is correctly integrated with Fraud Protection. For more information about schemas, see [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas). 
+*Data mapping* is a process that helps ensure that the correct values are assigned to the correct schema fields, and that your commerce system is correctly integrated with Fraud Protection. For more information about schemas, see [Data schemas for loss prevention](./view-loss-prevent-schemas.md). 
 
 ### Schema guidance for CSV files
 
@@ -62,7 +62,7 @@ Use this schema guidance to produce files in comma-separated values (CSV) format
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas, new line characters, and multiline characters.
 
-For more information about schemas you can use to generate models and determine risk assessments, see [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas). 
+For more information about schemas you can use to generate models and determine risk assessments, see [Data schemas for loss prevention](./view-loss-prevent-schemas.md). 
 
 ### Required data entities for data mapping
 
@@ -73,10 +73,10 @@ Because the loss prevention capability identifies anomalies and patterns that mi
 - Payments
 - PaymentMethods
 
-For detailed information about schemas that define the data that is used to generate models and determine risk assessments, see [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas). Although all data fields are important, you can start with fewer mandatory fields and then onboard additional fields over time to improve model output.
+For detailed information about schemas that define the data that is used to generate models and determine risk assessments, see [Data schemas for loss prevention](./view-loss-prevent-schemas.md). Although all data fields are important, you can start with fewer mandatory fields and then onboard additional fields over time to improve model output.
 
 > [!IMPORTANT]
->The data that is used to analyze loss is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number [BIN] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). Therefore, don't include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](https://docs.microsoft.com/dynamics365/fraud-protection/security-compliance).
+>The data that is used to analyze loss is sensitive, and you should take care to upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number [BIN] and the last four digits). We don't request the full payment instrument number or Social Security number (SSN). Therefore, don't include this type of data in the files that you upload. For more information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](./security-compliance.md).
 
 ### What to do if you can't map all your data
 
@@ -189,7 +189,7 @@ When you sign in to your Fraud Protection portal, if **Loss prevention** appears
 
 
     > [!NOTE]
-    >The data must be in .CVS format and must follow the schema that is provided in [Data schemas for loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas).
+    >The data must be in .CVS format and must follow the schema that is provided in [Data schemas for loss prevention](./view-loss-prevent-schemas.md).
 
 3. To upload your data files: 
 
@@ -373,5 +373,3 @@ For information about how to access and use Fraud Protection's features, see the
 
 - [Protect customer accounts with Fraud Protection](promocode-set-up-account-protection.md)
 - [Protect purchases with Fraud Protection](promocode-set-up-purchase-protection.md)
-
-

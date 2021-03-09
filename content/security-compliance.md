@@ -36,9 +36,9 @@ Prior to implementing Fraud Protection, make sure the privacy disclosures in you
 Fraud Protection provides tools to help you comply with data subject requests from your customers. These tools enable you to delete and export customer data from the service which has not been processed using deidentification techniques in the fraud network. Data processed in the fraud network cannot be accessed, exported, viewed, or deleted. 
 
 For more information, see the following resources:
-- [Data Subject Requests for the GDPR](https://docs.microsoft.com/microsoft-365/compliance/gdpr-data-subject-requests)
+- [Data Subject Requests for the GDPR](/microsoft-365/compliance/gdpr-data-subject-requests)
 - [Safeguard individual privacy with the Microsoft Cloud](https://www.microsoft.com/trustcenter/privacy/gdpr/gdpr-overview)
-- [Microsoft Dynamics 365 and GDPR](https://docs.microsoft.com/dynamics365/get-started/gdpr/index)
+- [Microsoft Dynamics 365 and GDPR](/dynamics365/get-started/gdpr/index)
 - [Microsoft Power BI GDPR white paper](https://powerbi.microsoft.com/blog/power-bi-gdpr-whitepaper-is-now-available/)
 
 In the *Diagnose experience* for Fraud Protection, you can delete the offline data that you've uploaded into Fraud Protection. At the top of the page, select **Delete my data**.
