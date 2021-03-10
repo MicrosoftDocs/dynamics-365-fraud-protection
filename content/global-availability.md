@@ -46,7 +46,6 @@ As is fully described in the dashboard that covers [geographical availability fo
 The data schema that Fraud Protection uses is available in Microsoft technical documentation. You can find this documentation in the following places:
 
 - [Purchase protection](https://docs.microsoft.com/dynamics365/fraud-protection/schema-int)
-- [Account creation](https://docs.microsoft.com/dynamics365/fraud-protection/labels-schema)
 - [Account protection](https://docs.microsoft.com/dynamics365/fraud-protection/ap-schema)
 - [Loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas#transactions)
 
