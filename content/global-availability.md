@@ -47,7 +47,7 @@ The data schema that Fraud Protection uses is available in Microsoft technical d
 
 - [Purchase protection](https://docs.microsoft.com/dynamics365/fraud-protection/schema-int)
 - [Account creation](https://docs.microsoft.com/dynamics365/fraud-protection/labels-schema)
-- [Account protection](https://docs.microsoft.com/dynamics365/fraud-protection/new-ap-schema)
+- [Account protection](https://docs.microsoft.com/dynamics365/fraud-protection/ap-schema)
 - [Loss prevention](https://docs.microsoft.com/dynamics365/fraud-protection/view-loss-prevent-schemas#transactions)
 
 The data schemas indicate the types of payment data per transaction that are typically configured for standard API calls. It's worth mentioning that these API calls are highly configurable by customers. Therefore, you can easily screen out data that could arguably be restricted in your location. As a reference, credit card information is processed only in a truncated format (only the last four digits), in accordance with standard security practices. In other words, offering truncated credit card values is optional to the customer. Customers can omit transmittal of this data to the service APIs.
