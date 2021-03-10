@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about custom assessments, and explains how to create and define them.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 03/05/2021
 
 ms.topic: conceptual
 search.app: 
@@ -90,6 +90,7 @@ Currently, you can create up to three distinct assessments under custom assessme
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
 - [Learn from the account protection scorecard](ap-scorecard.md)
+- [Account protection schemas](ap-schema.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
