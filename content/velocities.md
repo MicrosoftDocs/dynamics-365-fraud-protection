@@ -18,20 +18,20 @@ title: Perform velocity checks
 
 ## Overview
 
-Velocity checks allow you to examine the historical patterns of a user or entity (for example, a credit card or an IP address) and then use these historical patterns to flag potential fraud. Fraudsters generally do not place a single order and walk away – more commonly, they experiment with one transaction first, and if it is approved, they will follow up with several more transactions. This continues until a flag is raised. 
+Velocity checks allow you to examine the historical patterns of a user or entity (for example, a credit card or an IP address) and then use these historical patterns to flag potential fraud. Fraudsters generally do not place a single order and stop – usually they experiment with one transaction first, and if it is successful, they follow up with additional transactions over a period of time until a flag is raised. 
 
-Velocity checks help you understand how several separate and different events may be related over time. They also help you understand how frequently certain data points recur. This enables you to quickly identify deviations from normal user behavior and take action accordingly. 
+Velocity checks help you understand how several separate and different events that occur over time may be related. They also help you understand how frequently certain data points recur. This factors enable you to quickly identify deviations from normal user behavior and take action accordingly. 
 
 ## Define a velocity
 
-You define velocities in Fraud Protection with the FROM, SELECT, GROUPBY, and WHEN keywords, using the following structure:
+To define velocities in Fraud Protection, use the **FROM**, **SELECT**, **GROUPBY**, and **WHEN** keywords, within the following structure:
 
       FROM <*event type**aggregation method*> AS <*alias*>  
       GROUPBY <*attribute name*>   
       WHEN <*condition*>
 
-- After FROM, select an assessment on which to observe your velocity: Purchase, AccountLogin, or AccountCreation. 
-- After SELECT, select an aggregation method (Count, DistinctCount, or Sum), and then name your velocity using the AS keyword. This name can be used to reference your velocity in rules. 
+- After **FROM**, select an assessment on which to observe your velocity: Purchase, AccountLogin, or AccountCreation. 
+- After **SELECT**, select an aggregation method (Count, DistinctCount, or Sum), and then name your velocity using the **AS** keyword. This name can be used to reference your velocity in rules. 
 
 | Aggregation Method | Description                 | Example  |
 |--------------------|-----------------------------|----------|
@@ -39,8 +39,8 @@ You define velocities in Fraud Protection with the FROM, SELECT, GROUPBY, and WH
 | DistinctCount      | Returns the number of distinct values for the specified property.| SELECT DistinctCount(@”device.ipAddress”) AS distinctIPaddresses  | 
 | Sum                | Returns the total sum of values for a specified numeric property, across all events which meet the condition. | SELECT Sum(@”totalAmount”) AS totalSpending  | 
 
-- After GROUPBY, select a property or an expression. This property/expression is evaluated for every event processed. Events evaluated to the same value in GROUPBY are aggregated into a single value.
-- **The WHEN statement is optional.** After WHEN, you may type a Boolean expression. Only events matching this condition are considered in the aggregation. Others will be ignored.  
+- After **GROUPBY**, select a property or an expression. This property/expression is evaluated for every event processed. Events evaluated to the same value in GROUPBY are aggregated into a single value.
+- **The **WHEN** statement is optional.** After **WHEN**, you may type a Boolean expression. Only events matching this condition are considered in the aggregation; other events are ignored.  
 
 > [!NOTE]
 > The time window over which you’d like to observe the velocity is specified when you reference the velocity from a rule, not in the velocity definition itself. 
@@ -89,8 +89,8 @@ Use the following examples to create your own velocity checks.
 
 2. (Optional) In the **Condition** box, you can either write a Boolean condition or leave it blank. 
 
-    -  To write a Boolean condition, begin with the keyword WHEN.  
-    -  The WHEN keyword determines when your velocities are updated. For example, if you want the velocities in your velocity set to only update on events which take place in the United States, define the following condition:
+    -  To write a Boolean condition, begin with the keyword **WHEN**.  
+    -  The **WHEN** keyword determines when your velocities are updated. For example, if you want the velocities in your velocity set to only update on events which take place in the United States, define the following condition:
 
          WHEN @”user.countryRegion” == “US”
 
@@ -114,9 +114,11 @@ For information about using your velocities to make decisions, see [Use a veloci
 
 When you create or edit a velocity set, the **Sample** panel appears on the right side of the page. 
 
-The **Sample** panel displays all the properties of an event that can be referenced in your velocities. These properties differ depending on which event type your velocity observes. Select the event type from the **Assessments** dropdown at the top of the panel.
+The **Sample** panel displays all the properties of an event that can be referenced in your velocities. These properties differ depending on which event type your velocity observes. 
 
-The **payload sample** section contains an example of the properties that can be sent in the request API for the assessment. 
+To select an event type from the **Sample** panel, select an event from the **Assessments** dropdown located at the top of the panel.
+
+The **Payload sample** section contains an example of the properties that can be sent in the request API for the assessment. 
 
 The **enrichment sample** contains an example of properties that are added to your event by Fraud Protection, after the initial request has been sent. For examples, information from Fraud Protection’s [device fingerprinting](device-fingerprinting.md) solution, as well as risk and bot scores from our machine learning models. The enrichment sample also includes information from rule evaluation, such as the decision, the rule name, and the clause name that was triggered. Any of these properties can be used in your velocity and can be referenced using @. For example: @”user.firstName”.
 
@@ -153,13 +155,11 @@ To use your velocities to make decisions on incoming assessment events, you must
      SELECT Sum(@”totalAmount”)
      GROUPBY @”user.userId”
 
-You can use the following syntax to reference this velocity in a rule:
+Use the following syntax to reference this velocity in a rule:
 
      Velocity.myVelocity(**String** key, **Timespan** timeWindow)
   
-The first parameter, **key**, represents the key that will be used to lookup the velocity. In the velocity definition above for **myVelocity**, the GROUPBY @”user.userId” statement indicates that values will be aggregated for each user ID encountered. When referencing the velocity from a rule, the **key** parameter specifies which user id to retrieve the velocity value for. 
-
-Therefore, either of the following statements is valid:
+The first parameter, **key**, represents the key that will be used to lookup the velocity. In the velocity definition above for **myVelocity**, the **GROUPBY** @”user.userId” statement indicates that values will be aggregated for each user ID encountered. When referencing the velocity from a rule, the **key** parameter specifies the user id for which to retrieve the velocity. Therefore, either of the following statements is valid:
 
      Velocity.myVelocity(@”user.userId”, 7d)
      Velocity.myVelocity(“12345”, 7d)
