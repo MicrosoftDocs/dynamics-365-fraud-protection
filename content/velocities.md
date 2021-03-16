@@ -24,7 +24,7 @@ Velocity checks help you understand how several separate and different events th
 
 ## Define a velocity
 
-To define velocities in Fraud Protection, use the **FROM**, **SELECT**, **GROUPBY**, and **WHEN** keywords, within the following structure:
+To define velocities in Fraud Protection, use the **FROM**, **SELECT**, **GROUPBY**, and **WHEN** keywords within the following structure:
 
  ```json
 FROM <*event type**aggregation method*> AS <*alias*>  
@@ -173,13 +173,13 @@ GROUPBY @”user.userId”
 
 Use the following syntax to reference this velocity in a rule:
 
-```
+```json
 Velocity.myVelocity(**String** key, **Timespan** timeWindow)
 ```
 
 The first parameter, **key**, represents the key that will be used to lookup the velocity. In the velocity definition above for **myVelocity**, the **GROUPBY** @”user.userId” statement indicates that values will be aggregated for each user ID encountered. When referencing the velocity from a rule, the **key** parameter specifies the user id for which to retrieve the velocity. Therefore, either of the following statements is valid:
 
-```
+```json
 Velocity.myVelocity(@”user.userId”, 7d)
 Velocity.myVelocity(“12345”, 7d)
 ```
