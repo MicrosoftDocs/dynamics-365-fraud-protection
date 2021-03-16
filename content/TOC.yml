@@ -110,6 +110,8 @@
   href: event-tracing.md
 - name: External calls
   href: external-calls.md 
+- name: Perform velocity checks
+  href: velocities.md 
 - name: Extensibility via Event Hubs
   items: 
   - name: Overview
