@@ -88,9 +88,9 @@ WHEN @”ruleEvaluation.decision” == “Reject”
 
 ```json
 FROM Purchase AS intlHighRiskTxns_perUser
-      SELECT Count()
-      GROUPBY @”user.userId”
-      WHEN @”user.country” != “US” and @riskScore > 900
+SELECT Count()
+GROUPBY @”user.userId”
+WHEN @”user.country” != “US” and @riskScore > 900
 ```
 
 ## Create a velocity set
