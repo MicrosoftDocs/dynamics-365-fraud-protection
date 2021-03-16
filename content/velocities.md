@@ -4,7 +4,7 @@ description: This topic explains how to use velocities to examine user and entit
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/15/2021
+ms.date: 03/16/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -26,11 +26,9 @@ Velocity checks help you understand how several separate and different events ma
 
 You define velocities in Fraud Protection with the FROM, SELECT, GROUPBY, and WHEN keywords, using the following structure:
 
-   FROM <*event type**aggregation method*> AS <*alias*>
-   
-   GROUPBY <*attribute name*>
-   
-   WHEN <*condition*>
+      FROM <*event type**aggregation method*> AS <*alias*>  
+      GROUPBY <*attribute name*>   
+      WHEN <*condition*>
 
 - After FROM, select an assessment on which to observe your velocity: Purchase, AccountLogin, or AccountCreation. 
 - After SELECT, select an aggregation method (Count, DistinctCount, or Sum), and then name your velocity using the AS keyword. This name can be used to reference your velocity in rules. 
@@ -49,49 +47,39 @@ You define velocities in Fraud Protection with the FROM, SELECT, GROUPBY, and WH
 
 ### Examples of velocity checks
 
+Use the following examples to create your own velocity checks.
+
 #### How much money a specific user has spent
 
-   FROM Purchase AS totalSpending_perUser
-  
-   SELECT Sum(@”totalAmount”)
-  
-   GROUPBY @”user.userId”
+      FROM Purchase AS totalSpending_perUser  
+      SELECT Sum(@”totalAmount”)
+      GROUPBY @”user.userId”
 
 #### How many times a specific IP address has been used to create a new account
 
-   FROM AccountCreation AS newAccounts_perIP
-  
-   SELECT Count()
-  
-   GROUPBY @”device.ipAddress”
+      FROM AccountCreation AS newAccounts_perIP
+      SELECT Count()
+      GROUPBY @”device.ipAddress”
 
 #### How many unique users have logged in using a specific device
 
-   FROM AccountLogin AS uniqueUserLogins_perDevice
-  
-   SELECT DistinctCount(@”user.userId”)
-  
-   GROUPBY @”deviceId” 
+      FROM AccountLogin AS uniqueUserLogins_perDevice
+      SELECT DistinctCount(@”user.userId”)
+      GROUPBY @”deviceId” 
 
 #### How many login attempts has a specific user made which were rejected by Fraud Protection
 
-   FROM AccountLogin AS loginRejections_perUser
-  
-   SELECT Count()
-  
-   GROUPBY @”user.userId”
-  
-   WHEN @”ruleEvaluation.decision” == “Reject”
+      FROM AccountLogin AS loginRejections_perUser
+      SELECT Count()
+      GROUPBY @”user.userId”
+      WHEN @”ruleEvaluation.decision” == “Reject”
 
 #### How many purchases has a specific user made from outside of the US, and which also received a high-risk score
 
-   FROM Purchase AS intlHighRiskTxns_perUser
-  
-   SELECT Count()
-  
-   GROUPBY @”user.userId”
-  
-   WHEN @”user.country” != “US” and @riskScore > 900
+      FROM Purchase AS intlHighRiskTxns_perUser
+      SELECT Count()
+      GROUPBY @”user.userId”
+      WHEN @”user.country” != “US” and @riskScore > 900
 
 ## Create a velocity set
 
@@ -101,10 +89,10 @@ You define velocities in Fraud Protection with the FROM, SELECT, GROUPBY, and WH
 
 2. (Optional) In the **Condition** box, you can either write a Boolean condition or leave it blank. 
 
-  -  To write a Boolean condition, begin with the keyword WHEN.  
-  -  The WHEN keyword determines when your velocities are updated. For example, if you want the velocities in your velocity set to only update on events which take place in the United States, define the following condition:
+    -  To write a Boolean condition, begin with the keyword WHEN.  
+    -  The WHEN keyword determines when your velocities are updated. For example, if you want the velocities in your velocity set to only update on events which take place in the United States, define the following condition:
 
-  WHEN @”user.countryRegion” == “US”
+         WHEN @”user.countryRegion” == “US”
 
 3.	Select **New velocity** to add a velocity. 
 
@@ -125,7 +113,6 @@ For information about using your velocities to make decisions, see [Use a veloci
 ### Understand the Sample panel
 
 When you create or edit a velocity set, the **Sample** panel appears on the right side of the page. 
-
 
 The **Sample** panel displays all the properties of an event that can be referenced in your velocities. These properties differ depending on which event type your velocity observes. Select the event type from the **Assessments** dropdown at the top of the panel.
 
@@ -162,22 +149,20 @@ The **enrichment sample** contains an example of properties that are added to yo
 
 To use your velocities to make decisions on incoming assessment events, you must reference them in your rules. For example, if the following velocity is defined as part of a set:
 
-  FROM Purchase AS myVelocity
-  
-  SELECT Sum(@”totalAmount”)
-  
-  GROUPBY @”user.userId”
+     FROM Purchase AS myVelocity
+     SELECT Sum(@”totalAmount”)
+     GROUPBY @”user.userId”
 
 You can use the following syntax to reference this velocity in a rule:
 
-  Velocity.myVelocity(**String** key, **Timespan** timeWindow)
+     Velocity.myVelocity(**String** key, **Timespan** timeWindow)
   
 The first parameter, **key**, represents the key that will be used to lookup the velocity. In the velocity definition above for **myVelocity**, the GROUPBY @”user.userId” statement indicates that values will be aggregated for each user ID encountered. When referencing the velocity from a rule, the **key** parameter specifies which user id to retrieve the velocity value for. 
 
 Therefore, either of the following statements is valid:
 
-  Velocity.myVelocity(@”user.userId”, 7d)
-  Velocity.myVelocity(“12345”, 7d)
+     Velocity.myVelocity(@”user.userId”, 7d)
+     Velocity.myVelocity(“12345”, 7d)
 
 The **timeWindow** parameter represents the time window on which you observe the velocity. You can select a time window anywhere between 1 minute and 7 days. The following are all valid time windows:
 
