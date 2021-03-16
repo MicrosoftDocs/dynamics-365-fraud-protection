@@ -108,7 +108,7 @@ You define velocities in Fraud Protection with the FROM, SELECT, GROUPBY, and WH
 
 3.	Select **New velocity** to add a velocity. 
 
-    For information about defining velocities, see [Defining a velocity](#_Defining_a_velocity). 
+    For information about defining velocities, see [Defining a velocity](velocities.md#define-a-velocity). 
     You can add up to 10 velocities in a set. 
 
 4.	To publish your velocity, select **Publish**. 
@@ -120,7 +120,7 @@ You define velocities in Fraud Protection with the FROM, SELECT, GROUPBY, and WH
     Once published, the velocities in the set are visible to all. 
     As events flow through Fraud Protection, they begin aggregating data. 
     
-For information about using your velocities to make decisions, see [Use a velocity in rules](#_Use_a_velocity). 
+For information about using your velocities to make decisions, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules). 
 
 ### Understand the Sample panel
 
