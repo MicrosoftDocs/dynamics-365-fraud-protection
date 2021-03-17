@@ -27,9 +27,10 @@ Velocity checks help you understand how several separate and different events th
 To define velocities in Fraud Protection, use the **FROM**, **SELECT**, **GROUPBY**, and **WHEN** keywords within the following structure:
 
  ```json
-FROM <*event type**aggregation method*> AS <*alias*>  
-GROUPBY <*attribute name*>   
-WHEN <*condition*>
+FROM <event type>
+SELECT <aggregation method> AS <alias>
+GROUPBY <attribute name>
+WHEN <condition>
 ```
 
 - After **FROM**, select an assessment on which to observe your velocity: Purchase, AccountLogin, or AccountCreation. 
@@ -110,7 +111,7 @@ WHEN @”user.countryRegion” == “US”
 
 3.	Select **New velocity** to add a velocity. 
 
-    For information about defining velocities, see [Defining a velocity](velocities.md#define-a-velocity). 
+    For information about defining velocities, see [Define a velocity](velocities.md#define-a-velocity). 
     You can add up to 10 velocities in a set. 
 
 4.	To publish your velocity, select **Publish**. 
@@ -171,27 +172,27 @@ SELECT Sum(@”totalAmount”)
 GROUPBY @”user.userId”
 ```
 
-Use the following syntax to reference this velocity in a rule:
+You can use the following syntax to reference this velocity in a rule:
 
 ```json
-Velocity.myVelocity(**String** key, **Timespan** timeWindow)
+Velocity.myVelocity(String key, Timespan timeWindow)
 ```
 
-The first parameter, **key**, represents the key that will be used to lookup the velocity. In the velocity definition above for **myVelocity**, the **GROUPBY** @”user.userId” statement indicates that values will be aggregated for each user ID encountered. When referencing the velocity from a rule, the **key** parameter specifies the user id for which to retrieve the velocity. Therefore, either of the following statements is valid:
+The first parameter, **key**, represents the key that will be used to lookup the velocity. In the velocity definition above for **myVelocity**, the **GROUPBY** @”user.userId” statement indicates that values will be aggregated for each user ID encountered. When referencing the velocity from a rule, the **key** parameter specifies the user id for which to retrieve the velocity, therefore either of the following statements is valid:
 
 ```json
 Velocity.myVelocity(@”user.userId”, 7d)
 Velocity.myVelocity(“12345”, 7d)
 ```
 
-The **timeWindow** parameter represents the time window on which you observe the velocity. You can select a time window anywhere between 1 minute and 7 days. The following are all valid time windows:
+The **timeWindow** parameter represents the time window on which you observe the velocity. You can select a time window for any period between 1 minute and 7 days. The following are all valid time windows:
 
 - [1-59]m
 - [1-23]h
 - [1-7]d
 
 > [!NOTE]
-> The time window begins at the start of the previous unit of measurement. For example: if the current date and time is Nov 27, 2020 11:04 am, and you check a velocity over the last 2 hours, you will see the data since 9:00 am, not 9:04 am. 
+> The time window begins at the start of the previous unit of measurement. For example, if the current date and time is April 1, 2021 11:04 am, and you check a velocity over the last 2 hours, you will see the data since 9:00 am, not 9:04 am. 
 
 > [!NOTE]
 > If the velocity fails to return a value due to an error, a default value of 0 is returned and your rule continues to execute.
