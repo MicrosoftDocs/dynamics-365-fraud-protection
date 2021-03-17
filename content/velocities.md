@@ -127,15 +127,15 @@ For information about using your velocities to make decisions, see [Use a veloci
 
 ### Understand the Sample panel
 
-When you create or edit a velocity set, the **Sample** panel appears on the right side of the page. 
+When you create or edit a velocity set, the **Sample** panel appears on the right side of the page. This panel displays all the properties of an event that can be referenced in your velocities. These properties differ depending on which event type your velocity observes. 
 
-The **Sample** panel displays all the properties of an event that can be referenced in your velocities. These properties differ depending on which event type your velocity observes. 
+- The **Assessments** dropdown located at the top of the panel displays a list of event types you can select.
 
-To select an event type from the **Sample** panel, select an event from the **Assessments** dropdown located at the top of the panel.
+- The **Payload sample** section contains an example of the properties you can include in the request API for the assessment. 
 
-The **Payload sample** section contains an example of the properties that can be sent in the request API for the assessment. 
+- The **enrichment sample** contains an example of properties added to your event by Fraud Protection after the initial request has been sent. For example, it may include information from Fraud Protection’s [device fingerprinting](device-fingerprinting.md) solution, as well as risk and bot scores from our machine learning models. 
 
-The **enrichment sample** contains an example of properties that are added to your event by Fraud Protection, after the initial request has been sent. For examples, information from Fraud Protection’s [device fingerprinting](device-fingerprinting.md) solution, as well as risk and bot scores from our machine learning models. The enrichment sample also includes information from rule evaluation, such as the decision, the rule name, and the clause name that was triggered. Any of these properties can be used in your velocity and can be referenced using @. For example: @”user.firstName”.
+   The enrichment sample also includes information from the rule evaluation, such as the decision, the rule name, and the clause name that was triggered. Any of these properties can be used in your velocity and can be referenced using @. For example: @”user.firstName”.
 
 ## Manage your velocity sets
 
