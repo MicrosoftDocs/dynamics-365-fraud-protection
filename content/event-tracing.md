@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use event tracing.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 12/10/2020
+ms.date: 03/18/2021
 ms.topic: conceptual
 search.app:
   - Capaedac-fraudprotection
@@ -104,7 +104,7 @@ You use trace events to report and monitor the performance for all rules which i
 
 ### Audit events
 
-You use audit events to track portal actions and develop an audit log. Audit events currently support EditList/EditRule, NewList/NewRule, and DeleteList/DeleteRule operations.
+You use audit events to track portal actions and develop an audit log. Audit events currently support new/edit/delete operations on rules, lists, velocities, and external calls.
 
 ##### Namespace: FraudProtection.Audit.
 
@@ -126,9 +126,11 @@ You use audit events to track portal actions and develop an audit log. Audit eve
 
 ### Monitoring events
 
-Use monitoring events for reporting and alerting on your API latency as well as errors outside the Fraud Protection portal. Request counts and latency distribution events are sent every 20 seconds. These events include **startTime** and **endTime** fields that determine the aggregation period and dimension names and values that can be used to filter the metrics as required.
+You can use monitoring events for custom reporting and alerting on your API and external calls performance in conjunction with the reporting available in the Fraud Protection portal. Each of the events below will provide insight into the latency and errors for each service.
 
 ##### Namespace: FraudProtection.Monitoring.RequestLatencyMsDistribution.
+
+For API calls, request counts and latency distributions (in ms) are sent every 20 seconds in this event. These events include startTime and endTime fields that determine the aggregation period and dimension names and values that can be used to filter the metrics as required.
 
 ```json
 
@@ -179,6 +181,63 @@ Use monitoring events for reporting and alerting on your API latency as well as 
 ```
 
 The *Samples* field represents the request count per API.
+
+**Namespace: FraudProtection.Monitoring.ExternalCalls**
+
+This event includes the latency (in ms) and HTTP status code of each external call *<link to external call doc>* which is triggered from a rule. Additional dimensions for the rule and clause triggering the call are also provided.
+
+For external calls, latency (in ms) and http status code metrics are sent with each request in this event. Additional dimensions for the rule triggering the call are also provided to improve the troubleshooting experience if you were interested in investigating the performance of an individual call.
+
+```json
+
+{
+    "name": "FraudProtection.Monitoring.ExternalCalls",
+    "version": "1.0",
+    "metadata": {
+        "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+        "timestamp": "2020-06-10T23:43:33.4526859Z"
+    },
+    "externalCallName": "SampleExternalCall",
+    "requestStatus": "Success",
+    "httpStatusCode": 200,
+    "correlationId": "50BFA0D6-1E3D-4700-A2B3-1DD01162C08A",
+    "latencyMs": 123,
+    "assessment": "PURCHASE",
+    "rule": "SampleRule",
+    "clause": "SampleClause"
+}
+
+```
+
+**Namespace: FraudProtection.Errors.ExternalCalls**
+
+This event logs errors for each failed external call, and can be useful for debugging any issues you may see with your external call performance. The full request and response for the call will be logged, as well as the latency, and the rule and clause the call were triggered from.
+
+```json
+
+{
+    "name": "FraudProtection.Errors.ExternalCalls",
+    "version": "1.0",
+    "metadata": {
+        "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+        "timestamp": "2020-06-10T23:43:33.4526859Z"
+    },
+    "externalCallName": "SampleExternalCall",
+    "requestStatus": "ResponseFailure",
+    "httpStatusCode": 404,
+    "correlationId": "50BFA0D6-1E3D-4700-A2B3-1DD01162C08A",
+    "latencyMs": 123,
+    "assessment": "PURCHASE",
+    "rule": "SampleRule",
+    "clause": "SampleClause",
+    "response": "{}",
+    "requestUri": "https://samplewebsite/sample",
+    "requestBody": "{}"
+}
+
+```
+
+
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
