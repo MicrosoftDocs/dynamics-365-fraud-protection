@@ -187,7 +187,7 @@ If you select **Anonymous**, the **Authorization** header in the HTTP request to
 
 If you select **AAD**, the **Authorization** header in the HTTP request to the target endpoint will include a Bearer token. A Bearer token is a JSON Web Token (JWT) issued by Azure Active Directory. For information about JWTs, see [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text **Bearer** in the required format to the request **Authorization** header as follows:
 
-    Bearer <token>
+  Bearer <token>
     
 ### Token claims
 The following table lists the claims that you can expect in Bearer tokens issued by Fraud Protection. 
@@ -200,7 +200,7 @@ The following table lists the claims that you can expect in Bearer tokens issued
       
 When your API receives a token, it should open the token, and validate the each of the above claims match their description. 
 
-Here is an example of how you can authenticate an incoming request using the [JwtSecurityTokenHandler](https://docs.microsoft.com/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?view=azure-dotnet).
+Here is an example of how you can authenticate an incoming request using the [JwtSecurityTokenHandler](https://docs.microsoft.com/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?).
 
 
 ```C#
