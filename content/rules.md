@@ -124,7 +124,7 @@ To undo all changes that you or other people have made to the sample, select **R
 
 Conditions start with the keyword **WHEN** and are followed by a Boolean expression that evaluates a statement to either **True** or **False**. A condition can be created to determine which rule is evaluated and to group related business logic. For example, the following condition is related to digital product transactions.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 WHEN @"productList.type" == "Digital"
 ```
 
@@ -138,7 +138,7 @@ Clauses contain the fraud logic and business policies that are relevant to the s
 
 Clauses have the following basic structure.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN <decision> 
 WHEN <condition is true>
 ```
@@ -153,7 +153,7 @@ When a clause is triggered (that is, when the **WHEN** statement returns **True*
 
 If a condition matches the decision but doesn't trigger a clause, the rule is then run.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN Approve("NO_CLAUSE_HIT")
 ```
 
@@ -171,14 +171,14 @@ Prior-to-all-scoring clauses are run before Fraud Protection's AI models are run
 
 The following example helps you review purchases when users buy a product in a market outside their geographical location.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN Review("location inconsistency") 
 WHEN Geo.MarketCode(@"device.ipAddress") != "@productList.market"
 ```
 
 In this section, you can also write a clause to cross-reference lists. For example, if you have a custom list that is named **Risky Emails**, the following clause rejects events if the user's email address appears in the list.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN Reject ("risky email") 
 WHEN ContainsKey ("Risky Emails", "Emails", @"user.email")
 ```
@@ -191,7 +191,7 @@ Post-bot-scoring clauses are run after Fraud Protection's AI models have generat
 
 In post-bot-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You reference this score by using the *@botScore* variable. For example, the following clause rejects events from a specific email domain that has a bot score that is more than 700.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN Reject()
 WHEN @"user.email".EndsWith("@contoso.com") && @"botScore" > 700
 ```
@@ -202,7 +202,7 @@ Post-risk-scoring clauses are run after Fraud Protection's AI models have genera
 
 In post-risk-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You reference this score by using the *@riskScore* variable. For example, the following clause rejects expensive transactions that have a risk score that is more than 700.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN Reject("high price and risk score")
 WHEN @purchasePrice >= 199.99 && @riskScore > 700
 ```
@@ -330,19 +330,19 @@ If the payload sample doesn't match the condition, the rule isn't evaluated. If 
 
 Create a rule that has the following three clauses.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 `// Approves when email from contoso domain has been validated`
 `RETURN Approve()`
 `WHEN @"email.isEmailValidated" == true && @"email.emailValue".EndsWith("@contoso.com")`
 ```
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 `// Rejects when email has not been validated and high risk score`
 `RETURN Reject()`
 `WHEN @"email.isEmailValidated" == false && @"riskscore" > 700`
 ```
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 `// Reviews when email has not been validated and medium risk score`
 `RETURN Review()`
 `WHEN @"email.isEmailValidated" == false && @"riskscore" > 400`
@@ -350,7 +350,7 @@ Create a rule that has the following three clauses.
 
 The payload sample contains the following object.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 "email": {
     "email": "Primary",
     "emailValue": "kayla@contoso.com",
@@ -362,7 +362,7 @@ The payload sample contains the following object.
 
 The score sample contains the following value.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 "riskScore": 500,
 ```
 
@@ -370,7 +370,7 @@ When the evaluation pane is expanded, clause 1 is triggered, and a decision of *
 
 In the sample payload, you change the value of the **isEmailValidated** field in the payload from **true** to **false**.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 "isEmailValidated": false,
 ```
 
