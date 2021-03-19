@@ -4,7 +4,7 @@ description: This topic explains how to use external calls to ingest data from A
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/01/2021
+ms.date: 03/19/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -203,7 +203,7 @@ When your API receives a token, it should open the token, and validate the each 
 Here is an example of how you can authenticate an incoming request using the [JwtSecurityTokenHandler](https://docs.microsoft.com/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?view=azure-dotnet).
 
 
-```json
+```C#
 
 string authHeader = "Bearer <token>"; // the Authorization header value
 var jwt = new JwtSecurityTokenHandler().ReadJwtToken(token);
