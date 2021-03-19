@@ -4,7 +4,7 @@ description: This topic explains how to use velocities to examine user and entit
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/18/2021
+ms.date: 03/19/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
