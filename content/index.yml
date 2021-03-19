@@ -64,51 +64,55 @@ additionalContent:
             - text: Enable a Fraud Protection instance
               url: promocode-set-up-DFP-purchased-version.md
             - text: Configure user access
-              url: configure-user-access.md   
+              url: configure-user-access.md
             - text: Implement device fingerprinting
               url: device-fingerprinting.md
         # Card
-        - title: Set up your environment
+        - title: Get in touch
           links:
-            - text: Enable a Fraud Protection instance
+            - text: Join Dynamics 365 Community
+              url: https://community.dynamics.com/365/fraudprotection
+            - text: Share your ideas
+              url: https://experience.dynamics.com/ideas/   
+            - text: Report an issue
+              url: https://support.microsoft.com/
+        # Card
+        - title: Setup guides
+          links:
+            - text: Purchase protection
+              url: purchase-protection.md
+            - text: Account protection
+              url: ap-overview.md
+            - text: Loss prevention
+              url: loss-prevention-overview.md
+        # Card
+        - title: API documentation
+          links:
+            - text: Enable a Fraud Protection instance (trial)
+              url: promocode-set-up-DFP-trial-version.md
+            - text: Enable a Fraud Protection instance (purchased)
               url: promocode-set-up-DFP-purchased-version.md
             - text: Configure user access
-              url: configure-user-access.md   
-            - text: Implement device fingerprinting
+              url: configure-user-access.md
+            - text: Setup device fingerprinting
               url: device-fingerprinting.md
         # Card
-        - title: Set up your environment
+        - title: Privacy, security, compliance
           links:
-            - text: Enable a Fraud Protection instance
-              url: promocode-set-up-DFP-purchased-version.md
-            - text: Configure user access
-              url: configure-user-access.md   
-            - text: Implement device fingerprinting
-              url: device-fingerprinting.md
+            - text: Privacy protection for data
+              url: data-processing-protection.md
+            - text: Security overview
+              url: security.md
+            - text: Compliance overview
+              url: security-compliance.md
+            - text: Data residency and Fraud Protection network
+              url: data-processing-protection.md
         # Card
-        - title: Set up your environment
+        - title: Trust Center
           links:
-            - text: Enable a Fraud Protection instance
-              url: promocode-set-up-DFP-purchased-version.md
-            - text: Configure user access
-              url: configure-user-access.md   
-            - text: Implement device fingerprinting
-              url: device-fingerprinting.md
-        # Card
-        - title: Set up your environment
-          links:
-            - text: Enable a Fraud Protection instance
-              url: promocode-set-up-DFP-purchased-version.md
-            - text: Configure user access
-              url: configure-user-access.md   
-            - text: Implement device fingerprinting
-              url: device-fingerprinting.md
-        # Card
-        - title: Set up your environment
-          links:
-            - text: Enable a Fraud Protection instance
-              url: promocode-set-up-DFP-purchased-version.md
-            - text: Configure user access
-              url: configure-user-access.md   
-            - text: Implement device fingerprinting
-              url: device-fingerprinting.md                                                                      
+            - text: Fraud Protection transparency notice
+              url: https://go.microsoft.com/fwlink/?linkid=2135033
+            - text: Fraud Protection mobile reference
+              url: https://stp-webui-cld-prod3-eastus.cloudapp.net/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=7a90ef45-ad4f-45d0-853a-4217a8db6e52&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_FAQ_and_White_Papers
+            - text: Fraud Protection model explainability
+              url: https://stp-webui-cld-prod3-eastus.cloudapp.net/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=75477753-8598-4b81-b4e5-6566cbbe49c7&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_FAQ_and_White_Papers
