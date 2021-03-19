@@ -26,7 +26,7 @@ Velocity checks help you understand the relationships between events over time, 
 
 Velocity sets are made up of individual velocities. You define velocities in Fraud Protection with the **SELECT**, **FROM**, **WHEN**, and **GROUPBY** keywords, using the following structure:
 
- ```Fraud Protection Language
+ ```FraudProtectionLanguage
 SELECT <aggregation method> AS <velocity name>
 FROM <event type>
 WHEN <condition>
@@ -56,7 +56,7 @@ Use the following examples to create your own velocities.
 
 **How much money each user has spent:**
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 SELECT Sum(@”totalAmount”) AS totalSpending_perUser
 FROM Purchase   
 GROUPBY @”user.userId” 
@@ -65,7 +65,7 @@ GROUPBY @”user.userId”
 
 **How many times each IP address has been used to create a new account:**
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 SELECT Count() AS NewAccounts_perIP
 FROM AccountCreation
 GROUPBY @”device.ipAddress”
@@ -74,7 +74,7 @@ GROUPBY @”device.ipAddress”
 
 **For each device, how  many unique users have logged in:**
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 SELECT DistinctCount(@”user.userId”) AS uniqueUserLogins_perDevice
 FROM AccountLogin
 GROUPBY @”deviceAttributes.deviceId” 
@@ -83,7 +83,7 @@ GROUPBY @”deviceAttributes.deviceId”
 
 **For each user, how many login attempts were made which were rejected by Fraud Protection:**
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 SELECT Count() AS loginRejections_perUser
 FROM AccountLogin
 WHEN @”ruleEvaluation.decision” == “Reject”
@@ -93,7 +93,7 @@ GROUPBY @”user.userId”
 
 **For each user, how many purchases were made outside of the US which also received a high-risk score:**
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 SELECT Count() AS intlHighRiskTxns_perUser
 FROM Purchase
 GROUPBY @”user.userId”
@@ -170,7 +170,7 @@ When you create or edit a velocity set, the **Sample** panel appears on the righ
 
 To use your velocities to make decisions on incoming assessment events, you must reference them in your rules. For example, if the following velocity is defined as part of a set:
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 FROM Purchase AS totalSpending
 SELECT Sum(@”totalAmount”)
 GROUPBY @”user.userId”
@@ -179,7 +179,7 @@ GROUPBY @”user.userId”
 
 In your rule, you can perform a velocity check using  the following syntax: 
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 Velocity.totalSpending(@”user.userId”, 7d)
 
 ```
