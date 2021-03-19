@@ -1,0 +1,114 @@
+### YamlMime:Hub
+
+title: Dynamics 365 Fraud Protection Documentation
+brand: dynamics
+
+metadata:
+  title: Dynamics 365 Fraud Protection Documentation
+  description: Dynamics 365 Fraud Protection Documentation
+  ms.topic: hub-page
+  author: kelsiefu
+  ms.author: v-madeq
+  ms.service: fraud-protection
+  ms.date: 03/19/2021
+
+# highlightedContent section (optional)
+# Maximum of 8 items
+highlightedContent:
+# itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
+  items:
+    # Card
+    - title: What’s Dynamics 365 Fraud Protection
+      itemType: overview
+      url: overview.md
+    # Card
+    - title: What’s new in Dynamics 365 Fraud Protection
+      itemType: whats-new
+      url: whats-new-10-6.md
+    # Card
+    - title: Dynamics 365 Fraud Protection videos
+      itemType: video
+      url: https://docs.microsoft.com/learn/browse/?products=dynamics-fraud-protection&terms=fraud%20protection&expanded=dynamics-365
+    # Card
+    - title: Fraud Protection training on Microsoft Learn
+      itemType: learn
+      url: file3.md OR https://docs.microsoft.com/file3
+
+# additionalContent section (optional)
+# Card with links style
+additionalContent:
+  # Supports up to 3 sections
+  sections:
+    - items:
+        # Card
+        - title: Meet Fraud Protection
+          links:
+            - text: Overview
+              url: overview.md
+            - text: Release plans
+              url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/fraud-protection/dynamics365-fraud-protection/
+            - text: Access your environment 
+              url: https://go.microsoft.com/fwlink/?linkid=2157858
+        # Card
+        - title: Provisioning and usage
+          links:
+            - text: Regional availability
+              url: global-availability.md 
+            - text: Provision your Azure tenant
+              url: provision-azure-tenant.md
+            - text: Assessment usage and metering
+              url: metering.md
+        # Card
+        - title: Set up your environment
+          links:
+            - text: Enable a Fraud Protection instance
+              url: promocode-set-up-DFP-purchased-version.md
+            - text: Configure user access
+              url: configure-user-access.md   
+            - text: Implement device fingerprinting
+              url: device-fingerprinting.md
+        # Card
+        - title: Set up your environment
+          links:
+            - text: Enable a Fraud Protection instance
+              url: promocode-set-up-DFP-purchased-version.md
+            - text: Configure user access
+              url: configure-user-access.md   
+            - text: Implement device fingerprinting
+              url: device-fingerprinting.md
+        # Card
+        - title: Set up your environment
+          links:
+            - text: Enable a Fraud Protection instance
+              url: promocode-set-up-DFP-purchased-version.md
+            - text: Configure user access
+              url: configure-user-access.md   
+            - text: Implement device fingerprinting
+              url: device-fingerprinting.md
+        # Card
+        - title: Set up your environment
+          links:
+            - text: Enable a Fraud Protection instance
+              url: promocode-set-up-DFP-purchased-version.md
+            - text: Configure user access
+              url: configure-user-access.md   
+            - text: Implement device fingerprinting
+              url: device-fingerprinting.md
+        # Card
+        - title: Set up your environment
+          links:
+            - text: Enable a Fraud Protection instance
+              url: promocode-set-up-DFP-purchased-version.md
+            - text: Configure user access
+              url: configure-user-access.md   
+            - text: Implement device fingerprinting
+              url: device-fingerprinting.md
+        # Card
+        - title: Set up your environment
+          links:
+            - text: Enable a Fraud Protection instance
+              url: promocode-set-up-DFP-purchased-version.md
+            - text: Configure user access
+              url: configure-user-access.md   
+            - text: Implement device fingerprinting
+              url: device-fingerprinting.md                                                                      
