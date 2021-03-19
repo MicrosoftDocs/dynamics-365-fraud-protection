@@ -24,7 +24,7 @@ To get started, read the [Quick start guide](fpl-lang-ref.md#quick-start-guide) 
 
 Rules consist of [clauses](rules.md#clauses), and are defined by the **RETURN** and **WHEN** keywords. They have the following basic structure.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN *decision* 
 WHEN *condition is true*
 ```
@@ -35,7 +35,7 @@ The **RETURN** decision is run only if the **WHEN** expression is evaluated to *
 
 Your clause must return a decision of *Approve*, *Reject*, *Challenge*, or *Review*. You can also include optional parameters to send more information about the decision. Here are some examples of **RETURN** statements.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN Reject()
 RETURN Reject("email is on block list")
 RETURN Reject("email is on block list", "do not escalate")
@@ -45,7 +45,7 @@ For information about decision types and their parameters, see the [Decision typ
 
 In addition to a decision type, you can also return additional functions, such as Other or Trace. 
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN Approve(), Other(key="someValue")
 RETURN Review(), Trace(email=@"user.email")
 ```
@@ -67,7 +67,7 @@ When you use variables in a Boolean expression, you can perform the following ta
 
 - Compare variables to other variables, or to constants.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 WHEN @"user.email" == "kayla@contoso.com"
 WHEN @"user.firstName" == @"shippingAddress.firstName"
 WHEN @"riskscore" > 700 
@@ -76,20 +76,20 @@ WHEN Geo.CountryCode(@"device.ipAddress") == "US"
 
 - Check whether a variable is contained in a list.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 WHEN ContainsKey("Safe List", "Emails", @"user.email")
 ```
 
 - Check the value of a key in a list.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 WHEN Lookup("Email List", "Emails", @"user.email", "Status") == "Safe"
 WHEN Lookup("Product cutoff list", "Product", @"productList.productName", "Score Cutoff").toDouble() < @"riskScore"
 ```
 
 - Evaluate a string.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 WHEN @"phone.phoneNumber".StartsWith("1-")
 WHEN @"user.email".EndsWith("@contoso.com")
 ```
@@ -246,7 +246,7 @@ For example, you create a single-column list of risky email addresses and name i
 
 You can then use the following syntax to reject all transactions from the risky email addresses in this list.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN Reject("risky email") 
 WHEN ContainsKey("Risky email list", "Email", @"user.email") 
 ```
@@ -270,7 +270,7 @@ For example, you create a list that has one column for email addresses and anoth
 
 You can then use the following syntax to reject all transactions from the email addresses in this list that have a status of *Risky*.
 
-```Fraud Protection Language
+```FraudProtectionLanguage
 RETURN Reject("risky email") 
 WHEN Lookup("Email List", "Email", @"user.email", "Status") == "Risky"
 ```
