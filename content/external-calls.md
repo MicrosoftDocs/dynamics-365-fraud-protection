@@ -82,9 +82,9 @@ You can add sample values for each parameter. Fraud Protection will use these pa
 
 To ensure that Fraud Protection can connect to your endpoint, test the connection at any point. 
 
-1. To test a connection while creating a new external call or editing an existing one, once all required fields have been entered, select **Test**. 
+- To test a connection while creating a new external call or editing an existing one, once all required fields have been entered, select **Test**. 
 
-      Fraud Protection sends a request to your external call using the endpoint and parameters that you provided. 
+  Fraud Protection sends a request to your external call using the endpoint and parameters that you provided. 
 
    - If Fraud Protection successfully reaches the target endpoint, a green message bar displays at the top of the panel to inform you that the connection was successful. 
 
@@ -119,7 +119,7 @@ In addition to the three metrics described above, a fourth chart displays:
 
 -	**Errors**: The number of errors by error type and code. 
 
-     You can view these error counts over time, or to view the distribution of errors, select **Pie chart**. 
+     - To view error counts over time, or to view the distribution of errors, select **Pie chart**. 
 
 In addition to HTTP Client Errors (400, 401, 403), you may also see the following errors:
 
