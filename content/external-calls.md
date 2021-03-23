@@ -4,7 +4,7 @@ description: This topic explains how to use external calls to ingest data from A
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/19/2021
+ms.date: 03/22/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -18,7 +18,7 @@ title: External calls
 
 ## Overview
 
-External calls enable you to ingest data from APIs outside of Microsoft Dynamics 365 Fraud Protection (Fraud Protection) and then use that data to make informed decisions in real-time. For example, third-party address and phone verification services, or your own custom scoring models, may provide critical input in determining the risk-level for some events. With external calls, you can connect to any API endpoint, make a request to that endpoint when necessary from within your rule, and use the response from that endpoint to make a decision. 
+External calls enable you to ingest data   from APIs outside of Microsoft Dynamics 365 Fraud Protection (Fraud Protection) and then use that data to make informed decisions in real-time  . For example, third-party address and phone verification services, or your own custom scoring models, may provide critical input in determining the risk-level for some events  . With external calls, you can connect to any API endpoint, make a request to that endpoint when necessary from within your rule, and use the response from that endpoint to make a decision. 
 
 > [!NOTE]
 > If this additional data will be needed for all events, you can also send it as part of the assessment schema. For more information about how to send custom data as part of your API request, see [Custom data sample](https://docs.microsoft.com/dynamics365/fraud-protection/view-purchase-protection-schemas#custom-data-sample).
@@ -47,7 +47,7 @@ Before you create an external call, there are a few restrictions you should know
    3. **Web Request**: Select the appropriate HTTP method (**GET** or **POST**), and then enter the API endpoint.
    4. **Authentication**: Choose how you want to authenticate incoming requests. 
    
-      - If you select **Anonymous**, no authorization header will be sent. 
+      - If you select **Anonymous**, a authorization header won't be sent. 
       - If you select **AAD**, an AAD token will be generated in your tenant, and *Bearer <token>* is used as the authorization header. 
       
       For more information about authentication, authorization, and AAD tokens, see [Understanding authentication and authorization](external-calls.md#understanding-authentication-and-authorization).
@@ -68,7 +68,7 @@ You can add sample values for each parameter. Fraud Protection will use these pa
 
    8. **Sample Response**: The **Sample response** is an example of the JSON data returned in a successful response from your API endpoint. Any data returned in the response can be referenced in your rules. The sample you provide here is shown as you create rules. 
 
-      Select **Test** to automatically populate this field with a real response from your API.
+      - Select **Test** to automatically populate this field with a real response from your API.
  
    9. **Timeout**: Specify how long in milliseconds the request should wait before timing out. You must specify a number between 1 and 1000. 
 
@@ -136,8 +136,8 @@ In addition to HTTP Client Errors (400, 401, 403), you may also see the followin
 You can use Fraud Protection’s event tracing capability to forward events related to your external calls to your own Azure Event Hubs or Blob Storage. 
 In the Fraud Protection portal, on the Event Tracing page, you can subscribe to the following two events related to external calls:
 
-1.	FraudProtection.Monitoring.ExternalCalls
-2.	FraudProtection.Errors.ExternalCalls
+- FraudProtection.Monitoring.ExternalCalls
+- FraudProtection.Errors.ExternalCalls
 
 Whenever a request is made to an external call, an event is sent to the FraudProtection.Monitoring.ExternalCalls namespace. The event payload includes information on the latency of the call, the request status, and the rule and clause from which it was triggered. 
 
@@ -179,7 +179,7 @@ For information about the rules language and how you can use external calls in r
 > [!NOTE]
 > Using external calls in your rule may increase the latency of the rule. 
 
-## Understanding authentication and authorization 
+## Understand authentication and authorization 
 
 To ensure that data is accessed securely, APIs often  authenticate the sender of a request to verify that they have permission to access the data.External calls in Fraud Protection support two methods of authentication: *Anonymous* and *AAD*.
 
@@ -194,7 +194,7 @@ The following table lists the claims that you can expect in Bearer tokens issued
 
 | Name                            | Claim              | Description |
 |---------------------------------|--------------------|-------------|
-| Tenant ID                       | tid                | Identifies the Azure tenant ID of the subscription associated with your Fraud Protection account. To find your tenant ID in the Fraud Protection Portal, see [Required IDs and information](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#required-ids-and-information). To find your tenant ID in the Azure Portal, see [How to find your Azure Active Directory tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).      |
+| Tenant ID                       | tid                | <p>Identifies the Azure tenant ID of the subscription associated with your Fraud Protection account. To find your tenant ID in the Fraud Protection Portal, see [Required IDs and information](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#required-ids-and-information). To find your tenant ID in the Azure Portal, see [How to find your Azure Active Directory tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).      |
 | Audience                        | aud                | Identifies the intended recipient of the token. This value will reflect exactly the application ID provided when you configure your external call on the Fraud Protection portal.                                                   |
 | Application ID                  | appid              | This is Fraud Protection’s application id: bf04bdab-e06f-44f3-9821-d3af64fc93a9. This ID is owned solely by Fraud Protection, and only we can request a token on behalf of it.                                                        |
       
@@ -217,5 +217,7 @@ throw new Exception("the token is not authorized.");
 
 ```
 
+## External Data Practices
+You acknowledge that you are responsible for adhering to all applicable laws and regulations, including without limitation data protection laws, contractual restrictions and/or policies related to data sets you provide to Microsoft through the External Calls feature of Fraud Protection. Further, you acknowledge that your use of Fraud Protection is subject to use restrictions detailed in the [Microsoft Customer Agreement](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Flicensing%2Fterms%2Fproductoffering%2FMicrosoftDynamics365Services%2FMCA&data=04%7C01%7CAlia.Buckner%40microsoft.com%7Cb04b9a60a2864eb2678708d8ed887d65%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637520517763184431%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=iENICkulZcCWF%2FwKhDTJ%2FagP7yQrUH0M5Km8%2Bd0BGDk%3D&reserved=0), which states that you may not use Fraud Protection (i) as the sole factor in determining whether to proceed with a payment transaction; (ii) as a factor in determining any person’s financial status, financial history, creditworthiness, or eligibility for insurance, housing, or employment; or (iii) to make decisions that produce legal effects or significantly affect a person. You are also prohibited from providing or otherwise using sensitive or highly regulated data types in connection with your use of the external calls feature of Fraud Protection. Please take time to review any data set or data types before you use them in connection with the external calls feature of Fraud Protection to ensure that you are compliant with this provision. Microsoft also reserves the right to verify that you are compliant with this provision.
 
 
