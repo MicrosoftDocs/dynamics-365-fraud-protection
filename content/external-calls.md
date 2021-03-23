@@ -18,7 +18,7 @@ title: External calls
 
 ## Overview
 
-External calls enable you to ingest data   from APIs outside of Microsoft Dynamics 365 Fraud Protection (Fraud Protection) and then use that data to make informed decisions in real-time  . For example, third-party address and phone verification services, or your own custom scoring models, may provide critical input in determining the risk-level for some events  . With external calls, you can connect to any API endpoint, make a request to that endpoint when necessary from within your rule, and use the response from that endpoint to make a decision. 
+External calls enable you to ingest data   from APIs outside of Microsoft Dynamics 365 Fraud Protection (Fraud Protection) and then use that data to make informed decisions in real-time. For example, third-party address and phone verification services, or your own custom scoring models, may provide critical input in determining the risk-level for some events  . With external calls, you can connect to any API endpoint, make a request to that endpoint when necessary from within your rule, and use the response from that endpoint to make a decision. 
 
 > [!NOTE]
 > If this additional data will be needed for all events, you can also send it as part of the assessment schema. For more information about how to send custom data as part of your API request, see [Custom data sample](https://docs.microsoft.com/dynamics365/fraud-protection/view-purchase-protection-schemas#custom-data-sample).
@@ -47,7 +47,7 @@ Before you create an external call, there are a few restrictions you should know
    3. **Web Request**: Select the appropriate HTTP method (**GET** or **POST**), and then enter the API endpoint.
    4. **Authentication**: Choose how you want to authenticate incoming requests. 
    
-      - If you select **Anonymous**, a authorization header won't be sent. 
+      - If you select **Anonymous**, an authorization header won't be sent. 
       - If you select **AAD**, an AAD token will be generated in your tenant, and *Bearer <token>* is used as the authorization header. 
       
       For more information about authentication, authorization, and AAD tokens, see [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization).
@@ -64,7 +64,7 @@ You can add sample values for each parameter. Fraud Protection will use these pa
 
       For GET methods, the request URL is shown, and for POST methods, the request body is shown. 
       
-      The sample request is used to make a sample call to your endpoint, prior to creation, or any time you select **Test**. 
+      The sample request is used to make a sample call to your endpoint, prior to creation, or anytime you select **Test**. 
 
    8. **Sample Response**: The **Sample response** is an example of the JSON data returned in a successful response from your API endpoint. Any data returned in the response can be referenced in your rules. The sample you provide here is shown as you create rules. 
 
@@ -183,7 +183,7 @@ For information about the rules language and how you can use external calls in r
 
 To ensure that data is accessed securely, APIs often  authenticate the sender of a request to verify that they have permission to access the data.External calls in Fraud Protection support two methods of authentication: *Anonymous* and *AAD*.
 
-If you select **Anonymous**, the **Authorization** header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint does not require an **Authorization** header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL you enter in the **Web Request** field. The target endpoint can then validate if the API key from the request URL is allowed, and then decide if permission should be granted.
+If you select **Anonymous**, the **Authorization** header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint does not require an **Authorization** header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL you enter in the **Web Request** field. The target endpoint can then be validated if the API key from the request URL is allowed, and then decide if permission should be granted.
 
 If you select **AAD**, the **Authorization** header in the HTTP request to the target endpoint will include a Bearer token. A Bearer token is a JSON Web Token (JWT) issued by Azure Active Directory. For information about JWTs, see [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text **Bearer** in the required format to the request **Authorization** header as follows:
 
@@ -196,9 +196,9 @@ The following table lists the claims that you can expect in Bearer tokens issued
 |---------------------------------|--------------------|-------------|
 | Tenant ID                       | tid                | <p>Identifies the Azure tenant ID of the subscription associated with your Fraud Protection account. To find your tenant ID in the Fraud Protection Portal, see [Required IDs and information](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#required-ids-and-information). To find your tenant ID in the Azure Portal, see [How to find your Azure Active Directory tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).      |
 | Audience                        | aud                | Identifies the intended recipient of the token. This value will reflect exactly the application ID provided when you configure your external call on the Fraud Protection portal.                                                   |
-| Application ID                  | appid              | This is Fraud Protection’s application id: bf04bdab-e06f-44f3-9821-d3af64fc93a9. This ID is owned solely by Fraud Protection, and only we can request a token on behalf of it.                                                        |
+| Application ID                  | appid              | This is Fraud Protection’s application ID: bf04bdab-e06f-44f3-9821-d3af64fc93a9. This ID is owned solely by Fraud Protection, and only we can request a token on behalf of it.                                                        |
       
-When your API receives a token, it should open the token, and validate the each of the above claims match their description. 
+When your API receives a token, it should open the token and validate that each of the above claims match their description. 
 
 Here is an example of how you can authenticate an incoming request using the [JwtSecurityTokenHandler](https://docs.microsoft.com/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?).
 
