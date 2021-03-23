@@ -4,7 +4,7 @@ description: This topic explains how to use velocities to examine user and entit
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/19/2021
+ms.date: 03/22/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -18,9 +18,7 @@ title: Perform velocity checks
 
 ## Overview
 
-Velocity checks allow you to examine the historical patterns of a user or entity (for example, a credit card or an IP address) and then use these historical patterns to flag potential fraud. Fraudsters generally do not place a single order and walk away – more commonly, they experiment with one transaction first, and if it is approved, they will follow up with several more transactions. This continues until a flag is raised. 
-
-Velocity checks help you understand the relationships between events over time, and how frequently certain data points decur. This enables you to quickly identify deviations from normal user behavior and take action accordingly. 
+Velocity checks allow you to identify patterns of events from a user or entity (such as a credit card)    whose frequency might indicate suspicious activity and potential fraud.  For example, after trying a few individual orders, fraudsters often place many orders quickly with a single credit card, from a single IP address, or device. They may also place many orders quickly with many different credit cards.  By defining velocities, you can watch incoming events for these types of patterns and use rules to define thresholds beyond which you want to treat these patterns as suspicious. 
 
 ## Define a velocity
 
@@ -39,13 +37,15 @@ GROUPBY <attribute name>
 | Aggregation Method | Description                 | Example  |
 |--------------------|-----------------------------|----------|
 | Count              | Returns the number of times an event has occurred.  | SELECT Count() AS numPurchases  | 
-| DistinctCount      | Returns the number of distinct values for the specified property.  | SELECT DistinctCount(@”device.ipAddress”) AS distinctIPaddresses  | 
+| DistinctCount      | Returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event will not contribute to the aggregation.  | SELECT DistinctCount(@”device.ipAddress”) AS distinctIPaddresses  | 
 | Sum                | Returns the sum of values for a specified numeric property. | SELECT Sum(@”totalAmount”) AS totalSpending  | 
 
 - After **FROM**, select an assessment on which to observe your velocity: Purchase, AccountLogin, or AccountCreation. 
-- *The **WHEN** statement is optional.* After **WHEN**, you may type a Boolean expression. Only events matching this condition are considered in the aggregation. Other events are ignored.  
-- After **GROUPBY**, select a property or an expression. This property/expression is evaluated for every event processed. Events evaluated to the same value in GROUPBY are aggregated into a single value.
+- *The **WHEN** statement is optional.* After **WHEN**, you may type a Boolean expression. Only events matching this condition are considered in the aggregation. Other events are ignored. This expression is used to filter the events which are considered in the velocity.
+- After **GROUPBY**, select a property or an expression. This property/expression is evaluated for every event processed. Events whose GROUPBY expression evaluates to the same value are combined to calculate the requested Count, DistinctCount, or Sum. If the GROUPBY expression is null or empty for an incoming event, the event will not contribute to the aggregation.
 
+> [!TIP]
+> Any expression which can be used in a rule can also be used in a velocity. This includes lists and external calls. For a full list of available functions, see the [Language Reference Guide](fpl-lang-ref.md).
 
 > [!NOTE]
 > The time window over which you’d like to observe the velocity is specified when you reference the velocity from a rule, not in the velocity definition itself. 
@@ -81,23 +81,23 @@ GROUPBY @”deviceAttributes.deviceId”
 
 ```
 
-**For each user, how many login attempts were made which were rejected by Fraud Protection:**
+**For each user, how many login attempts were made which were rejected by Fraud Protection or received a high-risk score:**
 
 ```FraudProtectionLanguage
 SELECT Count() AS loginRejections_perUser
 FROM AccountLogin
-WHEN @”ruleEvaluation.decision” == “Reject”
+WHEN @”ruleEvaluation.decision” == “Reject”or @riskScore > 900
 GROUPBY @”user.userId”
 
 ```
 
-**For each user, how many purchases were made outside of the US which also received a high-risk score:**
+**For each user, how many purchases were made outside of the US which also contained a product on a high risk list,  received a high-risk score, or came from a user on the blocked list:**
 
 ```FraudProtectionLanguage
 SELECT Count() AS intlHighRiskTxns_perUser
 FROM Purchase
+WHEN @”user.country” != “US” and ContainsKey(“Risky Products”, “Product ID”, @”ProductList.productId”)
 GROUPBY @”user.userId”
-WHEN @”user.country” != “US” and @riskScore > 900
 
 ```
 
@@ -184,18 +184,69 @@ Velocity.totalSpending(@”user.userId”, 7d)
 
 ```
 
-The first parameter is the **key**, which will be used to lookup the velocity. In the velocity definition above for  **totalSpending**, the GROUPBY @”user.userId” statement indicates that values will be aggregated for each user ID encountered. When referencing the velocity from a rule, the **key** parameter specifies the specific user id for which to retrieve the velocity value. 
+The first parameter is the **key**, which will be used to lookup the velocity. In the velocity definition above for  **totalSpending**, the GROUPBY @”user.userId” statement indicates that values will be aggregated for each user ID encountered. When referencing the velocity from a rule, the **key** parameter specifies the specific user id to retrieve the velocity value for. If the key parameter is null or empty, Fraud Protection returns 0. 
 
-The second parameter is the **timeWindow** on which you observe the velocity. You can select a time window between 1 minute and 7 days. The following are all valid time windows:
+The second parameter is the **timeWindow** on which you observe the velocity. You can select a time window between 1 minute and 7 days. Currently, the following are all valid time windows:
 
 - [1-59]m
 - [1-23]h
 - [1-7]d
 
+In the future, this list will be expanded.
+
 > [!NOTE]
 > The time window begins at the start of the previous unit of measurement. For example, if the current date and time is April 1, 2021 11:04 am, and you check a velocity over the timeWindow 2h, you will see the data since 9:00 am, not 9:04 am. 
 
 > [!NOTE]
-> If the velocity fails to return a value due to an error, a default value of 0 is returned, and your rule continues to execute.
+> If the velocity fails to return a value due to an error, a default value of 0 is returned, and your rule continues.
 
+> [!NOTE]
+> Velocities are updated only after all rules have been evaluated. Therefore, when you reference a velocity in a rule, executing it will not include the current event being processed.
 
+## Use rules to view velocity values  
+
+In addition to returning decisions, rules can also utilize observation functions such as Trace() and Other(). For more information on observation functions, see the [Language Reference Guide](fpl-lang-ref.md). 
+You can use Other() to print out velocity values in each Assessment API response. For example, you can create the following rule:
+
+```FraudProtectionLanguage
+RETURN Approve(), Other(
+    totalSpending_7d = Velocity.totalSpending_perUser(@"user.userId", 7d),
+    loginsPerDevice_1m = Velocity.login_count_perDevice(@"deviceAttributes.deviceId", 1m)
+)
+
+```
+
+Each Account Login or Account Creation event that triggers this rule, will then the following section in the API response:
+
+```FraudProtectionLanguage
+      "Other": {
+        "clause1": {
+          "totalSpending_7d": "0",
+          "loginsPerDevice_1m": "0"
+        }
+      },
+
+```
+
+> [!NOTE]
+> This behavior does not apply to Purchase events. 
+
+Alternatively, instead of printing the velocity values directly to the API response, you can also send the values to your own Azure Event Hubs or Blob Storage, using [event tracing](event-tracing.md). For example, you can create the following rule: 
+
+```FraudProtectionLanguage
+RETURN Approve(), Trace(
+    totalSpending_7d = Velocity.totalSpending_perUser(@"user.userId", 7d),
+    loginsPerDevice_1m = Velocity.login_count_perDevice(@"deviceAttributes.deviceId", 1m)
+)
+
+```
+
+If you subscribe to the [FraudProtection.Trace.Rule event](event-tracing.md#trace-events), the following information will be sent as part of each event:
+
+```FraudProtectionLanguage
+    "attributes": {
+"totalSpending_7d": 523.99
+      "loginsPerDevice_1m": 1
+    }
+
+```
