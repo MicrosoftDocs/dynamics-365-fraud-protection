@@ -4,7 +4,7 @@ description: This topic explains how to use velocities to examine user and entit
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/22/2021
+ms.date: 03/23/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -91,7 +91,7 @@ GROUPBY @”user.userId”
 
 ```
 
-**For each user, how many purchases were made outside of the US which also contained a product on a high risk list,  received a high-risk score, or came from a user on the blocked list:**
+**For each user, how many purchases were made outside of the US which also contained a product on a high risk list:**
 
 ```FraudProtectionLanguage
 SELECT Count() AS intlHighRiskTxns_perUser
@@ -198,14 +198,15 @@ In the future, this list will be expanded.
 > The time window begins at the start of the previous unit of measurement. For example, if the current date and time is April 1, 2021 11:04 am, and you check a velocity over the timeWindow 2h, you will see the data since 9:00 am, not 9:04 am. 
 
 > [!NOTE]
-> If the velocity fails to return a value due to an error, a default value of 0 is returned, and your rule continues.
+> If the velocity fails to return a value due to an error, a default value of 0 is returned, and your rule continues to execute.
 
 > [!NOTE]
-> Velocities are updated only after all rules have been evaluated. Therefore, when you reference a velocity in a rule, executing it will not include the current event being processed.
+> Velocities are updated only after all rules have been evaluated. Therefore, when you reference a velocity in a rule, it will not be included in  the current event being processed.
 
 ## Use rules to view velocity values  
 
 In addition to returning decisions, rules can also utilize observation functions such as Trace() and Other(). For more information on observation functions, see the [Language Reference Guide](fpl-lang-ref.md). 
+
 You can use Other() to print out velocity values in each Assessment API response. For example, you can create the following rule:
 
 ```FraudProtectionLanguage
@@ -218,7 +219,7 @@ RETURN Approve(), Other(
 
 Each Account Login or Account Creation event that triggers this rule, will then the following section in the API response:
 
-```FraudProtectionLanguage
+```JSON
       "Other": {
         "clause1": {
           "totalSpending_7d": "0",
@@ -243,7 +244,7 @@ RETURN Approve(), Trace(
 
 If you subscribe to the [FraudProtection.Trace.Rule event](event-tracing.md#trace-events), the following information will be sent as part of each event:
 
-```FraudProtectionLanguage
+```JSON
     "attributes": {
 "totalSpending_7d": 523.99
       "loginsPerDevice_1m": 1
