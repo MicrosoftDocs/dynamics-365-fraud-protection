@@ -50,7 +50,7 @@ Before you create an external call, there are a few restrictions you should know
       - If you select **Anonymous**, a authorization header won't be sent. 
       - If you select **AAD**, an AAD token will be generated in your tenant, and *Bearer <token>* is used as the authorization header. 
       
-      For more information about authentication, authorization, and AAD tokens, see [Understanding authentication and authorization](external-calls.md#understanding-authentication-and-authorization).
+      For more information about authentication, authorization, and AAD tokens, see [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization).
       
    5. **Application ID**: If you select AAD authentication, you must provide the application ID of an existing Azure Active Directory application within your Fraud Protection subscription tenant. For more information about creating and managing Azure AD applications, see [Create Azure Active Directory Applications](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#create-azure-active-directory-applications).
 
