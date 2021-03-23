@@ -119,7 +119,7 @@ In addition to the three metrics described above, a fourth chart displays:
 
 -	**Errors**: The number of errors by error type and code. 
 
-You can view these error counts over time, or to view the distribution of errors, select **Pie chart**. 
+     You can view these error counts over time, or to view the distribution of errors, select **Pie chart**. 
 
 In addition to HTTP Client Errors (400, 401, 403), you may also see the following errors:
 
