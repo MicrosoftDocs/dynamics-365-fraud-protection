@@ -192,13 +192,17 @@ You can use the LET keyword to define a variable, which can then be referenced e
 
 For example, you could declare the following variable:
 
-  LET $fullName = @”user.firstName” + @”user.lastName”
+```
+LET $fullName = @”user.firstName” + @”user.lastName”
+```
 
 Variables declared in a LET statement can be used only within the scope of the rule or velocity set it is defined in. 
 
 To reference the variable above, you could write the following:
 
-  WHEN $fullName == “Kayla Goderich”
+```
+WHEN $fullName == “Kayla Goderich”
+```
 
 > [!NOTE]
 > Once a variable has been defined, it cannot be updated with a new value.
