@@ -30,10 +30,10 @@ This language reference guide includes the complete list of operators, functions
 - [Logical operators](fpl-lang-ref.md#logical-operators)
 - [List functions](fpl-lang-ref.md#list-functions)
 - [Comparison operators](fpl-lang-ref.md#comparison-operators)
-- [Type casting operators](fpl-lang-ref.md#type-casting-operators)
 - [Geo functions](fpl-lang-ref.md#geo-functions)
 - [String functions](fpl-lang-ref.md#string-functions)
 - [Math functions](fpl-lang-ref.md#math-functions)
+- [Type casting operators](fpl-lang-ref.md#type-casting-operators)
 - [DateTime functions](fpl-lang-ref.md#datetime-operators)
 - [Aggregation functions](fpl-lang-ref.md#aggregation-functions)
 
@@ -188,16 +188,14 @@ For information about type inferencing, see the [Type inference of variables](fp
 # Defining your own variables
 
 You can use the LET keyword to define a variable, which can then be referenced elsewhere in the rule. All variables should be prefixed by $.
-
 For example, you could declare the following variable:
 
-LET $fullName = @”user.firstName” + @”user.lastName”
+  LET $fullName = @”user.firstName” + @”user.lastName”
 
 Variables declared in a LET statement can be used only within the scope of the rule or velocity set it is defined in. 
-
 To reference the variable above, you could write the following:
 
-WHEN $fullName == “Kayla Goderich”
+  WHEN $fullName == “Kayla Goderich”
 
 > [!NOTE]
 > Once a variable has been defined, it cannot be updated with a new value.
