@@ -1,5 +1,5 @@
 - name: Overview
-  href: index.md
+  href: index.yml
 - name: What's new or changed
   items:
   - name: Dynamics 365 Fraud Protection October 2020 release
