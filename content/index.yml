@@ -28,11 +28,11 @@ highlightedContent:
     # Card
     - title: Fraud Protection videos
       itemType: video
-      url: https://docs.microsoft.com/learn/browse/?products=dynamics-fraud-protection&terms=fraud%20protection&expanded=dynamics-365
+      url: https://www.youtube.com/results?search_query=dynamics+365+fraud+protection
     # Card
     - title: Fraud Protection training on Microsoft Learn
       itemType: learn
-      url: file3.md OR https://docs.microsoft.com/file3
+      url: https://docs.microsoft.com/learn/browse/?products=dynamics-fraud-protection&terms=fraud%20protection&expanded=dynamics-365
 
 # additionalContent section (optional)
 # Card with links style
