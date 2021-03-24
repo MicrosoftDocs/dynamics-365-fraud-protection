@@ -36,6 +36,8 @@ This language reference guide includes the complete list of operators, functions
 - [Type casting operators](fpl-lang-ref.md#type-casting-operators)
 - [DateTime functions](fpl-lang-ref.md#datetime-operators)
 - [Aggregation functions](fpl-lang-ref.md#aggregation-functions)
+- [ContainsKey](fpl-lang-ref.md#containskey)
+- [Lookup](fpl-lang-ref.md#lookup)
 
 The guide also covers additional topics such as: 
 
@@ -43,7 +45,6 @@ The guide also covers additional topics such as:
 -	[Using lists](fpl-lang-ref.md#using-lists-in-rules)
 -	[Using external calls and velocities](fpl-lang-ref.md#using-external-calls-and-velocities)
 -	[Type inheritance of properties](fpl-lang-ref.md#type-inference-of-variables)
-
 
 ## Keywords
 
@@ -103,7 +104,7 @@ Fraud Protection allows you to upload custom lists and reference them in the lan
 
 For information about how to upload these lists, see [Manage lists](lists.md). For additional information on how  how to use lists in rules, see the [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules) section later in this topic.
 
-| Operator        | Description | Example |
+| Operator      | Description | Example |
 |---------------|-------------|---------|
 | <p>ContainsKey(<p>  String *listName*, </p><p>  String *columnName*, </p><p>  String *key*) </p>   | Checks whether a key is contained in the specified column in a Fraud Protection [list](lists.md). | <p>ContainsKey("Email Support List", "Emails", @"user.email")</p><p>This example checks whether the "Emails" column in the "Email Support List" list contains the *@"user.email"* variable.</p> |
 | <p>Lookup(<p>  String *listName*, </p><p>  String *keyColName*, </p><p>  String *valueColName *) </p>    |<p>Looks up the value of a key in a Fraud Protection list. The column name containing the key as well as the column name containing the value must be specified. </p><p>The value will always be returned as a *String*.  </p><p>If the key isn't found, and defaultValue parameter isn't specified, "Unknown" is returned. </p><p>Overloads:</p><ul><li>Lookup(String *listName*, String *keyColumnName*, String key, String valueColumnName, String defaultValue)</li></ul> | <p>Lookup("Email Support List", "Emails", @"user.email", "Status",0)</p><p>This example looks for the *@"user.email"* variable in the "Emails" column of the "Email Support List" list and returns the corresponding value in the "Status" column.</p><p>If the key is not found in the list, Fraud Protection will return 0.</p> |
@@ -255,7 +256,7 @@ You can also specify your own default value as the fifth parameter. For more inf
 
 The **Lookup** operator always returns a *String* value. To convert this value to an *Int*, *Double*, or *DateTime* value, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
-## Using external calls and velocities
+# Using external calls and velocities
 
 You can reference external calls and velocities by using the corresponding keyword. 
 
@@ -264,7 +265,7 @@ To reference an external call in the language, type “External.” followed by 
 To reference a velocity in the language, type “Velocity.” followed by the individual velocity you’d like to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
 
 
-## Type inference of variables
+# Type inference of variables
 
 Variable types are inferred from the context that they are used in. Here are some examples:
 
