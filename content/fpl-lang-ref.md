@@ -26,7 +26,7 @@ This language reference guide includes the complete list of operators, functions
 - [Keywords](fpl-lang-ref.md#keywords)
 - [Decision functions](fpl-lang-ref.md#decision-functions)
 - [Observation functions](fpl-lang-ref.md#observation-functions)
-- [Referencing attributes](fpl-lang-ref.md#referencing-attributes-and-variables)
+- [Referencing attributes and variables](fpl-lang-ref.md#referencing-attributes-and-variables)
 - [Logical operators](fpl-lang-ref.md#logical-operators)
 - [List functions](fpl-lang-ref.md#list-functions)
 - [Comparison operators](fpl-lang-ref.md#comparison-operators)
@@ -42,23 +42,22 @@ The guide also covers additional topics such as:
 - [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables)
 -	[Using lists](fpl-lang-ref.md#using-lists-in-rules)
 -	[Using external calls and velocities](fpl-lang-ref.md#using-external-calls-and-velocities)
--	Type inheritance of properties
+-	[Type inheritance of properties](fpl-lang-ref.md#type-inference-of-variables)
 
-## Language reference
 
-### Keywords
+## Keywords
 
-| Keyword | Description | Example |
-|--------|-------------|---------|
-| RETURN | <p>A RETURN statement will terminate rule execution. </p><p>The statement must specify a valid decision function Approve(), Reject(), Challenge(), or Review().</p><p>The statement may also specify one or more observation functions:  Other() or Trace()</p>| <p>RETURN Reject()</p><p>RETURN Reject(), Other(key=@"user.email")</p><p>RETURN Reject(), Other(key=@"user.email"),Trace(ip=@"device.ipAddress")</p> |
-| WHEN   | The WHEN statement specifies a *Boolean* condition. This serves to make the rest of the block execute only when the condition evaluates to true. | WHEN @"riskscore" \> 400 |
+| Keyword  | Description | Example |
+|----------|-------------|---------|
+| RETURN   | <p>A RETURN statement will terminate rule execution. </p><p>The statement must specify a valid decision function *Approve*(), *Reject*(), *Challenge*(), or *Review*(). </p><p>The statement may also specify one or more observation functions:  Other() or Trace() </p>| <p>RETURN Reject()</p><p>RETURN Reject(), Other(key=@"user.email")</p><p>RETURN Reject(), Other(key=@"user.email"), Trace(ip=@"device.ipAddress")</p>|
+| WHEN     | The WHEN statement specifies a *Boolean* condition. This serves to make the rest of the block execute only when the condition evaluates to true. | WHEN @"riskscore" \> 400 |
 | SELECT   | Used in a velocity to specify an aggregation function. | SELECT Count() AS velocityName |
 | AS       | Used to create an alias for your velocity, which will be referenceable from rules. | SELECT Count() AS velocityName |
 | FROM     | Used to select on assessment on which to observe a velocity.  | FROM Purchase  |
 | GROUPBY  | <p>A GROUPBY statement specifies a property or an expression. All events events evaluated to the same value in the GROUPBY are combined to calculate the requested aggregation in the SELECT statement. </p><p>For example if you wanted to calculate an aggregation for each user, you would GROUPBY @”user.userId” </p> | GROUPBY @”user.userId”  |
 | LET      | <p>Used to define a new variable. The scope of the variable is the rule or velocity set in which it is defined in. Variable names should be prefixed with $.</p><p>For more information, see [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables). </p>  | LET $fullName = @”user.firstName” + @”user.lastName”  |
 
-#### Decision functions
+## Decision functions
 
 Decision functions are used in rules to specify a decision.  
 
@@ -69,17 +68,16 @@ Decision functions are used in rules to specify a decision.
 | Review()    | <p>Specifies a decision of Review. Can include a reason for the review, as well as an additional supporting message.</p><p>Overloads:</p><ul><li>Review(String *reason*)</li><li>Review(String *reason*, String *supportMessage*)</li></ul> | <p>RETURN Review()</p><p>RETURN Review("user on watch list")</p><p>RETURN Review("user on watch list", "do not escalate")</p> |
 | Challenge(String *challengeType*) | <p>Specifies a decision of Challenge, as well as a challenge type. Can also include a reason for the challenge, as well as an additional supporting message.</p><p>Overloads:</p><ul><li>Challenge(String *challengeType*, String *reason*)</li><li>Challenge(String *challengeType*, String *reason*, String *supportMessage*)</li></ul> | <p>RETURN Challenge ("SMS")</p><p>RETURN Challenge ("SMS", "suspected bot")</p><p>RETURN Challenge ("SMS", suspected bot", "do not escalate")</p> |
 
-#### Observation functions
+## Observation functions
 
 Observation functions can be used to take data from the current context, and write it elsewhere.  
 
 | Return type | Description | Example |
 |--------|-------------|---------|
 | Other(k=v)  | Can be used to pass key/value pairs into the API response. | Other(key="test", email=@"user.email", countryRegion=Geo.CountryRegion(@"device.ipAddress")) |
-|Trace(k=v)   |Can be used to trigger a Trace event, and send key value pairs to the FraudProtection.Trace.Rule [Event Tracing namespace](event-tracing.md#event-schemas). |Trace(key="Manual Review", ip=@"device.ipAddress") |
+|Trace(k=v)   |Can be used to trigger a Trace event, and send key value pairs to the FraudProtection.Trace.Rule [Event Tracing namespace](event-tracing.md#event-schemas). |Trace(key="Manual Review", ip=@"device.ipAddress")  Referencing attributes and variables
 
-#### Referencing attributes and variables
-
+## Referencing attributes and variables
 You can use the @ operator to reference an attribute from the current event.
 
 | Variable          | Description | Example |
@@ -91,7 +89,7 @@ You can use the @ operator to reference an attribute from the current event.
 |@a[x]    |<p>Used to index array variables. </p><p>If the request payload for an assessment contains an array of items, you can access individual elements of the array using the following syntax: @"productList[0]". </p><p>To access an attribute of that element: @"productList[0].productId"</p>    |<p>@"productList[0].productId" </p><p>@"paymentInstrumentList[3].type"</p>
 | Exists            | <p>This operator checks whether a variable exists in the event payload.</p><p>Exists(*String variable*)</p>    | Exists(@"user.email")  |
 
-#### Logical operators
+## Logical operators
 
 | Operator    | Description | Example |
 |-----------|-------------|---------|
@@ -99,7 +97,7 @@ You can use the @ operator to reference an attribute from the current event.
 | or (\|\|) | Logical **Or** | <p>@"email.isEmailUsername" == false \|\| @"email.isEmailValidated" == false</p><p>@"email.isEmailUsername" == false or @"email.isEmailValidated" == false</p> |
 | not       | Logical negation  | <p> !@”email.isEmailUsername” </p><p> not @”email.isEmailUsername” </p>  |
 
-#### List functions
+## List functions
 
 Fraud Protection allows you to upload custom lists and reference them in the language. 
 
@@ -112,7 +110,7 @@ For information about how to upload these lists, see [Manage lists](lists.md). F
 | <p>LookupClosest(</p><p>String*listName*, String *keyColumnName*, </p><p>String *key*, String *valueColumnName*) | Looks up the value of a key in a Fraud Protection list. If the key isn't found, it returns the value of the key that is alphabetically closest to the key that you're looking for. | <p>LookupClosest("IP Addresses", "IP", @"device.ipAddress", "City") == "Seattle"</p><p>This example looks for the *@ipAddress* variable in the "IP" column of the "IP Addresses" list and returns the corresponding value in the "City" column. If *@ipAddress* isn't found in the list, the expression returns the value of the next closest IP address in the list.</p> |
 | In            | <p>This operator checks whether a key is contained in a comma-separated list of values.</p><p>In(String *key*, String *list*)</p> | In(@"user.countryRegion", "US, MX, CA") |
 
-#### Comparison operators
+## Comparison operators
 
 Fraud Protection supports all standard C# [comparison](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/comparison-operators) and [equality](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/equality-operators) operations. This table includes some examples of operators which may be useful to you. Applying these operators to Strings will result in lexicographic comparisons..
 
@@ -125,7 +123,7 @@ Fraud Protection supports all standard C# [comparison](https://docs.microsoft.co
 | \>=    | This operator checks whether the first value is greater than or equal to the second value. | @"riskScore" \>= 500 |
 | \<=    | This operator checks whether the first value is less than or equal to the second value. | @"riskScore" \<= 500 |
 
-#### Geo functions
+## Geo functions
 
 These functions convert an IP address to a geographical address.
 
@@ -138,7 +136,7 @@ These functions convert an IP address to a geographical address.
 | Geo.City(String *ip*)          | <p>This operator converts an IPv4 address to a city name.</p><p>For example, for an IP address in New York City, "New York City" is returned.</p> | WGeo.City(@"device.ipAddress") |
 | Geo.MarketCode(String *ip*)    | <p>This operator converts an IPv4 address to the market code of the IP address.</p><p>For example, for an IP address from Canada, "NA" (North America) is returned.</p> | Geo.MarketCode(@"device.ipAddress") |
 
-#### String functions
+## String functions
 
 Fraud Protection supports the standard C# [string class](https://docs.microsoft.com/dotnet/api/system.string?view=netframework-4.8&preserve-view=true). This table includes some examples of methods that you might find useful.
 
@@ -148,7 +146,7 @@ Fraud Protection supports the standard C# [string class](https://docs.microsoft.
 | EndsWith(String *suffix*)   | <p>This operator checks whether a string ends with a specified suffix.</p><p>EndsWith(String *suffix*)</p> | @"user.email".EndsWith("@contoso.com") |
 | Contains(String *suffix*)   | <p>This operator checks whether a string contains another string.</p><p>Contains(String *substring*)</p> | @"productList.productName".Contains("Xbox") |
 
-#### Math functions
+## Math functions
 
 Fraud Protection supports all standard C# [math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8&preserve-view=true) and [arithmetic operators](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods that you might find useful.
 
@@ -157,7 +155,7 @@ Fraud Protection supports all standard C# [math methods](https://docs.microsoft.
 | Math.Min(Double *value1*, Double *value*2) | his operator computes the minimum of two values. | Math.Min(@"riskScore",@"botScore") |
 | Math.Max(Double *value1*, Double *value*2) | This operator computes the maximum of two values. | Math.Max(@"riskScore",@"botScore") |
 
-### DateTime operators
+## DateTime operators
 
 Fraud Protection supports the standard C# [DateTime](https://docs.microsoft.com/dotnet/api/system.datetime?view=netframework-4.8&preserve-view=true) properties, methods, and operators. This table includes some examples of functions and properties that you might find useful.
 
@@ -169,7 +167,7 @@ Fraud Protection supports the standard C# [DateTime](https://docs.microsoft.com/
 | Year   | This operator gets the year component of the date that is represented by this instance. | @"user.creationDate".Year |
 | Date   | This operator gets a new object that has the same date as this instance, and the time value set to midnight. | @"user.creationDate".Date |
 
-### Type casting operators
+## Type casting operators
 
 For information about type inferencing, see the [Type inference of variables](fpl-lang-ref.md#type-inference-of-variables) section.
 
@@ -179,7 +177,7 @@ For information about type inferencing, see the [Type inference of variables](fp
 | ToDouble()   | This operator converts a string to a *Double* value. | @"productList.purchasePrice".ToDouble() |
 | ToInt32()    | This operator converts a string to an *Int32* value. | @"riskScore".ToInt32() |
 
-### Aggregation functions
+## Aggregation functions
 
 | Function     | Description | Example |
 |--------------|-------------|---------|
@@ -187,7 +185,7 @@ For information about type inferencing, see the [Type inference of variables](fp
 | DistinctCount(String *key*)()   | Returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event will not contribute to the aggregation. | SELECT DistinctCount(@”device.ipAddress”) AS distinctIPs |
 | Sum(Double *value*)             | Returns the sum of values for a specified numeric property.  | SELECT Sum(@”totalAmount”) AS totalSpending |
 
-## Defining your own variables
+# Defining your own variables
 
 You can use the LET keyword to define a variable, which can then be referenced elsewhere in the rule. All variables should be prefixed by $.
 
@@ -204,11 +202,11 @@ WHEN $fullName == “Kayla Goderich”
 > [!NOTE]
 > Once a variable has been defined, it cannot be updated with a new value.
 
-## Using lists in rules
+# Using lists in rules
 
 You can use the **ContainsKey** and **Lookup** operators to reference lists which you have uploaded to Fraud Protection. For more information about lists, see [Manage lists](lists.md).
 
-### ContainsKey
+## ContainsKey
 
 To check whether a one of your lists contains a specific value, use the **ContainsKey** operator. Specify the list name, the column, and the key that you want to check for.
 
@@ -229,7 +227,7 @@ WHEN ContainsKey("Risky email list", "Email", @"user.email")
 
 This clause checks whether the "Email" column in the "Risky email list" list contains the *@email* key. If it does, the transaction is rejected.
 
-### Lookup
+## Lookup
 
 For multi-column lists, You can use the **Lookup** operator to check the value of column for a specific key.
 
@@ -266,7 +264,6 @@ You can reference external calls and velocities by using the corresponding keywo
 To reference an external call in the language, type “External.” followed by the external call you’d like to reference. For more information, see [Use an external call in rules](external-calls.md#use-an-external-call-in-rules).
 
 To reference a velocity in the language, type “Velocity.” followed by the individual velocity you’d like to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
-
 
 
 ## Type inference of variables
