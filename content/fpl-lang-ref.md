@@ -23,18 +23,19 @@ You can use this language today to define rules and velocities. To learn more, s
 
 This language reference guide includes the complete list of operators, functions, and keywords that make up the language:
 
--	Keywords
--	Decision functions
--	Observation functions
--	Referencing attributes
--	Logical operators
--	Comparison operators
--	Type casting operators
--	Geo functions
--	String functions 
--	Math functions
--	DateTime functions
--	Aggregation functions
+- [Keywords](fpl-lang-ref.md#keywords)
+- [Decision functions](fpl-lang-ref.md#decision-functions)
+- [Observation functions](fpl-lang-ref.md#observation-functions)
+- [Referencing attributes](fpl-lang-ref.md#referencing-attributes-and-variables)
+- [Logical operators](fpl-lang-ref.md#logical-operators)
+- [List functions](fpl-lang-ref.md#list-functions)
+- [Comparison operators](fpl-lang-ref.md#comparison-operators)
+- [Type casting operators](fpl-lang-ref.md#type-casting-operators)
+- [Geo functions](fpl-lang-ref.md#geo-functions)
+- [String functions](fpl-lang-ref.md#string-functions)
+- [Math functions](fpl-lang-ref.md#math-functions)
+- [DateTime functions](fpl-lang-ref.md#datetime-operators)
+- [Aggregation functions](fpl-lang-ref.md#aggregation-functions)
 
 The guide also covers additional topics such as: 
 
