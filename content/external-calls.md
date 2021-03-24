@@ -4,7 +4,7 @@ description: This topic explains how to use external calls to ingest data from A
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/22/2021
+ms.date: 03/24/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -163,7 +163,7 @@ For information on how to integrate this data with your own organization’s wor
 
 4.	To test that Fraud Protection is still able to connect to your external call, select the ellipses, and then select **Test Connection**. 
 
-## Use an external call with rules
+## Use an external call in rules
 
 1.	To use your external calls to make decisions, reference them from your rules.
 2.	To reference an external call named, **myCall**, in your rule, use the following syntax:
