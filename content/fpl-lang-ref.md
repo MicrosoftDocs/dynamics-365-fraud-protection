@@ -186,7 +186,7 @@ For information about type inferencing, see the [Type inference of variables](fp
 | DistinctCount(String *key*)()   | Returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event will not contribute to the aggregation. | SELECT DistinctCount(@”device.ipAddress”) AS distinctIPs |
 | Sum(Double *value*)             | Returns the sum of values for a specified numeric property.  | SELECT Sum(@”totalAmount”) AS totalSpending |
 
-# Defining your own variables
+## Defining your own variables
 
 You can use the LET keyword to define a variable, which can then be referenced elsewhere in the rule. All variables should be prefixed by $.
 For example, you could declare the following variable:
@@ -201,7 +201,7 @@ To reference the variable above, you could write the following:
 > [!NOTE]
 > Once a variable has been defined, it cannot be updated with a new value.
 
-# Using lists in rules
+## Using lists in rules
 
 You can use the **ContainsKey** and **Lookup** operators to reference lists which you have uploaded to Fraud Protection. For more information about lists, see [Manage lists](lists.md).
 
@@ -256,7 +256,7 @@ You can also specify your own default value as the fifth parameter. For more inf
 
 The **Lookup** operator always returns a *String* value. To convert this value to an *Int*, *Double*, or *DateTime* value, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
-# Using external calls and velocities
+## Using external calls and velocities
 
 You can reference external calls and velocities by using the corresponding keyword. 
 
@@ -265,7 +265,7 @@ To reference an external call in the language, type “External.” followed by 
 To reference a velocity in the language, type “Velocity.” followed by the individual velocity you’d like to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
 
 
-# Type inference of variables
+## Type inference of variables
 
 Variable types are inferred from the context that they are used in. Here are some examples:
 
