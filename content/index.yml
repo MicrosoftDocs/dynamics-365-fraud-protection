@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 
-title: Dynamics 365 Fraud Protection Documentation
+title: Dynamics 365 Fraud Protection documentation
 brand: dynamics
 
 metadata:
-  title: Dynamics 365 Fraud Protection Documentation
+  title: Dynamics 365 Fraud Protection documentation
   description: Dynamics 365 Fraud Protection Documentation
   ms.topic: hub-page
   author: kelsiefu
@@ -18,11 +18,11 @@ highlightedContent:
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
   items:
     # Card
-    - title: What’s Dynamics 365 Fraud Protection
+    - title: What’s Fraud Protection
       itemType: overview
       url: overview.md
     # Card
-    - title: What’s new in Dynamics 365 Fraud Protection
+    - title: What’s new in Fraud Protection
       itemType: whats-new
       url: whats-new-10-6.md
     # Card
@@ -41,7 +41,7 @@ additionalContent:
   sections:
     - items:
         # Card
-        - title: Meet Fraud Protection
+        - title: Start your journey with Fraud Protection
           links:
             - text: Overview
               url: overview.md
@@ -77,7 +77,7 @@ additionalContent:
             - text: Report an issue
               url: https://support.microsoft.com/
         # Card
-        - title: Setup guides
+        - title: Set up Fraud Protection
           links:
             - text: Purchase protection
               url: purchase-protection.md
@@ -94,7 +94,7 @@ additionalContent:
               url: promocode-set-up-DFP-purchased-version.md
             - text: Configure user access
               url: configure-user-access.md
-            - text: Setup device fingerprinting
+            - text: Set up device fingerprinting
               url: device-fingerprinting.md
         # Card
         - title: Privacy, security, compliance
