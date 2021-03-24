@@ -104,7 +104,7 @@
     href: lists.md
   - name: Manage rules
     href: rules.md
-  - name: Language guide for  rules
+  - name: Language reference guide
     href: fpl-lang-ref.md    
 - name: Event tracing
   href: event-tracing.md
