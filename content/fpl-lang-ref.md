@@ -44,7 +44,7 @@ The guide also covers additional topics such as:
 - [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables)
 -	[Using lists](fpl-lang-ref.md#using-lists-in-rules)
 -	[Using external calls and velocities](fpl-lang-ref.md#using-external-calls-and-velocities)
--	[Type inheritance of properties](fpl-lang-ref.md#type-inference-of-variables)
+-	[Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes)
 
 ## Keywords
 
@@ -211,7 +211,7 @@ WHEN $fullName == “Kayla Goderich”
 
 You can use the **ContainsKey** and **Lookup** operators to reference lists which you have uploaded to Fraud Protection. For more information about lists, see [Manage lists](lists.md).
 
-## ContainsKey
+### ContainsKey
 
 To check whether a one of your lists contains a specific value, use the **ContainsKey** operator. Specify the list name, the column, and the key that you want to check for.
 
@@ -232,7 +232,7 @@ WHEN ContainsKey("Risky email list", "Email", @"user.email")
 
 This clause checks whether the "Email" column in the "Risky email list" list contains the *@email* key. If it does, the transaction is rejected.
 
-## Lookup
+### Lookup
 
 For multi-column lists, You can use the **Lookup** operator to check the value of column for a specific key.
 
@@ -271,7 +271,7 @@ To reference an external call in the language, type “External.” followed by 
 To reference a velocity in the language, type “Velocity.” followed by the individual velocity you’d like to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
 
 
-## Type inference of variables
+## Type inference of attributes
 
 Variable types are inferred from the context that they are used in. Here are some examples:
 
