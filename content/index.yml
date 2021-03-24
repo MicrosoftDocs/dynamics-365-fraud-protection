@@ -26,7 +26,7 @@ highlightedContent:
       itemType: whats-new
       url: whats-new-10-6.md
     # Card
-    - title: Dynamics 365 Fraud Protection videos
+    - title: Fraud Protection videos
       itemType: video
       url: https://docs.microsoft.com/learn/browse/?products=dynamics-fraud-protection&terms=fraud%20protection&expanded=dynamics-365
     # Card
