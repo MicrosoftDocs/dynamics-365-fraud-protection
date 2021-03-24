@@ -41,7 +41,7 @@ The guide also covers additional topics such as:
 
 - [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables)
 -	[Using lists](fpl-lang-ref.md#using-lists-in-rules)
--	[Using external calls and velocities](pl-lang-ref.md#using-external-calls-and-velocities)
+-	[Using external calls and velocities](fpl-lang-ref.md#using-external-calls-and-velocities)
 -	Type inheritance of properties
 
 ## Language reference
@@ -255,7 +255,7 @@ This clause looks for the *@"user.email"* key in the "Email" column in the "Emai
 
 If the *@"user.email"* key isn't found in the list, Fraud Protection returns "Unknown."
 
-You can also specify your own default value as the fifth parameter. For more information, see the [List operators](fpl-lang-ref.md#list-operators) section earlier in this topic.
+You can also specify your own default value as the fifth parameter. For more information, see the [Logical operators](fpl-lang-ref.md#logical-operators) section earlier in this topic.
 
 The **Lookup** operator always returns a *String* value. To convert this value to an *Int*, *Double*, or *DateTime* value, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
@@ -263,7 +263,7 @@ The **Lookup** operator always returns a *String* value. To convert this value t
 
 You can reference external calls and velocities by using the corresponding keyword. 
 
-To reference an external call in the language, type “External.” followed by the external call you’d like to reference. For more information, see [Use an external call with rules](external-calls.md#use-an-external-call-with-rules).
+To reference an external call in the language, type “External.” followed by the external call you’d like to reference. For more information, see [Use an external call in rules](external-calls.md#use-an-external-call-in-rules).
 
 To reference a velocity in the language, type “Velocity.” followed by the individual velocity you’d like to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
 
