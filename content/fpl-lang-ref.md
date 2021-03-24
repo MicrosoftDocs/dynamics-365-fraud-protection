@@ -139,7 +139,7 @@ These functions convert an IP address to a geographical address.
 
 ## String functions
 
-Fraud Protection supports the standard C# [string class](https://docs.microsoft.com/dotnet/api/system.string?view=netframework-4.8&preserve-view=true). This table includes some examples of methods that you might find useful.
+Fraud Protection supports the standard C# [string class](https://docs.microsoft.com/dotnet/api/system.string?view=netframework-4.8&preserve-view=true). This table includes some examples of functions and operators  that you might find useful.
 
 | Operator     | Description | Example |
 |------------|-------------|---------|
@@ -162,7 +162,7 @@ Fraud Protection supports the standard C# [DateTime](https://docs.microsoft.com/
 
 | Operator | Description | Example |
 |--------|-------------|---------|
-|DaysSince(DateTime *date*)	|Returns an int representing the number of days that have passed between today (in UTC time) and the given DateTime value. 	|DaysSince(@"user.CreationDate")|
+|DaysSince(DateTime *date*)	| Returns an int representing the number of days that have passed between today (in UTC time) and the given DateTime value. 	|DaysSince(@"user.CreationDate")|
 | UtcNow | This operator gets a DateTime object that is set to the current date and time on the computer, expressed as Coordinated Universal Time (UTC). | DateTime.UtcNow |
 | Today  | This operator gets an object that is set to the current date, where the time component is set to 00:00:00. | DateTime.Today |
 | Year   | This operator gets the year component of the date that is represented by this instance. | @"user.creationDate".Year |
@@ -189,11 +189,13 @@ For information about type inferencing, see the [Type inference of variables](fp
 ## Defining your own variables
 
 You can use the LET keyword to define a variable, which can then be referenced elsewhere in the rule. All variables should be prefixed by $.
+
 For example, you could declare the following variable:
 
   LET $fullName = @”user.firstName” + @”user.lastName”
 
 Variables declared in a LET statement can be used only within the scope of the rule or velocity set it is defined in. 
+
 To reference the variable above, you could write the following:
 
   WHEN $fullName == “Kayla Goderich”
