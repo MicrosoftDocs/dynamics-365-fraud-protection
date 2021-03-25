@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains the scorecard capability of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/13/2020
+ms.date: 03/05/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -73,7 +73,7 @@ The **Risk decision** section shows metrics from the automated decision rules th
 ## Related topics
 
 - [Account protection overview](ap-overview.md)
-- [View account protection schemas](new-ap-schema.md)
+- [Account protection schemas](ap-schema.md)
 - [Custom assessment](custom-assessment.md)
 
 
