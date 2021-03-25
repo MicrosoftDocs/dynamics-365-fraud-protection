@@ -95,9 +95,9 @@ You can use the @ operator to reference an attribute from the current event.
 
 | Operator    | Description | Example |
 |-----------|-------------|---------|
-| and (&&)  | Logical **And** | <p> @"riskScore" > 500 && @"riskScore" < 800 </p><p> @"riskScore" > 500 and @"riskScore" < 800 </p> |
+| and (&&)  | Logical **And** | <p>@"riskScore" > 500 && @"riskScore" < 800 </p><p> @"riskScore" > 500 and @"riskScore" < 800</p> |
 | or (\|\|) | Logical **Or** | <p>@"email.isEmailUsername" == false \|\| @"email.isEmailValidated" == false</p><p>@"email.isEmailUsername" == false or @"email.isEmailValidated" == false</p> |
-| not       | Logical negation  | <p> @"email.isEmailUsername” </p><p> not(!) @"email.isEmailUsername" </p>  |
+| not       | Logical negation  | <p>@"email.isEmailUsername”</p><p>not(!) @"email.isEmailUsername"</p>  |
 
 ## List functions
 
