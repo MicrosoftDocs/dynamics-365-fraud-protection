@@ -36,13 +36,14 @@ This language reference guide includes the complete list of operators, functions
 - [Type casting operators](fpl-lang-ref.md#type-casting-operators)
 - [DateTime functions](fpl-lang-ref.md#datetime-operators)
 - [Aggregation functions](fpl-lang-ref.md#aggregation-functions)
-- [ContainsKey](fpl-lang-ref.md#containskey)
-- [Lookup](fpl-lang-ref.md#lookup)
+
 
 The guide also covers additional topics such as: 
 
 - [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables)
--	[Using lists](fpl-lang-ref.md#using-lists-in-rules)
+-	[Using lists in rules](fpl-lang-ref.md#using-lists-in-rules)
+  	- [ContainsKey](fpl-lang-ref.md#containskey)
+    - [Lookup](fpl-lang-ref.md#lookup)
 -	[Using external calls and velocities](fpl-lang-ref.md#using-external-calls-and-velocities)
 -	[Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes)
 
@@ -192,17 +193,14 @@ You can use the LET keyword to define a variable, which can then be referenced e
 
 For example, you could declare the following variable:
 
-```
-LET $fullName = @”user.firstName” + @”user.lastName”
-```
+   LET $fullName = @”user.firstName” + @”user.lastName”
 
 Variables declared in a LET statement can be used only within the scope of the rule or velocity set it is defined in. 
 
 To reference the variable above, you could write the following:
 
-```
-WHEN $fullName == “Kayla Goderich”
-```
+   WHEN $fullName == “Kayla Goderich”
+
 
 > [!NOTE]
 > Once a variable has been defined, it cannot be updated with a new value.
