@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic outlines the account protection schemas for data uploaded in bulk as CSV files.
 ms.author: v-madeq 
 ms.service: fraud-protection
-ms.date: 03/05/2021
+ms.date: 03/23/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -101,8 +101,8 @@ The **AccountCreation** API lets you share information and context with Fraud Pr
 | PaymentInstrument \\ BillingAddress | CountryRegion                     | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, **US**). |
 | MarketingContext                    | campaignType                | enum     | The marketing campaign type. Possible values are **Direct**, **Email**, **Referral**, **PaidSearch**, **OrganicSearch**, **Advertising**, **SocialNetwork**, **General Marketing**, **Unknown**, **Other**. |
 | MarketingContext                    | trafficSource-referrer      | string   | The source of this user if known. If via existing user referral, provide the original MerchantUserId of the referrer.                            |
-| MarketingContext                    | trafficSource-referral link | string   | The source of this user if known. If via other campaign types instead of existing user referral, provide the source URL link.                    |
-| MarketingContext                    | TrafficSource-referral site | string   | The source site of the traffic. Possible values are **Facebook**, **Instagram**, **Twitter**, **Bing**, **Google**, **Pinterest**, **WhatsApp**, etc.          |
+| MarketingContext                    | trafficSource-referralLink | string   | The source of this user if known. If via other campaign types instead of existing user referral, provide the source URL link.                    |
+| MarketingContext                    | trafficSource-referralSite | string   | The source site of the traffic. Possible values are **Facebook**, **Instagram**, **Twitter**, **Bing**, **Google**, **Pinterest**, **WhatsApp**, etc.          |
 | MarketingContext                    | IncentiveType            | enum     | The incentive type for the new user. Possible values are **None**, **CashBack**, **Discount**, **FreeTrial**, **BonusPoints**, **Gift**, **Unknown**, **Other**. |
 | MarketingContext                    | incentiveOffer              | string   | The exact incentive offer name. For examples, $5 off on first order, free shipping, 5000 points. |
 | MarketingContext                    | CampaignStartDate           | date     | The date of the campaign starting on the incentive collection.                                   |
@@ -158,8 +158,8 @@ The **AccountLogIn** API lets you share information and context with Fraud Prote
 | RecentUpdate              | lastPaymentInstrumentUpdate | dateTime | The date/time of the most recent update or creation of any payment instrument. |
 | MarketingContext                    | campaignType                | enum     | The marketing campaign type. Possible values are **Direct**, **Email**, **Referral**, **PaidSearch**, **OrganicSearch**, **Advertising**, **SocialNetwork**, **General Marketing**, **Unknown**, **Other**. |
 | MarketingContext                    | trafficSource-referrer      | string   | The source of this user if known. If via existing user referral, provide the original MerchantUserId of the referrer.      |
-| MarketingContext                    | trafficSource-referral link | string   | The source of this user if known. If via other campaign types instead of existing user referral, provide the source URL link.          |
-| MarketingContext                    | TrafficSource-referral site | string   | The source site of the traffic. Possible values are **Facebook**, **Instagram**, **Twitter**, **Bing**, **Google**, **Pinterest**, **WhatsApp**, etc.          |
+| MarketingContext                    | trafficSource-referralLink | string   | The source of this user if known. If via other campaign types instead of existing user referral, provide the source URL link.          |
+| MarketingContext                    | trafficSource-referralSite | string   | The source site of the traffic. Possible values are **Facebook**, **Instagram**, **Twitter**, **Bing**, **Google**, **Pinterest**, **WhatsApp**, etc.          |
 | MarketingContext                    | IncentiveType               | enum     | The incentive type for the new user. Possible values are **None**, **CashBack**, **Discount**, **FreeTrial**, **BonusPoints**, **Gift**, **Unknown**, **Other**. |
 | MarketingContext                    | incentiveOffer              | string   | The exact incentive offer name. For examples, $5 off on first order, free shipping, 5000 points. |
 | MarketingContext                    | CampaignStartDate           | date     | The date of the campaign starting on the incentive collection.     |
