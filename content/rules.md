@@ -45,6 +45,8 @@ The WHEN statement can utilize any of the following:
 
 Expressions can be compared using comparison operators (such as ==, !=, >, <), and can be combined using logical operators such as **and** (&&) and **or** (||).
 
+For more information on rule syntax, see the [Language reference guide](fpl-lang-ref.md).
+
 ### Examples of rules
 
 ```FraudProtectionLanguage
@@ -75,8 +77,6 @@ WHEN ContainsKey("Email Block List", "Emails", @"user.email")
 RETURN Review()
 WHEN @"user.email".EndsWith("@contoso.com")
 ```
-
-For more information on rule syntax, see the [Language reference guide](fpl-lang-ref.md).
 
 ## Rules tab
 
