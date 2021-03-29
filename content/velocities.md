@@ -4,7 +4,7 @@ description: This topic explains how to use velocities to examine user and entit
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/23/2021
+ms.date: 04/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -15,6 +15,8 @@ title: Perform velocity checks
 ---
 
 # Perform velocity checks
+
+[!include [banner](includes/banner.md)]
 
 ## Overview
 
