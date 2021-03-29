@@ -77,7 +77,7 @@ Use transactional events to create custom scorecards and automated workflows usi
 
 ### Trace events
 
-You use trace events to report and monitor the performance for all rules which include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule which triggered the event, the event type which correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, see [Observation functions](fpl-lang-ref#observation-functions) in the Rules language guide.
+You use trace events to report and monitor the performance for all rules which include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule which triggered the event, the event type which correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, see [Observation functions](fpl-lang-ref.md#observation-functions) in the Rules language guide.
 
 ##### Namespace: FraudProtection.Trace.Rule.
 
