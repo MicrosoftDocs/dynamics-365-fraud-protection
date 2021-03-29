@@ -4,7 +4,7 @@ description: This topic explains how to create and manage rules that protect acc
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/19/2021
+ms.date: 03/29/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -19,6 +19,62 @@ title: Manage rules for Fraud Protection
 ## Overview
 
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create rules that use the score that Fraud Protection's state-of-the-art artificial intelligence (AI) model generates, together with additional parameters from the request payload. Based on these inputs, rules can convert an assessment into a decision, such as **Approve**, **Reject**, **Review**, or **Challenge**.
+
+## Defining a rule: Quick start guide
+
+Rules consist of clauses, and are defined by the RETURN and WHEN keywords. They have the following basic structure.
+
+```FraudProtectionLanguage
+RETURN <*decision*>
+WHEN <*condition*> 
+
+```
+The RETURN statement will only be executed if the WHEN statement evaluates to True. The RETURN statement will terminate rule execution and must specify a valid decision function: *Approve*, *Reject*, *Challenge*, or *Review*. Each decision function also accepts an optional parameter, allowing you to express the *reason* for the decision. To learn more, see [Decision Functions](fpl-lang-ref.md#decision-functions). 
+
+In addition to a decision, the RETURN statement can also be used to write data to the API response or to event tracing. To learn more, see [Observation Functions](fpl-lang-ref.md#observation-functions). 
+
+The WHEN statement specifies a Boolean condition, which determines if the RETURN statement will execute. 
+
+The WHEN statement can utilize any of the following:
+
+-	Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"user.userId".
+-	The scores that are generated from Fraud Protection’s artificial intelligence models. For example, @"riskscore".
+-	Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage Lists](lists.md). For more information on referencing these lists in your rules, see [Using Lists in Rules](rules.md).
+-	Velocities which you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
+-	External calls which you have created in Fraud Protection. For more information, see [External Calls](external-calls.md). 
+
+Expressions can be compared using comparison operators (such as ==, !=, >, <), and can be combined using logical operators such as **and** (&&) and **or** (||).
+
+### Examples of Rules
+
+```FraudProtectionLanguage
+RETURN Reject(“high score”)
+WHEN @”riskScore” > 900
+
+```
+
+```FraudProtectionLanguage
+RETURN Review("medium score")
+WHEN @"riskScore" <= 900 and @"riskScore" > 400
+
+```
+
+```FraudProtectionLanguage
+RETURN Approve(), Other(ip=@"device.ipAddress")
+WHEN @"user.countryRegion" == "US"
+
+```
+
+```FraudProtectionLanguage
+RETURN Reject("user on block list")
+WHEN ContainsKey("Email Block List", "Emails", @"user.email")
+
+```
+
+```FraudProtectionLanguage
+RETURN Review()
+WHEN @"user.email".EndsWith("@contoso.com")
+```
 
 ## Rules tab
 
