@@ -45,7 +45,7 @@ The WHEN statement can utilize any of the following:
 
 Expressions can be compared using comparison operators (such as ==, !=, >, <), and can be combined using logical operators such as **and** (&&) and **or** (||).
 
-### Examples of Rules
+### Examples of rules
 
 ```FraudProtectionLanguage
 RETURN Reject(“high score”)
