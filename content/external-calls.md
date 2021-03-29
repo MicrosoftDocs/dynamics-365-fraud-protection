@@ -16,6 +16,8 @@ title: External calls
 
 # External calls
 
+[!include [banner](includes/banner.md)]
+
 ## Overview
 
 External calls enable you to ingest data   from APIs outside of Microsoft Dynamics 365 Fraud Protection (Fraud Protection) and then use that data to make informed decisions in real-time. For example, third-party address and phone verification services, or your own custom scoring models, may provide critical input in determining the risk-level for some events  . With external calls, you can connect to any API endpoint, make a request to that endpoint when necessary from within your rule, and use the response from that endpoint to make a decision. 
