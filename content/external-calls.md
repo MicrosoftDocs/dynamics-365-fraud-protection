@@ -4,7 +4,7 @@ description: This topic explains how to use external calls to ingest data from A
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/24/2021
+ms.date: 04/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
