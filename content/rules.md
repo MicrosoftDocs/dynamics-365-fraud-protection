@@ -39,7 +39,7 @@ The WHEN statement can utilize any of the following:
 
 -	Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"user.userId".
 -	The scores that are generated from Fraud Protection’s artificial intelligence models. For example, @"riskscore".
--	Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage Lists](lists.md). For more information on referencing these lists in your rules, see [Using Lists in Rules](rules.md).
+-	Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md). For more information on referencing these lists in your rules, see [Using Lists in rules](fpl-lang-ref.md#using-lists-in-rules).
 -	Velocities which you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
 -	External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md). 
 
