@@ -239,5 +239,4 @@ This event logs errors for each failed external call, and can be useful for debu
 
 
 
-
 [!INCLUDE[footer-include](includes/footer-banner.md)]
