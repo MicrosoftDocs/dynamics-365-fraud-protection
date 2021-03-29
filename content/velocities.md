@@ -16,6 +16,7 @@ title: Perform velocity checks
 
 # Perform velocity checks
 
+[!include [banner](includes/banner.md)]
 
 ## Overview
 
