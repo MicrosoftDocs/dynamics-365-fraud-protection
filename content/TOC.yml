@@ -100,20 +100,20 @@
     href: loss-prevention-integration-with-commerce.md
   - name: Data access and privacy for loss prevention
     href: loss-prevention-data-access-and-privacy.md
-- name: Manage rules and lists
+- name: Fundamental capabilities
   items: 
-  - name: Manage lists
-    href: lists.md
   - name: Manage rules
     href: rules.md
+  - name: Manage lists
+    href: lists.md
+  - name: External calls
+    href: external-calls.md 
+  - name: Perform velocity checks
+    href: velocities.md      
   - name: Language reference guide
     href: fpl-lang-ref.md    
 - name: Event tracing
   href: event-tracing.md
-- name: External calls
-  href: external-calls.md 
-- name: Perform velocity checks
-  href: velocities.md 
 - name: Extensibility via Event Hubs
   items: 
   - name: Overview
