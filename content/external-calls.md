@@ -16,7 +16,7 @@ title: External calls
 
 # External calls
 
-[!include [banner](includes/banner.md)]
+[!include [banner](includes/banner.md)
 
 ## Overview
 
