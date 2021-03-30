@@ -4,7 +4,7 @@ description: This topic explains how to create and manage rules that protect acc
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/29/2021
+ms.date: 04/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -26,7 +26,7 @@ Rules consist of clauses, and are defined by the **RETURN** and **WHEN** keyword
 
 ```FraudProtectionLanguage
 RETURN <decision>
-WHEN <condition> 
+WHEN <condition>
 
 ```
 The RETURN statement will only be executed if the WHEN statement evaluates to True. The RETURN statement will terminate rule execution and must specify a valid decision function: *Approve*, *Reject*, *Challenge*, or *Review*. Each decision function also accepts an optional parameter, allowing you to express the *reason* for the decision. To learn more, see [Decision functions](fpl-lang-ref.md#decision-functions). 
@@ -51,7 +51,7 @@ For more information on rule syntax, see the [Language reference guide](fpl-lang
 
 ```FraudProtectionLanguage
 RETURN Reject("high score")
-WHEN @”riskScore” > 900
+WHEN @"riskScore" > 900
 
 ```
 
@@ -75,7 +75,8 @@ WHEN ContainsKey("Email Block List", "Emails", @"user.email")
 
 ```FraudProtectionLanguage
 RETURN Review()
-WHEN @"user.email".EndsWith("@contoso.com")
+WHEN @"user.email".EndsWith(“@contoso.com”)
+
 ```
 
 ## Rules tab
