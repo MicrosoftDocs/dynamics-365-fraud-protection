@@ -20,7 +20,7 @@
     href: promocode-set-up-DFP-purchased-version.md
   - name: Configure user access
     href: configure-user-access.md    
-  - name: Implement device fingerprinting
+  - name: Set up device fingerprinting
     href: promocode-set-up-device-fingerprinting.md
   - name: Protect customer accounts
     href: promocode-set-up-account-protection.md
@@ -38,7 +38,7 @@
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md
-  - name: Implement device fingerprinting
+  - name: Set up device fingerprinting
     href: device-fingerprinting.md    
   - name: Upload historical data for purchase protection
     href: data-upload.md
@@ -62,7 +62,7 @@
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md      
-  - name: Implement device fingerprinting
+  - name: Set up device fingerprinting
     href: device-fingerprinting.md    
   - name: Monitor API calls
     href: monitoring.md 
@@ -76,7 +76,7 @@
     href: account-protection-protect-experience.md
   - name: Custom assessment
     href: custom-assessment.md
-  - name: Implement device fingerprinting
+  - name: Set up device fingerprinting
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
