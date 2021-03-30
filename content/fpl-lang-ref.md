@@ -194,7 +194,7 @@ You can use the LET keyword to define a variable, which can then be referenced e
 For example, you could declare the following variable:
 
 ```FraudProtectionLanguage
-LET $fullName = @”user.firstName” + @”user.lastName”
+LET $fullName = @"user.firstName" + @"user.lastName"
 ```
 
 Variables declared in a LET statement can be used only within the scope of the rule or velocity set it is defined in. 
@@ -202,7 +202,8 @@ Variables declared in a LET statement can be used only within the scope of the r
 To reference the variable above, you could write the following:
 
 ```FraudProtectionLanguage
-WHEN $fullName == “Kayla Goderich”
+WHEN $fullName == "Kayla Goderich"
+
 ```
 
 > [!NOTE]
@@ -228,7 +229,8 @@ You can then use the following syntax to reject all transactions from the risky 
 
 ```FraudProtectionLanguage
 RETURN Reject("risky email") 
-WHEN ContainsKey("Risky email list", "Email", @"user.email") 
+WHEN ContainsKey("Risky email list", "Email", @"user.email")
+ 
 ```
 
 This clause checks whether the "Email" column in the "Risky email list" list contains the *@email* key. If it does, the transaction is rejected.
@@ -253,6 +255,7 @@ You can then use the following syntax to reject all transactions from the email 
 ```FraudProtectionLanguage
 RETURN Reject("risky email") 
 WHEN Lookup("Email List", "Email", @"user.email", "Status") == "Risky"
+
 ```
 
 This clause looks for the *@"user.email"* key in the "Email" column in the "Email List" list and checks whether the value in the "Status" column is *Risky*. If it is, the transaction is rejected.
