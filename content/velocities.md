@@ -32,6 +32,7 @@ FROM <event type>
 WHEN <condition>
 GROUPBY <attribute name>
 
+
 ```
 
 - After **SELECT**, select an aggregation method (Count, DistinctCount, or Sum), and then name your velocity using the **AS** keyword. This name can be used to reference your velocity in rules. 
@@ -59,9 +60,9 @@ Use the following examples to create your own velocities.
 **How much money each user has spent:**
 
 ```FraudProtectionLanguage
-SELECT Sum(@”totalAmount”) AS totalSpending_perUser
+SELECT Sum(@"totalAmount") AS totalSpending_perUser
 FROM Purchase   
-GROUPBY @”user.userId” 
+GROUPBY @"user.userId"
 
 ```
 
@@ -70,16 +71,17 @@ GROUPBY @”user.userId”
 ```FraudProtectionLanguage
 SELECT Count() AS NewAccounts_perIP
 FROM AccountCreation
-GROUPBY @”device.ipAddress”
+GROUPBY @"device.ipAddress"
+
 
 ```
 
 **For each device, how  many unique users have logged in:**
 
 ```FraudProtectionLanguage
-SELECT DistinctCount(@”user.userId”) AS uniqueUserLogins_perDevice
+SELECT DistinctCount(@"user.userId") AS uniqueUserLogins_perDevice
 FROM AccountLogin
-GROUPBY @”deviceAttributes.deviceId” 
+GROUPBY @"deviceAttributes.deviceId"
 
 ```
 
@@ -88,8 +90,8 @@ GROUPBY @”deviceAttributes.deviceId”
 ```FraudProtectionLanguage
 SELECT Count() AS loginRejections_perUser
 FROM AccountLogin
-WHEN @”ruleEvaluation.decision” == “Reject”or @riskScore > 900
-GROUPBY @”user.userId”
+WHEN @"ruleEvaluation.decision" == "Reject" or @"riskScore" > 900
+GROUPBY @"user.userId"
 
 ```
 
@@ -98,8 +100,8 @@ GROUPBY @”user.userId”
 ```FraudProtectionLanguage
 SELECT Count() AS intlHighRiskTxns_perUser
 FROM Purchase
-WHEN @”user.country” != “US” and ContainsKey(“Risky Products”, “Product ID”, @”ProductList.productId”)
-GROUPBY @”user.userId”
+WHEN @"user.country" != "US" and ContainsKey("Risky Products", "Product ID", @"ProductList.productId")
+GROUPBY @"user.userId
 
 ```
 
@@ -173,13 +175,15 @@ When you create or edit a velocity set, the **Sample** panel appears on the righ
 To use your velocities to make decisions on incoming assessment events, you must reference them in your rules. For example, if the following velocity is defined as part of a set:
 
 ```FraudProtectionLanguage
-FROM Purchase AS totalSpending
-SELECT Sum(@”totalAmount”)
-GROUPBY @”user.userId”
+SELECT Sum(@"totalAmount") AS totalSpending_perUser
+FROM Purchase 
+GROUPBY @"user.userId"
+
+WHEN Velocity.totalSpending_perUser(@"user.userid", 7d) > 1000
 
 ```
 
-In your rule, you can perform a velocity check using  the following syntax: 
+In your rule, you can perform a velocity check using the following syntax: 
 
 ```FraudProtectionLanguage
 Velocity.totalSpending(@”user.userId”, 7d)
@@ -213,8 +217,8 @@ You can use Other() to print out velocity values in each Assessment API response
 
 ```FraudProtectionLanguage
 RETURN Approve(), Other(
-    totalSpending_7d = Velocity.totalSpending_perUser(@"user.userId", 7d),
-    loginsPerDevice_1m = Velocity.login_count_perDevice(@"deviceAttributes.deviceId", 1m)
+		totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
+	 loginsPerDevice_1m = Velocity.loginCount_perDevice(@"deviceAttributes.deviceId", 1m)
 )
 
 ```
@@ -237,9 +241,9 @@ Each Account Login or Account Creation event that triggers this rule, will then 
 Alternatively, instead of printing the velocity values directly to the API response, you can also send the values to your own Azure Event Hubs or Blob Storage, using [event tracing](event-tracing.md). For example, you can create the following rule: 
 
 ```FraudProtectionLanguage
-RETURN Approve(), Trace(
-    totalSpending_7d = Velocity.totalSpending_perUser(@"user.userId", 7d),
-    loginsPerDevice_1m = Velocity.login_count_perDevice(@"deviceAttributes.deviceId", 1m)
+RETURN Approve(), Other(
+		totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
+	 loginsPerDevice_1m = Velocity.loginCount_perDevice(@"deviceAttributes.deviceId", 1m)
 )
 
 ```
