@@ -186,7 +186,7 @@ WHEN Velocity.totalSpending_perUser(@"user.userid", 7d) > 1000
 In your rule, you can perform a velocity check using the following syntax: 
 
 ```FraudProtectionLanguage
-Velocity.totalSpending(@”user.userId”, 7d)
+WHEN Velocity.totalSpending_perUser(@"user.userid", 7d) > 1000
 
 ```
 
