@@ -12,7 +12,7 @@
   href: global-availability.md  
 - name: Provision your Azure tenant
   href: provision-azure-tenant.md
-- name: Set-up Fraud Protection
+- name: Set up Fraud Protection
   items: 
   - name: Set up a trial version
     href: promocode-set-up-DFP-trial-version.md
@@ -118,7 +118,7 @@
   items: 
   - name: Overview
     href: extensibility-via-event-hubs-overview.md
-  - name: Setup extensibility via Event Hubs
+  - name: Set up extensibility via Event Hubs
     href: extensibility-setup.md  
   - name: Working with code
     href: extensibility-with-code.md
