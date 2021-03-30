@@ -21,7 +21,7 @@
   - name: Configure user access
     href: configure-user-access.md    
   - name: Set up device fingerprinting
-    href: promocode-set-up-device-fingerprinting.md
+    href: device-fingerprinting.md
   - name: Protect customer accounts
     href: promocode-set-up-account-protection.md
   - name: Protect purchases
