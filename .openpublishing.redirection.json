@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "content/promocode-set-up-device-fingerprinting.md",
+      "redirect_url": "device-fingerprinting",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "content/schema-INT.md",
       "redirect_url": "view-purchase-protection-schemas",
       "redirect_document_id": "false"
