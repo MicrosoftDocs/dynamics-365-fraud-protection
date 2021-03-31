@@ -76,7 +76,7 @@ The home page also includes:
 
 ### Clause naming
 
-Rules are made up of clauses, each of which might express a different aspect of your fraud strategy. Fraud Protection now provides you with the option to give each clause a unique name. Clause names are surfaced not only in the rule itself, but are also exposed in the API response for an assessment. 
+Rules are made up of clauses, each of which might express a different aspect of your fraud strategy. Fraud Protection now provides you with the option to give each clause a unique name. Clause names are surfaced not only in the rule itself but are also exposed in the API response for an assessment. 
 
 This means that for a given transaction, in addition to providing the rule that triggered a decision, Fraud Protection now provides the name of the specific clause that triggered the decision.  
 
@@ -94,7 +94,7 @@ Starting October 2020, a limited capacity of Fraud Protection is included in the
 - **Account protection** - Up to 20,000 assessments per month. 
 - **Loss prevention** - Up to 8,000 transactions per month. 
 
-If their usage requires higher limits, Commerce customers have the option of purchasing additional Fraud Protection add-ons. This offer makes it easier for all existing and new Commerce customers to evaluate how Fraud Protection capabilities can help protect their organizations against fraudulent purchases, fake accounts creation, suspicious log-ins, and employee fraud in the form of inappropriate discounts or returns. 
+If their usage requires higher limits, Commerce customers have the option of purchasing additional Fraud Protection add-ons. This offer makes it easier for all existing and new Commerce customers to evaluate how Fraud Protection capabilities can help protect their organizations against fraudulent purchases, fake accounts creation, suspicious logins, and employee fraud in the form of inappropriate discounts or returns. 
 
 To start using Fraud Protection if you are already an existing Commerce customer, visit the [Fraud Protection portal](https://dfp.microsoft.com/), sign in with tenant global administrator credentials, and complete a one-time setup for your environment.
 
