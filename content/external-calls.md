@@ -20,193 +20,177 @@ title: External calls
 
 ## Overview
 
-External calls enable you to ingest data   from APIs outside of Microsoft Dynamics 365 Fraud Protection (Fraud Protection) and then use that data to make informed decisions in real-time. For example, third-party address and phone verification services, or your own custom scoring models, may provide critical input in determining the risk-level for some events  . With external calls, you can connect to any API endpoint, make a request to that endpoint when necessary from within your rule, and use the response from that endpoint to make a decision. 
+External calls let you ingest data from APIs outside Microsoft Dynamics 365 Fraud Protection and then use that data to make informed decisions in real time. For example, third-party address and phone verification services, or your own custom scoring models, might provide critical input that helps determine the risk level for some events. By using external calls, you can connect to any API endpoint, make a request to that endpoint from within your rule as required, and use the response from that endpoint to make a decision.
 
 > [!NOTE]
-> If this additional data will be needed for all events, you can also send it as part of the assessment schema. For more information about how to send custom data as part of your API request, see [Custom data sample](https://docs.microsoft.com/dynamics365/fraud-protection/view-purchase-protection-schemas#custom-data-sample).
+> If this additional data will be needed for all events, you can also send it as part of the assessment schema. For more information about how to send custom data as part of an API request, see [Custom data sample](https://docs.microsoft.com/dynamics365/fraud-protection/view-purchase-protection-schemas#custom-data-sample).
 
-## Types of APIs you can use in an external call
+## Types of APIs that can be used in an external call
 
-Before you create an external call, there are a few restrictions you should know about:
+Before you create an external call, you should know about the following limitations:
 
--	Fraud Protection currently only supports the following authentication methods: *Anonymous* and *Azure Active Directory*. 
--	Fraud Protection currently only supports the following HTTP methods: *GET* and *POST*. 
+- Fraud Protection currently supports only the following authentication methods: *Anonymous* and *AAD*.
+- Fraud Protection currently supports only the following HTTP methods: *GET* and *POST*.
 
 ## Create an external call
 
-1. In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **External Calls**, and then select **New external call**. 
+1. In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **External Calls**, and then select **New external call**.
+2. Review and set the following fields as required:
 
-2. Review and complete the following fields as required:
+    - **Name** – Enter the name that you will use to reference the external call from your rules. The name can contain only numbers, letters, and underscores. It can't begin with a number.
 
-   
-   1. **Name**: This is the name you use to reference your external call from your rules. The name can only contain numbers, letters, and underscores, and cannot begin with a number.
+        > [!NOTE]
+        > You can't change the name of an external call after you use it in a rule.
 
-      > [!NOTE]
-      > You cannot change the name of an external call after you use it in a rule. 
+    - **Description** – Add a description to help your team quickly identify the external call.
+    - **Web Request** – Select the appropriate HTTP method (**GET** or **POST**), and then enter the API endpoint.
+    - **Authentication** – Select the method that should be used to authenticate incoming requests:
 
-   2. **Description**: Add a description that makes it easy for your team to quickly identify the external call.
+        - If you select **Anonymous**, an authorization header won't be sent.
+        - If you select **AAD**, an Azure Active Directory (Azure AD) token will be generated in your tenant, and *Bearer \<token\>* will be used as the authorization header.
 
-   3. **Web Request**: Select the appropriate HTTP method (**GET** or **POST**), and then enter the API endpoint.
-   4. **Authentication**: Choose how you want to authenticate incoming requests. 
-   
-      - If you select **Anonymous**, an authorization header won't be sent. 
-      - If you select **AAD**, an AAD token will be generated in your tenant, and *Bearer <token>* is used as the authorization header. 
-      
-      For more information about authentication, authorization, and AAD tokens, see [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization).
-      
-   5. **Application ID**: If you select AAD authentication, you must provide the application ID of an existing Azure Active Directory application within your Fraud Protection subscription tenant. For more information about creating and managing Azure AD applications, see [Create Azure Active Directory Applications](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#create-azure-active-directory-applications).
+        For more information about authentication, authorization, and Azure AD tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this topic.
 
-   6. **Add parameter**: You can use parameters to pass data from Fraud Protection to your API endpoint. Depending on the the HTTP method you select, these parameters are sent to the endpoint either in the query string or as part of the request body. 
-You can add sample values for each parameter. Fraud Protection will use these parameter values to make a sample call to your endpoint, either prior to creation or whenever you select **Test**.
+    - **Application ID** – If you selected **AAD** as the authentication method, you must provide the application ID of an existing Azure AD application within your Fraud Protection subscription tenant. For more information about how to create and manage Azure AD applications, see [Create Azure Active Directory Applications](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#create-azure-active-directory-applications).
+    - **Add parameter** – You can use parameters to pass data from Fraud Protection to your API endpoint. Depending on the HTTP method that you selected, these parameters will be sent to the endpoint either in the query string or as part of the request body.
 
-      > [!NOTE]
-      > All parameter values are interpreted as strings
+        You can add sample values for each parameter. Fraud Protection will use these parameter values to make a sample call to your endpoint, either before creation or whenever you select **Test**.
 
-   7. **Sample Request**: This is an example of the request that will be sent to your external call. It reflects the parameter names and values you specified in the Parameters field and can’t be edited. 
+        > [!NOTE]
+        > All parameter values are interpreted as strings.
 
-      For GET methods, the request URL is shown, and for POST methods, the request body is shown. 
-      
-      The sample request is used to make a sample call to your endpoint, prior to creation, or anytime you select **Test**. 
+    - **Sample Request** – An example of the request that will be sent to your external call. It reflects the parameter names and values that you specified, and it can't be edited.
 
-   8. **Sample Response**: The **Sample response** is an example of the JSON data returned in a successful response from your API endpoint. Any data returned in the response can be referenced in your rules. The sample you provide here is shown as you create rules. 
+        For *GET* methods, the request URL is shown. For *POST* methods, the request body is shown.
 
-      - Select **Test** to automatically populate this field with a real response from your API.
- 
-   9. **Timeout**: Specify how long in milliseconds the request should wait before timing out. You must specify a number between 1 and 1000. 
+        The sample request is used to make a sample call to your endpoint, either before creation or whenever you select **Test**.
 
-   10. **Default Response**: Specify the default response that should be returned when your request fails or exceeds the specified timeout. This must be valid JSON object or JSON element. 
+    - **Sample Response** – An example of the JavaScript Object Notation (JSON) data that is returned in a successful response from your API endpoint. Any data that is returned in the response can be referenced in your rules. The sample that you provide here is shown as you create rules.
 
-3. (Optional) To send a sample request to your API endpoint and view the response, select **Test**. For more information, see [Test an external call](external-calls.md#test-an-external-call).
+        Select **Test** to automatically enter a real response from your API in this field.
 
-4. When you’ve completed the required fields, select **Create**.
+    - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 1000.
+    - **Default Response** – Specify the default response that should be returned if your request fails or exceeds the specified time-out. The value must be valid JSON object or JSON element.
+
+3. Optional: To send a sample request to your API endpoint and view the response, select **Test**. For more information, see the next section, [Test an external call](external-calls.md#test-an-external-call).
+4. When you've finished setting the required fields, select **Create**.
 
 ## Test an external call
 
-To ensure that Fraud Protection can connect to your endpoint, test the connection at any point. 
+To ensure that Fraud Protection can connect to your endpoint, test the connection at any point.
 
-- To test a connection while creating a new external call or editing an existing one, once all required fields have been entered, select **Test**. 
+- To test a connection while you're creating a new external call or editing an existing external call, set all the required fields, and then select **Test**.
 
-  Fraud Protection sends a request to your external call using the endpoint and parameters that you provided. 
+    Fraud Protection  uses the endpoint and parameters that you provided to send a request to your external call.
 
-   - If Fraud Protection successfully reaches the target endpoint, a green message bar displays at the top of the panel to inform you that the connection was successful. 
-
-      To view the full response, select **See response details**.
-
-   - If Fraud Protection is unable to reach the target endpoint, or if it does not receive a response before the specified timeout, a red message bar displays at the top of the panel showing the error that was encountered. 
-   
-      To view more information about the error, select **See error details**.
+    - If Fraud Protection successfully reaches the target endpoint, a green message bar appears at the top of the panel to inform you that the connection was successful. To view the full response, select **See response details**.
+    - If Fraud Protection can't reach the target endpoint, or if it doesn't receive a response before the specified time-out, a red message bar appears at the top of the panel and shows the error that was encountered. To view more information about the error, select **See error details**.
 
 ## Monitor external calls
 
 ### Monitor external calls in the Fraud Protection portal
 
-Fraud Protection displays a tile containing three metrics for each external call you define: 
+Fraud Protection shows a tile that contains three metrics for each external call that you define:
 
--	**Requests per second**: The total number of requests divided by the total number of minutes in the selected time frame.
--	**Average latency**: The total number of requests divided by the total number of minutes in the selected time frame.
--	**Success rate**: The total number of successful requests divided by the total number of requests made.
+- **Requests per second** – The total number of requests divided by the total number of minutes in the selected time frame.
+- **Average latency** – The total number of requests divided by the total number of minutes in the selected time frame.
+- **Success rate** – The total number of successful requests divided by the total number of requests that have been made.
 
-The numbers and charts shown on this tile includes only data for the timeframe you select in the timeframe dropdown in the upper right corner of the page. 
+The numbers and charts that are shown on this tile include only data for the time frame that you select in the drop-down list in the upper-right corner of the page.
 
 > [!NOTE]
-> Metrics display only when your external call is used in an active rule. 
+> Metrics are shown only when your external call is used in an active rule.
 
-1. To dive deeper into the data about your external call, select **Performance** in the right corner of the tile. 
+1. To dive deeper into the data about your external call, select **Performance** in the right corner of the tile.
 
-   Fraud Protection displays a new page with a more in-depth view of these metrics. 
+    Fraud Protection shows a new page that has a more detailed view of the metrics.
 
-2. To view metrics for any timeframe in the last three months, adjust  the **Date range** at the top of the page. 
+2. To view metrics for any time frame in the last three months, adjust the **Date range** setting at the top of the page.
 
-In addition to the three metrics described above, a fourth chart displays:
+In addition to the three metrics that were described earlier, an **Error** chart is shown. This chart shows the number of errors by error type and code. To view error counts over time, or to view the distribution of errors, select **Pie chart**.
 
--	**Errors**: The number of errors by error type and code. 
+In addition to HTTP client errors (400, 401, and 403), you might see the following errors:
 
-     - To view error counts over time, or to view the distribution of errors, select **Pie chart**. 
+- **Invalid application id** – The application ID that was provided doesn't exist in your tenant, or it isn't valid.
+- **AAD failure** – The Azure AD token could not be retrieved.
+- **Definition not found** – The external call has been deleted, but it's still referenced in a rule.
+- **Timeout** – The request to the target took longer than the specified time-out.
+- **Communication failure** – No connection could be made to the target because of a network issue or because the target is unavailable.
+- **Circuit breaker** – If the external call has failed continuously and has exceeded a certain threshold, all further calls will be suspended for a short interval.
+- **Unknown Failure** – An internal Dynamics 365 failure occurred.
 
-In addition to HTTP Client Errors (400, 401, 403), you may also see the following errors:
+### Use event tracing to monitor external calls
 
--	**Invalid application id**: The application ID provided does not exist in your tenant or is invalid. 
--	**AAD failure**: Failed to retrieve Azure Active Directory token.
--	**Definition not found**: The external call has been deleted but is still referenced in a rule.
--	**Timeout**: Request to target took longer than the specified timeout. 
--	**Communication failure**: Unable to connect to target due to network issue or target is unavailable. 
--	**Circuit breaker**: If the external call has failed continuously, exceeding a certain threshold, all further calls will be suspended for a short interval. 
--	**Unknown Failure**: Dynamics 365 internal failure 
-
-### Use event tracing to monitor external calls 
-
-You can use Fraud Protection’s event tracing capability to forward events related to your external calls to your own Azure Event Hubs or Blob Storage. 
-In the Fraud Protection portal, on the Event Tracing page, you can subscribe to the following two events related to external calls:
+You can use Fraud Protection's event tracing capability to forward events that are related to your external calls to your own Azure event hubs or blob storage. In the Fraud Protection portal, on the **Event Tracing** page, you can subscribe to the following two events that are related to external calls:
 
 - FraudProtection.Monitoring.ExternalCalls
 - FraudProtection.Errors.ExternalCalls
 
-Whenever a request is made to an external call, an event is sent to the FraudProtection.Monitoring.ExternalCalls namespace. The event payload includes information on the latency of the call, the request status, and the rule and clause from which it was triggered. 
+Whenever a request is made to an external call, an event is sent to the FraudProtection.Monitoring.ExternalCalls namespace. The event payload includes information about the latency of the call, the request status, and the rule and clause that it was triggered from.
 
-When an external call fails, an event is sent to the FraudProtection.Errors.ExternalCalls namespace. The event payload includes the URI request and body that were sent to the external call as well as the response that was received. 
+When an external call fails, an event is sent to the FraudProtection.Errors.ExternalCalls namespace. The event payload includes the URI request and body that were sent to the external call, and the response that was received.
 
-For more information about event tracing, how to subscribe to events, and what you can do with events, see [Event tracing](event-tracing.md). 
+For more information about event tracing, how to subscribe to events, and what you can do with events, see [Event tracing](event-tracing.md).
 
-For information on how to integrate this data with your own organization’s workflows, and set up custom monitoring, alerting and reporting, see [Extensibility via Event Hubs](https://docs.microsoft.com/dynamics365/fraud-protection/extensibility-via-event-hubs-overview).
+For information about how to integrate this data with your own organization's workflows, and set up custom monitoring, alerting and reporting, see [Extensibility via Event Hubs](https://docs.microsoft.com/dynamics365/fraud-protection/extensibility-via-event-hubs-overview).
 
 ## Manage external calls
 
-1.	To edit an existing external call, select **Edit** on the card header. 
+- To edit an existing external call, select **Edit** on the card header.
 
-      > [!NOTE]
-      > You can’t change the name and parameters of an external call after you use it in a rule.
+    > [!NOTE]
+    > You can't change the name and parameters of an external call after you use it in a rule.
 
-2.	To delete an existing external call, select the ellipses, and then select **Delete**. 
+- To delete an existing external call, select the ellipsis (**...**), and then select **Delete**.
 
-      > [!NOTE]
-      > You can’t delete an external call after it is referenced in a rule. 
+    > [!NOTE]
+    > You can't delete an external call after it's referenced in a rule.
 
-3.	To view detailed performance metrics for an external call, select **Performance**. 
-
-4.	To test that Fraud Protection is still able to connect to your external call, select the ellipses, and then select **Test Connection**. 
+- To view detailed performance metrics for an external call, select **Performance**.
+- To test that Fraud Protection can still connect to your external call, select the ellipsis (**...**), and then select **Test Connection**.
 
 ## Use an external call in rules
 
-1.	To use your external calls to make decisions, reference them from your rules.
-2.	To reference an external call named, **myCall**, in your rule, use the following syntax:
+To use your external calls to make decisions, reference them from your rules.
 
-     External.myCall()
+For example, to reference an external call that is named **myCall** in your rule, use the following syntax:
 
-3.	Use the following syntax if **myCall** requires a parameter, for example *IPaddress*:
+External.myCall()
 
-     External.myCall(@”device.ipAddress”)
+If **myCall** requires a parameter, such as *IPaddress*, use the following syntax:
 
-For information about the rules language and how you can use external calls in rules, see the [Language guide for Fraud Protection rules](fpl-lang-ref.md). 
+External.myCall(@"device.ipAddress")
+
+For information about the rules language and how you can use external calls in rules, see the [language reference guide](fpl-lang-ref.md).
 
 > [!NOTE]
-> Using external calls in your rule may increase the latency of the rule. 
+> If external calls are used in a rule, the latency of the rule might increase.
 
-## Understand authentication and authorization 
+## Understand authentication and authorization
 
-To ensure that data is accessed securely, APIs often  authenticate the sender of a request to verify that they have permission to access the data.External calls in Fraud Protection support two methods of authentication: *Anonymous* and *AAD*.
+To ensure that data is securely accessed, APIs often authenticate the sender of a request to verify that they have permission to access the data. External calls in Fraud Protection support two methods of authentication: *Anonymous* and *AAD*.
 
-If you select **Anonymous**, the **Authorization** header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint does not require an **Authorization** header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL you enter in the **Web Request** field. The target endpoint can then be validated if the API key from the request URL is allowed, and then decide if permission should be granted.
+If you select **Anonymous**, the authorization header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint doesn't require an authorization header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL that you enter in the **Web Request** field. The target endpoint can then be validated if the API key from the request URL is allowed, and it can then decide whether permission should be granted.
 
-If you select **AAD**, the **Authorization** header in the HTTP request to the target endpoint will include a Bearer token. A Bearer token is a JSON Web Token (JWT) issued by Azure Active Directory. For information about JWTs, see [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text **Bearer** in the required format to the request **Authorization** header as follows:
+If you select **AAD**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by Azure AD. For information about JWTs, see [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format to the request authorization header as shown here:
 
-  Bearer <token>
-    
+Bearer \<token\>
+
 ### Token claims
-The following table lists the claims that you can expect in Bearer tokens issued by Fraud Protection. 
 
-| Name                            | Claim              | Description |
-|---------------------------------|--------------------|-------------|
-| Tenant ID                       | tid                | <p>Identifies the Azure tenant ID of the subscription associated with your Fraud Protection account. To find your tenant ID in the Fraud Protection Portal, see [Required IDs and information](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#required-ids-and-information). To find your tenant ID in the Azure Portal, see [How to find your Azure Active Directory tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant).      |
-| Audience                        | aud                | Identifies the intended recipient of the token. This value will reflect exactly the application ID provided when you configure your external call on the Fraud Protection portal.                                                   |
-| Application ID                  | appid              | This is Fraud Protection’s application ID: bf04bdab-e06f-44f3-9821-d3af64fc93a9. This ID is owned solely by Fraud Protection, and only we can request a token on behalf of it.                                                        |
-      
-When your API receives a token, it should open the token and validate that each of the above claims match their description. 
+The following table lists the claims that you can expect in bearer tokens that are issued by Fraud Protection.
 
-Here is an example of how you can authenticate an incoming request using the [JwtSecurityTokenHandler](https://docs.microsoft.com/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?).
+| Name           | Claim | Description |
+|----------------|-------|-------------|
+| Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that is associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Azure Active Directory tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). |
+| Audience       | aud   | This claim identifies the intended recipient of the token. The value will exactly reflect the application ID that you provided when you configured your external call in the Fraud Protection portal. |
+| Application ID | appid | This claim is Fraud Protection's application ID: *bf04bdab-e06f-44f3-9821-d3af64fc93a9*. This ID is owned solely by Fraud Protection, and only we can request a token on behalf of it. |
 
+When your API receives a token, it should open the token and validate that each of the preceding claims matches its description.
+
+Here is an example that shows how you can authenticate an incoming request by using [JwtSecurityTokenHandler](https://docs.microsoft.com/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?).
 
 ```C#
-
 string authHeader = "Bearer <token>"; // the Authorization header value
 var jwt = new JwtSecurityTokenHandler().ReadJwtToken(token);
 string tid = jwt.Claims.Where(c => c.Type == "tid").FirstOrDefault()?.Value;
@@ -214,12 +198,10 @@ string aud = jwt.Claims.Where(c => c.Type == "aud").FirstOrDefault()?.Value;
 string appid = jwt.Claims.Where(c => c.Type == "appid").FirstOrDefault()?.Value;
 if(tid != "<my tenant id>" || aud != "<my application id>" || appid != "bf04bdab-e06f-44f3-9821-d3af64fc93a9")
 {
-throw new Exception("the token is not authorized.");
+    throw new Exception("the token is not authorized.");
 }
-
 ```
 
 ## External data practices
-You acknowledge that you are responsible for adhering to all applicable laws and regulations, including without limitation data protection laws, contractual restrictions and/or policies related to data sets you provide to Microsoft through the External Calls feature of Fraud Protection. Further, you acknowledge that your use of Fraud Protection is subject to use restrictions detailed in the [Microsoft Customer Agreement](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.microsoft.com%2Flicensing%2Fterms%2Fproductoffering%2FMicrosoftDynamics365Services%2FMCA&data=04%7C01%7CAlia.Buckner%40microsoft.com%7Cb04b9a60a2864eb2678708d8ed887d65%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637520517763184431%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=iENICkulZcCWF%2FwKhDTJ%2FagP7yQrUH0M5Km8%2Bd0BGDk%3D&reserved=0), which states that you may not use Fraud Protection (i) as the sole factor in determining whether to proceed with a payment transaction; (ii) as a factor in determining any person’s financial status, financial history, creditworthiness, or eligibility for insurance, housing, or employment; or (iii) to make decisions that produce legal effects or significantly affect a person. You are also prohibited from providing or otherwise using sensitive or highly regulated data types in connection with your use of the external calls feature of Fraud Protection. Please take time to review any data set or data types before you use them in connection with the external calls feature of Fraud Protection to ensure that you are compliant with this provision. Microsoft also reserves the right to verify that you are compliant with this provision.
 
-
+You acknowledge that you are responsible for adhering to all applicable laws and regulations, including without limitation data protection laws, contractual restrictions and/or policies related to data sets you provide to Microsoft through the External Calls feature of Fraud Protection. Further, you acknowledge that your use of Fraud Protection is subject to use restrictions detailed in the [Microsoft Customer Agreement](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDynamics365Services/MCA), which states that you may not use Fraud Protection (i) as the sole factor in determining whether to proceed with a payment transaction; (ii) as a factor in determining any person's financial status, financial history, creditworthiness, or eligibility for insurance, housing, or employment; or (iii) to make decisions that produce legal effects or significantly affect a person. You are also prohibited from providing or otherwise using sensitive or highly regulated data types in connection with your use of the external calls feature of Fraud Protection. Please take time to review any data set or data types before you use them in connection with the external calls feature of Fraud Protection to ensure that you are compliant with this provision. Microsoft also reserves the right to verify that you are compliant with this provision.
