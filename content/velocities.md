@@ -20,240 +20,220 @@ title: Perform velocity checks
 
 ## Overview
 
-Velocity checks allow you to identify patterns of events from a user or entity (such as a credit card)    whose frequency might indicate suspicious activity and potential fraud.  For example, after trying a few individual orders, fraudsters often place many orders quickly with a single credit card, from a single IP address, or device. They may also place many orders quickly with many different credit cards.  By defining velocities, you can watch incoming events for these types of patterns and use rules to define thresholds beyond which you want to treat these patterns as suspicious. 
+The frequency of events from a user or entity (such as a credit card) might indicate suspicious activity and potential fraud. For example, after fraudsters try a few individual orders, they often use a single credit card to quickly place many orders from a single IP address or device. They might also use many different credit cards to quickly place many orders. Velocity checks help you identify these types of event patterns. By defining velocities, you can watch incoming events for these types of patterns and use rules to define thresholds beyond which you want to treat the patterns as suspicious.
 
 ## Define a velocity
 
-Velocity sets are made up of individual velocities. You define velocities in Fraud Protection with the **SELECT**, **FROM**, **WHEN**, and **GROUPBY** keywords, using the following structure:
+Velocity sets are made up of individual velocities. You define velocities in Microsoft Dynamics 365 Fraud Protection by using the **SELECT**, **FROM**, **WHEN**, and **GROUPBY** keywords in the following structure.
 
- ```FraudProtectionLanguage
+```FraudProtectionLanguage
 SELECT <aggregation method> AS <velocity name>
 FROM <event type>
 WHEN <condition>
 GROUPBY <attribute name>
-
-
 ```
 
-- After **SELECT**, select an aggregation method (Count, DistinctCount, or Sum), and then name your velocity using the **AS** keyword. This name can be used to reference your velocity in rules. 
+- After **SELECT**, specify an aggregation method: *Count*, *DistinctCount*, or *Sum*. Then use the **AS** keyword to name the velocity. This name can then be used to reference the velocity in rules.
 
-| Aggregation Method | Description                 | Example  |
-|--------------------|-----------------------------|----------|
-| Count              | Returns the number of times an event has occurred.  | SELECT Count() AS numPurchases  | 
-| DistinctCount      | Returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event will not contribute to the aggregation.  | SELECT DistinctCount(@”device.ipAddress”) AS distinctIPaddresses  | 
-| Sum                | Returns the sum of values for a specified numeric property. | SELECT Sum(@”totalAmount”) AS totalSpending  | 
+    Here is an explanation of the aggregation methods.
 
-- After **FROM**, select an assessment on which to observe your velocity: Purchase, AccountLogin, or AccountCreation. 
-- *The **WHEN** statement is optional.* After **WHEN**, you may type a Boolean expression. Only events matching this condition are considered in the aggregation. Other events are ignored. This expression is used to filter the events which are considered in the velocity.
-- After **GROUPBY**, select a property or an expression. This property/expression is evaluated for every event processed. Events whose GROUPBY expression evaluates to the same value are combined to calculate the requested Count, DistinctCount, or Sum. If the GROUPBY expression is null or empty for an incoming event, the event will not contribute to the aggregation.
+    | Aggregation method | Description | Example |
+    |--------------------|-------------|---------|
+    | Count              | This method returns the number of times that an event has occurred. | SELECT Count() AS numPurchases |
+    | DistinctCount      | This method returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPaddresses |
+    | Sum                | This method returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
+
+- After **FROM**, specify an assessment to observe the velocity on: *Purchase*, *AccountLogin*, or *AccountCreation*.
+- *The **WHEN** statement is optional.* After **WHEN**, you can type a Boolean expression. Only events that match the condition are considered in the aggregation. Other events are ignored. The expression is used to filter the events that are considered in the velocity.
+- After **GROUPBY**, specify a property or an expression. The property or expression is then evaluated for every event that is processed. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that is specified in the **SELECT** statement. If the **GROUPBY** expression is null or empty for an incoming event, the event won't contribute to the aggregation.
 
 > [!TIP]
-> Any expression which can be used in a rule can also be used in a velocity. This includes lists and external calls. For a full list of available functions, see the [Language Reference Guide](fpl-lang-ref.md).
+> Any expression that can be used in a rule can also be used in a velocity. These expressions include lists and external calls. For a full list of available functions, see the [language reference guide](fpl-lang-ref.md).
 
 > [!NOTE]
-> The time window over which you’d like to observe the velocity is specified when you reference the velocity from a rule, not in the velocity definition itself. 
+> The time window that you want to observe the velocity over isn't specified in the velocity definition itself. Instead, you specify it when you reference the velocity from a rule.
 
-### Examples of velocities 
+### Examples of velocities
 
 Use the following examples to create your own velocities.
 
-**How much money each user has spent:**
+#### The amount of money that each user has spent
 
 ```FraudProtectionLanguage
 SELECT Sum(@"totalAmount") AS totalSpending_perUser
-FROM Purchase   
+FROM Purchase
 GROUPBY @"user.userId"
-
 ```
 
-**How many times each IP address has been used to create a new account:**
+#### The number of times that each IP address has been used to create a new account
 
 ```FraudProtectionLanguage
 SELECT Count() AS NewAccounts_perIP
 FROM AccountCreation
 GROUPBY @"device.ipAddress"
-
-
 ```
 
-**For each device, how  many unique users have logged in:**
+#### For each device, the number of unique users who have signed in
 
 ```FraudProtectionLanguage
 SELECT DistinctCount(@"user.userId") AS uniqueUserLogins_perDevice
 FROM AccountLogin
 GROUPBY @"deviceAttributes.deviceId"
-
 ```
 
-**For each user, how many login attempts were made which were rejected by Fraud Protection or received a high-risk score:**
+#### For each user, the number of sign-in attempts that were rejected by Fraud Protection or received a high risk score
 
 ```FraudProtectionLanguage
 SELECT Count() AS loginRejections_perUser
 FROM AccountLogin
 WHEN @"ruleEvaluation.decision" == "Reject" or @"riskScore" > 900
 GROUPBY @"user.userId"
-
 ```
 
-**For each user, how many purchases were made outside of the US which also contained a product on a high risk list:**
+#### For each user, the number of purchases that were made outside of the US, and that also contained a product on a high risk list
 
 ```FraudProtectionLanguage
 SELECT Count() AS intlHighRiskTxns_perUser
 FROM Purchase
 WHEN @"user.country" != "US" and ContainsKey("Risky Products", "Product ID", @"ProductList.productId")
 GROUPBY @"user.userId
-
 ```
 
 ## Create a velocity set
 
-1. In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **Velocities**, and then select **New velocity set**. 
+1. In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **Velocities**, and then select **New velocity set**.
 
-    Fraud Protection creates a velocity set draft which is only visible to you (the creator). Note that all changes made to the draft are saved automatically.
+    Fraud Protection creates a draft velocity set that is visible only to you (the creator). Note that all changes that you make to the draft are automatically saved.
 
-2. (Optional) In the **Condition** box, you can either write a Boolean condition or leave it blank. 
+2. Optional: In the **Condition** field, enter a Boolean condition. Alternatively, leave the field blank.
 
-    Only events matching this condition are considered in the aggregation. Others events are ignored.
-    For example, if you want the velocities in your velocity set to only aggregate events which take place in the United States, define the following condition:
+    Only events that match this condition are considered in the aggregation. Other events are ignored. For example, if you want the velocities in the velocity set to aggregate only events that occur in the United States, define the following condition:
 
-    WHEN @”user.countryRegion” == “US”
+    WHEN @"user.countryRegion" == "US"
 
-3. To define a new velocity from scratch, select **New velocity**. For information about defining velocities, see [Define a velocity](velocities.md#define-a-velocity). 
+3. To define a new velocity from scratch, select **New velocity**. For information about how to define velocities, see the [Define a velocity](velocities.md#define-a-velocity) section earlier in this topic.
 
-   You can also start from an existing velocity template by selecting the arrow to the right of **New velocity**. 
-   To view a full list of templates and their contents, select **See all**.
-   
-   You can add up to 10 velocities in a set. 
-    
-4. To publish your velocity, select **Publish**. 
+    To start from an existing velocity template, select the arrow to the right of **New velocity**. To view a full list of existing templates and their contents, select **See all**.
 
-   In the confirmation dialog, you can change the name, description, or status of the velocity. When you are ready, select **Publish**.
+    You can add up to 10 velocities in a set.
 
-   Once published, the velocities in the set are visible to all. As events flow through Fraud Protection, the velocities will begin aggregating data. 
+4. To publish the velocity, select **Publish**.
+5. In the confirmation dialog box, you can change the name, description, or status of the velocity. When you're ready, select **Publish**.
 
-    
-   For information about using your velocities to make decisions, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules). 
+After the velocity is published, the velocities in the velocity set are visible to all users. As events flow through Fraud Protection, the velocities will start to aggregate data.
 
 > [!NOTE]
-> Once a velocity is published, it will start aggregating data from that point forward. Historical data will not be considered.
+> After a velocity is published, it starts to aggregate data from that point forward. Historical data isn't considered.
 
-### Understand the Sample panel
+For information about how to use your velocities to make decisions, see the [Use a velocity in rules](velocities.md#use-a-velocity-in-rules) section later in this topic.
 
-When you create or edit a velocity set, the **Sample** panel appears on the right side of the page. 
+### Understand the Sample pane
 
-- The **Sample** panel displays all the properties of an event that can be referenced in your velocities. These properties differ depending on which event type your velocity observes. Select the event type from the **Event** dropdown at the top of the panel.
-- The **payload sample** section contains an example of the properties that can be sent in the request API for the assessment. 
-- The **enrichment sample** contains an example of properties that are added to your event by Fraud Protection, after the initial request has been sent. For examples, this includes   information from Fraud Protection’s [device fingerprinting](device-fingerprinting.md) solution, as well as risk and bot scores from our machine learning models. 
+When you create or edit a velocity set, the **Sample** pane appears on the right side of the page.
 
-    The enrichment sample also includes information from rule evaluation, such as the decision, the rule name, and the clause name that was triggered. Any of these properties can be used in your velocity, and can be referenced using @. For example: @”user.firstName”.
+- The **Sample** pane shows all the event properties that can be referenced in your velocities. These properties vary, depending on the type of event that your velocity observes. Select the event type in the **Event** field at the top of the pane.
+- The **payload sample** section contains an example of the properties that can be sent in the request API for the assessment.
+- The **enrichment sample** section contains an example of the properties that Fraud Protection adds to your event after the initial request has been sent. For example, these properties include information from Fraud Protection's [device fingerprinting](device-fingerprinting.md) solution, and risk and bot scores from the machine learning models.
+
+    The enrichment sample also includes information from rule evaluation, such as the decision, the rule name, and the name of the clause that was triggered. You can use any of these properties in your velocity. Use an at sign (@) to reference them (for example, *@"user.firstName"*).
 
 ## Manage your velocity sets
 
-- To edit an existing published velocity set, select the velocity, and then select **Edit**. 
+- To edit an existing published velocity set, select the velocity, and then select **Edit**.
 
-    This creates a draft of your published velocity and is set to be only visible to you. All   changes you make to the draft are saved automatically. 
+    A draft of your published velocity is created and is visible only to you. All changes that you make to the draft are automatically saved.
 
-    When you are ready to push your changes into production, select **Publish**. This action overwrites the previously published velocity set with your new changes. 
-    
-    > [!NOTE]
-    > Any changes you make to a velocity will only affect the values calculated from that point forward. Changes do not apply to previous event data.    
-
-- To delete an existing velocity set, select the ellipsis, and then select **Delete**. 
+    When you're ready to push your changes into production, select **Publish**. The previously published velocity set is overwritten with your changes.
 
     > [!NOTE]
-    > You can’t delete a velocity set if any of its velocities are referenced in a published rule. 
+    > Any changes that you make to a velocity affect only the values that are calculated from that point forward. They don't affect previous event data.
 
-- To update the name or description of a velocity set, select the ellipsis, and then select **Rename**.
+- To delete an existing velocity set, select the ellipsis (**...**), and then select **Delete**.
 
-- To change the status of your velocity set, select **Activate** or **Deactivate**. 
+    > [!NOTE]
+    > You can't delete a velocity set if any of its velocities are referenced in a published rule.
 
-    The velocities in a velocity set marked as *Active* are constantly updated as new events flow into Fraud Protection. 
-    The velocities in a set which is marked as *Inactive* are never updated. 
-    
+- To update the name or description of a velocity set, select the ellipsis (**...**), and then select **Rename**.
+- To change the status of your velocity set, select **Activate** or **Deactivate**.
+
+    - The velocities in a velocity set that is marked as *Active* are constantly updated as new events flow into Fraud Protection.
+    - The velocities in a velocity set that is marked as *Inactive* are never updated.
+
 ## Use a velocity in rules
 
-To use your velocities to make decisions on incoming assessment events, you must reference them in your rules. For example, if the following velocity is defined as part of a set:
+To use your velocities to make decisions about incoming assessment events, you must reference them in your rules. For example, the following velocity is defined as part of a velocity set.
 
 ```FraudProtectionLanguage
 SELECT Sum(@"totalAmount") AS totalSpending_perUser
 FROM Purchase 
 GROUPBY @"user.userId"
-
 WHEN Velocity.totalSpending_perUser(@"user.userid", 7d) > 1000
-
 ```
 
-In your rule, you can perform a velocity check using the following syntax: 
+In your rule, you can do a velocity check by using the following syntax.
 
 ```FraudProtectionLanguage
 WHEN Velocity.totalSpending_perUser(@"user.userid", 7d) > 1000
-
 ```
 
-The first parameter is the **key**, which will be used to lookup the velocity. In the velocity definition above for  **totalSpending**, the GROUPBY @”user.userId” statement indicates that values will be aggregated for each user ID encountered. When referencing the velocity from a rule, the **key** parameter specifies the specific user id to retrieve the velocity value for. If the key parameter is null or empty, Fraud Protection returns 0. 
+The first parameter is **key**. This parameter is used to look up the velocity. In the preceding velocity definition for **totalSpending**, the **GROUPBY\ @"user.userId"** statement indicates that values will be aggregated for each user ID that is encountered. When you reference the velocity from a rule, the **key** parameter specifies the user ID to retrieve the velocity value for. If the **key** parameter is null or empty, Fraud Protection returns *0*.
 
-The second parameter is the **timeWindow** on which you observe the velocity. You can select a time window between 1 minute and 7 days. Currently, the following are all valid time windows:
+The second parameter is **timeWindow**. This parameter specifies the time window that you want to observe the velocity over. You can select a time window between one minute and seven days. Currently, the following are all valid time windows:
 
-- [1-59]m
-- [1-23]h
-- [1-7]d
+- \[1–59\]m
+- \[1–23\]h
+- \[1–7\]d
 
 In the future, this list will be expanded.
 
 > [!NOTE]
-> The time window begins at the start of the previous unit of measurement. For example, if the current date and time is April 1, 2021 11:04 am, and you check a velocity over the timeWindow 2h, you will see the data since 9:00 am, not 9:04 am. 
+> The time window begins at the start of the previous unit of measure. For example, if the current date and time are 11:04 AM on April 1, 2021, and you check a velocity over a two-hour (*2h*) time window, you will see the data since 9:00 AM, not since 9:04 AM.
+>
+> If a velocity fails to return a value because of an error, a default value of *0* is returned, and your rule continues to run.
+>
+> Velocities are updated only after all rules have been evaluated. Therefore, if you reference a velocity in a rule, it won't be included in the event that is currently being processed.
 
-> [!NOTE]
-> If the velocity fails to return a value due to an error, a default value of 0 is returned, and your rule continues to execute.
+## Use rules to view velocity values
 
-> [!NOTE]
-> Velocities are updated only after all rules have been evaluated. Therefore, when you reference a velocity in a rule, it will not be included in  the current event being processed.
+In addition to returning decisions, rules can use observation functions such as **Trace()** and **Other()**. For more information about observation functions, see the [language reference guide](fpl-lang-ref.md).
 
-## Use rules to view velocity values  
-
-In addition to returning decisions, rules can also utilize observation functions such as Trace() and Other(). For more information on observation functions, see the [Language Reference Guide](fpl-lang-ref.md). 
-
-You can use Other() to print out velocity values in each Assessment API response. For example, you can create the following rule:
+You can use **Other()** to print velocity values to each Assessment API response. For example, you create the following rule.
 
 ```FraudProtectionLanguage
 RETURN Approve(), Other(
-		totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
-	 loginsPerDevice_1m = Velocity.loginCount_perDevice(@"deviceAttributes.deviceId", 1m)
+        totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
+    loginsPerDevice_1m = Velocity.loginCount_perDevice(@"deviceAttributes.deviceId", 1m)
 )
-
 ```
 
-Each Account Login or Account Creation event that triggers this rule, will then the following section in the API response:
+Each Account Login or Account Creation event that triggers this rule will then the following section in the API response.
 
 ```JSON
-      "Other": {
-        "clause1": {
-          "totalSpending_7d": "0",
-          "loginsPerDevice_1m": "0"
-        }
-      },
-
-```
-
-> [!NOTE]
-> This behavior does not apply to Purchase events. 
-
-Alternatively, instead of printing the velocity values directly to the API response, you can also send the values to your own Azure Event Hubs or Blob Storage, using [event tracing](event-tracing.md). For example, you can create the following rule: 
-
-```FraudProtectionLanguage
-RETURN Approve(), Other(
-		totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
-	 loginsPerDevice_1m = Velocity.loginCount_perDevice(@"deviceAttributes.deviceId", 1m)
-)
-
-```
-
-If you subscribe to the [FraudProtection.Trace.Rule event](event-tracing.md#trace-events), the following information will be sent as part of each event:
-
-```JSON
-    "attributes": {
-"totalSpending_7d": 523.99
-      "loginsPerDevice_1m": 1
+"Other": {
+    "clause1": {
+        "totalSpending_7d": "0",
+        "loginsPerDevice_1m": "0"
     }
+},
+```
 
+> [!NOTE]
+> This behavior doesn't apply to Purchase events.
+
+Instead of printing the velocity values directly to the API response, you can use [event tracing](event-tracing.md) to send them to your own Azure event hubs or blob storage. For example, you create the following rule.
+
+```FraudProtectionLanguage
+RETURN Approve(), Other(
+        totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
+    loginsPerDevice_1m = Velocity.loginCount_perDevice(@"deviceAttributes.deviceId", 1m)
+)
+```
+
+If you subscribe to the [FraudProtection.Trace.Rule event](event-tracing.md#trace-events), the following information will then be sent as part of each event.
+
+```JSON
+"attributes": {
+    "totalSpending_7d": 523.99
+    "loginsPerDevice_1m": 1
+}
 ```
