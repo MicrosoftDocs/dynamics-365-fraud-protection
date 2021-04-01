@@ -47,6 +47,11 @@ We have improved the data upload experience for importing historical data for pu
 
 For more information, see [Upload historical data for purchase protection](data-upload.md) and [Upload historical data for loss prevention](loss-prevention-data-upload.md).
 
+## Dynamics 365: 2021 release wave 1 plan
+
+Wondering about upcoming and recently released capabilities in any of our business apps or platform?
+
+Check out the [Dynamics 365: 2021 release wave 1 plan](https://docs.microsoft.com/dynamics365-release-plan/2021wave1/). We've captured all the details, end to end, top to bottom, in a single document that you can use for planning.
 
 
 
