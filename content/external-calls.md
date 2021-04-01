@@ -62,7 +62,7 @@ Before you create an external call, you should know about the following limitati
 
         The sample request is used to make a sample call to your endpoint, either before creation or whenever you select **Test**.
 
-    - **Sample Response** – Provide an example of the JavaScript Object Notation (JSON) data that is returned in a successful response from your API endpoint. Any data that is returned in the response can be referenced in your rules. The sample that you provide here is shown as you create rules.
+    - **Sample Response** – Provide an example of the data data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and  can be referenced in your rules. The sample that you provide here is shown as you create rules.
 
         Select **Test** to automatically enter a real response from your API in this field.
 
@@ -118,7 +118,7 @@ In addition to HTTP client errors (400, 401, and 403), you might see the followi
 
 ### Use event tracing to monitor external calls
 
-You can use Fraud Protection's event tracing capability to forward events that are related to your external calls to your own Azure event hubs or blob storage. In the Fraud Protection portal, on the **Event Tracing** page, you can subscribe to the following two events that are related to external calls:
+You can use Fraud Protection's event tracing capability to forward events that are related to your external calls to your own instances of Azure Event Hubs or Azure Blob Storage. In the Fraud Protection portal, on the **Event Tracing** page, you can subscribe to the following two events that are related to external calls:
 
 - FraudProtection.Monitoring.ExternalCalls
 - FraudProtection.Errors.ExternalCalls
@@ -167,9 +167,9 @@ For information about the rules language and how you can use external calls in r
 
 To ensure that data is securely accessed, APIs often authenticate the sender of a request to verify that they have permission to access the data. External calls in Fraud Protection support two methods of authentication: *Anonymous* and *AAD*.
 
-If you select **Anonymous**, the authorization header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint doesn't require an authorization header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL that you enter in the **Web Request** field. The target endpoint can then be validated if the API key from the request URL is allowed and decide whether permission should be granted.
+If you select **Anonymous**, the authorization header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint doesn't require an authorization header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL that you enter in the **Web Request** field. The target endpoint can then validate if the API key from the request URL is allowed, and then decide whether permission should be granted.
 
-If you select **AAD**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by Azure AD. For information about JWTs, see [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format to the request authorization header as shown here:
+If you select **AAD**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by Azure AD. For information about JWTs, see [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown here:
 
 Bearer \<token\>
 
