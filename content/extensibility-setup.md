@@ -21,9 +21,9 @@ title: Set up extensibility via Event Hubs
 
 To get started, you must set up the following items:
 
-- A [resource group](https://docs.microsoft.com/azure/azure-resource-manager/management/manage-resource-groups-portal)
-- A [Microsoft Azure Event Hubs namespace and an event hub](https://docs.microsoft.com/azure/event-hubs/event-hubs-create)
-- An [event tracing subscription in Dynamics 365 Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/event-tracing)
+- A [resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal)
+- A [Microsoft Azure Event Hubs namespace and an event hub](/azure/event-hubs/event-hubs-create)
+- An [event tracing subscription in Dynamics 365 Fraud Protection](./event-tracing.md)
 	
 > [!NOTE]
 > We recommend that you set up a *separate* event hub for the subscription for each event *type*. For example, you can set up an **audit-events** event hub that has a Fraud Protection event tracing subscription to send *audit events*. Then set up a **latency-events** event hub that has a separate subscription to send *latency events*. You can set up both event hubs under the same namespace.

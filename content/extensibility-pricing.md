@@ -24,10 +24,10 @@ Here is a list of links to official and current pricing options for the various 
 - [Azure Logic Apps](https://azure.microsoft.com/pricing/details/logic-apps/) – A tool that lets you parse Dynamics 365 Fraud Protection events so that the data can be stored in Common Data Service, and that lets you quickly create automated workflows.
 - [Power Automate](https://flow.microsoft.com/pricing/) – A tool that is similar to Logic Apps, but that is packaged and priced differently.
 
-    If you require a tool that lets you set limits and restrictions for Power Automate, see [Limits and configuration in Power Automate](https://docs.microsoft.com/power-automate/limits-and-config). When you're trying to decide between Logic Apps and Power Automate, consider the size of your team and your technical requirements. Larger organizations might prefer the Logic Apps pricing plan to the per-user pricing plan for Power Automate.
+    If you require a tool that lets you set limits and restrictions for Power Automate, see [Limits and configuration in Power Automate](/power-automate/limits-and-config). When you're trying to decide between Logic Apps and Power Automate, consider the size of your team and your technical requirements. Larger organizations might prefer the Logic Apps pricing plan to the per-user pricing plan for Power Automate.
 
 - [Power BI](https://powerbi.microsoft.com/pricing/) – A tool that lets you create effective data visualizations by using Fraud Protection data.
-- [Common Data Service database storage add-ons](https://docs.microsoft.com/power-platform/admin/powerapps-flow-licensing-faq#add-ons)
+- [Common Data Service database storage add-ons](/power-platform/admin/powerapps-flow-licensing-faq#add-ons)
 
 ## Sample pricing breakdown
 

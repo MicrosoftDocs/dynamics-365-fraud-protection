@@ -34,9 +34,9 @@ By storing event data in Common Data Service as it comes through your event hub,
 > [!NOTE]
 > If you want to use either the sample app that is mentioned in [Work with Power Apps](extensibility-with-power-apps.md) or the sample Power BI report that is mentioned in [Work with Power BI](extensibility-with-power-bi.md), set up your Common Data Service entities by importing the pre-built solutions instead of manually creating the entities yourself.
 
-1. [Create an entity in Common Data Service](https://docs.microsoft.com/powerapps/maker/common-data-service/data-platform-create-entity).
+1. [Create an entity in Common Data Service](/powerapps/maker/common-data-service/data-platform-create-entity).
 
-    For example, if you're working with audit events, you might create an entity that is named **Audit Event**, and that has fields that are named **Entity Name**, **Entity Type**, **Operation Name**, **Timestamp**, and **User ID**. (For information about fields, see [How to create and edit fields](https://docs.microsoft.com/powerapps/maker/common-data-service/create-edit-fields).)
+    For example, if you're working with audit events, you might create an entity that is named **Audit Event**, and that has fields that are named **Entity Name**, **Entity Type**, **Operation Name**, **Timestamp**, and **User ID**. (For information about fields, see [How to create and edit fields](/powerapps/maker/common-data-service/create-edit-fields).)
 
     Nevertheless, you can set up your entity however you want, based on the information and naming conventions that you want. We recommend that you have a *separate* Common Data Service entity for each type of Fraud Protection event that you want to use.
 
