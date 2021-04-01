@@ -18,13 +18,13 @@ Microsoft regularly sends communications regarding service incidents, service ch
 
 ## Message center
 
-The [Microsoft 365 Message center](https://docs.microsoft.com/office365/admin/manage/message-center?view=o365-worldwide&preserve-view=true) displays maintenance notifications, service changes, release information, and customer action requests.
+The [Microsoft 365 Message center](/office365/admin/manage/message-center?preserve-view=true&view=o365-worldwide) displays maintenance notifications, service changes, release information, and customer action requests.
 
 ## Service Health Dashboard
 
-The [Service Health Dashboard](https://docs.microsoft.com/office365/enterprise/view-service-health) displays the latest status of updates and incidents regarding your service. For information on how to access the Microsoft 365 Service Health Dashboard, see [How do I check my online service health?](https://docs.microsoft.com/power-platform/admin/check-online-service-health)
+The [Service Health Dashboard](/office365/enterprise/view-service-health) displays the latest status of updates and incidents regarding your service. For information on how to access the Microsoft 365 Service Health Dashboard, see [How do I check my online service health?](/power-platform/admin/check-online-service-health)
 
-Additionally, you can configure your email preferences to receive messages posted on the Message Center and Service Health Dashboard by e-mail. For information on how to set this up, see [Message center Preferences](https://docs.microsoft.com/microsoft-365/admin/manage/message-center?view=o365-worldwide#preferences&preserve-view=true).
+Additionally, you can configure your email preferences to receive messages posted on the Message Center and Service Health Dashboard by e-mail. For information on how to set this up, see [Message center Preferences](/microsoft-365/admin/manage/message-center?preserve-view=true&view=o365-worldwide#preferences).
 
 
 

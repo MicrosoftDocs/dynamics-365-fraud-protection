@@ -98,7 +98,7 @@ The general process to upload historical data consists of the following steps:
    
 ### Analyze data in a loss prevention report
 
-For more information about reports, see [The diagnose experience in Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/diagnose-experience).
+For more information about reports, see [The diagnose experience in Fraud Protection](./diagnose-experience.md).
 
 ### Upload historical data
 
@@ -126,7 +126,7 @@ Historical data is also known as *cold start data*.
     -  To check the quality of the data, in the top navigation, select **Check data quality**.
     -  To upload additional data, in the top navigation, select **Upload data**.    
 
-For more information about how to upload historic data, see [Upload historical data for purchase protection](https://docs.microsoft.com/dynamics365/fraud-protection/data-upload).
+For more information about how to upload historic data, see [Upload historical data for purchase protection](./data-upload.md).
 
 ## Step 2: Interpret diagnose data in diagnostic and risk reports
 
@@ -386,8 +386,8 @@ Behind the scenes, the preceding code generates an HTTP request and receives a r
 
 For more information about access tokens, see the following Azure documentation:
 
--	[Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion)
--	[Cache access tokens](https://docs.microsoft.com/azure/architecture/multitenant-identity/token-cache)
+-	[Use client assertion to get access tokens from Azure AD](/azure/architecture/multitenant-identity/client-assertion)
+-	[Cache access tokens](/azure/architecture/multitenant-identity/token-cache)
 
 #### Call the APIs
 
@@ -477,7 +477,7 @@ The last two sections on the **Details** tab are named **Device information** an
 
 ![Map tab](media/promocode-images/pp-map.png)
 
-For more information about how to use the support tool, see [Support your customers with Fraud Protection](https://docs.microsoft.com/dynamics365/fraud-protection/risk-support).
+For more information about how to use the support tool, see [Support your customers with Fraud Protection](./risk-support.md).
 
 ### Block a customer or payment instrument in the support tool
 
@@ -489,7 +489,7 @@ On the **Accounts** tab, you can add a user to the Accounts summary section and 
 
 In Fraud Protection, lists and rules are used together to drive tailored actions. Rules shape real-time decision making by accepting or rejecting transactions, based on conditions and risk score thresholds that you select. The rules use lists, such as a *safe list*, a *block list*, and *custom lists* of data that are relevant to your business. These capabilities help you define and screen for risky transaction types. They also help you enforce various policies, such as geofencing. In general, they help you manage the trade-offs that are inherent when you must prevent fraud but also minimize false positives.
 
-For more information about how to create and use lists and rules, see [Manage lists](https://docs.microsoft.com/dynamics365/fraud-protection/lists) and [Manage rules](https://docs.microsoft.com/dynamics365/fraud-protection/rules) in the product documentation.
+For more information about how to create and use lists and rules, see [Manage lists](./lists.md) and [Manage rules](./rules.md) in the product documentation.
 
 #### Block a customer
 
@@ -548,7 +548,7 @@ The information and the linkages in the graph can be used for activities such as
 
 The **Product Node** pane on the right of the **Graph explorer** page displays details of the purchase.
 
-For more information about how to use the graph explorer, see [Visually explore data with the graph explorer](https://docs.microsoft.com/dynamics365/fraud-protection/graph-explorer).
+For more information about how to use the graph explorer, see [Visually explore data with the graph explorer](./graph-explorer.md).
 
 Congratulations! You have successfully completed the training and are ready to use Fraud Protection's purchase protection capabilities.
 
@@ -559,5 +559,3 @@ For information about how to access and use Fraud Protection's features, see the
 - [Set up device fingerprinting](device-fingerprinting.md)
 - [Protect customer accounts with Fraud Protection](promocode-set-up-account-protection.md)
 - [Prevent loss with Fraud Protection](promocode-set-up-loss-prevention.md)
-
-

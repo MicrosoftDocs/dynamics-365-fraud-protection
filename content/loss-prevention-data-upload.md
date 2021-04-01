@@ -30,7 +30,7 @@ The historical data must be imported from four entities:
 
 You can upload your historical data from the **Loss prevention** tab of the **Data upload** page.
 
-To ensure that Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](https://go.microsoft.com/fwlink/?linkid=2131494):
+To ensure that Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](./view-loss-prevent-schemas.md):
 
 - The files are in CSV UTF-8 (comma-delimited) format (\*.csv).
 - The maximum file size is 10 gigabytes (GB).
@@ -84,7 +84,7 @@ Before you use your internal data, you can download sample data and use it to ex
 
 ## Connect to Dynamics 365 Commerce
 
-In addition to uploading local files, you can connect to Dynamics 365 Commerce if this option is available to you. Note that when you connect to Commerce, all required data for Loss Prevention reports will automatically be imported and mapped. For more information, see [Loss prevention integration with Dynamics 365 Commerce](https://go.microsoft.com/fwlink/?linkid=2131495).
+In addition to uploading local files, you can connect to Dynamics 365 Commerce if this option is available to you. Note that when you connect to Commerce, all required data for Loss Prevention reports will automatically be imported and mapped. For more information, see [Loss prevention integration with Dynamics 365 Commerce](./loss-prevention-integration-with-commerce.md).
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

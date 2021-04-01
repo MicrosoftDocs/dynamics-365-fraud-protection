@@ -151,10 +151,12 @@ Fraud Protection supports the standard C# [string class](https://docs.microsoft.
 
 Fraud Protection supports all standard C# [math methods](https://docs.microsoft.com/dotnet/api/system.math?view=netframework-4.8&preserve-view=true) and [arithmetic operators](https://docs.microsoft.com/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods that you might find useful.
 
+
 | Operator                                   | Description | Example |
 |--------------------------------------------|-------------|---------|
 | Math.Min(Double *value1*, Double *value*2) | This operator computes the minimum of two values. | Math.Min(@"riskScore",@"botScore") |
 | Math.Max(Double *value1*, Double *value*2) | This operator computes the maximum of two values. | Math.Max(@"riskScore",@"botScore") |
+
 
 ## DateTime operators
 
@@ -186,9 +188,11 @@ For information about type inferencing, see the [Type inference of attributes](f
 | DistinctCount(String *key*) | This function returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPs |
 | Sum(Double *value*)         | This function returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
+
 ## Defining your own variables
 
 You can use the **LET** keyword to define a variable. That variable can then be referenced in other places in the rule. All variables should be prefixed by a dollar sign ($).
+
 
 For example, you declare the following variable.
 

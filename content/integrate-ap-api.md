@@ -69,7 +69,7 @@ You can create as many apps as you require to run API calls in your production e
 
 ### Manage existing Azure AD applications
 
-After you've created your Azure AD apps, you can manage them through the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps). For more information, see the [Azure documentation site](https://docs.microsoft.com/azure/active-directory/develop/active-directory-how-applications-are-added).
+After you've created your Azure AD apps, you can manage them through the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps). For more information, see the [Azure documentation site](/azure/active-directory/develop/active-directory-how-applications-are-added).
 
 ### Manually configure Azure AD applications
 
@@ -142,8 +142,8 @@ Content-Length: <content length>
 
 For more information, see the Azure documentation:
 
-- [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion)
-- [Cache access tokens](https://docs.microsoft.com/azure/architecture/multitenant-identity/token-cache)
+- [Use client assertion to get access tokens from Azure AD](/azure/architecture/multitenant-identity/client-assertion)
+- [Cache access tokens](/azure/architecture/multitenant-identity/token-cache)
 
 ### Call the APIs
 

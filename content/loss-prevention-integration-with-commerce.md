@@ -27,7 +27,7 @@ To integrate the loss prevention capability with Dynamics 365 Commerce, you must
 
 ## Turn on the Azure Data Lake Storage service for your Commerce environment
 
-For information about how to turn on the Azure Data Lake Storage service for your Commerce environment, see [Enable Azure Data Lake Storage in a Dynamics 365 Commerce environment](https://docs.microsoft.com/dynamics365/commerce/enable-adls-environment).
+For information about how to turn on the Azure Data Lake Storage service for your Commerce environment, see [Enable Azure Data Lake Storage in a Dynamics 365 Commerce environment](/dynamics365/commerce/enable-adls-environment).
 
 ## Turn on the loss prevention feature in your Commerce environment
 
@@ -56,7 +56,7 @@ The next step is to configure the settings so that the loss prevention capabilit
 
     The URL is stored in the Backend Configuration service for your Fraud Protection environment.
 
-For more information about how to integrate Fraud Protection's loss prevention capability with Commerce, see [Loss prevention in Commerce](https://docs.microsoft.com/dynamics365/commerce/dev-itpro/DFP#loss-prevention-in-commerce).
+For more information about how to integrate Fraud Protection's loss prevention capability with Commerce, see [Loss prevention in Commerce](/dynamics365/commerce/dev-itpro/DFP#loss-prevention-in-commerce).
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

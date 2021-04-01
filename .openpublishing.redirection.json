@@ -45,11 +45,6 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "content/index.md",
-      "redirect_url": "overview",
-      "redirect_document_id": "false"
-    },
-    {
       "source_path": "content/lists-model-operating-points.md",
       "redirect_url": "lists-rules",
       "redirect_document_id": "false"
