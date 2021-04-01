@@ -219,7 +219,7 @@ Each Account Login or Account Creation event that triggers this rule will then p
 > [!NOTE]
 > This behavior doesn't apply to Purchase events.
 
-Instead of printing the velocity values directly to the API response, you can use [event tracing](event-tracing.md) to send the individual event hubs to your own Azure event hubs or blob storage. For example, you create the following rule.
+Instead of printing the velocity values directly to the API response, you can use [event tracing](event-tracing.md) to send the values to your own instance of Azure Event Hubs or Azure Blob Storage. For example, you create the following rule.
 
 ```FraudProtectionLanguage
 RETURN Approve(), Other(
