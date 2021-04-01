@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to protect customer accounts with Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 02/02/2021
+ms.date: 03/11/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -100,7 +100,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 -	**Application (client) ID** – The application ID identifies the Azure AD app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **API Management** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you create.
 -	**Certificate thumbprint or secret** – You can find the certificate thumbprint or the secret on the confirmation page that appears after you select **Create application** on the **API Management** page.
 
-## Generate an access token
+### Generate an access token
 
 You must generate this token and provide it with each API call. Note that access tokens have a limited lifespan. We recommend that you cache and reuse each access token until it's time to get a new one.
 The following C# code samples show how you can acquire a token by using your certificate or secret. Replace the placeholders with your own information.
@@ -157,7 +157,7 @@ For more information about access tokens, see the following Azure documentation:
 - [Use client assertion to get access tokens from Azure AD](/azure/architecture/multitenant-identity/client-assertion)
 - [Cache access tokens](/azure/architecture/multitenant-identity/token-cache)
 
-#### Call the APIs
+### Call the APIs
 
 1.	Pass the following required HTTP headers on each request.
 
