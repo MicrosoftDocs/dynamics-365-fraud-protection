@@ -19,19 +19,19 @@ The April 2021 release of Microsoft Dynamics 365 Fraud Protection introduces sev
 
 ## External calls  
 
-Released as a preview feature, external calls allow you to connect to APIs outside of Fraud Protection and then use the response data in your rules. For example, you can use external calls to make decisions based on third party phone or address verification services, or even your own custom scoring models. 
+Released as a preview feature, external calls allow you to connect to APIs outside of Fraud Protection and then use the response data in your rules. For example, you can use external calls to make decisions based on third-party phone or address verification services, or even your own custom scoring models. 
 
 For more information, see [External calls](external-calls.md).
 
 ## Velocities  
 
-Released as a preview feature, the new velocity feature allow you to define your own custom velocities to monitor the relationships and patterns between past transactions. Using this tool, you can now get the answers to questions such as:
+Released as a preview feature, the new velocity feature allows you to define your own custom velocities to monitor the relationships and patterns between past transactions. Using this tool, you can now get the answers to questions such as:
 
 - How much money has a user spent in the last 1 hour? 
 - How many distinct payment instruments have been used from this device in the last 7 days? 
-- How many times has this user attempted to login in the last 1 minute? 
+- How many times has this user attempted to sign in in the last 1 minute? 
  
-You can then use all this information in rules to make real-time decisions. 
+You can then use this information in rules to make real-time decisions. 
 
 For more information, see [Perform velocity checks](velocities.md).
 
@@ -39,11 +39,11 @@ For more information, see [Perform velocity checks](velocities.md).
 
 We have improved the data upload experience for importing historical data for purchase protection and loss prevention. The benefits of the updated feature include:
 
-1. A centralized and unified experience which guides you to upload historical data for purchase protection and loss prevention. 
-2. The ability to map data columns with attributes in any order, and an auto-mapping ability to save manual effort. 
-3. Mappings which are remembered and can be reused for periodical data upload in just a few clicks. 
-4. Built-in data validations which alert you about data format errors before processing. For issues detected during data processing, details are provided in text files which you can download and use for troubleshooting. 
-5. The ability to upload files with or without column headers. 
+- A centralized and unified experience that guides you to upload historical data for purchase protection and loss prevention. 
+- The ability to map data columns with attributes in any order, and an auto-mapping ability to save manual effort. 
+- Mappings which are remembered and can be reused for periodical data upload in just a few clicks. 
+- Built-in data validations that alert you about data format errors before processing. For issues detected during data processing, details are provided in text files, which you can download and use for troubleshooting. 
+- The ability to upload files with or without column headers. 
 
 For more information, see [Upload historical data for purchase protection](data-upload.md) and [Upload historical data for loss prevention](loss-prevention-data-upload.md).
 
