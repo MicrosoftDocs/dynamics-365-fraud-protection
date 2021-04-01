@@ -42,7 +42,7 @@ When you've determined the specific *event* that you want to assess and the *dat
 
 ## Call the custom assessment API
 
-For detailed information about how to integrate with the API, see [Integrate account protection APIs](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-ap-api).
+For detailed information about how to integrate with the API, see [Integrate account protection APIs](./integrate-ap-api.md).
 
 When you integrate with the API, make sure that you use the URI information that is provided is the API path in step 4 in the previous section. The payload must include **name: \<API name\>**, where **API name** is the name that you entered in step 4.
 

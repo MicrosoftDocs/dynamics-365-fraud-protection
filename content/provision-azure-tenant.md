@@ -36,7 +36,7 @@ You will be prompted if there is no Azure tenant for your organization or if you
 
 ## Create and provision a new tenant in Azure AD
 
-To create and provision a new Azure tenant, follow the steps in [Quickstart: Create a new tenant in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
+To create and provision a new Azure tenant, follow the steps in [Quickstart: Create a new tenant in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
 
 > [!NOTE]
 > When you create your user ID, enter both your user name and company name. You cannot change the company name after it has been created. If a message appears stating that your company name is not available, this means your company already has an Azure tenant. Use that Azure tenant by following the steps under the "Provision your existing Azure tenant" topic. 

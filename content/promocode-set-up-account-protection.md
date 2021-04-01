@@ -154,8 +154,8 @@ Behind the scenes, the preceding code generates an HTTP request and receives a r
 
 For more information about access tokens, see the following Azure documentation:
 
-- [Use client assertion to get access tokens from Azure AD](https://docs.microsoft.com/azure/architecture/multitenant-identity/client-assertion)
-- [Cache access tokens](https://docs.microsoft.com/azure/architecture/multitenant-identity/token-cache)
+- [Use client assertion to get access tokens from Azure AD](/azure/architecture/multitenant-identity/client-assertion)
+- [Cache access tokens](/azure/architecture/multitenant-identity/token-cache)
 
 ### Call the APIs
 
@@ -472,5 +472,3 @@ For information about how to access and use other Fraud Protection capabilities,
 - [Implement device fingerprinting](promocode-set-up-device-fingerprinting.md)
 - [Protect purchases with Fraud Protection](promocode-set-up-purchase-protection.md)
 - [Prevent loss with Fraud Protection](promocode-set-up-loss-prevention.md)
-
-

@@ -21,7 +21,7 @@ Microsoft Power Apps offer a low-code, drag-and-drop, formula-based web tool tha
 The following resources will help you start to develop your own apps by using Power Apps:
 
 - [Free App in a Day PowerApps training and more from Pragmatic Works](https://powerapps.microsoft.com/blog/free-app-in-a-day-powerapps-training-and-more-from-pragmatic-works/) – Power Apps training videos, and a full curriculum that takes you through the whole process of building an app that uses data from Common Data Service.
-- [Official Power Apps documentation](https://docs.microsoft.com/powerapps/)
+- [Official Power Apps documentation](/powerapps/)
 
 ## Sample app
 
