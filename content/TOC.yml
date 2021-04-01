@@ -4,17 +4,19 @@
   href: overview.md
 - name: What's new or changed
   items:
-  - name: Dynamics 365 Fraud Protection October 2020 release
-    href: whats-new-10-6.md
-  - name: Dynamics 365 Fraud Protection July 2020 release
-    href: whats-new-7-1.md
+  - name: April 2021 release
+    href: whats-new-4-1-21.md   
+  - name: October 2020 release
+    href: whats-new-10-6.md  
+  - name: July 2020 release
+    href: whats-new-7-1.md  
   - name: May 2020 release
-    href: whats-new-5-4.md
+    href: whats-new-5-4.md       
 - name: Regional availability
   href: global-availability.md  
 - name: Provision your Azure tenant
   href: provision-azure-tenant.md
-- name: Set-up Fraud Protection
+- name: Set up Fraud Protection
   items: 
   - name: Set up a trial version
     href: promocode-set-up-DFP-trial-version.md
@@ -22,8 +24,8 @@
     href: promocode-set-up-DFP-purchased-version.md
   - name: Configure user access
     href: configure-user-access.md    
-  - name: Implement device fingerprinting
-    href: promocode-set-up-device-fingerprinting.md
+  - name: Set up device fingerprinting
+    href: device-fingerprinting.md
   - name: Protect customer accounts
     href: promocode-set-up-account-protection.md
   - name: Protect purchases
@@ -40,7 +42,7 @@
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md
-  - name: Implement device fingerprinting
+  - name: Set up device fingerprinting
     href: device-fingerprinting.md    
   - name: Upload historical data for purchase protection
     href: data-upload.md
@@ -64,7 +66,7 @@
     href: integrate-real-time-api.md
   - name: Labels API
     href: labels-api.md      
-  - name: Implement device fingerprinting
+  - name: Set up device fingerprinting
     href: device-fingerprinting.md    
   - name: Monitor API calls
     href: monitoring.md 
@@ -78,7 +80,7 @@
     href: account-protection-protect-experience.md
   - name: Custom assessment
     href: custom-assessment.md
-  - name: Implement device fingerprinting
+  - name: Set up device fingerprinting
     href: device-fingerprinting.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
@@ -102,13 +104,17 @@
     href: loss-prevention-integration-with-commerce.md
   - name: Data access and privacy for loss prevention
     href: loss-prevention-data-access-and-privacy.md
-- name: Manage rules and lists
+- name: Fundamental capabilities
   items: 
-  - name: Manage lists
-    href: lists.md
   - name: Manage rules
     href: rules.md
-  - name: Language guide for  rules
+  - name: Manage lists
+    href: lists.md
+  - name: External calls
+    href: external-calls.md 
+  - name: Perform velocity checks
+    href: velocities.md      
+  - name: Language reference guide
     href: fpl-lang-ref.md    
 - name: Event tracing
   href: event-tracing.md
@@ -116,7 +122,7 @@
   items: 
   - name: Overview
     href: extensibility-via-event-hubs-overview.md
-  - name: Setup extensibility via Event Hubs
+  - name: Set up extensibility via Event Hubs
     href: extensibility-setup.md  
   - name: Working with code
     href: extensibility-with-code.md

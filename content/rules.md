@@ -4,7 +4,7 @@ description: This topic explains how to create and manage rules that protect acc
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/23/2020
+ms.date: 04/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -19,6 +19,65 @@ title: Manage rules for Fraud Protection
 ## Overview
 
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create rules that use the score that Fraud Protection's state-of-the-art artificial intelligence (AI) model generates, together with additional parameters from the request payload. Based on these inputs, rules can convert an assessment into a decision, such as **Approve**, **Reject**, **Review**, or **Challenge**.
+
+## Defining a rule: Quick start guide
+
+Rules consist of clauses, and are defined by the **RETURN** and **WHEN** keywords. They have the following basic structure.
+
+```FraudProtectionLanguage
+RETURN <decision>
+WHEN <condition>
+
+```
+The RETURN statement will only be executed if the WHEN statement evaluates to True. The RETURN statement will terminate rule execution and must specify a valid decision function: *Approve*, *Reject*, *Challenge*, or *Review*. Each decision function also accepts an optional parameter, allowing you to express the *reason* for the decision. To learn more, see [Decision functions](fpl-lang-ref.md#decision-functions). 
+
+In addition to a decision, the RETURN statement can also be used to write data to the API response or to event tracing. To learn more, see [Observation functions](fpl-lang-ref.md#observation-functions). 
+
+The WHEN statement specifies a Boolean condition, which determines if the RETURN statement will execute. 
+
+The WHEN statement can utilize any of the following:
+
+-	Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"user.userId".
+-	The scores that are generated from Fraud Protection’s artificial intelligence models. For example, @"riskscore".
+-	Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md). For more information on referencing these lists in your rules, see [Using Lists in rules](fpl-lang-ref.md#using-lists-in-rules).
+-	Velocities which you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
+-	External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md). 
+
+Expressions can be compared using comparison operators (such as ==, !=, >, <), and can be combined using logical operators such as **and** (&&) and **or** (||).
+
+For more information on rule syntax, see the [Language reference guide](fpl-lang-ref.md).
+
+### Examples of rules
+
+```FraudProtectionLanguage
+RETURN Reject("high score")
+WHEN @"riskScore" > 900
+
+```
+
+```FraudProtectionLanguage
+RETURN Review("medium score")
+WHEN @"riskScore" <= 900 and @"riskScore" > 400
+
+```
+
+```FraudProtectionLanguage
+RETURN Approve(), Other(ip=@"device.ipAddress")
+WHEN @"user.countryRegion" == "US"
+
+```
+
+```FraudProtectionLanguage
+RETURN Reject("user on block list")
+WHEN ContainsKey("Email Block List", "Emails", @"user.email")
+
+```
+
+```FraudProtectionLanguage
+RETURN Review()
+WHEN @"user.email".EndsWith(“@contoso.com”)
+
+```
 
 ## Rules tab
 
@@ -124,7 +183,7 @@ To undo all changes that you or other people have made to the sample, select **R
 
 Conditions start with the keyword **WHEN** and are followed by a Boolean expression that evaluates a statement to either **True** or **False**. A condition can be created to determine which rule is evaluated and to group related business logic. For example, the following condition is related to digital product transactions.
 
-```ruleslanguage
+```FraudProtectionLanguage
 WHEN @"productList.type" == "Digital"
 ```
 
@@ -138,7 +197,7 @@ Clauses contain the fraud logic and business policies that are relevant to the s
 
 Clauses have the following basic structure.
 
-```ruleslanguage
+```FraudProtectionLanguage
 RETURN <decision> 
 WHEN <condition is true>
 ```
@@ -147,13 +206,13 @@ You can use this structure to create a clause that returns a decision of **Appro
 
 Everything after the **WHEN** keyword must be able to be evaluated to either **True** or **False**. This Boolean expression can consist of values from the [event payload](rules.md#clauses), [user-defined lists](lists.md), and [AI-based bot and risk scores](rules.md#post-bot-scoring-clauses).
 
-For information about the syntax for clauses, see the [Rules language guide](fpl-lang-ref.md).
+For information about the syntax for clauses, see the [[Language reference guide](fpl-lang-ref.md)](fpl-lang-ref.md).
 
 When a clause is triggered (that is, when the **WHEN** statement returns **True**), the decision that is specified in the **RETURN** statement is returned, and no subsequent clauses are run.
 
 If a condition matches the decision but doesn't trigger a clause, the rule is then run.
 
-```ruleslanguage
+```FraudProtectionLanguage
 RETURN Approve("NO_CLAUSE_HIT")
 ```
 
@@ -171,19 +230,19 @@ Prior-to-all-scoring clauses are run before Fraud Protection's AI models are run
 
 The following example helps you review purchases when users buy a product in a market outside their geographical location.
 
-```ruleslanguage
+```FraudProtectionLanguage
 RETURN Review("location inconsistency") 
 WHEN Geo.MarketCode(@"device.ipAddress") != "@productList.market"
 ```
 
 In this section, you can also write a clause to cross-reference lists. For example, if you have a custom list that is named **Risky Emails**, the following clause rejects events if the user's email address appears in the list.
 
-```ruleslanguage
+```FraudProtectionLanguage
 RETURN Reject ("risky email") 
 WHEN ContainsKey ("Risky Emails", "Emails", @"user.email")
 ```
 
-For information about the syntax that is used to reference lists in rules, see the [Rules language guide](fpl-lang-ref.md).
+For information about the syntax that is used to reference lists in rules, see the [[Language reference guide](fpl-lang-ref.md)](fpl-lang-ref.md).
 
 #### Post-bot-scoring clauses
 
@@ -191,7 +250,7 @@ Post-bot-scoring clauses are run after Fraud Protection's AI models have generat
 
 In post-bot-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You reference this score by using the *@botScore* variable. For example, the following clause rejects events from a specific email domain that has a bot score that is more than 700.
 
-```ruleslanguage
+```FraudProtectionLanguage
 RETURN Reject()
 WHEN @"user.email".EndsWith("@contoso.com") && @"botScore" > 700
 ```
@@ -202,7 +261,7 @@ Post-risk-scoring clauses are run after Fraud Protection's AI models have genera
 
 In post-risk-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You reference this score by using the *@riskScore* variable. For example, the following clause rejects expensive transactions that have a risk score that is more than 700.
 
-```ruleslanguage
+```FraudProtectionLanguage
 RETURN Reject("high price and risk score")
 WHEN @purchasePrice >= 199.99 && @riskScore > 700
 ```
@@ -330,19 +389,19 @@ If the payload sample doesn't match the condition, the rule isn't evaluated. If 
 
 Create a rule that has the following three clauses.
 
-```ruleslanguage
+```FraudProtectionLanguage
 `// Approves when email from contoso domain has been validated`
 `RETURN Approve()`
 `WHEN @"email.isEmailValidated" == true && @"email.emailValue".EndsWith("@contoso.com")`
 ```
 
-```ruleslanguage
+```FraudProtectionLanguage
 `// Rejects when email has not been validated and high risk score`
 `RETURN Reject()`
 `WHEN @"email.isEmailValidated" == false && @"riskscore" > 700`
 ```
 
-```ruleslanguage
+```FraudProtectionLanguage
 `// Reviews when email has not been validated and medium risk score`
 `RETURN Review()`
 `WHEN @"email.isEmailValidated" == false && @"riskscore" > 400`
@@ -350,7 +409,7 @@ Create a rule that has the following three clauses.
 
 The payload sample contains the following object.
 
-```json
+```FraudProtectionLanguage
 "email": {
     "email": "Primary",
     "emailValue": "kayla@contoso.com",
@@ -362,7 +421,7 @@ The payload sample contains the following object.
 
 The score sample contains the following value.
 
-```json
+```FraudProtectionLanguage
 "riskScore": 500,
 ```
 
@@ -370,7 +429,7 @@ When the evaluation pane is expanded, clause 1 is triggered, and a decision of *
 
 In the sample payload, you change the value of the **isEmailValidated** field in the payload from **true** to **false**.
 
-```json
+```FraudProtectionLanguage
 "isEmailValidated": false,
 ```
 

@@ -1,28 +1,44 @@
 ---
 author: yvonnedeq
-description: This topic explains how to implement device fingerprinting based on artificial intelligence.
+description: This topic explains how to set up device fingerprinting.
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/23/2020
+ms.date: 04/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Implement device fingerprinting
+title: Set up device fingerprinting
 ---
 
-# Implement device fingerprinting
+# Set up device fingerprinting
 
-Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that is based on artificial intelligence (AI). This feature enables the identification of devices (computer, Xbox, tablet, and so on)  across multiple sessions or interactions that engage with your business and others' in the fraud network. Additionally, this feature allows the service to link seemingly unrelated events to each other in the fraud network to identify patterns of fraud. Device fingerprinting runs on Microsoft Azure. It's cloud-scalable, reliable, and provides enterprise-grade security.
-When you implement Fraud Protection device fingerprinting by integrating the script on your online services, you direct Microsoft to collect the following types of data from the devices interacting with such services:
+## Overview
 
-- Device attributes such as plugins installed, processor class etc.
-- Operating system attributes, such as OS Information.
-- Browser-related attributes if applicable such as browser language, font etc.
-- Network attributes, such as IP address, signature hash etc.
+A *device fingerprint*, also known as a *machine fingerprint*, contains information that is collected about a remote computing device, such as a computer, Xbox, tablet, or smartphone, for the purpose of identifying that device. Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address.
 
+Microsoft Dynamics 365 Fraud Protection (Fraud Protection) provides a device fingerprinting feature that is based on artificial intelligence (AI). Therefore, device identification can be used as input to the process of fraud assessment. Additionally, this feature helps the Fraud Protection service track and link seemingly unrelated events in the fraud network, to help identify patterns of fraud. The data that is collected is not just a static list of attributes but also includes data that is dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device.
+
+Device fingerprinting runs on Azure, and includes benefits from proven cloud scalability, reliability, and enterprise-grade security. To help you better understand the impact that device fingerprinting has on fraud detection, this document includes some results from a study that Microsoft did. The study compared six months' worth of data for various Microsoft businesses through two different models: one that used device fingerprinting and one that did not.
+
+In summary, the results showed that device fingerprinting has a significant positive impact on the model detection rate for all businesses. Because it reduces false negatives, less fraud is detected on approved transactions after the fact.
+
+## Goals 
+
+The purpose of this set up guide is to help you complete the following steps in your own system and with your own data:
+
+- Map a customer's journey to a risk assessment action (for example, a checkout process or an account creation page) by making a device fingerprinting call to trigger a profiling service. This call includes a Fraud Protection customer-defined session ID and customer ID.
+- Receive a response from the profile service. This response includes a list of device data that Fraud Protection should collect from the event.
+- Run the device fingerprinting script, collect the required information, and send it to Fraud Protection.
+- Assess this user's transactions for fraud, make the appropriate assessment API call, and pass the session ID to Fraud Protection.
+- Fraud Protection then associates the captured device fingerprint information with the transaction that is being assessed.
+
+
+## Prerequisites
+
+Before you begin the tasks in this document, you must set up Fraud Protection in an Azure Active Directory (Azure AD) tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md) and [Set up a purchased version of Fraud Protection](promocode-set-up-DFP-purchased-version.md).
 
 It is your responsibility to:
 
@@ -30,30 +46,20 @@ It is your responsibility to:
 2. Disclose your use of third parties working on your behalf to process the data you collect, including Fraud Protection service providers. 
 3. Comply with all laws and regulations applicable to its use of Fraud Protection, including data protection laws. 
 
+### Important notice regarding data collection
 
-The process of integrating device fingerprinting for Fraud Protection consists of the following tasks:
+When you implement Fraud Protection device fingerprinting by integrating the script on your online services, you direct Microsoft to collect the following types of data from the devices interacting with such services:
 
-1. Set up Microsoft DNS.
-1. Integrate device fingerprinting with your website.
+- Device attributes such as plugins installed, processor class, etc.
+- Operating system attributes, such as OS Information.
+- Browser-related attributes if applicable such as browser language, font, etc.
+- Network attributes, such as IP address, signature hash, etc.
 
-## Set up DNS
-
-1. Select a subdomain under your root domain. (For example, select **f.contoso.com**. Any prefix can be used.)
-2. For the selected subdomain, create a canonical name (CNAME) that points to `fpt.dfp.microsoft.com`.
-
-    **Example**
-
-    - **Merchant website:** `www.contoso.com`
-    - **DNS record:** `f.contoso.com`, which points to `fpt.dfp.microsoft.com`
-
-3. For back-end onboarding, generate the Secure Sockets Layer (SSL) certificate for the selected subdomain.
-4. To start the process of exchanging SSL certificates, contact <DFPHelp@microsoft.com>.
-
-## Integrate device fingerprinting with your website or application
+## Implement device fingerprinting
 
 Your website or application should enable the device fingerprinting before it submits a transaction (such as a transaction for adding a payment instrument, sign-in, or checkout). Follow these steps to integrate device fingerprinting with your website.
 
-1. Insert a **script** on the webpage/application where you want collect device fingerprinting information.   
+- Insert a **script** on the webpage/application where you want collect device fingerprinting information.   
 
     ```javascript
     <script src="https://fpt.<Your_Sub_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
@@ -84,19 +90,12 @@ Your website or application should enable the device fingerprinting before it su
 3. When you submit transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection), set a session ID in the **deviceContextId** field.
 4. Set the **'device.ipAddress'** field to the customer IP address that your website receives when the customer uses your site.
 
+## Mobile device fingerprinting
+
 > [!NOTE]
 > You can learn more about the Mobile Reference Implementation in the [DFP Mobile Reference Implementation Document](https://go.microsoft.com/fwlink/?linkid=2132646). A login is required.
 
-## Verify device fingerprinting
 
-1. Send a transaction, sign-up, sign-in, or other item to the Dynamics 365 Fraud Protection API. Include the device fingerprinting **deviceContextID** value.
-2. Visit the [Fraud Protection portal](https://dfp.microsoft.com/).
-3. In the left navigation, select **Graph Explorer**.
-4. Search for the transaction, sign-up, sign-in, or other item that you submitted.
-5. In the chart, select the **DeviceContext** node.
-6. In the right pane, verify the additional details about your device (for example, the **UserAgent** value and operating system version).
-
-    If you see additional details beyond what was submitted in the API call, you've set up device fingerprinting correctly.
 
 
 
