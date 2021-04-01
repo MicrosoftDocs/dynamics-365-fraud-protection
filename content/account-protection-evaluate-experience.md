@@ -26,6 +26,7 @@ In evaluate mode, you can "shadow" your existing solution without affecting its 
 To get started with Fraud Protection, complete the initial configuration steps that are outlined on the dashboard. Then follow these steps to begin to use the evaluate experience.
 
 1. [Integrate the Fraud Protection APIs](integrate-real-time-api.md), and pass **'Evaluate'** for the **AssessmentType** field in **AccountCreation** and **AccountLogIn** API events. For information about all supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
+
 2. Observe, but don't necessarily honor, the decisions that Fraud Protection merchant rules make about whether those events should be approved, rejected, challenged, or reviewed.
 
 
