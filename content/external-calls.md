@@ -158,7 +158,7 @@ If **myCall** requires a parameter, such as *IPaddress*, use the following synta
 
 External.myCall(@"device.ipAddress")
 
-For information about the rules language and how you can use external calls in rules, see the [language reference guide](fpl-lang-ref.md).
+For information about the rules language and how you can use external calls in rules, see the [Language reference guide](fpl-lang-ref.md).
 
 > [!NOTE]
 > If external calls are used in a rule, the latency of the rule might increase.
