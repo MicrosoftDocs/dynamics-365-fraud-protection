@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to provision an Azure tenant for use with Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/09/2020
+ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -16,7 +16,7 @@ title: Create and provision your Azure tenant
 
 An Azure tenant represents an organization within Microsoft Azure Active Directory (Azure AD). It is a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for a Microsoft cloud service such as Azure, Microsoft Intune, or Microsoft 365. Essentially, an Azure tenant is a way to manage user access to Azure resources to ensure you control access to your data.
 
-You can use either of the following approaches to provision your Azure tenant for use with Microsoft Dynamics 365 Fraud Protection:
+You can use either of the following approaches to provision your Azure tenant for use with Microsoft Dynamics 365 Fraud Protection (Fraud Protection):
 
 - [Provision your existing Azure tenant](provision-azure-tenant.md#provision-your-existing-azure-tenant).
 - [Create and provision a new tenant in Azure AD](provision-azure-tenant.md#create-and-provision-a-new-tenant-in-azure-ad).
@@ -32,7 +32,7 @@ You will need Azure tenant administrator permissions to complete provisioning. I
 
 If your company already has an Azure tenant and you are an administrator, sign in to Fraud Protection using your company email address. On successful validation, the Fraud Protection service will be provisioned for your Azure tenant, and you can [configure access for other users](configure-user-access.md) and begin [integrating your systems with the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
 
-You will be prompted if there is no Azure tenant for your organization or if you are not an administrator for your existing tenant. If you need to configure a new tenant, see the instructions under "Create and provision a new tenant in Azure AD." If you have a tenant but do not have sufficient administrative privileges, contact your existing administrator for access.
+You will be prompted for a tenant if there is no Azure tenant for your organization or if you are not an administrator for your existing tenant. If you need to configure a new tenant, see the instructions under "Create and provision a new tenant in Azure AD." If you have a tenant but do not have sufficient administrative privileges, contact your existing administrator for access.
 
 ## Create and provision a new tenant in Azure AD
 
@@ -41,9 +41,9 @@ To create and provision a new Azure tenant, follow the steps in [Quickstart: Cre
 > [!NOTE]
 > When you create your user ID, enter both your user name and company name. You cannot change the company name after it has been created. If a message appears stating that your company name is not available, this means your company already has an Azure tenant. Use that Azure tenant by following the steps under the "Provision your existing Azure tenant" topic. 
 
-After you've signed up, you can proceed to configuring user access to Fraud Protection. For instructions, see the "Configure users in Dynamics 365 Fraud Protection" topic in [Configure user access](configure-user-access.md).
+After you've signed up, you can proceed to configuring user access to Fraud Protection. For more information, see [Configure user access to Dynamics 365 Fraud Protection](configure-user-access.md).
 
-After configuring access to users, integrate your existing systems with the Fraud Protection real-time application programming interfaces (APIs). See [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md), and follow the steps.
+After configuring access to users, integrate your existing systems with the Fraud Protection real-time application programming interfaces (APIs). For more information, see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
