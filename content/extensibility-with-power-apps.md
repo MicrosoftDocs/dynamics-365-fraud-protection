@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic explains how to use event hubs with Microsoft Power Apps to extend the functionality of Dynamics 365 Fraud Protection and incorporate Fraud Protection data into an organization's processes and workflows.
+description: This topic explains how to use event hubs with Microsoft Power Apps to extend the functionality of Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 10/23/2020
@@ -14,7 +14,7 @@ title: Work with Power Apps
 ---
 # Work with Power Apps
 
-Microsoft Power Apps offer a low-code, drag-and-drop, formula-based web tool that you can use to intuitively create full applications (mobile or desktop). These apps can be useful for the more interactive and complex processes that your organization might want to develop by using eventing data from Dynamics 365 Fraud Protection.
+Microsoft Power Apps offer a low-code, drag-and-drop, formula-based web tool that you can use to intuitively create full applications (mobile or desktop). These apps can be useful for the more interactive and complex processes that your organization might want to develop by using eventing data from Dynamics 365 Fraud Protection (Fraud Protection).
 
 ## Getting started
 
