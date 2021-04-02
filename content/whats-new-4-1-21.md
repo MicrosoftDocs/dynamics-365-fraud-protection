@@ -15,6 +15,8 @@ title: What's new in Dynamics 365 Fraud Protection April 2021 release
 
 # What's new in Dynamics 365 Fraud Protection April 2021 release
 
+[!include [banner](includes/preview-banner.md)]
+
 The April 2021 release of Microsoft Dynamics 365 Fraud Protection introduces several new capabilities and enhancements. 
 
 ## External calls  
