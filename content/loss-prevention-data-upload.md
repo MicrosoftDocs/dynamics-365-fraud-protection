@@ -24,7 +24,7 @@ The historical data must be imported from four entities:
 * PaymentMethod
 
 > [!IMPORTANT]
-> This data is sensitive, and you should upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). Microsoft doesn't request the full payment instrument number or Social Security number (SSN). Therefore, we recommend that you **exclude** this type of data from the files that you upload. For more information about how data is used and protected in Microsoft Dynamics 365 Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
+> This data is sensitive, and you should upload it only from a secure network location. Be aware that Microsoft requests only partial data about payment instruments (the bank identification number \[BIN\] and the last four digits). Microsoft doesn't request the full payment instrument number or Social Security number (SSN). Therefore, we recommend that you **exclude** this type of data from the files that you upload. For more information about how data is used and protected in Microsoft Dynamics 365 Fraud Protection (Fraud Protection), see [Security, compliance, and data subject requests](security-compliance.md).
 
 ## Website upload
 
