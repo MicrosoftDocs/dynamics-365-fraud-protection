@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use lists to manage information, fight fraud, and enforce business policies in Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -13,8 +13,6 @@ title: Manage lists for Dynamics 365 Fraud Protection
 
 ---
 # Manage lists for Dynamics 365 Fraud Protection
-
-## Overview
 
 Lists help you manage information that you use to fight fraud and enforce business policies. For example, you can create a list to track payment instruments that you consider risky or user email addresses that you consider safe. You can then upload the list as a comma-separated values (CSV) file and then reference it in a [rule](rules.md) to help automate decisions.
 
