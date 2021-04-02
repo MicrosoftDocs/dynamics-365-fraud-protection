@@ -14,7 +14,7 @@ title: Account protection protect experience
 
 # Account protection protect experience
 
-Microsoft Dynamics 365 Fraud Protection offers two operating modes: evaluate and protect. These operating modes provide two ways of using the same underlying product (that is, they provide two *experiences*). The same functionality and feature capabilities are available in both experiences.
+Microsoft Dynamics 365 Fraud Protection (Fraud Protection) offers two operating modes: evaluate and protect. These operating modes provide two ways of using the same underlying product (that is, they provide two *experiences*). The same functionality and feature capabilities are available in both experiences.
 
 In protect mode, you follow the guidance and recommendations from the analysis. These results help you determine whether you should accept or reject transactions, or which escalation path you should take.
 
