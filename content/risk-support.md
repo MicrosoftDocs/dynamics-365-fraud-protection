@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how you can use Microsoft Dynamics 365 Fraud Protection to support your customers.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: o4/02/2021
+ms.date: 04/02/2021
 ms.topic: conceptual 
 search.app: 
   - Capaedac-fraudprotection
