@@ -14,7 +14,7 @@ title: Overview of account protection features
 
 # Overview of account protection features
 
-Microsoft Dynamics 365 Fraud Protection provides merchants the capability to assess if the risk of attempts to create new accounts and attempts to log in on merchant’s ecosystem are fraudulent. Risk assessment in Fraud Protection can be used by the customer to block or challenge suspicious attempts to create new fake accounts or to compromise existing accounts.    
+Microsoft Dynamics 365 Fraud Protection (Fraud Protection) provides merchants the capability to assess if the risk of attempts to create new accounts and attempts to log in on merchant’s ecosystem are fraudulent. Risk assessment in Fraud Protection can be used by the customer to block or challenge suspicious attempts to create new fake accounts or to compromise existing accounts.    
 
 Account protection includes APIs for real-time risk assessment, rule, and list experience to optimize risk strategy as per your business needs, and a scorecard to monitor fraud protection effectiveness and trends in your ecosystem.
 
