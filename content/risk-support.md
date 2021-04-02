@@ -1,20 +1,20 @@
 ---
 author: yvonnedeq
-description: This topic explains how you can use Fraud Protection to support your customers.
+description: This topic explains how you can use Microsoft Dynamics 365 Fraud Protection to support your customers.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/23/2020
+ms.date: o4/02/2021
 ms.topic: conceptual 
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Support your customers with Fraud Protection
+title: Support your customers with Microsoft Dynamics 365 Fraud Protection
 ---
 
-# Support your customers with Fraud Protection
+# Support your customers with Microsoft Dynamics 365 Fraud Protection
 
-Risk support in Microsoft Dynamics 365 Fraud Protection lets your agents evaluate customer escalations, unblock customers whose purchase attempts are being incorrectly declined, and block future purchases from suspicious users, as appropriate. Your fraud investigators can search and investigate the history of your customers' past transactions with your business. Therefore, they can provide faster turnaround for decisions.
+Risk support in Microsoft Dynamics 365 Fraud Protection (Fraud Protection) lets your agents evaluate customer escalations, unblock customers whose purchase attempts are being incorrectly declined, and block future purchases from suspicious users, as appropriate. Your fraud investigators can search and investigate the history of your customers' past transactions with your business. Therefore, they can provide faster turnaround for decisions.
 
 ## Search and investigate
 
