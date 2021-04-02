@@ -24,7 +24,7 @@ Depending on how you choose to use Fraud Protection, you may make use of differe
 For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
 
 
-## Get set up
+## Set up
 
 ### Sign in
 > [!IMPORTANT]
