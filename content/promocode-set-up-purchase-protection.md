@@ -1,19 +1,19 @@
 ---
 author: yvonnedeq
-description: This topic describes how to protect purchases with Fraud Protection.
+description: This topic describes how to protect purchases with Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/11/2021
+ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Protect purchases with Fraud Protection
+title: Protect purchases with Dynamics 365 Fraud Protection
 ---
 
 
-# Protect purchases with Fraud Protection
+# Protect purchases with Dynamics 365 Fraud Protection
 
 ## Overview
 
@@ -477,7 +477,7 @@ The last two sections on the **Details** tab are named **Device information** an
 
 ![Map tab](media/promocode-images/pp-map.png)
 
-For more information about how to use the support tool, see [Support your customers with Fraud Protection](./risk-support.md).
+For more information about how to use the support tool, see [Support your customers with Dynamics 365 Fraud Protection](./risk-support.md).
 
 ### Block a customer or payment instrument in the support tool
 
@@ -557,5 +557,5 @@ Congratulations! You have successfully completed the training and are ready to u
 For information about how to access and use Fraud Protection's features, see the following documents:
 
 - [Set up device fingerprinting](device-fingerprinting.md)
-- [Protect customer accounts with Fraud Protection](promocode-set-up-account-protection.md)
-- [Prevent loss with Fraud Protection](promocode-set-up-loss-prevention.md)
+- [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
+- [Prevent loss with Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md)
