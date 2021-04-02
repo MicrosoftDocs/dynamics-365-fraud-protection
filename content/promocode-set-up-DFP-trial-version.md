@@ -124,6 +124,6 @@ Congratulations! You've successfully completed the setup process and are ready t
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
-- [Protect customer accounts with Fraud Protection](promocode-set-up-account-protection.md)
--	[Protect purchases with Fraud Protection](promocode-set-up-purchase-protection.md)
--	[Prevent loss with Fraud Protection](promocode-set-up-loss-prevention.md)
+- [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
+-	[Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
+-	[Prevent loss with Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md)
