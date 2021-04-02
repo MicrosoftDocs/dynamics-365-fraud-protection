@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic provides an overview about how you can use Microsoft Azure Event Hubs with code software development kits (SDKs) and Microsoft Power Platform to extend the functionality of Dynamics 365 Fraud Protection and incorporate Fraud Protection data into an organization's processes and workflows.
+description: This topic provides an overview about how you can use Microsoft Azure Event Hubs with code software development kits (SDKs) and Microsoft Power Platform to extend the functionality of Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 10/23/2020
@@ -15,7 +15,7 @@ title: Extensibility via Event Hubs
 
 # Extensibility via Event Hubs
 
-This content guides you through the process of setting up and using the *event tracing data* that is available from Microsoft Dynamics 365 Fraud Protection. This data includes, but isn't limited to, data for *audit log events*, *latency events*, and *trace events*.
+This content guides you through the process of setting up and using the *event tracing data* that is available from Microsoft Dynamics 365 Fraud Protection (Fraud Protection). This data includes, but isn't limited to, data for *audit log events*, *latency events*, and *trace events*.
 
 Through pure-code software development kits (SDKs), you can integrate this data with your own organization's workflows, requirements for granular control, and custom needs. Additionally, you can take advantage of fast-development tools such as Azure Logic Apps, Power BI, and Power Apps for powerful automation, reports, and applications.
 
