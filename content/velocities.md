@@ -23,7 +23,7 @@ The frequency of events from a user or entity (such as a credit card) might indi
 
 ## Define a velocity
 
-Velocity sets are made up of individual velocities. You define velocities in Microsoft Dynamics 365 Fraud Protection by using the **SELECT**, **FROM**, **WHEN**, and **GROUPBY** keywords in the following structure.
+Velocity sets are made up of individual velocities. You define velocities in Microsoft Dynamics 365 Fraud Protection (Fraud Protection) by using the **SELECT**, **FROM**, **WHEN**, and **GROUPBY** keywords in the following structure.
 
 ```FraudProtectionLanguage
 SELECT <aggregation method> AS <velocity name>
