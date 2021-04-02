@@ -53,6 +53,7 @@
     - name: Labels API
       href: labels-api.md     
     - name: View purchase protection schemas
+      href: view-purchase-protection-schemas.md      
     - name: Monitor API calls
       href: monitoring.md          
     - name: Integrate real-time APIs
