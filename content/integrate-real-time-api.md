@@ -82,64 +82,64 @@ For samples in other languages, see https://aka.ms/aaddev.
 
 **Certificate thumbprint**
 ```cs
-public async Task<string> acquireTokenWithCertificate(string tenantId, string clientId, string certPath, string password)
+/// <summary>
+/// Gets an access token using an app ID and private certificate key.
+/// </summary>
+/// <param name="tenantId">Directory (tenant) ID, in GUID format</param>
+/// <param name="clientId">Application (client) ID</param>
+/// <param name="certPath">File path to the certificate file (pfx) used to authenticate your application to AAD</param>
+/// <param name="certPassword">Password to access to the certificate file's private key</param>
+public async Task<string> AcquireTokenWithCertificate(string tenantId, string clientId, string certPath, string certPassword)
 {
-  // tenantId: Directory (tenant ID)
-  // clientId: Application (client) ID
-  // certPath: path to the certificate file (pfx) used to authenticate your application to AAD
-  // password: password for access to the certificate file's private key
+    var certificate = new X509Certificate2(certPath, certPassword);
 
-	X509Certificate2 certificate = new X509Certificate2(certFilePath,certPassword);
-	
-	var app = ConfidentialClientApplicationBuilder.Create(clientId)
-		   .WithAuthority(AzureCloudInstance.AzurePublic, new Guid(tenantId))
-		   .WithCertificate(certificate)
-		   .Build();
+    var app = ConfidentialClientApplicationBuilder.Create(clientId)
+            .WithAuthority(AzureCloudInstance.AzurePublic, tenantId)
+            .WithCertificate(certificate)
+            .Build();
 
-	string[] scopes = new string[] { "<API endpoint for INT or PROD>; should be https://api.dfp.microsoft-int.com/.default or https://api.dfp.microsoft.com/.default" };
+    var scopes = new string[] { "<API endpoint for INT or PROD>; should be https://api.dfp.microsoft-int.com/.default or https://api.dfp.microsoft.com/.default" };
 
-	AuthenticationResult result = null;
-	try
-	{
-		result = await app.AcquireTokenForClient(scopes)
-						  .ExecuteAsync();
-	}
-	catch (MsalServiceException ex)
-	{
-		// Catches authentication exceptions
-	}
-
-	return result.AccessToken;
+    try
+    {
+        var result = await app.AcquireTokenForClient(scopes).ExecuteAsync();
+        return result.AccessToken;
+    }
+    catch (MsalServiceException ex)
+    {
+        //Handle authentication exceptions
+        throw ex;
+    }
 }
 ```
 
 **Secret**
 ```cs
-public async Task<string> acquireTokenWithSecret(string tenantId, string clientId, string clientSecret)
+/// <summary>
+/// Gets an access token using an app ID and secret.
+/// </summary>
+/// <param name="tenantId">Directory (tenant) ID, in GUID format</param>
+/// <param name="clientId">Application (client) ID</param>
+/// <param name="clientSecret">The secret (password) used to authenticate the client (application) ID</param>
+public async Task<string> AcquireTokenWithSecret(string tenantId, string clientId, string clientSecret)
 {
-  // tenantId: Directory (tenant ID)
-  // clientId: Application (client) ID
-  // clientSecret: Symmetric key used to authenticate your application to AAD
+    var app = ConfidentialClientApplicationBuilder.Create(clientId)
+            .WithAuthority(AzureCloudInstance.AzurePublic, tenantId)
+            .WithClientSecret(clientSecret)
+            .Build();
 
-	var app = ConfidentialClientApplicationBuilder.Create(clientId)
-			.WithAuthority(AzureCloudInstance.AzurePublic, new Guid(tenantId))
-			.WithClientSecret(clientSecret)
-			.Build();
+    var scopes = new string[] { "<API endpoint for INT or PROD>; should be https://api.dfp.microsoft-int.com/.default or https://api.dfp.microsoft.com/.default" };
 
-	string[] scopes = new string[] { "<API endpoint for INT or PROD>; should be https://api.dfp.microsoft-int.com/.default or https://api.dfp.microsoft.com/.default" };
-
-	AuthenticationResult result = null;
-	try
-	{
-		result = await app.AcquireTokenForClient(scopes)
-					  .ExecuteAsync();
-	}
-	catch (MsalServiceException ex)
-	{
-		// Catches authentication exceptions
-	}
-
-	return result.AccessToken;
+    try
+    {
+        var result = await app.AcquireTokenForClient(scopes).ExecuteAsync();
+        return result.AccessToken;
+    }
+    catch (MsalServiceException ex)
+    {
+        //Handle authentication exceptions
+        throw ex;
+    }
 }
 ```
 The AuthenticationResult object in each case contains the AccessToken itself, and an ExpiresOn property which indicates when the token will become invalid. 
