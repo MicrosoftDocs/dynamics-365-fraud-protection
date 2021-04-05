@@ -1,13 +1,13 @@
 ---
 author: jackwi111
 description: This topic explains how to create Azure AD apps in Azure Portal or PowerShell for use with Dynamics 365 Fraud Protection.
-ms.author: v-jowigh
+ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/01/2019
 
 ms.topic: conceptual
 search.app: 
-  - FraudProtection
+  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Create Azure AD apps in Azure Portal or PowerShell 
@@ -26,12 +26,12 @@ You can create Microsoft Azure Active Directory (Azure AD) apps within Microsoft
 5. In the **Name** field, enter any name (for example, **API service account**). In the **Supported account types** field group, leave the **Accounts in this organizational directory only (\<your tenant name\>)** option selected. The Redirect (Web) URI is optional. It can be any URL that starts with **https://**. 
 
 ## Create an Azure AD app registration in PowerShell 
-If you prefer to use Microsoft Windows PowerShell to create an Azure AD app registration, see [New-AzureRmADApplication](https://docs.microsoft.com/powershell/module/azurerm.resources/new-azurermadapplication?view=azurermps-6.13.0). 
+If you prefer to use Microsoft Windows PowerShell to create an Azure AD app registration, see [New-AzureRmADApplication](/powershell/module/azurerm.resources/new-azurermadapplication?preserve-view=true&view=azurermps-6.13.0). 
 
 ## Grant your Azure AD app access to the Dynamics 365 Fraud Protection real-time APIs 
-For more information about how to configure API access to your Dynamics 365 Fraud Protection endpoint via the Azure portal, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](https://docs.microsoft.com/azure/active-directory/develop/howto-create-service-principal-portal). 
+For more information about how to configure API access to your Dynamics 365 Fraud Protection endpoint via the Azure portal, see [How to: Use the portal to create an Azure AD application and service principal that can access resources](/azure/active-directory/develop/howto-create-service-principal-portal). 
 
-To assign the appropriate Dynamics 365 API role to your Azure AD app using PowerShell, use the [New-AzureADServiceAppRoleAssignment Windows PowerShell script](https://docs.microsoft.com/powershell/module/azuread/new-azureadserviceapproleassignment?view=azureadps-2.0), as shown in the following example. 
+To assign the appropriate Dynamics 365 API role to your Azure AD app using PowerShell, use the [New-AzureADServiceAppRoleAssignment Windows PowerShell script](/powershell/module/azuread/new-azureadserviceapproleassignment?preserve-view=true&view=azureadps-2.0), as shown in the following example. 
 
 ```console
 $c_app_name = "<your Azure AD application display name here>"
@@ -50,3 +50,6 @@ $c_appRole = $sp.AppRoles | Where-Object { $_.DisplayName -eq $c_app_role_name }
 $c_sp = Get-AzureADServicePrincipal -Filter "displayName eq '$c_app_name'"
 New-AzureADServiceAppRoleAssignment -ObjectId $c_sp.ObjectId -PrincipalId $c_sp.ObjectId -ResourceId $sp.ObjectId -Id $c_appRole.Id 
 ```
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
