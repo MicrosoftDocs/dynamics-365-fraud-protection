@@ -83,60 +83,83 @@ To integrate your systems with Dynamics 365 Fraud Protection, complete the follo
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen.
 
 ### Generate an access token
-You must generate this token and provide it with each API call. Note that access tokens have a limited lifespan. We recommend that you cache and reuse it until it's time to get a new access token.
-
+You must generate an Azure AD access token and provide it with each DFP API call. Note that access tokens have a limited lifespan. We recommend that you cache and reuse the token until it gets close to expiring, at which time you can get a new access token.
 The following C# code samples provide examples of acquiring a token with your certificate or secret. Replace the placeholders with your specific information.
+For both of these C# samples, you will need to import the following [Microsoft.Identity.Client NuGet package](https://www.nuget.org/packages/Microsoft.Identity.Client/).
+
+For samples in other languages, see https://aka.ms/aaddev. 
 
 **Certificate thumbprint**
 ```cs
-public async Task<string> AcquireTokenWithCertificateAsync()
+/// <summary>
+/// Gets an access token using an app ID and private certificate key.
+/// </summary>
+/// <param name="tenantId">Directory (tenant) ID, in GUID format</param>
+/// <param name="clientId">Application (client) ID</param>
+/// <param name="certPath">File path to the certificate file (pfx) used to authenticate your application to AAD</param>
+/// <param name="certPassword">Password to access to the certificate file's private key</param>
+public async Task<string> AcquireTokenWithCertificate(string tenantId, string clientId, string certPath, string certPassword)
 {
-    var x509Cert = CertificateUtility.GetByThumbprint("<Certificate thumbprint>");
-    var clientAssertion = new ClientAssertionCertificate("<Client ID>", x509Cert);
-    var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
-    var authenticationResult = await context.AcquireTokenAsync("<API endpoint for INT or PROD>", clientAssertion);
+    var certificate = new X509Certificate2(certPath, certPassword);
 
-    return authenticationResult.AccessToken;
+    var app = ConfidentialClientApplicationBuilder.Create(clientId)
+            .WithAuthority(AzureCloudInstance.AzurePublic, tenantId)
+            .WithCertificate(certificate)
+            .Build();
+
+    var scopes = new string[] { "<API endpoint for INT or PROD>; should be https://api.dfp.microsoft-int.com/.default or https://api.dfp.microsoft.com/.default" };
+
+    try
+    {
+        var result = await app.AcquireTokenForClient(scopes).ExecuteAsync();
+        return result.AccessToken;
+    }
+    catch (MsalServiceException ex)
+    {
+        //Handle authentication exceptions
+        throw ex;
+    }
 }
 ```
 
 **Secret**
 ```cs
-public async Task<string> AcquireTokenWithSecretAsync()
-{
-    var clientAssertion = new ClientCredential("<Client ID>", "<Client secret>");
-    var context = new AuthenticationContext("<Authority URL. Typically https://login.microsoftonline.com/[Directory_ID]>");
-    var authenticationResult = await context.AcquireTokenAsync("<API endpoint for INT or PROD>", clientAssertion);
 
-    return authenticationResult.AccessToken;
-}
-```
-
-
-Behind the scenes, the code above generates an HTTP request and receives a response similar to the following.
-
-**Response**
-```http
-HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
-Date: <date>
-Content-Length: <content length>
+/// <summary>
+/// Gets an access token using an app ID and secret.
+/// </summary>
+/// <param name="tenantId">Directory (tenant) ID, in GUID format</param>
+/// <param name="clientId">Application (client) ID</param>
+/// <param name="clientSecret">The secret (password) used to authenticate the client (application) ID</param>
+public async Task<string> AcquireTokenWithSecret(string tenantId, string clientId, string clientSecret)
 
 {
-  "token_type":"Bearer",
-  "expires_in":"3599",
-  "ext_expires_in":"3599",
-  "expires_on":"<date timestamp>",
-  "not_before":"<date timestamp>",
-  "resource":"https://api.dfp.dynamics.com",
-  "access_token":"<your access token; e.g.: eyJ0eXA...NFLCQ>"
+    var app = ConfidentialClientApplicationBuilder.Create(clientId)
+            .WithAuthority(AzureCloudInstance.AzurePublic, tenantId)
+            .WithClientSecret(clientSecret)
+            .Build();
+
+    var scopes = new string[] { "<API endpoint for INT or PROD>; should be https://api.dfp.microsoft-int.com/.default or https://api.dfp.microsoft.com/.default" };
+
+    try
+    {
+        var result = await app.AcquireTokenForClient(scopes).ExecuteAsync();
+        return result.AccessToken;
+    }
+    catch (MsalServiceException ex)
+    {
+        //Handle authentication exceptions
+        throw ex;
+    }
 }
 ```
-
+The AuthenticationResult object in each case contains the AccessToken itself, and an ExpiresOn property which indicates when the token will become invalid. 
 
 For more information, refer to the Azure documentation: 
-- <a href="/azure/architecture/multitenant-identity/client-assertion" target="_blank">Use client assertion to get access tokens from Azure AD</a>
-- <a href="/azure/architecture/multitenant-identity/token-cache" target="_blank">Cache access tokens</a>
+
+- <a href="https://docs.microsoft.com/azure/active-directory/develop/msal-overview" target="_blank">Overview of Microsoft Authentication Library (MSAL)</a>
+- <a href="https://docs.microsoft.com/azure/active-directory/develop/msal-acquire-cache-tokens" target="_blank">Acquire and cache tokens using the Microsoft authentication library (MSAL)</a>
+
 
 ### Call the APIs
 To call the APIs, follow these steps:
