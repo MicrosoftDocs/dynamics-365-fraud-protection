@@ -67,7 +67,7 @@ PCI certifications provide solid guardrails and increased trust to sell our serv
 
 ## Expandability of transaction trust knowledge
 
-Fraud Protection's transaction acceptance booster (TAB) feature allows customers to send contextual data about a transaction, also known as transaction trust knowledge, to issuing banks. This contextual data helps the issuing banks make a more informed assessment and results in more accurate decisions by issuing banks. 
+Fraud Protection's transaction acceptance booster feature allows customers to send contextual data about a transaction, also known as transaction trust knowledge, to issuing banks. This contextual data helps the issuing banks make a more informed assessment and results in more accurate decisions by issuing banks. 
 
 In this release we have enabled expandability that allows customers to send additional raw data beyond the standard format.
 
