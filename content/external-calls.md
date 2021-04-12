@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains how to use external calls to ingest data from APIs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 04/01/2021
+ms.date: 04/12/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -40,7 +40,11 @@ Before you create an external call, you should know about the following limitati
         > You can't change the name of an external call after you use it in a rule.
 
     - **Description** – Add a description to help your team quickly identify the external call.
-    - **Web Request** – Select the appropriate HTTP method (**GET** or **POST**), and then enter the API endpoint.
+    - **Web request** – Select the appropriate HTTP method (**GET** or **POST**), and then enter the API endpoint.
+
+        > [!NOTE]
+        > Only HTTPS endpoints are supported.
+
     - **Authentication** – Select the method that should be used to authenticate incoming requests:
 
         - If you select **Anonymous**, an authorization header won't be sent.
@@ -56,18 +60,18 @@ Before you create an external call, you should know about the following limitati
         > [!NOTE]
         > All parameter values are interpreted as strings.
 
-    - **Sample Request** – Provide an example of the request that is sent to your external call. The request should reflect the parameter names and values that you specified, and it can't be edited.
+    - **Sample request** – Provide an example of the request that is sent to your external call. The request should reflect the parameter names and values that you specified, and it can't be edited.
 
         For *GET* methods, the request URL is shown. For *POST* methods, the request body is shown.
 
         The sample request is used to make a sample call to your endpoint, either before creation or whenever you select **Test**.
 
-    - **Sample Response** – Provide an example of the data data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and  can be referenced in your rules. The sample that you provide here is shown as you create rules.
+    - **Sample response** – Provide an example of the data data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and  can be referenced in your rules. The sample that you provide here is shown as you create rules.
 
         Select **Test** to automatically enter a real response from your API in this field.
 
     - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 1000.
-    - **Default Response** – Specify the default response that should be returned if your request fails or exceeds the specified time-out. The value must be valid JSON object or JSON element.
+    - **Default response** – Specify the default response that should be returned if your request fails or exceeds the specified time-out. The value must be valid JSON object or JSON element.
 
 3. Optional: To send a sample request to your API endpoint and view the response, select **Test**. For more information, see the next section, [Test an external call](external-calls.md#test-an-external-call).
 4. When you've finished setting the required fields, select **Create**.
@@ -144,7 +148,7 @@ For information about how to integrate this data with your own organization's wo
     > You can't delete an external call after it's referenced in a rule.
 
 - To view detailed performance metrics for an external call, select **Performance**.
-- To test that Fraud Protection can still connect to your external call, select the ellipsis (**...**), and then select **Test Connection**.
+- To test that Fraud Protection can still connect to your external call, select the ellipsis (**...**), and then select **Test connection**.
 
 ## Use an external call in rules
 
