@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic describes how to set up a trial version of Dynamics 365 Fraud Protection.
+description: This topic describes how to set up a trial version of Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 04/02/2021
@@ -14,7 +14,7 @@ title: Set up a trial version of Dynamics 365 Fraud Protection
 
 # Set up a trial version of Dynamics 365 Fraud Protection
 
-This document guides you through the prerequisites of setting up a trial version of Dynamics 365 Fraud Protection (Fraud Protection). After you complete the tasks in this document, you will be ready to use Fraud Protection to protect your business.
+This document guides you through the prerequisites of setting up a trial version of Microsoft Dynamics 365 Fraud Protection. After you complete the tasks in this document, you will be ready to use Fraud Protection to protect your business.
 
 ## Prerequisites for setting up Fraud Protection
 
