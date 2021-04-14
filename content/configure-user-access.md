@@ -16,7 +16,7 @@ title: Configure user access to Dynamics 365 Fraud Protection
 
 # Configure user access to Dynamics 365 Fraud Protection
 
-Microsoft Dynamics 365 Fraud Protection (Fraud Protection) allows you to grant users various levels of access to the tool based on logical or functional roles. Administrators can use the User access section to assign these roles.
+Microsoft Dynamics 365 Fraud Protection allows you to grant users various levels of access to the tool based on logical or functional roles. Administrators can use the User access section to assign these roles.
 
 ## Assign roles 
 
