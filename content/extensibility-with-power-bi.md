@@ -14,7 +14,7 @@ title: Work with Power BI
 ---
 # Work with Power BI
 
-[Microsoft Power BI](/power-bi/) makes the process of working with event data from Dynamics 365 Fraud Protection (Fraud Protection) customizable and easy. Power BI lets you produce informative and interactive data visualizations.
+[Microsoft Power BI](/power-bi/) makes the process of working with event data from Microsoft Dynamics 365 Fraud Protection customizable and easy. Power BI lets you produce informative and interactive data visualizations.
 
 ## Getting started
 
