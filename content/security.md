@@ -9,10 +9,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Security overview for Microsoft Dynamics 365 Fraud Protection
+title: Security overview for Dynamics 365 Fraud Protection
 ---
 
-# Security overview for Microsoft Dynamics 365 Fraud Protection
+# Security overview for Dynamics 365 Fraud Protection
 
 By providing Microsoft Dynamics 365 Fraud Protection, Microsoft has implemented, and will maintain, appropriate technical and organizational measures to protect Customer Data, which includes personal data. These measures are set forth in Microsoft Security Policy. Microsoft will make that policy available to customers, along with descriptions of the security controls in place for Fraud Protection, and other information reasonably requested by the customer regarding Microsoft security practices and policies. 
 
