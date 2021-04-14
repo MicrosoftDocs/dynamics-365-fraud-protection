@@ -14,7 +14,7 @@ title: Privacy protection for customer data
 
 # Privacy protection for customer data
 
-Fraud protection is a knowledge-intensive task. Microsoft Dynamics 365 Fraud Protection (Fraud Protection) processes data about payment transactions, online account activities, and devices interacting with Fraud Protection customers' ecommerce properties to help: 
+Fraud protection is a knowledge-intensive task. Microsoft Dynamics 365 Fraud Protection processes data about payment transactions, online account activities, and devices interacting with Fraud Protection customers' ecommerce properties to help: 
 
 - Prevent and identify fraudulent payment transactions.  
 - Discern legitimate transactions to drive down "false positives." 
