@@ -26,7 +26,7 @@ To get started, you must set up the following items:
 - An [event tracing subscription in Dynamics 365 Fraud Protection](./event-tracing.md)
 	
 > [!NOTE]
-> We recommend that you set up a *separate* event hub for the subscription for each event *type*. For example, you can set up an **audit-events** event hub that has a Dynamics 365 Fraud Protection event tracing subscription to send *audit events*. Then set up a **latency-events** event hub that has a separate subscription to send *latency events*. You can set up both event hubs under the same namespace.
+> We recommend that you set up a *separate* event hub for the subscription for each event *type*. For example, you can set up an **audit-events** event hub that has a Microsoft Dynamics 365 Fraud Protection event tracing subscription to send *audit events*. Then set up a **latency-events** event hub that has a separate subscription to send *latency events*. You can set up both event hubs under the same namespace.
 
 After you complete the setup that is described in this topic, you will have the basics that are required to work with Fraud Protection event data. The following data flow is also set up.
 
