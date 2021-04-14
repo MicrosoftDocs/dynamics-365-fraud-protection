@@ -17,7 +17,7 @@ title: Integrate account protection APIs
 
 # Integrate account protection APIs
 
-To take advantage of the full suite of features in Microsoft Dynamics 365 Fraud Protection (Fraud Protection), send your transaction data to the real-time application programming interfaces (APIs). In the evaluate experience, you can then analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions that are based on the rules that you've configured.
+To take advantage of the full suite of features in Microsoft Dynamics 365 Fraud Protection, send your transaction data to the real-time application programming interfaces (APIs). In the evaluate experience, you can then analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions that are based on the rules that you've configured.
 
 Depending on how you choose to use Fraud Protection, you can use different **account protection APIs**. For example, *AccountCreation*, *AccountLogin*, *AccountCreationStatus*, *AccountLoginStatus*, *AccountUpdate*, and *Label*.
 
