@@ -42,7 +42,7 @@ Here are two examples of rules that you can create in the Rules editor after you
 
 ### Step 1 (optional)
 
-In step 1, you select the target data that your rule will apply to. This data consists of a combination of a node, attributes, and a list. If you must first create a new list, create it offline and then upload it to Dynamics 365 Fraud Protection (Fraud Protection). The file must be a .csv file that includes headers.
+In step 1, you select the target data that your rule will apply to. This data consists of a combination of a node, attributes, and a list. If you must first create a new list, create it offline and then upload it to Microsoft Dynamics 365 Fraud Protection. The file must be a .csv file that includes headers.
 
 The following table defines the node and attribute combinations that you can use to build your lists. 
 
