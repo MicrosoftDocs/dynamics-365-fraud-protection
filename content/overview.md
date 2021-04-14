@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic provides an overview of the fraud protection features and its mission.
+description: This topic provides an overview of Microsoft Dynamics 365 Fraud Protection features and its mission.
 
 ms.author: v-madeq
 ms.service: fraud-protection
@@ -27,7 +27,7 @@ Because fraudsters who engage in online fraud and abuse reap a high return on in
 
 *Our mission is to help enterprises fight fraud and abuse while they keep their doors open for genuine customers and partners.*
 
-Microsoft Dynamics 365 Fraud Protection (Fraud Protection) initially focused on payment fraud protection. It helped enable an e-commerce merchant drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience of its customers. In subsequent release waves, we have added several new features to enhance this capability based on customer feedback. We are lighting up a new set of capabilities called **loss prevention** that help brick and mortar retail store operations fight fraud and abuse by reducing shrinkage losses and improving store efficiencies. We have significantly expanded the account creation protection capability portfolio via a new set of capabilities called **account protection**.
+Microsoft Dynamics 365 Fraud Protection initially focused on payment fraud protection. It helped enable an e-commerce merchant drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience of its customers. In subsequent release waves, we have added several new features to enhance this capability based on customer feedback. We are lighting up a new set of capabilities called **loss prevention** that help brick and mortar retail store operations fight fraud and abuse by reducing shrinkage losses and improving store efficiencies. We have significantly expanded the account creation protection capability portfolio via a new set of capabilities called **account protection**.
 
 ## How Fraud Protection helps you protect your business
 
