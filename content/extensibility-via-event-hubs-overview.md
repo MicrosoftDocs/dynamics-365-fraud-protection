@@ -15,7 +15,7 @@ title: Extensibility via Event Hubs
 
 # Extensibility via Event Hubs
 
-This content guides you through the process of setting up and using the *event tracing data* that is available from Microsoft Dynamics 365 Fraud Protection (Fraud Protection). This data includes, but isn't limited to, data for *audit log events*, *latency events*, and *trace events*.
+This content guides you through the process of setting up and using the *event tracing data* that is available from Microsoft Dynamics 365 Fraud Protection. This data includes, but isn't limited to, data for *audit log events*, *latency events*, and *trace events*.
 
 Through pure-code software development kits (SDKs), you can integrate this data with your own organization's workflows, requirements for granular control, and custom needs. Additionally, you can take advantage of fast-development tools such as Azure Logic Apps, Power BI, and Power Apps for powerful automation, reports, and applications.
 
