@@ -18,7 +18,7 @@ title: Work with code
 You can use code for the following purposes:
 
 - Test that your event hub is working correctly by sending test events to it.
-- Listen to and view sample events from the event tracing subscriptions that you set up in Microsoft Dynamics 365 Fraud Protection (Fraud Protection).
+- Listen to and view sample events from the event tracing subscriptions that you set up in Microsoft Dynamics 365 Fraud Protection.
 - Have full control as you work with eventing data (for example, store events in persistent storage for auditing purposes and run custom automated scripts).
 
 ## Getting started
