@@ -16,7 +16,7 @@ title: Create and provision your Azure tenant
 
 An Azure tenant represents an organization within Microsoft Azure Active Directory (Azure AD). It is a dedicated instance of the Azure AD service that an organization receives and owns when it signs up for a Microsoft cloud service such as Azure, Microsoft Intune, or Microsoft 365. Essentially, an Azure tenant is a way to manage user access to Azure resources to ensure you control access to your data.
 
-You can use either of the following approaches to provision your Azure tenant for use with Microsoft Dynamics 365 Fraud Protection (Fraud Protection):
+You can use either of the following approaches to provision your Azure tenant for use with Microsoft Dynamics 365 Fraud Protection:
 
 - [Provision your existing Azure tenant](provision-azure-tenant.md#provision-your-existing-azure-tenant).
 - [Create and provision a new tenant in Azure AD](provision-azure-tenant.md#create-and-provision-a-new-tenant-in-azure-ad).
