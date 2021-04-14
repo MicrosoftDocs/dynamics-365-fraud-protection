@@ -9,10 +9,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Support your customers with Microsoft Dynamics 365 Fraud Protection
+title: Support your customers with Dynamics 365 Fraud Protection
 ---
 
-# Support your customers with Microsoft Dynamics 365 Fraud Protection
+# Support your customers with Dynamics 365 Fraud Protection
 
 Risk support in Microsoft Dynamics 365 Fraud Protection lets your agents evaluate customer escalations, unblock customers whose purchase attempts are being incorrectly declined, and block future purchases from suspicious users, as appropriate. Your fraud investigators can search and investigate the history of your customers' past transactions with your business. Therefore, they can provide faster turnaround for decisions.
 
