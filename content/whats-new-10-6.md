@@ -15,7 +15,7 @@ title: What's new in Dynamics 365 Fraud Protection October 2020 release
 
 # What's new in Dynamics 365 Fraud Protection October 2020 release
 
-The October 2020 release of Microsoft Dynamics 365 Fraud Protection (Fraud Protection) introduces several new capabilities and enhancements. 
+The October 2020 release of Microsoft Dynamics 365 Fraud Protection introduces several new capabilities and enhancements. 
 
 ## Manual review (preview) 
 
