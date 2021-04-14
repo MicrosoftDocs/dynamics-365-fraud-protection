@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic explains how to use lists to manage information, fight fraud, and enforce business policies in Dynamics 365 Fraud Protection.
+description: This topic explains how to use lists to manage information, fight fraud, and enforce business policies in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 04/02/2021
@@ -29,7 +29,7 @@ Support lists are system-defined lists of email addresses and payment instrument
 
 ### Format requirements
 
-To upload a custom list in Microsoft Dynamics 365 Fraud Protection (Fraud Protection), you must first create and save the list as a CSV file on your local computer. The file must meet the following requirements:
+To upload a custom list in Microsoft Dynamics 365 Fraud Protection, you must first create and save the list as a CSV file on your local computer. The file must meet the following requirements:
 
 - It must be in CSV UTF-8 (comma-delimited) format (\*.csv).
 - It must contain a unique header for every column.
