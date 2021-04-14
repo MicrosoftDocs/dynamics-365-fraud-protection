@@ -23,7 +23,7 @@ For example, these flows are excellent for automatically sending an email when a
 
 ## Getting started
 
-Dynamics 365 Fraud Protection (Fraud Protection) offers many types of events that you can receive and work with through Logic Apps.
+Microsoft Dynamics 365 Fraud Protection offers many types of events that you can receive and work with through Logic Apps.
 
 To accelerate the setup process, go to [this GitHub repository (repo)](https://github.com/microsoft/Dynamics-365-Fraud-Protection-Samples/tree/master/logic%20app%20templates). This repo contains Logic App templates that will parse the event data for you. Therefore, you can immediately start to interact with the data. Follow the setup and usage instructions in the readme file that is provided in the repo.
 
