@@ -9,10 +9,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Data schemas for loss prevention in Microsoft Dynamics 365 Fraud Protection
+title: Data schemas for loss prevention in Dynamics 365 Fraud Protection
 ---
 
-# Data schemas for loss prevention in Microsoft Dynamics 365 Fraud Protection
+# Data schemas for loss prevention in Dynamics 365 Fraud Protection
 
 This topic outlines the schemas that define the data that is used to generate models and determine risk assessments.
 
