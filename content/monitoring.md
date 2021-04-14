@@ -15,7 +15,7 @@ title: Overview of API call monitoring tools
 
 # Overview of API call monitoring tools
 
-The monitoring tools in Microsoft Dynamics 365 Fraud Protection (Fraud Protection) provide data about the API calls you have made to the service. You can also consult the error logs to aid in identifying any issues. 
+The monitoring tools in Microsoft Dynamics 365 Fraud Protection provide data about the API calls you have made to the service. You can also consult the error logs to aid in identifying any issues. 
 
 ## View the monitoring page
 
