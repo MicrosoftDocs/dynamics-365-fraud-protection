@@ -15,7 +15,7 @@ title: Create Azure AD apps in Azure Portal or PowerShell
 
 # Create Azure AD apps in Azure Portal or PowerShell 
 
-You can create Microsoft Azure Active Directory (Azure AD) apps within Microsoft Dynamics 365 Fraud Protection (Fraud Protection) on the Real-time APIs page. For reference, see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md). If you want to set them up directly in the Azure portal, follow these steps to create an Azure AD app registration. 
+You can create Microsoft Azure Active Directory apps within Microsoft Dynamics 365 Fraud Protection on the Real-time APIs page. For reference, see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md). If you want to set them up directly in the Azure portal, follow these steps to create an Azure AD app registration. 
 
 ## Create an Azure AD app registration in the Azure portal 
 
