@@ -16,7 +16,7 @@ title: Compliance overview for Dynamics 365 Fraud Protection
 
 # Compliance overview for Dynamics 365 Fraud Protection
 
-Microsoft Dynamics 365 Fraud Protection (Fraud Protection) was designed with compliance, privacy, security, and confidentiality in mind and is only intended to be used to prevent fraud and help identify legitimate payment transactions. Microsoft offers Fraud Protection under the Microsoft Online Services Terms, which includes robust Data Protection Terms.
+Microsoft Dynamics 365 Fraud Protection was designed with compliance, privacy, security, and confidentiality in mind and is only intended to be used to prevent fraud and help identify legitimate payment transactions. Microsoft offers Fraud Protection under the Microsoft Online Services Terms, which includes robust Data Protection Terms.
 
 To review the Microsoft Online Services Terms, which include Fraud Protection-specific provisions, to determine if Fraud Protection meets your requirements, visit: https://www.microsoft.com/licensing/product-licensing/products.
 
