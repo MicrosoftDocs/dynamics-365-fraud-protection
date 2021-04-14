@@ -21,7 +21,7 @@ Here is a list of links to official and current pricing options for the various 
 - [Microsoft Azure Event Hubs](https://azure.microsoft.com/pricing/details/event-hubs/) – A tool that lets you receive and send events.
 - [Azure storage accounts](https://azure.microsoft.com/pricing/details/storage/) – A tool that lets you work with code software development kits (SDKs).
 - [Power Apps](https://powerapps.microsoft.com/pricing/) – A quick, low-code application development tool for fast, powerful apps.
-- [Azure Logic Apps](https://azure.microsoft.com/pricing/details/logic-apps/) – A tool that lets you parse Dynamics 365 Fraud Protection (Fraud Protection) events so that the data can be stored in Common Data Service, and that lets you quickly create automated workflows.
+- [Azure Logic Apps](https://azure.microsoft.com/pricing/details/logic-apps/) – A tool that lets you parse Dynamics 365 Fraud Protection events so that the data can be stored in Common Data Service, and that lets you quickly create automated workflows.
 - [Power Automate](https://flow.microsoft.com/pricing/) – A tool that is similar to Logic Apps, but that is packaged and priced differently.
 
     If you require a tool that lets you set limits and restrictions for Power Automate, see [Limits and configuration in Power Automate](/power-automate/limits-and-config). When you're trying to decide between Logic Apps and Power Automate, consider the size of your team and your technical requirements. Larger organizations might prefer the Logic Apps pricing plan to the per-user pricing plan for Power Automate.
