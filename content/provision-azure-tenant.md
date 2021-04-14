@@ -21,7 +21,7 @@ You can use either of the following approaches to provision your Azure tenant fo
 - [Provision your existing Azure tenant](provision-azure-tenant.md#provision-your-existing-azure-tenant).
 - [Create and provision a new tenant in Azure AD](provision-azure-tenant.md#create-and-provision-a-new-tenant-in-azure-ad).
 
-If you are unsure if your company already has an Azure tenant, see the note in the "Create and provision a new tenant in Azure AD" section for help.
+If you are unsure if your company already has an Azure tenant, see the note in the [Create and provision a new tenant in Azure AD](provision-azure-tenant.md#create-and-provision-a-new-tenant-in-azure-ad) section for help.
 
 You will need Azure tenant administrator permissions to complete provisioning. If you don't have an admin account, contact the tenant admin in your organization for support.
 
@@ -32,7 +32,7 @@ You will need Azure tenant administrator permissions to complete provisioning. I
 
 If your company already has an Azure tenant and you are an administrator, sign in to Fraud Protection using your company email address. On successful validation, the Fraud Protection service will be provisioned for your Azure tenant, and you can [configure access for other users](configure-user-access.md) and begin [integrating your systems with the Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md).
 
-You will be prompted for a tenant if there is no Azure tenant for your organization or if you are not an administrator for your existing tenant. If you need to configure a new tenant, see the instructions under "Create and provision a new tenant in Azure AD." If you have a tenant but do not have sufficient administrative privileges, contact your existing administrator for access.
+You will be prompted for a tenant if there is no Azure tenant for your organization or if you are not an administrator for your existing tenant. If you need to configure a new tenant, see the instructions in the [Create and provision a new tenant in Azure AD](provision-azure-tenant.md#create-and-provision-a-new-tenant-in-azure-ad) section. If you have a tenant but do not have sufficient administrative privileges, contact your existing administrator for access.
 
 ## Create and provision a new tenant in Azure AD
 
