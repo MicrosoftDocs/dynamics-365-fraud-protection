@@ -14,7 +14,7 @@ title: Work with Power Apps
 ---
 # Work with Power Apps
 
-Microsoft Power Apps offer a low-code, drag-and-drop, formula-based web tool that you can use to intuitively create full applications (mobile or desktop). These apps can be useful for the more interactive and complex processes that your organization might want to develop by using eventing data from Dynamics 365 Fraud Protection (Fraud Protection).
+Microsoft Power Apps offer a low-code, drag-and-drop, formula-based web tool that you can use to intuitively create full applications (mobile or desktop). These apps can be useful for the more interactive and complex processes that your organization might want to develop by using eventing data from Microsoft Dynamics 365 Fraud Protection.
 
 ## Getting started
 
