@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic explains technical and organizational measures that help protect customer data and personal data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 07/07/2020
+ms.date: 04/16/2021
 
 ms.topic: conceptual
 search.app: 
@@ -32,6 +32,7 @@ Here is a list of compliance certificate URLs for Fraud Protection:
 - [SOC 2](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuide?command=Download&downloadType=Document&downloadId=22d75122-9d83-4b44-8e25-c273dcbafdc3&docTab=4ce99610-c9c0-11e7-8c2c-f908a777fa4d_SOC_%2F_SSAE_16_Reports)
 - [SOC 3](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuide?command=Download&downloadType=Document&downloadId=ab827a49-6503-48ea-aa7d-e178efbb9eb1&docTab=4ce99610-c9c0-11e7-8c2c-f908a777fa4d_SOC_%2F_SSAE_16_Reports)
 - [HITRUST](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=02eaae7a-9d65-42e6-aec8-a8e22de1a494&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_GRC_Assessment_Reports)
+- [PCI DSS Compliance](https://go.microsoft.com/fwlink/?linkid=2160978)
 
 ## Security documentation and standard operating procedures FAQ
 
