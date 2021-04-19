@@ -3,18 +3,18 @@ author: yvonnedeq
 description: This topic describes notifications regarding service incidents and other required actions related to the use of Microsoft Dynamics 365 Fraud Protection service.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 01/14/2021
+ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Notifications for Fraud Protection service
+title: Notifications for Dynamics 365 Fraud Protection service
 ---
 
-# Notifications for Fraud Protection service
+# Notifications for Dynamics 365 Fraud Protection service
 
-Microsoft regularly sends communications regarding service incidents, service changes, maintenance, releases, and other required actions related to your use of the Microsoft Dynamics 365 Fraud Protection (Fraud Protection) service. These communications are posted to the Microsoft 365 Service Health Dashboard and the Message center.
+Microsoft regularly sends communications regarding service incidents, service changes, maintenance, releases, and other required actions related to your use of the Microsoft Dynamics 365 Fraud Protection  service. These communications are posted to the Microsoft 365 Service Health Dashboard and the Message center.
 
 ## Message center
 

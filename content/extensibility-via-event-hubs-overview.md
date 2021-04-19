@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic provides an overview about how you can use Microsoft Azure Event Hubs with code software development kits (SDKs) and Microsoft Power Platform to extend the functionality of Dynamics 365 Fraud Protection and incorporate Fraud Protection data into an organization's processes and workflows.
+description: This topic provides an overview about how you can use Microsoft Azure Event Hubs with code software development kits (SDKs) and Microsoft Power Platform to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 10/23/2020

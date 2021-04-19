@@ -1,21 +1,21 @@
 ---
 author: yvonnedeq
-description: This topic provides an overview of the fraud protection features and its mission.
+description: This topic provides an overview of Microsoft Dynamics 365 Fraud Protection features and its mission.
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 10/23/2020
+ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Overview of Fraud Protection features
+title: Overview of Dynamics 365 Fraud Protection features
 
 ---
 
 
-# Overview of Fraud Protection features
+# Overview of Dynamics 365 Fraud Protection features
 
 Today's digitally transformed enterprise conducts most of its business online and in real time. Little human intervention is involved. Although this approach helps reduce costs and improve the customer experience, it also exposes the enterprise to serious threats of fraud from sophisticated users who try to take advantage of the online channel's relative anonymity and accessibility. For example, in e-commerce, some transactions are maliciously created via compromised accounts and stolen payment instruments. Other malicious activities might include account takeover, abuse of free trials, fake product reviews, warranty fraud, refund fraud, reseller fraud, abuse of program discounts. All these activities, and others, can affect the enterprise's profitability and reputation.
 

@@ -17,7 +17,7 @@ title: Privacy protection for customer data
 Fraud protection is a knowledge-intensive task. Microsoft Dynamics 365 Fraud Protection processes data about payment transactions, online account activities, and devices interacting with Fraud Protection customers' ecommerce properties to help: 
 
 - Prevent and identify fraudulent payment transactions.  
-- Discern legitimate transactions to drive down “false positives.” 
+- Discern legitimate transactions to drive down "false positives." 
 - Improve customers’ online shopping experience.  
 
 Designed with compliance, security, confidentiality, and privacy in mind, Fraud Protection uses machine learning, artificial intelligence, and data de-identification techniques to evaluate payment transactions, certain account activities, and other events for risk and provides customers insights about the health of their commerce operations.  
@@ -69,7 +69,7 @@ Payment transaction data, account activity data, and device data are enriched an
   - Device data collected from a single device is converted to a fuzzy identifier.
 
 
-### Dynamics 365 Fraud Protection hashes certain customer data to be processed in the Fraud Network  
+### Fraud Protection hashes certain customer data to be processed in the Fraud Network  
 
 Fraud Protection hashes customer data containing personal data that can identify a data subject prior to transmitting it into the Fraud Network where it is processed to generate fraud insights. The hashing technique used by Fraud Protection turns this customer data into unique tokens, or strings of characters. For example, the email address “JohnDoe@outlook.com” will always map to the same string of characters, like “TK239732.”  This technique serves the following purposes.
 

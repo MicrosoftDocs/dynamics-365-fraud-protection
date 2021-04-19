@@ -1,22 +1,20 @@
 ---
 author: yvonnedeq
-description: This topic describes how to protect customer accounts with Fraud Protection.
+description: This topic describes how to protect customer accounts with Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/11/2021
+ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Protect customer accounts with Fraud Protection
+title: Protect customer accounts with Dynamics 365 Fraud Protection
 ---
 
-# Protect customer accounts with Fraud Protection
+# Protect customer accounts with Dynamics 365 Fraud Protection
 
-## Overview
-
-Microsoft Dynamics 365 Fraud Protection (Fraud Protection) includes account protection capabilities to help you assess whether any suspicious activity is occurring in your business ecosystem. These capabilities include risk assessment capabilities that you can use to block or challenge fraudulent attempts to create accounts or compromise existing accounts. Here are some examples:
+Microsoft Dynamics 365 Fraud Protection includes account protection capabilities to help you assess whether any suspicious activity is occurring in your business ecosystem. These capabilities include risk assessment capabilities that you can use to block or challenge fraudulent attempts to create accounts or compromise existing accounts. Here are some examples:
 
 -	APIs for real-time risk assessment
 -	A rule and list experience that you can use to optimize your risk strategy according to your business needs
@@ -470,5 +468,5 @@ Congratulations! You have successfully completed the training and are ready to u
 For information about how to access and use other Fraud Protection capabilities, see the following documents:
 
 - [Set up device fingerprinting](device-fingerprinting.md)
-- [Protect purchases with Fraud Protection](promocode-set-up-purchase-protection.md)
-- [Prevent loss with Fraud Protection](promocode-set-up-loss-prevention.md)
+- [Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
+- [Prevent loss with Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md)

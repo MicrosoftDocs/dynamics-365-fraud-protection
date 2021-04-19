@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic provides information about custom assessments, and explains how to create and define them.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/05/2021
+ms.date: 04/02/2021
 
 ms.topic: conceptual
 search.app: 
@@ -15,8 +15,6 @@ title: Custom assessment
 ---
 
 # Custom assessment
-
-## Overview
 
 Effective fraud management is a multi-tier strategy. To maximize fraud detection and minimize customer friction, you must assess interactions at various phases of a user's journey, and decide whether the interactions should be allowed, challenged, or prevented. Every business is different, and so are the associated user interactions that transmit signals about potential fraud. For example, profile updates, such as changes to a user's address or payment information, might be a key event for an e-commerce business. Other examples of user interactions that might be key events, depending on the business model, include submission of reviews, updates of seat preferences on a travel site, the addition of family and friends on a subscription or gaming service, and submission of a service support ticket or a complaint.
 
