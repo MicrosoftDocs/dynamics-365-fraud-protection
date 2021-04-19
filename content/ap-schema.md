@@ -19,7 +19,7 @@ This topic outlines the schema via the application programming interface (API). 
 
 ## AccountCreation
 
-The **AccountCreation** API lets you share information and context with Fraud Protection about incoming new account creation events for risk assessment.
+The **AccountCreation** API lets you share information and context with Microsoft Dynamics 365 Fraud Protection about incoming new account creation events for risk assessment.
 
 | Object                              | Attribute                   | Type     | Description |
 |-------------------------------------|-----------------------------|----------|-------------|

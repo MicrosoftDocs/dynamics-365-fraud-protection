@@ -42,7 +42,7 @@ Here are two examples of rules that you can create in the Rules editor after you
 
 ### Step 1 (optional)
 
-In step 1, you select the target data that your rule will apply to. This data consists of a combination of a node, attributes, and a list. If you must first create a new list, create it offline and then upload it to Fraud Protection. The file must be a .csv file that includes headers.
+In step 1, you select the target data that your rule will apply to. This data consists of a combination of a node, attributes, and a list. If you must first create a new list, create it offline and then upload it to Microsoft Dynamics 365 Fraud Protection. The file must be a .csv file that includes headers.
 
 The following table defines the node and attribute combinations that you can use to build your lists. 
 
@@ -76,7 +76,7 @@ To filter your view, follow these steps.
 
 In the **Transaction data** chart on the left side of the **Virtual fraud analyst** tab, the x-axis represents the risk score, and the y-axis represents the number of transactions.
 
-The machine learning model in Microsoft Dynamics 365 Fraud Protection evaluates every transaction by using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a range of risk scores from 0 (zero) through 999.
+The machine learning model in Fraud Protection evaluates every transaction by using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a range of risk scores from 0 (zero) through 999.
 
 Based on the risk score, the interactive chart shows the impact of fraud on your revenue. The following categories are used: **Approved transactions**, **Confirmed fraud**, and **Rejected transactions**. 
 

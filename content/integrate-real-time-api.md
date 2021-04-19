@@ -14,9 +14,9 @@ title: Integrate Dynamics 365 Fraud Protection real-time APIs
 
 # Integrate Dynamics 365 Fraud Protection real-time APIs
 
-To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the *Evaluate* experience, this allows you to analyze the results of using Dynamics 365 Fraud Protection. In the *Protect* experience, you can also honor decisions based on the rules you have configured.
+To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the *Evaluate* experience, this allows you to analyze the results of using Fraud Protection. In the *Protect* experience, you can also honor decisions based on the rules you have configured.
 
-Depending on how you choose to use Dynamics 365 Fraud Protection, you may make use of different sets of APIs, as seen below: 
+Depending on how you choose to use Fraud Protection, you may make use of different sets of APIs, as shown below: 
 
 - **Purchase protection APIs**: Purchase, PurchaseStatus, BankEvent, Chargeback, Refund, UpdateAccount, Label
 - **Account protection APIs**: SignUp, SignUpStatus, Label
@@ -24,7 +24,7 @@ Depending on how you choose to use Dynamics 365 Fraud Protection, you may make u
 For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
 
 
-## Get set up
+## Set up
 
 ### Sign in
 > [!IMPORTANT]
@@ -38,7 +38,7 @@ Visit the portal for each environment you intend to use, sign in, and accept the
 > [!IMPORTANT]
 > You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
 
-To acquire the tokens required to call the APIs, you must use Azure Active Directory (Azure AD) applications. You can configure these by applications using the **Real-time APIs** page in Microsoft Dynamics 365 Fraud Protection.
+To acquire the tokens required to call the APIs, you must use Azure Active Directory (Azure AD) applications. You can configure these by applications using the **Real-time APIs** page in Fraud Protection.
 
 #### To configure Azure AD applications:
 
@@ -71,10 +71,10 @@ You can create as many apps as necessary to run API calls in each of your enviro
 After you create your Azure AD apps, you can manage them through the <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank">Azure portal</a>. For more information, see <a href="/azure/active-directory/develop/active-directory-how-applications-are-added" target="_blank">Azure documentation site</a>. 
 
 ### Manually configure Azure AD applications
-To set up your applications directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md).
+To set up your applications directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md). 
 
-## Call the Dynamics 365 Fraud Protection real-time APIs 
-To integrate your systems with Dynamics 365 Fraud Protection, complete the following sections.
+## Call the Fraud Protection real-time APIs 
+To integrate your systems with Fraud Protection, complete the following sections.
 
 ### Required IDs and information
 - **Environment URI** - The URIs for your sandbox or production environment appear on the **Configuration** tab of the **API Management** page in the Fraud Protection portal.
@@ -187,12 +187,12 @@ To call the APIs, follow these steps:
     </li> 
    <li>Generate an event-based payload. Fill in the event data with the relevant information from your system. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>. 
     </li> 
-   <li>Combine the header (which includes the access token) and the payload, and then send them to your Dynamics 365 Fraud Protection endpoint.</li>
+   <li>Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint.</li>
 </ol>
 
 
 ## View the sample app 
-For additional reference, view the <a href="https://go.microsoft.com/fwlink/?linkid=2085137" target="_blank">sample merchant app</a> and the accompanying developer documentation. The sample app provides an example of how to call Dynamics 365 Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.
+For additional reference, view the <a href="https://go.microsoft.com/fwlink/?linkid=2085137" target="_blank">sample merchant app</a> and the accompanying developer documentation. The sample app provides an example of how to call Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.
 
 For guidance on configuring the sample site for your use, view <a href="https://go.microsoft.com/fwlink/?linkid=2100635" target="_blank">Configure the sample site</a>.
 

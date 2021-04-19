@@ -23,7 +23,7 @@ Depending on how you choose to use Fraud Protection, you can use different **acc
 
 For information about all supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 
-## Setup
+## Set up
 
 ### Sign in
 

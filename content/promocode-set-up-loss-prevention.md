@@ -1,22 +1,20 @@
 ---
 author: yvonnedeq
-description: This topic describes how to prevent loss with Fraud Protection.
+description: This topic describes how to prevent loss with Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 03/11/2021
+ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Prevent loss with Fraud Protection
+title: Prevent loss with Dynamics 365 Fraud Protection
 ---
 
-# Prevent loss with Fraud Protection
+# Prevent loss with Dynamics 365 Fraud Protection
 
-## Overview
-
-The loss prevention capability in Microsoft Dynamics 365 Fraud Protection (Fraud Protection) uses adaptive artificial intelligence (AI) to generate risk scores, and to identify data anomalies and patterns in historical transaction data. You can then use these risk scores, anomalies, and patterns to generate reports that provide a detailed trend analysis, based on the return rate, the discount rate, and other key performance indicators (KPIs) that might indicate in-store fraud.
+The loss prevention capability in Microsoft Dynamics 365 Fraud Protection uses adaptive artificial intelligence (AI) to generate risk scores, and to identify data anomalies and patterns in historical transaction data. You can then use these risk scores, anomalies, and patterns to generate reports that provide a detailed trend analysis, based on the return rate, the discount rate, and other key performance indicators (KPIs) that might indicate in-store fraud.
 
 ## Identifying fraudulent activity
 
@@ -44,7 +42,7 @@ After you complete these steps in your own system by using your own data, you wi
 
 Before you begin the tasks in this document, you must:
 
-- Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
+- Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Dynamics 365 Fraud Protection](promocode-set-up-dfp-trial-version.md).
 
 ## Step 1: Prepare your historical data (data mapping)
 
@@ -361,7 +359,7 @@ If a staff member associated with a transaction is tagged as anomalous by the mo
 
 ## Note for existing Commerce customers
 
-If you're an existing Commerce customer, all the mandatory fields have a **NOT NULL** constraint in the data type. For a schema reference, see [Data schemas for loss prevention in Fraud Protection](promocode-set-up-loss-prevention.md). However, you can also configure Commerce to share data directly with Fraud Protection.
+If you're an existing Commerce customer, all the mandatory fields have a **NOT NULL** constraint in the data type. For a schema reference, see [Data schemas for loss prevention in Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md). However, you can also configure Commerce to share data directly with Fraud Protection.
 
 For information about how to integrate Commerce with Fraud Connection and connect to Fraud Protection, see the [Connect loss prevention to data from Commerce](promocode-set-up-loss-prevention.md#connect-loss-prevention-to-data-from-commerce) section earlier in this document. There is no prerequisite schema work for loss prevention.
 
@@ -371,5 +369,5 @@ Congratulations! You've successfully completed the training and are ready to use
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
-- [Protect customer accounts with Fraud Protection](promocode-set-up-account-protection.md)
-- [Protect purchases with Fraud Protection](promocode-set-up-purchase-protection.md)
+- [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
+- [Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)

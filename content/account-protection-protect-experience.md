@@ -1,6 +1,6 @@
 ---
 author: kelsiefu
-description: This topic provides information about the protect experience in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the account protection experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
 ms.date: 07/07/2020

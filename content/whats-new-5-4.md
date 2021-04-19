@@ -18,7 +18,7 @@ title: What’s new in Dynamics 365 Fraud Protection May 2020 release
 
 ## Extend and tailor merchant purchase ontology 
 
-There are several cases where a merchant might need capabilities beyond Fraud Protection’s core features: 
+There are several cases where a merchant might need capabilities beyond the core features in Microsoft Dynamics 365 Fraud Protection: 
 
 - To extend the base ontology with custom knowledge in the marquee scenarios of payment fraud. Merchants might want to use specialized data beyond the base ontology of Fraud Protection to improve the fraud protection capability of the product. For example, the seat class selection might be an important attribute to consider for airline ticket purchases. 
 
