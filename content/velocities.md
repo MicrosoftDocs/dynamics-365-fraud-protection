@@ -4,7 +4,7 @@ description: This topic explains how to use velocities to examine user and entit
 
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 04/01/2021
+ms.date: 04/26/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -236,3 +236,8 @@ If you subscribe to the [FraudProtection.Trace.Rule event](event-tracing.md#trac
     "loginsPerDevice_1m": 1
 }
 ```
+
+## Additional resources
+
+- Video: [Learn about the new velocity feature in Dynamics 365 Fraud Protection](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DsCPt3o8Qg30&data=04%7C01%7Cv-madeq%40microsoft.com%7C25acb8fe676d47dd48bb08d908cb2c10%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637550490968740595%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=Epc2wB1eV5G8p5hPg1WCtlFlwGMujavBzD2r%2FqtQtwo%3D&reserved=0)
+- Blog: [Customize your protection with new features in the Dynamics 365 Fraud Protection preview: Identify potential fraud with velocities](https://cloudblogs.microsoft.com/dynamics365/bdm/2021/04/14/customize-your-protection-with-new-features-in-the-dynamics-365-fraud-protection-preview/)

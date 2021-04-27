@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This topic describes how to set up a trial version of Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
 ms.service: fraud-protection
-ms.date: 04/02/2021
+ms.date: 04/27/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -19,7 +19,7 @@ This document guides you through the prerequisites of setting up a trial version
 ## Prerequisites for setting up Fraud Protection
 
 - To set up Fraud Protection and control user access to your data, you must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, you can sign up for one.
-- Before you can install a trial subscription of Fraud Protection, a Microsoft seller or partner must provide a PromoCode provided to you. If you don't have a PromoCode, contact Microsoft.
+- Before you can install a trial subscription of Fraud Protection, a Microsoft seller or partner must provide a promotion code provided to you. If you don't have a promotion code, contact Microsoft.
 
 ## Set up Fraud Protection in an existing Azure AD tenant	
 
@@ -36,9 +36,9 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 
 1.	Select the sign-up link that was included in your welcome email.	
 2.	Enter your email address, and then select **Next**. The domain name in the email address must match your existing Azure AD tenant.	
-3.	After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**.	
+3.	After you successfully sign in, the next page notifies you that you're about to redeem the promotion code to start your **free trial of Dynamics 365 Fraud Protection**.	
 
-  	The PromoCode and offer ID are automatically entered on the page when you complete your setup.	
+  	The promotion code and offer ID are automatically entered on the page when you complete your setup.	
 
 ![Get started](media/promocode-images/get-started.png)	
 
@@ -94,9 +94,9 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 
 ![Sign in](media/promocode-images/sign-in.png)	
 
-12. After you successfully sign in, the next page notifies you that you're about to redeem the PromoCode to start your **free trial of Dynamics 365 Fraud Protection**. 	
+12. After you successfully sign in, the next page notifies you that you're about to redeem the promotion code to start your **free trial of Dynamics 365 Fraud Protection**. 	
 
-    The PromoCode and offer ID are automatically entered on the page.	
+    The promotion code and offer ID are automatically entered on the page.	
 
 ![Get started2](media/promocode-images/get-started.png)	
 
