@@ -54,6 +54,18 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 - Browser-related attributes if applicable such as browser language, font, etc.
 - Network attributes, such as IP address, signature hash, etc.
 
+## Set up DNS and SSL certificate
+
+Set up DNS by following these steps:
+1. Select a subdomain under your root domain.For example, select **f.contoso.com**. Any prefix can be used.
+
+1. For the selected subdomain, create a canonical name (CNAME) that points to **fpt.dfp.microsoft.com**.For example, **Merchant website**: www.contoso.com, **DNS record**: f.contoso.com, which points to fpt.dfp.microsoft.com.
+
+Set up the Secure Sockets Layer (SSL) certificate by following these steps:
+1. For back-end onboarding, generate the SSL certificate for the selected subdomain. You can add all the subdomains in **Certificate’s Subject Alternative Name** and create one SSL Certificate.
+
+1. After you generate the SSL certificate, Microsoft will need your SSL certificate and private key for onboarding. To start the process of exchanging SSL certificates, email DFPHelp@microsoft.com.
+
 ## Implement device fingerprinting
 
 Your website or application should enable the device fingerprinting before it submits a transaction (such as a transaction for adding a payment instrument, sign-in, or checkout). Follow these steps to integrate device fingerprinting with your website.
