@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic provides information about official and current pricing options.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app:

@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic explains how the labels API enables you to send information to the virtual fraud analyst and scorecard.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 

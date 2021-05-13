@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic provides information about custom assessments, and explains how to create and define them.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 04/02/2021
 
 ms.topic: conceptual

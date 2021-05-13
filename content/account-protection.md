@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic explains the account protection capability of Dynamics 365 Fraud Protection.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 02/17/2021
 ms.topic: conceptual
 search.app: 
