@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic explains how you can visually explore your data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 

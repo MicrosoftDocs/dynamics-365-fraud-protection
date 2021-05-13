@@ -3,7 +3,6 @@ author: yvonnedeq
 description: This topic explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
 
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 04/26/2021
 ms.topic: conceptual
 search.app: 

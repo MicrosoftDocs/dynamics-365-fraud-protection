@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic explains the scorecard capability of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 03/05/2021
 ms.topic: conceptual
 search.app: 

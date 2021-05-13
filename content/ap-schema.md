@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic outlines the account protection schemas for data uploaded in bulk as CSV files.
 ms.author: v-madeq 
-ms.service: fraud-protection
 ms.date: 03/23/2021
 ms.topic: conceptual
 search.app: 

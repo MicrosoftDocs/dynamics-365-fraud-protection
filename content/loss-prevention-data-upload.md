@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic explains how to upload data for the loss prevention feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq 
-ms.service: fraud-protection
 ms.date: 01/28/2020
 ms.topic: conceptual
 search.app: 
