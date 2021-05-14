@@ -3,7 +3,6 @@ author: yvonnedeq
 description: This topic explains how to set up device fingerprinting.
 
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 

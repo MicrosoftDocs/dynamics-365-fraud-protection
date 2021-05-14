@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic describes how to set up a trial version of Microsoft Dynamics 365 Fraud Protection.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 04/27/2021
 ms.topic: conceptual
 search.app: 

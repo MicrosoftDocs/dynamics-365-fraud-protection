@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic outlines the schemas that are required for historical data upload.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 03/08/2021
 ms.topic: conceptual
 search.app: 

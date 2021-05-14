@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic outlines the tools, systems, and procedures that can help prevent fraud in brick-and-mortar stores.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 

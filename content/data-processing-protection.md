@@ -2,7 +2,6 @@
 author: yvonnedeq
 description: This topic describes how payment transaction, account activity, and device data are protected.
 ms.author: v-madeq
-ms.service: fraud-protection
 ms.date: 11/12/2020
 ms.topic: conceptual
 search.app: 
