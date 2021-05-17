@@ -25,7 +25,7 @@ This content is organized into the following main topics:
 - [Work with Logic Apps or Power Automate](extensibility-with-power-automate.md)
 - [Work with Power BI](extensibility-with-power-bi.md)
 - [Work with Power Apps](extensibility-with-power-apps.md)
-- [Pricing](extensibility-pricing.md)
+
 
 > [!NOTE]
 > Only the [Set up extensibility via Event Hubs](extensibility-setup.md) topic is *required*. The remaining topics are optional, depending on your organization's needs. Each topic is divided into sections, so that you can skip around and review only the parts that you require. In these topics, the terms *events*, *eventing data*, and *event tracing data* are used interchangeably. 
