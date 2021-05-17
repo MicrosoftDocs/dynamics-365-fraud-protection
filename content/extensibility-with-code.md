@@ -40,7 +40,6 @@ For a sample of working code that sends and receives events to and from Event Hu
 - [Work with Logic Apps or Power Automate](extensibility-with-power-automate.md)
 - [Work with Power BI](extensibility-with-power-bi.md)
 - [Work with Power Apps](extensibility-with-power-apps.md)
-- [Pricing](extensibility-pricing.md)
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
