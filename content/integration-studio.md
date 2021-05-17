@@ -16,7 +16,8 @@ title: Integration studio (preview)
 
 [!include [banner](includes/preview-banner.md)]
 
-The customer product adoption journey starts with the first touchpoint and continues with consistent positive experiences from trial to purchase. In this critical journey, every interaction that customers experience needs to be personalized. The journey starts with a seamless onboarding experience, which plays an important role when it comes to product adoption and usage. Onboarding also helps the product gain valuable information about the customer’s behavior and provides additional insights into the customer journey. 
+The customer product adoption journey starts with the first touchpoint and continues with consistent positive experiences from trial to purchase. In this critical journey, every interaction that customers experience needs to be personalized. The journey starts with a seamless onboarding experience, which plays an important role when it comes to product adoption and usage. Onboarding also helps the product gain valuable information about the customer’s behavior and provides additional insights into the customer journey.
+
 Keeping this in mind, we have enabled world class onboarding capabilities by providing rich and intuitive integration experiences via the guided process, as well as an informed integration process that has minimal impact to customers and reduces churn. Such onboarding experiences, along with great technical and functional documentation support, help enterprise customers meet their onboarding goals to protect and advance their business by using the product. 
 
 ## Integration experience
