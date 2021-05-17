@@ -124,8 +124,6 @@
      href: extensibility-with-power-bi.md  
    - name: Working with Power Apps
      href: extensibility-with-power-apps.md
-   - name: Indicative Pricing
-     href: extensibility-pricing.md 
    - name: Event tracing
      href: event-tracing.md
    - name: Assessment usage and metering	
