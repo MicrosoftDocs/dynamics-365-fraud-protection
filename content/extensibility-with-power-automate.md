@@ -71,7 +71,7 @@ You now have a constantly updated database in Common Data Service that contains 
 - [Work with code](extensibility-with-code.md)
 - [Work with Power BI](extensibility-with-power-bi.md)
 - [Work with Power Apps](extensibility-with-power-apps.md)
-- [Pricing](extensibility-pricing.md)
+
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
