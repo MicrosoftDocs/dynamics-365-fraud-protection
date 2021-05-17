@@ -18,7 +18,7 @@ Microsoft Azure Logic Apps and Power Automate flows offer low-code user interfac
 For example, these flows are excellent for automatically sending an email when a specific user's rule has been deleted or pinging a Teams channel when high latency is detected.
 
 > [!NOTE]
-> Logic Apps is used for this topic. However, similar, if not identical, logic can be applied to Power Automate flows. Logic Apps is part of the Azure portal, whereas Power Automate is a separate product that is part of the Microsoft Power Platform family of tools. Pricing and capabilities vary. For more information, see [Pricing](extensibility-pricing.md).
+> Logic Apps is used for this topic. However, similar, if not identical, logic can be applied to Power Automate flows. Logic Apps is part of the Azure portal, whereas Power Automate is a separate product that is part of the Microsoft Power Platform family of tools. Pricing and capabilities vary. 
 
 ## Getting started
 
@@ -71,7 +71,7 @@ You now have a constantly updated database in Common Data Service that contains 
 - [Work with code](extensibility-with-code.md)
 - [Work with Power BI](extensibility-with-power-bi.md)
 - [Work with Power Apps](extensibility-with-power-apps.md)
-- [Pricing](extensibility-pricing.md)
+
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
