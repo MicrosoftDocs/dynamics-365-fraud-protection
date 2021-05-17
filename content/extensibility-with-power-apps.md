@@ -33,7 +33,7 @@ The following resources will help you start to develop your own apps by using Po
 - [Work with code](extensibility-with-code.md)
 - [Work with Logic Apps or Power Automate](extensibility-with-power-automate.md)
 - [Work with Power BI](extensibility-with-power-bi.md)
-- [Pricing](extensibility-pricing.md)
+
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
