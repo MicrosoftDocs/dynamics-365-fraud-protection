@@ -63,6 +63,11 @@
       "source_path": "content/signup.md",
       "redirect_url": "provision-azure-tenant",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/extensibility-pricing.md",
+      "redirect_url": "overview",
+      "redirect_document_id": "false"
     }
   ]
 }
