@@ -20,7 +20,7 @@ The customer product adoption journey starts with the first touchpoint and conti
 
 ## Integration experience
 
-The Integration experience (preview) provides a guided integration process for each product capability, with well-defined start and end points. This is achieved by providing out-of-the-box code snippets and step-by-step instructions that can be started from within the product. The guided processes are interactive and provide clear instructions to customers about what they need to do during integration and why.
+The Integration studio experience (preview) provides a guided integration process for each product capability, with well-defined start and end points. This is achieved by providing out-of-the-box code snippets and step-by-step instructions that can be started from within the product. The guided processes are interactive and provide clear instructions to customers about what they need to do during integration and why.
 
 The guided processes have been separated by the integration experiences that are required to enable use of the product. For example, Azure Active Directory application integration and device fingerprinting must be enabled for the Account Protection integration and Purchase Protection integration processes.
 
