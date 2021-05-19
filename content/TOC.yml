@@ -34,8 +34,8 @@
     href: promocode-set-up-loss-prevention.md   
 - name: Set up Fraud Protection
   items:
-  - name: Integration studio
-    href: integration-studio.md
+  - name: Integration experience (preview)
+    href: integration-experience.md
   - name: Purchase protection
     items:
     - name: Overview
