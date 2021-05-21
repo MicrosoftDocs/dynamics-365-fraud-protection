@@ -78,6 +78,8 @@ additionalContent:
         # Card
         - title: Set up Fraud Protection
           links:
+            - text: Integration experience (preview)
+              url: integration-experience.md
             - text: Purchase protection
               url: purchase-protection.md
             - text: Account protection
