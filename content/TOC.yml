@@ -4,6 +4,8 @@
   href: overview.md
 - name: What's new or changed
   items:
+  - name: May 2021 release
+    href: whats-new-5-21.md   
   - name: April 2021 release
     href: whats-new-4-1-21.md   
   - name: October 2020 release
@@ -32,6 +34,8 @@
     href: promocode-set-up-loss-prevention.md   
 - name: Set up Fraud Protection
   items:
+  - name: Integration experience (preview)
+    href: integration-experience.md
   - name: Purchase protection
     items:
     - name: Overview
