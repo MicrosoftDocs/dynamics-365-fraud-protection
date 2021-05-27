@@ -31,26 +31,16 @@ The following sign-in scenarios are intended for customers who purchased a licen
 ### Complete the setup process	
 
 1.	Go to [Access your Dynamics 365 Fraud Protection account](https://dfp.microsoft.com/) and sign in as the Global administrator of the Azure AD tenant.	
-2.	To review the **Terms of Use**, select **Microsoft Online Subscription Agreement**.	
-3.	To accept the **Terms of Use**, select **I accept**.	
-4.	In the **Geographic data storage region** field, select the region where you want to store your data, and then select **Next**.	
+2.	On the next screen under the **Data storage geography** field, select the geographic region where you want to store your data, and then select **Start setup**.	
 
- 	  > [!NOTE]	
- 	  >You can't change the region after you've set it.	
-    	
- 	 The setup process is started and might take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
-   
-   After setup is completed, the **Congratulations** page appears.	
-    	
-5.	Select **Continue**.	
-6.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.	
+  > [!NOTE]
+  > You can't change the region after you've set it.	
 
-   	The Fraud Protection portal is opened.	
-
-![Data flow](media/promocode-images/DFP-Portal.png)	
+3.	The setup process starts and might take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
+4.	After setup is completed, you're prompted to review important information about the Fair Credit Reporting Act (FCRA). After completing your review, select **I accept**.	
+5.	The Fraud Protection portal opens.	
 
 Congratulations! You've successfully completed the setup process and are ready to use Fraud Protection to protect your business.
-
 
 ## Next steps
 
