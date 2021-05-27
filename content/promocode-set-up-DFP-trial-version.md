@@ -34,27 +34,21 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 ## Setup process for an existing AAD tenant	
 
 1.	Select the sign-up link that was included in your welcome email.	
-2.	Enter your email address, and then select **Next**. The domain name in the email address must match your existing Azure AD tenant.	
-3.	After you successfully sign in, the next page notifies you that you're about to redeem the promotion code to start your **free trial of Dynamics 365 Fraud Protection**.	
+2.	Enter your work email address, and then select **Verify**. The domain name in the email address must match your existing Azure AD tenant.	
+3.	Choose the first option, by clicking Sign-In button and entering the credentials for Global Administrator of this Azure AD tenant. 
+4.	After you successfully sign in, the next page notifies you that you're about to redeem the promotion code to start your **free trial of Dynamics 365 Fraud Protection**.	
 
   	The promotion code and offer ID are automatically entered on the page when you complete your setup.	
 
-![Get started](media/promocode-images/get-started.png)	
+4.	You can review the trial agreement and privacy statements, and then Click **Get started**.	
+5.	On the next screen under the **Data storage geography** field, select the geographic region where you want to store your data, and then select **Start setup**.	
 
-4.	Select **Get started**.	
-5.	To review the Terms of Use, select **Microsoft Online Subscription Agreement**.	
-6.	To accept the Terms of Use, select **I accept**.	
-7.	In the **Geographic data storage region** field, select the region where you want to store your data, and then select **Next**.	
+  > [!NOTE]
+  > You can't change the region after you've set it.	
 
-    You can't change the region after you've set it.	
-
-8.	The setup process starts and might take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
-9.	After setup is completed, the **Congratulations** screen appears.	
-10.	Select **Continue**.	
-11.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.	
-12.	The Fraud Protection portal opens.	
-
-![DFP Portal](media/promocode-images/DFP-Portal.png)	
+6.	The setup process starts and might take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
+7.	After setup is completed, you're prompted to review important information about the Fair Credit Reporting Act (FCRA). After completing your review, select **I accept**.	
+8.	The Fraud Protection portal opens.	
 
 Congratulations! You've successfully completed the setup process and are ready to use Fraud Protection to protect your business.	
 
@@ -65,57 +59,29 @@ If you don't have an existing AAD tenant, or if you prefer to set up a new one, 
 ### Setup process for a new AAD tenant 	
 
 1.	Select the sign-up link that was included in your welcome email.	
-2.	Enter an email address that has a unique domain name (that is, the domain name of the new tenant that you want to set up).	
+2.	Enter your work email address and click 'Verify'.	
+3.	If your work email does not map to an existing Azure AD domain, you're prompted to create a new tenant. Select **Click here to create an Azure tenant** and move to step 6
+4.	If your work email maps to an existing Azure AD domain, you can create a new Azure AD tenant by clicking **Sign up** option on the subsequent page
 
-    For example, enter *admin@<your choice of domain name>.onmicrosoft.com*	
+5.	In the signup flow, enter the required details and then select **Next**.	
+6.	In the domain name field, enter the domain name of your choice and click **Check availability** to see if the name is available. If not, choose a new one 
 
-3.	Select **Verify**.	
-4.	If the tenant name is already being used, you're prompted to create a new tenant. In this case, repeat steps 2 and 3	
-5.	If the tenant name is accepted, select **Click here to create an Azure tenant**.	
+  > [!NOTE]
+  > You can't change the domain name after the tenant is created.	
 
-![Azure tenant](media/promocode-images/create-azure-tenant.png)	
+7.	After you've entered a domain name that's available, click **Next** and then choose a username and password.
+8.	After you have reviewed the trial agreement and privacy statements, click **Sign up** to create your new Azure AD tenant and start your **free trial of Dynamics 365 Fraud Protection**
 
-6.	Enter the required details, and then select **Next**.	
+9.	Select **Get started**.	
+10.	On the next screen click Sign In and enter the username and password you created in Step 7.
+11.	Under the **Data storage geography** field, select the geographic region where you want to store your data, and then select **Start setup**.	
 
-    You can use any valid work or school email address. It doesn't have to be the same one that you used in step 2.	
+  > [!NOTE]
+  > You can't change the region after you've set it.	
 
-7.	In the username field, enter the username from the email address you entered in step 2.	
-8.	In the company name field, enter the domain name from that email address. Then select **Next**.	
-
-    You can't change the company name after the tenant is created.	
-
-9.	After you've entered the company name and a green check mark appears, enter a password, and then select **Create my account**.	
-
-![Create account](media/promocode-images/create-account.png)    	
-
-10.	Select the **Sign in** link below the text box.	
-11.	In the **Sign in** dialog box, enter your credentials, and then select **Next**.	
-
-![Sign in](media/promocode-images/sign-in.png)	
-
-12. After you successfully sign in, the next page notifies you that you're about to redeem the promotion code to start your **free trial of Dynamics 365 Fraud Protection**. 	
-
-    The promotion code and offer ID are automatically entered on the page.	
-
-![Get started2](media/promocode-images/get-started.png)	
-
-13.	Select **Get started**.	
-14.	To review the Terms of Use, select **Microsoft Online Subscription Agreement**.	
-15.	To accept the Terms of Use, select **I accept**.	
-16.	In the **Geographic data storage region** field, select the region where you want to store your data, and then select **Next.** 	
-
-    You can't change the region after you've set it.	
-
-    The setup process starts and might take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
-
-    After setup is completed, the **Congratulations** screen appears.	
-
-17.	Select **Continue**.	
-18.	You're prompted to review important information about the Fair Credit Reporting Act (FCRA). After you've completed your review, select **I accept**.	
-
-    The Fraud Protection portal opens.	
-
-![DFP Portal2](media/promocode-images/DFP-Portal.png)	
+12. The setup process starts and might take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
+13. After setup is completed, you're prompted to review important information about the Fair Credit Reporting Act (FCRA). After completing your review, select **I accept**.	
+14.	The Fraud Protection portal opens.	
 
 Congratulations! You've successfully completed the setup process and are ready to use Fraud Protection to protect your business.	
 
