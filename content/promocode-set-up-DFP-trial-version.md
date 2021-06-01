@@ -33,7 +33,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 
 ## Setup process for an existing AAD tenant	
 
-1.	Select **Sign-up** in your welcome email.	
+1.	Select the sign-up link in your welcome email.	
 2.	Enter your work email address, and then select **Verify**. The domain name in the email address must match your existing Azure AD tenant.	
 3.	Choose the first option by selecting **Sign-In** and entering the credentials for the global administrator of the Azure AD tenant. 
 4.	After you successfully sign in, the next page notifies you that you're about to redeem the promotion code to start your free trial of Dynamics 365 Fraud Protection.	
@@ -44,7 +44,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
 5.	On the next screen under the **Data storage geography** field, select the geographic region where you want to store your data, and then select **Start setup**.	
 
   > [!NOTE]
-  > You can't change the region after you've set it.	
+  > You can't change the **Data storage geography** value after you've set it.		
 
 6.	The setup process starts and may take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
 7.	After setup is completed, you're prompted to review important information about the Fair Credit Reporting Act (FCRA). After completing your review, select **I accept**.	
@@ -57,7 +57,7 @@ If you don't have an existing Azure AD tenant, or if you prefer to set up a new 
 
 ### Setup process for a new AAD tenant 	
 
-1.	Select **Sign-up** in your welcome email.	
+1.	Select the sign-up link in your welcome email.	
 2.	Enter your work email address and then select **Verify**.	
 3.	If your work email does not map to an existing Azure AD domain, you're prompted to create a new tenant. Select **Click here to create an Azure tenant** and skip to step 6.
 4.	If your work email maps to an existing Azure AD domain, create a new Azure AD tenant by selecting **Sign up** on the next page.
@@ -74,7 +74,7 @@ If you don't have an existing Azure AD tenant, or if you prefer to set up a new 
 11.	Under the **Data storage geography** field, select the geographic region where you want to store your data, and then select **Start setup**.	
 
   > [!NOTE]
-  > You can't change the region after you've set it.	
+  > You can't change the **Data storage geography** value after you've set it.		
 
 12. The setup process starts and may take a few minutes to run. If you prefer, you can sign out and then return after installation is completed.	
 13. After setup is completed, you're prompted to review important information about the Fair Credit Reporting Act (FCRA). After completing your review, select **I accept**.	
@@ -85,5 +85,5 @@ If you don't have an existing Azure AD tenant, or if you prefer to set up a new 
 For information about how to access and use features in Fraud Protection features, see the topics below.
 
 - [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
--	[Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
--	[Prevent loss with Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md)
+- [Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
+- [Prevent loss with Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md)
