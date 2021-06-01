@@ -42,7 +42,7 @@ The following sign-in scenarios are intended for customers who purchased a licen
 
 ## Next steps
 
-For information about how to access and use Fraud Protection's other capabilities, see the following documents:
+For information about how to access and use other features in Fraud Protection, see the topics below.
 
 - [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
 - [Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
