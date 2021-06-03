@@ -18,9 +18,9 @@
   href: global-availability.md  
 - name: Set up your environment
   items:
-  - name: Enable a trial instance
+  - name: Set up a trial instance
     href: promocode-set-up-DFP-trial-version.md
-  - name: Enable a purchased instance
+  - name: Set up a purchased instance
     href: promocode-set-up-DFP-purchased-version.md
   - name: Configure user access
     href: configure-user-access.md   
