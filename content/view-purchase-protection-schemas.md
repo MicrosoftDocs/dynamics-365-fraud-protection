@@ -211,6 +211,16 @@ The following schema is used in the Evaluate and Protect experiences.
 | MID                | string   | The merchant ID (MID) that is used for bank communication. |
 | PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
 | MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
+| MerchantPaymentInstrumentId | string | Multiple PI scenario & PI change scenario. |
+| PaymentMethod | string | Groupings/categories of payment methods. |
+| CardType | string | The type of payment. |
+| UpdatedPI | string | Used different PI than the one in Purchase? |
+| CvvVerify | string | Indicates whether CVV verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
+| AvsVerify | string | Indicates whether address verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
+| CavVerify | string | Indicates whether cardholder authentication verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
+| AuthorizationResultCode | string | Bank response from the authorization decision. |
+| AuthorizationResultText | string | Reasons for the authorization decision; especially for declined or pending transactions. |
+| ThreeDS | string | *Refer to Purchase threeDS section in Purchase sheet.* |
 
 ## Account
 
