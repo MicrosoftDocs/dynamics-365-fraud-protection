@@ -243,6 +243,14 @@ The following schemas are used in the Evaluate and Protect experiences.
 | ExternalDeviceType       | string   | The device type as identified by the merchant (for example: **PC** or **Mobile Device**). |
 | IpAddress                | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
 | MerchantLocalDate        | DateTime | A date in ISO 8601 format. |
+| MembershipType | string  | The customer's membership status or type.  |
+| LoginInputMethod | string |  The method the customer uses to input their credentials. |
+| LastPasswordUpdatedDate | string | When the customer's password was last updated. |
+| FirstPurchaseDate | string | When the customer made their first purchase. |
+| LoginChallengeType | string | The type of challenge-response test that was initiated. |
+| AddressList | string | *Refer to Purchase address section.* |
+| PaymentInstrumentList | string | *Refer to Purchase paymentInstrumentList section.*  |
+| DeviceContext | string | *Refer to Purchase deviceContext section.*  |
 
 ### UpdateAddress
 
