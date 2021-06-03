@@ -146,7 +146,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Sku           | string | The product's stock keeping unit (SKU). |
 | SalesPrice    | double | The price of the item that was sold excluding tax. This information is provided by the merchant. |
 | Currency      | string | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant.  | 
-| COGS          | string | The cost of goods sold (that is, the raw material cost of the item). This information is provided by the merchant. |
+| COGS          | double | The cost of goods sold (that is, the raw material cost of the item). This information is provided by the merchant. |
 | IsRecurring   | bool   | A value that indicates whether the product is a recurring subscription. |
 | IsFree        | bool   | A value that indicates whether the product is offered for free. |
 | Language      | string | The language and language territory (for example: **EN-US**). |
