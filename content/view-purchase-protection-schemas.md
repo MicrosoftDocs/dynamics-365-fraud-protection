@@ -333,7 +333,149 @@ The following schema is used in the Evaluate and Protect experiences.
 | Amount           | double   | The amount that was charged to the customer. This information is provided by the merchant. |
 | Currency         | string   | The currency of the original purchase as a three-character currency code. (For example: USD, which is aligned with the OANDA currency code). This information is provided by the merchant. |
 
+## Vertical-specific attributes
+
+
+| Attribute | Vertical | Type | Description |
+|--- |--- |--- |---  |
+| **travelOverview**  |    |    |   | 
+| carRentalIncluded  |  Travel  |  bool  |  A True/False value indicating whether a car rental is included. | 
+| lodgingIncluded  |  Travel  |  bool  |  A True/False value indicating whether lodging is included. | 
+| travelType  |  Travel  |  string  |  The travel category or type. | 
+| isRoundTrip  |  Travel  |  bool  |  A True/False value indicating whether the travel is round trip. | 
+| isDiscountOffered  |  Travel  |  bool  |  A True/False value indicating whether a discount was offered. | 
+| travelDateTime  |  Travel  |  DateTimeOffset  |  The travel start date and time. | 
+| returnDateTime  |  Travel  |  DateTimeOffset  |  The travel end or return date and time. | 
+| fromCity  |  Travel  |  string  |  The city where the customer is travelling from. | 
+| fromState  |  Travel  |  string  |  The state where the customer is travelling from. | 
+| fromCountryISO  |  Travel  |  string  |  The ISO country where the customer is travelling from. | 
+| fromZipCode  |  Travel  |  string  |  The zip code where the customer is travelling from. | 
+| toCity  |  Travel  |  string  |  The city where the customer is travelling to. | 
+| toState  |  Travel  |  string  |  The state where the customer is travelling to. | 
+| toCountryISO  |  Travel  |  string  |  The ISO country where the customer is travelling to. | 
+| toZipCode  |  Travel  |  string  |  The zip code where the customer is travelling to. | 
+| travelDuration  |  Travel  |  string  |  Deprecating (Don't use) | 
+| isPackagedTour  |  Travel  |  bool  |  A True/False value indicating whether this was a packaged tour. | 
+| bookingType  |  Travel  |  string  |  The booking type. | 
+| webUrl  |  Travel  |  string  |  The URL where the travel was booked. | 
+| issueDateTime  |  Travel  |  DateTimeOffset  |  The date and time when the tickets were issued. | 
+| flightDetails  |  Travel  |  object  |  refer to flightDetails section | 
+| lodgingDetails  |  Travel  |  object  |  refer to lodgingDetails section | 
+| carRentalDetails  |  Travel  |  object  |  refer to carRentalDetails section | 
+| travelAgent  |  Travel  |  object  |  refer to travelAgent section | 
+| **flightDetails**  |    |    |   | 
+| ticketNumber  |  Travel  |  string  |  The unique ticket number. | 
+| placeOfIssue  |  Travel  |  string  |  The location where the ticket was issued. | 
+| isRestrictedTicket  |  Travel  |  bool  |  A True/False value indicating whether the ticket is restricted. | 
+| rewardsOrVoucherApplied  |  Travel  |  bool  |  A True/False value indicating whether rewards or vouchers were applied to the order. | 
+| totalRewardsApplied  |  Travel  |  int32  |  The total rewards which were applied to the order. | 
+| totalFees  |  Travel  |  decimal  |  The total fees applied to the order. | 
+| passengerCount  |  Travel  |  Int32  |  The total number of passengers. | 
+| numberOfStops  |  Travel  |  Int32  |  The number of stops or layovers for the flight. | 
+| purchaserProfileType  |  Travel  |  string  |  The customer's profile or membership type. | 
+| isThirdParty  |  Travel  |  bool  |  A True/False value indicating whether the order was placed through a third party site. | 
+| isPurchaserFrequentFlyer  |  Travel  |  bool  |  A True/False value indicating whether the customer is a frequent flyer. | 
+| flightSegments  |  Travel  |  object  |  refer to flightSegements section | 
+| passengers  |  Travel  |  object  |  refer to passengers section | 
+| **flightSegments**  |    |    |   | 
+| airlineCode  |  Travel  |  string  |  The airline code. | 
+| airlineName  |  Travel  |  string  |  The airline name. | 
+| segmentSequence  |  Travel  |  Int32  |  The sequence number of the given flight leg (e.g. 2 for the second leg of the flight) | 
+| travelClass  |  Travel  |  string  |  The seat class or cabin. | 
+| operatedBy  |  Travel  |  string  |  The organization operating the flight. | 
+| flightNumber  |  Travel  |  string  |  The flight number. | 
+| fromAirportCode  |  Travel  |  string  |  The airport code where the flight is flying from. | 
+| toAirportCode  |  Travel  |  string  |  The airport code where the flight is flying to. | 
+| departureDateTime  |  Travel  |  DateTimeOffset  |  The departure date and time. | 
+| arrivalDateTime  |  Travel  |  DateTimeOffset  |  The arrival date and time. | 
+| fromAirportCity  |  Travel  |  string  |  The airport city where the customer is travelling from. | 
+| fromAirportState  |  Travel  |  string  |  The  airport state where the customer is travelling from. | 
+| fromAirportZipcode  |  Travel  |  string  |  The airport zip code where the customer is travelling from. | 
+| fromAirportCountryISO  |  Travel  |  string  |  The airport ISO country where the customer is travelling from. | 
+| toAirportCity  |  Travel  |  string  |  The airport city where the customer is travelling to. | 
+| toAirportState  |  Travel  |  string  |  The airport state where the customer is travelling to. | 
+| toAirportZipcode  |  Travel  |  string  |  The airport zip code where the customer is travelling to. | 
+| toAirportCountryISO  |  Travel  |  string  |  The airport ISO country where the customer is travelling to. | 
+| **passengers**  |    |    |   | 
+| firstName  |  Travel  |  string  |  The passenger first name. | 
+| lastName  |  Travel  |  string  |  The passenger last name. | 
+| **carRentalDetails**  |    |    |   | 
+| pickupLocation  |  Travel  |  string  |  The car rental pickup location. | 
+| pickupDateTime  |  Travel  |  DateTimeOffset  |  The car rental pickup date and time. | 
+| dropOffLocation  |  Travel  |  string  |  The car rental drop-off location. | 
+| dropOffDateTime  |  Travel  |  DateTimeOffset  |  The car rental drop-off date and time | 
+| discountProgram  |  Travel  |  string  |  The discount program applied to the car rental order. | 
+| carType  |  Travel  |  string  |  The car type or category. | 
+| isPrepaid  |  Travel  |  bool  |  A True/False value indicating whether the car rental was prepaid. | 
+| insuranceIncluded  |  Travel  |  bool  |  A True/False value indicating whether insurance was included. | 
+| contactEmail  |  Travel  |  string  |  The car renter's email address. | 
+| contactPhoneNumber  |  Travel  |  string  |  The car renter's phone number. | 
+| pickupAddress  |  Travel  |  object  |  refer to address section | 
+| dropOffAddress  |  Travel  |  object  |  refer to address section | 
+| **travelAgent**  |    |    |   | 
+| agencyCode  |  Travel  |  string  |  The travel agency code. | 
+| agencyName  |  Travel  |  string  |  The travel agency name. | 
+| agentCode  |  Travel  |  string  |  The trave agent code. | 
+| agencyLocation  |  Travel  |  object  |  refer to agentAddress section | 
+| **agentAddress**  |    |    |   | 
+| street1  |  Travel  |  string  |  The first row that was provided for the address | 
+| street2  |  Travel  |  string  |  The second row that was provided for the address. (This value can be blank.) | 
+| street3  |  Travel  |  string  |  The third row that was provided for the address. (This value can be blank.) | 
+| city  |  Travel  |  string  |  The city that was provided for the address. | 
+| state  |  Travel  |  string  |  The state or province that was provided for the address. | 
+| district  |  Travel  |  string  |  The district that was provided for the address. | 
+| zipCode  |  Travel  |  string  |  The postal code that was provided for the address. | 
+| country  |  Travel  |  string  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
+| agencyContactPhone  |  Travel  |  string  |  The agency contact phone number | 
+| agencyContactEmail  |  Travel  |  string  |  The agency contact email address | 
+| **lodgingDetails**  |    |    |   | 
+| folioNumber  |  Lodging  |  string  |  The unique identifier of the lodging property. | 
+| CheckInDate  |  Lodging  |  DateTimeOffset  |  The check-in date for the lodging stay. | 
+| CheckOutDate  |  Lodging  |  DateTimeOffset  |  The check-out date for the lodging stay. | 
+| reservationConfirmed  |  Lodging  |  bool  |  A True/False value indicating whether the reservation has been confirmed. | 
+| membershipDetails  |  Lodging  |  string  |  Additional details on the customer's membership status. | 
+| discountProgram  |  Lodging  |  string  |  The discount program applied to the lodging order. | 
+| adultCount  |  Lodging  |  Int32  |  The number of adults included in the stay. | 
+| kidCount  |  Lodging  |  Int32  |  The number of kids included in the stay. | 
+| nightsCount  |  Lodging  |  Int32  |  The number of nights included in the stay. | 
+| roomCount  |  Lodging  |  Int32  |  The number of rooms included in the stay. | 
+| bedType  |  Lodging  |  string  |  The bed type or category. | 
+| roomType  |  Lodging  |  string  |  The room type or category. | 
+| paymentDescription  |  Lodging  |  string  |  Additional details on the loding payment. | 
+| facility  |  Lodging  |  object  |  refer to facility section | 
+| **facility**  |    |    |   | 
+| name  |  Lodging  |  string  |  The facility name. | 
+| type  |  Lodging  |  string  |  The facility type. | 
+| contactPhoneNumber  |  Lodging  |  string  |  The phone number used to contact the facility. | 
+| contactEmail  |  Lodging  |  string  |  The email address used to contact the facility. | 
+| dailyRoomRate  |  Lodging  |  decimal  |  The daily room rate for the facility. | 
+| currency  |  Lodging  |  string  |  The currency supported by the facility. | 
+| dailyRoomTaxAmount  |  Lodging  |  decimal  |  The daily room tax amount charged by the facility. | 
+| address  |  Lodging  |  object  |  refer to address section | 
+| **address**  |    |    |   | 
+| street1  |  Car Rental  |  string  |  The first row that was provided for the address | 
+| street2  |  Car Rental  |  string  |  The second row that was provided for the address. (This value can be blank.) | 
+| street3  |  Car Rental  |  string  |  The third row that was provided for the address. (This value can be blank.) | 
+| city  |  Car Rental  |  string  |  The city that was provided for the address. | 
+| state  |  Car Rental  |  string  |  The state or province that was provided for the address. | 
+| district  |  Car Rental  |  string  |  The district that was provided for the address. | 
+| zipCode  |  Car Rental  |  string  |  The postal code that was provided for the address. | 
+| country  |  Car Rental  |  string  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
+| **cloudBusiness**  |    |    |   | 
+| organizationId  |  CloudBusiness  |  string  |  The unique identifier for the cloud service or organization. | 
+| companyName  |  CloudBusiness  |  string  |  The cloud service name. | 
+| companyType  |  CloudBusiness  |  string  |  The cloud company type. | 
+| companySize  |  CloudBusiness  |  Int32  |  The cloud company size. | 
+| entityId  |  CloudBusiness  |  string  |  The unique identifier for the legal entity under the organization. | 
+| primaryContactFirstName  |  CloudBusiness  |  string  |  The first name of the primary contact for the business. | 
+| primaryContactLastName  |  CloudBusiness  |  string  |  The last name of the primary contact for the business. | 
+| primaryContactEmail  |  CloudBusiness  |  string  |  The email address of the primary contact for the business. | 
+| primaryContactPhoneNumber  |  CloudBusiness  |  string  |  The phone number of the primary contact for the business. | 
+| subscriptionCount  |  CloudBusiness  |  Int32  |  The total number of subscriptions available. | 
+| companyAddress  |  CloudBusiness  |  object  |  Refer to address section | 
+
 ## Download sample data
+
 You can download our sample data files to explore options before using your own internal data.
 - For samples you can use with loss prevention, select [Loss prevention sample data file](https://download.microsoft.com/download/3/1/6/316b5f40-287d-48a3-ab3c-bf4c7a171cfc/LP1.zip.).
 - For samples you can use with purchase protection, select [Purchase protection sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/PP1.zip).
