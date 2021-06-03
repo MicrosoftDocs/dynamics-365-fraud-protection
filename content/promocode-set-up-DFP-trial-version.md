@@ -67,7 +67,7 @@ If you don't have an existing Azure AD tenant, or if you prefer to set up a new 
   > [!NOTE]
   > You can't change the domain name after the tenant is created.	
 
-7.	After you've sucessfully entered a domain name, select **Next** and then choose a username and password.
+7.	After you've successfully entered a domain name, select **Next** and then choose a username and password.
 8.	Review the trial agreement and privacy statements, and then select **Sign up** to create your new Azure AD tenant and start your free trial of Dynamics 365 Fraud Protection.
 9.	Select **Get started**.	
 10.	Select **Sign In** and enter the username and password you created in Step 7.
