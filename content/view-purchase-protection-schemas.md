@@ -2,7 +2,7 @@
 author: yvonnedeq
 description: This topic outlines the schemas that are required for historical data upload.
 ms.author: mapowath
-ms.date: 03/08/2021
+ms.date: 06/04/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -32,68 +32,68 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 
 | Attribute           | Type     | Description |
 |---------------------|----------|-------------|
-| PurchaseId          | string   | The identifier of the transaction (or purchase or order). |
-| OriginalOrderId     | string   | The original order identifier for payments of recurring billing, such as monthly subscription billing. |
+| PurchaseId          | String  | The identifier of the transaction (or purchase or order). |
+| OriginalOrderId     | String  | The original order identifier for payments of recurring billing, such as monthly subscription billing. |
 | CustomerLocalDate   | DateTime | The purchase creation date in the customer's local time zone. The format is ISO 8601. |
 | MerchantLocalDate   | DateTime | The purchase ingestion date in the merchant's local time zone. The format is ISO 8601. |
-| TotalAmount         | double   | The total amount that was charged to the customer including tax. This information is provided by the merchant. |
-| SalesTax            | double   | The sales tax that was charged for the transaction. This information is provided by the merchant. |
-| Currency            | string   | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant. |
-| DeviceContextId     | string   | The session ID of the event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if the session isn't available. |
-| IPAddress           | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
-| UserId              | string   | The customer identifier. This information is provided by the merchant. This attribute is required.|
-| UserFirstName       | string   | The customer-provided first name on the customer account. |
-| UserLastName        | string   | The customer-provided last name on the customer account. |
-| UserEmail           | string   | The customer's email address. This value is case-insensitive. |
+| TotalAmount         | Double  | The total amount that was charged to the customer including tax. This information is provided by the merchant. |
+| SalesTax            | Double  | The sales tax that was charged for the transaction. This information is provided by the merchant. |
+| Currency            | String  | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant. |
+| DeviceContextId     | String  | The session ID of the event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if the session isn't available. |
+| IPAddress           | String  | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
+| UserId              | String  | The customer identifier. This information is provided by the merchant. This attribute is required.|
+| UserFirstName       | String  | The customer-provided first name on the customer account. |
+| UserLastName        | String  | The customer-provided last name on the customer account. |
+| UserEmail           | String  | The customer's email address. This value is case-insensitive. |
 | UserCreationDate    | DateTime | The creation date of the customer account. The format is ISO 8601. |
 | UserUpdateDate      | DateTime | The date when customer data was last changed. The format is ISO 8601. |
-| UserZipCode         | string   | The customer's postal code. |
-| UserCountryCode     | string   | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
-| UserTimeZone        | string   | An empty string. |
-| UserLanguage        | string   | The customer's language and language territory (for example: **EN-US**). |
-| UserPhoneNumber     | string   | The customer's phone number. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| IsEmailValidated    | bool     | A **True**/**False** value that indicates whether the customer-provided email address has been verified as owned by the customer. |
-| ShippingFirstName   | string   | The first name that was provided for the address. |
-| ShippingLastName    | string   | The last name that was provided for the address. |
-| ShippingPhoneNumber | string   | The phone number that was provided for the address. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| Street1             | string   | The first row that was provided for the address. |
-| Street2             | string   | The second row that was provided for the address. (This value can be blank.) |
-| Street3             | string   | The third row that was provided for the address. (This value can be blank.) |
-| City                | string   | The city that was provided for the address. |
-| State               | string   | The state or province that was provided for the address. |
-| ZipCode             | string   | The postal code that was provided for the address. |
-| CountryCode         | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
-| CustomData          | object   | An optional user-defined JavaScript Object Notation (JSON) property bag. It's filled in when an API call is instantiated. The attributes can be referenced when you create purchase rules.<p>**Note:**</p><ul><li>The following primitive types are supported: **String (Unicode)**, **Int32**, **UInt32**, **Double**, **Boolean**, and **DateTime** (in Coordinated Universal Time \[UTC\], in conformance to .NET semantics).</li><li>The string data limit is 256 characters.</li><li>There is a limit of 100 custom attributes per payload.</li><li>Don't send sensitive or highly regulated data types. Here are some examples:<ul><li>Data that indicates a protected class (such as gender or race) or private/sensitive categories (such as religious views or sexual orientation)</li><li>Biometric data or any data that is related to health</li></ul></li><li>The custom data retention policy matches the retention policy of the purchase event (six months).</li></ul><p>For a sample that shows how to use purchase APIs with a custom data object in Fraud Protection, see the [Custom data sample](schema-INT.md#custom-data-sample) section at the end of this topic.</p>  |
-|MerchantBusinessType  | string    |The business or industry vertical (for example: gaming, retail, dining, or social networking).  |
- |MerchantIdentifier    |string     |The merchant ID (MID) is a specific identification number attached to a business that tells the payment processing systems involved in a transaction where to send which funds. You can think of it like an address for your business. For example, if you don't have a merchant ID, the networks involved won't know where to send your money.  |
- |MerchantCategoryCode  |string     |The merchant category code (MCC) is a four-digit number listed in ISO 18245 for retail financial services. An MCC is used to classify a business by the types of goods or services it provides.  |
- |MerchantBusinessSegment |string   |The subsection of a merchant’s overall operations in which there is an established, separate product line, business line or child brand (for example: Xbox or Surface).  |
- | MerchantProductCategory |string   |The merchant-defined product or service category. |
- |StoreId               |string     |The store identifier.  |
- |StoreName             |string     |The store display name.  |
- |StoreAddress          |string     |The full address (street, city, state, zip) of the store.  |
- |IsTest               |bool        |A value that indicates whether the transaction is a test in production.  |
- |IsFreeProductIncluded |bool      |A value that indicates whether a free product is included in the transaction.|
- |IsGuestCheckout       |bool      |A value that indicates whether the purchase was made as a guest.  |
- |IsPostAuthCheck       |bool      |A value that indicates whether there was a post-authentication check.  |
- |IsRecurringCharge     |bool      |A value that indications whether the transaction was a subscription/recurring.  |
+| UserZipCode         | String  | The customer's postal code. |
+| UserCountryCode     | String  | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
+| UserTimeZone        | String  | An empty string. |
+| UserLanguage        | String  | The customer's language and language territory (for example: **EN-US**). |
+| UserPhoneNumber     | String  | The customer's phone number. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
+| IsEmailValidated    | Boolean  | A **True**/**False** value that indicates whether the customer-provided email address has been verified as owned by the customer. |
+| ShippingFirstName   | String  | The first name that was provided for the address. |
+| ShippingLastName    | String  | The last name that was provided for the address. |
+| ShippingPhoneNumber | String  | The phone number that was provided for the address. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
+| Street1             | String  | The first row that was provided for the address. |
+| Street2             | String  | The second row that was provided for the address. (This value can be blank.) |
+| Street3             | String  | The third row that was provided for the address. (This value can be blank.) |
+| City                | String  | The city that was provided for the address. |
+| State               | String  | The state or province that was provided for the address. |
+| ZipCode             | String  | The postal code that was provided for the address. |
+| CountryCode         | String  | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| CustomData          | Object   | An optional user-defined JavaScript Object Notation (JSON) property bag. It's filled in when an API call is instantiated. The attributes can be referenced when you create purchase rules.<p>**Note:**</p><ul><li>The following primitive types are supported: **String (Unicode)**, **Int32**, **UInt32**, **Double**, **Boolean**, and **DateTime** (in Coordinated Universal Time \[UTC\], in conformance to .NET semantics).</li><li>The string data limit is 256 characters.</li><li>There is a limit of 100 custom attributes per payload.</li><li>Don't send sensitive or highly regulated data types. Here are some examples:<ul><li>Data that indicates a protected class (such as gender or race) or private/sensitive categories (such as religious views or sexual orientation)</li><li>Biometric data or any data that is related to health</li></ul></li><li>The custom data retention policy matches the retention policy of the purchase event (six months).</li></ul><p>For a sample that shows how to use purchase APIs with a custom data object in Fraud Protection, see the [Custom data sample](schema-INT.md#custom-data-sample) section at the end of this topic.</p>  |
+|MerchantBusinessType  | String  |The business or industry vertical (for example: gaming, retail, dining, or social networking).  |
+ |MerchantIdentifier    | String  |The merchant ID (MID) is a specific identification number attached to a business that tells the payment processing systems involved in a transaction where to send which funds. You can think of it like an address for your business. For example, if you don't have a merchant ID, the networks involved won't know where to send your money.  |
+ |MerchantCategoryCode  | String  |The merchant category code (MCC) is a four-digit number listed in ISO 18245 for retail financial services. An MCC is used to classify a business by the types of goods or services it provides.  |
+ |MerchantBusinessSegment | String  |The subsection of a merchant’s overall operations in which there is an established, separate product line, business line or child brand (for example: Xbox or Surface).  |
+ | MerchantProductCategory | String  |The merchant-defined product or service category. |
+ |StoreId               | String  |The store identifier.  |
+ |StoreName             | String  |The store display name.  |
+ |StoreAddress          | String  |The full address (street, city, state, zip) of the store.  |
+ |IsTest               | Boolean |A value that indicates whether the transaction is a test in production.  |
+ |IsFreeProductIncluded | Boolean |A value that indicates whether a free product is included in the transaction.|
+ |IsGuestCheckout       | Boolean |A value that indicates whether the purchase was made as a guest.  |
+ |IsPostAuthCheck       | Boolean |A value that indicates whether there was a post-authentication check.  |
+ |IsRecurringCharge     | Boolean |A value that indications whether the transaction was a subscription/recurring.  |
  |RecurringChargeFrequencyInDays  |double    |How often the recurring purchase is being charged, for example, every 30 days, every half year, every year, etc.  |
  |RecurringChargeStartDate |DateTime         |The start date for a recurring transaction.  |
  |RecurringChargeEndDate   |DateTime         |The end date for a recurring transaction.  |
- |IsPostpaid               |bool             |A value that indicates whether a transaction is postpaid or not.  |
-|DiscountAmount           |double           |The discount amount applied to the transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **1**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+1, or **6**. |
-|TipAmount                |double           |The tip amount applied to the transaction.  |
-|DistinctItemCount        |double           |The distinct/unique item count per transaction.  |
-|TotalItemCount           |double           |The total item count per transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **10**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+10, or **15**. |
-|IsLowLiabilityPIType     |bool             |A value that indicates low liability payment instruments (for example: Apple Pay, Alipay, or UnionPay).  |
-|OrderType               |string            |The type of transaction (for example: takeout).  |
-|IsRetryOrder             |bool	           |A value that indicates whether the order was retried.  |
-| AttemptId                |string           |The identifier for each transaction retry.  |
+ |IsPostpaid               | Boolean |A value that indicates whether a transaction is postpaid or not.  |
+|DiscountAmount           | Double  |The discount amount applied to the transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **1**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+1, or **6**. |
+|TipAmount                | Double  |The tip amount applied to the transaction.  |
+|DistinctItemCount        | Double  |The distinct/unique item count per transaction.  |
+|TotalItemCount           | Double  |The total item count per transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **10**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+10, or **15**. |
+|IsLowLiabilityPIType     | Boolean |A value that indicates low liability payment instruments (for example: Apple Pay, Alipay, or UnionPay).  |
+|OrderType               | String  |The type of transaction (for example: takeout).  |
+|IsRetryOrder             | Boolean |A value that indicates whether the order was retried.  |
+| AttemptId                | String  |The identifier for each transaction retry.  |
 | ShippingDate             |DateTime         |The date that the order was shipped.  |
-| OrderInitiatedChannel    |string           |The channel where the transaction was created (for example: ‘AppStore', 'Web', MobileWeb, 'App', ‘InGamePurchase’).  | 
-| OrderInitiatedChannelName   |string        |The App Name or Web URL where the transaction was created.  |
-| OrderInitiatedChannelRegionORCountry |string        |The market where the transaction was created (for example: App market).  |
-| MerchantBusinessSubSegmentL2   |string       |The second level (L2) business or industry segment.  |
+| OrderInitiatedChannel    | String  |The channel where the transaction was created (for example: ‘AppStore', 'Web', MobileWeb, 'App', ‘InGamePurchase’).  | 
+| OrderInitiatedChannelName   | String  |The App Name or Web URL where the transaction was created.  |
+| OrderInitiatedChannelRegionORCountry | String  |The market where the transaction was created (for example: App market).  |
+| MerchantBusinessSubSegmentL2   | String  |The second level (L2) business or industry segment.  |
 | midName  |  String  |  The merchant name associated with the MID (merchant identifier). | 
 | transactionProcessingOrder  |  String  |  The order in which the fraud assessment was made during the transaction flow. | 
 | recurringSubscriptionId  |  String  |  The unique ID for the recurring charge | 
