@@ -522,81 +522,80 @@ The following schema is used in the Evaluate and Protect experiences.
 | DropOffLocation  |  Travel  |  String  |  The car rental drop-off location. | 
 | DropOffDateTime  |  Travel  |  DateTimeOffset  |  The car rental drop-off date and time | 
 | DiscountProgram  |  Travel  |  String  |  The discount program applied to the car rental order. | 
-| carType  |  Travel  |  String  |  The car type or category. | 
-| isPrepaid  |  Travel  | Boolean  |  A True/False value indicating whether the car rental was prepaid. | 
-| insuranceIncluded  |  Travel  | Boolean  |  A True/False value indicating whether insurance was included. | 
-| contactEmail  |  Travel  |  String  |  The car renter's email address. | 
-| contactPhoneNumber  |  Travel  |  String  |  The car renter's phone number. | 
-| pickupAddress  |  Travel  |  Object  |  refer to address section | 
-| dropOffAddress  |  Travel  |  Object  |  refer to address section | 
-| **travelAgent**  |    |    |   | 
-| agencyCode  |  Travel  |  String  |  The travel agency code. | 
-| agencyName  |  Travel  |  String  |  The travel agency name. | 
-| agentCode  |  Travel  |  String  |  The trave agent code. | 
-| agencyLocation  |  Travel  |  Object  |  refer to agentAddress section | 
-| **agentAddress**  |    |    |   | 
-| street1  |  Travel  |  String  |  The first row that was provided for the address | 
-| street2  |  Travel  |  String  |  The second row that was provided for the address. (This value can be blank.) | 
-| street3  |  Travel  |  String  |  The third row that was provided for the address. (This value can be blank.) | 
-| city  |  Travel  |  String  |  The city that was provided for the address. | 
-| state  |  Travel  |  String  |  The state or province that was provided for the address. | 
-| district  |  Travel  |  String  |  The district that was provided for the address. | 
-| zipCode  |  Travel  |  String  |  The postal code that was provided for the address. | 
-| country  |  Travel  |  String  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
-| agencyContactPhone  |  Travel  |  String  |  The agency contact phone number | 
-| agencyContactEmail  |  Travel  |  String  |  The agency contact email address | 
-| **lodgingDetails**  |    |    |   | 
-| folioNumber  |  Lodging  |  String  |  The unique identifier of the lodging property. | 
+| CarType  |  Travel  |  String  |  The car type or category. | 
+| IsPrepaid  |  Travel  | Boolean  |  A True/False value indicating whether the car rental was prepaid. | 
+| InsuranceIncluded  |  Travel  | Boolean  |  A True/False value indicating whether insurance was included. | 
+| ContactEmail  |  Travel  |  String  |  The car renter's email address. | 
+| ContactPhoneNumber  |  Travel  |  String  |  The car renter's phone number. | 
+| PickupAddress  |  Travel  |  Object  |  refer to address section | 
+| DropOffAddress  |  Travel  |  Object  |  refer to address section | 
+| **TravelAgent**  |    |    |   | 
+| AgencyCode  |  Travel  |  String  |  The travel agency code. | 
+| AgencyName  |  Travel  |  String  |  The travel agency name. | 
+| AgentCode  |  Travel  |  String  |  The trave agent code. | 
+| AgencyLocation  |  Travel  |  Object  |  refer to agentAddress section | 
+| **AgentAddress**  |    |    |   | 
+| Street1  |  Travel  |  String  |  The first row that was provided for the address | 
+| Street2  |  Travel  |  String  |  The second row that was provided for the address. (This value can be blank.) | 
+| Street3  |  Travel  |  String  |  The third row that was provided for the address. (This value can be blank.) | 
+| City  |  Travel  |  String  |  The city that was provided for the address. | 
+| State  |  Travel  |  String  |  The state or province that was provided for the address. | 
+| District  |  Travel  |  String  |  The district that was provided for the address. | 
+| ZipCode  |  Travel  |  String  |  The postal code that was provided for the address. | 
+| Country  |  Travel  |  String  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
+| AgencyContactPhone  |  Travel  |  String  |  The agency contact phone number | 
+| AgencyContactEmail  |  Travel  |  String  |  The agency contact email address | 
+| **LodgingDetails**  |    |    |   | 
+| FolioNumber  |  Lodging  |  String  |  The unique identifier of the lodging property. | 
 | CheckInDate  |  Lodging  |  DateTimeOffset  |  The check-in date for the lodging stay. | 
 | CheckOutDate  |  Lodging  |  DateTimeOffset  |  The check-out date for the lodging stay. | 
-| reservationConfirmed  |  Lodging  | Boolean  |  A True/False value indicating whether the reservation has been confirmed. | 
-| membershipDetails  |  Lodging  |  String  |  Additional details on the customer's membership status. | 
-| discountProgram  |  Lodging  |  String  |  The discount program applied to the lodging order. | 
-| adultCount  |  Lodging  |  Int32  |  The number of adults included in the stay. | 
-| kidCount  |  Lodging  |  Int32  |  The number of kids included in the stay. | 
-| nightsCount  |  Lodging  |  Int32  |  The number of nights included in the stay. | 
-| roomCount  |  Lodging  |  Int32  |  The number of rooms included in the stay. | 
-| bedType  |  Lodging  |  String  |  The bed type or category. | 
-| roomType  |  Lodging  |  String  |  The room type or category. | 
-| paymentDescription  |  Lodging  |  String  |  Additional details on the loding payment. | 
-| facility  |  Lodging  |  Object  |  refer to facility section | 
-| **facility**  |    |    |   | 
-| name  |  Lodging  |  String  |  The facility name. | 
-| type  |  Lodging  |  String  |  The facility type. | 
-| contactPhoneNumber  |  Lodging  |  String  |  The phone number used to contact the facility. | 
-| contactEmail  |  Lodging  |  String  |  The email address used to contact the facility. | 
-| dailyRoomRate  |  Lodging  |  decimal  |  The daily room rate for the facility. | 
-| currency  |  Lodging  |  String  |  The currency supported by the facility. | 
-| dailyRoomTaxAmount  |  Lodging  |  decimal  |  The daily room tax amount charged by the facility. | 
-| address  |  Lodging  |  Object  |  refer to address section | 
-| **address**  |    |    |   | 
-| street1  |  Car Rental  |  String  |  The first row that was provided for the address | 
-| street2  |  Car Rental  |  String  |  The second row that was provided for the address. (This value can be blank.) | 
-| street3  |  Car Rental  |  String  |  The third row that was provided for the address. (This value can be blank.) | 
-| city  |  Car Rental  |  String  |  The city that was provided for the address. | 
-| state  |  Car Rental  |  String  |  The state or province that was provided for the address. | 
-| district  |  Car Rental  |  String  |  The district that was provided for the address. | 
-| zipCode  |  Car Rental  |  String  |  The postal code that was provided for the address. | 
-| country  |  Car Rental  |  String  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
-| **cloudBusiness**  |    |    |   | 
-| organizationId  |  CloudBusiness  |  String  |  The unique identifier for the cloud service or organization. | 
-| companyName  |  CloudBusiness  |  String  |  The cloud service name. | 
-| companyType  |  CloudBusiness  |  String  |  The cloud company type. | 
-| companySize  |  CloudBusiness  |  Int32  |  The cloud company size. | 
-| entityId  |  CloudBusiness  |  String  |  The unique identifier for the legal entity under the organization. | 
-| primaryContactFirstName  |  CloudBusiness  |  String  |  The first name of the primary contact for the business. | 
-| primaryContactLastName  |  CloudBusiness  |  String  |  The last name of the primary contact for the business. | 
-| primaryContactEmail  |  CloudBusiness  |  String  |  The email address of the primary contact for the business. | 
-| primaryContactPhoneNumber  |  CloudBusiness  |  String  |  The phone number of the primary contact for the business. | 
-| subscriptionCount  |  CloudBusiness  |  Int32  |  The total number of subscriptions available. | 
-| companyAddress  |  CloudBusiness  |  Object  |  Refer to address section | 
+| ReservationConfirmed  |  Lodging  | Boolean  |  A True/False value indicating whether the reservation has been confirmed. | 
+| MembershipDetails  |  Lodging  |  String  |  Additional details on the customer's membership status. | 
+| DiscountProgram  |  Lodging  |  String  |  The discount program applied to the lodging order. | 
+| AdultCount  |  Lodging  |  Int32  |  The number of adults included in the stay. | 
+| KidCount  |  Lodging  |  Int32  |  The number of kids included in the stay. | 
+| NightsCount  |  Lodging  |  Int32  |  The number of nights included in the stay. | 
+| RoomCount  |  Lodging  |  Int32  |  The number of rooms included in the stay. | 
+| BedType  |  Lodging  |  String  |  The bed type or category. | 
+| RoomType  |  Lodging  |  String  |  The room type or category. | 
+| PaymentDescription  |  Lodging  |  String  |  Additional details on the loding payment. | 
+| Facility  |  Lodging  |  Object  |  refer to facility section | 
+| **Facility**  |    |    |   | 
+| Name  |  Lodging  |  String  |  The facility name. | 
+| Type  |  Lodging  |  String  |  The facility type. | 
+| ContactPhoneNumber  |  Lodging  |  String  |  The phone number used to contact the facility. | 
+| ContactEmail  |  Lodging  |  String  |  The email address used to contact the facility. | 
+| DailyRoomRate  |  Lodging  |  decimal  |  The daily room rate for the facility. | 
+| Currency  |  Lodging  |  String  |  The currency supported by the facility. | 
+| DailyRoomTaxAmount  |  Lodging  |  decimal  |  The daily room tax amount charged by the facility. | 
+| Address  |  Lodging  |  Object  |  refer to address section | 
+| **Address**  |    |    |   | 
+| Street1  |  Car Rental  |  String  |  The first row that was provided for the address | 
+| Street2  |  Car Rental  |  String  |  The second row that was provided for the address. (This value can be blank.) | 
+| Street3  |  Car Rental  |  String  |  The third row that was provided for the address. (This value can be blank.) | 
+| City  |  Car Rental  |  String  |  The city that was provided for the address. | 
+| State  |  Car Rental  |  String  |  The state or province that was provided for the address. | 
+| District  |  Car Rental  |  String  |  The district that was provided for the address. | 
+| ZipCode  |  Car Rental  |  String  |  The postal code that was provided for the address. | 
+| Country  |  Car Rental  |  String  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
+| **CloudBusiness**  |    |    |   | 
+| OrganizationId  |  CloudBusiness  |  String  |  The unique identifier for the cloud service or organization. | 
+| CompanyName  |  CloudBusiness  |  String  |  The cloud service name. | 
+| CompanyType  |  CloudBusiness  |  String  |  The cloud company type. | 
+| CompanySize  |  CloudBusiness  |  Int32  |  The cloud company size. | 
+| EntityId  |  CloudBusiness  |  String  |  The unique identifier for the legal entity under the organization. | 
+| PrimaryContactFirstName  |  CloudBusiness  |  String  |  The first name of the primary contact for the business. | 
+| PrimaryContactLastName  |  CloudBusiness  |  String  |  The last name of the primary contact for the business. | 
+| PrimaryContactEmail  |  CloudBusiness  |  String  |  The email address of the primary contact for the business. | 
+| PrimaryContactPhoneNumber  |  CloudBusiness  |  String  |  The phone number of the primary contact for the business. | 
+| SubscriptionCount  |  CloudBusiness  |  Int32  |  The total number of subscriptions available. | 
+| CompanyAddress  |  CloudBusiness  |  Object  |  *Refer to address section.* | 
 
 ## Download sample data
 
 You can download our sample data files to explore options before using your own internal data.
 - For samples you can use with loss prevention, select [Loss prevention sample data file](https://download.microsoft.com/download/3/1/6/316b5f40-287d-48a3-ab3c-bf4c7a171cfc/LP1.zip.).
 - For samples you can use with purchase protection, select [Purchase protection sample data file](https://download.microsoft.com/download/c/6/a/c6a37f61-1d4c-4357-8b3c-0a6d78bcb3a1/PP1.zip).
-
 
 ### Custom data sample
 
