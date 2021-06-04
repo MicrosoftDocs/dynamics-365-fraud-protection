@@ -102,11 +102,11 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | OrganizationLevel1  |  Object  |  The top level of the organization hierarchy. | 
 | OrganizationLevel2  |  Object  |  The middle level of the organization hierarchy. | 
 | OrganizationLevel3  |  Object  |  The lowest level of the organization hierarchy. | 
-| ThreeDS  |  Object  |  refer to threeDS section | 
-| RecipientUser  |  Object  |  refer to user section | 
-| TravelOverview  |  Object  |  refer to Vertical Specific Attributes travelOverview Section | 
-| CloudBusiness  |  Object  |  refer to Vertical Specific Attributes clouldBusiness Section | 
-| MembershipType  |  String  |  The customer's membership status or type. Different levels in paid can be specified such as Premium,Executive. | 
+| ThreeDS  |  Object  |  *Refer to ThreeDS section.* | 
+| RecipientUser  |  Object  |  *Refer to user section.* | 
+| TravelOverview  |  Object  |  *Refer to Vertical-specific attributes TravelOverview section.* | 
+| CloudBusiness  |  Object  |  *Refer to Vertical-specific attributes CloudBusiness section.* | 
+| MembershipType  |  String  |  The customer's membership status or type. Different levels can be specified such as Premium and Executive. | 
 | AuthenticationMethod  |  String  |  The way in which the customer was authenticated prior/during purchase. | 
 | LoginInputMethod  |  String  |  The way in which the customer input their credentials. | 
 | LastPasswordUpdatedDate  |  DateTimeOffset  |  When the customer's password was last updated. | 
@@ -121,12 +121,12 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | SslSignature  |  String  |  The SSL signature. | 
 | EnabledCookies  |  Boolean  |  A True/False value that indicates whether cookies are enabled. | 
 | EnabledFlash  |  Boolean  |  A True/False value that indicates whether Flash is enabled. | 
-| EnabledJavaScript  |  Boolean  |  A True/False value that indicates whether javascript is enabled. | 
+| EnabledJavaScript  |  Boolean  |  A True/False value that indicates whether JavaScript is enabled. | 
 | ScreenAspectRatio  |  String  |  The aspect ratio of the browser. | 
 | ScreenColorDepth  |  String  |  The color depth of the screen. | 
 | ScreenResolution  |  String  |  Resolution of device screen in pixels | 
 | SiteHostName  |  String  |  The site's hostname. | 
-| Os  |  String  |  The device operating system. | 
+| OS  |  String  |  The device operating system. | 
 | OSFonts  |  String  |  The operating system's default font. | 
 | DeviceProcessor  |  String  |  The device processor. | 
 | SessionId  |  String  |  The unique session ID. | 
@@ -144,14 +144,14 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | DeviceModelName  |  String  |  Device model. | 
 | DeviceSystemName  |  String  |  Device name of the machine. | 
 | DeviceSystemVersion  |  String  |  Device version. | 
-| IsBluetoothEnabled  |  Boolean  |  A True/False value that indicates whether bluetooth has been enabled. | 
+| IsBluetoothEnabled  |  Boolean  |  A True/False value that indicates whether Bluetooth has been enabled. | 
 | SimNetworkCountryISO  |  String  |  ISO country code for the mobile service provider. | 
 | SimNetworkType  |  String  |  Mobile network type. | 
 | SystemUpTime  |  String  |  The duration of time that the device has been working and available. | 
 | PaymentMethod  |  String  |  The top-level payment method category. | 
 | IsLowLiabilityPIType  |  Boolean  |  A True/False value indicating whether the payment method is a low liability. | 
 | HolderCompanyName  |  Boolean  |  Name of the organization providing the business or company card (for business purchases only). | 
-| SettlementApprovalRequired  |  Boolean  |  A True/False value inidcating whether or not approval was required for a SEPA transaction. | 
+| SettlementApprovalRequired  |  Boolean  |  A True/False value indicating whether or not approval was required for a SEPA transaction. | 
 | PaymentCheckoutProvider  |  String  |  The eWallet checkout provider. | 
 | BinName  |  String  |  The BIN display name. | 
 | BinCountryISO  |  String  |  The ISO country code associated with the BIN. | 
@@ -175,12 +175,12 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | AcquirerId  |  String  |  Acquiring institution identification code. | 
 | AcquirerCountryISO  |  String  |  Acquiring institution country code. | 
 | CvvVerify  |  String  |  Indicates whether CVV verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |  
-| AvsVerify  |  String  |  Indicates whether addres verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> | 
-| CavVerify  |  String  |  Indicates whether cardholder authentication verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> | 
+| AvsVerify  |  String  |  Indicates whether address verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> | 
+| CavVerify  |  String  |  Indicates whether cardholder authentication verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> | 
 | EncryptedCreditCardNumber  |  String  |  The hashed or encrypted credit card number. | 
 | OrganizationId  |  String  |  The unique identifier for the merchant or organization. | 
 | Name  |  String  |  The name of the organization. | 
-| ZipCode  |  String  |  The zipcode at where the organization is located. | 
+| ZipCode  |  String  |  The zip code at where the organization is located. | 
 | State  |  String  |  The state at where the organization is located. | 
 | CountryISO  |  String  |  The country ISO code for where the organization is located. | 
 | ProductBrand  |  String  |  Brand name of the product. | 
@@ -198,7 +198,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | TransStatus  |  String  |  Indicates whether a transaction qualifies as an authenticated transaction or account verification.  | 
 | TransStatusReason  |  String  |  Provides information on why the Transaction Status field has the specified value. | 
 | ThreeDSCompInd  |  String  |  Indicates whether the 3DS Method successfully completed. | 
-| AcsChallengeMandated  |  String  |  Indication of whether a challenge is required for the transaction to be authorised due to local/regional mandates or other variable.  | 
+| AcsChallengeMandated  |  String  |  Indication of whether a challenge is required for the transaction to be authorized due to local/regional mandates or other variable.  | 
 | ThreeDSRequestorChallengeInd  |  String  |  Indicates whether a challenge is requested for this transaction. | 
 | ChallengeCompletionInd  |  String  |  Indicator of the state of the ACS challenge cycle and whether the challenge has completed or will require additional messages. | 
 | Values accepted: | 
@@ -319,7 +319,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Status             | String   | The status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | BankResponseCode   | String   | The bank code on the response. |
-| PaymentProcessor   | String   | The processor name (for example: **FDC** or **Paypal**). |
+| PaymentProcessor   | String   | The processor name (for example: **FDC** or **PayPal**). |
 | MRN                | String   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
 | MID                | String   | The merchant ID (MID) that is used for bank communication. |
 | PurchaseId         | String   | The identifier of the transaction (or purchase or order). |
@@ -328,9 +328,9 @@ The following schema is used in the Evaluate and Protect experiences.
 | PaymentMethod | String | Groupings/categories of payment methods. |
 | CardType | String | The type of payment. |
 | UpdatedPI | String | Used different PI than the one in Purchase? |
-| CvvVerify | String | Indicates whether CVV verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
+| CvvVerify | String | Indicates whether CVV verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
 | AvsVerify | String | Indicates whether address verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
-| CavVerify | String | Indicates whether cardholder authentication verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
+| CavVerify | String | Indicates whether cardholder authentication verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
 | AuthorizationResultCode | String | Bank response from the authorization decision. |
 | AuthorizationResultText | String | Reasons for the authorization decision; especially for declined or pending transactions. |
 | ThreeDS | String | *Refer to Purchase ThreeDS section in Purchase sheet.* |
@@ -488,7 +488,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | PurchaserProfileType  |  Travel  |  String  |  The customer's profile or membership type. | 
 | IsThirdParty  |  Travel  | Boolean  |  A True/False value indicating whether the order was placed through a third party site. | 
 | IsPurchaserFrequentFlyer  |  Travel  | Boolean  |  A True/False value indicating whether the customer is a frequent flyer. | 
-| FlightSegments  |  Travel  |  Object  |  *Refer to FlightSegements section.* | 
+| FlightSegments  |  Travel  |  Object  |  *Refer to FlightSegments section.* | 
 | Passengers  |  Travel  |  Object  |  *Refer to Passengers section.* | 
 | **FlightSegments**  |    |    |   | 
 | AirlineCode  |  Travel  |  String  |  The airline code. | 
