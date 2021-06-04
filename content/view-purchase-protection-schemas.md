@@ -218,55 +218,55 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 
 | Attribute                   | Type     | Description |
 |-----------------------------|----------|-------------|
-| PurchaseId                  | string   | The identifier of the transaction (or purchase or order). |
-| MerchantPaymentInstrumentId | string   | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
-| Type                        | string   | The type of payment. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
-| PurchaseAmount              | double   | The total purchase amount that uses this payment instrument for the transaction. |
+| PurchaseId                  |  String  | The identifier of the transaction (or purchase or order). |
+| MerchantPaymentInstrumentId |  String  | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
+| Type                        |  String  | The type of payment. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| PurchaseAmount              | Double   | The total purchase amount that uses this payment instrument for the transaction. |
 | CreationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | UpdateDate                  | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
-| CardType                    | string   | This attribute is used only for payments of the **CreditCard** type. |
-| HolderName                  | string   | The name of the customer of the payment instrument. This attribute is used only for payments of the **CreditCard** type. |
-| BIN                         | string   | This attribute is used only for payments of the **CreditCard** type. |
-| ExpirationDate              | string   | The expiration date for the payment instrument in the merchant's system. The format is ISO 8601. This attribute is used only for payments of the **CreditCard** type. |
-| LastFourDigits              | string   | This attribute is used only for payments of the **CreditCard** type. |
-| Email                       | string   | The email address that is associated with the payment instrument. This attribute is used only for payments of the **Paypal** type. |
-| BillingAgreementId          | string   | This attribute is used only for payments of the **Paypal** type. |
-| PayerId                     | string   | This attribute is used only for payments of the **Paypal** type. |
-| PayerStatus                 | string   | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **Paypal** type. |
-| AddressStatus               | string   | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **Paypal** type. |
-| IMEI                        | string   | This attribute is used only for payments of the **Mobilepayment** type. |
-| FirstName                   | string   | The first name that was provided for the address. |
-| LastName                    | string   | The last name that was provided for the address. |
-| PhoneNumber                 | string   | The phone number that was provided for the address. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| Street1                     | string   | The first row that was provided for the address. |
-| Street2                     | string   | The second row that was provided for the address. (This value can be blank.) |
-| Street3                     | string   | The third row that was provided for the address. (This value can be blank.) |
-| City                        | string   | The city that was provided for the address. |
-| State                       | string   | The state or province that was provided for the address. |
-| ZipCode                     | string   | The postal code that was provided for the address. |
-| CountryCode                 | string   | The country/region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
- | PISource                     | string   | The payment instrument source (for example: CustomerInput, FromSavedProfile, MobilePay). |
+| CardType                    |  String  | This attribute is used only for payments of the **CreditCard** type. |
+| HolderName                  |  String  | The name of the customer of the payment instrument. This attribute is used only for payments of the **CreditCard** type. |
+| BIN                         |  String  | This attribute is used only for payments of the **CreditCard** type. |
+| ExpirationDate              |  String  | The expiration date for the payment instrument in the merchant's system. The format is ISO 8601. This attribute is used only for payments of the **CreditCard** type. |
+| LastFourDigits              |  String  | This attribute is used only for payments of the **CreditCard** type. |
+| Email                       |  String  | The email address that is associated with the payment instrument. This attribute is used only for payments of the **Paypal** type. |
+| BillingAgreementId          |  String  | This attribute is used only for payments of the **Paypal** type. |
+| PayerId                     |  String  | This attribute is used only for payments of the **Paypal** type. |
+| PayerStatus                 |  String  | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **Paypal** type. |
+| AddressStatus               |  String  | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **Paypal** type. |
+| IMEI                        |  String  | This attribute is used only for payments of the **Mobilepayment** type. |
+| FirstName                   |  String  | The first name that was provided for the address. |
+| LastName                    |  String  | The last name that was provided for the address. |
+| PhoneNumber                 |  String  | The phone number that was provided for the address. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
+| Street1                     |  String  | The first row that was provided for the address. |
+| Street2                     |  String  | The second row that was provided for the address. (This value can be blank.) |
+| Street3                     |  String  | The third row that was provided for the address. (This value can be blank.) |
+| City                        |  String  | The city that was provided for the address. |
+| State                       |  String  | The state or province that was provided for the address. |
+| ZipCode                     |  String  | The postal code that was provided for the address. |
+| CountryCode                 |  String  | The country/region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| PISource                   |  String  | The payment instrument source (for example: CustomerInput, FromSavedProfile, MobilePay). |
 
 ### Products
 
 | Attribute     | Type   | Description |
 |---------------|--------|-------------|
-| PurchaseId    | string | The identifier of the transaction (or purchase or order). |
-| ProductId     | string | The product identifier. This is a required attribute.|
-| PurchasePrice | double | The price for the line item of the purchase. |
-| Margin        | string | The margin that was gained by the sale of the item. |
+| PurchaseId    |  String  | The identifier of the transaction (or purchase or order). |
+| ProductId     |  String  | The product identifier. This is a required attribute.|
+| PurchasePrice | Double | The price for the line item of the purchase. |
+| Margin        |  String  | The margin that was gained by the sale of the item. |
 | Quantity      | Int32  | The number of items that were purchased. |
-| ProductName   | string | The customer-readable product name. |
-| Type          | string | A value that indicates whether the goods were physical or digital. |
-| Category      | string | The category of product (for example: **Apparel**, **Shoes**, or **Accessories**). |
-| Market        | string | The market where the product is offered. The value should be a two-letter ISO country or region code (for example: **US**). |
-| Sku           | string | The product's stock keeping unit (SKU). |
-| SalesPrice    | double | The price of the item that was sold excluding tax. This information is provided by the merchant. |
-| Currency      | string | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant.  | 
-| COGS          | double | The cost of goods sold (that is, the raw material cost of the item). This information is provided by the merchant. |
-| IsRecurring   | bool   | A value that indicates whether the product is a recurring subscription. |
-| IsFree        | bool   | A value that indicates whether the product is offered for free. |
-| Language      | string | The language and language territory (for example: **EN-US**). |
+| ProductName   |  String  | The customer-readable product name. |
+| Type          |  String  | A value that indicates whether the goods were physical or digital. |
+| Category      |  String  | The category of product (for example: **Apparel**, **Shoes**, or **Accessories**). |
+| Market        |  String  | The market where the product is offered. The value should be a two-letter ISO country or region code (for example: **US**). |
+| Sku           |  String  | The product's stock keeping unit (SKU). |
+| SalesPrice    | Double | The price of the item that was sold excluding tax. This information is provided by the merchant. |
+| Currency      |  String  | The currency of the original purchase as a three-character currency code (for example: **USD**, which is aligned with the OANDA currency code). This information is provided by the merchant.  | 
+| COGS          | Double | The cost of goods sold (that is, the raw material cost of the item). This information is provided by the merchant. |
+| IsRecurring   | Boolean | A value that indicates whether the product is a recurring subscription. |
+| IsFree        | Boolean | A value that indicates whether the product is offered for free. |
+| Language      |  String  | The language and language territory (for example: **EN-US**). |
 
 ## Chargebacks
 
@@ -274,14 +274,14 @@ The following schema is used in the Diagnose, Evaluate, and Protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
-| ChargebackId       | string   | The chargeback identifier. |
-| Reason             | string   | The reason that was provided by the bank. |
-| Status             | string   | The status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| ChargebackId       |  String  | The chargeback identifier. |
+| Reason             |  String  | The reason that was provided by the bank. |
+| Status             |  String  | The status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Amount             | double   | The chargeback amount. |
-| Currency           | string   | The currency that is used for the chargeback amount. |
-| UserId             | string   | The customer identifier.|
-| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
+| Amount             | Double | The chargeback amount. |
+| Currency           | String | The currency that is used for the chargeback amount. |
+| UserId             | String | The customer identifier.|
+| PurchaseId         | String | The identifier of the transaction (or purchase or order). |
 | MerchantLocalDate  | DateTime | The purchase ingestion date in the merchant's local time zone. The format is ISO 8601. |
 
 ## Refunds
@@ -290,14 +290,14 @@ The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
-| RefundId           | string   | The refund identifier. |
-| Reason             | string   | The customer-provided reason. |
-| Status             | string   | The refund status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| RefundId           | String  | The refund identifier. |
+| Reason             | String   | The customer-provided reason. |
+| Status             | String   | The refund status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Amount             | double   | The refund amount. |
-| Currency           | string   | The currency that is used for the sales price amount. |
-| UserId             | string   | The customer identifier. This is a required attribute.|
-| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
+| Amount             | Double   | The refund amount. |
+| Currency           | String   | The currency that is used for the sales price amount. |
+| UserId             | String   | The customer identifier. This is a required attribute.|
+| PurchaseId         | String   | The identifier of the transaction (or purchase or order). |
 | MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
 
 ## PurchaseStatus
@@ -306,10 +306,10 @@ The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute         | Type     | Description |
 |-------------------|----------|-------------|
-| PurchaseId        | string   | The identifier of the transaction (or purchase or order). |
-| StatusType        | string   | The type of status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| PurchaseId        | String   | The identifier of the transaction (or purchase or order). |
+| StatusType        | String   | The type of status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | StatusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
-| Reason            | string   | The reason for the status transition. |
+| Reason            | String   | The reason for the status transition. |
 | MerchantLocalDate | DateTime | A date in ISO 8601 format. |
 
 ## BankEvents
@@ -318,26 +318,26 @@ The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
-| BankEventId        | string   | The bank event identifier. |
-| Type               | string   | The bank event type. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| BankEventId        | String   | The bank event identifier. |
+| Type               | String   | The bank event type. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Status             | string   | The status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
-| BankResponseCode   | string   | The bank code on the response. |
-| PaymentProcessor   | string   | The processor name (for example: **FDC** or **Paypal**). |
-| MRN                | string   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
-| MID                | string   | The merchant ID (MID) that is used for bank communication. |
-| PurchaseId         | string   | The identifier of the transaction (or purchase or order). |
+| Status             | String   | The status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| BankResponseCode   | String   | The bank code on the response. |
+| PaymentProcessor   | String   | The processor name (for example: **FDC** or **Paypal**). |
+| MRN                | String   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
+| MID                | String   | The merchant ID (MID) that is used for bank communication. |
+| PurchaseId         | String   | The identifier of the transaction (or purchase or order). |
 | MerchantLocalDate  | DateTime | A date in ISO 8601 format. |
-| MerchantPaymentInstrumentId | string | Multiple PI scenario & PI change scenario. |
-| PaymentMethod | string | Groupings/categories of payment methods. |
-| CardType | string | The type of payment. |
-| UpdatedPI | string | Used different PI than the one in Purchase? |
-| CvvVerify | string | Indicates whether CVV verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
-| AvsVerify | string | Indicates whether address verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
-| CavVerify | string | Indicates whether cardholder authentication verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
-| AuthorizationResultCode | string | Bank response from the authorization decision. |
-| AuthorizationResultText | string | Reasons for the authorization decision; especially for declined or pending transactions. |
-| ThreeDS | string | *Refer to Purchase threeDS section in Purchase sheet.* |
+| MerchantPaymentInstrumentId | String | Multiple PI scenario & PI change scenario. |
+| PaymentMethod | String | Groupings/categories of payment methods. |
+| CardType | String | The type of payment. |
+| UpdatedPI | String | Used different PI than the one in Purchase? |
+| CvvVerify | String | Indicates whether CVV verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
+| AvsVerify | String | Indicates whether address verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
+| CavVerify | String | Indicates whether cardholder authentication verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
+| AuthorizationResultCode | String | Bank response from the authorization decision. |
+| AuthorizationResultText | String | Reasons for the authorization decision; especially for declined or pending transactions. |
+| ThreeDS | String | *Refer to Purchase threeDS section in Purchase sheet.* |
 
 ## Account
 
@@ -348,87 +348,87 @@ The following schemas are used in the Evaluate and Protect experiences.
 | Attribute                | Type     | Description |
 |--------------------------|----------|-------------|
 | CustomerLocalDate        | DateTime | A date in ISO 8601 format. |
-| UserId                   | string   | The customer identifier. This is a required attribute.|
+| UserId                   |  String  | The customer identifier. This is a required attribute.|
 | UsercreationDate         | DateTime | A date in ISO 8601 format. |
 | UserupdateDate           | DateTime | A date in ISO 8601 format. |
-| FirstName                | string   | The customer-provided first name on the customer account. |
-| LastName                 | string   | The customer-provided last name on the customer account. |
-| CountryCode              | string   | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
-| ZipCode                  | string   | The customer's postal code. |
-| TimeZone                 | string   | This attribute is obsolete (deprecated). Provide an empty string as the value. |
-| Language                 | string   | The customer's language and language territory (for example: **EN-US**). |
-| PhoneNumber              | string   | The customer's phone number. The format should be the country/region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| Email                    | string   | The customer's email address. This value is case-insensitive. |
-| IsEmailValidated         | bool     | A value that indicates whether the customer-provided email has been verified as owned by the customer. |
+| FirstName                |  String  | The customer-provided first name on the customer account. |
+| LastName                 |  String  | The customer-provided last name on the customer account. |
+| CountryCode              |  String  | The customer's country or region. The value should be a two-letter country or region code (for example: **US**). |
+| ZipCode                  |  String  | The customer's postal code. |
+| TimeZone                 |  String  | This attribute is obsolete (deprecated). Provide an empty string as the value. |
+| Language                 |  String  | The customer's language and language territory (for example: **EN-US**). |
+| PhoneNumber              |  String  | The customer's phone number. The format should be the country/region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
+| Email                    |  String  | The customer's email address. This value is case-insensitive. |
+| IsEmailValidated         | Boolean  | A value that indicates whether the customer-provided email has been verified as owned by the customer. |
 | EmailValidatedDate       | DateTime | The date when the customer-provided email was verified as owned by the customer. The format is ISO 8601. |
-| IsPhoneNumberValidated   | bool     | A value that indicates whether the customer-provided phone number has been verified as owned by the customer. |
+| IsPhoneNumberValidated   | Boolean  | A value that indicates whether the customer-provided phone number has been verified as owned by the customer. |
 | PhoneNumberValidatedDate | DateTime | The date when the customer-provided phone number was verified as owned by the customer. The format is ISO 8601. |
-| DeviceContextId          | string   | The session ID of the event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if the session isn't available. |
-| Provider                 | string   | A value that indicates the source of the **deviceContextId** value: **DFP Fingerprinting** or **Merchant**. |
-| DeviceContextDC          | string   | The Microsoft Device Fingerprinting data center for the customer's session ID. |
-| ExternalDeviceId         | string   | The customer's device ID. This information is provided and mastered by the merchant. |
-| ExternalDeviceType       | string   | The device type as identified by the merchant (for example: **PC** or **Mobile Device**). |
-| IpAddress                | string   | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
+| DeviceContextId          |  String  | The session ID of the event's session (provided by Microsoft Device Fingerprinting) or the transaction ID if the session isn't available. |
+| Provider                 |  String  | A value that indicates the source of the **deviceContextId** value: **DFP Fingerprinting** or **Merchant**. |
+| DeviceContextDC          |  String  | The Microsoft Device Fingerprinting data center for the customer's session ID. |
+| ExternalDeviceId         |  String  | The customer's device ID. This information is provided and mastered by the merchant. |
+| ExternalDeviceType       |  String  | The device type as identified by the merchant (for example: **PC** or **Mobile Device**). |
+| IpAddress                |  String  | The customer's IP address. This information is provided by Microsoft Device Fingerprinting. |
 | MerchantLocalDate        | DateTime | A date in ISO 8601 format. |
-| MembershipType | string  | The customer's membership status or type.  |
-| LoginInputMethod | string |  The method the customer uses to input their credentials. |
-| LastPasswordUpdatedDate | string | When the customer's password was last updated. |
-| FirstPurchaseDate | string | When the customer made their first purchase. |
-| LoginChallengeType | string | The type of challenge-response test that was initiated. |
-| AddressList | string | *Refer to Purchase address section.* |
-| PaymentInstrumentList | string | *Refer to Purchase paymentInstrumentList section.*  |
-| DeviceContext | string | *Refer to Purchase deviceContext section.*  |
+| MembershipType | String  | The customer's membership status or type.  |
+| LoginInputMethod | String |  The method the customer uses to input their credentials. |
+| LastPasswordUpdatedDate | String | When the customer's password was last updated. |
+| FirstPurchaseDate | String | When the customer made their first purchase. |
+| LoginChallengeType | String | The type of challenge-response test that was initiated. |
+| AddressList | String | *Refer to Purchase address section.* |
+| PaymentInstrumentList | String | *Refer to Purchase paymentInstrumentList section.*  |
+| DeviceContext | String | *Refer to Purchase deviceContext section.*  |
 
 ### UpdateAddress
 
 | Attribute       | Type   | Description |
 |-----------------|--------|-------------|
-| UserId          | string | The customer identifier. This is a required attribute.|
-| Addresstype     | string | The address type: **Billing**, **Shipping**, **Account**, or **Unknown**. |
-| FirstName       | string | The first name that was provided for the address. |
-| LastName        | string | The last name that was provided for the address. |
-| PhoneNumber     | string | The phone number that was provided for the address. |
-| Street1         | string | The first row that was provided for the address. |
-| Street2         | string | The second row that was provided for the address. (This value can be blank.) |
-| Street3         | string | Third row that was provided for the address. (This value can be blank.) |
-| City            | string | The city that was provided for the address. |
-| State           | string | The state or province that was provided for the address. |
-| District        | string | The district that was provided for the address. (This value can be blank.) |
-| ZipCode         | string | The postal code that was provided for the address. |
-| CountryCode     | string | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| UserId          |  String  | The customer identifier. This is a required attribute.|
+| Addresstype     |  String  | The address type: **Billing**, **Shipping**, **Account**, or **Unknown**. |
+| FirstName       |  String  | The first name that was provided for the address. |
+| LastName        |  String  | The last name that was provided for the address. |
+| PhoneNumber     |  String  | The phone number that was provided for the address. |
+| Street1         |  String  | The first row that was provided for the address. |
+| Street2         |  String  | The second row that was provided for the address. (This value can be blank.) |
+| Street3         |  String  | Third row that was provided for the address. (This value can be blank.) |
+| City            |  String  | The city that was provided for the address. |
+| State           |  String  | The state or province that was provided for the address. |
+| District        |  String  | The district that was provided for the address. (This value can be blank.) |
+| ZipCode         |  String  | The postal code that was provided for the address. |
+| CountryCode     |  String  | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
 
 ### UpdatePaymentInstrument
 
 | Attribute                     | Type     | Description |
 | ----------------------------- |----------|-------------|
-| UserId                        | string   | The customer identifier. This is a required attribute.|
-| MerchantPaymentInstrumentId   | string   | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
-| PaymentInstrumenttype         | string   | The type of payment: **CreditCard**, **Paypal**, **Mobilepayment**, or **Giftcard**. |
+| UserId                        |  String  | The customer identifier. This is a required attribute.|
+| MerchantPaymentInstrumentId   |  String  | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
+| PaymentInstrumenttype         |  String  | The type of payment: **CreditCard**, **Paypal**, **Mobilepayment**, or **Giftcard**. |
 | PaymentInstrumentcreationDate | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | PaymentInstrumentupdateDate   | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
-| PaymentInstrumentState        | string   | The state of the payment instrument: **Active**, **Block**, or **Expire**. |
-| CardType                      | string   | This attribute is used only for payments of the **CreditCard** type. |
-| HolderName                    | string   | The name of the customer of the payment instrument. This attribute is used only for payments of the **CreditCard** type. |
-| BIN                           | string   | This attribute is used only for payments of the **CreditCard** type. |
-| ExpirationDate                | string   | The expiration date for the payment instrument in the merchant's system. This attribute is used only for payments of the **CreditCard** type. |
-| LastFourDigits                | string   | This attribute is used only for payments of the **CreditCard** type. |
-| Email                         | string   | The email address that is associated with the payment instrument. This attribute is used only for payments of the **Paypal** type. |
-| BillingAgreementId            | string   | This attribute is used only for payments of the **Paypal** type. |
-| PayerId                       | string   | This attribute is used only for payments of the **Paypal** type. |
-| PayerStatus                   | string   | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **Paypal** type. |
-| AddressStatus                 | string   | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **Paypal** type. |
-| IMEI                          | string   | This attribute is used only for payments of the **Mobilepayment** type. |
-| BillingAddressfirstName       | string   | The first name that was provided for address. |
-| BillingAddresslastName        | string   | The last name that was provided for address. |
-| BillingAddressphoneNumber     | string   | The phone number that was provided for address. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
-| Street1                       | string   | The first row that was provided for the address. |
-| Street2                       | string   | The second row that was provided for the address. (This value can be blank.) |
-| Street3                       | string   | Third row that was provided for the address. (This value can be blank.) |
-| City                          | string   | The city that was provided for the address. |
-| State                         | string   | The state or province that was provided for the address. |
-| District                      | string   | The district that was provided for the address. (This value can be blank.) |
-| ZipCode                       | string   | The postal code that was provided for the address. |
-| CountryCode                   | string   | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
+| PaymentInstrumentState        |  String  | The state of the payment instrument: **Active**, **Block**, or **Expire**. |
+| CardType                      |  String  | This attribute is used only for payments of the **CreditCard** type. |
+| HolderName                    |  String  | The name of the customer of the payment instrument. This attribute is used only for payments of the **CreditCard** type. |
+| BIN                           |  String  | This attribute is used only for payments of the **CreditCard** type. |
+| ExpirationDate                |  String  | The expiration date for the payment instrument in the merchant's system. This attribute is used only for payments of the **CreditCard** type. |
+| LastFourDigits                |  String  | This attribute is used only for payments of the **CreditCard** type. |
+| Email                         |  String  | The email address that is associated with the payment instrument. This attribute is used only for payments of the **Paypal** type. |
+| BillingAgreementId            |  String  | This attribute is used only for payments of the **Paypal** type. |
+| PayerId                       |  String  | This attribute is used only for payments of the **Paypal** type. |
+| PayerStatus                   |  String  | A value that indicates whether PayPal has verified the payer. This attribute is used only for payments of the **Paypal** type. |
+| AddressStatus                 |  String  | A value that indicates whether PayPal has verified the payer's address. This attribute is used only for payments of the **Paypal** type. |
+| IMEI                          |  String  | This attribute is used only for payments of the **Mobilepayment** type. |
+| BillingAddressfirstName       |  String  | The first name that was provided for address. |
+| BillingAddresslastName        |  String  | The last name that was provided for address. |
+| BillingAddressphoneNumber     |  String  | The phone number that was provided for address. The format should be the country or region code followed by a hyphen (-) and then the phone number (for example: for the US, **+1-1234567890**). |
+| Street1                       |  String  | The first row that was provided for the address. |
+| Street2                       |  String  | The second row that was provided for the address. (This value can be blank.) |
+| Street3                       |  String  | Third row that was provided for the address. (This value can be blank.) |
+| City                          |  String  | The city that was provided for the address. |
+| State                         |  String  | The state or province that was provided for the address. |
+| District                      |  String  | The district that was provided for the address. (This value can be blank.) |
+| ZipCode                       |  String  | The postal code that was provided for the address. |
+| CountryCode                   |  String  | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
 
 ## Labels
 
@@ -447,8 +447,8 @@ The following schema is used in the Evaluate and Protect experiences.
 | Processor | String | The name of the bank or payment processor. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
 | EffectiveStartDate | DateTime | The date from which this label is effective. The format is ISO 8601. |
 | EffectiveEndDate | DateTime | The end date for this label. The format is ISO 8601. |
-| Amount           | double   | The amount that was charged to the customer. This information is provided by the merchant. |
-| Currency         | string   | The currency of the original purchase as a three-character currency code. (For example: USD, which is aligned with the OANDA currency code). This information is provided by the merchant. |
+| Amount           | Double   | The amount that was charged to the customer. This information is provided by the merchant. |
+| Currency         | String   | The currency of the original purchase as a three-character currency code. (For example: USD, which is aligned with the OANDA currency code). This information is provided by the merchant. |
 
 ## Vertical-specific attributes
 
@@ -456,140 +456,140 @@ The following schema is used in the Evaluate and Protect experiences.
 | Attribute | Vertical | Type | Description |
 |--- |--- |--- |---  |
 | **travelOverview**  |    |    |   | 
-| carRentalIncluded  |  Travel  |  bool  |  A True/False value indicating whether a car rental is included. | 
-| lodgingIncluded  |  Travel  |  bool  |  A True/False value indicating whether lodging is included. | 
-| travelType  |  Travel  |  string  |  The travel category or type. | 
-| isRoundTrip  |  Travel  |  bool  |  A True/False value indicating whether the travel is round trip. | 
-| isDiscountOffered  |  Travel  |  bool  |  A True/False value indicating whether a discount was offered. | 
-| travelDateTime  |  Travel  |  DateTimeOffset  |  The travel start date and time. | 
-| returnDateTime  |  Travel  |  DateTimeOffset  |  The travel end or return date and time. | 
-| fromCity  |  Travel  |  string  |  The city where the customer is travelling from. | 
-| fromState  |  Travel  |  string  |  The state where the customer is travelling from. | 
-| fromCountryISO  |  Travel  |  string  |  The ISO country where the customer is travelling from. | 
-| fromZipCode  |  Travel  |  string  |  The zip code where the customer is travelling from. | 
-| toCity  |  Travel  |  string  |  The city where the customer is travelling to. | 
-| toState  |  Travel  |  string  |  The state where the customer is travelling to. | 
-| toCountryISO  |  Travel  |  string  |  The ISO country where the customer is travelling to. | 
-| toZipCode  |  Travel  |  string  |  The zip code where the customer is travelling to. | 
-| travelDuration  |  Travel  |  string  |  Deprecating (Don't use) | 
-| isPackagedTour  |  Travel  |  bool  |  A True/False value indicating whether this was a packaged tour. | 
-| bookingType  |  Travel  |  string  |  The booking type. | 
-| webUrl  |  Travel  |  string  |  The URL where the travel was booked. | 
-| issueDateTime  |  Travel  |  DateTimeOffset  |  The date and time when the tickets were issued. | 
-| flightDetails  |  Travel  |  object  |  refer to flightDetails section | 
-| lodgingDetails  |  Travel  |  object  |  refer to lodgingDetails section | 
-| carRentalDetails  |  Travel  |  object  |  refer to carRentalDetails section | 
-| travelAgent  |  Travel  |  object  |  refer to travelAgent section | 
-| **flightDetails**  |    |    |   | 
-| ticketNumber  |  Travel  |  string  |  The unique ticket number. | 
-| placeOfIssue  |  Travel  |  string  |  The location where the ticket was issued. | 
-| isRestrictedTicket  |  Travel  |  bool  |  A True/False value indicating whether the ticket is restricted. | 
-| rewardsOrVoucherApplied  |  Travel  |  bool  |  A True/False value indicating whether rewards or vouchers were applied to the order. | 
-| totalRewardsApplied  |  Travel  |  int32  |  The total rewards which were applied to the order. | 
-| totalFees  |  Travel  |  decimal  |  The total fees applied to the order. | 
-| passengerCount  |  Travel  |  Int32  |  The total number of passengers. | 
-| numberOfStops  |  Travel  |  Int32  |  The number of stops or layovers for the flight. | 
-| purchaserProfileType  |  Travel  |  string  |  The customer's profile or membership type. | 
-| isThirdParty  |  Travel  |  bool  |  A True/False value indicating whether the order was placed through a third party site. | 
-| isPurchaserFrequentFlyer  |  Travel  |  bool  |  A True/False value indicating whether the customer is a frequent flyer. | 
-| flightSegments  |  Travel  |  object  |  refer to flightSegements section | 
-| passengers  |  Travel  |  object  |  refer to passengers section | 
-| **flightSegments**  |    |    |   | 
-| airlineCode  |  Travel  |  string  |  The airline code. | 
-| airlineName  |  Travel  |  string  |  The airline name. | 
-| segmentSequence  |  Travel  |  Int32  |  The sequence number of the given flight leg (e.g. 2 for the second leg of the flight) | 
-| travelClass  |  Travel  |  string  |  The seat class or cabin. | 
-| operatedBy  |  Travel  |  string  |  The organization operating the flight. | 
-| flightNumber  |  Travel  |  string  |  The flight number. | 
-| fromAirportCode  |  Travel  |  string  |  The airport code where the flight is flying from. | 
-| toAirportCode  |  Travel  |  string  |  The airport code where the flight is flying to. | 
-| departureDateTime  |  Travel  |  DateTimeOffset  |  The departure date and time. | 
-| arrivalDateTime  |  Travel  |  DateTimeOffset  |  The arrival date and time. | 
-| fromAirportCity  |  Travel  |  string  |  The airport city where the customer is travelling from. | 
-| fromAirportState  |  Travel  |  string  |  The  airport state where the customer is travelling from. | 
-| fromAirportZipcode  |  Travel  |  string  |  The airport zip code where the customer is travelling from. | 
-| fromAirportCountryISO  |  Travel  |  string  |  The airport ISO country where the customer is travelling from. | 
-| toAirportCity  |  Travel  |  string  |  The airport city where the customer is travelling to. | 
-| toAirportState  |  Travel  |  string  |  The airport state where the customer is travelling to. | 
-| toAirportZipcode  |  Travel  |  string  |  The airport zip code where the customer is travelling to. | 
-| toAirportCountryISO  |  Travel  |  string  |  The airport ISO country where the customer is travelling to. | 
-| **passengers**  |    |    |   | 
-| firstName  |  Travel  |  string  |  The passenger first name. | 
-| lastName  |  Travel  |  string  |  The passenger last name. | 
-| **carRentalDetails**  |    |    |   | 
-| pickupLocation  |  Travel  |  string  |  The car rental pickup location. | 
-| pickupDateTime  |  Travel  |  DateTimeOffset  |  The car rental pickup date and time. | 
-| dropOffLocation  |  Travel  |  string  |  The car rental drop-off location. | 
-| dropOffDateTime  |  Travel  |  DateTimeOffset  |  The car rental drop-off date and time | 
-| discountProgram  |  Travel  |  string  |  The discount program applied to the car rental order. | 
-| carType  |  Travel  |  string  |  The car type or category. | 
-| isPrepaid  |  Travel  |  bool  |  A True/False value indicating whether the car rental was prepaid. | 
-| insuranceIncluded  |  Travel  |  bool  |  A True/False value indicating whether insurance was included. | 
-| contactEmail  |  Travel  |  string  |  The car renter's email address. | 
-| contactPhoneNumber  |  Travel  |  string  |  The car renter's phone number. | 
-| pickupAddress  |  Travel  |  object  |  refer to address section | 
-| dropOffAddress  |  Travel  |  object  |  refer to address section | 
+| CarRentalIncluded  |  Travel  | Boolean  |  A True/False value indicating whether a car rental is included. | 
+| LodgingIncluded  |  Travel  | Boolean  |  A True/False value indicating whether lodging is included. | 
+| TravelType  |  Travel  |  String  |  The travel category or type. | 
+| IsRoundTrip  |  Travel  | Boolean  |  A True/False value indicating whether the travel is round trip. | 
+| IsDiscountOffered  |  Travel  | Boolean  |  A True/False value indicating whether a discount was offered. | 
+| TravelDateTime  |  Travel  |  DateTimeOffset  |  The travel start date and time. | 
+| ReturnDateTime  |  Travel  |  DateTimeOffset  |  The travel end or return date and time. | 
+| FromCity  |  Travel  |  String  |  The city where the customer is travelling from. | 
+| FromState  |  Travel  |  String  |  The state where the customer is travelling from. | 
+| FromCountryISO  |  Travel  |  String  |  The ISO country where the customer is travelling from. | 
+| FromZipCode  |  Travel  |  String  |  The zip code where the customer is travelling from. | 
+| ToCity  |  Travel  |  String  |  The city where the customer is travelling to. | 
+| ToState  |  Travel  |  String  |  The state where the customer is travelling to. | 
+| ToCountryISO  |  Travel  |  String  |  The ISO country where the customer is travelling to. | 
+| ToZipCode  |  Travel  |  String  |  The zip code where the customer is travelling to. | 
+| TravelDuration  |  Travel  |  String  |  Deprecating (Don't use) | 
+| IsPackagedTour  |  Travel  | Boolean  |  A True/False value indicating whether this was a packaged tour. | 
+| BookingType  |  Travel  |  String  |  The booking type. | 
+| WebUrl  |  Travel  |  String  |  The URL where the travel was booked. | 
+| IssueDateTime  |  Travel  |  DateTimeOffset  |  The date and time when the tickets were issued. | 
+| FlightDetails  |  Travel  |  Object  |  refer to flightDetails section | 
+| LodgingDetails  |  Travel  |  Object  |  refer to lodgingDetails section | 
+| CarRentalDetails  |  Travel  |  Object  |  refer to carRentalDetails section | 
+| TravelAgent  |  Travel  |  Object  |  refer to travelAgent section | 
+| **FlightDetails**  |    |    |   | 
+| TicketNumber  |  Travel  |  String  |  The unique ticket number. | 
+| PlaceOfIssue  |  Travel  |  String  |  The location where the ticket was issued. | 
+| IsRestrictedTicket  |  Travel  | Boolean  |  A True/False value indicating whether the ticket is restricted. | 
+| RewardsOrVoucherApplied  |  Travel  | Boolean  |  A True/False value indicating whether rewards or vouchers were applied to the order. | 
+| TotalRewardsApplied  |  Travel  |  int32  |  The total rewards which were applied to the order. | 
+| TotalFees  |  Travel  |  decimal  |  The total fees applied to the order. | 
+| PassengerCount  |  Travel  |  Int32  |  The total number of passengers. | 
+| NumberOfStops  |  Travel  |  Int32  |  The number of stops or layovers for the flight. | 
+| PurchaserProfileType  |  Travel  |  String  |  The customer's profile or membership type. | 
+| IsThirdParty  |  Travel  | Boolean  |  A True/False value indicating whether the order was placed through a third party site. | 
+| IsPurchaserFrequentFlyer  |  Travel  | Boolean  |  A True/False value indicating whether the customer is a frequent flyer. | 
+| FlightSegments  |  Travel  |  Object  |  refer to flightSegements section | 
+| Passengers  |  Travel  |  Object  |  refer to passengers section | 
+| **FlightSegments**  |    |    |   | 
+| AirlineCode  |  Travel  |  String  |  The airline code. | 
+| AirlineName  |  Travel  |  String  |  The airline name. | 
+| SegmentSequence  |  Travel  |  Int32  |  The sequence number of the given flight leg (e.g. 2 for the second leg of the flight) | 
+| TravelClass  |  Travel  |  String  |  The seat class or cabin. | 
+| OperatedBy  |  Travel  |  String  |  The organization operating the flight. | 
+| FlightNumber  |  Travel  |  String  |  The flight number. | 
+| FromAirportCode  |  Travel  |  String  |  The airport code where the flight is flying from. | 
+| ToAirportCode  |  Travel  |  String  |  The airport code where the flight is flying to. | 
+| DepartureDateTime  |  Travel  |  DateTimeOffset  |  The departure date and time. | 
+| ArrivalDateTime  |  Travel  |  DateTimeOffset  |  The arrival date and time. | 
+| FromAirportCity  |  Travel  |  String  |  The airport city where the customer is travelling from. | 
+| FromAirportState  |  Travel  |  String  |  The  airport state where the customer is travelling from. | 
+| FromAirportZipcode  |  Travel  |  String  |  The airport zip code where the customer is travelling from. | 
+| FromAirportCountryISO  |  Travel  |  String  |  The airport ISO country where the customer is travelling from. | 
+| ToAirportCity  |  Travel  |  String  |  The airport city where the customer is travelling to. | 
+| ToAirportState  |  Travel  |  String  |  The airport state where the customer is travelling to. | 
+| ToAirportZipcode  |  Travel  |  String  |  The airport zip code where the customer is travelling to. | 
+| ToAirportCountryISO  |  Travel  |  String  |  The airport ISO country where the customer is travelling to. | 
+| **Passengers**  |    |    |   | 
+| FirstName  |  Travel  |  String  |  The passenger first name. | 
+| LastName  |  Travel  |  String  |  The passenger last name. | 
+| **CarRentalDetails**  |    |    |   | 
+| PickupLocation  |  Travel  |  String  |  The car rental pickup location. | 
+| PickupDateTime  |  Travel  |  DateTimeOffset  |  The car rental pickup date and time. | 
+| DropOffLocation  |  Travel  |  String  |  The car rental drop-off location. | 
+| DropOffDateTime  |  Travel  |  DateTimeOffset  |  The car rental drop-off date and time | 
+| DiscountProgram  |  Travel  |  String  |  The discount program applied to the car rental order. | 
+| carType  |  Travel  |  String  |  The car type or category. | 
+| isPrepaid  |  Travel  | Boolean  |  A True/False value indicating whether the car rental was prepaid. | 
+| insuranceIncluded  |  Travel  | Boolean  |  A True/False value indicating whether insurance was included. | 
+| contactEmail  |  Travel  |  String  |  The car renter's email address. | 
+| contactPhoneNumber  |  Travel  |  String  |  The car renter's phone number. | 
+| pickupAddress  |  Travel  |  Object  |  refer to address section | 
+| dropOffAddress  |  Travel  |  Object  |  refer to address section | 
 | **travelAgent**  |    |    |   | 
-| agencyCode  |  Travel  |  string  |  The travel agency code. | 
-| agencyName  |  Travel  |  string  |  The travel agency name. | 
-| agentCode  |  Travel  |  string  |  The trave agent code. | 
-| agencyLocation  |  Travel  |  object  |  refer to agentAddress section | 
+| agencyCode  |  Travel  |  String  |  The travel agency code. | 
+| agencyName  |  Travel  |  String  |  The travel agency name. | 
+| agentCode  |  Travel  |  String  |  The trave agent code. | 
+| agencyLocation  |  Travel  |  Object  |  refer to agentAddress section | 
 | **agentAddress**  |    |    |   | 
-| street1  |  Travel  |  string  |  The first row that was provided for the address | 
-| street2  |  Travel  |  string  |  The second row that was provided for the address. (This value can be blank.) | 
-| street3  |  Travel  |  string  |  The third row that was provided for the address. (This value can be blank.) | 
-| city  |  Travel  |  string  |  The city that was provided for the address. | 
-| state  |  Travel  |  string  |  The state or province that was provided for the address. | 
-| district  |  Travel  |  string  |  The district that was provided for the address. | 
-| zipCode  |  Travel  |  string  |  The postal code that was provided for the address. | 
-| country  |  Travel  |  string  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
-| agencyContactPhone  |  Travel  |  string  |  The agency contact phone number | 
-| agencyContactEmail  |  Travel  |  string  |  The agency contact email address | 
+| street1  |  Travel  |  String  |  The first row that was provided for the address | 
+| street2  |  Travel  |  String  |  The second row that was provided for the address. (This value can be blank.) | 
+| street3  |  Travel  |  String  |  The third row that was provided for the address. (This value can be blank.) | 
+| city  |  Travel  |  String  |  The city that was provided for the address. | 
+| state  |  Travel  |  String  |  The state or province that was provided for the address. | 
+| district  |  Travel  |  String  |  The district that was provided for the address. | 
+| zipCode  |  Travel  |  String  |  The postal code that was provided for the address. | 
+| country  |  Travel  |  String  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
+| agencyContactPhone  |  Travel  |  String  |  The agency contact phone number | 
+| agencyContactEmail  |  Travel  |  String  |  The agency contact email address | 
 | **lodgingDetails**  |    |    |   | 
-| folioNumber  |  Lodging  |  string  |  The unique identifier of the lodging property. | 
+| folioNumber  |  Lodging  |  String  |  The unique identifier of the lodging property. | 
 | CheckInDate  |  Lodging  |  DateTimeOffset  |  The check-in date for the lodging stay. | 
 | CheckOutDate  |  Lodging  |  DateTimeOffset  |  The check-out date for the lodging stay. | 
-| reservationConfirmed  |  Lodging  |  bool  |  A True/False value indicating whether the reservation has been confirmed. | 
-| membershipDetails  |  Lodging  |  string  |  Additional details on the customer's membership status. | 
-| discountProgram  |  Lodging  |  string  |  The discount program applied to the lodging order. | 
+| reservationConfirmed  |  Lodging  | Boolean  |  A True/False value indicating whether the reservation has been confirmed. | 
+| membershipDetails  |  Lodging  |  String  |  Additional details on the customer's membership status. | 
+| discountProgram  |  Lodging  |  String  |  The discount program applied to the lodging order. | 
 | adultCount  |  Lodging  |  Int32  |  The number of adults included in the stay. | 
 | kidCount  |  Lodging  |  Int32  |  The number of kids included in the stay. | 
 | nightsCount  |  Lodging  |  Int32  |  The number of nights included in the stay. | 
 | roomCount  |  Lodging  |  Int32  |  The number of rooms included in the stay. | 
-| bedType  |  Lodging  |  string  |  The bed type or category. | 
-| roomType  |  Lodging  |  string  |  The room type or category. | 
-| paymentDescription  |  Lodging  |  string  |  Additional details on the loding payment. | 
-| facility  |  Lodging  |  object  |  refer to facility section | 
+| bedType  |  Lodging  |  String  |  The bed type or category. | 
+| roomType  |  Lodging  |  String  |  The room type or category. | 
+| paymentDescription  |  Lodging  |  String  |  Additional details on the loding payment. | 
+| facility  |  Lodging  |  Object  |  refer to facility section | 
 | **facility**  |    |    |   | 
-| name  |  Lodging  |  string  |  The facility name. | 
-| type  |  Lodging  |  string  |  The facility type. | 
-| contactPhoneNumber  |  Lodging  |  string  |  The phone number used to contact the facility. | 
-| contactEmail  |  Lodging  |  string  |  The email address used to contact the facility. | 
+| name  |  Lodging  |  String  |  The facility name. | 
+| type  |  Lodging  |  String  |  The facility type. | 
+| contactPhoneNumber  |  Lodging  |  String  |  The phone number used to contact the facility. | 
+| contactEmail  |  Lodging  |  String  |  The email address used to contact the facility. | 
 | dailyRoomRate  |  Lodging  |  decimal  |  The daily room rate for the facility. | 
-| currency  |  Lodging  |  string  |  The currency supported by the facility. | 
+| currency  |  Lodging  |  String  |  The currency supported by the facility. | 
 | dailyRoomTaxAmount  |  Lodging  |  decimal  |  The daily room tax amount charged by the facility. | 
-| address  |  Lodging  |  object  |  refer to address section | 
+| address  |  Lodging  |  Object  |  refer to address section | 
 | **address**  |    |    |   | 
-| street1  |  Car Rental  |  string  |  The first row that was provided for the address | 
-| street2  |  Car Rental  |  string  |  The second row that was provided for the address. (This value can be blank.) | 
-| street3  |  Car Rental  |  string  |  The third row that was provided for the address. (This value can be blank.) | 
-| city  |  Car Rental  |  string  |  The city that was provided for the address. | 
-| state  |  Car Rental  |  string  |  The state or province that was provided for the address. | 
-| district  |  Car Rental  |  string  |  The district that was provided for the address. | 
-| zipCode  |  Car Rental  |  string  |  The postal code that was provided for the address. | 
-| country  |  Car Rental  |  string  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
+| street1  |  Car Rental  |  String  |  The first row that was provided for the address | 
+| street2  |  Car Rental  |  String  |  The second row that was provided for the address. (This value can be blank.) | 
+| street3  |  Car Rental  |  String  |  The third row that was provided for the address. (This value can be blank.) | 
+| city  |  Car Rental  |  String  |  The city that was provided for the address. | 
+| state  |  Car Rental  |  String  |  The state or province that was provided for the address. | 
+| district  |  Car Rental  |  String  |  The district that was provided for the address. | 
+| zipCode  |  Car Rental  |  String  |  The postal code that was provided for the address. | 
+| country  |  Car Rental  |  String  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
 | **cloudBusiness**  |    |    |   | 
-| organizationId  |  CloudBusiness  |  string  |  The unique identifier for the cloud service or organization. | 
-| companyName  |  CloudBusiness  |  string  |  The cloud service name. | 
-| companyType  |  CloudBusiness  |  string  |  The cloud company type. | 
+| organizationId  |  CloudBusiness  |  String  |  The unique identifier for the cloud service or organization. | 
+| companyName  |  CloudBusiness  |  String  |  The cloud service name. | 
+| companyType  |  CloudBusiness  |  String  |  The cloud company type. | 
 | companySize  |  CloudBusiness  |  Int32  |  The cloud company size. | 
-| entityId  |  CloudBusiness  |  string  |  The unique identifier for the legal entity under the organization. | 
-| primaryContactFirstName  |  CloudBusiness  |  string  |  The first name of the primary contact for the business. | 
-| primaryContactLastName  |  CloudBusiness  |  string  |  The last name of the primary contact for the business. | 
-| primaryContactEmail  |  CloudBusiness  |  string  |  The email address of the primary contact for the business. | 
-| primaryContactPhoneNumber  |  CloudBusiness  |  string  |  The phone number of the primary contact for the business. | 
+| entityId  |  CloudBusiness  |  String  |  The unique identifier for the legal entity under the organization. | 
+| primaryContactFirstName  |  CloudBusiness  |  String  |  The first name of the primary contact for the business. | 
+| primaryContactLastName  |  CloudBusiness  |  String  |  The last name of the primary contact for the business. | 
+| primaryContactEmail  |  CloudBusiness  |  String  |  The email address of the primary contact for the business. | 
+| primaryContactPhoneNumber  |  CloudBusiness  |  String  |  The phone number of the primary contact for the business. | 
 | subscriptionCount  |  CloudBusiness  |  Int32  |  The total number of subscriptions available. | 
-| companyAddress  |  CloudBusiness  |  object  |  Refer to address section | 
+| companyAddress  |  CloudBusiness  |  Object  |  Refer to address section | 
 
 ## Download sample data
 
