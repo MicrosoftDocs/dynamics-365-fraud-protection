@@ -87,14 +87,131 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 |TotalItemCount           |double           |The total item count per transaction. For example, if a user purchases 10 of the same XBOX controllers, this item will be number **10**. Or, if a user purchase 5 different games and 10 of the same XBOX controllers, this item will be number 5+10, or **15**. |
 |IsLowLiabilityPIType     |bool             |A value that indicates low liability payment instruments (for example: Apple Pay, Alipay, or UnionPay).  |
 |OrderType               |string            |The type of transaction (for example: takeout).  |
- |IsRetryOrder             |bool	           |A value that indicates whether the order was retried.  |
- | AttemptId                |string           |The identifier for each transaction retry.  |
- | ShippingDate             |DateTime         |The date that the order was shipped.  |
- | OrderInitiatedChannel    |string           |The channel where the transaction was created (for example: ‘AppStore', 'Web', MobileWeb, 'App', ‘InGamePurchase’).  | 
- | OrderInitiatedChannelName   |string        |The App Name or Web URL where the transaction was created.  |
- | OrderInitiatedChannelRegionORCountry |string        |The market where the transaction was created (for example: App market).  |
- | MerchantBusinessSubSegmentL2   |string       |The second level (L2) business or industry segment.  |
-
+|IsRetryOrder             |bool	           |A value that indicates whether the order was retried.  |
+| AttemptId                |string           |The identifier for each transaction retry.  |
+| ShippingDate             |DateTime         |The date that the order was shipped.  |
+| OrderInitiatedChannel    |string           |The channel where the transaction was created (for example: ‘AppStore', 'Web', MobileWeb, 'App', ‘InGamePurchase’).  | 
+| OrderInitiatedChannelName   |string        |The App Name or Web URL where the transaction was created.  |
+| OrderInitiatedChannelRegionORCountry |string        |The market where the transaction was created (for example: App market).  |
+| MerchantBusinessSubSegmentL2   |string       |The second level (L2) business or industry segment.  |
+| midName  |  String  |  The merchant name associated with the MID (merchant identifier). | 
+| transactionProcessingOrder  |  String  |  The order in which the fraud assessment was made during the transaction flow. | 
+| recurringSubscriptionId  |  String  |  The unique ID for the recurring charge | 
+| recurringChargeSequence  |  Int32  |  The nth (1, 2, 3...) time the recurring charge has occurred for this customer. | 
+| transactionDescription  |  String  |  The transaction processing type | 
+| organizationLevel1  |  Object  |  The top level of the organization hierarchy. | 
+| organizationLevel2  |  Object  |  The middle level of the organization hierarchy. | 
+| organizationLevel3  |  Object  |  The lowest level of the organization hierarchy. | 
+| threeDS  |  Object  |  refer to threeDS section | 
+| recipientUser  |  Object  |  refer to user section | 
+| travelOverview  |  Object  |  refer to Vertical Specific Attributes travelOverview Section | 
+| cloudBusiness  |  Object  |  refer to Vertical Specific Attributes clouldBusiness Section | 
+| membershipType  |  String  |  The customer's membership status or type. Different levels in paid can be specified such as Premium,Executive. | 
+| authenticationMethod  |  String  |  The way in which the customer was authenticated prior/during purchase. | 
+| loginInputMethod  |  String  |  The way in which the customer input their credentials. | 
+| lastPasswordUpdatedDate  |  DateTimeOffset  |  When the customer's password was last updated. | 
+| firstPurchaseDate  |  DateTimeOffset  |  When the customer made their first purchase | 
+| loginChallengeType  |  String  |  The type of challenge-response test that was initiated. | 
+| httpSignature  |  String  |  The digital signature of the HTTP message. | 
+| httpUserAgent  |  String  |  The request header used to identify the application, operating system, vendor, and/or version. | 
+| browserHeader  |  String  |  The full list of request headers sent by the browser. | 
+| browserResolution  |  String  |  The browser resolution. | 
+| browserLanguage  |  String  |  The browser default language preference. | 
+| tcpSignature  |  String  |  The TCP application signature. | 
+| sslSignature  |  String  |  The SSL signature. | 
+| enabledCookies  |  Boolean  |  A True/False value that indicates whether cookies are enabled. | 
+| enabledFlash  |  Boolean  |  A True/False value that indicates whether Flash is enabled. | 
+| enabledJavaScript  |  Boolean  |  A True/False value that indicates whether javascript is enabled. | 
+| screenAspectRatio  |  String  |  The aspect ratio of the browser. | 
+| screenColorDepth  |  String  |  The color depth of the screen. | 
+| screenResolution  |  String  |  Resolution of device screen in pixels | 
+| siteHostName  |  String  |  The site's hostname. | 
+| os  |  String  |  The device operating system. | 
+| oSFonts  |  String  |  The operating system's default font. | 
+| deviceProcessor  |  String  |  The device processor. | 
+| sessionId  |  String  |  The unique session ID. | 
+| trueIp  |  String  |  True IP address of device identified by device fingerprinting​ | 
+| proxyIp  |  String  |  IP address of proxy device. | 
+| deviceId  |  String  |  Unique GUID per device generated by device fingerprinting | 
+| timeZone  |  String  |  Offset of the local time zone, in hours, with respect to GMT | 
+| userAgentDetails  |  String  |  Additional user agent or browser details. | 
+| appVersion  |  String  |  Application version. | 
+| browserPackagesList  |  String  |  List of packages installed on the device. | 
+| buildManufacturer  |  String  |  Manufacturer of the device. | 
+| buildModel  |  String  |  User visible name for the end product. | 
+| buildSdkVersion  |  String  |  Build version. | 
+| dataNetworkType  |  String  |  Type of mobile data network. | 
+| deviceModelName  |  String  |  Device model. | 
+| deviceSystemName  |  String  |  Device name of the machine. | 
+| deviceSystemVersion  |  String  |  Device version. | 
+| isBluetoothEnabled  |  Boolean  |  A True/False value that indicates whether bluetooth has been enabled. | 
+| simNetworkCountryISO  |  String  |  ISO country code for the mobile service provider. | 
+| simNetworkType  |  String  |  Mobile network type. | 
+| systemUpTime  |  String  |  The duration of time that the device has been working and available. | 
+| paymentMethod  |  String  |  The top-level payment method category. | 
+| isLowLiabilityPIType  |  Boolean  |  A True/False value indicating whether the payment method is a low liability. | 
+| holderCompanyName  |  Boolean  |  Name of the organization providing the business or company card (for business purchases only). | 
+| settlementApprovalRequired  |  Boolean  |  A True/False value inidcating whether or not approval was required for a SEPA transaction. | 
+| paymentCheckoutProvider  |  String  |  The eWallet checkout provider. | 
+| binName  |  String  |  The BIN display name. | 
+| binCountryISO  |  String  |  The ISO country code associated with the BIN. | 
+| binCardType  |  String  |  The BIN card type. | 
+| binCardAssociation  |  String  |  The BIN card association. | 
+| binBankGroup  |  String  |  The BIN bank group. | 
+| currency  |  String  |  Currency code for the selected payment instrument. | 
+| isInternationalMoneyTransfer  |  Boolean  |  A True/False value indicating whether an international money transfer occurred. | 
+| bankIdentifierCode  |  String  |   Bank Identifier Code (BIC or SWIFT code)  | 
+| bankName  |  String  |  The bank name | 
+| bankZipCode  |  String  |  The bank zip code | 
+| bankState  |  String  |  The bank state | 
+| bankCountryISO  |  String  |  The bank ISO country | 
+| paymentCollectionDate  |  DateTimeOffset  |  The estimated date for payment collection (primarily used for payment service providers). | 
+| instantPaymentSettlement  |  Boolean  |  A True/False value indicating bank redirects (used to support CSV payments). | 
+| autoCaptureEnabled  |  Boolean  |  A True/False value indicating whether the payment was automatically captured for card payments. For redirect payments this is simply an indicator to the partner bank whether to withdraw funds automatically or not.  | 
+| accountType  |  String  |  Indicates the type of account to charge for the transaction. UNSPECIFIED is the default.   | 
+| CHEQUE_ACCOUNT uses the card as a debit card. CREDIT_FACILITY uses the card as a credit card. | 
+| authorizationType  |  String  |  The authorization type. Mastercard and Visa now require merchants to define authorization attempts as either a pre-authorization or a final-authorization. | 
+| authorizationResultCode  |  String  |  Bank response from the authorization decision.  | 
+| authorizationResultText  |  String  |  Reasons for the authorization decision; especially for declined or pending transactions.  | 
+| acquirerId  |  String  |  Acquiring institution identification code. | 
+| acquirerCountryISO  |  String  |  Acquiring institution country code | 
+| cvvVerify  |  String  |  Indicates whether CVV verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |  
+| avsVerify  |  String  |  Indicates whether addres verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> | 
+| cavVerify  |  String  |  Indicates whether cardholder authentication verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> | 
+| encryptedCreditCardNumber  |  String  |  The hashed or encrypted credit card number. | 
+| organizationId  |  String  |  The unique identifier for the merchant or organizaiton. | 
+| name  |  String  |  The name of the organization | 
+| zipCode  |  String  |  The zipcode at where the organization is located | 
+| state  |  String  |  The state at where the organization is located | 
+| countryISO  |  String  |  The countryISO at where the organization is located | 
+| productBrand  |  String  |  Brand name of the product | 
+| buyItAgainOrder  |  Boolean  |  True when users re-order a previous order (not just a product from that order) | 
+| preOrderAvailabilityDate  |  DateTimeOffset  |  When the product was first available for preorder | 
+| terminalId  |  String  |  The unique identifier for the point of sale terminal  | 
+| terminalName  |  String  |  The point of sale terminal name | 
+| isThreeDSAuth  |  Boolean  |  A True/False value that indicates whether this transaction is authenticated via 3DS. | 
+| messageCategory  |  String  |  Identifies the category of the message for a specific use case. |
+| deviceChannel  |  String  |  Indicates the type of channel interface being used to initiate the transaction. |
+| threeDSServerTransId  |  String  |  Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction. | 
+| threeDSRequestorAuthenticationInd  |  String  | Indicates the type of Authentication request. |
+| threeRIInd  |  String  |  Indicates the type of 3RI request. | 
+| threeDSReqPriorAuthMethod  |  String  |  Mechanism used by the Cardholder to previously authenticate to the 3DS Requestor. | 
+| transStatus  |  String  |  Indicates whether a transaction qualifies as an authenticated transaction or account verification.  | 
+| transStatusReason  |  String  |  Provides information on why the Transaction Status field has the specified value. | 
+| threeDSCompInd  |  String  |  Indicates whether the 3DS Method successfully completed. | 
+| acsChallengeMandated  |  String  |  Indication of whether a challenge is required for the transaction to be authorised due to local/regional mandates or other variable.  | 
+| threeDSRequestorChallengeInd  |  String  |  Indicates whether a challenge is requested for this transaction. | 
+| challengeCompletionInd  |  String  |  Indicator of the state of the ACS challenge cycle and whether the challenge has completed or will require additional messages. | 
+| Values accepted: | 
+| eci  |  String  |  Electronic Commerce Indicator (ECI). Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.  | 
+| shipNameIndicator  |  String  |  Indicates if the Cardholder Name on the account is identical to the shipping Name used for this transaction. | 
+| Values accepted: | 
+| suspiciousAccActivity  |  String  |  Indicates whether the 3DS Requestor has experienced suspicious activity (including previous fraud) on the cardholder account. | 
+| chAccPwChangeInd  |  String  |  Indicates the length of time since the cardholder’s account with the 3DS Requestor had a password change or account reset. | 
+| chAccAgeInd  |  String  |  Length of time that the cardholder has had the account with the 3DS Requestor. | 
+| provisionAttemptsDay  |  String  |  Number of Add Card attempts in the last 24 hours. | 
+| Length: maximum 3 characters <p>Example values:<p><ul><li>2</li><li>02</li><li>002</li></ul> | 
+| exemptionRaised  |  String  |  <p>PSD2 exemption requests</p><ul><li>Y - exempted</li><li>N- Not exempted</li></ul> |  
 
 
 ### PaymentInstruments
