@@ -77,7 +77,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
  |IsGuestCheckout       | Boolean |A value that indicates whether the purchase was made as a guest.  |
  |IsPostAuthCheck       | Boolean |A value that indicates whether there was a post-authentication check.  |
  |IsRecurringCharge     | Boolean |A value that indications whether the transaction was a subscription/recurring.  |
- |RecurringChargeFrequencyInDays  |double    |How often the recurring purchase is being charged, for example, every 30 days, every half year, every year, etc.  |
+ |RecurringChargeFrequencyInDays  |Double    |How often the recurring purchase is being charged, for example, every 30 days, every half year, every year, etc.  |
  |RecurringChargeStartDate |DateTime         |The start date for a recurring transaction.  |
  |RecurringChargeEndDate   |DateTime         |The end date for a recurring transaction.  |
  |IsPostpaid               | Boolean |A value that indicates whether a transaction is postpaid or not.  |
@@ -161,39 +161,38 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Currency  |  String  |  Currency code for the selected payment instrument. | 
 | IsInternationalMoneyTransfer  |  Boolean  |  A True/False value indicating whether an international money transfer occurred. | 
 | BankIdentifierCode  |  String  |   Bank Identifier Code (BIC or SWIFT code)  | 
-| BankName  |  String  |  The bank name | 
-| BankZipCode  |  String  |  The bank zip code | 
-| BankState  |  String  |  The bank state | 
-| BankCountryISO  |  String  |  The bank ISO country | 
+| BankName  |  String  |  The bank name. | 
+| BankZipCode  |  String  |  The bank zip code. | 
+| BankState  |  String  |  The bank state. | 
+| BankCountryISO  |  String  |  The bank ISO country. | 
 | PaymentCollectionDate  |  DateTimeOffset  |  The estimated date for payment collection (primarily used for payment service providers). | 
 | InstantPaymentSettlement  |  Boolean  |  A True/False value indicating bank redirects (used to support CSV payments). | 
 | AutoCaptureEnabled  |  Boolean  |  A True/False value indicating whether the payment was automatically captured for card payments. For redirect payments this is simply an indicator to the partner bank whether to withdraw funds automatically or not.  | 
-| AccountType  |  String  |  Indicates the type of account to charge for the transaction. UNSPECIFIED is the default.   | 
-| CHEQUE_ACCOUNT uses the card as a debit card. CREDIT_FACILITY uses the card as a credit card. | 
+| AccountType  |  String  |  Indicates the type of account to charge for the transaction. UNSPECIFIED is the default. CHEQUE_ACCOUNT uses the card as a debit card. CREDIT_FACILITY uses the card as a credit card.   | 
 | AuthorizationType  |  String  |  The authorization type. Mastercard and Visa now require merchants to define authorization attempts as either a pre-authorization or a final-authorization. | 
 | AuthorizationResultCode  |  String  |  Bank response from the authorization decision.  | 
-| AuthorizationResultText  |  String  |  Reasons for the authorization decision; especially for declined or pending transactions.  | 
+| AuthorizationResultText  |  String  |  Reasons for the authorization decision, especially for declined or pending transactions.  | 
 | AcquirerId  |  String  |  Acquiring institution identification code. | 
-| AcquirerCountryISO  |  String  |  Acquiring institution country code | 
+| AcquirerCountryISO  |  String  |  Acquiring institution country code. | 
 | CvvVerify  |  String  |  Indicates whether CVV verification is available and/or successfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |  
 | AvsVerify  |  String  |  Indicates whether addres verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> | 
 | CavVerify  |  String  |  Indicates whether cardholder authentication verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> | 
 | EncryptedCreditCardNumber  |  String  |  The hashed or encrypted credit card number. | 
-| OrganizationId  |  String  |  The unique identifier for the merchant or organizaiton. | 
-| Name  |  String  |  The name of the organization | 
-| ZipCode  |  String  |  The zipcode at where the organization is located | 
-| State  |  String  |  The state at where the organization is located | 
-| CountryISO  |  String  |  The countryISO at where the organization is located | 
-| ProductBrand  |  String  |  Brand name of the product | 
-| BuyItAgainOrder  |  Boolean  |  True when users re-order a previous order (not just a product from that order) | 
-| PreOrderAvailabilityDate  |  DateTimeOffset  |  When the product was first available for preorder | 
-| TerminalId  |  String  |  The unique identifier for the point of sale terminal  | 
-| TerminalName  |  String  |  The point of sale terminal name | 
+| OrganizationId  |  String  |  The unique identifier for the merchant or organization. | 
+| Name  |  String  |  The name of the organization. | 
+| ZipCode  |  String  |  The zipcode at where the organization is located. | 
+| State  |  String  |  The state at where the organization is located. | 
+| CountryISO  |  String  |  The country ISO code for where the organization is located. | 
+| ProductBrand  |  String  |  Brand name of the product. | 
+| BuyItAgainOrder  |  Boolean  |  True when users re-order a previous order (not just a product from that order). | 
+| PreOrderAvailabilityDate  |  DateTimeOffset  |  When the product was first available for preorder. | 
+| TerminalId  |  String  |  The unique identifier for the point of sale terminal.  | 
+| TerminalName  |  String  |  The point of sale terminal name. | 
 | IsThreeDSAuth  |  Boolean  |  A True/False value that indicates whether this transaction is authenticated via 3DS. | 
 | MessageCategory  |  String  |  Identifies the category of the message for a specific use case. |
 | DeviceChannel  |  String  |  Indicates the type of channel interface being used to initiate the transaction. |
 | ThreeDSServerTransId  |  String  |  Universally unique transaction identifier assigned by the 3DS Server to identify a single transaction. | 
-| ThreeDSRequestorAuthenticationInd  |  String  | Indicates the type of Authentication request. |
+| ThreeDSRequestorAuthenticationInd  |  String  | Indicates the type of authentication request. |
 | ThreeRIInd  |  String  |  Indicates the type of 3RI request. | 
 | ThreeDSReqPriorAuthMethod  |  String  |  Mechanism used by the Cardholder to previously authenticate to the 3DS Requestor. | 
 | TransStatus  |  String  |  Indicates whether a transaction qualifies as an authenticated transaction or account verification.  | 
@@ -205,13 +204,11 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Values accepted: | 
 | Eci  |  String  |  Electronic Commerce Indicator (ECI). Payment System-specific value provided by the ACS or DS to indicate the results of the attempt to authenticate the Cardholder.  | 
 | ShipNameIndicator  |  String  |  Indicates if the Cardholder Name on the account is identical to the shipping Name used for this transaction. | 
-| Values accepted: | 
-| SuspiciousAccActivity  |  String  |  Indicates whether the 3DS Requestor has experienced suspicious activity (including previous fraud) on the cardholder account. | 
-| ChAccPwChangeInd  |  String  |  Indicates the length of time since the cardholder’s account with the 3DS Requestor had a password change or account reset. | 
-| ChAccAgeInd  |  String  |  Length of time that the cardholder has had the account with the 3DS Requestor. | 
-| ProvisionAttemptsDay  |  String  |  Number of Add Card attempts in the last 24 hours. | 
-| Length: maximum 3 characters <p>Example values:<p><ul><li>2</li><li>02</li><li>002</li></ul> | 
-| ExemptionRaised  |  String  |  <p>PSD2 exemption requests</p><ul><li>Y - exempted</li><li>N- Not exempted</li></ul> |  
+| SuspiciousAccActivity  |  String  |  Indicates whether the 3DS requestor has experienced suspicious activity (including previous fraud) on the cardholder account. | 
+| ChAccPwChangeInd  |  String  |  Indicates the length of time since the cardholder’s account with the 3DS requestor had a password change or account reset. | 
+| ChAccAgeInd  |  String  |  Length of time that the cardholder has had the account with the 3DS requestor. | 
+| ProvisionAttemptsDay  |  String  |  Number of Add Card attempts in the last 24 hours.</br>Length: Maximum 3 characters.</br></br>Example values:<ul><li>2</li><li>02</li><li>002</li></ul> |  
+| ExemptionRaised  |  String  |  <p>PSD2 exemption requests.</p><ul><li>Y - exempted</li><li>N- Not exempted</li></ul> |  
 
 ### PaymentInstruments
 
@@ -240,7 +237,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 | Street1                     |  String  | The first row that was provided for the address. |
 | Street2                     |  String  | The second row that was provided for the address. (This value can be blank.) |
 | Street3                     |  String  | The third row that was provided for the address. (This value can be blank.) |
-| City                        |  String  | The city that was provided for the address. |
+| City                        |  String  | The city that was provided for the address. 
 | State                       |  String  | The state or province that was provided for the address. |
 | ZipCode                     |  String  | The postal code that was provided for the address. |
 | CountryCode                 |  String  | The country/region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
@@ -336,7 +333,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | CavVerify | String | Indicates whether cardholder authentication verification is available and/or sucessfully verified.<ul><li>Y = Successfully verified</li><li>N = Not successfully verified</li><li>U = Unavailable</li><li>A = Available, but no verification</li></ul> |
 | AuthorizationResultCode | String | Bank response from the authorization decision. |
 | AuthorizationResultText | String | Reasons for the authorization decision; especially for declined or pending transactions. |
-| ThreeDS | String | *Refer to Purchase threeDS section in Purchase sheet.* |
+| ThreeDS | String | *Refer to Purchase ThreeDS section in Purchase sheet.* |
 
 ## Account
 
@@ -374,9 +371,9 @@ The following schemas are used in the Evaluate and Protect experiences.
 | LastPasswordUpdatedDate | String | When the customer's password was last updated. |
 | FirstPurchaseDate | String | When the customer made their first purchase. |
 | LoginChallengeType | String | The type of challenge-response test that was initiated. |
-| AddressList | String | *Refer to Purchase address section.* |
-| PaymentInstrumentList | String | *Refer to Purchase paymentInstrumentList section.*  |
-| DeviceContext | String | *Refer to Purchase deviceContext section.*  |
+| AddressList | String | *Refer to Purchase Address section.* |
+| PaymentInstrumentList | String | *Refer to Purchase PaymentInstrumentList section.*  |
+| DeviceContext | String | *Refer to Purchase DeviceContext section.*  |
 
 ### UpdateAddress
 
@@ -470,15 +467,15 @@ The following schema is used in the Evaluate and Protect experiences.
 | ToState  |  Travel  |  String  |  The state where the customer is travelling to. | 
 | ToCountryISO  |  Travel  |  String  |  The ISO country where the customer is travelling to. | 
 | ToZipCode  |  Travel  |  String  |  The zip code where the customer is travelling to. | 
-| TravelDuration  |  Travel  |  String  |  Deprecating (Don't use) | 
+| TravelDuration  |  Travel  |  String  |  Deprecated. Do not use. | 
 | IsPackagedTour  |  Travel  | Boolean  |  A True/False value indicating whether this was a packaged tour. | 
 | BookingType  |  Travel  |  String  |  The booking type. | 
 | WebUrl  |  Travel  |  String  |  The URL where the travel was booked. | 
 | IssueDateTime  |  Travel  |  DateTimeOffset  |  The date and time when the tickets were issued. | 
-| FlightDetails  |  Travel  |  Object  |  refer to flightDetails section | 
-| LodgingDetails  |  Travel  |  Object  |  refer to lodgingDetails section | 
-| CarRentalDetails  |  Travel  |  Object  |  refer to carRentalDetails section | 
-| TravelAgent  |  Travel  |  Object  |  refer to travelAgent section | 
+| FlightDetails  |  Travel  |  Object  |  *Refer to FlightDetails section.* | 
+| LodgingDetails  |  Travel  |  Object  |  *Refer to LodgingDetails section.* | 
+| CarRentalDetails  |  Travel  |  Object  |  *Refer to CarRentalDetails section.* | 
+| TravelAgent  |  Travel  |  Object  |  *Refer to TravelAgent section.* | 
 | **FlightDetails**  |    |    |   | 
 | TicketNumber  |  Travel  |  String  |  The unique ticket number. | 
 | PlaceOfIssue  |  Travel  |  String  |  The location where the ticket was issued. | 
@@ -491,8 +488,8 @@ The following schema is used in the Evaluate and Protect experiences.
 | PurchaserProfileType  |  Travel  |  String  |  The customer's profile or membership type. | 
 | IsThirdParty  |  Travel  | Boolean  |  A True/False value indicating whether the order was placed through a third party site. | 
 | IsPurchaserFrequentFlyer  |  Travel  | Boolean  |  A True/False value indicating whether the customer is a frequent flyer. | 
-| FlightSegments  |  Travel  |  Object  |  refer to flightSegements section | 
-| Passengers  |  Travel  |  Object  |  refer to passengers section | 
+| FlightSegments  |  Travel  |  Object  |  *Refer to FlightSegements section.* | 
+| Passengers  |  Travel  |  Object  |  *Refer to Passengers section.* | 
 | **FlightSegments**  |    |    |   | 
 | AirlineCode  |  Travel  |  String  |  The airline code. | 
 | AirlineName  |  Travel  |  String  |  The airline name. | 
@@ -507,7 +504,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | FromAirportCity  |  Travel  |  String  |  The airport city where the customer is travelling from. | 
 | FromAirportState  |  Travel  |  String  |  The  airport state where the customer is travelling from. | 
 | FromAirportZipcode  |  Travel  |  String  |  The airport zip code where the customer is travelling from. | 
-| FromAirportCountryISO  |  Travel  |  String  |  The airport ISO country where the customer is travelling from. | 
+| FromAirportCountryISO  |  Travel  |  String  |  The airport ISO country code where the customer is travelling from. | 
 | ToAirportCity  |  Travel  |  String  |  The airport city where the customer is travelling to. | 
 | ToAirportState  |  Travel  |  String  |  The airport state where the customer is travelling to. | 
 | ToAirportZipcode  |  Travel  |  String  |  The airport zip code where the customer is travelling to. | 
@@ -526,13 +523,13 @@ The following schema is used in the Evaluate and Protect experiences.
 | InsuranceIncluded  |  Travel  | Boolean  |  A True/False value indicating whether insurance was included. | 
 | ContactEmail  |  Travel  |  String  |  The car renter's email address. | 
 | ContactPhoneNumber  |  Travel  |  String  |  The car renter's phone number. | 
-| PickupAddress  |  Travel  |  Object  |  refer to address section | 
-| DropOffAddress  |  Travel  |  Object  |  refer to address section | 
+| PickupAddress  |  Travel  |  Object  |  *Refer to Address section.* | 
+| DropOffAddress  |  Travel  |  Object  |  *Refer to Address section.* | 
 | **TravelAgent**  |    |    |   | 
 | AgencyCode  |  Travel  |  String  |  The travel agency code. | 
 | AgencyName  |  Travel  |  String  |  The travel agency name. | 
-| AgentCode  |  Travel  |  String  |  The trave agent code. | 
-| AgencyLocation  |  Travel  |  Object  |  refer to agentAddress section | 
+| AgentCode  |  Travel  |  String  |  The travel agent code. | 
+| AgencyLocation  |  Travel  |  Object  |  *Refer to AgentAddress section.* | 
 | **AgentAddress**  |    |    |   | 
 | Street1  |  Travel  |  String  |  The first row that was provided for the address | 
 | Street2  |  Travel  |  String  |  The second row that was provided for the address. (This value can be blank.) | 
@@ -542,8 +539,8 @@ The following schema is used in the Evaluate and Protect experiences.
 | District  |  Travel  |  String  |  The district that was provided for the address. | 
 | ZipCode  |  Travel  |  String  |  The postal code that was provided for the address. | 
 | Country  |  Travel  |  String  |  The country/region code that was provided for the address. The value should be a two-letter ISO country/region code (for example, US). | 
-| AgencyContactPhone  |  Travel  |  String  |  The agency contact phone number | 
-| AgencyContactEmail  |  Travel  |  String  |  The agency contact email address | 
+| AgencyContactPhone  |  Travel  |  String  |  The agency contact phone number. | 
+| AgencyContactEmail  |  Travel  |  String  |  The agency contact email address. | 
 | **LodgingDetails**  |    |    |   | 
 | FolioNumber  |  Lodging  |  String  |  The unique identifier of the lodging property. | 
 | CheckInDate  |  Lodging  |  DateTimeOffset  |  The check-in date for the lodging stay. | 
@@ -557,8 +554,8 @@ The following schema is used in the Evaluate and Protect experiences.
 | RoomCount  |  Lodging  |  Int32  |  The number of rooms included in the stay. | 
 | BedType  |  Lodging  |  String  |  The bed type or category. | 
 | RoomType  |  Lodging  |  String  |  The room type or category. | 
-| PaymentDescription  |  Lodging  |  String  |  Additional details on the loding payment. | 
-| Facility  |  Lodging  |  Object  |  refer to facility section | 
+| PaymentDescription  |  Lodging  |  String  |  Additional details on the lodging payment. | 
+| Facility  |  Lodging  |  Object  |  *Refer to Facility section.* | 
 | **Facility**  |    |    |   | 
 | Name  |  Lodging  |  String  |  The facility name. | 
 | Type  |  Lodging  |  String  |  The facility type. | 
@@ -567,7 +564,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | DailyRoomRate  |  Lodging  |  decimal  |  The daily room rate for the facility. | 
 | Currency  |  Lodging  |  String  |  The currency supported by the facility. | 
 | DailyRoomTaxAmount  |  Lodging  |  decimal  |  The daily room tax amount charged by the facility. | 
-| Address  |  Lodging  |  Object  |  refer to address section | 
+| Address  |  Lodging  |  Object  |  *Refer to Address section.* | 
 | **Address**  |    |    |   | 
 | Street1  |  Car Rental  |  String  |  The first row that was provided for the address | 
 | Street2  |  Car Rental  |  String  |  The second row that was provided for the address. (This value can be blank.) | 
@@ -588,7 +585,7 @@ The following schema is used in the Evaluate and Protect experiences.
 | PrimaryContactEmail  |  CloudBusiness  |  String  |  The email address of the primary contact for the business. | 
 | PrimaryContactPhoneNumber  |  CloudBusiness  |  String  |  The phone number of the primary contact for the business. | 
 | SubscriptionCount  |  CloudBusiness  |  Int32  |  The total number of subscriptions available. | 
-| CompanyAddress  |  CloudBusiness  |  Object  |  *Refer to address section.* | 
+| CompanyAddress  |  CloudBusiness  |  Object  |  *Refer to Address section.* | 
 
 ## Download sample data
 
