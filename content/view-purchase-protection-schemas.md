@@ -451,7 +451,7 @@ The following schema is used in the Evaluate and Protect experiences.
 
 | Attribute | Vertical | Type | Description |
 |--- |--- |--- |---  |
-| **travelOverview**  |    |    |   | 
+| **TravelOverview**  |    |    |   | 
 | CarRentalIncluded  |  Travel  | Boolean  |  A True/False value indicating whether a car rental is included. | 
 | LodgingIncluded  |  Travel  | Boolean  |  A True/False value indicating whether lodging is included. | 
 | TravelType  |  Travel  |  String  |  The travel category or type. | 
