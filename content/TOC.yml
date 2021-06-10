@@ -18,6 +18,8 @@
   href: global-availability.md  
 - name: Set up your environment
   items:
+  - name: Create and provision your Azure tenant
+    href: provision-azure-tenant.md
   - name: Set up a trial instance
     href: promocode-set-up-DFP-trial-version.md
   - name: Set up a purchased instance
