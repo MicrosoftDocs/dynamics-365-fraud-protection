@@ -43,13 +43,13 @@ The **Assessments used** metric reflects your usage of Fraud Protection. The fol
 The **Accumulated Consumption %** metric shows the ratio of the total number of assessments that have been used to the total number of assessments that have been purchased since the start of a billing cycle, and resets to 0% at the beginning of a new billing cycle. 
 
 > [!NOTE]
-> Billing arrangements are made via your Microsoft Account Executive or Microsoft Cloud Solution Provider partner. You will receive notifications from them if your accumulated consumption approaches 100 percent before the end of the current billing cycle. Therefore, you will have an opportunity to adjust your subscription as required.
+>* Billing arrangements are made via your Microsoft Account Executive or Microsoft Cloud Solution Provider partner. You will receive notifications from them if your accumulated consumption approaches 100 percent before the end of the current billing cycle. Therefore, you will have an opportunity to adjust your subscription as required.
 
 ## Additional notes about assessment usage and metering
 
 - Only activity in the Fraud Protection production environment counts toward the assessments that have been used. Activity in the integration environment doesn't count. Therefore, in the integration environment, the **Subscription** page doesn't show the **Summary** tab.
 - The calculation of assessments that have been used excludes any assessment API calls that fail because of service issues that are caused by Fraud Protection (HTTP response code 5xx). The calculation includes only successful requests (HTTP response code 2xx) and bad requests (HTTP response code 4xx).
 - The **Experience Type** and **Response Type** filters on the **Details** tab of the **Subscription** page apply only to the account protection and purchase protection capabilities.
-
+- If you have setup a Pay as you go billing option for Fraud Protection then your Assessments Purchased and Consumption metrics would be shown as 0. Please refer to your Azure subscription invoice for more details on your billed usage
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
