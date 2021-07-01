@@ -15,9 +15,9 @@ title: Assessment usage and metering
 
 # Assessment usage and metering
 
-When you purchase Microsoft Dynamics 365 Fraud Protection, you're entitled to a specific number of "assessments" for one or more Fraud Protection capabilities. The **Metering** page provides an overview of your Fraud Protection usage. For example, you can view statistics about different assessment API types, view trends of assessments that have been consumed for loss prevention reports over time, and filter your view to highlight the specific data and date ranges that you're interested in. The data on this page is updated every hour. You can use it to assess whether any adjustments are required to your Fraud Protection subscription. 
+When you purchase Microsoft Dynamics 365 Fraud Protection, you're entitled to a specific number of "assessments" for one or more Fraud Protection capabilities. When you use Fraud Protection, your usage is "metered" and the **Subscription** page provides an overview of your usage. For example, you can view statistics about different assessment API types, view trends of assessments that have been consumed for loss prevention reports over time, and filter your view to highlight the specific data and date ranges that you're interested in. The data on this page is updated every hour. You can use it to assess whether any adjustments are required to your Fraud Protection subscription. 
 
-On the **Metering** page, the information is divided between two tabs:
+On the **Subscription** page, the information is divided between two tabs:
 
 - **Summary** – This tab shows a monthly comparison of the number of assessments that you've purchased and the number of assessments that you've used across different Fraud Protection capabilities (for example, loss prevention, purchase protection, and account protection). On this tab, you can view data across different subscription periods.
 - **Details** – This tab lets you dive deeper into your assessment usage data. You can select any date range and filter the data by different dimensions.
@@ -47,9 +47,9 @@ The **Accumulated Consumption %** metric shows the ratio of the total number of 
 
 ## Additional notes about assessment usage and metering
 
-- Only activity in the Fraud Protection production environment counts toward the assessments that have been used. Activity in the integration environment doesn't count. Therefore, in the integration environment, the **Metering** page doesn't show the **Summary** tab.
+- Only activity in the Fraud Protection production environment counts toward the assessments that have been used. Activity in the integration environment doesn't count. Therefore, in the integration environment, the **Subscription** page doesn't show the **Summary** tab.
 - The calculation of assessments that have been used excludes any assessment API calls that fail because of service issues that are caused by Fraud Protection (HTTP response code 5xx). The calculation includes only successful requests (HTTP response code 2xx) and bad requests (HTTP response code 4xx).
-- The **Experience Type** and **Response Type** filters on the **Details** tab of the **Metering** page apply only to the account protection and purchase protection capabilities.
+- The **Experience Type** and **Response Type** filters on the **Details** tab of the **Subscription** page apply only to the account protection and purchase protection capabilities.
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
