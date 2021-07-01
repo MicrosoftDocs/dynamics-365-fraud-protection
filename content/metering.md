@@ -1,10 +1,8 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic explains how to meter your usage of Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
-ms.date: 07/07/2020
-
-
+ms.author: josaw
+ms.date: 07/21/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
