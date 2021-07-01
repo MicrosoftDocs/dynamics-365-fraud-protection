@@ -1,9 +1,8 @@
 ---
+author: josaw1
 description: This topic explains how to enable Pay as you go billing for Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 07/08/2021
-
-
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
