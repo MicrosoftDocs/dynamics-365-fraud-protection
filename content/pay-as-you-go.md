@@ -51,7 +51,7 @@ With Pay as you go, your total bill amount every month is determined based on ho
 
 ## Prerequisites
 
-To enble Pay as you go billing, you need the following subscriptions. 
+To enable Pay as you go billing, you need the following subscriptions. 
 - Monthly subscription for the Fraud Protection Pay as you go SKU.
 - Active Azure subscription.
 
