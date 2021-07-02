@@ -21,7 +21,7 @@ To get Fraud Protection event data into Power BI, you can use event data that is
 
 For more information, see the following decision tree.
 
-![Decision tree](media/eventhubs/decision-tree.png)
+![Decision tree.](media/eventhubs/decision-tree.png)
 
 We recommend: 
 

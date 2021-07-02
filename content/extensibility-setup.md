@@ -29,7 +29,7 @@ To get started, you must set up the following items:
 
 After you complete the setup that is described in this topic, you will have the basics that are required to work with Fraud Protection event data. The following data flow is also set up.
 
-![Data flow](media/eventhubs/data-flow.png)
+![Data flow.](media/eventhubs/data-flow.png)
 
 Fraud Protection produces real-time events and sends them to your Event Hubs instance. They are then consumed by event receivers such as Power Automate, Logic Apps, etc.
 

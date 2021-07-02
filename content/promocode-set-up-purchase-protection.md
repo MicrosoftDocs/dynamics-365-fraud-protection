@@ -72,7 +72,7 @@ The general process to upload historical data consists of the following steps:
 
 1.	Sign in to the [Fraud Protection portal](https://dfp.microsoft.com/), and then, in the left navigation, select **Purchase**.
 
-![Portal](media/promocode-images/DFP-Portal.png)
+![Portal.](media/promocode-images/DFP-Portal.png)
 
 2.	On the **Purchase** page, select **Diagnose**, and then select **Upload required data**.
 3. In the left navigation, select **Data**, select **Data upload**, and then select **Purchase protection**.
@@ -132,7 +132,7 @@ You can use either your own generated reports or Fraud Protection's sample repor
 -	To view reports that were generated from your own data, in the left navigation, select **Purchase**, select **Diagnose**, and then select **Diagnose report** or **Risk report**.
 -	To view sample reports, in the left navigation, select **Purchase**, select **Diagnose**, and then select **View sample report**.
 
-![PP sample](media/promocode-images/pp-sample.png)
+![PP sample.](media/promocode-images/pp-sample.png)
 
 > [!NOTE]
 >Sample reports are generated from synthetic sample data.
@@ -145,7 +145,7 @@ Before you can generate your risk diagnostic report, the key metrics of your dat
 
 You can download the data diagnostic report from the tool as a PDF file, and then share it with a broader audience or do offline analysis.
 
-![PP summary](media/promocode-images/pp-summary.png)
+![PP summary.](media/promocode-images/pp-summary.png)
 
 > [!NOTE]
 >Sample reports are generated from synthetic sample data.
@@ -163,7 +163,7 @@ The following screenshot shows the top section of the data diagnostic report. Th
 
  	One basis point equals 0.01 percent (one one-hundredth of 1 percent). Therefore, for the chargeback rate, a basis point of 500 means that 5 percent of uploaded transactions have an associated chargeback.
 
-![Diagnostic report](media/promocode-images/pp-diagnostic-report.png)
+![Diagnostic report.](media/promocode-images/pp-diagnostic-report.png)
 
 The next section of the report is the **Daily chargeback rate** section. This section provides the following information:
 
@@ -187,7 +187,7 @@ The bottom section of the report provides an assessment of some aspects of the d
  	For example, the schema that Fraud Protection uses requires a two-letter ISO country or region code, and a three-character currency code that is aligned with the OANDA currency code. If different codes are used for these attributes, there will be a 100-percent mismatch. However, in some cases, only a subset of the data has a formatting mismatch (as shown in the screenshot). This mismatch can be caused by errors that are introduced by some payment types or interface differences (web interface versus mobile app interface). Regardless, it's important that you understand the root cause of these formatting issues and fix them before you generate a risk diagnostic report.
 -	The **Unique entities** section provides an assessment of the diversity of your data. It shows the percentage of unique data entities for **IP address**, **User ID**, and **User email** attributes. High diversity of data in these attributes enables good model performance and learning. These profiling entities are used to assess velocities for users. Fewer than one unique value for every 100 transactions (that is, a value of less than 1 percent) is a strong indicator of data mapping errors. In this case, you must investigate the issue and resolve it to help reduce the likelihood that the model's response will be skewed.
 
-![Empty value](media/promocode-images/pp-empty-value.png)
+![Empty value.](media/promocode-images/pp-empty-value.png)
 
 ### Risk diagnostic report – Summary
 
@@ -212,7 +212,7 @@ The following screenshot shows the top section of the risk diagnostic report. Th
 -	The **Total count of reported fraud events** section shows the total number/count of reported fraud events that are available in the data diagnostic report.
 -	The **% of reported fraud events** section shows the total count of reported fraud events as a percentage of the total count of reported transactions. The value is calculated as (Total count of reported fraud events ÷ Total count of reported transactions) × 100.
 
-![Risk report](media/promocode-images/pp-risk-report.png)
+![Risk report.](media/promocode-images/pp-risk-report.png)
 
 #### Distribution of transactions by risk score
 
@@ -230,7 +230,7 @@ This section provides the following information:
 
 The next section of the report is named **Model performance**. It shows how the model performed, based on the data that was received. It provides the following information:
 
-![Model performance](media/promocode-images/pp-sample-model-performance.png)
+![Model performance.](media/promocode-images/pp-sample-model-performance.png)
 
 -	You can use the slider above the chart to select the risk score threshold that you want to analyze. Any transaction where the score is more than the threshold will be recommended for rejection.
 -	The chart represents the receiver operating characteristic (ROC) curve. It shows the percentage of rejected transactions that have chargebacks (y-axis) versus the percentage of rejected legitimate transactions, also known as false positives (x-axis). This data is charted by transaction count on the left and transaction value on the right. The chart will always be a curve. However, notice how steeply the curve climbs, because the steepness indicates a high rate of fraud detection that involves a low number of false positives, which is the ultimate outcome. In an ideal scenario, you will observe a false positive rate of 1 percent. However, the actual rate depends on the cost of the loss of one item. For example:
@@ -253,7 +253,7 @@ The next section of the report is named **Model performance**. It shows how the 
 
 -	At the bottom of the report, the **Top 5 risk factors** section shows the top-five risk factors for the selected percentage of your transactions that have the highest risk score. 
 
-![Risk factors](media/promocode-images/pp-top5.png)
+![Risk factors.](media/promocode-images/pp-top5.png)
 
 In the example that is shown, out of 1 percent of the riskiest transactions (that is, the transactions that have the highest risk scores, as assessed by Fraud Protection), 20 percent had a suspicious device Internet Protocol (IP) address, and 18.2 percent had a risky prepaid card. This section of the report is helpful because, by indicating which data attributes are showing the highest risk of being fraudulent, it can show where you should focus your fraud detection efforts.
 
@@ -432,7 +432,7 @@ The Fraud Protection support tool lets your agents evaluate customer escalations
  	
  	There are two tabs in the search results. One tab contains information about accounts, and the other contains information about transactions that are associated with the accounts.
 
-![Account tab](media/promocode-images/pp-account-tab.png)
+![Account tab.](media/promocode-images/pp-account-tab.png)
 
 By default, the **Accounts** tab is selected. It shows the following information:
 
@@ -442,7 +442,7 @@ By default, the **Accounts** tab is selected. It shows the following information
 
 3.	Select the **Transactions** tab, and then, in the **Transaction history** section, select a transaction.
 
-![Details tab](media/promocode-images/pp-details-tab.png)
+![Details tab.](media/promocode-images/pp-details-tab.png)
  	
 The **Transactions** tab shows the following information:
  	
@@ -450,7 +450,7 @@ The **Transactions** tab shows the following information:
    -	By default, the **Details** tab is selected. It shows details about individual transactions, such as the payment method, the device that was used, and the originating IP address.
       The first two sections on the **Details** tab are named **Purchase information** and **Risk information**.
 
-![Purchase information](media/promocode-images/pp-box5.png)
+![Purchase information.](media/promocode-images/pp-box5.png)
 
 - The **Purchase information** section shows purchase-related data, such as the date and time of the transaction, the transaction number, the bank status, and the purchase status. Note that the transaction number is an ID that you will create and send to Fraud Protection. The ID format isn't specified by Fraud Protection. It can be in any format that you prefer, such as a GUID or string.
 -	The **Risk information** section shows several important pieces of information that are related to the transaction, such as its risk score, the merchant decision, and the decision reason. The merchant decision that is shown is based on the rules stack that is configured by the merchant. Fraud Protection decision reasons are codes that help your customer support agents quickly identify the reason behind Fraud Protection's recommendation for the transaction, so that they can take appropriate action. During the trial phase, you receive only group-level codes. However, after you're in Protect mode, you will receive unique codes that provide reason information at a more granular level. For more information about Fraud Protection decision reasons, see the product documentation.
@@ -466,13 +466,13 @@ The last two sections on the **Details** tab are named **Device information** an
 
     This tab itemizes everything that was purchased during the selected transaction. It shows the prices, applicable taxes, and fees.
 
-![Line items](media/promocode-images/pp-line-items.png)
+![Line items.](media/promocode-images/pp-line-items.png)
 
 5.	Select the **Map** tab.
 
     The transaction map lets you view the shipping address and billing address in relation to each other if both addresses were provided in the dataset. Select one of the addresses to center it on the map. If the addresses match, the pins for the two addresses will overlap.
 
-![Map tab](media/promocode-images/pp-map.png)
+![Map tab.](media/promocode-images/pp-map.png)
 
 For more information about how to use the support tool, see [Support your customers with Dynamics 365 Fraud Protection](./risk-support.md).
 
@@ -480,7 +480,7 @@ For more information about how to use the support tool, see [Support your custom
 
 On the **Accounts** tab, you can add a user to the Accounts summary section and the associated payment instruments to the Payment instruments section (highlighted in the screenshot below).
 
-![Accounts summary](media/promocode-images/pp-account-summary.png)
+![Accounts summary.](media/promocode-images/pp-account-summary.png)
 
 #### Use lists and rules to drive actions
 
@@ -541,7 +541,7 @@ The information and the linkages in the graph can be used for activities such as
 3.	Select the **Product** node to show details about the purchase.
 4.	A pane on the right of the **Graph explorer** page shows details about the purchase.
 
-![Graph explorer](media/promocode-images/pp-graph-explorer.png)
+![Graph explorer.](media/promocode-images/pp-graph-explorer.png)
 
 The **Product Node** pane on the right of the **Graph explorer** page displays details of the purchase.
 
