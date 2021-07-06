@@ -9,6 +9,7 @@ search.app:
 search.audienceType:
   - admin
 title: Overview of loss prevention reports
+ms.custom: "intro-internal"
 ---
 
 # Overview of loss prevention reports

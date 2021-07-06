@@ -10,7 +10,7 @@ search.app:
 search.audienceType:
   - admin
 title: Overview of Dynamics 365 Fraud Protection features
-
+ms.custom: "intro-internal"
 ---
 
 

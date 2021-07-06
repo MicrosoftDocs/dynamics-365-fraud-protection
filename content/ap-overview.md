@@ -9,6 +9,7 @@ search.app:
 search.audienceType:
   - admin
 title: Overview of account protection features
+ms.custom: "intro-internal"
 ---
 
 # Overview of account protection features

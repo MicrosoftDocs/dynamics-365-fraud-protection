@@ -9,6 +9,7 @@ search.app:
 search.audienceType:
   - admin
 title: Overview of the labels API
+ms.custom: "intro-internal"
 ---
 
 # Overview of the labels API
