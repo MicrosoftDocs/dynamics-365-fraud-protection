@@ -9,6 +9,7 @@ search.app:
 search.audienceType:
   - admin
 title: Security overview for Dynamics 365 Fraud Protection
+ms.custom: "intro-internal"
 ---
 
 # Security overview for Dynamics 365 Fraud Protection

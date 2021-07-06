@@ -9,6 +9,7 @@ search.app:
 search.audienceType:
   - admin
 title: Overview of account creation features
+ms.custom: "intro-internal"
 ---
 
 # Overview of account creation features
