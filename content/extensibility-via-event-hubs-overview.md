@@ -9,7 +9,7 @@ search.app:
 search.audienceType:
   - admin
 title: Extensibility via Event Hubs
-
+ms.custom: "intro-internal"
 ---
 
 # Extensibility via Event Hubs

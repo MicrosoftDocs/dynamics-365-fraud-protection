@@ -9,8 +9,7 @@ search.app:
 search.audienceType:
   - admin
 title: Compliance overview for Dynamics 365 Fraud Protection
-
-
+ms.custom: "intro-internal"
 ---
 
 # Compliance overview for Dynamics 365 Fraud Protection
