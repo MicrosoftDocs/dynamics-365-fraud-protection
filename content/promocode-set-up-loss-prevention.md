@@ -17,11 +17,11 @@ The loss prevention capability in Microsoft Dynamics 365 Fraud Protection uses a
 
 ## Identifying fraudulent activity
 
-![Loss prevention1](media/promocode-images/DFP-LP1.png)
+![Loss prevention1.](media/promocode-images/DFP-LP1.png)
 
 The loss prevention capability is designed to help loss prevention analysts, store managers, and loss prevention investigators identify fraudulent activity that typically involves discounts, returns, price overrides, voided transactions, gift card redemption, and so on, that employees improperly apply on point of sale (POS) terminals.
 
-![Loss prevention2](media/promocode-images/DFP-LP2.png)
+![Loss prevention2.](media/promocode-images/DFP-LP2.png)
 
 Loss prevention is based on anomaly detection that looks for patterns in POS data that is ingested into the system. It identifies outliers through unsupervised machine learning (ML), and provides a list of anomalous terminals, anomalous actors, and anomalous products. Store managers, loss prevention analysts, and loss prevention fraud investigators can then use this list to focus on specific areas that might represent fraud.
 
@@ -100,7 +100,7 @@ There are two ways to upload historical data into Fraud Protection for loss prev
 
 Choose the data connection method that is appropriate for your situation.
 
-![Data connection](media/promocode-images/data-connection.png)
+![Data connection.](media/promocode-images/data-connection.png)
 
 
 To connect loss prevention to Commerce, you must complete a series of one-time setup activities. After these activities are completed, you can easily disconnect and reconnect the systems. For more information, see [Connect loss prevention to data from Commerce](promocode-set-up-loss-prevention.md#connect-loss-prevention-to-data-from-commerce).
@@ -118,7 +118,7 @@ To connect your retail data to Fraud Protection, make sure that you have all thr
 3. Set the **Enable Data Lake integration** option to **Yes**.
 4. Save the details of the data lake (the value of the **DNS name** field). You will need this information to reconnect if the data lake integration is ever disconnected.
 
-![Commerce data connection](media/promocode-images/commerce-data-connection.png)
+![Commerce data connection.](media/promocode-images/commerce-data-connection.png)
 
 5. Return to the dashboard and enter **Entity Store** in the search field at the top of the page.
 
@@ -129,7 +129,7 @@ To connect your retail data to Fraud Protection, make sure that you have all thr
 
    Automatic refresh incrementally adds the most recent data from POS devices to the retail data lake.
 
-![Commerce refresh](media/promocode-images/Commerce-refresh.png)
+![Commerce refresh.](media/promocode-images/Commerce-refresh.png)
 
 8. Return to the dashboard and select the **Feature management** tile.
 9. In the **Feature management** workspace, find the **Dynamics 365 Fraud Protection (DFP) Loss Prevention** feature, and enable it.
@@ -147,7 +147,7 @@ To connect your retail data to Fraud Protection, make sure that you have all thr
 	
     In the following screenshot, the connection was successful, and the process of syncing to acquire data from Commerce and generate a loss prevention report has started.
 
-![Connect sync](media/promocode-images/lp-connect-sync.png)
+![Connect sync.](media/promocode-images/lp-connect-sync.png)
 
 ### Disconnect from and reconnect to Commerce
 
@@ -172,7 +172,7 @@ When the connection is successful, the process of syncing to acquire the data an
 
 When you sign in to your Fraud Protection portal, if **Loss prevention** appears in the left navigation pane, the loss prevention capability is enabled.
 
-![Portal](media/promocode-images/DFP-Portal.png)
+![Portal.](media/promocode-images/DFP-Portal.png)
 
 1. In the left navigation, select **Loss prevention**, and then select **Go to Data Upload**.
 2. Select the **Loss prevention** tab, and then select the **Loss prevention** button.     
@@ -223,7 +223,7 @@ You can review the following information in the report displayed on the **Loss p
 
 In the following screenshot, you can review information based on the risk score of 560 and above.
 
-![Revenue opportunity](media/promocode-images/lp-revenue-opp.png)
+![Revenue opportunity.](media/promocode-images/lp-revenue-opp.png)
 
 You can set the range of months for which you want to analyze the data in the **Month range** fields.
 You can set the risk score range in the **Risk score range** field. 
@@ -243,7 +243,7 @@ The **Anomalous staff count by month and score bin** chart shows anomalous staff
 
 In the following screenshot you can review information based on the risk score 760 and above.
 
-![Anomalous terminals](media/promocode-images/lp-anomalous-terminals.png)
+![Anomalous terminals.](media/promocode-images/lp-anomalous-terminals.png)
 
 The **Revenue opportunity based on terminal data** pane provides a summary of the returns, discounts and total.
 
@@ -261,7 +261,7 @@ The model uses five or six default events to generate the risk score. It conside
 
 The following screenshot shows information that includes the staff which were at or above the threshold 560 for at least one month. The data set is sorted to show the staff, based on the risk score that the models have generated.
 
-![Staff data](media/promocode-images/lp-staff.png)
+![Staff data.](media/promocode-images/lp-staff.png)
 
 The **Data summary** section provides a summary of the staff assessment. It shows the total number of unique staff IDs, the score count (number of times that the unique staffers were anomalous during the reporting data period), and the average risk score on a scale of 0 (zero) through 999.
 
@@ -279,7 +279,7 @@ The **Score count** indicates the number of months they were above the threshold
 
 The following screenshot shows information that includes the staff which were at or above the threshold 560 for at least one month. The data set is sorted to show the staff, based on the risk score that the models have generated.
 
-![Staff risk](media/promocode-images/lp-staff-risk-score-by-month.png)
+![Staff risk.](media/promocode-images/lp-staff-risk-score-by-month.png)
 
 - In the **Month range** fields, set the range of months for which you want to analyze the data.
 - In the **Risk score range** fields, set the risk score range. To drill deeper into possible fraudulent activities, keep the score range high.
@@ -291,7 +291,7 @@ The **All reasons affecting risk score by percentile** lists the specific reason
 
 #### Reason Details
 
-![Staff reason](media/promocode-images/lp-staff-reason.png)
+![Staff reason.](media/promocode-images/lp-staff-reason.png)
 
 - To review reason details and further analyze the impact of that reason on the risk score, select one of the five reasons from the **Reason** drop-down list.
 
@@ -301,7 +301,7 @@ The **Reason value by month** chart shows you details for the reason or event th
 
 - To view data on top risk terminals, select the **Terminals** tab.
 
-![Terminals](media/promocode-images/lp-terminals.png)
+![Terminals.](media/promocode-images/lp-terminals.png)
 
 This screenshot shows information that includes the top risk terminals which were at or above the threshold 760 for at least one month.
 
@@ -316,7 +316,7 @@ The **Top risk terminals** grid lists all terminal IDs. The highest-risk termina
 
 #### Reason Details
 
-![Staff reason details](media/promocode-images/lp-staff-reason.png)
+![Staff reason details.](media/promocode-images/lp-staff-reason.png)
 
 - To review reason details and further analyze the impact of that reason on the risk score, select one of the five reasons from the **Reason** drop-down list.
 
@@ -326,7 +326,7 @@ The **Reason value by month** chart shows you details for the reason or event th
 
 To better understand how a specific terminal has been working, a useful tool is trend analysis that compares the score of a specific terminal to the score of the whole population. The example chart in the following screenshot shows the variation in risk score by month.
 
-![Terminal risk](media/promocode-images/lp-terminal-risk-score-by-month.png)
+![Terminal risk.](media/promocode-images/lp-terminal-risk-score-by-month.png)
 
 The **Terminal's risk score summary** section shows the maximum score, the average score, and the number of times that this specific store or terminal has been anomalous.
 
@@ -338,7 +338,7 @@ The model uses five or six default events to generate the risk score. It conside
 
 To understand how each event or reason affected the risk scores, review the following information on the report.
 
-![Terminal reason](media/promocode-images/lp-terminal-reason.png)
+![Terminal reason.](media/promocode-images/lp-terminal-reason.png)
 
 The grid in the **All reasons affecting the score by percentile** section lists the specific reasons that affect the risk score, ranked by the percentile. Significant percentiles are highlighted.
 
@@ -350,7 +350,7 @@ The **Reason details** chart shows the value by month for the reason or event th
 
 The **Transactions (last six months)** section of the report shows specific transactions that have occurred at the terminal during the last six months.
 
-![Transactions](media/promocode-images/lp-six-months.png)
+![Transactions.](media/promocode-images/lp-six-months.png)
 
 As the column headings for the grid show, the data in the grid includes the date of the transaction according to the receipt, the transaction ID, the staff ID, the purchase amount, the discount amount, the return amount, an indication of whether a return receipt was present, the payment method, and the category.
 
