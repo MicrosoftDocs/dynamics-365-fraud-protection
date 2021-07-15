@@ -84,6 +84,6 @@ If you don't have an existing Azure AD tenant, or if you prefer to set up a new 
 
 For information about how to access and use features in Fraud Protection features, see the topics below.
 
-- [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
-- [Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
-- [Prevent loss with Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md)
+- [Set up customer accounts](promocode-set-up-account-protection.md)
+- [Set up purchase protection](promocode-set-up-purchase-protection.md)
+- [Set up loss prevention](promocode-set-up-loss-prevention.md)
