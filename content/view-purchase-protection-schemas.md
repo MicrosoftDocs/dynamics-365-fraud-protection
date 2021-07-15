@@ -1,7 +1,7 @@
 ---
 author: josaw1
 description: This topic outlines the schemas that are required for historical data upload.
-ms.author: mapowath
+ms.author: josaw
 ms.date: 07/15/2021
 ms.topic: conceptual
 search.app: 
