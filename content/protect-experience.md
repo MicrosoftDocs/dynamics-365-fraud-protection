@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic provides information about the protect experience in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
@@ -26,7 +26,7 @@ To get started with Fraud Protection, complete the initial configuration steps t
 
 ## Features
 
-The Protect experience in Fraud Protection provides the features that are described in the following topics:
+The protect experience in Fraud Protection provides the features that are described in the following topics:
 
 - [Purchase protection](purchase-protection.md)
 - [Artificial intelligence (AI) and insights from the fraud protection network](fraud-protection-network.md)
