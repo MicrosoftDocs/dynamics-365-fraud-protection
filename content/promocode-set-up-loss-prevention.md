@@ -367,5 +367,5 @@ Congratulations! You've successfully completed the training and are ready to use
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
-- [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
-- [Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
+- [Set up customer accounts protection](promocode-set-up-account-protection.md)
+- [Set up purchase protection](promocode-set-up-purchase-protection.md)
