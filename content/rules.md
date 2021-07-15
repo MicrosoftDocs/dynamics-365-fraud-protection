@@ -1,18 +1,18 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic explains how to create and manage rules that protect account and purchase data in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Manage rules for Dynamics 365 Fraud Protection
+title: Manage rules
 
 ---
 
-# Manage rules for Dynamics 365 Fraud Protection
+# Manage rules 
 
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create rules that use the score that Fraud Protection's state-of-the-art artificial intelligence (AI) model generates, together with additional parameters from the request payload. Based on these inputs, rules can convert an assessment into a decision, such as **Approve**, **Reject**, **Review**, or **Challenge**.
 
