@@ -1,9 +1,9 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic provides an overview of Microsoft Dynamics 365 Fraud Protection features and its mission.
 
-ms.author: v-madeq
-ms.date: 04/02/2021
+ms.author: josaw
+ms.date: 07/15/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -43,11 +43,13 @@ By using Fraud Protection, you can help protect your business from fraud through
 These capabilities are part of a comprehensive set of features that are grouped into three user experiences to help accelerate your journey toward a more comprehensive fraud protection environment: 
 
 - **Diagnose** – Use this experience in Fraud Protection to gain insights into fraud issues in your environment.
+   > [NOTE!]
+   > The diagnose functionality might not be available in all countries or regions.
+
 - **Evaluate** – Use this experience to assess and evaluate the effectiveness of Fraud Protection relative to your current fraud protection solution.
 - **Protect** – Use this experience to customize business rules to obtain recommendations for your e-commerce transaction decisions.
 
-> [!NOTE]
-> You can enter any of the three experiences at any time. 
+
 
 | Capability | Diagnose | Evaluate | Protect |
 |------------|----------|----------|---------|
