@@ -49,8 +49,7 @@ These capabilities are part of a comprehensive set of features that are grouped 
 - **Evaluate** – Use this experience to assess and evaluate the effectiveness of Fraud Protection relative to your current fraud protection solution.
 - **Protect** – Use this experience to customize business rules to obtain recommendations for your e-commerce transaction decisions.
 
-> [!NOTE]
-> You can enter any of the three experiences at any time. 
+
 
 | Capability | Diagnose | Evaluate | Protect |
 |------------|----------|----------|---------|
