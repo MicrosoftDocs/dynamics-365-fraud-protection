@@ -43,7 +43,7 @@ By using Fraud Protection, you can help protect your business from fraud through
 These capabilities are part of a comprehensive set of features that are grouped into three user experiences to help accelerate your journey toward a more comprehensive fraud protection environment: 
 
 - **Diagnose** – Use this experience in Fraud Protection to gain insights into fraud issues in your environment.
-   > [NOTE!]
+   > [!NOTE]
    > The diagnose functionality might not be available in all countries or regions.
 
 - **Evaluate** – Use this experience to assess and evaluate the effectiveness of Fraud Protection relative to your current fraud protection solution.

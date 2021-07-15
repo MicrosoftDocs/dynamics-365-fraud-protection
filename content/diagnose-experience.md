@@ -16,7 +16,7 @@ title: Diagnose experience overview
 
 The diagnose functionality in Microsoft Dynamics 365 Fraud Protection evaluates your historical data and generates reports that provide valuable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities.
 
-> [NOTE!]
+> [!NOTE]
 > The diagnose functionality might not be available in all countries or regions.
 
 

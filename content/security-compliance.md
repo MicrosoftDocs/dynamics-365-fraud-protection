@@ -40,7 +40,7 @@ For more information, see the following resources:
 
 In the *Diagnose* experience for Fraud Protection, you can delete the offline data that you've uploaded into Fraud Protection. At the top of the page, select **Delete my data**.
 
-> [NOTE!]
+> [!NOTE]
 > The diagnose functionality might not be available in all countries or regions.
 
 
