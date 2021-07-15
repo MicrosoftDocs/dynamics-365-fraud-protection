@@ -21,11 +21,11 @@ Purchase protection capabilities let you review historical data, use a customiza
 
 After you configure real-time API calls with Fraud Protection, transaction data automatically starts to flow into the system. This document shows how to use this historical data. It focuses on three areas:
 
--	**The diagnose experience**, where you can evaluate transaction data and generate reports that provide actionable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities. 
+-	**The diagnose experience**: Evaluate transaction data and generate reports that provide actionable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities. 
    > [NOTE!]
    > The diagnose functionality might not be available in all countries or regions.
--	**The support tool**, which lets you investigate the history of your customers' past transactions with your business.
--	**The graph explorer**, which lets you learn about the connections between data, search for specific data points, and view the attributes of data points.
+-	**The support tool**: Investigate the history of your customers' past transactions with your business.
+-	**The graph explorer**: Learn about the connections between data, search for specific data points, and view the attributes of data points.
 
 ## Goals for this document
 
