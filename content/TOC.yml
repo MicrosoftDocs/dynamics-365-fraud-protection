@@ -146,7 +146,7 @@
      href: integrate-ap-api.md
 -  name: Privacy, security, compliance
    items:
-   - name: Privacy protection of data
+   - name: Privacy protection for customer data
      href: data-processing-protection.md
    - name: Security overview
      href: security.md
