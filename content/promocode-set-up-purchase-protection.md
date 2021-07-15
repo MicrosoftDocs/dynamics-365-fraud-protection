@@ -555,5 +555,5 @@ Congratulations! You have successfully completed the training and are ready to u
 For information about how to access and use Fraud Protection's features, see the following documents:
 
 - [Set up device fingerprinting](device-fingerprinting.md)
-- [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
-- [Prevent loss with Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md)
+- [Set up customer accounts protection](promocode-set-up-account-protection.md)
+- [Set up loss prevention](promocode-set-up-loss-prevention.md)
