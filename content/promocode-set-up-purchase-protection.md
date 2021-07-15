@@ -1,8 +1,8 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic describes how to protect purchases with Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
-ms.date: 04/02/2021
+ms.author: josaw
+ms.date: 07/15/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -21,7 +21,9 @@ Purchase protection capabilities let you review historical data, use a customiza
 
 After you configure real-time API calls with Fraud Protection, transaction data automatically starts to flow into the system. This document shows how to use this historical data. It focuses on three areas:
 
--	**The diagnose experience**, where you can evaluate transaction data and generate reports that provide actionable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities.
+-	**The diagnose experience**, where you can evaluate transaction data and generate reports that provide actionable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities. 
+   > [NOTE!]
+   > The diagnose functionality might not be available in all countries or regions.
 -	**The support tool**, which lets you investigate the history of your customers' past transactions with your business.
 -	**The graph explorer**, which lets you learn about the connections between data, search for specific data points, and view the attributes of data points.
 
@@ -95,7 +97,7 @@ The general process to upload historical data consists of the following steps:
    
 ### Analyze data in a loss prevention report
 
-For more information about reports, see [The diagnose experience in Fraud Protection](./diagnose-experience.md).
+For more information about reports, see [Diagnose experience overview](./diagnose-experience.md).
 
 ### Upload historical data
 
@@ -148,7 +150,7 @@ You can download the data diagnostic report from the tool as a PDF file, and the
 ![PP summary.](media/promocode-images/pp-summary.png)
 
 > [!NOTE]
->Sample reports are generated from synthetic sample data.
+> Sample reports are generated from synthetic sample data.
 
 ### Data diagnostic report – Details
 
@@ -274,7 +276,7 @@ For information about supported events, see Dynamics 365 Fraud Protection API.
 ### Sign in
 
 > [!IMPORTANT]
->You must be a global administrator in your Azure tenant to complete the initial sign-in.
+> You must be a global administrator in your Azure tenant to complete the initial sign-in.
 
 Visit the portal for each environment that you intend to use, sign in, and accept the terms and conditions if you're prompted.
 
@@ -286,7 +288,7 @@ You might already have completed this step for the production environment during
 ### Create Azure AD apps
 
 > [!IMPORTANT]
->To complete this step, you must be an application administrator, a cloud application administrator, or a global administrator in your Azure AD tenant.
+> To complete this step, you must be an application administrator, a cloud application administrator, or a global administrator in your Azure AD tenant.
 
 To acquire the tokens that are required to call the APIs, use Fraud Protection to configure Azure AD applications.
 
@@ -308,7 +310,7 @@ To acquire the tokens that are required to call the APIs, use Fraud Protection t
  	The confirmation page summarizes the app's name and ID, and either the certificate thumbprint or the secret, depending on the authentication method that you selected.
 
  	> [!IMPORTANT]
- 	>Save the information about your certificate thumbprint or secret for future reference. This information will be shown only once.
+ 	> Save the information about your certificate thumbprint or secret for future reference. This information will be shown only once.
 
 ### Create additional apps
 
