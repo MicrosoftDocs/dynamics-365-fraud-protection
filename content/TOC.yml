@@ -122,13 +122,13 @@
      href: extensibility-via-event-hubs-overview.md
    - name: Set up extensibility via Event Hub
      href: extensibility-setup.md 
-   - name: Working with code
+   - name: Work with code
      href: extensibility-with-code.md
-   - name: Working with Logic Apps/Power Automate
+   - name: Work with Logic Apps/Power Automate
      href: extensibility-with-power-automate.md   
-   - name: Working with Power BI
+   - name: Work with Power BI
      href: extensibility-with-power-bi.md  
-   - name: Working with Power Apps
+   - name: Work with Power Apps
      href: extensibility-with-power-apps.md
    - name: Event tracing
      href: event-tracing.md
