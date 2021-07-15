@@ -1,18 +1,18 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic provides information about security, compliance, and data subject requests.
-ms.author: v-madeq
-ms.date: 04/02/2021
+ms.author: josaw
+ms.date: 05/17/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Compliance overview for Dynamics 365 Fraud Protection
+title: Compliance overview
 ms.custom: "intro-internal"
 ---
 
-# Compliance overview for Dynamics 365 Fraud Protection
+# Compliance overview
 
 Microsoft Dynamics 365 Fraud Protection was designed with compliance, privacy, security, and confidentiality in mind and is only intended to be used to prevent fraud and help identify legitimate payment transactions. Microsoft offers Fraud Protection under the Microsoft Online Services Terms, which includes robust Data Protection Terms.
 
@@ -38,7 +38,11 @@ For more information, see the following resources:
 - [Microsoft Dynamics 365 and GDPR](/dynamics365/get-started/gdpr/index)
 - [Microsoft Power BI GDPR white paper](https://powerbi.microsoft.com/blog/power-bi-gdpr-whitepaper-is-now-available/)
 
-In the *Diagnose experience* for Fraud Protection, you can delete the offline data that you've uploaded into Fraud Protection. At the top of the page, select **Delete my data**.
+In the *Diagnose* experience for Fraud Protection, you can delete the offline data that you've uploaded into Fraud Protection. At the top of the page, select **Delete my data**.
+
+> [NOTE!]
+> The diagnose functionality might not be available in all countries or regions.
+
 
 In the *Evaluate* and *Protect experiences*, you can perform the following tasks for all entities that contain personal data:
 

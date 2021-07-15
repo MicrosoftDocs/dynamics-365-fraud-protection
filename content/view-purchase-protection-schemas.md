@@ -1,8 +1,8 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic outlines the schemas that are required for historical data upload.
-ms.author: mapowath
-ms.date: 06/04/2021
+ms.author: josaw
+ms.date: 07/15/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -26,7 +26,7 @@ Note the following formatting guidelines throughout:
 
 ## Transactions
 
-The following schemas are used in the Diagnose, Evaluate, and Protect experiences.
+The following schemas are used in the diagnose, evaluate, and protect experiences.
 
 ### Purchases
 
@@ -266,7 +266,7 @@ The following schemas are used in the Diagnose, Evaluate, and Protect experience
 
 ## Chargebacks
 
-The following schema is used in the Diagnose, Evaluate, and Protect experiences.
+The following schema is used in the diagnose, evaluate, and protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|

@@ -1,25 +1,28 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic provides information about the diagnose experience in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
-ms.date: 04/02/2021
+ms.author: josaw
+ms.date: 07/15/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: The diagnose experience in Microsoft Dynamics 365 Fraud Protection
+title: Diagnose experience overview
 
 ---
 
-# The diagnose experience in Microsoft Dynamics 365 Fraud Protection
+# Diagnose experience overview
 
-Microsoft Dynamics 365 Fraud Protection's *Diagnose experience* evaluates your historical data and generates reports that provide valuable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities.
+The diagnose functionality in Microsoft Dynamics 365 Fraud Protection evaluates your historical data and generates reports that provide valuable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities.
+
+> [NOTE!]
+> The diagnose functionality might not be available in all countries or regions.
 
 
 ## Upload data
 
-To begin your diagnose experience, upload your historical data for analysis. Your data files should reflect approved transactions that were approved by you (the merchant) and sent to your bank.
+To begin your diagnose experience, upload your historical data for analysis. Your data files should reflect transactions that were approved by you and sent to your bank.
 
 To help guarantee that Fraud Protection can interpret the files that you upload, make sure that they meet the following requirements.
 
