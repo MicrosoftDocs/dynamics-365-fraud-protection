@@ -88,7 +88,7 @@
        href: monitoring.md          
      - name: Labels API	
        href: labels-api.md     
-     - name: Metrics and score cards
+     - name: Review key metrics for account protection
        href: ap-scorecard.md      
   -  name: Loss prevention
      items:
