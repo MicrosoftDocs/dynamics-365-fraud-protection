@@ -43,12 +43,12 @@ The following sign-in scenarios are intended for customers who purchased a licen
 
 For information about how to access and use other features in Fraud Protection, see the topics below.
 
-- [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
-- [Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
-- [Prevent loss with Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md)
+- [Set up customer account protection](promocode-set-up-account-protection.md)
+- [Set up purchase protection](promocode-set-up-purchase-protection.md)
+- [Set up loss prevention](promocode-set-up-loss-prevention.md)
 
 
 ## Configure access for additional users (Optional)
 
 Fraud protection offers role-based access control (RBAC) for enhanced security and role management. Initial configuration of users and roles should be done by the global administrator of your Azure AD tenant. After an **AllAreas_Admin** account has been set up, you can use it to add additional users.
-For more information about how to configure user access, see [Configure user access to **Fraud Protection**](configure-user-access.md).
+For more information about how to configure user access, see [Configure user access](configure-user-access.md).
