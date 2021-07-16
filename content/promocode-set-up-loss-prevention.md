@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic describes how to prevent loss with Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+author: josaw1
+description: This topic describes how to set up loss prevention in Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
@@ -11,8 +11,7 @@ search.audienceType:
 title: Prevent loss with Dynamics 365 Fraud Protection
 ---
 
-# Prevent loss with Dynamics 365 Fraud Protection
-
+# Set up loss prevention
 The loss prevention capability in Microsoft Dynamics 365 Fraud Protection uses adaptive artificial intelligence (AI) to generate risk scores, and to identify data anomalies and patterns in historical transaction data. You can then use these risk scores, anomalies, and patterns to generate reports that provide a detailed trend analysis, based on the return rate, the discount rate, and other key performance indicators (KPIs) that might indicate in-store fraud.
 
 ## Identifying fraudulent activity
@@ -41,7 +40,7 @@ After you complete these steps in your own system by using your own data, you wi
 
 Before you begin the tasks in this document, you must:
 
-- Set up Fraud Protection in an AAD tenant, as described in [Set up a trial version of Dynamics 365 Fraud Protection](promocode-set-up-dfp-trial-version.md).
+- Set up Fraud Protection in an AAD tenant, as described in [Set up a trial instance](promocode-set-up-dfp-trial-version.md).
 
 ## Step 1: Prepare your historical data (data mapping)
 
@@ -368,5 +367,5 @@ Congratulations! You've successfully completed the training and are ready to use
 
 For information about how to access and use Fraud Protection's features, see the following documents:
 
-- [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
-- [Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
+- [Set up customer accounts protection](promocode-set-up-account-protection.md)
+- [Set up purchase protection](promocode-set-up-purchase-protection.md)

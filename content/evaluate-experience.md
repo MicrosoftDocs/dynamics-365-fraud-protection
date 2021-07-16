@@ -1,19 +1,19 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic provides information about the Evaluate experience in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: The evaluate experience in Microsoft Dynamics 365 Fraud Protection 
+title: Evaluate experience overview
 ---
 
-# The evaluate experience in Microsoft Dynamics 365 Fraud Protection
+# Evaluate experience overview
 
-Microsoft Dynamics 365 Fraud Protection's *evaluate experience* allows you to use your real-time transactional traffic to compare Fraud Protection with your existing fraud solution. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation, and you can upload historical and asynchronous data to tune the model to your business scenarios. You can then use Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
+The evaluate experience in Microsoft Dynamics 365 Fraud Protection allows you to use your real-time transactional traffic to compare Fraud Protection with your existing fraud solution. You can send transactions through real-time application programming interfaces (APIs) to get an inline evaluation, and you can upload historical and asynchronous data to tune the model to your business scenarios. You can then use Fraud Protection to gain deeper insights into your data, tailor your risk management strategies, and support your customers.
 
 ## Using the evaluate experience
 
@@ -37,7 +37,7 @@ The evaluate experience in Fraud Protection provides the features that are descr
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
 
-The Protect experience is differentiated from Evaluate by additional features as described on [Protect experience](protect-experience.md), and becomes your real-time tool in your full production environment.
+The protect experience is differentiated from evaluate by additional features as described in the [protect experience](protect-experience.md) topic, and becomes your real-time tool in your full production environment.
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
