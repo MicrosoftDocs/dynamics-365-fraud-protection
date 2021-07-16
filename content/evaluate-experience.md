@@ -37,7 +37,7 @@ The evaluate experience in Fraud Protection provides the features that are descr
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
 
-The Protect experience is differentiated from Evaluate by additional features as described on [Protect experience](protect-experience.md), and becomes your real-time tool in your full production environment.
+The protect experience is differentiated from evaluate by additional features as described in the [protect experience](protect-experience.md) topic, and becomes your real-time tool in your full production environment.
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
