@@ -1,8 +1,8 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic explains how to set up device fingerprinting.
 
-ms.author: v-madeq
+ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
