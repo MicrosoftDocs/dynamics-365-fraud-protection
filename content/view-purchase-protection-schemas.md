@@ -28,6 +28,9 @@ Note the following formatting guidelines throughout:
 
 The following schemas are used in the diagnose, evaluate, and protect experiences.
 
+> [!NOTE]
+> The diagnose functionality might not be available in all countries or regions.
+
 ### Purchases
 
 | Attribute           | Type     | Description |
@@ -268,6 +271,9 @@ The following schemas are used in the diagnose, evaluate, and protect experience
 
 The following schema is used in the diagnose, evaluate, and protect experiences.
 
+> [!NOTE]
+> The diagnose functionality might not be available in all countries or regions.
+
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
 | ChargebackId       |  String  | The chargeback identifier. |
@@ -282,7 +288,7 @@ The following schema is used in the diagnose, evaluate, and protect experiences.
 
 ## Refunds
 
-The following schema is used in the Evaluate and Protect experiences.
+The following schema is used in the evaluate and protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
@@ -298,7 +304,7 @@ The following schema is used in the Evaluate and Protect experiences.
 
 ## PurchaseStatus
 
-The following schema is used in the Evaluate and Protect experiences.
+The following schema is used in the evaluate and protect experiences.
 
 | Attribute         | Type     | Description |
 |-------------------|----------|-------------|
@@ -310,7 +316,7 @@ The following schema is used in the Evaluate and Protect experiences.
 
 ## BankEvents
 
-The following schema is used in the Evaluate and Protect experiences.
+The following schema is used in the evaluate and protect experiences.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
@@ -337,7 +343,7 @@ The following schema is used in the Evaluate and Protect experiences.
 
 ## Account
 
-The following schemas are used in the Evaluate and Protect experiences.
+The following schemas are used in the evaluate and protect experiences.
 
 ### UpdateAccount
 
@@ -428,7 +434,7 @@ The following schemas are used in the Evaluate and Protect experiences.
 
 ## Labels
 
-The following schema is used in the Evaluate and Protect experiences.
+The following schema is used in the evaluate and protect experiences.
 
 | Attribute | Type | Description |
 | --- | --- | --- |
