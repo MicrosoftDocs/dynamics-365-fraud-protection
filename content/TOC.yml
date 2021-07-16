@@ -52,7 +52,7 @@
       href: data-upload.md
     - name: Virtual fraud analyst
       href: virtual-fraud-analyst.md  
-    - name: Metrics and score cards
+    - name: Review key metrics with scorecard reports
       href: scorecard.md 
     - name: Boost bank acceptance rates
       href: transaction-acceptance-booster.md 
@@ -88,7 +88,7 @@
        href: monitoring.md          
      - name: Labels API	
        href: labels-api.md     
-     - name: Metrics and score cards
+     - name: Review key metrics for account protection
        href: ap-scorecard.md      
   -  name: Loss prevention
      items:
@@ -102,7 +102,7 @@
        href: loss-prevention-integration-with-commerce.md
      - name: Data access and privacy
        href: loss-prevention-data-access-and-privacy.md
-     - name: Reporting
+     - name: Reports
        href: reports.md
 -  name: Fundamental capabilities
    items:
@@ -122,13 +122,13 @@
      href: extensibility-via-event-hubs-overview.md
    - name: Set up extensibility via Event Hub
      href: extensibility-setup.md 
-   - name: Working with code
+   - name: Work with code
      href: extensibility-with-code.md
-   - name: Working with Logic Apps/Power Automate
+   - name: Work with Logic Apps/Power Automate
      href: extensibility-with-power-automate.md   
-   - name: Working with Power BI
+   - name: Work with Power BI
      href: extensibility-with-power-bi.md  
-   - name: Working with Power Apps
+   - name: Work with Power Apps
      href: extensibility-with-power-apps.md
    - name: Event tracing
      href: event-tracing.md
@@ -146,7 +146,7 @@
      href: integrate-ap-api.md
 -  name: Privacy, security, compliance
    items:
-   - name: Privacy protection of data
+   - name: Privacy protection for customer data
      href: data-processing-protection.md
    - name: Security overview
      href: security.md

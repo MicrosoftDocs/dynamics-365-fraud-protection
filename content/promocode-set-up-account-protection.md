@@ -1,17 +1,17 @@
 ---
-author: yvonnedeq
-description: This topic describes how to protect customer accounts with Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+author: josaw1
+description: This topic describes how to set up customer accounts protection in Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Protect customer accounts with Dynamics 365 Fraud Protection
+title: Set up customer accounts protection
 ---
 
-# Protect customer accounts with Dynamics 365 Fraud Protection
+# Set up customer accounts protection
 
 Microsoft Dynamics 365 Fraud Protection includes account protection capabilities to help you assess whether any suspicious activity is occurring in your business ecosystem. These capabilities include risk assessment capabilities that you can use to block or challenge fraudulent attempts to create accounts or compromise existing accounts. Here are some examples:
 

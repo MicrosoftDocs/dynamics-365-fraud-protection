@@ -8,10 +8,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Set up a trial version of Dynamics 365 Fraud Protection
+title: Set up a trial instance
 ---
 
-# Set up a trial version of Dynamics 365 Fraud Protection
+# Set up a trial instance
 
 This document guides you through setting up a trial version of Microsoft Dynamics 365 Fraud Protection. After you complete the tasks in this document, you'll be ready to use Fraud Protection to protect your business.
 
@@ -84,6 +84,6 @@ If you don't have an existing Azure AD tenant, or if you prefer to set up a new 
 
 For information about how to access and use features in Fraud Protection features, see the topics below.
 
-- [Protect customer accounts with Dynamics 365 Fraud Protection](promocode-set-up-account-protection.md)
-- [Protect purchases with Dynamics 365 Fraud Protection](promocode-set-up-purchase-protection.md)
-- [Prevent loss with Dynamics 365 Fraud Protection](promocode-set-up-loss-prevention.md)
+- [Set up customer accounts](promocode-set-up-account-protection.md)
+- [Set up purchase protection](promocode-set-up-purchase-protection.md)
+- [Set up loss prevention](promocode-set-up-loss-prevention.md)
