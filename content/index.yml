@@ -55,6 +55,8 @@ additionalContent:
               url: global-availability.md 
             - text: Provision your Azure tenant
               url: provision-azure-tenant.md
+            - text: Pay as you go billing
+              url: pay-as-you-go.md
             - text: Assessment usage and metering
               url: metering.md
         # Card
