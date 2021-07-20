@@ -24,6 +24,8 @@
     href: promocode-set-up-DFP-trial-version.md
   - name: Set up a purchased instance
     href: promocode-set-up-DFP-purchased-version.md
+  - name: Pay as you go billing
+    href: pay-as-you-go.md
   - name: Configure user access
     href: configure-user-access.md   
   - name: Set up device fingerprinting
