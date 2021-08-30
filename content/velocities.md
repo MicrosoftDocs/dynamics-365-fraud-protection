@@ -2,8 +2,8 @@
 author: yvonnedeq
 description: This topic explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
 
-ms.author: v-madeq
-ms.date: 04/26/2021
+ms.author: josaw
+ms.date: 08/30/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -14,9 +14,6 @@ title: Perform velocity checks
 ---
 
 # Perform velocity checks
-
-[!include [banner](includes/preview-banner.md)]
-
 
 The frequency of events from a user or entity (such as a credit card) might indicate suspicious activity and potential fraud. For example, after fraudsters try a few individual orders, they often use a single credit card to quickly place many orders from a single IP address or device. They might also use many different credit cards to quickly place many orders. Velocity checks help you identify these types of event patterns. By defining velocities, you can watch incoming events for these types of patterns and use rules to define thresholds beyond which you want to treat the patterns as suspicious.
 
@@ -41,7 +38,7 @@ GROUPBY <attribute name>
     | DistinctCount      | This method returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPaddresses |
     | Sum                | This method returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
-- After **FROM**, specify an assessment to observe the velocity on: *Purchase*, *AccountLogin*, or *AccountCreation*.
+- After **FROM**, specify an assessment to observe the velocity on: *Purchase, AccountLogin, AccountCreation, Chargeback, or Bank*.
 - *The **WHEN** statement is optional.* After **WHEN**, you can type a Boolean expression. Only events that match the condition are considered in the aggregation. Other events are ignored. The expression is used to filter the events that are considered in the velocity.
 - After **GROUPBY**, specify a property or an expression. The property or expression is then evaluated for every event that is processed. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that is specified in the **SELECT** statement. If the **GROUPBY** expression is null or empty for an incoming event, the event won't contribute to the aggregation.
 
@@ -176,13 +173,13 @@ WHEN Velocity.totalSpending_perUser(@"user.userid", 7d) > 1000
 
 The first parameter is **key**. This parameter is used to look up the velocity. In the preceding velocity definition for **totalSpending**, the **GROUPBY\ @"user.userId"** statement indicates that values will be aggregated for each user ID that is encountered. When you reference the velocity from a rule, the **key** parameter specifies the user ID to retrieve the velocity value for. If the **key** parameter is null or empty, Fraud Protection returns *0*.
 
-The second parameter is **timeWindow**. This parameter specifies the time window that you want to observe the velocity over. You can select a time window between one minute and seven days. Currently, the following are all valid time windows:
+The second parameter is **timeWindow**. This parameter specifies the time window that you want to observe the velocity over. You can select a time window between one second to ninety days. Currently, the following are all valid time windows:
 
+- \[1–59\]s
 - \[1–59\]m
 - \[1–23\]h
 - \[1–7\]d
 
-In the future, this list will be expanded.
 
 > [!NOTE]
 > The time window begins at the start of the previous unit of measure. For example, if the current date and time are 11:04 AM on April 1, 2021, and you check a velocity over a two-hour (*2h*) time window, you will see the data since 9:00 AM, not since 9:04 AM.
