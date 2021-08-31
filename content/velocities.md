@@ -1,9 +1,9 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
 
 ms.author: josaw
-ms.date: 08/30/2021
+ms.date: 09/09/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -38,7 +38,7 @@ GROUPBY <attribute name>
     | DistinctCount      | This method returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPaddresses |
     | Sum                | This method returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
-- After **FROM**, specify an assessment to observe the velocity on: *Purchase, AccountLogin, AccountCreation, Chargeback, or Bank*.
+- After **FROM**, specify an assessment to observe the velocity on: *Purchase, AccountLogin, AccountCreation, Chargeback, or BankEvent*.
 - *The **WHEN** statement is optional.* After **WHEN**, you can type a Boolean expression. Only events that match the condition are considered in the aggregation. Other events are ignored. The expression is used to filter the events that are considered in the velocity.
 - After **GROUPBY**, specify a property or an expression. The property or expression is then evaluated for every event that is processed. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that is specified in the **SELECT** statement. If the **GROUPBY** expression is null or empty for an incoming event, the event won't contribute to the aggregation.
 
@@ -178,7 +178,7 @@ The second parameter is **timeWindow**. This parameter specifies the time window
 - \[1–59\]s
 - \[1–59\]m
 - \[1–23\]h
-- \[1–7\]d
+- \[1–90\]d
 
 
 > [!NOTE]
