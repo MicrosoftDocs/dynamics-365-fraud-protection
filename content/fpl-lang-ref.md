@@ -1,8 +1,8 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
-ms.author: v-madeq
-ms.date: 04/01/2021
+ms.author: josaw1
+ms.date: 09/01/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -49,7 +49,8 @@ The guide also covers additional topics. Here are some examples:
 
 | Keyword | Description | Example |
 |---------|-------------|---------|
-| RETURN  | <p>A **RETURN** statement terminates rule execution.</p><p>The statement must specify a valid decision function: **Approve()**, **Reject()**, **Challenge()**, or **Review()**.</p><p>The statement can also specify one or more observation functions: **Other()** or **Trace()**</p> | <p>RETURN Reject()</p><p>RETURN Reject(), Other(key=@"user.email")</p><p>RETURN Reject(), Other(key=@"user.email"), Trace(ip=@"device.ipAddress")</p>|
+| RETURN  | <p>A **RETURN** statement terminates rule execution.</p><p>The statement must specify a valid [decision function](fpl-lang-ref.md#decision-functions): **Approve()**, **Reject()**, **Challenge()**, or **Review()**.</p><p>The statement can also specify one or more observation functions: **Output()** or **Trace()**</p> | <p>RETURN Reject()</p><p>RETURN Reject(), Output(key=@"user.email")</p><p>RETURN Reject(), Trace(ip=@"device.ipAddress")</p>|
+| OBSERVE | An **OBSERVE** statement does not terminate rule execution.</p><p>When an **OBSERVE** clause is hit, it will be logged in the API response, however, clauses will continue to evaluate until a **RETURN** statement is reached.</p><p>An **OBSERVE** statement must be followed by an [observation function](fpl-lang-ref.md#observation-functions).</p><p>Allows performing actions without stopping execution. For example, passing key value pairs to the API response with Other: OBSERVE Other(key1=value1) | OBSERVE Output()</p><p>OBSERVE Output(reason=”high score”)</p> |
 | WHEN    | A **WHEN** statement specifies a Boolean condition. The rest of the block is then run only if the condition is evaluated to *true*. | WHEN @"riskscore" \> 400 |
 | SELECT  | A **SELECT** statement is used in a velocity to specify an aggregation function. | SELECT Count() AS velocityName |
 | AS      | An **AS** statement is used to create an alias for your velocity. This alias can then be referenced from rules. | SELECT Count() AS velocityName |
@@ -74,7 +75,7 @@ Observation functions can be used to take data from the current context and writ
 
 | Return type | Description | Example |
 |-------------|-------------|---------|
-| Other(k=v)  | This type can be used to pass key-value pairs into the API response. | Other(key="test", email=@"user.email", countryRegion=Geo.CountryRegion(@"device.ipAddress")) |
+| Output(k=v)  | This type can be used to pass key-value pairs into the API response. | Output(key="test", email=@"user.email", countryRegion=Geo.CountryRegion(@"device.ipAddress")) |
 |Trace(k=v)   | This type can be used to trigger a Trace event and send key-value pairs to the FraudProtection.Trace.Rule [Event Tracing namespace](event-tracing.md#event-schemas). | Trace(key="Manual Review", ip=@"device.ipAddress") |
 
 ## Referencing attributes and variables
