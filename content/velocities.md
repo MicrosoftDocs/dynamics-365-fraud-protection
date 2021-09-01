@@ -193,7 +193,7 @@ In the future, this list will be expanded.
 
 ## Use rules to view velocity values
 
-In addition to returning decisions, rules can use [observation functions](fpl-lang-ref#observation-functions) such as **Output()** to print certain values to the API response. For example, a user could write the following clause, which does not make a decision, but will simply output the values of several velocities in the API response.
+In addition to returning decisions, rules can use [observation functions](fpl-lang-ref.md#observation-functions) such as **Output()** to print certain values to the API response. For example, a user could write the following clause, which does not make a decision, but will simply output the values of several velocities in the API response.
 
 ```FraudProtectionLanguage
 OBSERVE Output(
