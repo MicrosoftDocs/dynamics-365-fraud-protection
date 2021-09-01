@@ -202,7 +202,7 @@ OBSERVE Output(
 )
 ```
 
-Each assessment event that triggers this rule, will then print the following section in the API response:
+Each assessment event that triggers this rule will then print the following section in the API response:
 
 ```JSON
 "MerchantRuleOutput": {
