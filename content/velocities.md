@@ -1,8 +1,8 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
 
-ms.author: v-madeq
+ms.author: josaw
 ms.date: 04/26/2021
 ms.topic: conceptual
 search.app: 
@@ -193,36 +193,31 @@ In the future, this list will be expanded.
 
 ## Use rules to view velocity values
 
-In addition to returning decisions, rules can use observation functions such as **Trace()** and **Other()**. For more information about observation functions, see the [language reference guide](fpl-lang-ref.md).
-
-You can use **Other()** to print velocity values to each Assessment API response. For example, you create the following rule.
+In addition to returning decisions, rules can use [observation functions](fpl-lang-ref.md#observation-functions) such as **Output()** to print certain values to the API response. For example, a user could write the following clause, which does not make a decision, but will simply output the values of several velocities in the API response.
 
 ```FraudProtectionLanguage
-RETURN Approve(), Other(
-        totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
+OBSERVE Output(
+    totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
     loginsPerDevice_1m = Velocity.loginCount_perDevice(@"deviceAttributes.deviceId", 1m)
 )
 ```
 
-Each Account Login or Account Creation event that triggers this rule will then print the following section in the API response.
+Each assessment event that triggers this rule will then print the following section in the API response:
 
 ```JSON
-"Other": {
+"MerchantRuleOutput": {
     "clause1": {
-        "totalSpending_7d": "0",
-        "loginsPerDevice_1m": "0"
+        "totalSpending_7d": "523.99",
+        "loginsPerDevice_1m": "1"
     }
 },
 ```
 
-> [!NOTE]
-> This behavior doesn't apply to Purchase events.
-
 Instead of printing the velocity values directly to the API response, you can use [event tracing](event-tracing.md) to send the values to your own instance of Azure Event Hubs or Azure Blob Storage. For example, you create the following rule.
 
 ```FraudProtectionLanguage
-RETURN Approve(), Other(
-        totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
+RETURN Approve(), Trace(
+    totalSpending_7d = Velocity.totalSpending_perUser(@"user.userid", 7d),
     loginsPerDevice_1m = Velocity.loginCount_perDevice(@"deviceAttributes.deviceId", 1m)
 )
 ```
