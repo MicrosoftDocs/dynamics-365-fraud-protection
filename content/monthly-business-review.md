@@ -1,3 +1,18 @@
+---
+author: josaw1
+description: This topic provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
+ms.date: 09/20/2021
+ms.topic: conceptual
+search.app: 
+  - Capaedac-fraudprotection
+search.audienceType:
+  - admin
+title: Monthly business review (preview version)
+---
+
+
+
 # Monthly business review (preview version)
 
 The Dynamics 365 Fraud Protection monthly business review (preview) tool is provided as a preview service under the terms and conditions described in the Microsoft Online Service Terms. The monthly business review allows merchants to review long term business metrics, compare and track fraud and rule performance month over month, and visualize long term operational trend.
