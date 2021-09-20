@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the Monthly business review tool in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/20/2021
 ms.topic: conceptual
