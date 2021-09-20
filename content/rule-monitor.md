@@ -8,11 +8,11 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Rule monitor tool (preview version)
+title: Rule monitor tool (preview)
 ---
 
 
-# Rule monitor tool (preview version)
+# Rule monitor tool (preview)
 
 The Dynamics 365 Fraud Protection rule monitor tool (preview) is provided as a preview service under the terms and conditions described in the Microsoft Online Service Terms. The rule monitor enables merchants to understand transaction volume, distribution, and fraud trend by rules and clauses, to analyze decision and performance by rule segments, and to compare the impact of observe rules with decision rules.
 
