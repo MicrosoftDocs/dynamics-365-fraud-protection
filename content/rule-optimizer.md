@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the Score rule optimizer tool in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/20/2021
 ms.topic: conceptual
@@ -8,11 +8,11 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Score Rule Optimizer (Preview version)
+title: Score rule optimizer (preview version)
 ---
 
 
-# Score Rule Optimizer (Preview version)
+# Score rule optimizer (preview version)
 
 The Fraud Protection score rule optimizer (Preview) tool is provided to you as a Preview service under terms and conditions described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). The score rule optimizer is a tool that allows merchants to analyze historical transaction data, perform operational tasks, and make informed operational decisions such as setting the score threshold, rejecting risky transactions, estimating score threshold impact, analyzing fraud trends and performance, and conducting deep dive analysis.
 
