@@ -1,3 +1,18 @@
+---
+author: josaw1
+description: This topic provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
+ms.date: 09/20/2021
+ms.topic: conceptual
+search.app: 
+  - Capaedac-fraudprotection
+search.audienceType:
+  - admin
+title: Fraud Tracker (Preview version)
+---
+
+
+
 # Fraud Tracker (Preview version)
 
 The Fraud Protection fraud tracker (Preview) tool is provided as a preview service under the terms and conditions described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). The fraud tracker allows merchants to understand fraud volume (both by count and dollar amount), distribution, and trend; to analyze by payment instrument and product; and to make informed operational decisions such as adjusting the score threshold for a certain transaction segment.
