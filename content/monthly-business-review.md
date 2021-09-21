@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about the Monthly business review tool in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the monthly business review tool (preview version) in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/20/2021
 ms.topic: conceptual
@@ -8,20 +8,20 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Monthly business review (preview version)
+title: Monthly business review tool (preview version)
 ---
 
 
 
-# Monthly business review (preview version)
+# Monthly business review tool (preview version)
 
-The Dynamics 365 Fraud Protection monthly business review (preview) tool is provided as a preview service under the terms and conditions described in the Microsoft Online Service Terms. The monthly business review allows merchants to review long term business metrics, compare and track fraud and rule performance month over month, and visualize long term operational trend.
+The Dynamics 365 Fraud Protection monthly business review tool (preview) is provided as a preview service under the terms and conditions described in the Microsoft Online Service Terms. The monthly business review enables merchants to review long-term business metrics, compare and track fraud and rule performance month over month, and visualize long-term operational trend.
 
-The monthly business review is an interactive report tool built on the Microsoft Power BI platform. Merchants can use this tool to drive purchase protection in their online business for their customers by applying various filters and reviewing business metrics by various segments.
+The monthly business review is an interactive report tool built on the Microsoft Power BI platform. Merchants can use this tool to drive purchase protection for their customers in their online business by applying various filters and reviewing business metrics by various segments.
 
 The monthly business review report refreshes every 24 hours with the latest transactional data. The time stamp in the report displays the UTC refresh time for the report.
 
-The monthly business review shows the following metrics by count or by amount.
+The monthly business review displays the following metrics by count or by amount.
 
 - **Scale metrics**: Displays transaction volume, settled volume, and bank acceptance rate.
 
@@ -29,7 +29,7 @@ The monthly business review shows the following metrics by count or by amount.
 
 - **Fraud metrics**: Displays fraud volume and rate by transaction date, and fraud and rate received by 5<sup>th</sup> of the next month.
 
-- **Fraud metrics by received date**: Display fraud volume and rate by received date.
+- **Fraud metrics by received date**: Displays fraud volume and rate by received date.
 
 ## Appendix
 
@@ -43,7 +43,7 @@ The following filters are included in the filter pane on the right side of the s
 
 - **Acquirer ID**.
 
-- **Assessment type**: Merchants can filter by evaluate or protect type.
+- **Assessment type**: Filter by evaluate or protect type.
 
 - **AVS verify**.
 
@@ -59,7 +59,7 @@ The following filters are included in the filter pane on the right side of the s
 
 - **Guest checkout flag**.
 
-- **Merchant final decision**: Merchants can filter by the purchase status decision they provided.
+- **Merchant final decision**: Filter by the purchase status decision previously provided.
 
 - **Merchant first decision**.
 
@@ -79,17 +79,17 @@ The following filters are included in the filter pane on the right side of the s
 
 - **Payer status**.
 
-- **Policy applied**: Merchants can filter by rule/policy triggered transactions.
+- **Policy applied**: Filter by rule/policy triggered transactions.
 
-- **Recurring flag**: This indicates if transactions are recurrent or not.
+- **Recurring flag**: Indicates whether transactions are recurrent.
 
 - **Settled flag**.
 
-- **Over zero-dollar flag**: This indicates if the purchase is not free.
+- **Over zero-dollar flag**: Indicates if the purchase is not free.
 
-- **Confirmed fraud type**: The confirmed fraud type includes chargeback, refund, merchant true reject, and purchase status
+- **Confirmed fraud type**: Includes chargeback, refund, merchant true reject, and purchase status.
 
-- **Confirmed non-fraud type**: The confirmed non-fraud type includes bank approved and merchant approved.
+- **Confirmed non-fraud type**: Includes bank approved and merchant approved.
 
 - **Shipping country/region**.
 
