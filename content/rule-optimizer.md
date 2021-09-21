@@ -100,11 +100,11 @@ Summary metrics display the following information:
 
 - Transaction volume. Total transaction volume sent to Fraud Protection.
 
-- Rejected rate*. Percentage of volume that the merchant's final decision is rejected, and a decision is not made by the bank out of the transaction volume.
+- Rejected rate\*. Percentage of volume that the merchant's final decision is rejected, and a decision is not made by the bank out of the transaction volume.
 
 - Volume of transactions on which the bank has made a decision.
 
-- Bank declined rate. Percentage of volume that bank declined out of bank decisioned volume.
+- Bank declined rate. Percentage of volume that bank declined out of bank decision volume.
 
 - Settled volume. Bank approval volume and volume labeled as fraud.\*
 
