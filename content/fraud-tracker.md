@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about thefFraud tracker tool in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the fraud tracker tool in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/20/2021
 ms.topic: conceptual
@@ -8,33 +8,33 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Fraud tracker (preview version)
+title: Fraud tracker tool (preview version)
 ---
 
 
-# Fraud tracker (preview version)
+# Fraud tracker tool (preview version)
 
-The Fraud Protection fraud tracker (Preview) tool is provided as a preview service under the terms and conditions described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). The fraud tracker allows merchants to understand fraud volume (both by count and dollar amount), distribution, and trend; to analyze by payment instrument and product; and to make informed operational decisions such as adjusting the score threshold for a certain transaction segment.
+The Dynamics 365 Fraud Protection fraud tracker tool (preview) is provided as a preview service under the terms and conditions described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). The fraud tracker helps merchants with: understanding fraud volume (by count and dollar amount), distribution, and trend; analyzing by payment instrument and product; and making informed operational decisions such as adjusting the score threshold for a certain transaction segment.
 
 The fraud tracker is an interactive report tool built on the Microsoft Power BI platform. Merchants can use this tool to drive purchase protection for their customers in their online business by applying various filters, changing the granularity of the dimension, and viewing an analysis of fraud volume and rate in various market segments.
 
 The fraud tracker report refreshes every 24 hours with the latest transactional data. The time stamp in the report displays the UTC refresh time for the report.
 
-The fraud tracker is composed of the following report tabs:
+The fraud tracker includes the following report tabs.
 
-- **Fraud tracker**, which helps merchants get an overview of the fraud volume and rate across segments.
+- **Fraud tracker**: Provides an overview of the fraud volume and rate across segments.
 
-- **Fraud by received date**, which shows the monthly and weekly distribution report of confirmed fraud.
+- **Fraud by received date**: Dislays the monthly and weekly distribution report for confirmed fraud.
 
-- **PI analysis**, which shows confirmed fraud distribution by payment instrument (PI) type\*. (Fraud distribution is confirmed by the user or bank.)
+- **PI analysis**: Displays confirmed fraud distribution by payment instrument (PI) type\*. (Fraud distribution is confirmed by the user or bank.)
 
-- **Product analysis**, which shows confirmed fraud distribution by product type, category, and name.
+- **Product analysis**: Displays confirmed fraud distribution by product type, category, and name.
 
 ## Fraud Tracker
 
-Fraud tracker provides a summary view of the fraud volume and fraud rate by payment instruments segment and product segment. It also shows the fraud volume and rate change over time and across an identified category. It allows users to quickly identify any patterns or trends for fraud in their online business.
+Fraud tracker provides a summary view of the fraud volume and fraud rate by payment instruments segment and product segment. It also provides the fraud volume and rate change over time and across an identified category. It allows you to quickly identify any patterns or trends for fraud in your online business.
 
-The summary section shows the total transaction volume, fraud volume, label confirmed volume, and the fraud rate of the date range selected for the transaction date.
+The summary section displays the total transaction volume, fraud volume, label confirmed volume, and the fraud rate of the date range selected for the transaction date.
 
 There are four charts that show different dimensions of the fraud:
 
