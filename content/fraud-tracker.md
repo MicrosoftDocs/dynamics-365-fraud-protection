@@ -105,34 +105,36 @@ Product analysis consists of three parts:
 
 The following filters are included in reports.
 
--   Billing country/region.
+- **Billing country/region**.
 
--   User country/region.
+- **User country/region**.
 
--   PI type, card type. This includes credit card and types of credit card as the sub-filter.
+- **PI type, card type**: Includes sub-filter for credit card and types of credit card.
 
--   Product type, category, name. Merchants can filter at different levels of the product filter tree.
+- **Product type, category, name**: Filter at different levels of the product filter tree.
 
--   Date range. Merchants can use the slider or date picker to set the date range.
+- **Date range**: Adjust the slider or date picker to set the date range.
 
--   Label, fraud identifier. Merchants can filter by fraud label and non-fraud. The fraud label may include chargebacks, refunds, and other labels provided by the merchant.
+- **Label, fraud identifier**: Filter by fraud label and non-fraud. The fraud label may include chargebacks, refunds, and other labels previously provided.
 
--   Measurement unit. Merchants can show the report by count or amount.
+- **Measurement unit**: Display the report by count or amount.
 
 ### Hidden filter pane
 
--   Assessment type. Merchants can filter by evaluate or protect type.
+The following filters are included in the filter pane on the right side of the screen. The filter pane can be hidden if necessary.
 
--   Merchant final decision: Merchants can filter by the purchase status decision they provided.
+- **Assessment type**: Filter by evaluate or protect type.
 
--   Bank decision. Merchants can filter by the bank decision they provided.
+- **Merchant final decision**: Filter by the purchase status decision previously provided.
 
--   Policy applied. Merchants can filter by rule/policy triggered transactions.
+- **Bank decision**: Filter by the bank decision provided.
 
--   Recurring flag. This indicates if transactions are recurrent or not.
+- **Policy applied**:  Filter by rule/policy triggered transactions.
 
--   Over zero-dollar flag. This indicates if the purchase is not free.
+- **Recurring flag**: Indicates whether transactions are recurrent.
 
--   Confirmed fraud type. The confirmed fraud type includes chargeback, refund, merchant true reject, and purchase status
+- **Over zero-dollar flag**: Indicates if the purchase is not free.
 
--   Confirmed non-fraud type. The confirmed non-fraud type includes bank approved and merchant approved.
+- **Confirmed fraud type**: Includes chargeback, refund, merchant true reject, and purchase status.
+
+- **Confirmed non-fraud type**: Includes bank approved and merchant approved.
