@@ -13,6 +13,7 @@ title: Rule monitor tool (preview)
 
 
 # Rule monitor tool (preview)
+[!include [preview banner](includes/preview-banner.md)]
 
 The Dynamics 365 Fraud Protection rule monitor tool (preview) is provided as a preview service under the terms and conditions described in the Microsoft Online Service Terms. The rule monitor enables merchants to understand transaction volume, distribution, and fraud trend by rules and clauses, to analyze decision and performance by rule segments, and to compare the impact of observe rules with decision rules.
 
