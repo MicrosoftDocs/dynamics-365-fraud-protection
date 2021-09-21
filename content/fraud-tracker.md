@@ -13,6 +13,7 @@ title: Fraud tracker tool (preview version)
 
 
 # Fraud tracker tool (preview version)
+[!include [preview banner](includes/preview-banner.md)]
 
 The Dynamics 365 Fraud Protection fraud tracker tool (preview) is provided as a preview service under the terms and conditions described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). The fraud tracker helps merchants with: understanding fraud volume (by count and dollar amount), distribution, and trend; analyzing by payment instrument and product; and making informed operational decisions such as adjusting the score threshold for a certain transaction segment.
 
