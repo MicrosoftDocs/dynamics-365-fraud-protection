@@ -13,6 +13,7 @@ title: Score rule optimizer tool (preview)
 
 
 # Score rule optimizer tool (preview)
+[!include [preview banner](includes/preview-banner.md)]
 
 The Dynamics 365 Fraud Protection score rule optimizer tool (preview) is provided to you as a preview service under terms and conditions described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). The score rule optimizer is a tool that allows merchants to analyze historical transaction data, perform operational tasks, and make informed operational decisions such as setting the score threshold, rejecting risky transactions, estimating score threshold impact, analyzing fraud trends and performance, and conducting deep dive analyses.
 
