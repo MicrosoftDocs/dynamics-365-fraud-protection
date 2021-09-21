@@ -24,7 +24,7 @@ The fraud tracker includes the following report tabs.
 
 - **Fraud tracker**: Provides an overview of the fraud volume and rate across segments.
 
-- **Fraud by received date**: Dislays the monthly and weekly distribution report for confirmed fraud.
+- **Fraud by received date**: Displays the monthly and weekly distribution report for confirmed fraud.
 
 - **PI analysis**: Displays confirmed fraud distribution by payment instrument (PI) type\*. (Fraud distribution is confirmed by the user or bank.)
 
@@ -59,7 +59,7 @@ The fraud by received date report has two levels, weekly and monthly. You can sw
 
 There are four charts that show different dimensions of the fraud:
 
-- **List of fraud volume and rate by PI segment:** Diplays confirmed fraud volume and fraud rate for transactions by PI type. You can drill down on a PI type to display a breakdown by credit card type. The shaded bar indicates the volume for each PI type and the color shade for the fraud rate indicates the percentage of the fraud. High fraud rates are highlighted in red.
+- **List of fraud volume and rate by PI segment:** Displays confirmed fraud volume and fraud rate for transactions by PI type. You can drill down on a PI type to display a breakdown by credit card type. The shaded bar indicates the volume for each PI type and the color shade for the fraud rate indicates the percentage of the fraud. High fraud rates are highlighted in red.
 
 - **List of fraud volume and rate by product segment:** Displays confirmed fraud volume and fraud rate for transactions by product type. You can drill down on a product type to display breakdown by product category or drill down on product name. The shaded bar indicates the volume for each product type, and the color shade for the fraud rate indicates the percentage of the fraud. High fraud rates are highlighted in red.
 
@@ -97,7 +97,7 @@ Product analysis consists of three parts:
 
 - **Fraud distribution percentage by segment and fraud volume:** Displays the percentage of confirmed fraud distribution for each segment and the total confirmed fraud volume by transaction period. You can identify the product segment with a large fraud distribution or identify changes in fraud distribution over time.
 
-- **Fraud rate by segment:** Diplays the percentage of confirmed fraud volume versus the total label confirmed volume of each segment by transaction period. You can identify the product segment with a fraud rate spike or identify changes in fraud rate for a PI segment over time.
+- **Fraud rate by segment:** Displays the percentage of confirmed fraud volume versus the total label confirmed volume of each segment by transaction period. You can identify the product segment with a fraud rate spike or identify changes in fraud rate for a PI segment over time.
 
 <!-- I don't know what this applies to. \*Evaluated only on transactions with confirmed fraud and non-fraud statuses, as confirmed by user/merchant. -->
 
