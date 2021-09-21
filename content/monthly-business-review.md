@@ -14,6 +14,7 @@ title: Monthly business review tool (preview version)
 
 
 # Monthly business review tool (preview version)
+[!include [preview banner](../includes/preview-banner.md)]
 
 The Dynamics 365 Fraud Protection monthly business review tool (preview) is provided as a preview service under the terms and conditions described in the Microsoft Online Service Terms. The monthly business review enables merchants to review long-term business metrics, compare and track fraud and rule performance month over month, and visualize long-term operational trend.
 
