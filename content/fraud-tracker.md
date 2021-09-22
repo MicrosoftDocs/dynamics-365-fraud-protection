@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about the fraud tracker tool in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the fraud tracker tool (preview) in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/20/2021
 ms.topic: conceptual
@@ -8,10 +8,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Fraud tracker tool (preview version)
+title: Fraud tracker tool (preview)
 ---
 
-# Fraud tracker tool (preview version)
+# Fraud tracker tool (preview)
 
 [!include [preview banner](includes/preview-banner.md)]
 
