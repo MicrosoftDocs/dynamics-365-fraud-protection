@@ -54,4 +54,6 @@ The scorecard plots the following metrics:
 - Chargeback rate by receive date – The percentage of chargebacks out of the total volume that was approved by banks on the receive date. 
 
  
+## Additional resources
 
+[Review key metrics with scorecard reports](scorecard.md)
