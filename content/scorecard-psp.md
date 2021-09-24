@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic desribes how payment service providers (PSPs) can use scorecard reports in Microsoft Dynamics 365 Fraud Protection to review key metrics and understand the performance of their fraud protection efforts.
+description: This topic describes how payment service providers (PSPs) can use scorecard reports in Microsoft Dynamics 365 Fraud Protection to review key metrics and understand the performance of their fraud protection efforts.
 ms.author: josaw
 ms.date: 09/23/2021
 ms.topic: conceptual
