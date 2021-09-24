@@ -3,7 +3,7 @@ author: josaw1
 description: This topic provides an overview of what support and custom lists are, and how to manage information on lists in Dynamics 365 Fraud Protection.  
 ms.author: josaw
 ms.date: 09/24/2021
-ms.topic: how-to
+ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
@@ -24,5 +24,5 @@ Custom lists are created and defined by you. You can upload any number of custom
 
 ## Support lists
 
-Support lists are predefined lists included in Dynamic 365 Fraud protection that help you get started. There are support lists for each of the following entities: email address, payment instrument, IP address, user ID and device ID. You can assign entities the status of safe, block, or watch. For details on how to manage support lists, see [Manage support lists](manage-support-lists.md).
+Support lists are predefined lists included in Dynamic 365 Fraud protection that help you get started. There are support lists for each of the following entities: email address, payment instrument, IP address, user ID, and device ID. You can assign entities the status of safe, block, or watch. For details on how to manage support lists, see [Manage support lists](manage-support-lists.md).
 
