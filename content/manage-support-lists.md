@@ -43,7 +43,7 @@ To add, remove, or edit entries from support lists from Lists page, you can take
 
 1. When you’re finished editing, select **Update**.
 
-## Edit an existing support list entry
+## Edit a support list entry
 
 1. Select one of the support lists, and then select **Edit**.  
 
