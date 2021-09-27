@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains functionality to support payment service providers (PSPs) in Dynamics 365 Fraud Protection.  
+description: This topic explains functionality in Dynamics 365 Fraud Protection that supports payment service providers (PSPs).  
 ms.author: josaw
 ms.date: 09/30/2021
 ms.topic: conceptual
@@ -15,29 +15,28 @@ title: Payment service provider protection (preview) overview
 
 [!include [preview banner](includes/preview-banner.md)]
 
-Microsoft Dynamics 365 Fraud Protection provides merchants the capability to protect e-commerce transactions from fraudulent activity. We are extending product capabilities to provide fraud protection to PSPs. 
+Microsoft Dynamics 365 Fraud Protection provides payment service providers (PSPs) the capability to protect their merchants from fraudulent activity. 
 
-A single PSP alone could have hundreds to thousands of merchants who need fraud protection solution to protect their business. These merchants cover numerous industries and verticals, such as retail, gaming, digital goods, and travel. The size, structure and industries served require new fraud protection capabilities that are above and beyond that of an individual enterprise customer. 
+A single PSP could have hundreds to thousands of merchants who need a fraud protection solution to protect their business. The merchants can be serving numerous industries and verticals, such as retail, gaming, digital goods, and travel. The size, structure, and industries that are served require fraud protection capabilities that are beyond that required by an individual enterprise customer. 
 
 ## Manage environments
 
-Creating new environments helps PSPs manage their merchant’s’ fraud operations, data and user access.  
-
-For example: If you are a PSP who manages 2 merchants, you can create 2 different environments for each of your merchants. User access, fraud operations and data of each of the merchants can be hosted and managed within these dedicated environments. 
+By creating new environments for their merchants, PSPs can better manage their merchants' fraud operations, their data, and their user access. 
+For example, if you are a PSP who manages two merchants, you can create two different environments, one for each of your merchants. That way, user access, data, and fraud operations for each of the merchants can be hosted and managed within these dedicated environments. 
 
 ### Create a new environment
 
-You can create a new environment by clicking on the “New environment” option under the environment picker on top right corner of fraud protection portal. The Ffollowing info will be needed to create an environment: 
+To create a new environment, select **New environment** under the environment picker on the top right of the Fraud Protection portal page. The following information is needed to create an environment: 
 
-1. Data Storage Geography: EU, US or Canada. 
+1. **Data storage geography** - Select EU, US, or Canada. 
 
-1. Name of Environment (Name of the merchant you are trying to onboarding to that environment). 
+1. **Name of environment** - The name should be the name of the merchant you will onboard to that environment. 
 
-1. Description (optional) 
+1. **Description (optional)** - Add some information to help identify the environment. 
 
-1. Tags (optional): You can use tags to specify any generic information related to this environment. Such as industry vertical.  
+1. **Tags (optional)** - You can use tags to specify any generic information related to this environment, such as industry vertical.  
 
-### View environments
+### Display environments
 
-You can view a list of all environments under your tenant by clicking on the “Manage Environment” option under the environment picker. 
+To display a list of all of the environments under your tenant, select **Manage environment** under the environment picker. 
 
