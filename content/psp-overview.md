@@ -8,10 +8,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Payment service provider protection (preview) overview
+title: Payment service provider enablement (preview)
 ---
 
-# Payment service provider protection (preview) overview
+# Payment service provider enablement (preview)
 
 [!include [preview banner](includes/preview-banner.md)]
 
