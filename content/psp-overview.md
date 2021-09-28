@@ -40,3 +40,19 @@ To create a new environment, select **New environment** under the environment pi
 
 To display a list of all of the environments under your tenant, select **Manage environment** under the environment picker. 
 
+## Additional resources
+
+[Manage environments (PSPs)](manage-psp-environments.md)
+
+[Integrate purchase protection APIs](integrate-real-time-api.md)  
+
+[Labels API](labels-api.md) 
+
+[Set up device fingerprinting](device-fingerprinting.md) 
+
+[View purchase protection schemas](view-purchase-protection-schemas.md) 
+
+[Manage rules](rules.md)  
+
+[Fraud tracker tool](fraud-tracker.md)  
+
