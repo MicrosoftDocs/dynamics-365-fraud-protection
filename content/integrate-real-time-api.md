@@ -156,8 +156,8 @@ The AuthenticationResult object in each case contains the AccessToken itself, an
 
 For more information, refer to the Azure documentation: 
 
-- <a href="https://docs.microsoft.com/azure/active-directory/develop/msal-overview" target="_blank">Overview of Microsoft Authentication Library (MSAL)</a>
-- <a href="https://docs.microsoft.com/azure/active-directory/develop/msal-acquire-cache-tokens" target="_blank">Acquire and cache tokens using the Microsoft authentication library (MSAL)</a>
+- [Overview of Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
+- [Acquire and cache tokens using the Microsoft authentication library (MSAL)](/azure/active-directory/develop/msal-acquire-cache-tokens)
 
 
 ### Call the APIs
