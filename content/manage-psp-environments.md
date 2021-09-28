@@ -36,7 +36,7 @@ To display a list of all of the environments under your tenant, select **Manage 
 
 ## Additional resources
 
-[Payment service provider protection (preview) overview](psp-overview.md)
+[Payment service provider enablement (preview)](psp-overview.md)
 
 [Integrate purchase protection APIs](integrate-real-time-api.md)  
 
