@@ -39,6 +39,6 @@ Fraud Protection provides curated data sets, metrics, and Microsoft Power BI rep
 - The threat vulnerability analyzer and threat vulnerability trend reports for account protection enable you to:
   - Analyze account protection session data.
   - Investigate threat and fraud attacks at the session level.
-  - Make informed operational decisions. For example, you have richer insights pertaining to setting the score threshold, segmenting threat traffic, estimating score threshold impact, analyzing abusive traffic patterns, and validating machine learning score performance. The interactive threat vulnerability tool provides intelligence on various dimensions including geolocation, device configuration, IP, and reason code. 
+  - Make informed operational decisions. For example, you have richer insights pertaining to setting the score threshold, segmenting threat traffic, estimating score threshold impact, analyzing abusive traffic patterns, and validating machine learning score performance. The interactive reports provide intelligence on various dimensions including geolocation, device configuration, IP, and reason code. 
     >[!NOTE]
     >The report from the tool refreshes every 24 hours with the latest account protection sessions. It retains account login and account creation sessions from the previous four weeks. The threat vulnerability trend report retains account login and account creation metrics and data from the previous four months.
