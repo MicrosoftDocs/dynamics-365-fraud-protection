@@ -116,7 +116,7 @@
   items:
   - name: PSP enablement
     href: psp-overview.md
-  - name: Manage environments (PSPs)
+  - name: Manage environments
     href: manage-psp-environments.md
   - name: Score rule optimizer tool
     href: rule-optimizer.md 
