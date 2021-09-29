@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about the monthly business review tool (preview version) in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides information about the monthly business review tool (preview) in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/20/2021
 ms.topic: conceptual
@@ -8,10 +8,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Monthly business review tool (preview version)
+title: Monthly business review tool (preview)
 ---
 
-# Monthly business review tool (preview version)
+# Monthly business review tool (preview)
 
 [!include [preview banner](includes/preview-banner.md)]
 
