@@ -46,4 +46,4 @@ Fraud Protection provides curated data sets, metrics, and Power BI reports for p
     - Make informed operational decisions. For example, you gain richer insights that are related to setting the score threshold, segmenting threat traffic, estimating score threshold impact, analyzing abusive traffic patterns, and validating the performance of machine learning scores. The interactive reports provide intelligence about various dimensions, such as geolocation, device configuration, IP address, and reason code.
 
     > [!NOTE]
-    > The report from the tool is updated with the latest account protection sessions every 24 hours. It retains account sign-in and account creation sessions from the previous four weeks. The threat vulnerability trend report retains account sign-in and account creation metrics and data from the previous four months.
+    > The reports are updated with the latest account protection sessions every 24 hours. It retains account sign-in and account creation sessions from the previous four weeks. The threat vulnerability trend report retains account sign-in and account creation metrics and data from the previous four months.
