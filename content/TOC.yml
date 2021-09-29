@@ -72,42 +72,42 @@
       href: graph-explorer.md
     - name: Support your customers
       href: risk-support.md   
-  -  name: Account protection
-     items:
-     - name: Overview of account protection
-       href: ap-overview.md
-     - name: Overview	of account creation
-       href: account-protection.md
-     - name: Evaluate experience
-       href: account-protection-evaluate-experience.md
-     - name: Protect experience
-       href: account-protection-protect-experience.md
-     - name: Custom assessment
-       href: custom-assessment.md
-     - name: Integrate real-time APIs
-       href: integrate-ap-api.md
-     - name: Review key metrics for account protection	
-       href: ap-scorecard.md
-     - name: Monitor API calls	
-       href: monitoring.md          
-     - name: Labels API	
-       href: labels-api.md     
-     - name: Review key metrics for account protection
-       href: ap-scorecard.md      
-  -  name: Loss prevention
-     items:
-     - name: Overview
-       href: loss-prevention-overview.md
-     - name: Upload historical data
-       href: loss-prevention-data-upload.md
-     - name: Data schemas
-       href: view-loss-prevent-schemas.md
-     - name: Integration with Dynamics 365 Commerce
-       href: loss-prevention-integration-with-commerce.md
-     - name: Data access and privacy
-       href: loss-prevention-data-access-and-privacy.md
-     - name: Reports
-       href: reports.md
+  - name: Account protection
+    items:
+    - name: Overview of account protection
+      href: ap-overview.md
+    - name: Overview	of account creation
+      href: account-protection.md
+    - name: Evaluate experience
+      href: account-protection-evaluate-experience.md
+    - name: Protect experience
+      href: account-protection-protect-experience.md
+    - name: Custom assessment
+      href: custom-assessment.md
+    - name: Integrate real-time APIs
+      href: integrate-ap-api.md
+    - name: Review key metrics for account protection	
+      href: ap-scorecard.md
+    - name: Monitor API calls	
+      href: monitoring.md          
+    - name: Labels API	
+      href: labels-api.md     
+    - name: Review key metrics for account protection
+      href: ap-scorecard.md      
+  - name: Loss prevention
+    items:
+    - name: Overview
+      href: loss-prevention-overview.md
+    - name: Upload historical data
+      href: loss-prevention-data-upload.md
+    - name: Data schemas
+      href: view-loss-prevent-schemas.md
+    - name: Integration with Dynamics 365 Commerce
+      href: loss-prevention-integration-with-commerce.md
+    - name: Data access and privacy
+      href: loss-prevention-data-access-and-privacy.md
+    - name: Reports
+      href: reports.md
 -  name: Fundamental capabilities
    items:
    - name: Manage rules
