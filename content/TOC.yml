@@ -82,6 +82,10 @@
       href: account-protection-evaluate-experience.md
     - name: Protect experience
       href: account-protection-protect-experience.md
+    - name: Threat vulnerability analyzer tool (preview)
+      href: threat-vulnerability-analyzer.md
+    - name: Threat vulnerability trend tool (preview)
+      href: threat-vulnerability-trend.md
     - name: Custom assessment
       href: custom-assessment.md
     - name: Integrate real-time APIs
@@ -108,6 +112,20 @@
       href: loss-prevention-data-access-and-privacy.md
     - name: Reports
       href: reports.md
+- name: PSP protection (preview)
+  items:
+  - name: PSP enablement
+    href: psp-overview.md
+  - name: Manage environments (PSPs)
+    href: manage-psp-environments.md
+  - name: Score rule optimizer tool
+    href: rule-optimizer.md 
+  - name: Fraud tracker tool
+    href: fraud-tracker.md
+  - name: Rule monitor tool
+    href: rule-monitor.md
+  - name: Monthly business review tool
+    href: monthly-business-review.md 
 - name: Fundamental capabilities
   items:
   - name: Manage rules
