@@ -8,10 +8,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Integrate Dynamics 365 Fraud Protection real-time APIs
+title: Integrate purchase protection APIs
 ---
 
-# Integrate Dynamics 365 Fraud Protection real-time APIs
+# Integrate purchase protection APIs
 
 To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the evaluate experience, this allows you to analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions based on the rules you have configured.
 
@@ -156,8 +156,8 @@ The AuthenticationResult object in each case contains the AccessToken itself, an
 
 For more information, refer to the Azure documentation: 
 
-- <a href="https://docs.microsoft.com/azure/active-directory/develop/msal-overview" target="_blank">Overview of Microsoft Authentication Library (MSAL)</a>
-- <a href="https://docs.microsoft.com/azure/active-directory/develop/msal-acquire-cache-tokens" target="_blank">Acquire and cache tokens using the Microsoft authentication library (MSAL)</a>
+- [Overview of Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
+- [Acquire and cache tokens using the Microsoft authentication library (MSAL)](/azure/active-directory/develop/msal-acquire-cache-tokens)
 
 
 ### Call the APIs
