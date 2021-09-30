@@ -89,6 +89,8 @@ additionalContent:
               url: ap-overview.md
             - text: Loss prevention
               url: loss-prevention-overview.md
+            - text: PSP enablement (preview)
+              url: psp-overview.md
         # Card
         - title: API documentation
           links:
