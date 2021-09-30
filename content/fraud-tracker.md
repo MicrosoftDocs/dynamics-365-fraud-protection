@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic provides information about the fraud tracker tool (preview) in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 09/20/2021
+ms.date: 09/30/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -30,7 +30,7 @@ The fraud tracker includes the following report tabs:
 
 \* If the **Confirmed fraud type** filter includes the **Merchant true reject** category, the merchant's final rejected transactions are included as fraudulent transactions.
 
-## Fraud Tracker
+## Fraud tracker
 
 The **Fraud tracker** report provides a summary view of the fraud volume and fraud rate by payment instruments segment and product segment. It also shows the fraud volume and rate change over time and across an identified category. It lets you quickly identify any fraud patterns or trends in your online business.
 
