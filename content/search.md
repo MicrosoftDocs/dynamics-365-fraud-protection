@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how conduct a searche for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
+description: This topic explains how to conduct a search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: josaw
 ms.date: 10/07/2021
 ms.topic: how-to
@@ -15,7 +15,7 @@ title: Search transactions
 
 [!include [preview banner](includes/preview-banner.md)]
 
-**Transaction search** enables you to search and find transactions in Dynamics 365 Fraud Protection based on speficic filter values. You can then view, export, and interact with those transactions. 
+**Transaction search** enables you to search and find transactions in Dynamics 365 Fraud Protection based on specific filter values. You can then view, export, and interact with those transactions. 
 
 For example, you can find all of the transactions associated with the email address "user@contoso.com". Then, you can view detailed information about each transaction such as risk score, user information, device information, and more. Finally, you can add elements of the transactions to support lists and apply a status such as **Block** to "user@contoso.com".
 
@@ -72,7 +72,7 @@ Select **Export** next to the search results grid, then choose one of the follow
 
 - **All Columns** – All relevant data is exported, including information in both the API request and API response. 
 
-- **Current Columns** – Only data in the columns currently diplayed in the grid will be exported. 
+- **Current Columns** – Only data in the columns currently displayed in the grid will be exported. 
 
 Objects that represent a list in the API schema, such as ProductList and PaymentInstrumentList, are displayed as a single column. 
 
