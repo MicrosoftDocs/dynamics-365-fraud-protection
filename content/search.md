@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how conduct searches for transactions in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
+description: This topic explains how conduct a searche for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: josaw
 ms.date: 10/07/2021
 ms.topic: how-to
@@ -15,25 +15,25 @@ title: Search transactions
 
 [!include [preview banner](includes/preview-banner.md)]
 
-Transaction search allows you to search and find specific transactions. You can then view, export, and interact with those transactions. 
+**Transaction search** enables you to search and find transactions in Dynamics 365 Fraud Protection based on speficic filter values. You can then view, export, and interact with those transactions. 
 
-As an example, you can find all transactions associated with the email address "user@contoso.com". Then, you can view detailed information about each transaction such as risk score, user information, device information, and more. Finally, you can add elements of transactions to Support Lists, such as applying **Block** status to "user@contoso.com".
+For example, you can find all of the transactions associated with the email address "user@contoso.com". Then, you can view detailed information about each transaction such as risk score, user information, device information, and more. Finally, you can add elements of the transactions to support lists and apply a status such as **Block** to "user@contoso.com".
 
-To open search, select the **Transaction search** tab on the **Purchase protection** page.
+To access search, select the **Transaction search** tab on the **Purchase protection** page.
 
 ## Filter transactions
 
-You can take advantage of various filter options to easily find a specific transaction or multiple matching transactions. To view transactions, you must first specify a date filter as well as an attribute filter. 
+You can take advantage of various filter options to easily find a specific transaction or multiple matching transactions. To view transactions, you must first specify a date filter and an attribute filter. 
 
 ### Filter by date
 
-Use the **Date filter** to filter your transactions by a certain date range. You can search for transactions that occurred up to 13 months in the past. 
+Use the **Date filter** to include transactions that occurred in a certain date range. You can search for transactions that occurred up to 13 months in the past. 
 
 ### Filter by attribute
 
 To filter your transactions by an attribute, do the following. 
 
-1. Select an attribute that you want to filter by (for example, "Email").
+1. Select an attribute that you want to filter by (for example, "email").
 
 1. Enter the value of this attribute that you want to filter by. The value can be one of the following: 
 
