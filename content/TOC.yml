@@ -118,6 +118,8 @@
     href: psp-overview.md
   - name: Manage environments
     href: manage-psp-environments.md
+  - name: PSP User Roles and Access
+    href: psp-user-roles.md
   - name: Score rule optimizer tool
     href: rule-optimizer.md 
   - name: Fraud tracker tool
