@@ -23,7 +23,7 @@ To access search, select the **Transaction search** tab on the **Purchase protec
 
 ## Filter transactions
 
-You can take advantage of various filter options to easily find a specific transaction or multiple matching transactions. To view transactions, you must first specify a date filter and an attribute filter. 
+You can use various filter options to find a specific transaction or multiple matching transactions. To view transactions, you must first specify a date filter and an attribute filter. 
 
 ### Filter by date
 
@@ -37,47 +37,50 @@ To filter your transactions by an attribute, do the following.
 
 1. Enter the value of this attribute that you want to filter by. The value can be one of the following: 
 
-  - Exact term to match (eg. `user@contoso.com`) 
+    - **Exact term to match** - Enter the exact term or value. For example, "user@contoso.com".
 
-  - Prefix term to match, using the `*` wildcard (eg.  `user*` matches both `user1@contoso.com` and `user2@contoso.com`) 
+    - **Prefix term to match** - Use the "\*" wildcard to represent any or any number of characters. For example, "user\*" returns both "user1@contoso.com" and "user22@contoso.com". 
 
 You can add multiple attribute filters separated by **And** or **Or**.
 
 ## Transaction search results
 
-Once filter(s) have been applied, you will see a table of matching transactions. 
+After you apply your filters, a table of matching transactions is displayed. By default, transactions are sorted by **Merchant local date**, with the most recent at the top. 
 
-Note the following: 
-
-- A maximum of 300 transactions can be shown. If you want more results, select **Export**. For more information, see [Export transactions](search.md#export-transactions) below.
-
-- Transactions are sorted by **Merchant local date** with the most recent at the top. 
-
-- Only the first value of multi-value columns will be shown. For example, if multiple payment instruments were used in a single transaction, only the first will appear in the “Payment Instrument” column.  
+>[!IMPORTANT]
+>A maximum of 300 transactions is displayed. If you want to view more results, select **Export** to create a file containing the full set of results. For more information, see [Export transactions](search.md#export-transactions) below.
+>
+>If your results include multi-value columns, only the first value is shown. For example, if multiple payment instruments were used in a single transaction, only the first will appear in the **Payment instrument** column.  
 
 ### Column options
 
-- Add or remove shown columns by selecting the Column Options button in the command bar. 
+You can add, remove, and change the order of columns in the search results grid. You can also sort by a specific column.
 
-- Reorder columns by selecting columns and dragging, either in the Column Options panel, or on the search results grid. 
+- To add or remove columns, select **Column options** in the command bar. 
 
-- Sort by a column (ascending or descending) by selecting a column name in the table. Note: Only the transactions loaded on the screen are sorted, unless sorting by Merchant Local Date. 
+- To reorder columns, select the column and drag it to the location you want. You can select the column in the **Column options** panel, or in the search results grid. 
+
+- To sort by a column (ascending or descending order), select a column name in the grid. 
+  >[!NOTE]
+  >Only the transactions loaded on the screen are sorted, unless you sort by **Merchant local date**. 
 
 ## Export transactions
 
-You can export your transactions to a .csv file on your computer to view your data in full. 
+To view a full list of the search results, you can export your transactions to a .csv file on your computer. 
 
-Select **Export**, then choose one of the following options.
+Select **Export** next to the search results grid, then choose one of the following options.
 
-- **All Columns** – All data relevant to the transactions will be exported. This includes all information in both the API request and API response. 
+- **All Columns** – All relevant data is exported, including information in both the API request and API response. 
 
-- **Current Columns** – Only data in the columns you currently have shown will be exported. 
+- **Current Columns** – Only data in the columns currently diplayed in the grid will be exported. 
 
-Note the following: 
+Objects that represent a list in the API schema, such as ProductList and PaymentInstrumentList, are displayed as a single column. 
 
-- Exports are limited to 10,000 rows each. Export operations taking longer than 2 minutes will automatically be cancelled. 
+>[!IMPORTANT]
+>Exports are limited to 10,000 rows each. 
+>
+>Export operations that take longer than two minutes are automatically cancelled. 
 
-- Objects that represent a List in the API schema (such as ProductList, PaymentInstrumentList, etc.) will be displayed as a single column. 
 
 ## Review individual transactions
 
