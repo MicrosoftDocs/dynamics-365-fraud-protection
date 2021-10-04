@@ -13,7 +13,7 @@ title: PSP User Roles and Access
 ---
 
 
-# Configuring Access using PSP Roles
+# PSP User Roles and Access
 
 Microsoft Dynamics 365 Fraud Protection allows you to grant users various levels of access to the tool based on logical or functional roles.
 
@@ -49,7 +49,7 @@ Users and roles can also be managed through the Azure portal. For information ab
 
 ## PSP User Roles and Access 
 
-Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select these when assigning a user to the system. 
+Dynamics 365 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select these when assigning a user to the system. 
 
 ![User Access Key](/content/media/psp-images/user-access-key.png)
 
