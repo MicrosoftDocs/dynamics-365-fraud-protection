@@ -51,9 +51,9 @@ Users and roles can also be managed through the Azure portal. For information ab
 
 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select these when assigning a user to the system. 
 
-![User Access Key](/media/psp-images/user-access-key.png)
+![User Access Key](/content/media/psp-images/user-access-key.png)
 
-![User Access Table](/media/psp-images/user-access-table.png)
+![User Access Table](/content/media/psp-images/user-access-table.png)
 
 ### PSP Admin 
 A PSP Admin has the highest level of authority and can manage Dynamics 365 Fraud Protection for a PSP and their merchant customers. It is a high-level administrative account with full access to all the PSP-centric features. 
