@@ -15,10 +15,11 @@ title: Search transactions
 
 [!include [preview banner](includes/preview-banner.md)]
 
-Transaction Search allows you to search and find transactions. Once found, you can view, export, and interact with those transactions. 
+Transaction search allows you to search and find specific transactions. You can then view, export, and interact with those transactions. 
 
-As an example, you can find all transactions associated with the email address "user@contoso.com". Then, you can view detailed information about each transaction such as risk score, user information, device inf
-ormation, and more. Finally, you can add elements of transactions to Support Lists, such as applying **Block** status to "user@contoso.com".
+As an example, you can find all transactions associated with the email address "user@contoso.com". Then, you can view detailed information about each transaction such as risk score, user information, device information, and more. Finally, you can add elements of transactions to Support Lists, such as applying **Block** status to "user@contoso.com".
+
+To open search, select the **Transaction search** tab on the **Purchase protection** page.
 
 ## Filter transactions
 
