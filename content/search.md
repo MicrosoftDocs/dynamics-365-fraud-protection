@@ -84,9 +84,9 @@ Objects that represent a list in the API schema, such as ProductList and Payment
 
 ## Review individual transactions
 
-You can drill down on specific transactions by selecting **Purchase ID** for the transaction in your search results that you want to investigate.
+To drill down on a specific transaction, select the **Purchase ID** for the transaction that you want to investigate.
 
-In addition to viewing information about the transaction, you can apply **Safe**, **Block**, or **Watch** status to certain elements of the transaction. To add or change a status, select the pencil icon next to the element. For more information on support lists, see [Manage support lists](manage-support-lists.md)
+You can apply **Safe**, **Block**, or **Watch** status to certain elements of the transaction. To add or change a status, select the pencil icon next to the element. For more information on support lists and statuses, see [Manage support lists](manage-support-lists.md).
 
 ## Additional resources
 
