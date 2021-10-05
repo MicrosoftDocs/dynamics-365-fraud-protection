@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides details on how to edit, add, and remove entities in support lists in Dynamics 365 Fraud Protection.  
+description: This topic explains how to edit, add, and remove entities in support lists in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/24/2021
 ms.topic: how-to
@@ -14,94 +14,73 @@ title: Manage support lists
 
 # Manage support lists
 
-Support lists are predefined lists included in Dynamic 365 Fraud Protection that help you get started. There are support lists for each of the following entities. You can assign entities the status of safe, block, or watch.  
+Support lists are predefined lists that are included in Microsoft Dynamic 365 Fraud Protection to help you get started. There are support lists for each of the following entities. You can assign entities a status of *Safe*, *Block*, or *Watch*.
 
-- Email address (@"user.email") – This entity is for the email address derived from a user.
+- **Email address (@"user.email")** – This entity is the email address that is derived from a user.
+- **Payment instrument (@"paymentInstrumentList.merchantPaymentInstrumentId")** – This entity is the payment method that is associated with a transaction.
+- **IP address (@"deviceContext.ipAddress")** – This entity is the IP address where the payment originates.
+- **User ID (@"user.userId")** – This entity is the unique ID that is assigned to the user from a transaction.
+- **Device ID (@"deviceContext.externalDeviceId")** – This entity is the device ID that is associated with a transaction.
 
-- Payment instrument (@"paymentInstrumentList.merchantPaymentInstrumentId") – This entity is the payment method that is associated with a transaction.
+Support lists can be modified on the **Support** page or the **Lists** page.
 
-- IP address (@"deviceContext.ipAddress") – This entity is the IP address from which the payment originates.
+To add, remove, or edit entries in support lists from the **Lists** page, you can complete the following procedures on the **Support Lists** page.
 
-- User ID (@"user.userId") – This entity is the unique ID that is assigned to the user from a transaction.
+## Add an entry to a support list
 
-- Device ID (@"deviceContext.externalDeviceId") – Device ID that is associated with the transaction 
-
-
-Support lists can be modified on the **Support** page or the **Lists** page. 
-
-To add, remove, or edit entries from support lists from Lists page, you can take the following actions in the Support Lists page. 
-
-## Add a new entry to a support list 
-
-1. Select a support lists, and then select **Edit**. 
-
-1. Enter the information for the list entry in the text box. 
-
-1. Select a **Status**.
-
-1. You have the option to place **Reason**, **Expiration date**, and **Comments**.
-
-1. When you’re finished editing, select **Update**.
+1. Select a support list, and then select **Edit**.
+1. In the text box, enter the information for the new list entry.
+1. In the **Status** field, select a status.
+1. Optional: Enter values in the **Reason**, **Expiration date**, and **Comments** fields.
+1. When you've finished, select **Update**.
 
 ## Edit a support list entry
 
-1. Select one of the support lists, and then select **Edit**.  
+1. Select a support list, and then select **Edit**.
+1. In the text box, update the information for an existing entry.
 
-1. Enter the information for existing entry in the text box. 
+    The current status of the entry is shown below the text box.
 
-1. Existing status for the entry will be displayed below the textbox. 
-
-1. You have the option to update **Status**, **Reason**, **Expiration date**, and **Comments**.  
-
-1. When you’re finished editing, select **Update**. 
+1. Optional: Update the **Status**, **Reason**, **Expiration date**, and **Comments** fields.
+1. When you've finished, select **Update**.
 
 ## Remove a support list entry
 
-1. Select a support list, and then select **Edit**.  
+1. Select a support list, and then select **Edit**.
+1. In the text box, enter the information for an existing entry.
 
-1. Enter the information for existing entry in the text box. 
+    The current status of the entry is shown below the text box.
 
-1. Existing status for the entry will be displayed below the textbox. 
-
-1. Select **Remove**. 
-
-1. You have the option to enter **Comments**.  
-
-1. When you’re finished editing, select **Update**.
+1. Select **Remove**.
+1. Optional: Enter a value in the **Comments** field.
+1. When you've finished, select **Update**.
 
 ## Add or remove multiple support list entries
 
-1. Select a support list, and then select **Edit**.  
-
-1. Copy and paste the list of entries you would like to add or remove.  
-
-1. Select a status for the entries, or select **Remove** to remove the entries from the list. 
-
-1. You have the option to update **Reason**, **Expiration date**, and **Comments**. 
-
-1. When you’re finished editing, select **Update**.
+1. Select a support list, and then select **Edit**.
+1. Copy and paste the list of entries that you want to add or remove.
+1. Select a status for the entries, or select **Remove** to remove the entries from the list.
+1. Optional: Update the **Reason**, **Expiration date**, and **Comments** fields.
+1. When you've finished, select **Update**.
 
 ## Preview a support list
 
-To preview a support list, select the list, and then select **Preview**. 
-
-To view the full support list, select **Download** to download the list, and then open the file in any text editor. 
+To preview a support list, select the list, and then select **Preview**.
 
 > [!NOTE]
-> The preview pane displays a maximum of 20 rows. 
+> The preview pane shows a maximum of 20 rows.
+
+To view the full support list, select **Download** to download the list, and then open the file in any text editor.
 
 ## Download a support list
 
-To download a support list, do the following.
-1. Select the list you want to download, and select **Download**.
-1. Select the download button in the lower-left corner of the browser window to view the list. 
+1. Select the list to download, and then select **Download**.
+1. Select the **Download** button in the lower-left corner of the browser window to view the list.
 
-To download multiple support lists, select the lists, and then select **Download**. The files are downloaded as a zip file. 
+To download multiple support lists, select the lists, and then select **Download**. The files are downloaded as a zip file.
 
 ## Additional resources
 
 [Lists overview](lists-overview.md)
+
 [Manage custom lists](lists.md)
-
-
-
