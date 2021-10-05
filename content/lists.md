@@ -153,7 +153,7 @@ You can preview a list in Fraud Protection. The preview pane shows a maximum of 
 ## Additional resources
 
 [Lists overview](lists-overview.md)
-[Manage support lists](manage-support-lists.md)
 
+[Manage support lists](manage-support-lists.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
