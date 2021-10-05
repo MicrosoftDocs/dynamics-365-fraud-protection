@@ -1,6 +1,6 @@
 ---
 author: tajimha
-description: This topic explains how to configure user access for PSP roles in Microsoft Dynamics 365 Fraud Protection.
+description: This topic explains how to configure user access for payment service provider (PSP) roles in Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 10/04/2021
 ms.topic: conceptual
@@ -8,20 +8,22 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: PSP User Roles and Access
+title: User roles and access (PSPs)
 
 ---
 
 
-# PSP User Roles and Access
+# User roles and access (PSPs)
+[!include [preview banner](includes/preview-banner.md)]
 
-Microsoft Dynamics 365 Fraud Protection allows you to grant users various levels of access to the tool based on logical or functional roles.
+As a payment service provider (PSP), you can grant users of Dynamics 365 Fraud Protection various levels of access based on logical or functional roles.
 
 ## Assign roles 
 
-The administrator who is defined in your Azure tenant sets up the initial user and role configuration. 
+The initial user and role configuration must be set up by the administrator, as defined in your Azure tenant. 
 
-### Assign roles to existing users or groups of your tenant
+### Existing users or groups of your tenant
+
 - In the left navigation, select **Settings**, and then select **User access**. 
 
 ### Grant access to a user or group in this environment
@@ -51,9 +53,9 @@ Users and roles can also be managed through the Azure portal. For information ab
 
 Dynamics 365 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select these when assigning a user to the system. 
 
-![User Access Key](/content/media/psp-images/user-access-key.png)
+![User Access Key](media/psp/user-access-key.png)
 
-![User Access Table](/content/media/psp-images/user-access-table.png)
+![User Access Table](media/psp/user-access-table.png)
 
 *To create an Azure AD Application, the user assigned a PSP Admin or Technical Developer role must also be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant.
 
