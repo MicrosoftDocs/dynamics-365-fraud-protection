@@ -16,7 +16,7 @@ title: User roles and access (PSPs)
 # User roles and access (PSPs)
 [!include [preview banner](includes/preview-banner.md)]
 
-As a payment service provider (PSP), you can grant users of Dynamics 365 Fraud Protection various levels of access based on logical or functional roles.
+Payment service providers (PSPs) can grant users of Dynamics 365 Fraud Protection various levels of access based on logical or functional roles.
 
 ## Assign roles 
 
@@ -49,39 +49,33 @@ To learn more about the available roles, see the "Dynamics 365 Fraud Protection 
 
 Alternatively, users and roles can be managed through the Azure portal. For information about how to grant access to users through the Azure portal, see [Assign a user or group to an enterprise app in Azure Active Directory](/azure/active-directory/manage-apps/assign-user-or-group-access-portal). For information about how to add users to Azure AD or delete users from Azure AD, see [Add or delete users using Azure Active Directory](/azure/active-directory/fundamentals/add-users-azure-active-directory). 
 
-## PSP User Roles and Access 
+## PSP user roles and access 
 
-Dynamics 365 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select these when assigning a user to the system. 
+Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select the features and funcitons when you assign a user to the system. 
 
 ![User Access Key](media/psp/user-access-key.png)
 
 ![User Access Table](media/psp/user-access-table.png)
 
-*To create an Azure AD Application, the user assigned a PSP Admin or Technical Developer role must also be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant.
+>[!NOTE]
+>To create an Azure AD application, the user assigned "PSP Admin" or "Technical Developer" role must also be assigned "Application Administrator", "Cloud Application Administrator", or "Global Administrator" in your Azure tenant.
 
-### PSP Admin 
-A PSP Admin has the highest level of authority and can manage Dynamics 365 Fraud Protection for a PSP and their merchant customers. It is a high-level administrative account with full access to all the PSP-centric features. 
+The following roles are available for PSP users.
 
-### Fraud Manager 
-A Fraud Manager is an internal role within a Payment Service Provider intended to manage Dynamics 365 Fraud Protection for a PSP's customer merchants.
+- **PSP Admin** - This role has the highest level of authority and can manage Fraud Protection for a PSP and their merchant customers. It is a high-level administrative account with full access to all of the PSP related features. 
 
-### Fraud Supervisor 
-A Fraud Supervisor is the highest level of authority within a PSP's customer merchant and can access merchant facing functions delegated to them by the PSP.
+- **Fraud Manager** - This is an internal role within the PSP. The user in this role is intended to manage Fraud Protection for a PSP's customer merchants.
 
-### Fraud Analyst 
-A Fraud analyst is a role for a PSP's customer merchant used to run analysis and reports with read-only access to a customer merchant's data.
+- **Fraud Supervisor** - This role is the highest level of authority within a PSP's customer merchant and can access merchant-facing functions delegated to them by the PSP.
 
-### Manual Review Agent 
-A Manual Review Agent is responsible for reviewing individual transactions and approving or declining them.  
-*A Manual Review Agent does not have direct access to view the Support Lists page but can modify the state of an entry in the Support List via the Transaction Search page. 
+- **Fraud Analyst** - This role is intended for a PSP's customer merchant who will run analysis and reports with read-only access to a customer merchant's data.
 
-### Technical Developer
-A Technical Developer is responsible for managing the technical configurations and integrations of a PSP's Dynamics 365 Fraud Protection instance. 
+- **Manual Review Agent** - This user is responsible for reviewing individual transactions and approving or declining them. A Manual Review Agent does not have direct access to the **Support Lists** page, but can modify the status of an entry in the support list through the **Transaction Search** page. 
 
-### Customer Service Support
-Customer Service Support has visibility on the transaction details and is provided with information needed to handle  customer queries.
+- **Technical Developer** - This role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for the PSP. 
 
-### Reporting
-This PSP role only has access to Event Tracing to allow integrating into DFP events and data to for consumption into the PSP's internal reporting infrastructure. 
+- **Customer Service Support** - This user can view the transaction details and is provided with information needed to handle customer queries.
+
+- **Reporting** - This role only has access to event tracing to allow Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
