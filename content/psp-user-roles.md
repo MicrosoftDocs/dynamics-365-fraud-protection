@@ -47,7 +47,7 @@ To learn more about the available roles, see the "Dynamics 365 Fraud Protection 
 
 ### User management in your Azure tenant 
 
-Users and roles can also be managed through the Azure portal. For information about how to grant access to users via the Azure portal, see [Assign a user or group to an enterprise app in Azure Active Directory](/azure/active-directory/manage-apps/assign-user-or-group-access-portal). For information about how to add users to Azure AD or delete users from Azure AD, see [Add or delete users using Azure Active Directory](/azure/active-directory/fundamentals/add-users-azure-active-directory). 
+Alternatively, users and roles can be managed through the Azure portal. For information about how to grant access to users through the Azure portal, see [Assign a user or group to an enterprise app in Azure Active Directory](/azure/active-directory/manage-apps/assign-user-or-group-access-portal). For information about how to add users to Azure AD or delete users from Azure AD, see [Add or delete users using Azure Active Directory](/azure/active-directory/fundamentals/add-users-azure-active-directory). 
 
 ## PSP User Roles and Access 
 
