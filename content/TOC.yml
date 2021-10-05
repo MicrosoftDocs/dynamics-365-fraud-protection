@@ -118,7 +118,7 @@
     href: psp-overview.md
   - name: Manage environments
     href: manage-psp-environments.md
-  - name: PSP user roles and access
+  - name: User roles and access
     href: psp-user-roles.md
   - name: Score rule optimizer tool
     href: rule-optimizer.md 
