@@ -28,7 +28,7 @@ The administrator who is defined in your Azure tenant sets up the initial user a
 
     If the name is recognized as a member of your Azure tenant, the name will resolve, and the full name will be shown. 
 
-1. Select the name to continue. 
+1. Select the name. 
 1. In the **Roles** field, select one or more of the defined roles. 
 1. Select **Assign role** to create the user. 
 
