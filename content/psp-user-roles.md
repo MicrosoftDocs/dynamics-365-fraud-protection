@@ -79,4 +79,5 @@ The following roles are available for PSP users:
 
 [Assign a user account to an enterprise application](/azure/active-directory/manage-apps/add-application-portal-assign-users#assign-a-user-account-to-an-enterprise-application)
 
+
 [!INCLUDE[footer-include](includes/footer-banner.md)]
