@@ -44,7 +44,7 @@ To learn more about the available PSP roles, see the [PSP user roles and access]
 
 ### User management in your Azure tenant 
 
-Alternatively, users and roles can be managed through the Azure portal. For information about how to grant access to users through the Azure portal, see [Assign a user account to an enterprise application](https://docs.microsoft.com/azure/active-directory/manage-apps/add-application-portal-assign-users#assign-a-user-account-to-an-enterprise-application). 
+Users and roles can also be managed through the Azure portal. For information about how to grant access to users through the Azure portal, see [Assign a user account to an enterprise application](https://docs.microsoft.com/azure/active-directory/manage-apps/add-application-portal-assign-users#assign-a-user-account-to-an-enterprise-application). 
 
 ## PSP user roles and access 
 
