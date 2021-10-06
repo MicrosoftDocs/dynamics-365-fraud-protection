@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/02/2021
+ms.date: 10/05/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -15,39 +15,33 @@ title: Configure user access
 
 # Configure user access
 
-Microsoft Dynamics 365 Fraud Protection allows you to grant users various levels of access to the tool based on logical or functional roles. Administrators can use the User access section to assign these roles.
+Microsoft Dynamics 365 Fraud Protection (DFP) allows you to grant users various levels of access to the tool based on logical or functional roles. Administrators can use the User access section to assign these roles.
 
 ## Assign roles 
 
-The administrator who is defined in your Azure tenant sets up the initial user and role configuration. 
+The administrator who is defined in your Azure tenant sets up the initial user and role configuration. For information about how to add users to Azure Active Directory, see [Create a user account in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
-### Assign roles to existing users or groups of your tenant
-- In the left navigation, select **Settings**, and then select **User access**. 
-
-### Grant access to a user or group in this environment
+### Assign roles to existing users or groups of your tenant in DFP
+1. In the left navigation, select **Settings**, and then select **User access**. 
 1. Select **Assign role**. 
 1. Enter the name or company email address of the person or group that you want to edit. 
 
     If the name is recognized as a member of your Azure tenant, it will be resolved, and the full name will be shown. 
 
 1. Select the name to continue. 
-
-### Assign a specific role to the user
 1. In the **Roles** field, select one or more of the defined roles. 
 1. Select **Assign role** to create the user. 
 
 ### Edit or delete existing users
-- Select the user name in the **Member** list, and then select **Edit** or **Remove**. 
+1. To edit or delete a user, select the user name in the **Member** list, and then select **Edit** or **Remove**. 
 
-In this section, roles can be added to or deleted from a member. Note that, if you edit your own account (for example, if you delete your own administrative role), those edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home). 
+   In this section, roles can be added to or deleted from a member. Note that, if you edit your own account (for example, if you delete your own administrative role), those edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home). 
 
 To learn more about the available roles, see the "Dynamics 365 Fraud Protection roles" section of this document. 
 
 ### User management in your Azure tenant 
 
-Users and roles can also be managed through the Azure portal. For information about how to grant access to users via the Azure portal, see [Assign a user or group to an enterprise app in Azure Active Directory](/azure/active-directory/manage-apps/assign-user-or-group-access-portal). For information about how to add users to Azure AD or delete users from Azure AD, see [Add or delete users using Azure Active Directory](/azure/active-directory/fundamentals/add-users-azure-active-directory). 
-
-## Dynamics 365 Fraud Protection roles 
+Users and roles can also be managed through the Azure portal.  For information about how to grant access to users through the Azure portal, see [Assign a user account to an enterprise application](https://docs.microsoft.com/azure/active-directory/manage-apps/add-application-portal-assign-users#assign-a-user-account-to-an-enterprise-application). 
 
 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select these when assigning a user to the system. 
 
