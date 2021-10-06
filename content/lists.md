@@ -3,7 +3,7 @@ author: josaw1
 description: This topic explains how to add, manage, and use custom lists to manage information, fight fraud, and enforce business policies in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/24/2021
-ms.topic: jow-to
+ms.topic: how-to
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
