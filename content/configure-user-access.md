@@ -38,7 +38,7 @@ To edit or delete a user, select the user name in the **Member** list, and then 
 
    On this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits may interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home). 
 
-To learn more about the available roles, see the [Fraud Protection roles](configure-user-access.md#Roles) section of this topic. 
+To learn more about the available roles, see the [Fraud Protection roles](configure-user-access.md#roles) section of this topic. 
 
 ### User management in your Azure tenant 
 
