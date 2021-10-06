@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 10/05/2021
+ms.date: 10/07/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -26,16 +26,17 @@ The administrator who is defined in your Azure tenant sets up the initial user a
 1. Select **Assign role**. 
 1. Enter the name or company email address of the person or group that you want to edit. 
 
-    If the name is recognized as a member of your Azure tenant, the name will resolve, and the full name will be shown. 
+    If the name is recognized as a member of your Azure tenant, the name will resolve to the full name. 
 
 1. Select the name. 
 1. In the **Roles** field, select one or more of the defined roles. 
 1. Select **Assign role** to create the user. 
 
 ### Edit or delete existing users
-1. To edit or delete a user, select the user name in the **Member** list, and then select **Edit** or **Remove**. 
 
-   On this part of the page, roles can be added to or deleted from a member. If you edit your own account (for example, if you delete your own administrative role), your edits may interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home). 
+To edit or delete a user, select the user name in the **Member** list, and then select **Edit** or **Remove**. 
+
+   On this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits may interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home). 
 
 To learn more about the available roles, see the [Fraud Protection roles](configure-user-access.md#Roles) section of this topic. 
 
@@ -74,5 +75,9 @@ All roles listed below are named as they will be in your production environment.
 ## Additional resources
 
 [User roles and access (PSPs)](psp-user-roles.md)
+
+[Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account)
+
+[Assign a user account to an enterprise application](/azure/active-directory/manage-apps/add-application-portal-assign-users#assign-a-user-account-to-an-enterprise-application)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
