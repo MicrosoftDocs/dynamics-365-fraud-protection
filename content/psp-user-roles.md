@@ -30,7 +30,7 @@ After a user has been added to the PSP's Azure Active Directory (Azure AD), you 
 1. Select **Assign role(s)**. 
 1. Enter the name or company email address of the person or group that you want to assign a Fraud Protection PSP role to. 
 
-    If the name is recognized as a member of the Azure tenant, the name will resolve, and the full name will be shown. 
+    If the name is recognized as a member of the Azure tenant, the name will resolve to the full name. 
 
 1. Select the name. 
 1. In the **Roles** field, select one or more of the defined roles you'd like to assign to the user. 
