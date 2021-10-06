@@ -23,7 +23,7 @@ Payment service providers (PSPs) can grant users of Dynamics 365 Fraud Protectio
 The administrator who is defined in your Azure tenant does the initial setup of creating users in your tenant. These can then be assigned DFP roles from within the DFP portal. For information about how to add users to Azure Active Directory, see [Create a user account in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
 ### Assign PSP roles to users in DFP
-After a usser is added to your Azure Active Directory, you can assig them a PSP role in DFP. To do so from the DFP portal:
+After a usser is added to your Azure Active Directory, you can assign them a PSP role in DFP. To do so from the DFP portal:
 
 1. In the left navigation, select **Settings**, and then select **User access**. 
 1. Select **Assign role(s)**. 
