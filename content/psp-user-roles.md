@@ -16,42 +16,39 @@ title: User roles and access (PSPs)
 # User roles and access (PSPs)
 [!include [preview banner](includes/preview-banner.md)]
 
-Payment service providers (PSPs) can grant users of Dynamics 365 Fraud Protection various levels of access based on logical or functional roles.
+Payment service providers (PSPs) can grant users of Dynamics 365 Fraud Protection (DFP) various levels of access based on logical or functional roles.
 
 ## Assign roles 
 
-The initial user and role configuration must be set up by the administrator, as defined in your Azure tenant. 
+The administrator who is defined in your Azure tenant does the initial setup of creating users in your tenant. These can then be assigned DFP roles from within the DFP portal. For information about how to add users to Azure Active Directory, see [Create a user account in Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
-### Existing users or groups of your tenant
+### Assign PSP roles to users in DFP
+After a usser is added to your Azure Active Directory, you can assig them a PSP role in DFP. To do so from the DFP portal:
 
-- In the left navigation, select **Settings**, and then select **User access**. 
-
-### Grant access to a user or group in this environment
-1. Select **Assign role**. 
-1. Enter the name or company email address of the person or group that you want to edit. 
+1. In the left navigation, select **Settings**, and then select **User access**. 
+1. Select **Assign role(s)**. 
+1. Enter the name or company email address of the person or group that you want to assign a DFP PSP role to. 
 
     If the name is recognized as a member of your Azure tenant, it will be resolved, and the full name will be shown. 
 
 1. Select the name to continue. 
+1. In the **Roles** field, select one or more of the defined roles you'd like to assign to the user. 
+1. Select **Assign role** to add the user to the DFP environment you're in, under the role you selected. 
 
-### Assign a specific role to the user
-1. In the **Roles** field, select one or more of the defined roles. 
-1. Select **Assign role** to create the user. 
-
-### Edit or delete existing users
-- Select the user name in the **Member** list, and then select **Edit** or **Remove**. 
+### Edit role assignment or delete existing users
+1. To edit the role assigned to a user in DFP or to delete a user, select the user name in the **Member** list, and then select **Edit** or **Remove**. 
 
 In this section, roles can be added to or deleted from a member. Note that, if you edit your own account (for example, if you delete your own administrative role), those edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home). 
 
-To learn more about the available roles, see the "Dynamics 365 Fraud Protection roles" section of this document. 
+To learn more about the available PSP roles, see the [PSP user roles and access](#psp-user-roles-and-access) section of this document. 
 
 ### User management in your Azure tenant 
 
-Alternatively, users and roles can be managed through the Azure portal. For information about how to grant access to users through the Azure portal, see [Assign a user or group to an enterprise app in Azure Active Directory](/azure/active-directory/manage-apps/assign-user-or-group-access-portal). For information about how to add users to Azure AD or delete users from Azure AD, see [Add or delete users using Azure Active Directory](/azure/active-directory/fundamentals/add-users-azure-active-directory). 
+Alternatively, users and roles can be managed through the Azure portal. For information about how to grant access to users through the Azure portal, see [Assign a user account to an enterprise application](https://docs.microsoft.com/azure/active-directory/manage-apps/add-application-portal-assign-users#assign-a-user-account-to-an-enterprise-application). 
 
 ## PSP user roles and access 
 
-Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select the features and funcitons when you assign a user to the system. 
+Dynamics 365 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select the features and funcitons when you assign a user to the system. 
 
 ![User Access Key](media/psp/user-access-key.png)
 
