@@ -141,7 +141,7 @@
     - name: Lists overview
       href: lists-overview.md
     - name: Manage support lists
-      href: manage-support-lists..md
+      href: manage-support-lists.md
     - name: Manage custom lists
       href: lists.md
   - name: External calls
