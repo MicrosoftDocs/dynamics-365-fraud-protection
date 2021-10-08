@@ -118,6 +118,10 @@
     href: psp-overview.md
   - name: Manage environments
     href: manage-psp-environments.md
+  - name: User roles and access
+    href: psp-user-roles.md
+  - name: Scorecard reports
+    href: scorecard-psp.md
   - name: Score rule optimizer tool
     href: rule-optimizer.md 
   - name: Fraud tracker tool
@@ -126,12 +130,20 @@
     href: rule-monitor.md
   - name: Monthly business review tool
     href: monthly-business-review.md 
+  - name: Search transactions
+    href: search.md
 - name: Fundamental capabilities
   items:
   - name: Manage rules
     href: rules.md
-  - name: Manage lists
-    href: lists.md
+  - name: Lists
+    items:
+    - name: Lists overview
+      href: lists-overview.md
+    - name: Manage support lists
+      href: manage-support-lists..md
+    - name: Manage custom lists
+      href: lists.md
   - name: External calls
     href: external-calls.md
   - name: Perform velocity checks
