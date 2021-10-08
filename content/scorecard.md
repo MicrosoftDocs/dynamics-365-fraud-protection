@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic explains how to review key metrics and understand the performance of fraud protection efforts in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 07/15/2020
+ms.date: 09/23/2021
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -41,5 +41,9 @@ The scorecard plots the following metrics:
 - **Settled rate** – The percentage of bank approvals out of the total volume that was sent to banks.
 - **Chargeback rate by receive date** – The percentage of chargebacks out of the total volume that was approved by banks on the chargeback receive date and the transaction date.
 
+
+## Additional resources
+
+[Scorecard reports for PSPs (preview)](scorecard-psp.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
