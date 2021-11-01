@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: josaw
-ms.date: 10/07/2021
+ms.date: 11/01/2021
 ms.topic: how-to
 search.app: 
   - Capaedac-fraudprotection
@@ -81,7 +81,7 @@ Objects that represent a list in the API schema, such as **ProductList** and **P
 
 To drill down into a specific transaction, select the **Purchase ID** value for the transaction that you want to investigate.
 
-You can apply a status of *Safe*, *Block*, or *Watch* to specific elements of the transaction. To add or change a status, select the **Edit** button (pencil symbol) next to the element. For more information about support lists and statuses, see [Manage support lists](manage-support-lists.md).
+You can apply a status of *Safe*, *Block*, or *Watch* to specific elements of the transaction. To add or change a status, select the **Edit** button (pencil symbol) next to the element. For more information about support lists and statuses, see [Manage support lists](manage-support-lists.md). To display the full API request and response for the transaction in JSON, select **Debug** on the upper right corner of the page.
 
 ## Additional resources
 
