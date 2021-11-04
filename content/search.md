@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: josaw
-ms.date: 11/01/2021
+ms.date: 11/04/2021
 ms.topic: how-to
 search.app: 
   - Capaedac-fraudprotection
@@ -79,9 +79,14 @@ Objects that represent a list in the API schema, such as **ProductList** and **P
 
 ## Review individual transactions
 
-To drill down into a specific transaction, select the **Purchase ID** value for the transaction that you want to investigate.
+To drill down into a specific transaction, select the **Purchase ID** for the transaction that you want to investigate. On the **Transaction** drilldown page, detailed information about the transaction is displayed. To display the full API request and response for the transaction in JSON, select **Debug** on the upper right corner of the page.
 
-You can apply a status of *Safe*, *Block*, or *Watch* to specific elements of the transaction. To add or change a status, select the **Edit** button (pencil symbol) next to the element. For more information about support lists and statuses, see [Manage support lists](manage-support-lists.md). To display the full API request and response for the transaction in JSON, select **Debug** on the upper right corner of the page.
+You can apply a status of *Safe*, *Block*, or *Watch* to specific attributes of the transaction, such as an email or IP address. To add or change a status, select the pencil icon next to the element. For more information about support lists and statuses, see [Manage support lists](manage-support-lists.md).
+
+On the **Velocities** tile at the bottom of the page, values for a variety of velocities across several different timeframes are displayed. For example, the number of purchase attempts that came from a particular email address in the last 7 days is shown. You can select a velocity value to open a new tab that displays the transactions. Definitions for the default velocities are shown on the **Velocity** page. 
+
+> [!NOTE]
+> The velocity values shown on the **Transaction** drilldown page are real-time, and may have changed since the original purchase event occurred.
 
 ## Additional resources
 
