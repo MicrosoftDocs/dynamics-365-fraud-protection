@@ -48,7 +48,7 @@ additionalContent:
             - text: Release plans
               url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/fraud-protection/dynamics365-fraud-protection/
             - text: Access your environment 
-              url: https://go.microsoft.com/fwlink/?linkid=2157858
+              url: https://dfp.microsoft.com/
         # Card
         - title: Provisioning and usage
           links:
