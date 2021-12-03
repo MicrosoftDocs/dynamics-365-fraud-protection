@@ -26,8 +26,7 @@ patterns of fraud.
 
 When you implement Fraud Protection device fingerprinting by integrating the
 reference implementation provided in your application, you (i) agree to
-Microsoft's APIs terms of use located
-[here](https://docs.microsoft.com/en-us/legal/microsoft-apis/terms-of-use), and
+[Microsoft APIs Terms of Use](https://docs.microsoft.com/en-us/legal/microsoft-apis/terms-of-use), and
 (ii) you direct Microsoft to process the following types of data from the
 devices interacting with the Fraud Protection services (collectively, "Device
 Fingerprinting Data"):
@@ -35,10 +34,10 @@ Fingerprinting Data"):
 1.  Device attributes such as device ID, screen information, processor class,
     etc.
 
-2.  Operating system (OS) attributes, such as OS information, OS version, OEM
+1.  Operating system (OS) attributes, such as OS information, OS version, OEM
     details, etc.
 
-3.  Browser related attributes if applicable such as browser language, installed
+1.  Browser related attributes if applicable such as browser language, installed
     default apps, etc.
 
 It is your responsibility to:
@@ -46,45 +45,44 @@ It is your responsibility to:
 1.  Receive consent from your users to collect and allow Microsoft to process
     the Device Fingerprinting Data.
 
-2.  Inform your customers of your data collection and processing practices, for
+1.  Inform your customers of your data collection and processing practices, for
     example by disclosing the data you collect and how it is used.
 
-3.  Disclose your use of third parties working on your behalf to process the
+1.  Disclose your use of third parties working on your behalf to process the
     data you collect, including Fraud Protection service providers.
 
-4.  Comply with all laws and regulations applicable to the use of Fraud
+1.  Comply with all laws and regulations applicable to the use of Fraud
     Protection, including data protection laws.
 
 In order to integrate the device fingerprinting for Fraud Protection, you will
 need to complete the following tasks:
 
 1.  Set up Microsoft Azure DNS by following the steps included under "Set-up
-    Azure DNS" at the following website:
-    <https://docs.microsoft.com/en-us/dynamics365/fraud-protection/device-fingerprinting>
+    Azure DNS" in [Set up device fingerprinting](device-fingerprinting).
 
-2.  Integrate device fingerprinting with your mobile application using the
+1.  Integrate device fingerprinting with your mobile application using the
     reference implementation provided.
 
-## Attribute Category Introduction Reference
+## Attribute category introduction reference
 
 
-Below is a list of the Device Fingerprinting Data that we may process and the
+Below is a list of the device fingerprinting data that we may process and the
 rationale for processing such data. Each of the data attributes described in the
 list below is optional and you are free to configure the number of attributes
 that best reflect the needs of your organization in relation to the privacy
 rights of device users in your corresponding jurisdiction.
 
 Attributes are categorized as follows and each attribute is identified with one
-of the below mentioned category.
+of the below mentioned categories.
 
-**Core Features:** This group of attributes are core to Fraud Protection's
+- **Core Features:** This group of attributes are core to Fraud Protection's
 ability to predict patterns of fraud. Based on our prior experience we have
 every reason to believe that these attributes will be highly accretive to Fraud
 Protection's model performance and ability to discern distinctive patterns of
 fraud. If these are not supplied then the device fingerprinting will be
 inaccurate.
 
-**Investigative Features:** This group of attributes have the potential to add
+- **Investigative Features:** This group of attributes have the potential to add
 or enhance Fraud Protection's ability to predict patterns of fraud more
 accurately. Statistical analysis of collected data is the only definitive way of
 determining whether these attributes are strong predictors of patterns of fraud.
@@ -94,7 +92,7 @@ of attributes would allow us to determine whether they will be strong predictors
 of patterns of fraud, they are of course optional and are not required to be
 provided.
 
-**Potential Label:** This group of attributes are utilized for model supervision
+- **Potential Label:** This group of attributes are utilized for model supervision
 and labeling purposes. Each of these attributes by itself have a probability of
 not providing ground truth. However, combining these attributes increases the
 likelihood that the label used in training the Fraud Protection's model becomes
@@ -102,7 +100,7 @@ ground truth and hence results in higher model performance. Although Fraud
 Protection can function without these attributes, the machine learning model
 will be unable to improve without such attributes.
 
-## Android Attributes for mobile reference implementation
+## Android attributes for mobile reference implementation
 
 
 | Code | Name                                      | Permission if any                                                          | Group                 | Description of the Attribute                                                                                                                                                                                                                                                                                                                         | Attribute Category     | Baseline Stack Level                                         |
@@ -265,71 +263,62 @@ will be unable to improve without such attributes.
 
 
 
-## Android Technical Reference
+## Android technical reference
 
 
-1.  Download Android Reference Implementation from here:
-    <https://go.microsoft.com/fwlink/?linkid=2138490>
+1.  Download Android reference implementation [here](https://go.microsoft.com/fwlink/?linkid=2138490).
 
-2.  Import the library module to your project (the library source becomes part
-    of your project):
+1.  Import the library module to your project (the library source becomes part of your project):
 
-    1.  Click **File \> New \> Import Module**.
+    1.  Select **File \> New \> Import Module**.
 
-    2.  Enter the location of the library module directory then
-        click **Finish**.
+    1.  Enter the location of the library module directory, then select **Finish**.
 
-The library module is copied to your project, so you can actually edit the
-library code.
+The library module is copied to your project, so you can edit the library code.
 
 1.  Make sure the library is listed at the top of your settings.gradle file, as
-    shown here for a library named " :DynamicsFP"
+    shown here for a library named " :DynamicsFP". `include ':Demo', ':DynamicsFP'`
 
-include ':Demo', ':DynamicsFP'
+1.  Open the app module's build.gradle file and add a new line to the dependencies block as shown in the following snippet: `dependencies { implementation project(":DynamicsFP") } `
 
-1.  Open the app module's build.gradle file and add a new line to the
-    dependencies block as shown in the following snippet:
+1.  Select **Sync Project with Gradle Files**.
 
-dependencies { implementation project(":DynamicsFP") }
+1.  You can initiate reference implementation by calling the following process: 
 
-1.  Click **Sync Project with Gradle Files**.
-
-2.  You can initiate Reference implementation by calling the following process
-
+```plaintext
 import com.microsoft.dynamicsfp.androidsdk.DynamicsFP;
 
 *DynamicsFP.start(getApplicationContext(), \$tenantId);*
 
 \$tenantId :Provided by Microsoft(GUID/UUID)
+```
 
-You can initiate Reference Implementation code on base application class so it
-can start collecting device attributes. Reference Implementation does not prompt
+You can initiate reference implementation code on base application class so it
+can start collecting device attributes. Reference implementation does not prompt
 Runtime Permission.
 
-1.  You can send collected device attributes to DFP by calling DFP in the
-    following way
+1.  You can send collected device attributes to Fraud Protetion by calling Fraud Protetion in the
+    following way:
 
 import com.microsoft.dynamicsfp.androidsdk.DynamicsFP;
 
+```plaintext
 *DynamicsFP.send(\$pageId);*
 
 \$pageId(Optional): SI=SignIn, SU=SignUp, P= Purchase
+```
 
-You can call send() in any fragment/activity before or on the page which has the
-operation you need a risk assessment for. For Sign In/Up scenario You can call
+You can call send() in any fragment/activity before or on the page that has the
+operation you need a risk assessment for. For a sign in/sign up scenario, you can call
 send() immediate after start() in base application class.
 
-1.  Once you need sessionId you can get it by calling:
+1.  Once you need sessionId, get it by calling:`*String sessionId = DynamicsFP.getSessionId();*` . SessionId is required when calling the risk assessment APIs.
 
-*String sessionId = DynamicsFP.getSessionId();*
+### Android Runtime permissions
 
-SessionId required when calling the risk assessment APIs.
-
-**Android Runtime permissions:**
-
-Reference implementations rely on following Runtime permissions to collect
-various device data. Reference implementation does not ask for any Runtime
-permission, App should obtain these Runtime permissions from user.
+Reference implementations rely on the following runtime permissions to collect
+various device data. Reference implementation does not request any runtime
+permissions, the app should obtain the runtime permissions from the user.
 
 -   android.permission.ACCESS_COARSE_LOCATION
 
@@ -339,24 +328,20 @@ permission, App should obtain these Runtime permissions from user.
 
 
 
-## Android Additional References
+## Android additional references
 
 
-Android API Reference: <https://developer.android.com/reference>
+[Android API Reference](https://developer.android.com/reference)
 
-About Permissions:
-<https://developer.android.com/training/permissions/requesting>
+[About permissions](https://developer.android.com/training/permissions/requesting)
 
-App Manifest File:
-<https://developer.android.com/guide/topics/manifest/manifest-intro>
+[App manifest file](https://developer.android.com/guide/topics/manifest/manifest-intro)
 
-Add Dependency:
-<https://developer.android.com/studio/projects/android-library#AddDependency>
+[Add dependency](https://developer.android.com/studio/projects/android-library#AddDependency)
 
-Information about Determining Sensitive Data Access Needs:
-<https://developer.android.com/games/develop/permissions?hl=en>
+[Determine sensitive data access needs](https://developer.android.com/games/develop/permissions?hl=en)
 
-Android Legal Notice: <https://developer.android.com/legal>
+[Android Legal Notice](https://developer.android.com/legal)
 
 
 ## iOS Attributes for mobile reference implementation
