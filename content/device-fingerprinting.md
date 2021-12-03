@@ -101,12 +101,7 @@ Your website or application should enable the device fingerprinting before it su
 4. Set the **'device.ipAddress'** field to the customer IP address that your website receives when the customer uses your site.
 
 ## Mobile device fingerprinting
-
-> [!NOTE]
-> You can learn more about the Mobile Reference Implementation in the [DFP Mobile Reference Implementation Document](https://go.microsoft.com/fwlink/?linkid=2132646). A login is required.
-
-
-
+You can learn more about the mobile reference implementation in the [Dynamics 365 Fraud Protection mobile reference implementation](mobile-reference-implementation.md).
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
