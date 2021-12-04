@@ -26,7 +26,7 @@ patterns of fraud.
 
 When you implement Fraud Protection device fingerprinting by integrating the
 reference implementation provided in your application, you (i) agree to
-[Microsoft APIs Terms of Use](https://docs.microsoft.com/en-us/legal/microsoft-apis/terms-of-use), and
+[Microsoft APIs Terms of Use](/legal/microsoft-apis/terms-of-use), and
 (ii) you direct Microsoft to process the following types of data from the
 devices interacting with the Fraud Protection services (collectively, "Device
 Fingerprinting Data"):
@@ -58,7 +58,7 @@ In order to integrate the device fingerprinting for Fraud Protection, you will
 need to complete the following tasks:
 
 1.  Set up Microsoft Azure DNS by following the steps included under "Set-up
-    Azure DNS" in [Set up device fingerprinting](device-fingerprinting).
+    Azure DNS" in [Set up device fingerprinting](device-fingerprinting.md).
 
 1.  Integrate device fingerprinting with your mobile application using the
     reference implementation provided.
