@@ -103,8 +103,8 @@ will be unable to improve without such attributes.
 ## Android attributes for mobile reference implementation
 
 
-| Code | Name                                      | Permission if any                                                          | Group                 | Description of the Attribute                                                                                                                                                                                                                                                                                                                         | Attribute Category     | Baseline Stack Level                                         |
-|------|-------------------------------------------|----------------------------------------------------------------------------|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|--------------------------------------------------------------|
+| Code | Name    | Permission if any        | Group        | Description of the Attribute     | Attribute Category     | Baseline Stack Level     |
+|------|---------|--------------------------|--------------|----------------------------------|------------------------|--------------------------|
 | A1   | DeviceId                                  | NA                                                                         | DEVICE SPECIFICATION  | Generated on the device on first use ( a.k.a : DeviceID)                                                                                                                                                                                                                                                                                             | Core Features          | 31                                                           |
 | A2   | OS Architecture                           | NA                                                                         | DEVICE SPECIFICATION  | OS Architecture i.e. armv7l                                                                                                                                                                                                                                                                                                                          | Potential Label        | 31                                                           |
 | A3   | OS Name                                   | NA                                                                         | DEVICE SPECIFICATION  | OS Name i.e. Linux                                                                                                                                                                                                                                                                                                                                   | Potential Label        | 31                                                           |
@@ -347,10 +347,10 @@ permissions, the app should obtain the runtime permissions from the user.
 ## iOS Attributes for mobile reference implementation
 
 
-| Code | Type         | Name                                       | Permission if any               | Group                | Description of the Attribute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Attribute Category     |
-|------|--------------|--------------------------------------------|---------------------------------|----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------|
-| A1   | String       | DeviceId                                   |                                 | DEVICE SPECIFICATION | Generated on the device on first use                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Core Features          |
-| A2   | String       | BundleIdentifier                           |                                 | DEVICE SPECIFICATION | Bundle identifier uniquely identifies an application in Apple's ecosystem                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Investigative Features |
+| Code | Type         | Name         | Permission if any     | Group                | Description of the Attribute        | Attribute Category     |
+|------|--------------|--------------|-----------------------|----------------------|-------------------------------------|------------------------|
+| A1   | String       | DeviceId                                   |                                 | DEVICE SPECIFICATION | Generated on the device on first use         | Core Features          |
+| A2   | String       | BundleIdentifier                           |                                 | DEVICE SPECIFICATION | Bundle identifier uniquely identifies an application in Apple's ecosystem                                                                                                                                                                                                                                                                                                                                                                                                                                       | Investigative Features |
 | A3   | String       | BundleName                                 |                                 | DEVICE SPECIFICATION | Identifies the short name of the bundle                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Investigative Features |
 | A4   | String       | AppVersionName                             |                                 | DEVICE SPECIFICATION | App version i.e. 4.3.1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Investigative Features |
 | A5   | String       | AppVersionCode                             |                                 | DEVICE SPECIFICATION | App Build code i.e. 230, A1160                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |                        |
@@ -440,58 +440,55 @@ permissions, the app should obtain the runtime permissions from the user.
 
 
 
-## iOS Technical Reference
+## iOS technical reference
 
 
-1.  Download iOS Reference Implementation from
-    here:  <https://go.microsoft.com/fwlink/?linkid=2139005>
+1.  Download iOS Reference Implementation from [here](https://go.microsoft.com/fwlink/?linkid=2139005).
 
-2.  Unzip and Add all the files to your iOS App project. 
+1.  Unzip the downloaded file and add all the files to your iOS app project. 
 
- You can initiate Reference Implementation by calling 
+You can initiate Reference Implementation by calling: 
 
+```plaintext
 DynamicsFP.start(instanceId: \$tenantId) 
 
 \$tenantId: Provided by Microsoft (GUID/UUID) 
+```
 
-You can initiate Reference Implementation on AppDelegate class so it can start
-collecting device attributeson app startup. Reference Implementation does prompt
-Location Permission. 
+You can initiate reference implementation on AppDelegate class so it can start
+collecting device attributes on app startup. Reference implementation does prompt
+location permission. 
 
-You can send collected device attributes to DFP by calling 
+You can send collected device attributes to Fraud Protection by calling: 
 
+```plaintext
 DynamicsFP.send(pageId: \$pageId) 
 
 \$pageId(Optional): SI=SignIn, SU=SignUp, P=Purchase 
+```
 
-You can call send() in any UIViewController before or on the page which has the
-operation you need a risk assessment for. For Sign In/Up scenario You can
+You can call send() in any UIViewController before or on the page that has the
+operation you need a risk assessment for. For sign in/sign up scenarios, you can
 call send() immediate after start() in AppDelegate class. 
 
-Once you need sessionId you can get it by calling: 
-
-**var** sessionId = DynamicsFP.getSessionId()   
+Once you need sessionId, get it by calling: `**var** sessionId = DynamicsFP.getSessionId() `  
  
+SessionId is required when calling the risk assessment APIs. 
 
-SessionId required when calling the risk assessment APIs. 
+**iOS runtime permissions:**
 
-**iOS Ru time permissions:**
-
--   Reference implementation uses CLLocationManager and check for
-    CLAuthorizationStatus.authorizedAlways Or
+-   Reference implementation uses CLLocationManager and checks for
+    CLAuthorizationStatus.authorizedAlways or
     CLAuthorizationStatus.authorizedWhenInUse before requesting **location**
-    data. App should obtain CLLocationManager.requestWhenInUseAuthorization Or
-    CLLocationManager.requestAlwaysAuthorization permission from user.
+    data. The app should obtain CLLocationManager.requestWhenInUseAuthorization or
+    CLLocationManager.requestAlwaysAuthorization permission from the user.
 
--   Reference implementation uses AppTrackingTransparencyand check for
+-   Reference implementation uses AppTrackingTransparency and checks for
     ATTrackingManager.AuthorizationStatus.authorized before collecting
-    **AdvertisingId**. App should obtain
-    ATTrackingManager.requestTrackingAuthorization permission from user.
+    **AdvertisingId**. The app should obtain
+    ATTrackingManager.requestTrackingAuthorization permission from the user.
 
-
-
-
-## iOS Additional References
+## iOS additional references
 
 
 [iOS Apple Developer](https://developer.apple.com/ios/)
