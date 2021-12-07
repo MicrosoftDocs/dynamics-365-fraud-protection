@@ -30,6 +30,8 @@
     href: pay-as-you-go.md
   - name: Configure user access
     href: configure-user-access.md   
+  - name: Mobile reference implementation
+    href: mobile reference implementation.md
   - name: Set up device fingerprinting
     href: device-fingerprinting.md
   - name: Set up customer accounts protection
