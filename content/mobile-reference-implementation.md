@@ -241,7 +241,7 @@ The library module is copied to your project. You can edit the library code.
 
 1.  Select **Sync Project with Gradle Files**.
 
-1.  You can initiate reference implementation by calling the following process: 
+You can initiate reference implementation by calling the following process: 
 
 ```plaintext
 import com.microsoft.dynamicsfp.androidsdk.DynamicsFP;
@@ -253,7 +253,7 @@ import com.microsoft.dynamicsfp.androidsdk.DynamicsFP;
 
 You can initiate reference implementation code on base application class so it can start collecting device attributes. Reference implementation does not prompt the user for runtime permission.
 
-1.  You can send collected device attributes to Fraud Protetion by calling Fraud Protetion in the following way:
+You can send collected device attributes to Fraud Protetion by calling Fraud Protetion in the following way:
 
 
 ```plaintext
@@ -267,7 +267,7 @@ import com.microsoft.dynamicsfp.androidsdk.DynamicsFP;
 You can call send() in any fragment/activity before or on the page that has the operation you need a risk assessment for. For a sign in/sign up scenario, you can call
 send() immediate after start() in base application class.
 
-1.  Once you need sessionId, get it by calling:`*String sessionId = DynamicsFP.getSessionId();*` . SessionId is required when calling the risk assessment APIs.
+Once you need sessionId, get it by calling:`*String sessionId = DynamicsFP.getSessionId();*` . SessionId is required when calling the risk assessment APIs.
 
 ### Android runtime permissions
 
@@ -401,7 +401,7 @@ permissions from the user, the app should obtain the runtime permissions from th
 
 1.  Unzip the downloaded file and add all of the files to your iOS app project. 
  
-1.  You can initiate the reference implementation by calling: 
+1. You can initiate the reference implementation by calling: 
 
 ```plaintext
 DynamicsFP.start(instanceId: \$tenantId) 
@@ -409,9 +409,9 @@ DynamicsFP.start(instanceId: \$tenantId) 
 \$tenantId: Provided by Microsoft (GUID/UUID) 
 ```
 
-1. You can initiate reference implementation on AppDelegate class so it can start collecting device attributes on app startup. Reference implementation does prompt for location permission. 
+You can initiate reference implementation on AppDelegate class so it can start collecting device attributes on app startup. Reference implementation does prompt for location permission. 
 
-1. You can send collected device attributes to Fraud Protection by calling: 
+You can send collected device attributes to Fraud Protection by calling: 
 
 ```plaintext
 DynamicsFP.send(pageId: \$pageId) 
@@ -421,7 +421,7 @@ DynamicsFP.send(pageId: \$pageId) 
 
 You can call send() in any UIViewController before or on the page that has the  operation you need a risk assessment for. For sign in/sign up scenarios, you can call send() immediate after start() in AppDelegate class. 
 
-1.Once you need the sessionId, get it by calling: `**var** sessionId = DynamicsFP.getSessionId() `  
+Once you need the sessionId, get it by calling: `**var** sessionId = DynamicsFP.getSessionId() `  
  
 SessionId is required when calling the risk assessment APIs. 
 
