@@ -163,7 +163,7 @@ Attributes are categorized as follows. Each attribute is identified with one of 
 | N7   | Is stay on plugged in enabled?  | N/A   | USER PREFERENCE   | Whether the user keeps the device on while the device is plugged in (during charge).   | Investigative Features | 31   |
 | N8   | Is auto caps enabled?   | N/A   | USER PREFERENCE   | Setting to enable auto-caps in text editors is enabled.   | Investigative Features | 31   |
 | N9   | Is auto punctuate?  | N/A   | USER PREFERENCE   | Setting to enable auto-punctuate in text editors is enabled.  | Investigative Features | 31   |
-| O1   | Is auto replace enabled?  | N/A   | USER PREFERENCE   | Setting to enable auto-replace (AutoText) in text editors is enabled.   | Investigative Features | 31   |
+| O1   | Is auto replace enabled?  | N/A   | USER PREFERENCE   | Setting to enable auto-replace (auto text) in text editors is enabled.   | Investigative Features | 31   |
 | O2   | Is show password enabled?   | N/A   | USER PREFERENCE   | Setting to show password characters in text editors is enabled.  | Investigative Features | 31   |
 | O3   | 24 hour clock format  | N/A   | USER PREFERENCE   | Display times as 12 or 24 hours.  | Investigative Features | 31   |
 | O4   | Is vibrate on?  | N/A   | USER PREFERENCE   | Whether vibrate is on for different events.   | Investigative Features | 31   |
@@ -210,7 +210,7 @@ Attributes are categorized as follows. Each attribute is identified with one of 
 | D4   | Signal strength   | android.permission.ACCESS_WIFI_STATE   | DEVICE SPECIFICATION  | Wi-Fi signal strength.  | Investigative Features | 31   |
 | D5   | WifiSSID  | android.permission.ACCESS_WIFI_STATE   | DEVICE SPECIFICATION  | The service set identifier (SSID) of the current 802.11 network.  | Core Features  | Deprecated (may be available from lower version of the stack). |
 | D6   | IPAddressV4 (IPV4)  | android.permission.ACCESS_WIFI_STATE   | DEVICE SPECIFICATION  |  | Core Features  | 31   |
-| D7   | Configured networks SSIDs   | android.permission.ACCESS_WIFI_STATE   | DEVICE SPECIFICATION  | A list of all the network-configured SSIDs for the current foreground user.   | Core Ffatures  | Deprecated (may be available from lower version of the stack). |
+| D7   | Configured networks SSIDs   | android.permission.ACCESS_WIFI_STATE   | DEVICE SPECIFICATION  | A list of all the network-configured SSIDs for the current foreground user.   | Core Features  | Deprecated (may be available from lower version of the stack). |
 | F5   | Bluetooth address   | android.permission.BLUETOOTH   | DEVICE SPECIFICATION  | The hardware address of the local Bluetooth adapter. (for example, 00:11:22:AA:BB:CC).   | Core Features  | Deprecated (may be available from lower version of the stack). |
 | F6   | Bluetooth adapter name  | android.permission.BLUETOOTHandroid.permission.BLUETOOTH_CONNECT (RunTime) | DEVICE SPECIFICATION  | The friendly Bluetooth name of the local Bluetooth adapter. This name is visible to remote Bluetooth devices.  | Investigative Features | 31   |
 | F7   | BlueToothState  | android.permission.BLUETOOTH   | DEVICE SPECIFICATION  | The current state of the local Bluetooth adapter.  | Potential Label  | 31   |
@@ -253,7 +253,7 @@ import com.microsoft.dynamicsfp.androidsdk.DynamicsFP;
 
 You can initiate reference implementation code on base application class so it can start collecting device attributes. Reference implementation does not prompt the user for runtime permission.
 
-You can send collected device attributes to Fraud Protetion by calling Fraud Protetion in the following way:
+You can send collected device attributes to Fraud Protection by calling Fraud Protection in the following way:
 
 
 ```plaintext
@@ -356,7 +356,7 @@ permissions from the user, the app should obtain the runtime permissions from th
 | L1   | DoubleArray  | AccelerometerData  |  N/A  | ACCELEROMETER  | Accelerometer reading (X-axis, Y-axis, Z-axis).         | Investigative Features |
 | L2   | Double   | AccelerometerDataTimeStamp   |  N/A  | ACCELEROMETER  | Time at which the accelerometer data is valid.         | Investigative Features |
 | M1   | DoubleArray  | GyroscopeData  |  N/A  | GYROSCOPE  | Gyroscope reading (X-axis, Y-axis, Z-axis).         | Investigative Features |
-| M2   | Double   | GyroscopeDataTimeStamp   |  N/A  | GYROSCOPE  | Time at which thegyroscope data is valid.         | Investigative Features |
+| M2   | Double   | GyroscopeDataTimeStamp   |  N/A  | GYROSCOPE  | Time at which the gyroscope data is valid.         | Investigative Features |
 | O1   | Double   | Brightness   |  N/A  |USER PREFERENCE  | Screen brightness.         | Investigative Features |
 | O2   | String   | CurrentScreenSizeInPixel   |  N/A  | USER PREFERENCE  | Current max screen width in pixels.          | Investigative Features |
 | O4   | Float  | CurrentPixelAspectRatio  |  N/A  | USER PREFERENCE  | The aspect ratio of a single pixel. The ratio is defined as X/Y.  | Investigative Features |
