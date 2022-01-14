@@ -3,13 +3,13 @@ author: josaw1
 description: This topic explains the account protection capability of Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 02/17/2021
-ms.topic: conceptual
+ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Account creation overview
-ms.custom: "intro-internal"
+
 ---
 
 # Account creation overview

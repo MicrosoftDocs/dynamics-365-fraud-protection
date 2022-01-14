@@ -4,13 +4,13 @@ description: This topic provides an overview of Microsoft Dynamics 365 Fraud Pro
 
 ms.author: josaw
 ms.date: 07/15/2021
-ms.topic: conceptual
+ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Overview of Dynamics 365 Fraud Protection features
-ms.custom: "intro-internal"
+
 ---
 
 
