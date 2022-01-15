@@ -3,13 +3,13 @@ author: josaw1
 description: This topic explains how security in Microsoft Dynamics 365 Fraud Protection is implemented.
 ms.author: josaw
 ms.date: 04/02/2021
-ms.topic: conceptual
+ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Security overview for Dynamics 365 Fraud Protection
-ms.custom: "intro-internal"
+
 ---
 
 # Security overview 

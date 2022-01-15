@@ -3,13 +3,13 @@ author: josaw1
 description: This topic provides information about security, compliance, and data subject requests.
 ms.author: josaw
 ms.date: 05/17/2021
-ms.topic: conceptual
+ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Compliance overview
-ms.custom: "intro-internal"
+
 ---
 
 # Compliance overview
