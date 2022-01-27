@@ -24,10 +24,9 @@ Roles can be assigned to either of the following types of users:
 - Users outside of the organization's Azure tenant, who will be invited to join the tenant as guest users.
 
 > [!IMPORTANT]
-> Users inside of the organization's Azure tenant that are member users can see a list of all other users in the tenant. In contrast, users outside of the tenant who join as guest users cannot see any other users aside from those within the same Fraud Protection environment they were given access to. Decide whether to assign users member or guest roles accordingly based on your business privacy requirements.
+> Users inside of the organization's Azure tenant that are member users can see a list of all other users in the tenant. In contrast, users outside of the tenant who join as guest users cannot see any other users aside from those within the same Fraud Protection environment they were given access to. Assign users member or guest roles accordingly based on your business privacy requirements.
 
 For more information on how to directly add users to your Azure AD tenant as members or non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
-
 
 ### Assign roles to users in Fraud Protection
 
@@ -59,7 +58,7 @@ To revoke a user's access to the current environment, select the user in the mem
 > [!IMPORTANT]
 > Revoking access for a user removes them from the current environment. They may still have access to other environments in the hierarchy. To fully remove a user from accessing Fraud Protection, [delete the user from your AAD tenant](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
 
-## Roles and access
+## User roles and access
 
 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. Users will access Fraud Protection differently depending on their user role within the organization's Azure tenant. You can select roles when you assign a new user to the system.
 
