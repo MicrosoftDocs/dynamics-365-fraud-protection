@@ -335,7 +335,7 @@ To accept an invitation to Fraud Protection, follow these steps.
 
 1. Check your email inbox for an email with the subject line "___ invited you to access applications within their organization".
 1. Select **Accept invitation**.
-1. If an existing Microsoft or related account exists with your email address, you will be prompted to sign in with that account. Otherwise, follow the set up process to sign up for a new account. Once fully signed in, you should have access to Fraud Protection.  
+1. If an existing Microsoft or related account exists with your email address, you will be prompted to sign in with that account. Otherwise, follow the setup process to sign up for a new account. Once fully signed in, you should have access to Fraud Protection.  
 1. Go back to the invitation email and write down or bookmark the exact link after the text "If you accept this invitation, you will be sent to ...". This link will be in the format `https://dfp.microsoft.com/.../...`. Each time you access Fraud Protection you will need to use this specific link.
 
 ## Additional resources
