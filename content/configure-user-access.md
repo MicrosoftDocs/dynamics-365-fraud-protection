@@ -17,32 +17,48 @@ title: Configure user access
 Microsoft Dynamics 365 Fraud Protection lets you grant users various levels of access to the tool, based on logical or functional roles. Administrators can use the **User access** section to assign these roles.
 
 ## Assign roles
+Users are managed through your assigned Azure Active Directory (Azure AD) tenant.
 
-The administrator who is defined in your Azure tenant sets up the initial user and role configuration. For information about how to add users to Azure Active Directory (Azure AD), see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
+Roles can be assigned to either of the following types of users:
+- Users inside of the organization's Azure tenant 
+- Users outside of the organization's Azure tenant, who will be invited to join the tenant as **Guest** users
 
-### Assign roles to existing users or groups of your tenant in Fraud Protection
+> [!IMPORTANT]
+> Users inside of the organization's Azure tenant that are **Member** users will have the ability to see a list of all other users in the tenant. In contrast, users outside of the tenant who join as **Guest** users *cannot* see any other users aside from those within the same Fraud Protection environment they were given access to. Decide accordingly based on your business privacy requirements.
 
+
+For more information on how to directly add users to your Azure Active Directory (Azure AD) tenant as **Member**, non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
+
+
+### Assign roles to users in Fraud Protection
+
+1. Open the Fraud Protection portal page.
 1. In the left navigation pane, select **Settings**, and then select **User access**.
-1. Select **Assign role**.
-1. Enter the name or company email address of the person or group that you want to edit.
+1. Select **Assign role(s)**.
+1. Enter the name or email address of the person or group that you want to assign a Fraud Protection role to.
 
-    If the name is recognized as a member of your Azure tenant, it's resolved to the full name.
+    Suggestions of users in the Azure tenant will appear while you type. Select a user if it matches who you intend to assign roles to.
+    
+    Otherwise, a notice will inform you that an invitation email will be sent to allow the person or group to join the Fraud Protection environment.
 
-1. Select the name.
-1. In the **Roles** field, select one or more of the defined roles.
-1. Select **Assign role** to create the user.
+1. In the **Roles** field, select one or more defined roles that you want to assign to the user.
+1. Select **Assign role(s)**.
 
-### Edit or delete existing users
+### Edit assigned roles
 
-To edit or delete a user, select the user name in the **Member** list, and then select **Edit** or **Remove**.
+To edit the role that is assigned to a user in Fraud Protection, select the user in the member list, and then select **Edit**.
 
 In this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home).
 
 To learn more about the available roles, see the [Fraud Protection roles](configure-user-access.md#roles) section of this topic.
 
-### User management in your Azure tenant
+### Revoke user access to environment
 
-Users and roles can also be managed through the Azure portal. For information about how to grant access to users through the Azure portal, see [Assign a user account to an enterprise application](/azure/active-directory/manage-apps/add-application-portal-assign-users#assign-a-user-account-to-an-enterprise-application).
+To revoke a user's access to the current environment, select the user in the member list, and then select **Revoke access**. 
+
+> [!IMPORTANT]
+> Revoking access for a user removes them from the current environment. They may still have access to other environments in the hierarchy. To fully remove a user from accessing Fraud Protection, [delete the user from your AAD tenant](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
+
 
 ## Roles
 

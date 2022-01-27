@@ -19,35 +19,50 @@ title: User roles and access (PSPs)
 Payment service providers (PSPs) can grant users of Microsoft Dynamics 365 Fraud Protection various levels of access, based on logical or functional roles.
 
 ## Assign PSP roles
+Users are managed through your assigned Azure Active Directory (Azure AD) tenant.
 
-The administrator who is defined in the Azure tenant initially creates users in the tenant. They can then assign Fraud Protection roles from the Fraud Protection portal. For information about how to add users to Azure Active Directory (Azure AD), see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
+Roles can be assigned to either of the following types of users:
+- Users inside of the organization's Azure tenant 
+- Users outside of the organization's Azure tenant, who will be invited to join the tenant as **Guest** users
+
+> [!IMPORTANT]
+> Users inside of the organization's Azure tenant that are **Member** users will have the ability to see a list of all other users in the tenant. In contrast, users outside of the tenant who join as **Guest** users *cannot* see any other users aside from those within the same Fraud Protection environment they were given access to. Decide accordingly based on your business privacy requirements.
+
+
+For more information on how to directly add users to your Azure Active Directory (Azure AD) tenant as **Member**, non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
 ### Assign PSP roles to users in Fraud Protection
-
-After a user has been added to the PSP's Azure AD, you can assign a PSP role to them in Fraud Protection.
 
 1. Open the Fraud Protection portal page.
 1. In the left navigation pane, select **Settings**, and then select **User access**.
 1. Select **Assign role(s)**.
-1. Enter the name or company email address of the person or group that you want to assign a Fraud Protection PSP role to.
+1. Enter the name or email address of the person or group that you want to assign a Fraud Protection PSP role to.
 
-    If the name is recognized as a member of the Azure tenant, it's resolved to the full name.
+    Suggestions of users in the Azure tenant will appear while you type. Select a user if it matches who you intend to assign roles to.
+    
+    Otherwise, a notice will inform you that an invitation email will be sent to allow the person or group to join the Fraud Protection environment.
 
-1. Select the name.
 1. In the **Roles** field, select one or more defined roles that you want to assign to the user.
-1. Under each role that you selected, select **Assign role**. The user is added to the Fraud Protection environment that you're using.
+1. Select **Assign role(s)**.
 
-### Edit assigned roles or delete users
+> [!NOTE]
+> Users outside of the Azure tenant will join the tenant as a **Guest** user and appear in the table of users in **User access** after they have accepted the invitation emailed to them and completed the sign-in/sign-up process.
 
-To edit the role that is assigned to a user in Fraud Protection, or to delete a user, select the user name in the **Member** list, and then select either **Edit** or **Remove**.
+
+### Edit assigned roles
+
+To edit the role that is assigned to a user in Fraud Protection, select the user in the member list, and then select **Edit**.
 
 In this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home).
 
 To learn more about the available PSP roles, see the [PSP user roles and access](psp-user-roles.md#psp-user-roles-and-access) section of this topic.
 
-### User management in your Azure tenant
+### Revoke user access to environment
 
-Users and roles can also be managed through the Azure portal. For information about how to grant access to users through the Azure portal, see [Assign a user account to an enterprise application](/azure/active-directory/manage-apps/add-application-portal-assign-users#assign-a-user-account-to-an-enterprise-application).
+To revoke a user's access to the current environment, select the user in the member list, and then select **Revoke access**. 
+
+> [!IMPORTANT]
+> Revoking access for a user removes them from the current environment. They may still have access to other environments in the hierarchy. To fully remove a user from accessing Fraud Protection, [delete the user from your AAD tenant](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
 
 ## PSP user roles and access
 
@@ -307,6 +322,29 @@ The following roles are available for PSP users:
 - **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
 - **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
 - **Reporting** – This role provides access to event tracing only, to enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
+
+## Access Fraud Protection 
+Users will access Fraud Protection differently depending on their user type within the organization's Azure tenant.
+
+
+### Members
+You can access Fraud Protection by simply visiting [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and signing in with your Microsoft account.
+
+### Guest users
+Check your email inbox for an email with the subject line  "___ invited you to access applications within their organization" and follow the following steps:
+1. Select the **Accept invitation** button.
+1. If an existing Microsoft or related account exists with your email address, you will be prompted to sign in with that account.
+  
+    Otherwise, follow the setup process to sign up a new account.
+1. Once fully signed in, you should have access to  Fraud Protection.  
+1. Go back to your email inbox with the invitation email. 
+
+    Note down or bookmark the exact link after the text "If you accept this invitation, you will be sent to ..." 
+    
+    This link will be in the format of `https://dfp.microsoft.com/.../...`
+
+    Every time you wish to access Fraud Protection, you must visit this exact, specialized link.
+
 
 ## Additional resources
 
