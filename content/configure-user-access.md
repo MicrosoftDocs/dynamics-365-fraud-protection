@@ -91,6 +91,27 @@ All the roles in the following list are named as they will be named in your prod
 
 - **Risk_API** – This role provides access to the API but not to the user-facing tool.
 
+## Access Fraud Protection 
+Users will access Fraud Protection differently depending on their user type within the organization's Azure tenant.
+
+### Members
+You can access Fraud Protection by simply visiting [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and signing in with your Microsoft account.
+
+### Guest users
+Check your email inbox for an email with the subject line  "___ invited you to access applications within their organization" and follow the following steps:
+1. Select the **Accept invitation** button.
+1. If an existing Microsoft or related account exists with your email address, you will be prompted to sign in with that account.
+  
+    Otherwise, follow the setup process to sign up a new account.
+1. Once fully signed in, you should have access to  Fraud Protection.  
+1. Go back to your email inbox with the invitation email. 
+
+    Note down or bookmark the exact link after the text "If you accept this invitation, you will be sent to ..." 
+    
+    This link will be in the format of `https://dfp.microsoft.com/.../...`
+
+    Every time you wish to access Fraud Protection, you must visit this exact, specialized link.
+
 ## Additional resources
 
 [User roles and access (PSPs)](psp-user-roles.md)
