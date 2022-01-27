@@ -49,7 +49,7 @@ To edit the role that is assigned to a user in Fraud Protection, select the user
 
 In this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home).
 
-To learn more about the available roles, see the [Fraud Protection roles](configure-user-access.md#user-roles-and-access) section of this topic.
+To learn more about the available roles, see the [User roles and access](configure-user-access.md#user-roles-and-access) section of this topic.
 
 ### Revoke user access to environment
 
