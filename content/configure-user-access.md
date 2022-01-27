@@ -77,7 +77,7 @@ All the roles in the following list are named as they will be named in your prod
 
 - **SupportAgent** – This role provides tailored access to Fraud Protection for support agents who work with your customers. A user in this role can view and work in the support tool, view the ontology, and assign customers to safe lists or block lists.
 
-    - **Write** – **SupportAgent** user roles have write permsissions for support lists.
+    - **Write** – **SupportAgent** user roles have write permissions for support lists.
     - **Read** – **SupportAgent** user roles have read permissions for lists, support tool, and ontology.
     - **No access** – **SupportAgent** user roles have no access to areas other than those specified for write and read permissions. Some pages might be accessible in the navigation but not fully usable.
 
@@ -101,7 +101,7 @@ To accept an invitation to Fraud Protection, follow these steps.
 
 1. Check your email inbox for an email with the subject line "___ invited you to access applications within their organization".
 1. Select **Accept invitation**.
-1. If an existing Microsoft or related account exists with your email address, you will be prompted to sign in with that account. Otherwise, follow the set up process to sign up for a new account. Once fully signed in, you should have access to Fraud Protection.  
+1. If an existing Microsoft or related account exists with your email address, you will be prompted to sign in with that account. Otherwise, follow the setup process to sign up for a new account. Once fully signed in, you should have access to Fraud Protection.  
 1. Go back to the invitation email and write down or bookmark the exact link after the text "If you accept this invitation, you will be sent to ...". This link will be in the format `https://dfp.microsoft.com/.../...`. Each time you access Fraud Protection you will need to use this specific link.
 
 ## Additional resources
