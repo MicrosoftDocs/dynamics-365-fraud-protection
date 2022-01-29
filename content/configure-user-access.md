@@ -56,7 +56,7 @@ To learn more about the available roles, see the [User roles and access](configu
 To revoke a user's access to the current environment, select the user in the member list, and then select **Revoke access**. 
 
 > [!IMPORTANT]
-> Revoking access for a user removes them from the current environment. They may still have access to other environments in the hierarchy. To fully remove a user from accessing Fraud Protection, [delete the user from your AAD tenant](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user).
+> Revoking access for a user removes them from the current environment. They may still have access to other environments in the hierarchy. To fully remove a user from accessing Fraud Protection, [delete the user from your AAD tenant](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user), completely removing their access to your tenant and its associated applications or services.
 
 ## User roles and access
 
