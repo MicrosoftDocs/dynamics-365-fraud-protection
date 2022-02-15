@@ -60,7 +60,7 @@
         ]
       },
       "ms.service": {
-        "**.md": "dynamics-365-fraud-protection"
+        "**.*": "dynamics-365-fraud-protection"
       }
 },
     "template": [],
