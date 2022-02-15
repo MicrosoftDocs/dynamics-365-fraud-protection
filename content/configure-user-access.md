@@ -14,7 +14,7 @@ title: Configure user access
 
 # Configure user access
 
-Microsoft Dynamics 365 Fraud Protection lets you grant users various levels of access to the tool, based on logical or functional roles. Administrators can use the **User access** section to assign these roles.
+Dynamics 365 Fraud Protection lets you grant users various levels of access to the tool, based on logical or functional roles. Administrators can use the **User access** section to assign these roles.
 
 ## Assign roles
 
@@ -27,7 +27,7 @@ Roles can be assigned to either of the following types of users:
 
 Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. Users outside the organization's Azure tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
 
-You can invite colleagues to use Dynamics 365 Fraud Protection or change their role assignments if one or both of the following conditions are true for your account: 
+You can invite colleagues to use Fraud Protection or change their role assignments if one or both of the following conditions are true for your account: 
 - You are a Global administrator of the Azure Active Directory (AAD) tenant where Fraud Protection is set-up. 
 - You have AllAreas_Admin or AllAreas_Editor permissions for Fraud Protection and have one of the following permissions in the AAD tenant where Fraud Protection is set-up: Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
 
