@@ -28,8 +28,8 @@ Roles can be assigned to either of the following types of users:
 Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. Users outside the organization's Azure tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
 
 You can invite colleagues to use Fraud Protection or change their role assignments if one or both of the following conditions are true for your account: 
-- You are a Global administrator of the Azure Active Directory (AAD) tenant where Fraud Protection is set-up. 
-- You have AllAreas_Admin or AllAreas_Editor permissions for Fraud Protection and have one of the following permissions in the AAD tenant where Fraud Protection is set-up: Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
+- You are a Global administrator of the Azure Active Directory (AAD) tenant where Fraud Protection is set up. 
+- You have AllAreas_Admin or AllAreas_Editor permissions for Fraud Protection and have one of the following permissions in the AAD tenant where Fraud Protection is set up; Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
 
 For more information about how to directly add users to your Azure AD tenant as members or non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
