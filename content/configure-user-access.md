@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/10/2022
+ms.date: 02/15/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -25,8 +25,11 @@ Roles can be assigned to either of the following types of users:
 - Users inside the organization's Azure tenant
 - Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users
 
-> [!IMPORTANT]
-> Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. By contrast, users outside the tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
+Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. Users outside the organization's Azure tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
+
+You can invite colleagues to use Dynamics 365 Fraud Protection or change their role assignments if one or both of the following conditions are true for your account: 
+- You are a Global administrator of the Azure Active Directory (AAD) tenant where Fraud Protection is set-up. 
+- You have AllAreas_Admin or AllAreas_Editor permissions for Fraud Protection and have one of the following permissions in the AAD tenant where Fraud Protection is set-up: Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
 
 For more information about how to directly add users to your Azure AD tenant as members or non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
