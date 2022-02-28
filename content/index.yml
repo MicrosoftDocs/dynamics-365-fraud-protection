@@ -8,9 +8,8 @@ metadata:
   description: Dynamics 365 Fraud Protection Documentation
   ms.topic: hub-page
   author: kelsiefu
-  ms.author: v-madeq
-  ms.date: 03/19/2021
-  ms.service: dynamics-365-fraud-protection
+  ms.author: josaw
+  ms.date: 02/01/2022
 
 # highlightedContent section (optional)
 # Maximum of 8 items
@@ -24,7 +23,7 @@ highlightedContent:
     # Card
     - title: What’s new in Fraud Protection
       itemType: whats-new
-      url: whats-new-5-21.md
+      url: whats-new-8-21.md
     # Card
     - title: Fraud Protection videos
       itemType: video
@@ -46,9 +45,9 @@ additionalContent:
             - text: Overview
               url: overview.md
             - text: Release plans
-              url: https://docs.microsoft.com/dynamics365-release-plan/2020wave2/fraud-protection/dynamics365-fraud-protection/
+              url: https://docs.microsoft.com/dynamics365-release-plan/2021wave2/fraud-protection/dynamics365-fraud-protection/get-started
             - text: Access your environment 
-              url: https://go.microsoft.com/fwlink/?linkid=2157858
+              url: https://dfp.microsoft.com/
         # Card
         - title: Provisioning and usage
           links:

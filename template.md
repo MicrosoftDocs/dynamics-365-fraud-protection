@@ -50,7 +50,6 @@ Here are some key things to note about metadata.
     - **ms.date** - This should be the first proposed publication date.
     - **ms.topic** - Enter "article" here.
     - **ms.prod** 
-    - **ms.service** - Always use "Dynamics365Operations".
     - **ms.technology** 
 
 - **Optional metadata**

@@ -3,7 +3,7 @@ author: josaw1
 description: This topic provides an overview of what custom and support lists are, and how you can manage information in lists in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/24/2021
-ms.topic: conceptual
+ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:

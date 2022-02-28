@@ -3,13 +3,13 @@ author: josaw1
 description: This topic provides an overview of the account protection experience in the Microsoft Dynamics 365 Fraud Protection system.
 ms.author: josaw
 ms.date: 03/05/2021
-ms.topic: conceptual
+ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Account protection overview
-ms.custom: "intro-internal"
+
 ---
 
 # Account protection overview

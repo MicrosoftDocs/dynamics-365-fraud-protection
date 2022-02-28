@@ -3,7 +3,7 @@ author: josaw1
 description: This topic explains how to set up device fingerprinting.
 
 ms.author: josaw
-ms.date: 04/02/2021
+ms.date: 02/01/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -102,6 +102,5 @@ Your website or application should enable the device fingerprinting before it su
 
 ## Mobile device fingerprinting
 You can learn more about the mobile reference implementation in [Dynamics 365 Fraud Protection mobile SDK for Android](mobile-sdk-android.md) and [Dynamics 365 Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md).
-
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
