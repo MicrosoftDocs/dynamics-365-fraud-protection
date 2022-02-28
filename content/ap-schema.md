@@ -13,7 +13,7 @@ title: Account protection schemas
 
 # Account protection schemas
 
-This topic outlines the schema via the application programming interface (API). For more information, see [Integrate Dynamics 365 Fraud Protection real-time APIs](https://docs.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api).
+This topic outlines the schema via the application programming interface (API). For more information, see [Integrate Dynamics 365 Fraud Protection real-time APIs](/dynamics365/fraud-protection/integrate-real-time-api).
 
 
 ## AccountCreation

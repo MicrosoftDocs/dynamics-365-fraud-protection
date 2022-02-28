@@ -172,7 +172,7 @@ To ensure that data is securely accessed, APIs often authenticate the sender of 
 
 If you select **Anonymous**, the authorization header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint doesn't require an authorization header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL that you enter in the **Web Request** field. The target endpoint can then validate if the API key from the request URL is allowed, and then decide whether permission should be granted.
 
-If you select **AAD**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by Azure AD. For information about JWTs, see [Microsoft identity platform access tokens](https://docs.microsoft.com/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown here:
+If you select **AAD**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by Azure AD. For information about JWTs, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown here:
 
 Bearer \<token\>
 
@@ -182,13 +182,13 @@ The following table lists the claims that you can expect in bearer tokens that a
 
 | Name           | Claim | Description |
 |----------------|-------|-------------|
-| Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that is associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Azure Active Directory tenant ID](https://docs.microsoft.com/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). |
+| Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that is associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Azure Active Directory tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). |
 | Audience       | aud   | This claim identifies the intended recipient of the token. The value will exactly reflect the application ID that you provided when you configured your external call in the Fraud Protection portal. |
 | Application ID | appid | This claim is Fraud Protection's application ID: *bf04bdab-e06f-44f3-9821-d3af64fc93a9*. This ID is owned solely by Fraud Protection and only Microsoft can request a token on its behalf. |
 
 When your API receives a token, it should open the token and validate that each of the preceding claims matches its description.
 
-Here is an example that shows how you can authenticate an incoming request by using [JwtSecurityTokenHandler](https://docs.microsoft.com/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler?).
+Here is an example that shows how you can authenticate an incoming request by using [JwtSecurityTokenHandler](/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler).
 
 ```C#
 string authHeader = "Bearer <token>"; // the Authorization header value
@@ -210,5 +210,3 @@ You acknowledge that you are responsible for adhering to all applicable laws and
 
 - Video: [Learn about the new external calls feature in Dynamics 365 Fraud Protection](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJM3KpsGYaag&data=04%7C01%7Cv-madeq%40microsoft.com%7C25acb8fe676d47dd48bb08d908cb2c10%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637550490968730638%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=7ePFKAsF4XwuaFur9WBmSRa0fDdCHDFbA%2FzQHOuoeLE%3D&reserved=0)
 - Blog: [Customize your protection with new features in the Dynamics 365 Fraud Protection preview: Make informed decisions in real-time with external calls](https://cloudblogs.microsoft.com/dynamics365/bdm/2021/04/14/customize-your-protection-with-new-features-in-the-dynamics-365-fraud-protection-preview/)
-
-
