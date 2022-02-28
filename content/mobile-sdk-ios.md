@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides the information that is required for device fingerprinting in a Microsoft Dynamics 365 Fraud Protection mobile device implementation for iOS.
+description: This topic provides information required for device fingerprinting in a Microsoft Dynamics 365 Fraud Protection mobile device implementation for iOS.
 ms.author: josaw
 ms.date: 03/01/2022
 ms.topic: reference
@@ -40,7 +40,7 @@ It is your responsibility to:
 
 Below is a list of the device fingerprinting attribute categories that we try to collect and how it helps in detecting Fraud. If your organization has specific needs and you would like certain categories of data to not be processed by us, you can reach out to customer support before onboarding, and we can help you configure this correctly to meet your privacy needs.
 
-**Core Features:** This group of attributes is core to Fraud Protection's ability to predict patterns of fraud. Based on our prior experience we believe that these attributes will be highly accretive to Fraud Protection's model performance and ability to discern distinctive patterns of fraud. If these are not supplied, then the device fingerprinting will be inaccurate.
+**Core Features:** This group of attributes is core to Fraud Protection's ability to predict patterns of fraud. Based on our prior experience, we believe that these attributes will be highly accretive to Fraud Protection's model performance and ability to discern distinctive patterns of fraud. If these attributes are not supplied, then the device fingerprinting will be inaccurate.
 
 **Investigative Features:** This group of attributes has the potential to add or enhance Fraud Protection's ability to predict patterns of fraud more accurately. Statistical analysis of collected data is the only definitive way of determining whether these attributes are strong predictors of patterns of fraud. If the predictive capability of these attributes does not live up to our expectations, then we will no longer utilize these attributes. While this group of attributes would allow us to determine whether they will be strong predictors of patterns of fraud, they are optional and are not required to be provided.
 
@@ -52,15 +52,13 @@ Below is a list of the device fingerprinting attribute categories that we try to
 
 2.  Create a new file called 'Podfile' inside your project's root directory and add the following statements to it. Replace YOUR\_TARGET\_PROJECT\_NAME with the name of your Xcode project.
 
+```plaintext
 platform :ios, '11.0'
-
 target '${YOUR\_TARGET\_PROJECT\_NAME}' do
-
-  use\_frameworks!
-
-  pod ' FraudProtection', '2.0.0'
-
+use\_frameworks!
+pod ' FraudProtection', '2.0.0'
 end
+```
 
 3.  Install the pod by executing the following command: pod install --repo-update
 
@@ -68,7 +66,6 @@ end
 
  ```plaintext
 **import** FraudProtection
-
 FraudProtection.start(instanceId: $tenantId)
 ```
 
@@ -78,7 +75,6 @@ FraudProtection.start(instanceId: $tenantId)
 
 ```plaintext
 **import** FraudProtection
-
 FraudProtection.send(pageId: $pageId)
 ```
 
@@ -96,7 +92,6 @@ The pageId is optional and can be set as follows based on the scenario.
 
 ```plaintext
 **import** FraudProtection
-
 **var** sessionId = FraudProtection.getSessionId()
 ```
 
