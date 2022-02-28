@@ -36,7 +36,7 @@ It is your responsibility to:
 
 4.  Comply with all laws and regulations applicable to the use of Fraud Protection, including data protection laws.
 
-## Attribute Category Introduction Reference
+## Attribute category introduction reference
 
 Below is a list of the device fingerprinting attribute categories that we try to collect and how it helps in detecting Fraud. If your organization has specific needs and you would like certain categories of data to not be processed by us, you can reach out to customer support before onboarding, and we can help you configure this correctly to meet your privacy needs.
 
@@ -46,75 +46,31 @@ Below is a list of the device fingerprinting attribute categories that we try to
 
 **Potential Label:** This group of attributes is utilized for model supervision and labeling purposes. Each of these attributes by itself has a probability of not providing ground truth. However, combining these attributes increases the likelihood that the label used in training the Fraud Protection's model becomes ground truth and results in higher model performance.
 
-## Android Technical Reference
-
-1.  Add the JitPack repository to your root build.gradle.
-
-
-
-
-
-
-
-
-
-
-
-Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that is based on artificial intelligence (AI), runs on Azure, is cloud-scalable and reliable, and has enterprise-grade security. The device fingerprinting functionality enables the identification, across multiple sessions or interactions, of devices that engage with your business and other businesses in the Fraud Protection fraud network. These devices might be, for example, computers, Xbox consoles, or tablets. Additionally, the functionality enables Fraud Protection to link together seemingly unrelated events in the fraud network to identify patterns of fraud.
-
-When you implement Fraud Protection device fingerprinting by integrating the reference implementation that is provided in your app, you agree to the [Microsoft APIs Terms of Use](/legal/microsoft-apis/terms-of-use). Additionally, you direct Microsoft to process the following types of data from the devices that interact with the Fraud Protection services. (These types of data are referred to collectively as *the device fingerprinting data*.)
-
-- Device attributes, such as the device ID, screen information, and processor class
-- Operating system (OS) attributes, such as OS information, the OS version, and original equipment manufacturer (OEM) details
-- Applicable browser-related attributes, such as the browser language and apps that are installed by default
-
-You have the following responsibilities:
-
-- Receive consent from your users to collect and allow Microsoft to process the device fingerprinting data.
-- Inform your customers about your data collection and processing practices. For example, disclose the data that you collect, and explain how it is used.
-- Disclose your use of third parties that work on your behalf to process the data that you collect. These third parties include Fraud Protection service providers.
-- Comply with all laws and regulations that are applicable to the use of Fraud Protection. These laws and regulations include data protection laws.
-
-To integrate device fingerprinting for Fraud Protection, you must complete the following tasks:
-
-1. Set up the Azure Domain Name System (DNS) by following the steps in [Set up DNS and SSL certificate](device-fingerprinting.md#set-up-dns-and-ssl-certificate).
-1. Integrate device fingerprinting with your mobile application by using the reference implementation that is provided.
-
-## Attribute categories
-
-This section provides a list of the device fingerprinting data that Microsoft might process and the reason for processing that data. Each data attribute that is described in the following list is optional. You can configure the number of attributes that best reflects the needs of your organization in relation to the privacy rights of device users in your jurisdiction.
-
-Each attribute belongs to one of the following categories:
-
-- **Core Features** – Attributes in this category are core to Fraud Protection's ability to predict patterns of fraud. Based on previous experience, Microsoft believes that these attributes will be highly accretive to Fraud Protection's model performance and its ability to detect distinctive patterns of fraud. If these core features aren't provided, device fingerprinting will be inaccurate.
-- **Investigative Features** – Attributes in this category might be able to increase or enhance Fraud Protection's ability to accurately predict patterns of fraud. Statistical analysis of collected data is the only definitive way to determine whether these attributes are strong predictors of patterns of fraud. If the predictive capability of these attributes doesn't meet Microsoft expectations, we will no longer use them. Although this category of attributes will enable Microsoft to determine whether the attributes will be strong predictors of patterns of fraud, they are optional.
-- **Potential Label** – Attributes in this category are used for model supervision and labeling purposes. There is some probability that each of these attributes on its own won't provide ground truth. However, when the attributes are combined, it's more likely that the label that is used during training of Fraud Protection's model will become ground truth and that model performance will therefore increase. Although Fraud Protection can work without these attributes, the machine learning model won't be able to improve without them.
-
 ## Android technical reference
 
 1.  Add the JitPack repository to your root build.gradle.
 
 allprojects {
 
-repositories {
+  repositories {
 
-...
+    ...
 
-maven { url 'https://jitpack.io' }
+    maven { url 'https://jitpack.io' }
 
-}
+  }
 
-}
+ }
 
 2.  Add the dependency.
 
 dependencies {
 
-implementation ('com.github.microsoft:fraudprotection-sdk-android:2.0.0@aar'){
+  implementation ('com.github.microsoft:fraudprotection-sdk-android:2.0.0@aar'){
 
-transitive = true
+    transitive = true
 
-}
+  }
 
 }
 
