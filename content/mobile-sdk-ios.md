@@ -52,11 +52,11 @@ Below is a list of the device fingerprinting attribute categories that we try to
 
 2.  Create a new file called 'Podfile' inside your project's root directory and add the following statements to it. Replace YOUR\_TARGET\_PROJECT\_NAME with the name of your Xcode project.
 
-```plaintext
+```swift
 platform :ios, '11.0'
 target '${YOUR\_TARGET\_PROJECT\_NAME}' do
-use\_frameworks!
-pod ' FraudProtection', '2.0.0'
+  use\_frameworks!
+  pod ' FraudProtection', '2.0.0'
 end
 ```
 
@@ -64,7 +64,7 @@ end
 
 4.  You can initiate the SDK in the AppDelegate class so it can start collecting device attributes.
 
- ```plaintext
+ ```swift
 **import** FraudProtection
 FraudProtection.start(instanceId: $tenantId)
 ```
@@ -73,7 +73,7 @@ FraudProtection.start(instanceId: $tenantId)
 
 5.  Send collected device attributes to Microsoft by calling send(). You can call send() in any UIViewController before or on the page that has the operation you need a risk assessment for. For a Sign In/Up scenario, you can call send() immediately after start() in base AppDelegate class.
 
-```plaintext
+```swift
 **import** FraudProtection
 FraudProtection.send(pageId: $pageId)
 ```
@@ -90,7 +90,7 @@ The pageId is optional and can be set as follows based on the scenario.
 
 6.  Obtain the SessionId required when calling the risk assessment APIs by calling getSessionId().
 
-```plaintext
+```swift
 **import** FraudProtection
 **var** sessionId = FraudProtection.getSessionId()
 ```
