@@ -65,7 +65,7 @@ end
 4.  You can initiate the SDK in the AppDelegate class so it can start collecting device attributes.
 
 ```swift
-**import** FraudProtection
+import FraudProtection
 FraudProtection.start(instanceId: $tenantId)
 ```
 
@@ -74,7 +74,7 @@ FraudProtection.start(instanceId: $tenantId)
 5.  Send collected device attributes to Microsoft by calling send(). You can call send() in any UIViewController before or on the page that has the operation you need a risk assessment for. For a Sign In/Up scenario, you can call send() immediately after start() in base AppDelegate class.
 
 ```swift
-**import** FraudProtection
+import FraudProtection
 FraudProtection.send(pageId: $pageId)
 ```
 
@@ -91,8 +91,8 @@ The pageId is optional and can be set as follows based on the scenario.
 6.  Obtain the SessionId required when calling the risk assessment APIs by calling getSessionId().
 
 ```swift
-**import** FraudProtection
-**var** sessionId = FraudProtection.getSessionId()
+import FraudProtection
+var sessionId = FraudProtection.getSessionId()
 ```
 
 
