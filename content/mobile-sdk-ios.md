@@ -64,7 +64,7 @@ end
 
 4.  You can initiate the SDK in the AppDelegate class so it can start collecting device attributes.
 
- ```swift
+```swift
 **import** FraudProtection
 FraudProtection.start(instanceId: $tenantId)
 ```
