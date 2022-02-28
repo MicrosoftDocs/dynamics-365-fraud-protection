@@ -18,7 +18,7 @@ ms.custom:
 
 This feature is designed and recommended for use with Microsoft Dynamics 365 Fraud Protection service. Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that (i) is based on artificial intelligence (AI); (ii) runs on Microsoft Azure; and (iii) is cloud-scalable, reliable, and has enterprise-grade security. Fraud Protection's device fingerprinting feature enables the identification of devices (computer, Xbox, tablet, mobile phone, and so on) across multiple sessions or interactions that engage with your business and other businesses in the Fraud Protection fraud network. Additionally, this feature allows Fraud Protection to link seemingly unrelated events to each other in the fraud network to identify patterns of fraud.
 
-When you implement Fraud Protection device fingerprinting by instrumenting your Android application with a Dynamics 365 Fraud Protection SDK for Android, you (i) agree to Microsoft's APIs terms of use located [here](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use), and (ii) you direct Microsoft to process the following types of data from the devices interacting with the Fraud Protection services (collectively, "Device Fingerprinting Data"):
+When you implement Fraud Protection device fingerprinting by instrumenting your Android application with a Dynamics 365 Fraud Protection SDK for Android, you (i) agree to Microsoft's APIs terms of use located [here](/legal/microsoft-apis/terms-of-use), and (ii) you direct Microsoft to process the following types of data from the devices interacting with the Fraud Protection services (collectively, "Device Fingerprinting Data"):
 
 1.  Device attributes such as device ID, screen information, processor class, etc.
 
