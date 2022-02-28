@@ -65,7 +65,7 @@ Below is a list of the device fingerprinting attribute categories that we try to
     dependencies {
         implementation ('com.github.microsoft:fraudprotection-sdk-android:2.0.0@aar'){
         transitive = true
-      }
+	    }
     }
     ```
 
