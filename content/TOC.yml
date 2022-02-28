@@ -30,8 +30,6 @@
     href: pay-as-you-go.md
   - name: Configure user access
     href: configure-user-access.md   
-  - name: Mobile reference implementation
-    href: mobile-reference-implementation.md
   - name: Set up device fingerprinting
     href: device-fingerprinting.md
   - name: Set up customer accounts protection
@@ -180,6 +178,10 @@
     href: integrate-real-time-api.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
+  - name: Mobile SDK for Android
+    href: mobile-sdk-android.md
+  - name: Mobile SDK for iOS
+    href: mobile-sdk-ios.md
 - name: Privacy, security, compliance
   items:
   - name: Privacy protection for customer data
