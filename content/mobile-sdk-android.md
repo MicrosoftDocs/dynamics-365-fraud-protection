@@ -73,7 +73,7 @@ Below is a list of the device fingerprinting attribute categories that we try to
 
 4.  You can initiate the SDK in the base application class so it can start collecting device attributes.
 
-```plaintext
+```FIX
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
 FraudProtection.start(getApplicationContext(), tenantId);
 ```
