@@ -73,7 +73,7 @@ Below is a list of the device fingerprinting attribute categories that we try to
 
 4.  You can initiate the SDK in the base application class so it can start collecting device attributes.
 
-```FIX
+```java
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
 FraudProtection.start(getApplicationContext(), tenantId);
 ```
@@ -82,7 +82,7 @@ FraudProtection.start(getApplicationContext(), tenantId);
 
 5.  Send collected device attributes to Microsoft by calling send(). You can call send() in any fragment/activity before or on the page that has the operation you need a risk assessment for. For a Sign In/Up scenario, you can call send() immediately after start() in base application class.
 
-```FIX
+```java
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
 FraudProtection.send(pageId);
 ```
@@ -99,7 +99,7 @@ The pageId is optional and can be set as follows based on the scenario.
 
 6.  Obtain the SessionId required when calling the risk assessment APIs by calling getSessionId().
 
-```FIX
+```java
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
 String sessionId = FraudProtection.getSessionId();
 ```
