@@ -18,7 +18,7 @@ ms.custom:
 
 This feature is designed and recommended for use with Microsoft Dynamics 365 Fraud Protection service. Microsoft Dynamics 365 Fraud Protection provides device fingerprinting that (i) is based on artificial intelligence (AI); (ii) runs on Microsoft Azure; and (iii) is cloud-scalable, reliable, and has enterprise-grade security. Fraud Protection's device fingerprinting feature enables the identification of devices (computer, Xbox, tablet, mobile phone, and so on) across multiple sessions or interactions that engage with your business and other businesses in the Fraud Protection fraud network. Additionally, this feature allows Fraud Protection to link seemingly unrelated events to each other in the fraud network to identify patterns of fraud.
 
-When you implement Fraud Protection device fingerprinting by instrumenting your Android application with a Dynamics 365 Fraud Protection SDK for Android, you (i) agree to Microsoft's APIs terms of use located [here](https://docs.microsoft.com/en-us/legal/microsoft-apis/terms-of-use), and (ii) you direct Microsoft to process the following types of data from the devices interacting with the Fraud Protection services (collectively, "Device Fingerprinting Data"):
+When you implement Fraud Protection device fingerprinting by instrumenting your Android application with a Dynamics 365 Fraud Protection SDK for Android, you (i) agree to Microsoft's APIs terms of use located [here](https://docs.microsoft.com/legal/microsoft-apis/terms-of-use), and (ii) you direct Microsoft to process the following types of data from the devices interacting with the Fraud Protection services (collectively, "Device Fingerprinting Data"):
 
 1.  Device attributes such as device ID, screen information, processor class, etc.
 
@@ -50,29 +50,24 @@ Below is a list of the device fingerprinting attribute categories that we try to
 
 1.  Add the JitPack repository to your root build.gradle.
 
+```plaintext
 allprojects {
-
-  repositories {
-
-    ...
-
-    maven { url 'https://jitpack.io' }
-
-  }
-
- }
+repositories {
+...
+maven { url 'https://jitpack.io' }
+}
+}
+```
 
 2.  Add the dependency.
 
+```plaintext
 dependencies {
-
-  implementation ('com.github.microsoft:fraudprotection-sdk-android:2.0.0@aar'){
-
-    transitive = true
-
-  }
-
+implementation ('com.github.microsoft:fraudprotection-sdk-android:2.0.0@aar'){
+transitive = true
 }
+}
+```
 
 3.  Select **Sync Project with Gradle Files**.
 
@@ -80,9 +75,7 @@ dependencies {
 
 ```plaintext
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
-
 FraudProtection.start(getApplicationContext(), tenantId);
-
 - **TenantId—**Provided by Microsoft (GUID/UUID).
 ```
 
@@ -90,25 +83,23 @@ FraudProtection.start(getApplicationContext(), tenantId);
 
 ```plaintext
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
-
 FraudProtection.send(pageId);
 ```
 
 The pageId is optional and can be set as follows based on the scenario.
 
-- **SI—**Sign in
+- **SI**—Sign in
 
-- **SU—** Sign up
+- **SU**—Sign up
 
-- **P—** Purchase
+- **P**—Purchase
 
-- **tst—** Test
+- **tst—**—Test
 
 6.  Obtain the SessionId required when calling the risk assessment APIs by calling getSessionId().
 
 ```plaintext
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
-
 String sessionId = FraudProtection.getSessionId();
 ```
 
