@@ -50,38 +50,39 @@ Below is a list of the device fingerprinting attribute categories that we try to
 
 1.  Add the JitPack repository to your root build.gradle.
 
-```plaintext
-allprojects {
-repositories {
-...
-maven { url 'https://jitpack.io' }
-}
-}
-```
+    ```gradle
+    allprojects {
+        repositories {
+            ...
+		    maven { url 'https://jitpack.io' }
+	    }
+    }
+    ```
 
 2.  Add the dependency.
 
-```plaintext
-dependencies {
-implementation ('com.github.microsoft:fraudprotection-sdk-android:2.0.0@aar'){
-transitive = true
-}
-}
-```
+    ```gradle
+    dependencies {
+        implementation ('com.github.microsoft:fraudprotection-sdk-android:2.0.0@aar'){
+        transitive = true
+      }
+    }
+    ```
 
 3.  Select **Sync Project with Gradle Files**.
 
-4.  You can initiate the SDK in the base Application class so it can start collecting device attributes.
+4.  You can initiate the SDK in the base application class so it can start collecting device attributes.
 
 ```plaintext
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
 FraudProtection.start(getApplicationContext(), tenantId);
-- **TenantId—**Provided by Microsoft (GUID/UUID).
 ```
+- **TenantId—**Provided by Microsoft (GUID/UUID).
 
-5.  Send collected device attributes to Microsoft by calling send(). You can call send() in any fragment/activity before or on the page that has the operation you need a risk assessment for. For a Sign In/Up scenario, you can call send() immediately after start() in base Application class.
 
-```plaintext
+5.  Send collected device attributes to Microsoft by calling send(). You can call send() in any fragment/activity before or on the page that has the operation you need a risk assessment for. For a Sign In/Up scenario, you can call send() immediately after start() in base application class.
+
+```FIX
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
 FraudProtection.send(pageId);
 ```
@@ -98,7 +99,7 @@ The pageId is optional and can be set as follows based on the scenario.
 
 6.  Obtain the SessionId required when calling the risk assessment APIs by calling getSessionId().
 
-```plaintext
+```FIX
 import com.microsoft.fraudprotection.androidsdk.FraudProtection;
 String sessionId = FraudProtection.getSessionId();
 ```
