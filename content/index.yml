@@ -31,7 +31,7 @@ highlightedContent:
     # Card
     - title: Fraud Protection training on Microsoft Learn
       itemType: learn
-      url: https://docs.microsoft.com/learn/browse/?products=dynamics-fraud-protection&terms=fraud%20protection&expanded=dynamics-365
+      url: /learn/browse/?expanded=dynamics-365&products=dynamics-fraud-protection&terms=fraud+protection
 
 # additionalContent section (optional)
 # Card with links style
@@ -45,7 +45,7 @@ additionalContent:
             - text: Overview
               url: overview.md
             - text: Release plans
-              url: https://docs.microsoft.com/dynamics365-release-plan/2021wave2/fraud-protection/dynamics365-fraud-protection/get-started
+              url: /dynamics365-release-plan/2021wave2/fraud-protection/dynamics365-fraud-protection/get-started
             - text: Access your environment 
               url: https://dfp.microsoft.com/
         # Card
