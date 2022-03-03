@@ -178,6 +178,10 @@
     href: integrate-real-time-api.md
   - name: Integrate account protection APIs
     href: integrate-ap-api.md
+  - name: Mobile SDK for Android
+    href: mobile-sdk-android.md
+  - name: Mobile SDK for iOS
+    href: mobile-sdk-ios.md
 - name: Privacy, security, compliance
   items:
   - name: Privacy protection for customer data
