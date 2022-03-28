@@ -8,7 +8,7 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - developer
-title: Case management overview
+title: Case management for Administrators
 ms.custom:
 ---
 
