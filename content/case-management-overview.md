@@ -1,4 +1,4 @@
---
+---
 author: josaw1
 description: This topic provides information about the componente of Case management in Dynamics 365 Fraud Protection.
 ms.author: josaw
