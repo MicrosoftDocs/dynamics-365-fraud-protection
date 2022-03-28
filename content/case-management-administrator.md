@@ -14,11 +14,11 @@ ms.custom:
 
 # Case management for Administrators
 
-To complete administrator-specific tasks in Case management, yu must be assigned one of the following roles:
+To complete administrator-specific tasks in Case management, you must be assigned one of the following roles:
 
-- All areas of Aministrator
+- All areas of Administrator
 - All areas of Editor
-- PSP admin
+- PSP administrator
 - Fraud Manager
 - Fraud Supervisor
 
