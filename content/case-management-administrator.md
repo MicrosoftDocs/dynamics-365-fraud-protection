@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about working with Case management as an Administrator.
+description: This topic explains how to work with Case management as an administrator.
 ms.author: josaw
 ms.date: 03/28/2022
 ms.topic: reference
@@ -8,13 +8,13 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - developer
-title: Case management for Administrators
+title: Case management for administrators
 ms.custom:
 ---
 
-# Case management for Administrators
+# Case management for administrators
 
-To complete administrator-specific tasks in Case management, you must be assigned one of the following roles:
+To complete administrator-specific tasks in Case management for Microsoft Dynamics 365 Fraud Protection, you must be assigned one of the following roles:
 
 - All areas of Administrator
 - All areas of Editor
@@ -22,74 +22,71 @@ To complete administrator-specific tasks in Case management, you must be assigne
 - Fraud Manager
 - Fraud Supervisor
 
-If you are assigned one of the roles, you can complete the following tasks:
+If you're assigned one of these roles, you can complete the following tasks:
 
 - [Define cases for manual review agents](#review)
-- [Create organization methods for storing cases](#store)
+- [Create organization methods to store cases](#store)
 - [Define the criteria to route cases to the appropriate queue](#route)
 
-## <a name="review"></a> Define cases for manual review agents
-To enable purchase transactions for manual review, define the criteria which qualifies certain transactions for manual review. You can create assessment rules which then out put a **Review()** decision. For more information about creating the rules, see [Manage rules](rules.md). You can use any criteria that meets your business needs.
+## <a name="review"></a>Define cases for manual review agents
 
-The following example shows all transactions to be selected for review. The transactions have a score greater than **600** and the user country is **US**. 
+Define the criteria that specific purchase transactions must meet to qualify for manual review. You can create assessment rules that generate a **Review()** decision as output. For more information about how to create these rules, see [Manage rules](rules.md). You can use any criteria that meet your business requirements.
 
-  ```
-   RETURN Review()
-   WHEN @"riskScore" > 600 and @"user.country" == "US"
+The following example shows all transactions that must be selected for review. The risk score of the transactions is more than 600, and the user's country or region is **US**.
 
-  ```
+```
+RETURN Review()
+WHEN @"riskScore" > 600 and @"user.country" == "US"
+```
 
-## <a name="store"></a> Create organization methods for storing cases
+## <a name="store"></a>Create organization methods to store cases
 
-You can use queues to organize purchase transactions that are marked for review by the assessment rules. Transactions that appear in the case management queues are referred to as **cases**. You can create up to 29 queues for each environment. 
+You can use queues to organize purchase transactions that the assessment rules mark for review. Transactions that appear in the case management queues are referred to as *cases*. You can create up to 29 queues for each environment.
 
-Complete the following steps to create a queue.
+Follow these steps to create a queue.
 
-1. In the left navigation pane, select **Case management** > **Queues** and select **+ New Queue**.
-2. Give the queue name that helps you identify the purpose of the queue.
-3. Enter a description that explains the type of cases stored in this queue.
-4. Choose the review sequence preference. An **Unrestricted queue** lets you review any case in the queue in any order. For a **Restricted queue**, you must review cases in a predefined order.
-5. Select the default sorting and order to define the order in which cases are displayed and presented to review agents. In a restricted queue, this selection defines the order of cases that agents can review. 
-6. Select the time out duration and default action to define the maximum amount of time a case can be in the queue without being reviewed and the default action that is taken when that maximum time duration is met.
+1. In the left navigation pane, select **Case management** \> **Queues**, and select **New queue**.
+2. Enter a name that will help you identify the purpose of the queue.
+3. Enter a description that explains the type of cases that are stored in this queue.
+4. Select your preference for the review sequence. If you select **Unrestricted queue**, you can review any case in the queue in any order. If you select **Restricted queue**, you must review cases in a predefined order.
+5. Select the default sorting and order to define the order that cases appear and are presented to review agents in. In a restricted queue, your selections define the order of cases that agents can review.
+6. Select the time-out duration and default action to define the maximum amount of time that a case can be in the queue without being reviewed and the default action that is taken when that time is reached.
 
-You can edit or delete any queue you have created. To edit the name of a queue or delete a queue, remove the routing rules that have a dependency on the queue. See the next section for more information about routing rules. 
+You can edit or delete any queue that you've created. To edit the name of a queue or delete a queue, remove the routing rules that have a dependency on the queue. For more information about routing rules, see the next section.
 
-All your environments will have a system created queue named **General**. Cases that don't qualify to be routed to a specific queue are routed to the **General** queue. Settings for the **General queue** are:
+All your environments will have a system-created queue that is named **General**. Cases that don't qualify to be routed to a specific queue are routed to the **General** queue. The **General** queue has the following settings:
 
-  - Timeout = 24 hours 
-  - Default action = Approve
-  - Default sorting = Time in queue
-  - Sort order = Descending 
- 
- These settings can't be edited.   
+- **Timeout:** 24 hours 
+- **Default action:** Approve
+- **Default sorting:** Time in queue
+- **Sort order:** Descending 
 
-## <a name ="route"></a> Define the criteria to route cases to the appropriate queue
+These settings can't be edited.
 
-After the queues are created, define the criteria based on which cases will be routed to these queues. These criteria make up the routing rules, which are similar to assessment rules except that routing rules don't result in a decision. Instead, routing rules result in a routing action. While one queue can have multiple cases, one case can only be routed to one queue.
+## <a name="route"></a>Define the criteria to route cases to the appropriate queue
 
-All cases have a hold of five minutes after passing through the routing rules, to update with supplementary events, before they appear in the respective queue. If a supplementary event is received through the **purchaseStatus** API with any **statusType**, the case will not be routed to aqueue and the **statusType** received in the **purchaseStatus** API event will be recorded as the transaction's latest status. 
+After the queues are created, define the criteria that will be used to route cases to them. These criteria make up the routing rules. Routing rules resemble assessment rules, but they don't result in a decision. Instead, they result in a routing action. Although each queue can have multiple cases, each case can be routed to only one queue.
 
-Routing rules can be authored through a visual editor or through a code editor. You can author routing rules in code editor using the FraudProtection Language. For more information, see [Language reference guide](fpl-lang-ref.md).
+After cases pass through the routing rules, there is a five-minute hold before they appear in the appropriate queue. During this time, the cases are updated with supplementary events. If a supplementary event that has any **statusType** value is received through the **purchaseStatus** application programming interface (API), the case won't be routed to a queue. In this case, the **statusType** value that is received in the **purchaseStatus** API event will be recorded as the transaction's latest status.
 
-Complete the following steps to create routing rules.
+Routing rules can be created in either a visual editor or a code editor. In the code editor, you can create routing rules by using the FraudProtection Language. For more information, see [Language reference guide](fpl-lang-ref.md).
 
-1. On the left navigation page, select **Case management** > **Routing rules** and select **+ New Rule**.
-2. To add an uber level condition that can be applied to the rule set, add it under the condition segment. For example, ff you want the rule set to be executed for a particular product category.
-3. Select **+ Clause** to add a new clause.
-5. From the drop-down list, select the queue to route the cases to.
-6. Set the criteria for routing using the drop-down lists for attributes, operators, and supplying the desired value.
-7. To switch to code editor, select **Code view** on the top right of the clause. 
-8. Use the command **RouteTo Queue(“<Queue name>”) WHEN <Condition>**. The following example shows the code view for routing transactions greater than 1,000 to a **High value orders** queue.
+Follow these steps to create a routing rule.
 
-  ```
+1. In the left navigation pane, select **Case management** \> **Routing rules**, and select **New rule**.
+2. To add an uber-level condition that can be applied to the rule set, add it under the condition segment. For example, you might want the rule set to be run for a specific product category.
+3. Select **Clause** to add a new clause.
+5. In the drop-down list, select the queue to route the cases to.
+6. Define the routing criteria by using the drop-down lists for attributes and operators and providing the desired values.
+7. To switch to the code editor, select **Code view** in the upper right of the clause.
+8. Use the command **RouteTo Queue("\<Queue name\>") WHEN \<Condition\>**. The following example shows the code view for routing transactions where the total amount is more than 1,000 to a **High Value Orders** queue.
+
+    ```
     ROUTETO Queue("High Value Orders")
     WHEN @"purchase.request.totalAmount" > 1000 
-  ```
-  
+    ```
+
 > [!NOTE]
-> The routing rules you create using the visual editor are translated to code view when you switch. However, after you edit using the code view, you can't switch back to visual view.  
+> The routing rules that you create by using the visual editor are translated to the code view when you switch to the code editor. However, after you edit the rules by using the code view, you can't switch back to the visual view.
 
-Routing rules can be customized to set the order of execution by dragging and dropping the routing rules to define which rules must be executed first. After the ordering is complete, on the **Routing rules** page, select **Save**.
-
-
-
+To customize the order of execution for routing rules, drag the routing rules to define which rules must be executed first. When you've finished, select **Save** on the **Routing rules** page.
