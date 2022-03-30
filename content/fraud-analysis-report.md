@@ -55,7 +55,7 @@ The **Fraud summary** scorecard provides the following fraud summary metrics.
 
 - **Fraud volume** – This value represents the total volume of transaction labeled as fraud in the fraud type filter.
 
-- **Fraud rate** – This shows the percentage of transactions labeled as fraud in the fraud type filter, among total transactions labeled as fraud or non-fraud.
+- **Fraud rate** – This chart shows the percentage of transactions labeled as fraud in the fraud type filter, among total transactions labeled as fraud or non-fraud.
 
 ## Fraud detail charts
 
