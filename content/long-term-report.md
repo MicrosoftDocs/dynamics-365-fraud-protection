@@ -1,7 +1,18 @@
+---
+author: josaw1
+description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
+ms.date: 03/31/2022
+ms.topic: conceptual
+search.app: 
+  - Capaedac-fraudprotection
+search.audienceType:
+  - admin
+title: Long term report for purchase protection
 
+---
 
-
-**Review key metrics with scorecard reports-long term report**
+# Long term report for purchase protection
 
 Microsoft Dynamics 365 Fraud Protection provides long term report for purchase protection. You can use them to review your key metrics and understand the performance of your fraud protection efforts for historical transactions over 6 months old.
 
