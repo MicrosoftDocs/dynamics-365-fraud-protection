@@ -1,8 +1,18 @@
+---
+author: josaw1
+description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
+ms.date: 03/31/2022
+ms.topic: conceptual
+search.app: 
+  - Capaedac-fraudprotection
+search.audienceType:
+  - admin
+title: Virtual fraud analyst
 
+---
 
-
-
-**Use the virtual fraud analyst**
+# Virtual fraud analyst
 
 The virtual fraud analyst (VFA) uses innovative artificial intelligence (AI) technology to provide a compelling historical view of your data, and to help you set up and adjust optimal [<u>risk score thresholds</u>](https://docs.microsoft.com/en-gb/dynamics365/fraud-protection/scorecard). This information can then be transformed into rules that help you decide, in real time, whether to accept or reject customer transactions.
 
