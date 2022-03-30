@@ -1,8 +1,18 @@
+---
+author: josaw1
+description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
+ms.date: 03/31/2022
+ms.topic: conceptual
+search.app: 
+  - Capaedac-fraudprotection
+search.audienceType:
+  - admin
+title: Fraud analysis report for purchase protection
 
+---
 
-
-
-**Fraud analysis**
+# Fraud analysis report for purchase protection
 
 Microsoft Dynamics 365 Fraud Protection provides ability to analyze transactions to determine whether a transaction is fraudulent, and to understand changing fraud patterns for your business. It helps you understand fraud volume (by count and dollar amount), distribution, and trend, and lets them do analysis on fraud transactions by payment instrument, product, and IP country/region.
 
