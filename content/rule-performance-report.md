@@ -8,11 +8,11 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Rule performance report
+title: Rule performance report for purchase protection
 
 ---
 
-# Rule performance report
+# Rule performance report for purchase protection
 
 Microsoft Dynamics 365 Fraud Protection provides a rule performance report designed to track the impact of fraud protection rules enabled by you. It helps merchants understand the transaction volume, distribution, and potential fraud trends by rules and clauses. It also lets them analyze decisions and performance by rule segments and compare the impact of observe rules and decision rules.
 
