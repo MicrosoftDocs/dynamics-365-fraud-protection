@@ -10,12 +10,6 @@
     href: whats-new-5-21.md   
   - name: April 2021 release
     href: whats-new-4-1-21.md   
-  - name: October 2020 release
-    href: whats-new-10-6.md  
-  - name: July 2020 release
-    href: whats-new-7-1.md  
-  - name: May 2020 release
-    href: whats-new-5-4.md       
 - name: Regional availability
   href: global-availability.md  
 - name: Set up your environment
@@ -130,8 +124,6 @@
     href: rule-monitor.md
   - name: Monthly business review tool
     href: monthly-business-review.md 
-  - name: Search transactions
-    href: search.md
 - name: Fundamental capabilities
   items:
   - name: Manage rules
@@ -148,6 +140,8 @@
     href: external-calls.md
   - name: Perform velocity checks
     href: velocities.md
+  - name: Search transactions
+    href: search.md
   - name: Language reference guide
     href: fpl-lang-ref.md  
 - name: Extensibility
