@@ -1,8 +1,18 @@
+---
+author: josaw1
+description: This topic explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
+ms.date: 03/31/2022
+ms.topic: conceptual
+search.app: 
+  - Capaedac-fraudprotection
+search.audienceType:
+  - admin
+title: Rule performance report
 
+---
 
-
-
-**Rule performance**
+# Rule performance report
 
 Microsoft Dynamics 365 Fraud Protection provides a rule performance report designed to track the impact of fraud protection rules enabled by you. It helps merchants understand the transaction volume, distribution, and potential fraud trends by rules and clauses. It also lets them analyze decisions and performance by rule segments and compare the impact of observe rules and decision rules.
 
