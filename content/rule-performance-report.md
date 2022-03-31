@@ -87,3 +87,6 @@ The KPI charts provide details about the following key performance metrics. You 
 - **Transaction volume** – Shows the total count or number of transactions that were sent for assessment.
 
 - **Rule rejected rate** - Shows the percentage of purchases that was rejected by decision rules, out of the total volume of purchases.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
