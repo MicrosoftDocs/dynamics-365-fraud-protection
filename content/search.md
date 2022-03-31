@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: josaw
-ms.date: 11/04/2021
+ms.date: 03/31/2022
 ms.topic: how-to
 search.app: 
   - Capaedac-fraudprotection
@@ -15,78 +15,77 @@ title: Search transactions
 
 [!include [preview banner](includes/preview-banner.md)]
 
-Transaction search lets you search for transactions in Microsoft Dynamics 365 Fraud Protection, based on specific filter values. You can then view, export, and interact with the transactions that you find.
+The **Search** page helps you find and view details about events in Dynamics 365 Fraud Protection, based on specific filter values. You can search for an individual event ID or use filters to find all transactions that match some criteria. You can export the search results or drill into an individual event to show a more detailed view.  
 
-For example, you can find all the transactions that are associated with the email address `user@contoso.com`. You can then view detailed information about each transaction, such as the risk score, user information, and device information. Finally, you can add elements of the transactions to support lists, and apply a status such as *Block* to `user@contoso.com`.
+For example, you can search for all the events associated with the email address 'kayla@contoso.com'. You can review the details for each event such as risk score, user information, and device information. You can also add the email address, or other attributes such as DeviceID or UserID, to safe or block [support lists](manage-support-lists.md). 
 
-To access transaction search, select the **Transaction search** tab on the **Purchase protection** page.
+To search events, select the **Search** page on the left navigation. 
 
-## Filter transactions
+## Select event type and timeframe
 
-You can use various filter options to search for a specific matching transaction or multiple matching transactions. To view transactions, you must first specify a date filter and an attribute filter.
+First select which assessment event you want to search for: purchase, account creation, or account login. 
+You can then choose the timeframe you want to search across. You can search between any two dates within the past 13 months. 
+> [!NOTE]
+> Search will not display events that were sent prior to the search feature being turned on. 
 
-### Filter by date
+### Filter events by attribute
 
-Use the date filter to include transactions that occurred during a specific date range. You can search for transactions that occurred up to 13 months in the past.
+To find transactions, you must filter by one or more attributes of the transactions. You can search by attributes in the following categories.
 
-### Filter by attribute
+- Attributes sent as part of the API request schema, such as information about the user, device, payment instrument (PI), or address. 
+- Custom data attributes that were included in the API request.
+- Fraud Protection AI scores, such as risk score and bot score, and the associated reason codes.
+- Rules triggered and the decisions resulting from the rules being triggered.
+- Device information returned by device fingerprinting in Fraud Protection.
+- Information sent as part of related events such as bank events and chargebacks, and status and label events.
+> [!NOTE]
+> When you search on a field from a related event, only the most recent event of that type will be searched. For example, if there were multiple bank events sent for a transaction, the most recent bank event will be searched on.
 
-To filter transactions by an attribute, follow these steps.
+You can add up to five filters, separated by a single **And** or **Or** condition.
 
-1. Select an attribute to filter by (for example, **email**).
-1. Enter the attribute value to filter by. You have the following options:
 
-    - **Exact term to match** – Enter the exact term or value. For example, enter `user@contoso.com`.
-    - **Prefix term to match** – Use a wildcard character (\*) to represent any character or any number of characters. For example, **user\*** returns both `user1@contoso.com` and `user22@contoso.com`.
+## View search results
 
-You can add multiple attribute filters that are separated by **And** or **Or**.
+After you select **Search**, the **Results** tile shows all of the events that match your specified filters. By default, events are sorted by the **Transaction date** attribute, which is shown in your local time zone. The most recent event will appear at the top of the grid. You can sort by other attributes by selecting the column title. However, this will only sort the events that have already loaded on the results grid. By default, 100 transactions are loaded on the page. As you scroll, more transactions will be loaded. 
 
-## Transaction search results
+If your results include multi-value columns, only the first value is shown. For example, if multiple payment instruments were used in a single event, the first payment instrument appears in the **Payment instrument** column.
 
-After you apply your filters, the search results grid shows the matching transactions. By default, transactions are sorted by **Merchant local date** column. The most recent transaction appears at the top of the grid.
+## Change column options
 
-> [!IMPORTANT]
-> A maximum of 300 transactions is shown. To view more results, select **Export** to create a file that contains the full set of results. For more information, see the [Export transactions](search.md#export-transactions) section later in this topic.
->
-> If your results include multi-value columns, only the first value is shown. For example, if multiple payment instruments were used in a single transaction, only the first payment instrument appears in the **Payment instrument** column.
-
-### Column options
-
-You can add, remove, and change the order of columns in the search results grid. You can also sort by a specific column.
-
-- To add or remove columns, select **Column options** on the command bar.
-- To reorder columns, select a column, and drag it to the desired location. You can select the column in either the **Column options** pane or the search results grid.
-- To sort by a column (in either ascending order or descending order), select the column name in the grid.
-
-    > [!NOTE]
-    > Only the transactions that are loaded on the screen are sorted, unless you sort by the **Merchant local date** column.
+Select **Column options** to customize which columns are shown in the results grid. You can add or remove columns to show specific attributes, or you can drag a column to a new position. Your column settings are  valid only for you, and will persist if you return to the **Search** page later. To reset your column options to the default, select **Default view**. 
 
 ## Export transactions
 
-To view the full list of the search results, you can export your transactions to a comma-separated values (CSV) file on your computer.
+Select **Export** to export your search results to a comma-separated values (CSV) file on your computer. You can select one of the following export options.
 
-- Select **Export** next to the search results grid, and then select one of the following options:
-
-    - **All Columns** – Export all relevant data, including information in both the application programming interface (API) request and the API response.
-    - **Current Columns** – Export only data in the columns that are currently shown in the grid.
-
-Objects that represent a list in the API schema, such as **ProductList** and **PaymentInstrumentList**, are shown as a single column.
+- **All Columns** – Export all data associated with this event. This includes all attributes in the API request and API response, and any attributes from related events.  
+- **Current Columns** – Export only data in the columns that are currently shown in the grid.
 
 > [!IMPORTANT]
-> Each export is limited to 10,000 rows.
->
-> Export operations that take longer than two minutes are automatically canceled.
+> Exports which exceed 10,000 rows, or take longer than two minutes, are automatically canceled. 
 
-## Review individual transactions
 
-To drill down into a specific transaction, select the **Purchase ID** for the transaction that you want to investigate. On the **Transaction** drilldown page, detailed information about the transaction is displayed. To display the full API request and response for the transaction in JSON, select **Debug** on the upper right corner of the page.
+## Review individual events
 
-You can apply a status of *Safe*, *Block*, or *Watch* to specific attributes of the transaction, such as an email or IP address. To add or change a status, select the pencil icon next to the element. For more information about support lists and statuses, see [Manage support lists](manage-support-lists.md).
+### Event details
+To drill down into a specific event, select the event ID for the event that you want to investigate. On the **Event details** page, all the information related to the specific event will be displayed, including information from rule evaluation, AI scoring, and device fingerprinting. Other information will also be displayed, such as information sent in the assessment API request, or other related events such as bank events, chargebacks, and status or label events.
 
-On the **Velocities** tile at the bottom of the page, values for a variety of velocities across several different timeframes are displayed. For example, the number of purchase attempts that came from a particular email address in the last 7 days is shown. You can select a velocity value to open a new tab that displays the transactions. Definitions for the default velocities are shown on the **Velocity** page. 
+On the **Velocities** tile at the bottom of the page, values for a variety of velocities across several different timeframes are displayed. For example, the number of purchase attempts that came from a particular email address in the last seven days is shown. You can select a velocity value to open a new tab and display the corresponding events. The velocity values on the **Event details** page are shown in real time and may have changed since the original purchase event occurred. Definitions for the default velocities are shown on the **Velocity** page.
 
-> [!NOTE]
-> The velocity values shown on the **Transaction** drilldown page are real-time, and may have changed since the original purchase event occurred.
+You can also select **JSON view** in the upper right corner of the page to display the JSON API requests and responses associated with this transaction.
+
+### Add attributes to support lists
+You can apply a status of **Safe**, **Block**, or **Watch** to specific attributes such as email or IP address. To add or change a status, select the pencil icon next to the element. For more information about support lists and statuses, see [Manage support lists](manage-support-lists.md).
+
+### Add notes
+Select **Notes** on the top right of the page to view or add notes to a transaction. Notes will be visible to anyone who views the transaction.
+
+### Link analysis
+Select the **Link Analysis** tab to view other events that have attributes in common with the event you are currently reviewing. For example, if you select **Email**, you can view all events that were made with the same email in the selected timeframe. If you select multiple attributes, use the dropdown to specify whether you want to see events that match all the attributes you have selected, or at least one of the attributes. 
+
+Select **Column options** to customize the fields shown in the results grid, or select **Export** to export the data into a CSV file.
+
+If want to further investigate a specific pattern, you can select **Open** on the **Search** page to open a new tab with the appropriate search filters pre-loaded. 
 
 ## Additional resources
 
