@@ -1,98 +1,93 @@
 ---
 author: yvonnedeq
-description: This topic explains how the virtual fraud analyst helps you set up and adjust risk score thresholds.
-
-ms.author: v-madeq
-ms.date: 10/23/2020
+description: This topic explains how the Virtual fraud analyst (VFA) in Microsoft Dynamics 365 Fraud Protection helps you set up and adjust risk score thresholds.
+ms.author: josaw
+ms.date: 03/31/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
 
-title: Use the virtual fraud analyst
+title: Virtual fraud analyst
 
 ---
 
-# Use the virtual fraud analyst
+# Virtual fraud analyst
 
-The virtual fraud analyst (VFA) uses innovative artificial intelligence (AI) technology to provide a compelling historical view of your data, and to help you set up and adjust optimal [risk score thresholds](scorecard.md). This information can then be transformed into rules that help you decide, in real time, whether to accept or reject customer transactions.
+The virtual fraud analyst (VFA) uses innovative artificial intelligence (AI) technology to provide a compelling historical view of your data, and to help you set up and adjust optimal [risk score thresholds](scorecard.md). This information can then be transformed into rules that help you decide, in real time, whether to accept or reject customer transactions.
 
-VFA helps you balance acceptable levels of lost revenue and customer support costs against chargebacks, fees, and refunds. The configuration experience tests basic filters and risk score ranges against historical transactions.
+VFA helps you balance acceptable levels of lost revenue and customer support costs against chargebacks, fees, and refunds. The configuration experience tests risk score threshold, reject rate, fraud rate and profit margin against historical transaction, to estimate risk impact on detection rate, net profit achieved and others.
 
-Here are two examples of rules that you can create in the Rules editor after you explore the impact of a specific filter and risk score on your historical data in VFA:
+The score rule optimizer report is updated with the latest transactional data every 24 hours. The time stamp on the report shows the update time in Coordinated Universal Time.
 
-- **Fine-grained rules**
-
-    Fine-grained rules that you create by using VFA give you more control and help you stop more fraud in subsets of your transactions.
-
-    For example, you can build a custom list of products that are currently in a specific price range, and use that list to build your rule. You can use filters on [standard ontology nodes and attributes](graph-explorer.md), and then select an appropriate list that contains the corresponding dataset.
-
-    Next, you can set up a rule to screen for high-priced products that are bought only by users who live in high-risk countries or regions.
-
-- **"Catch-all" fraud rules for all your traffic**
-
-    You can create a catch-all rule that meets your needs for all transactions and isn't linked to a specific custom list. To understand the impact of a catch-all rule on fraud protection, skip step 1 in the step-by-step instructions that follow, and go directly to step 2, where you select a risk score. 
-
-    For more information about rules and lists, see [Manage rules](rules.md) and [Manage lists](lists.md).
-
-
-## Use rules in VFA
-
-### Step 1 (optional)
-
-In step 1, you select the target data that your rule will apply to. This data consists of a combination of a node, attributes, and a list. If you must first create a new list, create it offline and then upload it to Microsoft Dynamics 365 Fraud Protection. The file must be a .csv file that includes headers.
-
-The following table defines the node and attribute combinations that you can use to build your lists. 
-
-| Node | Attributes |
-|---|---|
-| User | CountryRegion |
-| Device | DeviceType, IPCountryRegion |
-| BillingAddress | CountryRegion |
-| PaymentInstrument | Type |
-| Product | Type, SKU, Category, Market |
-
-To create a filter for historical transaction data, follow these steps.
-
-1. Create and upload a list.
-1. In the left navigation, select **Purchase**, and then select **Virtual fraud analyst**.
-1. Select a node, attribute, list, and column.
-1. To add another filter, select **Add another filter**, and then repeat step 3.
-1. Select **Analyze**.
-
-### Step 2
-
-In step 2, you use the **Transaction data** chart to examine the effect of fraud on your historical transaction data. You can filter your view by selecting a range of dates and a range of risk scores. 
-
-To filter your view, follow these steps.
-
-1. In the **Transaction date range** section, select a range of dates.
-1. In the **Transaction Data** section, enter values to adjust the impact of the risk score range on your historical data.
-1. In the **Risk Impact** section, use the risk score slider to set a risk score threshold, from 0 (zero) through 999.
-
-#### The Transaction data chart
-
-In the **Transaction data** chart on the left side of the **Virtual fraud analyst** tab, the x-axis represents the risk score, and the y-axis represents the number of transactions.
+You can switch views between count view and amount view. Count view shows volume and percentage by transaction count, and amount view shows volume and percentage in US dollars.
 
 The machine learning model in Fraud Protection evaluates every transaction by using advanced adaptive AI. It then assigns a risk score. The higher the risk score, the higher the perceived risk. The machine learning model uses a range of risk scores from 0 (zero) through 999.
 
-Based on the risk score, the interactive chart shows the impact of fraud on your revenue. The following categories are used: **Approved transactions**, **Confirmed fraud**, and **Rejected transactions**. 
+**Use filters in VFA**
+
+You can use the drop-down menus and sliders on the VFA to filter your view of the interactive charts. The following filter options are available:
+
+**PI type** This filter includes payment instrument type such as card type.
+
+**Product type** – You can filter at product type.
+
+**IP country/region** – Country/region based on IP address.
+
+**Date range** – Use this filter to show transaction data by date. You can select dates in the calendar, enter dates manually, or select date ranges.
+
+**Non-fraud type** – You can filter by non-fraud label. The non-fraud label include bank approved, merchant approved, and other labels previously provided. <u>Changing this will impact denominator for the calculation of fraud rate.</u>
+
+**Fraud type** – You can filter by fraud label. The fraud label include chargebacks, refunds, merchant rejected and other labels previously provided. <u>Changing this will impact fraud volume and numerator for the calculation of fraud rate.</u>
+
+**Estimated risk impact**
+
+In the **estimated risk impact**, you can adjust the criteria and view the estimated impact on key metrics. Select score cutoff, reject rate, fraud rate, or estimated profit margin as input.
+
+Score cutoff: risk score can range from 0 to 999, and you can select score cutoff in increments of 10.
+
+Reject rate: you can select target reject rate and VFA tool will calculate corresponding score cutoff.
+
+Fraud rate: you can select target fraud rate and VFA tool will calculate corresponding score cutoff.
+
+Estimated profit margin: user can provide estimated profit margin for the products and the VFA tool will calculate corresponding score cutoff and analyze optimal net profit achieved.
+
+|                                       |     |
+|---------------------------------------|-----|
+| Key metrics for risk impact includes: |     |
+|                                       |     |
+
+- **Detection rate**- The fraudulent transactions that have been blocked
+
+- **Reject rate\*** – The percentage of volume where the merchant's final decision was rejected and a decision wasn't made by the bank, out of the transaction volume.
+
+- **Fraud rate\*** – The percentage of fraud volume out of the total settled volume.
+
+- **Net profit achieved**- percentage of total net profit achieved at given score cutoff
+
+**Estimated net profit and net profit achieved percentage**
+
+In this chart, the x-axis represents the risk score, and the blue bars represent net profit, and the black line represents net profit percentage.
+
+Based on the risk score, the interactive chart shows the impact of fraud on your revenue. The following categories are used: **Approved transactions**, **transactions labeled as fraud**, and **Rejected transactions**.
+
+You can use the following filters on the tool:
+
+**Estimated profit margin:** user can provide estimated profit margin for the products.
+
+**Score range**: use the input or scroll bar to select desired score range.
 
 You can hover over any point in the chart to see a detailed representation of the values.
 
-#### The Risk impact metrics
+**Balance fraud loss against opportunity loss**
 
-In the **Risk impact** section on the right side of the **Virtual fraud analyst** tab, you can view the key metrics that are associated with the chart. Use the risk score slider to set your threshold, and then continue to refine the score in single-point increments after you create a rule.
+The goal of any world-class fraud protection system is to help companies maximize their bottom line. By using Fraud Protection, you can quickly find a risk threshold that helps protect your business against fraud and also minimize the impact on your legitimate transactions.
 
-| Metric | Definition |
-|---|---|
-| Fraud catch rate | The fraudulent transactions that have been blocked. Rejections are always above the risk score that you select. |
-| Customer friction | The approved transactions that have been blocked. Approvals are equal to or less than the score that you select. |
+Create rules in Fraud protection
 
-## Balance fraud loss against opportunity loss
+You can create rules in the Rules editor after you explore the impact of a specific filter and risk score on your historical data in VFA.
 
-The goal of any world-class fraud protection system is to help companies maximize their bottom line. By using Fraud Protection, you can quickly find a risk threshold that helps protect your business against fraud and also minimizes the impact on your legitimate transactions.
-
+For more information about rules and lists, see [<u>Manage rules</u>](https://docs.microsoft.com/en-gb/dynamics365/fraud-protection/rules) and [<u>Manage lists</u>](https://docs.microsoft.com/en-gb/dynamics365/fraud-protection/lists).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
