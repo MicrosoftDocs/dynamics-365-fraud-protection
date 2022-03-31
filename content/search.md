@@ -85,7 +85,7 @@ Select the **Link Analysis** tab to view other events that have attributes in co
 
 Select **Column options** to customize the fields shown in the results grid, or select **Export** to export the data into a CSV file.
 
-If want to further investigate a specific pattern, you can select **Open** on the **Search** page to open a new tab with the appropriate search filters pre-loaded. 
+If want to further investigate a specific pattern, you can select **Open in search** page to open a new tab with the appropriate search filters pre-loaded. 
 
 ## Additional resources
 
