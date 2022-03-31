@@ -13,7 +13,7 @@ title: Long term report for purchase protection
 
 # Long term report for purchase protection
 
-Dynamics 365 Fraud Protection provides a **Long term** report for purchase protection. You can use the report to review your key metrics and understand the performance of your fraud protection efforts for historical transactions over 6 months old.
+Dynamics 365 Fraud Protection provides a **Long term** report for purchase protection. You can use the report to review your key metrics and understand the performance of your fraud protection efforts for historical transactions over six months old.
 
 Your top key performance indicators (KPIs) are summarized at the top of the report, providing a snapshot of  transactions labeled by you as fraudulent. You can use the charts on the page to drill down and fully investigate the metrics.
 
@@ -53,7 +53,7 @@ The **Long term** report provides the following key performance metrics.
 
 - **Transaction volume** – Shows the total count or number of transactions that were sent for assessment.
 
-- **Manual review rate** – Shows the percentage or purchases that was sent by rules for manual review, out of the total volume of purchases.
+- **Manual review rate** – Shows the percentage of purchases that was sent by rules for manual review, out of the total volume of purchases.
 
 - **Rule rejected rate** – Shows the percentage of purchases that was rejected by rules, out of the total volume of purchases.
 
