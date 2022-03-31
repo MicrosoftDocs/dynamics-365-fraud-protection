@@ -31,17 +31,17 @@ You can use the drop-down menus and sliders on the report to filter your view of
 
 - **Product type** – Enables you to display based on product type.
 
-- **IP country/region** – Filter on country or region, based on IP address.
+- **IP country/region** – Filters on country or region, based on IP address.
 
-- **Date range** – Show transaction data by date. You can select dates in the calendar, enter dates manually, or select date ranges.
+- **Date range** – Shows transaction data by date. You can select dates in the calendar, enter dates manually, or select date ranges.
 
 - **Score range** – Use the text input box or the scroll bar to select desired score range, from 0 to 999, by increments of 10.
 
-- **Non-fraud type** – Filter by non-fraud label. The non-fraud label may include *Bank approved*, *Merchant approved*, and other labels that you previously provided. 
+- **Non-fraud type** – Filters by non-fraud label. The non-fraud label may include *Bank approved*, *Merchant approved*, and other labels that you previously provided. 
 > [!NOTE]
 > Changing this value will impact the denominator for the calculation of fraud rate.
 
-- **Fraud type** – Filter by fraud label. The fraud label may include *Chargebacks*, *Refunds*, *Merchant rejected*, and other labels that you previously provided.
+- **Fraud type** – Filters by fraud label. The fraud label may include *Chargebacks*, *Refunds*, *Merchant rejected*, and other labels that you previously provided.
 > [!NOTE]
 > Changing this value will impact fraud volume and the numerator for the calculation of fraud rate.
 
