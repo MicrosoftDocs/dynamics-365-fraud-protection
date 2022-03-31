@@ -70,3 +70,6 @@ The KPI charts provide details about the following key performance metrics. You 
 - **Fraud by product** – Shows the fraud distribution by product type, category, and name.
 
 - **Fraud by IP country/region** – Shows the fraud distribution by country or region, based on IP address.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
