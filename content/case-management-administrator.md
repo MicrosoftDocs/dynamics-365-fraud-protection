@@ -69,12 +69,12 @@ After the queues are created, define the criteria that will be used to route cas
 
 After cases pass through the routing rules, there is a five-minute hold before they appear in the appropriate queue. During this time, the cases are updated with supplementary events. If a supplementary event that has any **statusType** value is received through the **purchaseStatus** application programming interface (API), the case won't be routed to a queue. In this case, the **statusType** value that is received in the **purchaseStatus** API event will be recorded as the transaction's latest status.
 
-Routing rules can be created in either a visual editor or a code editor. In the code editor, you can create routing rules by using the FraudProtection Language. For more information, see [Language reference guide](fpl-lang-ref.md).
+Routing rules can be created in either a visual editor or a code editor. In the code editor, you can create routing rules by using the Fraud Protection language. For more information, see [Language reference guide](fpl-lang-ref.md).
 
 Follow these steps to create a routing rule.
 
 1. In the left navigation pane, select **Case management** \> **Routing rules**, and select **New rule**.
-2. To add an uber-level condition that can be applied to the rule set, add it under the condition segment. For example, you might want the rule set to be run for a specific product category.
+2. To add an top-level condition that can be applied to the rule set, add it under the condition segment. For example, you might want the rule set to be run for a specific product category.
 3. Select **Clause** to add a new clause.
 5. In the drop-down list, select the queue to route the cases to.
 6. Define the routing criteria by using the drop-down lists for attributes and operators and providing the desired values.
