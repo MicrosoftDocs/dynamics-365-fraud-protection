@@ -8,10 +8,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Search transactions
+title: Search
 ---
 
-# Search transactions
+# Search
 
 [!include [preview banner](includes/preview-banner.md)]
 
