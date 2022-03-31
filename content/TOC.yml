@@ -148,7 +148,7 @@
     href: external-calls.md
   - name: Perform velocity checks
     href: velocities.md
-  - name: Search transactions
+  - name: Search
     href: search.md
   - name: Language reference guide
     href: fpl-lang-ref.md  
