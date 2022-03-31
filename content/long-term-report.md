@@ -81,3 +81,5 @@ The KPI charts provide details about the following key performance metrics. You 
 
 - **Score distribution** – Shows the transaction volume distribution by risk score, in increments of 10. You can switch between **Chart** layout or **Table** layout.
 
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
