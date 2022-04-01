@@ -50,10 +50,20 @@
       href: protect-experience.md
     - name: Upload historical data
       href: data-upload.md
-    - name: Virtual fraud analyst
-      href: virtual-fraud-analyst.md  
-    - name: Review key metrics with scorecard reports
-      href: scorecard.md 
+    - name: Reporting
+      items:
+      - name: Review key metrics with scorecard reports
+        href: scorecard.md
+      - name: Virtual fraud analyst
+        href: virtual-fraud-analyst.md  
+      - name: Fraud analysis report
+        href: fraud-analysis-report.md
+      - name: Long term report
+        href: long-term-report.md
+      - name: Rule performance report
+        href: rule-performance-report.md
+      - name: Visually explore data
+        href: graph-explorer.md
     - name: Boost bank acceptance rates
       href: transaction-acceptance-booster.md 
     - name: Labels API
@@ -64,8 +74,6 @@
       href: monitoring.md          
     - name: Integrate real-time APIs
       href: integrate-real-time-api.md      
-    - name: Visually explore data
-      href: graph-explorer.md
     - name: Support your customers
       href: risk-support.md   
   - name: Account protection
@@ -142,7 +150,7 @@
     href: external-calls.md
   - name: Perform velocity checks
     href: velocities.md
-  - name: Search transactions
+  - name: Search
     href: search.md
   - name: Language reference guide
     href: fpl-lang-ref.md  
@@ -210,5 +218,4 @@
     href: https://support.microsoft.com/
 -  name: Access your environment
    href: https://dfp.microsoft.com
-
 
