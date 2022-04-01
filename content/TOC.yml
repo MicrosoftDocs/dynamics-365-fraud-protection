@@ -153,7 +153,15 @@
   - name: Search
     href: search.md
   - name: Language reference guide
-    href: fpl-lang-ref.md  
+    href: fpl-lang-ref.md
+  - name: Case management
+    items:
+    - name: Case management overview
+      href: case-management-overview.md
+    - name: Case management for administrators
+      href: case-management-administrator.md
+    - name: Case management for manual reviewers
+      href: case-management-manual-review.md      
 - name: Extensibility
   items:
   - name: Overview   
