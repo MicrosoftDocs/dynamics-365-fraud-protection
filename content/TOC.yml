@@ -157,7 +157,7 @@
   - name: Case management
     items:
     - name: Case management overview
-      href: case-management-overview
+      href: case-management-overview.md
     - name: Case management for administrators
       href: case-management-administrator.md
     - name: Case management for manual reviewers
