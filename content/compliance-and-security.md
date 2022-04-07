@@ -1,7 +1,7 @@
 ---
 author: yvonnedeq
 description: This topic explains technical and organizational measures that help protect customer data and personal data in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+ms.author: v-ydequadros
 ms.date: 04/16/2021
 
 ms.topic: conceptual

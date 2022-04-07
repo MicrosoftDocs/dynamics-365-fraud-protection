@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
+author: yvonne-deq
 description: This topic explains how to use event hubs with code software development kits (SDKs) to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
-ms.author: v-madeq
+ms.author: v-ydequadros
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app:

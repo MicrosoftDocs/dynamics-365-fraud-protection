@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
+author: yvonne-deq
 description: This topic explains the reporting capabilities of the loss prevention feature in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+ms.author: v-ydequadros
 ms.date: 07/09/2020
 ms.topic: conceptual
 search.app: 

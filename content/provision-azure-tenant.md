@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
+author: yvonne-deq
 description: This topic explains how to provision an Azure tenant for use with Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+ms.author: v-ydequadros
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 

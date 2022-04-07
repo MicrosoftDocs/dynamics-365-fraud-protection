@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
+author: yvonne-deq
 description: This topic provides information about how you can boost bank acceptance rates.
-ms.author: v-madeq
+ms.author: v-ydequadros
 ms.date: 03/11/2021
 ms.topic: conceptual
 search.app: 
