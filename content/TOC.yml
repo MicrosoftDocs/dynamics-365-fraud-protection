@@ -184,7 +184,7 @@
     href: fraud-protection-network.md   
 - name: API documentation
   items:
-  - name: Swagger
+  - name: Swagger UI
     href: swagger.md
   - name: Monitor API calls
     href: monitoring.md  
