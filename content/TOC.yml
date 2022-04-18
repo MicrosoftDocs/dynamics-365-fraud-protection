@@ -184,7 +184,9 @@
     href: fraud-protection-network.md   
 - name: API documentation
   items:
-  - name: Overview
+  - name: Swagger
+    href: swagger.md
+  - name: Monitor API calls
     href: monitoring.md  
   - name: Integrate purchase protection APIs
     href: integrate-real-time-api.md
