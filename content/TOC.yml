@@ -85,7 +85,7 @@
 - name: Purchase protection
   items: 
   - name: Purchase protection overview
-    href: pp-overview.md
+    href: purchase-protection.md
   - name: How purchase protection works
     href: tbd.md
   - name: Set up purchase protection
@@ -147,7 +147,7 @@
 - name: Loss prevention
   items: 
   - name: Loss prevention overview
-    href: lp-overview.md
+    href: loss-prevention-overview.md
   - name: How loss prevention works
     href: tbd.md
   - name: Set up loss prevention
