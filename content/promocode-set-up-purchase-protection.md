@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic describes how to set up purchase protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 07/15/2021
+ms.date: 05/04/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -19,12 +19,6 @@ Microsoft Dynamics 365 Fraud Protection includes purchase protection capabilitie
 ## Using transaction data
 
 After you configure real-time API calls with Fraud Protection, transaction data automatically starts to flow into the system. This document shows how to use this historical data. It focuses on three areas:
-
--	**The diagnose experience**: Evaluate transaction data and generate reports that provide actionable risk insights into existing fraud patterns in your business. These reports can help you identify opportunities for improving your fraud protection capabilities. 
-   > [!NOTE]
-   > The diagnose functionality might not be available in all countries or regions.
--	**The support tool**: Investigate the history of your customers' past transactions with your business.
--	**The graph explorer**: Learn about the connections between data, search for specific data points, and view the attributes of data points.
 
 ## Goals for this document
 
