@@ -1,5 +1,5 @@
 ---
-author: jackwi111
+author: josaw1
 description: This topic explains how to create Azure AD apps in Azure Portal or PowerShell for use with Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 07/01/2019
