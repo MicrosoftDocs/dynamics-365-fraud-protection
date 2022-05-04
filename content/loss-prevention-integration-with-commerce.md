@@ -1,7 +1,7 @@
 ---
-author: yvonne-deq
+author: josaw1
 description: This topic explains how to integrate loss prevention with Microsoft Dynamics 365 Commerce.
-ms.author: v-ydequadros
+ms.author: josaw
 ms.date: 01/28/2020
 
 ms.topic: conceptual

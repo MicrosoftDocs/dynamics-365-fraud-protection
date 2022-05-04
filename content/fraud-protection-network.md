@@ -1,7 +1,7 @@
 ---
-author: yvonne-deq
+author: josaw1
 description: This topic provides information about artificial intelligence (AI) and insights from the fraud protection network.
-ms.author: v-ydequadros
+ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 

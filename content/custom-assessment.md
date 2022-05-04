@@ -1,7 +1,7 @@
 ---
-author: yvonne-deq
+author: josaw1
 description: This topic provides information about custom assessments, and explains how to create and define them.
-ms.author: v-ydequadros
+ms.author: josaw
 ms.date: 04/02/2021
 
 ms.topic: conceptual

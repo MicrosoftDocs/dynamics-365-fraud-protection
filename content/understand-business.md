@@ -1,7 +1,7 @@
 ---
-author: jackwi111
+author: josaw1
 description: Understand your business
-ms.author: v-ydequadros
+ms.author: josaw
 ms.date: 04/22/2019
 
 ms.topic: conceptual
