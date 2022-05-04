@@ -42,8 +42,6 @@
     items:
     - name: Overview
       href: purchase-protection.md
-    - name: Diagnose experience
-      href: diagnose-experience.md
     - name: Evaluate experience
       href: evaluate-experience.md
     - name: Protect experience
