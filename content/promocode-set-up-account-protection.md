@@ -170,8 +170,7 @@ For more information about access tokens, see the following Azure documentation:
     
 3.	Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint. (The API endpoint is the URI for your environment and appears on the Account information tile on the Fraud Protection dashboard.)
 
-    For more information about APIs, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection).
-
+For more information about APIs, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).   
 ## Step 3: Understand account protection events
 
 ### Account Create

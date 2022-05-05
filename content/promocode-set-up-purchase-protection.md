@@ -2,19 +2,22 @@
 author: josaw1
 description: This topic describes how to set up purchase protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 07/15/2021
+ms.date: 05/05/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Protect purchases with Dynamics 365 Fraud Protection
+title: Set up purchase protection
 ---
-
 
 # Set up purchase protection
 
-Microsoft Dynamics 365 Fraud Protection includes purchase protection capabilities to help you assess commerce transactions for fraudulent activity. Purchase protection capabilities let you review historical data, use a customizable rules engine and risk support toolset, and fine-tune fraud protection decisions, based on the knowledge that you gain from using the Fraud Protection service and the Microsoft fraud protection network. You can then use these findings by implementing strategies that support your customers.
+> [!IMPORTANT]
+> The *diagnose* experience described in this article has been removed from Dynamics 365 Fraud Protection. This article will be updated in the near future to reflect the changes.
+
+
+Dynamics 365 Fraud Protection includes purchase protection capabilities to help you assess commerce transactions for fraudulent activity. Purchase protection capabilities let you review historical data, use a customizable rules engine and risk support toolset, and fine-tune fraud protection decisions, based on the knowledge that you gain from using the Fraud Protection service and the Microsoft fraud protection network. You can then use these findings by implementing strategies that support your customers.
 
 ## Using transaction data
 
@@ -90,7 +93,7 @@ The general process to upload historical data consists of the following steps:
    Fraud Protection begins processing your data and building your loss prevention report.
 
     > [!NOTE]
-    >Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
+    > Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
 
 10. In the left navigation, select **Purchase** and then select **Diagnose** to see your report. To download a copy, select **Download report**.
    
@@ -116,7 +119,7 @@ Historical data is also known as *cold start data*.
    Fraud Protection begins processing your data and building your loss prevention report.
 
     > [!NOTE]
-    >Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
+    > Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
 
 10. In the left navigation, select **Purchase** and then select **Diagnose** to see your report. 
 
@@ -136,7 +139,7 @@ You can use either your own generated reports or Fraud Protection's sample repor
 ![PP sample.](media/promocode-images/pp-sample.png)
 
 > [!NOTE]
->Sample reports are generated from synthetic sample data.
+> Sample reports are generated from synthetic sample data.
 
 ### Data diagnostic report – Summary
 

@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic explains the purchase protection capability of Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+ms.author: josaw
 ms.date: 02/02/2021
 ms.topic: conceptual
 search.app: 
@@ -17,7 +17,6 @@ Microsoft Dynamics 365 Fraud Protection provides merchants the capability to ass
 
 Learn more about the following features used in purchase protection:
 
-- [Diagnose experience](diagnose-experience.md)
 - [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md)
 - [Labels API](labels-api.md)
 - [Implement device fingerprinting](device-fingerprinting.md)
