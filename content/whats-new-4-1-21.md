@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic explains what's new in the Microsoft Dynamics 365 Fraud Protection April 2021 release.
-ms.author: v-madeq
+ms.author: josaw
 ms.date: 04/05/2021
 ms.topic: conceptual
 search.app: 

@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic explains how to use event hubs with Microsoft Power BI to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
-ms.author: v-madeq
+ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app:

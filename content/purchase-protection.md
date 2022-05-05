@@ -1,5 +1,5 @@
 ---
-author: yvonnedeq
+author: josaw1
 description: This topic explains the purchase protection capability of Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 02/02/2021
