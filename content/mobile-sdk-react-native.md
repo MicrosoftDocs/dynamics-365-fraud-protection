@@ -39,7 +39,6 @@ The following list shows the device fingerprinting attribute categories that we 
 
 ## React Native library technical reference
 
-### Getting started
 1. Install library
 
     from `npm`
@@ -67,9 +66,8 @@ The following list shows the device fingerprinting attribute categories that we 
     ```bash
     react-native link @microsoft/fraud-protection
     ```
-### Usage
 
-1. You can initiate the SDK by following so it can start to collect device attributes.
+3. You can initiate the SDK by following so it can start to collect device attributes.
 
     ```javascript
     import RNFraudProtection from '@microsoft/fraud-protection';
@@ -79,7 +77,7 @@ The following list shows the device fingerprinting attribute categories that we 
 
     In this code, **tenantId** is the globally unique identifier (GUID) or universally unique identifier (UUID) that is provided by Microsoft.
 
-2. Send collected device attributes to Microsoft by calling **send()**. You can call **send()** in anywhere before or on the page that has the operation that you need a risk assessment for. For a sign-in/sign-up scenario, you can call **send()** immediately after **start()** call.
+4. Send collected device attributes to Microsoft by calling **send()**. You can call **send()** in anywhere before or on the page that has the operation that you need a risk assessment for. For a sign-in/sign-up scenario, you can call **send()** immediately after **start()** call.
 
     ```javascript
     import RNFraudProtection from '@microsoft/fraud-protection';
@@ -94,7 +92,7 @@ The following list shows the device fingerprinting attribute categories that we 
     - **P** – Purchase
     - **tst** – Test
 
-3. Call **getSessionId()** to obtain the **SessionId** value that is required when the risk assessment APIs are called.
+5. Call **getSessionId()** to obtain the **SessionId** value that is required when the risk assessment APIs are called.
 
     ```javascript
     import RNFraudProtection from '@microsoft/fraud-protection';
