@@ -37,42 +37,42 @@ You have the following responsibilities:
 The following list shows the device fingerprinting attribute categories that Fraud Protection tries to collect and explains how each category helps detect fraud. If your organization has specific needs and you want some categories of data not to be processed by Fraud Protection, contact customer support before onboarding to get help implementing the correct configuration to meet your privacy needs.
 
 - **Core Features** – This group of attributes is core to Fraud Protection's ability to predict patterns of fraud. Based on our previous experience, we believe that these attributes will be highly accretive to Fraud Protection's model performance and ability to discern distinctive patterns of fraud. If these attributes aren't supplied, the device fingerprinting will be inaccurate.
-- **Investigative Features** – This group of attributes has the potential to add or enhance Fraud Protection's ability to predict patterns of fraud more accurately. Statistical analysis of collected data is the only definitive way to determine whether these attributes are strong predictors of patterns of fraud. If the predictive capability of these attributes doesn't meet our expectations, we will no longer use them. Although this group of attributes will enable us to determine whether they will be strong predictors of patterns of fraud, they are optional and don't have to be supplied.
+- **Investigative Features** – This group of attributes has the potential to add or enhance Fraud Protection's ability to predict patterns of fraud more accurately. Statistical analysis of collected data is the only definitive way to determine whether these attributes are strong predictors of patterns of fraud. If the predictive capability of these attributes doesn't meet expectations, they will no longer be used. Although this group of attributes can help determine whether they will be strong predictors of patterns of fraud, they are optional and don't have to be supplied.
 - **Potential Label** – This group of attributes is used for model supervision and labeling purposes. There is a probability that each of these attributes, by itself, won't provide ground truth. However, the combination of these attributes increases the likelihood that the label that is used to train Fraud Protection's model will become ground truth and helps improve model performance.
 
 ## React Native library technical reference
 
 [![Version](https://img.shields.io/npm/v/@microsoft/fraud-protection.svg)](https://www.npmjs.com/package/@microsoft/fraud-protection)
 
-1. Install library
+1. Install the library.
 
-    from `npm`
+    - From `npm`:
     
     ```bash
     npm install @microsoft/fraud-protection --save
     ```
 
-    from `yarn`
+    - From `yarn`:
     
     ```bash
     yarn add @microsoft/fraud-protection
     ```
 
-2. Link native code
+2. Link native code.
 
-    With autolinking (react-native 0.60+)
+    - With autolinking (react-native 0.60+):
     
     ```bash
     cd ios && pod install
     ```
 
-    Pre 0.60
+    - Pre 0.60:
     
     ```bash
     react-native link @microsoft/fraud-protection
     ```
 
-3. You can initiate the SDK by following so it can start to collect device attributes.
+3. Initiate the SDK so that it can start to collect device attributes.
 
     ```javascript
     import RNFraudProtection from '@microsoft/fraud-protection';
@@ -82,7 +82,7 @@ The following list shows the device fingerprinting attribute categories that Fra
 
     In this code, **tenantId** is the globally unique identifier (GUID) or universally unique identifier (UUID) that is provided by Microsoft.
 
-4. Send collected device attributes to Microsoft by calling **send()**. You can call **send()** in anywhere before or on the page that has the operation that you need a risk assessment for. For a sign-in/sign-up scenario, you can call **send()** immediately after **start()** call.
+4. Send collected device attributes to Microsoft by calling **send()**. You can call **send()** anywhere before or on the page that has the operation that you need a risk assessment for. For a sign-in/sign-up scenario, you can call **send()** immediately after the **start()** call.
 
     ```javascript
     import RNFraudProtection from '@microsoft/fraud-protection';
@@ -120,7 +120,6 @@ The React Native SDK relies on the following native runtime permissions to colle
     - The iOS SDK uses CLLocationManager, and checks for **CLAuthorizationStatus.authorizedAlways** or **CLAuthorizationStatus.authorizedWhenInUse** before it requests location data. The app should obtain **CLLocationManager.requestWhenInUseAuthorization** Or **CLLocationManager.requestAlwaysAuthorization** permission from the user.
     - The iOS SDK uses AppTrackingTransparency and checks for **ATTrackingManager.AuthorizationStatus.authorized** before it collects **AdvertisingId**. The app should obtain **ATTrackingManager.requestTrackingAuthorization** permission from the user.
 
-
 ## Support
 
-To log a support ticket, go to <https://dfp.microsoft.com>. (Global admin permissions are required.)
+To log a support ticket, go to <https://dfp.microsoft.com>. Global administrator permissions are required.
