@@ -42,23 +42,21 @@ The following list shows the device fingerprinting attribute categories that Fra
 
 ## React Native library technical reference
 
-[![Version](https://img.shields.io/npm/v/@microsoft/fraud-protection.svg)](https://www.npmjs.com/package/@microsoft/fraud-protection)
-
 1. Install the library.
 
-    - From `npm`:
+    - From [npm](https://www.npmjs.com/package/@microsoft/fraud-protection):
     
     ```bash
     npm install @microsoft/fraud-protection --save
     ```
 
-    - From `yarn`:
+    - From yarn:
     
     ```bash
     yarn add @microsoft/fraud-protection
     ```
 
-2. Link native code.
+1. Link native code.
 
     - With autolinking (react-native 0.60+):
     
@@ -72,7 +70,7 @@ The following list shows the device fingerprinting attribute categories that Fra
     react-native link @microsoft/fraud-protection
     ```
 
-3. Initiate the SDK so that it can start to collect device attributes.
+1. Initiate the SDK so that it can start to collect device attributes.
 
     ```javascript
     import RNFraudProtection from '@microsoft/fraud-protection';
@@ -82,7 +80,7 @@ The following list shows the device fingerprinting attribute categories that Fra
 
     In this code, **tenantId** is the globally unique identifier (GUID) or universally unique identifier (UUID) that is provided by Microsoft.
 
-4. Send collected device attributes to Microsoft by calling **send()**. You can call **send()** anywhere before or on the page that has the operation that you need a risk assessment for. For a sign-in/sign-up scenario, you can call **send()** immediately after the **start()** call.
+1. Send collected device attributes to Microsoft by calling **send()**. You can call **send()** anywhere before or on the page that has the operation that you need a risk assessment for. For a sign-in/sign-up scenario, you can call **send()** immediately after the **start()** call.
 
     ```javascript
     import RNFraudProtection from '@microsoft/fraud-protection';
@@ -97,7 +95,7 @@ The following list shows the device fingerprinting attribute categories that Fra
     - **P** – Purchase
     - **tst** – Test
 
-5. Call **getSessionId()** to obtain the **SessionId** value that is required when the risk assessment APIs are called.
+1. Call **getSessionId()** to obtain the **SessionId** value that is required when the risk assessment APIs are called.
 
     ```javascript
     import RNFraudProtection from '@microsoft/fraud-protection';
