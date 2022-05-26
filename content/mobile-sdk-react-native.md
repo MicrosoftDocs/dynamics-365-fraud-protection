@@ -38,6 +38,7 @@ The following list shows the device fingerprinting attribute categories that we 
 - **Potential Label** – This group of attributes is used for model supervision and labeling purposes. There is a probability that each of these attributes, by itself, won't provide ground truth. However, the combination of these attributes increases the likelihood that the label that is used to train Fraud Protection's model will become ground truth and helps improve model performance.
 
 ## React Native library technical reference
+[![Version](https://img.shields.io/npm/v/@microsoft/fraud-protection.svg)](https://www.npmjs.com/package/@microsoft/fraud-protection)
 
 1. Install library
 
