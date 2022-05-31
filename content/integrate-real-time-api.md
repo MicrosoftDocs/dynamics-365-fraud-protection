@@ -69,8 +69,6 @@ You can create as many apps as necessary to run API calls in each of your enviro
 ### Manage existing Azure AD applications 
 After you create your Azure AD apps, you can manage them through the <a href="https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps" target="_blank">Azure portal</a>. For more information, see <a href="/azure/active-directory/develop/active-directory-how-applications-are-added" target="_blank">Azure documentation site</a>. 
 
-### Manually configure Azure AD applications
-To set up your applications directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md). 
 
 ## Call the Fraud Protection real-time APIs 
 To integrate your systems with Fraud Protection, complete the following sections.
