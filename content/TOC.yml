@@ -34,8 +34,6 @@
     href: promocode-set-up-purchase-protection.md
   - name: Set up loss prevention
     href: promocode-set-up-loss-prevention.md  
-  - name: Create Azure AD apps in Azure Portal or PowerShell
-    href: azure-apps-portal-powershell.md
 - name: Set up Fraud Protection
   items:
   - name: Integration experience (preview)
