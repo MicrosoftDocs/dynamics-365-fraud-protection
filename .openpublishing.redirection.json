@@ -11,6 +11,11 @@
       "redirect_document_id": "false"
     },  
     {
+      "source_path": "azure-apps-portal-powershell.md",
+      "redirect_url": "provision-azure-tenant",
+      "redirect_document_id": "false"
+    },  
+    {
       "source_path": "content/schema-INT.md",
       "redirect_url": "view-purchase-protection-schemas",
       "redirect_document_id": "false"
