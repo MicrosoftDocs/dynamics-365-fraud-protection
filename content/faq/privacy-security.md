@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides frequently asked questions and answers about privacy and security in Microsoft Dynamics 365 Fraud Protection.
+description: This topic provides frequently asked questions and answers (FAQ) about privacy and security in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 06/01/2022
 ms.topic: faq
