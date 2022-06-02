@@ -13,7 +13,7 @@ title: Legal considerations FAQ
 
 # Legal considerations FAQ
 
-## How does Dynamics 365 Fraud Protection ensure it doesn't collect data from end users who are under the minimum age legally allowed in connection with data profiling/collection?
+## How does Dynamics 365 Fraud Protection ensure it doesn't collect data from users under the minimum age legally allowed in connection with data profiling/collection?
 
 It is the responsibility of the merchant to ensure the data collected is legally valid in each jurisdiction (for example, as required by COPPA in the United States).
 
@@ -32,10 +32,9 @@ For more information regarding Dynamics 365 security, see the [Microsoft Trust C
 
 See Microsoft's new EU privacy campaign (Schrems II) and commitments in the following blog post: [New steps to defend your data](https://blogs.microsoft.com/on-the-issues/2020/11/19/defending-your-data-edpb-gdpr/).
 
-FOr information on how Microsoft handles government requests, see the [U.S. National Security Order Report](https://www.microsoft.com/en-us/corporate-responsibility/us-national-security-orders-report?activetab=pivot_1%3aprimaryr2) and [Law Enforcement Requests Report](https://www.microsoft.com/en-us/corporate-responsibility/law-enforcement-requests-report). 
-<https://www.microsoft.com/en-us/corporate-responsibility/law-enforcement-requests-report>
+For information on how Microsoft handles government requests, see the [U.S. National Security Order Report](https://www.microsoft.com/en-us/corporate-responsibility/us-national-security-orders-report?activetab=pivot_1%3aprimaryr2) and [Law Enforcement Requests Report](https://www.microsoft.com/en-us/corporate-responsibility/law-enforcement-requests-report). 
 
-## Can Fraud Protection support litigation holds (freeze of data from a specific point in time) for a specific tenant without freezing other tenant data?
+## Does Fraud Protection support litigation holds (freeze of data from a specific point in time) for a specific tenant without freezing other tenant data?
 
 When a party is in litigation, Microsoft (at an organizational level) can isolate data by taking a snapshot of the data and securing such data separately to be "untouched". Fraud Protection can do a full backup as a snapshot, however it doesn't provide this functionality in a self-serve manner since it's not expected to function as a system of record for customers.
 
