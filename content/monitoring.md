@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to monitor API calls in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to monitor API calls in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual

@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic describes how to set up purchase protection in Microsoft Dynamics 365 Fraud Protection.
+description: This article describes how to set up purchase protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 05/05/2022
 ms.topic: conceptual

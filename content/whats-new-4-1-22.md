@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains what's new in the Microsoft Dynamics 365 Fraud Protection April 2022 release.
+description: This article explains what's new in the Microsoft Dynamics 365 Fraud Protection April 2022 release.
 ms.author: josaw
 ms.date: 04/01/2022
 ms.topic: conceptual

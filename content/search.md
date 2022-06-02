@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
+description: This article explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: josaw
 ms.date: 03/31/2022
 ms.topic: how-to

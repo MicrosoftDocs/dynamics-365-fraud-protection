@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic describes the integration experience functionality in Dynamics 365 Fraud Protection.
+description: This article describes the integration experience functionality in Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 05/20/2021
 ms.topic: conceptual

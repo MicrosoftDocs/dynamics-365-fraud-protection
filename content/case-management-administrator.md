@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to work with Case management as an administrator.
+description: This article explains how to work with Case management as an administrator.
 ms.author: josaw
 ms.date: 03/28/2022
 ms.topic: reference

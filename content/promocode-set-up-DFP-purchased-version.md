@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic describes how to set up a purchased version of Microsoft Dynamics 365 Fraud Protection.
+description: This article describes how to set up a purchased version of Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 06/04/2021
 ms.topic: conceptual
@@ -41,7 +41,7 @@ The following sign-in scenarios are intended for customers who purchased a licen
 
 ## Next steps
 
-For information about how to access and use other features in Fraud Protection, see the topics below.
+For information about how to access and use other features in Fraud Protection, see the articles below.
 
 - [Set up customer account protection](promocode-set-up-account-protection.md)
 - [Set up purchase protection](promocode-set-up-purchase-protection.md)

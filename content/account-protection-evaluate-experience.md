@@ -1,6 +1,6 @@
 ---
 author: kelsiefu
-description: This topic provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
+description: This article provides information about the evaluate experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kelfu
 ms.date: 07/07/2020
 ms.topic: conceptual

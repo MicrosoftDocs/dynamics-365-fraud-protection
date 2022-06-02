@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic outlines the tools, systems, and procedures that can help prevent fraud in brick-and-mortar stores.
+description: This article outlines the tools, systems, and procedures that can help prevent fraud in brick-and-mortar stores.
 ms.author: josaw
 ms.date: 07/09/2020
 ms.topic: overview
