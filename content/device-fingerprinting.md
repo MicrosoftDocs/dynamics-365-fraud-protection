@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to set up device fingerprinting.
+description: This article explains how to set up device fingerprinting.
 
 ms.author: josaw
 ms.date: 02/01/2022

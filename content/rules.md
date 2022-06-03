@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to create and manage rules that protect account and purchase data in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to create and manage rules that protect account and purchase data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
@@ -83,7 +83,7 @@ You can create custom rules and manage existing rules on the **Rules** tab.
 - To create and manage rules that are related to accounts, select **Account creation** or **Account login**, and then select the **Rules** tab.
 - To create and manage rules that are related to a custom assessment, select **Custom assessments**, select a custom assessment, and then select the **Rules** tab.
 
-The **Rules** tab shows a list of the rules that have been configured for an assessment type. These rules are divided into two sections: **Published Rules** and **Drafts**. For information about drafts, see the [Drafts](rules.md#drafts) section later in this topic.
+The **Rules** tab shows a list of the rules that have been configured for an assessment type. These rules are divided into two sections: **Published Rules** and **Drafts**. For information about drafts, see the [Drafts](rules.md#drafts) section later in this article.
 
 You can view the following information for each rule or draft:
 
@@ -116,7 +116,7 @@ In the **Payload settings** pane, you can define the sample payload for the asse
 
 In the API request, you might choose not to send optional fields from the assessment schema. Alternatively, you might choose to send additional custom fields. In both cases, be sure to update the payload sample that is shown in the **Payload settings** pane, so that it reflects the specific fields that you're sending.
 
-This payload sample is shown every time that a new rule is created for the assessment (see the [Payload sample](rules.md#payload-sample) section later in this topic). Note that any changes that you make apply only to rules that you create from that time onward.
+This payload sample is shown every time that a new rule is created for the assessment (see the [Payload sample](rules.md#payload-sample) section later in this article). Note that any changes that you make apply only to rules that you create from that time onward.
 
 To undo all changes that you or other people have made to the payload sample, and return it to the system's default payload sample, select **Revert**.
 
@@ -165,7 +165,7 @@ The payload sample contains an example of the fields that can be sent in the req
 
 #### Score sample
 
-The score sample contains scores that are generated from Fraud Protection's AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use *@"botScore"* after the bot evaluation has been run, and you can use *@"riskScore"* after the risk evaluation has been run. For more information, see the [Clauses](rules.md#clauses) section later in this topic.
+The score sample contains scores that are generated from Fraud Protection's AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use *@"botScore"* after the bot evaluation has been run, and you can use *@"riskScore"* after the risk evaluation has been run. For more information, see the [Clauses](rules.md#clauses) section later in this article.
 
 #### Editing the sample
 
@@ -185,7 +185,7 @@ WHEN @"productList.type" == "Digital"
 
 You can then create clauses that configure a fraud strategy that is related to digital product transactions.
 
-The addition of a condition to a rule is optional. If you want a rule to apply to all events, don't add a condition. For information about how to use conditions to order rules, see the [Rule ordering](rules.md#rule-ordering) section later in this topic.
+The addition of a condition to a rule is optional. If you want a rule to apply to all events, don't add a condition. For information about how to use conditions to order rules, see the [Rule ordering](rules.md#rule-ordering) section later in this article.
 
 ### Clauses
 
@@ -284,7 +284,7 @@ An event is evaluated against each rule condition, in order, until a condition r
 You can create rules that make decisions that are related to purchase, account creation, and account login events.
 
 > [!IMPORTANT]
-> By default, when a new rule is published, it appears at the bottom of the list in the **Published Rules** section of the **Rules** tab. For information about how to reposition the rule, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this topic.
+> By default, when a new rule is published, it appears at the bottom of the list in the **Published Rules** section of the **Rules** tab. For information about how to reposition the rule, see the [Change the order of a rule](rules.md#change-the-order-of-a-rule) section later in this article.
 
 1. On the [**Rules** tab](rules.md#rules-tab), select **New Rule**.
 
@@ -325,7 +325,7 @@ To delete a rule, select it, and then select **Delete**. Be aware that this oper
 
 ### Edit an existing rule
 
-When you edit a rule that has been published, Fraud Protection saves your changes as a draft until you publish them. Both the published version of the selected rule and the draft version can be viewed as side-by-side tabs. Until a draft is published, it's visible only to the person who creates it. For more information, see the [Drafts](rules.md#drafts) section earlier in this topic.
+When you edit a rule that has been published, Fraud Protection saves your changes as a draft until you publish them. Both the published version of the selected rule and the draft version can be viewed as side-by-side tabs. Until a draft is published, it's visible only to the person who creates it. For more information, see the [Drafts](rules.md#drafts) section earlier in this article.
 
 1. Select the rule, and then select **Edit**.
 

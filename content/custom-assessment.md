@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about custom assessments, and explains how to create and define them.
+description: This article provides information about custom assessments, and explains how to create and define them.
 ms.author: josaw
 ms.date: 04/02/2021
 
@@ -81,7 +81,7 @@ Currently, you can create up to three distinct assessments under custom assessme
 
     The change takes effect as soon as it's saved.
 
-## Related topics
+## Related articles
 
 - [Account protection overview](ap-overview.md)
 - [Manage lists](lists.md)

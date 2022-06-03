@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains the scorecard capability of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains the scorecard capability of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 03/05/2021
 ms.topic: conceptual
@@ -69,7 +69,7 @@ The **Risk decision** section shows metrics from the automated decision rules th
 - **Top rules** – The **Top rules** list shows the rules that triggered the highest volume of automated decisions.
 
 
-## Related topics
+## Related articles
 
 - [Account protection overview](ap-overview.md)
 - [View account protection schemas](./overview.md)

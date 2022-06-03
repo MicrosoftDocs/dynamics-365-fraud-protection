@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to provision an Azure tenant for use with Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to provision an Azure tenant for use with Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
@@ -38,7 +38,7 @@ You will be prompted for a tenant if there is no Azure tenant for your organizat
 To create and provision a new Azure tenant, follow the steps in [Quickstart: Create a new tenant in Azure Active Directory](/azure/active-directory/fundamentals/active-directory-access-create-new-tenant).
 
 > [!NOTE]
-> When you create your user ID, enter both your user name and company name. You cannot change the company name after it has been created. If a message appears stating that your company name is not available, this means your company already has an Azure tenant. Use that Azure tenant by following the steps under the "Provision your existing Azure tenant" topic. 
+> When you create your user ID, enter both your user name and company name. You cannot change the company name after it has been created. If a message appears stating that your company name is not available, this means your company already has an Azure tenant. Use that Azure tenant by following the steps under the "Provision your existing Azure tenant" article. 
 
 After you've signed up, you can proceed to configuring user access to Fraud Protection. For more information, see [Configure user access to Dynamics 365 Fraud Protection](configure-user-access.md).
 

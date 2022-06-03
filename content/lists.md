@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to add, manage, and use custom lists to manage information, fight fraud, and enforce business policies in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to add, manage, and use custom lists to manage information, fight fraud, and enforce business policies in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/24/2021
 ms.topic: how-to
@@ -69,7 +69,7 @@ You can then configure a rule that enforces the rejection of transactions where 
 
 ## Upload a custom list
 
-You can upload organized data in a list file to Fraud Protection and then reference the list in a [rule](rules.md). The file must adhere to the specifications that are described in the [Format requirements](lists.md#format-requirements) section earlier in this topic.
+You can upload organized data in a list file to Fraud Protection and then reference the list in a [rule](rules.md). The file must adhere to the specifications that are described in the [Format requirements](lists.md#format-requirements) section earlier in this article.
 
 To upload a list to Fraud Protection, follow these steps.
 

@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to edit, add, and remove entities in support lists in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to edit, add, and remove entities in support lists in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/24/2021
 ms.topic: how-to

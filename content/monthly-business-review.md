@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about the monthly business review tool (preview) in Microsoft Dynamics 365 Fraud Protection.
+description: This article provides information about the monthly business review tool (preview) in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/20/2021
 ms.topic: conceptual

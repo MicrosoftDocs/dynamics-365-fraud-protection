@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how the labels API enables you to send information to the virtual fraud analyst and scorecard.
+description: This article explains how the labels API enables you to send information to the virtual fraud analyst and scorecard.
 ms.author: josaw
 ms.date: 07/09/2020
 ms.topic: conceptual

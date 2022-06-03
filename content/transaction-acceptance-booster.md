@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about how you can boost bank acceptance rates.
+description: This article provides information about how you can boost bank acceptance rates.
 ms.author: josaw
 ms.date: 03/11/2021
 ms.topic: conceptual
