@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic describes how to set up loss prevention in Microsoft Dynamics 365 Fraud Protection.
+description: This article describes how to set up loss prevention in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual

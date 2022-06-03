@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about security, compliance, and data subject requests.
+description: This article provides information about security, compliance, and data subject requests.
 ms.author: josaw
 ms.date: 05/04/2022
 ms.topic: overview

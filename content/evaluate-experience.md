@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about the Evaluate experience in Microsoft Dynamics 365 Fraud Protection.
+description: This article provides information about the Evaluate experience in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: overview
@@ -27,7 +27,7 @@ Get started with Fraud Protection by completing the initial configuration steps 
 
 ## Features
 
-The evaluate experience in Fraud Protection provides the features that are described in the following topics:
+The evaluate experience in Fraud Protection provides the features that are described in the following articles:
 
 
 - [Purchase protection](purchase-protection.md)
@@ -37,7 +37,7 @@ The evaluate experience in Fraud Protection provides the features that are descr
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Support your customers](risk-support.md)
 
-The protect experience is differentiated from evaluate by additional features as described in the [protect experience](protect-experience.md) topic, and becomes your real-time tool in your full production environment.
+The protect experience is differentiated from evaluate by additional features as described in the [protect experience](protect-experience.md) article, and becomes your real-time tool in your full production environment.
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

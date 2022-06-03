@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
+description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
 ms.date: 09/01/2021
 ms.topic: conceptual
@@ -34,7 +34,7 @@ This language reference guide includes the complete list of operators, functions
 - [DateTime functions](fpl-lang-ref.md#datetime-operators)
 - [Aggregation functions](fpl-lang-ref.md#aggregation-functions)
 
-The guide also covers additional topics. Here are some examples:
+The guide also covers additional articles. Here are some examples:
 
 - [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables)
 - [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules)
@@ -102,7 +102,7 @@ You can use the at sign (@) operator to reference an attribute from the current 
 
 Fraud Protection lets you upload custom lists and reference them in the language. 
 
-For information about how to upload these lists, see [Manage lists](lists.md). For more information about how to use lists in rules, see the [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules) section later in this topic.
+For information about how to upload these lists, see [Manage lists](lists.md). For more information about how to use lists in rules, see the [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules) section later in this article.
 
 | Operator | Description | Example |
 |----------|-------------|---------|
@@ -172,7 +172,7 @@ Fraud Protection supports the standard C# [DateTime](/dotnet/api/system.datetime
 
 ## Type casting operators
 
-For information about type inferencing, see the [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes) section later in this topic.
+For information about type inferencing, see the [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes) section later in this article.
 
 | Operator     | Description | Example |
 |--------------|-------------|---------|
@@ -262,7 +262,7 @@ This clause looks for the *@"user.email"* key in the "Email" column in the "Emai
 
 If the *@"user.email"* key isn't found in the list, Fraud Protection returns "Unknown."
 
-You can also specify your own default value as the fifth parameter. For more information, see the [Logical operators](fpl-lang-ref.md#logical-operators) section earlier in this topic.
+You can also specify your own default value as the fifth parameter. For more information, see the [Logical operators](fpl-lang-ref.md#logical-operators) section earlier in this article.
 
 The **Lookup** operator always returns a *String* value. To convert this value to an *Int*, *Double*, or *DateTime* value, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 

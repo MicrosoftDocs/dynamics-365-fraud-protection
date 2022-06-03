@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic outlines data schemas for loss prevention in Microsoft Dynamics 365 Fraud Protection.
+description: This article outlines data schemas for loss prevention in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
@@ -13,7 +13,7 @@ title: Data schemas for loss prevention
 
 # Data schemas for loss prevention
 
-This topic outlines the schemas that define the data that is used to generate models and determine risk assessments.
+This article outlines the schemas that define the data that is used to generate models and determine risk assessments.
 
 Note the following formatting guidelines throughout:
 

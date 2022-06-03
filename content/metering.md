@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to meter your usage of Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to meter your usage of Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 07/21/2021
 ms.topic: conceptual

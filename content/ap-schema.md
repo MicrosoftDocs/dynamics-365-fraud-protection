@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic outlines the account protection schemas for data uploaded in bulk as CSV files.
+description: This article outlines the account protection schemas for data uploaded in bulk as CSV files.
 ms.author: josaw 
 ms.date: 03/17/2022
 ms.topic: conceptual
@@ -13,7 +13,7 @@ title: Account protection schemas
 
 # Account protection schemas
 
-This topic outlines the schema via the application programming interface (API). For more information, see [Integrate Dynamics 365 Fraud Protection real-time APIs](/dynamics365/fraud-protection/integrate-real-time-api).
+This article outlines the schema via the application programming interface (API). For more information, see [Integrate Dynamics 365 Fraud Protection real-time APIs](/dynamics365/fraud-protection/integrate-real-time-api).
 
 
 ## AccountCreation

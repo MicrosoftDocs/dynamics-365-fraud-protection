@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information that is required for device fingerprinting in a mobile device implementation of Microsoft Dynamics 365 Fraud Protection for Android.
+description: This article provides information that is required for device fingerprinting in a mobile device implementation of Microsoft Dynamics 365 Fraud Protection for Android.
 ms.author: josaw
 ms.date: 03/29/2022
 ms.topic: reference

@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides an overview of the account protection experience in the Microsoft Dynamics 365 Fraud Protection system.
+description: This article provides an overview of the account protection experience in the Microsoft Dynamics 365 Fraud Protection system.
 ms.author: josaw
 ms.date: 03/05/2021
 ms.topic: overview

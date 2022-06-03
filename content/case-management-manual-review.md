@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to complete manual reviews in Case management for Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to complete manual reviews in Case management for Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 03/28/2022
 ms.topic: reference

@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides an overview of Microsoft Dynamics 365 Fraud Protection features and its mission.
+description: This article provides an overview of Microsoft Dynamics 365 Fraud Protection features and its mission.
 
 ms.author: josaw
 ms.date: 05/04/2022

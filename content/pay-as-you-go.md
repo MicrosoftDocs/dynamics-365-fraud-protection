@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to enable Pay as you go billing for Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to enable Pay as you go billing for Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 07/08/2021
 ms.topic: conceptual
@@ -13,7 +13,7 @@ title: Pay as you go billing
 
 # Pay as you go billing
 
-This topic describes how to get started with Pay as you go billing for Dynamics 365 Fraud Protection. With Pay as you go billing, you can use Fraud Protection as much or as little as you need, and you pay only for what you use. Service interruptions will be minimized and you won't overpay as a result of forecasted transaction volumes.
+This article describes how to get started with Pay as you go billing for Dynamics 365 Fraud Protection. With Pay as you go billing, you can use Fraud Protection as much or as little as you need, and you pay only for what you use. Service interruptions will be minimized and you won't overpay as a result of forecasted transaction volumes.
 
 
 ## Pricing
