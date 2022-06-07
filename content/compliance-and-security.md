@@ -43,7 +43,7 @@ The following list contains compliance certificate URLs for Fraud Protection.
 | Network vulnerability scan report | A scan of the application or service network. | Yes. This scan is done as part of the penetration test. |
 | Network security policy | The policy for maintaining network and data security. | Yes. For more information, see the [Azure Security and Compliance Blueprint](/azure/governance/blueprints/samples/). |
 | Information security policy | The policy about how data is kept and stored. This policy covers employee access to data (access to the internet, the ability to download items to USB drives, etc.). | Yes. For more information, see the [ISO 27001 report](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=1db75ce8-45d3-41fb-a705-2bd2163c72eb&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_ISO_Reports). |
-| Data flow diagram | <p>A diagram that identifies how the application or service is integrated with customer data and/or systems. | Yes. The product documentation inludes this information. |
+| Data flow diagram | <p>A diagram that identifies how the application or service is integrated with customer data and/or systems. | Yes. The product documentation includes this information. |
 | Incident response and triage policies | A document that defines what constitutes an incident and how the organization responds. | Yes. For more information, see the [ISO 27001 report](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=1db75ce8-45d3-41fb-a705-2bd2163c72eb&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_ISO_Reports). |
 | Third-party audit reports | Audits such as SSAE 16 SOC 2 and SAS70 Type II. | Yes. For more information, see the [SOC2 report](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuide?command=Download&downloadType=Document&downloadId=22d75122-9d83-4b44-8e25-c273dcbafdc3&docTab=4ce99610-c9c0-11e7-8c2c-f908a777fa4d_SOC_%2F_SSAE_16_Reports). |
 | Backup policy | A document that defines the company's backup strategy. | Yes. The Azure multi-region deployment strategy includes this information. |
@@ -84,18 +84,15 @@ Not applicable.
 #### Is hash salting used?
 Not applicable.
  
-#### Does the application or service use automatic account provisioning? How is it accomplished (for example, on-demand via SAML, automated comma-separated values (CSV) feed over secure transmission, or API)? Provide documentation.
+#### Does the application or service use automatic account provisioning? If so, how is it accomplished (for example, on-demand via SAML, automated comma-separated values (CSV) feed over secure transmission, or API)?
 No, and not applicable. 
  
 #### Does the application or service use immediate account access termination, including closing open sessions?
 No. Azure AD token expiration aligns user access termination, not the session. 
 
 #### If account terminations aren't automatic, is this action performed within one hour of an account access termination request?
-Yes, per Azure AD policy. 
- 
-#### Document the process. All actions must be logged.
-For more information, see the [Azure AD documentation](/azure/active-directory/).
- 
+Yes, per Azure AD policy. For more information, see the [Azure AD documentation](/azure/active-directory/).
+
 #### What is the session idle time-out of the application?
 Per Azure AD policy, the session idle time-out is in line with the token validity period. 
  
@@ -108,17 +105,17 @@ No. Only audit logs are tracked and retained as features per Online Services Ter
 #### Does the application or service let the administrator explicitly grant authorization to data and capabilities based on role and/or function, according to the least privilege model?
 Yes. Via Azure AD roles, administrators can grant access within their tenant. 
  
-#### A minimum expectation is support for the Administrator role, User role, Read-Only Administrator (log) role, and unprivileged Administrator (no access to content) role. Do you provide this support?
-The application/service doesn't have any roles besides the admin role. Users in the Administrator role are responsible for spinning out additional roles within their tenant. For information about how to add and remove roles, see [Configure user access](configure-user-access.md). 
+#### A minimum expectation is support for the administrator role, user role, read-only administrator (log) role, and unprivileged administrator (no access to content) role. Do you provide this support?
+The application/service doesn't have any roles besides the administrator role. Users in the administrator role are responsible for creating additional roles within their tenant. For information about how to add and remove roles, see [Configure user access](configure-user-access.md). 
  
 #### If there are sharing permissions in the application, does the application or service let the administrator review user requests for additional access to data?
 Not applicable. 
  
-#### Does the application or service let the administrator user distinguish "administrator users" and "regular users"?
+#### Does the application or service let the administrator user distinguish administrator users and regular users?
 No.
 
-#### Document the rights that are available for the various roles in the application or service. Examples include read-only accounts and the log audit role.
-For more information, see the Fraud Protection onboarding guide.
+#### What are the rights that are available for the various roles in the application or service?
+For more information, see [User roles and access](configure-user-access.md#user-roles-and-access).
 
 ### Auditing
 
@@ -129,7 +126,9 @@ Log data isn't shared by the product. Service metrics and key performance indica
 Yes. For more information, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 #### Does the application or service collect or provide audit logs of administrator actions (user account Create/Update/Delete) or application-specific actions?
-<p>The application maintains an audit history of key changes, such as rule or list updates. User account actions and corresponding audit history are controlled via Azure AD. For more information, see the overview in [Azure Active Directory reports and monitoring documentation](/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).</p><p>For Azure AD auditing, see the core directory events for application role and group membership in [List of Azure Active Directory Audit Activities](/archive/blogs/motiba/list-of-azure-active-directory-audit-activities).</p><p>For access to audits from the Azure AD portal, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).</p>
+The application maintains an audit history of key changes, such as rule or list updates. User account actions and corresponding audit history are controlled via Azure AD. For more information, see the overview in [Azure Active Directory reports and monitoring documentation](/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
+ 
+ For Azure AD auditing, see the core directory events for application role and group membership in [List of Azure Active Directory Audit Activities](/archive/blogs/motiba/list-of-azure-active-directory-audit-activities).</p><p>For access to audits from the Azure AD portal, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 #### Does the application or service collect or provide audit logs of user actions (document or content Create/Read/Update/Delete)?
 Not applicable. Only the admin role is supported.
@@ -156,12 +155,16 @@ No proactive downtime notification is in place. It's currently part of the roadm
 
 #### Does the application or service enable unstructured data to be exported in bulk in a non-proprietary format, such as CSV?
 In the product, the General Data Protection Regulation (GDPR) experience lets users export data under the guidelines that are described in the section about data subject rights in the [Compliance documentation](./security-compliance.md). 
+
 #### Does the unstructured data retain security access control lists (ACLs)?
 No. For more information, see the GDPR documentation that is listed in [Honor data subject requests](./security-compliance.md#honor-data-subject-requests).
+
 #### Does the application or service enable databases to be exported in bulk in a non-proprietary format?
 No.
+
 #### Provide a documented backup policy.
 A multi-region data replication and resiliency strategy is in place. For more information about the backup and restore capability, see [Online backup and on-demand data restore in Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore).
+
 #### Does the application or service have a documented disaster recovery plan?
 For more information about the Microsoft enterprise business continuity management (EBCM) plan, see the [Enterprise Business Continuity Management Program white paper](https://go.microsoft.com/fwlink/?linkid=2121521). (Sign-in is required.)
 
@@ -169,26 +172,37 @@ For more information about the Microsoft enterprise business continuity manageme
 
 #### Can Microsoft disable the application instance in the event of a security incident? 
 Yes.
+
 #### Does the application or service protect data by using Transport Layer Security (TLS) encryption? 
 Yes.
+
 #### What level of encryption is used? 
 TLS 1.2.
+
 #### What are the procedures for allowing customers to have the resources that are required to do security penetration scanning? 
 Corporate, External, & Legal Affairs (CELA) and Security approval from Microsoft are required.
+
 #### Does the application or service have a recent third-party network security penetration test? (The test must be less than three months old.) 
 Yes, Azure periodically performs this test.
+
 #### Does the application or service have a recent third-party application security penetration test? (The test must be less than three months old.) 
 Yes. This test will be provided on request.
+
 #### Does the application or service use a secure communications method, such as TLS? 
 Yes.
+
 #### Does the application or service have a mobile client? 
 Fraud Protection is a web-based software as a service (SaaS) offering.
+
 #### Can the application be limited so that it allows traffic only from trusted networks? 
 The application can't be limited through the user interface (UI). However, it can be limited through manual configuration.
+
 #### Does the application have traffic reporting and the ability to alert about normal traffic? 
 Yes. These capabilities are available through internal alerting and monitoring. For more information, see [API call monitoring](./monitoring.md).
+
 #### If the infrastructure doesn't support encryption at rest by default, does the application or service enable data at rest to be stored in an encrypted format? 
 All data is encrypted at rest. For more information, see [Data encryption in Azure Cosmos DB](/azure/cosmos-db/database-encryption-at-rest).
+
 #### Does the system have a general retention schedule, so that the data is purged after a period? 
 Yes. For more information, see the OST guidelines.
 
@@ -196,18 +210,25 @@ Yes. For more information, see the OST guidelines.
 
 #### Do you have a well-defined security program? Provide a brief description. 
 Yes. For information, see the [Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).
+
 #### Does Microsoft have established information security policies? 
 Yes. For information, see the [Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).
+
 #### Does Microsoft have a third-party audit report for datacenter security and policies? 
 Yes. For more information, visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
+
 #### Provide a copy of the report (SSAE 16 SOC 2, SAS70 Type II, and so on). 
 Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
+
 #### Has the application or service done the Cloud Security Alliance CCM self-assessment? 
 Yes.
+ 
 #### Provide a copy of the self-assessment. 
 Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
+
 #### Does Microsoft have a current change management policy document? 
 Yes.
+
 #### Does the application or service have an established incident response and triage policy and established processes? 
 Yes.
 
