@@ -53,7 +53,7 @@ The following list contains compliance certificate URLs for Fraud Protection.
 
 ## Security assessment FAQ
 
-### Authentication and administration
+### Authentication and administration FAQ
  
 #### Does the application or service support single sign-on (SSO) through Security Assertion Markup Language (SAML) 1.1, SAML 2.0, or Web Services Federation (WS-Fed)?
 
@@ -117,7 +117,7 @@ No.
 #### What are the rights that are available for the various roles in the application or service?
 For more information, see [User roles and access](configure-user-access.md#user-roles-and-access).
 
-### Auditing
+### Auditing FAQ
 
 #### Does the application or service log information in an industry-standard type of event format, such as CSV, Common Event Format (CEF), or Syslog?
 Log data isn't shared by the product. Service metrics and key performance indicators (KPIs) are surfaced via Power BI views.
@@ -151,7 +151,7 @@ As a customer, you can make a server-to-server call to the service and monitor t
 #### How is this notification reported to customers?
 No proactive downtime notification is in place. It's currently part of the roadmap. Customers are notified about any incidents that are discovered via alerting through the standard communications channel.
 
-### Business continuity and disaster recovery
+### Business continuity and disaster recovery FAQ
 
 #### Does the application or service enable unstructured data to be exported in bulk in a non-proprietary format, such as CSV?
 In the product, the General Data Protection Regulation (GDPR) experience lets users export data under the guidelines that are described in the section about data subject rights in the [Compliance documentation](./security-compliance.md). 
@@ -168,7 +168,7 @@ A multi-region data replication and resiliency strategy is in place. For more in
 #### Does the application or service have a documented disaster recovery plan?
 For more information about the Microsoft enterprise business continuity management (EBCM) plan, see the [Enterprise Business Continuity Management Program white paper](https://go.microsoft.com/fwlink/?linkid=2121521). (Sign-in is required.)
 
-### Data security
+### Data security FAQ
 
 #### Can Microsoft disable the application instance in the event of a security incident? 
 Yes.
@@ -206,7 +206,7 @@ All data is encrypted at rest. For more information, see [Data encryption in Azu
 #### Does the system have a general retention schedule, so that the data is purged after a period? 
 Yes. For more information, see the OST guidelines.
 
-### Governance
+### Governance FAQ
 
 #### Do you have a well-defined security program? Provide a brief description. 
 Yes. For information, see the [Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).
