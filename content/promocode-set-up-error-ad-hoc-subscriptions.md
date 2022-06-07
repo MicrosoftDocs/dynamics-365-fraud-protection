@@ -43,7 +43,7 @@ Get-MsolCompanyInformation | fl AllowAdHocSubscriptions
 
 ## References
 
-- The same process exists for Dynamics 365 Business Central: <a href="[https://docs.microsoft.com/en-us/powershell/module/msonline/set-msolcompanysettings](https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-business-central-manage-selfservice-signups)" target="_blank">Enable and Disable Dynamics 365 Business Central Self-service Signups</a>.
+- The same process exists for Dynamics 365 Business Central: <a href="https://docs.microsoft.com/en-us/dynamics365/business-central/dev-itpro/developer/devenv-business-central-manage-selfservice-signups" target="_blank">Enable and Disable Dynamics 365 Business Central Self-service Signups</a>.
 
 ## Support
 
