@@ -145,6 +145,37 @@ For more information, see the Fraud Protection onboarding guide.
 
 ### Auditing
 
+#### Does the application or service log information in an industry-standard type of event format, such as CSV, Common Event Format (CEF), or Syslog?
+Log data isn't shared by the product. Service metrics and key performance indicators (KPIs) are surfaced via Power BI views.
+
+#### Does the application or service collect or provide data about user sign-in, sign-out, password changes, and failed sign-in attempts?
+Yes. For more information, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
+
+#### Does the application or service collect or provide audit logs of administrator actions (user account Create/Update/Delete) or application-specific actions?
+<p>The application maintains an audit history of key changes, such as rule or list updates. User account actions and corresponding audit history are controlled via Azure AD. For more information, see the overview in [Azure Active Directory reports and monitoring documentation](/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).</p><p>For Azure AD auditing, see the core directory events for application role and group membership in [List of Azure Active Directory Audit Activities](/archive/blogs/motiba/list-of-azure-active-directory-audit-activities).</p><p>For access to audits from the Azure AD portal, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).</p>
+
+#### Does the application or service collect or provide audit logs of user actions (document or content Create/Read/Update/Delete)?
+Not applicable. Only the admin role is supported.
+
+#### Does the application or service collect or provide audit logs of metadata actions (Create/Read/Update/Delete)?
+Yes. An audit history of key changes, such as list and rule updates, is maintained.
+
+#### Can Microsoft provide audit trails for any activities that are performed on personally identifiable information (PII)?
+The only PII is in the audit history of rule and list changes. This history is read-only and can't be modified.
+
+#### Can Microsoft store logs and encrypted data at rest?
+Logs are maintained per standard Microsoft Azure Online Services policy.
+
+#### Does Microsoft have procedures in place to detect, report, and alert about the downtime of the customer instance within a reasonable time frame if the instance is down?
+Yes, we have advanced monitoring and alerting capabilities in place.
+
+#### What information is provided to customers to validate the negotiated service level agreement (SLA)?
+As a customer, you can make a server-to-server call to the service and monitor the SLA directly.
+
+#### How is this notification reported to customers?
+No proactive downtime notification is in place. It's currently part of the roadmap. Customers are notified about any incidents that are discovered via alerting through the standard communications channel.
+
+
 | Question | Response |
 |----------|----------|
 | Does the application or service log information in an industry-standard type of event format, such as CSV, Common Event Format (CEF), or Syslog? | Log data isn't shared by the product. Service metrics and key performance indicators (KPIs) are surfaced via Power BI views. |
