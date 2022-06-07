@@ -191,6 +191,17 @@ No proactive downtime notification is in place. It's currently part of the roadm
 
 ### Business continuity and disaster recovery
 
+#### Does the application or service enable unstructured data to be exported in bulk in a non-proprietary format, such as CSV?
+In the product, the General Data Protection Regulation (GDPR) experience lets users export data under the guidelines that are described in the section about data subject rights in the [Compliance documentation](./security-compliance.md). 
+#### Does the unstructured data retain security access control lists (ACLs)?
+No. For more information, see the GDPR documentation that is listed in [Honor data subject requests](./security-compliance.md#honor-data-subject-requests).
+#### Does the application or service enable databases to be exported in bulk in a non-proprietary format?
+No.
+#### Provide a documented backup policy.
+A multi-region data replication and resiliency strategy is in place. For more information about the backup and restore capability, see [Online backup and on-demand data restore in Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore).
+#### Does the application or service have a documented disaster recovery plan?
+For more information about the Microsoft enterprise business continuity management (EBCM) plan, see the [Enterprise Business Continuity Management Program white paper](https://go.microsoft.com/fwlink/?linkid=2121521). (Sign-in is required.)
+
 | Question | Response |
 |----------|----------|
 | Does the application or service enable unstructured data to be exported in bulk in a non-proprietary format, such as CSV? | In the product, the General Data Protection Regulation (GDPR) experience lets users export data under the guidelines that are described in the section about data subject rights in the [Compliance documentation](./security-compliance.md). |
@@ -200,6 +211,31 @@ No proactive downtime notification is in place. It's currently part of the roadm
 | Does the application or service have a documented disaster recovery plan? | For more information about the Microsoft enterprise business continuity management (EBCM) plan, see the [Enterprise Business Continuity Management Program white paper](https://go.microsoft.com/fwlink/?linkid=2121521). (Sign-in is required.) |
 
 ### Data security
+
+#### Can Microsoft disable the application instance in the event of a security incident? 
+Yes.
+#### Does the application or service protect data by using Transport Layer Security (TLS) encryption? 
+Yes.
+#### What level of encryption is used? 
+TLS 1.2.
+#### What are the procedures for allowing customers to have the resources that are required to do security penetration scanning? 
+Corporate, External, & Legal Affairs (CELA) and Security approval from Microsoft are required.
+#### Does the application or service have a recent third-party network security penetration test? (The test must be less than three months old.) 
+Yes, Azure periodically performs this test.
+#### Does the application or service have a recent third-party application security penetration test? (The test must be less than three months old.) 
+Yes. This test will be provided on request.
+#### Does the application or service use a secure communications method, such as TLS? 
+Yes.
+#### Does the application or service have a mobile client? 
+Fraud Protection is a web-based software as a service (SaaS) offering.
+#### Can the application be limited so that it allows traffic only from trusted networks? 
+The application can't be limited through the user interface (UI). However, it can be limited through manual configuration.
+#### Does the application have traffic reporting and the ability to alert about normal traffic? 
+Yes. These capabilities are available through internal alerting and monitoring. For more information, see [API call monitoring](./monitoring.md).
+#### If the infrastructure doesn't support encryption at rest by default, does the application or service enable data at rest to be stored in an encrypted format? 
+All data is encrypted at rest. For more information, see [Data encryption in Azure Cosmos DB](/azure/cosmos-db/database-encryption-at-rest).
+#### Does the system have a general retention schedule, so that the data is purged after a period? 
+Yes. For more information, see the OST guidelines.
 
 | Question | Response |
 |----------|----------|
@@ -217,6 +253,23 @@ No proactive downtime notification is in place. It's currently part of the roadm
 | Does the system have a general retention schedule, so that the data is purged after a period? | Yes. For more information, see the OST guidelines. |
 
 ### Governance
+
+#### Do you have a well-defined security program? Provide a brief description. 
+Yes. For information, see the [Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).
+#### Does Microsoft have established information security policies? 
+Yes. For information, see the [Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).
+#### Does Microsoft have a third-party audit report for datacenter security and policies? 
+Yes. For more information, visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
+#### Provide a copy of the report (SSAE 16 SOC 2, SAS70 Type II, and so on). 
+Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
+#### Has the application or service done the Cloud Security Alliance CCM self-assessment? 
+Yes.
+#### Provide a copy of the self-assessment. 
+Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
+#### Does Microsoft have a current change management policy document? 
+Yes.
+#### Does the application or service have an established incident response and triage policy and established processes? 
+Yes.
 
 | Question | Response |
 |----------|----------|
