@@ -54,6 +54,71 @@ The following list contains compliance certificate URLs for Fraud Protection.
 ## Security assessment FAQ
 
 ### Authentication and administration
+ 
+#### Does the application or service support single sign-on (SSO) through Security Assertion Markup Language (SAML) 1.1, SAML 2.0, or Web Services Federation (WS-Fed)?
+
+Yes.
+- **Portal**: SPA - OAuth 2.0 and OpenID Connect, with implicit flow
+- **Service-to-service backend API**: OAuth 2.0
+- **Fingerprinting service**: Anonymous
+- **Azure Stack**: Shared access signature (SAS) token for storage
+
+#### Does the application support Okta integration (SSO platform)?
+
+This integration isn't supported by default. Azure Active Directory (Azure AD) supports custom integrations. Because the merchant owns the tenant, the merchant can take advantage of Azure AD identity integration points. For more information, see the [Azure AD documentation](/azure/active-directory/).
+
+#### Is there a "back-door" URL that lets users or administrators bypass SSO?
+No. 
+#### Does the application or service support two-factor authentication (2FA)?
+Yes. The merchant can enable 2FA in Azure AD.
+ 
+#### What is the 2FA solution?
+The 2FA solution is Azure Multi-Factor Authentication, an Azure Active Directory feature. For more information, see [How it works: Azure Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
+ 
+#### Does the application support application-level passwords?
+No. User and application identities are managed in the customer's Azure AD. 
+ 
+#### Which hash or encryption algorithm is used to protect passwords?
+Not applicable.
+ 
+#### Is hash salting used?
+Not applicable.
+ 
+#### Does the application or service use automatic account provisioning? How is it accomplished (for example, on-demand via SAML, automated comma-separated values (CSV) feed over secure transmission, or API)? Provide documentation.
+No, and not applicable. 
+ 
+#### Does the application or service use immediate account access termination, including closing open sessions?
+No. Azure AD token expiration aligns user access termination, not the session. 
+
+#### If account terminations aren't automatic, is this action performed within one hour of an account access termination request?
+Yes, per Azure AD policy. 
+ 
+#### Document the process. All actions must be logged.
+For more information, see the [Azure AD documentation](/azure/active-directory/).
+ 
+#### What is the session idle time-out of the application?
+Per Azure AD policy, the session idle time-out is in line with the token validity period. 
+ 
+#### Does the application or service use an automatic account deprovisioning process via an API?
+No. 
+ 
+#### Does the application or service provide a disposition strategy for content that is attached to a user's account upon deprovisioning?
+No. Only audit logs are tracked and retained as features per Online Services Terms (OST) guidelines and the Microsoft Privacy Statement. 
+ 
+#### Does the application or service let the administrator explicitly grant authorization to data and capabilities based on role and/or function, according to the least privilege model?
+Yes. Via Azure AD roles, administrators can grant access within their tenant. 
+ 
+#### A minimum expectation is support for the Administrator role, User role, Read-Only Administrator (log) role, and unprivileged Administrator (no access to content) role. Do you provide this support?
+The application/service doesn't have any roles besides the admin role. Users in the Administrator role are responsible for spinning out additional roles within their tenant. For information about how to add and remove roles, see [Configure user access](configure-user-access.md). 
+ 
+#### If there are sharing permissions in the application, does the application or service let the administrator review user requests for additional access to data?
+Not applicable. 
+ 
+#### Does the application or service let the administrator user distinguish "administrator users" and "regular users"?
+No.
+
+#### Document the rights that are available for the various roles in the application or service. Examples include read-only accounts and the log audit role.
+For more information, see the Fraud Protection onboarding guide.
 
 | Question | Response |
 |----------|----------|
