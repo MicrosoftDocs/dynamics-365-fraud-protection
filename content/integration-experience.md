@@ -8,19 +8,18 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Integration experience (preview)
+title: Integration experience
 
 ---
 
-# Integration experience (preview)
+# Integration experience
 
-[!include [banner](includes/preview-banner.md)]
 
 The customer product adoption journey starts with the first touchpoint and continues with consistent, positive experiences from trial to purchase. In this journey, every interaction that customers experience needs to be personalized. The journey starts with a seamless onboarding experience, which plays an important role when it comes to product adoption and usage. Onboarding also helps the product gain valuable information about the customer’s behavior and provides additional insights into the customer journey.
 
 ## Integration experience
 
-The integration experience (preview) provides a guided integration process for each product capability, with well-defined start and end points. This is achieved by providing out-of-the-box code snippets and step-by-step instructions that can be started from within the product. The guided processes are interactive and provide clear instructions to customers about what they need to do during integration and why.
+The integration experience provides a guided integration process for each product capability, with well-defined start and end points. This is achieved by providing out-of-the-box code snippets and step-by-step instructions that can be started from within the product. The guided processes are interactive and provide clear instructions to customers about what they need to do during integration and why.
 
 The guided processes have been separated by the integration experiences that are required to enable use of the product. For example, Azure Active Directory application integration and device fingerprinting must be enabled for the Account Protection integration and Purchase Protection integration processes.
 
