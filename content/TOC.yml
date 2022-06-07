@@ -33,7 +33,9 @@
   - name: Set up purchase protection
     href: promocode-set-up-purchase-protection.md
   - name: Set up loss prevention
-    href: promocode-set-up-loss-prevention.md  
+    href: promocode-set-up-loss-prevention.md
+  - name: Setup error - Blocked by company setting
+    href: promocode-set-up-error-ad-hoc-subscriptions.md
 - name: Set up Fraud Protection
   items:
   - name: Integration experience (preview)
