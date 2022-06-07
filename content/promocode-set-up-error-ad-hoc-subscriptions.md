@@ -12,29 +12,32 @@ title: Promotion code redemption - Enable ad-hoc subscriptions
 ms.custom:
 ---
 
-# Promotion code redemption - Enable ad-hoc subscriptions
+# Promotion code redemption error
+## Trial signup blocked by company policy
 
-You may encounter an error while redeeming a Dynamics 365 Fraud Protection promotion code stating "Trial signup blocked by company policy".  The company setting known as *[AllowAdHocSubscriptions](https://docs.microsoft.com/en-us/powershell/module/msonline/set-msolcompanysettings)* is disabled and needs to be temporarily enabled.  You can then redeem the promotion code and disable the company setting afterwards.
+You may encounter an error while redeeming a Dynamics 365 Fraud Protection promotion code stating "Trial signup blocked by company policy".  The company setting known as **[AllowAdHocSubscriptions](https://docs.microsoft.com/en-us/powershell/module/msonline/set-msolcompanysettings)** is disabled and needs to be temporarily enabled.  You can then redeem the promotion code and disable the company setting afterwards.
+
+Keep in mind that you or another admin may have disabled this setting to prevent certain types of signup at your company.  Consider reviewing this with your colleagues before following the steps below.
 
 ## Temporarily enable the ad-hoc subscriptions
 > [!NOTE]
 > You'll need to be an Azure global admin in your tenant to run this code.
 
 ```powershell
-//Start PowerShell and run these first 3 commands.  The 2nd one will prompt you for your credentials:
+# Start PowerShell and run these first 3 commands.  The 2nd one will prompt you for your credentials:
 Install-Module MSOnline
 Connect-MsolService
 Get-MsolCompanyInformation | fl AllowAdHocSubscriptions
 
-//if it's False and you're ready to temporarily allow these signups, run this:
+# If the 3rd command outputs "False" and you're ready to temporarily allow these signups, run this:
 Set-MsolCompanySettings -AllowAdHocSubscriptions $true
 
-//at this point, go back to the Fraud Protection site and try to redeem your promo code again.
+# At this point, go back to the Fraud Protection site and try to redeem your promo code again.
 
-//assuming you want to put the protection back on, run this after you redeem your promo code for Fraud Protection
+# Assuming you're ready to put the protection back on, run this after you redeem your Fraud Protection promotion code:
 Set-MsolCompanySettings -AllowAdHocSubscriptions $false
 
-//the setting should be False again
+# The setting should be "False" again
 Get-MsolCompanyInformation | fl AllowAdHocSubscriptions
 ```
 
