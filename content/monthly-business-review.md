@@ -1,21 +1,20 @@
 ---
 author: josaw1
-description: This article provides information about the monthly business review tool (preview) in Microsoft Dynamics 365 Fraud Protection.
+description: This article provides information about the monthly business review tool in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 09/20/2021
+ms.date: 06/07/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Monthly business review tool (preview)
+title: Monthly business review tool
 ---
 
-# Monthly business review tool (preview)
+# Monthly business review tool
 
-[!include [preview banner](includes/preview-banner.md)]
 
-The Microsoft Dynamics 365 Fraud Protection monthly business review tool (preview) is provided as a preview service under the terms and conditions that are described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). It lets merchants review long-term business metrics, compare and track fraud and rule performance month over month, and visualize long-term operational trends.
+The Microsoft Dynamics 365 Fraud Protection monthly business review tool is provided as a service under the terms and conditions that are described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). It lets merchants review long-term business metrics, compare and track fraud and rule performance month over month, and visualize long-term operational trends.
 
 The monthly business review is an interactive report tool that is built on the Power BI platform. Merchants can use it to drive purchase protection for customers in their online business by applying various filters and reviewing business metrics by various segments.
 
