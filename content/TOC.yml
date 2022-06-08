@@ -204,6 +204,8 @@
     href: security.md
   - name: Security measures for protecting data 	
     href: compliance-and-security.md
+  - name: Security assessment FAQ
+    href: security-assessment-faq.md
   - name: Compliance overview
     href: security-compliance.md
   - name: Visually explore data	
