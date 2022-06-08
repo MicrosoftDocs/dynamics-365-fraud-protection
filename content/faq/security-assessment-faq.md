@@ -15,7 +15,7 @@ title: Security assessment FAQ
 
 This article provides answers to frequently asked questions about security assessment in Microsoft Dynamics 365 Fraud Protection.
 
-## Authentication and administration FAQ
+## Authentication and administration
  
 #### Does the application or service support single sign-on (SSO) through Security Assertion Markup Language (SAML) 1.1, SAML 2.0, or Web Services Federation (WS-Fed)?
 
@@ -79,7 +79,7 @@ No.
 #### What are the rights that are available for the various roles in the application or service?
 For more information, see [User roles and access](../configure-user-access.md#user-roles-and-access).
 
-## Auditing FAQ
+## Auditing
 
 #### Does the application or service log information in an industry-standard type of event format, such as CSV, Common Event Format (CEF), or Syslog?
 Log data isn't shared by the product. Service metrics and key performance indicators (KPIs) are surfaced via Power BI views.
@@ -90,7 +90,7 @@ Yes. For more information, see [Audit activity reports in the Azure Active Direc
 #### Does the application or service collect or provide audit logs of administrator actions (user account Create/Update/Delete) or application-specific actions?
 The application maintains an audit history of key changes, such as rule or list updates. User account actions and corresponding audit history are controlled via Azure AD. For more information, see the overview in [Azure Active Directory reports and monitoring documentation](/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
  
-For Azure AD auditing, see the core directory events for application role and group membership in [List of Azure Active Directory Audit Activities](/archive/blogs/motiba/list-of-azure-active-directory-audit-activities).</p><p>For access to audits from the Azure AD portal, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
+For Azure AD auditing, see the core directory events for application role and group membership in [List of Azure Active Directory Audit Activities](/archive/blogs/motiba/list-of-azure-active-directory-audit-activities). For access to audits from the Azure AD portal, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 #### Does the application or service collect or provide audit logs of user actions (document or content Create/Read/Update/Delete)?
 Not applicable. Only the admin role is supported.
@@ -113,7 +113,7 @@ As a customer, you can make a server-to-server call to the service and monitor t
 #### How is this notification reported to customers?
 No proactive downtime notification is in place. It's currently part of the roadmap. Customers are notified about any incidents that are discovered via alerting through the standard communications channel.
 
-## Business continuity and disaster recovery FAQ
+## Business continuity and disaster recovery
 
 #### Does the application or service enable unstructured data to be exported in bulk in a non-proprietary format, such as CSV?
 In the product, the General Data Protection Regulation (GDPR) experience lets users export data under the guidelines that are described in the section about data subject rights in the [Compliance documentation](../security-compliance.md). 
@@ -124,13 +124,13 @@ No. For more information, see the GDPR documentation that is listed in [Honor da
 #### Does the application or service enable databases to be exported in bulk in a non-proprietary format?
 No.
 
-#### Provide a documented backup policy.
+#### Is there a documented backup policy?
 A multi-region data replication and resiliency strategy is in place. For more information about the backup and restore capability, see [Online backup and on-demand data restore in Azure Cosmos DB](/azure/cosmos-db/online-backup-and-restore).
 
 #### Does the application or service have a documented disaster recovery plan?
 For more information about the Microsoft enterprise business continuity management (EBCM) plan, see the [Enterprise Business Continuity Management Program white paper](https://go.microsoft.com/fwlink/?linkid=2121521). (Sign-in is required.)
 
-## Data security FAQ
+## Data security
 
 #### Can Microsoft disable the application instance in the event of a security incident? 
 Yes.
@@ -168,7 +168,7 @@ All data is encrypted at rest. For more information, see [Data encryption in Azu
 #### Does the system have a general retention schedule, so that the data is purged after a period? 
 Yes. For more information, see the OST guidelines.
 
-## Governance FAQ
+## Governance
 
 #### Do you have a well-defined security program? Provide a brief description. 
 Yes. For information, see the [Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).
