@@ -1,7 +1,11 @@
 - name: Dynamics 365 Fraud Protection home page
   href: index.yml
 - name: Overview
-  href: overview.md
+  items:
+  - name: Overview of Dynamics 365 Fraud Protection
+    href: overview.md
+  - name: Service FAQ
+    href: faq/service-faq.md
 - name: What's new or changed
   items:
   - name: April 2022 release
@@ -198,6 +202,8 @@
     href: mobile-sdk-ios.md
 - name: Privacy, security, compliance
   items:
+  - name: Legal considerations FAQ
+    href: faq/legal-faq.md
   - name: Privacy protection for customer data
     href: data-processing-protection.md
   - name: Security overview
@@ -206,8 +212,14 @@
     href: compliance-and-security.md
   - name: Security assessment FAQ
     href: security-assessment-faq.md
+  - name: Privacy and security FAQ
+    href: faq/privacy-security-faq.md
+  - name: Data residency and GDPR FAQ
+    href: faq/data-residency-gdpr-faq.md
   - name: Compliance overview
     href: security-compliance.md
+  - name: Compliance FAQ
+    href: faq/compliance-faq.md
   - name: Visually explore data	
     href: graph-explorer.md
   - name: Notifications for Fraud Protection service
