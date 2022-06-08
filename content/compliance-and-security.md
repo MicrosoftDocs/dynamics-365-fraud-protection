@@ -52,6 +52,8 @@ The following list contains compliance certificate URLs for Fraud Protection.
 
 ## Additional resources
  
-[Security assessment FAQ](security-assessment-faq.md)
+[Security assessment FAQ](faq/security-assessment-faq.md)
+ 
+[Privacy and security FAQ](privacy-security-faq.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
