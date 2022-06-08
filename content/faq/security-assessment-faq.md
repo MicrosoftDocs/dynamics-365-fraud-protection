@@ -68,7 +68,7 @@ No. Only audit logs are tracked and retained as features per Online Services Ter
 Yes. Via Azure AD roles, administrators can grant access within their tenant. 
  
 #### A minimum expectation is support for the administrator role, user role, read-only administrator (log) role, and unprivileged administrator (no access to content) role. Do you provide this support?
-The application/service doesn't have any roles besides the administrator role. Users in the administrator role are responsible for creating additional roles within their tenant. For information about how to add and remove roles, see [Configure user access](configure-user-access.md). 
+The application/service doesn't have any roles besides the administrator role. Users in the administrator role are responsible for creating additional roles within their tenant. For information about how to add and remove roles, see [Configure user access](../configure-user-access.md). 
  
 #### If there are sharing permissions in the application, does the application or service let the administrator review user requests for additional access to data?
 Not applicable. 
@@ -77,7 +77,7 @@ Not applicable.
 No.
 
 #### What are the rights that are available for the various roles in the application or service?
-For more information, see [User roles and access](configure-user-access.md#user-roles-and-access).
+For more information, see [User roles and access](../configure-user-access.md#user-roles-and-access).
 
 ## Auditing FAQ
 
@@ -116,10 +116,10 @@ No proactive downtime notification is in place. It's currently part of the roadm
 ## Business continuity and disaster recovery FAQ
 
 #### Does the application or service enable unstructured data to be exported in bulk in a non-proprietary format, such as CSV?
-In the product, the General Data Protection Regulation (GDPR) experience lets users export data under the guidelines that are described in the section about data subject rights in the [Compliance documentation](./security-compliance.md). 
+In the product, the General Data Protection Regulation (GDPR) experience lets users export data under the guidelines that are described in the section about data subject rights in the [Compliance documentation](../security-compliance.md). 
 
 #### Does the unstructured data retain security access control lists (ACLs)?
-No. For more information, see the GDPR documentation that is listed in [Honor data subject requests](./security-compliance.md#honor-data-subject-requests).
+No. For more information, see the GDPR documentation that is listed in [Honor data subject requests](../security-compliance.md#honor-data-subject-requests).
 
 #### Does the application or service enable databases to be exported in bulk in a non-proprietary format?
 No.
@@ -160,7 +160,7 @@ Fraud Protection is a web-based software as a service (SaaS) offering.
 The application can't be limited through the user interface (UI). However, it can be limited through manual configuration.
 
 #### Does the application have traffic reporting and the ability to alert about normal traffic? 
-Yes. These capabilities are available through internal alerting and monitoring. For more information, see [API call monitoring](./monitoring.md).
+Yes. These capabilities are available through internal alerting and monitoring. For more information, see [API call monitoring](../monitoring.md).
 
 #### If the infrastructure doesn't support encryption at rest by default, does the application or service enable data at rest to be stored in an encrypted format? 
 All data is encrypted at rest. For more information, see [Data encryption in Azure Cosmos DB](/azure/cosmos-db/database-encryption-at-rest).
@@ -193,5 +193,17 @@ Yes.
 
 #### Does the application or service have an established incident response and triage policy and established processes? 
 Yes.
+ 
+## Additional resources
+ 
+[Service FAQ](service-faq.md)
 
-[!INCLUDE[footer-include](includes/footer-banner.md)]
+[Legal considerations FAQ](legal-faq.md)
+
+[Privacy and security FAQ](privacy-security-faq.md)
+
+[Data residency and GDPR FAQ](data-residency-gdpr-faq.md)
+
+[Compliance FAQ](compliance-faq.md)
+
+[!INCLUDE[footer-include](../includes/footer-banner.md)]
