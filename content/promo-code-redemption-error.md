@@ -16,7 +16,7 @@ ms.custom:
 
 This topic provides troubleshooting guidance for when a global administrator encounters an error when attempting to redeem a Microsoft Dynamics 365 Fraud Protection promotion code.
 
-## Trial account blocked by company policy
+## Cause: Trial account blocked by company policy
 
 When trying and failing to redeem a Fraud Protection promotion code, a global administrator may encounter the following error: 
 
@@ -27,7 +27,7 @@ You're likely seeing this error because your company policy blocks trial account
 > [!NOTE] 
 > You or another administrator may have disabled the **AllowAdHocSubscriptions** PowerShell setting to prevent certain types of signups at your company. It is recommended that you check with your colleagues before following the steps below.
 
-## Temporarily enable ad hoc subscriptions
+## Solution: Temporarily enable ad hoc subscriptions
 
 To temporarily enable ad hoc subscriptions, follow these steps.
 
