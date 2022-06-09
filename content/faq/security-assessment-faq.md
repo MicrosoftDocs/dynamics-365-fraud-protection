@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions about security assessment in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/08/2022
+ms.date: 06/09/2022
 ms.topic: conceptual
 search.app: 
  - Capaedac-fraudprotection
@@ -25,12 +25,13 @@ Yes.
 - **Fingerprinting service**: Anonymous
 - **Azure Stack**: Shared access signature (SAS) token for storage
 
+#### Is there a "back door" URL that lets users or administrators bypass single sign-on (SSO)?
+No. 
+
 #### Does the application support Okta integration (SSO platform)?
 
-This integration isn't supported by default. Azure Active Directory (Azure AD) supports custom integrations. Because the merchant owns the tenant, the merchant can take advantage of Azure AD identity integration points. For more information, see the [Azure AD documentation](/azure/active-directory/).
+Okta integration isn't supported by default. Azure Active Directory (Azure AD) supports custom integrations. Because the merchant owns the tenant, the merchant can take advantage of Azure AD identity integration points. For more information, see the [Azure AD documentation](/azure/active-directory/).
 
-#### Is there a "back-door" URL that lets users or administrators bypass SSO?
-No. 
 #### Does the application or service support two-factor authentication (2FA)?
 Yes. The merchant can enable 2FA in Azure AD.
  
@@ -38,7 +39,7 @@ Yes. The merchant can enable 2FA in Azure AD.
 The 2FA solution is Azure Multi-Factor Authentication, an Azure Active Directory feature. For more information, see [How it works: Azure Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
  
 #### Does the application support application-level passwords?
-No. User and application identities are managed in the customer's Azure AD. 
+No. User and application identities are managed in the customer's Azure AD account. 
  
 #### Which hash or encryption algorithm is used to protect passwords?
 Not applicable.
@@ -50,7 +51,7 @@ Not applicable.
 No, and not applicable. 
  
 #### Does the application or service use immediate account access termination, including closing open sessions?
-No. Azure AD token expiration aligns user access termination, not the session. 
+No. Azure AD token expiration aligns with user access termination, not the session. 
 
 #### If account terminations aren't automatic, is this action performed within one hour of an account access termination request?
 Yes, per Azure AD policy. For more information, see the [Azure AD documentation](/azure/active-directory/).
@@ -82,20 +83,20 @@ For more information, see [User roles and access](../configure-user-access.md#us
 ## Auditing
 
 #### Does the application or service log information in an industry-standard type of event format, such as CSV, Common Event Format (CEF), or Syslog?
-Log data isn't shared by the product. Service metrics and key performance indicators (KPIs) are surfaced via Power BI views.
+Log data isn't shared by the product. Service metrics and key performance indicators (KPIs) are available via Power BI views.
 
 #### Does the application or service collect or provide data about user sign-in, sign-out, password changes, and failed sign-in attempts?
 Yes. For more information, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
-#### Does the application or service collect or provide audit logs of administrator actions (user account Create/Update/Delete) or application-specific actions?
-The application maintains an audit history of key changes, such as rule or list updates. User account actions and corresponding audit history are controlled via Azure AD. For more information, see the overview in [Azure Active Directory reports and monitoring documentation](/azure/active-directory/reports-monitoring/index) and [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
+#### Does the application or service collect or provide audit logs of administrator actions (user account create/update/delete) or application-specific actions?
+The application maintains an audit history of key changes, such as rule or list updates. User account actions and corresponding audit history are controlled via Azure AD. For more information, see [Azure Active Directory reports and monitoring documentation](/azure/active-directory/reports-monitoring).
  
-For Azure AD auditing, see the core directory events for application role and group membership in [List of Azure Active Directory Audit Activities](/archive/blogs/motiba/list-of-azure-active-directory-audit-activities). For access to audits from the Azure AD portal, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
+For information on Azure AD auditing, see the core directory events for application role and group membership in [List of Azure Active Directory Audit Activities](/archive/blogs/motiba/list-of-azure-active-directory-audit-activities). For access to audits from the Azure AD portal, see [Audit logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 #### Does the application or service collect or provide audit logs of user actions (document or content Create/Read/Update/Delete)?
 Not applicable. Only the admin role is supported.
 
-#### Does the application or service collect or provide audit logs of metadata actions (Create/Read/Update/Delete)?
+#### Does the application or service collect or provide audit logs of metadata actions (create/read/update/delete)?
 Yes. An audit history of key changes, such as list and rule updates, is maintained.
 
 #### Can Microsoft provide audit trails for any activities that are performed on personally identifiable information (PII)?
@@ -105,21 +106,21 @@ The only PII is in the audit history of rule and list changes. This history is r
 Logs are maintained per standard Microsoft Azure Online Services policy.
 
 #### Does Microsoft have procedures in place to detect, report, and alert about the downtime of the customer instance within a reasonable time frame if the instance is down?
-Yes, we have advanced monitoring and alerting capabilities in place.
+Yes, there are advanced monitoring and alerting capabilities in place.
 
 #### What information is provided to customers to validate the negotiated service level agreement (SLA)?
-As a customer, you can make a server-to-server call to the service and monitor the SLA directly.
+As a customer, you can make a server-to-server calls to the service and monitor the SLA directly.
 
-#### How is this notification reported to customers?
-No proactive downtime notification is in place. It's currently part of the roadmap. Customers are notified about any incidents that are discovered via alerting through the standard communications channel.
+#### How is downtime notification reported to customers?
+No proactive downtime notification is in place, but it's currently part of the roadmap. Customers are notified about any incidents that are discovered via alerting through the standard communications channel.
 
 ## Business continuity and disaster recovery
 
 #### Does the application or service enable unstructured data to be exported in bulk in a non-proprietary format, such as CSV?
-In the product, the General Data Protection Regulation (GDPR) experience lets users export data under the guidelines that are described in the section about data subject rights in the [Compliance documentation](../security-compliance.md). 
+In the product, the General Data Protection Regulation (GDPR) experience allows users to export data under the guidelines that are described in the [Compliance documentation](../security-compliance.md). 
 
 #### Does the unstructured data retain security access control lists (ACLs)?
-No. For more information, see the GDPR documentation that is listed in [Honor data subject requests](../security-compliance.md#honor-data-subject-requests).
+No. For more information, see [Data Subject Requests and the GDPR and CCPA](/compliance/regulatory/gdpr-data-subject-requests).
 
 #### Does the application or service enable databases to be exported in bulk in a non-proprietary format?
 No.
@@ -138,16 +139,16 @@ Yes.
 #### Does the application or service protect data by using Transport Layer Security (TLS) encryption? 
 Yes.
 
-#### What level of encryption is used? 
+#### What level of TLS encryption is used? 
 TLS 1.2.
 
-#### What are the procedures for allowing customers to have the resources that are required to do security penetration scanning? 
-Corporate, External, & Legal Affairs (CELA) and Security approval from Microsoft are required.
+#### What are the procedures for allowing customers to access the resources required to do security penetration scanning? 
+Corporate, External, & Legal Affairs (CELA) and security approval from Microsoft are required.
 
-#### Does the application or service have a recent third-party network security penetration test? (The test must be less than three months old.) 
+#### Does the application or service have a recent (less than three months old) third-party network security penetration test?
 Yes, Azure periodically performs this test.
 
-#### Does the application or service have a recent third-party application security penetration test? (The test must be less than three months old.) 
+#### Does the application or service have a recent (less than three months old) third-party application security penetration test? 
 Yes. This test will be provided on request.
 
 #### Does the application or service use a secure communications method, such as TLS? 
@@ -165,29 +166,23 @@ Yes. These capabilities are available through internal alerting and monitoring. 
 #### If the infrastructure doesn't support encryption at rest by default, does the application or service enable data at rest to be stored in an encrypted format? 
 All data is encrypted at rest. For more information, see [Data encryption in Azure Cosmos DB](/azure/cosmos-db/database-encryption-at-rest).
 
-#### Does the system have a general retention schedule, so that the data is purged after a period? 
-Yes. For more information, see the OST guidelines.
+#### Does the system have a general retention schedule, so that data is purged after a period? 
+Yes. For more information, see the [Online Services Terms (OST)](/licensing/terms/product/ForallOnlineServices) guidelines.
 
 ## Governance
 
-#### Do you have a well-defined security program? Provide a brief description. 
-Yes. For information, see the [Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).
+#### Do you have a well-defined security program? 
+Yes. For information, see [Microsoft Security Development Lifecycle (SDL)](/securityengineering/sdl/).
 
 #### Does Microsoft have established information security policies? 
 Yes. For information, see the [Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).
 
-#### Does Microsoft have a third-party audit report for datacenter security and policies? 
+#### Does Microsoft have a third-party audit report for datacenter security and policies that I can access?
 Yes. For more information, visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
 
-#### Provide a copy of the report (SSAE 16 SOC 2, SAS70 Type II, and so on). 
-Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
-
-#### Has the application or service done the Cloud Security Alliance CCM self-assessment? 
-Yes.
+#### Has the application or service completed the Cloud Security Alliance CCM self-assessment? If so, can I access it?
+Yes, see the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
  
-#### Provide a copy of the self-assessment. 
-Visit the [Microsoft Service Trust Portal](https://servicetrust.microsoft.com/ViewPage/TrustDocuments?command=Download&downloadType=Document&downloadId=64f922a6-d624-40dd-a8ae-6f996b5186f3&docTab=6d000410-c9e9-11e7-9a91-892aae8839ad_FAQ_and_White_Papers).
-
 #### Does Microsoft have a current change management policy document? 
 Yes.
 
