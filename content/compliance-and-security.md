@@ -1,8 +1,8 @@
 ---
 author: josaw1
-description: This article explains technical and organizational measures that help protect customer data and personal data in Microsoft Dynamics 365 Fraud Protection.
+description: This article describes technical and organizational measures that help protect customer data and personal data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/08/2022
+ms.date: 06/09/2022
 ms.topic: conceptual
 search.app: 
  - Capaedac-fraudprotection
@@ -13,9 +13,9 @@ title: Security measures for protecting data
 
 # Security measures for protecting data
 
-This article explains technical and organizational measures that help protect customer data and personal data in Microsoft Dynamics 365 Fraud Protection
+This article describes technical and organizational measures that help protect customer data and personal data in Microsoft Dynamics 365 Fraud Protection
 
-Microsoft Dynamics 365 Fraud Protection has implemented, and will continue to maintain, appropriate technical and organizational measures to help protect customer data and personal data as stated in the Microsoft Security Policy. This policy is available to customers, as are descriptions of the security controls that are in place for Fraud Protection and other information that customers reasonably request about Microsoft security practices and policies.
+Microsoft Dynamics 365 Fraud Protection has implemented, and will continue to maintain, appropriate technical and organizational measures to help protect customer data and personal data as stated in the Microsoft Security Policy, which is available to customers. Descriptions of the security controls in place for Fraud Protection and other information that customers commonly request about Microsoft security practices and policies are also available to customers.
 
 For more information about Microsoft security practices, visit the [Microsoft Trust Center](https://www.microsoft.com/trust-center).
 
@@ -34,7 +34,9 @@ The following list contains compliance certificate URLs for Fraud Protection.
 - [HITRUST](https://servicetrust.microsoft.com/ViewPage/MSComplianceGuideV3?command=Download&downloadType=Document&downloadId=02eaae7a-9d65-42e6-aec8-a8e22de1a494&tab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb&docTab=7027ead0-3d6b-11e9-b9e1-290b1eb4cdeb_GRC_Assessment_Reports)
 - [PCI DSS Compliance](https://go.microsoft.com/fwlink/?linkid=2160978)
 
-## Security documentation and standard operating procedures
+## Security documentation availability
+
+The following table lists and describes available security documentation and how to access the documentation.
 
 | Documentation | Description | Available? |
 |---------------|-------------|--------------------|
