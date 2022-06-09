@@ -13,7 +13,6 @@ title: Search
 
 # Search
 
-[!include [preview banner](includes/preview-banner.md)]
 
 The **Search** page helps you find and view details about events in Dynamics 365 Fraud Protection, based on specific filter values. You can search for an individual event ID or use filters to find all transactions that match some criteria. You can export the search results or drill into an individual event to show a more detailed view.  
 
