@@ -2,13 +2,14 @@
 author: josaw1
 description: This article explains functionality in Microsoft Dynamics 365 Fraud Protection that supports payment service providers (PSPs).
 ms.author: josaw
-ms.date: 056/07/2022
+ms.date: 06/07/2022
 ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Payment service provider enablement
+---
 
 # Payment service provider enablement
 
