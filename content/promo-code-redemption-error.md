@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides troubleshooting guidance for when a global administrator encounters an error when attempting to redeem a Microsoft Dynamics 365 Fraud Protection promotion code.
+description: This topic provides troubleshooting guidance for when a global administrator encounters an error while attempting to redeem a Microsoft Dynamics 365 Fraud Protection promotion code.
 ms.author: josaw
 ms.date: 06/09/2022
 ms.topic: reference
@@ -14,18 +14,18 @@ ms.custom:
 
 # Troubleshoot promotion code redemption error
 
-This topic provides troubleshooting guidance for when a global administrator encounters an error when attempting to redeem a Microsoft Dynamics 365 Fraud Protection promotion code.
+This topic provides troubleshooting guidance for when a global administrator encounters an error while attempting to redeem a Microsoft Dynamics 365 Fraud Protection promotion code.
 
 ## Cause: Trial account blocked by company policy
 
-When trying and failing to redeem a Fraud Protection promotion code, a global administrator may encounter the following error: 
+When attempting to redeem a Fraud Protection promotion (promo) code, a global administrator may encounter the following error: 
 
 `Trial signup blocked by company policy`
 
-You're likely seeing this error because your company policy blocks trial accounts from redeeming promo codes by disabling ad hoc subscriptions. To successfully redeem the promo code, you must temporarily enable the [AllowAdHocSubscriptions](/powershell/module/msonline/set-msolcompanysettings PowerShell setting. You can then redeem the promotion code and disable the PowerShell setting again afterwards.
+This error is likely caused by your company disabling ad hoc subscriptions, which blocks trial accounts from redeeming promo codes. To successfully redeem the promo code, you must temporarily enable the [AllowAdHocSubscriptions](/powershell/module/msonline/set-msolcompanysettings PowerShell setting. You can then redeem the promo code and disable the PowerShell setting again afterwards.
 
 > [!NOTE] 
-> You or another administrator may have disabled the **AllowAdHocSubscriptions** PowerShell setting to prevent certain types of signups at your company. It is recommended that you check with your colleagues before following the steps below.
+> You or another administrator may have disabled the **AllowAdHocSubscriptions** PowerShell setting to prevent certain types of signups at your company. It is recommended that you check with your company colleagues before temporarily enabling ad hoc subscriptions by following the steps below.
 
 ## Solution: Temporarily enable ad hoc subscriptions
 
