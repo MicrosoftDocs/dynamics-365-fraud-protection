@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides troubleshooting guidance for when a global administrator fails to redeem a Microsoft Dynamics 365 Fraud Protection promotion code because company policy blocks it.
+description: This topic provides troubleshooting guidance for when a global administrator encounters an error when attempting to redeem a Microsoft Dynamics 365 Fraud Protection promotion code.
 ms.author: josaw
 ms.date: 06/09/2022
 ms.topic: reference
@@ -14,7 +14,7 @@ ms.custom:
 
 # Troubleshoot promotion code redemption error
 
-This topic provides troubleshooting guidance for when a global administrator encounters an error when attempting to redeem a Microsoft Dynamics 365 Fraud Protection promotion code. because company policy blocks it.
+This topic provides troubleshooting guidance for when a global administrator encounters an error when attempting to redeem a Microsoft Dynamics 365 Fraud Protection promotion code.
 
 ## Trial account blocked by company policy
 
@@ -22,13 +22,13 @@ When trying and failing to redeem a Fraud Protection promotion code, a global ad
 
 `Trial signup blocked by company policy`
 
-This error is likely generated because company policy blocks trial accounts from redeeming promo codes, which is done by disabling the [AllowAdHocSubscriptions](/powershell/module/msonline/set-msolcompanysettings) PowerShell setting. To successfully redeem the promo code, the **AllowAdHocSubscriptions** PowerShell setting must be temporarily enabled. You can then redeem the promotion code and disable the company setting afterwards.
+You are likely seeing this error because your company policy blocks trial accounts from redeeming promo codes by disabling ad hoc subscriptions. To successfully redeem the promo code, you must temporarily enable the [AllowAdHocSubscriptions](/powershell/module/msonline/set-msolcompanysettings PowerShell setting. You can then redeem the promotion code and disable the PowerShell setting again afterwards.
 
-> [!NOTE] Keep in mind that you or another administrator may have disabled the **AllowAdHocSubscriptions** PowerShell to prevent certain types of signup at your company. It is recommended that you check with your colleagues before following the steps below.
+> [!NOTE] You or another administrator may have disabled the **AllowAdHocSubscriptions** PowerShell setting to prevent certain types of signups at your company. It is recommended that you check with your colleagues before following the steps below.
 
-## Temporarily enable ad-hoc subscriptions
+## Temporarily enable ad hoc subscriptionss
 
-You can temporarily enable ad-hoc subscriptions by running the following PowerShell code.
+To temporarily enable ad hoc subscriptions, follow these steps.
 
 > [!NOTE]
 > You'll need to be an Azure global administrator in your tenant to run this code.
@@ -47,17 +47,13 @@ You can temporarily enable ad-hoc subscriptions by running the following PowerSh
     Set-MsolCompanySettings -AllowAdHocSubscriptions $true
     ```
 
-1. Go back to the Fraud Protection site and try to redeem your promo code again.
-1. If you were able to redeem your Fraud Protection promotion code and are ready to turn the protection back on, run the following commands. The output of the second command should again be **False**.
+1. On the Fraud Protection site, try to redeem your promo code again.
+1. If you were able to redeem your Fraud Protection promotion code and are ready to disable ad hoc subscriptions again, run the following commands. The output of the second command should again be **False**.
 
     ```PowerShell
     Set-MsolCompanySettings -AllowAdHocSubscriptions $false
     Get-MsolCompanyInformation | fl AllowAdHocSubscriptions
     ```
-
-## References
-
-The same process exists for Dynamics 365 Business Central: [Enable and Disable Dynamics 365 Business Central Self-service Signups](/dynamics365/business-central/dev-itpro/developer/devenv-business-central-manage-selfservice-signups).
 
 ## Support
 
