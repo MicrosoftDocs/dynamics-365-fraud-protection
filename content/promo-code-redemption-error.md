@@ -22,12 +22,12 @@ When trying and failing to redeem a Fraud Protection promotion code, a global ad
 
 `Trial signup blocked by company policy`
 
-You are likely seeing this error because your company policy blocks trial accounts from redeeming promo codes by disabling ad hoc subscriptions. To successfully redeem the promo code, you must temporarily enable the [AllowAdHocSubscriptions](/powershell/module/msonline/set-msolcompanysettings PowerShell setting. You can then redeem the promotion code and disable the PowerShell setting again afterwards.
+You're likely seeing this error because your company policy blocks trial accounts from redeeming promo codes by disabling ad hoc subscriptions. To successfully redeem the promo code, you must temporarily enable the [AllowAdHocSubscriptions](/powershell/module/msonline/set-msolcompanysettings PowerShell setting. You can then redeem the promotion code and disable the PowerShell setting again afterwards.
 
 > [!NOTE] 
 > You or another administrator may have disabled the **AllowAdHocSubscriptions** PowerShell setting to prevent certain types of signups at your company. It is recommended that you check with your colleagues before following the steps below.
 
-## Temporarily enable ad hoc subscriptionss
+## Temporarily enable ad hoc subscriptions
 
 To temporarily enable ad hoc subscriptions, follow these steps.
 
@@ -49,7 +49,7 @@ To temporarily enable ad hoc subscriptions, follow these steps.
     ```
 
 1. On the Fraud Protection site, try to redeem your promo code again.
-1. If you were able to redeem your Fraud Protection promotion code and are ready to disable ad hoc subscriptions again, run the following commands. The output of the second command should again be **False**.
+1. If you are able to redeem your Fraud Protection promotion code and ready to disable ad hoc subscriptions again, run the following commands. The output of the second command should again be **False**.
 
     ```PowerShell
     Set-MsolCompanySettings -AllowAdHocSubscriptions $false
