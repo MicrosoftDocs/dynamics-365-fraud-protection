@@ -13,8 +13,6 @@ title: What's new in Dynamics 365 Fraud Protection October 2021 release
 
 # What's new in Dynamics 365 Fraud Protection October 2021 release
 
-[!include [preview banner](includes/preview-banner.md)]
-
 The following features are included in the October 2021 release of Microsoft Dynamics 365 Fraud Protection:
 
 - Payment service provider (PSP) enablement

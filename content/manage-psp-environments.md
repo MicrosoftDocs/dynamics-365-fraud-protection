@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how payment service providers (PSPs) can manage environments in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 09/30/2021
+ms.date: 06/07/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -13,7 +13,6 @@ title: Manage environments (PSPs)
 
 # Manage environments (PSPs)
 
-[!include [preview banner](includes/preview-banner.md)]
 
 By creating new environments for their merchants, payment service providers (PSPs) can better manage fraud operations, data, and user access for those merchants. For example, if you're a PSP who manages two merchants, you can create two environments, one for each merchant. In that way, each merchant's fraud operations, data, and user access can be hosted and managed in a dedicated environment.
 
@@ -32,7 +31,7 @@ To view a list of all the environments under your tenant, select **Manage enviro
 
 ## Additional resources
 
-[Payment service provider enablement (preview)](psp-overview.md)
+[Payment service provider enablement](psp-overview.md)
 
 [Integrate purchase protection APIs](integrate-real-time-api.md)
 

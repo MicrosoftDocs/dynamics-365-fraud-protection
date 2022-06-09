@@ -44,6 +44,6 @@ The scorecard plots the following metrics:
 
 ## Additional resources
 
-[Scorecard reports for PSPs (preview)](scorecard-psp.md)
+[Scorecard reports for PSPs](scorecard-psp.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

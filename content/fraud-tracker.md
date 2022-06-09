@@ -1,21 +1,20 @@
 ---
 author: josaw1
-description: This article provides information about the fraud tracker tool (preview) in Microsoft Dynamics 365 Fraud Protection.
+description: This article provides information about the fraud tracker tool in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 09/30/2021
+ms.date: 06/09/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Fraud tracker tool (preview)
+title: Fraud tracker tool
 ---
 
-# Fraud tracker tool (preview)
+# Fraud tracker tool
 
-[!include [preview banner](includes/preview-banner.md)]
 
-The Microsoft Dynamics 365 Fraud Protection fraud tracker tool (preview) is provided as a preview service under the terms and conditions that are described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). It helps merchants understand fraud volume (by count and dollar amount), distribution, and trend, and lets them do analysis by payment instrument and product. It also helps them make informed operational decisions, such as adjusting the score threshold for a specific transaction segment.
+The Microsoft Dynamics 365 Fraud Protection fraud tracker tool helps merchants understand fraud volume (by count and dollar amount), distribution, and trend, and lets them do analysis by payment instrument and product. It also helps them make informed operational decisions, such as adjusting the score threshold for a specific transaction segment.
 
 The fraud tracker is an interactive report tool that is built on the Power BI platform. Merchants can use it to drive purchase protection for customers in their online business by applying various filters, changing the granularity of the dimension, and viewing an analysis of fraud volume and rate in various market segments.
 
