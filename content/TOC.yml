@@ -36,7 +36,7 @@
     href: promocode-set-up-loss-prevention.md  
 - name: Set up Fraud Protection
   items:
-  - name: Integration experience (preview)
+  - name: Integration experience
     href: integration-experience.md
   - name: Purchase protection
     items:
@@ -86,9 +86,9 @@
       href: account-protection-evaluate-experience.md
     - name: Protect experience
       href: account-protection-protect-experience.md
-    - name: Threat vulnerability analyzer tool (preview)
+    - name: Threat vulnerability analyzer tool 
       href: threat-vulnerability-analyzer.md
-    - name: Threat vulnerability trend tool (preview)
+    - name: Threat vulnerability trend tool
       href: threat-vulnerability-trend.md
     - name: Custom assessment
       href: custom-assessment.md
@@ -116,7 +116,7 @@
       href: loss-prevention-data-access-and-privacy.md
     - name: Reports
       href: reports.md
-- name: PSP protection (preview)
+- name: PSP protection
   items:
   - name: PSP enablement
     href: psp-overview.md
