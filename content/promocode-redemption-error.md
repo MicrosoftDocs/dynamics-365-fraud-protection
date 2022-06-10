@@ -12,7 +12,7 @@ title: Troubleshoot promotion code redemption error
 ms.custom:
 ---
 
-# Troubleshoot - Promotion code redemption errors
+# Troubleshoot - Promotion code redemption error
 ## Cause: Trial account blocked by company policy
 
 When attempting to redeem a Fraud Protection promotion code, a global administrator may encounter the following error: 
