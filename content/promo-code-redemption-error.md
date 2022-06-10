@@ -49,7 +49,7 @@ To temporarily enable ad hoc subscriptions, follow these steps.
     ```
 
 1. On the Fraud Protection site, try to redeem your promo code again.
-1. If you are able to redeem your Fraud Protection promotion code and ready to disable ad hoc subscriptions again, run the following commands. The output of the second command should again be **False**.
+1. If you're able to redeem your Fraud Protection promotion code and ready to disable ad hoc subscriptions again, run the following commands. The output of the second command should again be **False**.
 
     ```PowerShell
     Set-MsolCompanySettings -AllowAdHocSubscriptions $false
