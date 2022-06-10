@@ -37,7 +37,7 @@
   - name: Troubleshooting
     items:
     - name: Promotion code redemption error
-      href: promo-code-redemption-error.md
+      href: promocode-redemption-error.md
 - name: Set up Fraud Protection
   items:
   - name: Integration experience (preview)
