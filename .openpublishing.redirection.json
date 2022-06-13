@@ -16,6 +16,11 @@
       "redirect_document_id": "false"
     },  
     {
+      "source_path": "understand-business.md",
+      "redirect_url": "overview",
+      "redirect_document_id": "false"
+    },  
+    {
       "source_path": "content/schema-INT.md",
       "redirect_url": "view-purchase-protection-schemas",
       "redirect_document_id": "false"
