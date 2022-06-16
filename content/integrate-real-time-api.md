@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
 ms.author: josaw
-ms.date: 11/19/2020
+ms.date: 06/16/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -78,6 +78,7 @@ To integrate your systems with Fraud Protection, complete the following sections
 - **Directory (tenant) ID** - The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Configuration tab** of the **API Management** page in the Fraud Protection portal. 
 - **Application (client) ID** - This identifies the Azure AD app you've created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen.
+- **Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
 ### Generate an access token
 You must generate an Azure AD access token and provide it with each DFP API call. Note that access tokens have a limited lifespan. We recommend that you cache and reuse the token until it gets close to expiring, at which time you can get a new access token.
@@ -180,7 +181,10 @@ To call the APIs, follow these steps:
     <td>x-ms-correlation-id</td> 
     <td>Send a new GUID value on each set of API calls that are made together.</td> 
     </tr> 
-    </table> 
+    <td>x-ms-dfpenvid</td> 
+    <td>Send the GUID value of your Instance ID.</td> 
+    </tr>
+   </table> 
     </li> 
    <li>Generate an event-based payload. Fill in the event data with the relevant information from your system. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>. 
     </li> 
