@@ -107,7 +107,7 @@ To connect loss prevention to Commerce, you must complete a series of one-time s
 To connect your retail data to Fraud Protection, make sure that you have all three of the following prerequisites:
 
 - Access to the retail data lake.
-- Access to your Finance and Operations environment.
+- Access to your finance and operations environment.
 - A Fraud Protection license (trial or activated subscription).
 
 #### Connect loss prevention to data from Commerce
