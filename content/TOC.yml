@@ -204,6 +204,8 @@
     href: mobile-sdk-android.md
   - name: Mobile SDK for iOS
     href: mobile-sdk-ios.md
+  - name: Mobile SDK for React Native
+    href: mobile-sdk-react-native.md
 - name: Privacy, security, compliance
   items:
   - name: Legal considerations FAQ
