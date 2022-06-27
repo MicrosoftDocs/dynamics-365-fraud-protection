@@ -32,7 +32,7 @@ For data in transit, Fraud Protection uses encryption that is based on Transport
 
 Microsoft technologies such as Azure Cosmos DB, Azure Blob Storage, and Azure Data Lake are used to store data at rest. Fraud Protection implements strict trust boundaries to ensure that there is no unauthorized access to a merchant's data in its environment.
 
-For more information about Microsoft's approach to data encryption at rest and in transit, see [Azure encryption overview](/azure/security/fundamentals/encryption-overview.md) and [Azure Data Encryption-at-Rest](/azure/security/fundamentals/encryption-atrest).
+For more information about Microsoft's approach to data encryption at rest and in transit, see [Azure encryption overview](/azure/security/fundamentals/encryption-overview.md) and [Azure Data Encryption-at-Rest](/azure/security/fundamentals/encryption-atrest.md).
 
 #### Does Fraud Protection process, access, transmit, or store its merchant's non-public personal data?  
 
