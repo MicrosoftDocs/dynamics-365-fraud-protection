@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions (FAQ) about privacy and security in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/02/2022
+ms.date: 06/27/2022
 ms.topic: faq
 search.app: 
   - Capaedac-fraudprotection
@@ -14,6 +14,9 @@ title: Privacy and security FAQ
 # Privacy and security FAQ
 
 This article provides answers to frequently asked questions (FAQ) about privacy and security in Microsoft Dynamics 365 Fraud Protection.
+
+> [!NOTE]
+> Please note that Dynamics 365 Fraud Protection does not support Customer Managed Keys (CMK) or Lockbox capabilities.
 
 #### Has Fraud Protection experienced a security breach in the last 12 months? What are the breach notification process and timelines? 
 
