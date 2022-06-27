@@ -20,7 +20,7 @@ This article provides answers to frequently asked questions (FAQ) about privacy 
 
 Fraud Protection follows Microsoft's standard data breach notification process subject to General Data Protection Regulation (GDPR) requirements, regardless of whether a customer's data is subject to GDPR. For more information, including a description of the process and links to learn more, see [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/gdpr-data-breach). While you're there, you can also set up your organization's privacy contact for notifications.
 
-You can also find more information in [Azure, Dynamics 365, and Windows breach notification under the GDPR](/compliance/regulatory/gdpr-breach-azure-dynamics-windows.md).
+You can also find more information in [Azure, Dynamics 365, and Windows breach notification under the GDPR](/compliance/regulatory/gdpr-breach-azure-dynamics-windows).
 
 #### Does Fraud Protection support encryption of data at rest? How is the encryption deployed? Is any data encrypted in transit? What are the protocols? 
 
@@ -30,7 +30,7 @@ For data in transit, Fraud Protection uses encryption that is based on Transport
 
 Microsoft technologies such as Azure Cosmos DB, Azure Blob Storage, and Azure Data Lake are used to store data at rest. Fraud Protection implements strict trust boundaries to ensure that there is no unauthorized access to a merchant's data in its environment.
 
-For more information about Microsoft's approach to data encryption at rest and in transit, see [Azure encryption overview](/azure/security/fundamentals/encryption-overview.md) and [Azure Data Encryption-at-Rest](/azure/security/fundamentals/encryption-atrest.md).
+For more information about Microsoft's approach to data encryption at rest and in transit, see [Azure encryption overview](/azure/security/fundamentals/encryption-overview) and [Azure Data Encryption-at-Rest](/azure/security/fundamentals/encryption-atrest).
 
 > [!NOTE]
 > Please note that Dynamics 365 Fraud Protection does not support Customer Managed Keys (CMK) or Lockbox capabilities. 
