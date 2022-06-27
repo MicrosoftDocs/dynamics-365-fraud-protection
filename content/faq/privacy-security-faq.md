@@ -15,8 +15,6 @@ title: Privacy and security FAQ
 
 This article provides answers to frequently asked questions (FAQ) about privacy and security in Microsoft Dynamics 365 Fraud Protection.
 
-> [!NOTE]
-> Please note that Dynamics 365 Fraud Protection does not support Customer Managed Keys (CMK) or Lockbox capabilities.
 
 #### Has Fraud Protection experienced a security breach in the last 12 months? What are the breach notification process and timelines? 
 
@@ -33,6 +31,9 @@ For data in transit, Fraud Protection uses encryption that is based on Transport
 Microsoft technologies such as Azure Cosmos DB, Azure Blob Storage, and Azure Data Lake are used to store data at rest. Fraud Protection implements strict trust boundaries to ensure that there is no unauthorized access to a merchant's data in its environment.
 
 For more information about Microsoft's approach to data encryption at rest and in transit, see [Azure encryption overview](/azure/security/fundamentals/encryption-overview.md) and [Azure Data Encryption-at-Rest](/azure/security/fundamentals/encryption-atrest.md).
+
+> [!NOTE]
+> Please note that Dynamics 365 Fraud Protection does not support Customer Managed Keys (CMK) or Lockbox capabilities. 
 
 #### Does Fraud Protection process, access, transmit, or store its merchant's non-public personal data?  
 
@@ -57,10 +58,6 @@ Yes. Microsoft [Commercial Licensing Terms](https://www.microsoft.com/licensing/
 Yes. Fraud Protection is part of the Dynamics 365 family of products, and follows policies and guidelines that are defined for the Dynamics 365 and Cloud & AI organization. Fraud Protection collaborates with Azure Security, Microsoft Threat Intelligence Center, Azure Incident Response Team, Microsoft Global Security, and other internal security and compliance teams.
 
 For more information about security for Fraud Protection, see [Security overview for Dynamics 365 Fraud Protection](../security.md).
-
-#### Does Fraud Protection support tenant-generated encryption keys or allow tenants to encrypt data to an identity without access to a public key certificate (for example, identity-based encryption)? 
-
-Yes. For information about Azure Data Encryption at Rest, see [Azure Data Encryption at Rest](/azure/security/fundamentals/encryption-atrest.md).
 
 #### How does Fraud Protection ensure that data quality errors and risks that are inherited from partners in the cloud supply chain are inspected, accounted for, and corrected? 
 
