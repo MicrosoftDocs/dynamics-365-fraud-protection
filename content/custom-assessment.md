@@ -107,7 +107,7 @@ To implement custom assessments with device fingerprinting, follow the steps bel
 
 1. Select the **Use device fingerprinting** template and then select **Create.** The **Rules** page opens with two new clauses added. The new clauses contain reference statements that you can modify. If you chose a new name for the device fingerprinting session ID in your payload, replace the "deviceContextId" in the rules with the name that you chose.
 
-1. You can modify the return statement as needed and add or remove clauses to implement the necessary conditions to make a decision. For more information on the fraud query language and other commands that can be used in rules, refer to the [Language reference guide](fpl-lang-ref.md) article.
+1. You can modify the return statement as needed and add or remove clauses to implement the necessary conditions to make a decision. For more information on the fraud query language and other commands that can be used in rules, refer to the [Language reference guide](fpl-lang-ref.md).
 
 1. When you are done editing the rule, select **Publish** and then **Activate**.
 
