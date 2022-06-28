@@ -82,13 +82,13 @@ Currently, you can create up to three distinct assessments under custom assessme
 
 ## Use custom assessments with device fingerprinting
 
-You can use custom assessments with device fingerprinting in Dynamics 365 Fraud Protection to help protect against several scenarios such as detecting the presence of bots on pages where a user has not been authenticated.
+You can use custom assessments with device fingerprinting in Fraud Protection to help protect against several scenarios such as detecting the presence of bots on pages where a user has not been authenticated.
 
 After you implement device fingerprinting on the relevant page in your website or app, use the fingerprinting session ID to retrieve the Fraud Protection bot model score and to access key attributes of a device such as TrueIP or device location. You can use this data to formulate policies that address your fraud protection needs.
 
 To implement custom assessments with device fingerprinting, follow the steps below.
 
-1. To implement device fingerprinting on the relevant pages in your app or website, refer to the appropriate instructions on the following pages:
+1. To implement device fingerprinting on the relevant pages in your app or website, refer to the appropriate instructions on the following pages.
 
     - For web pages, see [Set up device fingerprinting](device-fingerprinting.md#implement-device-fingerprinting).
 
@@ -114,7 +114,7 @@ To implement custom assessments with device fingerprinting, follow the steps bel
 1. Finally, [call the custom assessment API](custom-assessment.md#call-the-custom-assessment-api).
 
 > [!NOTE]
-> Wait at least two seconds after you initiate the device fingerprinting session to make the custom assessment API call. That way, fingerprinting data can be collected and transmitted and therefore used within the custom assessment rule execution.
+> Wait at least two seconds after you initiate the device fingerprinting session to make the custom assessment API call. That way, fingerprinting data can be collected and transmitted, and therefore used within the custom assessment rule execution.
 
 
 ## Related articles
