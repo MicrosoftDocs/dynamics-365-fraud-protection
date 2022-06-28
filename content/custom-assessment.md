@@ -90,11 +90,11 @@ To implement custom assessments with device fingerprinting, follow the steps bel
 
 1. To implement device fingerprinting on the relevant pages in your app or website, refer to the appropriate instructions on the following pages:
 
-    1.  For web pages, see [Set up device fingerprinting](device-fingerprinting.md#implement-device-fingerprinting).
+    - For web pages, see [Set up device fingerprinting](device-fingerprinting.md#implement-device-fingerprinting).
 
-    1.  For Android apps, see the [Fraud Protection mobile SDK for Android](mobile-sdk-android.md).
+    - For Android apps, see [Fraud Protection mobile SDK for Android](mobile-sdk-android.md).
 
-    1.  For iOS Apps, see the [Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md).
+    - For iOS Apps, see [Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md).
 
 1. Create a custom assessment and a rule by following the steps in the [Custom assessment](custom-assessment.md#create-an-assessment) article. Ensure that the session ID from the device fingerprinting session is included in the payload for your custom assessment.
 
