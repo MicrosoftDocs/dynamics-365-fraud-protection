@@ -67,6 +67,23 @@ To revoke a user's access to the current environment, select the user in the mem
 
 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select the features and functions when you assign a user to the system.
 
+### Roles
+
+The following roles are available for PSP users:
+
+- **PSP Admin** – This role is a high-level administrative account that has full access to all PSP-related features. A user in this role can manage Fraud Protection for a PSP and its merchant customers.
+- **Fraud Manager** – This role is an internal role in a PSP. A user in this role is intended to manage Fraud Protection for the PSP's merchant customers.
+- **Fraud Supervisor** – This role provides the highest level of authority in a PSP's merchant customer. A user in this role can access merchant-facing functions that the PSP delegates to them.
+- **Fraud Analyst** – This role is intended for a PSP's merchant customer who will run analysis and reports. A user in this role has read-only access to the merchant customer's data.
+- **Manual Review Agent** – A user in this role is responsible for reviewing individual transactions and approving or declining them. Although manual review agents don't have direct access to the **Support Lists** page, they can modify the status of an entry in the support list through the **Transaction Search** page.
+- **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
+- **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
+- **Reporting** – This role provides access to event tracing only, to enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
+
+### Permissions
+
+The following table shows the specific read/write permissions that users will have on each page depending on their role(s):
+
 <table>
 <thead>
 <tr>
@@ -311,16 +328,6 @@ Fraud Protection offers a defined set of user roles, each of which has access to
 
 \* To create an Azure AD application, the user who is assigned the **PSP Admin** or **Technical Developer** role must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
 
-The following roles are available for PSP users:
-
-- **PSP Admin** – This role is a high-level administrative account that has full access to all PSP-related features. A user in this role can manage Fraud Protection for a PSP and its merchant customers.
-- **Fraud Manager** – This role is an internal role in a PSP. A user in this role is intended to manage Fraud Protection for the PSP's merchant customers.
-- **Fraud Supervisor** – This role provides the highest level of authority in a PSP's merchant customer. A user in this role can access merchant-facing functions that the PSP delegates to them.
-- **Fraud Analyst** – This role is intended for a PSP's merchant customer who will run analysis and reports. A user in this role has read-only access to the merchant customer's data.
-- **Manual Review Agent** – A user in this role is responsible for reviewing individual transactions and approving or declining them. Although manual review agents don't have direct access to the **Support Lists** page, they can modify the status of an entry in the support list through the **Transaction Search** page.
-- **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
-- **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
-- **Reporting** – This role provides access to event tracing only, to enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
 
 ### Member access
 
