@@ -69,30 +69,170 @@ Fraud Protection offers a defined set of user roles, each of which has access to
 
 All the roles in the following list are named as they will be named in your production environment. To grant users access to these roles in your sandbox environment, select the version of the role that begins with "Sandbox_" (for example, **Sandbox_AllAreas_Admin**).
 
-- **AllAreas_Admin** – This high-level administrative account has full access to Fraud Protection.
-- **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools.
+### Roles
 
-    - **Write** – **AllAreasEditor** user roles have write permissions to edit or perform data uploads, rules, virtual fraud analyst, lists, and subject requests.
-    - **Read** – **AllAreasEditor** user roles have read permissions for diagnostic reports, the support tool, the scorecard, metrics, the ontology, graph explorer, the API configuration, metering, monitoring, permissions, and transaction acceptance booster.
+- **AllAreas_Admin** – This high-level administrative account has full access to Fraud Protection.
+
+- **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools.
 
 - **AllAreasViewer** – A user in this role can view all areas of Fraud Protection and learn from the data, but can't do uploads or change settings.
 
-    - **Write** – **AllAreasViewer** user roles have no write permissions.
-    - **Read** – **AllAreasViewer** user roles have read permissions for all areas.
-
 - **SupportAgent** – This role provides tailored access to Fraud Protection for support agents who work with your customers. A user in this role can view and work in the support tool, view the ontology, and assign customers to safe lists or block lists.
-
-    - **Write** – **SupportAgent** user roles have write permissions for support lists.
-    - **Read** – **SupportAgent** user roles have read permissions for lists, the support tool, and the ontology.
-    - **No access** – **SupportAgent** user roles have access only to the areas that are specified for write and read permissions. Some pages might be accessible in the navigation but not fully usable.
 
 - **FraudEngineer** – This role provides tailored access for fraud analysts and engineers in your organization who work with Fraud Protection. A user in this role has similar access to a user in the **AllAreasEditor** role. This user can access the data engineering information but doesn't have access to some configuration options.
 
-    - **Write** – **AllAreasEditor** user roles have write permissions to edit or perform data uploads, rules, virtual fraud analyst, lists, and subject requests.
-    - **Read** – **AllAreasEditor** user roles have read permissions for diagnostic reports, the support tool, the scorecard, metrics, the ontology, and graph explorer.
-    - **No access** – **AllAreasEditor** user roles have no access to the API configuration, metering, monitoring, permissions, and transaction acceptance booster. Some pages might be accessible in the navigation but not fully usable.
-
 - **Risk_API** – This role provides access to the API but not to the user-facing tool.
+
+- **ManualReviewFraudManager** - 
+- **ManualReviewSeniorAnalyst** -
+- **ManualReviewAnalyst** - 
+
+### Permissions
+
+The following table shows the specific read/write permissions that users will have on each page depending on their role(s):
+
+<table>
+    <thead>
+        <tr>
+            <th>Section</th>
+            <th>Sub-page (tab)</th>
+            <th>AllAreas_Admin</th>
+            <th>AllAreasEditor</th>
+            <th>AllAreasViewer</th>
+            <th>SupportAgent</th>
+            <th>FraudEngineer</th>
+            <th>Risk_API</th>
+            <th>ManualReviewFraudManager</th>
+            <th>ManualReviewSeniorAnalyst</th>
+            <th>ManualReviewAnalyst</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td colspan="2">Dashboard</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Account creation</td>
+            <td>Scorecard</td>
+        </tr>
+        <tr>
+            <td>Rules</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Account login</td>
+            <td>Scorecard</td>
+        </tr>
+        <tr>
+            <td>Rules</td>
+        </tr>
+        <tr>
+            <td rowspan="5">Account protection reports</td>
+            <td>Summary</td>
+        </tr>
+        <tr>
+            <td>Score and reason code</td>
+        </tr>
+        <tr>
+            <td>Status and label</td>
+        </tr>
+        <tr>
+            <td>Device high level</td>
+        </tr>
+        <tr>
+            <td>IP and Device ID</td>
+        </tr>
+        <tr>
+            <td rowspan="6">Purchase</td>
+            <td>Summary</td>
+        </tr>
+        <tr>
+            <td>Rules</td>
+        </tr>
+        <tr>
+            <td>Rules performance</td>
+        </tr>
+        <tr>
+            <td>Virtual fraud analyst</td>
+        </tr>
+        <tr>
+            <td>Fraud analysis</td>
+        </tr>
+        <tr>
+            <td>Support</td>
+        </tr>
+        <tr>
+            <td colspan="2">Loss Prevention</td>
+        </tr>
+        <tr>
+            <td colspan="2">Custom assessments</td>
+        </tr>
+        <tr>
+            <td colspan="2">Search</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Case management</td>
+            <td>Queues</td>
+        </tr>
+        <tr>
+            <td>Report</td>
+        </tr>
+        <tr>
+            <td>Routing rules</td>
+        </tr>
+        <tr>
+            <td colspan="2">Velocities</td>
+        </tr>
+        <tr>
+            <td colspan="2">External calls</td>
+        </tr>
+        <tr>
+            <td colspan="2">Lists</td>
+        </tr>
+        <tr>
+            <td colspan="2">Graph explorer</td>
+        </tr>
+        <tr>
+            <td colspan="2">Event tracing</td>
+        </tr>
+        <tr>
+            <td colspan="2">Data upload</td>
+        </tr>
+        <tr>
+            <td colspan="2">API management</td>
+        </tr>
+        <tr>
+            <td colspan="2">Integration</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Subscription</td>
+            <td>Summary</td>
+        </tr>
+        <tr>
+            <td>Details</td>
+        </tr>
+        <tr>
+            <td>Billing</td>
+        </tr>
+        <tr>
+            <td colspan="2">User access</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Subject requests</td>
+            <td>Search</td>
+        </tr>
+        <tr>
+            <td>Requests</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Transaction acceptance booster</td>
+            <td>Opt in</td>
+        </tr>
+        <tr>
+            <td>Report</td>
+        </tr>
+    </tbody>
+</table>
+
 
 ### Member access
 
