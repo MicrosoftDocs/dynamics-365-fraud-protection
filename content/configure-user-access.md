@@ -115,23 +115,23 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td rowspan="2">Account creation</td>
             <td>Scorecard</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td>Rules</td>
@@ -140,23 +140,23 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td rowspan="2">Account login</td>
             <td>Scorecard</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td>Rules</td>
@@ -165,68 +165,68 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td rowspan="5">Account protection reports</td>
             <td>Summary</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
         </tr>
         <tr>
             <td>Score and reason code</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
         </tr>
         <tr>
             <td>Status and label</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
         </tr>
         <tr>
             <td>Device high level</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
         </tr>
         <tr>
             <td>IP and Device ID</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
@@ -234,15 +234,15 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="6">Purchase</td>
             <td>Summary</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td>Rules</td>
@@ -251,19 +251,19 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>Read only</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td>Rules performance</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
@@ -273,47 +273,47 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
-            <td>No access</td>
+            <td>Read only</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td>Fraud analysis</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
         </tr>
         <tr>
             <td>Support</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
             <td>Read only</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">Loss Prevention</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">Custom assessments</td>
@@ -322,10 +322,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">Search</td>
@@ -342,36 +342,36 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="3">Case management</td>
             <td>Queues</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
         </tr>
         <tr>
             <td>Report</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
         </tr>
         <tr>
             <td>Routing rules</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
@@ -383,10 +383,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">External calls</td>
@@ -395,10 +395,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">Lists</td>
@@ -407,10 +407,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">Graph explorer</td>
@@ -419,10 +419,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>No access</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">Event tracing</td>
@@ -431,10 +431,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">Data upload</td>
@@ -443,10 +443,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
             <td>No access</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td rowspan="3">API management</td>
@@ -456,10 +456,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>No access</td>
             <td>No access</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td>Errors</td>
@@ -468,10 +468,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>No access</td>
             <td>No access</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td>Ontology</td>
@@ -480,10 +480,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">Integration</td>
@@ -492,10 +492,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td rowspan="3">Subscription</td>
@@ -541,10 +541,10 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
+            <td>No access</td>
             <td>?</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td rowspan="2">Subject requests</td>
@@ -574,24 +574,24 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="2">Transaction acceptance booster</td>
             <td>Opt in</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
         </tr>
         <tr>
             <td>Report</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>

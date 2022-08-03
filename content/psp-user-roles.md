@@ -114,36 +114,36 @@ The following table shows the specific read/write permissions that users will ha
         </tr>
         <tr>
           <td>Virtual fraud analyst</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
+          <td>Read/Write</td>
+          <td>Read/Write</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
         </tr>
         <tr>
           <td>Fraud analysis</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
-          <td>?</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
         </tr>
         <tr>
             <td colspan="2">Search</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td colspan="2">Rules</td>
@@ -185,7 +185,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
-            <td>*Write only</td>
+            <td>Write only <sup>1</sup></td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -204,36 +204,36 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="3">Case management</td>
             <td>Queues</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read/Write <sup>2</sup></td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td>Report</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td>Routing rules</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
           <tr>
             <td rowspan="2">API Management</td>
@@ -271,7 +271,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
         </tr>
         <tr>
-            <td>AAD Apps*</td>
+            <td>AAD Apps <sup>3</sup></td>
             <td>Read/Write</td>
             <td>No access</td>
             <td>No access</td>
@@ -377,30 +377,32 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="2">Transaction acceptance booster</td>
             <td>Opt in</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td>Report</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
     </tbody>
 </table>
 
-\* To create an Azure AD application, the user who is assigned the **PSP Admin** or **Technical Developer** role must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
+\(1) ManualReviewAgent can remove/add items to Support Lists (e.g. Safe, Block, Watch) via features like Search or Case management, but cannot read or edit off of the full Support Lists  page.
+
+\(2) ManualReviewAgent can make decisions (e.g. Approve/Reject/Send back to queue) on cases in queues but cannot modify higher-level queue settings.
+
+\(3) To create an Azure AD application, the user who is assigned the **PSP Admin** or **Technical Developer** role must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
 
 
 ### Member access
