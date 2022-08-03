@@ -103,10 +103,10 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="3">Purchase</td>
             <td>Summary</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -136,14 +136,25 @@ The following table shows the specific read/write permissions that users will ha
         </tr>
         <tr>
             <td colspan="2">Search</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td colspan="2">Event Details</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read/Write <sup>1</sup></td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td colspan="2">Rules</td>
@@ -170,14 +181,14 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="2">Lists</td>
             <td>Custom</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
         </tr>
         <tr>
             <td>Support</td>
@@ -185,9 +196,9 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
-            <td>Write only <sup>1</sup></td>
+            <td>Read/Write<sup>1</sup></td>
             <td>No access</td>
-            <td>No access</td>
+            <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
@@ -354,25 +365,25 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="2">Subject requests</td>
             <td>Search</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td>Requests</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td rowspan="2">Transaction acceptance booster</td>
@@ -398,7 +409,7 @@ The following table shows the specific read/write permissions that users will ha
     </tbody>
 </table>
 
-\(1) ManualReviewAgent can remove/add items to Support Lists (e.g. Safe, Block, Watch) via features like Search or Case management, but cannot read or edit off of the full Support Lists  page.
+\(1) ManualReviewAgent can remove/add items to Support Lists (e.g. Safe, Block, Watch) via the Event Details page, but cannot read or edit off of the full Support Lists page.
 
 \(2) ManualReviewAgent can make decisions (e.g. Approve/Reject/Send back to queue) on cases in queues but cannot modify higher-level queue settings.
 
