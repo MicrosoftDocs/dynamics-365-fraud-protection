@@ -82,7 +82,7 @@ The following roles are available for PSP users:
 
 ### Permissions
 
-The following table shows the specific read/write permissions that users will have on each page depending on their role(s):
+The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal depending on their role(s):
 
 <table>
     <thead>
@@ -157,15 +157,27 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
         </tr>
         <tr>
-            <td colspan="2">Rules</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td rowspan="2">Rules</td>
+            <td>Performance</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+          <td>Rule management</td>
+          <td>Read/Write</td>
+          <td>Read/Write</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
         </tr>
         <tr>
             <td colspan="2">Velocities</td>
@@ -181,14 +193,14 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="2">Lists</td>
             <td>Custom</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td>Support</td>
@@ -247,7 +259,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
         </tr>
           <tr>
-            <td rowspan="2">API Management</td>
+            <td rowspan="3">API Management</td>
             <td>API requests</td>
             <td>Read/Write</td>
             <td>No access</td>
@@ -266,6 +278,17 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
             <td>No access</td>
             <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Ontology</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
@@ -315,41 +338,27 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
         </tr>
         <tr>
-            <td rowspan="3">Subscription</td>
+            <td rowspan="2">Subscription</td>
             <td>Summary</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td>Details</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-        </tr>
-        <tr>
-            <td>Billing</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td colspan="2">User access</td>
@@ -395,10 +404,12 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td>Report</td>
             <td>Read only</td>
+            <td>No access</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -413,7 +424,7 @@ The following table shows the specific read/write permissions that users will ha
 
 \(2) ManualReviewAgent can make decisions (e.g. Approve/Reject/Send back to queue) on cases in queues but cannot modify higher-level queue settings.
 
-\(3) To create an Azure AD application, the user who is assigned the **PSP Admin** or **Technical Developer** role must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
+\(3) To create an Azure AD application, the user must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
 
 
 ### Member access

@@ -89,7 +89,7 @@ All the roles in the following list are named as they will be named in your prod
 
 ### Permissions
 
-The following table shows the specific read/write permissions that users will have on each page depending on their role(s):
+The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal depending on their role(s):
 
 <table>
     <thead>
@@ -415,12 +415,12 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="2">Lists</td>
             <td>Custom</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read/Write</td>
+            <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
@@ -430,7 +430,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
-            <td>Read/Write</td>
+            <td>Read/Write <sup>1</sup></td>
             <td>Read/Write</td>
             <td>No access</td>
             <td>?</td>
@@ -439,11 +439,11 @@ The following table shows the specific read/write permissions that users will ha
         </tr>
         <tr>
             <td colspan="2">Graph explorer</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>?</td>
             <td>?</td>
@@ -452,7 +452,7 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td colspan="2">Event tracing</td>
             <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
@@ -465,7 +465,7 @@ The following table shows the specific read/write permissions that users will ha
             <td colspan="2">Data upload</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
-            <td>No access</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
             <td>No access</td>
@@ -478,7 +478,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>API requests</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>?</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -490,7 +490,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>Errors</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>?</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -500,18 +500,43 @@ The following table shows the specific read/write permissions that users will ha
         </tr>
         <tr>
             <td>Ontology</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>?</td>
             <td>?</td>
             <td>?</td>
         </tr>
         <tr>
-            <td colspan="2">Integration</td>
+            <td rowspan="3">Integration</td>
+            <td>Dashboard</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+        </tr>
+        <tr>
+            <td>AAD Apps <sup>2</sup></td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>?</td>
+            <td>?</td>
+            <td>?</td>
+        </tr>
+        <tr>
+            <td>Device Fingerprinting</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -549,15 +574,15 @@ The following table shows the specific read/write permissions that users will ha
         </tr>
         <tr>
             <td>Billing</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td colspan="2">User access</td>
@@ -577,7 +602,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
-            <td>Read only</td>
+            <td>No access</td>
             <td>Read/Write</td>
             <td>No access</td>
             <td>?</td>
@@ -589,7 +614,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
-            <td>Read only</td>
+            <td>No access</td>
             <td>Read/Write</td>
             <td>No access</td>
             <td>?</td>
@@ -623,6 +648,12 @@ The following table shows the specific read/write permissions that users will ha
         </tr>
     </tbody>
 </table>
+
+\(1) SupportAgent can remove/add items to Support Lists (e.g. Safe, Block, Watch) via the Event Details page, but cannot read or edit off of the full Support Lists page.
+
+\(2) To create an Azure AD application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
+
+
 
 
 ### Member access
