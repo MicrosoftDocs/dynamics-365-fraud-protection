@@ -9,7 +9,7 @@ metadata:
   ms.topic: hub-page
   author: kelsiefu
   ms.author: josaw
-  ms.date: 02/01/2022
+  ms.date: 06/07/2022
 
 # highlightedContent section (optional)
 # Maximum of 8 items
@@ -80,7 +80,7 @@ additionalContent:
         # Card
         - title: Set up Fraud Protection
           links:
-            - text: Integration experience (preview)
+            - text: Integration experience 
               url: integration-experience.md
             - text: Purchase protection
               url: purchase-protection.md
@@ -88,7 +88,7 @@ additionalContent:
               url: ap-overview.md
             - text: Loss prevention
               url: loss-prevention-overview.md
-            - text: PSP enablement (preview)
+            - text: PSP enablement
               url: psp-overview.md
         # Card
         - title: API documentation
