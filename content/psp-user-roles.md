@@ -1,8 +1,8 @@
 ---
 author: josaw1
-description: This topic explains how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 01/27/2022
+ms.date: 06/07/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -13,8 +13,6 @@ title: User roles and access (PSPs)
 ---
 
 # User roles and access (PSPs)
-
-[!include [preview banner](includes/preview-banner.md)]
 
 Payment service providers (PSPs) can grant users of Microsoft Dynamics 365 Fraud Protection various levels of access, based on logical or functional roles.
 
@@ -56,7 +54,7 @@ To edit the role that is assigned to a user in Fraud Protection, select the user
 
 In this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home).
 
-To learn more about the available PSP roles, see the [PSP user roles and access](psp-user-roles.md#psp-user-roles-and-access) section of this topic.
+To learn more about the available PSP roles, see the [PSP user roles and access](psp-user-roles.md#psp-user-roles-and-access) section of this article.
 
 ### Revoke user access to the environment
 

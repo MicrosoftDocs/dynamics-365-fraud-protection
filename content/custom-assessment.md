@@ -1,9 +1,8 @@
 ---
-author: yvonnedeq
-description: This topic provides information about custom assessments, and explains how to create and define them.
-ms.author: v-madeq
-ms.date: 04/02/2021
-
+author: josaw1
+description: This article provides information about custom assessments, and explains how to create and define them.
+ms.author: josaw
+ms.date: 06/28/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -81,7 +80,44 @@ Currently, you can create up to three distinct assessments under custom assessme
 
     The change takes effect as soon as it's saved.
 
-## Related topics
+## Use custom assessments with device fingerprinting
+
+You can use custom assessments with device fingerprinting in Fraud Protection to help protect against several scenarios such as detecting the presence of bots on pages where a user has not been authenticated.
+
+After you implement device fingerprinting on the relevant page in your website or app, use the fingerprinting session ID to retrieve the Fraud Protection bot model score and to access key attributes of a device such as TrueIP or device location. You can use this data to formulate policies that address your fraud protection needs.
+
+To implement custom assessments with device fingerprinting, follow the steps below.
+
+1. To implement device fingerprinting on the relevant pages in your app or website, refer to the appropriate instructions on the following pages.
+
+    - For web pages, see [Set up device fingerprinting](device-fingerprinting.md#implement-device-fingerprinting).
+
+    - For Android apps, see [Fraud Protection mobile SDK for Android](mobile-sdk-android.md).
+
+    - For iOS Apps, see [Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md).
+
+1. Create a custom assessment and a rule by following the steps in the [Custom assessment](custom-assessment.md#create-an-assessment) article. Ensure that the session ID from the device fingerprinting session is included in the payload for your custom assessment.
+
+> [!NOTE]
+> The session ID is referred to in this article as "deviceContextId". You can choose any name for this attribute, just be sure you refer to the correct name in the rules.
+
+1. Open the rule you created for custom assessment and select **Edit**.
+
+1. In the **Clauses** section, select **From template** and then select **See all.**
+
+1. Select the **Use device fingerprinting** template and then select **Create.** The **Rules** page opens with two new clauses added. The new clauses contain reference statements that you can modify. If you chose a new name for the device fingerprinting session ID in your payload, replace the "deviceContextId" in the rules with the name that you chose.
+
+1. You can modify the return statement as needed and add or remove clauses to implement the necessary conditions to make a decision. For more information on the fraud query language and other commands that can be used in rules, refer to the [Language reference guide](fpl-lang-ref.md).
+
+1. When you are done editing the rule, select **Publish** and then **Activate**.
+
+1. Finally, [call the custom assessment API](custom-assessment.md#call-the-custom-assessment-api).
+
+> [!NOTE]
+> Wait at least two seconds after you initiate the device fingerprinting session to make the custom assessment API call. That way, fingerprinting data can be collected and transmitted, and therefore used within the custom assessment rule execution.
+
+
+## Related articles
 
 - [Account protection overview](ap-overview.md)
 - [Manage lists](lists.md)

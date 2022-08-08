@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
-ms.author:  v-madeq
+author: josaw1
+description: This article explains how to upload historical data for Microsoft Dynamics 365 Fraud Protection.
+ms.author:  josaw
 ms.date: 02/02/2021
 ms.topic: conceptual
 search.app: 

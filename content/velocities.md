@@ -1,8 +1,8 @@
 ---
 author: josaw1
-description: This topic explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 09/09/2021
+ms.date: 06/07/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -37,7 +37,7 @@ GROUPBY <attribute name>
     | DistinctCount      | This method returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPaddresses |
     | Sum                | This method returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
-- After **FROM**, specify an assessment to observe the velocity on: *Purchase, AccountLogin, AccountCreation, Chargeback, or BankEvent*.
+- After **FROM**, specify an assessment to observe the velocity on: *Purchase, AccountLogin, AccountCreation, Chargeback, BankEvent, or Custom Assessment*.
 - *The **WHEN** statement is optional.* After **WHEN**, you can type a Boolean expression. Only events that match the condition are considered in the aggregation. Other events are ignored. The expression is used to filter the events that are considered in the velocity.
 - After **GROUPBY**, specify a property or an expression. The property or expression is then evaluated for every event that is processed. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that is specified in the **SELECT** statement. If the **GROUPBY** expression is null or empty for an incoming event, the event won't contribute to the aggregation.
 
@@ -105,7 +105,7 @@ GROUPBY @"user.userId
 
     WHEN @"user.countryRegion" == "US"
 
-3. To define a new velocity from scratch, select **New velocity**. For information about how to define velocities, see the [Define a velocity](velocities.md#define-a-velocity) section earlier in this topic.
+3. To define a new velocity from scratch, select **New velocity**. For information about how to define velocities, see the [Define a velocity](velocities.md#define-a-velocity) section earlier in this article.
 
     To start from an existing velocity template, select the arrow to the right of **New velocity**. To view a full list of existing templates and their contents, select **See all**.
 
@@ -119,7 +119,7 @@ After the velocity is published, the velocities in the velocity set are visible 
 > [!NOTE]
 > After a velocity is published, it starts to aggregate data from that point forward. Historical data isn't considered.
 
-For information about how to use your velocities to make decisions, see the [Use a velocity in rules](velocities.md#use-a-velocity-in-rules) section later in this topic.
+For information about how to use your velocities to make decisions, see the [Use a velocity in rules](velocities.md#use-a-velocity-in-rules) section later in this article.
 
 ### Understand the Sample pane
 

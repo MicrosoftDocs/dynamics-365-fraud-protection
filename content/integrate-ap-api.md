@@ -1,9 +1,8 @@
 ---
-author: yvonnedeq
-description: This topic explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time application programming interfaces (APIs).
-
-ms.author: v-madeq 
-ms.date: 07/07/2020
+author: josaw1
+description: This article explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time application programming interfaces (APIs).
+ms.author: josaw
+ms.date: 06/16/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -70,9 +69,6 @@ You can create as many apps as you require to run API calls in your production e
 
 After you've created your Azure AD apps, you can manage them through the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps). For more information, see the [Azure documentation site](/azure/active-directory/develop/active-directory-how-applications-are-added).
 
-### Manually configure Azure AD applications
-
-If you want to set up your apps directly in Azure, see [Create Azure AD apps in Azure Portal or PowerShell](azure-apps-portal-powershell.md).
 
 ## Call the Fraud Protection real-time APIs
 
@@ -84,6 +80,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 - **Directory (tenant) ID** – The directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard.
 - **Application (client) ID** – The application ID identifies the Azure AD app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **Real-time APIs** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you created.
 - **Certificate thumbprint or secret** – You can find the certificate thumbprint or the secret on the confirmation page that appears after you select **Create application** on the **Real-time APIs** page.
+- **Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
 ### Generate an access token
 
@@ -154,6 +151,7 @@ To call the APIs, follow these steps.
     |---------------------|--------------|
     | Authorization       | Use the following format for this header: **Bearer *accesstoken***, where *accesstoken* is the token that is returned by Azure AD. |
     | x-ms-correlation-id | Send a new GUID value on each set of API calls that are made together. |
+    | x-ms-dfpenvid       | Send the GUID value of your Instance ID. |
 
 2. Generate an event-based payload. Fill in the event data with the relevant information from your system. For information about all supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 3. Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint.

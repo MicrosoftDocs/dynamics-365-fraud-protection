@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic explains what's new in the Microsoft Dynamics 365 Fraud Protection May 2020 release.
-ms.author: v-madeq
+author: josaw1
+description: This article explains what's new in the Microsoft Dynamics 365 Fraud Protection May 2020 release.
+ms.author: josaw
 ms.date: 02/02/2021
 
 ms.topic: conceptual

@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic provides information about the components of Case management in Microsoft Dynamics 365 Fraud Protection.
+description: This article provides information about the components of Case management in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 03/28/2022
 ms.topic: reference
@@ -18,7 +18,7 @@ Microsoft Dynamics 365 Fraud Protection offers a suite of capabilities that you 
 
 Case management lets you organize and access transactions, and specify the level of ambiguity that will require review by human subject matter experts. It also includes functionality that lets you provide a feedback loop for the AI-based assessments.
 
-Case management has several components that work together to provide an end-to-end transaction management experience. The rest of this topic describes the most important of these components:
+Case management has several components that work together to provide an end-to-end transaction management experience. The rest of this article describes the most important of these components:
 
 - [Cases](#case)
 - [Supplementary events](#events)

@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic explains how to use event hubs with Microsoft Power BI to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
-ms.author: v-madeq
+author: josaw1
+description: This article explains how to use event hubs with Microsoft Power BI to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
+ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app:
@@ -77,7 +77,7 @@ The following resources will help you start to produce your own Power BI reports
 
 You can reference and build a sample of a Power BI dashboard that is based on Fraud Protection latency event data in [this GitHub repository (repo)](https://github.com/microsoft/Dynamics-365-Fraud-Protection-Samples/tree/master/power%20bi%20sample).
 
-## Related topics
+## Related articles
 
 - [Extensibility via Event Hubs](extensibility-via-event-hubs-overview.md)
 - [Set up extensibility via Event Hubs](extensibility-setup.md)	

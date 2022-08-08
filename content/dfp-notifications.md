@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic describes notifications regarding service incidents and other required actions related to the use of Microsoft Dynamics 365 Fraud Protection service.
-ms.author: v-madeq
+author: josaw1
+description: This article describes notifications regarding service incidents and other required actions related to the use of Microsoft Dynamics 365 Fraud Protection service.
+ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app: 

@@ -1,8 +1,8 @@
 ---
 author: josaw1
-description: This topic outlines the schemas that are required for historical data upload.
+description: This article outlines the schemas that are required for historical data upload.
 ms.author: josaw
-ms.date: 07/15/2021
+ms.date: 05/04/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -14,7 +14,7 @@ title: View purchase protection schemas
 
 # View purchase protection schemas
 
-This topic outlines the schemas for real-time APIs and historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
+This article outlines the schemas for real-time APIs and historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection as comma-separated values (CSV) files. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
 Note the following formatting guidelines throughout:
 
@@ -26,10 +26,7 @@ Note the following formatting guidelines throughout:
 
 ## Transactions
 
-The following schemas are used in the diagnose, evaluate, and protect experiences.
-
-> [!NOTE]
-> The diagnose functionality might not be available in all countries or regions.
+The following schemas are used in the evaluate and protect experiences.
 
 ### Purchases
 
@@ -66,7 +63,7 @@ The following schemas are used in the diagnose, evaluate, and protect experience
 | State               | String  | The state or province that was provided for the address. |
 | ZipCode             | String  | The postal code that was provided for the address. |
 | CountryCode         | String  | The country or region code that was provided for the address. The value should be a two-letter ISO country or region code (for example: **US**). |
-| CustomData          | Object   | An optional user-defined JavaScript Object Notation (JSON) property bag. It's filled in when an API call is instantiated. The attributes can be referenced when you create purchase rules.<p>**Note:**</p><ul><li>The following primitive types are supported: **String (Unicode)**, **Int32**, **UInt32**, **Double**, **Boolean**, and **DateTime** (in Coordinated Universal Time \[UTC\], in conformance to .NET semantics).</li><li>The string data limit is 256 characters.</li><li>There is a limit of 100 custom attributes per payload.</li><li>Don't send sensitive or highly regulated data types. Here are some examples:<ul><li>Data that indicates a protected class (such as gender or race) or private/sensitive categories (such as religious views or sexual orientation)</li><li>Biometric data or any data that is related to health</li></ul></li><li>The custom data retention policy matches the retention policy of the purchase event (six months).</li></ul><p>For a sample that shows how to use purchase APIs with a custom data object in Fraud Protection, see the [Custom data sample](#custom-data-sample) section at the end of this topic.</p>  |
+| CustomData          | Object   | An optional user-defined JavaScript Object Notation (JSON) property bag. It's filled in when an API call is instantiated. The attributes can be referenced when you create purchase rules.<p>**Note:**</p><ul><li>The following primitive types are supported: **String (Unicode)**, **Int32**, **UInt32**, **Double**, **Boolean**, and **DateTime** (in Coordinated Universal Time \[UTC\], in conformance to .NET semantics).</li><li>The string data limit is 256 characters.</li><li>There is a limit of 100 custom attributes per payload.</li><li>Don't send sensitive or highly regulated data types. Here are some examples:<ul><li>Data that indicates a protected class (such as gender or race) or private/sensitive categories (such as religious views or sexual orientation)</li><li>Biometric data or any data that is related to health</li></ul></li><li>The custom data retention policy matches the retention policy of the purchase event (six months).</li></ul><p>For a sample that shows how to use purchase APIs with a custom data object in Fraud Protection, see the [Custom data sample](#custom-data-sample) section at the end of this article.</p>  |
 |MerchantBusinessType  | String  |The business or industry vertical (for example: gaming, retail, dining, or social networking).  |
  |MerchantIdentifier    | String  |The merchant ID (MID) is a specific identification number attached to a business that tells the payment processing systems involved in a transaction where to send which funds. You can think of it like an address for your business. For example, if you don't have a merchant ID, the networks involved won't know where to send your money.  |
  |MerchantCategoryCode  | String  |The merchant category code (MCC) is a four-digit number listed in ISO 18245 for retail financial services. An MCC is used to classify a business by the types of goods or services it provides.  |
@@ -219,7 +216,7 @@ The following schemas are used in the diagnose, evaluate, and protect experience
 |-----------------------------|----------|-------------|
 | PurchaseId                  |  String  | The identifier of the transaction (or purchase or order). |
 | MerchantPaymentInstrumentId |  String  | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
-| Type                        |  String  | The type of payment. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| Type                        |  String  | The type of payment. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).|
 | PurchaseAmount              | Double   | The total purchase amount that uses this payment instrument for the transaction. |
 | CreationDate                | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | UpdateDate                  | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
@@ -269,16 +266,14 @@ The following schemas are used in the diagnose, evaluate, and protect experience
 
 ## Chargebacks
 
-The following schema is used in the diagnose, evaluate, and protect experiences.
+The following schema is used in the evaluate and and protect experiences.
 
-> [!NOTE]
-> The diagnose functionality might not be available in all countries or regions.
 
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
 | ChargebackId       |  String  | The chargeback identifier. |
 | Reason             |  String  | The reason that was provided by the bank. |
-| Status             |  String  | The status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| Status             |  String  | The status. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942). |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | Double | The chargeback amount. |
 | Currency           | String | The currency that is used for the chargeback amount. |
@@ -294,7 +289,7 @@ The following schema is used in the evaluate and protect experiences.
 |--------------------|----------|-------------|
 | RefundId           | String  | The refund identifier. |
 | Reason             | String   | The customer-provided reason. |
-| Status             | String   | The refund status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| Status             | String   | The refund status. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942). |
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
 | Amount             | Double   | The refund amount. |
 | Currency           | String   | The currency that is used for the sales price amount. |
@@ -309,7 +304,7 @@ The following schema is used in the evaluate and protect experiences.
 | Attribute         | Type     | Description |
 |-------------------|----------|-------------|
 | PurchaseId        | String   | The identifier of the transaction (or purchase or order). |
-| StatusType        | String   | The type of status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| StatusType        | String   | The type of status. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).|
 | StatusDate        | DateTime | The date and time when the status was applied. The format is ISO 8601. |
 | Reason            | String   | The reason for the status transition. |
 | MerchantLocalDate | DateTime | A date in ISO 8601 format. |
@@ -321,9 +316,9 @@ The following schema is used in the evaluate and protect experiences.
 | Attribute          | Type     | Description |
 |--------------------|----------|-------------|
 | BankEventId        | String   | The bank event identifier. |
-| Type               | String   | The bank event type. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| Type               | String   | The bank event type. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).|
 | BankEventTimestamp | DateTime | The timestamp from the bank. The format is ISO 8601. |
-| Status             | String   | The status. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| Status             | String   | The status. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).|
 | BankResponseCode   | String   | The bank code on the response. |
 | PaymentProcessor   | String   | The processor name (for example: **FDC** or **PayPal**). |
 | MRN                | String   | The Merchant Reference Number (MRN) that is used to identify the transaction on the merchant side. |
@@ -440,13 +435,13 @@ The following schema is used in the evaluate and protect experiences.
 | --- | --- | --- |
 | TrackingId | String | The unique ID for each event/record. |
 | MerchantLocalDate | DateTime | The date in the merchant&#39;s time zone. The format is ISO 8601.  |
-| EventTimeStamp | DateTime | The date and time of the event. The format is ISO 8601. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| EventTimeStamp | DateTime | The date and time of the event. The format is ISO 8601. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).|
 | LabelObjectType | String | This field indicates the type of label: Purchase, Signup, Custom Fraud Evaluation, Account, Payment instrument, or Email. |
 | LabelObjectId | String | This is an identifier field for the type of object: PurchaseId, SignupId, UserId, MerchantPaymentInstrumentId, or Email.  |
-| LabelSource | String | This field represents the source of the label. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
-| LabelState | String | This field indicates the current status of the label. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost).  |
-| LabelReasonCodes | String | This field indicates the reason codes associated with each type of label. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
-| Processor | String | The name of the bank or payment processor. For more information, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection#/v1.0/V1.0MerchantservicesEventsPurchasePost). |
+| LabelSource | String | This field represents the source of the label. |
+| LabelState | String | This field indicates the current status of the label. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).|
+| LabelReasonCodes | String | This field indicates the reason codes associated with each type of label. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).|
+| Processor | String | The name of the bank or payment processor. For more information, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).|
 | EffectiveStartDate | DateTime | The date from which this label is effective. The format is ISO 8601. |
 | EffectiveEndDate | DateTime | The end date for this label. The format is ISO 8601. |
 | Amount           | Double   | The amount that was charged to the customer. This information is provided by the merchant. |

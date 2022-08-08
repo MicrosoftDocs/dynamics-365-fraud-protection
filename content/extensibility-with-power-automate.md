@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic explains how to use event hubs with Microsoft Azure Logic Apps or Power Automate to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
-ms.author: v-madeq
+author: josaw1
+description: This article explains how to use event hubs with Microsoft Azure Logic Apps or Power Automate to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
+ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app:
@@ -18,7 +18,7 @@ Microsoft Azure Logic Apps and Power Automate flows offer low-code user interfac
 For example, these flows are excellent for automatically sending an email when a specific user's rule has been deleted or pinging a Teams channel when high latency is detected.
 
 > [!NOTE]
-> Logic Apps is used for this topic. However, similar, if not identical, logic can be applied to Power Automate flows. Logic Apps is part of the Azure portal, whereas Power Automate is a separate product that is part of the Microsoft Power Platform family of tools. Pricing and capabilities vary. 
+> Logic Apps is used for this article. However, similar, if not identical, logic can be applied to Power Automate flows. Logic Apps is part of the Azure portal, whereas Power Automate is a separate product that is part of the Microsoft Power Platform family of tools. Pricing and capabilities vary. 
 
 ## Getting started
 
@@ -64,7 +64,7 @@ By storing event data in Common Data Service as it comes through your event hub,
 
 You now have a constantly updated database in Common Data Service that contains your event data. Therefore, you can now interact with this database through Microsoft Power Platform tools such as Power BI and Power Apps.
 
-## Related topics
+## Related articles
 
 - [Extensibility via Event Hubs](extensibility-via-event-hubs-overview.md)
 - [Set up extensibility via Event Hubs](extensibility-setup.md)	

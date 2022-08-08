@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic explains how to use event hubs with Microsoft Power Apps to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
-ms.author: v-madeq
+author: josaw1
+description: This article explains how to use event hubs with Microsoft Power Apps to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
+ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app:
@@ -26,7 +26,7 @@ The following resources will help you start to develop your own apps by using Po
 
 [Dynamics 365 Fraud Protection Portal Admin App](https://github.com/microsoft/Dynamics-365-Fraud-Protection-Samples/tree/master/power%20app%20sample) is integrated with event tracing data from Fraud Protection and with Common Data Service. It serves as an administrative toolbox application for the Fraud Protection portal. The app is fully open-source, and can be modified or used just as a reference.
 
-## Related topics
+## Related articles
 
 - [Extensibility via Event Hubs](extensibility-via-event-hubs-overview.md)
 - [Set up extensibility via Event Hubs](extensibility-setup.md)	

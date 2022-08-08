@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic explains what's new in the Microsoft Dynamics 365 Fraud Protection October 2020 release.
-ms.author: v-madeq
+author: josaw1
+description: This article explains what's new in the Microsoft Dynamics 365 Fraud Protection October 2020 release.
+ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app: 
@@ -16,7 +16,7 @@ title: What's new in Dynamics 365 Fraud Protection October 2020 release
 
 The October 2020 release of Microsoft Dynamics 365 Fraud Protection introduces several new capabilities and enhancements. 
 
-## Manual review (preview) 
+## Manual review
 
 Released as a preview in this version, manual review is a new capability that introduces the ability for Fraud Protection customers to augment their fraud workflows with manual review capabilities (also known as *case review*.) This allows customers to author rules to identify  transactions which might benefit from further human review, and then place the rules into a queue to facilitate and amplify the review process.
 

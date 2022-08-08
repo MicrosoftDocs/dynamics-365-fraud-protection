@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic explains how to use event tracing in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
+author: josaw1
+description: This article explains how to use event tracing in Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
 search.app:
@@ -181,7 +181,7 @@ The *Samples* field represents the request count per API.
 
 **Namespace: FraudProtection.Monitoring.ExternalCalls**
 
-This event includes the latency (in ms) and HTTP status code of each external call *<link to external call doc>* which is triggered from a rule. Additional dimensions for the rule and clause triggering the call are also provided.
+This event includes the latency (in ms) and HTTP status code of each external call \<link to external call doc\> which is triggered from a rule. Additional dimensions for the rule and clause triggering the call are also provided.
 
 For external calls, latency (in ms) and http status code metrics are sent with each request in this event. Additional dimensions for the rule triggering the call are also provided to improve the troubleshooting experience if you were interested in investigating the performance of an individual call.
 

@@ -6,6 +6,21 @@
       "redirect_document_id": "false"
     }, 
     {
+      "source_path": "content/diagnose-experience.md",
+      "redirect_url": "purchase-protection",
+      "redirect_document_id": "false"
+    },  
+    {
+      "source_path": "azure-apps-portal-powershell.md",
+      "redirect_url": "provision-azure-tenant",
+      "redirect_document_id": "false"
+    },  
+    {
+      "source_path": "understand-business.md",
+      "redirect_url": "overview",
+      "redirect_document_id": "false"
+    },  
+    {
       "source_path": "content/schema-INT.md",
       "redirect_url": "view-purchase-protection-schemas",
       "redirect_document_id": "false"

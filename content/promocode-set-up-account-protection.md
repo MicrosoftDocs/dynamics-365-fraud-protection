@@ -1,8 +1,8 @@
 ---
 author: josaw1
-description: This topic describes how to set up customer accounts protection in Microsoft Dynamics 365 Fraud Protection.
+description: This article describes how to set up customer accounts protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/02/2021
+ms.date: 06/16/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -96,6 +96,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 -	**Directory (tenant) ID** – The directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard.
 -	**Application (client) ID** – The application ID identifies the Azure AD app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **API Management** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you create.
 -	**Certificate thumbprint or secret** – You can find the certificate thumbprint or the secret on the confirmation page that appears after you select **Create application** on the **API Management** page.
+-	**Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
 ### Generate an access token
 
@@ -163,6 +164,7 @@ For more information about access tokens, see the following Azure documentation:
 | Authorization	| <p>Use the following format for this header: Bearer *accesstoken*</p><p>In this format, accesstoken is the token that is returned by Azure AD.</p>| 
 | x-ms-correlation-id	| Send a new GUID value on each set of API calls that are made together.| 
 | Content-Type	| application/json| 
+| x-ms-dfpenvid       | Send the GUID value of your Instance ID. |
 
 2.	Generate an event-based payload. Fill in the event data with the relevant information from your system. 
 
@@ -170,8 +172,7 @@ For more information about access tokens, see the following Azure documentation:
     
 3.	Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint. (The API endpoint is the URI for your environment and appears on the Account information tile on the Fraud Protection dashboard.)
 
-    For more information about APIs, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection).
-
+For more information about APIs, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).   
 ## Step 3: Understand account protection events
 
 ### Account Create

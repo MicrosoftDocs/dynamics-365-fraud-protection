@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This topic explains how the Virtual fraud analyst (VFA) in Microsoft Dynamics 365 Fraud Protection helps you set up and adjust risk score thresholds.
+description: This article explains how the Virtual fraud analyst (VFA) in Microsoft Dynamics 365 Fraud Protection helps you set up and adjust risk score thresholds.
 ms.author: josaw
 ms.date: 03/31/2022
 ms.topic: conceptual

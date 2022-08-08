@@ -1,8 +1,8 @@
 ---
-author: yvonnedeq
-description: This topic explains how to use external calls to ingest data from APIs in Microsoft Dynamics 365 Fraud Protection.
-ms.author: v-madeq
-ms.date: 04/26/2021
+author: josaw1
+description: This article explains how to use external calls to ingest data from APIs in Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
+ms.date: 06/07/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -13,8 +13,6 @@ title: External calls
 ---
 
 # External calls
-
-[!include [banner](includes/preview-banner.md)]
 
 External calls let you ingest data from APIs outside Microsoft Dynamics 365 Fraud Protection and then use that data to make informed decisions in real time. For example, third-party address and phone verification services, or your own custom scoring models, might provide critical input that helps determine the risk level for some events. By using external calls, you can connect to any API endpoint, make a request to that endpoint from within your rule as required, and use the response from that endpoint to make a decision.
 
@@ -49,7 +47,7 @@ Before you create an external call, you should know about the following limitati
         - If you select **Anonymous**, an authorization header won't be sent.
         - If you select **AAD**, an Azure Active Directory (Azure AD) token will be generated in your tenant, and *Bearer \<token\>* will be used as the authorization header.
 
-        For more information about authentication, authorization, and Azure AD tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this topic.
+        For more information about authentication, authorization, and Azure AD tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this article.
 
     - **Application ID** – If you selected **AAD** as the authentication method, you must provide the application ID of an existing Azure AD application within your Fraud Protection subscription tenant. For more information about how to create and manage Azure AD applications, see [Create Azure Active Directory Applications](integrate-real-time-api.md#create-azure-active-directory-applications).
     - **Add parameter** – You can use parameters to pass data from Fraud Protection to your API endpoint. Depending on the HTTP method that you selected, these parameters will be sent to the endpoint either in the query string or as part of the request body.

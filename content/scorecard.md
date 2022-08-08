@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to review key metrics and understand the performance of fraud protection efforts in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to review key metrics and understand the performance of fraud protection efforts in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 09/23/2021
 ms.topic: conceptual
@@ -44,6 +44,6 @@ The scorecard plots the following metrics:
 
 ## Additional resources
 
-[Scorecard reports for PSPs (preview)](scorecard-psp.md)
+[Scorecard reports for PSPs](scorecard-psp.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

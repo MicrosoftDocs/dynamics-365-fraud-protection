@@ -1,7 +1,7 @@
 ---
-author: yvonnedeq
-description: This topic explains how to use event hubs with code software development kits (SDKs) to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
-ms.author: v-madeq
+author: josaw1
+description: This article explains how to use event hubs with code software development kits (SDKs) to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
+ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
 search.app:
@@ -33,7 +33,7 @@ For an extensive tutorial about how to send and receive events from Azure Event 
 
 For a sample of working code that sends and receives events to and from Event Hubs via JavaScript, see [Send events to or receive events from event hubs by using JavaScript (azure/event-hubs version 5)](/azure/event-hubs/event-hubs-node-get-started-send).
 
-## Related topics
+## Related articles
 
 - [Extensibility via Event Hubs](extensibility-via-event-hubs-overview.md)
 - [Set up extensibility via Event Hubs](extensibility-setup.md)	

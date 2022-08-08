@@ -80,8 +80,6 @@
       href: external-calls.md
     - name: Search
       href: search.md
-    - name: Assessment usage and metering	
-      href: metering.md 
     - name: AI and insights from the fraud protection network
       href: fraud-protection-network.md  
     - name: Rules
@@ -196,8 +194,6 @@
       href: data-upload.md
     - name: Risk support
       href: risk-support.md
-    - name: Assessment usage and metering	
-      href: metering.md 
     - name: AI and insights from the fraud protection network
       href: fraud-protection-network.md  
     - name: Rules
@@ -320,8 +316,6 @@
       href: search.md
     - name: Upload historical data
       href: loss-prevention-data-upload.md
-    - name: Assessment usage and metering	
-      href: metering.md 
     - name: AI and insights from the fraud protection network
       href: fraud-protection-network.md  
     - name: Rules

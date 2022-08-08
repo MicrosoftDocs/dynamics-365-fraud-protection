@@ -1,20 +1,23 @@
 ---
 author: josaw1
-description: This topic describes how to set up purchase protection in Microsoft Dynamics 365 Fraud Protection.
+description: This article describes how to set up purchase protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 07/15/2021
+ms.date: 06/16/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Protect purchases with Dynamics 365 Fraud Protection
+title: Set up purchase protection
 ---
-
 
 # Set up purchase protection
 
-Microsoft Dynamics 365 Fraud Protection includes purchase protection capabilities to help you assess commerce transactions for fraudulent activity. Purchase protection capabilities let you review historical data, use a customizable rules engine and risk support toolset, and fine-tune fraud protection decisions, based on the knowledge that you gain from using the Fraud Protection service and the Microsoft fraud protection network. You can then use these findings by implementing strategies that support your customers.
+> [!IMPORTANT]
+> The *diagnose* experience described in this article has been removed from Dynamics 365 Fraud Protection. This article will be updated in the near future to reflect the changes.
+
+
+Dynamics 365 Fraud Protection includes purchase protection capabilities to help you assess commerce transactions for fraudulent activity. Purchase protection capabilities let you review historical data, use a customizable rules engine and risk support toolset, and fine-tune fraud protection decisions, based on the knowledge that you gain from using the Fraud Protection service and the Microsoft fraud protection network. You can then use these findings by implementing strategies that support your customers.
 
 ## Using transaction data
 
@@ -90,7 +93,7 @@ The general process to upload historical data consists of the following steps:
    Fraud Protection begins processing your data and building your loss prevention report.
 
     > [!NOTE]
-    >Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
+    > Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
 
 10. In the left navigation, select **Purchase** and then select **Diagnose** to see your report. To download a copy, select **Download report**.
    
@@ -116,7 +119,7 @@ Historical data is also known as *cold start data*.
    Fraud Protection begins processing your data and building your loss prevention report.
 
     > [!NOTE]
-    >Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
+    > Typically, it takes about 30 to 60 minutes to generate a report package. However, the actual length of time depends on the amount of data that was provided.
 
 10. In the left navigation, select **Purchase** and then select **Diagnose** to see your report. 
 
@@ -136,7 +139,7 @@ You can use either your own generated reports or Fraud Protection's sample repor
 ![PP sample.](media/promocode-images/pp-sample.png)
 
 > [!NOTE]
->Sample reports are generated from synthetic sample data.
+> Sample reports are generated from synthetic sample data.
 
 ### Data diagnostic report – Summary
 
@@ -328,6 +331,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 -	**Directory (tenant) ID** – The directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard.
 -	**Application (client) ID** – The application ID identifies the Azure AD app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **API Management** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you create.
 -	**Certificate thumbprint or secret** – You can find the certificate thumbprint or the secret on the confirmation page that appears after you select **Create application** on the **API Management** page.
+- **Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
 #### Generate an access token
 
@@ -396,6 +400,7 @@ For more information about access tokens, see the following Azure documentation:
 | Authorization	| <p>Use the following format for this header: Bearer *accesstoken*</p><p>In this format, accesstoken is the token that is returned by Azure AD.</p>| 
 | x-ms-correlation-id	| Send a new GUID value on each set of API calls that are made together.| 
 | Content-Type	| application/json| 
+| x-ms-dfpenvid       | Send the GUID value of your Instance ID. |
 
 2.	Generate an event-based payload. Fill in the event data with the relevant information from your system. For information about supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 3.	Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint. (The API endpoint is the URI for your environment and appears on the **Account information** tile on the Fraud Protection dashboard.)

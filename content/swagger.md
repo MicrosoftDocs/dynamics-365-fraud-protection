@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic describes how to access Swagger for Microsoft Dynamics 365 Fraud Protection.
+description: This article describes how to access Swagger for Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 04/18/2022
 ms.topic: overview

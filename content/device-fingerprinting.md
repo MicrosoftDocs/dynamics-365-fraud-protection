@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to set up device fingerprinting.
+description: This article explains how to set up device fingerprinting.
 
 ms.author: josaw
 ms.date: 02/01/2022
@@ -97,7 +97,7 @@ Your website or application should enable the device fingerprinting before it su
     window.dfp.doFpt(this.document);
     ```
 
-3. When you submit transactions in the [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection), set a session ID in the **deviceContextId** field.
+3. When you submit transactions in the Dynamics 365 Fraud Protection API, set a session ID in the **deviceContextId** field.
 4. Set the **'device.ipAddress'** field to the customer IP address that your website receives when the customer uses your site.
 
 ## Mobile device fingerprinting

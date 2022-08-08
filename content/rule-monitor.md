@@ -1,19 +1,19 @@
 ---
 author: josaw1
-description: This topic provides information about the rule monitor tool in Microsoft Dynamics 365 Fraud Protection.
+description: This article provides information about the rule monitor tool in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 09/20/2021
+ms.date: 06/09/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Rule monitor tool (preview)
+title: Rule monitor tool 
 ---
 
-# Rule monitor tool (preview)
+# Rule monitor tool
 
-The Microsoft Dynamics 365 Fraud Protection rule monitor tool (preview) is provided as a preview service under the terms and conditions that are described in the [Microsoft Online Service Terms](https://go.microsoft.com/fwlink/?linkid=2172945). It helps merchants understand the transaction volume, distribution, and fraud trend by rules and clauses. It also lets them analyze decisions and performance by rule segments, and compare the impact of observe rules and decision rules.
+The Microsoft Dynamics 365 Fraud Protection rule monitor tool helps merchants understand the transaction volume, distribution, and fraud trend by rules and clauses. It also lets them analyze decisions and performance by rule segments, and compare the impact of observe rules and decision rules.
 
 The rule monitor is an interactive report tool that is built on the Power BI platform. Merchants can use it to drive purchase protection for customers in their online business by applying various filters, changing the granularity of the dimension, and viewing an analysis of rules and clauses in various market segments.
 

@@ -1,8 +1,8 @@
 ---
 author: josaw1
-description: This topic provides information about security, compliance, and data subject requests.
+description: This article provides information about security, compliance, and data subject requests.
 ms.author: josaw
-ms.date: 05/17/2021
+ms.date: 05/04/2022
 ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
@@ -37,12 +37,6 @@ For more information, see the following resources:
 - [Safeguard individual privacy with the Microsoft Cloud](https://www.microsoft.com/trustcenter/privacy/gdpr/gdpr-overview)
 - [Microsoft Dynamics 365 and GDPR](/dynamics365/get-started/gdpr/index)
 - [Microsoft Power BI GDPR white paper](https://powerbi.microsoft.com/blog/power-bi-gdpr-whitepaper-is-now-available/)
-
-In the diagnose experience for Fraud Protection, you can delete the offline data that you've uploaded into Fraud Protection. At the top of the page, select **Delete my data**.
-
-> [!NOTE]
-> The diagnose functionality might not be available in all countries or regions.
-
 
 In the evaluate and protect experiences, you can perform the following tasks for all entities that contain personal data:
 

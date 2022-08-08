@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains how to enable Pay as you go billing for Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to enable Pay as you go billing for Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 07/08/2021
 ms.topic: conceptual
@@ -13,7 +13,7 @@ title: Pay as you go billing
 
 # Pay as you go billing
 
-This topic describes how to get started with Pay as you go billing for Dynamics 365 Fraud Protection. With Pay as you go billing, you can use Fraud Protection as much or as little as you need, and you pay only for what you use. Service interruptions will be minimized and you won't overpay as a result of forecasted transaction volumes.
+This article describes how to get started with Pay as you go billing for Dynamics 365 Fraud Protection. With Pay as you go billing, you can use Fraud Protection as much or as little as you need, and you pay only for what you use. Service interruptions will be minimized and you won't overpay as a result of forecasted transaction volumes.
 
 
 ## Pricing
@@ -73,7 +73,7 @@ To enable Pay as you go billing, complete the following steps.
 
 3. Configure an Azure subscription for Fraud Protection billing.
     1. In a new browser tab, go to the [Azure portal](https://portal.azure.com/) and sign in with the same credentials that you used in step 2. 
-    1. Search for "Subscriptions" in the **Search** field, and then select **Subscriptions** to go the page that lists all of the Azure subscriptions that you have access to. If no subscriptions are displayed, you can create a new one. To create a subscription, select **Add**. For more information, see [Create an additional Azure subscription](/azure/cost-management-billing/manage/create-subscription.md).
+    1. Search for "Subscriptions" in the **Search** field, and then select **Subscriptions** to go the page that lists all of the Azure subscriptions that you have access to. If no subscriptions are displayed, you can create a new one. To create a subscription, select **Add**. For more information, see [Create an additional Azure subscription](/azure/cost-management-billing/manage/create-subscription).
     1. Select the subscription that you want to use for Fraud Protection billing.
     1. Select **Resource group** under **Settings** in the left menu. Select **Create** to create a new resource group.
     1. On the **Create a resource group** page, select a name and Azure region.

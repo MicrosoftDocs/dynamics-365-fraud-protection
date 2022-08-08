@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic explains what's new in the Microsoft Dynamics 365 Fraud Protection October 2021 release.
+description: This article explains what's new in the Microsoft Dynamics 365 Fraud Protection October 2021 release.
 ms.author: josaw
 ms.date: 09/30/2021
 ms.topic: conceptual
@@ -12,8 +12,6 @@ title: What's new in Dynamics 365 Fraud Protection October 2021 release
 ---
 
 # What's new in Dynamics 365 Fraud Protection October 2021 release
-
-[!include [preview banner](includes/preview-banner.md)]
 
 The following features are included in the October 2021 release of Microsoft Dynamics 365 Fraud Protection:
 

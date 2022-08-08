@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This topic describes how to set up a trial version of Microsoft Dynamics 365 Fraud Protection.
+description: This article describes how to set up a trial version of Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 06/04/2021
 ms.topic: conceptual
@@ -28,7 +28,7 @@ If your company already has an Azure AD tenant, you can add Fraud Protection to 
   > To set up Fraud Protection in an existing Azure AD tenant, you must have **global administrator permissions**.
 
 
-- If you have global administrator permissions, follow the instructions in the **Setup process for an existing Azure AD tenant** section next in this topic.	
+- If you have global administrator permissions, follow the instructions in the **Setup process for an existing Azure AD tenant** section next in this article.	
 - If you don't have global administrator permissions, find someone in your organization who does, so that they can help you with the setup process.	
 
 ## Setup process for an existing AAD tenant	
@@ -82,7 +82,7 @@ If you don't have an existing Azure AD tenant, or if you prefer to set up a new 
 
 ## Next steps
 
-For information about how to access and use features in Fraud Protection features, see the topics below.
+For information about how to access and use features in Fraud Protection features, see the articles below.
 
 - [Set up customer accounts](promocode-set-up-account-protection.md)
 - [Set up purchase protection](promocode-set-up-purchase-protection.md)
