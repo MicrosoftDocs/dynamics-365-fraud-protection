@@ -373,7 +373,7 @@
       - name: Data residency FAQ
         href: faq/data-residency-gdpr-faq.md
       - name: Compliance FAQ
-        href: faq/compliance-faq.md  - name: Compliance
+        href: faq/compliance-faq.md
 - name: Trust Center
   items:
   - name: Fraud Protection transparency notice
