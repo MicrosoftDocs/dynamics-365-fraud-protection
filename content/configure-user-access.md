@@ -437,21 +437,21 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="3">Subscription</td>
             <td>Summary</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td>Details</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
         </tr>
         <tr>
             <td>Billing</td>
