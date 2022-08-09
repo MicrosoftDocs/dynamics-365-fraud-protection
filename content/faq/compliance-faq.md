@@ -71,4 +71,4 @@ Yes. As a software as a service (SaaS) application, Fraud Protection runs on Azu
 
 [Privacy and security FAQ](privacy-security-faq.md)
 
-[Data residency and GDPR FAQ](data-residency-gdpr-faq.md)
+[Data residency FAQ](data-residency-gdpr-faq.md)
