@@ -16,6 +16,10 @@
     href: metering.md
   - name: Proof of concept and RFQ FAQ
     href: tbd.md
+  - name: Service FAQ
+    href: service-faq.md
+  - name: Promotion code redemption error
+    href: promocode-redemption-error.md
 - name: Transaction acceptance booster (TAB)
   href: transaction-acceptance-booster.md
 - name: Account protection
@@ -112,6 +116,8 @@
         href: case-management-administrator.md
       - name: Case management for manual reviewers
         href: case-management-manual-review.md
+    - Manage environments
+      href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
   - name: Compliance, privacy, security
@@ -236,6 +242,8 @@
         href: case-management-administrator.md
       - name: Case management for manual reviewers
         href: case-management-manual-review.md 
+    - Manage environments
+      href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
   - name: Compliance, privacy, security
@@ -348,6 +356,8 @@
         href: case-management-administrator.md
       - name: Case management for manual reviewers
         href: case-management-manual-review.md 
+    - Manage environments
+      href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
   - name: Compliance, privacy, security
