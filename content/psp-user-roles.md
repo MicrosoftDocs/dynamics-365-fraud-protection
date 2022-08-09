@@ -261,23 +261,23 @@ The following table shows the specific read/write permissions that users will ha
           <tr>
             <td rowspan="3">API Management</td>
             <td>API requests</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>Errors</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
-            <td>Read/Write</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
         </tr>

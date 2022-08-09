@@ -381,18 +381,18 @@ The following table shows the specific read/write permissions that users will ha
         <tr>
             <td rowspan="3">API management</td>
             <td>API requests</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>Errors</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>?</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
