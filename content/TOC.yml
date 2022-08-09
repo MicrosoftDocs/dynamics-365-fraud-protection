@@ -116,7 +116,7 @@
         href: case-management-administrator.md
       - name: Case management for manual reviewers
         href: case-management-manual-review.md
-    - Manage environments
+    - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
@@ -242,7 +242,7 @@
         href: case-management-administrator.md
       - name: Case management for manual reviewers
         href: case-management-manual-review.md 
-    - Manage environments
+    - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
@@ -356,7 +356,7 @@
         href: case-management-administrator.md
       - name: Case management for manual reviewers
         href: case-management-manual-review.md 
-    - Manage environments
+    - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
