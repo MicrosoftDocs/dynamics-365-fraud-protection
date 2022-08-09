@@ -17,7 +17,7 @@
   - name: Proof of concept and RFQ FAQ
     href: tbd.md
   - name: Service FAQ
-    href: service-faq.md
+    href: /faq/service-faq.md
   - name: Promotion code redemption error
     href: promocode-redemption-error.md
 - name: Transaction acceptance booster (TAB)
