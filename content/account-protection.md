@@ -23,9 +23,6 @@ Learn more about the following features used in account protection:
 
 - [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md)
 - [Labels API](labels-api.md)
-- [View labels schema](./overview.md)
-- [View sign-up data schemas](./overview.md)
-- [View sign-up status schemas](./overview.md)
 - [Implement device fingerprinting](device-fingerprinting.md)
 - [Monitor API calls](monitoring.md)
 - [Usage metering](metering.md)
