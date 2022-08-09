@@ -35,7 +35,7 @@ By using Fraud Protection, you can help protect your business from fraud through
 ## Account protection
 - Enhance detection of account fraud - Help protect your accounts with a capability that learns and adapts to patterns of legitimate and fraudulent account activities using Adaptive AI.
 - Help safeguard accounts with a fraud protection network - Gain broad awareness of account fraud activity with connected knowledge about behavior of entities, keeping the security of confidential information and shoppers' privacy top of mind.
-- Help protect accounts with device fingerprinting -D etect fraud patterns and identify returning devices with high fidelity using AI models that collect device and location attributes.
+- Help protect accounts with device fingerprinting - Detect fraud patterns and identify returning devices with high fidelity using AI models that collect device and location attributes.
 - Adaptable account rules engine fits your needs - Minimize customer delays and friction by configuring specialized rules and policies.
 - Help defend accounts with bot protection - Help protect against bot networks attempting to create synthetic accounts or gain access to accounts using stolen credentials.
 - Configure the engine to match your business needs - Enable customers to send custom payloads and configure real-time decision policies with an engine that helps protect specialized account activity scenarios, with scorecards and trends.
