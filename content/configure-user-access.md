@@ -253,11 +253,12 @@ The following table shows the specific read/write permissions that users will ha
         </tr>
         <tr>
             <td colspan="2">Loss Prevention</td>
-            <td>Read only</td>
-            <td>Read only</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>No access</td>
+            <td>Read/Write</td>
         </tr>
         <tr>
             <td colspan="2">Custom assessments</td>
