@@ -108,14 +108,6 @@
       items:
       - name: Key metrics for account protection
         href: ap-scorecard.md
-    - name: Case management
-      items:
-      - name: Case management overview
-        href: case-management-overview.md
-      - name: Case management for administrators
-        href: case-management-administrator.md
-      - name: Case management for manual reviewers
-        href: case-management-manual-review.md
     - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
@@ -348,14 +340,6 @@
       items:
       - name: Loss prevention reports
         href: reports.md
-    - name: Case management
-      items:
-      - name: Case management overview
-        href: case-management-overview.md
-      - name: Case management for administrators
-        href: case-management-administrator.md
-      - name: Case management for manual reviewers
-        href: case-management-manual-review.md 
     - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
