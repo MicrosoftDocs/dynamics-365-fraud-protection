@@ -16,6 +16,9 @@ title: User roles and access (PSPs)
 
 Payment service providers (PSPs) can grant users of Microsoft Dynamics 365 Fraud Protection various levels of access, based on logical or functional roles.
 
+> [!NOTE]
+> Information on this page is subject to change at any time.
+
 ## Assign PSP roles
 
 Users are managed through your assigned Azure Active Directory (Azure AD) tenant.
