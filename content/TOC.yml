@@ -23,49 +23,49 @@
 - name: Transaction acceptance booster (TAB)
   href: transaction-acceptance-booster.md
 - name: APIs and extensibility
-  - items:
-    - name: Language reference guide
-      href: fpl-lang-ref.md
-    - name: Set up extensibility via Event Hubs   
-      href: extensibility-via-event-hubs-overview.md
-    - name: Work with code
-      href: extensibility-with-code.md
-    - name: Work with Logic Apps/Power Automate
-      href: extensibility-with-power-automate.md   
-    - name: Work with Power BI
-      href: extensibility-with-power-bi.md  
-    - name: Work with Power Apps
-      href: extensibility-with-power-apps.md
-    - name: Mobile SDK for Android
-      href: mobile-sdk-android.md
-    - name: Mobile SDK for iOS
-      href: mobile-sdk-ios.md
-    - name: Mobile SDK for React Native
-      href: mobile-sdk-react-native.md
-    - name: APIs
-      items:
-      - name: Swagger UI
-        href: swagger.md
-      - name: Call real-time APIs training module
-        href: /learn/modules/call-real-item-apis/
-      - name: Configure sample app data training module
-        href: /learn/modules/configure-sample-app-fraud-protection/
-      - name: Account protection schemas
-        href: ap-schema.md
-      - name: Purchase protection schemas
-        href: view-purchase-protection-schemas.md
-      - name: Loss prevention schemas
-        href: view-loss-prevent-schemas.md
-      - name: Labels API	
-        href: labels-api.md        
-      - name: Integrate account protection APIs
-        href: integrate-ap-api.md 
-      - name: Integrate purchase protection APIs
-        href: integrate-real-time-api.md 
-      - name: Custom assessment
-        href: custom-assessment.md
-      - name: Monitor API calls
-        href: monitoring.md
+  items:
+  - name: Language reference guide
+    href: fpl-lang-ref.md
+  - name: Set up extensibility via Event Hubs   
+    href: extensibility-via-event-hubs-overview.md
+  - name: Work with code
+    href: extensibility-with-code.md
+  - name: Work with Logic Apps/Power Automate
+    href: extensibility-with-power-automate.md   
+  - name: Work with Power BI
+    href: extensibility-with-power-bi.md  
+  - name: Work with Power Apps
+    href: extensibility-with-power-apps.md
+  - name: Mobile SDK for Android
+    href: mobile-sdk-android.md
+  - name: Mobile SDK for iOS
+    href: mobile-sdk-ios.md
+  - name: Mobile SDK for React Native
+    href: mobile-sdk-react-native.md
+  - name: APIs
+    items:
+    - name: Swagger UI
+      href: swagger.md
+    - name: Call real-time APIs training module
+      href: /learn/modules/call-real-item-apis/
+    - name: Configure sample app data training module
+      href: /learn/modules/configure-sample-app-fraud-protection/
+    - name: Account protection schemas
+      href: ap-schema.md
+    - name: Purchase protection schemas
+      href: view-purchase-protection-schemas.md
+    - name: Loss prevention schemas
+      href: view-loss-prevent-schemas.md
+    - name: Labels API	
+      href: labels-api.md        
+    - name: Integrate account protection APIs
+      href: integrate-ap-api.md 
+    - name: Integrate purchase protection APIs
+      href: integrate-real-time-api.md 
+    - name: Custom assessment
+      href: custom-assessment.md
+    - name: Monitor API calls
+      href: monitoring.md
 - name: Account protection
   items: 
   - name: Overview
