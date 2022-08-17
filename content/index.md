@@ -20,11 +20,6 @@ Today's digitally transformed enterprise conducts most of its business online an
 
 Because fraudsters who engage in online fraud and abuse reap a high return on investment, it's likely that most of an enterprise's vulnerabilities will be discovered and exploited. Additionally, unlike during the early years of the internet, today's fraudulent transactions can be orchestrated by well-funded and well-equipped rings of professionals. Fraud protection professionals are best equipped to fight this threat.
 
-## Our mission
-
-*Our mission is to help enterprises fight fraud and abuse while they keep their doors open for genuine customers and partners.*
-
-Microsoft Dynamics 365 Fraud Protection initially focused on payment fraud protection. It helped enable an e-commerce merchant drive down fraud loss, increase bank acceptance rates to yield higher revenue, and improve the online shopping experience of its customers. In subsequent release waves, we have added several new features to enhance this capability based on customer feedback. We are lighting up a new set of capabilities called **loss prevention** that help brick and mortar retail store operations fight fraud and abuse by reducing shrinkage losses and improving store efficiencies. We have significantly expanded the account creation protection capability portfolio via a new set of capabilities called **account protection**.
 
 ## How Fraud Protection helps you protect your business
 
