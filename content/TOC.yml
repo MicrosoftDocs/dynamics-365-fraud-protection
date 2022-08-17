@@ -8,40 +8,24 @@
   href: global-availability.md  
 - name: Get started
   items: 
-  - name: Get the free trial
-    href: tbd.md
+  - name: Get started training module
+    href: /learn/modules/get-started-fraud-protection/
   - name: Pay as you go billing
     href: pay-as-you-go.md
   - name: Assessment and usage metering
     href: metering.md
-  - name: Proof of concept and RFQ FAQ
-    href: tbd.md
   - name: Service FAQ
     href: /faq/service-faq.md
+  - name: Provision Fraud Protection training module
+    href: /learn/modules/provision-fraud-protection/
   - name: Promotion code redemption error
     href: promocode-redemption-error.md
 - name: Transaction acceptance booster (TAB)
   href: transaction-acceptance-booster.md
-- name: Account protection
-  items: 
-  - name: Overview
-    href: ap-overview.md
-  - name: Architecture 
-    href: tbd.md
-  - name: How account protection works
-    href: tbd.md
-  - name: Set up account protection
-    items: 
-    - name: Set up your account protection service
-      href: promocode-set-up-account-protection.md
-    - name: User access
-      href: psp-user-roles.md
-    - name: Device fingerprinting 
-      href: device-fingerprinting.md
-    - name: Set up a sandbox environment
-      href: tbd.md
-    - name: Set up a production environment
-      href: tbd.md
+- name: APIs and extensibility
+  - items:
+    - name: Language reference guide
+      href: fpl-lang-ref.md
     - name: Set up extensibility via Event Hubs   
       href: extensibility-via-event-hubs-overview.md
     - name: Work with code
@@ -62,16 +46,40 @@
       items:
       - name: Swagger UI
         href: swagger.md
+      - name: Call real-time APIs training module
+        href: /learn/modules/call-real-item-apis/
+      - name: Configure sample app data training module
+        href: /learn/modules/configure-sample-app-fraud-protection/
       - name: Account protection schemas
         href: ap-schema.md
+      - name: Purchase protection schemas
+        href: view-purchase-protection-schemas.md
+      - name: Loss prevention schemas
+        href: view-loss-prevent-schemas.md
       - name: Labels API	
         href: labels-api.md        
       - name: Integrate account protection APIs
         href: integrate-ap-api.md 
+      - name: Integrate purchase protection APIs
+        href: integrate-real-time-api.md 
       - name: Custom assessment
         href: custom-assessment.md
       - name: Monitor API calls
         href: monitoring.md
+- name: Account protection
+  items: 
+  - name: Overview
+    href: ap-overview.md
+  - name: Set up account protection
+    items: 
+    - name: Set up your account protection service
+      href: promocode-set-up-account-protection.md
+    - name: User access
+      href: psp-user-roles.md
+    - name: Device fingerprinting 
+      href: device-fingerprinting.md
+    - name: Deploy and work with account protection and purchase protection learning path
+      href: /learn/paths/deploy-work-account-purchase-protection/
   - name: Operations
     items: 
     - name: Language reference guide
@@ -88,12 +96,6 @@
       href: fraud-protection-network.md  
     - name: Rules
       items:
-      - name: About rules
-        href: tbd.md
-      - name: Determine which rules to write
-        href: tbd.md
-      - name: How to write rules
-        href: tbd.md
       - name: Manage rules
         href: rules.md
     - name: Lists
@@ -122,8 +124,6 @@
       href: compliance-and-security.md
     - name: Privacy protection for customer data
       href: data-processing-protection.md
-    - name: Reason codes
-      href: tbd.md
     - name: FAQs
       items:
       - name: Legal considerations FAQ
@@ -140,42 +140,14 @@
   items: 
   - name: Overview
     href: purchase-protection.md
-  - name: Architecture
-    href: TBD.md
-  - name: How purchase protection works
-    href: tbd.md
   - name: Set up purchase protection
     items: 
     - name: Set up your purchase protection service
       href: promocode-set-up-purchase-protection.md
     - name: User access
       href: psp-user-roles.md
-    - name: Set up a sandbox environment
-      href: tbd.md
-    - name: Set up a production environment
-      href: tbd.md
-    - name: Set up extensibility via Event Hubs   
-      href: extensibility-via-event-hubs-overview.md
-    - name: Work with code
-      href: extensibility-with-code.md
-    - name: Work with Logic Apps/Power Automate
-      href: extensibility-with-power-automate.md   
-    - name: Work with Power BI
-      href: extensibility-with-power-bi.md  
-    - name: Work with Power Apps
-      href: extensibility-with-power-apps.md
-    - name: APIs
-      items:
-      - name: Swagger UI
-        href: swagger.md
-      - name: Purchase protection schemas
-        href: view-purchase-protection-schemas.md
-      - name: Labels API
-        href: labels-api.md     
-      - name: Integrate real-time APIs
-        href: integrate-real-time-api.md 
-      - name: Monitor API calls
-        href: monitoring.md     
+    - name: Deploy and work with account protection and purchase protection learning path
+      href: /learn/paths/deploy-work-account-purchase-protection/
   - name: Operations
     items: 
     - name: Language reference guide
@@ -196,12 +168,6 @@
       href: fraud-protection-network.md  
     - name: Rules
       items:
-      - name: About rules
-        href: tbd.md
-      - name: Determine which rules to write
-        href: tbd.md
-      - name: How to write rules
-        href: tbd.md
       - name: Manage rules
         href: rules.md
     - name: Lists
@@ -248,8 +214,6 @@
       href: compliance-and-security.md
     - name: Privacy protection for customer data
       href: data-processing-protection.md
-    - name: Reason codes
-      href: tbd.md
     - name: FAQs
       items:
       - name: Legal considerations FAQ
@@ -266,42 +230,16 @@
   items: 
   - name: Overview
     href: loss-prevention-overview.md
-  - name: Architecture
-    href: tbd.md
-  - name: How loss prevention works
-    href: tbd.md
   - name: Set up loss prevention
     items: 
     - name: Set up your loss prevention service
       href: promocode-set-up-loss-prevention.md
     - name: User access
       href: psp-user-roles.md
-    - name: Set up a sandbox environment
-      href: tbd.md
-    - name: Set up a production environment
-      href: tbd.md
+    - name: Deploy and work with loss prevention learning path
+      href: /learn/paths/deploy-work-loss-prevention-fraud-protection/
     - name: Integration with Dynamics 365 Commerce
       href: loss-prevention-integration-with-commerce.md
-    - name: Set up extensibility via Event Hubs   
-      href: extensibility-via-event-hubs-overview.md
-    - name: Work with code
-      href: extensibility-with-code.md
-    - name: Work with Logic Apps/Power Automate
-      href: extensibility-with-power-automate.md   
-    - name: Work with Power BI
-      href: extensibility-with-power-bi.md  
-    - name: Work with Power Apps
-      href: extensibility-with-power-apps.md
-    - name: APIs
-      items:
-      - name: Swagger UI
-        href: swagger.md
-      - name: Loss prevention schemas
-        href: view-loss-prevent-schemas.md
-      - name: Labels API
-        href: labels-api.md     
-      - name: Monitor API calls
-        href: monitoring.md    
   - name: Operations
     items: 
     - name: Language reference guide
@@ -320,12 +258,6 @@
       href: fraud-protection-network.md  
     - name: Rules
       items:
-      - name: About rules
-        href: tbd.md
-      - name: Determine which rules to write
-        href: tbd.md
-      - name: How to write rules
-        href: tbd.md
       - name: Manage rules
         href: rules.md
     - name: Lists
@@ -340,6 +272,8 @@
       items:
       - name: Loss prevention reports
         href: reports.md
+      - name: Generate a loss prevention report training module
+        href: /learn/modules/loss-prevention-report-fraud-protection/
     - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
@@ -354,8 +288,6 @@
       href: compliance-and-security.md
     - name: Privacy protection for customer data
       href: data-processing-protection.md
-    - name: Reason codes
-      href: tbd.md
     - name: FAQs
       items:
       - name: Legal considerations FAQ
@@ -376,15 +308,15 @@
     href: https://go.microsoft.com/fwlink/?linkid=2134792
   - name: Fraud Protection model audit reports
     href: https://go.microsoft.com/fwlink/?linkid=2132646
-- name: Community and training
+- name: Community, training, contact us
   items:
   - name: Join Dynamics 365 Community
     href: https://www.yammer.com/dynamicsaxfeedbackprograms/#/threads/inGroup?type=in_group&feedId=52719501312
-  - name: Training
-    href: tbd.md
-- name: Contact us
-  items:
-  - name: Share your ideas
-    href: https://experience.dynamics.com/ideas/categories/?forum=d4171bdb-9e54-e911-a963-000d3a4f33c1&forumName=Dynamics%20365%20Fraud%20Protection
-  - name: Report an issue
-    href: https://support.microsoft.com/   
+  - name: Training learning paths and modules
+    href: /learn/browse/?expanded=dynamics-365&products=dynamics-fraud-protection
+  - name: Contact us
+    items:
+    - name: Share your ideas
+      href: https://experience.dynamics.com/ideas/categories/?forum=d4171bdb-9e54-e911-a963-000d3a4f33c1&forumName=Dynamics%20365%20Fraud%20Protection
+    - name: Report an issue
+      href: https://support.microsoft.com/   
