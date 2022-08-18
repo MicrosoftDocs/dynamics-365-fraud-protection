@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This article provides answers to frequently asked questions (FAQ) about data residency and General Data Protection Regulation (GDPR) in Microsoft Dynamics 365 Fraud Protection.
+description: This article provides answers to frequently asked questions (FAQ) about data residency in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 06/02/2022
 ms.topic: faq
@@ -8,12 +8,12 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Data residency and GDPR FAQ
+title: Data residency FAQ
 ---
 
-# Data residency and GDPR FAQ
+# Data residency FAQ
 
-This article provides answers to frequently asked questions (FAQ) about data residency and General Data Protection Regulation (GDPR) in Microsoft Dynamics 365 Fraud Protection.
+This article provides answers to frequently asked questions (FAQ) about data residency in Microsoft Dynamics 365 Fraud Protection.
 
 #### Can customers choose the geography where Fraud Protection stores and processes their data? If so, will any data move outside that geography?
 
@@ -41,11 +41,11 @@ The data that the device fingerprinting feature collects is stored in the Micros
 
 Yes.
 
-#### What type of technical and organizational measures does Fraud Protection take to protect personal data in accordance with GDPR?
+#### What type of technical and organizational measures does Fraud Protection take to protect personal data?
 
 Fraud Protection implements a set of technical and organizational measures (TOMs) around data security and privacy that meet requirements of ISO 27018, SOC2, and other certifications. For an up-to-date list of audit reports, see [Service Trust Portal](https://servicetrust.microsoft.com/).
 
-#### Does Fraud Protection work with a data privacy officer to oversee GDPR compliance per Article 37 GDPR?
+#### Does Fraud Protection work with a data privacy officer to oversee compliance per Article 37 GDPR?
 
 Yes. The up-to-date contact information for the data privacy officer is available in the Microsoft data protection addendum on the [Licensing Documents](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) page of the Microsoft Licensing Resources and Documents site.
 

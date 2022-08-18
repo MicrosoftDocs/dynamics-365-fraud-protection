@@ -103,4 +103,7 @@ Your website or application should enable the device fingerprinting before it su
 ## Mobile device fingerprinting
 You can learn more about the mobile reference implementation in [Dynamics 365 Fraud Protection mobile SDK for Android](mobile-sdk-android.md) and [Dynamics 365 Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md).
 
+## Additional resources
+[Implement device fingerprinting in Dynamics 365 Fraud Protection](/learn/modules/device-fingerprint-fraud-protection/) training module.
+
 [!INCLUDE[footer-include](includes/footer-banner.md)]
