@@ -114,28 +114,6 @@
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
-  - name: Compliance, privacy, security
-    items:
-    - name: Compliance overview
-      href: security-compliance.md
-    - name: Security overview
-      href: security.md
-    - name: Data security
-      href: compliance-and-security.md
-    - name: Privacy protection for customer data
-      href: data-processing-protection.md
-    - name: FAQs
-      items:
-      - name: Legal considerations FAQ
-        href: faq/legal-faq.md
-      - name: Security assessment FAQ
-        href: faq/security-assessment-faq.md
-      - name: Privacy and security FAQ
-        href: faq/privacy-security-faq.md
-      - name: Data residency FAQ
-        href: faq/data-residency-gdpr-faq.md
-      - name: Compliance FAQ
-        href: faq/compliance-faq.md
 - name: Purchase protection
   items: 
   - name: Overview
@@ -204,28 +182,6 @@
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
-  - name: Compliance, privacy, security
-    items:
-    - name: Compliance overview
-      href: security-compliance.md
-    - name: Security overview
-      href: security.md
-    - name: Data security
-      href: compliance-and-security.md
-    - name: Privacy protection for customer data
-      href: data-processing-protection.md
-    - name: FAQs
-      items:
-      - name: Legal considerations FAQ
-        href: faq/legal-faq.md
-      - name: Security assessment FAQ
-        href: faq/security-assessment-faq.md
-      - name: Privacy and security FAQ
-        href: faq/privacy-security-faq.md
-      - name: Data residency FAQ
-        href: faq/data-residency-gdpr-faq.md
-      - name: Compliance FAQ
-        href: faq/compliance-faq.md
 - name: Loss prevention
   items: 
   - name: Overview
@@ -278,36 +234,36 @@
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
-  - name: Compliance, privacy, security
-    items:
-    - name: Compliance overview
-      href: security-compliance.md
-    - name: Security overview
-      href: security.md
-    - name: Data security
-      href: compliance-and-security.md
-    - name: Privacy protection for customer data
-      href: data-processing-protection.md
-    - name: FAQs
-      items:
-      - name: Legal considerations FAQ
-        href: faq/legal-faq.md
-      - name: Security assessment FAQ
-        href: faq/security-assessment-faq.md
-      - name: Privacy and security FAQ
-        href: faq/privacy-security-faq.md
-      - name: Data residency FAQ
-        href: faq/data-residency-gdpr-faq.md
-      - name: Compliance FAQ
-        href: faq/compliance-faq.md
-- name: Trust Center
+- name: Compliance, privacy, security
   items:
-  - name: Fraud Protection transparency notice
-    href: https://go.microsoft.com/fwlink/?linkid=2135033
-  - name: Fraud Protection mobile reference
-    href: https://go.microsoft.com/fwlink/?linkid=2134792
-  - name: Fraud Protection model audit reports
-    href: https://go.microsoft.com/fwlink/?linkid=2132646
+  - name: Compliance overview
+    href: security-compliance.md
+  - name: Security overview
+    href: security.md
+  - name: Data security
+    href: compliance-and-security.md
+  - name: Privacy protection for customer data
+    href: data-processing-protection.md
+  - name: FAQs
+    items:
+    - name: Legal considerations FAQ
+      href: faq/legal-faq.md
+    - name: Security assessment FAQ
+      href: faq/security-assessment-faq.md
+    - name: Privacy and security FAQ
+      href: faq/privacy-security-faq.md
+    - name: Data residency FAQ
+      href: faq/data-residency-gdpr-faq.md
+    - name: Compliance FAQ
+      href: faq/compliance-faq.md
+    - name: Trust Center
+      items:
+      - name: Fraud Protection transparency notice
+        href: https://go.microsoft.com/fwlink/?linkid=2135033
+      - name: Fraud Protection mobile reference
+        href: https://go.microsoft.com/fwlink/?linkid=2134792
+      - name: Fraud Protection model audit reports
+        href: https://go.microsoft.com/fwlink/?linkid=2132646
 - name: Community, training, contact us
   items:
   - name: Join Dynamics 365 Community
