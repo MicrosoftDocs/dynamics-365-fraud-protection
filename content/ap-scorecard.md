@@ -72,7 +72,6 @@ The **Risk decision** section shows metrics from the automated decision rules th
 ## Related articles
 
 - [Account protection overview](ap-overview.md)
-- [View account protection schemas](./overview.md)
 - [Custom assessment](custom-assessment.md)
 
 

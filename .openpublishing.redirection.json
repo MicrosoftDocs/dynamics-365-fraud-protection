@@ -6,6 +6,21 @@
       "redirect_document_id": "false"
     }, 
     {
+      "source_path": "account-protection.md",
+      "redirect_url": "index",
+      "redirect_document_id": "false"
+    },  
+    {
+      "source_path": "overview.md",
+      "redirect_url": "index",
+      "redirect_document_id": "false"
+    },  
+    {
+      "source_path": "understand-business.md",
+      "redirect_url": "index",
+      "redirect_document_id": "false"
+    },  
+    {
       "source_path": "content/diagnose-experience.md",
       "redirect_url": "purchase-protection",
       "redirect_document_id": "false"
@@ -17,7 +32,7 @@
     },  
     {
       "source_path": "understand-business.md",
-      "redirect_url": "overview",
+      "redirect_url": "index",
       "redirect_document_id": "false"
     },  
     {
@@ -27,17 +42,17 @@
     },  
     {
       "source_path": "content/labels-schema.md",
-      "redirect_url": "overview",
+      "redirect_url": "index",
       "redirect_document_id": "false"
     },  
     {
       "source_path": "content/signup-schema.md",
-      "redirect_url": "overview",
+      "redirect_url": "index",
       "redirect_document_id": "false"
     },  
     {
       "source_path": "content/signup-status-schema.md",
-      "redirect_url": "overview",
+      "redirect_url": "index",
       "redirect_document_id": "false"
     },  
     {
@@ -56,7 +71,7 @@
       "redirect_document_id": "false"
     },    {
       "source_path": "content/account-creation-assessment.md",
-      "redirect_url": "account-protection",
+      "redirect_url": "index",
       "redirect_document_id": "false"
     },
     {
@@ -81,7 +96,7 @@
     },
     {
       "source_path": "content/extensibility-pricing.md",
-      "redirect_url": "overview",
+      "redirect_url": "index",
       "redirect_document_id": "false"
     }
   ]

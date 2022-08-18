@@ -8,10 +8,10 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: Manage environments (PSPs)
+title: Manage environments
 ---
 
-# Manage environments (PSPs)
+# Manage environments
 
 
 By creating new environments for their merchants, payment service providers (PSPs) can better manage fraud operations, data, and user access for those merchants. For example, if you're a PSP who manages two merchants, you can create two environments, one for each merchant. In that way, each merchant's fraud operations, data, and user access can be hosted and managed in a dedicated environment.
