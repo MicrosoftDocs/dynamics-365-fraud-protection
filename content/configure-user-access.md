@@ -468,7 +468,7 @@ The following table shows the specific read/write permissions that users will ha
         </tr>
         <tr>
             <td colspan="2">User access</td>
-            <td>Read/Write</td>
+            <td>Read/Write <sup>3</sup></td>
             <td>Read only</td>
             <td>Read only</td>
             <td>No access</td>
@@ -519,6 +519,8 @@ The following table shows the specific read/write permissions that users will ha
 \(1) SupportAgent can remove/add items to Support Lists (e.g. Safe, Block, Watch) via the Event Details page, but cannot read or edit off of the full Support Lists page.
 
 \(2) To create an Azure AD application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
+
+\(3) The user assigning roles must also be assigned the Application Administrator, Cloud Application Administrator, Global Administrator, User Administrator or Privileged Role Administrator role in your Azure tenant.
 
 
 
