@@ -14,7 +14,7 @@ title: Configure user access
 
 # Configure user access
 
-Dynamics 365 Fraud Protection lets you grant users various levels of access to the tool, based on logical or functional roles. Administrators can use the **User access** section to assign these roles.
+Dynamics 365 Fraud Protection lets you grant users various levels of access to the service, based on logical or functional roles. Administrators can use the **User access** section to assign these roles.
 
 > [!IMPORTANT]
 > Information on this page is subject to change at any time.
@@ -25,14 +25,14 @@ Users are managed through your assigned Azure Active Directory (Azure AD) tenant
 
 Roles can be assigned to either of the following types of users:
 
-- Users inside the organization's Azure tenant
-- Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users
+- Users inside the organization's Azure tenant.
+- Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users.
 
 Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. Users outside the organization's Azure tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
 
 You can invite colleagues to use Fraud Protection or change their role assignments if one or both of the following conditions are true for your account: 
-- You are a Global administrator of the Azure Active Directory (AAD) tenant where Fraud Protection is set up. 
-- You have AllAreas_Admin or AllAreas_Editor permissions for Fraud Protection and have one of the following permissions in the AAD tenant where Fraud Protection is set up; Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
+- You are a global administrator of the Azure AD tenant where Fraud Protection is set up. 
+- You have "AllAreas_Admin" or "AllAreas_Editor" permissions for Fraud Protection and have one of the following permissions in the Azure AD tenant where Fraud Protection is set up; Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
 
 For more information about how to directly add users to your Azure AD tenant as members or non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
@@ -53,7 +53,7 @@ To assign roles to users in Fraud Protection, follow these steps.
 
 ### Edit assigned roles
 
-To edit the role that is assigned to a user in Fraud Protection, select the user in the member list, and then select **Edit**.
+To edit the role that is assigned to a user in Fraud Protection, select the user in the **Member list**, and then select **Edit**.
 
 In this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home).
 
@@ -61,7 +61,7 @@ To learn more about the available roles, see the [User roles and access](configu
 
 ### Revoke user access to the environment
 
-To revoke a user's access to the current environment, select the user in the member list, and then select **Revoke access**.
+To revoke a user's access to the current environment, select the user in the **Member list**, and then select **Revoke access**.
 
 > [!IMPORTANT]
 > When you revoke access for a user, the user is removed from the current environment. However, they might still have access to other environments in the hierarchy. To fully remove a user's access to Fraud Protection, [delete the user from your Azure AD tenant](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). In this way, you completely remove the user's access to your tenant and its associated applications or services.
@@ -86,7 +86,7 @@ All the roles in the following list are named as they will be named in your prod
 
 - **Risk_API** – This role provides access to the API but not to the user-facing tool.
 
-- **ManualReviewFraudManager**, **ManualReviewSeniorAnalyst**, **ManualReviewAnalyst** - These roles are used strictly internally and do not grant any user permissions in the Fraud Protection portal.
+- **ManualReviewFraudManager**, **ManualReviewSeniorAnalyst**, **ManualReviewAnalyst** – These roles are used strictly internally and do not grant any user permissions in the Fraud Protection portal.
 
 ### Permissions
 
@@ -516,11 +516,11 @@ The following table shows the specific read/write permissions that users will ha
     </tbody>
 </table>
 
-\(1) SupportAgent can remove/add items to Support Lists (e.g. Safe, Block, Watch) via the Event Details page, but cannot read or edit off of the full Support Lists page.
+\(1) SupportAgent can remove/add items to **Support lists** (e.g. Safe, Block, Watch) via the **Event Details** page, but cannot read or edit off of the full **Support lists** page.
 
 \(2) To create an Azure AD application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
 
-\(3) The user assigning roles must also be assigned the Application Administrator, Cloud Application Administrator, Global Administrator, User Administrator or Privileged Role Administrator role in your Azure tenant.
+\(3) The user assigning roles must also be assigned the Application Administrator, Cloud Application Administrator, Global Administrator, User Administrator, or Privileged Role Administrator role in your Azure tenant.
 
 
 
