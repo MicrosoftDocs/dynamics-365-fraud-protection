@@ -516,7 +516,7 @@ The following table shows the specific read/write permissions that users will ha
     </tbody>
 </table>
 
-\(1) SupportAgent can remove/add items to **Support lists** (e.g. Safe, Block, Watch) via the **Event Details** page, but cannot read or edit off of the full **Support lists** page.
+\(1) SupportAgent can remove/add items to **Support lists** (for example, Safe, Block, Watch) via the **Event Details** page, but cannot read or edit the full **Support lists** page.
 
 \(2) To create an Azure AD application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
 
