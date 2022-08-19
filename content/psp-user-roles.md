@@ -25,8 +25,8 @@ Users are managed through your assigned Azure Active Directory (Azure AD) tenant
 
 Roles can be assigned to either of the following types of users:
 
-- Users inside the organization's Azure tenant
-- Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users
+- Users inside the organization's Azure tenant.
+- Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users.
 
 > [!IMPORTANT]
 > Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. By contrast, users outside the tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to user according to your business privacy requirements.
@@ -53,7 +53,7 @@ To assign PSP roles to users in Fraud Protection, follow these steps.
 
 ### Edit assigned roles
 
-To edit the role that is assigned to a user in Fraud Protection, select the user in the member list, and then select **Edit**.
+To edit the role that is assigned to a user in Fraud Protection, select the user in the **Member list**, and then select **Edit**.
 
 In this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home).
 
@@ -423,11 +423,11 @@ The following table shows the specific read/write permissions that users will ha
     </tbody>
 </table>
 
-\(1) ManualReviewAgent can remove/add items to Support Lists (e.g. Safe, Block, Watch) via the Event Details page, but cannot read or edit off of the full Support Lists page.
+\(1) ManualReviewAgent can remove/add items to **Support lists** (for example, Safe, Block, Watch) via the **Event Details** page, but can't read or edit the full **Support lists** page.
 
-\(2) ManualReviewAgent can make decisions (e.g. Approve/Reject/Send back to queue) on cases in queues but cannot modify higher-level queue settings.
+\(2) ManualReviewAgent can make decisions (for example, Approve/Reject/Send back to queue) on cases in queues but cannot modify higher-level queue settings.
 
-\(3) To create an Azure AD application, the user must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
+\(3) To create an Azure AD application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
 
 
 ### Member access
