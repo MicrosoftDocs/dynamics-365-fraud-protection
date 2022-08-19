@@ -17,7 +17,7 @@ title: Configure user access
 Dynamics 365 Fraud Protection lets you grant users various levels of access to the service, based on logical or functional roles. Administrators can use the **User access** section to assign these roles.
 
 > [!IMPORTANT]
-> Information on this page is subject to change at any time.
+> Information in this article is subject to change at any time.
 
 ## Assign roles
 
@@ -25,14 +25,15 @@ Users are managed through your assigned Azure Active Directory (Azure AD) tenant
 
 Roles can be assigned to either of the following types of users:
 
-- Users inside the organization's Azure tenant.
-- Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users.
+- Users inside the organization's Azure tenant
+- Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users
 
 Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. Users outside the organization's Azure tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
 
-You can invite colleagues to use Fraud Protection or change their role assignments if one or both of the following conditions are true for your account: 
-- You are a global administrator of the Azure AD tenant where Fraud Protection is set up. 
-- You have "AllAreas_Admin" or "AllAreas_Editor" permissions for Fraud Protection and have one of the following permissions in the Azure AD tenant where Fraud Protection is set up; Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
+You can invite colleagues to use Fraud Protection or change their role assignments if one or both of the following conditions are true for your account:
+
+- You're a global administrator of the Azure AD tenant where Fraud Protection is set up. 
+- You have "AllAreas_Admin" or "AllAreas_Editor" permissions for Fraud Protection, and have one of the following permissions in the Azure AD tenant where Fraud Protection is set up: Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
 
 For more information about how to directly add users to your Azure AD tenant as members or non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
@@ -75,22 +76,16 @@ All the roles in the following list are named as they will be named in your prod
 ### Roles
 
 - **AllAreas_Admin** – This high-level administrative account has full access to Fraud Protection.
-
 - **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools.
-
 - **AllAreasViewer** – A user in this role can view all areas of Fraud Protection and learn from the data, but can't do uploads or change settings.
-
 - **SupportAgent** – This role provides tailored access to Fraud Protection for support agents who work with your customers. A user in this role can view and work in the support tool, view the ontology, and assign customers to safe lists or block lists.
-
 - **FraudEngineer** – This role provides tailored access for fraud analysts and engineers in your organization who work with Fraud Protection. A user in this role has similar access to a user in the **AllAreasEditor** role. This user can access the data engineering information but doesn't have access to some configuration options.
-
 - **Risk_API** – This role provides access to the API but not to the user-facing tool.
-
-- **ManualReviewFraudManager**, **ManualReviewSeniorAnalyst**, **ManualReviewAnalyst** – These roles are used strictly internally and do not grant any user permissions in the Fraud Protection portal.
+- **ManualReviewFraudManager**, **ManualReviewSeniorAnalyst**, **ManualReviewAnalyst** – These roles are used only internally and don't grant any user permissions in the Fraud Protection portal.
 
 ### Permissions
 
-The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal depending on their role(s):
+The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles.
 
 <table>
     <thead>
@@ -351,7 +346,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
-            <td>Read/Write <sup>1</sup></td>
+            <td>Read/Write<sup>1</sup></td>
             <td>Read/Write</td>
             <td>No access</td>
         </tr>
@@ -421,7 +416,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
         </tr>
         <tr>
-            <td>AAD Apps <sup>2</sup></td>
+            <td>AAD Apps<sup>2</sup></td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -468,7 +463,7 @@ The following table shows the specific read/write permissions that users will ha
         </tr>
         <tr>
             <td colspan="2">User access</td>
-            <td>Read/Write <sup>3</sup></td>
+            <td>Read/Write<sup>3</sup></td>
             <td>Read only</td>
             <td>Read only</td>
             <td>No access</td>
@@ -516,14 +511,9 @@ The following table shows the specific read/write permissions that users will ha
     </tbody>
 </table>
 
-\(1) SupportAgent can remove/add items to **Support lists** (for example, Safe, Block, Watch) via the **Event Details** page, but cannot read or edit the full **Support lists** page.
-
-\(2) To create an Azure AD application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
-
-\(3) The user assigning roles must also be assigned the Application Administrator, Cloud Application Administrator, Global Administrator, User Administrator, or Privileged Role Administrator role in your Azure tenant.
-
-
-
+1. SupportAgent can remove items from **Support lists** (for example, Safe, Block, and Watch) via the **Event Details** page, or add items to those lists. However, it can't read or edit the full **Support lists** page.
+2. To create an Azure AD application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
+3. The user who assigns roles must also be assigned the Application Administrator, Cloud Application Administrator, Global Administrator, User Administrator, or Privileged Role Administrator role in your Azure tenant.
 
 ### Member access
 
