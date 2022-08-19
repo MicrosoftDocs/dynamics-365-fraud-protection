@@ -1,8 +1,8 @@
 ---
-author: josaw1
+author: khanguyen
 description: This article explains how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
-ms.author: josaw
-ms.date: 06/07/2022
+ms.author: khanguyen
+ms.date: 08/03/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -16,6 +16,9 @@ title: User roles and access (PSPs)
 
 Payment service providers (PSPs) can grant users of Microsoft Dynamics 365 Fraud Protection various levels of access, based on logical or functional roles.
 
+> [!IMPORTANT]
+> Information in this article is subject to change at any time.
+
 ## Assign PSP roles
 
 Users are managed through your assigned Azure Active Directory (Azure AD) tenant.
@@ -26,7 +29,7 @@ Roles can be assigned to either of the following types of users:
 - Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users
 
 > [!IMPORTANT]
-> Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. By contrast, users outside the tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to user according to your business privacy requirements.
+> Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. By contrast, users outside the tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
 
 For more information about how to directly add users to your Azure AD tenant as members or non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
@@ -50,7 +53,7 @@ To assign PSP roles to users in Fraud Protection, follow these steps.
 
 ### Edit assigned roles
 
-To edit the role that is assigned to a user in Fraud Protection, select the user in the member list, and then select **Edit**.
+To edit the role that is assigned to a user in Fraud Protection, select the user in the **Member list**, and then select **Edit**.
 
 In this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home).
 
@@ -67,249 +70,7 @@ To revoke a user's access to the current environment, select the user in the mem
 
 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select the features and functions when you assign a user to the system.
 
-<table>
-<thead>
-<tr>
-<th>Section</th>
-<th>Sub-page (tab)</th>
-<th>PSP Admin</th>
-<th>Fraud Manager</th>
-<th>Fraud Supervisor</th>
-<th>Fraud Analyst</th>
-<th>Manual Review Agent</th>
-<th>Technical Developer</th>
-<th>Customer Service Support</th>
-<th>Reporting</th>
-</tr>
-</thead>
-<tbody>
-<td rowspan="2">Purchase</td>
-<td>Summary</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Transaction Search</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read only/View only</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>Read/Write</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">Rules</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read only/View only</td>
-<td>Read only/View only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">Velocities</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read only/View only</td>
-<td>Read only/View only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td rowspan="2">Lists</td>
-<td>Custom</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read only/View only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Support</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read only/View only</td>
-<td>*Write only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">External calls</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">Manual review</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">Graph explorer</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">Event tracing</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>Read/Write</td>
-</tr>
-<tr>
-<td colspan="2">Data upload</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td rowspan="2">API Management</td>
-<td>API requests</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Errors</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td rowspan="3">Integration</td>
-<td>Dashboard</td>
-<td>Read only/View only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>Read only/View only</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>AAD Apps*</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Device Fingerprinting</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">Subscription</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">User access</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">Subject requests</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td colspan="2">Transaction Acceptance Booster</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-</tbody>
-</table>
-
-\* To create an Azure AD application, the user who is assigned the **PSP Admin** or **Technical Developer** role must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
+### Roles
 
 The following roles are available for PSP users:
 
@@ -321,6 +82,350 @@ The following roles are available for PSP users:
 - **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
 - **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
 - **Reporting** – This role provides access to event tracing only, to enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
+
+### Permissions
+
+The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles.
+
+<table>
+    <thead>
+        <tr>
+            <th>Section</th>
+            <th>Sub-page (tab)</th>
+            <th>PSP Admin</th>
+            <th>Fraud Manager</th>
+            <th>Fraud Supervisor</th>
+            <th>Fraud Analyst</th>
+            <th>Manual Review Agent</th>
+            <th>Technical Developer</th>
+            <th>Customer Service Support</th>
+            <th>Reporting</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="3">Purchase</td>
+            <td>Summary</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+          <td>Virtual fraud analyst</td>
+          <td>Read/Write</td>
+          <td>Read/Write</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+        </tr>
+        <tr>
+          <td>Fraud analysis</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+        </tr>
+        <tr>
+            <td colspan="2">Search</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td colspan="2">Event Details</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read/Write<sup>1</sup></td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Rules</td>
+            <td>Performance</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+          <td>Rule management</td>
+          <td>Read/Write</td>
+          <td>Read/Write</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+        </tr>
+        <tr>
+            <td colspan="2">Velocities</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Lists</td>
+            <td>Custom</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Support</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read/Write<sup>1</sup></td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td colspan="2">External calls</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Case management</td>
+            <td>Queues</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>Read/Write<sup>2</sup></td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Report</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Routing rules</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+          <tr>
+            <td rowspan="3">API Management</td>
+            <td>API requests</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Errors</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Ontology</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Integration</td>
+            <td>Dashboard</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>AAD Apps<sup>3</sup></td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Device Fingerprinting</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td colspan="2">Event tracing</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>Read/Write</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Subscription</td>
+            <td>Summary</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Details</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td colspan="2">User access</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Subject requests</td>
+            <td>Search</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Requests</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Transaction acceptance booster</td>
+            <td>Opt in</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Report</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+    </tbody>
+</table>
+
+1. ManualReviewAgent can remove items from **Support lists** (for example, Safe, Block, and Watch) via the **Event Details** page, or add items to those lists. However, it can't read or edit the full **Support lists** page.
+2.  ManualReviewAgent can make decisions (for example, Approve, Reject, or Send back to queue) about cases in queues. However, it can't modify higher-level queue settings.
+3. To create an Azure AD application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
 
 ### Member access
 
