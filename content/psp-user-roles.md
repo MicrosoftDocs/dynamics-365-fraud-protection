@@ -8,11 +8,11 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: User roles and access (PSPs)
+title: User roles and access (PSPs,payment providers, payment gateways)
 
 ---
 
-# User roles and access (PSPs)
+# User roles and access (PSPs,payment providers, payment gateways)
 
 Payment service providers (PSPs) can grant users of Microsoft Dynamics 365 Fraud Protection various levels of access, based on logical or functional roles.
 
