@@ -1,5 +1,5 @@
 ---
-author: khanguyen
+author: kha-microsoft
 description: This article explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: khanguyen
 ms.date: 08/03/2022
@@ -72,6 +72,11 @@ To revoke a user's access to the current environment, select the user in the **M
 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. Users will access Fraud Protection differently, depending on their user role in the organization's Azure tenant. You can select roles when you assign a new user to the system.
 
 All the roles in the following list are named as they will be named in your production environment. To grant users access to these roles in your sandbox environment, select the version of the role that begins with "Sandbox_" (for example, **Sandbox_AllAreas_Admin**).
+
+
+> [!NOTE]
+> If you are shown a different selection of roles than those detailed below, you may be using the payment service provider version of Fraud Protection. Go to [User roles and access (payment service providers)](psp-user-roles.md) instead.
+
 
 ### Roles
 

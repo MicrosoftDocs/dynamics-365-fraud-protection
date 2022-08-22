@@ -74,8 +74,8 @@
     items: 
     - name: Set up your account protection service
       href: promocode-set-up-account-protection.md
-    - name: User access
-      href: psp-user-roles.md
+    - name: Configure user roles and access
+      href: configure-user-access.md
     - name: Device fingerprinting 
       href: device-fingerprinting.md
     - name: Deploy and work with account protection and purchase protection learning path
@@ -123,7 +123,11 @@
     - name: Set up your purchase protection service
       href: promocode-set-up-purchase-protection.md
     - name: User access
-      href: psp-user-roles.md
+      items:
+      - name: Configure user roles and access
+        href: configure-user-access.md
+      - name: User roles and access (payment service providers)
+        href: psp-user-roles.md
     - name: Deploy and work with account protection and purchase protection learning path
       href: /learn/paths/deploy-work-account-purchase-protection/
   - name: Operations
@@ -190,8 +194,8 @@
     items: 
     - name: Set up your loss prevention service
       href: promocode-set-up-loss-prevention.md
-    - name: User access
-      href: psp-user-roles.md
+    - name: Configure user roles and access
+      href: configure-user-access.md
     - name: Deploy and work with loss prevention learning path
       href: /learn/paths/deploy-work-loss-prevention-fraud-protection/
     - name: Integration with Dynamics 365 Commerce
