@@ -75,7 +75,11 @@
     - name: Set up your account protection service
       href: promocode-set-up-account-protection.md
     - name: User access
-      href: psp-user-roles.md
+      items:
+      - name: User roles and access
+        href: configure-user-access.md
+      - name: User roles for PSPs, payment providers, payment gateways
+        href: psp-user-roles.md
     - name: Device fingerprinting 
       href: device-fingerprinting.md
     - name: Deploy and work with account protection and purchase protection learning path
