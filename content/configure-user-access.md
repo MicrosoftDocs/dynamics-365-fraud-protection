@@ -73,6 +73,11 @@ Fraud Protection offers a defined set of user roles, each of which has access to
 
 All the roles in the following list are named as they will be named in your production environment. To grant users access to these roles in your sandbox environment, select the version of the role that begins with "Sandbox_" (for example, **Sandbox_AllAreas_Admin**).
 
+
+> [!NOTE]
+> If you are shown a different selection of roles than those detailed below, you may be using the payment service provider version of Fraud Protection. Go to [User roles and access (payment service providers)](psp-user-roles.md) instead.
+
+
 ### Roles
 
 - **AllAreas_Admin** – This high-level administrative account has full access to Fraud Protection.
