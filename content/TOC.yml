@@ -74,7 +74,7 @@
     items: 
     - name: Set up your account protection service
       href: promocode-set-up-account-protection.md
-    - name: User roles and access
+    - name: Configure user roles and access
       href: configure-user-access.md
     - name: Device fingerprinting 
       href: device-fingerprinting.md
@@ -124,7 +124,7 @@
       href: promocode-set-up-purchase-protection.md
     - name: User access
       items:
-      - name: User roles and access
+      - name: Configure user roles and access
         href: configure-user-access.md
       - name: User roles and access (payment service providers)
         href: psp-user-roles.md
@@ -194,7 +194,7 @@
     items: 
     - name: Set up your loss prevention service
       href: promocode-set-up-loss-prevention.md
-    - name: User roles and access
+    - name: Configure user roles and access
       href: configure-user-access.md
     - name: Deploy and work with loss prevention learning path
       href: /learn/paths/deploy-work-loss-prevention-fraud-protection/
