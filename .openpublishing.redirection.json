@@ -7,22 +7,22 @@
     }, 
     {
       "source_path": "account-protection.md",
-      "redirect_url": "index",
+      "redirect_url": "ap-overview",
       "redirect_document_id": "false"
     },  
     {
       "source_path": "overview.md",
-      "redirect_url": "index",
+      "redirect_url": "ap-overview",
       "redirect_document_id": "false"
     },  
     {
       "source_path": "understand-business.md",
-      "redirect_url": "index",
+      "redirect_url": "https://dynamics.microsoft.com/ai/fraud-protection/",
       "redirect_document_id": "false"
     },  
     {
       "source_path": "content/pay-as-you-go.md",
-      "redirect_url": "index",
+      "redirect_url": "https://dynamics.microsoft.com/ai/fraud-protection/",
       "redirect_document_id": "false"
     },  
     {
@@ -36,28 +36,23 @@
       "redirect_document_id": "false"
     },  
     {
-      "source_path": "understand-business.md",
-      "redirect_url": "index",
-      "redirect_document_id": "false"
-    },  
-    {
       "source_path": "content/schema-INT.md",
       "redirect_url": "view-purchase-protection-schemas",
       "redirect_document_id": "false"
     },  
     {
       "source_path": "content/labels-schema.md",
-      "redirect_url": "index",
+      "redirect_url": "labels-api",
       "redirect_document_id": "false"
     },  
     {
       "source_path": "content/signup-schema.md",
-      "redirect_url": "index",
+      "redirect_url": "ap-schema",
       "redirect_document_id": "false"
     },  
     {
       "source_path": "content/signup-status-schema.md",
-      "redirect_url": "index",
+      "redirect_url": "ap-schema",
       "redirect_document_id": "false"
     },  
     {
@@ -76,7 +71,7 @@
       "redirect_document_id": "false"
     },    {
       "source_path": "content/account-creation-assessment.md",
-      "redirect_url": "index",
+      "redirect_url": "ap-overview",
       "redirect_document_id": "false"
     },
     {
@@ -101,7 +96,7 @@
     },
     {
       "source_path": "content/extensibility-pricing.md",
-      "redirect_url": "index",
+      "redirect_url": "https://dynamics.microsoft.com/ai/fraud-protection/",
       "redirect_document_id": "false"
     }
   ]
