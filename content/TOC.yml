@@ -10,12 +10,10 @@
   items: 
   - name: Get started training module
     href: /learn/modules/get-started-fraud-protection/
-  - name: Pay as you go billing
-    href: pay-as-you-go.md
   - name: Assessment and usage metering
     href: metering.md
   - name: Service FAQ
-    href: /faq/service-faq.md
+    href: faq/service-faq.md
   - name: Provision Fraud Protection training module
     href: /learn/modules/provision-fraud-protection/
   - name: Promotion code redemption error
