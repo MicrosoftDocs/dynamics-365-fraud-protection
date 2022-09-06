@@ -405,7 +405,7 @@ For more information about access tokens, see the following Azure documentation:
 2.	Generate an event-based payload. Fill in the event data with the relevant information from your system. For information about supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 3.	Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint. (The API endpoint is the URI for your environment and appears on the **Account information** tile on the Fraud Protection dashboard.)
 
-For more information about APIs, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection).
+For more information about APIs, see [Dynamics 365 Fraud Protection API](/fraud-protection-rest/api/fraud-protection-rest/).
 
 ## Step 4: Understand purchase events
 
@@ -414,7 +414,7 @@ You use APIs to send risk evaluation events to Fraud Protection. These events bu
 -	For integration and testing, use the following endpoint: https://api.dfp.microsoft-int.com/
 -	For production, use the following endpoint: https://api.dfp.microsoft.com/
 
-For information about the required and optional fields, and their definitions, see [Dynamics 365 Fraud Protection API](https://apidocs.microsoft.com/services/dynamics365fraudprotection).
+For information about the required and optional fields, and their definitions, see [Dynamics 365 Fraud Protection API](/fraud-protection-rest/api/fraud-protection-rest/).
 
 ## Step 5: Use common support tool and graph explorer scenarios
 

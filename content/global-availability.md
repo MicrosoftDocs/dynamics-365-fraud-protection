@@ -42,7 +42,7 @@ The following information is meant to help you with your assessment of adequacy 
 
 As is fully described in the dashboard that covers [geographical availability for Dynamics 365](https://dynamics.microsoft.com/geographic-availability/), Fraud Protection is hosted from data centers that are located in the United States and Europe. Therefore, for services that are sold in India, customer data is processed and stored in either the United States or Europe, depending on capacity availability. Currently, the online service isn't hosted in Indian data centers. Although Microsoft plans to address geo location, so that it can offer Fraud Protection that is primarily hosted from its data centers in India, this configuration isn't currently offered.
 
-The data schema that Fraud Protection uses is available in Microsoft technical documentation. You can find this documentation in the following places:
+The data schema that Fraud Protection uses is available at these locations:
 
 - [Purchase protection](view-purchase-protection-schemas.md)
 - [Account protection](ap-schema.md)
