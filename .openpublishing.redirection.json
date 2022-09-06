@@ -6,17 +6,17 @@
       "redirect_document_id": "false"
     }, 
     {
-      "source_path": "account-protection.md",
+      "source_path": "content/account-protection.md",
       "redirect_url": "ap-overview",
       "redirect_document_id": "false"
     },  
     {
-      "source_path": "overview.md",
+      "source_path": "content/overview.md",
       "redirect_url": "ap-overview",
       "redirect_document_id": "false"
     },  
     {
-      "source_path": "understand-business.md",
+      "source_path": "content/understand-business.md",
       "redirect_url": "https://dynamics.microsoft.com/ai/fraud-protection/",
       "redirect_document_id": "false"
     },  
@@ -31,7 +31,7 @@
       "redirect_document_id": "false"
     },  
     {
-      "source_path": "azure-apps-portal-powershell.md",
+      "source_path": "content/azure-apps-portal-powershell.md",
       "redirect_url": "provision-azure-tenant",
       "redirect_document_id": "false"
     },  
