@@ -9,13 +9,13 @@
 - name: Get started
   items: 
   - name: Get started training module
-    href: /learn/modules/get-started-fraud-protection/
+    href: /training/modules/get-started-fraud-protection/
   - name: Assessment and usage metering
     href: metering.md
   - name: Service FAQ
     href: faq/service-faq.md
   - name: Provision Fraud Protection training module
-    href: /learn/modules/provision-fraud-protection/
+    href: /training/modules/provision-fraud-protection/
   - name: Promotion code redemption error
     href: promocode-redemption-error.md
 - name: Transaction acceptance booster (TAB)
@@ -45,9 +45,9 @@
     - name: Swagger UI
       href: swagger.md
     - name: Call real-time APIs training module
-      href: /learn/modules/call-real-item-apis/
+      href: /training/modules/call-real-item-apis/
     - name: Configure sample app data training module
-      href: /learn/modules/configure-sample-app-fraud-protection/
+      href: /training/modules/configure-sample-app-fraud-protection/
     - name: Account protection schemas
       href: ap-schema.md
     - name: Purchase protection schemas
@@ -77,7 +77,7 @@
     - name: Device fingerprinting 
       href: device-fingerprinting.md
     - name: Deploy and work with account protection and purchase protection learning path
-      href: /learn/paths/deploy-work-account-purchase-protection/
+      href: /training/paths/deploy-work-account-purchase-protection/
   - name: Operations
     items: 
     - name: Language reference guide
@@ -127,7 +127,7 @@
       - name: User roles and access (payment service providers)
         href: psp-user-roles.md
     - name: Deploy and work with account protection and purchase protection learning path
-      href: /learn/paths/deploy-work-account-purchase-protection/
+      href: /training/paths/deploy-work-account-purchase-protection/
   - name: Operations
     items: 
     - name: Language reference guide
@@ -195,7 +195,7 @@
     - name: Configure user roles and access
       href: configure-user-access.md
     - name: Deploy and work with loss prevention learning path
-      href: /learn/paths/deploy-work-loss-prevention-fraud-protection/
+      href: /training/paths/deploy-work-loss-prevention-fraud-protection/
     - name: Integration with Dynamics 365 Commerce
       href: loss-prevention-integration-with-commerce.md
   - name: Operations
@@ -231,7 +231,7 @@
       - name: Loss prevention reports
         href: reports.md
       - name: Generate a loss prevention report training module
-        href: /learn/modules/loss-prevention-report-fraud-protection/
+        href: /training/modules/loss-prevention-report-fraud-protection/
     - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
@@ -271,7 +271,7 @@
   - name: Join Dynamics 365 Community
     href: https://www.yammer.com/dynamicsaxfeedbackprograms/#/threads/inGroup?type=in_group&feedId=52719501312
   - name: Training learning paths and modules
-    href: /learn/browse/?expanded=dynamics-365&products=dynamics-fraud-protection
+    href: /training/browse/?expanded=dynamics-365&products=dynamics-fraud-protection
   - name: Contact us
     items:
     - name: Share your ideas
