@@ -21,11 +21,6 @@
       "redirect_document_id": "false"
     },  
     {
-      "source_path": "content/pay-as-you-go.md",
-      "redirect_url": "https://dynamics.microsoft.com/ai/fraud-protection/",
-      "redirect_document_id": "false"
-    },  
-    {
       "source_path": "content/diagnose-experience.md",
       "redirect_url": "purchase-protection",
       "redirect_document_id": "false"
