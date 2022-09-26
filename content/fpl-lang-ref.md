@@ -2,7 +2,7 @@
 author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
-ms.date: 09/01/2021
+ms.date: 09/26/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -23,6 +23,7 @@ This language reference guide includes the complete list of operators, functions
 - [Keywords](fpl-lang-ref.md#keywords)
 - [Decision functions](fpl-lang-ref.md#decision-functions)
 - [Observation functions](fpl-lang-ref.md#observation-functions)
+- [Model functions](fpl-lang-ref.md#model-functions)
 - [Referencing attributes and variables](fpl-lang-ref.md#referencing-attributes-and-variables)
 - [Logical operators](fpl-lang-ref.md#logical-operators)
 - [List functions](fpl-lang-ref.md#list-functions)
@@ -77,6 +78,17 @@ Observation functions can be used to take data from the current context and writ
 |-------------|-------------|---------|
 | Output(k=v)  | This function can be used to pass key-value pairs into the API response. | Output(key="test", email=@"user.email", countryRegion=Geo.CountryRegion(@"device.ipAddress")) |
 |Trace(k=v)   | This function can be used to trigger a Trace event and send key-value pairs to the FraudProtection.Trace.Rule [Event Tracing namespace](event-tracing.md#event-schemas). | Trace(key="Manual Review", ip=@"device.ipAddress") |
+
+## Model functions
+
+Model functions run the various fraud models and are useful when your assessment does not automatically run one or more fraud models. When model functions run, the following occurs. First, information about the model running during rule evaluation is output in the fraud assessment API call. Second, the rule will get access to the model result, including score, reasons, and more, that can be used for further rule processing and decision making.
+
+| Model type     | Description | Example |
+|--------------|-------------|---------|
+|  Risk  |  Assesses the likelihood of a session being risky. | Model.Risk()  |
+| Bot   |   Assesses the likelihood of a session being bot-initiated. Pass in a device context ID that has been sent to Fraud Protection’s device fingerprinting solution. | Model.Bot(@deviceContextId)   |
+
+
 
 ## Referencing attributes and variables
 You can use the at sign (@) operator to reference an attribute from the current event.
