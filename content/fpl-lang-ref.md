@@ -81,7 +81,7 @@ Observation functions can be used to take data from the current context and writ
 
 ## Model functions
 
-Model functions run the various fraud models and are useful when your assessment does not automatically run one or more of fraud models. When model functions are run, the following occurs. First, information about the model running during rule evaluation is output in the fraud assessment API call. Second, the rule will get access to the model result, including score, reasons, and more, that can be used for further rule processing and decision making.
+Model functions run the various fraud models and are useful when your assessment does not automatically run one or more fraud models. When model functions run, the following occurs. First, information about the model running during rule evaluation is output in the fraud assessment API call. Second, the rule will get access to the model result, including score, reasons, and more, that can be used for further rule processing and decision making.
 
 | Model type     | Description | Example |
 |--------------|-------------|---------|
