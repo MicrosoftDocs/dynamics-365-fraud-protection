@@ -23,6 +23,7 @@ This language reference guide includes the complete list of operators, functions
 - [Keywords](fpl-lang-ref.md#keywords)
 - [Decision functions](fpl-lang-ref.md#decision-functions)
 - [Observation functions](fpl-lang-ref.md#observation-functions)
+- [Model functions](fpl-lang-ref.md#model-functions)
 - [Referencing attributes and variables](fpl-lang-ref.md#referencing-attributes-and-variables)
 - [Logical operators](fpl-lang-ref.md#logical-operators)
 - [List functions](fpl-lang-ref.md#list-functions)
