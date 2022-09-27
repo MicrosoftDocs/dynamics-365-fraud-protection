@@ -72,6 +72,10 @@
     href: ap-overview.md
   - name: Set up account protection
     items: 
+    - name: Set up a trial instance of Fraud Protection
+      href: promocode-set-up-DFP-trial-version.md
+    - name: Set up a purchased instance of Fraud Protection
+      href: promocode-set-up-DFP-purchased-version.md
     - name: Set up your account protection service
       href: promocode-set-up-account-protection.md
     - name: Configure user roles and access
@@ -120,6 +124,10 @@
     href: purchase-protection.md
   - name: Set up purchase protection
     items: 
+    - name: Set up a trial instance of Fraud Protection
+      href: promocode-set-up-DFP-trial-version.md
+    - name: Set up a purchased instance of Fraud Protection
+      href: promocode-set-up-DFP-purchased-version.md
     - name: Set up your purchase protection service
       href: promocode-set-up-purchase-protection.md
     - name: User access
@@ -192,6 +200,10 @@
     href: loss-prevention-overview.md
   - name: Set up loss prevention
     items: 
+    - name: Set up a trial instance of Fraud Protection
+      href: promocode-set-up-DFP-trial-version.md
+    - name: Set up a purchased instance of Fraud Protection
+      href: promocode-set-up-DFP-purchased-version.md
     - name: Set up your loss prevention service
       href: promocode-set-up-loss-prevention.md
     - name: Configure user roles and access
