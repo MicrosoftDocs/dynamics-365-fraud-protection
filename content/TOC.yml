@@ -172,6 +172,8 @@
       items:
       - name: Key metrics
         href: scorecard.md
+      - name: Fraud tracker tool
+        href: fraud-tracker.md
       - name: Virtual fraud analyst
         href: virtual-fraud-analyst.md  
       - name: Fraud analysis report
@@ -180,6 +182,12 @@
         href: long-term-report.md
       - name: Rule performance report
         href: rule-performance-report.md
+      - name: Score rule optimizer tool
+        href: rule-optimizer.md
+      - name: Rule monitor tool
+        href: rule-monitor.md
+      - name: Monthly business review tool
+        href: monthly-business-review.md
       - name: Visually explore data
         href: graph-explorer.md
     - name: Case management
