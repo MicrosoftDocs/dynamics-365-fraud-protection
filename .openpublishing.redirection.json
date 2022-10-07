@@ -1,6 +1,81 @@
 {
   "redirections": [
     {
+      "source_path": "content/account-protection-evaluate-experience.md",
+      "redirect_url": "ap-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/account-protection-protect-experience.md",
+      "redirect_url": "ap-overview",
+      "redirect_document_id": "false"
+    },    
+    {
+      "source_path": "content/scorecard-psp.md",
+      "redirect_url": "scorecard",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/evaluate-experience.md",
+      "redirect_url": "ap-overview",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/integration-experience.md",
+      "redirect_url": "integrate-ap-api",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/psp-overview.md",
+      "redirect_url": "psp-user-roles",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/provision-azure-tenant.md",
+      "redirect_url": "promocode-set-up-dfp-purchased-version",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/protect-experience.md",
+      "redirect_url": "purchase-protection",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/whats-new-7-1.md",
+      "redirect_url": "transaction-acceptance-booster",
+      "redirect_document_id": "false"
+    }, 
+    {
+      "source_path": "content/whats-new-10-6.md",
+      "redirect_url": "transaction-acceptance-booster",
+      "redirect_document_id": "false"
+    },      
+    {
+      "source_path": "content/whats-new-4-1-22.md",
+      "redirect_url": "transaction-acceptance-booster",
+      "redirect_document_id": "false"
+    },  
+    {
+      "source_path": "content/whats-new-4-1-21.md",
+      "redirect_url": "transaction-acceptance-booster",
+      "redirect_document_id": "false"
+    },  
+    {
+      "source_path": "content/whats-new-5-21.md",
+      "redirect_url": "transaction-acceptance-booster",
+      "redirect_document_id": "false"
+    },      
+    {
+      "source_path": "content/whats-new-5-4.md",
+      "redirect_url": "transaction-acceptance-booster",
+      "redirect_document_id": "false"
+    },     
+    {
+      "source_path": "content/whats-new-8-21.md",
+      "redirect_url": "transaction-acceptance-booster",
+      "redirect_document_id": "false"
+    }, 
+    {
       "source_path": "content/promocode-set-up-device-fingerprinting.md",
       "redirect_url": "device-fingerprinting",
       "redirect_document_id": "false"
