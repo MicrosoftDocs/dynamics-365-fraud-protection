@@ -1,21 +1,5 @@
 - name: Dynamics 365 Fraud Protection home page
   href: index.md
-- name: What's new or changed
-  items:
-  - name: April 2022
-    href: whats-new-4-1-22.md
-  - name: October 2021
-    href: whats-new-8-21.md
-  - name: May 2021
-    href: whats-new-5-21.md
-  - name: April 2021
-    href: whats-new-4-1-21.md
-  - name: October 2020
-    href: whats-new-10-6.md
-  - name: July 2020
-    href: whats-new-7-1.md
-  - name: May 2020
-    href: whats-new-5-4.md
 - name: Regional availability
   href: global-availability.md  
 - name: Get started
