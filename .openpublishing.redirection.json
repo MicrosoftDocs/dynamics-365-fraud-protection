@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "content/account-protection-evaluate-experience.md",
+      "redirect_url": "ap-overview",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "content/account-protection-protect-experience.md",
       "redirect_url": "ap-overview",
       "redirect_document_id": "false"
@@ -46,6 +51,11 @@
       "redirect_document_id": "false"
     },      
     {
+      "source_path": "content/whats-new-4-1-22.md",
+      "redirect_url": "transaction-acceptance-booster",
+      "redirect_document_id": "false"
+    },  
+    {
       "source_path": "content/whats-new-4-1-21.md",
       "redirect_url": "transaction-acceptance-booster",
       "redirect_document_id": "false"
@@ -60,6 +70,11 @@
       "redirect_url": "transaction-acceptance-booster",
       "redirect_document_id": "false"
     },     
+    {
+      "source_path": "content/whats-new-8-21.md",
+      "redirect_url": "transaction-acceptance-booster",
+      "redirect_document_id": "false"
+    }, 
     {
       "source_path": "content/promocode-set-up-device-fingerprinting.md",
       "redirect_url": "device-fingerprinting",
