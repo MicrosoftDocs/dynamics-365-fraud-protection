@@ -6,6 +6,11 @@
       "redirect_document_id": "false"
     },    
     {
+      "source_path": "content/scorecard-psp.md",
+      "redirect_url": "scorecard",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "content/evaluate-experience.md",
       "redirect_url": "ap-overview",
       "redirect_document_id": "false"
