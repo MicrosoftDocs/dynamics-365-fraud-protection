@@ -108,6 +108,10 @@
         href: lists.md
     - name: Reporting
       items:
+      - name: Threat vulnerability analyzer tool
+        href: threat-vulnerability-analyzer.md
+      - name: Threat vulnerability trend tool
+        href: threat-vulnerability-trend.md
       - name: Key metrics for account protection
         href: ap-scorecard.md
     - name: Manage environments
@@ -194,6 +198,8 @@
   items: 
   - name: Overview
     href: loss-prevention-overview.md
+  - name: Data access and privacy for loss prevention
+    href: loss-prevention-data-access-and-privacy.md
   - name: Set up loss prevention
     items: 
     - name: Set up a trial instance of Fraud Protection
