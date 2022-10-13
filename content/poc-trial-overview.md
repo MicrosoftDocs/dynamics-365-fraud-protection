@@ -18,7 +18,7 @@ ms.custom:
 # Proof of Concept Options 
 Microsoft Dynamics 365 Fraud Protection offers you the ability to try a Proof of Concept (PoC) as an opportunity to deliver evidence that the proposed fraud solution can meet your business needs. The PoC provides a 90-day period where you can use Dynamics 365 Fraud Protection for free to build confidence before making a purchase decision.  
 
-Prerequisites: 
+**Prerequisites:** 
 
 - To participate in a PoC of Dynamics 365 Fraud Protection, a customer must have an Azure Active Directory (Azure AD) tenant. If you do not already have an Azure AD      tenant, you can sign up for one.  
 
@@ -26,7 +26,7 @@ Prerequisites:
 
 ![This image is a representation of PoC options available.](media/poc options image.png)
 
-POC Examples Summary 
+**POC Examples Summary** 
 
 Below are the different examples to participate in the POC trial depending on the Microsoft Dynamics 365 Fraud Protection solution that you are interested in exploring. 
 
