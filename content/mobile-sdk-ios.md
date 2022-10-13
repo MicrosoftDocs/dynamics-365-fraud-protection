@@ -38,15 +38,17 @@ The following list shows the device fingerprinting attribute categories that we 
 - **Potential Label** – This group of attributes is used for model supervision and labeling purposes. There is a probability that each of these attributes, by itself, won't provide ground truth. However, the combination of these attributes increases the likelihood that the label that is used to train Fraud Protection's model will become ground truth and helps improve model performance.
 
 ## iOS technical reference
+[![Fraud Protection](https://img.shields.io/cocoapods/v/FraudProtection?label=Latest%20Version&style=for-the-badge)](https://github.com/CocoaPods/Specs/blob/master/Specs/6/e/f/FraudProtection/2.2.1/FraudProtection.podspec.json)
 
+**Minimum Deployment Target: 12.4**
 1. Install CocoaPods.
 2. Create a new file that is named **Podfile** inside your project's root directory, and add the following statements to it. Replace **YOUR\_TARGET\_PROJECT\_NAME** with the name of your Xcode project.
 
     ```swift
-    platform :ios, '11.0'
+    platform :ios, '12.4'
     target '${YOUR\_TARGET\_PROJECT\_NAME}' do
         use\_frameworks!
-        pod ' FraudProtection', '2.0.2'
+        pod ' FraudProtection', '$version'
     end
     ```
 
