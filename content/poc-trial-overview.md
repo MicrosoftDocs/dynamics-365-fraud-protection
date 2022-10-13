@@ -28,7 +28,7 @@ Microsoft Dynamics 365 Fraud Protection offers you the ability to try a Proof 
 
 **POC Examples Summary** 
 
-Below are the different examples to participate in the POC trial depending on the Microsoft Dynamics 365 Fraud Protection solution that you are interested in exploring. 
+Below are the different examples to participate in the PoC trial depending on the Microsoft Dynamics 365 Fraud Protection solution that you are interested in exploring. 
 
 **Account Protection (Online PoC)** The online PoC requires API integration to set up the Account Protection solution for either Account Create, Account Login or both. This PoC process typically takes about six weeks for results depending on your speed to integrate, but provides the most accurate results and authentic experience to using the solution. You can gain a thorough understanding of the cutting-edge AI, robust features, reporting dashboards, how the solution would address your specific fraud challenges within the product portal, and how your team and customers could potentially interact with the solution. If you decide to move forward with purchasing the solution, then it is already set up to use. **Note:** There is only the online PoC option for Account Protection.  
 
