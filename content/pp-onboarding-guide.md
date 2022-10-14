@@ -80,7 +80,7 @@ Integrate purchase protection APIs - Dynamics 365 Fraud Protection | Microsoft D
 
  
 
-Integrate purchase APIs documented at:  https://aka.ms/dfpswagger​ 
+**Integrate purchase APIs documented at:**  https://aka.ms/dfpswagger​ 
 
  
 
