@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about the components of Case management in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/28/2022
+ms.date: 10/13/2022
 ms.topic: reference
 search.app: 
   - Capaedac-fraudprotection
@@ -44,4 +44,4 @@ You use routing rules to define the criteria for organizing cases into queues.
 
 ## <a name="review"></a>Transaction review
 
-Manual review agents use transaction reviews to review the contextual information about a specific case. Based on this review, the agents determine the likelihood of fraud for the transaction.
+Manual review agents review the contextual information about a case from use the transaction review page. s to review the contextual information about a specific case. Based on this review, the agents determine the likelihood of fraud for the transaction, and select an appropriate decision for the case. 
