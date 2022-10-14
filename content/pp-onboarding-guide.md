@@ -43,49 +43,47 @@ No actions for Merchant and Microsoft/Authorized Partner during this phase. Accu
 
 
 ​ 
-**Resources** 
+**Resources:** 
 
 Below are additional resources to help provide more details of the above-referenced integration steps.- 
 
-​ 
 
-Dynamics 365 Fraud Protection documentation - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Dynamics 365 Fraud Protection documentation** - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+
+ 
+- Create and provision your Azure tenant - Dynamics 365 Fraud Protection | Microsoft Docs​ 
 
  
 
-Create and provision your Azure tenant - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Set up a trial instance - Dynamics 365 Fraud Protection | Microsoft Docs​ 
 
  
 
-Set up a trial instance - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Set up a purchased instance - Dynamics 365 Fraud Protection | Microsoft Docs​ 
 
  
 
-Set up a purchased instance - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Configure user access - Dynamics 365 Fraud Protection | Microsoft Docs​ 
 
  
 
-Configure user access - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Set up purchase protection - Dynamics 365 Fraud Protection | Microsoft Docs​ 
 
  
 
-Set up purchase protection - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Set up device fingerprinting - Dynamics 365 Fraud Protection | Microsoft Learn 
 
  
 
-Set up device fingerprinting - Dynamics 365 Fraud Protection | Microsoft Learn 
+- Integrate purchase protection APIs - Dynamics 365 Fraud Protection | Microsoft Docs​ 
 
  
 
-Integrate purchase protection APIs - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- **Integrate purchase APIs documented at:**  https://aka.ms/dfpswagger​ 
 
  
 
-**Integrate purchase APIs documented at:**  https://aka.ms/dfpswagger​ 
-
- 
-
-**Integration Training Modules:** Deploy and work with Account Protection and Purchase Protection for Dynamics 365 Fraud Protection - Training | Microsoft Learn 
+- **Integration Training Modules:** Deploy and work with Account Protection and Purchase Protection for Dynamics 365 Fraud Protection - Training | Microsoft Learn 
 
  
 
