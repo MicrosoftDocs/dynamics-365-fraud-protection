@@ -42,9 +42,10 @@ No actions for Merchant and Microsoft/Authorized Partner during this phase. Accu
 ![step1.](media/step4-PP-onboardingguide.png)
 
 
+​ 
 **Resources** 
 
-Below are additional resources to help provide more details of the above-referenced integration steps. 
+Below are additional resources to help provide more details of the above-referenced integration steps.- 
 
 ​ 
 
@@ -84,7 +85,7 @@ Integrate purchase protection APIs - Dynamics 365 Fraud Protection | Microsoft D
 
  
 
-​Integration Training Modules - Deploy and work with Account Protection and Purchase Protection for Dynamics 365 Fraud Protection - Training | Microsoft Learn 
+**Integration Training Modules:** Deploy and work with Account Protection and Purchase Protection for Dynamics 365 Fraud Protection - Training | Microsoft Learn 
 
  
 
