@@ -22,7 +22,7 @@ Microsoft Dynamics 365 Fraud Protection offers you the ability to try a Proof 
 
 - To start a PoC for Fraud Protection, Microsoft or a Microsoft Authorized Partner must provide a promotion code to you. If you do not have a promotion code, you can request one [here](https://dynamics.microsoft.com/get-started/?appname=fraudprotection)
 
-![This image is a representation of PoC options available.](media/poc options image.png)
+![This image is a representation of PoC options available.](media/poc-options-image.png)
 
 **POC Examples Summary** 
 
