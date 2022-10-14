@@ -7,9 +7,7 @@ ms.topic: reference
 search.app: 
   - Capaedac-fraudprotection
 search.audienceType:
-  - All areas of Administrator
-  - Fraud Manager
-  - Fraud Supervisor
+  - Administrator
   - IT Pro
 title: Proof of Concept Options 
 ms.custom:
@@ -22,7 +20,7 @@ Microsoft Dynamics 365 Fraud Protection offers you the ability to try a Proof 
 
 - To participate in a PoC of Dynamics 365 Fraud Protection, a customer must have an Azure Active Directory (Azure AD) tenant. If you do not already have an Azure AD      tenant, you can sign up for one.  
 
-- To start a PoC for Fraud Protection, Microsoft or a Microsoft Authorized Partner must provide a promotion code to you. If you do not have a promotion code, you can request one here -### Get Started with Fraud Protection| Microsoft Dynamics 365 
+- To start a PoC for Fraud Protection, Microsoft or a Microsoft Authorized Partner must provide a promotion code to you. If you do not have a promotion code, you can request one [here](https://dynamics.microsoft.com/get-started/?appname=fraudprotection)
 
 ![This image is a representation of PoC options available.](media/poc options image.png)
 
