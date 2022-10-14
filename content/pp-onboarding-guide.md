@@ -24,3 +24,19 @@ ms.custom:
 
 
 ![step1.](media/step2-PP-onboardingguide.png)
+
+**Note:** Microsoft would perform data validation, but merchant needs to enable the API calls and start sending a small percentage of production traffic first. Post validation, merchants can send all traffic which will help the project move to the next step. 
+
+
+**Step 3. Data Accumulation Phase (Est. 4 weeks)** 
+
+No actions for Merchant and Microsoft/Authorized Partner during this phase. Accumulation starts right after data quality is signed off during API integration phase. Continue forward once the criteria below have been achieved:                                                                                                               
+
+- At least 500 fraudulent transactions                                                                      
+
+- At least 5000 non-fraudulent transactions                                                                    
+
+- At least 4 weeks data with more than 70% label maturity rate 
+
+
+![step1.](media/step2-PP-onboardingguide.png)
