@@ -20,7 +20,7 @@ ms.custom:
 
  
 
-![step1.](media/step1-PP-onboardingguide.png)
+![step1.](media/pp-onboarding-guide-steponeclean.png)
 
 
 ![step1.](media/step2-PP-onboardingguide.png)
