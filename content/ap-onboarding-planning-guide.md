@@ -12,8 +12,8 @@ title: Onboarding Planning Guide for Purchase Protection
 ms.custom:
 
 
-This guide helps you understand and plan for the project milestones of Dynamics 365 Fraud Protection Account Protection integration and onboarding.  
+**Integration Planning Guide:** This guide helps you understand and plan for the project milestones of Dynamics 365 Fraud Protection Account Protection integration and onboarding.  
 
-Onboarding Milestones - Integration Breakdown and Approximate Time 
+**Onboarding Milestones - Integration Breakdown and Approximate Time** 
 
-Note: All timeframes below are estimates. Actual time taken can vary based on Merchant, and Microsoft/Authorized Partner availability and focus. 
+**Note:** All timeframes below are estimates. Actual time taken can vary based on Merchant, and Microsoft/Authorized Partner availability and focus. 
