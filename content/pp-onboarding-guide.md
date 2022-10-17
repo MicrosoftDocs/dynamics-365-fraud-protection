@@ -23,7 +23,7 @@ ms.custom:
 ![step1.](media/pp-onboarding-guide-steponeclean.png)
 
 
-![step1.](media/step2-PP-onboardingguide.png)
+![step2.](media/step2-PP-onboardingguide.png)
 
 **Note:** Microsoft would perform data validation, but merchant needs to enable the API calls and start sending a small percentage of production traffic first. Post validation, merchants can send all traffic which will help the project move to the next step. 
 
