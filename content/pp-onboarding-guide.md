@@ -79,10 +79,10 @@ Below are additional resources to help provide more details of the above-referen
 
  
 
-- **Integrate purchase APIs schema documented at:**  https://aka.ms/dfpswagger 
+- **Integrate purchase APIs schema documented at:**  [swagger](https://dfpswagger.azurewebsites.net/index.html)
 
  
 
-- **Integration Training Modules - deploy and work with Dyanmics 365 Fraud Protection:**(https://learn.microsoft.com/training/paths/deploy-work-account-purchase-protection/)
+- **Integration Training Modules - deploy and work with Dyanmics 365 Fraud Protection:** [integration training modules](https://learn.microsoft.com/training/paths/deploy-work-account-purchase-protection/)
 
  
