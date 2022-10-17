@@ -12,3 +12,7 @@ title: Visual Abstract of How Dynamics 365 Fraud Protection - Purchase Protectio
 ms.custom:
 
 This article provides visual abstract representation and description of how Microsoft Dynamics 365 Fraud Protection – Purchase Protection interacts with various entities such as customers and banks. The diagram below highlights at an elevated level some of the product capabilities and APIs (Application Programming Interfaces) to help you better understand these interactions.  
+
+
+![overview diagram](media/pp-architecture-abstract1.png)
+
