@@ -38,7 +38,7 @@ As you can see in **(number 3)**, Risk Assessment. These device attributes go in
 
 **API Abstract Diagram** - Below is an abstract diagram of how Microsoft Dynamics 365 Fraud Account Protection typically connects with our customer’s front and back end. For example, at what time in the process does and API call take place, to which API, and what Microsoft Dynamics 365 components would then return to our customers. 
 
- ![overview](media/ap-architecture-diagram2.png)
+ ![overview](media/ap-architecture-rev-diagram2-abstract.png)
 
  **Microsoft Dynamics 365 Fraud Protection Customers Will Need to Set Up these APIs or Components:** 
 
