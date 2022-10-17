@@ -20,4 +20,4 @@ ms.custom:
 
 ![step1.](media/ap-onboarding-guide-step1.png)
 
-![step2.](media/)
+![step2.](media/ap-onboarding-guide-step2.png)
