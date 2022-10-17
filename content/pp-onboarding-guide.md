@@ -12,7 +12,7 @@ title: Onboarding Planning Guide for Purchase Protection
 ms.custom:
 
 
-**Integration Planning Guide** This guide helps you understand and plan for the project milestones of Dynamics 365 Fraud Protection Purchase Protection integration and onboarding. To understand the integration steps below in more detail, please review the integration guide:  Set up purchase protection - Dynamics 365 Fraud Protection | Microsoft Learn 
+**Integration Planning Guide** This guide helps you understand and plan for the project milestones of Dynamics 365 Fraud Protection Purchase Protection integration and onboarding. To understand the integration steps below in more detail, please review the integration guide:  [set up purchase protection](https://learn.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
 
 **Onboarding Milestones - Integration Breakdown and Approximate Time** 
 
@@ -45,46 +45,44 @@ No actions for Merchant and Microsoft/Authorized Partner during this phase. Accu
 ​ 
 **Resources:** 
 
-Below are additional resources to help provide more details of the above-referenced integration steps.- 
+Below are additional resources to help provide more details of the above-referenced integration steps:
 
 
-- Dynamics 365 Fraud Protection documentation** - Dynamics 365 Fraud Protection | Microsoft Docs​ 
-
- 
-- Create and provision your Azure tenant - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Dynamics 365 Fraud Protection overview: [overview of Dynamics365 Fraud Protection](https://learn.microsoft.com/dynamics365/fraud-protection/)
 
  
+- Create and provision your Azure tenant: [create and provision your Azure tenant](https://learn.microsoft.com/dynamics365/fraud-protection/promocode-set-up-dfp-purchased-version)
 
-- Set up a trial instance - Dynamics 365 Fraud Protection | Microsoft Docs​ 
 
- 
+- Set up a trial instance: [set up a trial instance - Dynamics 365 Fraud Protection](https://learn.microsoft.com/dynamics365/fraud-protection/promocode-set-up-dfp-trial-version)
 
-- Set up a purchased instance - Dynamics 365 Fraud Protection | Microsoft Docs​ 
 
  
 
-- Configure user access - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Set up a purchased instance: [set up a purchased instance](https://learn.microsoft.com/dynamics365/fraud-protection/promocode-set-up-dfp-purchased-version)
 
  
 
-- Set up purchase protection - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Configure user access and assign roles: [configure user access & roles](https://learn.microsoft.com/dynamics365/fraud-protection/configure-user-access)
 
  
 
-- Set up device fingerprinting - Dynamics 365 Fraud Protection | Microsoft Learn 
+- Set up purchase protection: [set up purchased protection](https://learn.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
 
  
 
-- Integrate purchase protection APIs - Dynamics 365 Fraud Protection | Microsoft Docs​ 
+- Set up device fingerprinting: [set up device fingerprinting](https://learn.microsoft.com/dynamics365/fraud-protection/device-fingerprinting)
 
  
 
-- **Integrate purchase APIs documented at:**  https://aka.ms/dfpswagger​ 
+- Integrate purchase protection APIs steps: [integrate purchase protection APIs](https://learn.microsoft.com/dynamics365/fraud-protection/integrate-real-time-api)
 
  
 
-- **Integration Training Modules:** Deploy and work with Account Protection and Purchase Protection for Dynamics 365 Fraud Protection - Training | Microsoft Learn 
+- **Integrate purchase APIs schema documented at:**  https://aka.ms/dfpswagger 
 
  
+
+- **Integration Training Modules - deploy and work with Dyanmics 365 Fraud Protection:**(https://learn.microsoft.com/training/paths/deploy-work-account-purchase-protection/)
 
  
