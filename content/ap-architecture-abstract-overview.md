@@ -38,8 +38,17 @@ As you can see in **(number 3)**, Risk Assessment. These device attributes go in
 
 **API Abstract Diagram** - Below is an abstract diagram of how Microsoft Dynamics 365 Fraud Account Protection typically connects with our customer’s front and back end. For example, at what time in the process does and API call take place, to which API, and what Microsoft Dynamics 365 components would then return to our customers. 
 
- 
+ ![overview](media/ap-architecture-diagram2.png)
 
- 
+ **Microsoft Dynamics 365 Fraud Protection Customers Will Need to Set Up these APIs or Components:** 
 
- 
+- **Device Fingerprinting:** Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address. This feature is based on artificial intelligence (AI) and can be used as input to the process of fraud assessments. A Java-based web SDK and iOS, Android and React Native SDKs for mobile applications are available.
+
+- **Account Creation and/or Account Login API:** Data attributes our customers pass along to Dynamics Fraud Protection related to the Account Creation or Account Login. This data is compared to data already within our fraud protection network where our machine learning will look for linkages. 
+
+- **Rules or Policies:** There are predefined rules in the Account Protection solution, or you can set up custom rules based on your policies. The rule scoring can tell you the probability of fraud risk, or the likelihood of fraud that you may want to review or reject. 
+
+- **Account Status API:** Is used to inform Dynamics Fraud Protection of the merchant’s final decision on a transaction.  For example, did the login transaction actually happen or was it rejected for what reason.  It is important to let Dynamics Fraud Protection adapt and learn from the merchant’s fraud patterns. 
+
+
+- **Account Label API:** Enables you to send additional information to Dynamics Fraud Protection in addition to the data that informs the virtual fraud analyst and scorecard features. The labels API provides additional knowledge for model training based on an additional set of fraud signals.
