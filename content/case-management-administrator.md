@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This article explains how to work with Case management as an administrator.
+description: This article explains how to work with case management as an administrator.
 ms.author: josaw
 ms.date: 10/13/2022
 ms.topic: reference
@@ -35,7 +35,7 @@ You can define the criteria that specific purchase transactions must meet to qua
 
 The following example shows all transactions that must be selected for review. The risk score of the transactions is more than 600, and the user's country or region is **US**.
 
-```dfp
+```FraudProtectionLanguage
 RETURN Review()
 WHEN @"riskScore" > 600 and @"user.country" == "US"
 ```
