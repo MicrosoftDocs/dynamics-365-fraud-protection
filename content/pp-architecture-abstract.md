@@ -41,7 +41,31 @@ On the right-hand side in **(number 4)** you can see we are also partnering with
  
 **API Abstract Diagram -** Below is an abstract diagram of how Microsoft Dynamics 365 Fraud Protection Purchase Protection connects with our customer’s front and back end and provides API descriptions. For Dynamics Fraud Protection to do its best job of adapting to fraud patterns, it is vital for DFP to understand the lifecycle of the transaction and so DFP offers a set of APIs that let the merchant describe that to us.  
  
+![API-Abstract](media/pp-architecture-api-abstract.png)
+ 
+**The areas in the above diagram include:** 
+ 
+- **Device Fingerprinting (front end):** Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address. This feature is based on artificial intelligence (AI) and can be used as input to the process of fraud assessments. It can be implemented for both browser and mobile based. A Java-based web SDK (software development kits) and iOS, Android and React Native SDKs for mobile applications are available.
+ 
+- **Purchase Assessment API (back end):** The Purchase API collects data attributes that include transaction context. This data is then compared to data already within our fraud protection network where our machine learning will look for linkages and similarities to known emerging fraud patterns. 
+
+- **Bank Event (back end):** Bank Event API is used to inform DFP of the bank’s authorization decision.  For example, approving or rejecting the transaction.  It can also be used to inform DFP about related events such as a CVV or 3DS challenge. 
+
+- **Purchase Status (back end):** Purchase status is used to inform Dynamics Fraud Protection of the merchant's final decision on the transaction. Knowing whether the transaction happened or was rejected for any reason (e.g., insufficient inventory, a trade block, etc.) it is important to let DFP adapt and learn from the merchant’s fraud patterns. 
+
+- **Label API (back end):** Enables you to send additional information to Microsoft Dynamics 365 Fraud Protection in addition to the data that informs the virtual fraud analyst and scorecard features. The labels API provides additional knowledge for model training based on an additional set of fraud signals.
+
+
+**Device Fingerprinting (#1, front end)** On the left-hand side we have Device Fingerprinting both for browser based as well as mobile based, and this is embedded on the front-end side. Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address. Microsoft Dynamics 365 Fraud Protection provides a device fingerprinting feature that is based on artificial intelligence (AI). Therefore, device identification can be used as input to the process of fraud assessment. Additionally, this feature helps the Fraud Protection service track and link unrelated events in the fraud network, to help identify patterns of fraud. The data collected is not just a static list of attributes but also includes data dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device. Device fingerprinting runs on Azure, and includes benefits from proven cloud scalability, reliability, and enterprise-grade security.   
 
  
+
+**Purchase API (#2, back end):** The APIs highlighted in green (numbers 2, 3, 4, 5) are the back-end integrations, and this is where your customer is not present.  Next to the first green box you can see (#2) Purchase API. The Purchase API mainly collects data attributes that include transaction context (such as order type and order-initiated channel), transaction time (such as customer local time), user information (such as account ID, email address, country or region, and creation date), payment instrument information (such as payment instrument ID, payment method, Bank Identification Number [BIN (Bank Identification Numbers)], and billing address), product information (such as product type, stock keeping unit [SKU], name, price, and quantity), device information (such as IP address and device context ID), and some additional information. This information helps determine which of your policies or rules will be executed and returned to you in the risk score and is important to the ML (machine learning) models which affect the quality of the score. The Purchase Status API, Bank Event API, and Label APIs collect corresponding feedback information to update the final status of a transaction. 
+
+**Bank Event API (#3, back end):** After the purchase takes place there is a bank event coming in. In this example, this Bank Event API is related to the bank authorization results as approving the transaction or rejecting the transaction. If you also have other details such as CVV (Card Verification Value) challenge result, an AAVS (Address Validation Services) or 3DS, Dynamics 365 Fraud Protection will also welcome that information. 
+
+**Purchase Status API (#4, back end):** Dynamics Fraud Protection wants to know what the final status decision our customers made on the transaction. For example, did you approve or reject the transaction? The purchase status that you send back to Dynamics Fraud Protection will help ensure the right information is being considered in our machine learning going forward and helps with the robust reporting that we provide you. 
+
+**Label API (#5, back end):** The Label API enables you to send additional information to Microsoft Dynamics 365 Fraud Protection. The labels API provides additional knowledge for model training based on an additional set of fraud signals. Labels are charged by manual review and any other way you can confirm fraud. If you have additional data such as chargeback or other data points or refunds, we welcome that too. You can use the Fraud Protection labels API to send information about transactions, account or payment instrument details, and reversals. 
 
  
