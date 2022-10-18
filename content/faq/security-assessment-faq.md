@@ -212,13 +212,13 @@ All data is encrypted at rest. For more information, see [Data encryption in Azu
 
 #### Does the system have a general retention schedule, so that data is purged after a period?
 
-Yes. For more information, see the [Online Services Terms (OST)](/licensing/terms/product/ForallOnlineServices) guidelines.
+Yes. For more information, see the [Online Services Terms (OST)](https://www.microsoft.com/licensing/terms/product/ForOnlineServices/all) guidelines.
 
 ## Governance
 
 #### Do you have a well-defined security program?
 
-Yes. For information, see [Microsoft Security Development Lifecycle (SDL)](/securityengineering/sdl/).
+Yes. For information, see [Microsoft Security Development Lifecycle (SDL)](https://www.microsoft.com/securityengineering/sdl/).
 
 #### Does Microsoft have established information security policies?
 
