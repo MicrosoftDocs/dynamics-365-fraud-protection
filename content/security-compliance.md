@@ -71,15 +71,15 @@ A data subject request (DSR) is a request asking for modification of personal da
 
 #### Data subject request API
 
-Fraud Protection allows you to programmatically honor data subject requests using our API. Below is the schema for our GDPR APIs. For more information on our APIs, see [Integrate Dynamics 365 Fraud Protection real-time APIs](/dynamics365/fraud-protection/integrate-real-time-api).
+Fraud Protection allows you to programmatically honor data subject requests using our API. Below is the schema for our GDPR APIs.
 
 
-| Attribute                   | Type     | Description |
-|-----------------------------|----------|-------------|
-| SubjectID                   | string   | A unique identifier (GUID) for the request provided by the merchant.  |
-| EntityType                  | string   | The value is required to be **User**. |
-| AttributeName               | string   | The value is required to be **userId**. |
-| AttributeValue              | string   | The given userId of the user you are trying to export or delete. |
+| Attribute                   | Type     | Description | Required? |
+|-----------------------------|----------|-------------|---------|
+| SubjectID                   | string   | A unique identifier (GUID) for the request that you provide.  | Yes |
+| EntityType                  | Enum     | **User** | Yes |
+| AttributeName               | Enum     | **userId** | Yes |
+| AttributeValue              | string   | This is the userId of the end user you are trying to export or delete, traditionally an email or username. | Yes |
 
 
 For further documentation about this and other Fraud Protection APIs, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
