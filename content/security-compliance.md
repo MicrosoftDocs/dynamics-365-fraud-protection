@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about security, compliance, and data subject requests.
 ms.author: josaw
-ms.date: 05/04/2022
+ms.date: 10/19/2022
 ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
@@ -50,7 +50,7 @@ A data subject request (DSR) is a request asking for modification of personal da
 
 #### To manage DSR requests with Fraud Protection:
 
-1. On the left navigation bar, select **Data engineering**, and then select **Subject requests**. 
+1. On the left navigation bar, select **Settings**, and then select **Subject requests**. 
 
     The **Search** tab provides the following selections to expedite your search:
 
@@ -69,6 +69,20 @@ A data subject request (DSR) is a request asking for modification of personal da
     - Statuses (pending or complete)
     - Exported data links.
 
+#### Data subject request API
+
+Fraud Protection allows you to programmatically honor data subject requests using our API. Below is the schema for our GDPR APIs. For more information on our APIs, see [Integrate Dynamics 365 Fraud Protection real-time APIs](/dynamics365/fraud-protection/integrate-real-time-api).
+
+
+| Attribute                   | Type     | Description |
+|-----------------------------|----------|-------------|
+| SubjectID                   | string   | A unique identifier (GUID) for the request provided by the merchant.  |
+| EntityType                  | string   | The value is required to be **User**. |
+| AttributeName               | string   | The value is required to be **userId**. |
+| AttributeValue              | string   | The given userId of the user you are trying to export or delete. |
+
+
+For further documentation about this and other Fraud Protection APIs, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
