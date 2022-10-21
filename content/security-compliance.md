@@ -76,10 +76,8 @@ Fraud Protection allows you to programmatically honor data subject requests usin
 
 | Attribute                   | Type     | Description | Required? |
 |-----------------------------|----------|-------------|---------|
-| SubjectID                   | string   | A unique identifier (GUID) for the request that you provide.  | Yes |
-| EntityType                  | Enum     | **User** | Yes |
-| AttributeName               | Enum     | **userId** | Yes |
-| AttributeValue              | string   | This is the userId of the end user you are trying to export or delete, traditionally an email or username. | Yes |
+| SubjectID                   | string   | Takes the form of "**User**:userId", where userId is an attribute of the User object. | Yes |
+
 
 
 For further documentation about this and other Fraud Protection APIs, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
