@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how the labels API enables you to send information to the virtual fraud analyst and scorecard.
 ms.author: josaw
-ms.date: 10/13/2022
+ms.date: 10/27/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -33,6 +33,7 @@ We recommend using the Chargeback and Refund API for providing information perta
 - Account takeover scenarios escalated by your customers 
 
 API Schema:
+
 | Attribute  | Type  | Description  | 
 |------------|-------|--------------|
 | labelObjectType/* |	Enum<p>Expected values:<p>PURCHASE, 
@@ -111,6 +112,6 @@ You blocked a suspicious user login and later the user calls the support team to
   "merchantTimeStamp": "2022-10-04T16:21:46.326Z"
  }
 }
-
+```
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
