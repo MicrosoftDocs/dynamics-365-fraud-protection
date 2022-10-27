@@ -1,7 +1,7 @@
 ---
 author: cschlegel2
 description: This article is a visual abstract of how Dyanmics 365 Fraud Protection Account Protection Works
-ms.author: cschlege2
+ms.author: cschlege
 ms.date: 10/27/2022
 ms.topic: reference
 search.app: 
