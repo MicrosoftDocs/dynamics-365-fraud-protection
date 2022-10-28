@@ -22,7 +22,7 @@ To complete administrator-specific tasks in case management for Fraud Protection
 - **All areas editor**
 - **Manual review fraud manager**
 - **PSP administrator** (only available in PSP environments)
-- **Fraud sanager** (only available in PSP environments)
+- **Fraud manager** (only available in PSP environments)
 - **Fraud supervisor** (only available in PSP environments)
 
 If you're assigned one of these roles, you can complete the following tasks:
@@ -72,14 +72,14 @@ These settings can't be edited.
 
 After the queues are created, define the criteria that will be used to route cases to them. These criteria make up the routing rules. Routing rules resemble assessment rules, but they don't result in a decision. Instead, they result in a routing action. Although each queue can have multiple cases, each case can be routed to only one queue. You can write multiple routing rules for the same queue.
 
-After cases pass through the routing rules, there is a five-minute hold before they appear in the appropriate queue. During this time, the cases are updated with supplementary events. If a supplementary event that has any **statusType** value is received through the **purchaseStatus** application programming interface (API), the case won't be routed to a queue. In this case, the **statusType** value that is received in the **purchaseStatus** API event will be recorded as the transaction's latest status.
+After cases pass through the routing rules, there's a five-minute hold before they appear in the appropriate queue. During this time, the cases are updated with supplementary events. If a supplementary event that has any **statusType** value is received through the **purchaseStatus** application programming interface (API), the case won't be routed to a queue. In this case, the **statusType** value that is received in the **purchaseStatus** API event will be recorded as the transaction's latest status.
 
 Routing rules can be created in either a visual editor or a code editor. In the code editor, you can create routing rules by using the Fraud Protection language. For more information, see [Language reference guide](fpl-lang-ref.md).
 
 Follow these steps to create a routing rule.
 
 1. In the left navigation pane, select **Case management \> Routing rules**, and then select **New rule**. Select the relevant assessment type.
-1. To add an top-level condition that can be applied to the rule set, add it under the condition segment. For example, you might want the rule set to be run for a specific product category.
+1. To add a top-level condition that can be applied to the rule set, add it under the condition segment. For example, you might want the rule set to be run for a specific product category.
 1. Select **New clause** to define a new clause for the routing rule.
 1. In the drop-down list, select the queue to route the cases to.
 1. Define the routing criteria by using the drop-down lists for attributes and operators and providing the desired values.
@@ -98,5 +98,5 @@ To customize the order of execution for routing rules, drag the routing rules to
 
 ## View the case management report dashboard
 
-Case management administrators have access to view the case management report dashboard. This dashboard gives managers the ability to analyze the queue and agent performance. The case management report is updated every 24 hours. You can select the **Assessment name**, **Queue name** and **Agent name** from the drop-down menu, as well as set the date range. The report shows the performance of several key metrics over daily, weekly, and monthly periods. To review specific cases, you can use the search feature to search with case management-specific attributes such as, **Queue name**, **Agent name**, **Review decision**, and **Reason and Review notes**. 
+Case management administrators have access to view the case management report dashboard. This dashboard gives managers the ability to analyze the queue and agent performance. The case management report is updated every 24 hours. You can select the **Assessment name**, **Queue name** and **Agent name** from the drop-down menu, and set the date range. The report shows the performance of several key metrics over daily, weekly, and monthly periods. To review specific cases, you can use the search feature to search with case management-specific attributes such as, **Queue name**, **Agent name**, **Review decision**, and **Reason and Review notes**. 
 
