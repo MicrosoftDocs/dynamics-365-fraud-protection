@@ -29,6 +29,18 @@ This guide helps you understand and plan for the project milestones of Dynamics 
 
 ### Environment setup and API integration phase
 
+The following lists the environment setup tasks, owner teams, and the estimated times for implementation for the environment setup and API integration phase.
+
+| Task  | Owner team | Estimated time  |
+| ----- |------------| ----------------|
+| Environment setup | Merchant and Microsoft/authorized partner | 1 day |
+| Device fingerprinting integration (web and/or mobile) | Merchant and Microsoft/authorized partner | 1 week |
+| Device fingerprinting data validation (web and/or mobile) | Microsoft/authorized partner | 1 week |
+| API integration and validation | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
+| Account creation and/or account sign-in API integration | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
+| Account creation status and/or account sign-in status integration | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
+| Label API integration | Merchant and Microsoft/authorized partner | $ |
+
 ![step1.](media/ap-onboarding-guide-step1.png)
 
 ### Data integration phase
