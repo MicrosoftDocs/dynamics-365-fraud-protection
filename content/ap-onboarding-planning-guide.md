@@ -39,7 +39,7 @@ The following table lists the environment setup tasks, owner teams, and the esti
 | API integration and validation | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
 | Account creation and/or account sign-in API integration | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
 | Account creation status and/or account sign-in status integration | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
-| Label API integration | Merchant and Microsoft/authorized partner | $ |
+| Label API integration | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
 
 <!--![step1.](media/ap-onboarding-guide-step1.png)-->
 ### Data validation phase
@@ -61,11 +61,21 @@ No actions are required for the Microsoft/authorized partner during this phase. 
 
 ### Protection phase
 
+The following table lists the environment setup tasks, owner teams, and the estimated times for implementation for the protection phase.
+
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
 | Model score calibration | Microsoft | 1 week |
 | Rule suggestion (if needed) | Microsoft | 1 week |
 | Go live | Microsoft | 1 day |
+
+#### Advanced protection and fraud ops task
+
+The following table lists the environment setup tasks, owner team, and the estimated time for implementation for the advanced protection and fraud ops phase.
+
+| Task  | Owner team | Estimated time  |
+| ----- |------------| ----------------|
+| Score analysis and rule adjustment to optimize KPIs | Merchant | Ongoing |
 
 <!--![step3.](media/ap-onboarding-guide-step34.png)-->
 ## Resources 
