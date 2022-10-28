@@ -1,6 +1,6 @@
 ---
 author: cschlegel2
-description: This article describes onboarding planning for purchase protection in Microsoft Dynamics 365 Fraud Protection.
+description: This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection account protection.
 ms.author: cschlegel
 ms.date: 10/28/2022
 ms.topic: reference
@@ -14,18 +14,18 @@ ms.custom:
 
 ---
 
-# Onboarding planning for purchase protection
+# Onboarding planning for account protection
 
-This article describes onboarding planning for purchase protection in Microsoft Dynamics 365 Fraud Protection.
+This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection account protection, and will help you understand and plan for the project onboarding milestones of Fraud Protection account protection integration and onboarding. 
 
-**Integration Planning Guide:** 
+For more details on the integration steps below, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
 
-This guide helps you understand and plan for the project milestones of Dynamics 365 Fraud Protection Account Protection integration and onboarding. For more details on the integration steps below, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
+## Onboarding milestones
 
-## Onboarding milestones - integration breakdown and approximate times 
+The tables below provide details on the onboarding milestones for the environment setup and the API integration, data validation, data accumulation, and protection phases.
 
 > [!NOTE]
-> All timeframes mentioned in this article are estimates. The actual time taken can vary based on merchant, Microsoft and authorized partner availability, and focus. 
+> All timeframes mentioned in this article are estimates. The actual time taken can vary based on client, Microsoft and authorized partner availability, and focus. 
 
 ### Environment setup and API integration phase
 
@@ -33,13 +33,13 @@ The following table lists the environment setup tasks, owner teams, and the esti
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
-| Environment setup | Merchant and Microsoft/authorized partner | 1 day |
-| Device fingerprinting integration (web and/or mobile) | Merchant and Microsoft/authorized partner | 1 week |
+| Environment setup | Client and Microsoft/authorized partner | 1 day |
+| Device fingerprinting integration (web and/or mobile) | Client and Microsoft/authorized partner | 1 week |
 | Device fingerprinting data validation (web and/or mobile) | Microsoft/authorized partner | 1 week |
-| API integration and validation | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
-| Account creation and/or account sign-in API integration | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
-| Account creation status and/or account sign-in status integration | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
-| Label API integration | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
+| API integration and validation | Client and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
+| Account creation and/or account sign-in API integration | Client and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
+| Account creation status and/or account sign-in status integration | Client and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
+| Label API integration | Client and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
 
 <!--![step1.](media/ap-onboarding-guide-step1.png)-->
 ### Data validation phase
@@ -48,11 +48,11 @@ The following table lists the environment setup tasks, owner teams, and the esti
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
-| Data quality validation and bug fixes | Merchant and Microsoft/authorized partner | 3-4 days |
-| Production traffic starts | Merchant | 1 day |
+| Data quality validation and bug fixes | Client and Microsoft/authorized partner | 3-4 days |
+| Production traffic starts | Client | 1 day |
 
 > [!NOTE]
-> Microsoft performs the data validation, but first the merchant must enable the API calls and start sending a small percentage of production traffic. After validation, the merchant can send all traffic that will help the project move to the next step.
+> Microsoft performs the data validation, but first the client must enable the API calls and start sending a small percentage of production traffic. After validation, the client can send all traffic that will help the project move to the next step.
 
 <!--![step2.](media/ap-onboarding-guide-step2.png)-->
 ### Data accumulation phase
@@ -75,7 +75,7 @@ The following table lists the environment setup tasks, owner team, and the estim
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
-| Score analysis and rule adjustment to optimize KPIs | Merchant | Ongoing |
+| Score analysis and rule adjustment to optimize KPIs | Client | Ongoing |
 
 <!--![step3.](media/ap-onboarding-guide-step34.png)-->
 ## Resources 
