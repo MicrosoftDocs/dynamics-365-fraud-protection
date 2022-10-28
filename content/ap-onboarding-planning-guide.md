@@ -16,7 +16,7 @@ ms.custom:
 
 # Onboarding planning for account protection
 
-This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection account protection, and will help you understand and plan for the project onboarding milestones of Fraud Protection account protection integration and onboarding. 
+This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection account protection, which will help you understand and plan for the project onboarding milestones of Fraud Protection account protection integration and onboarding. 
 
 For more information on the integration steps below, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
 
@@ -29,7 +29,7 @@ The tables below provide details on the onboarding milestones for the environmen
 
 ### Environment setup and API integration phase
 
-The following table lists the environment setup tasks, owner teams, and the estimated times for implementation for the environment setup and API integration phase.
+The following table lists the environment setup tasks, owner teams, and the estimated times for implementation of the environment setup and API integration phase.
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
@@ -43,7 +43,7 @@ The following table lists the environment setup tasks, owner teams, and the esti
 
 ### Data validation phase
 
-The following table lists the environment setup tasks, owner teams, and the estimated times for implementation for the data validation phase.
+The following table lists the environment setup tasks, owner teams, and the estimated times for implementation of the data validation phase.
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
@@ -55,11 +55,11 @@ The following table lists the environment setup tasks, owner teams, and the esti
 
 ### Data accumulation phase
 
-No actions are required for the Microsoft/authorized partner during this phase. Accumulation starts immediately after data quality is signed off during the API integration phase. You exit the phase once the criteria of at least 100 transactions is reached.
+No actions are required for the Microsoft/authorized partner during this phase. Accumulation starts immediately after data quality is signed off during the API integration phase. You exit the phase once the criteria of at least 1000 transactions is reached.
 
 ### Protection phase
 
-The following table lists the environment setup tasks, owner teams, and the estimated times for implementation for the protection phase.
+The following table lists the environment setup tasks, owner teams, and the estimated times for implementation of the protection phase.
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
@@ -77,7 +77,7 @@ The following table lists the environment setup tasks, owner team, and the estim
 
 ## Resources 
 
-The following resources provide more details on the integration steps referenced above.
+The following resources provide more information on the integration steps referenced above.
 
 - [Dynamics 365 Fraud Protection overview](/dynamics365/fraud-protection/)
 - [Create and provision your Azure tenant](promocode-set-up-dfp-purchased-version.md)
