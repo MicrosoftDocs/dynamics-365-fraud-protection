@@ -9,7 +9,7 @@ search.app:
 search.audienceType:
   - Admin
   - IT Pro
-title: Onboarding planning guide for purchase protection
+title: Onboarding planning guide for account protection
 ms.custom:
 
 ---
