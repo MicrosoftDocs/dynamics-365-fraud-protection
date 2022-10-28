@@ -78,15 +78,16 @@ Your review team identified suspicious transactions by looking at the payment in
 A user lost access to their account and a malicious actor signed in with the user’s credentials. Later the user recovered their credentials and reported a compromised time interval.
   
 ```JSON
-"labelObjectType": "ACCOUNT",
-"labelObjectId": "<userId>,
-"labelSource": "CustomerEscalation",
-"isFraud": true,
-"reasonText": "AccountCompromise",
-"labelState": "Fraud",
-"eventTimeStamp": "2022-10-04T12:21:46.326Z",
-"effectiveStartDate": "2022-10-03T10:00:00.000Z",
-"effectiveEndDate": "2022-10-04T12:16:00.000Z",
+{
+  "labelObjectType": "ACCOUNT",
+  "labelObjectId": "<userId>",
+  "labelSource": "CustomerEscalation",
+  "isFraud": true,
+  "reasonText": "AccountCompromise",
+  "labelState": "Fraud",
+  "eventTimeStamp": "2022-10-04T12:21:46.326Z",
+  "effectiveStartDate": "2022-10-03T10:00:00.000Z",
+  "effectiveEndDate": "2022-10-04T12:16:00.000Z",
   "_metadata": {
     "trackingId": "<guid or identifier>",
     "merchantTimeStamp": "2022-10-04T12:21:46.326Z"
@@ -99,16 +100,17 @@ A user lost access to their account and a malicious actor signed in with the use
 You blocked a suspicious user sign-in and later the user calls the support team to get unblocked. If the support team reviews the evidence and confirms legitimate user and unblocks, you need to send label with False Positive state. 
  
 ```JSON
-"labelObjectType": "ACCOUNT",
-"labelObjectId": "<userId>,
-"labelSource": "CustomerEscalation",
-"isFraud": false,
-"reasonText": "AccountCompromise",
-"labelState": "FalsePositive",
-"eventTimeStamp": "2022-10-04T16:21:46.326Z",
-"_metadata": {
-  "trackingId": "<guid or identifier>",
-  "merchantTimeStamp": "2022-10-04T16:21:46.326Z"
+{
+  "labelObjectType": "ACCOUNT",
+  "labelObjectId": "<userId>",
+  "labelSource": "CustomerEscalation",
+  "isFraud": false,
+  "reasonText": "AccountCompromise",
+  "labelState": "FalsePositive",
+  "eventTimeStamp": "2022-10-04T16:21:46.326Z",
+  "_metadata": {
+    "trackingId": "<guid or identifier>",
+    "merchantTimeStamp": "2022-10-04T16:21:46.326Z"
  }
 }
 ```
