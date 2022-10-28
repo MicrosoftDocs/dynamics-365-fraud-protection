@@ -18,7 +18,7 @@ ms.custom:
 
 This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection account protection, which will help you understand and plan for the project onboarding milestones of Fraud Protection account protection integration and onboarding. 
 
-For more information on the integration steps below, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
+For more information on the integration steps below, see [Set up account protection](promocode-set-up-account-protection.md).
 
 ## Onboarding milestones
 
