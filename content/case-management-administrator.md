@@ -18,12 +18,12 @@ This article explains how to work with case management as an administrator in Mi
 
 To complete administrator-specific tasks in case management for Fraud Protection, you must be assigned one of the following roles:
 
--	**AllAreas_Admin**
-- **AllAreasEditorManualReviewFraudManager**
-- **PSP Admin** (only available in PSP environments)
-- **Fraud Manager** (only available in PSP environments)
-- **Fraud Supervisor** (only available in PSP environments)
-
+-	**All areas administrator**
+- **All areas editor**
+- **Manual review fraud manager**
+- **PSP administrator** (only available in PSP environments)
+- **Fraud sanager** (only available in PSP environments)
+- **Fraud supervisor** (only available in PSP environments)
 
 If you're assigned one of these roles, you can complete the following tasks:
 
