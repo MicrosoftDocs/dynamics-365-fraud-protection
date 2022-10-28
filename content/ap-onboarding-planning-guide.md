@@ -29,7 +29,7 @@ This guide helps you understand and plan for the project milestones of Dynamics 
 
 ### Environment setup and API integration phase
 
-The following lists the environment setup tasks, owner teams, and the estimated times for implementation for the environment setup and API integration phase.
+The following table lists the environment setup tasks, owner teams, and the estimated times for implementation for the environment setup and API integration phase.
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
@@ -41,16 +41,33 @@ The following lists the environment setup tasks, owner teams, and the estimated 
 | Account creation status and/or account sign-in status integration | Merchant and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
 | Label API integration | Merchant and Microsoft/authorized partner | $ |
 
-![step1.](media/ap-onboarding-guide-step1.png)
-
-### Data integration phase
-
-![step2.](media/ap-onboarding-guide-step2.png)
-
+<!--![step1.](media/ap-onboarding-guide-step1.png)-->
 ### Data validation phase
 
-![step3.](media/ap-onboarding-guide-step34.png)
+The following table lists the environment setup tasks, owner teams, and the estimated times for implementation for the data validation phase.
 
+| Task  | Owner team | Estimated time  |
+| ----- |------------| ----------------|
+| Data quality validation and bug fixes | Merchant and Microsoft/authorized partner | 3-4 days |
+| Production traffic starts | Merchant | 1 day |
+
+> [!NOTE]
+> Microsoft performs the data validation, but first the merchant must enable the API calls and start sending a small percentage of production traffic. After validation, the merchant can send all traffic that will help the project move to the next step.
+
+<!--![step2.](media/ap-onboarding-guide-step2.png)-->
+### Data accumulation phase
+
+No actions are required for the Microsoft/authorized partner during this phase. Accumulation starts immediately after data quality is signed off during the API integration phase. You exit the phase once the criteria of at least 100 transactions is reached.
+
+### Protection phase
+
+| Task  | Owner team | Estimated time  |
+| ----- |------------| ----------------|
+| Model score calibration | Microsoft | 1 week |
+| Rule suggestion (if needed) | Microsoft | 1 week |
+| Go live | Microsoft | 1 day |
+
+<!--![step3.](media/ap-onboarding-guide-step34.png)-->
 ## Resources 
 
 The following resources provide more details on the integration steps referenced above.
