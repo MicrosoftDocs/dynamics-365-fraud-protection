@@ -38,9 +38,7 @@ API Schema:
 
 | Attribute  | Type  | Description | 
 |------------|-------|-------------|
-| labelObjectType/* |	Enum<p>Expected values:<p>PURCHASE, 
-ACCOUNTCREATION, ACCOUNTLOGIN, ACCOUNT, PI, 
-EMAIL	| Indicates how “widespread” you would like to flag a label, specifically, if you want to mark a single transaction as fraudulent, or if you want to mark the entire user as fraudulent. Depending on object type we will flag related transactions/events as fraud/non-fraud. For example, if labelObjectType is PURCHASE/ACCOUNTCREATION/ACCOUNTLOGIN then we will label specific transactions. Similarly, if value is ACCOUNT/PI then we flag all the transactions related to that user account or Payment Instrument. |
+| labelObjectType/* |	Enum</br></br>Expected values:</br>PURCHASE, ACCOUNTCREATION, ACCOUNTLOGIN, ACCOUNT, PI, EMAIL	| Indicates how extensively you want to flag a label. For example, if you want to mark a single transaction as fraudulent, or if you want to mark the entire user as fraudulent. Depending on object type we will flag related transactions/events as fraud/non-fraud. For example, if labelObjectType is PURCHASE/ACCOUNTCREATION/ACCOUNTLOGIN then we will label specific transactions. Similarly, if value is ACCOUNT/PI then we flag all the transactions related to that user account or Payment Instrument. |
 | labelObjectId/* | String  | The identifier corresponds to the value of the labelObjectType property. We use this value to find related transactions/events. You can find the id for each label object type here.<p>- PURCHASE, purchaseId<p>- ACCOUNTCREATION, signupId<p>- ACCOUNTLOGIN, loginId<p>- ACCOUNT, userId<p>- PI, merchantPaymentInstrumentId<p>This is very important attribute as we use it to identify the original assessment event, so value must match with the original transaction/event Ids. |
 | labelSource | String  | Indicate source of label information, some suggested values are “ManualReview” if a fraud label is identified by the review team, “CustomerEscalation” if customer complaints about a falsely rejected transaction (False positive). TC40/SAFE data is another source for label data. |
 | isFraud/*  |  Boolean   |  Specify if the label is fraud or non-fraud. Fraud Protection defaults to true If no value is provided.  |
@@ -60,7 +58,7 @@ EMAIL	| Indicates how “widespread” you would like to flag a label, specifica
 
 Your review team identified suspicious transactions by looking at the payment information. 
 
-```dfp
+```JSON
 {
   "labelObjectType": "PURCHASE",
   "labelObjectId": "<purchase transaction Id, i.e., purcahseId>",
@@ -79,7 +77,7 @@ Your review team identified suspicious transactions by looking at the payment in
 
 A user lost access to their account and a malicious actor logged in with the user’s credentials. Later the User recovered his credentials and reported a compromised time interval.
   
-```dfp
+```JSON
 "labelObjectType": "ACCOUNT",
 "labelObjectId": "<userId>,
 "labelSource": "CustomerEscalation",
@@ -100,7 +98,7 @@ A user lost access to their account and a malicious actor logged in with the use
   
 You blocked a suspicious user login and later the user calls the support team to unblock him. If the support team reviews the evidence and confirms legitimate user and unblocks, you need to send label with False Positive state. 
  
-```dfp
+```JSON
 "labelObjectType": "ACCOUNT",
 "labelObjectId": "<userId>,
 "labelSource": "CustomerEscalation",
