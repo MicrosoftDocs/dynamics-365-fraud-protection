@@ -18,7 +18,7 @@ ms.custom:
 
 This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection account protection, and will help you understand and plan for the project onboarding milestones of Fraud Protection account protection integration and onboarding. 
 
-For more details on the integration steps below, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
+For more information on the integration steps below, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
 
 ## Onboarding milestones
 
@@ -33,13 +33,13 @@ The following table lists the environment setup tasks, owner teams, and the esti
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
-| Environment setup | Client and Microsoft/authorized partner | 1 day |
-| Device fingerprinting integration (web and/or mobile) | Client and Microsoft/authorized partner | 1 week |
-| Device fingerprinting data validation (web and/or mobile) | Microsoft/authorized partner | 1 week |
-| API integration and validation | Client and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
-| Account creation and/or account sign-in API integration | Client and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
-| Account creation status and/or account sign-in status integration | Client and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
-| Label API integration | Client and Microsoft/authorized partner | 2 weeks (can be done in parallel with the steps above) |
+| Environment setup | Client and Microsoft/authorized partner | One (1) day |
+| Device fingerprinting integration (web and/or mobile) | Client and Microsoft/authorized partner | One (1) week |
+| Device fingerprinting data validation (web and/or mobile) | Microsoft/authorized partner | One (1) week |
+| API integration and validation | Client and Microsoft/authorized partner | Two (2) weeks (can be done in parallel with the steps above) |
+| Account creation and/or account sign-in API integration | Client and Microsoft/authorized partner | Two (2) weeks (can be done in parallel with the steps above) |
+| Account creation status and/or account sign-in status integration | Client and Microsoft/authorized partner | Two (2) weeks (can be done in parallel with the steps above) |
+| Label API integration | Client and Microsoft/authorized partner | Two (2) weeks (can be done in parallel with the steps above) |
 
 <!--![step1.](media/ap-onboarding-guide-step1.png)-->
 ### Data validation phase
@@ -48,8 +48,8 @@ The following table lists the environment setup tasks, owner teams, and the esti
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
-| Data quality validation and bug fixes | Client and Microsoft/authorized partner | 3-4 days |
-| Production traffic starts | Client | 1 day |
+| Data quality validation and bug fixes | Client and Microsoft/authorized partner | Three to four (3-4) days |
+| Production traffic starts | Client | One (1) day |
 
 > [!NOTE]
 > Microsoft performs the data validation, but first the client must enable the API calls and start sending a small percentage of production traffic. After validation, the client can send all traffic that will help the project move to the next step.
@@ -65,9 +65,9 @@ The following table lists the environment setup tasks, owner teams, and the esti
 
 | Task  | Owner team | Estimated time  |
 | ----- |------------| ----------------|
-| Model score calibration | Microsoft | 1 week |
-| Rule suggestion (if needed) | Microsoft | 1 week |
-| Go live | Microsoft | 1 day |
+| Model score calibration | Microsoft | One (1) week |
+| Rule suggestion (if needed) | Microsoft | One (1) week |
+| Go live | Microsoft | One (1) day |
 
 #### Advanced protection and fraud ops task
 
