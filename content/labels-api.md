@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This article explains how the labels API enables you to send information to the virtual fraud analyst and scorecard.
+description: This article explains how the labels API enables you to send information to the virtual fraud analyst and scorecard in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 10/28/2022
 ms.topic: conceptual
@@ -14,27 +14,28 @@ ms.custom:
 
 # Labels API
 
-The labels API enables you to send fraud or non-fraud signal to Microsoft Dynamics 365 Fraud Protection. This data will be used in model training, model performance evaluation, and reporting. This is a general API to label any assessment event using either individual transaction/event id or entities like user or payment instrument.
+This article explains how the labels API enables you to send information to the virtual fraud analyst and scorecard in Microsoft Dynamics 365 Fraud Protection.
 
-## Common label scenarios for Transaction (Purchase/Signup/LogIn/GenericEvent) 
+The labels API enables you to send fraud or non-fraud signals to Fraud Protection. This data is used in model training, model performance evaluation, and reporting. The labels API is a general API that labels assessment events using either individual transaction or event IDs, or entities such as user or payment instrument.
 
-- Any fraudulent transactions escalated by your customers 
-- Fraudulent activity or account abuse identified by your review team
-- Any offline analysis (like behavior analysis or discovered connections to existing fraud cases)
-- TC40/SAFE signals received
-- Reverse previous fraud signal after identifying it as non-fraud based on latest information available
-- Chargebacks/refunds received
-- Chargeback reversal after dispute
+## Common label scenarios for transaction events (purchase/sign up/sign in/generic events) 
+
+- Any fraudulent transactions escalated by your customers.
+- Fraudulent activity or account abuse identified by your review team.
+- Any offline analysis (like behavior analysis or discovered connections to existing fraud cases).
+- TC40/SAFE signals received.
+- Reverse previous fraud signal after identifying it as non-fraud based on latest information available.
+- Chargebacks/refunds received.
+- Chargeback reversal after dispute.
  
-
-Microsoft recommends using the Chargeback and Refund API for providing information pertaining to chargebacks and refunds. For more information about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942" target="_blank">Dynamics 365 Fraud Protection API</a>.
+Microsoft recommends using the chargeback and refund API for providing information related to chargebacks and refunds. For more information about supported events, see [Dynamics 365 Fraud Protection Service](https://go.microsoft.com/fwlink/?linkid=2084942).
 
 ## Account or payment instrument details 
 
-- Fraudulent account or payment instrument info identified by your review team 
-- Account takeover scenarios escalated by your customers 
+- Fraudulent account or payment instrument info identified by your review team. 
+- Account takeover scenarios escalated by your customers. 
 
-API Schema:
+## API Schema
 
 | Attribute  | Type  | Description | 
 |------------|-------|-------------|
