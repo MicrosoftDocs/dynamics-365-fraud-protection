@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article describes onboarding planning for purchase protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschlegel
-ms.date: 10/27/2022
+ms.date: 10/28/2022
 ms.topic: reference
 search.app: 
   - Capaedac-fraudprotection
@@ -27,9 +27,15 @@ This guide helps you understand and plan for the project milestones of Dynamics 
 > [!NOTE]
 > All timeframes mentioned in this article are estimates. The actual time taken can vary based on merchant, Microsoft and authorized partner availability, and focus. 
 
+### Environment setup and API integration phase
+
 ![step1.](media/ap-onboarding-guide-step1.png)
 
+### Data integration phase
+
 ![step2.](media/ap-onboarding-guide-step2.png)
+
+### Data validation phase
 
 ![step3.](media/ap-onboarding-guide-step34.png)
 
