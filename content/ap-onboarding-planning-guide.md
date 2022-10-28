@@ -41,7 +41,6 @@ The following table lists the environment setup tasks, owner teams, and the esti
 | Account creation status and/or account sign-in status integration | Client and Microsoft/authorized partner | Two (2) weeks (can be done in parallel with the steps above) |
 | Label API integration | Client and Microsoft/authorized partner | Two (2) weeks (can be done in parallel with the steps above) |
 
-<!--![step1.](media/ap-onboarding-guide-step1.png)-->
 ### Data validation phase
 
 The following table lists the environment setup tasks, owner teams, and the estimated times for implementation for the data validation phase.
@@ -54,7 +53,6 @@ The following table lists the environment setup tasks, owner teams, and the esti
 > [!NOTE]
 > Microsoft performs the data validation, but first the client must enable the API calls and start sending a small percentage of production traffic. After validation, the client can send all traffic that will help the project move to the next step.
 
-<!--![step2.](media/ap-onboarding-guide-step2.png)-->
 ### Data accumulation phase
 
 No actions are required for the Microsoft/authorized partner during this phase. Accumulation starts immediately after data quality is signed off during the API integration phase. You exit the phase once the criteria of at least 100 transactions is reached.
@@ -77,7 +75,6 @@ The following table lists the environment setup tasks, owner team, and the estim
 | ----- |------------| ----------------|
 | Score analysis and rule adjustment to optimize KPIs | Client | Ongoing |
 
-<!--![step3.](media/ap-onboarding-guide-step34.png)-->
 ## Resources 
 
 The following resources provide more details on the integration steps referenced above.
