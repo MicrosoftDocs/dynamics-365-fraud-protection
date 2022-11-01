@@ -1,6 +1,6 @@
 ---
 author: cschlegel2
-description: This article explainss how to evaluate proof of concept options in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to evaluate proof of concept options in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschlegel
 ms.date: 11/01/2022
 ms.topic: reference
@@ -21,8 +21,8 @@ Fraud Protection provides you with the ability to evaluate a proof of concept 
 
 ## Prerequisites
 
-- To participate in a Fraud Protection POC, you must have an Azure Active Directory (Azure AD) tenant. If you do not already have an Azure AD tenant, you can sign up for one.  
-- To start a Fraud Protection POC, Microsoft or a Microsoft authorized partner must first provide you with a promotion code. If you do not have a promotion code, see [Get started with Fraud Protection](https://dynamics.microsoft.com/get-started/?appname=fraudprotection) to contact a partner and request one.
+- To participate in a Fraud Protection POC, you must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, you can sign up for one.  
+- To start a Fraud Protection POC, Microsoft or a Microsoft authorized partner must first provide you with a promotion code. If you don't have a promotion code, see [Get started with Fraud Protection](https://dynamics.microsoft.com/get-started/?appname=fraudprotection) to contact a partner and request one.
 
 ## Fraud Protection POC capabilities 
 
@@ -41,11 +41,11 @@ The following table lists Fraud Protection POC capabilities and their POC types,
 
 ## POC examples 
 
-Below are the different examples of how to participate in a POC trial, depending on the Fraud Protection solution that you are interested in exploring.
+Below are the different examples of how to participate in a POC trial, depending on the Fraud Protection solution that you're interested in exploring.
 
 ### Account protection (online POC)
 
-The account protection online POC requires API integration to set up the account protection solution for account creation, account sign-in, or both. This POC provides an authentic experience with the most accurate results, and typically takes about six weeks to obtain results, depending on your integration speed. With this POC, you can gain a thorough understanding of Fraud Protections artificial intelligence (AI), robust features, and reporting dashboards. You can also learn how the solution would address your specific fraud challenges within the product portal, and how your team and customers could potentially interact with the solution. If you decide to move forward with purchasing the solution, it is already set up for you to use. 
+The account protection online POC requires API integration to set up the account protection solution for account creation, account sign-in, or both. This POC provides an authentic experience with the most accurate results, and typically takes about six weeks to obtain results, depending on your integration speed. With this POC, you can gain a thorough understanding of Fraud Protections artificial intelligence (AI), robust features, and reporting dashboards. You can also learn how the solution would address your specific fraud challenges within the product portal, and how your team and customers could potentially interact with the solution. If you decide to move forward with purchasing the solution, it's already set up for you to use. 
 
 > [!NOTE]
 > Account protection only has the online POC option.  
@@ -60,7 +60,7 @@ The purchase protection online POC is similar to the [account protection online 
 
 ### Purchase protection (Dynamics 365 Commerce and Fraud Protection online POC)
 
-If you are an existing Dynamics 365 Commerce customer, then the connection between Dynamics 365 Commerce and Dynamics 365 Fraud Protection allows you to get a jumpstart on running a purchase protection online POC. The process is faster than a typical online POC, and some of the required Fraud Protection API integrations can be done with just a few configuration changes in Commerce. To get started, Commerce customers can go to the Fraud Protection portal to set up Fraud Protection. For more information on getting started, see [Set up a purchased instance](promocode-set-up-dfp-purchased-version.md).
+If you're an existing Dynamics 365 Commerce customer, then the connection between Dynamics 365 Commerce and Dynamics 365 Fraud Protection allows you to get a jumpstart on running a purchase protection online POC. The process is faster than a typical online POC, and some of the required Fraud Protection API integrations can be done with just a few configuration changes in Commerce. To get started, Commerce customers can go to the Fraud Protection portal to set up Fraud Protection. For more information on getting started, see [Set up a purchased instance](promocode-set-up-dfp-purchased-version.md).
 
 ### Loss prevention (Offline POC)
 
@@ -68,4 +68,4 @@ The loss prevention offline POC requires you to map historical data and upload i
 
 ### Loss prevention (Dynamics 365 Commerce and Fraud Protection offline POC)
 
-If you are a Dynamics 365 Commerce customer, you can easily import your data and generate loss prevention reports from the Fraud Protection portal. The Fraud Protection team can work with you to understand the results of your data and guide you on how to use the loss prevention offline POC solution to address specific challenges related to potential fraud risk scenarios. To get started, see [Loss prevention in Commerce](/dynamics365/commerce/dev-itpro/dfp#loss-prevention-in-commerce). 
+If you're a Dynamics 365 Commerce customer, you can easily import your data and generate loss prevention reports from the Fraud Protection portal. The Fraud Protection team can work with you to understand the results of your data and guide you on how to use the loss prevention offline POC solution to address specific challenges related to potential fraud risk scenarios. To get started, see [Loss prevention in Commerce](/dynamics365/commerce/dev-itpro/dfp#loss-prevention-in-commerce). 
