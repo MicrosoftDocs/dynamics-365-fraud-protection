@@ -16,7 +16,7 @@ title: Integrate purchase protection APIs
 
 This article explains how to integrate real-time application programming interfaces (APIs) in Microsoft Dynamics 365 Fraud Protection.
 
-To take advantage of the full suite of Fraud Protection features, you must send your transaction data to the real-time Fraud Protection APIs. In the evaluate experience, this allows you to analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions based on the rules you've configured.
+To take advantage of the full suite of Fraud Protection features, you must send your transaction data to the real-time Fraud Protection APIs. In the evaluate experience, sending your transaction data enables you to analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions based on the rules you've configured.
 
 Depending on how you choose to use Fraud Protection, you may make use of different sets of the following purchase protection APIs: 
 
@@ -52,29 +52,29 @@ Visit the following portals for each environment you intend to use, sign in, and
 > [!IMPORTANT]
 > You must be an application administrator, cloud application administrator, or global administrator in your Azure tenant to complete this step.
 
-To acquire the tokens required to call the APIs, you must use Azure AD applications. You can configure this by following these steps.
+To acquire the tokens required to call the APIs, you must configure and use Azure AD applications as detailed below.
 
 ### Configure Azure AD applications
 
 To configure Azure AD applications, follow these steps.
 
 1. In the left navigation pane of the Fraud Protection portal, select **Integration \> Create Azure AD Application \> Setup now**. 
-1. Complete the form to create your app. It is recommended that you create one Azure AD application for each environment that you want to integrate with Fraud Protection. 
+1. Complete the form to create your app. It's recommended that you create one Azure AD application for each environment that you want to integrate with Fraud Protection. 
 1. Enter or select values for the following required fields: 
     1. **Application display name** - Give your application a descriptive name. Maximum length is 93 characters. 
     1. **Environment** - Choose whether this application should call your production or integration (sandbox) endpoint. 
     1. **Authentication method** - Choose whether you would like to authenticate via certificate or a secret (password). 
-1. For the certificate method, do the following: 
+1. For the certificate method: 
     1. Select **Choose file** to upload the public key. (The matching private key is required when you acquire tokens.) 
     1. Select **Secret** to automatically generate a password after the application has been created.
-1. When you are done filling in the fields above, select **Create application**. The confirmation screen summarizes your app's name, ID, and the certificate thumbprint or secret, depending on your authentication method. 
+1. When you're done filling in the fields above, select **Create application**. The confirmation screen summarizes your app's name, ID, and the certificate thumbprint or secret, depending on your authentication method. 
 
 > [!IMPORTANT]
 > Please save your secret or certificate thumbprint information for future reference. The secret will only be displayed once.
 
-### Create an additional application
+### Create another application
 
-To create an additional application, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
+To create another application, select **Create another application**. You can create as many apps as necessary to run API calls in each of your environments. 
 
 ### Manage existing Azure AD applications 
 
@@ -87,20 +87,20 @@ After you create your Azure AD apps, you can manage them through the [Azure port
 To securely integrate your systems with Fraud Protection, you obtain an Azure Active Directory token and provide it in the header of each API call. Below information is needed to obtain a token: 
 
 > [!NOTE]
-> Access tokens have a limited lifespan of 60 minutes. It is recommended that you cache and reuse a token until it gets close to expiring, at which time you can get a new access token.
+> Access tokens have a limited lifespan of 60 minutes. It's recommended that you cache and reuse a token until it gets close to expiring, at which time you can get a new access token.
 
 ### Required-IDs and information
 
 - **Environment URI** - The URIs for your sandbox or production environment appear on the **Configuration** tab of the **API Management** page in the Fraud Protection portal.
 - **Directory (tenant) ID** - The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Configuration** tab of the **API Management** page in the Fraud Protection portal. 
-- **Application (client) ID** - This identifies the Azure AD app you've created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
+- **Application (client) ID** - This ID identifies the Azure AD app you've created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen.
 - **Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
 ### Code samples providing examples of acquiring a token with your certificate or secret
 
 The following C# code samples provide examples of acquiring a token with your certificate or secret. Replace the placeholders with your specific information.
-For both of these C# samples, you'll need to import the following [Microsoft.Identity.Client NuGet package](https://www.nuget.org/packages/Microsoft.Identity.Client/).
+For both of the C# samples, you'll need to import the [Microsoft.Identity.Client NuGet package](https://www.nuget.org/packages/Microsoft.Identity.Client/).
 
 For samples in other languages, see https://aka.ms/aaddev. 
 
@@ -184,7 +184,7 @@ Body (key-value)
 - Response 
     - Use the value of access_token from the response for next step
 
-For more information, refer to the Azure documentation: 
+For more information, see the following Azure documentation: 
 
 - [Overview of Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
 - [Acquire and cache tokens using the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-acquire-cache-tokens)
@@ -238,10 +238,10 @@ To call the APIs, follow these steps:
 
 - A particular Azure AD token remains valid for 60 minutes. We recommend caching it for a shorter duration and reusing it. 
 - Ensure that your HttpClient has keep-alive connections. 
-- Always pass the x-ms-dfpenvid header and ensure it points to the environment of the merchant you want to send transactions on behalf of. 
+- Always pass the **x-ms-dfpenvid** header and ensure it points to the environment of the merchant you want to send transactions on behalf of. 
 - Store the secret in a secret store. 
-- Always pass the x-ms-correlation-id header for future debugging sessions with DFP 
-- Make sure this is unique for every transaction sent to DFP.  
+- Always pass the **x-ms-correlation-id** header for future debugging sessions with DFP. 
+- Ensure that the **x-ms-correlation-id** header is unique for every transaction sent to DFP.  
 
 ## View the sample app 
   
