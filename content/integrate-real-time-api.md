@@ -1,8 +1,8 @@
 ---
 author: josaw1
-description: This article explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time APIs.
-ms.author: josaw, cschlegel2
-ms.date: 06/16/2022, 10/14/2022
+description: This article explains how to integrate real-time APIs in Microsoft Dynamics 365 Fraud Protection.
+ms.author: cschlegel
+ms.date: 11/01/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -13,6 +13,8 @@ title: Integrate purchase protection APIs
 ---
 
 # Integrate purchase protection APIs
+
+This article explains how to integrate real-time APIs in Microsoft Dynamics 365 Fraud Protection.
 
 To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the evaluate experience, this allows you to analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions based on the rules you have configured.
 
@@ -107,7 +109,7 @@ For both of these C# samples, you will need to import the following [Microsoft.I
 For samples in other languages, see https://aka.ms/aaddev. 
 
 **Certificate thumbprint**
-```cs
+```csharp
 /// <summary>
 /// Gets an access token using an app ID and private certificate key.
 /// </summary>
@@ -140,8 +142,8 @@ public async Task<string> AcquireTokenWithCertificate(string tenantId, string cl
 ```
 
 **Secret**
-```cs
 
+```csharp
 /// <summary>
 /// Gets an access token using an app ID and secret.
 /// </summary>
@@ -170,6 +172,7 @@ public async Task<string> AcquireTokenWithSecret(string tenantId, string clientI
     }
 }
 ```
+
 The AuthenticationResult object in each case contains the AccessToken itself, and an ExpiresOn property which indicates when the token will become invalid. 
 - POST request to  
 -     https://login.microsoftonline.com/{AAD Tenant Id}/oauth2/token 
@@ -188,8 +191,8 @@ For more information, refer to the Azure documentation:
 - [Overview of Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
 - [Acquire and cache tokens using the Microsoft authentication library (MSAL)](/azure/active-directory/develop/msal-acquire-cache-tokens)
 
-
 ### Step 3. Call the APIs
+
 To call the APIs, follow these steps:
 
 <ol>
@@ -222,16 +225,15 @@ To call the APIs, follow these steps:
 </ol>
 
 - POST request to 
--   <Insert Base URL>/v1.0/merchantservices/events/purchase 
+-   <Base URL>/v1.0/merchantservices/events/purchase 
 -Headers 
--   x-ms-correlation-id : <Guid> needs to be unique per request 
+-   x-ms-correlation-id : GUID needs to be unique per request 
 -   content-type : application/json 
 -   Authorization : {Insert the token from previous step} 
 -   x-ms-dfpenvid : {Insert the environment id of the target environment} 
 -Body 
 -   Get the sample Account Protection request body from the shared swagger (open with Integrate purchase APIs documented at: [swagger](https://dfpswagger.azurewebsites.net/index.html)
 
-  
 ## Best Practices 
 
 - A particular AAD Token remains valid for 60 minutes. We recommend caching it for a shorter duration and reusing it. 
@@ -247,10 +249,9 @@ To call the APIs, follow these steps:
 - Make sure this is unique for every transaction sent to DFP.  
 
 ## View the sample app 
+  
 For additional reference, view the <a href="https://go.microsoft.com/fwlink/?linkid=2085137" target="_blank">sample merchant app</a> and the accompanying developer documentation. The sample app provides an example of how to call Fraud Protection APIs, including API events like sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.
 
-For guidance on configuring the sample site for your use, view <a href="https://go.microsoft.com/fwlink/?linkid=2100635" target="_blank">Configure the sample site</a>.
-
-
+For guidance on configuring the sample site for your use, see [Configure the sample site](https://go.microsoft.com/fwlink/?linkid=2100635).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
