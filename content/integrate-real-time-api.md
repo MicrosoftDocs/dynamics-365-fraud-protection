@@ -47,7 +47,6 @@ Visit the following portals for each environment you intend to use, sign in, and
 - [Production environment](https://dfp.microsoft.com) (You may already have completed this step in production during initial sign-up.)
 
 ## Create Azure Active Directory applications
-<!--Step 1-->
 
 > [!IMPORTANT]
 > You must be an application administrator, cloud application administrator, or global administrator in your Azure tenant to complete this step.
@@ -82,20 +81,20 @@ After you create your Azure AD apps, you can manage them through the [Azure port
 
 ## Generate an access token
 
-<!--Step 2-->
-
-To securely integrate your systems with Fraud Protection, you obtain an Azure Active Directory token and provide it in the header of each API call. Below information is needed to obtain a token: 
+To securely integrate your systems with Fraud Protection, you obtain an Azure Active Directory token and provide it in the header of each API call.  
 
 > [!NOTE]
 > Access tokens have a limited lifespan of 60 minutes. It's recommended that you cache and reuse a token until it gets close to expiring, at which time you can get a new access token.
 
-### Required-IDs and information
+The following information is needed to obtain a token.
+
+### Required IDs and information
 
 - **Environment URI** - The URIs for your sandbox or production environment appear on the **Configuration** tab of the **API Management** page in the Fraud Protection portal.
-- **Directory (tenant) ID** - The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Configuration** tab of the **API Management** page in the Fraud Protection portal. 
+- **Directory (tenant) ID** - This ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Configuration** tab of the **API Management** page in the Fraud Protection portal. 
 - **Application (client) ID** - This ID identifies the Azure AD app you've created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen.
-- **Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
+- **Instance ID** - This ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
 ### Code samples providing examples of acquiring a token with your certificate or secret
 
@@ -176,7 +175,7 @@ The **AuthenticationResult** object in each case contains the **AccessToken** an
     - `https://login.microsoftonline.com/<Azure AD tenant ID>/oauth2/token`
 - Headers 
     - Content-type : application/x-www-form-urlencoded 
-Body (key-value) 
+- Body (key-value) 
     - grant_type : client_credentials 
     - client_id : {Your Client ID from previous step} 
     - client_secret : {Your secret from previous step} 
@@ -190,8 +189,6 @@ For more information, see the following Azure documentation:
 - [Acquire and cache tokens using the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-acquire-cache-tokens)
 
 ## Call the APIs
-
-<!--Step 3-->
 
 To call the APIs, follow these steps:
 
@@ -225,14 +222,14 @@ To call the APIs, follow these steps:
 </ol>
 
 - POST request to 
--   `<Base URL>/v1.0/merchantservices/events/purchase`
+    - `<Base URL>/v1.0/merchantservices/events/purchase`
 -Headers 
--   x-ms-correlation-id : GUID needs to be unique per request 
--   content-type : application/json 
--   Authorization : {Insert the token from previous step} 
--   x-ms-dfpenvid : {Insert the environment ID of the target environment} 
+    - x-ms-correlation-id : GUID needs to be unique per request. 
+    - content-type : application/json 
+    - Authorization : {Insert the token from previous step} 
+    - x-ms-dfpenvid : {Insert the environment ID of the target environment} 
 -Body 
--   Get the sample Account Protection request body from the shared swagger (open with Integrate purchase APIs documented at: [swagger](https://dfpswagger.azurewebsites.net/index.html)
+    - Get the sample account protection request body from the shared [Swagger page](https://dfpswagger.azurewebsites.net/index.html).
 
 ## Best practices 
 
