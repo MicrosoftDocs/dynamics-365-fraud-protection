@@ -179,7 +179,7 @@ public async Task<string> AcquireTokenWithSecret(string tenantId, string clientI
 
 The AuthenticationResult object in each case contains the AccessToken itself, and an ExpiresOn property which indicates when the token will become invalid. 
 - POST request to  
--     `https://login.microsoftonline.com/<Azure AD tenant ID>/oauth2/token`
+- `https://login.microsoftonline.com/<Azure AD tenant ID>/oauth2/token`
 -Headers 
 -    Content-type : application/x-www-form-urlencoded 
 Body (key-value) 
