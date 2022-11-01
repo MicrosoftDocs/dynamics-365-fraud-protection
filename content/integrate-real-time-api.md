@@ -16,7 +16,7 @@ title: Integrate purchase protection APIs
 
 This article explains how to integrate real-time APIs in Microsoft Dynamics 365 Fraud Protection.
 
-To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the evaluate experience, this allows you to analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions based on the rules you have configured.
+To take advantage of the full suite of Microsoft Dynamics 365 Fraud Protection features, send your transaction data to the real-time APIs. In the evaluate experience, this allows you to analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions based on the rules you've configured.
 
 Depending on how you choose to use Fraud Protection, you may make use of different sets of APIs, such as shown below: 
 
@@ -24,7 +24,7 @@ Depending on how you choose to use Fraud Protection, you may make use of differe
 
 ### API Integration Milestones 
 
-- 1.Create an AAD Application (via Dynamics Fraud Protection UX) 
+- 1.Create an Azure Active Directory (Azure AD) application (via Dynamics Fraud Protection UX) 
 
 - 2.Generate an access token 
 
@@ -47,7 +47,7 @@ Visit the portal for each environment you intend to use, sign in, and accept the
 > [!IMPORTANT]
 > You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
 
-To acquire the tokens required to call the APIs, you must use Azure Active Directory (Azure AD) applications. You can configure this by following these steps.
+To acquire the tokens required to call the APIs, you must use Azure AD applications. You can configure this by following these steps.
 
 #### To configure Azure AD applications:
 
@@ -101,14 +101,14 @@ To securely integrate your systems with Fraud Protection, you obtain an Azure Ac
 
 - **Directory (tenant) ID** - The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the Integration page of the Fraud Protection portal. 
 
-- **Application (client) ID** - This identifies the Azure AD app you have created for calling APIs. 
+- **Application (client) ID** - This identifies the Azure AD app you've created for calling APIs. 
 
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen. 
 
 - **Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the Integration page of the Fraud Protection portal. 
 
 The following C# code samples provide examples of acquiring a token with your certificate or secret. Replace the placeholders with your specific information.
-For both of these C# samples, you will need to import the following [Microsoft.Identity.Client NuGet package](https://www.nuget.org/packages/Microsoft.Identity.Client/).
+For both of these C# samples, you'll need to import the following [Microsoft.Identity.Client NuGet package](https://www.nuget.org/packages/Microsoft.Identity.Client/).
 
 For samples in other languages, see https://aka.ms/aaddev. 
 
@@ -119,7 +119,7 @@ For samples in other languages, see https://aka.ms/aaddev.
 /// </summary>
 /// <param name="tenantId">Directory (tenant) ID, in GUID format</param>
 /// <param name="clientId">Application (client) ID</param>
-/// <param name="certPath">File path to the certificate file (pfx) used to authenticate your application to AAD</param>
+/// <param name="certPath">File path to the certificate file (pfx) used to authenticate your application to Azure AD</param>
 /// <param name="certPassword">Password to access to the certificate file's private key</param>
 public async Task<string> AcquireTokenWithCertificate(string tenantId, string clientId, string certPath, string certPassword)
 {
@@ -184,7 +184,7 @@ The AuthenticationResult object in each case contains the AccessToken itself, an
 -    Content-type : application/x-www-form-urlencoded 
 Body (key-value) 
 -   grant_type : client_credentials 
--   client_id : {Your Client Id from previous step} 
+-   client_id : {Your Client ID from previous step} 
 -   client_secret : {Your secret from previous step} 
 -   resource : https://api.dfp.microsoft.com (for int, https://api.dfp.microsoft-int.com)  
 - Response 
@@ -193,7 +193,7 @@ Body (key-value)
 For more information, refer to the Azure documentation: 
 
 - [Overview of Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
-- [Acquire and cache tokens using the Microsoft authentication library (MSAL)](/azure/active-directory/develop/msal-acquire-cache-tokens)
+- [Acquire and cache tokens using the Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-acquire-cache-tokens)
 
 ### Call the APIs
 
@@ -236,13 +236,13 @@ To call the APIs, follow these steps:
 -   x-ms-correlation-id : GUID needs to be unique per request 
 -   content-type : application/json 
 -   Authorization : {Insert the token from previous step} 
--   x-ms-dfpenvid : {Insert the environment id of the target environment} 
+-   x-ms-dfpenvid : {Insert the environment ID of the target environment} 
 -Body 
 -   Get the sample Account Protection request body from the shared swagger (open with Integrate purchase APIs documented at: [swagger](https://dfpswagger.azurewebsites.net/index.html)
 
 ## Best Practices 
 
-- A particular AAD Token remains valid for 60 minutes. We recommend caching it for a shorter duration and reusing it. 
+- A particular Azure AD token remains valid for 60 minutes. We recommend caching it for a shorter duration and reusing it. 
 
 - Ensure that your HttpClient has keep-alive connections. 
 
