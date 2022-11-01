@@ -1,6 +1,6 @@
 ---
 author: cschlegel2
-description: This article explains proof of concept options in Microsoft Dynamics 365 Fraud Protection.
+description: This article explainss how to evaluate proof of concept options in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschlegel
 ms.date: 11/01/2022
 ms.topic: reference
@@ -9,13 +9,13 @@ search.app:
 search.audienceType:
   - Administrator
   - IT Pro
-title: Proof of concept options 
+title: Evaluate proof of concept options 
 ms.custom:
 ---
 
-# Proof of concept options 
+# Evaluate proof of concept options 
 
-This article explains proof of concept options in Microsoft Dynamics 365 Fraud Protection.
+This article explains how to evaluate proof of concept options in Microsoft Dynamics 365 Fraud Protection.
 
 Fraud Protection provides you with the ability to try a proof of concept (POC) to determine if a proposed fraud solution can meet your business needs. The POC includes a free 90-day trial period of Fraud Protection for evaluation before making a purchase decision.  
 
