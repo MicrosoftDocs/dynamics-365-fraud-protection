@@ -7,7 +7,7 @@
   - name: Get started training module
     href: /training/modules/get-started-fraud-protection/
   - name: Evaluate proof of concept options
-    href: poc-trial-overview.md
+    href: evaluate-poc.md
   - name: Pay as you go billing
     href: pay-as-you-go.md
   - name: Assessment and usage metering
