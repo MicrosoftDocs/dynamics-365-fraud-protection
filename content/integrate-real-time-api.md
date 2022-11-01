@@ -41,7 +41,9 @@ Visit the portal for each environment you intend to use, sign in, and accept the
 - Sandbox - <a href="https://dfp.microsoft-int.com" target="_blank">https://dfp.microsoft-int.com</a> 
 - Production - <a href="https://dfp.microsoft.com" target="_blank">https://dfp.microsoft.com</a> (You might already have completed this step in production during initial sign-up.)
 
-### Step 1. Create Azure Active Directory applications
+### Create Azure Active Directory applications
+<!--Step 1-->
+
 > [!IMPORTANT]
 > You must be an Application Administrator, Cloud Application Administrator, or Global Administrator in your Azure tenant to complete this step.
 
@@ -88,7 +90,10 @@ To integrate your systems with Fraud Protection, complete the following sections
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen.
 - **Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
-### Step 2. Generate an access token
+### Generate an access token
+
+<!--Step 2-->
+
 To securely integrate your systems with Fraud Protection, you obtain an Azure Active Directory token and provide it in the header of each API call. Below information is needed to obtain a token: 
 **Note** that access tokens have a limited lifespan of 60 minutes. We recommend that you cache and reuse the token until it gets close to expiring, at which time you can get a new access token.
 
@@ -101,7 +106,6 @@ To securely integrate your systems with Fraud Protection, you obtain an Azure Ac
 - **Certificate thumbprint or secret** - Get the thumbprint or secret from the Real-time APIs confirmation screen. 
 
 - **Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the Integration page of the Fraud Protection portal. 
-
 
 The following C# code samples provide examples of acquiring a token with your certificate or secret. Replace the placeholders with your specific information.
 For both of these C# samples, you will need to import the following [Microsoft.Identity.Client NuGet package](https://www.nuget.org/packages/Microsoft.Identity.Client/).
@@ -175,7 +179,7 @@ public async Task<string> AcquireTokenWithSecret(string tenantId, string clientI
 
 The AuthenticationResult object in each case contains the AccessToken itself, and an ExpiresOn property which indicates when the token will become invalid. 
 - POST request to  
--     https://login.microsoftonline.com/{AAD Tenant Id}/oauth2/token 
+-     `https://login.microsoftonline.com/<Azure AD tenant ID>/oauth2/token`
 -Headers 
 -    Content-type : application/x-www-form-urlencoded 
 Body (key-value) 
@@ -191,7 +195,9 @@ For more information, refer to the Azure documentation:
 - [Overview of Microsoft Authentication Library (MSAL)](/azure/active-directory/develop/msal-overview)
 - [Acquire and cache tokens using the Microsoft authentication library (MSAL)](/azure/active-directory/develop/msal-acquire-cache-tokens)
 
-### Step 3. Call the APIs
+### Call the APIs
+
+<!--Step 3-->
 
 To call the APIs, follow these steps:
 
@@ -225,7 +231,7 @@ To call the APIs, follow these steps:
 </ol>
 
 - POST request to 
--   <Base URL>/v1.0/merchantservices/events/purchase 
+-   `<Base URL>/v1.0/merchantservices/events/purchase`
 -Headers 
 -   x-ms-correlation-id : GUID needs to be unique per request 
 -   content-type : application/json 
