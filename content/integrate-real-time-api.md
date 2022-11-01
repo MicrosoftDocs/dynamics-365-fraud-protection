@@ -32,9 +32,9 @@ Depending on how you choose to use Fraud Protection, you may make use of differe
 
 The integration of purchase protection APIs occurs in three phases: 
 
-1. Create an Azure Active Directory (Azure AD) application (via Dynamics Fraud Protection). 
-1. Generate an access token.
-1. Call the APIs.
+1. [Create Azure Active Directory applications](#create-azure-active-directory-applications) (via Fraud Protection). 
+1. [Generate an access token](#generate-an-access-token).
+1. [Call the APIs](#call-the-apis).
 
 ## Sign in
 
@@ -52,7 +52,7 @@ Visit the following portals for each environment you intend to use, sign in, and
 > [!IMPORTANT]
 > You must be an application administrator, cloud application administrator, or global administrator in your Azure tenant to complete this step.
 
-To acquire the tokens required to call the APIs, you must configure and use Azure AD applications as detailed below.
+To acquire the tokens required to call the APIs, you must configure and use Azure Active Directory (Azure AD) applications as detailed below.
 
 ### Configure Azure AD applications
 
