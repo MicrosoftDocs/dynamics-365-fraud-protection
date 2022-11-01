@@ -26,22 +26,24 @@ Fraud Protection provides you with the ability to try a proof of concept (POC)
 
 ## POC examples 
 
-Below are the different examples to participate in the POC trial depending on the Microsoft Dynamics 365 Fraud Protection solution that you are interested in exploring. 
+The following table lists Fraud Protection capabilities and their POC types, requirements, and estimated times for completion.
 
 | Fraud Protection capability | POC type | Requirements  | Estimated time for completion |
 | ------------- |-------------| -----| ------ |
 | [Account protection](#account-protection-online-poc) | Online POC | API integration | 6-8 weeks |
-| [Purchase protection(#purchase-protection-offline-poc)] | Offline POC | Historical data | Two (2) weeks |
+| [Purchase protection](#purchase-protection-offline-poc) | Offline POC | Historical data | Two (2) weeks |
 | [Purchase protection](#purchase-protection-online-poc) | Online POC | API integration | 6-8 weeks |
 | [Purchase protection](#purchase-protection-dynamics-365-commerce-and-fraud-protection-online-poc) | Online POC with Dynamics 365 Commerce | API integration | 4-6 weeks |
 | [Loss prevention](#loss-prevention-offline-poc) | Offline POC | Historical data | Two (2) weeks |
 | [Loss prevention](#loss-prevention-dynamics-365-commerce-and-fraud-protection-offline-poc) | Offline POC with Dynamics 365 Commerce | Historical data | One (1) week |
 
+Below are the different examples of how to participate in a POC trial, depending on the Fraud Protection solution that you are interested in exploring. 
+
 <!--![Representation of available POC options](media/poc-options-image.png)-->
 
 ### Account protection (online POC)
 
-The online POC requires API integration to set up the Account Protection solution for either Account Create, Account Login or both. This POC process typically takes about six weeks for results depending on your speed to integrate, but provides the most accurate results and authentic experience to using the solution. You can gain a thorough understanding of the cutting-edge AI, robust features, reporting dashboards, how the solution would address your specific fraud challenges within the product portal, and how your team and customers could potentially interact with the solution. If you decide to move forward with purchasing the solution, then it is already set up to use. 
+The online POC requires API integration to set up the account protection solution for account creation, account sign-in, or both. This POC provides the most accurate results and authentic experience to using the solution, and typically takes about six weeks to obtain results, depending on your integration speed. You can gain a thorough understanding of the cutting-edge AI, robust features, reporting dashboards, as well as how the solution would address your specific fraud challenges within the product portal, and how your team and customers could potentially interact with the solution. If you decide to move forward with purchasing the solution, it is already set up for you to use. 
 
 > [!NOTE]
 > Account protection only has the online POC option.  
