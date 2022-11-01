@@ -89,6 +89,8 @@ To securely integrate your systems with Fraud Protection, you obtain an Azure Ac
 > [!NOTE]
 > Access tokens have a limited lifespan of 60 minutes. It is recommended that you cache and reuse a token until it gets close to expiring, at which time you can get a new access token.
 
+### Required-IDs and information
+
 - **Environment URI** - The URIs for your sandbox or production environment appear on the **Configuration** tab of the **API Management** page in the Fraud Protection portal.
 - **Directory (tenant) ID** - The Directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Configuration** tab of the **API Management** page in the Fraud Protection portal. 
 - **Application (client) ID** - This identifies the Azure AD app you've created for calling APIs. Get the ID from the **Real-time APIs** confirmation screen or find it later in the Azure portal under **App registrations**. There will be one ID for each app you created.
@@ -171,16 +173,16 @@ public async Task<string> AcquireTokenWithSecret(string tenantId, string clientI
 The **AuthenticationResult** object in each case contains the **AccessToken** and an **ExpiresOn** property that indicates when the token will become invalid. 
 
 - POST request to  
-- `https://login.microsoftonline.com/<Azure AD tenant ID>/oauth2/token`
--Headers 
--    Content-type : application/x-www-form-urlencoded 
+    - `https://login.microsoftonline.com/<Azure AD tenant ID>/oauth2/token`
+- Headers 
+    - Content-type : application/x-www-form-urlencoded 
 Body (key-value) 
--   grant_type : client_credentials 
--   client_id : {Your Client ID from previous step} 
--   client_secret : {Your secret from previous step} 
--   resource : https://api.dfp.microsoft.com (for int, https://api.dfp.microsoft-int.com)  
+    - grant_type : client_credentials 
+    - client_id : {Your Client ID from previous step} 
+    - client_secret : {Your secret from previous step} 
+    - resource : https://api.dfp.microsoft.com (for int, https://api.dfp.microsoft-int.com)  
 - Response 
--   Use the value of access_token from the response for next step
+    - Use the value of access_token from the response for next step
 
 For more information, refer to the Azure documentation: 
 
