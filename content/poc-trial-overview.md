@@ -30,28 +30,31 @@ Below are the different examples to participate in the POC trial depending on th
 
 | Fraud Protection capability | POC type | Requirements  | Estimated time for completion |
 | ------------- |-------------| -----| ------ |
-| [Account protection](#account-protection-online-POC) | Online POC | API integration | 6-8 weeks |
-| Purchase protection | Offline POC | Historical data | 2 weeks |
-| Purchase protection | Online POC | API integration | 6-8 weeks |
-| Purchase protection | Online POC with Dynamics 365 Commerce | API integration | 4-6 weeks |
-| Loss prevention | Offline POC | Historical data | 2 weeks |
-| Loss prevention | Offline POC with Dynamics 365 Commerce | Historical data | 1 week |
+| [Account protection](#account-protection-online-poc) | Online POC | API integration | 6-8 weeks |
+| [Purchase protection(#purchase-protection-offline-poc)] | Offline POC | Historical data | Two (2) weeks |
+| [Purchase protection](#purchase-protection-online-poc) | Online POC | API integration | 6-8 weeks |
+| [Purchase protection](#purchase-protection-dynamics-365-commerce-and-fraud-protection-online-poc) | Online POC with Dynamics 365 Commerce | API integration | 4-6 weeks |
+| [Loss prevention](#loss-prevention-offline-poc) | Offline POC | Historical data | Two (2) weeks |
+| [Loss prevention](#loss-prevention-dynamics-365-commerce-and-fraud-protection-offline-poc) | Offline POC with Dynamics 365 Commerce | Historical data | One (1) week |
 
 <!--![Representation of available POC options](media/poc-options-image.png)-->
 
 ### Account protection (online POC)
 
-The online POC requires API integration to set up the Account Protection solution for either Account Create, Account Login or both. This POC process typically takes about six weeks for results depending on your speed to integrate, but provides the most accurate results and authentic experience to using the solution. You can gain a thorough understanding of the cutting-edge AI, robust features, reporting dashboards, how the solution would address your specific fraud challenges within the product portal, and how your team and customers could potentially interact with the solution. If you decide to move forward with purchasing the solution, then it is already set up to use. **Note:** There is only the online POC option for Account Protection.  
+The online POC requires API integration to set up the Account Protection solution for either Account Create, Account Login or both. This POC process typically takes about six weeks for results depending on your speed to integrate, but provides the most accurate results and authentic experience to using the solution. You can gain a thorough understanding of the cutting-edge AI, robust features, reporting dashboards, how the solution would address your specific fraud challenges within the product portal, and how your team and customers could potentially interact with the solution. If you decide to move forward with purchasing the solution, then it is already set up to use. 
+
+> [!NOTE]
+> Account protection only has the online POC option.  
 
 ### Purchase Protection (offline POC)
 
-The offline POC is the fastest way to understand Purchase Protection with results being shared back in typically two weeks depending on data quality. You would need to provide Microsoft Dynamics Fraud Protection with a minimum of three months of transaction data, two months of this data having chargebacks/labels, and the last month of data just being the transaction details, no chargebacks or labels needed. The Microsoft team will run this data through our Machine Learning Models and come back to you with a presentation and supporting files illustrating the results related to your fraud risk scenarios. Offline POC results are guidelines as to what you can expect with real-life results. Actual results may differ due to additional fraud signals captured (such as device fingerprinting) and are also influenced by the latest fraud trends. 
+The offline POC is the fastest way to understand Purchase Protection with results being shared back in typically two weeks, depending on data quality. You must provide Fraud Protection with a minimum of three months of transaction data, two months of this data with chargebacks and/or labels, and the last month of data just being the transaction details (no chargebacks or labels needed). The Microsoft team will run this data through our Machine Learning Models and come back to you with a presentation and supporting files illustrating the results related to your fraud risk scenarios. Offline POC results are guidelines as to what you can expect with real-life results. Actual results may differ due to additional fraud signals captured (such as device fingerprinting) and are also influenced by the latest fraud trends. 
 
 ### Purchase Protection (online POC)
 
 The online POC for Purchase Protection is similar to the Account Protection Online POC process (see above) where API integration is required. This online POC typically takes about six to eight weeks to see results depending on your pace of integration and the quality of the data you provide. You can gain a thorough understanding of the innovative AI, robust features, reporting dashboards, how the solution would address your specific fraud challenges within the product portal, and how your team and customers could potentially interact with the solution. 
 
-### Purchase Protection (Dynamics 365 Commerce & Fraud Protection Online POC)
+### Purchase Protection (Dynamics 365 Commerce and Fraud Protection online POC)
 
 If you are an existing Dynamics 365 Commerce customer, then the connection between Dynamics 365 Commerce and Dynamics 365 Fraud Protection allows you to get a jumpstart on running an online POC for Purchase Protection. The process is faster than a typical online POC and some of the required D365 Fraud Protection API integrations can be done with just a few configuration changes in D365 Commerce. D365Commerce customers can simply go to the D365 Fraud Protection portal, set up D365 Fraud Protection, and get started. For more information to get started refer to [set up purchased instance](promocode-set-up-dfp-purchased-version.md)
 
@@ -59,6 +62,6 @@ If you are an existing Dynamics 365 Commerce customer, then the connection betwe
 
 Loss prevention requires you to map historical data and upload it in the Fraud Protection portal. The Dynamics 365 Fraud Protection team can work with you to understand the results of your data and instruct you on how to use the Loss Prevention solution to address specific challenges related to potential fraud risk scenarios. 
 
-### Loss Prevention (Dynamics 365 Commerce & Fraud Protection Offline POC)
+### Loss Prevention (Dynamics 365 Commerce and Fraud Protection offline POC)
 
-If you are a D365 Commerce customer, you can easily import your data and generate Loss Prevention reports from the D365 Fraud Protection portal with just a few clicks. The Dynamics 365 Fraud Protection team can work with you to understand the results of your data and instruct you on how to use the Loss Prevention solution to address specific challenges related to potential fraud risk scenarios. To conduct this POC, refer to [Loss Prevention in Commerce](/dynamics365/commerce/dev-itpro/dfp#loss-prevention-in-commerce) to get started with the POC. 
+If you are a D365 Commerce customer, you can easily import your data and generate Loss Prevention reports from the D365 Fraud Protection portal with just a few clicks. The Dynamics 365 Fraud Protection team can work with you to understand the results of your data and instruct you on how to use the Loss Prevention solution to address specific challenges related to potential fraud risk scenarios. To conduct this POC, refer to [Loss prevention in Commerce](/dynamics365/commerce/dev-itpro/dfp#loss-prevention-in-commerce) to get started with the POC. 
