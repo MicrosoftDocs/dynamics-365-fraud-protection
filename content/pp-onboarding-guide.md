@@ -17,7 +17,7 @@ title: Onboarding planning for account purchase protection
 
 This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection purchase protection.
 
-**Integration Planning Guide** This guide helps you understand and plan for the project milestones of Dynamics 365 Fraud Protection Purchase Protection integration and onboarding. To understand the integration steps below in more detail, please review the integration guide:  [set up purchase protection](https://learn.microsoft.com/dynamics365/fraud-protection/promocode-set-up-purchase-protection)
+**Integration Planning Guide** This guide helps you understand and plan for the project milestones of Dynamics 365 Fraud Protection Purchase Protection integration and onboarding. For more information on the integration steps, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
 
 **Onboarding Milestones - Integration Breakdown and Approximate Time** 
 
