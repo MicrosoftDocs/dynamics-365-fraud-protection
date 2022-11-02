@@ -51,32 +51,31 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 - Browser-related attributes if applicable such as browser language, font, etc.
 - Network attributes, such as IP address, signature hash, etc.
 
-## Setting up Device Fingerprinting
+## Set up device fingerprinting
 
-# Set requires the following steps
-- 1. Setup DNS and SSL Certificate and upload it in the Fraud Protection portal; and 
-- 2. Implement device fingerprinting (on web or mobile app) 
+To set up device fingerprinting, follow these steps.
+
+1. Configure the DNS SSL certificate and upload it to the Fraud Protection portal.
+1. Implement device fingerprinting (on web or mobile app). 
 
 The sections below provide detailed instructions on these steps. Please note that the first step is only needed once, but the second step needs to be repeated once for each website or mobile app where device fingerprinting is to be enabled. 
 
-## Step 1: Setup DNS and provide and SSL certificate
-# Setup DNS by folloing these steps:
+### Step 1: Setup DNS and provide an SSL certificate
+
+To set up DNS and provide an SSL certificate, follow these steps.
 
 1. Select a subdomain under your root domain.For example, select **f.contoso.com**. Any prefix can be used.
-
 2. For the selected subdomain, create a canonical name (CNAME) that points to **fpt.dfp.microsoft.com**.For example, **Merchant website**: www.contoso.com, **DNS record**: f.contoso.com, which points to fpt.dfp.microsoft.com.
 
-Set up the Secure Sockets Layer (SSL) certificate by following these steps:
+To set up the Secure Sockets Layer (SSL) certificate, follow these steps.
+
 1. For back-end onboarding, generate the SSL certificate for the selected subdomain. You can add all the subdomains in **Certificate’s Subject Alternative Name** and create one SSL Certificate.
-
 2. Go to the Fraud Protection portal [portal](https://dfp.microsoft.com) and navigate to the **Integration** page from left hand menu. 
-
 3. Select **Edit** and then select **Next** on the following page to reach the page titled Upload SSL certificate. 
-
 4. Click **Select Certificate** button and upload the SSL Certificate generated in Step a) . If your certificate has a password, then enter it in the text box below and then select **Upload**. 
 
-**Note:** Only .pfx files are supported. It may take a few minutes for certificate to propagate to the device fingerprinting servers. 
-
+> [!NOTE]
+> Only .pfx files are supported. It may take a few minutes for certificate to propagate to the device fingerprinting servers. 
 
 ## Step 2: Implement device fingerprinting
 
@@ -115,22 +114,20 @@ Follow these steps on your website.
 3. When you submit transactions in the Dynamics 365 Fraud Protection API, set a session ID in the **deviceContextId** field.
 4. Set the **'device.ipAddress'** field to the customer IP address that your website receives when the customer uses your site.
 
-
 ## To enable fingerprinting on a mobile app: 
 
 For mobile apps, device fingerprinting integration supports Android, iOS and React Native platforms via SDK integration. You can learn more about the mobile reference implementation in the following documents:  
 
-[Dynamics 365 Fraud Protection mobile SDK for Android](https://learn.microsoft.com/dynamics365/fraud-protection/mobile-sdk-android) 
-
-[Dynamics 365 Fraud Protection mobile SDK for iOS](https://learn.microsoft.com/dynamics365/fraud-protection/mobile-sdk-ios) 
-
-[Dynamics 365 Fraud Protection mobile SDK for React Native](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/mobile-sdk-react-native)
-
+- [Dynamics 365 Fraud Protection mobile SDK for Android](mobile-sdk-android.md) 
+- [Dynamics 365 Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md) 
+- [Dynamics 365 Fraud Protection mobile SDK for React Native](mobile-sdk-react-native.md)
 
 ## Mobile device fingerprinting
+
 You can learn more about the mobile reference implementation in [Dynamics 365 Fraud Protection mobile SDK for Android](mobile-sdk-android.md) and [Dynamics 365 Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md).
 
 ## Additional resources
+
 [Implement device fingerprinting in Dynamics 365 Fraud Protection](/training/modules/device-fingerprint-fraud-protection/).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
