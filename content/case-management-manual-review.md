@@ -18,14 +18,14 @@ This article explains how to complete manual reviews in Case management for Micr
 
 To complete a manual review of a case in Case management for Microsoft Dynamics 365 Fraud Protection, you must be assigned one of the following roles:
 
-- Manual review agent 
-- Manual review fraud manager
-- All areas administrator
-- All areas editor 
-- PSP administrator (only available in PSP environments)
-- Fraud manager (only available in PSP environments)
-- Fraud supervisor (only available in PSP environments)
-- Manual review agent (only available in PSP environments)
+- **Manual review agent**
+- **Manual review fraud manager**
+- **All areas administrator**
+- **All areas editor** 
+- **PSP administrator** (available only in payment service provider \[PSP\] environments)
+- **Fraud manager** (available only in PSP environments)
+- **Fraud supervisor** (available only in PSP environments)
+- **Manual review agent** (available only in PSP environments)
 
 ## View cases in a queue
 
@@ -33,7 +33,7 @@ On the **Case management** page, you can view all the cases that you have access
 
 You can select the purchase ID of a case to view the details of the transaction. For example, you can see whether the transaction is under review by another agent.
 
-You can also make bulk decisions on cases that are pending review from the **Case management** page. For more information, see [Make bulk decisions](#make-bulk-decisions).
+From the **Case management** page, you can also make bulk decisions about cases that are pending review. For more information, see the [Make bulk decisions](#make-bulk-decisions) section.
 
 ## Review a case and linked transactions
 
@@ -43,7 +43,7 @@ You can start a review of a case in multiple ways:
 - If you're viewing the cases in the queue, you can select **Start review** in the upper right of **Pending review** grid.
 - You can also select the purchase ID of a case in the queue to view the details of the transaction. You have the option to start the review from the **Transaction details** page. If the queue that you're viewing allows for unrestricted processing, you can hover over the purchase ID of any case in the **Pending review** grid and then select **Start review**.
 
-After you select **Start review**, the **Transaction review** page appears and shows categorized details of the transaction. To have the raw data for the transaction sent to Fraud Protection, select **JSON view** in the upper-right corner of the page. On the **Link analysis** tab, you can view other transactions that are linked to the case that you're reviewing. The **Cases in review** grid shows all transactions currently pending review, including cases being actively reviewed by other manual review agents. The bottom **Decisioned cases** grid shows all linked decisioned cases. To track the linkage, you can select one or more attributes. Use the drop-down menu to filter for transactions that match any or all of the selected attributes. To help you with your decision, select **Column options** to customize the fields that are shown. You can export the results of linked transactions for additional analysis. You can also make bulk decisions on cases in the **Cases in review** grid. For more information, see [Make bulk decisions](#make-bulk-decisions).
+After you select **Start review**, the **Transaction review** page appears and shows categorized details of the transaction. To have the raw data for the transaction sent to Fraud Protection, select **JSON view** in the upper-right corner of the page. On the **Link analysis** tab, you can view other transactions that are linked to the case that you're reviewing. The **Cases in review** grid shows all transactions that are currently pending review, including cases that are being actively reviewed by other manual review agents. The lower **Decisioned cases** grid shows all linked cases that decisions have been made about. To track the linkage, you can select one or more attributes. Use the drop-down menu to filter for transactions that match any or all the selected attributes. To help with your decision, select **Column options** to customize the fields that are shown. You can export the results of linked transactions for additional analysis. You can also make bulk decisions about cases in the **Cases in review** grid. For more information, see the [Make bulk decisions](#make-bulk-decisions) section.
 
 ## Decisions and notes for a case
 
@@ -64,7 +64,7 @@ If you can't complete a review of a case, you can leave notes for the next revie
 
 You can make bulk decisions in multiple ways.
 
-- If you're viewing the cases in the queue, you can select any number of cases in the **Pending review** grid. Select **Approve**, **Reject**, or **Dismiss** from the upper right of **Pending review** grid. Select the appropriate reason, add any notes, and submit the decision.
-- You can also make bulk decisions from the **Link analysis** tab. When you're reviewing a single case, you can go to the **Link analysis** tab and search for linked cases. You can select one or more cases in the **Cases in review** grid, select the appropriate decision and reason, add any notes, and submit the decision. If you select a case that is being reviewed by another manual review agent in your bulk decision, the other manual review agent will get a notification that the case has already been decisioned and they won't be allowed to submit a decision. The original case can't be included in the bulk decision. You'll have to submit a decision for the original case individually by selecting the appropriate decision type from the top of the page. You can select a case from the **Decisioned cases** grid. While you can't make another manual review decision on a decisioned case, you can make bulk decisions on linked cases that appear in the **Cases in review** grid on the **Link analysis** page of a decisioned case.   
+- If you're viewing the cases in the queue, you can select any number of cases in the **Pending review** grid. Then select **Approve**, **Reject**, or **Dismiss** in the upper right of **Pending review** grid. Finally, select the appropriate reason, add any notes, and submit the decision.
+- You can also make bulk decisions from the **Link analysis** tab. When you're reviewing a single case, you can select the **Link analysis** tab and search for linked cases. You can then select one or more cases in the **Cases in review** grid, select the appropriate decision and reason, add any notes, and submit the decision. If you select a case that is being reviewed by another manual review agent in your bulk decision, the other manual review agent will receive a notification that a decision has already been made about the case, and they won't be allowed to submit a decision. The original case can't be included in the bulk decision. You'll have to submit a decision for the original case individually by selecting the appropriate decision type at the top of the page. You can select a case in the **Decisioned cases** grid. Although you can't make another manual review decision about a decisioned case, you can make bulk decisions about linked cases that appear in the **Cases in review** grid on the **Link analysis** page of a decisioned case.   
 
 
