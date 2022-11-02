@@ -60,7 +60,8 @@ To set up device fingerprinting, follow these steps.
 
 The sections below provide detailed instructions on these steps. Please note that the first step is only needed once, but the second step needs to be repeated once for each website or mobile app where device fingerprinting is to be enabled. 
 
-### Step 1: Setup DNS and provide an SSL certificate
+### Setup DNS and provide an SSL certificate
+<!--Step 1-->
 
 To set up DNS and provide an SSL certificate, follow these steps.
 
@@ -77,7 +78,8 @@ To set up the Secure Sockets Layer (SSL) certificate, follow these steps.
 > [!NOTE]
 > Only .pfx files are supported. It may take a few minutes for certificate to propagate to the device fingerprinting servers. 
 
-## Step 2: Implement device fingerprinting
+## Implement device fingerprinting
+<!--Step 2>
 
 Your website or application needs to initiate device fingerprinting requests a few seconds before a transaction is sent to Fraud Protection for risk evaluation (such as a transaction for adding a payment instrument, sign-in, or checkout). This would ensure that Fraud Protection has received all the data necessary to make an accurate assessment. The below sections provide detailed instructions to enable device fingerprinting on websites and mobile Apps. 
 
