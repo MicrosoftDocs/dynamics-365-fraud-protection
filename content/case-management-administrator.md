@@ -18,12 +18,12 @@ This article explains how to work with case management as an administrator in Mi
 
 To complete administrator-specific tasks in case management for Fraud Protection, you must be assigned one of the following roles:
 
--	**All areas administrator**
+- **All areas administrator**
 - **All areas editor**
 - **Manual review fraud manager**
-- **PSP administrator** (only available in PSP environments)
-- **Fraud manager** (only available in PSP environments)
-- **Fraud supervisor** (only available in PSP environments)
+- **PSP administrator** (available only in payment service provider \[PSP\] environments)
+- **Fraud manager** (available only in PSP environments)
+- **Fraud supervisor** (available only in PSP environments)
 
 If you're assigned one of these roles, you can complete the following tasks:
 
@@ -54,12 +54,12 @@ Follow these steps to create a queue.
 1. Enter a name that will help you identify the purpose of the queue.
 1. Enter a description that explains the types of cases that are stored in this queue.
 1. Select your preference for the review sequence. If you select **Unrestricted queue**, you can review any case in the queue in any order. If you select **Restricted queue**, you must review cases in a predefined order.
-1. Select the default sorting and order to define the order in which cases appear and are presented to review agents. In a restricted queue, your selections define the order of cases in which agents can review the cases.
-1. Select the timeout duration and default action to define the maximum amount of time that a case can be in the queue without being reviewed and the default action that is taken when that time is reached.
+1. Select the default sorting and order to define the order in which cases appear and are presented to review agents. In a restricted queue, your selections define the order in which agents can review the cases.
+1. Select the time-out duration and default action to define the maximum amount of time that a case can be in the queue without being reviewed and the default action that is taken when that time is reached.
 
 You can edit or delete any queue that you've created. To edit the name of a queue or delete a queue, remove the routing rules that have a dependency on the queue. For more information about routing rules, see the next section.
 
-All your environments have a system-created queue named **General**. Cases that don't qualify to be routed to a specific queue are routed to the **General** queue. The **General** queue has the following settings:
+All your environments have a system-created queue that is named **General**. Cases that don't qualify to be routed to a specific queue are routed to the **General** queue. The **General** queue has the following settings:
 
 - **Timeout:** 24 hours 
 - **Default action:** Approve
@@ -78,13 +78,14 @@ Routing rules can be created in either a visual editor or a code editor. In the 
 
 Follow these steps to create a routing rule.
 
-1. In the left navigation pane, select **Case management \> Routing rules**, and then select **New rule**. Select the relevant assessment type.
+1. In the left navigation pane, select **Case management \> Routing rules**, and then select **New rule**.
+1. Select the relevant assessment type.
 1. To add a top-level condition that can be applied to the rule set, add it under the condition segment. For example, you might want the rule set to be run for a specific product category.
 1. Select **New clause** to define a new clause for the routing rule.
 1. In the drop-down list, select the queue to route the cases to.
 1. Define the routing criteria by using the drop-down lists for attributes and operators and providing the desired values.
 1. To switch to the code editor, select **Code view** in the upper right of the clause.
-1. Use the command **RouteTo Queue("\<Queue name\>") WHEN \<Condition\>**. The following example shows the code view for routing transactions where the total amount is more than 1,000 to a **High Value Orders** queue.
+1. Use the command **RouteTo Queue("\<Queue name\>") WHEN \<Condition\>**. The following example shows the code view for the command to route transactions where the total amount is more than 1,000 to a **High Value Orders** queue.
 
     ```
     ROUTETO Queue("High Value Orders")
@@ -98,5 +99,5 @@ To customize the order of execution for routing rules, drag the routing rules to
 
 ## View the case management report dashboard
 
-Case management administrators have access to view the case management report dashboard. This dashboard gives managers the ability to analyze the queue and agent performance. The case management report is updated every 24 hours. You can select the **Assessment name**, **Queue name** and **Agent name** from the drop-down menu, and set the date range. The report shows the performance of several key metrics over daily, weekly, and monthly periods. To review specific cases, you can use the search feature to search with case management-specific attributes such as, **Queue name**, **Agent name**, **Review decision**, and **Reason and Review notes**. 
+Case management administrators have access to view the case management report dashboard. This dashboard lets managers analyze the queue and agent performance. The case management report is updated every 24 hours. You can select the assessment name, queue name, and agent name on the drop-down menu, and set the date range. The report shows the performance of several key metrics over daily, weekly, and monthly periods. To review specific cases, you can use the search feature to search by case management-specific attributes such as **Queue name**, **Agent name**, **Review decision**, and **Reason and Review notes**. 
 
