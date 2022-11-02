@@ -1,9 +1,9 @@
 ---
 author: josaw1
-description: This article explains how to set up device fingerprinting.
+description: This article explains how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 
 ms.author: josaw
-ms.date: 02/01/2022, updated 10/18/2022
+ms.date: 11/02/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -14,10 +14,11 @@ title: Set up device fingerprinting
 
 # Set up device fingerprinting
 
+This article explains how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 
 A *device fingerprint*, also known as a *machine fingerprint*, contains information that is collected about a remote computing device, such as a computer, Xbox, tablet, or smartphone, for the purpose of identifying that device. Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address.
 
-Microsoft Dynamics 365 Fraud Protection provides a device fingerprinting feature that is based on artificial intelligence (AI). Therefore, device identification can be used as input to the process of fraud assessment. Additionally, this feature helps the Fraud Protection service track and link seemingly unrelated events in the fraud network, in order to help identify patterns of fraud. The data collected is not just a static list of attributes but also includes data that is dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device.
+Fraud Protection provides a device fingerprinting feature that is based on artificial intelligence (AI) so that device identification can be used as input to the process of fraud assessment. This feature helps the Fraud Protection service track and link seemingly unrelated events in the fraud network to help identify patterns of fraud. The data collected is not just a static list of attributes but also includes data that is dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device.
 
 Device fingerprinting runs on Azure, and includes benefits from proven cloud scalability, reliability, and enterprise-grade security. To help you better understand the impact that device fingerprinting has on fraud detection, this document includes some results from a study that Microsoft did. The study compared six months' worth of data for various Microsoft businesses through two different models: one that used device fingerprinting and one that did not.
 
@@ -26,12 +27,10 @@ In summary, the results showed that device fingerprinting has a significant posi
 ## Goals 
 
 The purpose of this set up guide is to help you understand how you can: 
-- Call Fraud Protection device fingerprinting service 
 
-- Collect the required data and send it to Fraud Protection 
-
-- Include device fingerprinting session ID information in the subsequent Risk Assessment API Call to Fraud Protection (e.g., an online Purchase or new User Account creation) 
-
+- Call the Fraud Protection device fingerprinting service. 
+- Collect the required data and send it to Fraud Protection. 
+- Include device fingerprinting session ID information in the subsequent risk assessment API call to Fraud Protection (for example, for an online purchase or new user account creation). 
 
 ## Prerequisites
 
