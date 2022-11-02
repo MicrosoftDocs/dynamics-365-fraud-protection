@@ -46,4 +46,4 @@ You use routing rules to define the criteria for organizing cases into queues.
 
 ## Transaction review
 
-Manual review agents review the contextual information about a case from the **Transaction review** page. Based on this review, the agents determine the likelihood of fraud for the transaction, and select an appropriate decision for the case. 
+From the **Transaction review** page, manual review agents review the contextual information about a case. Based on this review, the agents determine the likelihood of fraud for the transaction and select an appropriate decision for the case. 
