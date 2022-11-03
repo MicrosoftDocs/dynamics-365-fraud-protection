@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to integrate real-time APIs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschlegel
-ms.date: 11/01/2022
+ms.date: 11/03/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -253,8 +253,8 @@ To call the APIs, follow these steps:
 - Ensure that your HttpClient has keep-alive connections. 
 - Always pass the **x-ms-dfpenvid** header, and ensure that it points to the environment of the merchant that you want to send transactions on behalf of. 
 - Store the secret in a secret store. 
-- Always pass the **x-ms-correlation-id** header for future debugging sessions with DFP. 
-- Ensure that the **x-ms-correlation-id** header is unique for every transaction that is sent to DFP.  
+- Always pass the **x-ms-correlation-id** header for future debugging sessions with Fraud Protection. 
+- Ensure that the **x-ms-correlation-id** header is unique for every transaction that is sent to Fraud Protection.  
 
 ## View the sample app 
 
