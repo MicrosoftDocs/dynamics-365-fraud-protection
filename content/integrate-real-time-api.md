@@ -32,7 +32,7 @@ Depending on how you use Fraud Protection, you might use different sets of the f
 
 The integration of purchase protection APIs occurs in three phases: 
 
-1. [Create Azure Active Directory (Azure AD) applications](#create-azure-active-directory-applications) via Fraud Protection. 
+1. [Create Azure Active Directory (Azure AD) applications](#create-azure-ad-applications) via Fraud Protection. 
 1. [Generate an access token](#generate-an-access-token).
 1. [Call the APIs](#call-the-apis).
 
