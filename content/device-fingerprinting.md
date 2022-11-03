@@ -17,9 +17,9 @@ This article explains how to set up device fingerprinting in Microsoft Dynamics 
 
 A *device fingerprint*, also known as a *machine fingerprint*, contains information that is collected about a remote computing device, such as a computer, Xbox, tablet, or smartphone, for the purpose of identifying that device. Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address.
 
-Fraud Protection provides a device fingerprinting feature that is based on artificial intelligence (AI) so that device identification can be used as input to the process of fraud assessment. This feature helps the Fraud Protection service track and link seemingly unrelated events in the fraud network to help identify patterns of fraud. The data collected is not just a static list of attributes but also includes data that is dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device.
+Fraud Protection provides a device fingerprinting feature that is based on artificial intelligence (AI) so that device identification can be used as input to the process of fraud assessment. This feature helps the Fraud Protection service track and link seemingly unrelated events in the fraud network to help identify patterns of fraud. The data collected isn't just a static list of attributes but also includes data that is dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device.
 
-Device fingerprinting runs on Azure, and includes benefits from proven cloud scalability, reliability, and enterprise-grade security. To help you better understand the impact that device fingerprinting has on fraud detection, this document includes some results from a study that Microsoft did. The study compared six months' worth of data for various Microsoft businesses through two different models: one that used device fingerprinting and one that did not.
+Device fingerprinting runs on Azure, and includes benefits from proven cloud scalability, reliability, and enterprise-grade security. To help you better understand the impact that device fingerprinting has on fraud detection, this document includes some results from a study that Microsoft did. The study compared six months' worth of data for various Microsoft businesses through two different models: one that used device fingerprinting and one that didn't.
 
 In summary, the results showed that device fingerprinting has a significant positive impact on the model detection rate for all businesses. Because it reduces false negatives, less fraud is detected on approved transactions after the fact.
 
@@ -35,9 +35,9 @@ The purpose of this set up guide is to help you understand how you can:
 
 Before you begin the tasks in this document, you must set up Fraud Protection in an Azure Active Directory (Azure AD) tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md) and [Set up a purchased version of Fraud Protection](promocode-set-up-DFP-purchased-version.md).
 
-It is your responsibility to:
+It's your responsibility to:
 
-1. Inform your customers of your data processing practices, for example by disclosing the data you collect and how it is used. 
+1. Inform your customers of your data processing practices, for example by disclosing the data you collect and how it's used. 
 2. Disclose your use of third parties working on your behalf to process the data you collect, including Fraud Protection service providers. 
 3. Comply with all laws and regulations applicable to its use of Fraud Protection, including data protection laws. 
 
@@ -59,9 +59,9 @@ Setting up device fingerprinting is accomplished in two phases.
 
 The sections below provide detailed instructions on these phases. The first phase only needs to be implemented once, but the second phase must be repeated once for each website or mobile app where device fingerprinting is to be enabled. 
 
-### Set up DNS and generate a SSL certificate
+### Set up DNS and generate an SSL certificate
 
-Complete the follwing procedures to set up DNS and generate a SSL certificate.
+Complete the following procedures to set up DNS and generate an SSL certificate.
 
 #### Set up DNS
 
@@ -72,7 +72,7 @@ To set up DNS, follow these steps.
 
 #### Generate and upload SSL certificate
 
-To generate and upload a SSL certificate, follow these steps.
+To generate and upload an SSL certificate, follow these steps.
 
 1. For back-end onboarding, generate the SSL certificate for the selected subdomain. You can create one SSL certificate and add all the subdomains in **Certificate’s Subject Alternative Name**.
 2. Go to the [Fraud Protection portal](https://dfp.microsoft.com), and in the left navigation pane, select **Integration**. 
@@ -88,14 +88,14 @@ Your website or application must initiate device fingerprinting requests a few s
 
 To implement device fingerprinting, follow these steps.
 
-1. Modify the following javascript script code and insert it on the webpage/application where you want to collect device fingerprinting information.   
+1. Modify the following JavaScript script code and insert it on the webpage/application where you want to collect device fingerprinting information.   
 
     ```JavaScript
     <script src="https://fpt.<Your_Root_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
     ```
 
     - **Your\_Root\_Domain** – The root domain of the client website.
-    - **session\_id** – The unique session identifier of the device created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although it is recommended that you use a globally unique identifier (GUID) for the session ID, this isn't required.
+    - **session\_id** – The unique session identifier of the device created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although it's recommended that you use a globally unique identifier (GUID) for the session ID, it isn't required.
     - **instance\_id** – A placeholder for the instance ID that represents you. Use the instance identifier (**instance\_id** value) listed on the **Account Information** dashboard tile of the Fraud Protection evaluate experience. You must have this value to integrate device fingerprinting with your website.
 
     **Example**
@@ -104,7 +104,7 @@ To implement device fingerprinting, follow these steps.
     <script src="https://fpt.contoso.com/mdt.js?session_id=211d403b-2e65-480c-a231-fd1626c2560e&instanceId=b472dbc3-0928-4577-a589-b80090117691" type="text/javascript"></script>
     ```
 
-    Here is an example of a response for mdt.js:
+    Here's an example of a response for mdt.js:
 
     ```JavaScript
    window.dfp={url:"https://Your_Sub_Domain/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};window.dfp.doFpt=function(doc){var frm,src;true&&(frm=doc.createElement("IFRAME"),frm.id="fpt_frame",frm.style.width="1px",frm.style.height="1px",frm.style.position="absolute",frm.style.visibility="hidden",frm.style.left="10px",frm.style.bottom="0px",frm.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;left:-200;border:0px"),src="https://Your_Sub_Domain/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",frm.setAttribute("src",src),doc.body.appendChild(frm))};
