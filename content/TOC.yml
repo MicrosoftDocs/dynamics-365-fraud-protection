@@ -122,6 +122,8 @@
   items: 
   - name: Overview
     href: purchase-protection.md
+  - name: Onboarding planning
+    href: pp-onboarding-guide.md
   - name: Set up purchase protection
     items: 
     - name: Set up a trial instance of Fraud Protection
