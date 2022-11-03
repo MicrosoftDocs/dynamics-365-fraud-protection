@@ -25,10 +25,6 @@ The tables in this section provide details about the onboarding milestones for t
 > - All timeframes below are estimates. Actual time taken can vary based on Merchant, and Microsoft/Authorized Partner availability and focus. 
 > - Microsoft performs the data validation, but clients must enable API calls and start sending a small percentage of production traffic first. Post validation, clients can send all traffic which will help the project move to the next step. 
 
-<!--![step 1](media/pp-onboarding-guide-steponeclean.png)-->
-
-<!--![step 2](media/step2-PP-onboardingguide.png)-->
-
 ### Environment setup and API integration phase
 
 The following table lists the environment setup tasks, owner teams, and estimated times for implementation of the environment setup and API integration phase.
@@ -44,7 +40,6 @@ The following table lists the environment setup tasks, owner teams, and estimate
 | Label and chargeback API integration and validation | Client and Microsoft/authorized partner | Two (2) weeks (This task can be done in parallel with the preceding tasks.) |
 
 ### Protection phase
-<!--Step 3-->
 
 The following table lists the environment setup tasks, owner teams, and estimated times for implementation of the protection phase.
 
@@ -63,8 +58,6 @@ No actions for the client and Microsoft/Authorized partner during this phase. Ac
 - At least four weeks data with more than 70% label maturity rate.
 
 ### Advanced modeling phase
-
-<!--[step 4](media/step4-PP-onboardingguide.png)-->
 
 The following table lists the environment setup tasks, owner teams, and estimated times for implementation of the advanced modeling phase.
 
