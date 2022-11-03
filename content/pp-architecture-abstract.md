@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article describes how Microsoft Dynamics 365 Fraud Protection purchase protection interacts with various entities such as customers and banks.
 ms.author: cschlegel
-ms.date: 11/02/2022
+ms.date: 11/03/2022
 ms.topic: reference
 search.app: 
   - Capaedac-fraudprotection
@@ -52,3 +52,9 @@ The numbered elements in the illustration are further explained below.
 **Purchase status API (4, back end)** - The purchase status API is a back-end integration, and collects corresponding feedback information to update Fraud Protection with the final status of a transaction. 
 
 **Label API (5, back end)** - The label API is a back-end integration, and collects corresponding feedback information to update Fraud Protection with the final status of a transaction.
+
+# Additional resources
+
+[Purchase protection overview](purchase-protection.md)
+
+[Set up your purchase protection service](promocode-set-up-purchase-protection.md)
