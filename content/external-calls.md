@@ -49,7 +49,7 @@ Before you create an external call, you should know about the following limitati
 
         For more information about authentication, authorization, and Azure AD tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this article.
 
-    - **Application ID** – If you selected **AAD** as the authentication method, you must provide the application ID of an existing Azure AD application within your Fraud Protection subscription tenant. For more information about how to create and manage Azure AD applications, see [Create Azure Active Directory Applications](integrate-real-time-api.md#create-azure-active-directory-applications).
+    - **Application ID** – If you selected **AAD** as the authentication method, you must provide the application ID of an existing Azure AD application within your Fraud Protection subscription tenant. For more information about how to create and manage Azure AD applications, see [Create Azure Active Directory Applications](integrate-real-time-api.md#create-azure-ad-applications).
     - **Add parameter** – You can use parameters to pass data from Fraud Protection to your API endpoint. Depending on the HTTP method that you selected, these parameters will be sent to the endpoint either in the query string or as part of the request body.
 
         You can add sample values for each parameter. Fraud Protection will use these parameter values to make a sample call to your endpoint, either before creation or whenever you select **Test**.
