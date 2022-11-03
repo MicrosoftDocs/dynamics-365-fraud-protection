@@ -15,11 +15,11 @@ title: Onboarding planning for account purchase protection
 
 # Onboarding planning for account purchase protection
 
-This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection purchase protection. Onboard planning will help you understand and plan for the project onboarding milestones of Fraud Protection purchase protection integration and onboarding. For more information on the integration steps, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
+This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection purchase protection. Onboard planning will help you understand and plan for the project implementation milestones of Fraud Protection purchase protection integration and onboarding. For more information on the integration steps, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
 
 ## Onboarding milestones
 
-The tables in this section provide details about the onboarding milestones for the environment setup and application programming interface (API) integration, protection, advanced modeling, and the advanced protection and fraud ops phases.
+The tables in this section provide details about the onboarding milestones for the environment setup and application programming interface (API) integration, protection, data accumulation, and advanced modeling phases.
 
 > [!NOTE]
 > - All timeframes below are estimates. Actual time taken can vary based on Merchant, and Microsoft/Authorized Partner availability and focus. 
@@ -58,9 +58,9 @@ The following table lists the environment setup tasks, owner teams, and estimate
 ### Data accumulation phase
 
 No actions for the client and Microsoft/Authorized partner during this phase. Accumulation starts right after data quality is signed off during the API integration phase. Continue forward once the criteria below have been achieved:                                                                                                               
-- At least 500 fraudulent transactions                                                                      
-- At least 5000 non-fraudulent transactions                                                                    
-- At least 4 weeks data with more than 70% label maturity rate \
+- At least 500 fraudulent transactions.                                                                      
+- At least 5000 non-fraudulent transactions.                                                                    
+- At least four weeks data with more than 70% label maturity rate.
 
 ### Advanced modeling phase
 
@@ -76,7 +76,7 @@ The following table lists the environment setup tasks, owner teams, and estimate
 
 #### Advanced protection and fraud ops tuning
 
-The following table lists the task, owner team, and estimated time for advanced protecton and fraud ops analysis and adjustments.
+The following table lists the task, owner team, and estimated time for advanced protection and fraud ops analysis and adjustments.
 
 | Task | Owner team | Estimated time |
 |------|------------| ---------------|
@@ -84,7 +84,7 @@ The following table lists the task, owner team, and estimated time for advanced 
 
 ## Resources 
 
-Teh following resources provide more information for the above-referenced integration steps.
+The following resources provide more information for the above-referenced integration steps.
 
 - [Fraud Protection overview](/dynamics365/fraud-protection/)
 - [Create and provision your Azure tenant](promocode-set-up-dfp-purchased-version.md)
