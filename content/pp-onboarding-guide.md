@@ -60,7 +60,7 @@ The following table lists the environment setup tasks, owner teams, and estimate
 No actions for the client and Microsoft/Authorized partner during this phase. Accumulation starts right after data quality is signed off during the API integration phase. Continue forward once the criteria below have been achieved:                                                                                                               
 - At least 500 fraudulent transactions                                                                      
 - At least 5000 non-fraudulent transactions                                                                    
-- At least 4 weeks data with more than 70% label maturity rate 
+- At least 4 weeks data with more than 70% label maturity rate \
 
 ### Advanced modeling phase
 
@@ -74,10 +74,17 @@ The following table lists the environment setup tasks, owner teams, and estimate
 | Model shadow on production  | Client and Microsoft/authorized partner | One (1) week |
 | Model switch | Microsoft/authorized partner | Upon notification |
 
+#### Advanced protection and fraud ops tuning
+
+The following table lists the task, owner team, and estimated time for advanced protecton and fraud ops analysis and adjustments.
+
+| Task | Owner team | Estimated time |
+|------|------------| ---------------|
+| Score analysis and rule adjustment to optimize key performance indicators (KPIs) | Client | Ongoing |
 
 ## Resources 
 
-Below are additional resources to help provide more details of the above-referenced integration steps:
+Teh following resources provide more information for the above-referenced integration steps.
 
 - [Fraud Protection overview](/dynamics365/fraud-protection/)
 - [Create and provision your Azure tenant](promocode-set-up-dfp-purchased-version.md)
