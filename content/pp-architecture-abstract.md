@@ -20,7 +20,7 @@ The following illustration highlights some of Fraud Protection's purchase protec
 
 ![Overview of how Fraud Protection purchase protection works.](media/pp-architecture-abstract1.png)
 
-Here is an explanation of the numbered elements in the illustration:
+Here's an explanation of the numbered elements in the illustration:
 
 - **Device fingerprinting (1)** – Device fingerprinting lets you collect crucial device telemetry during online actions. The data includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address. This feature is based on artificial intelligence (AI) and can be used as input to the fraud assessments process. Device fingerprinting can be deployed for both browser-based and mobile-based applications. A Java-based web software development kit (SDK) is available, as are iOS, Android, and React Native SDKs for mobile applications.
 - **Transaction payload (2)** – The transaction payload contains transaction-related information that clients pass to Fraud Protection. This data is compared to data that is already in the Fraud Protection network, where the machine learning model analyzes the data for linkages. 
@@ -34,7 +34,7 @@ The following APIs and components are required to take advantage of Fraud Protec
 - **Device fingerprinting (front end)**<!-- – Device fingerprinting lets you collect crucial device telemetry during online actions. The data includes hardware information, browser information, geographic information, and the IP address. This feature is based on AI and can be used as input to the fraud assessments process. It can be deployed for both browser-based and mobile-based applications. A Java-based web SDK is available, as are iOS, Android, and React Native SDKs for mobile applications.-->
 - **Purchase API (back end)** – This API collects data attributes that include transaction context. This data is compared to data that's already in the fraud protection network, where machine learning searches for linkages and similarities to known emerging fraud patterns.
 - **Bank event API (back end)** – This API is used to inform Fraud Protection of the bank's authorization decision (for example, approval or rejection of the transaction). It can also be used to inform Fraud Protection of related events, such as card verification value (CVV) or 3D Secure (3DS) challenges. 
-- **Purchase status API (back end)** – This API is used to inform Fraud Protection of the client's final decision about the transaction. It's important that Fraud Protection be notified whether a transaction was approved or rejected for any reason, so that it can adapt and learn from the client's fraud patterns. 
+- **Purchase status API (back end)** – This API is used to inform Fraud Protection of the client's final decision about the transaction. It's important that Fraud Protection be notified whether a transaction was approved or rejected for any reason. In that way, it can adapt and learn from the client's fraud patterns. 
 - **Label API (back end)** – This API lets you send additional information to Fraud Protection about transactions, account or payment instrument details, chargebacks, refunds, and reversals. The label API provides knowledge for model training that's based on a set of fraud signals.
 
 ## How Fraud Protection purchase protection connects with clients
@@ -43,7 +43,7 @@ The following illustration shows how Fraud Protection purchase protection typica
 
 ![How Fraud Protection purchase protection typically connects with clients.](media/pp-architecture-api-abstract.png)
 
-Here is an explanation of the numbered elements in the illustration:
+Here's an explanation of the numbered elements in the illustration:
 
 - **Device fingerprinting (1, front end)** – Browser-based and mobile-based device fingerprinting is embedded on the front-end side. This feature works with Fraud Protection to track and link unrelated events in the fraud network to help identify patterns of fraud.
 
