@@ -67,7 +67,7 @@
   - name: Overview
     href: ap-overview.md
   - name: How account protection works
-    href: ap-architecture-abstract-overview.md
+    href: how-ap-works.md
   - name: Onboarding planning
     href: ap-onboarding-planning-guide.md
   - name: Set up account protection
