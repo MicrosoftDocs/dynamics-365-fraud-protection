@@ -20,10 +20,10 @@ The following illustration highlights some of Fraud Protection's purchase protec
 
 ![Overview of how Fraud Protection purxhase protection works](media/pp-architecture-abstract1.png)
 
-- **Device fingerprinting (1)** Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address. This feature is based on artificial intelligence (AI) and can be used as input to the fraud assessments process. It can be deployed for both browser based and mobile based applications. A Java-based web software development kit (SDK) is available, as are iOS, Android, and React Native SDKs for mobile applications.
-- **Transaction payload (2)** Information related to the transaction that clients pass along to Fraud Protection. This data is compared to data already within the Fraud Protection network, where the machine learning model analyzes the data for linkages. 
-- **Risk assessment (3)** The machine learning model can return a score to you for bot and risk scores. The scoring advises you of the probability of fraud risk, or the likelihood of possible fraud that you may want to review or reject. 
-- **Trust knowledge (transaction acceptance booster) (4)** This feature helps you benefit from higher acceptance rates by sharing trust knowledge with banks.
+- **Device fingerprinting (1)** - Device fingerprinting enables you to collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address. This feature is based on artificial intelligence (AI) and can be used as input to the fraud assessments process. Device fingerprinting can be deployed for both browser-based and mobile-based applications. A Java-based web software development kit (SDK) is available, as are iOS, Android, and React Native SDKs for mobile applications.
+- **Transaction payload (2)** - The transaction payload contains information related to a transaction that clients pass along to Fraud Protection. This data is compared to data already within the Fraud Protection network, where the machine learning model analyzes the data for linkages. 
+- **Risk assessment (3)** - The machine learning model can return a score to you for bot and risk scores. The scoring advises you of the probability of fraud risk, or of the likelihood of possible fraud that you may want to review or reject. 
+- **Trust knowledge (transaction acceptance booster) (4)** - This feature helps you benefit from higher acceptance rates by sharing trust knowledge with banks.
 
 ## Required APIs and components
 
