@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about the components of case management in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 10/28/2022
+ms.date: 11/03/2022
 ms.topic: reference
 search.app: 
   - Capaedac-fraudprotection
