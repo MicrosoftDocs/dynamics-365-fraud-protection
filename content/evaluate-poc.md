@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article explains how to evaluate proof of concept options in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschlegel
-ms.date: 11/01/2022
+ms.date: 11/03/2022
 ms.topic: reference
 search.app: 
   - Capaedac-fraudprotection
