@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection purchase protection. 
 ms.author: cschlegel
-ms.date: 11/02/2022
+ms.date: 11/03/2022
 ms.topic: reference
 search.app: 
   - Capaedac-fraudprotection
@@ -45,24 +45,15 @@ No actions for Merchant and Microsoft/Authorized Partner during this phase. Accu
 
 Below are additional resources to help provide more details of the above-referenced integration steps:
 
-- Dynamics 365 Fraud Protection overview: [overview of Dynamics365 Fraud Protection](/dynamics365/fraud-protection/)
-
-- Create and provision your Azure tenant: [create and provision your Azure tenant](promocode-set-up-dfp-purchased-version.md)
-
-- Set up a trial instance: [set up a trial instance - Dynamics 365 Fraud Protection](promocode-set-up-dfp-trial-version.md)
-
-- Set up a purchased instance: [set up a purchased instance](promocode-set-up-dfp-purchased-version.md)
-
-- Configure user access and assign roles: [configure user access & roles](configure-user-access.md)
-
-- Set up purchase protection: [set up purchased protection](promocode-set-up-purchase-protection.md)
-
-- Set up device fingerprinting: [set up device fingerprinting](device-fingerprinting.md)
-
-- Integrate purchase protection APIs steps: [integrate purchase protection APIs](integrate-real-time-api.md)
-
-- **Integrate purchase APIs schema documented at:** [swagger](https://dfpswagger.azurewebsites.net/index.html)
-
-- **Integration Training Modules - deploy and work with Dyanmics 365 Fraud Protection:** [integration training modules](/training/paths/deploy-work-account-purchase-protection/)
+- [Fraud Protection overview](/dynamics365/fraud-protection/)
+- [Create and provision your Azure tenant](promocode-set-up-dfp-purchased-version.md)
+- [Set up a trial instance of Fraud Protection](promocode-set-up-dfp-trial-version.md)
+- [Set up a purchased instance of Fraud Protection](promocode-set-up-dfp-purchased-version.md)
+- [Configure user access](configure-user-access.md)
+- [Set up purchased protection](promocode-set-up-purchase-protection.md)
+- [Set up device fingerprinting](device-fingerprinting.md)
+- [Integrate purchase protection APIs](integrate-real-time-api.md)
+- [Integrate purchase APIs schema](https://dfpswagger.azurewebsites.net/index.html)
+- [Integration training modules](/training/paths/deploy-work-account-purchase-protection/)
 
  
