@@ -1,9 +1,8 @@
 ---
 author: josaw1
 description: This article explains how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
-
 ms.author: josaw
-ms.date: 11/02/2022
+ms.date: 11/03/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -53,72 +52,76 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 
 ## Set up device fingerprinting
 
-To set up device fingerprinting, follow these steps.
+Setting up device fingerprinting is accomplished in two phases.
 
-1. Configure the DNS SSL certificate and upload it to the Fraud Protection portal.
+1. Configure the Domain Name Server (DNS) Secure Sockets Layer (SSL) certificate and upload it to the Fraud Protection portal.
 1. Implement device fingerprinting (on web or mobile app). 
 
-The sections below provide detailed instructions on these steps. Please note that the first step is only needed once, but the second step needs to be repeated once for each website or mobile app where device fingerprinting is to be enabled. 
+The sections below provide detailed instructions on these phases. The first phase only needs to be implemented once, but the second phase must be repeated once for each website or mobile app where device fingerprinting is to be enabled. 
 
-### Setup DNS and provide an SSL certificate
-<!--Step 1-->
+### Set up DNS and generate a SSL certificate
 
-To set up DNS and provide an SSL certificate, follow these steps.
+Complete the follwing procedures to set up DNS and generate a SSL certificate.
 
-1. Select a subdomain under your root domain.For example, select **f.contoso.com**. Any prefix can be used.
-2. For the selected subdomain, create a canonical name (CNAME) that points to **fpt.dfp.microsoft.com**.For example, **Merchant website**: www.contoso.com, **DNS record**: f.contoso.com, which points to fpt.dfp.microsoft.com.
+#### Set up DNS
 
-To set up the Secure Sockets Layer (SSL) certificate, follow these steps.
+To set up DNS, follow these steps.
 
-1. For back-end onboarding, generate the SSL certificate for the selected subdomain. You can add all the subdomains in **Certificate’s Subject Alternative Name** and create one SSL Certificate.
-2. Go to the Fraud Protection portal [portal](https://dfp.microsoft.com) and navigate to the **Integration** page from left hand menu. 
-3. Select **Edit** and then select **Next** on the following page to reach the page titled Upload SSL certificate. 
-4. Click **Select Certificate** button and upload the SSL Certificate generated in Step a) . If your certificate has a password, then enter it in the text box below and then select **Upload**. 
+1. Select a subdomain under your root domain, for example, `f.contoso.com`. Any prefix can be used.
+1. For the selected subdomain, create a canonical name (CNAME) that points to `fpt.dfp.microsoft.com`. 
+
+#### Generate and upload SSL certificate
+
+To generate and upload a SSL certificate, follow these steps.
+
+1. For back-end onboarding, generate the SSL certificate for the selected subdomain. You can create one SSL certificate and add all the subdomains in **Certificate’s Subject Alternative Name**.
+2. Go to the [Fraud Protection portal](https://dfp.microsoft.com), and in the left navigation pane, select **Integration**. 
+3. On the **Integration** page, select **Edit**, and then on the following page select **Next** to open the **Upload SSL certificate** page. 
+4. Select **Select Certificate**, and then upload the SSL certificate you generated. If your certificate has a password, enter it in the text box, and then select **Upload**. 
 
 > [!NOTE]
 > Only .pfx files are supported. It may take a few minutes for certificate to propagate to the device fingerprinting servers. 
 
 ## Implement device fingerprinting
-<!--Step 2>
 
-Your website or application needs to initiate device fingerprinting requests a few seconds before a transaction is sent to Fraud Protection for risk evaluation (such as a transaction for adding a payment instrument, sign-in, or checkout). This would ensure that Fraud Protection has received all the data necessary to make an accurate assessment. The below sections provide detailed instructions to enable device fingerprinting on websites and mobile Apps. 
+Your website or application must initiate device fingerprinting requests a few seconds before a transaction is sent to Fraud Protection for risk evaluation (such as a transaction for adding a payment instrument, sign-in, or checkout). This ensures that Fraud Protection has received all the data necessary to make an accurate assessment. The following sections provide detailed instructions on how to enable device fingerprinting on websites and mobile apps. 
 
-Follow these steps on your website.
+To implement device fingerprinting, follow these steps.
 
-- Insert a **javascript** on the webpage/application where you want collect device fingerprinting information.   
+1. Modify the following javascript script code and insert it on the webpage/application where you want to collect device fingerprinting information.   
 
-    ```JavaScriptCopy
-    <script src="https://fpt.<Your_Sub_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
+    ```JavaScript
+    <script src="https://fpt.<Your_Root_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
     ```
 
-    - **Your\_Root\_Domain** – The root domain of the merchant website.
-    - **session\_id** – The unique session identifier of the device created by the merchant. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that you use a globally unique identifier (GUID) for the session ID, this approach isn't required.
-    - **instance\_id** – A placeholder for the instance ID that represents you. Use the instance identifier (**instance\_id** value) listed on the **Account Information** dashboard tile in the Dynamics 365 Fraud Protection evaluate experience. You must have this value to integrate device fingerprinting with your website.
+    - **Your\_Root\_Domain** – The root domain of the client website.
+    - **session\_id** – The unique session identifier of the device created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although it is recommended that you use a globally unique identifier (GUID) for the session ID, this isn't required.
+    - **instance\_id** – A placeholder for the instance ID that represents you. Use the instance identifier (**instance\_id** value) listed on the **Account Information** dashboard tile of the Fraud Protection evaluate experience. You must have this value to integrate device fingerprinting with your website.
 
     **Example**
 
-    ```JavaScriptCopy
-    <script src="https://Your_Sub_Domain/mdt.js?session_id=211d403b-2e65-480c-a231-fd1626c2560e&instanceId=b472dbc3-0928-4577-a589-b80090117691" type="text/javascript"></script>
+    ```JavaScript
+    <script src="https://fpt.contoso.com/mdt.js?session_id=211d403b-2e65-480c-a231-fd1626c2560e&instanceId=b472dbc3-0928-4577-a589-b80090117691" type="text/javascript"></script>
     ```
 
-    Here is an example of a response for mdt.js.
+    Here is an example of a response for mdt.js:
 
-    ```JavaScriptCopy
+    ```JavaScript
    window.dfp={url:"https://Your_Sub_Domain/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};window.dfp.doFpt=function(doc){var frm,src;true&&(frm=doc.createElement("IFRAME"),frm.id="fpt_frame",frm.style.width="1px",frm.style.height="1px",frm.style.position="absolute",frm.style.visibility="hidden",frm.style.left="10px",frm.style.bottom="0px",frm.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;left:-200;border:0px"),src="https://Your_Sub_Domain/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",frm.setAttribute("src",src),doc.body.appendChild(frm))};
     ```
 
 2. Load device fingerprinting after the page's elements are loaded.
 
-    ```JavaScriptCopy
+    ```JavaScript
     window.dfp.doFpt(this.document);
     ```
 
-3. When you submit transactions in the Dynamics 365 Fraud Protection API, set a session ID in the **deviceContextId** field.
-4. Set the **'device.ipAddress'** field to the customer IP address that your website receives when the customer uses your site.
+3. When you submit transactions in the Fraud Protection API, set a session ID in the **deviceContextId** field.
+4. Set the **device.ipAddress** field to the customer IP address that your website receives when a customer uses your site.
 
-## To enable fingerprinting on a mobile app: 
+## Enable fingerprinting on a mobile app
 
-For mobile apps, device fingerprinting integration supports Android, iOS and React Native platforms via SDK integration. You can learn more about the mobile reference implementation in the following documents:  
+For mobile apps, device fingerprinting integration supports Android, iOS, and React Native platforms via SDK integration. For more information about the mobile reference implementation, see the following articles:  
 
 - [Dynamics 365 Fraud Protection mobile SDK for Android](mobile-sdk-android.md) 
 - [Dynamics 365 Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md) 
