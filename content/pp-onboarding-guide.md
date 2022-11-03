@@ -46,7 +46,7 @@ The following table lists the environment setup tasks, owner teams, and estimate
 | Task | Owner team | Estimated time |
 |------|------------| ---------------|
 | Historical data upload (optional) | Client | One (1) day |
-| Partner training (rules engine, velocity SRO, etc.)  | Client and Microsoft/authorized partner | One (1) day |
+| Partner training | Client and Microsoft/authorized partner | One (1) day |
 | Transaction acceptance booster (TAB) opt-in | Microsoft/authorized partner | One (1) day |
 | Rule creation and migration | Client | Two (2) days |
 
