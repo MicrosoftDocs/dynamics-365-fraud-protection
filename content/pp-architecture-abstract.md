@@ -31,9 +31,9 @@ The following APIs and components are required to take advantage of Fraud Protec
 
 - **Device fingerprinting (front end)** <!-- Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address. This feature is based on artificial intelligence (AI) and can be used as input to the process of fraud assessments. It can be implemented for both browser and mobile based. A Java-based web SDK (software development kits) and iOS, Android and React Native SDKs for mobile applications are available.-->
 - **Purchase assessment API (back end)** - This API collects data attributes that include transaction context. This data is compared to data already within the fraud protection network, where machine learning will search for linkages and similarities to known emerging fraud patterns.
-- **Bank event API (back end)** - This API is used to inform Fraud Protection of the bank’s authorization decision (for example, approving or rejecting a transaction).  It can also be used to inform Fraud Protection about related events such as card verification value (CVV) or 3D Secure (3DS) challenges. 
-- **Purchase status API (back end)** - This API sends purchase status, such as approving and rejecting transactions, back to Fraud Protection. This feedback helps ensure that the right information is considered by Fraud Protection machine learning going forward, and helps provide you with robust reporting.  
-- **Label API (back end)** - This API enables you to send additional information to Fraud Protection about transactions, account or payment instrument details, chargebacks, refunds, and reversals. The labels API provides knowledge for model training based on a set of fraud signals.
+- **Bank event API (back end)** - This API is used to inform Fraud Protection of the bank’s authorization decision.  For example, approving or rejecting the transaction.  It can also be used to inform Fraud Protection  about related events such as a CVV or 3DS challenge. 
+- **Purchase status (back end)** - Purchase status is used to inform Dynamics Fraud Protection of the merchant's final decision on the transaction. Knowing whether the transaction happened or was rejected for any reason (e.g., insufficient inventory, a trade block, etc.) it is important to let Fraud Protection  adapt and learn from the merchant’s fraud patterns. 
+- **Label API (back end)** - Enables you to send additional information to Microsoft Dynamics 365 Fraud Protection in addition to the data that informs the virtual fraud analyst and scorecard features. The labels API provides additional knowledge for model training based on an additional set of fraud signals.
 
 ## How Fraud Protection purchase protection connects with clients
 
@@ -69,10 +69,3 @@ As you can see in **(number 3)**, Risk Assessment. These device attributes go in
 On the right-hand side in **(number 4)** you can see we are also partnering with a set of issuing banks via a feature we call Transaction Acceptance Booster. This feature helps you achieve higher bank acceptance rates by sharing some of the intelligence Dynamics 365 Fraud Protection has about the transaction, known as Trust Knowledge, with the issuing banks.  This is data that the issuing bank would not see without Dynamics 365 Fraud Protection and allows them to have higher confidence in their assessment of the transaction and therefore accept many transactions that they would otherwise have rejected.  
 
 **API Abstract Diagram -** Below is an abstract diagram of how Microsoft Dynamics 365 Fraud Protection Purchase Protection connects with our customer’s front and back end and provides API descriptions. For Dynamics Fraud Protection to do its best job of adapting to fraud patterns, it is vital for DFP to understand the lifecycle of the transaction and so DFP offers a set of APIs that let the merchant describe that to us.  -->
- 
-
-
-
- 
-
- 
