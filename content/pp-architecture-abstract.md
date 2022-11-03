@@ -53,7 +53,7 @@ The numbered elements in the illustration are further explained below.
 
 **Label API (5, back end)** - The label API is a back-end integration, and collects corresponding feedback information to update Fraud Protection with the final status of a transaction.
 
-# Additional resources
+## Additional resources
 
 [Purchase protection overview](purchase-protection.md)
 
