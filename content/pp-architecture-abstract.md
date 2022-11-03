@@ -41,7 +41,7 @@ The following illustration shows how Fraud Protection purchase protection typica
 
 The numbered elements in the illustration are further explained below.
 
-![API-Abstract](media/pp-architecture-api-abstract.png)
+![How Fraud Protection purchase protection typically connects with clients](media/pp-architecture-api-abstract.png)
 
 **Device fingerprinting (1, front end)** - Browser-based and mobile-based device fingerprinting is embedded on the front-end side. This feature works with Fraud Protection to track and link unrelated events in the fraud network to help identify patterns of fraud. The data collected isn't just a static list of attributes but also includes dynamically captured data based on the evaluation of specific combinations of attributes such as browser, system, network, and geolocation attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to identify the device. Device fingerprinting runs on Azure, and includes benefits from proven cloud scalability, reliability, and enterprise-grade security.   
 
