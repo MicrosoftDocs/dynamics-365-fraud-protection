@@ -122,6 +122,8 @@
   items: 
   - name: Overview
     href: purchase-protection.md
+  - name: How purchase protection works
+    href: how-pp-works.md
   - name: Set up purchase protection
     items: 
     - name: Set up a trial instance of Fraud Protection
