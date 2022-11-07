@@ -1,6 +1,6 @@
 ---
 author: cschlegel2
-description: This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection purchase protection. 
+description: This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection purchase protection.
 ms.author: cschlegel
 ms.date: 11/03/2022
 ms.topic: reference
@@ -15,15 +15,15 @@ title: Onboarding planning for account purchase protection
 
 # Onboarding planning for account purchase protection
 
-This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection purchase protection. Onboard planning will help you understand and plan for the project implementation milestones of Fraud Protection purchase protection integration and onboarding. For more information on the integration steps, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
+This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection purchase protection. Onboard planning will help you understand and plan for the project implementation milestones of Fraud Protection purchase protection integration and onboarding. For more information about the integration steps, see [Set up purchase protection](promocode-set-up-purchase-protection.md).
 
 ## Onboarding milestones
 
 The tables in this section provide details about the onboarding milestones for the environment setup and application programming interface (API) integration, protection, data accumulation, and advanced modeling phases.
 
 > [!NOTE]
-> - All timeframes below are estimates. Actual time taken can vary based on Merchant, and Microsoft/Authorized Partner availability and focus. 
-> - Microsoft performs the data validation, but clients must enable API calls and start sending a small percentage of production traffic first. Post validation, clients can send all traffic which will help the project move to the next step. 
+> - All timeframes that are  mentioned in this article are estimates. The actual time that is required can vary, based on merchant and Microsoft/authorized partner availability and focus.
+> - Microsoft does the data validation, but clients must first enable the API calls and start to send a small percentage of production traffic. After validation is completed, clients can send all traffic to help the project move to the next step.
 
 ### Environment setup and API integration phase
 
@@ -31,13 +31,13 @@ The following table lists the environment setup tasks, owner teams, and estimate
 
 | Task | Owner team | Estimated time |
 |------|------------| ---------------|
-| Environment provisioning and setup | Client and Microsoft/authorized partner | One (1) day |
-| Device fingerprinting integration (web and/or mobile) | Client and Microsoft/authorized partner | One (1) week |
-| Device fingerprinting data validation (web and/or mobile) | Microsoft/authorized partner | One (1) week |
-| Purchase API integration and validation | Client and Microsoft/authorized partner | Two (2) weeks (This task can be done in parallel with the preceding tasks.) |
-| Bank event APT integration and validation | Client and Microsoft/authorized partner | Two (2) weeks (This task can be done in parallel with the preceding tasks.) |
-| Purchase status API integration and validation | Client and Microsoft/authorized partner | Two (2) weeks (This task can be done in parallel with the preceding tasks.) |
-| Label and chargeback API integration and validation | Client and Microsoft/authorized partner | Two (2) weeks (This task can be done in parallel with the preceding tasks.) |
+| Environment provisioning and setup | Client and Microsoft/authorized partner | One day |
+| Device fingerprinting integration (web and/or mobile) | Client and Microsoft/authorized partner | One week |
+| Device fingerprinting data validation (web and/or mobile) | Microsoft/authorized partner | One week |
+| Purchase API integration and validation | Client and Microsoft/authorized partner | Two weeks (This task can be done in parallel with the preceding tasks.) |
+| Bank event APT integration and validation | Client and Microsoft/authorized partner | Two weeks (This task can be done in parallel with the preceding tasks.) |
+| Purchase status API integration and validation | Client and Microsoft/authorized partner | Two weeks (This task can be done in parallel with the preceding tasks.) |
+| Label and chargeback API integration and validation | Client and Microsoft/authorized partner | Two weeks (This task can be done in parallel with the preceding tasks.) |
 
 ### Protection phase
 
@@ -45,17 +45,18 @@ The following table lists the environment setup tasks, owner teams, and estimate
 
 | Task | Owner team | Estimated time |
 |------|------------| ---------------|
-| Historical data upload (optional) | Client | One (1) day |
-| Partner training | Client and Microsoft/authorized partner | One (1) day |
-| Transaction acceptance booster (TAB) opt-in | Microsoft/authorized partner | One (1) day |
-| Rule creation and migration | Client | Two (2) days |
+| Historical data upload (optional) | Client | One day |
+| Partner training | Client and Microsoft/authorized partner | One day |
+| Transaction acceptance booster (TAB) opt-in | Microsoft/authorized partner | One day |
+| Rule creation and migration | Client | Two days |
 
 ### Data accumulation phase
 
-No actions for the client and Microsoft/Authorized partner during this phase. Accumulation starts right after data quality is signed off during the API integration phase. Continue forward once the criteria below have been achieved:                                                                                                               
-- At least 500 fraudulent transactions.                                                                      
-- At least 5000 non-fraudulent transactions.                                                                    
-- At least four weeks data with more than 70% label maturity rate.
+No actions are required for the client and Microsoft/authorized partner during this phase. Accumulation begins immediately after data quality is signed off on during the API integration phase. Move on to the next phase after the following criteria have been met:
+
+- At least 500 fraudulent transactions
+- At least 5,000 non-fraudulent transactions
+- At least four weeks of data that has a label maturity rate above 70 percent
 
 ### Advanced modeling phase
 
@@ -63,8 +64,8 @@ The following table lists the environment setup tasks, owner teams, and estimate
 
 | Task | Owner team | Estimated time |
 |------|------------| ---------------|
-| Model training | Client | Two (2) weeks |
-| Model shadow on production  | Client and Microsoft/authorized partner | One (1) week |
+| Model training | Client | Two weeks |
+| Model shadow on production | Client and Microsoft/authorized partner | One week |
 | Model switch | Microsoft/authorized partner | Upon notification |
 
 #### Advanced protection and fraud ops tuning
@@ -75,9 +76,9 @@ The following table lists the task, owner team, and estimated time for advanced 
 |------|------------| ---------------|
 | Score analysis and rule adjustment to optimize key performance indicators (KPIs) | Client | Ongoing |
 
-## Resources 
+## Resources
 
-The following resources provide more information for the above-referenced integration steps.
+The following resources provide more information for the integration steps that are referenced in this topic:
 
 - [Fraud Protection overview](/dynamics365/fraud-protection/)
 - [Create and provision your Azure tenant](promocode-set-up-dfp-purchased-version.md)
@@ -89,5 +90,3 @@ The following resources provide more information for the above-referenced integr
 - [Integrate purchase protection APIs](integrate-real-time-api.md)
 - [Integrate purchase APIs schema](https://dfpswagger.azurewebsites.net/index.html)
 - [Integration training modules](/training/paths/deploy-work-account-purchase-protection/)
-
- 
