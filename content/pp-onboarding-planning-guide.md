@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection purchase protection.
 ms.author: cschlegel
-ms.date: 11/03/2022
+ms.date: 11/08/2022
 ms.topic: reference
 search.app: 
   - Capaedac-fraudprotection
