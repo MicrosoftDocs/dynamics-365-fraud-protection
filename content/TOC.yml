@@ -6,6 +6,8 @@
   items: 
   - name: Get started training module
     href: /training/modules/get-started-fraud-protection/
+  - name: Evaluate proof of concept options
+    href: evaluate-poc.md
   - name: Pay as you go billing
     href: pay-as-you-go.md
   - name: Assessment and usage metering
@@ -66,6 +68,10 @@
   items: 
   - name: Overview
     href: ap-overview.md
+  - name: How account protection works
+    href: how-ap-works.md
+  - name: Onboarding planning
+    href: ap-onboarding-planning-guide.md
   - name: Set up account protection
     items: 
     - name: Set up a trial instance of Fraud Protection
@@ -122,6 +128,8 @@
   items: 
   - name: Overview
     href: purchase-protection.md
+  - name: How purchase protection works
+    href: how-pp-works.md    
   - name: Onboarding planning
     href: pp-onboarding-planning-guide.md
   - name: Set up purchase protection

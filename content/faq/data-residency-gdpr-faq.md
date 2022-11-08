@@ -27,7 +27,7 @@ Fraud Protection customers can choose the geography where Fraud Protection store
 
 Microsoft implements a common set of physical security best practices across its datacenters. Main access to the datacenter facilities is typically restricted to a single point of entry that is staffed by security personnel. The main interior or reception areas have electronic card access control devices on the perimeter doors to restrict access to the interior facilities. Rooms inside the Microsoft datacenters that contain critical systems (servers, generators, electrical panels, and network equipment) are restricted through various security mechanisms, such as electronic card access control, keyed locks on each individual door, man traps, and biometric devices.
 
-For more information about the physical security of Azure datacenters, see [Physical security of Azure datacenters](/azure/security/fundamentals/physical-security.md).
+For more information about the physical security of Azure datacenters, see [Physical security of Azure datacenters](/azure/security/fundamentals/physical-security).
 
 #### Will Fraud Protection provide, upon request, the physical location or geography where a customer's data is stored? Does Fraud Protection allow customers to define acceptable geographical locations for data routing or resource instantiation?
 
