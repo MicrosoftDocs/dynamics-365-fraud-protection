@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 11/03/2022
+ms.date: 11/08/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
