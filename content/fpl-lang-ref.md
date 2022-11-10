@@ -18,7 +18,7 @@ Microsoft Dynamics 365 has its own rich and expressive language to help you defi
 
 You can use this language today to define rules and velocities. For more information, see [Manage rules](rules.md) and [Perform velocity checks](velocities.md).
 
-This language reference guide includes the complete list of operators, functions, and keywords that make up the language:
+This language reference guide includes the complete list of operators, functions, and statements that make up the language:
 
 - [Keywords](fpl-lang-ref.md#keywords)
 - [Decision functions](fpl-lang-ref.md#decision-functions)
@@ -46,18 +46,15 @@ The guide also covers additional articles. Here are some examples:
 - [Using external calls and velocities](fpl-lang-ref.md#using-external-calls-and-velocities)
 - [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes)
 
-## Keywords
+## Statements
 
-| Keyword | Description | Example |
-|---------|-------------|---------|
-| RETURN  | <p>A **RETURN** statement terminates rule execution.</p><p>The statement must specify a valid [decision function](fpl-lang-ref.md#decision-functions): **Approve()**, **Reject()**, **Challenge()**, or **Review()**.</p><p>The statement can also specify one or more observation functions: **Output()** or **Trace()**</p> | <p>RETURN Reject()</p><p>RETURN Reject(), Output(key=@"user.email")</p><p>RETURN Reject(), Trace(ip=@"device.ipAddress")</p>|
-| OBSERVE | An **OBSERVE** statement does not terminate rule execution.</p><p>When an **OBSERVE** clause is hit, it will be logged in the API response, however, clauses will continue to evaluate until a **RETURN** statement is reached.</p><p>An **OBSERVE** statement must be followed by an [observation function](fpl-lang-ref.md#observation-functions).</p> | OBSERVE Output()</p><p>OBSERVE Output(reason=”high score”)</p> |
-| WHEN    | A **WHEN** statement specifies a Boolean condition. The rest of the block is then run only if the condition is evaluated to *true*. | WHEN @"riskscore" \> 400 |
-| SELECT  | A **SELECT** statement is used in a velocity to specify an aggregation function. | SELECT Count() AS velocityName |
-| AS      | An **AS** statement is used to create an alias for your velocity. This alias can then be referenced from rules. | SELECT Count() AS velocityName |
-| FROM    | A **FROM** statement is used to specify an assessment to observe a velocity on. | FROM Purchase |
-| GROUPBY | <p>A **GROUPBY** statement specifies a property or an expression. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that is requested in the **SELECT** statement.</p><p>For example, to calculate an aggregation for each user, use **GROUPBY @"user.userId"**.</p> | GROUPBY @"user.userId" |
-| LET     | <p>A **LET** statement is used to define a new variable. The scope of the variable is the rule or velocity set that it's defined in. Variable names should be prefixed with a dollar sign ($).</p><p>For more information, see [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables).</p> | LET $fullName = @"user.firstName" + @"user.lastName" |
+| Statement | Syntax | Description | Example |
+|---------|-------------|-------------|---------|
+| RETURN  | RETURN \<<i>DecisionFunction</i>\> <br>[ ,\<<i>ObservationFunction</i>\>(\<<i>KeyValuePairs</i>\>) ] <br>[ WHEN \<<i>BooleanExpression</i>\> ] |<p>A **RETURN** statement terminates rule execution.</p><p>The statement must specify a valid [decision function](fpl-lang-ref.md#decision-functions): **Approve()**, **Reject()**, **Challenge()**, or **Review()**.</p><p>The statement can also specify one or more [observation functions](fpl-lang-ref.md#observation-functions): **Output()** or **Trace()**</p> <p> Finally, it can include a **WHEN** clause to specify the condition under which it should do any of the above. | <p>RETURN Reject()</p><p>RETURN Reject(), Output(key=@"user.email")</p><p>RETURN Reject(), Trace(ip=@"device.ipAddress") WHEN @"riskscore">400</p>|
+| OBSERVE | OBSERVE \<<i>ObservationFunction</i>\>(\<<i>KeyValuePairs</i>\>) <br>[ WHEN \<<i>BooleanExpression</i>\> ]|An **OBSERVE** statement does not terminate rule execution. Clauses will continue to evaluate until a **RETURN** statement is reached.</p><p>An **OBSERVE** statement must be followed by one or more [observation functions](fpl-lang-ref.md#observation-functions).  </p><p>If a **WHEN** clause is present, it must evaluate to **True** for the statement to cause the key-value pairs specified in the observations function(s) to be logged to the API response and/or trace logs.</p> | OBSERVE Output()</p><p>OBSERVE Output(reason=”high score”)</p> <p> OBSERVE TRACE(ip=@"device.ipAddress") WHEN @"riskscore" > 400
+| WHEN    |WHEN \<<i>BooleanExpression</i>\> |A **WHEN** statement is similar to the **WHEN** clauses on the other statements, but it stands alone. It is used only in the Condition section of the various rule types. It specifies a Boolean condition which determines if the entire rule, velocity set or routing rule should run.</p> | WHEN @"riskscore" \> 400 |
+| SELECT  | SELECT <i>\<AggregationFunction\></i> <br> AS <i>\<VelocityName\></i> <br> FROM <i>\<AssesmentType\></i> <br> GROUPBY <i>\<GroupExpression\></i> <br> [ WHEN <i>\<BooleanExpression\></i> ] |A **SELECT** statement is used in velocity set to define a velocity.  It must specify an [aggregation function](fpl-lang-ref.md#aggregation-functions). </p><p> The required **AS** clause is used to create an alias for your velocity. This alias can then be referenced from rules.</p><p>The required **FROM** clause is used to specify which assessment type to observe a velocity on. Valid values are **Purchase**, **AccountLogin**, **AccountCreation**, **Chargeback**, **BankEvent**, and **CustomAssessment**. </p><p>The required **GROUPBY** clause specifies a property or an expression. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that is requested in the **SELECT** statement.</p><p>For example, to calculate an aggregation for each user, use **GROUPBY @"user.userId"**.</p><p> The optional **WHEN** clause specifies a Boolean expression that determines if the assessment being processed should be included in the velocity being defined. </p>| SELECT Count() AS velocityName </p>|
+| LET     | |<p>A **LET** statement is used to define a new variable. The scope of the variable is the rule or velocity set that it's defined in. Variable names should be prefixed with a dollar sign ($).</p><p>For more information, see [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables).</p> | LET $fullName = @"user.firstName" + @"user.lastName" |
 
 ## Decision functions
 
