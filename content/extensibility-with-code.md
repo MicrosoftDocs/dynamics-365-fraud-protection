@@ -22,7 +22,7 @@ You can use code for the following purposes:
 
 ## Getting started
 
-There are many software development kits (SDKs) available for working with events [from Event Hubs in .NET, Java, Python, JavaScript, Go, and Apache Storm](/azure/event-hubs/sdks?blank=true). 
+There are many software development kits (SDKs) available for working with events [from Event Hubs in .NET, Java, Python, JavaScript, Go, and Apache Storm](/azure/event-hubs/sdks). 
 
 For an extensive tutorial about how to send and receive events from Azure Event Hubs, see [Send events to or receive events from event hubs by using JavaScript (azure/event-hubs version 5)](/azure/event-hubs/get-started-node-send-v2). You can also access instructions for the remaining code SDKs from the left navigation in Fraud Protection.
 
