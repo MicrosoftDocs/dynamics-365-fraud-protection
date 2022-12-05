@@ -87,7 +87,7 @@ The following resources provide more information about the integration steps tha
 - [Set up account protection](promocode-set-up-account-protection.md)
 - [Configure Dynamics Fraud Protection with Azure Active Directory B2C](/azure/active-directory-b2c/partner-dynamics-365-fraud-protection)
 - [Set up device fingerprinting](device-fingerprinting.md)
-- [integrate account protection APIs](integrate-ap-api.md)
+- [Integrate account protection APIs](integrate-ap-api.md)
 - [Integrate purchase APIs schema documentation](https://dfpswagger.azurewebsites.net/index.html)
 - [Integration training modules](/training/paths/deploy-work-account-purchase-protection/)
 - [Account protection manage lists and rules](rules.md)
