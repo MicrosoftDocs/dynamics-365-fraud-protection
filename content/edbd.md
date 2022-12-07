@@ -14,6 +14,26 @@ title: European Data Boundary Descriptions
 
 # European Data Boundary Descriptions
 
+> [!IMPORTANT]
+> For comprehensive details about Microsoft's EU Data Boundary commitment, refer to [insert link here](http://www.microsoft.com).
+
+The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, there are some scenarios where Microsoft must transfer data to meet cloud and service operational requirements. 
+
+## Data egress in Dynamics 365 Fraud Protection
+
+Fraud Protection transmits all or a significant amount of Customer Data collected from credit card transactions and device fingerprinting in a pseudonymized format to a separate database in the US for machine learning modeling and processing across all services tenants (Network database). These data are further encrypted and the crypto keys are hashed and salted for increased security protection. 
+
+## Additional resources
+
+- [Device fingerprinting](device-fingerprinting.md)
+- [Transaction account booster (TAB)](tab.md)
+- [insert link to transparency doc here](http://www.microsoft.com)
+
+
+
+
+
+
 
 A device fingerprint contains information that is collected about a remote computing device for the purpose of identifying the device. Device fingerprinting collects device telemetry during online actions, including hardware information, browser information, geographic information, and the Internet Protocol (IP) address. 
 Dynamics 365 Fraud Protection provides a device fingerprinting service so that device identification can be used as input to the process of fraud assessment. This service helps Fraud Protection track and link seemingly unrelated events in the fraud protection network to help identify patterns of fraud. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device.
