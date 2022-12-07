@@ -280,6 +280,8 @@
     href: compliance-and-security.md
   - name: Privacy protection for customer data
     href: data-processing-protection.md
+  - name: European Data Boundary Descriptions
+    href: edbd.md
   - name: FAQs
     items:
     - name: Legal considerations FAQ
