@@ -83,4 +83,4 @@ Yes, Fraud Protection follows industry standard best practices. As is outlined i
 
 [Compliance FAQ](compliance-faq.md)
 
-[European Data Boundary Descriptions](../edbd.md)
+[EU Data Boundary exceptions for Fraud Protection](../edbd.md)
