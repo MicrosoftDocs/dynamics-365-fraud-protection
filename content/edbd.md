@@ -15,7 +15,7 @@ title: European Data Boundary Descriptions
 # European Data Boundary Descriptions
 
 > [!IMPORTANT]
-> For comprehensive details about Microsoft's EU Data Boundary commitment, refer to [insert link here](http://www.microsoft.com).
+> For comprehensive details about Microsoft's EU Data Boundary commitment, refer to [insert link here](https://www.microsoft.com).
 
 The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, there are some scenarios where Microsoft must transfer data to meet cloud and service operational requirements. 
 
@@ -36,7 +36,7 @@ Customers may opt in to sending their transaction data, which can include bank i
 
 ## Additional resources
 
-- [insert link to transparency doc here](http://www.microsoft.com)
+- [insert link to transparency doc here](https://www.microsoft.com)
 - [Privacy protection for customer data](data-processing-protection.md)
 - [Data residency FAQ](faq/data-residency-gdpr-faq.md)
 - [Compliance FAQ](faq/compliance-faq.md)
@@ -44,6 +44,6 @@ Customers may opt in to sending their transaction data, which can include bank i
 - [Legal considerations FAQ](faq/legal-faq.md)
 - [Privacy and security FAQ](faq/privacy-security-faq.md)
 - [Device fingerprinting](device-fingerprinting.md)
-- [Transaction account booster (TAB)](tab.md)
+- [Transaction account booster (TAB)](transaction-acceptance-booster.md)
 
 
