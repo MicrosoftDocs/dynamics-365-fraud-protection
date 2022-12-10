@@ -8,16 +8,16 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: EU Data Boundary exceptions for Fraud Protection
+title: EU Data Boundary exceptions for Dynamics 365 Fraud Protection
 
 ---
 
-# EU Data Boundary exceptions for Fraud Protection
+# EU Data Boundary exceptions for Dynamics 365 Fraud Protection
 
 > [!IMPORTANT]
 > For comprehensive details about Microsoft's EU Data Boundary commitment, refer to [insert link here](https://www.microsoft.com).
 
-The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, there are some scenarios supported by Dynamics 365 Fraud Protection where Microsoft must transfer data to meet operational requirements. 
+The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, there are some scenarios supported by Fraud Protection where Microsoft must transfer data to meet operational requirements. 
 
 ## Data egress in Fraud Protection
 
