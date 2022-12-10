@@ -16,7 +16,7 @@ title: Data residency FAQ
 This article provides answers to frequently asked questions (FAQ) about data residency in Microsoft Dynamics 365 Fraud Protection.
 
 >[!NOTE]
->For information about Fraud Protection and Microsoft's EU Data Boundary commitment, refer to the [European Data Boundary Descriptions](../edbd.md) article.
+>For information about Fraud Protection and Microsoft's EU Data Boundary commitment, refer to the [EU Data Boundary exceptions for Fraud Protection](../edbd.md) article.
 
 #### Can customers choose the geography where Fraud Protection stores and processes their data? If so, will any data move outside that geography?
 
@@ -55,7 +55,7 @@ Yes. The up-to-date contact information for the data privacy officer is availabl
 
 ## Additional resources
 
-[European Data Boundary Descriptions](../edbd.md)
+[EU Data Boundary exceptions for Fraud Protection](../edbd.md)
 
 [Service FAQ](service-faq.md)
 
