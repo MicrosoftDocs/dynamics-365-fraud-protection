@@ -55,7 +55,7 @@ Yes. The up-to-date contact information for the data privacy officer is availabl
 
 ## Additional resources
 
-[European Data Boundary Descriptions](edbd.md)
+[European Data Boundary Descriptions](../edbd.md)
 
 [Service FAQ](service-faq.md)
 
