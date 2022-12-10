@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions (FAQ) about data residency in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/02/2022
+ms.date: 12/09/2022
 ms.topic: faq
 search.app: 
   - Capaedac-fraudprotection
@@ -15,11 +15,15 @@ title: Data residency FAQ
 
 This article provides answers to frequently asked questions (FAQ) about data residency in Microsoft Dynamics 365 Fraud Protection.
 
+>[!NOTE]
+>For information about Fraud Protection and Microsoft's EU Data Boundary commitment, refer to the [European Data Boundary Descriptions](../edbd.md) article.
+
 #### Can customers choose the geography where Fraud Protection stores and processes their data? If so, will any data move outside that geography?
 
 Yes, customers can choose the geography where Fraud Protection stores the master copy of their data by selecting it in a list of geographies where Fraud Protection is present (US, Canada, and EU). To provide accurate scores and global fraud insights by using Fraud Protection Network, Fraud Protection must store and process some data outside a customer's selected geography.
 
 In addition, the pseudonymized data inside the Fraud Protection Network is stored and processed in a common set of regions and datacenters that have been designated by the Fraud Protection team. The primary data warehouse is in the United States. This data includes pseudonymized data that customers contribute and derived data such as features, aggregations, reports, and machine learning models. The list of regions might change over time, but regions are chosen with the goal of providing a low-latency and accurate global fraud assessment for all Fraud Protection Network customers.
+
 
 #### What are the locations that directly process, transmit, or store merchant data? What physical access controls are in place?
 
@@ -50,6 +54,8 @@ Fraud Protection implements a set of technical and organizational measures (TOMs
 Yes. The up-to-date contact information for the data privacy officer is available in the Microsoft data protection addendum on the [Licensing Documents](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) page of the Microsoft Licensing Resources and Documents site.
 
 ## Additional resources
+
+[European Data Boundary Descriptions](edbd.md)
 
 [Service FAQ](service-faq.md)
 
