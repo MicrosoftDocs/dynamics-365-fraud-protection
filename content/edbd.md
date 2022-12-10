@@ -8,20 +8,20 @@ search.app:
   - Capaedac-fraudprotection
 search.audienceType:
   - admin
-title: European Data Boundary Descriptions
+title: EU Data Boundary exceptions for Fraud Protection
 
 ---
 
-# European Data Boundary Descriptions
+# EU Data Boundary exceptions for Fraud Protection
 
 > [!IMPORTANT]
 > For comprehensive details about Microsoft's EU Data Boundary commitment, refer to [insert link here](https://www.microsoft.com).
 
-The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, there are some scenarios where Microsoft must transfer data to meet cloud and service operational requirements. 
+The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, there are some scenarios supported by Dynamics 365 Fraud Protection where Microsoft must transfer data to meet operational requirements. 
 
-## Data egress in Dynamics 365 Fraud Protection
+## Data egress in Fraud Protection
 
-To provide accurate scores and global fraud insights by using the Fraud Protection Network, Fraud Protection must store and process some data outside a customer's selected geography. Fraud Protection transmits all or a significant amount of Customer Data collected from credit card transactions and device fingerprinting in a pseudonymized format to a separate database in the US for machine learning modeling and processing across all services tenants. This data includes pseudonymized data that customers contribute and derived data such as features, aggregations, reports, and machine learning models. This data is further encrypted and the crypto keys are hashed and salted for increased security protection. 
+To provide accurate scores and global fraud insights by using the Fraud Protection Network, Fraud Protection must store and process some data outside a customer's selected geography. Fraud Protection transmits all or a significant amount of Customer Data collected from credit card transactions and device fingerprinting in a pseudonymized format to a separate database in the US for machine learning modeling and processing across all service tenants. This data includes pseudonymized data that customers contribute and derived data such as features, aggregations, reports, and machine learning models. This data is further encrypted and the crypto keys are hashed and salted for increased security protection. 
 
 For more information about what data Fraud Protection processes and how Fraud Protection processes the data, refer to [Privacy protection for customer data](data-processing-protection.md).
 
