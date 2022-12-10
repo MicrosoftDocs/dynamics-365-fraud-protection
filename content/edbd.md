@@ -39,6 +39,10 @@ Customers may opt-in to sending their transaction data which can include bank id
 - [insert link to transparency doc here](http://www.microsoft.com)
 - [Privacy protection for customer data](data-processing-protection.md)
 - [Data residency FAQ](faq/data-residency-gdpr-faq.md)
+- [Compliance FAQ](compliance-faq.md)
+- [Service FAQ](service-faq.md)
+- [Legal considerations FAQ](legal-faq.md)
+- [Privacy and security FAQ](privacy-security-faq.md)
 - [Device fingerprinting](device-fingerprinting.md)
 - [Transaction account booster (TAB)](tab.md)
 
