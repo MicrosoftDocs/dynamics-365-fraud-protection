@@ -31,7 +31,7 @@ The device fingerprinting feature collects data in the region/geography closest 
 
 ### Transaction acceptance booster (TAB)
 
-Customers may opt-in to sending their transaction data which can include bank identification number, email address, mobile phone, etc. to participating card networks and issuing banks participating in the “Transaction acceptance booster” (TAB) program. When the optional feature is turned on by the customer, Fraud Protection will communicate to the external endpoint managed by the corresponding card network or issuing bank which may be hosted outside of the customer’s geography. Customer Data is is stored by the TAB participating bank or card network based on their policies.
+Customers may opt in to sending their transaction data, which can include bank identification number, email address, mobile phone, etc. to participating card networks and issuing banks participating in the “Transaction acceptance booster” (TAB) program. When the optional feature is turned on by the customer, Fraud Protection will communicate to the external endpoint managed by the corresponding card network or issuing bank, which may be hosted outside of the customer’s geography. Customer Data is stored by the TAB participating bank or card network based on their policies.
 
 
 ## Additional resources
