@@ -65,7 +65,7 @@ Yes. As a software as a service (SaaS) application, Fraud Protection runs on Azu
 
 ## Additional resources
 
-[European Data Boundary Descriptions](../edbd.md)
+[EU Data Boundary exceptions for Fraud Protection](../edbd.md)
 
 [Service FAQ](service-faq.md)
 
