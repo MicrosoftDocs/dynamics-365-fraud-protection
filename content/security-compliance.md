@@ -32,7 +32,7 @@ Prior to implementing Fraud Protection, make sure the privacy disclosures in you
 
 Fraud Protection provides tools to help you comply with data subject requests from your customers. These tools enable you to delete and export customer data from the service which has not been processed using deidentification techniques in the fraud network. Data processed in the fraud network cannot be accessed, exported, viewed, or deleted. 
 
-**Note: In order to honor data subject requests, you must provide a user id in your payload for Account Creation, Account Login, and Purchase APIs. If you do not provide a user id for a transaction, that transaction cannot be identified, exported, or deleted.** 
+**Note: The user id field in the API payload for GDPR Delete or Export Calls is mandatory for Fraud protection to successfully process the corresponding data subject requests (DSRs). The user id should be identical to the one that was provided for the Account Creation, Account Login, or Purchase API call for the same Data Subject. If user id is not provided, or a different user id is provided than the one that was provided before, then Fraud Protection cannot identify the transaction and therefore DSRs cannot be fulfilled.** 
 
 For more information, see the following resources:
 - [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
