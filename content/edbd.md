@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides an overview of data egress outside of the European Union that occurs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 12/07/2022
+ms.date: 12/14/2022
 ms.topic: overview
 search.app: 
   - Capaedac-fraudprotection
@@ -17,7 +17,7 @@ title: EU Data Boundary exceptions for Dynamics 365 Fraud Protection
 > [!IMPORTANT]
 > For comprehensive details about Microsoft's EU Data Boundary commitment, refer to [insert link here](https://www.microsoft.com).
 
-The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, there are some scenarios supported by Fraud Protection where Microsoft must transfer data to meet operational requirements. 
+The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, serious threats of fraud from sophisticated users are not constrained by national or geographic boundaries. Malicious actors operate on a worldwide basis leveraging known and newly-discovered vulnerabilities, technical or socially engineered. Therefore, limiting the scope of our fraud detection technology to any given region compromises our ability to offer the best intelligence to detect and prevent online fraud. Fraud protection technologies and professionals are only equipped sufficiently when their scope is enabled to identify patterns, behaviors, and practices on a worldwide basis. Below you will find the scenarios supported by Fraud Protection on a global basis to meet these highly-demanding operational standards. 
 
 ## Data egress in Fraud Protection
 
@@ -27,7 +27,7 @@ For more information about what data Fraud Protection processes and how Fraud Pr
 
 ### Device fingerprinting
 
-The device fingerprinting feature collects data in the region/geography closest to the customer’s device. The data is then replicated across all fingerprinting geographies and matched with the data from other regions. Device fingerprinting is sensitive to latency between the end-user device and the fingerprinting endpoint. Increased latency would result in a significant loss of fingerprinting precision. To decrease latency and improve assessment results, data flows to the US where data processing and storage occur. This intermittent device fingerprinting data is stored for up to 28 days. After 28 days, the master copy of the data is stored in the customer's environment in the provisioned geography.
+The device fingerprinting feature collects data in the region/geography closest to the customer’s device. The data is then replicated across all fingerprinting geographies and matched with the data from other regions. Device fingerprinting is sensitive to latency between the end-user device and the fingerprinting endpoint. Increased latency would result in a significant loss of fingerprinting precision. To decrease latency and improve assessment results, data flows to the US where data processing and storage occur. This intermittent device fingerprinting data is stored for up to 28 days in the US. After 28 days, the master copy of the data is stored in the customer's environment in the provisioned geography.
 
 ### Transaction acceptance booster (TAB)
 
