@@ -27,7 +27,7 @@ For more information about what data Fraud Protection processes and how Fraud Pr
 
 ### Device fingerprinting
 
-The device fingerprinting feature collects data in the region/geography closest to the customer’s device. The data is then replicated across all fingerprinting geographies and matched with the data from other regions. Device fingerprinting is sensitive to latency between the end-user device and the fingerprinting endpoint. Increased latency would result in a significant loss of fingerprinting precision. To decrease latency and improve assessment results, data flows to the US where data processing and storage occur. This intermittent device fingerprinting data is stored for up to 28 days in the US. After 28 days, the master copy of the data is stored in the customer's environment in the provisioned geography.
+The device fingerprinting feature collects data in the region/geography closest to the end user’s device for optimal latency between the device and the fingerprinting endpoint. The data is then replicated across all fingerprinting datacenters and matched with the data from other regions. To improve assessment results, and generate additional intelligence, data flows to the US where data processing and storage occur. This intermittent device fingerprinting data is stored for up to 28 days in the US. After 28 days, the master copy of the data is stored in the customer's environment in the provisioned geography.
 
 ### Transaction acceptance booster (TAB)
 
