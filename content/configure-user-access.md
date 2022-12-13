@@ -1,8 +1,8 @@
 ---
 author: kha-microsoft
 description: This article explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
-ms.author: khanguyen
-ms.date: 08/03/2022
+ms.author: josaw
+ms.date: 12/13/2022
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -33,7 +33,7 @@ Users inside the organization's Azure tenant who are member users can view a lis
 You can invite colleagues to use Fraud Protection or change their role assignments if one or both of the following conditions are true for your account:
 
 - You're a global administrator of the Azure AD tenant where Fraud Protection is set up. 
-- You have "AllAreas_Admin" or "AllAreas_Editor" permissions for Fraud Protection, and have one of the following permissions in the Azure AD tenant where Fraud Protection is set up: Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
+- You have "AllAreas_Admin" permission for Fraud Protection, and have one of the following permissions in the Azure AD tenant where Fraud Protection is set up: Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
 
 For more information about how to directly add users to your Azure AD tenant as members or non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
