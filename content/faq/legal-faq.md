@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions (FAQ) about legal considerations in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/02/2022
+ms.date: 12/09/2022
 ms.topic: faq
 search.app: 
   - Capaedac-fraudprotection
@@ -33,6 +33,8 @@ For more information about Dynamics 365 security, see the [Microsoft Trust Cente
 
 For information about Microsoft's new European Union (EU) privacy campaign (Schrems II) and commitments, see [New steps to defend your data](https://blogs.microsoft.com/on-the-issues/2020/11/19/defending-your-data-edpb-gdpr/).
 
+For information about Fraud Protection and Microsoft's EU Data Boundary commitment, refer to the [EU Data Boundary exceptions for Fraud Protection](../edbd.md) article.
+
 For information about how Microsoft handles government requests, see the [US National Security Order Report](https://www.microsoft.com/corporate-responsibility/us-national-security-orders-report?activetab=pivot_1%3aprimaryr2) and the [Law Enforcement Requests Report](https://www.microsoft.com/corporate-responsibility/law-enforcement-requests-report). 
 
 #### Does Fraud Protection support litigation holds (freezes of data from a specific point in time) for a specific tenant without freezing other tenant data?
@@ -56,3 +58,5 @@ For information about Microsoft's data subprocessors, see the [Microsoft Cloud S
 [Data residency FAQ](data-residency-gdpr-faq.md)
 
 [Compliance FAQ](compliance-faq.md)
+
+[EU Data Boundary exceptions for Fraud Protection](../edbd.md)
