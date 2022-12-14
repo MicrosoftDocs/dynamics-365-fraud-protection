@@ -536,13 +536,14 @@ To accept an invitation to Fraud Protection, follow these steps.
 1. For future access, visit [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and sign in with the guest user account.
 
 
-### Tenant Picker
+### Switch between tenants
 
 The tenant picker allows you to select which tenant you want to be in, provided you have multiple tenants with DFP provisioned.
 
-The tenant picker can be found by clicking the profile icon on the top right of the dashboard, there is a link called "switch tenant". The tenant picker will give you a set of options to pick from: the options are only tenants that you, as a guest or admin, have access to. To switch the tenant you want to be in, click on the desired tenant and you will be redirected.
+The tenant picker can be found by clicking the profile icon on the top right of the dashboard, there is a link called **switch tenant**. The tenant picker will give you a set of options to pick from: the options are only tenants that you, as a guest or admin, have access to. To switch the tenant you want to be in, click on the desired tenant name and you will be redirected.
 
-If you run into an error screen saying that global administrator privileges are required, click on the switch tenant button at the bottom of the screen. This will open the tenant picker and allow you to select the proper tenant.
+If you run into an error screen saying that global administrator privileges are required, click on the **switch tenant** button at the bottom of the screen. This will open the tenant picker and allow you to select the proper tenant.
+
 
 ## Additional resources
 
