@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions (FAQ) about the Microsoft Dynamics 365 Fraud Protection service.
 ms.author: josaw
-ms.date: 06/02/2022
+ms.date: 12/09/2022
 ms.topic: faq
 search.app: 
   - Capaedac-fraudprotection

@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions about security assessment in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/09/2022
+ms.date: 12/02/2022
 ms.topic: conceptual
 search.app: 
  - Capaedac-fraudprotection
@@ -251,5 +251,7 @@ Yes.
 [Data residency and GDPR FAQ](data-residency-gdpr-faq.md)
 
 [Compliance FAQ](compliance-faq.md)
+
+[EU Data Boundary exceptions for Fraud Protection](../edbd.md)
 
 [!INCLUDE[footer-include](../includes/footer-banner.md)]
