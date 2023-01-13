@@ -131,6 +131,19 @@ When you create or edit a velocity set, the **Sample** pane appears on the right
 
     The enrichment sample also includes information from rule evaluation, such as the decision, the rule name, and the name of the clause that was triggered. You can use any of these properties in your velocity. Use an at sign (@) to reference them (for example, *@"user.firstName"*).
 
+## System defined (Default) velocities
+
+Several system defined velocities are created per environment.  For instance you may see the following default velocities:
+
+- Default - Email velocities
+- Default - Payment instrument velocities
+- Default - IP velocities
+- Default - Device ID velocities
+
+Certain aspects of Fraud Protection rely on these default velocities, such as the search results page for Purchase Protection.
+
+**As such, system-defined velocities cannot be edited, deleted, or deactivated.**  However, they can be cloned and those clones can be edited, etc.
+
 ## Manage your velocity sets
 
 - To edit an existing published velocity set, select the velocity, and then select **Edit**.
