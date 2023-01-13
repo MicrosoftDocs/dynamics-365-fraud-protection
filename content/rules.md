@@ -308,9 +308,9 @@ System defined rules may be created per environment. For instance you may see th
 
 - Default Support Rule
 
-Certain aspects of Fraud Protection rely on this default rule.  In this case, after adding a user or IP address to a known list (safe, watch, or reject), this default rule ensures those lists are checked during assessment evaluation.
+Certain aspects of Fraud Protection rely on default rules.  In this case, after adding an email, IP address or other known list content to a support list (safe, watch, or reject), this default rule ensures those lists are checked during assessment evaluation.
 
-System-defined rules can be edited, deleted and deactivated. Consider creating or editing another rule unless your intention is to change this default behavior.
+System-defined rules can be edited, deleted and deactivated. Consider creating or editing other rules unless your intention is to change this default behavior.
 
 ## Manage existing rules
 
