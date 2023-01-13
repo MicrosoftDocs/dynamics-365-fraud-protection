@@ -302,6 +302,16 @@ You can create rules that make decisions that are related to purchase, account c
 1. Set the [status](rules.md#status) to either **Active** or **Inactive**.
 1. To reposition the rule in the list on the **Rules** tab, select the rule, drag it to its new position, and then select **Save order**.
 
+## System defined (Default) rules
+
+System defined rules may be created per environment. For instance you may see the following default rule:
+
+- Default Support Rule
+
+Certain aspects of Fraud Protection rely on this default rule.  In this case, after adding a user or IP address to a known list (safe, watch, or reject), this default rule ensures those lists are checked during assessment evaluation.
+
+System-defined rules can be edited, deleted and deactivated. Consider creating or editing another rule unless your intention is to change this default behavior.
+
 ## Manage existing rules
 
 On the **Rules** tab, you can perform the following operations on an existing rule:
