@@ -17,6 +17,8 @@ This article describes how to get started with Pay as you go billing for Dynamic
 
 For more information or to purchase Pay as you go billing, see the [Dynamics 365 Fraud Protection pay-as-you-go pricing](https://dynamics.microsoft.com/ai/fraud-protection/pricing/) page.
 
+Pay as you go billing can only be enabled or not for all of the environments within the tenant of Fraud Protection
+
 
 ## Pricing
 
@@ -70,8 +72,8 @@ To enable Pay as you go billing, complete the following steps.
     1. Complete the steps in the purchase flow. You’ll receive confirmation that your monthly subscription for Fraud Protection Pay as you go is successfully set up. You'll then be redirected to the Fraud Protection portal. 
 
 2. Set up your Fraud Protection environment.
-    1. In the [Fraud Protection portal](https://dfp.microsoft.com/), sign in as the global administrator of the Azure AD tenant that you used above in Step 1.
-    1. If you already set up your Fraud Protection environment for your free trial, the Fraud Protection portal loads after you sign in and you can proceed to the next step. If you haven't set up your environment, follow the instructions in [Set up a purchased version of Dynamics 365 Fraud Protection](promocode-set-up-dfp-purchased-version.md#complete-the-setup-process).
+    1. In the [Fraud Protection portal](https://dfp.microsoft.com/), sign in as the global administrator of the Azure AD tenant that you used above in Step 1. If you already set up your Fraud Protection environment, the Fraud Protection portal will load after you sign in and you can proceed to the next step. If you haven't set up your environment, see [Set up a purchased instance](promocode-set-up-DFP-purchased-version.md).
+    2. If you already set up your Fraud Protection environment for your free trial, the Fraud Protection portal loads after you sign in and you can proceed to the next step. If you haven't set up your environment, follow the instructions in [Set up a purchased version of Dynamics 365 Fraud Protection](promocode-set-up-dfp-purchased-version.md#complete-the-setup-process).
 
 3. Configure an Azure subscription for Fraud Protection billing.
     1. In a new browser tab, go to the [Azure portal](https://portal.azure.com/) and sign in with the same credentials that you used in step 2. 
@@ -83,7 +85,7 @@ To enable Pay as you go billing, complete the following steps.
     1. You’ll receive a notification in the Azure portal confirming that the resource group was successfully created. Make a note of the name of the Azure subscription and the resource group. You'll need this information to set up Pay as you go billing in the next step. 
 
 4. Enable Pay as you go billing.
-    1. Return to the [Fraud Protection portal](https://dfp.microsoft.com/). On the home page, select **Enable**.
+    1. Return to the [Fraud Protection portal](https://dfp.microsoft.com/). You need to have the Global admin role or Product admin role. On the home page, select **Enable**.
     1. Select the Azure subscription and resource group that you configured in step 3 and select **Enable**. You’ll receive confirmation that setup for Pay as you go was successful. 
 
 To learn more about what type of Fraud Protection usage is billable, see [Assessment usage and metering](metering.md).
