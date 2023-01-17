@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to monitor API calls in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 10/23/2020
+ms.date: 01/16/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -16,6 +16,8 @@ ms.custom: "intro-internal"
 # Monitor API calls
 
 The monitoring tools in Microsoft Dynamics 365 Fraud Protection provide data about the API calls you have made to the service. You can also consult the error logs to aid in identifying any issues. 
+
+If your Fraud Protection instance has multiple environments, the API call information for each environment can be found by using the environment switcher on the top right of the menu bar. If the environment has child environments, the data in the API requests and **Errors** tab includes API calls for all the child environments. 
 
 ## View the monitoring page
 
