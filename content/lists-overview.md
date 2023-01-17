@@ -16,6 +16,8 @@ title: Lists overview
 
 Lists help you manage information that you use to fight fraud and enforce business policies. For example, you can create a list to track payment instruments that you consider risky or user email addresses that you consider safe. You can then upload the list as a comma-separated values (CSV) file and reference it in a [rule](rules.md) to help automate decisions.
 
+If your Fraud Protection instance has multiple environments, you can create a list in a specific environment by using the environment switcher. You can only reference a list in the rules that are defined in the same environment. 
+
 In Microsoft Dynamics 365 Fraud Protection, you can create two types of list: custom lists and support lists.
 
 ## Custom lists
