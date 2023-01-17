@@ -16,6 +16,8 @@ title: Manage rules
 
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create rules that use the score that Fraud Protection's state-of-the-art artificial intelligence (AI) model generates, together with additional parameters from the request payload. Based on these inputs, rules can convert an assessment into a decision, such as **Approve**, **Reject**, **Review**, or **Challenge**.
 
+If your Fraud Protection instance has multiple environments, you can manage rules in a specific environment by using the environment switcher. If the environment has parent environments, the rules in the top level parent environment will evaluate first. If the **Rule settings** for the top parent environment is set to **Run all matching rules until a decision is made**, the rules in the second level parent environment will evaluate the next. This continues unless the rule settings for one environment is set to **Run only the first matching rule**, or until all the parent and the current environments’ rules have completed the evaluation.  
+
 ## Defining a rule: Quick start guide
 
 Rules consist of clauses, and are defined by the **RETURN** and **WHEN** keywords. They have the following basic structure.
