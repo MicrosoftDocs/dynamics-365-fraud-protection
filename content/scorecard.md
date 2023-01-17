@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to review key metrics and understand the performance of fraud protection efforts in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 09/23/2021
+ms.date: 01/17/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -18,6 +18,8 @@ You can use the scorecard reports to review your key metrics and understand the 
 In the evaluate experience, your scorecard lets you evaluate the capabilities of Microsoft Dynamics 365 Fraud Protection. In the protect experience, your scorecard reflects the real-time performance of Fraud Protection as your system of record. After evaluating the data presented in the scorecard, you can use the knowledge that you gain to make well-informed risk management decisions for your business.
 
 Your top-four key performance indicators (KPIs) are summarized across the top of the page to provide a snapshot of your performance. You can fully investigate these metrics in the charts.
+
+If your Fraud Protection instance has multiple environments, you can access the report in a specific environment by using the environment switcher. If the environment has child environments, the data in report includes transactions and assessments for all its child environments.
 
 ## Customize your view
 
