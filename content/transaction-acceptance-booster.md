@@ -33,9 +33,18 @@ With participating issuing banks and networks for contextual transaction data, t
 5. Select **Save** to confirm your choice.
 
 
-### Reports
+### TAB for multi-hierarchy
 
-To view a report of your transaction acceptance booster service, select **Settings**, select **Transaction acceptance booster**, and then select the **Report** tab.
+If your Fraud Protection instance has multipel environments, you can control TAB settings from each environment individually. The following user roles have permissions to edit this setting: 
+
+- Product admin
+- Global admin
+- PSP admin
+- All areas admin
+
+When the TAB setting is changed in the parent environment, the TAB settings of all its children will be overwritten. This include current and future descendants.The parent environments settings take precedence. 
+
+When you modigy the TAB settings in a parent environment, you can view the list of child environments whose TAB settings will be overwritten. You can then proceed to confirm the changes. The childrens overwritten TAB settings pages will show a notification of the changes made by the parent. You can modify the settings in the parent or child environment multiple times. 
 
 ## Program MID
 
