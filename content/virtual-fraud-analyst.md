@@ -2,7 +2,7 @@
 author: yvonnedeq
 description: This article explains how the Virtual fraud analyst (VFA) in Microsoft Dynamics 365 Fraud Protection helps you set up and adjust risk score thresholds.
 ms.author: josaw
-ms.date: 03/31/2022
+ms.date: 01/17/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -23,7 +23,9 @@ The **Score rule optimizer** report is updated with the latest transactional dat
 
 You can switch views on the report between **Count view** and **Amount view**. **Count view** shows volume and percentage by transaction count, and **Amount view** shows volume and percentage in US dollars.
 
-The machine learning (ML) model in Fraud Protection evaluates every transaction by using advanced adaptive artificial intelligence (AI) and then assigns a risk score. In general, the higher the risk score, the higher the perceived risk. The ML model uses a range of risk scores from 0 through 999.
+The machine learning (ML) model in Fraud Protection evaluates every transaction by using advanced adaptive artificial intelligence (AI) and then assigns a risk score. In general, the higher the risk score, the higher the perceived risk. The ML model uses a range of risk scores from 0 through 999
+
+If your Fraud Protection instance has multiple environments, you can access the report in a specific environment by using the environment switcher. If the environment has child environments, the data in report includes transactions and assessments for all its child environments.
 
 ## User filters
 
