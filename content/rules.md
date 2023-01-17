@@ -306,9 +306,11 @@ You can create rules that make decisions that are related to purchase, account c
 
 Rules may be created by Fraud Protection per environment. For example, the following default rule may be created.
 
-- **Default Support Rule**: Certain aspects of Fraud Protection rely on default rules. After you add an email, IP address, or other known list content to a support list (safe, watch, or reject), this default rule ensures that the lists are checked during assessment evaluation.
+- **Default Support Rule**
 
-System-defined rules can be edited, deleted, and deactivated. As a best practice, consider creating or editing a different rule unless you want to change the default behavior.
+Some Fraud Protection functionality relies on default rules. After you add an email, IP address, or other known list content to a support list (safe, watch, or reject), this default rule ensures that the lists are checked during assessment evaluation.
+
+You can edit, delete, and deactivate system-defined rules. As a best practice, consider creating or editing a different rule unless you want to change the default behavior.
 
 ## Manage existing rules
 
