@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to create and manage rules that protect account and purchase data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/02/2021
+ms.date: 01/017/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
