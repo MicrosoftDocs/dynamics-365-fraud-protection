@@ -2,7 +2,7 @@
 author: kha-microsoft
 description: This article explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 12/13/2022
+ms.date: 01/16/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -15,6 +15,8 @@ title: Configure user access
 # Configure user access
 
 Dynamics 365 Fraud Protection lets you grant users various levels of access to the service, based on logical or functional roles. Administrators can use the **User access** section to assign these roles.
+
+If your Fraud Protection instance has multiple environments, user access for each environment can be found by using the environment switcher. If the environment has child environments, the user or groups granted with a user role will automatically have the same level of access to all its child environments. When you revoke a user role from an environment, the user or groups automatically lose the same level of access to all its child environments unless it's added explicitly for another environment. 
 
 > [!IMPORTANT]
 > Information in this article is subject to change at any time.
@@ -33,7 +35,7 @@ Users inside the organization's Azure tenant who are member users can view a lis
 You can invite colleagues to use Fraud Protection or change their role assignments if one or both of the following conditions are true for your account:
 
 - You're a global administrator of the Azure AD tenant where Fraud Protection is set up. 
-- You have "AllAreas_Admin" permission for Fraud Protection, and have one of the following permissions in the Azure AD tenant where Fraud Protection is set up: Application administrator, Cloud application administrator, User administrator, or Privileged role administrator.
+- You have **AllAreas_Admin** or **Product admin** permission for Fraud Protection, and have one of the following permissions in the Azure AD tenant where Fraud Protection is set up: Application administrator, Cloud application administrator, User administrator, or Privileged role administrator. Administrator roles are asked to attest usage disclaimers and run a brief educational video during their first-run experience in Fraud Protection.
 
 For more information about how to directly add users to your Azure AD tenant as members or non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
@@ -54,7 +56,7 @@ To assign roles to users in Fraud Protection, follow these steps.
 
 ### Edit assigned roles
 
-To edit the role that is assigned to a user in Fraud Protection, select the user in the **Member list**, and then select **Edit**.
+To edit the role that is assigned to a user in Fraud Protection, select the user in the **Member list**, and then select **Edit**. To edit a role for a specific environment, use the environment switcher to select the environment you want to configure. 
 
 In this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home).
 
@@ -62,10 +64,12 @@ To learn more about the available roles, see the [User roles and access](configu
 
 ### Revoke user access to the environment
 
+To revoke a user's access to a specific environment, use the environment switcher to select the environment you want to configure. 
+
 To revoke a user's access to the current environment, select the user in the **Member list**, and then select **Revoke access**.
 
 > [!IMPORTANT]
-> When you revoke access for a user, the user is removed from the current environment. However, they might still have access to other environments in the hierarchy. To fully remove a user's access to Fraud Protection, [delete the user from your Azure AD tenant](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). In this way, you completely remove the user's access to your tenant and its associated applications or services.
+> When you revoke access for a user, the user is removed from the current environment. However, they might still have access to other environments in the hierarchy. Ensure that the user doesn't have access to any other environment if you wish to remove the user from Fraud Protection.
 
 ## User roles and access
 
@@ -80,17 +84,20 @@ All the roles in the following list are named as they will be named in your prod
 
 ### Roles
 
-- **AllAreas_Admin** – This high-level administrative account has full access to Fraud Protection.
-- **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools.
-- **AllAreasViewer** – A user in this role can view all areas of Fraud Protection and learn from the data, but can't do uploads or change settings.
+- **Product admin** - This top-level administrative account has full access to your Fraud Protection instance and all the environments in the hierarchy.
+- **AllAreas_Admin** – This high-level administrative account has full access to an environment and it's child environments in Fraud Protection.
+- **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools in an environment and its child environments, but this role doesn't give access to make user role assignments.
+- **AllAreasViewer** – A user in this role can view all areas of Fraud Protection and learn from the data, but can't do uploads or change settings in an environment and its child environments.
 - **SupportAgent** – This role provides tailored access to Fraud Protection for support agents who work with your customers. A user in this role can view and work in the support tool, view the ontology, and assign customers to safe lists or block lists.
-- **FraudEngineer** – This role provides tailored access for fraud analysts and engineers in your organization who work with Fraud Protection. A user in this role has similar access to a user in the **AllAreasEditor** role. This user can access the data engineering information but doesn't have access to some configuration options.
-- **Risk_API** – This role provides access to the API but not to the user-facing tool.
-- **ManualReviewFraudManager**, **ManualReviewSeniorAnalyst**, **ManualReviewAnalyst** – These roles are used only internally and don't grant any user permissions in the Fraud Protection portal.
+- **FraudEngineer** – This role provides tailored access for fraud analysts and engineers in your organization who work with Fraud Protection. A user in this role has similar access to a user in the **AllAreasEditor** role. This user can access the data engineering information but doesn't have access to some configuration options in an environment and its child environment.
+- **Risk_API** – This role provides access to the API for an environment and its child environments, but not to the user-facing tool.
+- **ManualReviewFraudManager**, **ManualReviewSeniorAnalyst**, **ManualReviewAnalyst** – These roles are used only internally and don't grant any user permissions in the Fraud Protection portal in an environment and its child environments.
 
 ### Permissions
 
 The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles.
+
+In addition to the sections listed in the table below, the **Product admin** also has read/write permissions on the **Admin settings** page, including the **Configuration**, **Search**, **Billing**, and **Subscription** tabs.
 
 <table>
     <thead>
