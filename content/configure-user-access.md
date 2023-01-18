@@ -104,6 +104,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         <tr>
             <th>Section</th>
             <th>Sub-page (tab)</th>
+            <th>Product admin</th>
             <th>AllAreas_Admin</th>
             <th>AllAreasEditor</th>
             <th>AllAreasViewer</th>
@@ -120,11 +121,13 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>No access</td>
         </tr>
         <tr>
             <td rowspan="2">Account creation</td>
             <td>Scorecard</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -134,6 +137,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         </tr>
         <tr>
             <td>Rules</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -147,12 +151,14 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>Rules</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -166,12 +172,14 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>Score and reason code</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -184,6 +192,7 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>Read only</td>
             <td>No access</td>
@@ -193,12 +202,14 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>IP and Device ID</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -212,12 +223,14 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>Rules</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -230,12 +243,14 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>Virtual fraud analyst</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -245,6 +260,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         </tr>
         <tr>
             <td>Fraud analysis</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -259,10 +275,12 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td colspan="2">Loss Prevention</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -272,6 +290,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         </tr>
         <tr>
             <td colspan="2">Custom assessments</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -286,10 +305,12 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td colspan="2">Event Details</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -302,6 +323,7 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Queues</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
@@ -309,6 +331,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         </tr>
         <tr>
             <td>Report</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -320,6 +343,7 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Routing rules</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
@@ -329,6 +353,7 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td colspan="2">Velocities</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
@@ -336,6 +361,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         </tr>
         <tr>
             <td colspan="2">External calls</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -348,6 +374,7 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Custom</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
@@ -355,6 +382,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         </tr>
         <tr>
             <td>Support</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -369,10 +397,12 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td colspan="2">Event tracing</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -382,6 +412,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         </tr>
         <tr>
             <td colspan="2">Data upload</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -395,12 +426,14 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>Errors</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -415,11 +448,13 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
+            <td>Read only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td rowspan="3">Integration</td>
             <td>Dashboard</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -431,6 +466,7 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>AAD Apps<sup>2</sup></td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
@@ -440,14 +476,16 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Device Fingerprinting</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
         <tr>
-            <td rowspan="3">Subscription</td>
+            <td rowspan="2">Usage</td>
             <td>Summary</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -460,21 +498,14 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Billing</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
+            <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
         <tr>
             <td colspan="2">User access</td>
+            <td>Read/Write<sup>3</sup></td>
             <td>Read/Write<sup>3</sup></td>
             <td>Read only</td>
             <td>Read only</td>
@@ -487,6 +518,7 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td>Search</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>Read only</td>
             <td>No access</td>
             <td>Read/Write</td>
@@ -494,6 +526,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         </tr>
         <tr>
             <td>Requests</td>
+            <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read only</td>
@@ -505,6 +538,7 @@ In addition to the sections listed in the table below, the **Product admin** als
             <td rowspan="2">Transaction acceptance booster</td>
             <td>Opt in</td>
             <td>Read/Write</td>
+            <td>Read/Write</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>No access</td>
@@ -513,6 +547,7 @@ In addition to the sections listed in the table below, the **Product admin** als
         </tr>
         <tr>
             <td>Report</td>
+            <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
             <td>Read only</td>
