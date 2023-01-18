@@ -154,7 +154,10 @@ To call the APIs, follow these steps.
     | x-ms-dfpenvid       | Send the GUID value of your Instance ID. |
 
 2. Generate an event-based payload. Fill in the event data with the relevant information from your system. For information about all supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
-3. Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint.
+3. Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint
+
+> [!NOTE]
+> If you create a new environment, include teh environment ID in the API header during integration so the transactions can be correctly routed. 
 
 ## View the sample app
 
