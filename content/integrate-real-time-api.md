@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to integrate real-time APIs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschlegel
-ms.date: 01/16/2023
+ms.date: 01/18/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -201,51 +201,36 @@ For more information, see the following Azure documentation:
 
 ## Call the APIs
 
-To call the APIs, follow these steps:
+To call the APIs, complete the followign steps. 
 
-<ol>
- <li> 
-    Pass the following required HTTP headers on each request. 
-    <table> 
-    <tr> 
-    <th>Header name</th> 
-    <th>Header value</th> 
-    </tr> 
-    <tr> 
-    <td>Authorization</td> 
-    <td>
-    Use the following format for this header (replace <i>accesstoken</i> with the actual token value):<br /> 
-        <ul><li> Bearer <i>accesstoken</i>, where accesstoken is the token that is returned by Azure AD.</li></ul> 
-    </td> 
-    </tr> 
-    <tr> 
-    <td>x-ms-correlation-id</td> 
-    <td>Send a new GUID value on each set of API calls that are made together.</td> 
-    </tr> 
-    <td>x-ms-dfpenvid</td> 
-    <td>Send the GUID value of your Instance ID.</td> 
-    </tr>
-   </table> 
-    </li> 
-   <li>Generate an event-based payload. Fill in the event data with the relevant information from your system. For documentation about all supported events, see <a href="https://go.microsoft.com/fwlink/?linkid=2084942">Dynamics 365 Fraud Protection API</a>. 
-    </li> 
-   <li>Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint.</li>
-</ol>
+1. Pass the following required HTTP headers on each request. 
 
-- POST request to:
+   | Header name   |  Header value  |
+   |---------------|----------------|
+   | Authorization | Use the following format for this header (replace *accesstoken* with the actual token value):</br> Bearer *accesstoken*, where accesstoken is the token that is returned by Azure AD. |
+   | x-ms-correlation-id | Send a new GUID value on each set of API calls that are made together. |
+   | x-ms-dfpenvid | Send the GUID value of your Instance ID. |
+   
+2. Generate an event-based payload. Fill in the event data with the relevant information from your system. For documentation about all supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
+3. Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint.
 
-    - `<Base URL>/v1.0/merchantservices/events/purchase`
+  - POST request to:
 
-- Headers:
+      - `<Base URL>/v1.0/merchantservices/events/purchase`
 
-    - x-ms-correlation-id : GUID needs to be unique per request.
-    - content-type : application/json
-    - Authorization : {Insert the token from previous step}
-    - x-ms-dfpenvid : {Insert the environment ID of the target environment}
+  - Headers:
 
-- Body:
+      - x-ms-correlation-id : GUID needs to be unique per request.
+      - content-type : application/json
+      - Authorization : {Insert the token from previous step}
+      - x-ms-dfpenvid : {Insert the environment ID of the target environment}
 
-    - Get the sample account protection request body from the shared [Swagger page](https://dfpswagger.azurewebsites.net/index.html).
+  - Body:
+
+      - Get the sample account protection request body from the shared [Swagger page](https://dfpswagger.azurewebsites.net/index.html). 
+
+> [!NOTE]
+> IF you create a new environment, include the environment ID in the API header during integration so the transactions can be correctly routed.
 
 ## Best practices 
 
