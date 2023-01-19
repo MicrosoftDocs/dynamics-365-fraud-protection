@@ -20,7 +20,7 @@ Fraud Protection offers a suite of capabilities that you can use to enhance AI-b
 
 Case management lets you organize and access transactions, and specify the level of ambiguity that will require review by human subject matter experts. It also includes functionality that lets you provide a feedback loop for the AI-based assessments.
 
-If your Fraud Protection instance has multiple environments, you can access case management in a specific environment by using the environment switcher. If the environment has child environments, the **Queues** and **Report** pages include cases and queues for all its child environments. You can see the environment name listed for each queue or case. You can only use routing rules to send transactions in the same environment. 
+If your Fraud Protection instance has multiple environments, you can access case management in a specific environment by using the environment switcher. If the environment has child environments, the **Queues** and **Report** pages include cases and queues for all the child environments. The environment name is listed for each queue or case. You can only use routing rules to send transactions in the same environment. 
 
 Case management has several components that work together to provide an end-to-end transaction management experience. The rest of this article describes the most important of these components:
 
