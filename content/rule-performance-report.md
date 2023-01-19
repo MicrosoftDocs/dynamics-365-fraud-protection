@@ -24,7 +24,7 @@ You can switch views on the report between **Count view** and **Amount view**. *
 
 The machine learning (ML) model in Fraud Protection evaluates every transaction by using advanced adaptive artificial intelligence (AI) and then assigns a risk score. In general, the higher the risk score, the higher the perceived risk. The ML model uses a range of risk scores from 0 through 999.
 
-If your Fraud Protection instance has multiple environments, you can access the report in a specific environment by using the environment switcher. If the environment has child environments, the data in report includes transactions and assessments for all its child environments.
+If your Fraud Protection instance has multiple environments, you can access the report in a specific environment by using the environment switcher. If the environment has child environments, the data on the report includes transactions and assessments for all the child environments.
 
 ## User filters
 
