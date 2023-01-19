@@ -17,7 +17,7 @@ ms.custom: "intro-internal"
 
 The monitoring tools in Microsoft Dynamics 365 Fraud Protection provide data about the API calls you have made to the service. You can also consult the error logs to aid in identifying any issues. 
 
-If your Fraud Protection instance has multiple environments, the API call information for each environment can be found by using the environment switcher on the top right of the menu bar. If the environment has child environments, the data in the API requests and **Errors** tab includes API calls for all the child environments. 
+If your Fraud Protection instance has multiple environments, the API call information for each environment can be found by using the environment switcher on the top right of the menu bar. If the environment has child environments, the data in the API requests and on the **Errors** tab includes API calls for all the child environments. 
 
 ## View the monitoring page
 
