@@ -17,7 +17,7 @@ In Microsoft Dynamics 365 Fraud Protection's evaluate and protect experiences, y
 
 For the best results, we recommend that you upload at least six months' worth of historical data.
 
-If your Fraud Protection instance has multiple environments, data upload for each environment can be found by using the environment switcher. If the environment has child environments, the data uploaded will be processed at the environment you selected.
+If your Fraud Protection instance has multiple environments, data upload for each environment can be found by using the environment switcher. If the environment has child environments, the data that's uploaded will be processed in the environment that you selected.
 
 ## Data types
 
