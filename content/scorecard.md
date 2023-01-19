@@ -19,7 +19,7 @@ In the evaluate experience, your scorecard lets you evaluate the capabilities of
 
 Your top-four key performance indicators (KPIs) are summarized across the top of the page to provide a snapshot of your performance. You can fully investigate these metrics in the charts.
 
-If your Fraud Protection instance has multiple environments, you can access the report in a specific environment by using the environment switcher. If the environment has child environments, the data in report includes transactions and assessments for all its child environments.
+If your Fraud Protection instance has multiple environments, you can access the report in a specific environment by using the environment switcher. If the environment has child environments, the data on the report includes transactions and assessments for all the child environments.
 
 ## Customize your view
 
