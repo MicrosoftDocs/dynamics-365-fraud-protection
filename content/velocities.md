@@ -16,11 +16,11 @@ title: Perform velocity checks
 
 The frequency of events from a user or entity (such as a credit card) might indicate suspicious activity and potential fraud. For example, after fraudsters try a few individual orders, they often use a single credit card to quickly place many orders from a single IP address or device. They might also use many different credit cards to quickly place many orders. Velocity checks help you identify these types of event patterns. By defining velocities, you can watch incoming events for these types of patterns and use rules to define thresholds beyond which you want to treat the patterns as suspicious.
 
-If your Fraud Protection instance has multiple environments, you can define a velocity set in a specific environment by using the environment switcher. You can reference velocity only in the rules that are defined in the corresponding environment. If velocity is created in a parent environment, and the rule is defined in the same environment, the transactions in the child environments will be included in the velocity when the parent-level rule runs. 
+If your instance of Microsoft Dynamics 365 Fraud Protection has multiple environments, you can define a velocity set in a specific environment by using the environment switcher. You can reference velocity only in the rules that are defined in the corresponding environment. If velocity is created in a parent environment, and the rule is defined in the same environment, the transactions in the child environments will be included in the velocity when the parent-level rule runs. 
 
 ## Define a velocity
 
-Velocity sets are made up of individual velocities. You define velocities in Microsoft Dynamics 365 Fraud Protection by using the **SELECT**, **FROM**, **WHEN**, and **GROUPBY** keywords in the following structure.
+Velocity sets are made up of individual velocities. You define velocities in Dynamics 365 Fraud Protection by using the **SELECT**, **FROM**, **WHEN**, and **GROUPBY** keywords in the following structure.
 
 ```FraudProtectionLanguage
 SELECT <aggregation method> AS <velocity name>
