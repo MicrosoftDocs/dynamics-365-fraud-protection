@@ -16,7 +16,7 @@ title: Manage rules
 
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create rules that use the score that Fraud Protection's state-of-the-art artificial intelligence (AI) model generates, together with additional parameters from the request payload. Based on these inputs, rules can convert an assessment into a decision, such as **Approve**, **Reject**, **Review**, or **Challenge**.
 
-If your Fraud Protection instance has multiple environments, you can manage rules in a specific environment by using the environment switcher. If the environment has parent environments, the rules in the top level parent environment will evaluate first. If the **Rule settings** for the top parent environment is set to **Run all matching rules until a decision is made**, the rules in the second level parent environment will evaluate the next. This continues unless the rule settings for one environment is set to **Run only the first matching rule**, or until all the parent and the current environments’ rules have completed the evaluation.  
+If your Fraud Protection instance has multiple environments, you can manage rules in a specific environment by using the environment switcher. If the environment has parent environments, the rules in the top-level parent environment will be evaluated first. If the rule settings for the top-level parent environment are set to **Run all matching rules until a decision is made**, the rules in the second-level parent environment will be evaluated next. This process continues unless the rule settings for an environment are set to **Run only the first matching rule**, or until all the rules for the parent environment and the current environment have been evaluated.  
 
 ## Defining a rule: Quick start guide
 
@@ -36,7 +36,7 @@ The WHEN statement specifies a Boolean condition, which determines if the RETURN
 The WHEN statement can utilize any of the following:
 
 -	Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"user.userId".
--	The scores that are generated from Fraud Protection’s artificial intelligence models. For example, @"riskscore".
+-	The scores that are generated from Fraud Protection's artificial intelligence models. For example, @"riskscore".
 -	Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md). For more information on referencing these lists in your rules, see [Using Lists in rules](fpl-lang-ref.md#using-lists-in-rules).
 -	Velocities which you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
 -	External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md). 
