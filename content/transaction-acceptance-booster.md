@@ -35,16 +35,16 @@ With participating issuing banks and networks for contextual transaction data, t
 
 ### TAB for multi-hierarchy
 
-If your Fraud Protection instance has multipel environments, you can control TAB settings from each environment individually. The following user roles have permissions to edit this setting: 
+If your Fraud Protection instance has multiple environments, you can control the TAB settings from each environment individually. The following user roles have permissions to edit these settings: 
 
 - Product admin
 - Global admin
 - PSP admin
 - All areas admin
 
-When the TAB setting is changed in the parent environment, the TAB settings of all its children will be overwritten. Current and future descendants of the parent environment are included in this change. The parent environments settings take precedence. 
+When the TAB settings are changed in the parent environment, the TAB settings of all its children will be overwritten. Current and future descendants of the parent environment are included in this change. The parent environment's settings take precedence. 
 
-When you modify the TAB settings in a parent environment, you can view the list of child environments whose TAB settings will be overwritten. You can then proceed to confirm the changes. The childrens overwritten TAB settings pages will show a notification of the changes made by the parent. You can modify the settings in the parent or child environment multiple times. 
+When you modify the TAB settings in a parent environment, you can view the list of child environments that TAB settings will be overwritten for. You can then confirm the changes. The TAB settings page for each child will show a notification about the changes that were made by the parent. You can modify the settings in the parent or child environment multiple times. 
 
 ## Program MID
 
