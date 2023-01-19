@@ -15,18 +15,18 @@ title: Assessment usage and metering
 
 When you purchase Microsoft Dynamics 365 Fraud Protection, you're entitled to a specific number of "assessments" for one or more Fraud Protection capabilities. When you use Fraud Protection, your usage is "metered" and the **Subscription** page provides an overview of your usage. For example, you can view statistics about different assessment API types, view trends of assessments that have been consumed for loss prevention reports over time, and filter your view to highlight the specific data and date ranges that you're interested in. The data on this page is updated every hour. You can use it to assess whether any adjustments are required to your Fraud Protection subscription. 
 
-In **Admin settings**, the **Subscription** tab provides an overview of your usage and across all environments in your Fraud PRotection instance. 
+In **Admin settings**, the **Subscription** tab provides an overview of your usage and across all environments in your Fraud Protection instance. 
 
 On the **Subscription** page, the information is divided between two tabs:
 
 - **Summary** – This tab shows the number of assessments that you've purchased and the number of assessments that you've used across different Fraud Protection capabilities (for example, loss prevention, purchase protection, and account protection). On this tab, you can view data across different subscription periods.
 - **Details** – Use this tab to dive deeper into your assessment usage data. You can select any date range and filter the data by different dimensions.
 
-If your Fraud Protection instance has multiple environments, usage information for each environment can be found on the **Usage** page under **Settings**. Use the environment switcher located on the top menu bar to select the environment. If the environment has child environments, the number of assessments include assessments initiated for all its child environments. 
+If your Fraud Protection instance has multiple environments, usage information for each environment can be found under **Settings** on the **Usage** page. Use the environment switcher on the top menu bar to select the environment. If the environment has child environments, the number of assessments includes assessments that have been initiated for all the child environments. 
 
 On the **Usage** page, the information is divided between two tabs:
 
-- **Summary** – This tab shows a monthly comparison of the number of assessments that you've purchased and the number of assessments that you've used across different Fraud Protection capabilities. For example, loss prevention, purchase protection, and account protection. On this tab, you can view data across different subscription periods.
+- **Summary** – This tab shows a monthly comparison of the number of assessments that you've purchased and the number of assessments that you've used across different Fraud Protection capabilities (for example, loss prevention, purchase protection, and account protection). On this tab, you can view data across different subscription periods.
 - **Details** – Use this tab to dive deeper into your assessment usage.
 
 ## Assessments purchased metric
@@ -41,7 +41,7 @@ The **Assessments used** metric reflects your usage of Fraud Protection. The fol
 |-----------------------------|--------------------------------------------------|
 | Account protection | Real-time API calls where a risk assessment or decision is requested (that is, API calls for the AccountCreation, AccountLogin, and CustomAssessments APIs). |
 | Loss prevention | The number of transactions that have been processed to generate loss prevention reports.\* |
-| Purchase protection | Real-time API calls where a risk assessment is requested. That is, API calls for the Purchase. |
+| Purchase protection | Real-time API calls where a risk assessment is requested (that is, API calls for the Purchase API). |
 
 \* The number of assessments that you should purchase for the loss prevention capability is determined by the estimated number of in-store transactions that must be protected during the billing cycle. If the data is sampled before it's sent to Fraud Protection for assessment, variance can occur between the **Assessments used** metric and the **Assessments purchased** metric. This result is expected, because the **Assessments used** metric counts the number of transactions from the assessed data only, and the magnitude of the variance depends on the sampling rate. For accurate reporting of the assessments that have been used, and to generate higher-quality loss prevention reports, we recommend that you use a sampling rate of 100 percent. In other words, we recommend that you share all transactions that should be protected.
 
