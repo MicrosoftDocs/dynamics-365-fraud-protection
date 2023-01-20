@@ -201,36 +201,36 @@ For more information, see the following Azure documentation:
 
 ## Call the APIs
 
-To call the APIs, complete the followign steps. 
+To call the APIs, follow these steps. 
 
 1. Pass the following required HTTP headers on each request. 
 
-   | Header name   |  Header value  |
-   |---------------|----------------|
-   | Authorization | Use the following format for this header (replace *accesstoken* with the actual token value):</br> Bearer *accesstoken*, where accesstoken is the token that is returned by Azure AD. |
-   | x-ms-correlation-id | Send a new GUID value on each set of API calls that are made together. |
-   | x-ms-dfpenvid | Send the GUID value of your Instance ID. |
-   
+    | Header name | Header value |
+    |-------------|--------------|
+    | Authorization | <p>Use the following format for this header. (Replace *accesstoken* with the actual token value that's returned by Azure AD.)</p><p>Bearer *accesstoken* |
+    | x-ms-correlation-id | Send a new GUID value on each set of API calls that are made together. |
+    | x-ms-dfpenvid | Send the GUID value of your instance ID. |
+
 2. Generate an event-based payload. Fill in the event data with the relevant information from your system. For documentation about all supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 3. Combine the header (which includes the access token) and the payload, and then send them to your Fraud Protection endpoint.
 
-  - POST request to:
+    - POST request to:
 
-      - `<Base URL>/v1.0/merchantservices/events/purchase`
+        - `<Base URL>/v1.0/merchantservices/events/purchase`
 
-  - Headers:
+    - Headers:
 
-      - x-ms-correlation-id : GUID needs to be unique per request.
-      - content-type : application/json
-      - Authorization : {Insert the token from previous step}
-      - x-ms-dfpenvid : {Insert the environment ID of the target environment}
+        - x-ms-correlation-id : {A GUID, which must be unique per request}
+        - content-type : application/json
+        - Authorization : {The token from the previous step}
+        - x-ms-dfpenvid : {The environment ID of the target environment}
 
-  - Body:
+    - Body:
 
-      - Get the sample account protection request body from the shared [Swagger page](https://dfpswagger.azurewebsites.net/index.html). 
+        - Get the sample account protection request body from the shared [Swagger page](https://dfpswagger.azurewebsites.net/index.html). 
 
 > [!NOTE]
-> IF you create a new environment, include the environment ID in the API header during integration so the transactions can be correctly routed.
+> If you create a new environment, include the environment ID in the API header during integration, so that the transactions can be correctly routed.
 
 ## Best practices 
 
