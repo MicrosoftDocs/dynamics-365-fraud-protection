@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to create and manage rules that protect account and purchase data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/02/2021
+ms.date: 01/17/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -301,6 +301,16 @@ You can create rules that make decisions that are related to purchase, account c
 1. To publish your rule, select **Publish**. In the confirmation dialog box, change the name, description, and status, and then select **Publish**.
 1. Set the [status](rules.md#status) to either **Active** or **Inactive**.
 1. To reposition the rule in the list on the **Rules** tab, select the rule, drag it to its new position, and then select **Save order**.
+
+## System-defined (default) rules
+
+Rules may be created by Fraud Protection per environment. For example, the following default rule may be created.
+
+- **Default Support Rule**
+
+Some Fraud Protection functionality relies on default rules. After you add an email, IP address, or other known list content to a support list (safe, watch, or reject), this default rule ensures that the lists are checked during assessment evaluation.
+
+You can edit, delete, and deactivate system-defined rules. As a best practice, consider creating or editing a different rule unless you want to change the default behavior.
 
 ## Manage existing rules
 

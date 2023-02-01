@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 01/16/2023
+ms.date: 02/01/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -132,6 +132,19 @@ When you create or edit a velocity set, the **Sample** pane appears on the right
 - The **enrichment sample** section contains an example of the properties that Fraud Protection adds to your event after the initial request has been sent. For example, these properties include information from Fraud Protection's [device fingerprinting](device-fingerprinting.md) solution, and risk and bot scores from the machine learning models.
 
     The enrichment sample also includes information from rule evaluation, such as the decision, the rule name, and the name of the clause that was triggered. You can use any of these properties in your velocity. Use an at sign (@) to reference them (for example, *@"user.firstName"*).
+
+## System-defined (default) velocities
+
+Fraud Protection creates several system-defined velocities per environment. For example, the following default velocities may be added.
+
+- **Default - Email velocities**
+- **Default - Payment instrument velocities**
+- **Default - IP velocities**
+- **Default - Device ID velocities**
+
+Some Fraud Protection functionality relies on the default velocities, such as the **Search results** page for purchase protection. 
+
+You can't edit, delete, or deactivate system-defined velocities. However, you can clone them and then edit, delete, or deactive the clones. 
 
 ## Manage your velocity sets
 
