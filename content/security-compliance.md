@@ -82,5 +82,12 @@ Fraud Protection allows you to programmatically honor data subject requests usin
 
 For further documentation about this and other Fraud Protection APIs, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 
+## Fair Credit Reporting Act
+
+The Fair Credit Reporting Act (FCRA) is a federal privacy law that regulates the disclosure and use of consumer personal information to determine a consumer's eligibility to obtain a product or service or otherwise engage in a transaction. FCRA also applies to the use of consumer personal information for non-credit-related transactions, such as insurance, employment, or even retail purchases, where the consumer's reputation or personal characteristics are relevant to eligibility. 
+
+Why does FCRA matter to users of Fraud Protection? Fraud Protection wasn't designed to analyze the characteristics or behavior of credit card users, which is primarily an area that FCRA protects for consumers. Fraud Protection only informs you about the risk that the transaction might have been initiated by a fraudster, not whether the specific purchaser has a history of committing fraud. If Fraud Protection is ever abused to assess the personal characteristics of a given purchaser for purposes that are restricted by FCRA, this abuse could bring serious legal consequences for both users and Microsoft. For this reason, we take special care to educate our customers about the usage limitations of Fraud Protection.
+
+Therefore, during the first-run experience in Fraud Protection, usage consent forms are provided to tenant administrators, but only when they access the application for the first time. Product Admin, Global Admin, PSP Admin, and All Areas Admin are presented with this user experience. 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

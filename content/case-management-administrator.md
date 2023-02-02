@@ -18,6 +18,7 @@ This article explains how to work with case management as an administrator in Mi
 
 To complete administrator-specific tasks in case management for Fraud Protection, you must be assigned one of the following roles:
 
+- **Product admin**
 - **All areas administrator**
 - **All areas editor**
 - **Manual review fraud manager**
