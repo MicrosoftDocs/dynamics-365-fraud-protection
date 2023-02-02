@@ -32,7 +32,7 @@ To create a new environment, select **New environment** at the top, and then ent
 - **Create API ID (optional)** – You can enter an identifier that should be used instead of the Fraud Protection environment ID when events are sent to Fraud Protection.
 
 > [!NOTE]
-> You must have the Global Admin role to create Azure AD applications. For more information about Azure AD applications and integration, see [Integrate purchase protection API](integrate-real-time-api) and [Integrate account protection APIs](faq/data-residency-gdpr-faq.md). 
+> You must have the Global Admin role to create Azure AD applications. For more information about Azure AD applications and integration, see [Integrate purchase protection API](integrate-real-time-api.md) and [Integrate account protection APIs](faq/data-residency-gdpr-faq.md). 
 >
 > After you create the environment, you can't change the customer API ID.
 
