@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: josaw
-ms.date: 01/16/2023
+ms.date: 02/02/2023
 ms.topic: how-to
 search.app: 
   - Capaedac-fraudprotection
