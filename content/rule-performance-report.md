@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes the Rule performance report for purchase protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 01/17/2023
+ms.date: 02/02/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
