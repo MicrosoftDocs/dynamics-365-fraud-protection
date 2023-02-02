@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about how you can boost bank acceptance rates.
 ms.author: josaw
-ms.date: 03/11/2021
+ms.date: 02/02/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
