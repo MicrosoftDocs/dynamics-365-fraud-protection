@@ -2,7 +2,7 @@
 author: kha-microsoft
 description: This article explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 01/16/2023
+ms.date: 02/02/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
