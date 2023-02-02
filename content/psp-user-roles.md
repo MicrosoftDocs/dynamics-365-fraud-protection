@@ -443,15 +443,15 @@ To accept an invitation to Fraud Protection, follow these steps.
 1. Select **Accept invitation**.
 1. If an existing Microsoft account or related account uses your email address, you're prompted to use that account to sign in. Otherwise, follow the setup process to sign up for a new account. After you're fully signed in, you should have access to Fraud Protection.
 1. Return to the invitation email, and write down or bookmark the exact link that appears after the text "If you accept this invitation, you will be sent to...." This link will be in the format `https://dfp.microsoft.com/.../...`. Each time that you access Fraud Protection, you must use this exact link.
-1. For future access, visit [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and sign in with the guest user account.
+1. For future access, go to [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and sign in with the guest user account.
 
 ### Switch between tenants
 
-The tenant picker allows you to select which tenant you want to be in, provided you have multiple tenants with DFP provisioned.
+You can use the tenant picker to select which tenant you want to be in, provided you have multiple tenants with Fraud Protection provisioned.
 
-The tenant picker can be found by clicking the profile icon on the top right of the dashboard, there is a link called **switch tenant**. The tenant picker will give you a set of options to pick from: the options are only tenants that you, as a guest or admin, have access to. To switch the tenant you want to be in, click on the desired tenant name and you will be redirected.
+The tenant picker can be found by clicking the profile icon on the top right of the dashboard, there is a link called **switch tenant**. The tenant picker will give you a set of options to pick from. The options are only tenants that you, as a guest or admin, have access to. To change to a different tenant, select the tenant name you want to be in and you will be redirected.
 
-If you run into an error screen saying that global administrator privileges are required, click on the **switch tenant** button at the bottom of the screen. This will open the tenant picker and allow you to select the proper tenant.
+If you receive an error that says global administrator privileges are required, select **Switch tenant** at the bottom of the screen. The tenant picker will open and you can select the proper tenant.
 
 ## Additional resources
 
