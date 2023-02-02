@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how payment service providers (PSPs) can manage environments in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 01/16/2023
+ms.date: 02/02/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
