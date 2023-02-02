@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to review key metrics and understand the performance of fraud protection efforts in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 01/17/2023
+ms.date: 02/02/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
