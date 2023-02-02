@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions (FAQ) about privacy and security in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/27/2022
+ms.date: 12/09/2022
 ms.topic: faq
 search.app: 
   - Capaedac-fraudprotection
@@ -82,3 +82,5 @@ Yes, Fraud Protection follows industry standard best practices. As is outlined i
 [Data residency and GDPR FAQ](data-residency-gdpr-faq.md)
 
 [Compliance FAQ](compliance-faq.md)
+
+[EU Data Boundary exceptions for Fraud Protection](../edbd.md)

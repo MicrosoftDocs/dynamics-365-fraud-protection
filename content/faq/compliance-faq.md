@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions (FAQ) about compliance in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/02/2022
+ms.date: 12/09/2022
 ms.topic: faq
 search.app: 
   - Capaedac-fraudprotection
@@ -64,6 +64,8 @@ Fraud Protection follows a Microsoft-wide cadence of internal and external audit
 Yes. As a software as a service (SaaS) application, Fraud Protection runs on Azure, and includes ISO 27001, 27018, SOC2, SOC3, and PCI compliance. In addition, Azure covers a wide range of industry compliance for all the services in Azure that Fraud Protection relies on.
 
 ## Additional resources
+
+[EU Data Boundary exceptions for Fraud Protection](../edbd.md)
 
 [Service FAQ](service-faq.md)
 

@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/07/2022
+ms.date: 02/01/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -16,9 +16,11 @@ title: Perform velocity checks
 
 The frequency of events from a user or entity (such as a credit card) might indicate suspicious activity and potential fraud. For example, after fraudsters try a few individual orders, they often use a single credit card to quickly place many orders from a single IP address or device. They might also use many different credit cards to quickly place many orders. Velocity checks help you identify these types of event patterns. By defining velocities, you can watch incoming events for these types of patterns and use rules to define thresholds beyond which you want to treat the patterns as suspicious.
 
+If your instance of Microsoft Dynamics 365 Fraud Protection has multiple environments, you can define a velocity set in a specific environment by using the environment switcher. You can reference velocity only in the rules that are defined in the corresponding environment. If velocity is created in a parent environment, and the rule is defined in the same environment, the transactions in the child environments will be included in the velocity when the parent-level rule runs. 
+
 ## Define a velocity
 
-Velocity sets are made up of individual velocities. You define velocities in Microsoft Dynamics 365 Fraud Protection by using the **SELECT**, **FROM**, **WHEN**, and **GROUPBY** keywords in the following structure.
+Velocity sets are made up of individual velocities. You define velocities in Dynamics 365 Fraud Protection by using the **SELECT**, **FROM**, **WHEN**, and **GROUPBY** keywords in the following structure.
 
 ```FraudProtectionLanguage
 SELECT <aggregation method> AS <velocity name>
@@ -130,6 +132,19 @@ When you create or edit a velocity set, the **Sample** pane appears on the right
 - The **enrichment sample** section contains an example of the properties that Fraud Protection adds to your event after the initial request has been sent. For example, these properties include information from Fraud Protection's [device fingerprinting](device-fingerprinting.md) solution, and risk and bot scores from the machine learning models.
 
     The enrichment sample also includes information from rule evaluation, such as the decision, the rule name, and the name of the clause that was triggered. You can use any of these properties in your velocity. Use an at sign (@) to reference them (for example, *@"user.firstName"*).
+
+## System-defined (default) velocities
+
+Fraud Protection creates several system-defined velocities per environment. For example, the following default velocities may be added.
+
+- **Default - Email velocities**
+- **Default - Payment instrument velocities**
+- **Default - IP velocities**
+- **Default - Device ID velocities**
+
+Some Fraud Protection functionality relies on the default velocities, such as the **Search results** page for purchase protection. 
+
+You can't edit, delete, or deactivate system-defined velocities. However, you can clone them and then edit, delete, or deactive the clones. 
 
 ## Manage your velocity sets
 

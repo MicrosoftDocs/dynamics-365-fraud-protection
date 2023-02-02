@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about the components of case management in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 11/03/2022
+ms.date: 02/02/2023
 ms.topic: reference
 search.app: 
   - Capaedac-fraudprotection
@@ -19,6 +19,8 @@ This article provides information about the components of case management in Mic
 Fraud Protection offers a suite of capabilities that you can use to enhance AI-based assessments with the subject matter expertise of human reviewers.
 
 Case management lets you organize and access transactions, and specify the level of ambiguity that will require review by human subject matter experts. It also includes functionality that lets you provide a feedback loop for the AI-based assessments.
+
+If your Fraud Protection instance has multiple environments, you can access case management in a specific environment by using the environment switcher. If the environment has child environments, the **Queues** and **Report** pages include cases and queues for all the child environments. The environment name is listed for each queue or case. You can only use routing rules to send transactions in the same environment. 
 
 Case management has several components that work together to provide an end-to-end transaction management experience. The rest of this article describes the most important of these components:
 

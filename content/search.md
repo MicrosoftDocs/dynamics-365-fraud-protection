@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: josaw
-ms.date: 03/31/2022
+ms.date: 02/02/2023
 ms.topic: how-to
 search.app: 
   - Capaedac-fraudprotection
@@ -14,11 +14,13 @@ title: Search
 # Search
 
 
-The **Search** page helps you find and view details about events in Dynamics 365 Fraud Protection, based on specific filter values. You can search for an individual event ID or use filters to find all transactions that match some criteria. You can export the search results or drill into an individual event to show a more detailed view.  
+The **Search** page helps you find and view details about events in Microsoft Dynamics 365 Fraud Protection, based on specific filter values. You can search for an individual event ID or use filters to find all transactions that match some criteria. You can export the search results or drill into an individual event to show a more detailed view.  
 
-For example, you can search for all the events associated with the email address 'kayla@contoso.com'. You can review the details for each event such as risk score, user information, and device information. You can also add the email address, or other attributes such as DeviceID or UserID, to safe or block [support lists](manage-support-lists.md). 
+For example, you can search for all the events associated with the email address `kayla@contoso.com`. You can review the details for each event such as risk score, user information, and device information. You can also add the email address, or other attributes such as DeviceID or UserID, to safe or block [support lists](manage-support-lists.md). 
 
 To search events, select the **Search** page on the left navigation. 
+
+If your Fraud Protection instance has multiple environments, **Search for each environment** can be found by using the environment switcher on the top right of the menu bar. If the environment has child environments, the search results include transactions for all the child environments. To view the environment information in the search results, use **Environment name** or **Environment ID** in **Column options**. To limit the search results to a specific environment, use **Environment ID** as an attribute in the **Search** filter.    
 
 ## Select event type and timeframe
 
