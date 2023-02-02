@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes the Long term report for purchase protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/31/2022
+ms.date: 02/02/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -22,6 +22,8 @@ The **Long term** report for purchase protection is updated with the latest tran
 You can switch views on the report between **Count view** and **Amount view**. **Count view** shows volume and percentage by transaction count, and **Amount view** shows volume and percentage in US dollars.
 
 The machine learning (ML) model in Fraud Protection evaluates every transaction by using advanced adaptive artificial intelligence (AI) and then assigns a risk score. In general, the higher the risk score, the higher the perceived risk. The ML model uses a range of risk scores from 0 through 999.
+
+If your Fraud Protection instance has multiple environments, you can access the report in a specific environment by using the environment switcher. If the environment has child environments, the data on the report includes transactions and assessments for all the child environments.
 
 ## User filters
 
