@@ -96,7 +96,7 @@ No.
 
 #### What rights are available for the various roles in the application or service?
 
-For more information, see [User roles and access](../user-roles-and-access.md).
+For more information, see [User roles and access](../user-roles-access.md).
 
 ## Auditing
 
