@@ -2,7 +2,7 @@
 author: arj-malhotra
 description: This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 02/06/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -614,7 +614,7 @@ Guest users can access Fraud Protection after they accept an email invitation an
 
 To accept an invitation to Fraud Protection, follow these steps.
 
-1. Check your email inbox for an email that has the subject line "/<Name> invited you to access applications within their organization."
+1. Check your email inbox for an email that has the subject line "\<Name> invited you to access applications within their organization."
 2. Select **Accept invitation**.
 3. If an existing Microsoft account or related account uses your email address, you'll be prompted to use that account to sign in. Otherwise, follow the steps to sign up for a new account. After you're signed in, you should have access to Fraud Protection.
 4. Return to the invitation email, and write down or bookmark the exact link that appears after the text, "If you accept this invitation, you will be sent to...." This link will be in the format https://dfp.microsoft.com/.../.... 
