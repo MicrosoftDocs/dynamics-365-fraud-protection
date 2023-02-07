@@ -39,462 +39,562 @@ All the roles in the following list are named as they will be named in your prod
 The following table shows the specific read/write permissions that users have on each page in the Fraud Protection portal, depending on their roles.
 
 <table>
-    <thead>
-        <tr>
-            <th>Section</th>
-            <th>Sub-page (tab)</th>
-            <th>Product admin</th>
-            <th>AllAreas_Admin</th>
-            <th>AllAreasEditor</th>
-            <th>AllAreasViewer</th>
-            <th>SupportAgent</th>
-            <th>FraudEngineer</th>
-            <th>Risk_API</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan="2">Dashboard</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Account creation</td>
-            <td>Scorecard</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Rules</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Account login</td>
-            <td>Scorecard</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Rules</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="5">Account protection reports</td>
-            <td>Summary</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Score and reason code</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Status and label</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Device high level</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>IP and Device ID</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="6">Purchase</td>
-            <td>Summary</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Rules</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Rules performance</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Virtual fraud analyst</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Fraud analysis</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Support</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Loss Prevention</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Custom assessments</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Search</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Event Details</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read/write</td>
-            <td>Read/write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="3">Case management</td>
-            <td>Queues</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Report</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Routing rules</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Velocities</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">External calls</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Lists</td>
-            <td>Custom</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Support</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read/Write<sup>1</sup></td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Graph explorer</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Event tracing</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Data upload</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="3">API management</td>
-            <td>API requests</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Errors</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Ontology</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="3">Integration</td>
-            <td>Dashboard</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>AAD Apps<sup>2</sup></td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Device Fingerprinting</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Usage</td>
-            <td>Summary</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Details</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">User access</td>
-            <td>Read/Write<sup>3</sup></td>
-            <td>Read/Write<sup>3</sup></td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Subject requests</td>
-            <td>Search</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Requests</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Transaction acceptance booster</td>
-            <td>Opt in</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Report</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-    </tbody>
+<thead>
+<tr>
+<th>Section</th>
+<th>Sub-page (tab)</th>
+<th>AllAreas_Admin</th>
+<th>AllAreasEditor</th>
+<th>AllAreasViewer</th>
+<th>SupportAgent</th>
+<th>FraudEngineer</th>
+<th>Risk_API</th>
+<th>ManualReviewFraudManager</th>
+<th>ManualReviewSeniorAnalyst</th>
+<th>ManualReviewAnalyst</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td colspan="2">Dashboard</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+</tr>
+<tr>
+<td rowspan="2">Account creation</td>
+<td>Scorecard</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td rowspan="2">Account login</td>
+<td>Scorecard</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td rowspan="5">Account protection reports</td>
+<td>Summary</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Score and reason code</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Status and label</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Device high level</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>IP and Device ID</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td rowspan="6">Purchase</td>
+<td>Summary</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Rules</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Rules performance</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Virtual fraud analyst</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Fraud analysis</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Support</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td colspan="2">Loss Prevention</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td colspan="2">Custom assessments</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td colspan="2">Search</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+</tr>
+<tr>
+<td colspan="2">Event Details</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>Read/write</td>
+<td>Read/write</td>
+<td>No access</td>
+<td>Read/write</td>
+<td>Read/write</td>
+<td>Read/write</td>
+</tr>
+<tr>
+<td rowspan="3">Case management</td>
+<td>Queues</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>Read/write</td>
+<td>Read/write</td>
+<td>Read/write</td>
+</tr>
+<tr>
+<td>Report</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Routing rules</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>Read/write</td>
+<td>Read/write</td>
+<td>No access</td>
+</tr>
+<tr>
+<td colspan="2">Velocities</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>Read/write</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td colspan="2">External calls</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td rowspan="2">Lists</td>
+<td>Custom</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Support</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td colspan="2">Graph explorer</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+</tr>
+<tr>
+<td colspan="2">Event tracing</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td colspan="2">Data upload</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td rowspan="3">API management</td>
+<td>API requests</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Errors</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Ontology</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td rowspan="3">Integration</td>
+<td>Dashboard</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>AAD Apps</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Device Fingerprinting</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td rowspan="3">Subscription</td>
+<td>Summary</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Details</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Billing</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td colspan="2">User access</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td rowspan="2">Subject requests</td>
+<td>Search</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Requests</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td rowspan="2">Transaction acceptance booster</td>
+<td>Opt in</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Report</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+</tbody>
 </table>
 
 > [!NOTE]
