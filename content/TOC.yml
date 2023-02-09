@@ -270,6 +270,18 @@
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
+- name: Reporting
+  items:
+  - name: Virtual fraud analyst reporting
+    href: virtual-fraud-analyst-reporting.md
+  - name: Summary report
+    href: summary-report.md
+  - name: Score analyst reports
+    href: score-analyst.md
+  - name: Rule analayst reports
+    href: rule-analyst.md
+  - name: Threat analyst reports
+    href: threat-analyst.md
 - name: Compliance, privacy, security
   items:
   - name: Compliance overview
