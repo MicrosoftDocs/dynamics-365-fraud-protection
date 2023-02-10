@@ -142,9 +142,11 @@
       href: promocode-set-up-purchase-protection.md
     - name: User access
       items:
+      - name: User roles and access
+        href: user-roles-access.md
       - name: Configure user roles and access
         href: configure-user-access.md
-      - name: User roles and access (payment service providers)
+      - name: Payment service provider user roles and access 
         href: psp-user-roles.md
     - name: Deploy and work with account protection and purchase protection learning path
       href: /training/paths/deploy-work-account-purchase-protection/
