@@ -2,7 +2,7 @@
 author: yvonnedeq
 description: This article provides information about Virtual fraud analyst reporting and the available tools in Dynamics 365 Fraud Protection.
 ms.author: kfend
-ms.date: 02/08/2023
+ms.date: 03/01/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -20,7 +20,7 @@ Dynamics 365 Fraud Protection includes a suite of fraud analysis tools that's na
 
 VFA reports are updated every 24 hours by using the last four months of data. The time stamp on the report shows the time when the report was last updated, in Coordinated Universal Time.
 
-For applicable capabilities, such as purchases, you can switch between the Count view and the Amount view on the report. The Count view aggregates metrics by transaction count. The Amount view aggregates metrics in US dollars. Reports can be viewed in different timescales, including a daily view, a weekly view, and a monthly view.
+For applicable capabilities, such as purchases, you can switch between the Count view and the Amount view on the report. The Count view aggregates metrics by transaction count. The Amount view aggregates metrics in US dollars. Reports can be viewed in different timescales, including a daily view, a weekly view, and a monthly view. If you are using multiple capabilities in DFP such as purchase and account login, you can switch the capabilities to load different reports.
 
 ## VFA tools
 The following interactive report tools make up the VFA suite:
@@ -38,18 +38,18 @@ Because Fraud Protection offers multiple capabilities, common filters vary, depe
 - **Purchase protection**
 
     - **Merchant Business Segment** – Filter by business segment.
-    - **Merchant Product Category** – Filter by the category of product.
-    - **PI Type** – Filter by payment instrument type, such as CREDITCARD or PAYPAL.	
+    - **Merchant Product Category** – Filter by the category of product. If there are multiple products listed in one transaction, the report metrics select the product category of the first product in the transaction.
+    - **PI Type** – Filter by payment instrument type, such as CREDITCARD or PAYPAL. If there are multiple payment instruments listed in one transaction, the report metrics select the first payment instrument type of the transaction.
     - **PI Card Type** – Filter by the network that the credit or debit card is issued from.
     - **IP Country/Region** – Filter by country or region, based on IP address.
 
 - **Account protection**
 
-    - **Enabled JS** – Filter based on whether JavaScript is enabled.
     - **Operating System Family** – Filter by operating system (OS) family.
     - **Operating System** – Filter by OS that contains version information.
     - **Browser Family** – Filter by browser family, such as Edge, Chrome, or Safari.
-    - **IP Country/Region and State** – Filter by country/region and state/province, based on IP address.
+    - **IP Country/Region** - Filter by country/region, based on IP address.
+    - **IP State** – Filter by state/province, based on IP address.
 
 ## See also
 - [Summary report](summary-report.md)
