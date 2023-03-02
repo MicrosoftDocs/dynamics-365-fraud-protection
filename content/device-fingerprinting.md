@@ -119,10 +119,18 @@ To implement device fingerprinting, follow these steps.
 3. When you submit transactions in the Fraud Protection API, set a session ID in the **deviceContextId** field.
 4. Set the **device.ipAddress** field to the customer IP address that your website receives when a customer uses your site.
 
+## Enable fingerprinting on a mobile app
+
+For mobile apps, device fingerprinting integration supports Android, iOS, and React Native platforms via software development kit (SDK) integration. For more information about the mobile reference implementation, see the following articles:
+
+- [Dynamics 365 Fraud Protection mobile SDK for Android](mobile-sdk-android.md)
+- [Dynamics 365 Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md)
+- [Dynamics 365 Fraud Protection mobile SDK for React Native](mobile-sdk-react-native.md)
+
 ## Interpreting fingerprinting response to detect VPNs
 
 There are two fields that exist in the Account Create and Account Login API response that can be used to identify VPNs:
-- Proxy (which is a Boolean indicating if we detected a proxy or not)
+- Proxy (which is a Boolean indicating if Fraud Protection detected a proxy or not)
 - ProxyType (which is an enum with the below values)
 
 |ProxyType |Description|
@@ -136,18 +144,6 @@ There are two fields that exist in the Account Create and Account Login API resp
 |web|The proxy operates through the use of an Internet web browser.  Users navigate to the web proxy website, enter the URL of the site they actually wish to visit, and the contents of the requested URL are returned by the web proxy website within the browser.|
 
 For example, to identify a VPN, Proxy would be TRUE and ProxyType would be "service".
-
-## Enable fingerprinting on a mobile app
-
-For mobile apps, device fingerprinting integration supports Android, iOS, and React Native platforms via software development kit (SDK) integration. For more information about the mobile reference implementation, see the following articles:
-
-- [Dynamics 365 Fraud Protection mobile SDK for Android](mobile-sdk-android.md)
-- [Dynamics 365 Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md)
-- [Dynamics 365 Fraud Protection mobile SDK for React Native](mobile-sdk-react-native.md)
-
-## Mobile device fingerprinting
-
-You can learn more about the mobile reference implementation in [Dynamics 365 Fraud Protection mobile SDK for Android](mobile-sdk-android.md) and [Dynamics 365 Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md).
 
 ## Additional resources
 
