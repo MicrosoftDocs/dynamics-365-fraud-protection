@@ -67,7 +67,7 @@ Complete the following procedures to set up DNS and generate an SSL certificate.
 
 To set up DNS, follow these steps.
 
-1. Select a subdomain under your root domain, such as `f.contoso.com`. Any prefix can be used.
+1. Select a subdomain under your root domain, such as `fpt.contoso.com`. Any prefix can be used.
 1. For the selected subdomain, create a canonical name (CNAME) that points to `fpt.dfp.microsoft.com`.
 
 #### Generate and upload an SSL certificate
@@ -91,7 +91,7 @@ To implement device fingerprinting, follow these steps.
 1. Modify the following JavaScript script code, and insert it on the webpage or in the application where you want to collect device fingerprinting information.
 
     ```JavaScript
-    <script src="https://fpt.<Your_Root_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
+    <script src="https://<Your_Sub_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
     ```
 
     - **Your\_Root\_Domain** – The root domain of the client website.
