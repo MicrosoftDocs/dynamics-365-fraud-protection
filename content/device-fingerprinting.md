@@ -129,7 +129,7 @@ For mobile apps, device fingerprinting integration supports Android, iOS, and Re
 
 ## Interpreting fingerprinting response to detect VPNs
 
-There are two fields that exist in the Account Create and Account Login API response that can be used to identify VPNs:
+There are two fields that exist in the Account Create, Account Login, and Purchase API response that can be used to identify VPNs:
 - Proxy (which is a Boolean indicating if Fraud Protection detected a proxy or not)
 - ProxyType (which is an enum with the below values)
 
