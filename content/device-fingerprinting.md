@@ -129,21 +129,21 @@ For mobile apps, device fingerprinting integration supports Android, iOS, and Re
 
 ## Interpreting fingerprinting response to detect VPNs
 
-There are two fields that exist in the Account Create, Account Login, and Purchase API response that can be used to identify VPNs:
-- Proxy (which is a Boolean indicating if Fraud Protection detected a proxy or not)
-- ProxyType (which is an enum with the below values)
+There are two fields that exist in the **Account Create**, **Account Login**, and **Purchase API** response that can be used to identify VPNs:
+- Proxy: A boolean indicating if Fraud Protection detected a proxy or not.
+- ProxyType: An enum. The following table provides the enum values for each ProxyType.
 
-|ProxyType |Description|
---- | --- |
-|http|The proxy uses the HTTP protocol and has open ports which are accessible by any Internet user.|
-|service|The proxy is operated by an organization (often for profit) that provides access to subscribers as a service.  The proxy is one of an array of proxies (often internationally distributed) that are part of a Virtual Private Network (VPN) that subscribers connect to by installing an application.  The network may have different proxy locations or bandwidth options depending on the user’s membership level (paid or free).|
-|socks|The proxy uses the Socket Secure (SOCKS) protocol and has open ports which are accessible by any Internet user.|
-|socks http|The proxy has both the HTTP and SOCKS protocols setup and has open ports which are accessible by any Internet user.|
-|tor|The proxy is part of the onion router (Tor) network.  Encrypted user Internet traffic is routed through a regularly changing series of nodes operated by volunteers.|
-|unknown|The proxy’s type could not be determined.|
-|web|The proxy operates through the use of an Internet web browser.  Users navigate to the web proxy website, enter the URL of the site they actually wish to visit, and the contents of the requested URL are returned by the web proxy website within the browser.|
+  |ProxyType |Description|
+  |----------|-----------|
+  | http | The proxy uses the HTTP protocol and has open ports which are accessible by any Internet user. |
+  | service | The proxy is operated by an organization (often for profit) that provides access to subscribers as a service. The proxy is one of an array of proxies (often internationally distributed) that are part of a Virtual Private Network (VPN) that subscribers connect to by installing an application. The network may have different proxy locations or bandwidth options depending on the user’s membership level, whether it's paid or free. |
+  | socks | The proxy uses the Socket Secure (SOCKS) protocol and has open ports which are accessible by any Internet user. |
+  | socks http | The proxy has both the HTTP and SOCKS protocols setup and has open ports which are accessible by any Internet user. |
+  | tor | The proxy is part of the onion router (Tor) network. Encrypted user Internet traffic is routed through a regularly changing series of nodes operated by volunteers. |
+  | unknown | The proxy’s type couldn't be determined. |
+  | web | The proxy operates through the use of an Internet web browser. Navigate to the web proxy website, enter the URL of the site you wish to visit, and the contents of the requested URL are returned by the web proxy website within the browser. |
 
-For example, to identify a VPN, Proxy would be TRUE and ProxyType would be "service".
+For example, to identify a VPN, Proxy would be **TRUE** and ProxyType would be **service**.
 
 ## Additional resources
 
