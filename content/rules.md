@@ -45,6 +45,23 @@ Expressions can be compared using comparison operators (such as ==, !=, >, <), a
 
 For more information on rule syntax, see the [Language reference guide](fpl-lang-ref.md).
 
+## Visual view
+
+Use visual mode to write rules quickly and easily using the attributes from the request payload. 
+
+1. To create visual rules, select **+ New Clause**.
+2. Select **Visual View** next to the clause name.  
+3. You can add multiple filters to the clause and choose the attributes from the drop-down menu.  
+4. Switch back to the **Code View** to view and edit the rules in the Fraud Query Language. After the rule is edited in the **Code View**, you can't go back to the **Visual View**. 
+
+  The following graphic shows the **Code View** of the rules.
+  
+   ![Code view.](media/code-view.png)
+
+  The following graphic shows the **Visual View** of the rules.
+
+   ![Visual view.](media/visual-view.png)
+
 ### Examples of rules
 
 ```FraudProtectionLanguage
