@@ -91,7 +91,7 @@ To implement device fingerprinting, follow these steps.
 1. Modify the following JavaScript script code, and insert it on the webpage or in the application where you want to collect device fingerprinting information.
 
     ```JavaScript
-    <script src="https://<Your_Sub_Domain>.com/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
+    <script src="https://<Your_Sub_Domain>/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
     ```
 
     - **Your\_Root\_Domain** – The root domain of the client website.
