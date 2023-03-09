@@ -48,7 +48,7 @@ In the evaluate and protect experiences, you can perform the following tasks for
 
 A data subject request (DSR) is a request asking for modification of personal data held by a third party. 
 
-#### To manage DSR requests with Fraud Protection:
+### To manage DSR requests with Fraud Protection:
 
 1. On the left navigation bar, select **Settings**, and then select **Subject requests**. 
 
@@ -69,7 +69,7 @@ A data subject request (DSR) is a request asking for modification of personal da
     - Statuses (pending or complete)
     - Exported data links.
 
-#### Data subject request API
+### Data subject request API
 
 Fraud Protection allows you to programmatically honor data subject requests using our API. Below is the schema for our GDPR APIs.
 
@@ -81,6 +81,9 @@ Fraud Protection allows you to programmatically honor data subject requests usin
 
 
 For further documentation about this and other Fraud Protection APIs, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
+
+### Data subject request for reports
+Data modifications through data subject requests affect the aggregation numbers of the reports. Fraud Protection recalculates reports to reflect new status updates (for example, chargeback rates in purchase protection). However, it keeps only snapshots of aggregated data outside that moving time window. The aggregated snapshot no longer contains transaction-level details or personally identifiable information. Therefore, the aggregated snapshot can't reflect the impact of GDPR deletion. For example, a customer might request to delete all transactions on the account, including two transactions from the last month and one transaction from five months ago. When this GDPR deletion request is processed in Fraud Protection, an updated report that's configured to reflect the last four months of data might show no transactions in the previous month. Reports that are older than the previously stated time window of four months won't be updated. However, these reports don't affect any delete action in the underlying data.
 
 ## Fair Credit Reporting Act
 
