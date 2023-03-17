@@ -2,7 +2,7 @@
 author: arj-malhotra
 description: This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/06/2023
+ms.date: 03/15/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -23,6 +23,7 @@ All the roles in the following list are named as they will be named in your prod
 
 ## Roles
 
+- **Product admin** – This top-level administrative account has full access to your Fraud Protection instance and all the environments in the hierarchy.
 - **AllAreas_Admin** – This high-level administrative account has full access to Fraud Protection.
 - **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools.
 - **AllAreasViewer** – A user in this role can view all areas of Fraud Protection and learn from the data, but can't do uploads or change settings.
@@ -43,6 +44,7 @@ The following table shows the specific read/write permissions that users have on
 <tr>
 <th>Section</th>
 <th>Sub-page (tab)</th>
+<th>Product Admin</th>
 <th>AllAreas_Admin</th>
 <th>AllAreasEditor</th>
 <th>AllAreasViewer</th>
@@ -62,6 +64,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
+<td>Read/Write</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
@@ -70,6 +73,7 @@ The following table shows the specific read/write permissions that users have on
 <tr>
 <td rowspan="2">Account creation</td>
 <td>Scorecard</td>
+<td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -82,6 +86,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Rules</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -98,6 +103,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
@@ -107,6 +113,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Rules</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -123,6 +130,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
@@ -132,6 +140,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Score and reason code</td>
+<td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -147,6 +156,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
@@ -159,6 +169,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
@@ -168,6 +179,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>IP and Device ID</td>
+<td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -184,6 +196,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
@@ -193,6 +206,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Rules</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -208,6 +222,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
@@ -217,6 +232,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Virtual fraud analyst</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -229,6 +245,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Fraud analysis</td>
+<td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -246,6 +263,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
@@ -253,6 +271,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td colspan="2">Loss Prevention</td>
+<td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -265,6 +284,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td colspan="2">Custom assessments</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -282,6 +302,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -289,6 +310,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td colspan="2">Event Details</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -304,6 +326,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Queues</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>No access</td>
 <td>No access</td>
@@ -314,6 +337,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Report</td>
+<td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -328,6 +352,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Routing rules</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>No access</td>
 <td>No access</td>
@@ -340,6 +365,7 @@ The following table shows the specific read/write permissions that users have on
 <td colspan="2">Velocities</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>No access</td>
 <td>Read/Write</td>
@@ -350,6 +376,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td colspan="2">External calls</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -365,6 +392,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Custom</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>No access</td>
 <td>Read/Write</td>
@@ -375,6 +403,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Support</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -392,6 +421,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
@@ -399,6 +429,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td colspan="2">Event tracing</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -411,6 +442,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td colspan="2">Data upload</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -427,6 +459,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -436,6 +469,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Errors</td>
+<td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -453,6 +487,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -461,6 +496,7 @@ The following table shows the specific read/write permissions that users have on
 <tr>
 <td rowspan="3">Integration</td>
 <td>Dashboard</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -475,6 +511,7 @@ The following table shows the specific read/write permissions that users have on
 <td>AAD Apps</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>No access</td>
 <td>No access</td>
@@ -485,6 +522,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Device Fingerprinting</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -501,6 +539,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -510,6 +549,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Details</td>
+<td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -523,6 +563,7 @@ The following table shows the specific read/write permissions that users have on
 <tr>
 <td>Billing</td>
 <td>Read/Write</td>
+<td>Read/Write</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -534,6 +575,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td colspan="2">User access</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -549,6 +591,7 @@ The following table shows the specific read/write permissions that users have on
 <td>Search</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>No access</td>
 <td>Read/Write</td>
@@ -559,6 +602,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Requests</td>
+<td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
@@ -573,6 +617,7 @@ The following table shows the specific read/write permissions that users have on
 <td rowspan="2">Transaction acceptance booster</td>
 <td>Opt in</td>
 <td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>No access</td>
@@ -584,6 +629,7 @@ The following table shows the specific read/write permissions that users have on
 </tr>
 <tr>
 <td>Report</td>
+<td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
