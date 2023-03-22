@@ -16,7 +16,7 @@ title: User roles and access
 
 Microsoft Dynamics 365 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. Users access Fraud Protection differently, depending on their user role in the organization's Azure tenant. When you add a new user to the system, you can select the roles to assign roles to the user. For information about how to set up user roles and access in Fraud Protection, see [Configure user access](configure-user-access.md).
 
-All the roles in the following list are named as they will be named in your production environment. To grant users access to these roles in your sandbox environment, select the version of the role that begins with "Sandbox_" (for example, **Sandbox_AllAreas_Admin**).
+All the roles in the following list are named as they will be named in your production environment. To grant users access to these roles in your sandbox environment, select the version of the role that begins with "Sandbox_". For example, **Sandbox_AllAreas_Admin**.
 
 > [!NOTE]
 > If the selection of roles that's shown to you differs from the following list, you might be using the payment service provider version of Fraud Protection. In this case, see [Payment service provider user roles and access](psp-user-roles.md) for the list of roles.
@@ -31,13 +31,13 @@ All the roles in the following list are named as they will be named in your prod
 - **FraudEngineer** – This role provides tailored access for fraud analysts and engineers in your organization who work with Fraud Protection. A user in this role has similar access to a user in the **AllAreasEditor** role. This user can access the data engineering information but doesn't have access to some configuration options.
 - **Risk_API** – This role provides access to the API but not to the user-facing tool.
 - ManualReviewAnalyst – A user in this role is responsible for reviewing individual transactions and approving or declining them. Manual review analysts have access to the Search tool and queues in Case management.
-- **ManualReviewSeniorAnalyst** – In addition to reviewing individual transactions and approving or declining them, a user in this role can also set up routing rules. Manual review senior analysts have access to Search tool, Queues, and Routing rules in Case management.
+- **ManualReviewSeniorAnalyst** – In addition to reviewing individual transactions and approving or declining them, a user in this role can also set up routing rules. Manual review senior analysts have access to the Search tool, queues, and Routing rules in Case management.
 - **ManualReviewFraudManager** – A user in this role is intended to manage manual review operations for the merchant. A user in this role can assign user access, configure assessment rules, create queues, define routing rules, and view performance reports. 
 
 
 ## Permissions
 
-The following table shows the specific read/write permissions that users have on each page in the Fraud Protection portal, depending on their roles.
+The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles.
 
 <table>
 <thead>
@@ -534,7 +534,7 @@ The following table shows the specific read/write permissions that users have on
 <td>No access</td>
 </tr>
 <tr>
-<td rowspan="3">Subscription</td>
+<td rowspan="2">Usage</td>
 <td>Summary</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -553,19 +553,6 @@ The following table shows the specific read/write permissions that users have on
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Billing</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -644,7 +631,7 @@ The following table shows the specific read/write permissions that users have on
 </table>
 
 > [!NOTE]
-> The **SupportAgent ManualReviewAnalyst**, and **ManualReviewSeniorAnalyst** roles can add items to, or remove items from, **Support lists** (for example, Safe, Block, and Watch) by using the **Event Details** page. However, they can't read or edit the full Support lists page.
+> The **SupportAgent**, **ManualReviewAnalyst**, and **ManualReviewSeniorAnalyst** roles can add items to, or remove items from, **Support lists** (for example, Safe, Block, and Watch) by using the **Event Details** page. However, they can't read or edit the full Support lists page.
 > 
 > To create an Azure AD application, the user must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
 >
@@ -652,7 +639,7 @@ The following table shows the specific read/write permissions that users have on
 
 ## Member access
 
-Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and use a Microsoft account to sign in.
+Members can access their [Fraud Protection account](https://dfp.microsoft.com/) and use a Microsoft account to sign in.
 
 ## Guest user access
 
