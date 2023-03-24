@@ -2,7 +2,7 @@
 author: arj-malhotra
 description: This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/15/2023
+ms.date: 03/24/2023
 ms.topic: conceptual
 search.app: 
   - Capaedac-fraudprotection
@@ -24,12 +24,12 @@ All the roles in the following list are named as they will be named in your prod
 ## Roles
 
 - **Product admin** – This top-level administrative account has full access to your Fraud Protection instance and all the environments in the hierarchy.
-- **AllAreas_Admin** – This high-level administrative account has full access to Fraud Protection.
-- **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools.
-- **AllAreasViewer** – A user in this role can view all areas of Fraud Protection and learn from the data, but can't do uploads or change settings.
-- **SupportAgent** – This role provides tailored access to Fraud Protection for support agents who work with your customers. A user in this role can view and work in the support tool, view the ontology, and assign customers to safe lists or block lists.
-- **FraudEngineer** – This role provides tailored access for fraud analysts and engineers in your organization who work with Fraud Protection. A user in this role has similar access to a user in the **AllAreasEditor** role. This user can access the data engineering information but doesn't have access to some configuration options.
-- **Risk_API** – This role provides access to the API but not to the user-facing tool.
+- **AllAreas_Admin** – This high-level administrative account has full access to an environment and its child environments Fraud Protection.
+- **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools in an environment and its child environments. However, this role doesn't give access to make user role assignements.
+- **AllAreasViewer** – A user in this role can view all areas of Fraud Protection and learn from the data, but can't do uploads or change settings in an environment and its child environments.
+- **SupportAgent** – This role provides tailored access to Fraud Protection for support agents who work with your customers. A user in this role can view and work in the support tool, view the ontology, and assign customers to safe lists or block lists in an environment and its child environments.
+- **FraudEngineer** – This role provides tailored access for fraud analysts and engineers in your organization who work with Fraud Protection. A user in this role has similar access to a user in the **AllAreasEditor** role. This user can access the data engineering information but doesn't have access to some configuration options in an environment and its child environments.
+- **Risk_API** – This role provides access to the API for an environment and its child environments but not to the user-facing tool.
 - ManualReviewAnalyst – A user in this role is responsible for reviewing individual transactions and approving or declining them. Manual review analysts have access to the Search tool and queues in Case management.
 - **ManualReviewSeniorAnalyst** – In addition to reviewing individual transactions and approving or declining them, a user in this role can also set up routing rules. Manual review senior analysts have access to the Search tool, queues, and Routing rules in Case management.
 - **ManualReviewFraudManager** – A user in this role is intended to manage manual review operations for the merchant. A user in this role can assign user access, configure assessment rules, create queues, define routing rules, and view performance reports. 
@@ -37,7 +37,7 @@ All the roles in the following list are named as they will be named in your prod
 
 ## Permissions
 
-The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles.
+The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles. Along with the sections listed in the table, **Product admin** also has Read/Write permission to the **Admin settings** page, including the **Configuration**, **Search**, **Billing**, and **Subscription** tabs.
 
 <table>
 <thead>
