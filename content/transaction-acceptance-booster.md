@@ -4,8 +4,6 @@ description: This article provides information about how you can boost bank acce
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 

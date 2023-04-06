@@ -4,8 +4,6 @@ description: This article describes the Rule performance report for purchase pro
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Rule performance report for purchase protection

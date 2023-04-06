@@ -4,8 +4,6 @@ description: This article provides information about roles and user access to Mi
 ms.author: josaw
 ms.date: 03/24/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: User roles and access

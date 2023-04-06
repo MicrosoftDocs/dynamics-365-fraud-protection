@@ -4,8 +4,6 @@ description: This article explains how to integrate real-time APIs in Microsoft 
 ms.author: cschlegel
 ms.date: 01/18/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
   - IT Pro

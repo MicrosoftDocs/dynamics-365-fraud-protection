@@ -4,8 +4,6 @@ description: This article explains how to edit, add, and remove entities in supp
 ms.author: josaw
 ms.date: 09/24/2021
 ms.topic: how-to
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Manage support lists

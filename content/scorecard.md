@@ -4,8 +4,6 @@ description: This article explains how to review key metrics and understand the 
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Review key metrics with scorecard reports

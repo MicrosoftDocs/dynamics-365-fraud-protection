@@ -4,8 +4,6 @@ description: This article provides answers to frequently asked questions about s
 ms.author: josaw
 ms.date: 12/02/2022
 ms.topic: conceptual
-search.app: 
- - Capaedac-fraudprotection
 search.audienceType:
  - admin
 title: Security assessment FAQ 

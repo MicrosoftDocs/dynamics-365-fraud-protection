@@ -4,8 +4,6 @@ description: This article provides an overview of data egress outside of the Eur
 ms.author: josaw
 ms.date: 12/14/2022
 ms.topic: overview
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: EU Data Boundary exceptions for Dynamics 365 Fraud Protection

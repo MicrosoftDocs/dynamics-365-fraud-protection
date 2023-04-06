@@ -4,8 +4,6 @@ description: This article describes how to set up a purchased version of Microso
 ms.author: josaw
 ms.date: 02/01/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Set up a purchased instance

@@ -4,8 +4,6 @@ description: This article provides an overview of what custom and support lists 
 ms.author: josaw
 ms.date: 09/24/2021
 ms.topic: overview
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Lists overview

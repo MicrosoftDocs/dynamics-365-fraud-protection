@@ -4,8 +4,6 @@ description: This article explains how the Virtual fraud analyst (VFA) in Micros
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 

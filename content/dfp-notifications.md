@@ -4,8 +4,6 @@ description: This article describes notifications regarding service incidents an
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Notifications for Dynamics 365 Fraud Protection service

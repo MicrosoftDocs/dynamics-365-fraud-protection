@@ -4,8 +4,6 @@ description: This article provides information about the components of case mana
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: reference
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - developer
 title: Case management overview

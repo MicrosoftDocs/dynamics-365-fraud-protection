@@ -4,8 +4,6 @@ description: This article provides information about the score rule optimizer to
 ms.author: josaw
 ms.date: 09/20/2021
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Score rule optimizer tool 

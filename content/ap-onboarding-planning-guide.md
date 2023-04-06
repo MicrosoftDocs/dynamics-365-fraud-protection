@@ -4,8 +4,6 @@ description: This article describes onboarding planning for Microsoft Dynamics 3
 ms.author: cschlegel
 ms.date: 10/28/2022
 ms.topic: reference
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - Admin
   - IT Pro

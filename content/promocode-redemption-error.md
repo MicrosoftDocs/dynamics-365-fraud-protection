@@ -4,8 +4,6 @@ description: This topic provides troubleshooting guidance for when a global admi
 ms.author: josaw
 ms.date: 06/09/2022
 ms.topic: reference
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Troubleshoot promotion code redemption error

@@ -4,8 +4,6 @@ description: This article explains how to upload data for the loss prevention fe
 ms.author: josaw
 ms.date: 01/28/2020
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Upload historical data for loss prevention

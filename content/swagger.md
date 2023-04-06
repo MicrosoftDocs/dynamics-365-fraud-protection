@@ -4,8 +4,6 @@ description: This article describes how to access Swagger for Microsoft Dynamics
 ms.author: josaw
 ms.date: 04/18/2022
 ms.topic: overview
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Swagger UI

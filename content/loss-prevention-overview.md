@@ -4,8 +4,6 @@ description: This article outlines the tools, systems, and procedures that can h
 ms.author: josaw
 ms.date: 07/09/2020
 ms.topic: overview
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Loss prevention overview

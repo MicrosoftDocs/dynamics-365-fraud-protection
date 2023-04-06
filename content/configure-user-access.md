@@ -4,8 +4,6 @@ description: This article explains how to configure user access to Microsoft Dyn
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Configure user access
