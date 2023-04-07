@@ -4,8 +4,6 @@ description: This article explains how the labels API enables you to send inform
 ms.author: josaw
 ms.date: 11/03/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Labels API

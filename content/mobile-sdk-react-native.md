@@ -4,8 +4,6 @@ description: This topic provides information that is required for device fingerp
 ms.author: josaw
 ms.date: 05/26/2022
 ms.topic: reference
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - developer
 title: Dynamics 365 Fraud Protection mobile SDK for React Native

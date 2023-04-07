@@ -4,8 +4,6 @@ description: This article provides information about security, compliance, and d
 ms.author: josaw
 ms.date: 10/19/2022
 ms.topic: overview
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Compliance overview

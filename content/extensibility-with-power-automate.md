@@ -4,8 +4,6 @@ description: This article explains how to use event hubs with Microsoft Azure Lo
 ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
-search.app:
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Work with Logic Apps or Power Automate

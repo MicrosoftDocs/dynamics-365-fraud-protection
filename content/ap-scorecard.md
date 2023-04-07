@@ -4,8 +4,6 @@ description: This article explains the scorecard capability of the account prote
 ms.author: josaw
 ms.date: 03/05/2021
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Review key metrics for account protection

@@ -4,7 +4,6 @@
 title: [Topic name]
 description: [Full description that appears in the search results. Often the first paragraph of your topic.]
 author: [author's GitHub alias]
-manager: AnnBe
 ms.date: 04/22/2019
 ms.topic: article
 ms.prod: 

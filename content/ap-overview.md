@@ -4,8 +4,6 @@ description: This article provides an overview of the account protection experie
 ms.author: josaw
 ms.date: 03/05/2021
 ms.topic: overview
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Account protection overview

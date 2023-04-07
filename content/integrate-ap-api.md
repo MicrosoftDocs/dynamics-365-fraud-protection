@@ -4,8 +4,6 @@ description: This article explains how to integrate Microsoft Dynamics 365 Fraud
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Integrate account protection APIs 

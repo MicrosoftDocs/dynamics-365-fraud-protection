@@ -4,8 +4,6 @@ description: This article explains how to use velocities to examine user and ent
 ms.author: josaw
 ms.date: 02/01/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Perform velocity checks

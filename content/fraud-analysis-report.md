@@ -4,8 +4,6 @@ description: This article describes the Fraud Analysis report for purchase prote
 ms.author: josaw
 ms.date: 03/31/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Fraud analysis report for purchase protection

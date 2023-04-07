@@ -4,8 +4,6 @@ description: This article provides information about the monthly business review
 ms.author: josaw
 ms.date: 06/07/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Monthly business review tool

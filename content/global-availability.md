@@ -4,8 +4,6 @@ description: This article explains the global availability of Microsoft Dynamics
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Regional availability of Dynamics 365 Fraud Protection services

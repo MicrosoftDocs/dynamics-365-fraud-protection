@@ -4,8 +4,6 @@ description: This article describes how to set up loss prevention in Microsoft D
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Prevent loss with Dynamics 365 Fraud Protection

@@ -4,8 +4,6 @@ description: This article explains how to utilize the Rule analyst reports in Mi
 ms.author: kfend
 ms.date: 02/09/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Rule analyst reports

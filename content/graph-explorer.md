@@ -4,8 +4,6 @@ description: This article explains how you can visually explore your data in Mic
 ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Visually explore data with the graph explorer

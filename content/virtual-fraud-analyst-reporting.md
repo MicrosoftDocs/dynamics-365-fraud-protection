@@ -4,8 +4,6 @@ description: This article provides information about Virtual fraud analyst repor
 ms.author: kfend
 ms.date: 03/01/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Virtual fraud analyst reporting
