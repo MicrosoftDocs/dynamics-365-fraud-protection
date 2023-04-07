@@ -18,6 +18,9 @@ This content guides you through the process of setting up and using the *event t
 
 Through pure-code software development kits (SDKs), you can integrate this data with your own organization's workflows, requirements for granular control, and custom needs. Additionally, you can take advantage of fast-development tools such as Azure Logic Apps, Power BI, and Power Apps for powerful automation, reports, and applications.
 
+> [!NOTE]
+> Event Hub requires additional Azure services subscriptions. Contact your Microsoft Account Executive for details. If you have Azure global administrator credentials, log into the [Azure portal](https://ms.portal.azure.com/#home) to determine available subscriptions.
+
 This content is organized into the following main articles:
 
 - [Set up extensibility via Event Hubs](extensibility-setup.md)	
@@ -31,6 +34,7 @@ This content is organized into the following main articles:
 > Only the [Set up extensibility via Event Hubs](extensibility-setup.md) article is *required*. The remaining articles are optional, depending on your organization's needs. Each article is divided into sections, so that you can skip around and review only the parts that you require. In these articles, the terms *events*, *eventing data*, and *event tracing data* are used interchangeably. 
 >
 > Be sure to read the notes in each article *before* you move on to another article.
+
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
