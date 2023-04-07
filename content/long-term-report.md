@@ -4,8 +4,6 @@ description: This article describes the Long term report for purchase protection
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Long term report for purchase protection

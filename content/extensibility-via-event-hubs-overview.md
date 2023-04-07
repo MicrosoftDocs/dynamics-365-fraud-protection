@@ -4,8 +4,6 @@ description: This article provides an overview about how you can use Microsoft A
 ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: overview
-search.app:
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Extensibility via Event Hubs

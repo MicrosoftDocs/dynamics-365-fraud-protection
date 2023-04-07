@@ -4,8 +4,6 @@ description: This article provides information about how to set up event hubs to
 ms.author: josaw
 ms.date: 10/23/2020
 ms.topic: conceptual
-search.app:
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Set up extensibility via Event Hubs

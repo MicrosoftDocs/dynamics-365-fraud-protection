@@ -4,8 +4,6 @@ description: This article outlines the account protection schemas for data uploa
 ms.author: josaw 
 ms.date: 03/17/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Account protection schemas

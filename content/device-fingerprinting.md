@@ -4,8 +4,6 @@ description: This article explains how to set up device fingerprinting in Micros
 ms.author: josaw
 ms.date: 11/08/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Set up device fingerprinting

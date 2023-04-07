@@ -4,8 +4,6 @@ description: This article provides information about the fraud tracker tool in M
 ms.author: josaw
 ms.date: 06/09/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Fraud tracker tool

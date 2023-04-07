@@ -4,8 +4,6 @@ description: This article explains how you can use Microsoft Dynamics 365 Fraud 
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual 
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Support your customers with Dynamics 365 Fraud Protection

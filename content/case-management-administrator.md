@@ -4,8 +4,6 @@ description: This article explains how to work with case management as an admini
 ms.author: josaw
 ms.date: 11/03/2022
 ms.topic: reference
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - developer
 title: Case management for administrators

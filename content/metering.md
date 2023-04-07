@@ -4,8 +4,6 @@ description: This article explains how to meter your usage of Microsoft Dynamics
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Assessment usage and metering

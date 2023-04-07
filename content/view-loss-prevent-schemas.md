@@ -4,8 +4,6 @@ description: This article outlines data schemas for loss prevention in Microsoft
 ms.author: josaw
 ms.date: 04/02/2021
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Data schemas for loss prevention

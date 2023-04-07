@@ -4,8 +4,6 @@ description: This article describes technical and organizational measures that h
 ms.author: josaw
 ms.date: 06/09/2022
 ms.topic: conceptual
-search.app: 
- - Capaedac-fraudprotection
 search.audienceType:
  - admin
 title: Security measures for protecting data 

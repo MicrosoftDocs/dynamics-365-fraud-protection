@@ -4,8 +4,6 @@ description: This article describes how payment transaction, account activity, a
 ms.author: josaw
 ms.date: 11/12/2020
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Privacy protection for customer data

@@ -4,8 +4,6 @@ description: This article explains how to use external calls to ingest data from
 ms.author: josaw
 ms.date: 06/07/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: External calls
