@@ -20,6 +20,9 @@ Events can be aggregated and used to define metrics that you can use to monitor 
 
 If your Fraud Protection instance has multiple environments, event tracing for each environment can be found by using the environment switcher. If the environment has child environments, event tracing that is subscribed to for the parent environment will automatically include the same events for all the child environments. 
 
+> [!NOTE]
+> Event tracting customers must have a subscription to additional Azure services such as Event Hub or Blob Storage. Contact your Microsoft Account Executive for details. If you have Azure global administrator credentials, log into the [Azure portal](https://ms.portal.azure.com/#home) to determine available subscriptions.
+
 ## Getting started
 
 Follow these steps to start to use the event tracing functionality.
