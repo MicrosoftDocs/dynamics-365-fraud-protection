@@ -4,8 +4,6 @@ description: This article describes how to set up a trial version of Microsoft D
 ms.author: josaw
 ms.date: 06/04/2021
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Set up a trial instance

@@ -4,8 +4,6 @@ description: This article provides information that is required for device finge
 ms.author: josaw
 ms.date: 03/29/2022
 ms.topic: reference
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - developer
 title: Dynamics 365 Fraud Protection mobile SDK for Android

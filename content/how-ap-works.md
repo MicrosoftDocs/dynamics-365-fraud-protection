@@ -4,8 +4,6 @@ description: This article describes how Microsoft Dynamics 365 Fraud Protection 
 ms.author: cschlegel
 ms.date: 11/03/2022
 ms.topic: reference
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - Admin
   - IT Pro

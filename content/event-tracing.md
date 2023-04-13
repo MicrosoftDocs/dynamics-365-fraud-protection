@@ -4,8 +4,6 @@ description: This article explains how to use event tracing in Microsoft Dynamic
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app:
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Event tracing
@@ -19,6 +17,9 @@ The *event tracing* functionality in Microsoft Dynamics 365 Fraud Protection let
 Events can be aggregated and used to define metrics that you can use to monitor and manage your service costs and utilization. Events can also be used to maintain system logs for actions that are taken in the Fraud Protection portal (for example, *user A* edited *list B* on *date C*) or to develop custom reports that use transactional data. When you use the Event Hubs connectors that are available in Power Automate and Logic Apps, you can also use the data that you send to Event Hubs for alerting or highly customized workflows. Similarly, with Blob Storage you can create a new subscription which will copy all historical data into your cold storage account for further analysis.
 
 If your Fraud Protection instance has multiple environments, event tracing for each environment can be found by using the environment switcher. If the environment has child environments, event tracing that is subscribed to for the parent environment will automatically include the same events for all the child environments. 
+
+> [!NOTE]
+> Event tracting customers must have a subscription to additional Azure services such as Event Hub or Blob Storage. Contact your Microsoft Account Executive for details. If you have Azure global administrator credentials, log into the [Azure portal](https://ms.portal.azure.com/#home) to determine available subscriptions.
 
 ## Getting started
 

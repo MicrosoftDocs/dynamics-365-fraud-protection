@@ -5,8 +5,6 @@ ms.author: josaw
 ms.date: 10/23/2020
 
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Data access and privacy for loss prevention

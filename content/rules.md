@@ -4,8 +4,6 @@ description: This article explains how to create and manage rules that protect a
 ms.author: josaw
 ms.date: 01/17/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Manage rules

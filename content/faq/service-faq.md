@@ -4,8 +4,6 @@ description: This article provides answers to frequently asked questions (FAQ) a
 ms.author: josaw
 ms.date: 12/09/2022
 ms.topic: faq
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Service FAQ

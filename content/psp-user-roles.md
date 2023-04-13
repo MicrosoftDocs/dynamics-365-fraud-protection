@@ -4,8 +4,6 @@ description: This article explains how to configure user access for payment serv
 ms.author: kfend
 ms.date: 08/03/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Payment service provider user roles and access 

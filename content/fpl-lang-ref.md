@@ -4,8 +4,6 @@ description: This article is a language reference guide for Microsoft Dynamics 3
 ms.author: josaw
 ms.date: 09/26/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Language reference guide

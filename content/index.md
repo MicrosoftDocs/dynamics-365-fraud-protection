@@ -5,8 +5,6 @@ description: This article provides an overview of Microsoft Dynamics 365 Fraud P
 ms.author: josaw
 ms.date: 05/04/2022
 ms.topic: overview
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Overview of Dynamics 365 Fraud Protection

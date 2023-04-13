@@ -4,8 +4,6 @@ description: This article explains the reporting capabilities of the loss preven
 ms.author: josaw
 ms.date: 07/09/2020
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Overview of loss prevention reports

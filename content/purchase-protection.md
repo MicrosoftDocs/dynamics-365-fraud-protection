@@ -4,8 +4,6 @@ description: This article explains the purchase protection capability of Microso
 ms.author: josaw
 ms.date: 02/02/2021
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Protect purchases from fraudulent activity

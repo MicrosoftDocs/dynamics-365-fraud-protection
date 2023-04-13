@@ -4,8 +4,6 @@ description: This article explains how to evaluate proof of concept options in M
 ms.author: cschlegel
 ms.date: 11/03/2022
 ms.topic: reference
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - Administrator
   - IT Pro

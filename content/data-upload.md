@@ -4,8 +4,6 @@ description: This article explains how to upload historical data for Microsoft D
 ms.author:  josaw
 ms.date: 02/02/2021
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Upload historical data for purchase protection 

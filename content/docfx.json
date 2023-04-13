@@ -46,7 +46,9 @@
         "almostdunh",
         "AshleyWoodruff"
       ],
-      "search.appverid": "met150",
+      "search.app": [
+        "fraudprotection-docs"
+      ],
       "breadcrumb_path": "/dynamics365/fraud-protection/breadcrumb/toc.json",
       "extendBreadcrumb": true,
       "feedback_system": "GitHub",

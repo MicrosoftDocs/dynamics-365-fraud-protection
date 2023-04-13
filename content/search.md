@@ -4,8 +4,6 @@ description: This article explains how to search for a transaction in Microsoft 
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: how-to
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Search

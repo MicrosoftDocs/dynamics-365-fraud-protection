@@ -4,8 +4,6 @@ description: This article describes how to set up purchase protection in Microso
 ms.author: josaw
 ms.date: 06/16/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Set up purchase protection

@@ -4,8 +4,6 @@ description: This article explains how to add, manage, and use custom lists to m
 ms.author: josaw
 ms.date: 09/24/2021
 ms.topic: how-to
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Manage custom lists

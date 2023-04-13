@@ -4,8 +4,6 @@ description: This article explains how to utilize the Threat analyst reports in 
 ms.author: kfend
 ms.date: 02/08/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Threat analyst reports

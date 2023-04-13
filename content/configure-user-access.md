@@ -4,79 +4,69 @@ description: This article explains how to configure user access to Microsoft Dyn
 ms.author: josaw
 ms.date: 02/02/2023
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Configure user access
 
 ---
-
 # Configure user access
 
-In Microsoft Dynamics 365 Fraud Protection, you can grant users different levels of access to the service, based on logical or functional roles. Administrators can use the **User access** section to assign these roles. For more information, see [User roles and access](user-roles-access.md).
+In Microsoft Dynamics 365 Fraud Protection, you can grant users different levels of access to the service, based on logical or functional roles. Administrators can use the **User access** section to assign these roles. For more information about the available roles, see [User roles and access](user-roles-access.md).
+
+If your Fraud Protection instance has multiple environments, user access for each environment can be found by using the environment switcher. If the environment has child environments, the user or groups that are granted with a user role automatically have the same level of access to all the child environments. If you revoke a user role from an environment, the user or groups automatically lose the same level of access to all the child environments, unless it's explicitly added for another environment. 
 
 Users are managed through your assigned Azure Active Directory (Azure AD) tenant.
 
 Roles can be assigned to the following types of users:
 
-  - Users inside the organization's Azure tenant
-  - Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users
+- Users inside the organization's Azure tenant
+- Users outside the organization's Azure tenant, who will be invited to join the tenant as guest users
 
-Member users inside the organization's Azure tenant can view a list of other users in the tenant. Users outside the organization's Azure tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
+Member users inside the organization's Azure tenant can view a list of all other users in the tenant. Users outside the organization's Azure tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
 
 You can invite colleagues to use Fraud Protection or change their role assignments if one or both of the following conditions are met for your account:
 
-  - You're a global administrator of the Azure AD tenant where Fraud Protection is set up.
-  - You have AllAreas_Admin or AllAreas_Editor permission for Fraud Protection, and you have one of the following permissions in the Azure AD tenant where Fraud Protection is set up:
+- You're a global administrator of the Azure AD tenant where Fraud Protection is set up. 
+- You have **AllAreas_Admin** or **Product admin** permission for Fraud Protection, and you have one of the following permissions in the Azure AD tenant where Fraud Protection is set up: 
 
     - Application administrator
     - Cloud application administrator
-    - User administrator 
+    - User administrator
     - Privileged role administrator
 
+Administrator roles are asked to attest to usage disclaimers and play a brief educational video during their first-run experience in Fraud Protection.
+
 For more information about how to directly add users to your Azure AD tenant as members or non-guest users, see [Create a user account in Azure Active Directory](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
-
-## Assign roles to users in Fraud Protection
-
-To assign roles to users in Fraud Protection, follow these steps.
-
-1.	Open the Fraud Protection portal page.
-2.	In the left navigation pane, select **Settings**, and then select **User access** > **Assign roles**.
-3.	Enter the name or email address of the person or group that you're assigning a Fraud Protection role to.
-
-  > [!NOTE]
-  > In the Azure tenant, suggestions for users will appear while you type. Select a suggestion if it matches the user that you want to assign a role to. Otherwise, you'll receive a message that an invitation email will be sent to the person or group that you entered. That person or group can then join the Fraud Protection environment.
-
-4.	In the **Roles** field, select one or more defined roles that you want to assign to the user.
-5.	Select **Assign role(s)**.
 
 ### Assign roles to users in Fraud Protection
 
 To assign roles to users in Fraud Protection, follow these steps.
 
 1. Open the Fraud Protection portal page.
-1. In the left navigation pane, select **Settings**, and then select **User access**.
-1. Select **Assign role(s)**.
-1. Enter the name or email address of the person or group that you want to assign a Fraud Protection role to.
+2. In the left navigation pane, select **Settings**, and then select **User access** > **Assign roles**.
+3. Enter the name or email address of the person or group that you're assigning a Fraud Protection role to.
 
     > [!NOTE]
-    > In the Azure tenant, suggestions for users will appear while you type. Select a suggestion if it matches the user that you want to assign a user role to. Otherwise, a message informs you that an invitation email will be sent to the person or group that you entered, so that the person or group can join the Fraud Protection environment.
+    > In the Azure tenant, suggestions for users will appear while you type. Select a suggestion if it matches the user that you want to assign a role to. Otherwise, you'll receive a message that an invitation email will be sent to the person or group that you entered. That person or group can then join the Fraud Protection environment.
 
-1. In the **Roles** field, select one or more defined roles that you want to assign to the user.
-1. Select **Assign role(s)**.
+4. In the **Roles** field, select one or more defined roles that you want to assign to the user.
+5. Select **Assign role(s)**.
 
 ### Edit assigned roles
 
-To edit the role that's assigned to a user in Fraud Protection, select the user in the **Member list**, and then select **Edit**. 
+To edit the role that's assigned to a user in Fraud Protection, select the user in the **Member list**, and then select **Edit**. To edit a role for a specific environment, use the environment switcher to select the environment that you want to configure. 
 
 In this part of the page, roles can be added to or deleted from a user. If you edit your own account (for example, if you delete your own administrative role), your edits might interfere with your ability to use some features of Fraud Protection. If you must restore permissions, you can reset them in the [Azure portal](https://portal.azure.com/#home).
 
+To learn more about the available roles, see the article, [User roles and access](user-roles-access.md).
+
 ### Revoke user access to the environment
+
+To revoke a user's access to a specific environment, use the environment switcher to select the environment that you want to configure. 
 
 To revoke a user's access to the current environment, select the user in the **Member list**, and then select **Revoke access**.
 
 > [!IMPORTANT]
-> When you revoke access for a user, the user is removed from the current environment. However, they might still have access to other environments in the hierarchy. To fully remove a user's access to Fraud Protection, you must [delete the user from your Azure AD tenant](/azure/active-directory/fundamentals/add-users-azure-active-directory#delete-a-user). In this way, you completely remove the user's access to your tenant, and to its associated applications or services. 
+> When you revoke access for a user, the user is removed from the current environment. However, they might still have access to other environments in the hierarchy. If you want to remove the user from Fraud Protection, you must delete the user from your Axure AD tenant. In this way, you completely remove the user's access to your tenant, and to its associated applications or services.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

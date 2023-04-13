@@ -4,8 +4,6 @@ description: This article outlines the schemas that are required for historical 
 ms.author: josaw
 ms.date: 05/04/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: View purchase protection schemas

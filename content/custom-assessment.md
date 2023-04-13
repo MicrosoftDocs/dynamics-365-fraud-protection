@@ -4,8 +4,6 @@ description: This article provides information about custom assessments, and exp
 ms.author: josaw
 ms.date: 06/28/2022
 ms.topic: conceptual
-search.app: 
-  - Capaedac-fraudprotection
 search.audienceType:
   - admin
 title: Custom assessment
