@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions (FAQ) about data residency in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 12/09/2022
+ms.date: 04/14/2023
 ms.topic: faq
 search.audienceType:
   - admin
@@ -18,7 +18,7 @@ This article provides answers to frequently asked questions (FAQ) about data res
 
 #### Can customers choose the geography where Fraud Protection stores and processes their data? If so, will any data move outside that geography?
 
-Yes, customers can choose the geography where Fraud Protection stores the master copy of their data by selecting it in a list of geographies where Fraud Protection is present (US, Canada, and EU) at the time of creating a new Fraud Protection Environment. It is possible to create multiple environments with different geographies as well if a customer requires different segments of data to be stored in different geographies. More information about creating environments can be found [here](../manage-psp-environments.md). Fraud Protection also stores metadata that is not specific to an individual environment (such as billing or search settings) into a separate storage in the same geography as the first environment. Customers can view the geography of their metadata store on the Admin Settings page within Fraud Protection portal. Changes to this geography can be requested by creating a support request from the portal. 
+Yes, at the time of creating a new Fraud Protection environment, customers can choose the geography where Fraud Protection stores the master copy of their data by selecting it from a list of geographies where Fraud Protection is present (US, Canada, and EU). It is also possible to create multiple environments with different geographies if a customer requires different segments of data to be stored in different geographies. For more information about creating environments, see [Create a new environment](../manage-psp-environments.md#create-a-new-environment). Fraud Protection also stores metadata that is not specific to an individual environment (such as billing or search settings) into a separate storage location in the same geography as the first environment. Customers can view the geography of their metadata store on the **Admin Settings** page within Fraud Protection portal. Changes to this geography can be requested by creating a support request from the portal. 
 
 To provide accurate scores and global fraud insights by using Fraud Protection Network, Fraud Protection must store and process some data outside a customer's selected geography.
 
