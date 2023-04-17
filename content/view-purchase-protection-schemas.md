@@ -398,7 +398,7 @@ The following schemas are used in the evaluate and protect experiences.
 | ----------------------------- |----------|-------------|
 | UserId                        |  String  | The customer identifier. This is a required attribute.|
 | MerchantPaymentInstrumentId   |  String  | The identifier of the payment instrument. This information is provided by the merchant. This is a required attribute.|
-| PaymentInstrumenttype         |  String  | The type of payment: **CreditCard**, **Paypal**, **Mobilepayment**, or **Giftcard**. |
+| PaymentInstrumenttype         |  String  | The type of payment: **CreditCard**, **Paypal**, **CH**, **SEPA**, **BACS**, **Mobilepayment**, **Giftcard**, or other. |
 | PaymentInstrumentcreationDate | DateTime | The date of the first entry for the payment instrument in the merchant's system. The format is ISO 8601. |
 | PaymentInstrumentupdateDate   | DateTime | The date of the last update for the payment instrument in the merchant's system. The format is ISO 8601. |
 | PaymentInstrumentState        |  String  | The state of the payment instrument: **Active**, **Block**, or **Expire**. |
