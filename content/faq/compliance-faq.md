@@ -61,6 +61,15 @@ Fraud Protection follows a Microsoft-wide cadence of internal and external audit
 
 Yes. As a software as a service (SaaS) application, Fraud Protection runs on Azure, and includes ISO 27001, 27018, SOC2, SOC3, and PCI compliance. In addition, Azure covers a wide range of industry compliance for all the services in Azure that Fraud Protection relies on.
 
+#### What is the retention period of data in the Fraud Protection Network?
+
+Data processed within the Fraud Protection network is pseudonymized and retained for 24 months. Authorized Microsoft personnel may access your data for the purposes of providing Online Services or Professional Services, in accordance with Microsoft policy. To learn more about how Microsoft handles your data, visit [Microsoft Product and Services Data Protection Addendum (DPA)](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA?lang=1)
+
+#### Which persons within Fraud Protection have access to Customer Data?
+
+Please note that Microsoft employees, including Microsoft-approved subcontractors, may access Customer Data with the permission of the Customer for the purposes of providing Online Services or Professional Services. Data related to a transaction is deidentified and aggregated prior to transmission into the fraud network. Microsoft employees may access aggregated data related to a transaction in the fraud network for the purposes of improving the Online Services. 
+
+
 ## Additional resources
 
 [EU Data Boundary exceptions for Fraud Protection](../edbd.md)
