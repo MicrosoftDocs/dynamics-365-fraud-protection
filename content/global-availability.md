@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains the global availability of Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/02/2021
+ms.date: 04/18/2023
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -34,11 +34,9 @@ Microsoft Dynamics 365 Fraud Protection provides the English, French, German, Br
 
 Customers in other areas might experience increased latency or lack of service, and can't be fully supported by Microsoft.
 
-## Loss prevention
-
 The following information is meant to help you with your assessment of adequacy as you plan for future deployments and use of Fraud Protection in India.
 
-As is fully described in the dashboard that covers [geographical availability for Dynamics 365](https://dynamics.microsoft.com/geographic-availability/), Fraud Protection is hosted from data centers that are located in the United States and Europe. Therefore, for services that are sold in India, customer data is processed and stored in either the United States or Europe, depending on capacity availability. Currently, the online service isn't hosted in Indian data centers. Although Microsoft plans to address geo location, so that it can offer Fraud Protection that is primarily hosted from its data centers in India, this configuration isn't currently offered.
+As is fully described in the dashboard that covers [geographical availability for Dynamics 365](https://dynamics.microsoft.com/geographic-availability/), Fraud Protection is hosted from data centers that are located in the United States and Europe. Although Microsoft plans to address geo location, so that it can offer Fraud Protection that is primarily hosted from its data centers in India, this configuration isn't currently offered.
 
 The data schema that Fraud Protection uses is available at these locations:
 
