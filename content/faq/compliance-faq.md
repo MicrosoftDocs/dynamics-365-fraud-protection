@@ -63,7 +63,7 @@ Yes. As a software as a service (SaaS) application, Fraud Protection runs on Azu
 
 #### What is the retention period of data in the Fraud Protection Network?
 
-Data processed within the fraud network is pseudonymized and retained for 24 months. Authorized Microsoft personnel may access your data for the purposes of providing Online Services or Professional Services, in accordance with Microsoft policy. To learn more about how Microsoft handles your data, please visit [Microsoft Product and Services Data Protection Addendum (DPA)](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA?lang=1)
+Data processed within the Fraud Protection network is pseudonymized and retained for 24 months. Authorized Microsoft personnel may access your data for the purposes of providing Online Services or Professional Services, in accordance with Microsoft policy. To learn more about how Microsoft handles your data, visit [Microsoft Product and Services Data Protection Addendum (DPA)](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA?lang=1)
 
 #### Which persons within Fraud Protection have access to Customer Data?
 
