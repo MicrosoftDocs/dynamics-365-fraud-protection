@@ -123,6 +123,17 @@ You use audit events to track portal actions and develop an audit log. Audit eve
     "timestamp": "2020-06-10T23:43:33.4526859Z"
 }
 ```
+### Audit log access
+
+There are two ways that youc an access audit logs. You can set up event tracting, or you can request an auto-generated audit log be sent by creating a Customer support ticket. If you decide not to use event tracing and instead submit a support ticket, the support ticket is routed to the Fraud Protection engineering team. The team extracts the logs and provides them back to you. Audit logs are captured and stored in the same geo that you have chosen to provision an environment. The logs can't be edited after they are captured and the log retention period is 365 days. Logs older than 365 days are automatically deleted.
+
+There are five events generated that can be tracked by using the audit logs. Those events are:
+
+- A user is assigned to a Fraud Protection role for the first time.
+- An existing user's role is updated.
+- All role assignments are removed for a specific user.
+- A user accepts the FCRA consent.
+- A user updates the Transaction acceptance booster (TAB) settings. Any change to these settings is considered an update.
 
 ### Monitoring events
 
