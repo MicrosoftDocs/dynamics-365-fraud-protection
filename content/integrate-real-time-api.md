@@ -230,6 +230,14 @@ To call the APIs, follow these steps.
 > [!NOTE]
 > If you create a new environment, include the environment ID in the API header during integration, so that the transactions can be correctly routed.
 
+The following options are acceptable for x-ms-dfpenvid in the API call and the behavior is identical. 
+
+  - Use the environment ID for the environment you are calling. The ID is listed on the **Integration** page in the **Environment ID** field.
+  - Use the full pat of the **Customer API ID** from the root to the child environment you are calling using the forward slash (**/**) as a divider. For example, **/primary/XYZ**.
+  - Use the full path of the environment ID or customer API ID from the root to the child environment you are calling using the forward slash (**/**) as a divider. For example, **7b925ca8-d372-4245-bc5a-94b5fdb6c067/XYZ**.
+
+To specify the customer API ID when you creat an environment, see the article, [Manage environments](manage-psp-environments.md#create-a-new-environment).
+  
 ## Best practices 
 
 - Each Azure AD token remains valid for 60 minutes. We recommend that you cache it for a shorter duration and reuse it. 
