@@ -179,14 +179,14 @@ The **AuthenticationResult** object in each case contains the **AccessToken** va
 
 - Headers:
 
-    - Content-type : application/x-www-form-urlencoded 
+    - Content-type: application/x-www-form-urlencoded 
 
 - Body (key-value):
 
-    - grant_type : client_credentials 
-    - client_id : {Your Client ID from previous step} 
-    - client_secret : {Your secret from previous step} 
-    - resource : `https://api.dfp.microsoft.com` (for int, `https://api.dfp.microsoft-int.com`)
+    - grant_type: client_credentials 
+    - client_id: {Your Client ID from previous step} 
+    - client_secret: {Your secret from previous step} 
+    - resource: `https://api.dfp.microsoft.com` (for int, `https://api.dfp.microsoft-int.com`)
 
 - Response:
 
@@ -218,10 +218,10 @@ To call the APIs, follow these steps.
 
     - Headers:
 
-        - x-ms-correlation-id : {A GUID, which must be unique per request}
-        - content-type : application/json
-        - Authorization : {The token from the previous step}
-        - x-ms-dfpenvid : {The environment ID of the target environment}
+        - x-ms-correlation-id: {A GUID, which must be unique per request}
+        - content-type: application/json
+        - Authorization: {The token from the previous step}
+        - x-ms-dfpenvid: {The environment ID of the target environment}
 
     - Body:
 
@@ -230,6 +230,14 @@ To call the APIs, follow these steps.
 > [!NOTE]
 > If you create a new environment, include the environment ID in the API header during integration, so that the transactions can be correctly routed.
 
+The following options are acceptable for x-ms-dfpenvid in the API call and the behavior is identical. 
+
+  - Use the environment ID for the environment you're calling. The ID is listed on the **Integration** page in the **Environment ID** field.
+  - Use the full pat of the **Customer API ID** from the root to the child environment you're calling using the forward slash (**/**) as a divider. For example, **/primary/XYZ**.
+  - Use the full path of the environment ID or customer API ID from the root to the child environment you're calling using the forward slash (**/**) as a divider. For example, **7b925ca8-d372-4245-bc5a-94b5fdb6c067/XYZ**.
+
+To specify the customer API ID when you creat an environment, see the article, [Manage environments](manage-psp-environments.md#create-a-new-environment).
+  
 ## Best practices 
 
 - Each Azure AD token remains valid for 60 minutes. We recommend that you cache it for a shorter duration and reuse it. 
@@ -241,7 +249,7 @@ To call the APIs, follow these steps.
 
 ## View the sample app 
 
-For additional reference, view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer documentation. The sample app provides an example of how to call Fraud Protection APIs, including API events such sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.
+For additional reference, you can view the [sample merchant app](https://go.microsoft.com/fwlink/?linkid=2085137) and the accompanying developer documentation. The sample app provides an example of how to call Fraud Protection APIs, including API events such sending customer account updates, refunds, and chargebacks in real time. The documentation for the sample app is linked to actual sample code whenever such links are possible. Otherwise, code samples exist directly in the documentation.
 
 For guidance about how to configure the sample site for your use, see [Configure the sample site](https://go.microsoft.com/fwlink/?linkid=2100635).
 
