@@ -40,25 +40,27 @@ To help you get started with setting up Purchase Protection, we have provided th
 
 Understanding Purchase Protection, Account Protection, and Loss Prevention capabilities. 
 
-- [Dynamics-365-Fraud-Protection-home-page](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/).
+- [Dynamics 365 Fraud Protection home page](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/)
 
 ### Step 2: Understand How Purchase Protection Works
 
 Follow the link below to understand how purchase protection interacts with different entities, such as customers and banks. This doc also highlights purchase protection capabilities and APIs, to help you better understand risk assessment interactions. 
  
-- [How-purchase-protection-works](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/how-pp-works).
+- [How purchase protection works](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/how-pp-works)
 
 ### Step 3: Onboarding Planning and Implementation Milestones for Purchase Protection  
 
 Onboarding planning will help you understand and plan for the project implementation milestones of purchase protection integration and onboarding. Follow this link to learn more.  
-- [Onboarding-planning](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/pp-onboarding-planning-guide).
+- [Onboarding planning](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/pp-onboarding-planning-guide)
 
 ### Step 4: Provisioning Fraud Protection in INT (Sandbox) and PROD 
 
 Fraud protection is provisioned into an Azure AAD (Azure Active Directory) Tenant. You can either provision Dynamics 365 Fraud Protection into your existing AAD tenant or a new AAD tenant. Follow these links for more information. 
+- [Set up a trial instance of Fraud Protection](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/promocode-set-up-dfp-trial-version)
+- [Set up a purchased instance of Fraud Protection](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/promocode-set-up-dfp-purchased-version)
 
 Managing Environments (for partners or customers with multiple Fraud Protection environments) Microsoft Dynamics Fraud Protection provides the option for partners and customers to create multiple environments, allowing for customization of their setup in a way that meets their specific needs. This feature offers flexibility in establishing a hierarchy that is suitable for their requirements. 
-
+- [Manage environments](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/manage-psp-environments)
 
 ### Step 5: Configure User Access and Assign Roles  
  
