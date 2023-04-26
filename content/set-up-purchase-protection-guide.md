@@ -9,6 +9,7 @@ title: Set Up Purchase Protection Onboarding Guide
 ms.custom:
 ---
 
+
 # Set Up Purchase Protection Onboarding Guide
 This document guides you through setting up Microsoft Dynamics 365 Purchase Protection. Customers can look forward to a smooth onboarding process by following the steps and links outlined in this onboarding guide below. Below is a summary of the steps in this guide.  
 
