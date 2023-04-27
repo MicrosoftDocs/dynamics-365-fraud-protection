@@ -19,7 +19,7 @@ This article provides answers to frequently asked questions about security asses
 
 Yes.
 
-- **Portal:** SPA - OAuth 2.0 and OpenID Connect, with implicit flow
+- **Portal:** SPA - OAuth 2.0 and OpenID Connect, using authentication code flow with PKCE via the [MSAL v2 library](https://github.com/AzureAD/microsoft-authentication-library-for-js).
 - **Service-to-service backend API:** OAuth 2.0
 - **Fingerprinting service:** Anonymous
 - **Azure Stack:** Shared access signature (SAS) token for storage
