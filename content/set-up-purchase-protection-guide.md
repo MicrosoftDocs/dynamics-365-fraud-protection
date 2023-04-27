@@ -133,18 +133,25 @@ Case management lets you organize and access transactions and specify the level 
 ### Reporting 
 
 Reporting is available to display the impact of Dynamics Fraud Protection to your business.
+- [Key metrics](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/scorecard)
+- [Virtual fraud analyst](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/virtual-fraud-analyst)
+- [Fraud tracker tool](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fraud-tracker)
+- [Long term report](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/long-term-report)
+- [Rule performance report](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rule-performance-report)
 
 
 ### Event Tracing & Event Hub 
 
-Event Tracing offers you the ability to track and audit events, providing you with the option to redirect your data to various destinations outside the Fraud Protection Portal. To use Event tracing functionality, customers must have a subscription to additional Azure services such as Event Hub or Blob Storage. Contact your Microsoft Authorized Seller for details. If you have Azure global administrator credentials, log into the Azure portal to determine available subscriptions.  
-
+Event Tracing offers you the ability to track and audit events, providing you with the option to redirect your data to various destinations outside the Fraud Protection Portal. To use Event tracing functionality, customers must have a subscription to additional Azure services such as Event Hub or Blob Storage. Contact your Microsoft Authorized Seller for details. If you have Azure global administrator credentials, log into the [Azure portal](https://ms.portal.azure.com) to determine available subscriptions.  
+- [Event tracing](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/event-tracing)
+- [Set up extensibility via Event Hubs](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/extensibility-via-event-hubs-overview)
 
 ### External Calls 
 
 External calls let you ingest data from APIs outside Microsoft Dynamics 365 Fraud Protection and then use that data to make informed decisions in real time. 
-
+- [External calls](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/external-calls)
 
 ### Upload Historical Data into Purchase Protection 
 
 Data upload capabilities can be used to cold start our models or provide continuous batched data like Chargeback.
+- [upload historical data](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/data-upload)
