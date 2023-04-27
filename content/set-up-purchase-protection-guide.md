@@ -65,22 +65,25 @@ Managing Environments (for partners or customers with multiple Fraud Protection 
 ### Step 5: Configure User Access and Assign Roles  
  
 You can grant users various levels of access to the service, based on logical or functional roles.  
- 
+ - [Configure user roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/configure-user-access)
+ - [User roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/user-roles-access)
+ - [Payment service provider user roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/psp-user-roles)
  
 ### Step 6: Review APIs and Data Mapping for Purchase Protection 
 
 In this step, your authorized Microsoft partner should collaborate with you to check that your available data aligns with our APIs and provides sufficient information to run machine learning models and generate scores effectively.  
-
+- [Integrate purchase protection APIs](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/integrate-real-time-api)
+- [Labels API](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/labels-api)
 
 ### Step 7: Integrate Purchase Protection APIs 
 
-Collaborate with your authorized Microsoft partner, to confirm your   questions are addressed and APIs are properly integrated, as outlined in this guide.
-
+Collaborate with your authorized Microsoft partner, to confirm your questions are addressed and APIs are properly integrated, as outlined in this guide.
+- [Swagger UI](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/swagger)
 
 ### Step 8: Integrate Device Fingerprinting  
 
 Dynamics Fraud Protection offers a sophisticated Device Fingerprinting functionality that significantly enhances our model scoring. Device fingerprinting can be integrated into either the partner's hosted page or the merchant's webpage. Please visit our Swagger UI (user interfaces) to visualize and interact with the API’s resource which can be found in this link
-
+- [Set up device fingerprinting](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/device-fingerprinting)
 
 ### Step 9: Test and Validate Purchase Protection  
 
@@ -95,32 +98,37 @@ At this stage, you will begin setting up your purchase protection features and o
 ### Transaction Acceptance Booster
 
 TAB (Transaction Acceptance Booster) helps you benefit from higher acceptance rates by sharing Transaction Trust Knowledge with banks. 
-
+- [Transaction acceptance booster (TAB)](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/transaction-acceptance-booster)
 
 ### Rules 
 
 Writing Rules, which can use features like Velocities, Lists, External cCalls, and DFP model scores to make decisions. 
-
+- [Manage rules](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules)
 
 ### Velocities 
 
 Velocity checks help you identify several types of event patterns.
-
+- [Velocity checks](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/velocities)
 
 ### Lists 
 
 Lists help you manage information that you use to fight fraud and enforce business policies. 
-
+- [Lists Overview](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/lists-overview)
+- [Manage support lists](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/manage-support-lists)
+- [Manage custom lists](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/lists)
 
 ### Search 
 
 The Search page helps you find and view details about events in Microsoft Dynamics 365 Fraud Protection, based on specific filter values. 
-
+- [Search](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/search)
+- [Risk support](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/risk-support)
 
 ### Case Management 
 
 Case management lets you organize and access transactions and specify the level of ambiguity that will require review by human subject matter experts. It also includes functionality that lets you provide a feedback loop for the AI-based assessments. 
-
+- [Case management overview](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/case-management-overview)
+- [Case management for administrators](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/case-management-administrator)
+- [Case management for manual reviewers](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/case-management-manual-review)
 
 ### Reporting 
 
