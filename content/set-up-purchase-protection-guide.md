@@ -1,3 +1,4 @@
+---
 author: cschlegel2
 description: This document guides you through setting up Microsoft Dynamics 365 Purchase Protection.  
 ms.author: cschlegel
@@ -28,7 +29,7 @@ This document guides you through setting up Microsoft Dynamics 365 Purchase Prot
 
 ## Prerequisites 
 
-To set up Fraud Protection and control user access to your data, you must have an Azure Active Directory (Azure AD (Active Directory)) tenant. If you do not already have an Azure AD tenant, please contact your authorized Microsoft seller or partner to sign up for one. 
+To set up Fraud Protection and control user access to your data, you must have an Azure Active Directory (Azure AD) tenant. If you do not already have an Azure AD tenant, please contact your authorized Microsoft seller or partner to sign up for one. 
 Before you can install Fraud Protection, an authorized Microsoft seller or partner must provide a promotion code to you. If you do not have a promotion code, contact your authorized Microsoft seller or partner.
 
 To help you get started with setting up Purchase Protection, we have provided the steps below with related onboarding and integration document links from this site for quick reference. Follow the doc links below to walk through the provisioning, integration, and key features.  
@@ -102,7 +103,7 @@ TAB (Transaction Acceptance Booster) helps you benefit from higher acceptance ra
 
 ### Rules 
 
-Writing Rules, which can use features like Velocities, Lists, External cCalls, and DFP model scores to make decisions. 
+Writing Rules, which can use features like Velocities, Lists, External Calls, and DFP model scores to make decisions. 
 - [Manage rules](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules)
 
 ### Velocities 
@@ -142,7 +143,7 @@ Reporting is available to display the impact of Dynamics Fraud Protection to you
 
 ### Event Tracing & Event Hub 
 
-Event Tracing offers you the ability to track and audit events, providing you with the option to redirect your data to various destinations outside the Fraud Protection Portal. To use Event tracing functionality, customers must have a subscription to additional Azure services such as Event Hub or Blob Storage. Contact your Microsoft Authorized Seller for details. If you have Azure global administrator credentials, log into the [Azure portal](https://ms.portal.azure.com) to determine available subscriptions.  
+Event Tracing offers you the ability to track and audit events, providing you with the option to redirect your data to various destinations outside the Fraud Protection Portal. To use Event tracing functionality, customers must have a subscription to additional Azure services such as Event Hub or Blob Storage. Contact your Microsoft Authorized Seller for details. If you have Azure global administrator credentials, log into the    [Azure portal](https://ms.portal.azure.com) to determine available subscriptions.  
 - [Event tracing](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/event-tracing)
 - [Set up extensibility via Event Hubs](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/extensibility-via-event-hubs-overview)
 
@@ -154,4 +155,4 @@ External calls let you ingest data from APIs outside Microsoft Dynamics 365 Frau
 ### Upload Historical Data into Purchase Protection 
 
 Data upload capabilities can be used to cold start our models or provide continuous batched data like Chargeback.
-- [upload historical data](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/data-upload)
+- [Upload historical data](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/data-upload)
