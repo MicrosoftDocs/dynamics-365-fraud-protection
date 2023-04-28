@@ -219,7 +219,7 @@ You can use this structure to create a clause that returns a decision of **Appro
 
 Everything after the **WHEN** keyword must be able to be evaluated to either **True** or **False**. This Boolean expression can consist of values from the [event payload](rules.md#clauses), [user-defined lists](lists.md), and [AI-based bot and risk scores](rules.md#post-bot-scoring-clauses).
 
-For information about the syntax for clauses, see the [[Language reference guide](fpl-lang-ref.md)](fpl-lang-ref.md).
+For information about the syntax for clauses, see the [Language reference guide](fpl-lang-ref.md).
 
 When a clause is triggered (that is, when the **WHEN** statement returns **True**), the decision that is specified in the **RETURN** statement is returned, and no subsequent clauses are run.
 
