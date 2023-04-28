@@ -255,7 +255,7 @@ RETURN Reject ("risky email")
 WHEN ContainsKey ("Risky Emails", "Emails", @"user.email")
 ```
 
-For information about the syntax that is used to reference lists in rules, see the [[Language reference guide](fpl-lang-ref.md)](fpl-lang-ref.md).
+For information about the syntax that is used to reference lists in rules, see the [Language reference guide](fpl-lang-ref.md).
 
 #### Post-bot-scoring clauses
 
