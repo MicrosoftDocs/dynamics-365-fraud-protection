@@ -1,30 +1,29 @@
 ---
 author: cschlegel2
-description: This document guides you through setting up Microsoft Dynamics 365 Purchase Protection.  
+description: This article explains how to set up up Microsoft Dynamics 365 Purchase Protection.  
 ms.author: cschlegel
 ms.date: 04/25/2023
 ms.topic: reference
 search.audienceType:
   - Developer, IT PRO, Fraud Manager
-title: Set Up Purchase Protection Onboarding Guide
+title: Set Up Purchase Protection 
 ms.custom:
 ---
 
 
-# Set Up Purchase Protection Onboarding Guide
-This document guides you through setting up Microsoft Dynamics 365 Purchase Protection. Customers can look forward to a smooth onboarding process by following the steps and links outlined in this onboarding guide below. Below is a summary of the steps in this guide.  
+# Set Up Purchase Protection 
+This article provides an overveiw of how to set up Microsoft Dynamics 365 Purchase Protection. By following the guidance in this article, you can look forward to a smooth onboarding process. The following list is a summary of the steps in this guide.  
 
- 
- 1. Overview of Fraud Protection capabilities  
- 2. Understand how purchase protection works 
- 3. Onboarding planning and implementation milestones 
- 4. Provisioning Fraud Protection in INT (Sandbox) and PROD  
- 5. User access and assign roles 
- 6. Review APIs and data mapping  
- 7. Integrate purchase protection APIs  
- 8. Integrate device fingerprinting 
- 9. Test and validate  
-10. Setting up continuous Operations & Features 
+[1. Overview of Fraud Protection capabilities](#overview) 
+[2. Understand how purchase protection works](#understand) 
+[3. Onboarding planning and implementation milestones](#onboard)
+[4. Provisioning Fraud Protection in INT (Sandbox) and PROD](#provision)
+[5. User access and assign roles](#assign)
+[6. Review APIs and data mapping](#review)
+[7. Integrate purchase protection APIs](#purchase)  
+[8. Integrate device fingerprinting](#device)
+[9. Test and validate](#test)
+[10. Setting up continuous operations and features](#continuous)
 
 
 ## Prerequisites 
@@ -35,9 +34,7 @@ Before you can install Fraud Protection, an authorized Microsoft seller or partn
 To help you get started with setting up Purchase Protection, we have provided the steps below with related onboarding and integration document links from this site for quick reference. Follow the doc links below to walk through the provisioning, integration, and key features.  
 
 
-## Onboarding & Integration Steps with Doc Links
-
-### Step 1: Overview of Dynamics Fraud Protection
+## <a name="overview"></a> Overview of Dynamics Fraud Protection
 
 Understanding Purchase Protection, Account Protection, and Loss Prevention capabilities. 
 
