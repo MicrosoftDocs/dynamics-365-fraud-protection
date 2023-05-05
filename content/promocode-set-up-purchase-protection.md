@@ -27,23 +27,23 @@ This article provides an overview of the process for setting up Purchase Protect
 
 ## Prerequisites
 
-Before you set up Purchase Protection, you must set up Dynamics 365 Fraud Protection. Fraud Protection is where you control user access to your data. You must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, contact your authorized Microsoft seller or partner to sign up for one. Before you can install Fraud Protection, an authorized Microsoft seller or partner must provide a promotion code to you. If you don't have a promotion code, contact your authorized Microsoft seller or partner. To learn more about Fraud Protection, and about the capabilities of Purchase Protection, Account Protection, and Loss Prevention, see the [Dynamics 365 Fraud Protection home page](index.md).
+Before you set up Purchase Protection, you must set up Dynamics 365 Fraud Protection. Fraud Protection is where you control user access to your data. To set up Fraud Protection, you must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, contact your authorized Microsoft seller or partner to sign up for one. Before you can install Fraud Protection, an authorized Microsoft seller or partner must provide a promotion code to you. If you don't have a promotion code, contact your authorized Microsoft seller or partner. To learn more about Fraud Protection, and about the capabilities of Purchase Protection, Account Protection, and Loss Prevention, see the [Dynamics 365 Fraud Protection home page](index.md).
 
-## <a name="understand"></a>Understand how Purchase Protection works
+## <a name="understand"></a>1. Understand how Purchase Protection works
 
 To learn how Purchase Protection interacts with different entities, such as customers and banks, see [How purchase protection works](how-pp-works.md). This article also highlights Purchase Protection capabilities and APIs to help you better understand risk assessment interactions.
 
-## <a name="onboard"></a>Onboarding planning and implementation milestones for Purchase Protection
+## <a name="onboard"></a>2. Onboarding planning and implementation milestones for Purchase Protection
 
 Onboarding planning helps you understand and plan for the project implementation milestones of Purchase Protection integration and onboarding. To learn more, see [Onboarding planning](pp-onboarding-planning-guide.md).
 
-## <a name="provision"></a>Provision Fraud Protection in INT (sandbox) and production environments
+## <a name="provision"></a>3. Provision Fraud Protection in INT (sandbox) and production environments
 
 Fraud Protection is provisioned in an Azure AD tenant. You can provision it in your existing Azure AD tenant or a new Azure AD tenant. To learn more, see [Set up a trial instance of Fraud Protection](promocode-set-up-dfp-trial-version.md) and [Set up a purchased instance of Fraud Protection](promocode-set-up-dfp-purchased-version.md).
 
 Fraud Protection gives you the option to create multiple environments and lets you customize the setup in a way that meets your specific needs. This feature gives you the flexibility to establish a hierarchy that's suitable for your requirements. To learn more, see [Manage environments](manage-psp-environments.md).
 
-## <a name="configure"></a>Configure user access and assign roles
+## <a name="configure"></a>4. Configure user access and assign roles
 
 You can grant users different levels of access to the service, based on logical or functional roles. To learn more about user roles and access, and how to configure them, see the following articles:
 
@@ -51,23 +51,23 @@ You can grant users different levels of access to the service, based on logical 
 - [User roles and access](user-roles-access.md)
 - [Payment service provider user roles and access](psp-user-roles.md)
 
-## <a name="review"></a>Review the APIs and data mapping for Purchase Protection 
+## <a name="review"></a>5. Review the APIs and data mapping for Purchase Protection 
 
 Work with your authorized Microsoft partner to confirm that your available data is aligned with our APIs, and that it provides enough information to effectively run machine learning models and generate scores. To learn more, see [Integrate purchase protection APIs](integrate-real-time-api.md) and [Labels API](labels-api.md).
 
-## <a name="purchase"></a>Integrate Purchase Protection APIs
+## <a name="purchase"></a>6. Integrate Purchase Protection APIs
 
 Work with your authorized Microsoft partner to confirm that your questions are addressed and the APIs are correctly integrated. To learn more, see [Swagger UI](swagger.md).
 
-## <a name="device"></a>Integrate device fingerprinting
+## <a name="device"></a>7. Integrate device fingerprinting
 
 Fraud Protection provides sophisticated device fingerprinting functionality that significantly enhances your model scoring. Device fingerprinting can be integrated into either a partner's hosted page or a merchant's webpage. To view our Swagger user interface (UI), where you can visualize and interact with the API's resource, see [Set up device fingerprinting](device-fingerprinting.md).
 
-## <a name="test"></a>Test and validate Purchase Protection
+## <a name="test"></a>8. Test and validate Purchase Protection
 
 As test traffic begins to flow into the sandbox environment, contact your authorized Microsoft partner to confirm that your data is being received. When the validations have been successfully completed, the integration process can proceed to its full implementation in production environments. Inform your authorized Microsoft partner that you've started sending traffic to confirm that the data was received.
 
-## <a name="continuous"></a>Set up continuous operations and features
+## <a name="continuous"></a>9. Set up continuous operations and features
 
 As you begin to set up your Purchase Protection operations and features, you can determine your own unique set of rules and velocities while you use other features as required to best serve the needs of your business.
 
