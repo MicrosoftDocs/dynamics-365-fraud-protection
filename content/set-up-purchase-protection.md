@@ -61,7 +61,7 @@ Collaborate with your authorized Microsoft partner to confirm your questions are
 
 ## <a name="device"></a>  Integrate device fingerprinting  
 
-Fraud Protection offers sophisticated Device fingerprinting functionality that significantly enhances our model scoring. Device fingerprinting can be integrated into either the partner's hosted page or the merchant's webpage. View our Swagger UI to visualize and interact with the API’s resource here, [Set up device fingerprinting](device-fingerprinting.md).
+Fraud Protection offers sophisticated Device fingerprinting functionality that significantly enhances your model scoring. Device fingerprinting can be integrated into either a partner's hosted page or a merchant's webpage. View our Swagger UI to visualize and interact with the API’s resource here, [Set up device fingerprinting](device-fingerprinting.md).
 
 ## <a name="test"></a>  Test and validate Purchase Protection  
 
