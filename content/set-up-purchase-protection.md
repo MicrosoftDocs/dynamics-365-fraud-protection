@@ -12,96 +12,72 @@ ms.custom:
 
 
 # Set Up Purchase Protection 
-This article provides an overveiw of how to set up Microsoft Dynamics 365 Purchase Protection. By following the guidance in this article, you can look forward to a smooth onboarding process. The following list is a summary of the steps in this guide.  
+This article provides an overveiw of how to set up Purchase Protection functionality in Dynamics 365 Fraud Protection. To help you get started, we have provided the steps below with related onboarding and integration document links for quick reference. Follow the links below to walk through the provisioning, integration, and key features.  
 
-[1. Overview of Fraud Protection capabilities](#overview) 
-[2. Understand how purchase protection works](#understand) 
-[3. Onboarding planning and implementation milestones](#onboard)
-[4. Provisioning Fraud Protection in INT (Sandbox) and PROD](#provision)
-[5. User access and assign roles](#assign)
-[6. Review APIs and data mapping](#review)
-[7. Integrate purchase protection APIs](#purchase)  
-[8. Integrate device fingerprinting](#device)
-[9. Test and validate](#test)
-[10. Setting up continuous operations and features](#continuous)
-
+1. [Understand how purchase protection works](#understand) 
+2. [Onboarding planning and implementation milestones](#onboard)
+3. [Provisioning Fraud Protection in INT (Sandbox) and PROD](#provision)
+4. [Configure user access and assign roles](#configure)
+5. [Review APIs and data mapping](#review)
+6. [Integrate purchase protection APIs](#purchase)  
+7. [Integrate device fingerprinting](#device)
+8. [Test and validate](#test)
+9. [Setting up continuous operations and features](#continuous)
 
 ## Prerequisites 
 
-To set up Fraud Protection and control user access to your data, you must have an Azure Active Directory (Azure AD) tenant. If you do not already have an Azure AD tenant, please contact your authorized Microsoft seller or partner to sign up for one. 
-Before you can install Fraud Protection, an authorized Microsoft seller or partner must provide a promotion code to you. If you do not have a promotion code, contact your authorized Microsoft seller or partner.
+Before you set up Purchase Protection, you must set up Dynamics 365 Fraud Protection. This is where you control user access to your data. You must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, contact your authorized Microsoft seller or partner to sign up for one. 
+Before you can install Fraud Protection, an authorized Microsoft seller or partner must provide a promotion code to you. If you do not have a promotion code, contact your authorized Microsoft seller or partner. For more information about Fraud Protection, and to understand the capabilities of Purchase Protection, Account Protection, and Loss Prevention, see the [Dynamics 365 Fraud Protection home page](index.md).
 
-To help you get started with setting up Purchase Protection, we have provided the steps below with related onboarding and integration document links from this site for quick reference. Follow the doc links below to walk through the provisioning, integration, and key features.  
+## <a name="understand"></a>  Understand how Purchase Protection works
 
+To understand how purchase protection interacts with different entities, such as customers and banks, see [How purchase protection works](how-pp-works.md). This article also highlights purchase protection capabilities and APIs, to help you better understand risk assessment interactions. 
 
-## <a name="overview"></a> Overview of Dynamics Fraud Protection
+## <a name="onboard"></a> Onboarding planning and implementation milestones for Purchase Protection  
 
-Understanding Purchase Protection, Account Protection, and Loss Prevention capabilities. 
+Onboarding planning helps you understand and plan for the project implementation milestones of Purchase Protection integration and onboarding. To learn more, see [Onboarding planning](pp-onboarding-planning-guide.md).
 
-- [Dynamics 365 Fraud Protection home page](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/)
+## <a name="provision"></a>  Provisioning Fraud Protection in INT (Sandbox) and Production 
 
-### Step 2: Understand How Purchase Protection Works
+Fraud Protection is provisioned into an Azure AAD (Azure Active Directory) tenant. You can provision Fraud Protection into your existing AAD tenant or a new AAD tenant. For more information, see [Set up a trial instance of Fraud Protection](promocode-set-up-dfp-trial-version.md)
+and [Set up a purchased instance of Fraud Protection](promocode-set-up-dfp-purchased-version.md).
 
-Follow the link below to understand how purchase protection interacts with different entities, such as customers and banks. This doc also highlights purchase protection capabilities and APIs, to help you better understand risk assessment interactions. 
+Fraud Protection provides the option to create multiple environments. This allows you to customize the setup in a way that meets your specific needs. This feature offers flexibility in establishing a hierarchy that is suitable for your requirements. To learn more, see [Manage environments](manage-psp-environments.md).
+
+## <a name="configure"></a> Configure user access and assign roles  
  
-- [How purchase protection works](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/how-pp-works)
-
-### Step 3: Onboarding Planning and Implementation Milestones for Purchase Protection  
-
-Onboarding planning will help you understand and plan for the project implementation milestones of purchase protection integration and onboarding. Follow this link to learn more.  
-- [Onboarding planning](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/pp-onboarding-planning-guide)
-
-### Step 4: Provisioning Fraud Protection in INT (Sandbox) and PROD 
-
-Fraud protection is provisioned into an Azure AAD (Azure Active Directory) Tenant. You can either provision Dynamics 365 Fraud Protection into your existing AAD tenant or a new AAD tenant. Follow these links for more information. 
-- [Set up a trial instance of Fraud Protection](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/promocode-set-up-dfp-trial-version)
-- [Set up a purchased instance of Fraud Protection](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/promocode-set-up-dfp-purchased-version)
-
-Managing Environments (for partners or customers with multiple Fraud Protection environments) Microsoft Dynamics Fraud Protection provides the option for partners and customers to create multiple environments, allowing for customization of their setup in a way that meets their specific needs. This feature offers flexibility in establishing a hierarchy that is suitable for their requirements. 
-- [Manage environments](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/manage-psp-environments)
-
-### Step 5: Configure User Access and Assign Roles  
+You can grant users various levels of access to the service, based on logical or functional roles. To learn more about user roles, access, and how to configure them, see: 
+ - [Configure user roles and access](configure-user-access.md)
+ - [User roles and access](user-roles-access.md)
+ - [Payment service provider user roles and access](psp-user-roles.md)
  
-You can grant users various levels of access to the service, based on logical or functional roles.  
- - [Configure user roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/configure-user-access)
- - [User roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/user-roles-access)
- - [Payment service provider user roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/psp-user-roles)
- 
-### Step 6: Review APIs and Data Mapping for Purchase Protection 
+## <a name="review"></a>  Review APIs and data mapping for Purchase Protection 
 
-In this step, your authorized Microsoft partner should collaborate with you to check that your available data aligns with our APIs and provides sufficient information to run machine learning models and generate scores effectively.  
-- [Integrate purchase protection APIs](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/integrate-real-time-api)
-- [Labels API](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/labels-api)
+Your authorized Microsoft partner should collaborate with you to check that your available data aligns with our APIs and provides sufficient information to run machine learning models and generate scores effectively. For more information, see [Integrate purchase protection APIs](integrate-real-time-api.md) and [Labels API](labels-api.md).
 
-### Step 7: Integrate Purchase Protection APIs 
+## <a name="purchase"></a>  Integrate Purchase Protection APIs 
 
-Collaborate with your authorized Microsoft partner, to confirm your questions are addressed and APIs are properly integrated, as outlined in this guide.
-- [Swagger UI](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/swagger)
+Collaborate with your authorized Microsoft partner to confirm your questions are addressed and APIs are properly integrated. To learn more, see [Swagger UI](swagger.md).
 
-### Step 8: Integrate Device Fingerprinting  
+## <a name="device"></a>  Integrate device fingerprinting  
 
-Dynamics Fraud Protection offers a sophisticated Device Fingerprinting functionality that significantly enhances our model scoring. Device fingerprinting can be integrated into either the partner's hosted page or the merchant's webpage. Please visit our Swagger UI (user interfaces) to visualize and interact with the API’s resource which can be found in this link
-- [Set up device fingerprinting](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/device-fingerprinting)
+Fraud Protection offers sophisticated Device fingerprinting functionality that significantly enhances our model scoring. Device fingerprinting can be integrated into either the partner's hosted page or the merchant's webpage. View our Swagger UI to visualize and interact with the API’s resource here, [Set up device fingerprinting](device-fingerprinting.md).
 
-### Step 9: Test and Validate Purchase Protection  
+## <a name="test"></a>  Test and validate Purchase Protection  
 
-In this stage, as test traffic begins to flow into our Sandbox environment, please contact your authorized Microsoft partner to confirm that your data is being received. Upon successful completion of these validations, the integration process can then proceed to its full implementation in production environments. Please let your authorized Microsoft partner know that you have started sending traffic to confirm the data was received. 
+As test traffic begins to flow into the Sandbox environment, contact your authorized Microsoft partner to confirm that your data is being received. When the validations have successfully completed, the integration process can proceed to its full implementation in production environments. Let your authorized Microsoft partner know that you have started sending traffic to confirm the data was received. 
 
- 
-### Step 10: Continuous Operations and Features 
+## <a name="continuous"></a>  Continuous operations and features 
 
-At this stage, you will begin setting up your purchase protection features and operations. Customers can determine their own unique set of rules, velocities, and leverage other features as needed to best serve the needs of their business.  
-
+As you begin setting up your Purchase Protection features and operations, you can determine your own unique set of rules, velocities while leveraging other features as needed to best serve the needs of your business.  
 
 ### Transaction Acceptance Booster
 
-TAB (Transaction Acceptance Booster) helps you benefit from higher acceptance rates by sharing Transaction Trust Knowledge with banks. 
-- [Transaction acceptance booster (TAB)](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/transaction-acceptance-booster)
+The Transaction Acceptance Booster (TAB) helps you benefit from higher acceptance rates by sharing Transaction Trust Knowledge with banks. For more detailed information, see [Transaction acceptance booster (TAB)](transaction-acceptance-booster.md).
 
 ### Rules 
 
-Writing Rules, which can use features like Velocities, Lists, External Calls, and DFP model scores to make decisions. 
-- [Manage rules](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules)
+You can create rules that include features like velocities, lists, external calls, and DFP model scores to make decisions. To learn more about rules, see [Manage rules](rules.md).
 
 ### Velocities 
 
@@ -110,46 +86,39 @@ Velocity checks help you identify several types of event patterns.
 
 ### Lists 
 
-Lists help you manage information that you use to fight fraud and enforce business policies. 
-- [Lists Overview](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/lists-overview)
-- [Manage support lists](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/manage-support-lists)
-- [Manage custom lists](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/lists)
+You can use lists to manage the information that you use to fight fraud and enforce business policies. To learn more, see:
+- [Lists Overview](lists-overview.md)
+- [Manage support lists](manage-support-lists.md)
+- [Manage custom lists](lists.md)
 
 ### Search 
 
-The Search page helps you find and view details about events in Microsoft Dynamics 365 Fraud Protection, based on specific filter values. 
-- [Search](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/search)
-- [Risk support](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/risk-support)
+You can use the **Search** to find and view details about events in Fraud Protection, based on specific filter values. For more information, see [Search](search.md) and [Risk support](risk-support.md).
 
-### Case Management 
+### Case management 
 
-Case management lets you organize and access transactions and specify the level of ambiguity that will require review by human subject matter experts. It also includes functionality that lets you provide a feedback loop for the AI-based assessments. 
-- [Case management overview](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/case-management-overview)
-- [Case management for administrators](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/case-management-administrator)
-- [Case management for manual reviewers](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/case-management-manual-review)
+Use case management to organize and access transactions, specify the level of ambiguity that will require review by human subject matter experts, and provide a feedback loop for the AI-based assessments. To learn more about how to work with case management, see: 
+- [Case management overview](case-management-overview.md)
+- [Case management for administrators](case-management-administrator.md)
+- [Case management for manual reviewers](ase-management-manual-review.md)
 
 ### Reporting 
 
-Reporting is available to display the impact of Dynamics Fraud Protection to your business.
-- [Key metrics](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/scorecard)
-- [Virtual fraud analyst](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/virtual-fraud-analyst)
-- [Fraud tracker tool](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fraud-tracker)
-- [Long term report](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/long-term-report)
-- [Rule performance report](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rule-performance-report)
+Reporting is available to display the impact of Dynamics Fraud Protection on your business. To learn more about reporting, see:
+- [Key metrics](scorecard.md)
+- [Virtual fraud analyst](virtual-fraud-analyst.md)
+- [Fraud tracker tool](fraud-tracker.md)
+- [Long term report](long-term-report.md)
+- [Rule performance report](rule-performance-report.md)
 
+### Event tracing and Event Hub
 
-### Event Tracing & Event Hub 
+Event tracing offers the ability to track and audit events, providing you with the option to redirect your data to various destinations outside the Fraud Protection Portal. To use Event tracing functionality, you must have a subscription to additional Azure services such as Event Hub or Blob Storage. Contact your Microsoft Authorized Seller for details. If you have Azure global administrator credentials, log into the [Azure portal](https://ms.portal.azure.com) to determine available subscriptions. To learn more about Event tracing and Event Hubs in Fraud Protection, see [Event tracing](event-tracing.md) and [Set up extensibility via Event Hubs](extensibility-via-event-hubs-overview.md).
 
-Event Tracing offers you the ability to track and audit events, providing you with the option to redirect your data to various destinations outside the Fraud Protection Portal. To use Event tracing functionality, customers must have a subscription to additional Azure services such as Event Hub or Blob Storage. Contact your Microsoft Authorized Seller for details. If you have Azure global administrator credentials, log into the    [Azure portal](https://ms.portal.azure.com) to determine available subscriptions.  
-- [Event tracing](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/event-tracing)
-- [Set up extensibility via Event Hubs](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/extensibility-via-event-hubs-overview)
+### External calls 
 
-### External Calls 
+You can use external calls to ingest data from APIs outside of Fraud Protection and then use that data to make informed decisions in real time. For more details, see [External calls](external-calls.md).
 
-External calls let you ingest data from APIs outside Microsoft Dynamics 365 Fraud Protection and then use that data to make informed decisions in real time. 
-- [External calls](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/external-calls)
+### Upload historical data into Purchase Protection 
 
-### Upload Historical Data into Purchase Protection 
-
-Data upload capabilities can be used to cold start our models or provide continuous batched data like Chargeback.
-- [Upload historical data](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/data-upload)
+Data upload capabilities can be used to cold start models or provide continuous batched data like Chargeback. To learn more, see [Upload historical data](data-upload.md).
