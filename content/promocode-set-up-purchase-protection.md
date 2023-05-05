@@ -27,7 +27,7 @@ This article provides an overview of the process for setting up Purchase Protect
 
 ## Prerequisites
 
-Before you set up Purchase Protection, you must set up Dynamics 365 Fraud Protection. Fraud Protection is where you control user access to your data. To set up Fraud Protection, you must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, contact your authorized Microsoft seller or partner to sign up for one. Before you can install Fraud Protection, an authorized Microsoft seller or partner must provide a promotion code to you. If you don't have a promotion code, contact your authorized Microsoft seller or partner. To learn more about Fraud Protection, and about the capabilities of Purchase Protection, Account Protection, and Loss Prevention, see the [Dynamics 365 Fraud Protection home page](index.md).
+Before you set up Purchase Protection, you must set up Dynamics 365 Fraud Protection. To set up Fraud Protection and control user access to your data, you must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, contact your authorized Microsoft seller or partner to sign up for one. Before you can install Fraud Protection, an authorized Microsoft seller or partner must provide a promotion code to you. If you don't have a promotion code, contact your authorized Microsoft seller or partner. To learn more about Fraud Protection, and about the capabilities of Purchase Protection, Account Protection, and Loss Prevention, see the [Dynamics 365 Fraud Protection home page](index.md).
 
 ## <a name="understand"></a>1. Understand how Purchase Protection works
 
