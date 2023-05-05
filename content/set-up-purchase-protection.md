@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article explains how to set up up Microsoft Dynamics 365 Purchase Protection.  
 ms.author: cschlegel
-ms.date: 04/25/2023
+ms.date: 05/05/2023
 ms.topic: reference
 search.audienceType:
   - Developer, IT PRO, Fraud Manager
@@ -81,8 +81,7 @@ You can create rules that include features like velocities, lists, external call
 
 ### Velocities 
 
-Velocity checks help you identify several types of event patterns.
-- [Velocity checks](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/velocities)
+Velocity checks help you identify several types of event patterns. For more details, see [Velocity checks](velocities.md).
 
 ### Lists 
 
@@ -100,7 +99,7 @@ You can use the **Search** to find and view details about events in Fraud Protec
 Use case management to organize and access transactions, specify the level of ambiguity that will require review by human subject matter experts, and provide a feedback loop for the AI-based assessments. To learn more about how to work with case management, see: 
 - [Case management overview](case-management-overview.md)
 - [Case management for administrators](case-management-administrator.md)
-- [Case management for manual reviewers](ase-management-manual-review.md)
+- [Case management for manual reviewers](case-management-manual-review.md)
 
 ### Reporting 
 
