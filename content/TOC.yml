@@ -132,13 +132,13 @@
     href: how-pp-works.md    
   - name: Onboarding planning
     href: pp-onboarding-planning-guide.md
-  - name: Set up purchase protection
+  - name: Setting up purchase protection
     items: 
     - name: Set up a trial instance of Fraud Protection
       href: promocode-set-up-DFP-trial-version.md
     - name: Set up a purchased instance of Fraud Protection
       href: promocode-set-up-DFP-purchased-version.md
-    - name: Set up your purchase protection service
+    - name: Set up Purchase Protection 
       href: promocode-set-up-purchase-protection.md
     - name: User access
       items:
