@@ -1,6 +1,6 @@
 ---
 author: kelsiefu
-description: This article explains the scorecard capability of the account protection feature in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to work with in-product notifications in Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 04/05/2023
 ms.topic: conceptual
