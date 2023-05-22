@@ -28,10 +28,10 @@ Prior to implementing Fraud Protection, make sure the privacy disclosures in you
 
 ## Honor data subject requests
 
-Fraud Protection provides tools to help you comply with data subject requests from your customers. These tools enable you to delete and export customer data from the service which has not been processed using deidentification techniques in the fraud network. Data processed in the fraud network cannot be accessed, exported, viewed, or deleted. 
+Fraud Protection provides tools to help you comply with data subject requests from your customers. These tools enable you to delete and export Transactional Data from Assessments which haven't been processed using pseudonymization techniques in the Fraud Protection network. After Transactional Data is processed in the network, it can't be accessed, exported, viewed, or deleted. Transactional Data is defined as all the data from the request and response payload, plus any attributes and enrichments that are attached to a transaction. Fraud Protection may still retain aggregated data calculated with a contribution from the transaction.    
 
 > [!NOTE]
-> The **User ID** field in the API payload for GDPR Delete or Export calls is mandatory for Fraud protection to successfully process the corresponding data subject requests (DSRs). The User ID should be identical to the one that was provided for the Account creation, Account login, or Purchase API call for the same Data Subject. If a User ID isn't provided, or a different User ID is provided from the one that was provided before, it will be extremely difficult for Fraud Protection to identify the transaction and DSRs will be difficult to process without significant efforts of investment.
+> The **User ID** field in the API payload for GDPR Delete or Export calls is mandatory for Fraud Protection to successfully process the corresponding data subject requests (DSRs). The User ID should be identical to the one that was provided for the Account creation, Account login, or Purchase API call for the same Data Subject. If a User ID isn't provided, or a different User ID is provided from the one that was provided before, it will be extremely difficult for Fraud Protection to identify the transaction and DSRs will be difficult to process without significant efforts of investment.
 
 For more information, see the following resources:
 - [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
@@ -40,36 +40,35 @@ For more information, see the following resources:
 - [Microsoft Dynamics 365 and GDPR](/dynamics365/get-started/gdpr/index)
 - [Microsoft Power BI GDPR white paper](https://powerbi.microsoft.com/blog/power-bi-gdpr-whitepaper-is-now-available/)
 
-In the evaluate and protect experiences, you can perform the following tasks for all entities that contain personal data:
+On the **Subject Requests** page, you can perform the following tasks for all transactions:
 
-- Identify entities that contain personal data.
-- Delete entities.
-- Export entities.
+-	Identify transactions that contain personal data
+-	Delete transactions
+-	Export transactions
 
 ## Manage data subject requests
 
 A data subject request (DSR) is a request asking for modification of personal data held by a third party. 
 
-### To manage DSR requests with Fraud Protection:
+### Manage DSR requests with Fraud Protection:
 
 1. On the left navigation bar, select **Settings**, and then select **Subject requests**. 
 
-    The **Search** tab provides the following selections to expedite your search:
+   You can make requests for each assessment. For a request, select the assessment, the Data subject ID, and the value for the Data subject ID.
 
-    - User.Email
-    - User.UserId
-    - Purchase.PurchaseId
-    - PaymentInstrument.PaymentInstrumentId
+    - For Account Creation, Account Login, and Purchase Protection, the Data subject ID is user.userId.
+   
 
-1. After you make your selection, if you require more specificity, you can use the search bar to enter keywords. 
-1. From the search results, select either **Export user and associated data** or **Delete user and associated data**.
-1. Select the **Requests** tab that identifies the following properties for your search:
+1. Select the type of request you would like to make (export or delete), and then review and confirm.
+
+   The **Requests** table identifies the following properties for your requests. The log will retain exported data links and information for 28 days.
 
     - Request ID
+    - Requestor
+    - Timestamp
     - Request types (delete or export)
-    - Subject ID
     - Statuses (pending or complete)
-    - Exported data links.
+    - Exported data links
 
 ### Data subject request API
 
