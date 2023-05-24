@@ -25,6 +25,9 @@ Here's an explanation of the numbered elements in the illustration:
 - **Risk assessment (3)** – Fraud Protection's machine learning model can return a score to you for bot and risk scores. The scoring advises you about the probability of fraud risk, or of the likelihood of possible fraud that you might want to review or reject. 
 - **Trust knowledge (transaction acceptance booster) (4)** – This feature helps you benefit from higher acceptance rates by sharing trust knowledge with banks.
 
+> [!NOTE]
+> Reason codes are subject to change based on improvements to the Fraud Protection Service by Microsoft. Additionally, reason codes that are associated with a specific transaction may change based on additional information that's obtained and processed by the Fraud Protection Service.
+
 ## Required APIs and components
 
 The following APIs and components are required to take advantage of Fraud Protection purchase protection's features:
