@@ -13,6 +13,9 @@ title: Protect purchases from fraudulent activity
 
 Microsoft Dynamics 365 Fraud Protection provides merchants the capability to assess e-commerce transactions for fraudulent activity. By using Fraud Protection to review your historical data, and then using powerful tools like the customizable rules engine, the risk support toolset, and more, you can fine-tune your fraud protection decisions, support your customers, and implement new strategies based on the knowledge gained from the Fraud Protection service and Microsoft’s fraud protection network.
 
+> [!NOTE]
+> Reason codes are subject to change based on improvements to the Fraud Protection Service by Microsoft. Additionally, reason codes that are associated with a specific transaction may change based on additional information that's obtained and processed by the Fraud Protection Service.
+
 Learn more about the following features used in purchase protection:
 
 - [Integrate Dynamics 365 Fraud Protection APIs](integrate-real-time-api.md)
