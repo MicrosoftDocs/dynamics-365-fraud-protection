@@ -7,7 +7,7 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Monitor API calls
-ms.custom: "intro-internal"
+ms.collection: get-started
 ---
 
 
