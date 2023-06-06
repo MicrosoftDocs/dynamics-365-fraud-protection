@@ -94,7 +94,7 @@ To implement device fingerprinting, follow these steps.
 
     - **Your\_Root\_Domain** – The root domain of the client website.
     - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that you use a globally unique identifier (GUID) for the session ID, it isn't required.
-    - **instance\_id** – A placeholder for the instance ID that represents you. Use the instance identifier (**instance\_id** value) that's listed on the **Account Information** dashboard tile of the Fraud Protection evaluate experience. You must have this value to integrate device fingerprinting with your website.
+    - **instance\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Device fingerprinting ID** value that's listed on the **Current environment** tile on the **Integration** page of the corresponding environment in the Fraud Protection portal.
 
     **Example**
 
