@@ -112,14 +112,6 @@
         href: manage-support-lists.md
       - name: Manage custom lists
         href: lists.md
-    - name: Reporting
-      items:
-      - name: Threat vulnerability analyzer tool
-        href: threat-vulnerability-analyzer.md
-      - name: Threat vulnerability trend tool
-        href: threat-vulnerability-trend.md
-      - name: Key metrics for account protection
-        href: ap-scorecard.md
     - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
