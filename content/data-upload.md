@@ -47,15 +47,16 @@ You can upload historical data through the Fraud Protection portal or the applic
 
 You upload your historical data on the **Purchase protection** tab of the **Data upload** page.
 
-To ensure that Fraud Protection correctly interprets your files, follow these requirements, and review the [required schemas](view-purchase-protection-schemas.md):
+Please follow these requirements:
 
-- The files are in CSV UTF-8 format (comma, semi-colon, or tab-delimited) with a \*.csv or \*.tsv extension.
+- The files follow the [required schemas](view-purchase-protection-schemas.md).
+- The files are in CSV UTF-8 (comma, semi-colon, or tab-delimited) format (\*.csv or \*.tsv).
 - The maximum file size is 10 gigabytes (GB).
 - **DateTime** columns are in International Organization for Standardization (ISO) 8601 format.
 - The decimal precision is two decimal places.
 - The following characters are escaped in all columns: commas/semi-colons, new line characters, and multiline characters.
 
-**To browse and upload data files:**
+**To upload and process data files:**
 
 1. In the left navigation, select **Data**, then **Data upload**.
 1. On the **Purchase protection** tab, select **Select data source**.
