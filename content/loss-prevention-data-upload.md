@@ -30,11 +30,7 @@ You can upload your historical data from the **Loss prevention** tab of the **Da
 Please follow these requirements:
 
 - The files follow the [required schemas](./view-loss-prevent-schemas.md).
-- The files are in CSV UTF-8 (comma, semi-colon, or tab-delimited) format (\*.csv or \*.tsv).
-- The maximum file size is 10 gigabytes (GB).
-- **DateTime** columns are in International Organization for Standardization (ISO) 8601 format.
-- The decimal precision is two decimal places.
-- The following characters are escaped in all columns: commas/semi-colons, new line characters, and multiline characters.
+[!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
 **To upload and process data files:**
 
