@@ -27,9 +27,8 @@ The historical data must be imported from four entities:
 
 You can upload your historical data from the **Loss prevention** tab of the **Data upload** page.
 
-Please follow these requirements:
+Please follow these requirements and the [required schemas](./view-loss-prevent-schemas.md).
 
-- The files follow the [required schemas](./view-loss-prevent-schemas.md).
 [!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
 **To upload and process data files:**
