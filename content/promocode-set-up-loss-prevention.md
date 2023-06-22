@@ -46,7 +46,7 @@ When Fraud Protection assesses a transaction for potential purchase fraud, it us
 
 *Data mapping* is a process that helps ensure that the correct values are assigned to the correct schema fields, and that your commerce system is correctly integrated with Fraud Protection. For more information about schemas, see [Data schemas for loss prevention](./view-loss-prevent-schemas.md). 
 
-### Schema guidance for CSV files
+### Schema guidance for data upload
 
 [!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
