@@ -15,11 +15,7 @@ This article outlines the schemas that define the data that is used to generate 
 
 Note the following formatting guidelines throughout:
 
-- The files are in CSV UTF-8 (comma, semi-colon, or tab-delimited) format (\*.csv or \*.tsv).
-- The maximum file size is 10 gigabytes (GB).
-- **DateTime** columns are in International Organization for Standardization (ISO) 8601 format. For example, in C# **DateTime.UtcNow.ToString("o")** would have the format **"2019-03-14T20:18:11.254Z"**.
-- The decimal precision is two decimal places.
-- The following characters are escaped in all columns: commas/semi-colons, new line characters, and multiline characters.
+[!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
 ## Transactions
 
