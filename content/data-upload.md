@@ -49,8 +49,7 @@ You upload your historical data on the **Purchase protection** tab of the **Data
 
 Please follow these requirements:
 
-- The files follow the [required schemas](view-purchase-protection-schemas.md).
-[!INCLUDE[data-upload-req](includes/data-upload-req.md)]
+- The files follow the [required schemas](view-purchase-protection-schemas.md). [!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
 **To upload and process data files:**
 
