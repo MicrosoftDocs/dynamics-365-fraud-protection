@@ -61,10 +61,7 @@ Please follow these requirements:
 1. In the left navigation, select **Data**, then **Data upload**.
 1. On the **Purchase protection** tab, select **Select data source**.
 1. Click "Browse" and select your CSV/TSV file.
-1. If the file has no column headers, select the **This file doesn't include column headers** option.
-
-    > The system will automatically assign default column headers.
-
+1. If the file has no column headers, select the **This file doesn't include column headers** option. The system will automatically assign default column headers.
 1. To begin data mapping, select **Next**, and then select the columns in your file that you want to map to each schema attribute.
 1. In the data preview pane at the bottom of the page, confirm that the column mapping is correct.
 1. When all the attributes are mapped, select **Save and close** to return to the **Data upload** page.
