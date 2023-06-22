@@ -47,9 +47,9 @@ You can upload historical data through the Fraud Protection portal or the applic
 
 You upload your historical data on the **Purchase protection** tab of the **Data upload** page.
 
-Please follow these requirements:
+Please follow these requirements and the [required schemas](view-purchase-protection-schemas.md):
 
-- The files follow the [required schemas](view-purchase-protection-schemas.md). [!INCLUDE[data-upload-req](includes/data-upload-req.md)]
+[!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
 **To upload and process data files:**
 
