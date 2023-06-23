@@ -134,7 +134,7 @@ Fraud Protection supports all standard C# [comparison](/dotnet/csharp/language-r
 
 ## Geo functions
 
-These functions convert an IP address to a geographical address.
+Geo functions provide resolution by converting an IP address to a geographical address. Geo functions can be invoked in rules only by using IPs that are part of transaction payload or collected by Fraud Protection by using Device Fingerprinting. Geo functions can't be invoked for arbitrary IP values.
 
 | Operator                       | Description | Example |
 |--------------------------------|-------------|---------|
