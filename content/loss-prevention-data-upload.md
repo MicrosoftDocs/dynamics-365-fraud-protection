@@ -27,15 +27,15 @@ The historical data must be imported from four entities:
 
 You can upload your historical data from the **Loss prevention** tab of the **Data upload** page.
 
-Please follow these requirements and the [required schemas](./view-loss-prevent-schemas.md).
+Follow these requirements and the [required schemas](./view-loss-prevent-schemas.md).
 
 [!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
 **To upload and process data files:**
 
-1. In the left navigation, select **Data**, then **Data upload**.
+1. In the left navigation, select **Data** > **Data upload**.
 1. On the **Loss prevention** tab, select **Select data source**.
-1. Click "Browse" and select your CSV/TSV file.
+1. Select **Browse** and then select your CSV/TSV file.
 1. If the file has no column headers, select the **This file doesn't include column headers** option. The system will automatically assign default column headers.
 1. To begin data mapping, select **Next**, and then select the columns in your file that you want to map to each schema attribute.
 1. In the data preview pane at the bottom of the page, confirm that the column mapping is correct.
