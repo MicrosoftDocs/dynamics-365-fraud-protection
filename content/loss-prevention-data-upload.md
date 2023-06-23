@@ -27,25 +27,18 @@ The historical data must be imported from four entities:
 
 You can upload your historical data from the **Loss prevention** tab of the **Data upload** page.
 
-To ensure that Fraud Protection can correctly interpret the files that you upload, make sure that they meet the following requirements, and that they follow the [required schemas](./view-loss-prevent-schemas.md):
+Follow these requirements and the [required schemas](./view-loss-prevent-schemas.md).
 
-- The files are in CSV UTF-8 (comma-delimited) format (\*.csv).
-- The maximum file size is 10 gigabytes (GB).
-- **DateTime** columns are in International Organization for Standardization (ISO) 8601 format.
-- The decimal precision is two decimal places.
-- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
+[!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
-**To browse and upload data files:**
+**To upload and process data files:**
 
-1. In the left navigation, select **Data**, and then select **Data upload**.
-1. On the **Data upload** page, on the **Loss prevention** tab, select **Select data source**.
-1. Select the file format type: **CSV** or **TSV**.
-1. If the file has no column headers, select the **This file doesn't include column headers** option.
-
-    The system will automatically assign default column headers.
-
+1. In the left navigation, select **Data** > **Data upload**.
+1. On the **Loss prevention** tab, select **Select data source**.
+1. Select **Browse** and then select your CSV/TSV file.
+1. If the file has no column headers, select the **This file doesn't include column headers** option. The system will automatically assign default column headers.
 1. To begin data mapping, select **Next**, and then select the columns in your file that you want to map to each schema attribute.
-1. In the data preview pane at the bottom of the page, confirm that the mapping is correct.
+1. In the data preview pane at the bottom of the page, confirm that the column mapping is correct.
 1. When all the attributes are mapped, select **Save and close** to return to the **Data upload** page.
 1. Select **Process data**.
 
