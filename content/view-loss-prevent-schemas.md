@@ -13,7 +13,7 @@ title: Data schemas for loss prevention
 
 This article outlines the data schemas used to generate models and determine risk assessments.
 
-Please follow these requirements:
+Follow these requirements:
 
 [!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
