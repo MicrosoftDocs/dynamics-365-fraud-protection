@@ -46,15 +46,9 @@ When Fraud Protection assesses a transaction for potential purchase fraud, it us
 
 *Data mapping* is a process that helps ensure that the correct values are assigned to the correct schema fields, and that your commerce system is correctly integrated with Fraud Protection. For more information about schemas, see [Data schemas for loss prevention](./view-loss-prevent-schemas.md). 
 
-### Schema guidance for CSV files
+### Schema guidance for data upload
 
-Use this schema guidance to produce files in comma-separated values (CSV) format:
-
-- The files are in CSV UTF-8 (comma-delimited) format (*.csv).
-- The maximum file size is 10 gigabytes (GB).
-- The **DateTime** columns are in International Organization for Standardization (ISO) 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
-- The decimal precision is two decimal places.
-- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
+[!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
 For more information about schemas you can use to generate models and determine risk assessments, see [Data schemas for loss prevention](./view-loss-prevent-schemas.md). 
 

@@ -11,15 +11,11 @@ title: Data schemas for loss prevention
 
 # Data schemas for loss prevention
 
-This article outlines the schemas that define the data that is used to generate models and determine risk assessments.
+This article outlines the data schemas used to generate models and determine risk assessments.
 
-Note the following formatting guidelines throughout:
+Follow these requirements:
 
-- The files are in CSV UTF-8 (comma-delimited) format (\*.csv).
-- The maximum file size is 10 gigabytes (GB).
-- The **DateTime** columns are in International Organization for Standardization (ISO) 8601 format. For example, **DateTime.UtcNow.ToString("o")** might have the result **"2019-03-14T20:18:11.254Z"**.
-- The decimal precision is two decimal places.
-- The following characters are escaped in all columns: commas, new line characters, and multiline characters.
+[!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
 ## Transactions
 
