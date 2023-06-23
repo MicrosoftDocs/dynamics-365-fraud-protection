@@ -14,7 +14,7 @@ title: View purchase protection schemas
 
 This article outlines the schemas for real-time APIs and historical data that is bulk-uploaded into Microsoft Dynamics 365 Fraud Protection. For information about the upload procedure, see [Upload historical data](data-upload.md). If data will be ingested via the application programming interface (API), see [Integrate Dynamics 365 Fraud Protection real-time APIs](integrate-real-time-api.md).
 
-Please follow these requirements:
+Follow these requirements:
 
 [!INCLUDE[data-upload-req](includes/data-upload-req.md)]
 
