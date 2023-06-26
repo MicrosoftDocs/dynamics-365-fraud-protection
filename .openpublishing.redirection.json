@@ -168,6 +168,71 @@
       "source_path": "content/extensibility-pricing.md",
       "redirect_url": "https://dynamics.microsoft.com/ai/fraud-protection/",
       "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/threat-vulnerability-analyzer.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/threat-vulnerability-trend.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/ap-scorecard.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/scorecard.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/fraud-tracker.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/virtual-fraud-analyst.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/fraud-analysis-report.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/long-term-report.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/rule-performance-report.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/rule-optimizer.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/rule-monitor.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/monthly-business-review.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/graph-explorer.md",
+      "redirect_url": "virtual-fraud-analyst-reporting",
+      "redirect_document_id": "false"
     }
   ]
 }
