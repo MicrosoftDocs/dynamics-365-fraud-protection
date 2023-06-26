@@ -112,14 +112,6 @@
         href: manage-support-lists.md
       - name: Manage custom lists
         href: lists.md
-    - name: Reporting
-      items:
-      - name: Threat vulnerability analyzer tool
-        href: threat-vulnerability-analyzer.md
-      - name: Threat vulnerability trend tool
-        href: threat-vulnerability-trend.md
-      - name: Key metrics for account protection
-        href: ap-scorecard.md
     - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
@@ -182,28 +174,6 @@
         href: manage-support-lists.md
       - name: Manage custom lists
         href: lists.md
-    - name: Reporting
-      items:
-      - name: Key metrics
-        href: scorecard.md
-      - name: Fraud tracker tool
-        href: fraud-tracker.md
-      - name: Virtual fraud analyst
-        href: virtual-fraud-analyst.md  
-      - name: Fraud analysis report
-        href: fraud-analysis-report.md
-      - name: Long term report
-        href: long-term-report.md
-      - name: Rule performance report
-        href: rule-performance-report.md
-      - name: Score rule optimizer tool
-        href: rule-optimizer.md
-      - name: Rule monitor tool
-        href: rule-monitor.md
-      - name: Monthly business review tool
-        href: monthly-business-review.md
-      - name: Visually explore data
-        href: graph-explorer.md
     - name: Case management
       items:
       - name: Case management overview
