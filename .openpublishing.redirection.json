@@ -6,6 +6,11 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "content/data-residency-gdpr-faq.md",
+      "redirect_url": "data-residency-faq",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "content/account-protection-protect-experience.md",
       "redirect_url": "ap-overview",
       "redirect_document_id": "false"
