@@ -22,7 +22,7 @@ To create a new environment, or switch between environments, select **Manage env
 
 To create a new environment, select **New environment** at the top, and then enter the following information: 
 
-- **Data storage geography** – Select the geography where your customer data resides. For more information about data residency, see [Data residency FAQ](faq/data-residency-gdpr-faq.md).
+- **Data storage geography** – Select the geography where your customer data resides. For more information about data residency, see [Data residency FAQ](faq/data-residency-faq.md).
 - **Name** – Enter the name of the environment that you want to create.
 - **Description (optional)** – You can add some information to help identify the environment.
 - **Tags (optional)** – You can use tags to specify any generic information that's related to the environment, such as the industry vertical.
@@ -30,7 +30,7 @@ To create a new environment, select **New environment** at the top, and then ent
 - **Create API ID (optional)** – You can enter an identifier that should be used instead of the Fraud Protection environment ID when events are sent to Fraud Protection.
 
 > [!NOTE]
-> You must have the Global Admin role to create Azure AD applications. For more information about Azure AD applications and integration, see [Integrate purchase protection API](integrate-real-time-api.md) and [Integrate account protection APIs](faq/data-residency-gdpr-faq.md). 
+> You must have the Global Admin role to create Azure AD applications. For more information about Azure AD applications and integration, see [Integrate purchase protection API](integrate-real-time-api.md) and [Integrate account protection APIs](faq/data-residency-faq.md). 
 >
 > After you create the environment, you can't change the customer API ID.
 

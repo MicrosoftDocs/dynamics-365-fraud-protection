@@ -277,7 +277,7 @@
     - name: Privacy and security FAQ
       href: faq/privacy-security-faq.md
     - name: Data residency FAQ
-      href: faq/data-residency-gdpr-faq.md
+      href: faq/data-residency-faq.md
     - name: Compliance FAQ
       href: faq/compliance-faq.md
     - name: Trust Center
