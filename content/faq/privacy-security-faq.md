@@ -77,7 +77,7 @@ Yes, Fraud Protection follows industry standard best practices. As is outlined i
 
 [Legal considerations FAQ](legal-faq.md)
 
-[Data residency and GDPR FAQ](data-residency-gdpr-faq.md)
+[Data residency and GDPR FAQ](data-residency-faq.md)
 
 [Compliance FAQ](compliance-faq.md)
 
