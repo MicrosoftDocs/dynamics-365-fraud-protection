@@ -19,7 +19,7 @@ Yes.
 
 #### What information security certifications does Fraud Protection hold?
 
-Currently, Fraud Protection holds the following information security certifications: 23 NYCRR 500, AFM and DNB (Netherlands), AMF and ACPR (France), APRA (Australia), Argentina PDPA, CDSA, CFTC 1.31, CSA STAR Attestation, CSA STAR Certification, CSA STAR Self-Assessment, Canadian Privacy Laws, DPP (UK), EU EN 301 549, EU ENISA IAF, EU Model Clauses, EU-US Privacy Shield, European Banking Authority, FCA and PRA (UK), FERPA (US), FFIEC (US), FINMA (Switzerland), FSA (Denmark), GDPR, GLBA (US), GSMA SAS-SM, Germany C5, GxP (FDA 21 CFR Part 11), HIPAA and the HITECH Act (US), HITRUST, ISO 20000-1:2011, ISO 22301:2012, ISO 27001:2013, ISO 27017:2015, ISO 27018:2014, ISO 27701:2019, ISO 9001:2015, Japan My Number Act, KNF (Poland), MAS and ABS (Singapore), MPAA (US), NBB and FSMA (Belgium), NEN 7510:2011 (Netherlands), NHS IG Toolkit (UK), Netherlands BIR 2012, OSFI (Canada), OSPAR, PCI 3DS, PCI DSS Level 1, RBI and IRDAI (India), SEC 17a-4 (US), SEC Regulation SCI, SOC 1 Type 2, SOC 2 Type 2, SOC 3, SOX (US), Spain DPA, TISAX, TruSight, and WCAG 2.0.
+Currently, Fraud Protection holds the following information security certifications: 23 NYCRR 500, AFM and DNB (Netherlands), AMF and ACPR (France), APRA (Australia), Argentina PDPA, CDSA, CFTC 1.31, CSA STAR Attestation, CSA STAR Certification, CSA STAR Self-Assessment, Canadian Privacy Laws, DPP (UK), EU EN 301 549, EU ENISA IAF, EU Model Clauses, EU-US Privacy Shield, European Banking Authority, FCA and PRA (UK), FERPA (US), FFIEC (US), FINMA (Switzerland), FSA (Denmark), GLBA (US), GSMA SAS-SM, Germany C5, GxP (FDA 21 CFR Part 11), HIPAA and the HITECH Act (US), HITRUST, ISO 20000-1:2011, ISO 22301:2012, ISO 27001:2013, ISO 27017:2015, ISO 27018:2014, ISO 27701:2019, ISO 9001:2015, Japan My Number Act, KNF (Poland), MAS and ABS (Singapore), MPAA (US), NBB and FSMA (Belgium), NEN 7510:2011 (Netherlands), NHS IG Toolkit (UK), Netherlands BIR 2012, OSFI (Canada), OSPAR, PCI 3DS, PCI DSS Level 1, RBI and IRDAI (India), SEC 17a-4 (US), SEC Regulation SCI, SOC 1 Type 2, SOC 2 Type 2, SOC 3, SOX (US), Spain DPA, TISAX, TruSight, and WCAG 2.0.
 
 To access the latest audit reports, see [Service Trust Portal](https://servicetrust.microsoft.com).
 
@@ -80,4 +80,4 @@ Please note that Microsoft employees, including Microsoft-approved subcontractor
 
 [Privacy and security FAQ](privacy-security-faq.md)
 
-[Data residency FAQ](data-residency-gdpr-faq.md)
+[Data residency FAQ](data-residency-faq.md)
