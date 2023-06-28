@@ -53,7 +53,7 @@ For information about Microsoft's data subprocessors, see the [Microsoft Cloud S
 
 [Privacy and security FAQ](privacy-security-faq.md)
 
-[Data residency FAQ](data-residency-gdpr-faq.md)
+[Data residency FAQ](data-residency-faq.md)
 
 [Compliance FAQ](compliance-faq.md)
 
