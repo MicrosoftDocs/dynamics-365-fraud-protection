@@ -48,7 +48,7 @@ Yes.
 
 Fraud Protection implements a set of technical and organizational measures (TOMs) around data security and privacy that meet requirements of ISO 27018, SOC2, and other certifications. For an up-to-date list of audit reports, see [Service Trust Portal](https://servicetrust.microsoft.com/).
 
-#### Does Fraud Protection work with a data privacy officer to oversee compliance per Article 37 GDPR?
+#### Does Fraud Protection work with a data privacy officer to oversee compliance?
 
 Yes. The up-to-date contact information for the data privacy officer is available in the Microsoft data protection addendum on the [Licensing Documents](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) page of the Microsoft Licensing Resources and Documents site.
 
