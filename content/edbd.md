@@ -38,7 +38,7 @@ Customers may opt in to sending their transaction data, which can include bank i
 
 - [Microsoft's EU Data Boundary documentation](/privacy/eudb/eu-data-boundary-learn)
 - [Privacy protection for customer data](data-processing-protection.md)
-- [Data residency FAQ](faq/data-residency-gdpr-faq.md)
+- [Data residency FAQ](faq/data-residency-faq.md)
 - [Compliance FAQ](faq/compliance-faq.md)
 - [Service FAQ](faq/service-faq.md)
 - [Legal considerations FAQ](faq/legal-faq.md)
