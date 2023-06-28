@@ -246,7 +246,7 @@ Yes.
 
 [Privacy and security FAQ](privacy-security-faq.md)
 
-[Data residency and GDPR FAQ](data-residency-gdpr-faq.md)
+[Data residency FAQ](data-residency-faq.md)
 
 [Compliance FAQ](compliance-faq.md)
 

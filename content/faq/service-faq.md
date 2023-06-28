@@ -49,6 +49,6 @@ Fraud Protection is built on top of Microsoft's Azure cloud platform and benefit
 
 [Privacy and security FAQ](privacy-security-faq.md)
 
-[Data residency FAQ](data-residency-gdpr-faq.md)
+[Data residency FAQ](data-residency-faq.md)
 
 [Compliance FAQ](compliance-faq.md)
