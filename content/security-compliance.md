@@ -31,14 +31,13 @@ Prior to implementing Fraud Protection, make sure the privacy disclosures in you
 Fraud Protection provides tools to help you comply with data subject requests from your customers. These tools enable you to delete and export Transactional Data from Assessments which haven't been processed using pseudonymization techniques in the Fraud Protection network. After Transactional Data is processed in the network, it can't be accessed, exported, viewed, or deleted. Transactional Data is defined as all the data from the request and response payload, plus any attributes and enrichments that are attached to a transaction. Fraud Protection may still retain aggregated data calculated with a contribution from the transaction.    
 
 > [!NOTE]
-> The **User ID** field in the API payload for GDPR Delete or Export calls is mandatory for Fraud Protection to successfully process the corresponding data subject requests (DSRs). The User ID should be identical to the one that was provided for the Account creation, Account login, or Purchase API call for the same Data Subject. If a User ID isn't provided, or a different User ID is provided from the one that was provided before, it will be extremely difficult for Fraud Protection to identify the transaction and DSRs will be difficult to process without significant efforts of investment.
+> The **User ID** field in the API payload for Delete or Export calls is mandatory for Fraud Protection to successfully process the corresponding data subject requests (DSRs). The User ID should be identical to the one that was provided for the Account creation, Account login, or Purchase API call for the same Data Subject. If a User ID isn't provided, or a different User ID is provided from the one that was provided before, it will be extremely difficult for Fraud Protection to identify the transaction and DSRs will be difficult to process without significant efforts of investment.
 
 For more information, see the following resources:
 - [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
-- [Data Subject Requests for the GDPR](/microsoft-365/compliance/gdpr-data-subject-requests)
+- [Data Subject Requests](/microsoft-365/compliance/gdpr-data-subject-requests)
 - [Safeguard individual privacy with the Microsoft Cloud](https://www.microsoft.com/trustcenter/privacy/gdpr/gdpr-overview)
 - [Microsoft Dynamics 365 and GDPR](/dynamics365/get-started/gdpr/index)
-- [Microsoft Power BI GDPR white paper](https://powerbi.microsoft.com/blog/power-bi-gdpr-whitepaper-is-now-available/)
 
 On the **Subject Requests** page, you can perform the following tasks for all transactions:
 
