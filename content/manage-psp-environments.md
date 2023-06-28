@@ -22,7 +22,7 @@ To create a new environment, or switch between environments, select **Manage env
 
 To create a new environment, select **New environment** at the top, and then enter the following information: 
 
-- **Data storage geography** – Select the geography where your customer data resides. For more information about data residency, see [Data residency FAQ](faq/data-residency-gdpr-faq.md).
+- **Data storage geography** – Select the geography where your customer data resides. For more information about data residency, see [Data residency FAQ](faq/data-residency-faq.md).
 - **Name** – Enter the name of the environment that you want to create.
 - **Description (optional)** – You can add some information to help identify the environment.
 - **Tags (optional)** – You can use tags to specify any generic information that's related to the environment, such as the industry vertical.
