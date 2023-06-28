@@ -6,8 +6,8 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "content/data-residency-gdpr-faq.md",
-      "redirect_url": "data-residency-faq",
+      "source_path": "content/faq/data-residency-gdpr-faq.md",
+      "redirect_url": "/dynamics365/fraud-protection/faq/data-residency-faq",
       "redirect_document_id": "false"
     },
     {
