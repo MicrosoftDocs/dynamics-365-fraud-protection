@@ -37,7 +37,6 @@ For more information, see the following resources:
 - [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 - [Data Subject Requests](/microsoft-365/compliance/gdpr-data-subject-requests)
 - [Safeguard individual privacy with the Microsoft Cloud](https://www.microsoft.com/trustcenter/privacy/gdpr/gdpr-overview)
-- [Microsoft Dynamics 365 and GDPR](/dynamics365/get-started/gdpr/index)
 
 On the **Subject Requests** page, you can perform the following tasks for all transactions:
 
