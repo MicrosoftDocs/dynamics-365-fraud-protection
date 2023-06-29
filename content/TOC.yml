@@ -174,8 +174,10 @@
         href: lists-overview.md
       - name: Manage support lists
         href: manage-support-lists.md
-      - name: Manage custom lists
+      - name: Manage custom CSV lists
         href: lists.md
+      - name: Manage custom Cosmos DB lists
+        href: manage-cosmos-db-lists.md
     - name: Case management
       items:
       - name: Case management overview
@@ -234,8 +236,10 @@
         href: lists-overview.md
       - name: Manage support lists
         href: manage-support-lists.md
-      - name: Manage custom lists
+      - name: Manage custom CSV lists
         href: lists.md
+      - name: Manage custom Cosmos DB lists
+        href: manage-cosmos-db-lists.md
     - name: Reporting
       items:
       - name: Loss prevention reports
