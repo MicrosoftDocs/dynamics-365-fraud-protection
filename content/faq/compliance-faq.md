@@ -69,6 +69,9 @@ Data processed within the Fraud Protection network is pseudonymized and retained
 
 Please note that Microsoft employees, including Microsoft-approved subcontractors, may access Customer Data with the permission of the Customer for the purposes of providing Online Services or Professional Services. Data related to a transaction is deidentified and aggregated prior to transmission into the fraud network. Microsoft employees may access aggregated data related to a transaction in the fraud network for the purposes of improving the Online Services. 
 
+#### Does Fraud Protection use cookies in device fingerprinting?
+
+Yes, the purpose of using cookies for DFP is to collect information for devices, but not for a particular individual. If you wish to opt out of using cookies you can, but it would degrade the device fingerprinting.
 
 ## Additional resources
 
