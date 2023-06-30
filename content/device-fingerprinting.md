@@ -48,6 +48,8 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 - Browser-related attributes if applicable such as browser language, font, and so on.
 - Network attributes, such as IP address, signature hash, and so on.
 
+Cookies are used in Fraud Protection to collect information for a device, not for a particular individual. You can opt out of using cookies, but that degrades the device fingerprinting.
+
 ## Set up device fingerprinting
 
 The setup of device fingerprinting is done in two phases.
@@ -93,7 +95,7 @@ To implement device fingerprinting, follow these steps.
     ```
 
     - **Your\_Sub\_Domain** – The subdomain under your root domain.
-    - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that you use a globally unique identifier (GUID) for the session ID, it isn't required.
+    - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID should contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although we recommend that you use a globally unique identifier (GUID) for the session ID, it isn't required.
     - **instance\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Device fingerprinting ID** value that's listed on the **Current environment** tile on the **Integration** page of the corresponding environment in the Fraud Protection portal.
 
     **Example**
