@@ -123,6 +123,27 @@ You can preview a list in Fraud Protection. The preview pane shows a maximum of 
 
 - To preview a list, select it, and then select **Preview**.
 
+## Monitor custom lists in the Fraud Protection portal
+
+> [!NOTE]
+> Metrics are shown only when your list is used in an active rule.
+
+1. To dive into the metrics about your Cosmos DB list, select the list from the lists page. Then, select **Performance** either from the command bar at the top of the page or from the dropdown menu that appears after right-clicking.
+
+    Fraud Protection shows a new page that has a more detailed view of the metrics.
+
+2. To view metrics for any time frame in the last three months, adjust the **Date range** setting at the top of the page.
+
+In addition to the three metrics that were described earlier, an **Error** chart is shown. This chart shows the number of errors by error type and code. To view error counts over time, or to view the distribution of errors, select **Pie chart**.
+
+In addition to HTTP client errors (400, 401, and 403), you might see the following errors:
+
+- **Definition not found** – The list has been deleted, but it's still referenced in a rule.
+- **Timeout** – The request to the target took longer than the specified time-out.
+- **Communication failure** – No connection could be made to the target because of a network issue or because the target is unavailable.
+- **Circuit breaker** – If the list has failed continuously and has exceeded a certain threshold, all further calls will be suspended for a short interval.
+- **Unknown Failure** – An internal Dynamics 365 failure occurred.
+
 ## Additional resources
 
 [Lists overview](lists-overview.md)
