@@ -12,13 +12,13 @@ title: Manage custom Cosmos DB lists
 
 # Manage custom Cosmos DB lists
 
-Custom lists are created and defined by you. You can create custom lists that use Cosmos DB as a data source, tailored to your specific business needs or fraud protection strategy. For example, you can create a custom list that contains email addresses, IP addresses, or product IDs, and additional values that are associated with each entry.
+Custom lists are created and defined by you. You have the ability to create custom lists that utilize Cosmos DB as a data source, tailored to your specific business needs or fraud protection strategy. For instance, you can create a custom list containing email addresses, IP addresses, or product IDs, along with additional values associated with each entry. This option is ideal for large and complex datasets that require real-time updates and access. Moreover, it allows you to maintain all list data in one place within your Cosmos DB database.
 
 ## Prerequisites
 
 To create a custom list using Cosmos DB in Microsoft Dynamics 365 Fraud Protection, you must first [create a container in Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-create-container) and [choose a partition key that's appropriate for your data structure](https://learn.microsoft.com/en-us/azure/cosmos-db/partitioning-overview#choose-partitionkey).
 
-## Use custom Cosmos DB lists
+## Use custom lists
 
 [Rules](rules.md) define custom logic that automates business decisions. To help define this logic, you can take advantage of any list in a rule. For example, you can create one list of email addresses that you consider risky and another list of email addresses that you consider safe. You can then configure a rule so that all sign-in attempts that use an email address in the **Risky Emails** list are rejected, whereas sign-in attempts that use an email address in the **Safe Emails** list are approved.
 
@@ -61,7 +61,7 @@ In addition to using multicolumn lists to combine safe and block lists, you can 
 
 You can then configure a rule that enforces the rejection of transactions where the [risk score](ap-scorecard.md#risk-model-score) exceeds the specified threshold for the product type. For information about how to create effective rules to customize your business logic, see [Rules](rules.md).
 
-## Create a custom Cosmos DB list
+## Create a custom list
 
 You can define a list and then reference the list in a [rule](rules.md). Before creating the list definition, ensure you have met the prerequisites described in the [Prerequisites](manage-cosmos-db-lists.md#prerequisites) section earlier in this article.
 
@@ -90,7 +90,7 @@ To create a list definition, follow these steps.
 >
 > For information about how data is used and protected in Fraud Protection, see [Security, compliance, and data subject requests](security-compliance.md).
 
-## Update a custom Cosmos DB list
+## Update a custom list
 
 You can update a custom Cosmos DB list from the **Lists** page at any time, to add new information or change existing information. You can change the description of a custom list, but you can't change its name and columns if it's used in a published rule or velocity.
 
@@ -102,7 +102,7 @@ To update a custom Cosmos DB list in Fraud Protection, follow these steps.
 1. Optionally, you can select **Preview** to view the list data before updating.
 1. Select **Update** to apply your changes.
 
-## Delete a custom Cosmos DB list
+## Delete a custom list
 
 - To delete a list, select the list, and then select **Delete**.
 - To delete multiple lists, select the lists you want to remove, and then select **Delete**.
@@ -110,14 +110,14 @@ To update a custom Cosmos DB list in Fraud Protection, follow these steps.
 > [!NOTE]
 > Lists which are referenced in rules or velocities cannot be deleted.
 
-## Search for a custom Cosmos DB list
+## Search for a custom list
 
 When you search for a list, all list names, descriptions, data source type are searched, and the results are filtered accordingly.
 
 - To search for a list, enter a keyword in the **Search** field in the upper right of the **Lists** page.
 - To remove the filter, either clear the keyword from the **Search** field or select the **X** to the right.
 
-## Preview a custom Cosmos DB list
+## Preview a custom list
 
 You can preview a list in Fraud Protection. The preview pane shows a maximum of 20 rows.
 
