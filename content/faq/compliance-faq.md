@@ -71,7 +71,7 @@ Please note that Microsoft employees, including Microsoft-approved subcontractor
 
 #### Does Fraud Protection use cookies in device fingerprinting?
 
-Yes, the purpose of using cookies for DFP is to collect information for a device, not for a particular individual. If you wish to opt out of using cookies you can, but it would degrade the device fingerprinting.
+Yes. Fraud Protection uses cookies to collect information for a device, not for a particular individual. To opt out of using cookies you can, but it would degrade the device fingerprinting.
 
 ## Additional resources
 
