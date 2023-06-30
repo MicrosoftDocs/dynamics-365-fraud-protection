@@ -48,7 +48,7 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 - Browser-related attributes if applicable such as browser language, font, and so on.
 - Network attributes, such as IP address, signature hash, and so on.
 
-Cookies are used in Fraud Protection to collect information for a device, not for a particular individual. You can opt out of using cookies, but that would degrade the device fingerprinting.
+Cookies are used in Fraud Protection to collect information for a device, not for a particular individual. You can opt out of using cookies, but that degrades the device fingerprinting.
 
 ## Set up device fingerprinting
 
