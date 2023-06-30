@@ -92,7 +92,7 @@ To create a list definition, follow these steps.
 
 ## Update a custom list
 
-You can update a custom Cosmos DB list from the **Lists** page at any time, to add new information or change existing information. You can change the description of a custom list, but you can't change its name and columns if it's used in a published rule or velocity.
+You can update a custom Cosmos DB list definition from the **Lists** page at any time to add new information or modify existing information. Please note that this does not include data updates; these should be made directly from your database and will be automatically reflected in our system. Changes can be made to the description of a custom list, however, its name and columns cannot be altered if it's being used in a published rule or velocity.
 
 To update a custom Cosmos DB list in Fraud Protection, follow these steps.
 
