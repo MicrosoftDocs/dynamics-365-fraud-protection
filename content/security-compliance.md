@@ -72,7 +72,7 @@ A data subject request (DSR) is a request asking for modification of personal da
 
 Fraud Protection allows you to programmatically honor data subject requests using our API. Below is the schema for our GDPR APIs.
 
-GDPR API payload. The GDPR API is used for [Account protection](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-overview) and [Purchase protection](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/purchase-protection).
+GDPR API payload. The GDPR API is used for [Account protection](ap-overview.md) and [Purchase protection](purchase-protection.md).
 
 | Attribute                   | Type     | Description | Required? |
 |-----------------------------|----------|-------------|---------|
