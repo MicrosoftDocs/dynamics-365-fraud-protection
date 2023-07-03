@@ -28,7 +28,7 @@ Case management has several components that work together to provide an end-to-e
 - [Routing rules](#routing-rules)
 - [Transaction review](#transaction-review)
 
-Note: The [Device fingerprinting](assessment-create-new.md#device-fingerprinting-template) template does not case management.  All other [Assessment templates](assessment-create-new.md#assessment-wizard-select-template) support case management, except for its reporting capabilities.
+Note: The [Device fingerprinting](assessment-create-new.md#device-fingerprinting-template) template does not support case management.  All other [Assessment templates](assessment-create-new.md#assessment-wizard-select-template) support case management, except for its reporting capabilities.
 
 ## Cases
 
