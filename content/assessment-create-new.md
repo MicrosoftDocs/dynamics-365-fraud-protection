@@ -12,7 +12,7 @@ Clicking this link will open the Assessment wizard, which consists of five steps
 4. [Define settings](assessment-create-new.md#assessment-wizard-define-settings)
 5. [Finalize name and endpoint](assessment-create-new.md#assessment-wizard-finalize-name-and-endpoint)
 
-This “_+ New assessment_” link is only visible in the root environment and to users with “Read/Write” permissions to Assessments as defined in [User roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/configure-user-access).  If both pre-requisites are true and the “_+ New assessment_” link still is not visible in left-hand navigation bar, you have reached maximum limit of assessments (16) that can be created at any given time and will need to delete one of your existing assessments before a new one can be created.  The Account creation, Account login, Purchase, and Loss prevention assessments in the left-hand navigation bar do not contribute to this limit.
+This "_+ New assessment_" link is only visible in the root environment and to users with "_Read/Write_" permissions to Assessments as defined in [User roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/configure-user-access).  If both pre-requisites are true and the "_+ New assessment_" link still is not visible in left-hand navigation bar, you have reached maximum limit of assessments (16) that can be created at any given time and will need to delete one of your existing assessments before a new one can be created.  The Account creation, Account login, Purchase, and Loss prevention assessments in the left-hand navigation bar do not contribute to this limit.
 
 ## Assessment wizard: Select template
 
@@ -82,9 +82,9 @@ Each data field is classified into one of two categories: [Standard](assessment-
 
 The accuracy of the risk score returned by Fraud Protection depends on multiple factors, including whether the set of data fields provided presents a complete and accurate description of the event being evaluated.
 
-The standard data fields available to any API are organized and only made available in the form of pre-defined sections.  Every fraud assessment template comes with a default set of these standard sections.  Of these default sections, the only one that is required for any template is “_Metadata_”.  While all other default standard sections can be removed from the API schema prior to creating the assessment, we highly recommend keeping all default standard sections in your API schema since removing any of these standard sections and their associated data fields will likely result in Fraud Protection returning lower quality risk scores from the FPN.
+The standard data fields available to any API are organized and only made available in the form of pre-defined sections.  Every fraud assessment template comes with a default set of these standard sections.  Of these default sections, the only one that is required for any template is "_Metadata_".  While all other default standard sections can be removed from the API schema prior to creating the assessment, we highly recommend keeping all default standard sections in your API schema since removing any of these standard sections and their associated data fields will likely result in Fraud Protection returning lower quality risk scores from the FPN.
 
-You can also add additional standard sections to your new API by clicking the “_Add Section_” drop-down and selecting those applicable to your fraud scenario.  To view the data fields that make up each standard section, see Fraud Protection’s [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) or use the _JSON Preview Pane_ accessible from within the Assessment wizard. 
+You can also add additional standard sections to your new API by clicking the "_Add Section_" drop-down and selecting those applicable to your fraud scenario.  To view the data fields that make up each standard section, see Fraud Protection’s [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) or use the _JSON Preview Pane_ accessible from within the Assessment wizard. 
 
 ### Custom data fields
 
@@ -94,8 +94,8 @@ These fields are fully defined by you and will not impact Fraud Protection’s A
 
 We support two ways for you to add custom data fields to your API’s schema:
 
-- Individual fields can be added by clicking the “_+ New field_” link located under the Custom header; and
-- Multiple fields can be added simultaneously by uploading a custom JSON (.json) file or by manually entering well-formed JSON directly into the **Import JSON** window accessible via the “_From JSON…_” option in the “_Add section_” drop-down.
+- Individual fields can be added by clicking the "_+ New field_" link located under the Custom header; and
+- Multiple fields can be added simultaneously by uploading a custom JSON (.json) file or by manually entering well-formed JSON directly into the **Import JSON** window accessible via the "_From JSON…_" option in the "_Add section_" drop-down.
 
 Each custom data field includes the following fields:
 
@@ -191,7 +191,7 @@ In this step of the Assessment wizard, you can select the following settings bas
 
 ### Rule evaluation behavior
 
-This setting determines the order in which the rules will be evaluated for your assessment.  All fraud assessment templates default to “Run all matching rules until a decision is made”, which allows multiple rules to be evaluated for a single transaction until a decision (Approve, Reject, Review) is made.  See [Rule evaluation behavior](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules#rule-evaluation-behavior) for more details.
+This setting determines the order in which the rules will be evaluated for your assessment.  All fraud assessment templates default to "Run all matching rules until a decision is made", which allows multiple rules to be evaluated for a single transaction until a decision (Approve, Reject, Review) is made.  See [Rule evaluation behavior](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules#rule-evaluation-behavior) for more details.
 
 ### Additional features
 
@@ -271,4 +271,4 @@ Once you have finished configuring the settings for your fraud assessment, the l
 - **API name** (_required_) – This is the unique name that will be included in each call to the API for the fraud assessment.
     - The API name cannot be changed if the assessment is in use (e.g., used in rules or velocities).  It may also be visible to the Fraud Protection engineering team as it is considered system metadata.
 
-Upon completing this step, your newly created assessment will be accessible in the left-hand navigation bar under “Fraud assessments” of the Fraud Protection portal.  This new assessment can take advantage of all the core capabilities that exist in the product – invoking risk scores using our AI models, writing rules to make decisions, etc.
+Upon completing this step, your newly created assessment will be accessible in the left-hand navigation bar under "_Fraud assessments_" of the Fraud Protection portal.  This new assessment can take advantage of all the core capabilities that exist in the product – invoking risk scores using our AI models, writing rules to make decisions, etc.
