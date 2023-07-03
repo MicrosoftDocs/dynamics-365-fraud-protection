@@ -47,7 +47,10 @@ The device fingerprinting template has some special settings designed to keep th
 
 To use the full suite of device attributes in rules and velocities, you will need to call the _Device.GetFullAttributes_ FQL function.  Upon creating a new API based on the device fingerprinting template, a default sample rule is created that references this _Device.GetFullAttributes_ function.  For more details on this _Device.GetFullAttributes_ function, see [Language reference](fpl-lang-ref.md) guide.  For more details on default sample rules, see [Assessment (default) rules](rules.md#assessment-default-rules).
 
-See [Set up device fingerprinting](device-fingerprinting.md) for more details on setting up and enabling device fingerprinting for web and mobile.
+See [Set up device fingerprinting](device-fingerprinting.md) for more details on setting up and enabling device fingerprinting for web and mobile.  The following sections detail the device fingerprinting attribute fields Fraud Protection attempts to collect:
+- [Web](device-fingerprinting.md#device-fingerprinting-attribute-list-for-web)
+- [iOS](device-fingerprinting.md#device-fingerprinting-attribute-list-for-ios)
+- [Android](device-fingerprinting.md#device-fingerprinting-attribute-list-for-android)
 
 ### Money transfer template
 
