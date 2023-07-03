@@ -50,7 +50,7 @@ Follow these steps to start to use the event tracing functionality.
 
 ## Event schemas
 
-Four supported classifications of events are currently available in event tracing: *trace events*, *audit events*, *monitoring events*, and *transactional events*.
+Five supported classifications of events are currently available in event tracing: *transactional events*, *trace events*, *assessment events*, *audit events*, and *monitoring events*.
 
 ### Transactional events
 Use transactional events to create custom scorecards and automated workflows using the data available in your assessment and non-assessment API calls. Using blob storage, you can also copy the data from historical API calls to create a data warehouse for your business. The payload for this event includes the entire request and response for each API call.
@@ -102,6 +102,47 @@ You use trace events to report and monitor the performance for all rules which i
     }
 ```
 
+### Assessment events
+
+Assessment and associated label and observation events can be traced to event hubs and blobs.
+
+##### Namespace: FraudProtection.Assessments.
+
+```json
+{
+    "request": "",
+    "response": "",
+    "eventId": "uniqueId",
+    "assessmentApiName": "<your assessment api name>",
+    "assessmentName": "<your assessment name>"
+}
+```
+
+##### Namespace: FraudProtection.Observations.
+
+```json
+{
+    "request": "",
+    "primaryEventId": "<assessment event id>",
+    "observationApiName": "<your observation api name>",
+    "observationName": "<your observation name>",
+    "observationEventId": "<your observation event id>",
+    "assessmentApiName": "<your assessment api name>",
+    "assessmentName": "<your assessment name>"
+}
+```
+
+##### Namespace: FraudProtection.Labels.
+
+```json
+{
+    "request": "",
+    "labelEventId": "",
+    "assessmentApiName": "<your assessment api name>",
+    "assessmentName": "<your assessment name>"
+}
+```
+
 ### Audit events
 
 You use audit events to track portal actions and develop an audit log. Audit events currently support new/edit/delete operations on rules, lists, velocities, and external calls.
@@ -123,6 +164,7 @@ You use audit events to track portal actions and develop an audit log. Audit eve
     "timestamp": "2020-06-10T23:43:33.4526859Z"
 }
 ```
+
 ### Audit log access
 
 There are two ways that youc an access audit logs. You can set up event tracting, or you can request an auto-generated audit log be sent by creating a Customer support ticket. If you decide not to use event tracing and instead submit a support ticket, the support ticket is routed to the Fraud Protection engineering team. The team extracts the logs and provides them back to you. Audit logs are captured and stored in the same geo that you have chosen to provision an environment. The logs can't be edited after they are captured and the log retention period is 365 days. Logs older than 365 days are automatically deleted.
