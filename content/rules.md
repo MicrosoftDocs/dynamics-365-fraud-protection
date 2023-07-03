@@ -346,6 +346,8 @@ These default rules show up as active under "_Published Rules_" immediately upon
 | Software piracy | Supported | Supported |
 | Custom | N/A | Supported |
 
+Additional rules can be manually created for an assessment in both its root and child environments. 
+
 To invoke Fraud Protection’s risk and bot scores from within a rule for an assessment created using one of the following templates, the following [Model functions](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fpl-lang-ref#model-functions) must be used:
 
 - **Risk score**: _Model.Risk().Score_
