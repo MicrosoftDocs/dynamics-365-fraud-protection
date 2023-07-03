@@ -50,6 +50,22 @@ The **Accumulated Consumption %** metric shows the ratio of the total number of 
 > [!NOTE]
 > Billing arrangements are made via your Microsoft Account Executive or Microsoft Cloud Solution Provider partner. You will receive notifications from them if your accumulated consumption approaches 100 percent before the end of the current billing cycle. Therefore, you will have an opportunity to adjust your subscription as required.
 
+### Assessment to SKU mapping
+
+The following table shows which Fraud Protection SKU each assessment maps to:
+
+| Assessment | SKU |
+|------------|-----|
+| [Account creation](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-overview) | Account protection |
+| [Account login](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-overview) | Account protection |
+| [Purchase](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/purchase-protection) | Purchase protection |
+| [Loss prevention](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/loss-prevention-overview) | Loss prevention |
+| [Card payment](assessment-create-new.md#card-payment-template) | Purchase protection |
+| [Device fingerprinting](assessment-create-new.md#device-fingerprinting-template) | Account protection |
+| [Money transfer](assessment-create-new.md#money-transfer-template) | Purchase protection |
+| [Software piracy](assessment-create-new.md#software-piracy-template) | Loss prevention |
+| [Custom](assessment-create-new.md#custom-template) | Account protection |
+
 ## Additional notes about assessment usage and metering
 
 - Only activity in the Fraud Protection production environment counts toward the assessments that have been used. Activity in the integration environment doesn't count. Therefore, in the integration portal, the **Admin setting** page doesn't show the **Subscription** tab.
