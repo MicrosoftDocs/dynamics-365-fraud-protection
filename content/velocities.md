@@ -96,9 +96,9 @@ GROUPBY @"user.userId
 #### For each user, the number of unique custom emails that were used across an assessment and observation event
 
 ```FraudProtectionLanguage
-SELECT DistinctCount(@"Custom.email") AS uniqueEmails_perUser
+SELECT DistinctCount(@"custom.email") AS uniqueEmails_perUser
 FROM Assessment_A1, Assessment_A1:status
-GROUPBY @"Custom.userId"
+GROUPBY @"custom.userId"
 ```
 
 ## Create a velocity set
