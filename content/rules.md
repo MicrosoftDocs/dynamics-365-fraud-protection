@@ -329,6 +329,30 @@ Some Fraud Protection functionality relies on default rules. After you add an em
 
 You can edit, delete, and deactivate system-defined rules. As a best practice, consider creating or editing a different rule unless you want to change the default behavior.
 
+## Assessment default rules
+
+Each assessment template mentioned in the [Select template](assessment-create-new.md#assessment-wizard-select-template) step of the Assessment wizard comes pre-defined with one or both of the following default rules:
+
+- **Sample template rule** – This rule contains a series of sample clauses that serve as the building blocks for defining your own logic for making decisions based on values like risk score, bot score, and device attributes where applicable.  None of these clauses make decisions by default, however they can quickly be altered to do so using the samples provided.
+- **Support list rule** – This rule consists of a series of clauses that leverage Fraud Protection’s support lists (safe, block, watch) to help you make informed decisions (accept, reject, review) based on entities in those lists.
+
+These default rules show up as active under "_Published Rules_" immediately upon creation of the assessment, where applicable.  Here is a summary of the default rules supported by assessment template:
+
+| Template | Template rule | Support list rule |
+|----------|---------------|-------------------|
+| Card payment | Supported | Supported |
+| Device fingerprinting | Supported | N/A |
+| Money transfer | Supported | Supported |
+| Software piracy | Supported | Supported |
+| Custom | N/A | Supported |
+
+## Assessment risk and bot scoring
+
+An important distinction between Fraud Protection’s _Account Creation_, _Account Login_, & _Purchase_ assessments and those assessments created using the [Assessment wizard](assessment-create-new.md#assessment-wizard-overview) is that those originating from the wizard require a different syntax to invoke Fraud Protection’s risk and bot scores from within the Rules experience:
+
+- **_Model.Risk().Score_** replaces **_@riskScore_** as the way to [invoke a risk score](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-scorecard#risk-model-score).
+- **_Model.Bot(@"deviceFingerprinting.id").Score_** replaces **_@botScore_** as the way to [invoke a bot score](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-scorecard#bot-model-score).
+
 ## Manage existing rules
 
 On the **Rules** tab, you can perform the following operations on an existing rule:
