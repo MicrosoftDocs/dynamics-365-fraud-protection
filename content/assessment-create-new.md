@@ -41,7 +41,7 @@ The **Card payment** template allows you to assess the fraud risk of online and 
 
 ### Device fingerprinting template
 
-The **Device fingerprinting template** allows you to gather intelligence from remote computing devices to help assess fraud risk.  This template is useful in scenarios where you want to enable _device fingerprinting only_ and allows you to access the full suite of device attributes that Fraud Protection collects, along with other enrichments like IP intelligence.  If you would like to use device fingerprinting as part of any other scenario, you can integrate it into any of our other assessment templates by adding the “Device Fingerprinting” section to your API schema in the [Define schema details](assessment-create-new.md#assessment-wizard-define-schema-details) step of the Assessment wizard.
+The **Device fingerprinting template** allows you to gather intelligence from remote computing devices to help assess fraud risk.  This template is useful in scenarios where you want to enable _device fingerprinting only_ and allows you to access the full suite of device attributes that Fraud Protection collects, along with other enrichments like IP intelligence.  If you would like to use device fingerprinting as part of any other scenario, you can integrate it into any of our other assessment templates by adding the "_Device Fingerprinting_" section to your API schema in the [Define schema details](assessment-create-new.md#assessment-wizard-define-schema-details) step of the Assessment wizard.
 
 The device fingerprinting template has some special settings designed to keep the API lightweight.  Search and case management are both disabled by default and cannot be enabled for this template. Additionally, this template does not support risk scoring.  The _Model.Risk_ FQL function cannot be invoked when an API based on this template is used.
 
@@ -191,7 +191,7 @@ In this step of the Assessment wizard, you can select the following settings bas
 
 ### Rule evaluation behavior
 
-This setting determines the order in which the rules will be evaluated for your assessment.  All fraud assessment templates default to "Run all matching rules until a decision is made", which allows multiple rules to be evaluated for a single transaction until a decision (Approve, Reject, Review) is made.  See [Rule evaluation behavior](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules#rule-evaluation-behavior) for more details.
+This setting determines the order in which the rules will be evaluated for your assessment.  All fraud assessment templates default to "_Run all matching rules until a decision is made_", which allows multiple rules to be evaluated for a single transaction until a decision (Approve, Reject, Review) is made.  See [Rule evaluation behavior](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules#rule-evaluation-behavior) for more details.
 
 ### Additional features
 
