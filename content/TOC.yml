@@ -249,7 +249,7 @@
   - name: Create a new assessment
     href: assessment-create-new.md
   - name: Configure an existing assessment
-    href: assessment-edit-existing.md
+    href: assessment-configure-existing.md
   - name: User access
     items:
     - name: User roles and access
