@@ -244,6 +244,50 @@
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
+- name: Assessments
+  items:
+  - name: Create a new assessment
+    href: <To be created>
+  - name: Configure an existing assessment
+    href: <To be created>
+  - name: Operations
+    items: 
+    - name: Language reference guide
+      href: fpl-lang-ref.md
+    - name: Event tracing
+      href: event-tracing.md
+    - name: Velocity checks
+      href: velocities.md
+    - name: External calls
+      href: external-calls.md
+    - name: Search
+      href: search.md
+    - name: AI and insights from the fraud protection network
+      href: fraud-protection-network.md  
+    - name: Rules
+      items:
+      - name: Manage rules
+        href: rules.md
+    - name: Lists
+      items:
+      - name: Lists overview
+        href: lists-overview.md
+      - name: Manage support lists
+        href: manage-support-lists.md
+      - name: Manage custom lists
+        href: lists.md
+    - name: Case management
+      items:
+      - name: Case management overview
+        href: case-management-overview.md
+      - name: Case management for administrators
+        href: case-management-administrator.md
+      - name: Case management for manual reviewers
+        href: case-management-manual-review.md 
+    - name: Manage environments
+      href: manage-psp-environments.md
+    - name: Notifications for Fraud Protection service
+      href: dfp-notifications.md
 - name: Reporting
   items:
   - name: Virtual fraud analyst reporting
