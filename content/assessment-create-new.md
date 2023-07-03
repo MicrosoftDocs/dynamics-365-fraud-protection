@@ -84,7 +84,7 @@ The accuracy of the risk score returned by Fraud Protection depends on multiple 
 
 The standard data fields available to any API are organized and only made available in the form of pre-defined sections.  Every fraud assessment template comes with a default set of these standard sections.  Of these default sections, the only one that is required for any template is "_Metadata_".  While all other default standard sections can be removed from the API schema prior to creating the assessment, we highly recommend keeping all default standard sections in your API schema since removing any of these standard sections and their associated data fields will likely result in Fraud Protection returning lower quality risk scores from the FPN.
 
-You can also add additional standard sections to your new API by clicking the "_Add Section_" drop-down and selecting those applicable to your fraud scenario.  To view the data fields that make up each standard section, see Fraud Protection’s [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) or use the _JSON Preview Pane_ accessible from within the Assessment wizard. 
+You can also add additional standard sections to your new API by clicking the "_Add section_" drop-down and selecting those applicable to your fraud scenario.  To view the data fields that make up each standard section, see Fraud Protection’s [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) or use the _JSON Preview Pane_ accessible from within the Assessment wizard. 
 
 ### Custom data fields
 
