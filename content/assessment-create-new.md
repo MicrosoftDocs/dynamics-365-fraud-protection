@@ -1,6 +1,6 @@
 # Assessment wizard overview
 
-If you have a fraud scenario that cannot be addressed using our existing [Account creation](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-overview), [Account login](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-overview), or [Purchase](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/purchase-protection) APIs, the Assessment wizard provides you with the tools to create your own customized real-time Fraud Protection APIs.
+If you have a fraud scenario that cannot be addressed using our existing [Account creation](ap-overview.md), [Account login](ap-overview.md), or [Purchase](purchase-protection.md) APIs, the Assessment wizard provides you with the tools to create your own customized real-time Fraud Protection APIs.
 
 Once you have identified the specific fraud scenario you would like to protect your business against, and the data you will use to evaluate this scenario for likelihood of fraud, you can access this wizard by clicking the "_+ New assessment_" link under Fraud assessments in left-hand navigation bar.
 
@@ -12,7 +12,7 @@ Clicking this link will open the Assessment wizard, which consists of five steps
 4. [Define settings](assessment-create-new.md#assessment-wizard-define-settings)
 5. [Finalize name and endpoint](assessment-create-new.md#assessment-wizard-finalize-name-and-endpoint)
 
-This "_+ New assessment_" link is only visible in the root environment and to users with "_Read/Write_" permissions to Assessments as defined in [User roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/configure-user-access).  If both pre-requisites are true and the "_+ New assessment_" link still is not visible in left-hand navigation bar, you have reached maximum limit of assessments (16) that can be created at any given time and will need to delete one of your existing assessments before a new one can be created.  The Account creation, Account login, Purchase, and Loss prevention assessments in the left-hand navigation bar do not contribute to this limit.
+This "_+ New assessment_" link is only visible in the root environment and to users with "_Read/Write_" permissions to Assessments as defined in [User roles and access](configure-user-access.md).  If both pre-requisites are true and the "_+ New assessment_" link still is not visible in left-hand navigation bar, you have reached maximum limit of assessments (16) that can be created at any given time and will need to delete one of your existing assessments before a new one can be created.  The Account creation, Account login, Purchase, and Loss prevention assessments in the left-hand navigation bar do not contribute to this limit.
 
 ## Assessment wizard: Select template
 
@@ -37,7 +37,7 @@ In the next step of the wizard, you will have the ability to further customize t
 
 ### Card payment template
 
-The **Card payment** template allows you to assess the fraud risk of online and offline card payments for financial institutions. This template is geared towards issuing banks and other financial institutions.  For merchant-based purchase scenarios, please use Fraud Protection’s [Purchase protection](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/purchase-protection) solution.
+The **Card payment** template allows you to assess the fraud risk of online and offline card payments for financial institutions. This template is geared towards issuing banks and other financial institutions.  For merchant-based purchase scenarios, please use Fraud Protection’s [Purchase protection](purchase-protection.md) solution.
 
 ### Device fingerprinting template
 
@@ -45,9 +45,9 @@ The **Device fingerprinting template** allows you to gather intelligence from re
 
 The device fingerprinting template has some special settings designed to keep the API lightweight.  Search and case management are both disabled by default and cannot be enabled for this template. Additionally, this template does not support risk scoring.  The _Model.Risk_ FQL function cannot be invoked when an API based on this template is used.
 
-To use the full suite of device attributes in rules and velocities, you will need to call the _Device.GetFullAttributes_ FQL function.  Upon creating a new API based on the device fingerprinting template, a default sample rule is created that references this _Device.GetFullAttributes_ function.  For more details on this _Device.GetFullAttributes_ function, see [Language reference](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fpl-lang-ref) guide.  For more details on default sample rules, see [Assessment (default) rules](rules.md#assessment-default-rules).
+To use the full suite of device attributes in rules and velocities, you will need to call the _Device.GetFullAttributes_ FQL function.  Upon creating a new API based on the device fingerprinting template, a default sample rule is created that references this _Device.GetFullAttributes_ function.  For more details on this _Device.GetFullAttributes_ function, see [Language reference](fpl-lang-ref.md) guide.  For more details on default sample rules, see [Assessment (default) rules](rules.md#assessment-default-rules).
 
-See [Set up device fingerprinting](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/device-fingerprinting) for more details on setting up and enabling device fingerprinting for web and mobile.
+See [Set up device fingerprinting](device-fingerprinting.md) for more details on setting up and enabling device fingerprinting for web and mobile.
 
 ### Money transfer template
 
@@ -174,7 +174,7 @@ The **Chargeback event** allows you to provide Fraud Protection with information
 
 The **Label event** allows you to provide Fraud Protection with fraud and non-fraud signals related to a transaction. This event is a data ingestion only event.
 
-See [Labels API](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/labels-api) for more details on Fraud Protection’s label event.
+See [Labels API](labels-api.md) for more details on Fraud Protection’s label event.
 
 ### Custom event
 
@@ -186,14 +186,14 @@ In this step of the Assessment wizard, you can select the following settings bas
 
 ### Rule evaluation behavior
 
-This setting determines the order in which the rules will be evaluated for your assessment.  All fraud assessment templates default to "_Run all matching rules until a decision is made_", which allows multiple rules to be evaluated for a single transaction until a decision (Approve, Reject, Review) is made.  See [Rule evaluation behavior](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules#rule-evaluation-behavior) for more details.
+This setting determines the order in which the rules will be evaluated for your assessment.  All fraud assessment templates default to "_Run all matching rules until a decision is made_", which allows multiple rules to be evaluated for a single transaction until a decision (Approve, Reject, Review) is made.  See [Rule evaluation behavior](rules.md#rule-evaluation-behavior) for more details.
 
 ### Additional features
 
 Fraud Protection supports three settings for three different assessment features:
 
-- **Case management** – Allows you to manage and take action on transactions that require review by human subject matter experts.  See [Case management overview](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/case-management-overview) for more details.
-- **Search** – Allows you to find and view details associated with specific transactions.  See [Search](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/search) for more details.
+- **Case management** – Allows you to manage and take action on transactions that require review by human subject matter experts.  See [Case management overview](case-management-overview.md) for more details.
+- **Search** – Allows you to find and view details associated with specific transactions.  See [Search](search.md) for more details.
 
 The features available and their default settings will vary based on the fraud assessment template you selected in the Select template step.  Here is a summary of the assessment feature default settings broken down by assessment template:
 
@@ -256,7 +256,7 @@ Once you have selected data subject ID(s) and created the assessment by completi
 
 Transactions that were sent before a data subject ID was selected will not be accessible for export or deletion by that data subject ID. _metadata.eventId_ is always set as a data subject ID, so events associated with a given assessment can always be exported and deleted using that field.
 
-See [Compliance overview](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/security-compliance) for more information about exporting and deleting data.
+See [Compliance overview](security-compliance.md) for more information about exporting and deleting data.
 
 ## Assessment wizard: Finalize name and endpoint
 
