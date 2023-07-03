@@ -60,7 +60,7 @@
       href: integrate-ap-api.md 
     - name: Integrate purchase protection APIs
       href: integrate-real-time-api.md 
-    - name: Custom assessment
+    - name: Custom assessments
       href: custom-assessment.md
     - name: Monitor API calls
       href: monitoring.md
