@@ -45,14 +45,9 @@ The **Device fingerprinting template** allows you to gather intelligence from re
 
 The device fingerprinting template has some special settings designed to keep the API lightweight.  Search and case management are both disabled by default and cannot be enabled for this template. Additionally, this template does not support risk scoring.  The _Model.Risk_ FQL function cannot be invoked when an API based on this template is used.
 
-To use the full suite of device attributes in rules and velocities, you will need to call the _Device.GetFullAttributes_ FQL function.  Upon creating a new API based on the device fingerprinting template, a default sample rule is created that references this _Device.GetFullAttributes_ function.  For more details on this _Device.GetFullAttributes_ function, see [Language reference](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fpl-lang-ref) guide.  For more details on default sample rules, see **INSERT 'Default rules' URL**.
+To use the full suite of device attributes in rules and velocities, you will need to call the _Device.GetFullAttributes_ FQL function.  Upon creating a new API based on the device fingerprinting template, a default sample rule is created that references this _Device.GetFullAttributes_ function.  For more details on this _Device.GetFullAttributes_ function, see [Language reference](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fpl-lang-ref) guide.  For more details on default sample rules, see [Assessment (default) rules](rules.md#assessment-default-rules).
 
 See [Set up device fingerprinting](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/device-fingerprinting) for more details on setting up and enabling device fingerprinting for web and mobile.
-
-See the following pages for more details on the device fingerprinting attribute fields Fraud Protection attempts to collect:
--	**INSERT 'Device fingerprinting attribute list for web' URL**
--	**INSERT 'Device fingerprinting attribute list for iOS' URL**
--	**INSERT 'Device fingerprinting attribute list for Android' URL**
 
 ### Money transfer template
 
