@@ -98,7 +98,7 @@
       href: external-calls.md
     - name: Search
       href: search.md
-    - name: AI and insights from the fraud protection network
+    - name: AI and insights from the Fraud Protection Network
       href: fraud-protection-network.md  
     - name: Rules
       items:
@@ -160,7 +160,7 @@
       href: risk-support.md
     - name: In-product notifications
       href: in-product-notifications.md
-    - name: AI and insights from the fraud protection network
+    - name: AI and insights from the Fraud Protection Network
       href: fraud-protection-network.md  
     - name: Rules
       items:
@@ -220,7 +220,7 @@
       href: search.md
     - name: Upload historical data
       href: loss-prevention-data-upload.md
-    - name: AI and insights from the fraud protection network
+    - name: AI and insights from the Fraud Protection Network
       href: fraud-protection-network.md  
     - name: Rules
       items:
@@ -247,9 +247,17 @@
 - name: Assessments
   items:
   - name: Create a new assessment
-    href: <To be created>
+    href: assessment-create-new.md
   - name: Configure an existing assessment
-    href: <To be created>
+    href: assessment-edit-existing.md
+  - name: User access
+    items:
+    - name: User roles and access
+      href: user-roles-access.md
+    - name: Configure user roles and access
+      href: configure-user-access.md
+    - name: Payment service provider user roles and access 
+      href: psp-user-roles.md
   - name: Operations
     items: 
     - name: Language reference guide
@@ -262,7 +270,7 @@
       href: external-calls.md
     - name: Search
       href: search.md
-    - name: AI and insights from the fraud protection network
+    - name: AI and insights from the Fraud Protection Network
       href: fraud-protection-network.md  
     - name: Rules
       items:
