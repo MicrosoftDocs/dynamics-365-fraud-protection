@@ -295,7 +295,6 @@ The **Rules** tab shows a list of the published rules that are configured for th
 
 An event is evaluated against each rule condition, in order, until a condition returns **True**. Each clause in the selected rule is then evaluated. If one of these clauses returns a decision, no further rules are evaluated. If none of these clauses returns a decision, either the transaction will be approved by default, or the next published rule that has a matching condition will be evaluated. The behavior depends on the [rule evaluation behavior](rules.md#rule-evaluation-behavior) that is selected in the rule settings.
 
-
 ## Create a new rule
 
 You can create rules that make decisions that are related to purchase, account creation, and account login events.
@@ -348,7 +347,7 @@ These default rules show up as active under "_Published Rules_" immediately upon
 
 Additional rules can be manually created for an assessment in both its root and child environments. 
 
-To invoke Fraud Protection’s risk and bot scores from within a rule for an assessment created using one of the following templates, the following [Model functions](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fpl-lang-ref#model-functions) must be used:
+To invoke Fraud Protection’s risk and bot scores from within a rule for an assessment created using one of the following templates, the following [Model functions](fpl-lang-ref.md#model-functions) must be used:
 
 - **Risk score**: _Model.Risk().Score_
 - **Bot score**: _Model.Bot(@"deviceFingerprinting.id").Score_
