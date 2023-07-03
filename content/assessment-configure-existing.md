@@ -14,6 +14,6 @@ If you have "_Read/Write_" permissions to Assessments, you will also be able to:
   - **Private** – only in the second assessment’s root environment (_default_)
   - **Shared** – accessible in all environments in the tenant
 - Delete the assessment.
-  - Deleting an assessment will permanently remove the assessment and its transactional data from your environment and all its child environments.
-  - For more details on deleting an assessment in a multi-hierarchy environment, see [Manage environments](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/manage-psp-environments).
-  - An assessment cannot be deleted if a velocity is referencing it or if it is being shared.
+  - An assessment can only be deleted in the root environment it was created in, and it cannot be deleted if a velocity is referencing it, or the assessment is being shared.
+  - Deleting an assessment will permanently remove the assessment and its transactional data from your environment and all its child environments.  It will also drop all cases associated with that assessment across all environments (root and children).
+  - If an assessment and associated data like rules are deleted in the root environment, the velocities that reference this assessment in child environments will show an error in the [Velocities](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/velocities) page. 
