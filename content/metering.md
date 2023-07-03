@@ -56,10 +56,10 @@ The following table shows which Fraud Protection SKU each assessment maps to:
 
 | Assessment | SKU |
 |------------|-----|
-| [Account creation](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-overview) | Account protection |
-| [Account login](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-overview) | Account protection |
-| [Purchase](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/purchase-protection) | Purchase protection |
-| [Loss prevention](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/loss-prevention-overview) | Loss prevention |
+| [Account creation](ap-overview.md) | Account protection |
+| [Account login](ap-overview.md) | Account protection |
+| [Purchase](purchase-protection.md) | Purchase protection |
+| [Loss prevention](loss-prevention-overview.md) | Loss prevention |
 | [Card payment](assessment-create-new.md#card-payment-template) | Purchase protection |
 | [Device fingerprinting](assessment-create-new.md#device-fingerprinting-template) | Account protection |
 | [Money transfer](assessment-create-new.md#money-transfer-template) | Purchase protection |
