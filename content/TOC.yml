@@ -304,10 +304,12 @@
     href: summary-report.md
   - name: Score analyst reports
     href: score-analyst.md
-  - name: Rule analayst reports
+  - name: Rule analyst reports
     href: rule-analyst.md
   - name: Threat analyst reports
     href: threat-analyst.md
+  - name: Assessment reporting
+    href: assessment-reporting.md
 - name: Compliance, privacy, security
   items:
   - name: Compliance overview
