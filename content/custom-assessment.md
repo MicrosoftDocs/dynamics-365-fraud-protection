@@ -10,7 +10,10 @@ title: Custom assessment
 
 ---
 
-# Custom assessment
+> [!IMPORTANT]
+> Custom assessments will be deprecated in a future release of Fraud Protection in favor of our new and more comprehensive [Assessments](assessment-create-new.md#assessment-wizard-overview) offering.  Custom assessments will continue to work and be fully supported until the deprecation date.  Deprecation can take many months and this notification is intended to allow you sufficient time to plan and update your implementation of Fraud Protection before deprecation.  Customers will be notified once the deprecation date is set.
+
+# Custom assessments
 
 Effective fraud management is a multi-tier strategy. To maximize fraud detection and minimize customer friction, you must assess interactions at various phases of a user's journey, and decide whether the interactions should be allowed, challenged, or prevented. Every business is different, and so are the associated user interactions that transmit signals about potential fraud. For example, profile updates, such as changes to a user's address or payment information, might be a key event for an e-commerce business. Other examples of user interactions that might be key events, depending on the business model, include submission of reviews, updates of seat preferences on a travel site, the addition of family and friends on a subscription or gaming service, and submission of a service support ticket or a complaint.
 
