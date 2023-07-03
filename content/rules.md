@@ -145,10 +145,8 @@ A rule consists of the following components:
 - The current [status](rules.md#status) of the rule: **Active** or **Inactive**
 - A [sample](rules.md#samples) of fields, to help you write and evaluate the rule
 - Components that help you build the logic that automatically approves, rejects, challenges, or reviews events:
-
     - A [condition](rules.md#conditions)
     - One or more of the following types of [clauses](rules.md#clauses):
-
         - [Prior to all scoring clauses](rules.md#prior-to-all-scoring-clauses)
         - [Post-bot-scoring clauses](rules.md#post-bot-scoring-clauses)
         - [Post-risk-scoring clauses](rules.md#post-risk-scoring-clauses)
@@ -236,6 +234,7 @@ Clauses are organized into sections. AI models are run based on these sections a
 - For purchase protection, an AI risk model is run that generates a risk score for the transaction. Therefore, these rules contain both prior-to-all-scoring clauses and post-risk scoring clauses.
 - For account protection, a bot model is run in addition to a risk model. These models generate a bot score and risk score, respectively. Therefore, these rules contain prior-to-all-scoring clauses, post-bot-scoring clauses, and post-risk-scoring clauses.
 - For custom assessments, no AI models are run, and these rules contain only prior-to-all-scoring clauses.
+- Assessments created using the [Assessment wizard](assessment-create-new.md#assessment-wizard-overview) don’t have a concept of prior-to-scoring and post-scoring clauses.  Instead, all clauses are executed sequentially (top to bottom) based on the order they are listed in the rule.
 
 #### Prior-to-all-scoring clauses
 
@@ -278,6 +277,7 @@ In post-risk-scoring clauses, you can use this score together with fields from t
 RETURN Reject("high price and risk score")
 WHEN @purchasePrice >= 199.99 && @riskScore > 700
 ```
+
 ### Drafts
 
 A rule can have both a *published* version and a *draft* version. Both versions can be viewed as side-by-side tabs on the **Rules** tab.
@@ -329,7 +329,7 @@ Some Fraud Protection functionality relies on default rules. After you add an em
 
 You can edit, delete, and deactivate system-defined rules. As a best practice, consider creating or editing a different rule unless you want to change the default behavior.
 
-## Assessment default rules
+## Assessment (default) rules
 
 Each assessment template mentioned in the [Select template](assessment-create-new.md#assessment-wizard-select-template) step of the Assessment wizard comes pre-defined with one or both of the following default rules:
 
@@ -346,12 +346,10 @@ These default rules show up as active under "_Published Rules_" immediately upon
 | Software piracy | Supported | Supported |
 | Custom | N/A | Supported |
 
-## Assessment risk and bot scoring
+To invoke Fraud Protection’s risk and bot scores from within a rule for an assessment created using one of the following templates, the following [Model functions](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fpl-lang-ref#model-functions) must be used:
 
-An important distinction between Fraud Protection’s _Account Creation_, _Account Login_, & _Purchase_ assessments and those assessments created using the [Assessment wizard](assessment-create-new.md#assessment-wizard-overview) is that those originating from the wizard require a different syntax to invoke Fraud Protection’s risk and bot scores from within the Rules experience:
-
-- **_Model.Risk().Score_** replaces **_@riskScore_** as the way to [invoke a risk score](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-scorecard#risk-model-score).
-- **_Model.Bot(@"deviceFingerprinting.id").Score_** replaces **_@botScore_** as the way to [invoke a bot score](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/ap-scorecard#bot-model-score).
+- **Risk score**: _Model.Risk().Score_
+- **Bot score**: _Model.Bot(@"deviceFingerprinting.id").Score_
 
 ## Manage existing rules
 
