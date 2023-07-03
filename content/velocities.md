@@ -37,7 +37,7 @@ GROUPBY <attribute name>
     | DistinctCount      | This method returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPaddresses |
     | Sum                | This method returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
-- After **FROM**, specify an assessment to observe the velocity on: *Purchase, AccountLogin, AccountCreation, Chargeback, BankEvent, or Custom Assessment*.
+- After **FROM**, specify an assessment or observation event to observe the velocity on. Please note the field you want to observe velocity for, or group by, needs to be part of the API call. To observe a cross-event velocity, you can specify multiple events across assessments and/or observation events.
 - *The **WHEN** statement is optional.* After **WHEN**, you can type a Boolean expression. Only events that match the condition are considered in the aggregation. Other events are ignored. The expression is used to filter the events that are considered in the velocity.
 - After **GROUPBY**, specify a property or an expression. The property or expression is then evaluated for every event that is processed. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that is specified in the **SELECT** statement. If the **GROUPBY** expression is null or empty for an incoming event, the event won't contribute to the aggregation.
 
@@ -91,6 +91,14 @@ SELECT Count() AS intlHighRiskTxns_perUser
 FROM Purchase
 WHEN @"user.country" != "US" and ContainsKey("Risky Products", "Product ID", @"ProductList.productId")
 GROUPBY @"user.userId
+```
+
+#### For each user, the number of unique custom emails that were used across an assessment and observation event
+
+```FraudProtectionLanguage
+SELECT DistinctCount(@"Custom.email") AS uniqueEmails_perUser
+FROM Assessment_A1, Assessment_A1:status
+GROUPBY @"Custom.userId"
 ```
 
 ## Create a velocity set
