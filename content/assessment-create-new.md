@@ -200,42 +200,13 @@ Fraud Protection supports three settings for three different assessment features
 
 The features available and their default settings will vary based on the fraud assessment template you selected in the Select template step.  Here is a summary of the assessment feature default settings broken down by assessment template:
 
-<table>
-<thead>
-<tr>
-<th>Template</th>
-<th>Case management</th>
-<th>Search</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Card payment</td>
-<td>Enabled</td>
-<td>Enabled</td>
-</tr>
-<tr>
-<td>Device fingerprinting</td>
-<td>N/A</td>
-<td>N/A</td>
-</tr>
-<tr>
-<td>Money transfer</td>
-<td>Enabled</td>
-<td>Enabled</td>
-</tr>
-<tr>
-<td>Software piracy</td>
-<td>Disabled</td>
-<td>Disabled</td>
-</tr>
-<tr>
-<td>Custom</td>
-<td>Disabled</td>
-<td>Disabled</td>
-</tr>
-</tbody>
-</table>
+| Template | Case management | Search |
+|----------|-----------------|--------|
+| Card payment | Enabled | Enabled |
+| Device fingerprinting | N/A | N/A |
+| Money transfer | Enabled | Enabled |
+| Software piracy | Disabled | Disabled |
+| Custom | Disabled | Custom |
 
 For Search to work at an assessment level, please make sure you also have it enabled at the tenant level.
 
