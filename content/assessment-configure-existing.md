@@ -1,6 +1,6 @@
 # Assessment configuration overview
 
-You can configure an existing assessment by selecting the assessment in Fraud Protection’s left-hand navigation bar and then clicking its _Configuration_ tab.  This _Configuration_ tab only applies to assessments created using [templates](assessment-create-new.md#assessment-wizard-select-template) and is only visible to users with a minimum of "_Read_" permissions for _Assessments_ as defined in [User roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/configure-user-access).
+You can configure an existing assessment by selecting the assessment in Fraud Protection’s left-hand navigation bar and then clicking its _Configuration_ tab.  This _Configuration_ tab only applies to assessments created using [templates](assessment-create-new.md#assessment-wizard-select-template) and is only visible to users with a minimum of "_Read_" permissions for _Assessments_ as defined in [User roles and access](user-roles-access.md).
 
 If you have "_Read/Write_" permissions to Assessments, you will also be able to:
 
@@ -16,4 +16,4 @@ If you have "_Read/Write_" permissions to Assessments, you will also be able to:
 - Delete the assessment.
   - An assessment can only be deleted in the root environment it was created in, and it cannot be deleted if a velocity is referencing it, or the assessment is being shared.
   - Deleting an assessment will permanently remove the assessment and its transactional data from your environment and all its child environments.  It will also drop all cases associated with that assessment across all environments (root and children).
-  - If an assessment and associated data like rules are deleted in the root environment, the velocities that reference this assessment in child environments will show an error in the [Velocities](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/velocities) page. 
+  - If an assessment and associated data like rules are deleted in the root environment, the velocities that reference this assessment in child environments will show an error in the [Velocities](velocities.md) page. 
