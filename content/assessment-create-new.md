@@ -119,7 +119,156 @@ Fraud Protection supports the following observation and label events:
 -	[Assessment status](assessment-create-new.md#assessment-status-event)
 -	[Bank](assessment-create-new.md#bank-event)
 -	[Chargeback](assessment-create-new.md#chargeback-event)
--	[Custom](assessment-create-new.md#custom-event)
 -	[Label](assessment-create-new.md#label-event)
+-	[Custom](assessment-create-new.md#custom-event)
 
 In this step of the Assessment wizard, you will be shown those observation and label events related to the fraud assessment template selected in the [Select template](assessment-create-new.md#assessment-wizard-select-template) step along with any of the recommended ones selected by default.  Here is a summary of the related and recommended observation and label events available in this step of the wizard, broken down by assessment template:
+
+<table>
+<thead>
+<tr>
+<th>Assessment template</th>
+<th>Related events</th>
+<th>Recommended events</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Card payment</td>
+<td>Assessment status,<br>Label</td>
+<td>Assessment status,<br>Label</td>
+</tr>
+<tr>
+<td>Device fingerprinting</td>
+<td>Assessment status,<br>Label</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Money transfer</td>
+<td>Assessment status,<br>Label</td>
+<td>Assessment status,<br>Label</td>
+</tr>
+<tr>
+<td>Software piracy</td>
+<td>Assessment status,<br>Label</td>
+<td>Assessment status,<br>Label</td>
+</tr>
+<tr>
+<td>Custom</td>
+<td>Assessment status,<br>Bank,<br>Chargeback,<br>Label</td>
+<td>N/A</td>
+</tr>  
+</tbody>
+</table>
+
+Additional observation events can also be added to an assessment after the assessment has been created.  The list of available observation events exposed through the **INSERT 'Configure an existing assessment' URL** flow is a superset of those listed in the table above.
+
+### Assessment status event
+
+The **Assessment status event** allows you to provide Fraud Protection with information pertaining to the status of an assessment event. This is a data ingestion only event. Assessment Status event is applicable to all assessment templates.
+
+### Bank event
+
+The **Bank event** allows you to provide Fraud Protection with information pertaining to a bank event, such as transactions being approved or rejected for bank authorization. This is a data ingestion only event.
+
+### Chargeback event
+
+The **Chargeback event** allows you to provide Fraud Protection with information pertaining to a dispute a customer has with their bank regarding a particular transaction. This event is a data ingestion only event.
+
+### Label event
+
+The **Label event** allows you to provide Fraud Protection with fraud and non-fraud signals related to a transaction. This event is a data ingestion only event.
+
+See [Labels API](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/labels-api) for more details on Fraud Protection’s label event.
+
+### Custom event
+
+The **Custom event** allows you to provide Fraud Protection with any custom information pertaining to a transaction.
+
+## Assessment wizard: Define settings
+
+In this step of the Assessment wizard, you can select the following settings based on the fraud assessment template selected in the [Select template](assessment-create-new.md#assessment-wizard-select-template) step.
+
+### Rule evaluation behavior
+
+This setting determines the order in which the rules will be evaluated for your assessment.  All fraud assessment templates default to “Run all matching rules until a decision is made”, which allows multiple rules to be evaluated for a single transaction until a decision (Approve, Reject, Review) is made.  See [Rule evaluation behavior](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules#rule-evaluation-behavior) for more details.
+
+### Additional features
+
+Fraud Protection supports three settings for three different assessment features:
+
+- **Case management** – Allows you to manage and take action on transactions that require review by human subject matter experts.  See [Case management overview](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/case-management-overview) for more details.
+- **Search** – Allows you to find and view details associated with specific transactions.  See [Search](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/search) for more details.
+
+The features available and their default settings will vary based on the fraud assessment template you selected in the Select template step.  Here is a summary of the assessment feature default settings broken down by assessment template:
+
+<table>
+<thead>
+<tr>
+<th>Template</th>
+<th>Case management</th>
+<th>Search</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Card payment</td>
+<td>Enabled</td>
+<td>Enabled</td>
+</tr>
+<tr>
+<td>Device fingerprinting</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>Money transfer</td>
+<td>Enabled</td>
+<td>Enabled</td>
+</tr>
+<tr>
+<td>Software piracy</td>
+<td>Disabled</td>
+<td>Disabled</td>
+</tr>
+<tr>
+<td>Custom</td>
+<td>Disabled</td>
+<td>Disabled</td>
+</tr>
+</tbody>
+</table>
+
+For Search to work at an assessment level, please make sure you also have it enabled at the tenant level.
+
+If you decide to disable Search and Case Management for your assessment after these features were enabled, any transactions that were indexed for Search and any support cases that were active within Case Management will continue to exist for the time periods that these features were enabled.
+
+### Data subject IDs
+
+A **data subject ID** is an indexable field that Fraud Protection uses to allow you to export or delete data to comply with data subject requests from your customers. _metadata.eventId_ will always be a data subject ID, and Fraud Protection gives you the option to select a maximum of two additional fields as data subject IDs.
+
+If you have a field in your API schema that relates to user data, we highly recommend you select that field as a data subject ID as it will make it easier for you to comply with data subject requests from your customers. Some common examples of data subject IDs are:
+
+- _user.id_
+- _user.username_
+- _user.email_
+- _user.phone_
+- _shipping.email_
+
+If the standard section _User_ is included in your API’s schema, Fraud Protection will default select _user.id_ as a data subject ID (this counts as one of the two additional fields).
+
+Once you have selected data subject ID(s) and created the assessment by completing the Assessment wizard, you cannot remove any of these existing data subject IDs. If you have less than three data subject IDs selected, you will be able to add additional data subject IDs via the assessment's **INSERT 'Configuration' URL** page until this limit is reached.
+
+Transactions that were sent before a data subject ID was selected will not be accessible for export or deletion by that data subject ID. _metadata.eventId_ is always set as a data subject ID, so events associated with a given assessment can always be exported and deleted using that field.
+
+See [Compliance overview](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/security-compliance) for more information about exporting and deleting data.
+
+## Assessment wizard: Finalize name and endpoint
+
+Once you have finished configuring the settings for your fraud assessment, the last step is to name the new Fraud Protection API.
+
+- **Friendly name** (_required_) – This is the human-readable name of your assessment that will be displayed in the left-hand navigation bar, search, case management, rules, reporting, and more.
+- **API name** (_required_) – This is the unique name that will be included in each call to the API for the fraud assessment.
+    - The API name cannot be changed if the assessment is in use (e.g., used in rules or velocities).  It may also be visible to the Fraud Protection engineering team as it is considered system metadata.
+
+Upon completing this step, your newly created assessment will be accessible in the left-hand navigation bar under “Fraud assessments” of the Fraud Protection portal.  This new assessment can take advantage of all the core capabilities that exist in the product – invoking risk scores using our AI models, writing rules to make decisions, etc.
