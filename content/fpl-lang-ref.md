@@ -90,7 +90,7 @@ Model functions run the various fraud models and are useful when your assessment
 | Operator     | Description | Example |
 |--------------|-------------|---------|
 |  Device.GetAttributes(String _sessionId_)  |  Returns selected device attributes from device fingerprinting. The selected device attributes are curated by Fraud Protection and are a set of attributes commonly used in rules. | Device.GetAttributes(@"deviceContext.deviceContextId).attribute_name  |
-| Device.GetFullAttributes(String _sessionId_)   |   Returns full set of device attributes from device fingerprinting. This function should only be used when it is needed to access the full set of device attributes. To view the full set of device attributes, see [Set up device fingerprinting](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/device-fingerprinting). | Device.GetFullAttributes(@"deviceFingerprinting.id").attribute_name   |
+| Device.GetFullAttributes(String _sessionId_)   |   Returns full set of device attributes from device fingerprinting. This function should only be used when it is needed to access the full set of device attributes. To view the full set of device attributes, see [Set up device fingerprinting](device-fingerprinting.md). | Device.GetFullAttributes(@"deviceFingerprinting.id").attribute_name   |
 
 ## Referencing attributes and variables
 You can use the at sign (@) operator to reference an attribute from the current event.
