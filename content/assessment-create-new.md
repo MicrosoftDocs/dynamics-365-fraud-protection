@@ -161,7 +161,7 @@ In this step of the Assessment wizard, you will be shown those observation and l
 </tbody>
 </table>
 
-Additional observation events can also be added to an assessment after the assessment has been created.  The list of available observation events exposed through the **INSERT 'Configure an existing assessment' URL** flow is a superset of those listed in the table above.
+Additional observation events can also be added to an assessment after the assessment has been created.  The list of available observation events exposed through the [Assessment configuration](assessment-configure-existing.md#assessment-configuration-overview) flow is a superset of those listed in the table above.
 
 ### Assessment status event
 
@@ -257,7 +257,7 @@ If you have a field in your API schema that relates to user data, we highly reco
 
 If the standard section _User_ is included in your API’s schema, Fraud Protection will default select _user.id_ as a data subject ID (this counts as one of the two additional fields).
 
-Once you have selected data subject ID(s) and created the assessment by completing the Assessment wizard, you cannot remove any of these existing data subject IDs. If you have less than three data subject IDs selected, you will be able to add additional data subject IDs via the assessment's **INSERT 'Configuration' URL** page until this limit is reached.
+Once you have selected data subject ID(s) and created the assessment by completing the Assessment wizard, you cannot remove any of these existing data subject IDs. If you have less than three data subject IDs selected, you will be able to add additional data subject IDs via the [Assessment configuration](assessment-configure-existing.md#assessment-configuration-overview) page until this limit is reached.
 
 Transactions that were sent before a data subject ID was selected will not be accessible for export or deletion by that data subject ID. _metadata.eventId_ is always set as a data subject ID, so events associated with a given assessment can always be exported and deleted using that field.
 
