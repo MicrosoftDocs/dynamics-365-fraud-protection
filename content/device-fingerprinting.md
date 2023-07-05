@@ -35,6 +35,7 @@ Before you begin the tasks in this document, you must set up Fraud Protection in
 
 It's your responsibility to:
 
+- Receive consent from your users to collect and allow Microsoft to process the device fingerprinting data.
 - Inform your customers of your data processing practices by, for example, disclosing the data that you collect and how it's used. 
 - Disclose your use of third parties working on your behalf to process the data you collect, including Fraud Protection service providers. 
 - Comply with all laws and regulations applicable to its use of Fraud Protection, including data protection laws. 
