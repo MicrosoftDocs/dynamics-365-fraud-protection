@@ -2,9 +2,9 @@
 
 If you have a fraud scenario that cannot be addressed using our existing [Account creation](ap-overview.md), [Account login](ap-overview.md), or [Purchase](purchase-protection.md) APIs, the Assessment wizard provides you with the tools to create your own customized real-time Fraud Protection APIs.
 
-Once you have identified the specific fraud scenario you would like to protect your business against, and the data you will use to evaluate this scenario for likelihood of fraud, you can access this wizard by clicking the "_+ New assessment_" link under Fraud assessments in left-hand navigation bar.
+After you identify the specific fraud scenario you want to protect your business against, and the data to evaluate the scenario, you can access the wizard by selecting "_+ New assessment_".
 
-Clicking this link will open the Assessment wizard, which consists of five steps:
+Selecting this link opens the **Assessment wizard**, which consists of five steps:
 
 1. [Select template](assessment-create-new.md#assessment-wizard-select-template)
 2. [Define schema details](assessment-create-new.md#assessment-wizard-define-schema-details)
@@ -12,11 +12,11 @@ Clicking this link will open the Assessment wizard, which consists of five steps
 4. [Define settings](assessment-create-new.md#assessment-wizard-define-settings)
 5. [Finalize name and endpoint](assessment-create-new.md#assessment-wizard-finalize-name-and-endpoint)
 
-This "_+ New assessment_" link is only visible in the root environment and to users with "_Read/Write_" permissions to Assessments as defined in [User roles and access](configure-user-access.md).  If both pre-requisites are true and the "_+ New assessment_" link still is not visible in left-hand navigation bar, you have reached maximum limit of assessments (16) that can be created at any given time and will need to delete one of your existing assessments before a new one can be created.  The Account creation, Account login, Purchase, and Loss prevention assessments in the left-hand navigation bar do not contribute to this limit.
+This "_+ New assessment_" link is only visible in the root environment and to users with "_Read/Write_" permissions to Assessments as defined in [User roles and access](configure-user-access.md).  If both pre-requisites are true and the "_+ New assessment_" link isn't visible, you have reached the maximum limit of assessments (16) that can be created. Delete one of your existing assessments before you create a new one. The Account creation, Account login, Purchase, and Loss prevention assessments in the left-hand navigation bar don't contribute to this limit.
 
 ## Assessment wizard: Select template
 
-To help get you started, we have provided you with a handful of pre-defined templates that can be used to create new Fraud Protection API’s that are tailored to some of the most common fraud scenarios.  Each of these templates comes bundled with customized logic and a set of data fields that will serve as the foundation for your new Fraud Protection API.
+To help get you started, we have provided you with a handful of pre-defined templates. Use these templates to create new Fraud Protection API’s that are tailored to some of the most common fraud scenarios. Each of these templates is bundled with customized logic and a set of data fields that serve as the foundation for your new Fraud Protection API.
 
 The Assessment wizard currently supports the following templates:
 
@@ -26,28 +26,28 @@ The Assessment wizard currently supports the following templates:
 - [Software piracy](assessment-create-new.md#software-piracy-template)
 - [Custom](assessment-create-new.md#custom-template)
 
-Fraud Protection will continue to evolve this template catalogue over time to cover other scenarios where fraud is prevalent.
+Fraud Protection continues to evolve this template catalogue over time to cover other scenarios where fraud is prevalent.
 
-To view the API schema (request payload) and sample values for a given template, select the desired template and enable the _JSON Preview_ pane.  The full sample payload will be displayed in the JSON Preview by default; however, you have the option to filter the payload to only those fields that are Required or Searchable.  See [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) to learn more about Fraud Protection’s APIs.
+To view the API schema (request payload) and sample values for a given template, select the desired template and enable the _JSON Preview_ pane. The full sample payload is displayed in the JSON Preview by default. However, you can filter the payload to only those fields that are required or searchable. See [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) to learn more about Fraud Protection’s APIs.
 
-- **Required fields** – These data fields must be sent as part of the request payload whenever the API is invoked.  Failing to send these fields will result in a 400 error code being returned.
+- **Required fields** – These data fields must be sent as part of the request payload whenever the API is invoked.  Failing to send these fields results in a 400 error code being returned.
 - **Searchable fields** – These data fields can be used as search keys within a transaction search.
 
-In the next step of the wizard, you will have the ability to further customize the schema of your new Fraud Protection API to meet your specific business needs.
+In the next step of the wizard, you can further customize the schema of your new Fraud Protection API to meet your specific business needs.
 
 ### Card payment template
 
-The **Card payment** template allows you to assess the fraud risk of online and offline card payments for financial institutions. This template is geared towards issuing banks and other financial institutions.  For merchant-based purchase scenarios, please use Fraud Protection’s [Purchase protection](purchase-protection.md) solution.
+The **Card payment** template allows you to assess the fraud risk of online and offline card payments for financial institutions. This template is geared towards issuing banks and other financial institutions. For merchant-based purchase scenarios, use Fraud Protection’s [Purchase protection](purchase-protection.md) solution.
 
 ### Device fingerprinting template
 
-The **Device fingerprinting template** allows you to gather intelligence from remote computing devices to help assess fraud risk.  This template is useful in scenarios where you want to enable _device fingerprinting only_ and allows you to access the full suite of device attributes that Fraud Protection collects, along with other enrichments like IP intelligence.  If you would like to use device fingerprinting as part of any other scenario, you can integrate it into any of our other assessment templates by adding the "_Device Fingerprinting_" section to your API schema in the [Define schema details](assessment-create-new.md#assessment-wizard-define-schema-details) step of the Assessment wizard.
+The **Device fingerprinting template** allows you to gather intelligence from remote computing devices to help assess fraud risk.  This template is useful in scenarios where you want to enable _device fingerprinting only_. The template allows you to access the full suite of device attributes that Fraud Protection collects, along with other enrichments like IP intelligence. To use device fingerprinting as part of any other scenario, you can integrate it into other assessment templates by adding the "_Device Fingerprinting_" section to your API schema in the [Define schema details](assessment-create-new.md#assessment-wizard-define-schema-details) step of the Assessment wizard.
 
-The device fingerprinting template has some special settings designed to keep the API lightweight.  Search and case management are both disabled by default and cannot be enabled for this template. Additionally, this template does not support risk scoring.  The _Model.Risk_ FQL function cannot be invoked when an API based on this template is used.
+The device fingerprinting template has some special settings designed to keep the API lightweight. Search and case management are both disabled by default and cannot be enabled for this template. Additionally, this template does not support risk scoring. The _Model.Risk_ FQL function can't be invoked when an API based on this template is used.
 
-To use the full suite of device attributes in rules and velocities, you will need to call the _Device.GetFullAttributes_ FQL function.  Upon creating a new API based on the device fingerprinting template, a default sample rule is created that references this _Device.GetFullAttributes_ function.  For more details on this _Device.GetFullAttributes_ function, see [Language reference](fpl-lang-ref.md) guide.  For more details on default sample rules, see [Assessment (default) rules](rules.md#assessment-default-rules).
+To use the full suite of device attributes in rules and velocities, call the _Device.GetFullAttributes_ FQL function. When you create a new API based on the device fingerprinting template, a default sample rule is created that references this _Device.GetFullAttributes_ function. For more details on this _Device.GetFullAttributes_ function, see [Language reference](fpl-lang-ref.md) guide. For more details on default sample rules, see [Assessment (default) rules](rules.md#assessment-default-rules).
 
-See [Set up device fingerprinting](device-fingerprinting.md) for more details on setting up and enabling device fingerprinting for web and mobile.  The following sections detail the device fingerprinting attribute fields Fraud Protection attempts to collect:
+See [Set up device fingerprinting](device-fingerprinting.md) for more details on setting up and enabling device fingerprinting for web and mobile. The following sections detail the device fingerprinting attribute fields Fraud Protection attempts to collect:
 - [Web](device-fingerprinting.md#device-fingerprinting-attribute-list-for-web)
 - [iOS](device-fingerprinting.md#device-fingerprinting-attribute-list-for-ios)
 - [Android](device-fingerprinting.md#device-fingerprinting-attribute-list-for-android)
@@ -62,7 +62,7 @@ The **Software piracy template** allows you to assess the fraud risk of software
 
 ### Custom template
 
-The **Custom template** allows you to assess the fraud risk of a custom event.  This template is designed to be used in more obscure cases where none of the other templates fit the needs of the scenario in question.
+The **Custom template** allows you to assess the fraud risk of a custom event. This template is designed to be used in more obscure cases where no other templates fit the needs of the scenario in question.
 
 The Custom template does not support risk scoring.  The Model.Risk FQL function cannot be invoked when an API based on this template is used.
 
