@@ -129,7 +129,7 @@ For mobile apps, device fingerprinting integration supports Android, iOS, and Re
 
 ## Attribute category introduction reference
 
-The following list shows the device fingerprinting attribute categories that we try to collect for web, iOS, and Android and explains how each helps detect fraud. If your organization has specific needs, and you want some categories of data not to be processed by us, reach out to customer support before onboarding. We can help you do the configuration correctly to meet your privacy needs.
+The following tables shows the device fingerprinting attribute categories that we try to collect for web, iOS, and Android. The description of the attributes explains how each helps detect fraud. If your organization has specific needs, and you want some categories of data not to be processed by us, reach out to customer support before onboarding. We can help you do the configuration correctly to meet your privacy needs.
 
 ## Device fingerprinting attribute list for web
 
