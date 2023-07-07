@@ -60,7 +60,6 @@ To configure Azure AD applications, follow these steps.
 1. Enter or select values for the following required fields: 
 
     - **Application display name** – Give your application a descriptive name. The maximum length is 93 characters. 
-    - **Environment** – Select whether the application should call your production or integration (sandbox) endpoint. 
     - **Authentication method** – Select whether you want to authenticate via a certificate or a secret (password). 
 
 1. If you selected the certificate authentication method, follow these steps: 
@@ -71,7 +70,7 @@ To configure Azure AD applications, follow these steps.
 1. When you've finished setting the required fields, select **Create application**. The confirmation page summarizes your app's name, ID, and certificate thumbprint or secret, depending on the authentication method that you selected.
 
 > [!IMPORTANT]
-> Please save your secret or certificate thumbprint information for future reference. The secret will only be displayed once.
+> Save your secret or certificate thumbprint information for future reference. The secret will only be displayed once.
 
 ### Create another application
 
