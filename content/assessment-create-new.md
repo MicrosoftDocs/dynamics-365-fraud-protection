@@ -1,24 +1,36 @@
+---
+author: josaw1
+description: This article provides information about teh Assessment wizard and how to create customized real-time APIs in Fraud Protection.
+ms.author: josaw
+ms.date: 07/10/2023
+ms.topic: conceptual
+search.audienceType:
+  - admin
+title: Assessment wizard overview
+
+---
+
 # Assessment wizard overview
 
-If you have a fraud scenario that cannot be addressed using our existing [Account creation](ap-overview.md), [Account login](ap-overview.md), or [Purchase](purchase-protection.md) APIs, the Assessment wizard provides you with the tools to create your own customized real-time Fraud Protection APIs.
+If you have a fraud scenario that can't be addressed using the [Account creation](ap-overview.md), [Account login](ap-overview.md), or [Purchase](purchase-protection.md) APIs, the Assessment wizard provides you with the tools to create your own customized real-time Dynamics 365 Fraud Protection APIs.
 
-After you identify the specific fraud scenario you want to protect your business against, and the data to evaluate the scenario, you can access the wizard by selecting "_+ New assessment_".
+After you identify the specific fraud scenario you want to protect your business against, and the data to evaluate the scenario, select **+ New assessment** to open the **Assessment wizard**.
 
-Selecting this link opens the **Assessment wizard**, which consists of five steps:
+The **Assessment wizard** which consists of five steps:
 
-1. [Select template](assessment-create-new.md#assessment-wizard-select-template)
-2. [Define schema details](assessment-create-new.md#assessment-wizard-define-schema-details)
-3. [Select observation events](assessment-create-new.md#assessment-wizard-select-observation-events)
-4. [Define settings](assessment-create-new.md#assessment-wizard-define-settings)
-5. [Finalize name and endpoint](assessment-create-new.md#assessment-wizard-finalize-name-and-endpoint)
+1. [Select template](#template)
+2. [Define schema details](#schema)
+3. [Select observation events](#observation)
+4. [Define settings](#settings)
+5. [Finalize name and endpoint](#finalize)
 
-This "_+ New assessment_" link is only visible in the root environment and to users with "_Read/Write_" permissions to Assessments as defined in [User roles and access](configure-user-access.md).  If both pre-requisites are true and the "_+ New assessment_" link isn't visible, you have reached the maximum limit of assessments (16) that can be created. Delete one of your existing assessments before you create a new one. The Account creation, Account login, Purchase, and Loss prevention assessments in the left-hand navigation bar don't contribute to this limit.
+This link is only visible in the root environment and to users with **Read/Write** permissions to **Assessments** as defined in the article, [User roles and access](configure-user-access.md). If both pre-requisites are true and the **+ New assessment_** link isn't visible, you have reached the maximum limit of 16 assessments that can be created. Delete one of your existing assessments before you create a new one. The **Account creation**, **Account login**, **Purchase**, and **Loss prevention** assessments don't contribute to this limit.
 
-## Assessment wizard: Select template
+## <a name="template"></name> Select template
 
-To help get you started, we have provided you with a handful of pre-defined templates. Use these templates to create new Fraud Protection API’s that are tailored to some of the most common fraud scenarios. Each of these templates is bundled with customized logic and a set of data fields that serve as the foundation for your new Fraud Protection API.
+To get started, use the available pre-defined templates to create new Fraud Protection API’s that are tailored to some of the most common fraud scenarios. Each of these templates is bundled with customized logic and a set of data fields that serve as the foundation for your new Fraud Protection API.
 
-The Assessment wizard currently supports the following templates:
+The **Assessment wizard** currently supports the following templates:
 
 - [Card payment](assessment-create-new.md#card-payment-template)
 - [Device fingerprinting](assessment-create-new.md#device-fingerprinting-template)
@@ -26,26 +38,26 @@ The Assessment wizard currently supports the following templates:
 - [Software piracy](assessment-create-new.md#software-piracy-template)
 - [Custom](assessment-create-new.md#custom-template)
 
-Fraud Protection continues to evolve this template catalogue over time to cover other scenarios where fraud is prevalent.
+Fraud Protection continues to evolve this template catalog over time to cover other scenarios where fraud is prevalent.
 
-To view the API schema (request payload) and sample values for a given template, select the desired template and enable the _JSON Preview_ pane. The full sample payload is displayed in the JSON Preview by default. However, you can filter the payload to only those fields that are required or searchable. See [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) to learn more about Fraud Protection’s APIs.
+To view the API schema (request payload) and sample values for a given template, select the template and enable the **JSON Preview** pane. The full sample payload is displayed in the preview pane by default. However, you can filter the payload to only those fields that are required or searchable. See [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) to learn more about Fraud Protection’s APIs.
 
-- **Required fields** – These data fields must be sent as part of the request payload whenever the API is invoked.  Failing to send these fields results in a 400 error code being returned.
+- **Required fields** – These data fields must be sent as part of the request payload whenever the API is invoked. Failing to send these fields results in a 400 error code being returned.
 - **Searchable fields** – These data fields can be used as search keys within a transaction search.
 
 In the next step of the wizard, you can further customize the schema of your new Fraud Protection API to meet your specific business needs.
 
 ### Card payment template
 
-The **Card payment** template allows you to assess the fraud risk of online and offline card payments for financial institutions. This template is geared towards issuing banks and other financial institutions. For merchant-based purchase scenarios, use Fraud Protection’s [Purchase protection](purchase-protection.md) solution.
+The **Card payment** template allows you to assess the fraud risk of online and offline card payments for financial institutions. This template should be used for issuing banks and other financial institutions. For merchant-based purchase scenarios, use Fraud Protection’s [Purchase protection](purchase-protection.md) solution.
 
 ### Device fingerprinting template
 
-The **Device fingerprinting template** allows you to gather intelligence from remote computing devices to help assess fraud risk.  This template is useful in scenarios where you want to enable _device fingerprinting only_. The template allows you to access the full suite of device attributes that Fraud Protection collects, along with other enrichments like IP intelligence. To use device fingerprinting as part of any other scenario, you can integrate it into other assessment templates by adding the "_Device Fingerprinting_" section to your API schema in the [Define schema details](assessment-create-new.md#assessment-wizard-define-schema-details) step of the Assessment wizard.
+Use the **Device fingerprinting template** to gather intelligence from remote computing devices to help assess fraud risk. This template is useful in scenarios where you want to enable **device fingerprinting only**. The template allows you to access the full suite of device attributes that Fraud Protection collects, along with other enrichments like IP intelligence. To use device fingerprinting as part of any other scenario, integrate it into other assessment templates by adding the **Device Fingerprinting** section to your API schema in the [Define schema details](#schema) step of the **Assessment wizard**.
 
-The device fingerprinting template has some special settings designed to keep the API lightweight. Search and case management are both disabled by default and cannot be enabled for this template. Additionally, this template does not support risk scoring. The _Model.Risk_ FQL function can't be invoked when an API based on this template is used.
+The device fingerprinting template has some special settings designed to keep the API lightweight. **Search** and **Case management** are both disabled by default and can't be enabled for this template. Additionally, this template doesn't support risk scoring. The **Model.Risk** FQL function can't be invoked when an API based on this template is used.
 
-To use the full suite of device attributes in rules and velocities, call the _Device.GetFullAttributes_ FQL function. When you create a new API based on the device fingerprinting template, a default sample rule is created that references this _Device.GetFullAttributes_ function. For more details on this _Device.GetFullAttributes_ function, see [Language reference](fpl-lang-ref.md) guide. For more details on default sample rules, see [Assessment (default) rules](rules.md#assessment-default-rules).
+To use the full suite of device attributes in rules and velocities, call the **Device.GetFullAttributes** FQL function. When you create a new API based on the device fingerprinting template, a default sample rule is created that references this function. To learn more about this function, see [Language reference](fpl-lang-ref.md) guide. For more details on default sample rules, see [Assessment (default) rules](rules.md#assessment-default-rules).
 
 See [Set up device fingerprinting](device-fingerprinting.md) for more details on setting up and enabling device fingerprinting for web and mobile. The following sections detail the device fingerprinting attribute fields Fraud Protection attempts to collect:
 - [Web](device-fingerprinting.md#device-fingerprinting-attribute-list-for-web)
@@ -54,63 +66,65 @@ See [Set up device fingerprinting](device-fingerprinting.md) for more details on
 
 ### Money transfer template
 
-The **Money transfer template** allows you to assess the fraud risk of money transfers within a financial system or network.  This template is recommended for scenarios involving peer-to-peer payment networks like Zelle.
+The **Money transfer template** allows you to assess the fraud risk of money transfers within a financial system or network. This template is recommended for scenarios involving peer-to-peer payment networks like Zelle.
 
 ### Software piracy template
 
-The **Software piracy template** allows you to assess the fraud risk of software use. This template is recommended for scenarios involving software that is licensed via a subscription.
+The **Software piracy template** allows you to assess the fraud risk of software use. This template is recommended for scenarios involving software that is licensed by using a subscription.
 
 ### Custom template
 
 The **Custom template** allows you to assess the fraud risk of a custom event. This template is designed to be used in more obscure cases where no other templates fit the needs of the scenario in question.
 
-The Custom template does not support risk scoring.  The Model.Risk FQL function cannot be invoked when an API based on this template is used.
+The Custom template doesn't support risk scoring. The **Model.Risk** FQL function can't be invoked when an API based on this template is used.
 
-## Assessment wizard: Define schema details
+## <a name="schema"></name> Define schema details
 
-Once you have identified and selected your fraud assessment template, any data fields associated with that template are automatically included in the API’s schema (request payload).  To view the API schema (request payload) and sample values for your new fraud API, enable the _JSON Preview_ pane.
+After you identify and select your fraud assessment template, any data fields associated with that template are automatically included in the API’s schema (request payload). To view the API schema and sample values for your new fraud API, enable the **JSON Preview** pane.
 
-In this step of the Assessment wizard, we provide you with the ability to further customize your new API’s schema by adding any additional fields needed to help evaluate your fraud scenario and remove any fields that you may not be able to provide or are otherwise irrelevant to your fraud scenario.
+In this step of the **Assessment wizard**, you can further customize your new API’s schema by adding any additional fields needed to help evaluate your fraud scenario and remove any fields that you may not be able to provide or are otherwise irrelevant to your fraud scenario.
 
-Each data field is classified into one of two categories: [Standard](assessment-create-new.md#standard-data-fields) or [Custom](assessment-create-new.md#custom-data-fields).
+Each data field is classified into one of two categories:
+- [Standard](assessment-create-new.md#standard-data-fields)
+- [Custom](assessment-create-new.md#custom-data-fields).
 
 ### Standard data fields
 
-**Standard data fields** are processed and stored within the Fraud Protection Network (FPN) to generate a risk score and can be used in search, reports, rules, and other tenant-specific scenarios.
+**Standard data fields** are processed and stored within the Fraud Protection Network to generate a risk score and can be used in search, reports, rules, and other tenant-specific scenarios.
 
 The accuracy of the risk score returned by Fraud Protection depends on multiple factors, including whether the set of data fields provided presents a complete and accurate description of the event being evaluated.
 
-The standard data fields available to any API are organized and only made available in the form of pre-defined sections.  Every fraud assessment template comes with a default set of these standard sections.  Of these default sections, the only one that is required for any template is "_Metadata_".  While all other default standard sections can be removed from the API schema prior to creating the assessment, we highly recommend keeping all default standard sections in your API schema since removing any of these standard sections and their associated data fields will likely result in Fraud Protection returning lower quality risk scores from the FPN.
+The standard data fields available to any API are organized and only made available in the form of pre-defined sections. Every fraud assessment template comes with a default set of these standard sections. Of these default sections, only **Metadata** is required for any template. While all other default standard sections can be removed from the API schema prior to creating the assessment, we highly recommend keeping all default standard sections in your API schema since removing any of these standard sections and their associated data fields will likely result in Fraud Protection returning lower quality risk scores from the FPN.
 
-You can also add additional standard sections to your new API by clicking the "_Add section_" drop-down and selecting those applicable to your fraud scenario.  To view the data fields that make up each standard section, see Fraud Protection’s [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) or use the _JSON Preview Pane_ accessible from within the Assessment wizard. 
+You can add additional standard sections to your new API by selecting the **Add section** drop-down and selecting those applicable to your fraud scenario. To view the data fields that make up each standard section, see Fraud Protection’s [Swagger UI documentation](https://dfpswagger.azurewebsites.net/index.html) or use the **JSON Preview** pane accessible from within the **Assessment wizard**. 
 
 ### Custom data fields
 
-**Custom data fields** are additional fields that are not used to generate scores via the Fraud Protection Network. However, they can still be used in search, reports, rules and other tenant-specific scenarios.
+**Custom data fields** are additional fields that aren't used to generate scores using the Fraud Protection Network. However, they can still be used in search, reports, rules and other tenant-specific scenarios.
 
-These fields are fully defined by you and will not impact Fraud Protection’s AI models or scores.
+These fields are fully defined by you and won't impact Fraud Protection’s AI models or scores.
 
-We support two ways for you to add custom data fields to your API’s schema:
+Add custom data fields to your API’s schema using one of the following methods:
 
-- Individual fields can be added by clicking the "_+ New field_" link located under the Custom header; and
-- Multiple fields can be added simultaneously by uploading a custom JSON (.json) file or by manually entering well-formed JSON directly into the **Import JSON** window accessible via the "_From JSON…_" option in the "_Add section_" drop-down.
+- Individual fields can be added by selecting **+ New field**  under the **Custom header**
+- Multiple fields can be added simultaneously by uploading a custom JSON (.json) file or by manually entering well-formed JSON directly into the **Import JSON** window accessible from the **From JSON…** option in the **Add section** drop-down.
 
 Each custom data field includes the following fields:
 
--	**Name** (_required_) – This is the name of the custom data field included in your API’s schema.
--	**Friendly name** – This is the human-readable name assigned to the custom data field that is displayed when the field is referenced in other operational pages of Fraud Protection (e.g., Search, Case Management).
--	**Type** (_required_) – This is the data type of the custom data field.
-    -	Fraud Protection supports both primitive (e.g., integer, boolean) and non-primitive (e.g., array, object) data types, as well as some context-specific data types (e.g., email, IP address).
--	**Sample value** – This value is displayed in the JSON Preview Pane to help visualize what your new API is expecting as input for this field when the API is invoked.
--	**Required** (_checkbox_) – This value dictates if the custom data field must be provided whenever the API is invoked.
-    -	If enabled, failing to send this field as part of the API’s request payload will result in a 400 error code being returned.
--	**Searchable** (_checkbox_) – This value dictates if the custom data field can be used as a search key within transaction search.
+-	**Name** – This is the name of the custom data field included in your API’s schema.
+-	**Friendly name** – This is the human-readable name assigned to the custom data field that's displayed when the field is referenced in other operational pages of Fraud Protection, such as **Search** and **Case Management**.
+-	**Type** – This is the data type of the custom data field.
+    - Fraud Protection supports both primitive (integer, boolean) and non-primitive (array, object) data types, as well as some context-specific data types ( email, IP address).
+-	**Sample value** – This value is displayed in the **JSON Preview** pane to help visualize what your new API is expecting as input for this field when the API is invoked.
+-	**Required** – This value dictates if the custom data field must be provided whenever the API is invoked.
+    - If this checkbox is selected, failure to send this field as part of the API’s request payload will result in a 400 error code being returned.
+-	**Searchable** – This value dictates if the custom data field can be used as a search key within transaction search.
 
-Prior to your new assessment being created, you will have the ability to edit or delete any previously added custom data field.  Once the assessment has been created, you will not be able to change the **Name** or **Type** of a custom data field.
+Before your new assessment is created, you can edit or delete any previously added custom data fields. After the assessment is created, you can't change the **Name** or **Type** of a custom data field.
 
-## Assessment wizard: Select observation events
+## <a name="observation"></name> Select observation events
 
-Observation and label events allow customers to share information and other context with Fraud Protection for a given transaction.  These are data ingestion only events (i.e., no information is returned in the response other than success/fail).  Data sent through observation events can be used in velocities, rules, and search.
+You can use observation and label events to share information and other context with Fraud Protection for a specific transaction. These are data ingestion only events which means that no information is returned in the response other than success/fail. Data sent through observation events can be used in velocities, rules, and search.
 
 Fraud Protection supports the following observation and label events:
 
@@ -120,7 +134,7 @@ Fraud Protection supports the following observation and label events:
 -	[Label](assessment-create-new.md#label-event)
 -	[Custom](assessment-create-new.md#custom-event)
 
-In this step of the Assessment wizard, you will be shown those observation and label events related to the fraud assessment template selected in the [Select template](assessment-create-new.md#assessment-wizard-select-template) step along with any of the recommended ones selected by default.  Here is a summary of the related and recommended observation and label events available in this step of the wizard, broken down by assessment template:
+In this step of the **Assessment wizard**, you're shown those observation and label events related to the fraud assessment template you previoulsy selected along with any of the recommended ones selected by default. The following table is a summary of the related and recommended observation and label events available in this step of the wizard, broken down by assessment template:
 
 <table>
 <thead>
@@ -163,7 +177,7 @@ Additional observation events can also be added to an assessment after the asses
 
 ### Assessment status event
 
-The **Assessment status event** allows you to provide Fraud Protection with information pertaining to the status of an assessment event. This is a data ingestion only event. Assessment Status event is applicable to all assessment templates.
+The **Assessment status event** allows you to provide Fraud Protection with information pertaining to the status of an assessment event. This is a data ingestion only event. The Assessment Status event is applicable to all assessment templates.
 
 ### Bank event
 
@@ -177,28 +191,28 @@ The **Chargeback event** allows you to provide Fraud Protection with information
 
 The **Label event** allows you to provide Fraud Protection with fraud and non-fraud signals related to a transaction. This event is a data ingestion only event.
 
-See [Labels API](labels-api.md) for more details on Fraud Protection’s label event.
+For more details on Fraud Protection’s label event, see [Labels API](labels-api.md).
 
 ### Custom event
 
 The **Custom event** allows you to provide Fraud Protection with any custom information pertaining to a transaction.
 
-## Assessment wizard: Define settings
+## <a name="settings"></name> Define settings
 
-In this step of the Assessment wizard, you can select the following settings based on the fraud assessment template selected in the [Select template](assessment-create-new.md#assessment-wizard-select-template) step.
+In this step of the **Assessment wizard**, select settings based on the fraud assessment template you selected earlier.
 
 ### Rule evaluation behavior
 
-This setting determines the order in which the rules will be evaluated for your assessment.  All fraud assessment templates default to "_Run all matching rules until a decision is made_", which allows multiple rules to be evaluated for a single transaction until a decision (Approve, Reject, Review) is made.  See [Rule evaluation behavior](rules.md#rule-evaluation-behavior) for more details.
+This setting determines the order in which the rules will be evaluated for your assessment. All fraud assessment templates default to **Run all matching rules until a decision is made**, which allows multiple rules to be evaluated for a single transaction until a decision is made. See [Rule evaluation behavior](rules.md#rule-evaluation-behavior) for more details.
 
 ### Additional features
 
-Fraud Protection supports three settings for three different assessment features:
+Fraud Protection supports the following settings for three different assessment features:
 
-- **Case management** – Allows you to manage and take action on transactions that require review by human subject matter experts.  See [Case management overview](case-management-overview.md) for more details.
-- **Search** – Allows you to find and view details associated with specific transactions.  See [Search](search.md) for more details.
+- **Case management** – Manage and take action on transactions that require a review by human subject matter experts. For more information, see [Case management overview](case-management-overview.md).
+- **Search** – Find and view details associated with specific transactions. To learn more, see [Search](search.md).
 
-The features available and their default settings will vary based on the fraud assessment template you selected in the Select template step.  Here is a summary of the assessment feature default settings broken down by assessment template:
+The available features  and their default settings vary based on the fraud assessment template you selected in the **Select template** step. The following table is a summary of the assessment feature default settings broken down by assessment template:
 
 | Template | Case management | Search |
 |----------|-----------------|--------|
@@ -208,36 +222,38 @@ The features available and their default settings will vary based on the fraud a
 | Software piracy | Disabled | Disabled |
 | Custom | Disabled | Custom |
 
-For Search to work at an assessment level, please make sure you also have it enabled at the tenant level.
+For **Search** to work at an assessment level, ensure you have it enabled at the tenant level.
 
-If you decide to disable Search and Case Management for your assessment after these features were enabled, any transactions that were indexed for Search and any support cases that were active within Case Management will continue to exist for the time periods that these features were enabled.
+If you decide to disable **Search** and **Case Management** for your assessment after these features were enabled, any transactions that were indexed for **Search** and any support cases that were active within **Case Management** will continue to exist for the time periods that these features were enabled.
 
 ### Data subject IDs
 
-A **data subject ID** is an indexable field that Fraud Protection uses to allow you to export or delete data to comply with data subject requests from your customers. _metadata.eventId_ will always be a data subject ID, and Fraud Protection gives you the option to select a maximum of two additional fields as data subject IDs.
+A **data subject ID** is an indexable field that Fraud Protection uses so you can export or delete data to comply with data subject requests from your customers. A **metadata.eventId** will always be a data subject ID. Fraud Protection gives you the option to select a maximum of two additional fields as data subject IDs.
 
-If you have a field in your API schema that relates to user data, we highly recommend you select that field as a data subject ID as it will make it easier for you to comply with data subject requests from your customers. Some common examples of data subject IDs are:
+If you have a field in your API schema that relates to user data, we highly recommend you select that field as a data subject ID as it makes it easier for you to comply with data subject requests from your customers. Some common examples of data subject IDs are:
 
-- _user.id_
-- _user.username_
-- _user.email_
-- _user.phone_
-- _shipping.email_
+- user.id
+- user.username
+- user.email
+- user.phone
+- shipping.email
 
-If the standard section _User_ is included in your API’s schema, Fraud Protection will default select _user.id_ as a data subject ID (this counts as one of the two additional fields).
+If the standard section **User** is included in your API’s schema, Fraud Protection selects **user.id** by default as a data subject ID. This counts as one of the two additional fields.
 
-Once you have selected data subject ID(s) and created the assessment by completing the Assessment wizard, you cannot remove any of these existing data subject IDs. If you have less than three data subject IDs selected, you will be able to add additional data subject IDs via the [Assessment configuration](assessment-configure-existing.md#assessment-configuration-overview) page until this limit is reached.
+After you select the data subject IDs and create the assessment by completing the Assessment wizard, you can't remove any of the existing data subject IDs. If you have less than three data subject IDs selected, you can add additional data subject IDs by using the [Assessment configuration](assessment-configure-existing.md#assessment-configuration-overview) page until the limit is reached.
 
-Transactions that were sent before a data subject ID was selected will not be accessible for export or deletion by that data subject ID. _metadata.eventId_ is always set as a data subject ID, so events associated with a given assessment can always be exported and deleted using that field.
+Transactions sent before a data subject ID was selected aren't accessible for export or deletion by that data subject ID. The **metadata.eventId** is always set as a data subject ID, so events associated with a given assessment can always be exported and deleted using that field.
 
 See [Compliance overview](security-compliance.md) for more information about exporting and deleting data.
 
-## Assessment wizard: Finalize name and endpoint
+## <a name="finalize"></name> Finalize name and endpoint
 
-Once you have finished configuring the settings for your fraud assessment, the last step is to name the new Fraud Protection API.
+After you configure the settings for your fraud assessment, the last step is to name the new Fraud Protection API.
 
-- **Friendly name** (_required_) – This is the human-readable name of your assessment that will be displayed in the left-hand navigation bar, search, case management, rules, reporting, and more.
-- **API name** (_required_) – This is the unique name that will be included in each call to the API for the fraud assessment.
-    - The API name cannot be changed if the assessment is in use (e.g., used in rules or velocities).  It may also be visible to the Fraud Protection engineering team as it is considered system metadata.
+- **Friendly name** – This is the human-readable name of your assessment that's displayed in the left-hand navigation bar, search, case management, rules, and reporting.
+- **API name** – This is the unique name thats' included in each call to the API for the fraud assessment. The API name can't be changed if the assessment is in use with rules or velocities. The API name may also be visible to the Fraud Protection engineering team as it's considered system metadata.
 
-Upon completing this step, your newly created assessment will be accessible in the left-hand navigation bar under "_Fraud assessments_" of the Fraud Protection portal.  This new assessment can take advantage of all the core capabilities that exist in the product – invoking risk scores using our AI models, writing rules to make decisions, etc.
+When you complete this step, your new assessment is accessible in the left-hand navigation bar under **Fraud assessments**. The new assessment can take advantage of all the core capabilities that exist in the product including, invoking risk scores using our AI models and writing rules to make decisions.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
