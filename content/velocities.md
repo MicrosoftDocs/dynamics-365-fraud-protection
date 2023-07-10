@@ -142,7 +142,7 @@ Fraud Protection creates several system-defined velocities per environment. For 
 
 Some Fraud Protection functionality relies on the default velocities, such as the **Search results** page for purchase protection. 
 
-You can't edit, delete, or deactivate system-defined velocities. However, you can clone them and then edit, delete, or deactive the clones. 
+You can't edit or delete system-defined velocities. However, you can clone them and then edit or delete the clones. 
 
 ## Manage your velocity sets
 
