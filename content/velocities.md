@@ -37,7 +37,7 @@ GROUPBY <attribute name>
     | DistinctCount      | This method returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPaddresses |
     | Sum                | This method returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
-- After **FROM**, specify an assessment or observation event to observe the velocity on. Please note the field you want to observe velocity for, or group by, needs to be part of the API call. To observe a cross-event velocity, you can specify multiple events across assessments and/or observation events.
+- After **FROM**, specify an assessment or observation event to observe the velocity on. Th field you want to observe velocity for, or group by, must be part of the API call. To observe a cross-event velocity, specify multiple events across assessments or observation events.
 - *The **WHEN** statement is optional.* After **WHEN**, you can type a Boolean expression. Only events that match the condition are considered in the aggregation. Other events are ignored. The expression is used to filter the events that are considered in the velocity.
 - After **GROUPBY**, specify a property or an expression. The property or expression is then evaluated for every event that is processed. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that is specified in the **SELECT** statement. If the **GROUPBY** expression is null or empty for an incoming event, the event won't contribute to the aggregation.
 
