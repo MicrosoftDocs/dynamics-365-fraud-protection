@@ -55,7 +55,7 @@ A data subject request (DSR) is a request asking for modification of personal da
    You can make requests for each assessment. For a request, select the assessment, the Data subject ID, and the value for the Data subject ID.
 
     - For Account Creation, Account Login, and Purchase Protection, the Data subject ID is user.userId.
-    - For more information on data subject IDs for assessments created using the [Assessment wizard](assessment-create-new.md#assessment-wizard-overview), see [Data subject IDs](assessment-create-new.md#data-subject-ids).
+    - For more information on the data subject IDs for assessments created using the [Assessment wizard](assessment-create-new.md#assessment-wizard-overview), see [Data subject IDs](assessment-create-new.md#data-subject-ids).
    
 1. Select the type of request you would like to make (export or delete), and then review and confirm.
 
