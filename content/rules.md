@@ -330,12 +330,12 @@ You can edit, delete, and deactivate system-defined rules. As a best practice, c
 
 ## Assessment (default) rules
 
-Each assessment template mentioned in the [Select template](assessment-create-new.md#assessment-wizard-select-template) step of the Assessment wizard comes pre-defined with one or both of the following default rules:
+Each assessment template mentioned in the [Select template](assessment-create-new.md#assessment-wizard-select-template) step of the **Assessment wizard** comes pre-defined with one or both of the following default rules:
 
-- **Sample template rule** – This rule contains a series of sample clauses that serve as the building blocks for defining your own logic for making decisions based on values like risk score, bot score, and device attributes where applicable.  None of these clauses make decisions by default, however they can quickly be altered to do so using the samples provided.
+- **Sample template rule** – This rule contains a series of sample clauses that serve as the building blocks for defining your own logic for making decisions based on values like risk score, bot score, and device attributes where applicable. None of these clauses make decisions by default, however they can quickly be altered to do so using the samples provided.
 - **Support list rule** – This rule consists of a series of clauses that leverage Fraud Protection’s support lists (safe, block, watch) to help you make informed decisions (accept, reject, review) based on entities in those lists.
 
-These default rules show up as active under "_Published Rules_" immediately upon creation of the assessment, where applicable.  Here is a summary of the default rules supported by assessment template:
+Where applicable, these default rules show up as active under **Published Rules** immediately after an assessment is created. The following table is a summary of the default rules supported by assessment template:
 
 | Template | Template rule | Support list rule |
 |----------|---------------|-------------------|
@@ -347,10 +347,10 @@ These default rules show up as active under "_Published Rules_" immediately upon
 
 Additional rules and clauses can be manually added to an assessment in both its root and child environments.
 
-To invoke Fraud Protection’s risk and bot scores from within a rule for an assessment created using one of the following templates, the following [Model functions](fpl-lang-ref.md#model-functions) must be used:
+To invoke Fraud Protection’s risk and bot scores from within a rule for an assessment created using one of the templates, the following [Model functions](fpl-lang-ref.md#model-functions) must be used:
 
-- **Risk score**: _Model.Risk().Score_
-- **Bot score**: _Model.Bot(@"deviceFingerprinting.id").Score_
+- **Risk score**: Model.Risk().Score
+- **Bot score**: Model.Bot(@"deviceFingerprinting.id").Score
 
 ## Manage existing rules
 
