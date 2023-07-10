@@ -83,8 +83,8 @@ Subject Request API payload. The subject request API is used for [Assessments](a
 | Attribute                   | Type     | Description | Required? |
 |-----------------------------|----------|-------------|-----------|
 | AssessmentName              | string   | The name of the assessment. | Yes |
-| PropertyName                | string   | The name of the property that is the data subject ID (e.g., "_user.id_"). | Yes |
-| PropertyValue               | string   | The value of the property that is the data subject ID you are making the request on (e.g., "_user123_"). | Yes |
+| PropertyName                | string   | The name of the property that's the data subject ID. For example **user.id**,. | Yes |
+| PropertyValue               | string   | The value of the property that's the data subject ID you're making the request on. For example, **user123**. | Yes |
 
 For further documentation about this and other Fraud Protection APIs, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 
