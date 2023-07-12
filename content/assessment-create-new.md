@@ -26,7 +26,7 @@ The **Assessment wizard** which consists of five steps:
 
 This link is only visible in the root environment and to users with **Read/Write** permissions to **Assessments** as defined in the article, [User roles and access](configure-user-access.md). If both pre-requisites are true and the **+ New assessment_** link isn't visible, you have reached the maximum limit of 16 assessments that can be created. Delete one of your existing assessments before you create a new one. The **Account creation**, **Account login**, **Purchase**, and **Loss prevention** assessments don't contribute to this limit.
 
-## <a name="template"></name> Select template
+## <a name="template"></a> Select template
 
 To get started, use the available pre-defined templates to create new Fraud Protection API’s that are tailored to some of the most common fraud scenarios. Each of these templates is bundled with customized logic and a set of data fields that serve as the foundation for your new Fraud Protection API.
 
@@ -78,7 +78,7 @@ The **Custom template** allows you to assess the fraud risk of a custom event. T
 
 The Custom template doesn't support risk scoring. The **Model.Risk** FQL function can't be invoked when an API based on this template is used.
 
-## <a name="schema"></name> Define schema details
+## <a name="schema"></a> Define schema details
 
 After you identify and select your fraud assessment template, any data fields associated with that template are automatically included in the API’s schema (request payload). To view the API schema and sample values for your new fraud API, enable the **JSON Preview** pane.
 
@@ -122,7 +122,7 @@ Each custom data field includes the following fields:
 
 Before your new assessment is created, you can edit or delete any previously added custom data fields. After the assessment is created, you can't change the **Name** or **Type** of a custom data field.
 
-## <a name="observation"></name> Select observation events
+## <a name="observation"></a> Select observation events
 
 You can use observation and label events to share information and other context with Fraud Protection for a specific transaction. These are data ingestion only events which means that no information is returned in the response other than success/fail. Data sent through observation events can be used in velocities, rules, and search.
 
@@ -197,7 +197,7 @@ For more details on Fraud Protection’s label event, see [Labels API](labels-ap
 
 The **Custom event** allows you to provide Fraud Protection with any custom information pertaining to a transaction.
 
-## <a name="settings"></name> Define settings
+## <a name="settings"></a> Define settings
 
 In this step of the **Assessment wizard**, select settings based on the fraud assessment template you selected earlier.
 
@@ -246,7 +246,7 @@ Transactions sent before a data subject ID was selected aren't accessible for ex
 
 See [Compliance overview](security-compliance.md) for more information about exporting and deleting data.
 
-## <a name="finalize"></name> Finalize name and endpoint
+## <a name="finalize"></a> Finalize name and endpoint
 
 After you configure the settings for your fraud assessment, the last step is to name the new Fraud Protection API.
 
