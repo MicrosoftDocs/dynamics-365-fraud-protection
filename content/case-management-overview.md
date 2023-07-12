@@ -28,6 +28,9 @@ Case management has several components that work together to provide an end-to-e
 - [Routing rules](#routing-rules)
 - [Transaction review](#transaction-review)
 
+> [1NOTE]
+> The _Device fingerprinting_ template doesn't support case management. All other [Assessment templates](assessment-create-new.md#assessment-wizard-select-template) support case management, except for the reporting capabilities.
+
 ## Cases
 
 A case represents a purchase transaction that the merchant has decided will require review. The decision of the merchant is based on the outcome of the assessment. For more information about the assessment, see [Manage rules](rules.md#conditions).
