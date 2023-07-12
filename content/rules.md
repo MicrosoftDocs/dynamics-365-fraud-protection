@@ -330,7 +330,7 @@ You can edit, delete, and deactivate system-defined rules. As a best practice, c
 
 ## Assessment (default) rules
 
-Each assessment template mentioned in the [Select template](assessment-create-new.md#assessment-wizard-select-template) step of the **Assessment wizard** comes pre-defined with one or both of the following default rules:
+Each assessment template mentioned in the [Select template](assessment-create-new.md#-select-template) step of the **Assessment wizard** comes pre-defined with one or both of the following default rules:
 
 - **Sample template rule** – This rule contains a series of sample clauses that serve as the building blocks for defining your own logic for making decisions based on values like risk score, bot score, and device attributes where applicable. None of these clauses make decisions by default, however they can quickly be altered to do so using the samples provided.
 - **Support list rule** – This rule consists of a series of clauses that leverage Fraud Protection’s support lists (safe, block, watch) to help you make informed decisions (accept, reject, review) based on entities in those lists.
