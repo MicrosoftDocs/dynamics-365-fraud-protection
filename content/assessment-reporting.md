@@ -18,3 +18,6 @@ Reporting is currently limited to the following three real-time scorecards for a
 - **Top rules** – This chart shows the rules that trigger the highest volume of automated decisions.
 
 Apart from _Device fingerprinting_, all other [Assessment templates](assessment-create-new.md#assessment-wizard-select-template) support these real-time scorecards.
+
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
