@@ -22,6 +22,7 @@ This language reference guide includes the complete list of operators, functions
 - [Decision functions](fpl-lang-ref.md#decision-functions)
 - [Observation functions](fpl-lang-ref.md#observation-functions)
 - [Model functions](fpl-lang-ref.md#model-functions)
+- [Device attribute functions](fpl-lang-ref.md#device-attribute-functions)
 - [Referencing attributes and variables](fpl-lang-ref.md#referencing-attributes-and-variables)
 - [Logical operators](fpl-lang-ref.md#logical-operators)
 - [List functions](fpl-lang-ref.md#list-functions)
@@ -84,7 +85,12 @@ Model functions run the various fraud models and are useful when your assessment
 |  Risk  |  Assesses the likelihood of a session being risky. | Model.Risk()  |
 | Bot   |   Assesses the likelihood of a session being bot-initiated. Pass in a device context ID that has been sent to Fraud Protection’s device fingerprinting solution. | Model.Bot(@deviceContextId)   |
 
+## Device attribute functions
 
+| Operator     | Description | Example |
+|--------------|-------------|---------|
+|  Device.GetAttributes(String _sessionId_)  | Returns selected device attributes from device fingerprinting. The selected device attributes are curated by Fraud Protection and are a set of attributes commonly used in rules. | Device.GetAttributes(@"deviceContext.deviceContextId).attribute_name  |
+| Device.GetFullAttributes(String _sessionId_)   | Returns a full set of device attributes from device fingerprinting. Use this function only when it's needed to access the full set of device attributes. To view the full set of device attributes, see [Set up device fingerprinting](device-fingerprinting.md). | Device.GetFullAttributes(@"deviceFingerprinting.id").attribute_name   |
 
 ## Referencing attributes and variables
 You can use the at sign (@) operator to reference an attribute from the current event.

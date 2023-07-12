@@ -145,10 +145,8 @@ A rule consists of the following components:
 - The current [status](rules.md#status) of the rule: **Active** or **Inactive**
 - A [sample](rules.md#samples) of fields, to help you write and evaluate the rule
 - Components that help you build the logic that automatically approves, rejects, challenges, or reviews events:
-
     - A [condition](rules.md#conditions)
     - One or more of the following types of [clauses](rules.md#clauses):
-
         - [Prior to all scoring clauses](rules.md#prior-to-all-scoring-clauses)
         - [Post-bot-scoring clauses](rules.md#post-bot-scoring-clauses)
         - [Post-risk-scoring clauses](rules.md#post-risk-scoring-clauses)
@@ -236,6 +234,7 @@ Clauses are organized into sections. AI models are run based on these sections a
 - For purchase protection, an AI risk model is run that generates a risk score for the transaction. Therefore, these rules contain both prior-to-all-scoring clauses and post-risk scoring clauses.
 - For account protection, a bot model is run in addition to a risk model. These models generate a bot score and risk score, respectively. Therefore, these rules contain prior-to-all-scoring clauses, post-bot-scoring clauses, and post-risk-scoring clauses.
 - For custom assessments, no AI models are run, and these rules contain only prior-to-all-scoring clauses.
+- Assessments created using the [Assessment wizard](assessment-create-new.md#assessment-wizard-overview) don’t have a concept of prior-to-scoring and post-scoring clauses.  Instead, all clauses are executed sequentially (top to bottom) based on the order they are listed in the rule.
 
 #### Prior-to-all-scoring clauses
 
@@ -278,6 +277,7 @@ In post-risk-scoring clauses, you can use this score together with fields from t
 RETURN Reject("high price and risk score")
 WHEN @purchasePrice >= 199.99 && @riskScore > 700
 ```
+
 ### Drafts
 
 A rule can have both a *published* version and a *draft* version. Both versions can be viewed as side-by-side tabs on the **Rules** tab.
@@ -294,7 +294,6 @@ When you publish a draft, Fraud Protection overwrites the published version of t
 The **Rules** tab shows a list of the published rules that are configured for the assessment. The order that the rules are listed in affects the order that they are evaluated in. To reorder the rules, just drag a rule to its desired position, and then select **Save**.
 
 An event is evaluated against each rule condition, in order, until a condition returns **True**. Each clause in the selected rule is then evaluated. If one of these clauses returns a decision, no further rules are evaluated. If none of these clauses returns a decision, either the transaction will be approved by default, or the next published rule that has a matching condition will be evaluated. The behavior depends on the [rule evaluation behavior](rules.md#rule-evaluation-behavior) that is selected in the rule settings.
-
 
 ## Create a new rule
 
@@ -328,6 +327,30 @@ Rules may be created by Fraud Protection per environment. For example, the follo
 Some Fraud Protection functionality relies on default rules. After you add an email, IP address, or other known list content to a support list (safe, watch, or reject), this default rule ensures that the lists are checked during assessment evaluation.
 
 You can edit, delete, and deactivate system-defined rules. As a best practice, consider creating or editing a different rule unless you want to change the default behavior.
+
+## Assessment (default) rules
+
+Each assessment template mentioned in the [Select template](assessment-create-new.md#-select-template) step of the **Assessment wizard** comes pre-defined with one or both of the following default rules:
+
+- **Sample template rule** – This rule contains a series of sample clauses that serve as the building blocks for defining your own logic for making decisions based on values like risk score, bot score, and device attributes where applicable. None of these clauses make decisions by default, however they can quickly be altered to do so using the samples provided.
+- **Support list rule** – This rule consists of a series of clauses that leverage Fraud Protection’s support lists (safe, block, watch) to help you make informed decisions (accept, reject, review) based on entities in those lists.
+
+Where applicable, these default rules show up as active under **Published Rules** immediately after an assessment is created. The following table is a summary of the default rules supported by assessment template:
+
+| Template | Template rule | Support list rule |
+|----------|---------------|-------------------|
+| Card payment | Supported | Supported |
+| Device fingerprinting | Supported | N/A |
+| Money transfer | Supported | Supported |
+| Software piracy | Supported | Supported |
+| Custom | N/A | Supported |
+
+Additional rules and clauses can be manually added to an assessment in both its root and child environments.
+
+To invoke Fraud Protection’s risk and bot scores from within a rule for an assessment created using one of the templates, the following [Model functions](fpl-lang-ref.md#model-functions) must be used:
+
+- **Risk score**: Model.Risk().Score
+- **Bot score**: Model.Bot(@"deviceFingerprinting.id").Score
 
 ## Manage existing rules
 
