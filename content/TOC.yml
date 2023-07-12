@@ -40,10 +40,6 @@
     items:
     - name: Swagger UI
       href: swagger.md
-    - name: Call real-time APIs training module
-      href: /training/modules/call-real-item-apis/
-    - name: Configure sample app data training module
-      href: /training/modules/configure-sample-app-fraud-protection/
     - name: Account protection schemas
       href: ap-schema.md
     - name: Purchase protection schemas
@@ -80,8 +76,6 @@
       href: configure-user-access.md
     - name: Set up device fingerprinting 
       href: device-fingerprinting.md
-    - name: Deploy and work with account protection and purchase protection learning path
-      href: /training/paths/deploy-work-account-purchase-protection/
   - name: Operations
     items: 
     - name: Language reference guide
@@ -136,8 +130,6 @@
         href: configure-user-access.md
       - name: Payment service provider user roles and access 
         href: psp-user-roles.md
-    - name: Deploy and work with account protection and purchase protection learning path
-      href: /training/paths/deploy-work-account-purchase-protection/
   - name: Operations
     items: 
     - name: Language reference guide
@@ -198,8 +190,6 @@
       href: promocode-set-up-loss-prevention.md
     - name: Configure user roles and access
       href: configure-user-access.md
-    - name: Deploy and work with loss prevention learning path
-      href: /training/paths/deploy-work-loss-prevention-fraud-protection/
     - name: Integration with Dynamics 365 Commerce
       href: loss-prevention-integration-with-commerce.md
 - name: Assessments
