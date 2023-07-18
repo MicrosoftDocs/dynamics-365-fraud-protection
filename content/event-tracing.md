@@ -26,17 +26,23 @@ If your Fraud Protection instance has multiple environments, event tracing for e
 Follow these steps to start to use the event tracing functionality.
 
 1. In the [Fraud Protection](https://dfp.microsoft.com/) portal, select **Data**, and then select **Event Tracing**.
+  
 1. Select **New subscription**.
+   
 1. Enter a subscription display name.
+   
 1. Select a storage location:
-   1. **For Event Hubs**: Enter the connection string for the Event Hubs instance. Make sure that this string isn't the namespace connection string, and that it includes **Manage**, **Send**, and **Listen** privileges. For more information, see [Get an Event Hubs connection string](/azure/event-hubs/event-hubs-get-connection-string).
    
-   1. **For Blob Storage**: Enter the connection string for your Azure storage account. Then enter a container name where your event tracing data will reside. For more information, see [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
+   1. **For Event Hubs**: Enter the connection string for the Event Hubs instance. in Azure Key Vault. This Azure Key Vault should reside in the same tenant as your Fraud Protection subscription. Grant **Get Secret Access** to Fraud Protection app to the Azure Key Vault. Enter the **Secret Identifier URL** from your Azure Key Vault in the Fraud Protection portal.  For more information, see [Get an Event Hubs connection string](/azure/event-hubs/event-hubs-get-connection-string).
 
-1.	Select an event and review the description and sample of the JSON payload before saving the subscription by selecting **Create**. 
+   1. **For Blob Storage**: Enter the connection string for the Azure Blob Storage account in Azure Key Vault. This Azure Key Vault should reside in the same tenant as your Fraud Protection subscription. Grant **Get Secret Access** to Fraud Protection app to the Azure Key Vault. In the Fraud Protection portal, enter the **Secret Identifier URL** from your Azure Key Vault and a container name where your event tracing data will reside. For more information, see [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
-     Events are instantaneously sent to your Event Hubs instance from that point in time. If you selected Blob Storage, the copy process to write all historical data will begin and all events will be published to your container every 30 minutes. 
+1.	Click on **Test connection**. Once the connection is successfully tested, account related information, extracted from the connection string in the Azure Key Vault, will be displayed. For Azure Event Hubs, this read-only information will include **Event Hub Namespace** and **Event Hub Name**. For Azure Blob Storage, **Storage account name** will be displayed. Verify this information matches the storage account you intend to use.  Please note, without a successful connection test, **Create** button will not be enabled.
+    
+1.	Select an event and review the description and sample of the JSON payload before saving the subscription by selecting **Create**.
    
+  Events are instantaneously sent to your Event Hubs instance from that point in time. If you selected Blob Storage, the copy process to write all historical data will begin and all events will be published to your container every 30 minutes.  
+     
 1.	Go back to the [Fraud Protection](https://dfp.microsoft.com/) portal to view the count for the **Events/Hr.** metric and make sure that data is being sent to Event Hubs and Blob Storage.
 
     The **Events/Hr** and **Failures/Hr** metrics show an average over the past 24 hours.
