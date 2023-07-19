@@ -47,7 +47,12 @@ Before you create an external call, you should know about the following limitati
 
         For more information about authentication, authorization, and Azure AD tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this article.
 
-    - **Application ID** – If you selected **AAD** as the authentication method, you must provide the application ID of an existing Azure AD application within your Fraud Protection subscription tenant. For more information about how to create and manage Azure AD applications, see [Create Azure Active Directory Applications](integrate-real-time-api.md#create-azure-ad-applications).
+    -**Audience** - If you selected **AAD** as the authentication method, you will be asked to provide Audience. You can use an existing Azure application as the Audience or create a new one through the Integration experience within DFP portal. Please make sure Audience has permission to access the external call/service. To learn more about how to configure Azure Active Directory authentication, see [Configure Azure AD authentication](https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). 
+   
+    - **Application ID** – You will also need to provide the application ID of a new or existing Azure AD application within your Fraud Protection subscription tenant. Generate a certificate in your Azure Key Vault. Fraud Protection app should have Read access to this Azure Key Vault. Load the certificate to this Azure AD application. For more information about how to create and manage Azure AD applications, see [Create Azure Active Directory Applications](integrate-real-time-api.md#create-azure-ad-applications).
+  
+   - **Certificate URL** – Please provide the Certificate Identifier URL from your Azure Key Vault. This is the same certificate you loaded to Azure AD application in previous step. For more information on how to generate a certificate in Azure Key Vault, see [Creating and merging a certificate signing request in Azure Key Vault](https://learn.microsoft.com/en-us/azure/key-vault/certificates/create-certificate-signing-request?tabs=azure-portal) 
+    
     - **Add parameter** – You can use parameters to pass data from Fraud Protection to your API endpoint. Depending on the HTTP method that you selected, these parameters will be sent to the endpoint either in the query string or as part of the request body.
 
         You can add sample values for each parameter. Fraud Protection will use these parameter values to make a sample call to your endpoint, either before creation or whenever you select **Test**.
@@ -68,8 +73,8 @@ Before you create an external call, you should know about the following limitati
     - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 1000.
     - **Default response** – Specify the default response that should be returned if your request fails or exceeds the specified time-out. The value must be valid JSON object or JSON element.
 
-3. Optional: To send a sample request to your API endpoint and view the response, select **Test**. For more information, see the next section, [Test an external call](external-calls.md#test-an-external-call).
-4. When you've finished setting the required fields, select **Create**.
+4. Optional: To send a sample request to your API endpoint and view the response, select **Test**. For more information, see the next section, [Test an external call](external-calls.md#test-an-external-call).
+5. When you've finished setting the required fields, select **Create**.
 
 ## Test an external call
 
