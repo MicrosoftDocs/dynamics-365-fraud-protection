@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to use external calls to ingest data from APIs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/07/2022
+ms.date: 07/21/2023
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -47,7 +47,7 @@ Before you create an external call, you should know about the following limitati
 
         For more information about authentication, authorization, and Azure AD tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this article.
 
-    -**Audience** - If you selected **AAD** as the authentication method, you will be asked to provide an audience. You can use an existing Azure application as the audience or create a new one through the integration experience within DFP portal. Make sure audience has permission to access the external call/service. To learn more about how to configure Azure Active Directory (Azure AD) authentication, see [Configure Azure AD authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). 
+    - **Audience** - If you selected **AAD** as the authentication method, you will be asked to provide an audience. You can use an existing Azure application as the audience or create a new one through the integration experience within DFP portal. Make sure audience has permission to access the external call/service. To learn more about how to configure Azure Active Directory (Azure AD) authentication, see [Configure Azure AD authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). 
    
     - **Application ID** – You will also need to provide the application ID of a new or existing Azure AD application within your Fraud Protection subscription tenant. Generate a certificate in your Azure Key Vault. The Fraud Protection app should have read access to this Azure Key Vault. Load the certificate to this Azure AD application. For more information about how to create and manage Azure AD applications, see [Create Azure Active Directory Applications](integrate-real-time-api.md#create-azure-ad-applications).
   
@@ -196,7 +196,7 @@ The following table lists the claims that you can expect in bearer tokens that a
 
 | Name           | Claim | Description |
 |----------------|-------|-------------|
-| Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that is associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Azure Active Directory tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). |
+| Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that is associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Azure Active Directory tenant ID](/azure/active-directory/fundamentals/how-to-find-tenant). |
 | Audience       | aud   | This claim identifies the Azure application that is authorized to access the external service you want to call. To learn more about how configure Azure Active Directory authentication, see [Configure Azure AD authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
 | Application ID | appid | This claim identifies who is requesting a token. To learn more about how configure Azure Active Directory (Azure AD) authentication, see [Configure Azure AD authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
 
