@@ -83,7 +83,7 @@ Use transactional events to create custom scorecards and automated workflows usi
 
 ### Trace events
 
-You use trace events to report and monitor the performance for all rules which include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule which triggered the event, the event type which correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, see [Observation functions](fpl-lang-ref.md#observation-functions) in the Rules language guide.
+You use trace events to report and monitor the performance for all rules that include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule that triggered the event, the event type that correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, see [Observation functions](fpl-lang-ref.md#observation-functions) in the Rules language guide.
 
 ##### Namespace: FraudProtection.Trace.Rule.
 
@@ -173,7 +173,7 @@ You use audit events to track portal actions and develop an audit log. Audit eve
 
 ### Audit log access
 
-There are two ways that youc an access audit logs. You can set up event tracting, or you can request an auto-generated audit log be sent by creating a Customer support ticket. If you decide not to use event tracing and instead submit a support ticket, the support ticket is routed to the Fraud Protection engineering team. The team extracts the logs and provides them back to you. Audit logs are captured and stored in the same geo that you have chosen to provision an environment. The logs can't be edited after they are captured and the log retention period is 365 days. Logs older than 365 days are automatically deleted.
+There are two ways that you can access audit logs. You can set up event tracing, or you can request an auto-generated audit log be sent by creating a Customer support ticket. If you decide not to use event tracing and instead submit a support ticket, the support ticket is routed to the Fraud Protection engineering team. The team extracts the logs and provides them back to you. Audit logs are captured and stored in the same geo that you have chosen to provision an environment. The logs can't be edited after they are captured and the log retention period is 365 days. Logs older than 365 days are automatically deleted.
 
 There are five events generated that can be tracked by using the audit logs. Those events are:
 
