@@ -180,11 +180,11 @@ To ensure that data is securely accessed, APIs often authenticate the sender of 
 > •	GET
 > •	POST
 
-# Anonymous
+### Anonymous
 
 If you select **Anonymous**, the authorization header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint does not require an authorization header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL that you enter in the **Web Request** field. The target endpoint can then validate if the API key from the request URL is allowed, and then decide whether permission should be granted.
 
-# AAD
+### AAD
 
 If you select **AAD**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by Microsoft Entra ID (formerly Azure Active Directory (Azure AD)). For information about JWTs, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown here:
 
@@ -215,7 +215,7 @@ if(tid != "<my tenant id>" || aud != "<my audience>" || appid != "<my applicatio
     throw new Exception("the token is not authorized.");
 }
 ```
-# Basic
+### Basic
 
 If you select **Basic** as the authentication method, follow these steps to upload your password to the Azure key vault and grant access permissions to Fraud Protection.
 1.	Sign in to the [Azure portal](https://portal.azure.com/#home) by using your tenant credentials.
@@ -233,7 +233,7 @@ If you want to create a new key vault, follow the instructions in [Quickstart: C
 12.	In the **Authentication method** field, select **Basic**.
 13.	In the **Username** field, enter your user name for the URL that you're trying to connect to. In the **Password URL** field, paste the secret identifier that you copied earlier.
 
-# Certificate
+### Certificate
 
 If you select **Certificate** as the authentication method, follow these steps to upload your certificate to the key vault and grant access permissions to Fraud Protection.
 1.	Sign in to the [Azure portal](https://portal.azure.com/#home) by using your tenant credentials.
