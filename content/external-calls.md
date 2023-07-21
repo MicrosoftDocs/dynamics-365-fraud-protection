@@ -164,7 +164,7 @@ For information about the rules language and how you can use external calls in r
 
 ## Understand authentication and authorization
 
-To ensure that data is securely accessed, APIs often authenticate the sender of a request to verify that they have permission to access the data. External calls in Fraud Protection supports following methods of authentication: 
+To ensure that data is securely accessed, APIs often authenticate the sender of a request to verify that they have permission to access the data. External calls in Fraud Protection supports the following methods of authentication: 
 1. Anonymous
 2. AAD
 3. Basic
@@ -181,7 +181,7 @@ If you select **Anonymous**, the authorization header in the HTTP request to the
 
 # AAD
 
-If you select **AAD**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by **Microsoft Entra ID** (formerly, Azure Active Directory (Azure AD)). For information about JWTs, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown here:
+If you select **AAD**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by Microsoft Entra ID (formerly Azure Active Directory (Azure AD)). For information about JWTs, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown here:
 
 Bearer \<token\>
 
@@ -192,8 +192,8 @@ The following table lists the claims that you can expect in bearer tokens that a
 | Name           | Claim | Description |
 |----------------|-------|-------------|
 | Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that is associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Azure Active Directory tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). |
-| Audience       | aud   | This claim identifies the Azure application that is authorized to access the external service you want to call. To learn more about how configure Azure Active Directory authentication, see [Configure Azure AD authentication](https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
-| Application ID | appid | This claim identifies who is requesting a token. To learn more about how configure Azure Active Directory authentication, see [Configure Azure AD authentication](https://learn.microsoft.com/en-us/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
+| Audience       | aud   | This claim identifies the Azure application that is authorized to access the external service you want to call. To learn more about how configure Azure Active Directory authentication, see [Configure Azure AD authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
+| Application ID | appid | This claim identifies who is requesting a token. To learn more about how configure Azure Active Directory (Azure AD) authentication, see [Configure Azure AD authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
 
 When your API receives a token, it should open the token and validate that each of the preceding claims matches its description.
 
@@ -215,11 +215,11 @@ if(tid != "<my tenant id>" || aud != "<my audience>" || appid != "<my applicatio
 If you select **Basic** as the authentication method, follow these steps to upload your password to the Azure key vault and grant access permissions to Fraud Protection.
 1.	Sign in to the [Azure portal](https://portal.azure.com/#home) by using your tenant credentials.
 2.	If you have an existing key vault that you want to use, go there. Make sure that **Get** and **List** are selected in the secret permissions.
-If you want to create a new key vault, follow the instructions in [Quickstart: Create a key vault using the Azure portal](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal).
+If you want to create a new key vault, follow the instructions in [Quickstart: Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
 3.	In the left pane, select **Secrets**, and then select **Generate/Import**.
 4.	On the **Create a secret** page, enter a name for your secret. The secret value should be the password for the web URL that you're trying to connect to by using external calls.
 5.	Enter information in the required fields, and then select **Create**.
-6.	Copy and save the secret identifier, because you'll need it later.
+6.	Copy and save the secret identifier because you'll need it later.
 7.	In the left navigation pane, under **Settings**, select **Access Policies**, and then select **Add new access policy**.
 8.	In the **Secret Permissions** section, select the **Get** and **List** checkboxes.
 9.	In the **Principal** and **Authorized application** fields, search for **Dynamics 365 Fraud Protection**, and then select **Select**.
@@ -232,7 +232,7 @@ If you want to create a new key vault, follow the instructions in [Quickstart: C
 
 If you select **Certificate** as the authentication method, follow these steps to upload your certificate to the key vault and grant access permissions to Fraud Protection.
 1.	Sign in to the [Azure portal](https://portal.azure.com/#home) by using your tenant credentials.
-2.	If you have an existing key vault that you want to use, go there. If you want to create a new key vault, follow the instructions in [Quickstart: Create a key vault using the Azure portal](https://learn.microsoft.com/en-us/azure/key-vault/general/quick-create-portal).
+2.	If you have an existing key vault that you want to use, go there. If you want to create a new key vault, follow the instructions in [Quickstart: Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal).
 3.	In the left pane, select **Certificates**, and then select **Generate/Import**.
 4.	On the **Create a certificate** page, enter a name for your certificate. In the **Subject** field, enter the certificate subject.
 5.	Enter information in the required fields, and then select **Create**.
