@@ -66,7 +66,7 @@ Before you create an external call, you should know about the following limitati
 
         The sample request is used to make a sample call to your endpoint, either before creation or whenever you select **Test**.
 
-    - **Sample response** – Provide an example of the data data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and  can be referenced in your rules. The sample that you provide here is shown as you create rules.
+    - **Sample response** – Provide an example of the data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and  can be referenced in your rules. The sample that you provide here is shown as you create rules.
 
         Select **Test** to automatically enter a real response from your API in this field.
 
