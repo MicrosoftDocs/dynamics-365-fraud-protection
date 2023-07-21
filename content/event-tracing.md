@@ -26,17 +26,23 @@ If your Fraud Protection instance has multiple environments, event tracing for e
 Follow these steps to start to use the event tracing functionality.
 
 1. In the [Fraud Protection](https://dfp.microsoft.com/) portal, select **Data**, and then select **Event Tracing**.
+  
 1. Select **New subscription**.
+   
 1. Enter a subscription display name.
+   
 1. Select a storage location:
-   1. **For Event Hubs**: Enter the connection string for the Event Hubs instance. Make sure that this string isn't the namespace connection string, and that it includes **Manage**, **Send**, and **Listen** privileges. For more information, see [Get an Event Hubs connection string](/azure/event-hubs/event-hubs-get-connection-string).
    
-   1. **For Blob Storage**: Enter the connection string for your Azure storage account. Then enter a container name where your event tracing data will reside. For more information, see [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
+   1. **For Event Hubs**: Enter the connection string for the Event Hubs instance in Azure Key Vault. The Azure Key Vault should reside in the same tenant as your Fraud Protection subscription. Grant **Get Secret Access** to the Fraud Protection app to the Azure Key Vault. Enter the **Secret Identifier URL** from your Azure Key Vault in the Fraud Protection portal.  For more information, see [Get an Event Hubs connection string](/azure/event-hubs/event-hubs-get-connection-string).
 
-1.	Select an event and review the description and sample of the JSON payload before saving the subscription by selecting **Create**. 
+   1. **For Blob Storage**: Enter the connection string for the Azure Blob Storage account in Azure Key Vault. The Azure Key Vault should reside in the same tenant as your Fraud Protection subscription. Grant **Get Secret Access** to the Fraud Protection app to the Azure Key Vault. In the Fraud Protection portal, enter the secret identifier URL from your Azure Key Vault and a container name where your event tracing data will reside. For more information, see [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
 
-     Events are instantaneously sent to your Event Hubs instance from that point in time. If you selected Blob Storage, the copy process to write all historical data will begin and all events will be published to your container every 30 minutes. 
+1.	Select **Test connection**. Once the connection is successfully tested, account-related information that was extracted from the connection string in the Azure Key Vault will be displayed. For Azure Event Hubs, this read-only information will include **Event Hub Namespace** and **Event Hub Name**. For Azure Blob Storage, **Storage account name** will be displayed. Verify that this information matches the storage account you intend to use. Without a successful connection test, the **Create** button will not be enabled.
+    
+1.	Select an event and review the description and sample of the JSON payload. Then save the subscription by selecting **Create**.
    
+  Events are instantaneously sent to your Event Hubs instance from that point in time. If you selected Blob Storage, the copy process to write all historical data will begin and all events will be published to your container every 30 minutes.  
+     
 1.	Go back to the [Fraud Protection](https://dfp.microsoft.com/) portal to view the count for the **Events/Hr.** metric and make sure that data is being sent to Event Hubs and Blob Storage.
 
     The **Events/Hr** and **Failures/Hr** metrics show an average over the past 24 hours.
@@ -77,7 +83,7 @@ Use transactional events to create custom scorecards and automated workflows usi
 
 ### Trace events
 
-You use trace events to report and monitor the performance for all rules which include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule which triggered the event, the event type which correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, see [Observation functions](fpl-lang-ref.md#observation-functions) in the Rules language guide.
+You use trace events to report and monitor the performance for all rules that include the Trace() return type. The payload for this event includes standardized fields such as the name of the rule that triggered the event, the event type that correlates to the assessment type for that rule, correlation ID, etc. You can then send custom attributes using key:value pairs in the Trace() return type to include variables from the sample payload, the risk score, and custom fields. For more information on how to use Trace() in your rules to trigger these events, see [Observation functions](fpl-lang-ref.md#observation-functions) in the Rules language guide.
 
 ##### Namespace: FraudProtection.Trace.Rule.
 
@@ -167,7 +173,7 @@ You use audit events to track portal actions and develop an audit log. Audit eve
 
 ### Audit log access
 
-There are two ways that youc an access audit logs. You can set up event tracting, or you can request an auto-generated audit log be sent by creating a Customer support ticket. If you decide not to use event tracing and instead submit a support ticket, the support ticket is routed to the Fraud Protection engineering team. The team extracts the logs and provides them back to you. Audit logs are captured and stored in the same geo that you have chosen to provision an environment. The logs can't be edited after they are captured and the log retention period is 365 days. Logs older than 365 days are automatically deleted.
+There are two ways that you can access audit logs. You can set up event tracing, or you can request an auto-generated audit log be sent by creating a Customer support ticket. If you decide not to use event tracing and instead submit a support ticket, the support ticket is routed to the Fraud Protection engineering team. The team extracts the logs and provides them back to you. Audit logs are captured and stored in the same geo that you have chosen to provision an environment. The logs can't be edited after they are captured and the log retention period is 365 days. Logs older than 365 days are automatically deleted.
 
 There are five events generated that can be tracked by using the audit logs. Those events are:
 
