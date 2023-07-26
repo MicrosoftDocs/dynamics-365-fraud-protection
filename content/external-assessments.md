@@ -17,7 +17,7 @@ An assessment can have one of two possible sharing settings:
 
 External assessment can be set up to point to any **Private** assessment, available in the same root environment, or any **Shared** assessment, available in any root environment of the tenant. After an external assessment has been set up, it can be called through a rule from any assessment in that environment. 
 
-![External assessment flow](https://github.com/swasif23/dynamics-365-fraud-protection-pr/blob/swasif23-External-Assessments/content/media/external%20assessments.png)
+![External assessment flow](media/external-assessments.png)
 >*For Private Assessment: Environment Y = Environment X*
 >
 >*For Shared Assessment: Environment Y = Any root environment within the same tenant*
