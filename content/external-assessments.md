@@ -10,6 +10,8 @@ title: External assessments
 
 ---
 
+# External assessments
+
 External assessment is a mechanism to call an assessment from any other assessment. An external assessment isn't an assessment itself. Instead, it acts like a data source which allows you to send data and receive a response from a target assessment. 
 An assessment can have one of two possible sharing settings:
 - Private: Accessible only in assessment’s root environment
@@ -26,14 +28,14 @@ Calling assessment refers to any assessment that calls a Private or Shared asses
 
 ## Create an External Assessment
 
-To create an External Assessment, first ensure you have the right permission to perform this operation. To learn more user roles and permissions, see [User roles and access](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/user-roles-access)
+To create an External Assessment, first ensure you have the right permission to perform this operation. To learn more user roles and permissions, see [User roles and access](user-roles-access.md)
 
 1.	In the Fraud Protection portal, in the left navigation, select **External Assessments**, and then select **+ New external assessment**.
 2.	On the **New external assessment** page, set the following fields:
   - **Target assessment to call** – In the drop-down you can see all the Private assessments, set up in the same root environment, as well as any available Shared assessments, set up in any root environment of the same tenant. Select the assessment you want to target.
 
   > [!NOTE]
-  > If the Shared assessment you want to point your external assessment to is not showing in the drop-down, then check the Sharing setting of the assessment and ensure it is set to Shared. To learn more on how to configure Sharing setting please visit [Assessment configuration overview](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/assessment-configure-existing)
+  > If the Shared assessment you want to point your external assessment to is not showing in the drop-down, then check the Sharing setting of the assessment and ensure it is set to Shared. To learn more on how to configure Sharing setting please visit [Assessment configuration overview](assessment-configure-existing.md).
 
   - **Name** – Enter the name that you will use to reference the external assessment from your rules. The name can contain only numbers, letters, and underscores. It can't begin with a number.
 
@@ -97,7 +99,7 @@ OBSERVE Output(Result = $result)
 
 ```
 
-External Calls and External Assessments may require complex structured objects as part of their request schema. For more information on how to use JSON Arrays and Objects, please check the [Language reference guide](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fpl-lang-ref). 
+External Calls and External Assessments may require complex structured objects as part of their request schema. For more information on how to use JSON Arrays and Objects, please check the [Language reference guide](fpl-lang-ref.md). 
 
 ## Monitor external calls in the Fraud Protection portal
 
