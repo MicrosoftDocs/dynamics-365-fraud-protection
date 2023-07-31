@@ -14,7 +14,7 @@ title: Post-decision Rules
 
 In addition to Decision rules [Manage rules](rules.md), Fraud Protection also allows you to configure Post-decision action rules for an assessment. Post-decision action rules are evaluated after Decision rules, but before the API response has been returned. These rules can be used to perform actions which you would like to take **each time an assessment is evaluated**. You can use the decision of the assessment call in an action rule also. For example, if you'd always like to send additional information as part of your API response anytime a particular decision is taken, or if you'd always like to send or receive data from an External Call every time assessment is evaluated, you can use an action rule. 
 
-> [!Note]
+> [!NOTE]
 > Action rules are available for Assessments only.
 
 ## Defining an action rule
@@ -26,7 +26,7 @@ DO <action>
 WHEN <condition>
 ```
 
-DO is a keyword unique to action rules. You cannot use this keyword in Decision rules.
+DO is a keyword unique to action rules. You can't use this keyword in Decision rules.
 Only Action functions can be used following the DO keyword. For more information on available Action functions, please check [Language reference guide](fpl-lang-ref.md#model-functions)
 
 ### Examnple
@@ -45,7 +45,7 @@ If the assessment call decision is Approve, the API response will show following
 •	Response.Decision() allows you to access the decision that was made on the assessment call.
 •	SetResponse() method can only be use after DO keyword. It adds key value pairs to API response.  
 
-> [!Note]
+> [!NOTE]
 > DO keyword and SetResponse method are available in action rules only.
 
 #### SetResponse Syntax
@@ -57,12 +57,12 @@ If the assessment call decision is Approve, the API response will show following
 ## Create and Manage Post-decision Action Rules
 
 To create or manage action rules, go to **Rules** tab. 
-To create a new Post-Decision Action rule, select **+ New rule**, and select *Post-decision action* from the drop-down.
+To create a new Post-Decision Action rule, select **+ New rule**, and then select **Post-decision action**.
 
  - No rule evaluation is available in debugging experience.
  - No visual view is available for action rules. 
 
-The **Rules** tab shows a list of the rules that have been configured for an assessment type. These rules are divided into three sections: **Post-decision actions**, **Published Rules** and **Drafts**. For information about drafts, see the Drafts section later in this article.
+The **Rules** tab shows a list of the rules that have been configured for an assessment type. These rules are divided into three sections: **Post-decision actions**, **Published Rules** and **Drafts**.
 
 You can view the following information for each rule or draft:
 - The name
@@ -76,13 +76,13 @@ You can also select the tile for each rule to expand it and show additional info
 -	Who last updated the rule
 -	When the rule was last updated
 
-> [!Note]
+> [!NOTE]
 > On the **Rules** tab, published rules are listed in the order that they are run in.
 
 ## Rule evaluation behavior 
 
-In a multi-hierarchy environment, Rules will be executed in the following order:
-1.	  Evaluate all active parent Decision rules.
+In a multi-hierarchy environment, rules will be executed in the following order:
+1.	Evaluate all active parent Decision rules.
 2.	Evaluate all active child Decision rules.
 3.	Evaluate all active parent Post-decision Action rules.
 4.	Evaluate all active child Post-decision Action rules.
