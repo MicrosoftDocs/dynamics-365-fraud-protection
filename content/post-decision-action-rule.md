@@ -51,8 +51,8 @@ If the assessment call decision is Approve, the API response will show following
 #### SetResponse Syntax
 |Function call|API response in Assessments|
 |-------------------------|-------------------|
-|SetResponse(a="b", x="y")| "CustomProperties": {<br>"a" : "b",<br>"x" : "y"<br>}</br>|
-|SetResponse("newSection", a="b", x="y")|"CustomProperties": {<br>"newSection":{<br>"a" : "b",<br>"x" : "y"<br>}<br>}</br>|
+|SetResponse(a="b", x="y")| "CustomProperties": {<br> &nbsp;&nbsp;&nbsp;&nbsp;"a" : "b",<br>&nbsp;&nbsp;&nbsp;&nbsp;"x" : "y"<br>}</br>|
+|SetResponse("newSection", a="b", x="y")|"CustomProperties": {<br> &nbsp;&nbsp;&nbsp;&nbsp; "newSection":{<br> &nbsp;&nbsp;&nbsp;&nbsp; "a" : "b",<br> &nbsp;&nbsp;&nbsp;&nbsp; "x" : "y"<br>&nbsp;&nbsp;&nbsp;&nbsp;}<br>}</br>|
 
 ## Create and Manage Post-decision Action Rules
 
