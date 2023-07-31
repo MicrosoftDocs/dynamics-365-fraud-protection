@@ -12,7 +12,7 @@ title: Post-decision Rules
 
 # Post-decision Action Rules
 
-In addition to Decision rules [Manage rules - Dynamics 365 Fraud Protection | Microsoft Learn]( https://learn.microsoft.com/en-us/dynamics365/fraud-protection/rules ), Fraud Protection also allows you to configure Post-decision action rules for an assessment. Post-decision action rules are evaluated after Decision rules, but before the API response has been returned. These rules can be used to perform actions which you would like to take **each time an assessment is evaluated**. You can use the decision of the assessment call in an action rule also. For example, if you'd always like to send additional information as part of your API response anytime a particular decision is taken, or if you'd always like to send or receive data from an External Call every time assessment is evaluated, you can use an action rule. 
+In addition to Decision rules [Manage rules](rules.md), Fraud Protection also allows you to configure Post-decision action rules for an assessment. Post-decision action rules are evaluated after Decision rules, but before the API response has been returned. These rules can be used to perform actions which you would like to take **each time an assessment is evaluated**. You can use the decision of the assessment call in an action rule also. For example, if you'd always like to send additional information as part of your API response anytime a particular decision is taken, or if you'd always like to send or receive data from an External Call every time assessment is evaluated, you can use an action rule. 
 
 > [!Note]
 > Action rules are available for Assessments only.
@@ -27,7 +27,7 @@ WHEN <condition>
 ```
 
 DO is a keyword unique to action rules. You cannot use this keyword in Decision rules.
-Only Action functions can be used following the DO keyword. For more information on available Action functions, please check [Language reference guide](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/fpl-lang-ref#model-functions)
+Only Action functions can be used following the DO keyword. For more information on available Action functions, please check [Language reference guide](fpl-lang-ref.md#model-functions)
 
 ### Examnple
 
