@@ -226,6 +226,8 @@
       items:
       - name: Manage rules
         href: rules.md
+      - name: Post-decision action rules
+        href: post-decision-action-rule.md
     - name: Lists
       items:
       - name: Lists overview
