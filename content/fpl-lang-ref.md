@@ -20,6 +20,7 @@ This language reference guide includes the complete list of operators, functions
 
 - [Statements](fpl-lang-ref.md#statements)
 - [Decision functions](fpl-lang-ref.md#decision-functions)
+- [Action functions](fpl-lang-ref.md#action-functions)
 - [Observation functions](fpl-lang-ref.md#observation-functions)
 - [Model functions](fpl-lang-ref.md#model-functions)
 - [Device attribute functions](fpl-lang-ref.md#device-attribute-functions)
@@ -42,8 +43,9 @@ The guide also covers additional articles. Here are some examples:
     - [ContainsKey](fpl-lang-ref.md#containskey)
     - [Lookup](fpl-lang-ref.md#lookup)
 
-- [Using external calls and velocities](fpl-lang-ref.md#using-external-calls-and-velocities)
+- [Using external calls, external assessments and velocities](fpl-lang-ref.md#using-external-calls-and-velocities)
 - [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes)
+- [JSON Arrays and Objects](fpl-lang-ref.md#JSON-Arrays-and-Objects)
 
 ## Statements
 
@@ -55,6 +57,7 @@ The guide also covers additional articles. Here are some examples:
 | ROUTETO QUEUE <i>\<QueueName\></i><br>[ WHEN \<<i>BooleanExpression</i>\> ] | <p>The **ROUTETO** command is used in routing rules to direct matching assessments to [case management queues](case-management-administrator.md).</p><p>The optional **WHEN** clause can be used to describe the conditions under which the command should perform the routing.</p><p>A maximum of one can be used per clause in routing rules.</p> | ROUTETO Queue("High Value Queue")<br>WHEN @"purchase.request.totalAmount" \> 500 | 
 | SELECT <i>\<AggregationFunction\></i><br>AS <i>\<VelocityName\></i><br>FROM <i>\<AssesmentType\></i><br>GROUPBY <i>\<GroupExpression\></i><br>[ WHEN <i>\<BooleanExpression\></i> ] | <p>A **SELECT** statement is used in velocity sets to define a [velocity](velocities.md). It must specify an [aggregation function](fpl-lang-ref.md#aggregation-functions).</p><p>The required **AS** clause is used to create an alias for your velocity. This alias can then be referenced from rules.</p><p>The required **FROM** clause is used to specify the assessment type to observe a velocity on. Valid values are **Purchase**, **AccountLogin**, **AccountCreation**, **Chargeback**, **BankEvent**, and **CustomAssessment**.</p><p>The required **GROUPBY** clause specifies a property or an expression. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that's requested in the **SELECT** statement.</p><p>For example, to calculate an aggregation for each user, use **GROUPBY @"user.userId"**.</p><p>The optional **WHEN** clause specifies a Boolean expression that determines whether the assessment that's being processed should be included in the velocity that's being defined.</p><p>A maximum of one can be used per clause in velocity sets.</p>| <p>SELECT Count() AS _Purchase_Rejections_Per_Email<br>FROM Purchase<br>WHEN @"ruleEvaluation.decision" == "Reject"<br>GROUPBY @"user.email"</p><p>SELECT DistinctCount(@"purchaseId")<br>AS _BankDeclines_Per_Device<br>FROM BankEvent<br>WHEN @"status" == "DECLINED"<br>GROUPBY @"purchase.deviceContext.externalDeviceId"</p> |
 | WHEN \<<i>BooleanExpression</i>\> | <p>The **WHEN** statement is like the **WHEN** clauses on the other statements, but it stands alone in the Condition section of rules and velocity sets. It specifies a Boolean condition that determines whether the whole rule, velocity set, or routing rule should run.</p><p>A maximum of one can be used in the Condition section of all rule types and velocity sets.</p> | WHEN @"riskscore" \> 400 |
+|DO \<<i>Action function</i>\>|A **DO** statement is used to perform some action at the end of rule execution. This statement can only be used in Post-decision actions, and must be followed by an Action function|DO SetResponse(name = @”firstname” + @”lastname”)|
 
 ## Decision functions
 
@@ -66,6 +69,15 @@ Decision functions are used in rules to specify a decision.
 | Reject()                          | <p>This type specifies a decision of *Reject*. It can include a reason for the rejection and an additional supporting message.</p><p>Overloads:</p><ul><li>Reject(String *reason*)</li><li>Reject(String *reason*, String *supportMessage*)</li></ul> | <p>RETURN Reject()</p><p>RETURN Reject("embargo country")</p><p>RETURN Reject("embargo country", "do not escalate")</p> |
 | Review()                          | <p>This type specifies a decision of *Review*. It can include a reason for the review and an additional supporting message.</p><p>Overloads:</p><ul><li>Review(String *reason*)</li><li>Review(String *reason*, String *supportMessage*)</li></ul> | <p>RETURN Review()</p><p>RETURN Review("user on watch list")</p><p>RETURN Review("user on watch list", "do not escalate")</p> |
 | Challenge(String *challengeType*) | <p>This type specifies a decision of *Challenge* and a challenge type. It can also include a reason for the challenge and an additional supporting message.</p><p>Overloads:</p><ul><li>Challenge(String *challengeType*, String *reason*)</li><li>Challenge(String *challengeType*, String *reason*, String *supportMessage*)</li></ul> | <p>RETURN Challenge ("SMS")</p><p>RETURN Challenge ("SMS", "suspected bot")</p><p>RETURN Challenge ("SMS", suspected bot", "do not escalate")</p> |
+
+## Action functions
+
+Action functions are used to specify the action to be taken in a Post-decision action rule
+
+| Action type | Description | Example |
+|-------------|-------------|---------|
+|SetResponse(String sectionName, k=v)|<p>This function can be used to pass key-value pairs to the “CustomProperties” section of API response. You can specify a subsection sectionName for the key values pair to go into. </p><p>Overloads:</p>•&nbsp;&nbsp;&nbsp;SetResponse(k=v)|<p>SetResponse(“Scores”, bot = Model.Bot(@deviceContextId), risk=Model.Risk())</p><p>SetResponse(test=”123”)</p>|
+ 
 
 ## Observation functions
 
@@ -103,6 +115,7 @@ You can use the at sign (@) operator to reference an attribute from the current 
 | @"riskScore" | <p>For every Purchase or Account Protection event, Fraud Protection's AI models generate a risk score between 0 and 999. A higher score indicates a higher risk.</p><p>You can use *@riskScore* to reference this score in post-risk-scoring clauses.</p> | @"riskScore" |
 | @a\[x\]      | <p>This variable is used to index array variables.</p><p>If the request payload for an assessment contains an array of items, you can access individual elements of the array by using the following syntax: *@"productList\[0\]"*.</p><p>To access an attribute of that element, use the following syntax: *@"productList\[0\].productId"*</p> | <p>@"productList\[0\].productId"</p><p>@"paymentInstrumentList\[3\].type"</p> |
 | Exists       | <p>This operator checks whether a variable exists in the event payload.</p><p>Exists(*String variable*)</p> | Exists(@"user.email") |
+|Response.Decision()|This function references the decision for the current assessment being evaluated.| Response.Decision() == “Approve”|
 
 ## Logical operators
 
@@ -281,11 +294,12 @@ You can also specify your own default value as the fifth parameter. For more inf
 
 The **Lookup** operator always returns a *String* value. To convert this value to an *Int*, *Double*, or *DateTime* value, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
-## Using external calls and velocities
+## Using external calls, external assessments and velocities
 
 You can reference external calls and velocities by using the corresponding keyword. 
 
 - To reference an external call in the language, type **External**, followed by the external call that you want to reference. For more information, see [Use an external call in rules](external-calls.md#use-an-external-call-in-rules).
+- To reference an external call in the language, type **Assessments**, followed by the external assessment that you want to reference. For more information, see [Use an external assessments in rules](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/external-assessments)
 - To reference a velocity in the language, type **Velocity**, followed by the individual velocity that you want to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
 
 ## Type inference of attributes
@@ -301,3 +315,35 @@ If there isn't enough context to infer the type of a variable, it's considered a
 To specify the type of a non-string variable, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
+
+## JSON Arrays and Objects
+FQL has support for the construction of complex structured objects as local variables, which may be passed through to the external call or external assessment in JSON form. As with all other locals in FQL, arrays and objects are immutable once created.
+
+### JSON arrays
+
+Arrays are created by enclosing expressions in a pair of brackets:
+```FraudProtectionLanguage
+LET $arr1 = [ "hello", "world" ]
+LET $arr2 = [
+  "this is also an array",
+  78.4,
+  $arr1,
+  @"user.email",
+  External.MyExtcall()
+]
+```
+
+### JSON objects
+
+Objects are created with braces:
+```FraudProtectionLanguage
+LET $obj1 = { isObject: true }
+LET $obj2 = {
+  numberField: 7,
+  fieldIs: "string",
+  internalObj: $obj1,
+  inline: {
+    innerInnerField: "hello"
+  }
+}
+```
