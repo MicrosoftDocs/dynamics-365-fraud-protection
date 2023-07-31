@@ -43,9 +43,9 @@ The guide also covers additional articles. Here are some examples:
     - [ContainsKey](fpl-lang-ref.md#containskey)
     - [Lookup](fpl-lang-ref.md#lookup)
 
-- [Using external calls, external assessments and velocities](fpl-lang-ref.md#using-external-calls-and-velocities)
+- [Using external calls, external assessments and velocities](#external)
 - [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes)
-- [JSON Arrays and Objects](fpl-lang-ref.md#JSON-Arrays-and-Objects)
+- [JSON Arrays and Objects](#arrays-objects)
 
 ## Statements
 
@@ -294,12 +294,12 @@ You can also specify your own default value as the fifth parameter. For more inf
 
 The **Lookup** operator always returns a *String* value. To convert this value to an *Int*, *Double*, or *DateTime* value, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
-## Using external calls, external assessments and velocities
+## <a name='external'></a> Using external calls, external assessments and velocities
 
 You can reference external calls and velocities by using the corresponding keyword. 
 
 - To reference an external call in the language, type **External**, followed by the external call that you want to reference. For more information, see [Use an external call in rules](external-calls.md#use-an-external-call-in-rules).
-- To reference an external call in the language, type **Assessments**, followed by the external assessment that you want to reference. For more information, see [Use an external assessments in rules](https://learn.microsoft.com/en-us/dynamics365/fraud-protection/external-assessments)
+- To reference an external call in the language, type **Assessments**, followed by the external assessment that you want to reference. For more information, see [Use an external assessments in rules](external-assessments.md)
 - To reference a velocity in the language, type **Velocity**, followed by the individual velocity that you want to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
 
 ## Type inference of attributes
@@ -316,7 +316,7 @@ To specify the type of a non-string variable, use a [type casting operator](fpl-
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
 
-## JSON Arrays and Objects
+## <a name='arrays-objects'></a> JSON Arrays and Objects
 FQL has support for the construction of complex structured objects as local variables, which may be passed through to the external call or external assessment in JSON form. As with all other locals in FQL, arrays and objects are immutable once created.
 
 ### JSON arrays
