@@ -62,6 +62,7 @@ The following table shows which Fraud Protection SKU each assessment maps to:
 | [Loss prevention](loss-prevention-overview.md) | Loss prevention |
 | [Card payment](assessment-create-new.md#card-payment-template) | Purchase protection |
 | [Device fingerprinting](assessment-create-new.md#device-fingerprinting-template) | Account protection |
+| [Loyalty program](assessment-create-new.md#loyalty-program-template) | Loss prevention |
 | [Money transfer](assessment-create-new.md#money-transfer-template) | Purchase protection |
 | [Software piracy](assessment-create-new.md#software-piracy-template) | Loss prevention |
 | [Custom](assessment-create-new.md#custom-template) | Account protection |

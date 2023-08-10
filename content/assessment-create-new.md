@@ -34,6 +34,7 @@ The **Assessment wizard** currently supports the following templates:
 
 - [Card payment](assessment-create-new.md#card-payment-template)
 - [Device fingerprinting](assessment-create-new.md#device-fingerprinting-template)
+- [Loyalty program](assessment-create-new.md#loyalty-program-template)
 - [Money transfer](assessment-create-new.md#money-transfer-template)
 - [Software piracy](assessment-create-new.md#software-piracy-template)
 - [Custom](assessment-create-new.md#custom-template)
@@ -63,6 +64,9 @@ See [Set up device fingerprinting](device-fingerprinting.md) for more details on
 - [Web](device-fingerprinting.md#device-fingerprinting-attribute-list-for-web)
 - [iOS](device-fingerprinting.md#device-fingerprinting-attribute-list-for-ios)
 - [Android](device-fingerprinting.md#device-fingerprinting-attribute-list-for-android)
+
+### Loyalty program template
+The **Loyalty program template** allows you to assess the fraud risk of activity within loyalty programs. This template is recommended for scenarios involving rewards redemption and loyalty program enrollment.
 
 ### Money transfer template
 
@@ -156,6 +160,12 @@ In this step of the **Assessment wizard**, you're shown those observation and la
 <td>N/A</td>
 </tr>
 <tr>
+<tr>
+<td>Loyalty program</td>
+<td>Assessment status,<br>Label</td>
+<td>Assessment status,<br>Label</td>
+</tr>
+<tr>
 <td>Money transfer</td>
 <td>Assessment status,<br>Label</td>
 <td>Assessment status,<br>Label</td>
@@ -218,6 +228,7 @@ The available features  and their default settings vary based on the fraud asses
 |----------|-----------------|--------|
 | Card payment | Enabled | Enabled |
 | Device fingerprinting | N/A | N/A |
+| Loyalty program | Enabled | Enabled |
 | Money transfer | Enabled | Enabled |
 | Software piracy | Disabled | Disabled |
 | Custom | Disabled | Custom |
