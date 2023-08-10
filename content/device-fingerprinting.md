@@ -184,7 +184,6 @@ The following tables show the device fingerprinting attribute categories that we
 |JavaScript Collected Info|Is Flash Detected|Boolean value indicating whether Flash is detected.|
 |JavaScript Collected Info|Is JavaScript Enabled|Boolean value indicating whether JavaScript is enabled. |
 |JavaScript Collected Info|Is Opera|Boolean value indicating whether window.opera is defined.|
-|JavaScript Collected Info|Local Storage ID|Device ID from HTML5 local storage.|
 |JavaScript Collected Info|Logical Process Count|Logical processor count.|
 |JavaScript Collected Info|Mime Type Hash and Count|Browser mime type hash and count.|
 |JavaScript Collected Info|On Page Time|Time spent on the web page.|
