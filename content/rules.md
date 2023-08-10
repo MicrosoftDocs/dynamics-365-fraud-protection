@@ -341,6 +341,7 @@ Where applicable, these default rules show up as active under **Published Rules*
 |----------|---------------|-------------------|
 | Card payment | Supported | Supported |
 | Device fingerprinting | Supported | N/A |
+| Loyalty program | Supported | Supported |
 | Money transfer | Supported | Supported |
 | Software piracy | Supported | Supported |
 | Custom | N/A | Supported |
