@@ -117,8 +117,8 @@ To implement device fingerprinting, follow these steps.
     window.dfp.doFpt(this.document);
     ```
 
-3. When you submit transactions in the Fraud Protection API, set a session ID in the **deviceContextId** field.
-4. Set the **device.ipAddress** field to the customer IP address that your website receives when a customer uses your site.
+3. When you submit transactions in the Fraud Protection API, set a session ID in the **deviceContextId** field. For Assessments, set a session ID in the **deviceFingerprinting.id** field.
+4. Set the **device.ipAddress** field to the customer IP address that your website receives when a customer uses your site. For Assessments, set the customer IP address in the **deviceFingerprinting.ipAddress** field. This field is optional and doesn't need to be set if you don't have it.
 
 ## Enable fingerprinting on a mobile app
 
