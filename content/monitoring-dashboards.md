@@ -22,7 +22,7 @@ The time-series metrics can be viewed in different timescales:
 - **Last 8 days**: shows transactions or status events based on their receive time per hour for the last 8 days.
 
 ## Transaction monitor
-On a selected timescale: 
+The monitor shows volume and distribution metrics of assessment events such as Account Creation, Account Login, Purchase, and other assessment requests. On a selected timescale: 
 ### Key performance indicators
 - **Transaction volume** – The transaction volume by count assessed by Dynamics 365 Fraud Protection.
 - **Rule approved rate** – The percentage of assessed transactions by count that was approved 
@@ -38,7 +38,7 @@ On a selected timescale:
 - **Bot score distribution** - The distribution of pre-defined bot score buckets. it is only available for Account Creation, Account Login and Device Fingerprinting 
 
 ## Observation events monitor
-These metrics become available once the specific observation events are applied on a selected timescale: 
+The monitor shows volume and distribution metrics of observation events such as status, bank event, chargeback and label by received date. On a selected timescale:
 
 ### Observation event volume
 - **Status volume** – The status event volume received. Status includes purchase status, account create status, account login status, and assessment status. 
@@ -47,16 +47,16 @@ These metrics become available once the specific observation events are applied 
 - **Label volume** – The label event volume received.
 
 ### Time series charts
-•	Status events by received date:
-o	Volume chart – the status event volume received shown in time series.
-o	Distribution chart – The status distribution of status events received shown in time series.
-•	Bank events by received date:
-o	Volume chart - The bank event volume received shown in a time series.
-o	Distribution chart - The status distribution of bank events received shown in time series.
-•	Chargeback events by received date:
-o	Volume chart - The chargeback event volume received shown in a time series.
-o	Distribution chart - The status distribution of chargeback events received shown in time series.
-•	Label events by received date:
-o	Volume chart - The label event volume received shown in a time series.
-o	Distribution chart - The status distribution of label events received shown in time series.
+- **Status events** by received date:
+  - **Volume chart** – the status event volume received shown in time series.
+  - **Distribution chart** – The status distribution of status events received shown in time series.
+- **Bank events** by received date:
+  - **Volume chart** - The bank event volume received shown in time series.
+  - **Distribution chart** - The status distribution of bank events received shown in time series.
+- **Chargeback** by received date:
+  - **Volume chart** - The chargeback event volume received shown in time series.
+  - **Distribution chart** - The status distribution of chargeback events received shown in time series.
+- **Label** by received date:
+  - **Volume chart** - The label event volume received shown in time series.
+  - **Distribution chart** - The status distribution of label events received shown in time series.
 
