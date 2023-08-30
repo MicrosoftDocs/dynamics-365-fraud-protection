@@ -70,7 +70,7 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td rowspan="2">Account creation</td>
-<td>Scorecard</td>
+<td>Monitoring</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -78,9 +78,9 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
 </tr>
 <tr>
 <td>Rules</td>
@@ -97,7 +97,7 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td rowspan="2">Account login</td>
-<td>Scorecard</td>
+<td>Monitoring</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -105,9 +105,9 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
 </tr>
 <tr>
 <td>Rules</td>
@@ -123,21 +123,9 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 </tr>
 <tr>
-<td rowspan="5">Account protection reports</td>
-<td>Summary</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>No access</td>
-<td>Read only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
 <tr>
-<td>Score and reason code</td>
+<td rowspan="3">Purchase</td>
+<td>Monitoring</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -145,62 +133,9 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 <td>Read only</td>
 <td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Status and label</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
-<td>Read only</td>
-<td>No access</td>
-<td>Read only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Device high level</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>No access</td>
-<td>Read only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>IP and Device ID</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>No access</td>
-<td>Read only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td rowspan="6">Purchase</td>
-<td>Summary</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>No access</td>
-<td>Read only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
 </tr>
 <tr>
 <td>Rules</td>
@@ -212,45 +147,6 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>No access</td>
 <td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Rules performance</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>No access</td>
-<td>Read only</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Virtual fraud analyst</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read/Write</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read/Write</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-<td>No access</td>
-</tr>
-<tr>
-<td>Fraud analysis</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>No access</td>
-<td>Read only</td>
-<td>No access</td>
-<td>Read/Write</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
