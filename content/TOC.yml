@@ -263,8 +263,6 @@
     href: threat-analyst.md
   - name: Monitoring
     href: monitoring-dashboards.md
-  - name: Assessment reporting
-    href: assessment-reporting.md
 - name: Compliance, privacy, security
   items:
   - name: Compliance overview
