@@ -53,10 +53,10 @@ The monitor shows volume and distribution metrics of observation events such as 
 - **Bank events** by received date:
   - **Volume chart** - The bank event volume received shown in time series.
   - **Distribution chart** - The status distribution of bank events received shown in time series.
-- **Chargeback** by received date:
+- **Chargeback events** by received date:
   - **Volume chart** - The chargeback event volume received shown in time series.
   - **Distribution chart** - The status distribution of chargeback events received shown in time series.
-- **Label** by received date:
+- **Label events** by received date:
   - **Volume chart** - The label event volume received shown in time series.
   - **Distribution chart** - The status distribution of label events received shown in time series.
 
