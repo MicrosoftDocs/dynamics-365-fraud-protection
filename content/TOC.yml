@@ -261,6 +261,8 @@
     href: rule-analyst.md
   - name: Threat analyst reports
     href: threat-analyst.md
+  - name: Monitoring
+    href: monitoring-dashboards.md
   - name: Assessment reporting
     href: assessment-reporting.md
 - name: Compliance, privacy, security
