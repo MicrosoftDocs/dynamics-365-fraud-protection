@@ -104,7 +104,7 @@ The following table shows the specific read/write permissions that users will ha
     </thead>
     <tbody>
         <tr>
-            <td rowspan="3">Virtual fraud analyst</td>
+            <td rowspan="5">Virtual fraud analyst</td>
             <td>Summary</td>
             <td>Read only</td>
             <td>Read only</td>
