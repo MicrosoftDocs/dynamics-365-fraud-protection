@@ -189,6 +189,19 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 </tr>
 <tr>
+<td colspan="2">Assessments monitoring</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+</tr>
+<tr>
 <td colspan="2">Custom assessments</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
