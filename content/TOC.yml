@@ -249,7 +249,7 @@
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
 
-- name: Reporting
+- name: Reporting and monitoring
   items:
   - name: Virtual fraud analyst reporting
     href: virtual-fraud-analyst-reporting.md
