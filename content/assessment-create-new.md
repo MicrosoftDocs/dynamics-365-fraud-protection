@@ -90,7 +90,7 @@ In this step of the **Assessment wizard**, you can further customize your new AP
 
 Each data field is classified into one of two categories:
 - [Standard](assessment-create-new.md#standard-data-fields)
-- [Custom](assessment-create-new.md#custom-data-fields).
+- [Custom](assessment-create-new.md#custom-data-fields)
 
 ### Standard data fields
 
@@ -140,48 +140,14 @@ Fraud Protection supports the following observation and label events:
 
 In this step of the **Assessment wizard**, you're shown those observation and label events related to the fraud assessment template you previoulsy selected along with any of the recommended ones selected by default. The following table is a summary of the related and recommended observation and label events available in this step of the wizard, broken down by assessment template:
 
-<table>
-<thead>
-<tr>
-<th>Assessment template</th>
-<th>Related events</th>
-<th>Recommended events</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Card payment</td>
-<td>Assessment status,<br>Label</td>
-<td>Assessment status,<br>Label</td>
-</tr>
-<tr>
-<td>Device fingerprinting</td>
-<td>Assessment status,<br>Label</td>
-<td>N/A</td>
-</tr>
-<tr>
-<tr>
-<td>Loyalty program</td>
-<td>Assessment status,<br>Label</td>
-<td>Assessment status,<br>Label</td>
-</tr>
-<tr>
-<td>Money transfer</td>
-<td>Assessment status,<br>Label</td>
-<td>Assessment status,<br>Label</td>
-</tr>
-<tr>
-<td>Software piracy</td>
-<td>Assessment status,<br>Label</td>
-<td>Assessment status,<br>Label</td>
-</tr>
-<tr>
-<td>Custom</td>
-<td>Assessment status,<br>Bank,<br>Chargeback,<br>Label</td>
-<td>N/A</td>
-</tr>  
-</tbody>
-</table>
+| Assessment template | Related events | Recommended events |
+|----------|-----------------|--------|
+| Card payment | Assessment status,<br>Label | Assessment status,<br>Label |
+| Device fingerprinting | Assessment status,<br>Label | N/A |
+| Loyalty program | Assessment status,<br>Label | Assessment status,<br>Label |
+| Money transfer | Assessment status,<br>Label | Assessment status,<br>Label |
+| Software piracy | Assessment status,<br>Label | Assessment status,<br>Label |
+| Custom | Assessment status,<br>Bank,<br>Chargeback,<br>Label | N/A |
 
 Additional observation events can also be added to an assessment after the assessment has been created.  The list of available observation events exposed through the [Assessment configuration](assessment-configure-existing.md#assessment-configuration-overview) flow is a superset of those listed in the table above.
 
@@ -231,7 +197,7 @@ The available features  and their default settings vary based on the fraud asses
 | Loyalty program | Enabled | Enabled |
 | Money transfer | Enabled | Enabled |
 | Software piracy | Disabled | Disabled |
-| Custom | Disabled | Custom |
+| Custom | Disabled | Disabled |
 
 For **Search** to work at an assessment level, ensure you have it enabled at the tenant level.
 
