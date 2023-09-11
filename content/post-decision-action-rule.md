@@ -29,7 +29,7 @@ WHEN <condition>
 DO is a keyword unique to action rules. You can't use this keyword in Decision rules.
 Only Action functions can be used following the DO keyword. For more information on available Action functions, please check [Language reference guide](fpl-lang-ref.md#model-functions)
 
-### Examnple
+### Example
 
 ```FraudProtectionLanguage
 DO SetResponse(test=true) 
