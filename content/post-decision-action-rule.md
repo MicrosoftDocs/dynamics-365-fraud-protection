@@ -12,7 +12,7 @@ title: Post-decision Rules
 
 # Post-decision Action Rules
 
-In addition to Decision rules [Manage rules](rules.md), Fraud Protection also allows you to configure Post-decision action rules for an assessment. Post-decision action rules are evaluated after Decision rules, but before the API response has been returned. These rules can be used to perform actions which you would like to take **each time an assessment is evaluated**. You can use the decision of the assessment call in an action rule also. For example, if you'd always like to send additional information as part of your API response anytime a particular decision is taken, or if you'd always like to send or receive data from an External Call every time assessment is evaluated, you can use an action rule. 
+In addition to Decision rules [Manage rules](rules.md), Fraud Protection also allows you to configure Post-decision action rules for an assessment. Post-decision action rules are evaluated after Decision rules, but before the API response has been returned. These rules can be used to perform actions that you want to take **each time an assessment is evaluated**. You can use the decision of the assessment call in an action rule also. For example, if you always send additional information as part of your API response anytime a particular decision is taken, or if you always send or receive data from an External Call every time assessment is evaluated. 
 
 > [!NOTE]
 > Action rules are available for Assessments only.
@@ -27,15 +27,15 @@ WHEN <condition>
 ```
 
 DO is a keyword unique to action rules. You can't use this keyword in Decision rules.
-Only Action functions can be used following the DO keyword. For more information on available Action functions, please check [Language reference guide](fpl-lang-ref.md#model-functions)
+Only Action functions can be used following the DO keyword. For more information on available Action functions, see [Language reference guide](fpl-lang-ref.md#model-functions)
 
-### Examnple
+### Example
 
 ```FraudProtectionLanguage
 DO SetResponse(test=true) 
 WHEN Response.Decision() == "approve"
 ```
-If the assessment call decision is Approve, the API response will show following additional fields:
+If the assessment call decision is Approve, the API response will show following fields:
 
 ```FraudProtectionLanguage
 "customProperties": {
@@ -81,7 +81,7 @@ You can also select the tile for each rule to expand it and show additional info
 
 ## Rule evaluation behavior 
 
-In a multi-hierarchy environment, rules will be executed in the following order:
+In a multi-hierarchy environment, rules are executed in the following order:
 1.	Evaluate all active parent Decision rules.
 2.	Evaluate all active child Decision rules.
 3.	Evaluate all active parent Post-decision Action rules.
