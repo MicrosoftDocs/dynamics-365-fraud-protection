@@ -26,7 +26,7 @@ Learn more about the following features used in purchase protection:
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
 - [Use the virtual fraud analyst](virtual-fraud-analyst.md)
-- [Learn from the scorecard](scorecard.md)
+- [Learn from the monitoring dashboards](monitoring-dashboards.md)
 - [Boost bank acceptance rates](transaction-acceptance-booster.md)
 - [Support your customers](risk-support.md)
 - [Monitor API calls](monitoring.md)
