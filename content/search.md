@@ -42,6 +42,91 @@ To find transactions, you must filter by one or more attributes of the transacti
 
 You can add up to five filters, separated by a single **And** or **Or** condition.
 
+ ### Operators
+- Use the operator Equals to find records that have the same value as the one entered for the attribute selected.
+Example: to search for payloads where the billing address city is listed as "Seattle”.
+
+|Attribute             |Operator |Value  |
+|----------------------|---------|-------|
+|(City) Billing address|Equals   |Seattle|
+----
+
+- Use the operator Does not equal to find records that have a different value as the one entered for the attribute selected.
+Example: to search for payloads where the billing address city is not listed as "Seattle".
+
+|Attribute             |Operator      |Value  |
+|----------------------|--------------|-------|
+|(City) Billing address|Does not equal|Seattle|
+
+- Use the operator Contains to find records that include the value entered for the attributes selected.
+Example: to search for payloads with the product category that contains the word "Luxury".
+
+|Attribute                |Operator|Value |
+|-------------------------|--------|------|
+|Merchant product category|Contains|Luxury|
+
+- Use the operator Does not contain to find records that do not include the value entered for the attributes selected.
+Example: to search for payloads with the product category that doesn't contain the word "Luxury”.
+
+|Attribute                |Operator        |Value |
+|-------------------------|----------------|------|
+|Merchant product category|Does not contain|Luxury|
+
+- Use the operator Starts with to find records that begin with the value entered.
+Example: to search for payloads with a bank name that starts with "credit".
+
+|Attribute|Operator   |Value |
+|---------|-----------|------|
+|Bank name|Starts with|Credit|
+
+- Use the operator Ends with to find records that finish with your search value.
+Example: to search for payloads with a bank name that ends with "Union".
+
+|Attribute|Operator   |Value|
+|---------|-----------|-----|
+|Bank name|Finish with|Union|
+
+- Use the operator Is empty to find records that have an empty value.
+Example: to search for payloads with a zip code that is empty.
+
+|Attribute|Operator|
+|---------|--------|
+|Bank name|Is empty|
+
+- Use the operator Is not empty to search for records without an empty value.
+Example: to search for payloads with a zip code that is not empty.
+
+|Attribute|Operator    |
+|---------|------------|
+|Bank name|Is not empty|
+
+- Use the operator Is null to records that are not required on payloads and with a not known value: 1) not on the payload or 2) with a null value.
+Example: to search for payloads where the user's last name value is not required on the payload and not known.
+
+|Attribute|Operator|
+|---------|--------|
+|Bank name|Is null |
+
+- Use the operator Is not null to find records with any value.
+Example: to search for payloads where the user's last name value is known.
+
+|Attribute|Operator   |
+|---------|-----------|
+|Bank name|Is not null|
+
+- Use the operator Before to search for records with dates prior to the date entered.
+Example: to search for payloads with a shipping date before 9/18/2023.
+
+|Attribute    |Operator|Value    |
+|-------------|--------|---------|
+|Shipping date|Before  |9/18/2023|
+
+- Use the operator After to search for records with date attributes that are after your date entered.
+Example: to search for payloads with a shipping date after 9/18/2023.
+
+|Attribute    |Operator|Value    |
+|-------------|--------|---------|
+|Shipping date|After   |9/18/2023|
 
 ## View search results
 
