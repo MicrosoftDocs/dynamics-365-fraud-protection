@@ -42,6 +42,7 @@ To find transactions, you must filter by one or more attributes of the transacti
 
 You can add up to five filters, separated by a single **And** or **Or** condition.
 
+
 ### Operators
 
 - Use the operator Equals to find records that have the same value as the one entered for the attribute selected.
@@ -140,6 +141,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |Attribute    |Operator|Value    |
   |-------------|--------|---------|
   |Shipping date|After   |9/18/2023|
+
 
 ## View search results
 
