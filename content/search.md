@@ -45,7 +45,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
 
 ### Operators
 
-- Use the operator Equals to find records that have the same value as the one entered for the attribute selected.
+- Use the operator **Equals** to find records that have the same value as the one entered for the attribute selected.
 
   Example: Search for payloads where the billing address city is listed as "Seattle”.
 
@@ -54,7 +54,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |(City) Billing address|Equals   |Seattle|
 
 
-- Use the operator Does not equal to find records that have a different value as the one entered for the attribute selected.
+- Use the operator **Does not equal** to find records that have a different value as the one entered for the attribute selected.
 
   Example: Search for payloads where the billing address city is not listed as "Seattle".
 
@@ -62,7 +62,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |----------------------|--------------|-------|
   |(City) Billing address|Does not equal|Seattle|
 
-- Use the operator Contains to find records that include the value entered for the attributes selected.
+- Use the operator **Contains** to find records that include the value entered for the attributes selected.
 
   Example: Search for payloads with the product category that contains the word "Luxury".
 
@@ -70,7 +70,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |-------------------------|--------|------|
   |Merchant product category|Contains|Luxury|
 
-- Use the operator Does not contain to find records that don't include the value entered for the attributes selected.
+- Use the operator **Does not contain** to find records that don't include the value entered for the attributes selected.
 
   Example: Search for payloads with the product category that doesn't contain the word "Luxury”.
 
@@ -78,7 +78,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |-------------------------|----------------|------|
   |Merchant product category|Does not contain|Luxury|
 
-- Use the operator Starts with to find records that begin with the value entered.
+- Use the operator **Starts with** to find records that begin with the value entered.
 
   Example: Search for payloads with a bank name that starts with "credit".
 
@@ -86,7 +86,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |---------|-----------|------|
   |Bank name|Starts with|Credit|
 
-- Use the operator Ends with to find records that finish with your search value.
+- Use the operator **Ends with** to find records that finish with your search value.
 
   Example: Search for payloads with a bank name that ends with "Union".
 
@@ -94,7 +94,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |---------|-----------|-----|
   |Bank name|Finish with|Union|
 
-- Use the operator Is empty to find records that have an empty value.
+- Use the operator **Is empty** to find records that have an empty value.
 
   Example: Search for payloads with a zip code that is empty.
 
@@ -102,7 +102,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |---------|--------|
   |Bank name|Is empty|
 
-- Use the operator Is not empty to search for records without an empty value.
+- Use the operator **Is not empty** to search for records without an empty value.
 
   Example: Search for payloads with a zip code that isn't empty.
 
@@ -110,15 +110,15 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |---------|------------|
   |Bank name|Is not empty|
 
-- Use the operator Is null to records that aren't required on payloads and with an unknown value: 1) not on the payload or 2) with a null value.
+- Use the operator **Is null** to records that aren't required on payloads and with an unknown value: 1) not on the payload or 2) with a null value.
 
-  Example:Search for payloads where the user's last name value isn't required on the payload and unknown.
+  Example: Search for payloads where the user's last name value isn't required on the payload and unknown.
 
   |Attribute|Operator|
   |---------|--------|
   |Bank name|Is null |
 
-- Use the operator Is not null to find records with any value.
+- Use the operator **Is not null** to find records with any value.
 
   Example: Search for payloads where the user's last name value is known.
 
@@ -126,7 +126,7 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |---------|-----------|
   |Bank name|Is not null|
 
-- Use the operator Before to search for records with dates prior to the date entered.
+- Use the operator **Before** to search for records with dates prior to the date entered.
 
   Example: Search for payloads with a shipping date before 9/18/2023.
 
@@ -134,9 +134,9 @@ You can add up to five filters, separated by a single **And** or **Or** conditio
   |-------------|--------|---------|
   |Shipping date|Before  |9/18/2023|
 
-- Use the operator After to search for records with date attributes that are after your date entered.
+- Use the operator **After** to search for records with date attributes that are after your date entered.
 
-  Example:Search for payloads with a shipping date after 9/18/2023.
+  Example: Search for payloads with a shipping date after 9/18/2023.
 
   |Attribute    |Operator|Value    |
   |-------------|--------|---------|
@@ -167,7 +167,7 @@ Select **Export** to export your search results to a comma-separated values (CSV
 ## Review individual events
 
 ### Event details
-To drill down into a specific event, select the event ID for the event that you want to investigate. On the **Event details** page, all the information related to the specific event is displayed, including information from rule evaluation, AI scoring, and device fingerprinting. Other information is be displayed, such as information sent in the assessment API request, or other related events such as bank events, chargebacks, and status or label events.
+To drill down into a specific event, select the event ID for the event that you want to investigate. On the **Event details** page, all the information related to the specific event is displayed, including information from rule evaluation, AI scoring, and device fingerprinting. Other information is displayed, such as information sent in the assessment API request, or other related events such as bank events, chargebacks, and status or label events.
 
 On the **Velocities** tile at the bottom of the page, values for various velocities across several different timeframes are displayed. For example, the number of purchase attempts that came from a particular email address in the last seven days is shown. You can select a velocity value to open a new tab and display the corresponding events. The velocity values on the **Event details** page are shown in real time and may have changed since the original purchase event occurred. Definitions for the default velocities are shown on the **Velocity** page.
 
@@ -184,7 +184,7 @@ Select the **Link Analysis** tab to view other events that have attributes in co
 
 Select **Column options** to customize the fields shown in the results grid, or select **Export** to export the data into a CSV file.
 
-If want to further investigate a specific pattern, you can select **Open in search** page to open a new tab with the appropriate search filters pre-loaded. 
+To further investigate a specific pattern, select **Open in search** to open a new tab with the appropriate search filters pre-loaded. 
 
 ## Resources
 
