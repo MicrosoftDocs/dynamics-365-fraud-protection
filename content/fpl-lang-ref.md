@@ -298,9 +298,9 @@ The **Lookup** operator always returns a *String* value. To convert this value t
 
 You can reference external calls and velocities by using the corresponding keyword. 
 
-- To reference an external call in the language, type **External**, followed by the external call that you want to reference. For more information, see [Use an external call in rules](external-calls.md#use-an-external-call-in-rules).
-- To reference an external call in the language, type **Assessments**, followed by the external assessment that you want to reference. For more information, see [Use an external assessments in rules](external-assessments.md)
-- To reference a velocity in the language, type **Velocity**, followed by the individual velocity that you want to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
+- To reference an external call, type **External**, followed by the external call that you want to reference. For more information, see [Use an external call in rules](external-calls.md#use-an-external-call-in-rules).
+- To reference an external assessment, type **Assessments**, followed by the external assessment that you want to reference. For more information, see [Use an external assessment in rules](external-assessments.md).
+- To reference a velocity, type **Velocity**, followed by the velocity that you want to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
 
 ## Type inference of attributes
 
