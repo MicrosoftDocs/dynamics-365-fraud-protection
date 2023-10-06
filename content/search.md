@@ -43,7 +43,7 @@ To find transactions, you must filter by one or more attributes of the transacti
 You can add up to five filters, separated by a single **And** or **Or** condition.
 
 ### Operators
-The list of available Operators can change based on the data type of the selected attributes.
+The list of available Operators can change based on the data type of the selected attribute.
 
 - Use the operator **Equals** to find records that have the same value as the one entered for the attribute selected.
 
@@ -96,35 +96,35 @@ The list of available Operators can change based on the data type of the selecte
 
 - Use the operator **Is empty** to find records that have an empty value.
 
-  Example: Search for payloads with a bank name that is empty.
+  Example: Search for payloads with an email that is empty.
 
 |Attribute|Operator|
 |---------|---------|
-|Bank name|Is empty|
+|Email|Is empty|
 
 - Use the operator **Is not empty** to search for records without an empty value.
 
-  Example: Search for payloads with a bank name that isn't empty.
+  Example: Search for payloads with an email that isn't empty.
 
 |Attribute|Operator|
 |---------|---------|
-|Bank name|Is not empty|
+|Email|Is not empty|
 
 - Use the operator **Is null** to records that aren't required on payloads and with an unknown value: 1) not on the payload or 2) with a null value.
 
-  Example: Search for payloads where the user's last name value isn't required on the payload and unknown.
+  Example: Search for payloads where a user ID value isn't required on the payload and unknown.
 
 |Attribute|Operator|
 |---------|---------|
-|Bank name|Is null |
+|User ID|Is null |
 
 - Use the operator **Is not null** to find records with any value.
 
-  Example: Search for payloads where the user's last name value is known.
+  Example: Search for payloads where a user ID value is known.
 
 |Attribute|Operator|
 |---------|---------|
-|Bank name|Is not null|
+|User ID|Is not null|
 
 - Use the operator **Before** to search for records with dates prior to the date entered.
 
@@ -132,7 +132,7 @@ The list of available Operators can change based on the data type of the selecte
 
 |Attribute|Operator|Value|
 |---------|---------|---------|
-|Shipping date|Before  |9/18/2023|
+|Shipping date|Before|9/18/2023|
 
 - Use the operator **After** to search for records with date attributes that are after your date entered.
 
@@ -140,7 +140,7 @@ The list of available Operators can change based on the data type of the selecte
 
 |Attribute|Operator|Value|
 |---------|---------|---------|
-|Shipping date|After   |9/18/2023|
+|Shipping date|After|9/18/2023|
 
 ## View search results
 
