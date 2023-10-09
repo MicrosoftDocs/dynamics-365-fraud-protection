@@ -67,6 +67,6 @@ To revoke a user's access to a specific environment, use the environment switche
 To revoke a user's access to the current environment, select the user in the **Member list**, and then select **Revoke access**.
 
 > [!IMPORTANT]
-> When you revoke access for a user, the user is removed from the current environment. However, they might still have access to other environments in the hierarchy. If you want to remove the user from Fraud Protection, you must delete the user from your Axure AD tenant. In this way, you completely remove the user's access to your tenant, and to its associated applications or services.
+> When you revoke access for a user, the user is removed from the current environment. However, they might still have access to other environments in the hierarchy. If you want to remove the user from Fraud Protection, you must delete the user from your Azure AD tenant. In this way, you completely remove the user's access to your tenant, and to its associated applications or services.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
