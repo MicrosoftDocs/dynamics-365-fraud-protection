@@ -249,7 +249,7 @@
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
 
-- name: Reporting
+- name: Reporting and monitoring
   items:
   - name: Virtual fraud analyst reporting
     href: virtual-fraud-analyst-reporting.md
@@ -261,8 +261,8 @@
     href: rule-analyst.md
   - name: Threat analyst reports
     href: threat-analyst.md
-  - name: Assessment reporting
-    href: assessment-reporting.md
+  - name: Monitoring
+    href: monitoring-dashboards.md
 - name: Compliance, privacy, security
   items:
   - name: Compliance overview

@@ -70,7 +70,7 @@ At any time, you can change the name, API name, or sample payload for an assessm
 Currently, you can create up to three distinct assessments under custom assessments. If your business priorities or user scenarios have changed, and you no longer want to use an assessment that you've created, you can delete it.
 
 > [!NOTE]
-> If you delete an assessment, the rules and scorecard that are associated with it are also deleted and can't be restored. If you continue to make API calls that use the name of the deleted assessment, the API calls can't be resolved and will fail.
+> If you delete an assessment, the rules and monitoring data that are associated with it are also deleted and can't be restored. If you continue to make API calls that use the name of the deleted assessment, the API calls can't be resolved and will fail.
 
 1. In the [Fraud Protection](https://dfp.microsoft.com/) portal, in the left navigation, select **Custom assessments**.
 
@@ -123,7 +123,7 @@ To implement custom assessments with device fingerprinting, follow the steps bel
 - [Account protection overview](ap-overview.md)
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
-- [Learn from the account protection scorecard](ap-scorecard.md)
+- [Account protection monitoring dashboards](monitoring-dashboards.md)
 - [Account protection schemas](ap-schema.md)
 
 

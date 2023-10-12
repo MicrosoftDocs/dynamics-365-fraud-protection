@@ -15,7 +15,7 @@ Microsoft Dynamics 365 Fraud Protection includes account protection capabilities
 
 -	APIs for real-time risk assessment
 -	A rule and list experience that you can use to optimize your risk strategy according to your business needs
--	A scorecard that you can use to monitor fraud protection effectiveness and trends in your ecosystem
+-	Monitoring dashboards that you can use to monitor fraud protection effectiveness and trends in your ecosystem
 
 Account protection covers three types of account lifecycle events: *account creation*, *account login*, and *custom assessment*. For each event type, there are multiple lines of defense:
 
@@ -384,7 +384,7 @@ The value of **signUpId** must match the value in the payload. Each must have a 
 
 ### Label
 
-Use the **Label** event to send additional information to Fraud Protection, besides the data that informs the virtual fraud analyst and scorecard features. The **Labe**l API provides the additional information for model training that is based on an additional set of fraud signals. It also sends information about transactions, account or payment instrument details, and reversals.
+Use the **Label** event to send additional information to Fraud Protection, besides the data that informs the virtual fraud analyst and monitoring features. The **Labe**l API provides the additional information for model training that is based on an additional set of fraud signals. It also sends information about transactions, account or payment instrument details, and reversals.
 
 **URI**: \<API Endpoint>/v1.0/label/account/create/<userId\>
 

@@ -70,8 +70,5 @@ Fraud Protection algorithms run in real time to optimize and maximize your accep
 
 See the [API documentation](integrate-real-time-api.md) and the [data upload documentation](data-upload.md) for more information on reporting these events.
 
-### Reports
-To view a report of your Program MID activity, select **Scorecard** and then select the **MID classification** filter.
-
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

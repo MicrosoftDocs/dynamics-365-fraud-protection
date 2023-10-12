@@ -104,7 +104,7 @@ The following table shows the specific read/write permissions that users will ha
     </thead>
     <tbody>
         <tr>
-            <td rowspan="3">Purchase</td>
+            <td rowspan="5">Virtual fraud analyst</td>
             <td>Summary</td>
             <td>Read only</td>
             <td>Read only</td>
@@ -116,9 +116,31 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
         </tr>
         <tr>
-          <td>Virtual fraud analyst</td>
-          <td>Read/Write</td>
-          <td>Read/Write</td>
+          <td>Rule analyst</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+        </tr>
+        <tr>
+          <td>Threat analyst</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+        </tr>
+        <tr>
+          <td>Score analyst</td>
+          <td>Read only</td>
+          <td>Read only</td>
           <td>No access</td>
           <td>No access</td>
           <td>No access</td>
@@ -127,11 +149,11 @@ The following table shows the specific read/write permissions that users will ha
           <td>No access</td>
         </tr>
         <tr>
-          <td>Fraud analysis</td>
+          <td>Monitoring</td>
           <td>Read only</td>
           <td>Read only</td>
-          <td>No access</td>
-          <td>No access</td>
+          <td>Read only</td>
+          <td>Read only</td>
           <td>No access</td>
           <td>No access</td>
           <td>No access</td>
