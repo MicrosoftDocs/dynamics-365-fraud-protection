@@ -2,7 +2,7 @@
 author: zhangleoMS
 description: This article provides information about monitoring dashboards in Dynamics 365 Fraud Protection.
 ms.author: zhangleo
-ms.date: 09/22/2023
+ms.date: 10/12/2023
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -17,9 +17,9 @@ The metrics in these monitors are measured by count of received transactions or 
 In a multi-hierarchy environment, where a parent environment has child environments, the near real-time monitors aggregate transactions and observation events for both the parent environment and all its children environments. 
 
 The time-series metrics can be viewed in different timescales: 
-- **Last 1 hour** - shows transactions or observation events based on their receive time per minute for the last 1 hour.
-- **Last 48 hours** - shows transactions or status events based on their receive time per 15 minutes for the last 48 hours.
-- **Last 8 days**: shows transactions or status events based on their receive time per hour for the last 8 days.
+- **Last 1 hour** - Shows transactions or observation events based on their receive time per minute for the last 1 hour.
+- **Last 48 hours** - Shows transactions or status events based on their receive time per 15 minutes for the last 48 hours.
+- **Last 8 days** - Shows transactions or status events based on their receive time per hour for the last 8 days.
 
 ## Transaction monitor
 The monitor shows volume and distribution metrics of assessment events such as Account Creation, Account Login, Purchase, and other assessment requests. On a selected timescale: 
@@ -48,7 +48,7 @@ The monitor shows volume and distribution metrics of observation events such as 
 
 ### Time series charts
 - **Status events** by received date:
-  - **Volume chart** – the status event volume received shown in time series.
+  - **Volume chart** – The status event volume received shown in time series.
   - **Distribution chart** – The status distribution of status events received shown in time series.
 - **Bank events** by received date:
   - **Volume chart** - The bank event volume received shown in time series.
