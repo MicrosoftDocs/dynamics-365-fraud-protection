@@ -153,7 +153,7 @@ Fraud Protection supports all standard C# [comparison](/dotnet/csharp/language-r
 | \<=      | This operator checks whether the first value is less than or equal to the second value. | @"riskScore" \<= 500 |
 
 ## BIN Lookup functions
-BIN Lookup functions provide payment card account information (i.e., card network, card type, card's country code) based on bank identification number (BIN). This BIN Lookup functions are integrated with an aggregated third-party BIN lookup solutions curated by Microsfot for its accuracy, freshness and latency of the data.
+BIN Lookup functions provide payment card account information (e.g., card network, card type, card country code) based on bank identification number (BIN). These BIN Lookup functions are sourced by leading third-party BIN soltuion providers and curated by Microsoft.
 
 | Operator                       | Description | Example |
 |--------------------------------|-------------|---------|
