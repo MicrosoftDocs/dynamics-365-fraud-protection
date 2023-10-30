@@ -28,6 +28,7 @@ This language reference guide includes the complete list of operators, functions
 - [Logical operators](fpl-lang-ref.md#logical-operators)
 - [List functions](fpl-lang-ref.md#list-functions)
 - [Comparison operators](fpl-lang-ref.md#comparison-operators)
+- [BINLookup functions](fpl-lang-ref.md#bin-Lookup-functions)
 - [Geo functions](fpl-lang-ref.md#geo-functions)
 - [String functions](fpl-lang-ref.md#string-functions)
 - [Math functions](fpl-lang-ref.md#math-functions)
@@ -150,6 +151,17 @@ Fraud Protection supports all standard C# [comparison](/dotnet/csharp/language-r
 | \<       | This operator checks whether the first value is less than the second value. | @"riskScore" \< 500 |
 | \>=      | This operator checks whether the first value is greater than or equal to the second value. | @"riskScore" \>= 500 |
 | \<=      | This operator checks whether the first value is less than or equal to the second value. | @"riskScore" \<= 500 |
+
+## BIN Lookup functions
+BIN Lookup functions provide payment card account information (i.e., card network, card type, card's country code) based on bank identification number (BIN). This BIN Lookup functions are integrated with an aggregated third-party BIN lookup solutions curated by Microsfot for its accuracy, freshness and latency of the data.
+
+| Operator                       | Description | Example |
+|--------------------------------|-------------|---------|
+|BIN.Lookup(String *BIN*).cardNetwork|<p> This function looks up BIN and returns card's network (e.g., Visa, Mastercard). </p><p> For example, |BIN.Lookup(@"card.bin").cardNetwork|
+|BIN.Lookup(String *BIN*).cardType|<p> This operator looks up BIN and returns card type (e.g., Debit, Credit).|BIN.Lookup(@"card.bin").cardType|
+|BIN.Lookup(String *BIN*).issuer|<p> This operator looks up BIN and returns issuing organization.|BIN.Lookup(@"card.bin").issuer|
+|BIN.Lookup(String *BIN*).countryCode|<p> This operator looks up BIN and returns ISO 3-letter country code of the card.|BIN.Lookup(@"card.bin").countryCode|
+|BIN.Lookup(String *BIN*).error|<p> This operator looks up BIN and returns an error message if the BIN could not be found.|BIN.Lookup(@"card.bin").error|
 
 ## Geo functions
 
