@@ -141,7 +141,7 @@ For information about how to upload these lists, see [Manage lists](lists.md). F
 
 ## Comparison operators
 
-Fraud Protection supports all standard C# [comparison](/dotnet/csharp/language-reference/operators/comparison-operators) and [equality](/dotnet/csharp/language-reference/operators/equality-operators) operations. This table includes some examples of operators that you might find useful. If you apply these operators to strings, lexicographic comparisons occurs.
+Fraud Protection supports all standard C# [comparison](/dotnet/csharp/language-reference/operators/comparison-operators) and [equality](/dotnet/csharp/language-reference/operators/equality-operators) operations. This table includes some examples of operators that you might find useful. If you apply these operators to strings, lexicographic comparisons occur.
 
 | Operator | Description | Example |
 |----------|-------------|---------|
@@ -160,7 +160,7 @@ BIN Lookup functions provide payment card account information (e.g., card networ
 |BIN.Lookup(String *BIN*).cardNetwork|<p> This function looks up BIN and returns card's network (e.g., Visa, Mastercard).|BIN.Lookup(@"card.bin").cardNetwork|
 |BIN.Lookup(String *BIN*).cardType|<p> This operator looks up BIN and returns card type (e.g., Debit, Credit).|BIN.Lookup(@"card.bin").cardType|
 |BIN.Lookup(String *BIN*).issuer|<p> This operator looks up BIN and returns issuing organization.|BIN.Lookup(@"card.bin").issuer|
-|BIN.Lookup(String *BIN*).countryCode|<p> This operator looks up BIN and returns ISO 2-letter country code of the card.|BIN.Lookup(@"card.bin").countryCode|
+|BIN.Lookup(String *BIN*).countryCode|<p> This operator looks up BIN and returns ISO two-letter country code of the card.|BIN.Lookup(@"card.bin").countryCode|
 |BIN.Lookup(String *BIN*).error|<p> This operator looks up BIN and returns an error message if the BIN could not be found.|BIN.Lookup(@"card.bin").error|
 
 ## Geo functions
