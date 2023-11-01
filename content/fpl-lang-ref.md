@@ -153,12 +153,12 @@ Fraud Protection supports all standard C# [comparison](/dotnet/csharp/language-r
 | \<=      | This operator checks whether the first value is less than or equal to the second value. | @"riskScore" \<= 500 |
 
 ## BIN Lookup functions
-BIN Lookup functions provide payment card account information (e.g., card network, card type, card country code) based on bank identification number (BIN). Data for BIN Lookup is sourced from leading third-party BIN data providers and then curated by Microsoft Fraud Protection.
+BIN Lookup functions provide payment card account information (for example, card network, card type, card country code) based on bank identification number (BIN). Data for BIN Lookup is sourced from leading third-party BIN data providers and then curated by Microsoft Fraud Protection.
 
 | Operator                       | Description | Example |
 |--------------------------------|-------------|---------|
-|BIN.Lookup(String *BIN*).cardNetwork|<p> This function looks up BIN and returns card's network (e.g., Visa, Mastercard).|BIN.Lookup(@"card.bin").cardNetwork|
-|BIN.Lookup(String *BIN*).cardType|<p> This operator looks up BIN and returns card type (e.g., Debit, Credit).|BIN.Lookup(@"card.bin").cardType|
+|BIN.Lookup(String *BIN*).cardNetwork|<p> This function looks up BIN and returns card's network (for example, Visa, Mastercard).|BIN.Lookup(@"card.bin").cardNetwork|
+|BIN.Lookup(String *BIN*).cardType|<p> This operator looks up BIN and returns card type (for example, Debit, Credit).|BIN.Lookup(@"card.bin").cardType|
 |BIN.Lookup(String *BIN*).issuer|<p> This operator looks up BIN and returns issuing organization.|BIN.Lookup(@"card.bin").issuer|
 |BIN.Lookup(String *BIN*).countryCode|<p> This operator looks up BIN and returns ISO two-letter country code of the card.|BIN.Lookup(@"card.bin").countryCode|
 |BIN.Lookup(String *BIN*).error|<p> This operator looks up BIN and returns an error message if the BIN could not be found.|BIN.Lookup(@"card.bin").error|
