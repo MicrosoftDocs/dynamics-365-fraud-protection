@@ -55,8 +55,10 @@ Follow these steps to create a queue.
 1. Select your preference for the review sequence. If you select **Unrestricted queue**, you can review any case in the queue in any order. If you select **Restricted queue**, you must review cases in a predefined order.
 1. Select the default sorting and order to define the order in which cases appear and are presented to review agents. In a restricted queue, your selections define the order in which agents can review the cases.
 1. Select the time-out duration and default action to define the maximum amount of time that a case can be in the queue without being reviewed and the default action that is taken when that time is reached.
+1. You can also assign this queue to a specific set of AAD users and groups by adding them to the queue. When users go to their **Case management \> Queues** page from the left nav, they will see all the queues assigned to them. The “Queues assigned to me” filter will be selected by default. The filter can help users to focus and work on the queues that are assigned to them. 
+The users can always view all the available queues by applying the “All queues” filter in the Queues page.  
 
-You can edit or delete any queue that you've created. To edit the name of a queue or delete a queue, remove the routing rules that have a dependency on the queue. For more information about routing rules, see the next section.
+You can edit or delete any queue that you've created. You can also add/remove the assigned users and groups from the queue.To edit the name of a queue or delete a queue, remove the routing rules that have a dependency on the queue. For more information about routing rules, see the next section.
 
 All your environments have a system-created queue that is named **General**. Cases that don't qualify to be routed to a specific queue are routed to the **General** queue. The **General** queue has the following settings:
 
