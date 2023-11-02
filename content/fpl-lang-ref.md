@@ -186,7 +186,8 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 | EndsWith(String *suffix*)   | <p>This operator checks whether a string ends with a specified suffix.</p><p>EndsWith(String *suffix*)</p> | @"user.email".EndsWith("@contoso.com") |
 | Contains(String *suffix*)   | <p>This operator checks whether a string contains another string.</p><p>Contains(String *substring*)</p> | @"productList`.productName".Contains("Xbox") |
 | ContainsOnly(String *suffix*) | <p> This operator checks whether a string contains only the charsets provided.</p><p>ContainsOnly(Charset1 Charset2 ...etc.)</p>|@"zipcode".ContainsOnly(Charset.Numeric)|
-|-----------------------------|-------------|---------|
+| ContainsAll(String *suffix*) |<p> This operator checks whether a string contains all the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@"zipcode".ContainsOnly(Charset.Numeric)|
+| ContainsAny(String *suffix*)|<p> This operator checks whether a string contains any of the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|---------|
 | Length  | <p>This operator returns the number of characters in the string.  | @"user.username".Length |
 | Convert.ToDateTime(@"user.creationDate").ToString("yyyy-MM-dd HH:mm:ss")  | <p>This operator converts the string to datetime and converts datetime to a string using the given format.| Convert.ToDateTime(@"user.creationDate").ToString("yyyy-MM-dd") |
 
