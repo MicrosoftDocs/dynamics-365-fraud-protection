@@ -15,18 +15,18 @@ This document guides you through setting up a purchased version of Microsoft Dyn
 
 ## Prerequisites
 
-To set up Fraud Protection and control user access to your data, you must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, you can sign up for one.
+To set up Fraud Protection and control user access to your data, you must have a Microsoft Entra tenant. If you don't already have an Microsoft Entra tenant, you can sign up for one.
 
 ## Choose the correct Azure tenant
 
 The following sign-in scenarios are intended for customers who purchased a license for Fraud Protection.
-- When you purchase a license through a Microsoft Cloud Solution Provider (CSP), the CSP determines which Azure AD tenant you'll use. To get started with that tenant, go to [Access your Dynamics 365 Fraud Protection account](https://dfp.microsoft.com/), and sign in by using global administrator credentials.
+- When you purchase a license through a Microsoft Cloud Solution Provider (CSP), the CSP determines which Microsoft Entra tenant you'll use. To get started with that tenant, go to [Access your Dynamics 365 Fraud Protection account](https://dfp.microsoft.com/), and sign in by using global administrator credentials.
 - If you purchase a license through a Volume Licensing (VL) channel, follow the instructions in the email that you received to activate your subscription in the desired tenant. Then, to get started, go to [Access your Dynamics 365 Fraud Protection account](https://dfp.microsoft.com/), and sign in by using global administrator credentials.
 
 
 ### Complete the setup process	
 
-1.	Go to [Access your Dynamics 365 Fraud Protection account](https://dfp.microsoft.com/) and sign in as the Global administrator of the Azure AD tenant.	
+1.	Go to [Access your Dynamics 365 Fraud Protection account](https://dfp.microsoft.com/) and sign in as the Global administrator of the Microsoft Entra tenant.	
 2.	On the next screen under the **Data storage geography** field, select the geographic region where you want to store your data, and then select **Start setup**.	
 
   > [!NOTE]
@@ -47,7 +47,7 @@ For information about how to access and use other features in Fraud Protection, 
 
 ## Configure access for additional users (Optional)
 
-Fraud protection offers role-based access control (RBAC) for enhanced security and role management. Initial configuration of users and roles should be done by the global administrator of your Azure AD tenant. After an **AllAreas_Admin** account has been set up, you can use it to add additional users.
+Fraud protection offers role-based access control (RBAC) for enhanced security and role management. Initial configuration of users and roles should be done by the global administrator of your Microsoft Entra tenant. After an **AllAreas_Admin** account has been set up, you can use it to add additional users.
 For more information about how to configure user access, see [Configure user access](configure-user-access.md).
 
 ## Usage Restrictions – Fair Credit Reporting Act
@@ -60,5 +60,4 @@ Fraud Protection informs you of the risk that the transaction may have been init
 
 For this purpose, we protect usage of our application by informing customers of these restrictions during their first-run experience. A system-set notice-and-consent routine is presented to every environment administrator, preceded by a short video, where customers are required to read and attest their consent to usage in accordance with certain licensing restrictions that prohibit the use of Fraud Protection for the purposes restricted under the FCRA. This notice and consent experience is renewed on an annual basis, and it is automatically triggered when users are granted administration privileges. If your Fraud Protection instance has multiple child environments, all users granted administrator privileges will be subject to our FCRA notice-and-consent routine during their first first-run experience with the application. 
 
-Fraud Protection is a powerful technology that must be used with care. We urge you to use it responsibly. 
-
+Fraud Protection is a powerful technology that must be used with care. We urge you to use it responsibly.

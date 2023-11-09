@@ -26,11 +26,11 @@ To create a new environment, select **New environment** at the top, and then ent
 - **Name** – Enter the name of the environment that you want to create.
 - **Description (optional)** – You can add some information to help identify the environment.
 - **Tags (optional)** – You can use tags to specify any generic information that's related to the environment, such as the industry vertical.
-- **Azure AD application ID (optional)** – If you want an existing Azure Active Directory (Azure AD) application ID to access the environment, paste the application ID here. This approach is recommended if you plan to reuse API access credentials across two or more environments. For a list of available applications, go to **Create Azure AD applications** or **Azure AD** on the **Integration** page.
+- **Microsoft Entra application ID (optional)** – If you want an existing Microsoft Entra application ID to access the environment, paste the application ID here. This approach is recommended if you plan to reuse API access credentials across two or more environments. For a list of available applications, go to **Create Microsoft Entra applications** or **Microsoft Entra ID** on the **Integration** page.
 - **Create API ID (optional)** – You can enter an identifier that should be used instead of the Fraud Protection environment ID when events are sent to Fraud Protection.
 
 > [!NOTE]
-> You must have the Global Admin role to create Azure AD applications. For more information about Azure AD applications and integration, see [Integrate purchase protection API](integrate-real-time-api.md) and [Integrate account protection APIs](faq/data-residency-faq.md). 
+> You must have the Global Admin role to create Microsoft Entra applications. For more information about Microsoft Entra applications and integration, see [Integrate purchase protection API](integrate-real-time-api.md) and [Integrate account protection APIs](faq/data-residency-faq.md). 
 >
 > After you create the environment, you can't change the customer API ID.
 

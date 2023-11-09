@@ -83,7 +83,7 @@ The following resources provide more information about the integration steps tha
 - [Set up a purchased instance](promocode-set-up-dfp-purchased-version.md)
 - [Configure user access and assign roles](configure-user-access.md)
 - [Set up account protection](promocode-set-up-account-protection.md)
-- [Configure Dynamics Fraud Protection with Azure Active Directory B2C](/azure/active-directory-b2c/partner-dynamics-365-fraud-protection)
+- [Configure Dynamics Fraud Protection with Microsoft Entra ID B2C](/azure/active-directory-b2c/partner-dynamics-365-fraud-protection)
 - [Set up device fingerprinting](device-fingerprinting.md)
 - [Integrate account protection APIs](integrate-ap-api.md)
 - [Integrate purchase APIs schema documentation](https://dfpswagger.azurewebsites.net/index.html)
