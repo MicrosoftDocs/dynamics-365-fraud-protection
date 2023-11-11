@@ -33,18 +33,18 @@ To update the configuration, use the JSON editor to update attribute values. Whe
 ### Case management options schema
 |Property|Type|Description|
 | :--------: | :--------------------------------------: |---------------------|
-|sortableBy|Array of strings|**Ready-only**; for Fraud Protection internal use|
-|queueDecisions|Array of CaseManagementDecisionAction|An array of CaseManagementQueueActions <br /> <br /> Each of which will be displayed as a button for Case Management decisions|
-|defaultDecisionButtonName|String|Action on timeout for queues <br /> <br />defaultDecisionButtonName can only be values from queueDecision "name"|
+|sortableBy|Array of strings|**Ready-only**; for Fraud Protection internal use.|
+|queueDecisions|Array of CaseManagementDecisionAction|An array of CaseManagementQueueActions. <br /> <br /> Each of which will be displayed as a button for Case Management decisions.|
+|defaultDecisionButtonName|String|Action on timeout for queues. <br /> <br />defaultDecisionButtonName can only be values from queueDecision "name".|
 
 ### Case management queue actions schema
 |Property|Type|Description|
 | :--------: | :--------------------------------------: |---------------------|
-|name|String|Name of the decision action <br /> <br /> Minimum of two distinct names are needed|
-|caseAction|Enum <br /> <br /> *Expected values:* <br /> Approve <br /> Reject <br /> None| Fraud Proection decision action <br /> <br /> Minimum of two distinct caseActions are needed|
-|labelAction|Enum <br /> <br /> *Expected values:* <br /> Fraud <br /> NonFraud <br /> None | Enables you to ingest cases with fraud labels to Fraud Protection|
-|reasons|String| When making a certain decision in manul review cases, you can select specific reasons to be shown in the dropdown. <br /> <br /> Minimum of one reason per caseAction is needed|
-|buttonSentiment|Enum <br /> <br /> *Expected values:* <br /> Positive <br /> Negative <br /> Neutral <br /> Null|Button icon displayed with decision action name<br /> <br /> Positive: Green checkmark icon <br /> Negative: Red X icon <br /> Neutral: Black circle witha white line icon <br /> Null: no icon|
+|name|String|Name of the decision action. <br /> <br /> Minimum of two distinct names are needed.|
+|caseAction|Enum <br /> <br /> *Expected values:* <br /> Approve <br /> Reject <br /> None| Fraud Proection decision action. <br /> <br /> Minimum of two distinct caseActions are needed.|
+|labelAction|Enum <br /> <br /> *Expected values:* <br /> Fraud <br /> NonFraud <br /> None | Enables you to ingest cases with fraud labels to Fraud Protection.|
+|reasons|String| When making a certain decision in manul review cases, you can select specific reasons to be shown in the dropdown. <br /> <br /> Minimum of one reason per caseAction is needed.|
+|buttonSentiment|Enum <br /> <br /> *Expected values:* <br /> Positive <br /> Negative <br /> Neutral <br /> Null|Button icon displayed with decision action name. <br /> <br /> Positive: Green checkmark icon <br /> Negative: Red X icon <br /> Neutral: Black circle witha white line icon <br /> Null: no icon|
 
 ### Default case management configuration
 The following schema is the system default unless you have applied custom configuration:
