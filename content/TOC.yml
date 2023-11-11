@@ -80,6 +80,8 @@
     items: 
     - name: Language reference guide
       href: fpl-lang-ref.md
+    - name: Configuration
+      href: configuration.md
     - name: Event tracing
       href: event-tracing.md
     - name: Velocity checks
@@ -134,6 +136,8 @@
     items: 
     - name: Language reference guide
       href: fpl-lang-ref.md
+    - name: Configuration
+      href: configuration.md
     - name: Event tracing
       href: event-tracing.md
     - name: Velocity checks
@@ -210,6 +214,8 @@
     items: 
     - name: Language reference guide
       href: fpl-lang-ref.md
+    - name: Configuration
+      href: configuration.md
     - name: Event tracing
       href: event-tracing.md
     - name: Velocity checks
