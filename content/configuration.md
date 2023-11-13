@@ -52,9 +52,6 @@ The following schema is the system default unless you apply a custom configurati
 ```json
 {
 "caseManagementOptions": {
-		"sortableBy": [
-			"53f445d8-71dd-4a77-b31f-76c7c118ee1c/request/metadata/timestamp"
-		],
 		"queueDecisions": [
 			{
 				"name": "Approve",
