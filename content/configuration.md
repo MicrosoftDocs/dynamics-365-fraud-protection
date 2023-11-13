@@ -14,7 +14,7 @@ title: Configuration
 
 Configuration allows you have a greater flexibility and extensibility to modify UI elements or interfaces within Microsoft Dynamics 365 Fraud Protection to fit your business needs. Configuration currently supports the following feature areas:
 
-- [Case management](configuration.md##case-management-configuration)
+- [Case management](configuration.md#case-management-configuration)
 
 Under the **Admin Settings**, you can find the **Configuration** tab where you can choose the assessment and feature you want to apply configuration for. This setting is only accessible in the root environment and to users with role Product Admin and AllAreas Admin as defined in the article, [User roles and access](configure-user-access.md)
 
