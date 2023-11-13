@@ -16,7 +16,7 @@ Configuration allows you greater flexibility and extensibility to modify UI elem
 
 - [Case management](configuration.md#case-management-configuration)
 
-Under **Admin Settings**, use the **Configuration** tab to select the assessment and feature for which you want to apply the configuration. This setting is only accessible in the root environment and to users assigned the roles Product Admin and AllAreas Admin as defined in the article, [User roles and access](configure-user-access.md)
+Under **Admin Settings**, use the **Configuration** tab to select the assessment and feature to which you want to apply the configuration. This setting is only accessible in the root environment and to users assigned the roles Product Admin and AllAreas Admin as defined in the article, [User roles and access](configure-user-access.md)
 
 ## Case management configuration
 
