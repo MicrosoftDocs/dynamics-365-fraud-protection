@@ -1,6 +1,6 @@
 ---
 author: weiswang
-description: This article provides information about the Configuration
+description: This article provides information about the Configuration.
 ms.author: weiswang
 ms.date: 11/10/2023
 ms.topic: conceptual
@@ -10,22 +10,22 @@ title: Configuration
 
 ---
 
-# Configuration Overview
+# Configuration overview
 
-Configuration allows you to have a greater flexibility and extensibility to modify UI elements or interfaces within Microsoft Dynamics 365 Fraud Protection to fit your business needs. Configuration currently supports the following feature areas:
+Configuration allows you greater flexibility and extensibility to modify UI elements or interfaces within Microsoft Dynamics 365 Fraud Protection to fit your business needs. Configuration currently supports the following feature areas:
 
 - [Case management](configuration.md#case-management-configuration)
 
-Under **Admin Settings**, use the **Configuration** tab to select the assessment and feature for which you want to apply the configuration. This setting is only accessible in the root environment and to users assigned the role Product Admin and AllAreas Admin as defined in the article, [User roles and access](configure-user-access.md)
+Under **Admin Settings**, use the **Configuration** tab to select the assessment and feature for which you want to apply the configuration. This setting is only accessible in the root environment and to users assigned the roles Product Admin and AllAreas Admin as defined in the article, [User roles and access](configure-user-access.md)
 
 ## Case management configuration
 
 Case management configuration supports the following areas for configurability:
 
-- **Decision action name and its corresponding action, label, button icon**: customize name of the decision button and its corresponding decision action, ability to enable when to send fraud labels to Fraud protection and icon displayed next to the decision action name
-- **Decision reasons**: customize reasons lists for each decision action
+- **Decision action name and its corresponding action, label, button icon**: Customize the name of the decision button and its corresponding decision action, the ability to enable when fraud labels should be sent to to Fraud protection, and the icon displayed next to the decision action name.
+- **Decision reasons**: Customize reasons lists for each decision action.
 
-To update the configuration, use the JSON editor to update attribute values. When you're ready to apply the configuration, select **Save and Apply** to apply the configuration to selected assessment. To ensure configuration is applied, refresh your browser before reviewing cases with new configurations in Case Management.
+To update the configuration, use the JSON editor to update attribute values. When you're ready to apply the configuration, select **Save and Apply** to apply the configuration to the selected assessment. To ensure the configuration is applied, refresh your browser before reviewing cases with new configurations in Case management.
 
 > [!NOTE]
 > Case management configurations can impact queue creation/editing details page, Search and Case management reports.
