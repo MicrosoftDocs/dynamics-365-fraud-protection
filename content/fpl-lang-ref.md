@@ -58,7 +58,7 @@ The guide also covers other articles. Here are some examples:
 | ROUTETO QUEUE <i>\<QueueName\></i><br>[ WHEN \<<i>BooleanExpression</i>\> ] | <p>The **ROUTETO** command is used in routing rules to direct matching assessments to [case management queues](case-management-administrator.md).</p><p>The optional **WHEN** clause can be used to describe the conditions under which the command should perform the routing.</p><p>A maximum of one can be used per clause in routing rules.</p> | ROUTETO Queue("High Value Queue")<br>WHEN @"purchase.request.totalAmount" \> 500 | 
 | SELECT <i>\<AggregationFunction\></i><br>AS <i>\<VelocityName\></i><br>FROM <i>\<AssesmentType\></i><br>GROUPBY <i>\<GroupExpression\></i><br>[ WHEN <i>\<BooleanExpression\></i> ] | <p>A **SELECT** statement is used in velocity sets to define a [velocity](velocities.md). It must specify an [aggregation function](fpl-lang-ref.md#aggregation-functions).</p><p>The required **AS** clause is used to create an alias for your velocity. This alias can then be referenced from rules.</p><p>The required **FROM** clause is used to specify the assessment type to observe a velocity on. Valid values are **Purchase**, **AccountLogin**, **AccountCreation**, **Chargeback**, **BankEvent**, and **CustomAssessment**.</p><p>The required **GROUPBY** clause specifies a property or an expression. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation requested in the **SELECT** statement.</p><p>For example, to calculate an aggregation for each user, use **GROUPBY @"user.userId"**.</p><p>The optional **WHEN** clause specifies a Boolean expression that determines whether the assessment that's being processed should be included in the velocity that's being defined.</p><p>A maximum of one can be used per clause in velocity sets.</p>| <p>SELECT Count() AS _Purchase_Rejections_Per_Email<br>FROM Purchase<br>WHEN @"ruleEvaluation.decision" == "Reject"<br>GROUPBY @"user.email"</p><p>SELECT DistinctCount(@"purchaseId")<br>AS _BankDeclines_Per_Device<br>FROM BankEvent<br>WHEN @"status" == "DECLINED"<br>GROUPBY @"purchase.deviceContext.externalDeviceId"</p> |
 | WHEN \<<i>BooleanExpression</i>\> | <p>The **WHEN** statement is like the **WHEN** clauses on the other statements, but it stands alone in the Condition section of rules and velocity sets. It specifies a Boolean condition that determines whether the whole rule, velocity set, or routing rule should run.</p><p>A maximum of one can be used in the Condition section of all rule types and velocity sets.</p> | WHEN @"riskscore" \> 400 |
-|DO \<<i>Action function</i>\>|A **DO** statement is used to perform some action at the end of rule execution. This statement can only be used in Post-decision actions, and must be followed by an Action function|DO SetResponse(name = @”firstname” + @”lastname”)|
+|DO \<<i>Action function</i>\>|A **DO** statement is used to perform some action at the end of rule execution. This statement can only be used in Post-decision actions, and followed by an Action function|DO SetResponse(name = @”firstname” + @”lastname”)|
 
 ## Decision functions
 
@@ -96,14 +96,14 @@ Model functions run the various fraud models and are useful when your assessment
 | Model type     | Description | Example |
 |--------------|-------------|---------|
 |  Risk  |  Assesses the likelihood of a session being risky. | Model.Risk()  |
-| Bot   |   Assesses the likelihood of a session being bot-initiated. Pass in a device context ID that has been sent to Fraud Protection’s device fingerprinting solution. | Model.Bot(@deviceContextId)   |
+| Bot   |   Assesses the likelihood of a session being bot-initiated. Pass in a device context ID that was sent to Fraud Protection’s device fingerprinting solution. | Model.Bot(@deviceContextId)   |
 
 ## Device attribute functions
 
 | Operator     | Description | Example |
 |--------------|-------------|---------|
 |  Device.GetAttributes(String _sessionId_)  | Returns selected device attributes from device fingerprinting. The selected device attributes are curated by Fraud Protection and are a set of attributes commonly used in rules. | Device.GetAttributes(@"deviceContext.deviceContextId).attribute_name  |
-| Device.GetFullAttributes(String _sessionId_)   | Returns a full set of device attributes from device fingerprinting. Use this function only when it's needed to access the full set of device attributes. To view the full set of device attributes, see [Set up device fingerprinting](device-fingerprinting.md). | Device.GetFullAttributes(@"deviceFingerprinting.id").attribute_name   |
+| Device.GetFullAttributes(String _sessionId_)   | Returns a full set of device attributes from device fingerprinting. Use this function only when needed to access the full set of device attributes. To view the full set of device attributes, see [Set up device fingerprinting](device-fingerprinting.md). | Device.GetFullAttributes(@"deviceFingerprinting.id").attribute_name   |
 
 ## Referencing attributes and variables
 You can use the at sign (@) operator to reference an attribute from the current event.
@@ -228,10 +228,10 @@ Fraud Protection supports the standard C# [DateTime](/dotnet/api/system.datetime
 
 | Operator                   | Description | Example |
 |----------------------------|-------------|---------|
-| DaysSince(DateTime *date*) | This operator returns an integer that represents the number of days that have passed between the specified *DateTime* value and the current date (expressed as Coordinated Universal Time \[UTC\]). | DaysSince(@"user.CreationDate") |
+| DaysSince(DateTime *date*) | This operator returns an integer that represents the number of days that passed between the specified *DateTime* value and the current date (expressed as Coordinated Universal Time \[UTC\]). | DaysSince(@"user.CreationDate") |
 | UtcNow                     | This operator gets a DateTime object that is set to the current date and time on the computer, expressed as UTC. | DateTime.UtcNow |
 | Today                      | This operator gets an object that is set to the current date, where the time component is set to 00:00:00. | DateTime.Today |
-| Year                       | This operator gets the year component of the date that is represented by this instance. | @"user.creationDate".Year |
+| Year                       | This operator gets the year component of the date represented by this instance. | @"user.creationDate".Year |
 | Date                       | This operator gets a new object that has the same date as this instance, but where the time value is set to 00:00:00 (midnight). | @"user.creationDate".Date |
 
 ## Type casting operators
@@ -248,14 +248,14 @@ For information about type inferencing, see the [Type inference of attributes](f
 
 | Function                    | Description | Example |
 |-----------------------------|-------------|---------|
-| Count()                     | This function returns the number of times that an event has occurred. | SELECT Count() AS numPurchases |
+| Count()                     | This function returns the number of times that an event occurred. | SELECT Count() AS numPurchases |
 | DistinctCount(String *key*) | This function returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPs |
 | Sum(Double *value*)         | This function returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
 
 ## Defining your own variables
 
-You can use the **LET** keyword to define a variable. That variable can then be referenced in other places in the rule. All variables should be prefixed by a dollar sign ($).
+You can use the **LET** keyword to define a variable. That variable can then be referenced in other places in the rule. Prefix all variables by a dollar sign ($).
 
 
 For example, you declare the following variable.
@@ -273,11 +273,11 @@ WHEN $fullName == "Kayla Goderich"
 ```
 
 > [!NOTE]
-> After a variable has been defined, it can't be updated with a new value.
+> After a variable is defined, it can't be updated with a new value.
 
 ## Using lists in rules
 
-You can use the **ContainsKey** and **Lookup** operators to reference lists that you've uploaded to Fraud Protection. For more information about lists, see [Manage lists](lists.md).
+You can use the **ContainsKey** and **Lookup** operators to reference lists that you uploaded to Fraud Protection. For more information about lists, see [Manage lists](lists.md).
 
 ### ContainsKey
 
