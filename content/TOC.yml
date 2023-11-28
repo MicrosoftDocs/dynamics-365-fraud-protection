@@ -257,16 +257,18 @@
 
 - name: Reporting and monitoring
   items:
-  - name: Virtual fraud analyst reporting
+  - name: Reporting
     href: virtual-fraud-analyst-reporting.md
   - name: Summary report
     href: summary-report.md
-  - name: Score analyst reports
+  - name: Score reports
     href: score-analyst.md
-  - name: Rule analyst reports
+  - name: Rule reports
     href: rule-analyst.md
-  - name: Threat analyst reports
+  - name: Threat report
     href: threat-analyst.md
+  - name: Observation event report
+    href: observation-event-report.md
   - name: Monitoring
     href: monitoring-dashboards.md
 - name: Compliance, privacy, security
