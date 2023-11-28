@@ -183,14 +183,32 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 | Operator                    | Description | Example |
 |-----------------------------|-------------|---------|
 | Contains(String *suffix*)   | <p>This operator checks whether a string contains another string.</p><p>Contains(String *substring*)</p> | @"productList`.productName".Contains("Xbox") |
-| ContainsOnly(String *suffix*) | <p> This operator checks whether a string contains only the charsets provided.</p><p>ContainsOnly(Charset1 Charset2 ...etc.)</p>|@"zipcode".ContainsOnly(Charset.Numeric)|
-| ContainsAll(String *suffix*) |<p> This operator checks whether a string contains all the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@ “zipcode”.ContainsAll(Charset.Numeric\|Charset.Hypen))|
-| ContainsAny(String *suffix*)|<p> This operator checks whether a string contains any of the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@”zipcode”.ContainsAny(Charset.Numeric\|Charset.Hypen)|
+| ContainsOnly(String *suffix*) | <p> This operator checks whether a string contains only the charsets provided.</p><p>ContainsOnly(Charset1 Charset2 ...etc.)</p>|@"zipcode".ContainsOnly(CharSet.Numeric)|
+| ContainsAll(String *suffix*) |<p> This operator checks whether a string contains all the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@ “zipcode”.ContainsAll(CharSet.Numeric\|CharSet.Hypen)|
+| ContainsAny(String *suffix*)|<p> This operator checks whether a string contains any of the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hypen)|
 | StartsWith(String *prefix*) | <p>This operator checks whether a string begins with a specified prefix.</p><p>StartsWith(String *prefix*)</p> | @"user.phoneNumber".StartsWith("1-") |
 | EndsWith(String *suffix*)   | <p>This operator checks whether a string ends with a specified suffix.</p><p>EndsWith(String *suffix*)</p> | @"user.email".EndsWith("@contoso.com") |
 | IsNumberic(String*suffix*)  | <p>This operator checks whether a string contains number ends with a specified suffix.</p><p>IsNumeric(String *suffix*)</p> | @"user.email".IsNumberic() |
 | Length  | <p>This operator returns the number of characters in the string.  | @"user.username".Length |
 | Convert.ToDateTime(@"user.creationDate").ToString("yyyy-MM-dd HH:mm:ss")  | <p>This operator converts the string to datetime and converts datetime to a string using the given format.| Convert.ToDateTime(@"user.creationDate").ToString("yyyy-MM-dd") |
+
+### Using CharSet in ContainsOnly, ContainsAll, and ContainsAny
+
+Following character types can be used in ContainsOnly, ContainsAll, and ContainsAny
+
+| Character Type | Description |
+|----------------|-------------|
+| Alphabetic | a-z, A-Z |
+| Apostrophe |	' |
+| Asperand	| @ |
+| Backslash |	\ |
+| Comma	| , |
+| Hypen	| - |
+| Numeric	| 0-9 |
+| Period	| . |
+| Slash	| / |
+| Underscore |	_ |
+| WhiteSpace |	Single space |
 
 ## Math functions
 
