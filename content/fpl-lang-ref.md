@@ -2,7 +2,7 @@
 author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
-ms.date: 09/26/2022
+ms.date: 11/28/2023
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -194,7 +194,7 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 
 ### Using CharSet in ContainsOnly, ContainsAll, and ContainsAny
 
-Following character types can be used in ContainsOnly, ContainsAll, and ContainsAny
+The following character types can be used in ContainsOnly, ContainsAll, and ContainsAny.
 
 | Character Type | Description |
 |----------------|-------------|
