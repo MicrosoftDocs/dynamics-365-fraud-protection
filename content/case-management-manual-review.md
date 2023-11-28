@@ -45,7 +45,7 @@ After you select **Start review**, the **Transaction review** page appears and s
 
 ## Decisions and notes for a case
 
-After you've reviewed the details of the transaction and are ready to make a decision about the case, select **Approve**, **Reject**, or **Dismiss** in the upper-left corner of the **Transaction review** page. Based on your selection, the dialog box that appears presents a list of reason codes that you can select from to support your decision. You can also add your own notes for record keeping about the transaction. These notes are associated with the transaction. Therefore, any user who searches for and views the transaction will be able to view the notes that you've added.
+After you've reviewed the details of the transaction and are ready to make a decision about the case, select **Approve**, or **Reject** in the upper-left corner of the **Transaction review** page. Based on your selection, the dialog box that appears presents a list of reason codes that you can select from to support your decision. You can also add your own notes for record keeping about the transaction. These notes are associated with the transaction. Therefore, any user who searches for and views the transaction will be able to view the notes that you've added.
 
 > [!NOTE]
 > The **Transaction review** page monitors the amount of time that you spend reviewing cases. If you've been reviewing a case for 30 minutes, you'll receive an alert. If you're still reviewing the case, you can extend the time for another 30 minutes by selecting **Continue reviewing** in the message. If you don't make a selection in the message, the case will be sent back to the queue and made available for another agent to review.
@@ -62,7 +62,7 @@ If you can't complete a review of a case, you can leave notes for the next revie
 
 You can make bulk decisions in multiple ways.
 
-- If you're viewing the cases in the queue, you can select any number of cases in the **Pending review** grid. Then select **Approve**, **Reject**, or **Dismiss** in the upper right of **Pending review** grid. Finally, select the appropriate reason, add any notes, and submit the decision.
+- If you're viewing the cases in the queue, you can select any number of cases in the **Pending review** grid. Then select **Approve**, or **Reject** in the upper right of **Pending review** grid. Finally, select the appropriate reason, add any notes, and submit the decision.
 - You can also make bulk decisions from the **Link analysis** tab. When you're reviewing a single case, you can select the **Link analysis** tab and search for linked cases. You can then select one or more cases in the **Cases in review** grid, select the appropriate decision and reason, add any notes, and submit the decision. If you select a case that is being reviewed by another manual review agent in your bulk decision, the other manual review agent will receive a notification that a decision has already been made about the case, and they won't be allowed to submit a decision. The original case can't be included in the bulk decision. You'll have to submit a decision for the original case individually by selecting the appropriate decision type at the top of the page. You can select a case in the **Decisioned cases** grid. Although you can't make another manual review decision about a decisioned case, you can make bulk decisions about linked cases that appear in the **Cases in review** grid on the **Link analysis** page of a decisioned case.   
 
 

@@ -215,6 +215,19 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 </tr>
 <tr>
+<td colspan="2">Configuration</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
 <td colspan="2">Search</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -243,6 +256,19 @@ The following table shows the specific read/write permissions that users will ha
 <tr>
 <td rowspan="3">Case management</td>
 <td>Queues</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>Read/write</td>
+<td>Read/write</td>
+<td>Read/write</td>
+</tr>
+<tr>
+<td>Assign Queues</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>

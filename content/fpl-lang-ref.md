@@ -157,7 +157,7 @@ BIN Lookup functions provide payment card account information (for example, card
 
 | Operator                       | Description | Example |
 |--------------------------------|-------------|---------|
-|BIN.Lookup(String *BIN*).cardNetwork|<p> This operator looks up BIN and returns card network (for example, Visa, Mastercard).|BIN.Lookup(@"card.bin").cardNetwork|
+|BIN.Lookup(String *BIN*).cardNetwork|<p> This function looks up BIN and returns card's network (for example, Visa, Mastercard).|BIN.Lookup(@"card.bin").cardNetwork|
 |BIN.Lookup(String *BIN*).cardType|<p> This operator looks up BIN and returns card type (for example, Debit, Credit).|BIN.Lookup(@"card.bin").cardType|
 |BIN.Lookup(String *BIN*).issuer|<p> This operator looks up BIN and returns issuing organization.|BIN.Lookup(@"card.bin").issuer|
 |BIN.Lookup(String *BIN*).countryCode|<p> This operator looks up BIN and returns ISO two-letter country code of the card.|BIN.Lookup(@"card.bin").countryCode|
