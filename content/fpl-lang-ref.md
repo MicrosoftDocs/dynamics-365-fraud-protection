@@ -117,6 +117,7 @@ You can use the at sign (@) operator to reference an attribute from the current 
 | @a\[x\]      | <p>This variable is used to index array variables.</p><p>If the request payload for an assessment contains an array of items, you can access individual elements of the array by using the following syntax: *@"productList\[0\]"*.</p><p>To access an attribute of that element, use the following syntax: *@"productList\[0\].productId"*</p> | <p>@"productList\[0\].productId"</p><p>@"paymentInstrumentList\[3\].type"</p> |
 | Exists       | <p>This operator checks whether a variable exists in the event payload.</p><p>Exists(*String variable*)</p> | Exists(@"user.email") |
 |Response.Decision()|This function references the decision for the current assessment being evaluated.| Response.Decision() == “Approve”|
+|Request.CorrelationId()|This function references the unique Correlation ID of the event being evaluated. You can use this function to access the Correlation ID of an event in the rules experience and pass it to an external call as a parameter or a header.| External.MyExternalCall(Request.CorrelationId())|
 
 ## Logical operators
 
