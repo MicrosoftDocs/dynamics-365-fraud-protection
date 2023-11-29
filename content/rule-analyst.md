@@ -81,5 +81,8 @@ In addition to common filters, the following filters are available for you to fu
 - **Merchant Rule Decision** – The decisions that were made by Fraud Protection rules. The rule decisions include **Approve**, **Reject**, **Review**, and **Challenge**.
 - **Merchant Final Decision** – The final decisions that were shared through the Fraud Protection status API.
 - **Decision Rule/Clause** – The decision rule and clauses that were created through the Fraud Protection rule engine.
-- **Transaction Status** – The latest status of transactions.
 - **Score Type** – The available Fraud Protection score types.
+- **Transaction Status(when applies)** – The latest status of transactions.
+- **Latest event, status (when applies)** – the status of transactions from the latest label or observation event.  
+- **Latest fraud event (When applies)** – the fraudflag value from the latest label or observation event.
+
