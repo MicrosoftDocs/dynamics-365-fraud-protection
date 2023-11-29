@@ -1,18 +1,18 @@
 ---
 author: yvonnedeq
-description: This article explains how to utilize the Threat analyst reports in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to utilize the Threat report in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kfend
 ms.date: 02/08/2023
 ms.topic: conceptual
 search.audienceType:
   - admin
-title: Threat analyst reports
+title: Threat report
 ms.custom: bap-template
 ---
 
-# Threat analyst reports
+# Threat report
 
-Fraud Protection provides Threat analyst reports that are designed to show fraud insights into entities such as payment card type. You can use these reports to find distribution changes and identify anomalies on the entities. You can also use them to further optimize rules.
+Fraud Protection provides Threat report that is designed to show fraud insights into entities such as payment card type. You can use these reports to find distribution changes and identify anomalies on the entities. You can also use them to further optimize rules.
 
 ## Fraud views
 Based on the filters you have selected, the following metrics are available for analysis.
