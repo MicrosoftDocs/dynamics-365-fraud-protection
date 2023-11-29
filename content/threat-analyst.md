@@ -27,7 +27,8 @@ Based on the filters you have selected, the following metrics are available for 
 - **Transaction Volume** – The transaction volume that was assessed by Fraud Protection.
 - **Fraud Rate by transaction date** – An aggregation of the fraud volume and fraud rate by the original transaction date.
 - **Fraud Rate by fraud received date** – An aggregation of the fraud volume and fraud rate by the date when the fraud signal was received.
-- **Fraud by transaction status** – The transaction status distribution of confirmed fraudulent transactions. This information can provide insights into fraud reasons.
+- **Fraud by transaction status(when applies)** – The transaction status distribution of confirmed fraudulent transactions. This information can provide insights into fraud reasons.
+- **Fraudflag distribution from latest label or observation event(When applies)** – the percentage distribution of the fraudflag values from the latest label or observation event.  
 
 ### Entity distribution views
 The available entities vary, depending on the capability. The following lists show the entities that are available for each capability.
