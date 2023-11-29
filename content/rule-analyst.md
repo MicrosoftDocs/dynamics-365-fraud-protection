@@ -35,8 +35,8 @@ Decision rules are the rules that have activated for real-time decisioning by us
 - **Fraud Volume** – The number of confirmed fraudulent transactions on the decision rule.
 - **Non-Fraud Volume** – The number of confirmed non-fraudulent transactions on the decision rule.
 - **Fraud Rate** – The percentage of confirmed fraudulent transactions out of the total confirmed fraud and non-fraud transactions on the decision rule.
-- **Send to Bank Volume (When applies)** – The transactions that were assessed by the decision rule and sent to the bank.
-- **Bank Acceptance Rate (When applies)** – The percentage of bank-approved transactions out of the total transactions that were sent to the bank on the decision rule.
+- **Send to Bank Volume (when applies)** – The transactions that were assessed by the decision rule and sent to the bank.
+- **Bank Acceptance Rate (when applies)** – The percentage of bank-approved transactions out of the total transactions that were sent to the bank on the decision rule.
 
 ### Decision rule performance time series view
 Based on the filters you have selected, the following metrics are available for analysis.
@@ -45,7 +45,7 @@ Based on the filters you have selected, the following metrics are available for 
 - **Fraud Rate** – The percentage of confirmed fraudulent transactions out of the total confirmed fraud and non-fraud transactions on the decision rules.
 - **Rule/Clause Distribution** – The distribution of the decision rules.
 - **Score Distribution** – The distribution of Fraud Protection scores. When decision rule and clauses are selected in the filter, this chart shows the relations between decision rules and Fraud Protection scores.
-- **Bank Decision Distribution** – The distribution of bank decisions. When decision rule and clauses are selected in the filter, this chart shows the relation between decision rules and bank decisions.
+- **Bank Decision Distribution(when applies)** – The distribution of bank decisions. When decision rule and clauses are selected in the filter, this chart shows the relation between decision rules and bank decisions.
 
 ## Observe rule analysis
 Fraud Protection's Observe rule analysis report shows the distribution percentage for the observe rule as it's overlapped by a decision rule. The report also shows the transaction status and confirmed fraud metrics by the observe rule and clause segments.
@@ -59,8 +59,8 @@ Based on the filters you have selected, the following metrics are available for 
 - **Fraud Volume** – The amount of confirmed fraudulent transactions on the observe rule.
 - **Non-Fraud Volume** – The amount of confirmed non-fraudulent transactions on the observe rule.
 - **Fraud Rate** – The percentage of fraud transactions out of the total confirmed fraud and non-fraud transactions on the observe rule.
-- **Send to Bank Volume (When applies)** – The number of transactions that were assessed by the observe rule and sent to the bank.
-- **Bank Acceptance Rate (When applies)** – The percentage of bank-approved transactions out of the total transactions that were sent to the bank on the observe rule.
+- **Send to Bank Volume (when applies)** – The number of transactions that were assessed by the observe rule and sent to the bank.
+- **Bank Acceptance Rate (when applies)** – The percentage of bank-approved transactions out of the total transactions that were sent to the bank on the observe rule.
 
 ### Overlap rule performance table view
 This view shows the percentage of overlap between the observe rule and clause and the decision rule and clause. Columns represent the decision rule and clause, and rows represent the observe rule and clause.
@@ -72,7 +72,7 @@ Based on the filters you have selected, the following metrics are available for 
 
 - **Transaction Volume** – The volume that was assessed by the observe rules.
 - **Fraud Rate** – The percentage of fraud transactions out of the total confirmed transactions that were assessed on the observe rules.
-- **Bank Decision Distribution** – The percentage of bank-decisioned transactions out of the total transactions that were sent to the bank on the observe rules.
+- **Bank Decision Distribution(when applies)** – The percentage of bank-decisioned transactions out of the total transactions that were sent to the bank on the observe rules.
 
 ## Filters
 In addition to common filters, the following filters are available for you to further analyze your data. You can select different filters and check the metrics for your analysis
