@@ -41,11 +41,12 @@ When you select the **Score** view, based on the filters you have selected, the 
 
 - **Rule decision distribution by score** – The percentage of rule decisions in each score.
 - **Rule Decision Rate** – The volume of transactions that were assessed by rules and the percentage of each type of rule decision in each score.
-- **Transaction status by score** – The percentage of latest transaction statuses in each score.
-- **Bank acceptance rate by score**
+- **Bank acceptance rate by score(when applies)**
 
     - **Bank approved volume** – The bank-approved transactions in each score.
     - **Bank approved Rate** – The percentage of bank-approved transactions out of the total that were sent to the bank in each score.
+- **Transaction status by score(when applies)** – The percentage of latest transaction statuses in each score.
+- **Status distribution from latest observation event (when applies)** – The percentage distribution of the status of transactions from the latest observation events or label events by score.
 
 ### Time series view
 When you select the Time series view, based on the filters you have selected, the following metrics are available.
@@ -57,9 +58,10 @@ When you select the Time series view, based on the filters you have selected, th
     - **Fraud rate** – The percentage of fraud volume out of the total confirmed fraud and non-fraud transactions.
 
 - **Rule Decision Distribution** – The rule decision percentage. (The rule decisions include **Approve**, **Reject**, **Review**, and **Challenge**.)
-- **Transaction Status** – The percentage distribution of the latest status of transactions.
 - **Rule Decision Rate** – The percentage distribution of rule decisions.
 - **Bank Acceptance Volume and Rate** – The volume of bank-approved transactions, and the percentage of bank-approved transactions out of the total transactions that were sent to the bank.
+- **Transaction Status(when applies)** – The percentage distribution of the latest status of transactions.
+- **Status distribution from latest observation event (When applies)** – The percentage distribution of the status of transactions from the latest observation events or label events.
 
 ### Table view
 The statistical table view shows the following metrics for each score range, based on the selected filters:
@@ -69,8 +71,8 @@ The statistical table view shows the following metrics for each score range, bas
 - Non-Fraud volume
 - Fraud volume
 - Fraud rate
-- Send to bank volume
-- Bank acceptance rate
+- Send to bank volume(when applies)
+- Bank acceptance rate (when applies)
 
 ## Operation analysis report
 The **Operation analysis** report calculates statistics of score thresholds, based on the historical date. This information can help fraud control professionals understand the potential impact of the score threshold change and select score thresholds for their score rules.
@@ -94,7 +96,7 @@ The **Operation analysis** report calculates statistics of score thresholds, bas
     - Time series chart of the volume under, at, or above the given score cutoff and the percentage at or above the cutoff
     - Time series chart of fraudulent transactions and fraud rate under the given cutoff
 
-- **Profit Optimizer Simulation** – Given the estimated percentage of profit margin and score range (in increments of 10), the cumulative net profit and cumulative net profit achieved percentages are calculated.
+- **Profit Optimizer Simulation (when applies)** – Given the estimated percentage of profit margin and score range (in increments of 10), the cumulative net profit and cumulative net profit achieved percentages are calculated.
 
     - **Net Profit** – The profit of non-fraud transactions minus the cost of goods of fraud transactions.
     - **Cumulative Net profits achieved percentage** – The percentage of net profit at or under a score bin out of the total possible non-fraud profit.
@@ -110,4 +112,4 @@ In addition to the common filters, the following filters are available for you t
 - **Score type** – The available Fraud Protection score types.
 - **Transaction status(when applies)** – The latest status of transactions.
 - **Latest event, status (when applies)** – the status of transactions from the latest label or observation event.  
-- **Latest fraud event (When applies)** – the fraudflag value from the latest label or observation event.
+- **Latest fraud event (when applies)** – the fraudflag value from the latest label or observation event.
