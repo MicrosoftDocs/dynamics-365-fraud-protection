@@ -1,18 +1,18 @@
 ---
 author: yvonnedeq
-description: This article explains how to utilize the Rule analyst reports in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to utilize the Rule reports in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kfend
 ms.date: 02/09/2023
 ms.topic: conceptual
 search.audienceType:
   - admin
-title: Rule analyst reports
+title: Rule reports
 ms.custom: bap-template
 ---
 
-# Rule analyst reports
+# Rule reports
 
-Fraud Protection provides Rule analyst reports that are designed to track the impact of Fraud Protection rules that you've enabled. The reports help you understand the transaction volume, distribution, and potential fraud trends by rule and clause. You can also use them to analyze decisions and performance by rule segment, and to compare the impact of observe rules and decision rules.
+Fraud Protection provides Rule reports that are designed to track the impact of Fraud Protection rules that you've enabled. The reports help you understand the transaction volume, distribution, and potential fraud trends by rule and clause. You can also use them to analyze decisions and performance by rule segment, and to compare the impact of observe rules and decision rules.
 
 ## Decision rule analysis
 You can use KPIs to filter and further analyze your decision rules. Based on the filters you have selected, the following metrics are available:
