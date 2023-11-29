@@ -50,8 +50,10 @@ Because Fraud Protection offers multiple capabilities, common filters vary, depe
 - **Assessments**
 
     - After an assessment is created, you have the option to set up your own data filters. More information on this can be found in the article of [Configure an existing assessment](assessment-configure-existing.md).
+
 ## See also
 - [Summary report](summary-report.md)
 - [Score reports](score-analyst.md)
 - [Rule reports](rule-analyst.md)
 - [Threat report](threat-analyst.md)
+- [Observation event report](observation-event-report.md)
