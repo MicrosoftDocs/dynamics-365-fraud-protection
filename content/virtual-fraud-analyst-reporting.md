@@ -1,6 +1,6 @@
 ---
 author: yvonnedeq
-description: This article provides information about Virtual fraud analyst reporting and the available tools in Dynamics 365 Fraud Protection.
+description: This article provides information about reporting and its available reports in Dynamics 365 Fraud Protection.
 ms.author: kfend
 ms.date: 03/01/2023
 ms.topic: conceptual
