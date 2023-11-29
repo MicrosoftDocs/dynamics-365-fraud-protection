@@ -25,7 +25,7 @@ The following KPIs are included:
 - **Rule Rejected Rate** – The percentage of transactions at or above the score by count or amount that was rejected by the decision rules.
 - **Fraud Volume** – The confirmed fraudulent transactions by count or amount.
 - **Fraud Rate** – The percentage of confirmed fraud volume out of the total confirmed fraud and non-fraud transactions.
-- **Bank Acceptance Rate (When applies)** – The percentage of bank-approved transactions out of the total transactions that were sent to the bank at or above the score.
+- **Bank Acceptance Rate (when applies)** – The percentage of bank-approved transactions out of the total transactions that were sent to the bank at or above the score.
 
 ## Distribution and performance report
 Fraud control professionals can use the **Distribution and performance** report to analyze the relationship between Fraud Protection scores and other segments of the data, such as decisions, rule clauses, and transaction status.
@@ -61,7 +61,7 @@ When you select the Time series view, based on the filters you have selected, th
 - **Rule Decision Rate** – The percentage distribution of rule decisions.
 - **Bank Acceptance Volume and Rate** – The volume of bank-approved transactions, and the percentage of bank-approved transactions out of the total transactions that were sent to the bank.
 - **Transaction Status(when applies)** – The percentage distribution of the latest status of transactions.
-- **Status distribution from latest observation event (When applies)** – The percentage distribution of the status of transactions from the latest observation events or label events.
+- **Status distribution from latest observation event (when applies)** – The percentage distribution of the status of transactions from the latest observation events or label events.
 
 ### Table view
 The statistical table view shows the following metrics for each score range, based on the selected filters:
