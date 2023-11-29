@@ -14,7 +14,7 @@ ms.custom: bap-template
 
 Fraud Protection provides Rule reports that are designed to track the impact of Fraud Protection rules that you've enabled. The reports help you understand the transaction volume, distribution, and potential fraud trends by rule and clause. You can also use them to analyze decisions and performance by rule segment, and to compare the impact of observe rules and decision rules.
 
-## Decision rule analysis
+## Decision rule report
 You can use KPIs to filter and further analyze your decision rules. Based on the filters you have selected, the following metrics are available:
 
 - **Transaction Volume** – The number of transactions that were assessed by the selected decision rules.
@@ -47,7 +47,7 @@ Based on the filters you have selected, the following metrics are available for 
 - **Score Distribution** – The distribution of Fraud Protection scores. When decision rule and clauses are selected in the filter, this chart shows the relations between decision rules and Fraud Protection scores.
 - **Bank Decision Distribution(when applies)** – The distribution of bank decisions. When decision rule and clauses are selected in the filter, this chart shows the relation between decision rules and bank decisions.
 
-## Observe rule analysis
+## Observe rule report
 Fraud Protection's Observe rule analysis report shows the distribution percentage for the observe rule as it's overlapped by a decision rule. The report also shows the transaction status and confirmed fraud metrics by the observe rule and clause segments.
 
 ### Observe rule performance table view
