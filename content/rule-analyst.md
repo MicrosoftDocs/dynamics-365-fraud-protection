@@ -78,11 +78,11 @@ Based on the filters you have selected, the following metrics are available for 
 In addition to common filters, the following filters are available for you to further analyze your data. You can select different filters and check the metrics for your analysis
 
 - **Score** – Use the text box or the scroll bar to select the desired score range. The score is aggregated in increments of 10. For the digit in the ones place, the lower bound is rounded down to 0 (zero), and the upper bound is rounded up to 9. For example, if you select a score from 35 through 64, the metrics and charts on the report show data that has a score range from 30 through 69.
-- **Merchant Rule Decision** – The decisions that were made by Fraud Protection rules. The rule decisions include **Approve**, **Reject**, **Review**, and **Challenge**.
-- **Merchant Final Decision** – The final decisions that were shared through the Fraud Protection status API.
-- **Decision Rule/Clause** – The decision rule and clauses that were created through the Fraud Protection rule engine.
-- **Score Type** – The available Fraud Protection score types.
-- **Transaction Status(when applies)** – The latest status of transactions.
+- **Merchant rule decision** – The decisions that were made by Fraud Protection rules. The rule decisions include **Approve**, **Reject**, **Review**, and **Challenge**.
+- **Merchant final decision** – The final decisions that were shared through the Fraud Protection status API.
+- **Decision rule/clause** – The decision rule and clauses that were created through the Fraud Protection rule engine.
+- **Score type** – The available Fraud Protection score types.
+- **Transaction status(when applies)** – The latest status of transactions.
 - **Latest event, status (when applies)** – the status of transactions from the latest label or observation event.  
 - **Latest fraud event (When applies)** – the fraudflag value from the latest label or observation event.
 
