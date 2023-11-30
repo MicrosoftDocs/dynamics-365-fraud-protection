@@ -175,8 +175,15 @@ You can also select **JSON view** in the upper right corner of the page to displ
 ### Add attributes to support lists
 You can apply a status of **Safe**, **Block**, or **Watch** to specific attributes such as email or IP address. To add or change a status, select the pencil icon next to the element. For more information about support lists and statuses, see [Manage support lists](manage-support-lists.md).
 
-### Add notes
-Select **Notes** on the top right of the page to view or add notes to a transaction. Notes are visible to anyone who views the transaction.
+## Notes Panel
+
+Notes allow you to have a rich collaboration by your team when reviewing an event details. You may create, edit, reply, delete, and tag users on the notes panel attached to individual event details through Search and Case Management.
+1.	To create a new note, select click on + New Note in the upper-right corner, enter your text in the text box and click on the blue paper plane icon at the bottom right to publish your draft. To delete your draft, click on the blue cross at the bottom right.
+2.	To edit or delete a note, click on the vertical ellipsis to view the menu, and select the desired command.
+3.	To reply, enter your text in the Reply text box below the note you wish to reply on,
+4.	To tag a user in your note, type the @ symbol followed by their name or email alias with tenant access. Once the note is published the tagged user will get an in-product notification.
+
+You may also type hyperlinks that will be clickable once published.
 
 ### Link analysis
 Select the **Link Analysis** tab to view other events that have attributes in common with the event you are currently reviewing. For example, if you select **Email**, you can view all events that were made with the same email in the selected timeframe. If you select multiple attributes, use the dropdown to specify whether you want to see events that match all the attributes you have selected, or at least one of the attributes. 
