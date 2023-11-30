@@ -22,8 +22,9 @@ Under **Admin Settings**, use the **Configuration** tab to select the assessment
 
 Case management configuration supports the following areas for configurability:
 
-- **Decision action name and its corresponding action, label, button icon**: Customize the name of the decision button and its corresponding decision action, the ability to enable when fraud labels should be sent to to Fraud protection, and the icon displayed next to the decision action name.
+- **Decision action name and its corresponding action, label, button icon**: Customize the name of the decision button and its corresponding decision action, the ability to enable when fraud labels should be sent to Fraud protection, and the icon displayed next to the decision action name.
 - **Decision reasons**: Customize reasons lists for each decision action.
+- **Webhook**: A way to send messages about Case Management decision events through webhook.
 
 To update the configuration, use the JSON editor to update attribute values. When you're ready to apply the configuration, select **Save and Apply** to apply the configuration to the selected assessment. To ensure the configuration is applied, refresh your browser before reviewing cases with new configurations in Case management.
 
@@ -45,10 +46,10 @@ To update the configuration, use the JSON editor to update attribute values. Whe
 |labelAction|Enum <br /> <br /> *Expected values:* <br /> Fraud <br /> NonFraud <br /> None | Enables you to ingest cases with fraud labels to Fraud Protection.|
 |reasons|String| When making a certain decision in manual review cases, you can select specific reasons to be shown in the dropdown. <br /> <br /> Minimum of one reason per caseAction is needed.|
 |buttonSentiment|Enum <br /> <br /> *Expected values:* <br /> Positive <br /> Negative <br /> Neutral <br /> Null|Button icon displayed with decision action name. <br /> <br /> Positive: Green checkmark icon <br /> Negative: Red X icon <br /> Neutral: Black circle with a white line icon <br /> Null: no icon|
+|fqlAction|String|To invoke External Call from CM with null as a default.|
 
 ### Default case management configuration
 The following schema is the system default unless you apply a custom configuration:
-
 ```json
 {
 "caseManagementOptions": {
