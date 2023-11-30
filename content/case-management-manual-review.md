@@ -50,13 +50,15 @@ After you've reviewed the details of the transaction and are ready to make a dec
 > [!NOTE]
 > The **Transaction review** page monitors the amount of time that you spend reviewing cases. If you've been reviewing a case for 30 minutes, you'll receive an alert. If you're still reviewing the case, you can extend the time for another 30 minutes by selecting **Continue reviewing** in the message. If you don't make a selection in the message, the case will be sent back to the queue and made available for another agent to review.
 
-## Add notes without reviewing a case
+## Notes Panel
 
-If you can't complete a review of a case, you can leave notes for the next reviewer.
+Notes allow you to have a rich collaboration by your team when reviewing an event details. You may create, edit, reply, delete, and tag users on the notes panel attached to individual event details through Search and Case Management.
+1.	To create a new note, select click on + New Note in the upper-right corner, enter your text in the text box and click on the blue paper plane icon at the bottom right to publish your draft. To delete your draft, click on the blue cross at the bottom right.
+2.	To edit or delete a note, click on the vertical ellipsis to view the menu, and select the desired command.
+3.	To reply, enter your text in the Reply text box below the note you wish to reply on,
+4.	To tag a user in your note, type the @ symbol followed by their name or email alias with tenant access. Once the note is published the tagged user will get an in-product notification.
 
-1. Select **Notes** in the upper-right corner of the **Transaction review** page.
-1. Select **Note** to add a note that will be associated with the transaction. Anyone who views the transaction in the future will be able to view this note.
-1. Select **Send back to queue** to send the case back to the queue and make it available for another agent to review. 
+You may also type hyperlinks that will be clickable once published.
 
 ## Make bulk decisions
 
