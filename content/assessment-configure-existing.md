@@ -33,8 +33,8 @@ If you have **Read/Write** permissions for Assessments, you can:
   - Enabling or re-enabling the report can take up to 24 hours for the reports to be displayed. Disabling reports will hide the "Reporting" section.
   - You can setup data filters   to match your business needs, allowing you to analyze your data in various ways within the reports. A default set of data filters will be assigned automatically based on your assessment configuration.
   - You can setup data fields from observation events and labels to show distribution metrics as needed.  
-  - By enabling or disabling the "Amount" option, you can choose to display or hide the Amount metric in the reports. You can select specific data attributes to determine how amounts are aggregated for reporting. The “txnAmount” in monetary templates like Purchase, Money Transfer, and Card Payment is considered as the default amount attributes. These default amount attributes will be converted  to USD for aggregation, specifically to unify the currency representation.
-  - A limit has been set on report configuration changes to 5 times every 90 day  s to ensure the highest quality of performance and a consistent user experience. This has been implemented to maintain the integrity and responsiveness of the reports.
+  - By enabling or disabling the "Amount" option, you can choose to show the Amount metric in the reports. You can select specific data attributes to determine how amounts are aggregated for reporting. The “txnAmount” in monetary templates like Purchase, Money Transfer, and Card Payment is considered as the default amount attributes. These default amount attributes will be converted  to USD for aggregation, specifically to unify the currency representation.
+  - A limit has been set on report configuration changes to 5 times every 90 days to ensure the highest quality of performance and a consistent user experience. This has been implemented to maintain the integrity and responsiveness of the reports.
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
