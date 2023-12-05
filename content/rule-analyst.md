@@ -84,5 +84,5 @@ In addition to common filters, the following filters are available for you to fu
 - **Score type** – The available Fraud Protection score types.
 - **Transaction status(when applies)** – The latest status of transactions.
 - **Latest event, status (when applies)** – the status of transactions from the latest label or observation event.  
-- **Latest fraud event (when applies)** – the fraud flag value from the latest label or observation event.
+- **Latest fraud event, fraud flag (when applies)** – the fraud flag value from the latest label or observation event.
 
