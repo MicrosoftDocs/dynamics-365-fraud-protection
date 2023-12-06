@@ -189,7 +189,7 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 | ContainsAny(String *suffix*)|<p> This operator checks whether a string contains any of the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hypen)|
 | StartsWith(String *prefix*) | <p>This operator checks whether a string begins with a specified prefix.</p><p>StartsWith(String *prefix*)</p> | @"user.phoneNumber".StartsWith("1-") |
 | EndsWith(String *suffix*)   | <p>This operator checks whether a string ends with a specified suffix.</p><p>EndsWith(String *suffix*)</p> | @"user.email".EndsWith("@contoso.com") |
-| IsNumberic(String*suffix*)  | <p>This operator checks whether a string contains number ends with a specified suffix.</p><p>IsNumeric(String *suffix*)</p> | @"user.email".IsNumberic() |
+| IsNumeric()  | <p>This operator checks whether a string contains number.</p><p>(String).IsNumeric()</p> | @"user.email".IsNumeric() |
 | Length  | <p>This operator returns the number of characters in the string.  | @"user.username".Length |
 | Convert.ToDateTime(@"user.creationDate").ToString("yyyy-MM-dd HH:mm:ss")  | <p>This operator converts the string to datetime and converts datetime to a string using the given format.| Convert.ToDateTime(@"user.creationDate").ToString("yyyy-MM-dd") |
 
