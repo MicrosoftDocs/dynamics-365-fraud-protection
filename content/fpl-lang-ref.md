@@ -183,10 +183,10 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 
 | Operator                    | Description | Example |
 |-----------------------------|-------------|---------|
-| Contains(String *suffix*)   | <p>This operator checks whether a string contains another string.</p><p>Contains(String *substring*)</p> | @"productList`.productName".Contains("Xbox") |
-| ContainsOnly(String *suffix*) | <p> This operator checks whether a string contains only the charsets provided.</p><p>ContainsOnly(Charset1 Charset2 ...etc.)</p>|@"zipcode".ContainsOnly(CharSet.Numeric)|
-| ContainsAll(String *suffix*) |<p> This operator checks whether a string contains all the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@ “zipcode”.ContainsAll(CharSet.Numeric\|CharSet.Hypen)|
-| ContainsAny(String *suffix*)|<p> This operator checks whether a string contains any of the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hypen)|
+| Contains(String *substring*)   | <p>This operator checks whether a string contains another string.</p><p>Contains(String *substring*)</p> | @"productList`.productName".Contains("Xbox") |
+| ContainsOnly(*CharSet*) | <p> This operator checks whether a string contains only the charsets provided.</p><p>ContainsOnly(Charset1 Charset2 ...etc.)</p>|@"zipcode".ContainsOnly(CharSet.Numeric)|
+| ContainsAll(*CharSet*) |<p> This operator checks whether a string contains all the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@ “zipcode”.ContainsAll(CharSet.Numeric\|CharSet.Hypen)|
+| ContainsAny(*CharSet*)|<p> This operator checks whether a string contains any of the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hypen)|
 | StartsWith(String *prefix*) | <p>This operator checks whether a string begins with a specified prefix.</p><p>StartsWith(String *prefix*)</p> | @"user.phoneNumber".StartsWith("1-") |
 | EndsWith(String *suffix*)   | <p>This operator checks whether a string ends with a specified suffix.</p><p>EndsWith(String *suffix*)</p> | @"user.email".EndsWith("@contoso.com") |
 | IsNumeric()  | <p>This operator checks whether a string contains number.</p><p>(String).IsNumeric()</p> | @"user.email".IsNumeric() |
