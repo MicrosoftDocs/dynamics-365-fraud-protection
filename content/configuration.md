@@ -24,7 +24,7 @@ Case management configuration supports the following areas for configurability:
 
 - **Decision action name and its corresponding action, label, button icon**: Customize the name of the decision button and its corresponding decision action, the ability to enable when fraud labels should be sent to Fraud protection, and the icon displayed next to the decision action name.
 - **Decision reasons**: Customize reasons lists for each decision action.
-- **Webhook**: A way to send messages about Case Management decision events through webhook.
+- **FQL action**: Trigger an External Call when you click a decision button in Case Management.
 
 To update the configuration, use the JSON editor to update attribute values. When you're ready to apply the configuration, select **Save and Apply** to apply the configuration to the selected assessment. To ensure the configuration is applied, refresh your browser before reviewing cases with new configurations in Case management.
 
@@ -46,7 +46,7 @@ To update the configuration, use the JSON editor to update attribute values. Whe
 |labelAction|Enum <br /> <br /> *Expected values:* <br /> Fraud <br /> NonFraud <br /> None | Enables you to ingest cases with fraud labels to Fraud Protection.|
 |reasons|String| When making a certain decision in manual review cases, you can select specific reasons to be shown in the dropdown. <br /> <br /> Minimum of one reason per caseAction is needed.|
 |buttonSentiment|Enum <br /> <br /> *Expected values:* <br /> Positive <br /> Negative <br /> Neutral <br /> Null|Button icon displayed with decision action name. <br /> <br /> Positive: Green checkmark icon <br /> Negative: Red X icon <br /> Neutral: Black circle with a white line icon <br /> Null: no icon|
-|fqlAction|String|To invoke External Call from CM with null as a default.|
+|fqlAction|String <br /> <br /> *Entry Exemple:* <br /> "fqlAction" : "fqlAction" : "DO External.CallWebService() when true"| Example value for fqlAction that would result in the External Call "CallWebService" being called every time corresponding CM Decision button is selected.|
 
 ### Default case management configuration
 The following schema is the system default unless you apply a custom configuration:
