@@ -98,7 +98,7 @@ The **Operation analysis** report calculates statistics of score thresholds, bas
 
 ## Profit optimizer report  
 
-The **Profit optimizer** report calculates net profit and cumulative net profit achieved percentages based on the given estimated percentage of profit margin and score range (in increments of 10). The report is designed for purchase and other monetary templates within [Assessments](assessment-create-new.md) such as Money Transfer and Card Payment, only when amount calculation is enabled.
+The **Profit optimizer** report calculates net profit and cumulative net profit achieved percentages based on the given estimated percentage of profit margin and score range (in increments of 10). The report is designed for purchase and it requires to enable amount calculation.
 
   - **Net profit** – The profit of non-fraud transactions minus the cost of goods of fraud transactions.
   - **Cumulative net profits achieved percentage** – The percentage of net profit at or under a score bin out of the total possible non-fraud profit.
