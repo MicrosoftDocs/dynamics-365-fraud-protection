@@ -116,7 +116,7 @@ To create an action, go to actions on the configuration page, then click **...**
 
 ### Actions functions schema
 |Function|Description|Parameters|
-| :--------: | :--------------------------------------: |---------------------|
+| :--------: | :--------------------------------------: | :--------------------: |
 |DO Assessment.SendLabel(@eventId, Enum *label*, string *reason*)|Send a label for a transaction.|label: <br /> *Expected values:* <br /> "Fraud" <br /> "NonFraud" <br /> "None" <br /> <br /> reason: reason for applying label.|
 
 ### Default actions template
