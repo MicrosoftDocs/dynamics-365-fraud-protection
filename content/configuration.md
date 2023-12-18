@@ -108,7 +108,7 @@ To create an action, go to actions on the configuration page, then click **...**
 ### Actions configuration schema
 |Property|Type|Description|
 | :--------: | :--------------------------------------: |---------------------|
-|name|String|Name of the action. <br /> <br /> Action names must be unique.|
+|name|String|Name of the action. Action names must be unique.|
 |context -> type|Enum <br /> <br /> *Expected values:* <br /> "AssessmentEvent"|The context in which this action will be displayed|
 |context -> ids|Array of strings|The specific ids for which the action will be displayed. For AssessmentEvent the ids will be the Assessment API names.|
 |fql|String <br /> <br /> *Entry Example:* <br /> "fql" : "DO Assessment.SendLabel(@eventId, \"Fraud\", \"Some Reason\")"|The FQL that the action will execute when invoked.|
