@@ -96,3 +96,41 @@ The following schema is the system default unless you apply a custom configurati
 }  
 ```
 
+## Action configuration
+
+DFP lets you configure custom actions that execute FQL within a given context. Action configuration supports the following contexts:
+
+- **AssessmentEvent**: Actions will appear every time an Assessment Event is shown (search results page, search individual transaction page). Actions can be applied to 1 or many transactions.
+
+
+To create an action, go to actions on the configuration page, then click **...** -> **Create an action**. Use the JSON editor to update the template to configure your action. When you're ready to create the action, select **Save and Apply**. To ensure the action is configured, refresh your browser before applying an action for the first time.
+
+### Actions configuration schema
+|Property|Type|Description|
+| :--------: | :--------------------------------------: |---------------------|
+|name|String|Name of the action. <br /> <br /> Action names must be unique.|
+|context -> type|Enum <br /> <br /> *Expected values:* <br /> "AssessmentEvent"|The context in which this action will be displayed|
+|context -> ids|Array of strings|The specific ids for which the action will be displayed. For AssessmentEvent the ids will be the Assessment API names.|
+|fql|String <br /> <br /> *Entry Example:* <br /> "fql" : "DO Assessment.SendLabel(@eventId, \"Fraud\", \"Some Reason\")"|The FQL that the action will execute when invoked.|
+
+### Actions functions schema
+|Function|Description|Parameters|
+| :--------: | :--------------------------------------: |---------------------|
+|DO Assessment.SendLabel(@eventId, string *label*, string *reason*)|Allows you to send a label for a transaction |label: Enum <br /> <br /> *Expected values:* <br /> "Fraud" <br /> "NonFraud" <br /> "None" <br /> <br /> reason: reason for applying label.|
+
+### Default actions template
+The following is the default Actions template when you create an action:
+```json
+{
+	"name": "Put some name here....",
+	"context": {
+		"type": "AssessmentEvent",
+		"ids": [
+			"Assessment apiName (purchase, for example)",
+			"add more apiNames here"
+		]
+	},
+	"fql": "DO Assessment.SendLabel(@eventId, \"Fraud\", \"Some Reason\")"
+}
+```
+
