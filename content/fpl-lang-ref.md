@@ -35,7 +35,7 @@ This language reference guide includes the complete list of operators, functions
 - [Type casting operators](fpl-lang-ref.md#type-casting-operators)
 - [DateTime functions](fpl-lang-ref.md#datetime-operators)
 - [Aggregation functions](fpl-lang-ref.md#aggregation-functions)
-- [Global Variable functions](fpl-lang-ref.md#globalVariables-functions)
+- [Global Variables functions](fpl-lang-ref.md#global-variables-functions)
 
 The guide also covers other articles. Here are some examples:
 
@@ -254,7 +254,7 @@ For information about type inferencing, see the [Type inference of attributes](f
 | DistinctCount(String *key*) | This function returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPs |
 | Sum(Double *value*)         | This function returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
-## Global Variable functions
+## Global Variables functions
 
 Global Variable functions can be used to set and get global variables within rules. The variables that are set can be accessed from within the same rules or from other rules within the same environemnt or from environments down the stack. For example, if we have global variables set in the root environmnt, the variables can be accessed within the rules from the same environemnt or from its children. Also, global variables are specific to an assessment. A variable set within one assessment cannot be accessed from another assessment. 
 
