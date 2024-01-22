@@ -100,14 +100,14 @@ Model functions run the various fraud models and are useful when your assessment
 | Bot   |   Assesses the likelihood of a session being bot-initiated. Pass in a device context ID that was sent to Fraud Protection’s device fingerprinting solution. | Model.Bot(@deviceContextId)   |
 
 ## Gibberish detection functions
-These functions help prevent fraud by quicky and efficiently detecting whether key user-input fields (such as names and addresses) contain gibberish or not. 
+These functions help prevent fraud by quicky and efficiently detecting whether key user-input fields (such as names and addresses) contain gibberish. 
 | Function     | Description | Example |
 |--------------|-------------|---------|
-| GetPattern(String).maxConsonants |  Maximum number of contiguous consonants in a string that are not separated by a vowel. For example maxConsonants for the string “01gggyturah” is 5   |  GetPattern(@"user.email").maxConsonants |
-| GetPattern(String).gibberScore  |  ML based score between 0 and 1; 0 means most likely to be gibberish and 1 means least likely to be gibberish  | GetPattern(@"user.email").gibberScore  |
+| GetPattern(String).maxConsonants |  Maximum number of contiguous consonants in a string that are not separated by a vowel. For example maxConsonants for the string “01gggyturah” is 5.   |  GetPattern(@"user.email").maxConsonants |
+| GetPattern(String).gibberScore  |  ML based score between 0 and 1; 0 means most likely to be gibberish and 1 means least likely to be gibberish.  | GetPattern(@"user.email").gibberScore  |
 
 > [!NOTE]
-> Gibberish detection model is based on the frequency of two consecutive alphanumeric characters in publicly available english documents. It is assumed that the more frequently two consecutive alphanumeric characters appear in public documents, less likely that they are gibberish. Model should provide reasonable scores for english texts, and can be used to detect if the names or addresses contains gibberish. However, the Model might not be suitable for abbreviations, such as short form for states (AZ, TX, etc.) and it also cannot be used to validate names or addresses. Lastly, the model has not been tested for non-English texts
+> Gibberish detection model is based on the frequency of two consecutive alphanumeric characters in publicly available english documents. It is assumed that the more frequently two consecutive alphanumeric characters appear in public documents, less likely that they are gibberish. The model should provide reasonable scores for english texts, and can be used to detect if the names or addresses contains gibberish. However, the model might not be suitable for abbreviations, such as short form for states (AZ, TX, etc.) and it also can't be used to validate names or addresses. Lastly, the model has not been tested for non-English texts.
 
 
 ## Device attribute functions
