@@ -2,7 +2,7 @@
 author: weiswang
 description: This article provides information about the Configuration.
 ms.author: weiswang
-ms.date: 11/10/2023
+ms.date: 01/22/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -99,12 +99,12 @@ The following schema is the system default unless you apply a custom configurati
 
 ## Action configuration
 
-DFP lets you configure custom actions that execute FQL within a given context. Action configuration supports the following contexts:
+Fraud Protection enables you to configure custom actions that execute FQL within a given context. Action configuration supports the following contexts:
 
-- **AssessmentEvent**: Actions appear every time an Assessment Event is shown (search results page, search individual transaction page). Actions can be applied to 1 or many transactions.
+- **AssessmentEvent**: Actions appear every time an Assessment Event is shown (for example, Search results page, Search individual transaction page). Actions can be applied to one or many transactions.
 
 
-To create an action, go to actions on the configuration page, then click **...** -> **Create an action**. Use the JSON editor to update the template to configure your action. When you're ready to create the action, select **Save and Apply**. To ensure the action is configured, refresh your browser before applying an action for the first time.
+To create an action, go to **Actions** on the **Configuration** page, then select **...** -> **Create an action**. Use the JSON editor to update the template to configure your action. When you're ready to create the action, select **Save and Apply**. To ensure the action is configured, refresh your browser before applying an action for the first time.
 
 ### Actions configuration schema
 |Property|Type|Description|
