@@ -2,7 +2,7 @@
 author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
-ms.date: 11/28/2023
+ms.date: 01/22/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -256,7 +256,7 @@ For information about type inferencing, see the [Type inference of attributes](f
 
 ## Global Variables functions
 
-Global Variables functions can be used to set and get global variables within rules, velocities, routing rules and post decision action rules. The variables that are set can be accessed from within the same environment or from environments down the stack. For example, if we have global variables set in a rule within the root environment, the variables can be accessed within the rules from the same environment or from its children. Also, global variables are specific to an assessment. A variable set within one assessment cannot be accessed from another assessment. 
+Global Variables functions can be used to set and get global variables within rules, velocities, routing rules, and post-decision action rules. The variables that are set can be accessed from within the same environment or from environments down the stack. For example, if we have global variables set in a rule within the root environment, the variables can be accessed within the rules from the same environment or from its children. Also, global variables are specific to an assessment. A variable set within one assessment can't be accessed from another assessment. 
 
 | Operator | Description | Example |
 |-------------|-------------|---------|
