@@ -2,7 +2,7 @@
 author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
-ms.date: 11/28/2023
+ms.date: 01/22/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -23,6 +23,7 @@ This language reference guide includes the complete list of operators, functions
 - [Action functions](fpl-lang-ref.md#action-functions)
 - [Observation functions](fpl-lang-ref.md#observation-functions)
 - [Model functions](fpl-lang-ref.md#model-functions)
+- [Gibberish detection functions](fpl-lang-ref.md#gibberish-detection-functions)
 - [Device attribute functions](fpl-lang-ref.md#device-attribute-functions)
 - [Referencing attributes and variables](fpl-lang-ref.md#referencing-attributes-and-variables)
 - [Logical operators](fpl-lang-ref.md#logical-operators)
@@ -35,6 +36,7 @@ This language reference guide includes the complete list of operators, functions
 - [Type casting operators](fpl-lang-ref.md#type-casting-operators)
 - [DateTime functions](fpl-lang-ref.md#datetime-operators)
 - [Aggregation functions](fpl-lang-ref.md#aggregation-functions)
+- [Global Variables functions](fpl-lang-ref.md#global-variables-functions)
 
 The guide also covers other articles. Here are some examples:
 
@@ -98,6 +100,17 @@ Model functions run the various fraud models and are useful when your assessment
 |  Risk  |  Assesses the likelihood of a session being risky. | Model.Risk()  |
 | Bot   |   Assesses the likelihood of a session being bot-initiated. Pass in a device context ID that was sent to Fraud Protection’s device fingerprinting solution. | Model.Bot(@deviceContextId)   |
 
+## Gibberish detection functions
+These functions help prevent fraud by quicky and efficiently detecting whether key user-input fields (such as names and addresses) contain gibberish. 
+| Function     | Description | Example |
+|--------------|-------------|---------|
+| GetPattern(String).maxConsonants |  Maximum number of contiguous consonants in a string that are not separated by a vowel. For example maxConsonants for the string “01gggyturah” is 5.   |  GetPattern(@"user.email").maxConsonants |
+| GetPattern(String).gibberScore  |  ML based score between 0 and 1; 0 means most likely to be gibberish and 1 means least likely to be gibberish.  | GetPattern(@"user.email").gibberScore  |
+
+> [!NOTE]
+> Gibberish detection model is based on the frequency of two consecutive alphanumeric characters in publicly available english documents. It is assumed that the more frequently two consecutive alphanumeric characters appear in public documents, less likely that they are gibberish. The model should provide reasonable scores for english texts, and can be used to detect if the names or addresses contains gibberish. However, the model might not be suitable for abbreviations, such as short form for states (AZ, TX, etc.) and it also can't be used to validate names or addresses. Lastly, the model has not been tested for non-English texts.
+
+
 ## Device attribute functions
 
 | Operator     | Description | Example |
@@ -118,6 +131,8 @@ You can use the at sign (@) operator to reference an attribute from the current 
 | Exists       | <p>This operator checks whether a variable exists in the event payload.</p><p>Exists(*String variable*)</p> | Exists(@"user.email") |
 |Response.Decision()|This function references the decision for the current assessment being evaluated.| Response.Decision() == “Approve”|
 |Request.CorrelationId()|This function references the unique Correlation ID of the event being evaluated. You can use this function to access the Correlation ID of an event in the rules experience and pass it to an external call as a parameter or a header.| External.MyExternalCall(Request.CorrelationId())|
+|.GetDiagnostics()|This function can be used to discover important diagnostic and debug information from an external call or an external assessment response. For an external call, the Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Endpoint isn't available in the Diagnostic object for an external assessment response. Any of these fields can be used in the rules once the Diagnostics object has been created by using its corresponding extension method, “.GetDiagnostics()”|<p>LET $extResponse = External. myCall(@"device.ipAddress")</p><p>LET $extResponseDiagnostics = $extResponse.GetDiagnostics()</p><p>OBSERVE Output(Diagnostics = $extResponseDiagnostics )</p><p>WHEN $extResponseDiagnostics. HttpStatusCode != 200|
+
 
 ## Logical operators
 
@@ -253,6 +268,14 @@ For information about type inferencing, see the [Type inference of attributes](f
 | DistinctCount(String *key*) | This function returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPs |
 | Sum(Double *value*)         | This function returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
+## Global Variables functions
+
+Global Variables functions can be used to set and get global variables within rules, velocities, routing rules, and post-decision action rules. The variables that are set can be accessed from within the same environment or from environments down the stack. For example, if you set global variables in a rule within the root environment, the variables can be accessed within the rules from the same environment or from their children. Also, global variables are specific to an assessment. A variable set within one assessment can't be accessed from another assessment. 
+
+| Operator | Description | Example |
+|-------------|-------------|---------|
+| SetVariables(k=v)  | This function can be used to set key-value pairs, i.e., set values to variables. | Do SetVariables(key= 123, email=@"user.email")) |
+| GetVariable("k")   | This function can be used to access the variables that are already set. In cases where we access variables that is never set, a default value will be returned.| <p>GetVariable("key").AsInt()</p><p>GetVariable("email").AsString()<p>GetVariable("key").AsDouble()</p> <p>GetVariable("key").AsBool()</p> <p>GetVariable("key").AsDateTime()</p><p>GetVariable("key").AsJsonObject()</p>|<p>GetVariable("key").AsJsonArray()</p> |
 
 ## Defining your own variables
 
