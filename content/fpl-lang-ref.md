@@ -36,6 +36,7 @@ This language reference guide includes the complete list of operators, functions
 - [Type casting operators](fpl-lang-ref.md#type-casting-operators)
 - [DateTime functions](fpl-lang-ref.md#datetime-operators)
 - [Aggregation functions](fpl-lang-ref.md#aggregation-functions)
+- [Global Variables functions](fpl-lang-ref.md#global-variables-functions)
 
 The guide also covers other articles. Here are some examples:
 
@@ -267,6 +268,14 @@ For information about type inferencing, see the [Type inference of attributes](f
 | DistinctCount(String *key*) | This function returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPs |
 | Sum(Double *value*)         | This function returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
+## Global Variables functions
+
+Global Variables functions can be used to set and get global variables within rules, velocities, routing rules, and post-decision action rules. The variables that are set can be accessed from within the same environment or from environments down the stack. For example, if you set global variables in a rule within the root environment, the variables can be accessed within the rules from the same environment or from their children. Also, global variables are specific to an assessment. A variable set within one assessment can't be accessed from another assessment. 
+
+| Operator | Description | Example |
+|-------------|-------------|---------|
+| SetVariables(k=v)  | This function can be used to set key-value pairs, i.e., set values to variables. | Do SetVariables(key= 123, email=@"user.email")) |
+| GetVariable("k")   | This function can be used to access the variables that are already set. In cases where we access variables that is never set, a default value will be returned.| <p>GetVariable("key").AsInt()</p><p>GetVariable("email").AsString()<p>GetVariable("key").AsDouble()</p> <p>GetVariable("key").AsBool()</p> <p>GetVariable("key").AsDateTime()</p><p>GetVariable("key").AsJsonObject()</p>|<p>GetVariable("key").AsJsonArray()</p> |
 
 ## Defining your own variables
 
