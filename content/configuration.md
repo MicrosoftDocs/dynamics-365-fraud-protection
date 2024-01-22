@@ -110,7 +110,7 @@ To create an action, go to **Actions** on the **Configuration** page, then selec
 |Property|Type|Description|
 | :--------: | :--------------------------------------: |---------------------|
 |name|String|Name of the action. Action names must be unique.|
-|context -> type|Enum <br /> <br /> *Expected values:* <br /> "AssessmentEvent"|The context in which this action is displayed|
+|context -> type|Enum <br /> <br /> *Expected values:* <br /> "AssessmentEvent"|The context in which this action is displayed.|
 |context -> ids|Array of strings|The specific ids for which the action is displayed. For AssessmentEvent, the ids are the Assessment API names.|
 |fql|String <br /> <br /> *Entry Example:* <br /> "fql" : "DO Assessment.SendLabel(@eventId, \"Fraud\", \"Some Reason\")"|The FQL that the action executes when invoked.|
 
