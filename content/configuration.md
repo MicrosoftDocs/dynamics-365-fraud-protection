@@ -2,7 +2,7 @@
 author: weiswang
 description: This article provides information about the Configuration.
 ms.author: weiswang
-ms.date: 11/10/2023
+ms.date: 01/22/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -15,6 +15,7 @@ title: Configuration
 Configuration allows you greater flexibility and extensibility to modify UI elements or interfaces within Microsoft Dynamics 365 Fraud Protection to fit your business needs. Configuration currently supports the following feature areas:
 
 - [Case management](configuration.md#case-management-configuration)
+- [Actions](configuration.md#action-configuration)
 
 Under **Admin Settings**, use the **Configuration** tab to select the assessment and feature to which you want to apply the configuration. This setting is only accessible in the root environment and to users assigned the roles Product Admin and AllAreas Admin as defined in the article, [User roles and access](configure-user-access.md)
 
@@ -94,5 +95,43 @@ The following schema is the system default unless you apply a custom configurati
 		"defaultDecisionName": "Approve"
 	}
 }  
+```
+
+## Action configuration
+
+Fraud Protection enables you to configure custom actions that execute FQL within a given context. Action configuration supports the following contexts:
+
+- **AssessmentEvent**: Actions appear every time an Assessment Event is shown (for example, Search results page, Search individual transaction page). Actions can be applied to one or many transactions.
+
+
+To create an action, go to **Actions** on the **Configuration** page, then select **...** -> **Create an action**. Use the JSON editor to update the template to configure your action. When you're ready to create the action, select **Save and Apply**. To ensure the action is configured, refresh your browser before applying an action for the first time.
+
+### Actions configuration schema
+|Property|Type|Description|
+| :--------: | :--------------------------------------: |---------------------|
+|name|String|Name of the action. Action names must be unique.|
+|context -> type|Enum <br /> <br /> *Expected values:* <br /> "AssessmentEvent"|The context in which this action is displayed.|
+|context -> ids|Array of strings|The specific ids for which the action is displayed. For AssessmentEvent, the ids are the Assessment API names.|
+|fql|String <br /> <br /> *Entry Example:* <br /> "fql" : "DO Assessment.SendLabel(@eventId, \"Fraud\", \"Some Reason\")"|The FQL that the action executes when invoked.|
+
+### Actions functions schema
+|Function|Description|Parameters|
+| :--------: | :--------------------------------------: | :--------------------: |
+|DO Assessment.SendLabel(@eventId, Enum *label*, string *reason*)|Send a label for a transaction.|label: <br /> *Expected values:* <br /> "Fraud" <br /> "NonFraud" <br /> "None" <br /> <br /> reason: reason for applying label.|
+
+### Default actions template
+The following schema is the default Actions template when you create an action:
+```json
+{
+	"name": "Put some name here....",
+	"context": {
+		"type": "AssessmentEvent",
+		"ids": [
+			"Assessment apiName (purchase, for example)",
+			"add more apiNames here"
+		]
+	},
+	"fql": "DO Assessment.SendLabel(@eventId, \"Fraud\", \"Some Reason\")"
+}
 ```
 
