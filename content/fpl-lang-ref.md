@@ -277,7 +277,7 @@ Global Variables functions can be used to set and get global variables within ru
 | Operator | Description | Example |
 |-------------|-------------|---------|
 | SetVariables(k=v)  | This function can be used to set key-value pairs, i.e., set values to variables. | Do SetVariables(key= 123, email=@"user.email") |
-| GetVariable("k")   | This function can be used to access the variables that are already set. In cases where we access variables that is never set, a default value will be returned.| <p>GetVariable("key").AsInt()</p><p>GetVariable("email").AsString()<p>GetVariable("key").AsDouble()</p><p>GetVariable("key").AsBool()</p> <p>GetVariable("key").AsDateTime()</p><p>GetVariable("key").AsJsonObject()</p><p>GetVariable("key").AsJsonArray()</p> |
+| GetVariable("k")   | This function can be used to access the variables that are already set. In cases where we access variables that is never set, a default value will be returned.| <p>GetVariable("key").AsInt()</p><p>GetVariable("email").AsString()<p>GetVariable("key").AsDouble()</p><p>GetVariable("key").AsBool()</p><p>GetVariable("key").AsDateTime()</p><p>GetVariable("key").AsJsonObject()</p><p>GetVariable("key").AsJsonArray()</p> |
 
 ## Defining your own variables
 
