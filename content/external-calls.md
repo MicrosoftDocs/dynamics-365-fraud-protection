@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to use external calls to ingest data from APIs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 07/21/2023
+ms.date: 01/22/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -162,6 +162,15 @@ If **myCall** requires a parameter, such as *IPaddress*, use the following synta
 
 External.myCall(@"device.ipAddress")
 
+You can also access the Diagnostics object in rules, which can enable you to discover important diagnostic and debug information from an external call response. The Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Any of these fields can be accessed in the rules experience and can be used with the Observe Output method to create custom properties. It's important to note that the Diagnostics object has to be created by using its corresponding extension method, “.GetDiagnostics()”, before the object’s fields can be used in the rules. 
+
+Below is a sample rule using the Diagnostic object:
+```FraudProtectionLanguage
+LET $extResponse = External. myCall(@"device.ipAddress")
+LET $extResponseDiagnostics = $extResponse.GetDiagnostics()
+OBSERVE Output(Diagnostics = $extResponseDiagnostics ) 
+WHEN $extResponseDiagnostics.HttpStatusCode != 200
+```
 For information about the rules language and how you can use external calls in rules, see the [Language reference guide](fpl-lang-ref.md).
 
 > [!NOTE]
