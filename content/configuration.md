@@ -104,7 +104,7 @@ Fraud Protection enables you to configure custom actions that execute FQL within
 - **AssessmentEvent**: Actions appear every time an Assessment Event is shown (for example, Search results page, Search individual transaction page). Actions can be applied to one or many transactions.
 
 
-To create an action, go to **Actions** on the **Configuration** page, then select **...** -> **Create an action**. Use the JSON editor to update the template to configure your action. When you're ready to create the action, select **Save and Apply**. To ensure the action is configured, refresh your browser before applying an action for the first time. Actions can only be configured at a root environment level by an admin. Once an action is configured, it is visible to all children of the root environment.
+To create an action, go to **Actions** on the **Configuration** page, then select **...** -> **Create an action**. Use the JSON editor to update the template to configure your action. When you're ready to create the action, select **Save and Apply**. To ensure the action is configured, refresh your browser before applying an action for the first time. Actions can only be configured at a root environment level by an admin. Once an action is configured, it is visible to all environments underneath the root environment.
 
 ### Actions configuration schema
 |Property|Type|Description|
