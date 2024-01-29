@@ -27,7 +27,7 @@ Account protection covers three types of account lifecycle events: *account crea
 This document guides you through the following activities:
 
 -	[Step 1: Implement account protection APIs](promocode-set-up-account-protection.md#step-1-implement-account-protection-apis)
--	[Step 2: Create Microsoft Entra apps](promocode-set-up-account-protection.md#step-2-create-azure-ad-apps)
+-	[Step 2: Create Microsoft Entra apps](promocode-set-up-account-protection.md#step-2-create-microsoft-entra-apps)
 -	[Step 3: Understand account protection events](promocode-set-up-account-protection.md#step-3-understand-account-protection-events)
 
     After you complete these activities, you will be able to use account protection to block or challenge suspicious attempts to compromise existing accounts.
