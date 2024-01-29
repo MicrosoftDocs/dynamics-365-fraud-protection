@@ -122,7 +122,7 @@ In addition to the three metrics that were described earlier, an **Error** chart
 In addition to HTTP client errors (400, 401, and 403), you might see the following errors:
 
 - **Invalid application ID** – The application ID that was provided doesn't exist in your tenant, or it isn't valid.
-- **AAD failure** – The Azure AD token could not be retrieved.
+- **Microsoft Entra failure** – The Microsoft Entra token could not be retrieved.
 - **Definition not found** – The external call has been deleted, but it's still referenced in a rule.
 - **Timeout** – The request to the target took longer than the specified time-out.
 - **Communication failure** – No connection could be made to the target because of a network issue or because the target is unavailable.
