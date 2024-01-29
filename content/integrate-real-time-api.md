@@ -30,7 +30,7 @@ Depending on how you use Fraud Protection, you might use different sets of the f
 
 The integration of purchase protection APIs occurs in three phases: 
 
-1. [Create Microsoft Entra applications](#create-azure-ad-applications) via Fraud Protection. 
+1. [Create Microsoft Entra applications](#create-microsoft-entra-applications) via Fraud Protection. 
 1. [Generate an access token](#generate-an-access-token).
 1. [Call the APIs](#call-the-apis).
 
