@@ -30,19 +30,19 @@ No.
 
 #### Does the application support Okta integration (SSO platform)?
 
-Okta integration isn't supported by default. Azure Active Directory (Azure AD) supports custom integrations. Because the merchant owns the tenant, the merchant can take advantage of Azure AD identity integration points. For more information, see the [Azure AD documentation](/azure/active-directory/).
+Okta integration isn't supported by default. Microsoft Entra supports custom integrations. Because the merchant owns the tenant, the merchant can take advantage of Microsoft Entra identity integration points. For more information, see the [Microsoft Entra documentation](/azure/active-directory/).
 
 #### Does the application or service support two-factor authentication (2FA)?
 
-Yes. The merchant can enable 2FA in Azure AD.
+Yes. The merchant can enable 2FA in Microsoft Entra ID.
  
 #### What is the 2FA solution?
 
-The 2FA solution is Azure Multi-Factor Authentication, an Azure AD feature. For more information, see [How it works: Azure Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
+The 2FA solution is Azure Multi-Factor Authentication, a Microsoft Entra feature. For more information, see [How it works: Azure Multi-Factor Authentication](/azure/active-directory/authentication/concept-mfa-howitworks).
  
 #### Does the application support application-level passwords?
 
-No. User and application identities are managed in the customer's Azure AD account. 
+No. User and application identities are managed in the customer's Microsoft Entra account. 
  
 #### Which hash or encryption algorithm is used to protect passwords?
 
@@ -58,15 +58,15 @@ No, and not applicable.
  
 #### Does the application or service use immediate account access termination, including closing open sessions?
 
-No. Azure AD token expiration is aligned with user access termination, not the session. 
+No. Microsoft Entra token expiration is aligned with user access termination, not the session. 
 
 #### If account termination isn't automatic, is this action performed within one hour of an account access termination request?
 
-Yes, per Azure AD policy. For more information, see the [Azure AD documentation](/azure/active-directory/).
+Yes, per Microsoft Entra policy. For more information, see the [Microsoft Entra documentation](/azure/active-directory/).
 
 #### What is the session idle time-out of the application?
 
-Per Azure AD policy, the session idle time-out is aligned with the token validity period. 
+Per Microsoft Entra policy, the session idle time-out is aligned with the token validity period. 
  
 #### Does the application or service use an automatic account deprovisioning process via an API?
 
@@ -78,7 +78,7 @@ No. Only audit logs are tracked and retained as features per Online Services Ter
  
 #### Does the application or service let the administrator explicitly grant authorization to data and capabilities based on role and/or function, according to the least privilege model?
 
-Yes. Via Azure AD roles, administrators can grant access within their tenant. 
+Yes. Via Microsoft Entra roles, administrators can grant access within their tenant. 
  
 #### A minimum expectation is support for the administrator role, user role, read-only administrator (log) role, and unprivileged administrator (no access to content) role. Do you provide this support?
 
@@ -104,13 +104,13 @@ Log data isn't shared by the product. Service metrics and key performance indica
 
 #### Does the application or service collect or provide data about user sign-in, sign-out, password changes, and failed sign-in attempts?
 
-Yes. For more information, see [Audit activity reports in the Azure Active Directory portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
+Yes. For more information, see [Audit activity reports in the Microsoft Entra portal](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 #### Does the application or service collect or provide audit logs of administrator actions (user account create/update/delete) or application-specific actions?
 
-The application maintains an audit history of key changes, such as rule or list updates. User account actions and corresponding audit history are controlled via Azure AD. For more information, see [Azure Active Directory reports and monitoring documentation](/azure/active-directory/reports-monitoring).
+The application maintains an audit history of key changes, such as rule or list updates. User account actions and corresponding audit history are controlled via Microsoft Entra ID. For more information, see [Microsoft Entra reports and monitoring documentation](/azure/active-directory/reports-monitoring).
  
-For information about Azure AD auditing, see the core directory events for application role and group membership in [List of Azure Active Directory Audit Activities](/archive/blogs/motiba/list-of-azure-active-directory-audit-activities). For access to audits from the Azure AD portal, see [Audit logs in Azure Active Directory](/azure/active-directory/reports-monitoring/concept-audit-logs).
+For information about Microsoft Entra auditing, see the core directory events for application role and group membership in [List of Microsoft Entra Audit Activities](/archive/blogs/motiba/list-of-azure-active-directory-audit-activities). For access to audits from the Microsoft Entra portal, see [Audit logs in Microsoft Entra ID](/azure/active-directory/reports-monitoring/concept-audit-logs).
 
 #### Does the application or service collect or provide audit logs of user actions (document or content create/read/update/delete)?
 

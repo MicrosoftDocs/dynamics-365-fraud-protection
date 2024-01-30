@@ -33,7 +33,7 @@ Microsoft uses industry-standard processes to delete customer data and professio
 
 #### How is data confidentiality ensured in Fraud Protection?
 
-Fraud Protection requires that all access be authenticated with Azure Active Directory (Azure AD) and implements role-based access control to prevent unauthorized access by other customers. Fraud Protection also follows many internal security procedures to authorize and audit all access to data by Microsoft personnel, and to allow access only when it's required to ensure service stability and resolve issues.
+Fraud Protection requires that all access be authenticated with Microsoft Entra and implements role-based access control to prevent unauthorized access by other customers. Fraud Protection also follows many internal security procedures to authorize and audit all access to data by Microsoft personnel, and to allow access only when it's required to ensure service stability and resolve issues.
 
 As is stated in the Microsoft data protection addendum on the [Licensing Documents](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) page of the Microsoft Licensing Resources and Documents site:
 

@@ -21,7 +21,7 @@ External calls let you ingest data from APIs outside Microsoft Dynamics 365 Frau
 
 Before you create an external call, you should know about the following limitations:
 
-- Fraud Protection currently supports only the following authentication methods: *Anonymous* and *AAD*.
+- Fraud Protection currently supports only the following authentication methods: *Anonymous* and *Microsoft Entra ID*.
 - Fraud Protection currently supports only the following HTTP methods: *GET* and *POST*.
 
 ## Create an external call
@@ -43,15 +43,15 @@ Before you create an external call, you should know about the following limitati
     - **Authentication** – Select the method that should be used to authenticate incoming requests:
 
         - If you select **Anonymous**, an authorization header won't be sent.
-        - If you select **AAD**, an Azure Active Directory (Azure AD) token will be generated in your tenant, and *Bearer \<token\>* will be used as the authorization header.
+        - If you select **Microsoft Entra ID**, a Microsoft Entra token will be generated in your tenant, and *Bearer \<token\>* will be used as the authorization header.
 
-        For more information about authentication, authorization, and Azure AD tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this article.
+        For more information about authentication, authorization, and Microsoft Entra tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this article.
 
-    - **Audience** - If you selected **AAD** as the authentication method, you will be asked to provide an audience. You can use an existing Azure application as the audience or create a new one through the integration experience within DFP portal. Make sure audience has permission to access the external call/service. To learn more about how to configure Azure Active Directory (Azure AD) authentication, see [Configure Azure AD authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). 
+    - **Audience** - If you selected **Microsoft Entra ID** as the authentication method, you will be asked to provide an audience. You can use an existing Azure application as the audience or create a new one through the integration experience within DFP portal. Make sure audience has permission to access the external call/service. To learn more about how to configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). 
    
-    - **Application ID** – You will also need to provide the application ID of a new or existing Azure AD application within your Fraud Protection subscription tenant. Generate a certificate in your Azure Key Vault. The Fraud Protection app should have read access to this Azure Key Vault. Load the certificate to this Azure AD application. For more information about how to create and manage Azure AD applications, see [Create Azure Active Directory Applications](integrate-real-time-api.md#create-azure-ad-applications).
+    - **Application ID** – You will also need to provide the application ID of a new or existing Microsoft Entra application within your Fraud Protection subscription tenant. Generate a certificate in your Azure Key Vault. The Fraud Protection app should have read access to this Azure Key Vault. Load the certificate to this Microsoft Entra application. For more information about how to create and manage Microsoft Entra applications, see [Create Microsoft Entra Applications](integrate-real-time-api.md#create-microsoft-entra-applications).
   
-   - **Certificate URL** – Provide the certificate identifier URL from your Azure Key Vault. This is the same certificate you loaded to the Azure AD app in  the previous step. For more information on how to generate a certificate in Azure Key Vault, see [Creating and merging a certificate signing request in Azure Key Vault](/azure/key-vault/certificates/create-certificate-signing-request?tabs=azure-portal) 
+   - **Certificate URL** – Provide the certificate identifier URL from your Azure Key Vault. This is the same certificate you loaded to the Microsoft Entra app in  the previous step. For more information on how to generate a certificate in Azure Key Vault, see [Creating and merging a certificate signing request in Azure Key Vault](/azure/key-vault/certificates/create-certificate-signing-request?tabs=azure-portal) 
     
     - **Add parameter** – You can use parameters to pass data from Fraud Protection to your API endpoint. Depending on the HTTP method that you selected, these parameters will be sent to the endpoint either in the query string or as part of the request body.
 
@@ -113,7 +113,7 @@ In addition to the three metrics that were described earlier, an **Error** chart
 In addition to HTTP client errors (400, 401, and 403), you might see the following errors:
 
 - **Invalid application id** – The application ID that was provided doesn't exist in your tenant, or it isn't valid.
-- **AAD failure** – The Azure AD token could not be retrieved.
+- **Microsoft Entra failure** – The Microsoft Entra token could not be retrieved.
 - **Definition not found** – The external call has been deleted, but it's still referenced in a rule.
 - **Timeout** – The request to the target took longer than the specified time-out.
 - **Communication failure** – No connection could be made to the target because of a network issue or because the target is unavailable.
@@ -180,7 +180,7 @@ For information about the rules language and how you can use external calls in r
 
 To ensure that data is securely accessed, APIs often authenticate the sender of a request to verify that they have permission to access the data. External calls in Fraud Protection supports the following methods of authentication: 
 1. Anonymous
-2. AAD
+2. Microsoft Entra ID
 3. Basic
 4. Certificate
 
@@ -193,9 +193,9 @@ To ensure that data is securely accessed, APIs often authenticate the sender of 
 
 If you select **Anonymous**, the authorization header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint does not require an authorization header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL that you enter in the **Web Request** field. The target endpoint can then validate if the API key from the request URL is allowed, and then decide whether permission should be granted.
 
-### AAD
+### Microsoft Entra ID
 
-If you select **AAD**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by Microsoft Entra ID (formerly Azure Active Directory (Azure AD)). For information about JWTs, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown here:
+If you select **Microsoft Entra ID**, the authorization header in the HTTP request to the target endpoint will include a bearer token. A bearer token is a JSON Web Token (JWT) that is issued by Microsoft Entra ID (formerly Microsoft Entra ID). For information about JWTs, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown here:
 
 Bearer \<token\>
 
@@ -205,9 +205,9 @@ The following table lists the claims that you can expect in bearer tokens that a
 
 | Name           | Claim | Description |
 |----------------|-------|-------------|
-| Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that is associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Azure Active Directory tenant ID](/azure/active-directory/fundamentals/how-to-find-tenant). |
-| Audience       | aud   | This claim identifies the Azure application that is authorized to access the external service you want to call. To learn more about how configure Azure Active Directory authentication, see [Configure Azure AD authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
-| Application ID | appid | This claim identifies who is requesting a token. To learn more about how configure Azure Active Directory (Azure AD) authentication, see [Configure Azure AD authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
+| Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that is associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Microsoft Entra tenant ID](/azure/active-directory/fundamentals/how-to-find-tenant). |
+| Audience       | aud   | This claim identifies the Azure application that is authorized to access the external service you want to call. To learn more about how configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
+| Application ID | appid | This claim identifies who is requesting a token. To learn more about how configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
 
 When your API receives a token, it should open the token and validate that each of the preceding claims matches its description.
 
