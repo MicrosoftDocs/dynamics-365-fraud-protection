@@ -47,13 +47,13 @@ The full list of errors shows HTTP status descriptions and codes, the APIs to wh
 - Filter results by selecting any of the column headers. 
 - Select a line to find that error in the chart, and click it again to deselect. Results may take a few seconds to render. 
 
-# Health Ping to Online URL
+## Health ping to online URL
 
-Microsoft Dynamics 365 Fraud Protection (DFP) provides a health ping endpoint which allow customers to validate / verify connectivity from any client to our Web Service.  This is a basic check for latency and availability at the network layer.  
+Fraud Protection provides a health ping endpoint which allows customers to verify connectivity from any client to the Web Service. The health ping endpoints is a basic check for latency and availability at the network layer.  
 
-The endpoint return zero bytes payload along with 200 HTTP status code.
+The endpoint returns zero bytes payload along with a 200 HTTP status code.
 
-## Using Curl
+### Curl
 
 ```
 curl https://contoso-guid.api.dfp.dynamics.com/api/v1/health 2>&1 | grep HTTP
@@ -61,7 +61,7 @@ curl https://contoso-guid.api.dfp.dynamics.com/api/v1/health 2>&1 | grep HTTP
 < HTTP/1.1 200 OK
 ```
 
-## Using PowerShell
+### PowerShell
 
 ```
 (Invoke-WebRequest https://contoso-guid.dfp.dynamics.com/api/v1/health).StatusCode
