@@ -309,9 +309,9 @@ The following table shows the specific read/write permissions that users will ha
 <tr>
 <td rowspan="5">Reporting</td>
 <td>Summary</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -322,9 +322,9 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Rule reports</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -335,9 +335,9 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Score reports</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -348,9 +348,9 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Threat report</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -361,9 +361,9 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Observation report(Assessment Only)</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
