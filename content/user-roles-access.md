@@ -307,7 +307,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 </tr>
 <tr>
-<td rowspan="4">Virtual fraud analyst</td>
+<td rowspan="5">Reporting</td>
 <td>Summary</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -317,11 +317,11 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
 </tr>
 <tr>
-<td>Rule analyst</td>
+<td>Rule reports</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -330,11 +330,11 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
 </tr>
 <tr>
-<td>Score analyst</td>
+<td>Score reports</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -343,11 +343,11 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
 </tr>
 <tr>
-<td>Threat analyst</td>
+<td>Threat report</td>
 <td>Read only</td>
 <td>Read only</td>
 <td>Read only</td>
@@ -356,8 +356,21 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Observation report(Assessment Only)</td>
 <td>Read only</td>
 <td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
 </tr>
 <tr>
 <td colspan="2">Velocities</td>
