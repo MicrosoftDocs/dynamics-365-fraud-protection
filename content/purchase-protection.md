@@ -25,7 +25,7 @@ Learn more about the following features used in purchase protection:
 - [View purchase protection schemas](view-purchase-protection-schemas.md)
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
-- [Use the virtual fraud analyst](virtual-fraud-analyst.md)
+- [Use the reporting dashboards](virtual-fraud-analyst.md)
 - [Learn from the monitoring dashboards](monitoring-dashboards.md)
 - [Boost bank acceptance rates](transaction-acceptance-booster.md)
 - [Support your customers](risk-support.md)
