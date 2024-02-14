@@ -21,3 +21,11 @@ Once you have completed the Microsoft Dynamics 365 Fraud Protection onboarding p
 When you call CSS or submit a service ticket from within the Dynamics 365 Fraud Protection portal, you will be asked to provide a severity level.  The table below outlines the criteria for each level.
 
 If you call CSS, use the “Customer Verbiage” in the last column below to help the CSS agent assign the proper severity level . 
+
+
+| Severity Level | Severity Level Criteria | Response Time | Customer Verbiage |
+| --- | --- | --- | --- |
+| Level A | System down<br>Customer production outage or degradation.<br>Functionality loss resulting in the inability to restore customer production.<br>Issue impacting one or more customers. | 1 hour or less (24/7) | "Outage" |
+| Level B | Customer’s business has moderate loss or degradation of services, but work can reasonably continue in an impaired manner.<br>Average production issue. | 4 business hours (local time) | "Production issue" |
+| Level C | Customer’s business is functioning with minor impediments of service.<br>Lower priority. | 8 business hours (local time) | "General issue" |
+
