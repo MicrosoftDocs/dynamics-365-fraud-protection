@@ -301,6 +301,7 @@
       - name: Fraud Protection model audit reports
         href: https://go.microsoft.com/fwlink/?linkid=2132646
 - name: Product support
+  href: dfp-css-product-support.md
 - name: Community
   items:
   - name: Join Dynamics 365 Community
