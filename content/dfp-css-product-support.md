@@ -1,31 +1,35 @@
 ---
 author: sbrzezinski1
-description: This article explains how to receive DFP product support from the Customer Service and Support team.
+description: This article explains how to get support for Dynamics 365 Fraud Protection. 
 ms.author: sbrzezinski
 ms.date: 02/14/2024
 ms.topic: reference
 search.audienceType:
   - developer
-title: DFP Product Support
+title: Get support for Dynamics 365 Fraud Protection
 ms.custom:
 ---
 
-# DFP Product Support
+# Get support for Dynamics 365 Fraud Protection
 
-Once you have completed the Microsoft Dynamics 365 Fraud Protection onboarding process, product support may be needed at times. If you utilize a Microsoft partner for your onboarding, please contact them for product support. If you do not have a Microsoft partner, Product Support will be provided by the Microsoft Customer Service and Support (CSS) team. There are two mechanisms for you to contact CSS. Note: If your organization has a service contract such as Microsoft Unified, your Customer Success Account Manager (CSAM) can provide additional guidance.  
+After you complete the Dynamics 365 Fraud Protection onboarding process, you may want additional support from someone at Microsoft. If you used a Microsoft partner to help with  onboarding, contact that partner for support with Fraud Protection. If you haven't worked with a Microsoft partner, you should contact Microsoft Support. 
+> [!NOTE]
+> If your organization has a service contract such as Microsoft Unified, your Customer Success Account Manager (CSAM) can provide additional guidance.
 
-**Option 1:** Call CSS directly. CSS contact numbers per country can be found here: [Global Customer Service phone numbers - Microsoft Support](https://support.microsoft.com/en-us/topic/global-customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2). All hours of operation are listed in local times. CSS is available for all Fraud Protection customers.    
+There are two ways you can contact Microsoft Support. 
 
-**Option 2:** You may submit a CSS ticket directly within the Dynamics 365 Fraud Protection portal by clicking the “?” icon in the top-right corner of the portal and selecting “Create support request”.  You will then be taken to a separate CSS portal to submit your ticket.  Note: Global Admin permissions are needed to submit tickets from the Fraud Protection portal.
+- **Call suport directly**. Refer to [Global Customer Service phone numbers - Microsoft Support](https://support.microsoft.com/topic/global-customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2) to find support contact numbers for your country/region. Support is available for all Fraud Protection customers.    
 
-When you call CSS or submit a service ticket from within the Dynamics 365 Fraud Protection portal, you will be asked to provide a severity level.  The table below outlines the criteria for each level.
+- **Submit a support ticket**. In the Fraud Protection portal, select **?** in the top corner and then select **Create support request**. Submit your ticket on the support portal that displays.
+> [!NOTE]
+> You must have global admin permissions to submit a ticket from the Fraud Protection portal.
 
-If you call CSS, use the “Customer Verbiage” in the last column below to help the CSS agent assign the proper severity level . 
+When you call support or submit a support ticket from the Fraud Protection portal, you must provide a severity level. The following table details the criteria for each severity level. If you call support, use the “Customer verbiage” as displayed in the table to help the support agent assign the proper severity level. 
 
 
-| Severity Level | Severity Level Criteria | Response Time | Customer Verbiage |
+| Severity level | Severity level criteria | Response time | Customer verbiage |
 | --- | --- | --- | --- |
-| Level A | System down<br>Customer production outage or degradation.<br>Functionality loss resulting in the inability to restore customer production.<br>Issue impacting one or more customers. | 1 hour or less (24/7) | "Outage" |
-| Level B | Customer’s business has moderate loss or degradation of services, but work can reasonably continue in an impaired manner.<br>Average production issue. | 4 business hours (local time) | "Production issue" |
-| Level C | Customer’s business is functioning with minor impediments of service.<br>Lower priority. | 8 business hours (local time) | "General issue" |
+| Level A | System down<br>Customer production outage or degradation.<br>Functionality loss resulting in the inability to restore customer production.<br>Issue impacting one or more customers. | One hour or less (24/7) | "Outage" |
+| Level B | Customer’s business has moderate loss or degradation of services, but work can reasonably continue in an impaired manner.<br>Average production issue. | Four business hours (local time) | "Production issue" |
+| Level C | Customer’s business is functioning with minor impediment of service.<br>Lower priority. | Eight business hours (local time) | "General issue" |
 
