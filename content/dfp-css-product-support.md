@@ -16,7 +16,7 @@ After you complete the Dynamics 365 Fraud Protection onboarding process, you may
 > [!NOTE]
 > If your organization has a service contract such as Microsoft Unified, your Customer Success Account Manager (CSAM) can provide additional guidance.
 
-There are two ways you can contact Microsoft Support. 
+There are two ways to contact Microsoft Support. 
 
 - **Call suport directly**. Refer to [Global Customer Service phone numbers - Microsoft Support](https://support.microsoft.com/topic/global-customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2) to find support contact numbers for your country/region. Support is available for all Fraud Protection customers.    
 
@@ -29,7 +29,7 @@ When you call support or submit a support ticket from the Fraud Protection porta
 
 | Severity level | Severity level criteria | Response time | Customer verbiage |
 | --- | --- | --- | --- |
-| Level A | System down<br>Customer production outage or degradation.<br>Functionality loss resulting in the inability to restore customer production.<br>Issue impacting one or more customers. | One hour or less (24/7) | "Outage" |
+| Level A | System down.<br>Customer production outage or degradation.<br>Functionality loss resulting in the inability to restore customer production.<br>Issue impacting one or more customers. | One hour or less (24/7) | "Outage" |
 | Level B | Customer’s business has moderate loss or degradation of services, but work can reasonably continue in an impaired manner.<br>Average production issue. | Four business hours (local time) | "Production issue" |
 | Level C | Customer’s business is functioning with minor impediment of service.<br>Lower priority. | Eight business hours (local time) | "General issue" |
 
