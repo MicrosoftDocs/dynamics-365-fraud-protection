@@ -18,7 +18,7 @@ After you complete the Dynamics 365 Fraud Protection onboarding process, you may
 
 There are two ways to contact Microsoft Support. 
 
-- **Call suport directly**. Refer to [Global Customer Service phone numbers - Microsoft Support](https://support.microsoft.com/topic/global-customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2) to find support contact numbers for your country/region. Support is available for all Fraud Protection customers.    
+- **Call support directly**. To find support contact numbers for your country/region, refer to [Global Customer Service phone numbers - Microsoft Support](https://support.microsoft.com/topic/global-customer-service-phone-numbers-c0389ade-5640-e588-8b0e-28de8afeb3f2). Support is available for all Fraud Protection customers.    
 
 - **Submit a support ticket**. In the Fraud Protection portal, select **?** in the top corner and then select **Create support request**. Submit your ticket on the support portal that displays.
 > [!NOTE]
