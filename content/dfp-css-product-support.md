@@ -12,7 +12,7 @@ ms.custom:
 
 # Get support for Dynamics 365 Fraud Protection
 
-After you complete the Dynamics 365 Fraud Protection onboarding process, you may want additional support from someone at Microsoft. If you used a Microsoft partner to help with  onboarding, contact that partner for support with Fraud Protection. If you haven't worked with a Microsoft partner, you should contact Microsoft Support. 
+After you complete the Dynamics 365 Fraud Protection onboarding process, you may want additional support from someone at Microsoft. If you used a Microsoft partner to help with  onboarding, contact that partner for support with Fraud Protection. If you haven't worked with a Microsoft partner, contact Microsoft Support. 
 > [!NOTE]
 > If your organization has a service contract such as Microsoft Unified, your Customer Success Account Manager (CSAM) can provide additional guidance.
 
