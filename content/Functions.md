@@ -1,7 +1,6 @@
 
 # Functions
-
-
+Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create functions which are used to perform a specific task. Using functions, you can plug in groups of code that can be always run together and can be reused which can then be accessed from other places within DFP for decision making. For example, if we want to call an external service to fetch a value from it, that logic can be defined within a function and then this function can be invoked from other resources.
 
 ## Defining a Function: Quick start guide
 
