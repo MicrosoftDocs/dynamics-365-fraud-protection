@@ -26,7 +26,7 @@ Input parameters section has 3 parts
 
 
 ### Output Properties 
-The return value of a function can be defined through output properties. The Output properties section will have the FQL logic to return a value of the function. These properties can then be accessed from within other functions, rules, velocities, post decision action rules and routing rules by invoking the function. A function can have up to 30 output properties. 
+The return value of a function can be defined through output properties. The Output Properties section will have the FQL logic to return a value of the function. These properties can then be accessed from within other functions, rules, velocities, post decision action rules and routing rules by invoking the function. A function can have up to 30 output properties. 
 
 Output Properties section has 4 parts
 
@@ -50,7 +50,7 @@ When errors are encountered either before or after the evaluation of the output 
 
    ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/648f1bb4-948c-4fa4-a22b-a1c61c8aeac6)
 
-   The below of the differnt ways of returning a value 
+   There are different ways to return an output value
 
    1. Input parameters defined within a function can be used to return values
    
