@@ -25,7 +25,8 @@ Each parameters requires a default value which will be used during "Function Eva
 ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/9775bbfe-c31e-4b93-9f8c-17f2c7d8d9a9)
 
 
-### Output Proprties 
+### Output Properties 
+The return value of a function can be defined through output properties. The Output properties section will have the FQL logic to return a value of the function. These properties can then be accessed from within other functions, rules, velocities, post decision action rules and routing rules by invoking the function. A function can have up to 30 output properties. 
 
 #### Property Description
 A description of the property which will be helpful for the caller. Intellisense will be able to show the property description if it was defined. Also, the description is optional. 
@@ -36,12 +37,13 @@ The data type of the value that is returned from this property. Specifying the t
 #### Default Value
 #### Code Editor to Return a Value
 
-![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/fb128994-5f05-4af4-9b34-575fe5e813bb)
+The RETURN statement is used to return a value from the function.
 
-```FraudProtectionLanguage
-RETURN <Value>
-```
-The RETURN statement is used to return a value from the function. 
+In the sample below, The "MyFunction" function has 2 output properties "calculate_Sum" and "Call_WeatherService" defined with its corresponding description, data type and output values. The "calculate_Sum" used the input parameters to retrun a value and the "Call_weatherService" makes a call to an external service to return a value. To learn about invoking a function, see [Invoking Functions from resources](invoking-functions-from-resources.md#define-a-function) and [Function inheritance ](function-inheritance) sections later in this docuemnt. 
+![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/648f1bb4-948c-4fa4-a22b-a1c61c8aeac6)
+
+
+
 Any of the below can be accessed within Code Editor to return a value
 
 1. Input parameters defined within a function can be used to return values
