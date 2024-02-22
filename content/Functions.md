@@ -179,8 +179,43 @@ WHEN Functions.MyFunction(2,3).Calculate_Sum == 5
 ROUTETO Queue("General Queue")
 WHEN Functions.MyFunction(5,5).Calculate_Sum > 5
 ```
-## Function and resource limits
 
 ## Function inheritance 
+Functions can be invoked within the same environemnt and from environments down the stack. The invocation syntax depends on where the function exists and from where it is invoked. The below are the different ways to invoke functions within a multi hierarchy set up. 
+
+### Invoking the functions created within the same environment
+
+The below example shows invoking function from a rule where both the rule and the function exists ins the same environment
+```FraudProtectionLanguage
+LET $sum = Functions.MyFunction(2,3).Calculate_Sum
+RETURN Approve()
+WHEN $sum > 5
+```
+### Invoking the functions created within root environment
+The below example shows invoking a function that is created in the root from a child environment
+```FraudProtectionLanguage
+LET $sum = Functions.root.MyFunction(2,3).Calculate_Sum
+RETURN Approve()
+WHEN $sum > 5
+```
+### Invoking the functions created within the parent environment
+
+The below example shows invoking a function from the immediate parent environemnt. Here parent means the environment immediate environment above you
+```FraudProtectionLanguage
+LET $sum = Functions.parent.MyFunction(2,3).Calculate_Sum
+RETURN Approve()
+WHEN $sum > 5
+```
+
+### Invoking the functions created within any environment above the stack
+
+The below example shows invoking a function that is created an environment above the stack and inherited from any rule within a lower environment
+```FraudProtectionLanguage
+LET $sum = Functions.environment["environmentid"].MyFunction(2,3).Calculate_Sum
+RETURN Approve()
+WHEN $sum > 5
+```
+## Function and resource limits
+
 
 
