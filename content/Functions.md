@@ -17,7 +17,7 @@ Input parameter have 3 parts
 A name with which the parameter can be referenced
 
 #### Data Type
-Each parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. 
+Each parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the primitive data types such as integer, string, docuble, boolean and dateTime
 
 #### Default Value
 Each parameters requires a default value which will be used during "Function Evaluation" or if there is an issue with the function invocation. 
@@ -28,7 +28,11 @@ Each parameters requires a default value which will be used during "Function Eva
 ### Output Proprties 
 
 #### Property Description
+A description of the property which will be helpful for the caller. Intellisense will be able to show the property description if it was defined. Also, the description is optional. 
+
 #### Data Type
+The data type of the value that is returned from this property. Specifying the type converts the retrun value of that corresponding type. Currently we can return all the primitive data types such as integer, string, docuble, boolean and dateTime
+
 #### Default Value
 #### Code Editor to Return a Value
 
