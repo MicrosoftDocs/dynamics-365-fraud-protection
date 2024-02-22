@@ -9,11 +9,21 @@ Functions consist of Input parameters and output properties.
 
 ### Input Parameters 
 
-Functions can define inputs which camn be passed at the time of invocation. The input is defined using parameters which are called "Input Parameters" are defined in the function defenition.Each input parameter that the user defines has 3 parts
+Functions can define parametrs which can be passed to the function at the time of invocation. The input parameters are defined in the function defenition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for this function. Input parametrs are optional and the defined parameters can be used within the Output properties to return a value. For more information, see the [Output Properties](output-properties.md). 
+
+Input parameter have 3 parts
 
 #### Parameter Name
+A name with which the parameter can be referenced
+
 #### Data Type
+Each parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. 
+
 #### Default Value
+Each parameters requires a default value which will be used during "Function Evaluation" or if there is an issue with the function invocation. 
+
+![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/9775bbfe-c31e-4b93-9f8c-17f2c7d8d9a9)
+
 
 ### Output Proprties 
 
@@ -22,12 +32,22 @@ Functions can define inputs which camn be passed at the time of invocation. The 
 #### Default Value
 #### Code Editor to Return a Value
 
+![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/fb128994-5f05-4af4-9b34-575fe5e813bb)
+
 ```FraudProtectionLanguage
 RETURN <Value>
 ```
 The RETURN statement is used to return a value from the function. 
 Any of the below can be accessed within Code Editor to return a value
-1. Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"user.userId".
+
+1. Input parameters defined within a function can be used to return values
+
+   Example of output property returning an input parameter as the retrun value. For more information on how to define input parameters, see the [Input Parameters](functions.md#input-parameters) section earlier in this article.
+
+    ```FraudProtectionLanguage
+    RETURN _number1 + _number2
+    ```
+1. Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"salesTax"".
   
    Example of function using request attributes:
     ```FraudProtectionLanguage
@@ -123,9 +143,7 @@ Before you publish your new function, you can use the "Function evaluation" pane
 
 When the evaluation pane is open, you can see the list of output properties with its result. This will help you to understand if you are returning the correct values for the functions. 
 
-## Function inheritance 
-
-## Invoke a Function from resources
+## Invoking Functions from resources
 Functions which are created can be invoked from resources such as rules, velocities, post decision actions and routing rules. All the output properties defined within a function can be accessed by invoking the function. The values can then be used for decision making. 
 ### Invoke functions from Rules 
 
@@ -158,5 +176,7 @@ ROUTETO Queue("General Queue")
 WHEN Functions.MyFunction(5,5).Calculate_Sum > 5
 ```
 ## Function and resource limits
+
+## Function inheritance 
 
 
