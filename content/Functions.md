@@ -28,20 +28,37 @@ RETURN <Value>
 The RETURN statement is used to return a value from the function. 
 Any of the below can be accessed within Code Editor to return a value
 -	Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"user.userId".
-  Example of function using request attributes:
-    ```FraudProtectionLanguage
-  RETURN Reject("high score")
-  WHEN @"riskScore" > 900
   
+  Example of function using request attributes:
+  
+  ```FraudProtectionLanguage
+  RETURN @"salesTax"
   ```
 -	The scores that are generated from Fraud Protection's artificial intelligence models. For example, @"riskscore".
   Example of function using riskscore:
+
+  ```FraudProtectionLanguage
+  LET $a = Model.Risk().Score
+  RETURN 20
+  ```
 -	Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md). 
   Example of function using list:
+  ```FraudProtectionLanguage
+  RETURN Lookup("Country_Score", "Country", "US", "ScoreCutOff")
+  ```
 -	Velocities which you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
   Example of function using velocity:
--	External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md). 
+
+  ```FraudProtectionLanguage
+  RETURN Velocity.IPs_Per_User(@"deviceContext.ipAddress",30s)
+  ```
+-	External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md).
+
   Example of function using External calls:
+  ```FraudProtectionLanguage
+  RETURN External.weather("Seattle").id
+  ```
+
 - External assessments which you have created in Fraud Protection. For more information, see [External Assessments](external-assessments.md). 
   Example of function using External Assessments:
 - Please refer to the [Language reference guide](fpl-lang-ref.md) for list of all functions available within DFP. Decision functions , Action functions and Observation functions are not allowed within functions. Everything from Model functions until Global variable functions can be used within Functions. 
@@ -75,7 +92,7 @@ When you create or edit a function, the **Sample** pane appears on the right sid
 
 ## Manage your function
 
-- To edit an existing published function, select the function, and then select **Edit**.
+1. To edit an existing published function, select the function, and then select **Edit**.
 
     A draft of your published function is created and is visible only to you. All changes that you make to the draft are automatically saved.
 
@@ -83,11 +100,11 @@ When you create or edit a function, the **Sample** pane appears on the right sid
 
     To discard your draft, select **Discard**.
 
-- To delete an existing function, select the ellipsis (**...**), and then select **Delete**.
+2. To delete an existing function, select the ellipsis (**...**), and then select **Delete**.
 
-- To update the name or description of a function, select the ellipsis (**...**), and then select **Rename**.
+3. To update the name or description of a function, select the ellipsis (**...**), and then select **Rename**.
 
-- To search for a function, enter a keyword in the **Search** field. All function names and descriptions are searched, and the results are filtered accordingly.
+4. To search for a function, enter a keyword in the **Search** field. All function names and descriptions are searched, and the results are filtered accordingly.
 
 ## Evaluate a function
 
