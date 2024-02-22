@@ -116,6 +116,39 @@ Before you publish your new function, you can use the "Function evaluation" pane
 When the evaluation pane is open, you can see the list of output properties with its result. This will help you to understand if you are returning the correct values for the functions. 
 
 ## Function inheritance 
+
 ## Invoke a Function from resources
+
+### Invoke functions from Rules 
+
+```FraudProtectionLanguage
+LET $sum = Functions.MyFunction(5,5).Calculate_Sum
+RETURN Approve()
+WHEN $sum > 5
+```
+
+### Invoke functions from Velocities 
+
+```FraudProtectionLanguage
+SELECT DistinctCount(@"device.deviceContextId") AS Devices_Per_IP
+FROM AccountLogin
+WHEN Functions.MyFunction(5,5).Calculate_Sum > 5
+GROUPBY @"device.ipAddress"
+```
+
+### Invoke functions from Post Decision Rules
+
+```FraudProtectionLanguage
+DO SetResponse()
+WHEN Functions.MyFunction(2,3).Calculate_Sum == 5
+```
+
+### Invoke functions from Routing Rules 
+
+```FraudProtectionLanguage
+ROUTETO Queue("General Queue")
+WHEN Functions.MyFunction(5,5).Calculate_Sum > 5
+```
+
 
 
