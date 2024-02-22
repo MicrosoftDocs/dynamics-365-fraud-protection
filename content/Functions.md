@@ -27,44 +27,52 @@ RETURN <Value>
 ```
 The RETURN statement is used to return a value from the function. 
 Any of the below can be accessed within Code Editor to return a value
--	Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"user.userId".
+1. Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"user.userId".
   
-  Example of function using request attributes:
-  
-  ```FraudProtectionLanguage
-  RETURN @"salesTax"
-  ```
--	The scores that are generated from Fraud Protection's artificial intelligence models. For example, @"riskscore".
-  Example of function using riskscore:
+   Example of function using request attributes:
+    ```FraudProtectionLanguage
+    RETURN @"salesTax"
+    ```
+2. The scores that are generated from Fraud Protection's artificial intelligence models. For example, @"riskscore".
+   
+   Example of function using riskscore:
+    ```FraudProtectionLanguage
+    LET $a = Model.Risk().Score
+    RETURN 20
+    ```
+3. Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md).
+   
+   Example of function using list:
+    ```FraudProtectionLanguage
+    RETURN Lookup("Country_Score", "Country", "US", "ScoreCutOff")
+    ```
+4. Velocities which you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
+   
+   Example of function using velocity:
+    ```FraudProtectionLanguage
+    RETURN Velocity.IPs_Per_User(@"deviceContext.ipAddress",30s)
+    ```
+5. External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md).
 
-  ```FraudProtectionLanguage
-  LET $a = Model.Risk().Score
-  RETURN 20
-  ```
--	Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md). 
-  Example of function using list:
-  ```FraudProtectionLanguage
-  RETURN Lookup("Country_Score", "Country", "US", "ScoreCutOff")
-  ```
--	Velocities which you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
-  Example of function using velocity:
+   Example of function using External calls:
+    ```FraudProtectionLanguage
+    RETURN External.weather("Seattle").id
+    ```
+6. External assessments which you have created in Fraud Protection. For more information, see [External Assessments](external-assessments.md).
+   
+   Example of a function invoking external assessment:
+    ```FraudProtectionLanguage
+    LET $result = Assessments.myAssessment.Evaluate($baseInput = @@)
+    RETURN $result.ToStr()
+    ```
 
-  ```FraudProtectionLanguage
-  RETURN Velocity.IPs_Per_User(@"deviceContext.ipAddress",30s)
-  ```
--	External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md).
 
-  Example of function using External calls:
-  ```FraudProtectionLanguage
-  RETURN External.weather("Seattle").id
-  ```
-
-- External assessments which you have created in Fraud Protection. For more information, see [External Assessments](external-assessments.md). 
-  Example of function using External Assessments:
-- Please refer to the [Language reference guide](fpl-lang-ref.md) for list of all functions available within DFP. Decision functions , Action functions and Observation functions are not allowed within functions. Everything from Model functions until Global variable functions can be used within Functions. 
-  Example of function using Model Functions:
--Access function within functions
-  Example of function invoking other Functions:
+8. Access function within functions
+   
+   Example of a function invoking another function:
+    ```FraudProtectionLanguage
+    RETURN Functions.MyFunction(5,6).Calculat_Sum
+    ```
 
 ## Create a function
 
@@ -118,7 +126,7 @@ When the evaluation pane is open, you can see the list of output properties with
 ## Function inheritance 
 
 ## Invoke a Function from resources
-
+Functions which are created can be invoked from resources such as rules, velocities, post decision actions and routing rules. All the output properties defined within a function can be accessed by invoking the function. The values can then be used for decision making. 
 ### Invoke functions from Rules 
 
 ```FraudProtectionLanguage
@@ -149,6 +157,6 @@ WHEN Functions.MyFunction(2,3).Calculate_Sum == 5
 ROUTETO Queue("General Queue")
 WHEN Functions.MyFunction(5,5).Calculate_Sum > 5
 ```
-
+## Function and resource limits
 
 
