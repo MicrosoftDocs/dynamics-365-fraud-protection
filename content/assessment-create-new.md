@@ -192,10 +192,10 @@ The available features  and their default settings vary based on the fraud asses
 
 | Template | Case management | Search |
 |----------|-----------------|--------|
-| Card payment | Enabled | Enabled |
+| Card payment | Disabled | Enabled |
 | Device fingerprinting | N/A | N/A |
-| Loyalty program | Enabled | Enabled |
-| Money transfer | Enabled | Enabled |
+| Loyalty program | Disabled | Enabled |
+| Money transfer | Disabled | Enabled |
 | Software piracy | Disabled | Disabled |
 | Custom | Disabled | Disabled |
 
