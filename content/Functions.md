@@ -149,8 +149,9 @@ When the evaluation pane is open, you can see the list of output properties with
 
 ## Invoking Functions from resources
 Functions which are created can be invoked from resources such as rules, velocities, post decision actions and routing rules. All the output properties defined within a function can be accessed by invoking the function. The values can then be used for decision making. 
-### Invoke functions from Rules 
 
+### Invoke functions from Rules 
+Functions can be invoked from any rule (within any assessment) within the same environemnt or environments down the stack. To learn more about rules, see [Rules](rules.md).
 ```FraudProtectionLanguage
 LET $sum = Functions.MyFunction(5,5).Calculate_Sum
 RETURN Approve()
@@ -158,7 +159,7 @@ WHEN $sum > 5
 ```
 
 ### Invoke functions from Velocities 
-
+Functions can be invoked from any velocity within the same environemnt or environemnts down the stack. To learn more about velocities, see [Perform velocity checks](velocities.md).
 ```FraudProtectionLanguage
 SELECT DistinctCount(@"device.deviceContextId") AS Devices_Per_IP
 FROM AccountLogin
@@ -167,14 +168,14 @@ GROUPBY @"device.ipAddress"
 ```
 
 ### Invoke functions from Post Decision Rules
-
+Functions can be invoked from any post decision action rule (within any assessment) within the same environemnt or environments down the stack. To learn more about post decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
 ```FraudProtectionLanguage
 DO SetResponse()
 WHEN Functions.MyFunction(2,3).Calculate_Sum == 5
 ```
 
 ### Invoke functions from Routing Rules 
-
+Functions can be invoked from any routing rules within the same environemnt or environemnts down the stack. To learn more about routing rules, see [Case Management](case-management-overview.md).
 ```FraudProtectionLanguage
 ROUTETO Queue("General Queue")
 WHEN Functions.MyFunction(5,5).Calculate_Sum > 5
