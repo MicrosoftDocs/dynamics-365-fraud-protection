@@ -17,11 +17,12 @@ Input parameter have 3 parts
 A name with which the parameter can be referenced
 
 #### Data Type
-Each parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the primitive data types such as integer, string, docuble, boolean and dateTime
+Each parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the primitive data types such as integer, string, double, boolean and dateTime
 
 #### Default Value
-Each parameters requires a default value which will be used during "Function Evaluation" or if there is an issue with the function invocation. 
+Every parameter requires a default value which will be used during "Function Evaluation" or if there is an issue with the function invocation. 
 
+In the below sample, **_number1** and **_number2** are the 2 defined parameters with its corrsponding type and default value. Both these parameters should be passed to the function at the time of invocation. 
 ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/9775bbfe-c31e-4b93-9f8c-17f2c7d8d9a9)
 
 
@@ -32,14 +33,20 @@ The return value of a function can be defined through output properties. The Out
 A description of the property which will be helpful for the caller. Intellisense will be able to show the property description if it was defined. Also, the description is optional. 
 
 #### Data Type
-The data type of the value that is returned from this property. Specifying the type converts the retrun value of that corresponding type. Currently we can return all the primitive data types such as integer, string, docuble, boolean and dateTime
+The data type of the value that is returned from this property. Specifying the type converts the retrun value to that corresponding type. Currently we can return all the primitive data types such as integer, string, double, boolean and dateTime. 
+
+When errors are encountered either before or after the evaluation of the output property i.e. the if the output property gets deleted or if the caller of the function calls it with a different parameter type than the expected type, the default value of the data type will be returned from the function as the result.
 
 #### Default Value
+
+The default value is very important as this value gets returned as the result of a function whenever an exception is encountered during the evaluation of the property. Some examples are division by 0 and Null Reference exceptions.
+
 #### Code Editor to Return a Value
 
-The RETURN statement is used to return a value from the function.
+The code editor is used to return a value from the function. 
 
-In the sample below, The "MyFunction" function has 2 output properties "calculate_Sum" and "Call_WeatherService" defined with its corresponding description, data type and output values. The "calculate_Sum" used the input parameters to retrun a value and the "Call_weatherService" makes a call to an external service to return a value. To learn about invoking a function, see [Invoking Functions from resources](invoking-functions-from-resources.md#define-a-function) and [Function inheritance ](function-inheritance) sections later in this docuemnt. 
+In the sample below, The **MyFunction** function has 2 output properties **calculate_Sum** and **Call_WeatherService** defined with its corresponding description, data type and output values. The **Calculate_Sum** uses the input parameters to retrun a value and the **Call_weatherService** makes a call to an external service to return a value. To learn about invoking a function, see [Invoking Functions from resources](invoking-functions-from-resources.md#define-a-function) and [Function inheritance ](function-inheritance) sections later in this docuemnt. 
+
 ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/648f1bb4-948c-4fa4-a22b-a1c61c8aeac6)
 
 
