@@ -217,5 +217,24 @@ WHEN $sum > 5
 ```
 ## Function and resource limits
 
+Microsoft Dynamics 365 has a limit on the numbers of functions that can be created per environment and the resources that can be referenced within a function.
+1. Maximum number of functions that can be published within an environemnt - 30
+2. Maximum number of output properties that can exists within a function - 30
+3. Maximum number of velocilties that a function can reference  - 15
+4. Maximum number of external calls that a function can reference - 2
+5. Maximum number lists that a function can reference - 5
+6. Maximum number of unique external assessments that a function can reference -2​
+
+There are also limits on the number of function invocations that a resource can handle
+1. Maximum number of functions that a rule can invoke - 10 ​
+​2. Maximum number of functions that a velocity can invoke​ -10
+3. Maximum number of functions that a routing rule can invoke - 10
+4. Maximum number of functions that a post decision action can invoke - 10
+
+
+
+
+​
+
 
 
