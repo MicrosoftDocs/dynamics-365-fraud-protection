@@ -18,9 +18,9 @@ The input parameters section has 3 parts
 #### 2. Data Type
    Every input parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
 
-     | Data type | Sample value | 
+| Data type | Sample value | 
 |----------|---------------|
-| Boolean | True | N/A |
+| Boolean | True |
 | DateTime | Feb,22,2024 4:44PM |
 | Double | 10.0 |
 | Integer | 10 |
