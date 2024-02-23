@@ -81,7 +81,7 @@ The following roles are available for PSP users:
 - **Manual Review Agent** – A user in this role is responsible for reviewing individual transactions and approving or declining them. Although manual review agents don't have direct access to the **Support Lists** page, they can modify the status of an entry in the support list through the **Transaction Search** page.
 - **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
 - **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
-- **Reporting** – This role provides access to event tracing only, to enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
+- **Reporting** – This role provides access to event tracing and activity logs only, to read activity logs, enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
 
 ### Permissions
 
@@ -441,6 +441,18 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
+                    </tr>
+        <tr>
+            <td rowspan="2">Activity logs</td>
+          <td>Environement/Children levels</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>Read only</td>
         </tr>
     </tbody>
 </table>
