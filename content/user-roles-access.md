@@ -520,7 +520,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 </tr>
 <tr>
-<td>Rules</td>
+<td>Rule</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
