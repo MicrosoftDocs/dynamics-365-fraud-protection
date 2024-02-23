@@ -145,7 +145,25 @@ Below are the prerequisties for enabling client side integration:
 }
 ```
 
-Once you set up a device fingerprinting assessment with Client side integration, you are also able to call our standard server-to-server APIs to retrieve the fingerprinting intelligence.
+In order to complete the client side integration setup, you have to use a modified version of our javascript to return the encrypted response in the browser.
+
+  ```JavaScript
+  <script src="https://<Your_Sub_Domain>/mdt.js?session_id=<session_id>&customerId=<customer_id>&assessment=<assessment>&requestId=<request_id>>" type="text/javascript"></script>
+  ```
+
+  - **Your\_Sub\_Domain** – The subdomain under your root domain.
+  - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID should contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although we recommend that you use a globally unique identifier (GUID) for the session ID, it isn't required.
+  - **customer\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Environment ID** value that's listed on the **Current environment** tile on the **Integration** page of the corresponding environment in the Fraud Protection portal.
+  - **assessment** – The API name of the device fingerprinting assessment set up with client side integration enabled.
+  - **request\_id** – Another unique identifier for the request itself, separate from the session id. This should be a GUID of at least 32 characters in length
+
+  **Example**
+
+  ```JavaScript
+  <script src="https://fpt.contoso.com/mdt.js?session_id=2b2a1f5e-afa7-4c6d-a905-ebf66eaedc83&customerId=b3f6d54b-961c-4193-95ee-b6b204c7fd23&assessment=CSI&requestId=b12e86a0-37b1-43a2-958b-3f04fe7cef6c" type="text/javascript"></script>
+  ```
+
+Once you set up a device fingerprinting assessment with client side integration, you are also able to call our standard server-to-server APIs to retrieve the fingerprinting intelligence.
 
 ## Enable fingerprinting on a mobile app
 
