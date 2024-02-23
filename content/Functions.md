@@ -4,7 +4,7 @@ Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create func
 
 ## Defining a Function: Quick start guide
 
-Functions consist of Input parameters and output properties. 
+Functions consist of input parameters and output properties. 
 
 ### Input Parameters 
 
@@ -16,7 +16,15 @@ Input parameters section has 3 parts
    A name with which the parameter can be referenced
 
 #### 2. Data Type
-   Each parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the primitive types such as integer, string, double, boolean and dateTime.
+   Every input parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
+
+   | Data type | Sample value | 
+|----------|---------------|
+| Boolean | True | N/A |
+| DateTime | Feb,22,2024 4:44PM |
+| Double | 0.0 |
+| Integet | 0 |
+| String | "Hello" |
 
 #### 3. Default Value
    Every parameter requires a default value which will be used during "Function Evaluation" or if there is an issue with the function invocation. 
@@ -34,9 +42,9 @@ Output Properties section has 4 parts
    A description of the property which will be helpful for the caller. Intellisense will be able to show the property description if it was defined. Also, the description is optional. 
 
 #### 2. Data Type
-   The data type of the value that is returned from this property. Specifying the type converts the retrun value to that corresponding type. Currently functions support all the primitive types such as integer, string, double, boolean and dateTime.
+   The data type of the value that is returned from this property. Specifying the type converts the retrun value to that corresponding type. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
 
-When errors are encountered either before or after the evaluation of the output property i.e. the if the output property gets deleted or if the caller of the function calls it with a different parameter type than the expected type, the default value of the data type will be returned from the function as the result.
+When errors are encountered either before or after the evaluation of the output property i.e. if the output property is deleted or if the caller of the function calls it with a different parameter type than the expected type, the default value of the data type will be returned from the function as the result.
 
 #### 3. Default Value
 
@@ -46,7 +54,7 @@ When errors are encountered either before or after the evaluation of the output 
 
    The code editor is used to return a value from the function. 
 
-   In the sample below, The **MyFunction** function has 2 output properties **calculate_Sum** and **Call_WeatherService** defined with its corresponding description, data type and output values. The **Calculate_Sum** uses the input parameters to retrun a value and the **Call_weatherService** makes a call to an external service to return a value. To learn about invoking a function, see [Invoking Functions from resources](invoking-functions-from-resources.md#define-a-function) and [Function inheritance ](function-inheritance) sections later in this docuemnt. 
+   In the sample below, The **MyFunction** function has 2 output properties **calculate_Sum** and **Call_WeatherService** defined with its corresponding description, data type and default value. The **Calculate_Sum** uses the input parameters to retrun a value and the **Call_weatherService** makes a call to an external service to return a value. To learn about invoking a function, see [Invoke functions from resources](invoke-functions-from-resources.md#define-a-function) and [Function inheritance ](function-inheritance) sections later in this docuemnt. 
 
    ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/648f1bb4-948c-4fa4-a22b-a1c61c8aeac6)
 
@@ -59,7 +67,7 @@ When errors are encountered either before or after the evaluation of the output 
        ```FraudProtectionLanguage
        RETURN _number1 + _number2
        ```
-   1. Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"salesTax"".
+   1. Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"salesTax".
      
       Example of function using request attributes:
        ```FraudProtectionLanguage
@@ -82,7 +90,7 @@ When errors are encountered either before or after the evaluation of the output 
       
       Example of function using velocity:
        ```FraudProtectionLanguage
-       RETURN Velocity.IPs_Per_User(@"deviceContext.ipAddress",30s)
+       RETURN Velocity.IPs_Per_User(@"deviceContext.ipAddress", 30s)
        ```
    5. External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md).
    
@@ -108,7 +116,7 @@ When errors are encountered either before or after the evaluation of the output 
 
 ## Create a function
 
-1. In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **Functions**, and then select **New Function**.
+1. In the [Fraud Protection portal](https://dfp.microsoft.com/), from the left navigation, select **Functions**, and then select **New Function**.
 
     Fraud Protection creates a draft function that is visible only to you (the creator). Note that all changes that you make to the draft are automatically saved.
 
@@ -118,11 +126,11 @@ When errors are encountered either before or after the evaluation of the output 
 4. In the confirmation dialog box, you can change the name and description. When you're ready, select **Publish**.
 
 > [!NOTE]
-> After the function is published, the function is visible to all users. The function can then be invoked within other functions, rules, velocities, post decision rules and routing rules. 
+> After the function is published, the function is visible to all users. The function can then be invoked within other functions, rules, velocities, post-decision rules and routing rules. 
 
 For information about how to use your functions within other resources like functions, rules, velocities, post decision action and routing rules see the [Invoke a Function from resources](Functions.md#invoke-a-function-from-resources) section later in this article.
 
-### Understand the Sample pane
+### Understand the sample pane
 
 When you create or edit a function, the **Sample** pane appears on the right side of the page.
 
@@ -155,8 +163,8 @@ Before you publish your new function, you can use the "Function evaluation" pane
 
 When the evaluation pane is open, you can see the list of output properties with its result. This will help you to understand if you are returning the correct values for the functions. 
 
-## Invoking Functions from resources
-The published functions can be invoked from resources such as rules, velocities, post decision actions and routing rules. All the output properties defined within a function can be accessed by invoking the function. The values can then be used for decision making. 
+## Invoke functions from resources
+The published functions can be invoked from resources such as rules, velocities, post-decision actions, and routing rules. All the output properties defined within a function can be accessed by invoking the function. The values can then be used for decision making. 
 
 ### Invoking functions from Rules 
 Functions can be invoked from any rule (within any assessment) within the same environemnt or environments down the stack. To learn more about rules, see [Rules](rules.md).
@@ -176,7 +184,7 @@ GROUPBY @"device.ipAddress"
 ```
 
 ### Invoking functions from Post Decision Rules
-Functions can be invoked from any post decision action rule (within any assessment) within the same environemnt or environments down the stack. To learn more about post decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
+Functions can be invoked from any post-decision action rule (within any assessment) within the same environemnt or environments down the stack. To learn more about post decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
 ```FraudProtectionLanguage
 DO SetResponse()
 WHEN Functions.MyFunction(2,3).Calculate_Sum == 5
@@ -228,18 +236,19 @@ WHEN $sum > 5
 
 Microsoft Dynamics 365 has a limit on the numbers of functions that can be created per environment and the resources that can be referenced within a function. The below are the limits
 
-1. Maximum number of functions that can be published within an environemnt - 30
-2. Maximum number of output properties that can exists within a function - 30
-3. Maximum number of velocilties that a function can reference  - 15
-4. Maximum number of external calls that a function can reference - 2
-5. Maximum number lists that a function can reference - 5
-6. Maximum number of unique external assessments that a function can reference -2​
+  | Resource | Limit | 
+|----------|---------------|
+| Maximum number of functions that can be published within an environemnt | 30 |
+| Maximum number of output properties that can exists within a function | 30 |
+| Maximum number of velocilties that a function can reference | 15 |
+| Maximum number of external calls that a function can reference |2 |
+| Maximum number lists that a function can reference | 5 |
+| Maximum number of unique external assessments that a function can reference | 2​ |
+| Maximum number of functions that a rule can invoke | 10 |​
+| Maximum number of functions that a routing rule can invoke | 10 |
+| Maximum number of functions that a post decision action can invoke | 10 |
+| Maximum number of resources that a velocity can invoke | 10 |
 
-There are also limits on the number of function invocations that a resource can handle
-1. Maximum number of functions that a rule can invoke - 10 ​
-​2. Maximum number of functions that a velocity can invoke​ -10
-3. Maximum number of functions that a routing rule can invoke - 10
-4. Maximum number of functions that a post decision action can invoke - 10
 
 
 
