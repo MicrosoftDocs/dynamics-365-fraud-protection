@@ -24,41 +24,118 @@ Filter logs by attribute
 To find logs, you must filter by one or more attributes. You can search by the following: Operation type, Changed by, Environement ID, Log ID, Operation type, Resource ID, Resource name and Resource type. You can add up to five filters, separated by a single And or Or condition.
 
 # Operation type:
-Resource type – Operation type
-Assessment – Create – Update – Delete
-Post decision action – Create – Update – Activate - Deactivate – Rename – Reorder – Delete
-Decision rule – Create – Update – Activate - Deactivate – Rename – Reorder - Delete
-Case management queue – Create – Update – Delete
-Velocity set – Create – Update – Activate - Deactivate - Delete
-Custom list – Create – Update – Delete
-Event tracing subscription – Create – Update – Activate - Deactivate - Delete
-Transaction acceptance booster – Update
-Case – Requeue
-Routing rule – Create – Update – Activate - Deactivate – Rename – Reorder - Delete
+<table>
+    <thead>
+        <tr>
+            <th>Resource type</th>
+            <td colspan="5">Operation type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td>Post decision action</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Activate</td>
+           <td>Deactivate</td>
+            <td>Rename</td>
+          <td>Reorder</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+          <td>Decision rule</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Activate</td>
+           <td>Deactivate</td>
+            <td>Rename</td>
+          <td>Reorder</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+            <td>Routing rule</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Activate</td>
+           <td>Deactivate</td>
+            <td>Rename</td>
+          <td>Reorder</td>
+            <td>Delete</td>
+           </tr>
+        <tr>
+  <td>Velocity set</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Activate</td>
+           <td>Deactivate</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+  <td>Event tracing subscription</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Activate</td>
+           <td>Deactivate</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+          <td>Assessment</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+           <td>Custom list</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+           <td>Case management queue</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+          <td>Transaction acceptance booster</td>
+            <td>Update</td>
+                 </tr>
+        <tr>
+           <td>Case</td>
+            <td>Requeue</td>
+                  </tr>
+    </tbody>
+</table>
 
 ## View search Activity Logs results
+
 After you select Search, the Results tile shows all of the events that match your specified filters. By default, logs are sorted by the Transaction date attribute, which is shown in your local time zone. The most recent event appears at the top of the grid. You can sort by other attributes by selecting the column title. However, only the events that have already loaded on the results grid are sorted. By default, 100 transactions are loaded on the page. As you scroll, more transactions are loaded.
-Change column options
+
+# Change column options
 Select Column options to customize which columns are shown in the results grid. You can add or remove columns to show specific attributes, or you can drag a column to a new position. Your column settings are valid only for you, and persist if you return to the Activity logs page later. To reset your column options to the default, select Default view.
-Export activity logs
+
+# Export activity logs
 Select Export to export your search results to a comma-separated values (CSV) file on your computer. You can select one of the following export options.
 •	All Columns – Export all data associated with this event.
 •	Current Columns – Export only data in the columns that are currently shown in the grid.
-•	> [!NOTE]
-	Another option is to create an event tracing subscription for your Activity logs event that shows the same fields as the Activity logs page.
- Important
-Exports which exceed 10,000 rows, or take longer than two minutes to generate, are automatically canceled.
-Review individual activity logs
-Event details
+> [!NOTE]
+•	Another option is to create an event tracing subscription for your Activity logs event that shows the same fields as the Activity logs page.
+•	Exports which exceed 10,000 rows, or take longer than two minutes to generate, are automatically canceled.
+
+# Review individual activity logs
 To explore a particular activity log in more detail, choose the event ID of the event that you want to examine. On the Activity logs details page, you can see all the individual log fields at the top and click on them to open a new tab to start a related search and operation specific ones in the Change viewer. You can copy the fields in the Change viewer by clicking on "copy original" and "copy modified" buttons. You also have the option to jump to changes using the arrows button and show all fields or just the modified ones.
-Notes panel
+
+# Notes panel
 Notes allow your team to have a rich collaboration when reviewing event details. You can create, edit, reply, delete, and tag users on the Notes panel attached to individual event details through Search and Case Management.
+
 1.	To create a new note, select + New Note in the upper-right corner, enter your text in the text box, and then select the blue paper plane icon at the bottom right to publish your draft. To delete your draft, select the blue cross at the bottom right.
 2.	To edit or delete a note, select the vertical ellipsis to view the menu, and select the desired command.
 3.	To reply, enter your text in the Reply text box below the note you are replying to.
 4.	To tag a user in your note, type the @ symbol followed by the users name or email alias with tenant access. After the note is published, the tagged user receives an in-product notification.
+   
 You may also type hyperlinks that are clickable after they're published.
-Export:
+
+# Export:
 Select Column options to customize the fields shown in the results grid or select Export to export the data into a CSV file.
 To further investigate a specific pattern, select Open in search to open a new tab with the appropriate search filters
 
