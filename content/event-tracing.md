@@ -183,6 +183,22 @@ There are five events generated that can be tracked by using the audit logs. Tho
 - A user accepts the FCRA consent.
 - A user updates the Transaction acceptance booster (TAB) settings. Any change to these settings is considered an update.
 
+### Activity logs events
+
+You use activity logs events to eventsd to get etailed record of who did what, when, and where for some actions in DFP, such as who made the last change to a rule matching Activity logs content.
+
+##### Namespace: FraudProtection.ActivityLog.
+
+```json
+"eventId": "6d28c8d2-d120-4a09-bb68-e36d88357dbb",
+"operationType": "Create",
+"resourceType": "Decision rule",
+"resourceId": "a50bd4e9-cc41-4fdc-8b63-169399c73109",
+"resourceName": "Rule Test",
+"userId": "9234e81d-f5f2-4385-8172-56b37d63bb8d",
+[Followed by operation type specific fields]
+}
+```
 ### Monitoring events
 
 You can use monitoring events for custom reporting and alerting on your API and external calls performance in conjunction with the reporting available in the Fraud Protection portal. Each of the events below will provide insight into the latency and errors for each service.
