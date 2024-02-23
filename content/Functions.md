@@ -8,7 +8,7 @@ Functions consist of input parameters and output properties.
 
 ### Input Parameters 
 
-Functions can define parametrs which can be passed to the function at the time of invocation. The input parameters are defined in the function defenition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for this function. Input parametrs are optional and the defined parameters can be used within the Output properties to return a value. For more information, see the [output properties](Functions.md#output-properties). 
+Functions can define parameters which can be passed to the function at the time of invocation. The input parameters are defined in the function definition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for this function. Defining input parameters are optional and the defined parameters can be used within the Output properties to return a value. For more information, see the [output properties](Functions.md#output-properties). 
 
 Input parameters section has 3 parts
 
@@ -18,13 +18,14 @@ Input parameters section has 3 parts
 #### 2. Data Type
    Every input parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
 
-   | Data type | Sample value | 
+     | Data type | Sample value | 
 |----------|---------------|
 | Boolean | True | N/A |
 | DateTime | Feb,22,2024 4:44PM |
-| Double | 0.0 |
-| Integet | 0 |
+| Double | 10.0 |
+| Integer | 10 |
 | String | "Hello" |
+
 
 #### 3. Default Value
    Every parameter requires a default value which will be used during "Function Evaluation" or if there is an issue with the function invocation. 
@@ -42,7 +43,7 @@ Output Properties section has 4 parts
    A description of the property which will be helpful for the caller. Intellisense will be able to show the property description if it was defined. Also, the description is optional. 
 
 #### 2. Data Type
-   The data type of the value that is returned from this property. Specifying the type converts the retrun value to that corresponding type. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
+   The data type of the value that is returned from this property. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
 
 When errors are encountered either before or after the evaluation of the output property i.e. if the output property is deleted or if the caller of the function calls it with a different parameter type than the expected type, the default value of the data type will be returned from the function as the result.
 
@@ -167,7 +168,7 @@ When the evaluation pane is open, you can see the list of output properties with
 The published functions can be invoked from resources such as rules, velocities, post-decision actions, and routing rules. All the output properties defined within a function can be accessed by invoking the function. The values can then be used for decision making. 
 
 ### Invoking functions from Rules 
-Functions can be invoked from any rule (within any assessment) within the same environemnt or environments down the stack. To learn more about rules, see [Rules](rules.md).
+Functions can be invoked from any rule (within any assessment) within the same environment or environments down the stack. To learn more about rules, see [Rules](rules.md).
 ```FraudProtectionLanguage
 LET $sum = Functions.MyFunction(5,5).Calculate_Sum
 RETURN Approve()
@@ -175,7 +176,7 @@ WHEN $sum > 5
 ```
 
 ### Invoking functions from Velocities 
-Functions can be invoked from any velocity within the same environemnt or environemnts down the stack. To learn more about velocities, see [Perform velocity checks](velocities.md).
+Functions can be invoked from any velocity within the same environment or environemnts down the stack. To learn more about velocities, see [Perform velocity checks](velocities.md).
 ```FraudProtectionLanguage
 SELECT DistinctCount(@"device.deviceContextId") AS Devices_Per_IP
 FROM AccountLogin
@@ -184,14 +185,14 @@ GROUPBY @"device.ipAddress"
 ```
 
 ### Invoking functions from Post Decision Rules
-Functions can be invoked from any post-decision action rule (within any assessment) within the same environemnt or environments down the stack. To learn more about post decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
+Functions can be invoked from any post-decision action rule (within any assessment) within the same environment or environments down the stack. To learn more about post decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
 ```FraudProtectionLanguage
 DO SetResponse()
 WHEN Functions.MyFunction(2,3).Calculate_Sum == 5
 ```
 
 ### Invoking functions from Routing Rules 
-Functions can be invoked from any routing rules within the same environemnt or environemnts down the stack. To learn more about routing rules, see [Case Management](case-management-overview.md).
+Functions can be invoked from any routing rules within the same environment or environments down the stack. To learn more about routing rules, see [Case Management](case-management-overview.md).
 ```FraudProtectionLanguage
 ROUTETO Queue("General Queue")
 WHEN Functions.MyFunction(5,5).Calculate_Sum > 5
@@ -202,14 +203,14 @@ Functions can be invoked within the same environment and from environments down 
 
 ### Invoking the functions created within the same environment
 
-The below example shows invoking function from a rule where both the rule and the function exists in the same environment
+Below example shows invoking function from a rule where both the rule and the function exist in the same environment.
 ```FraudProtectionLanguage
 LET $sum = Functions.MyFunction(2,3).Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
 ### Invoking the functions created within root environment
-The below example shows invoking a function that is created in the root from a child environment
+The below example shows invoking a function that is created in the root from a child environment.
 ```FraudProtectionLanguage
 LET $sum = Functions.root.MyFunction(2,3).Calculate_Sum
 RETURN Approve()
@@ -217,7 +218,7 @@ WHEN $sum > 5
 ```
 ### Invoking the functions created within the parent environment
 
-The below example shows invoking a function from the immediate parent environemnt.
+The below example shows invoking a function from the immediate parent environment.
 ```FraudProtectionLanguage
 LET $sum = Functions.parent.MyFunction(2,3).Calculate_Sum
 RETURN Approve()
@@ -238,9 +239,9 @@ Microsoft Dynamics 365 has a limit on the numbers of functions that can be creat
 
   | Resource | Limit | 
 |----------|---------------|
-| Maximum number of functions that can be published within an environemnt | 30 |
+| Maximum number of functions that can be published within an environment | 30 |
 | Maximum number of output properties that can exists within a function | 30 |
-| Maximum number of velocilties that a function can reference | 15 |
+| Maximum number of velocities that a function can reference | 15 |
 | Maximum number of external calls that a function can reference |2 |
 | Maximum number lists that a function can reference | 5 |
 | Maximum number of unique external assessments that a function can reference | 2​ |
