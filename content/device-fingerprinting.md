@@ -128,8 +128,22 @@ Client side integration is useful for low latency scenarios where skipping the s
 
 Below are the prerequisties for enabling client side integration:
 - You must be using the device fingerprinting assessment template with **only** the metadata and device fingerprinting sections.
-- You must have an external call set up that returns a response in the JWKS format. This external call will contain the key that DFP will encrypt the payload with, so you can decrypt the payload that is returned in the browser. [Learn more about external calls here](external-calls.md).
-- (insert JWKS format here).
+  - When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you will see the client side integration option available to you.
+- You must have an external call set up that returns a response in the JWKS format. This external call will return the key that DFP will encrypt the payload with, so you can decrypt the payload that is returned in the browser. The customer is responsible for providing the key for encryption/decryption. See below for an example of JWKS format. [Learn more about external calls here](external-calls.md).
+
+```json
+{
+  "keys":
+  [
+    {
+      "kty":null,
+      "use":null,
+      "kid":null,
+      "k":null
+    }
+  ]
+}
+```
 
 Once you set up a device fingerprinting assessment with Client side integration, you are also able to call our standard server-to-server APIs to retrieve the fingerprinting intelligence.
 
