@@ -54,7 +54,7 @@ When errors are encountered either before or after the evaluation of the output 
 
    The code editor is used to return a value from the function. 
 
-   In the sample below, The **MyFunction** function has 2 output properties **calculate_Sum** and **Call_WeatherService** defined with its corresponding description, data type and default value. The **Calculate_Sum** uses the input parameters to retrun a value and the **Call_weatherService** makes a call to an external service to return a value. To learn about invoking a function, see [Invoke functions from resources](invoke-functions-from-resources.md#define-a-function) and [Function inheritance ](function-inheritance) sections later in this docuemnt. 
+   In the sample below, The **MyFunction** function has 2 output properties **calculate_Sum** and **Call_WeatherService** defined with its corresponding description, data type and default value. The **Calculate_Sum** uses the input parameters to retrun a value and the **Call_weatherService** makes a call to an external service to return a value. To learn about invoking a function, see [Invoke functions from resources](Functions.md#invoke-functions-from-resources) and [Function inheritance ](Functions.md#function-inheritance) sections later in this docuemnt. 
 
    ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/648f1bb4-948c-4fa4-a22b-a1c61c8aeac6)
 
