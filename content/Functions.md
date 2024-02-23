@@ -120,7 +120,7 @@ When errors are encountered either before or after the evaluation of the output 
 
     Fraud Protection creates a draft function that is visible only to you (the creator). Note that all changes that you make to the draft are automatically saved.
 
-2. To define a new function from scratch, see the [Defining a Function](Functions.md#define-a-function) section earlier in this article.
+2. To define a new function from scratch, see the [Defining a Function](Functions.md#defining-a-function) section earlier in this article.
 
 3. To publish the function, select **Publish**.
 4. In the confirmation dialog box, you can change the name and description. When you're ready, select **Publish**.
