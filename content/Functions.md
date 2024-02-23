@@ -128,7 +128,7 @@ When errors are encountered either before or after the evaluation of the output 
 > [!NOTE]
 > After the function is published, the function is visible to all users. The function can then be invoked within other functions, rules, velocities, post-decision rules and routing rules. 
 
-For information about how to use your functions within other resources like functions, rules, velocities, post decision action and routing rules see the [Invoke a Function from resources](Functions.md#invoke-a-function-from-resources) section later in this article.
+For information about how to use your functions within other resources like functions, rules, velocities, post decision action and routing rules see the [Invoke function from resources](Functions.md#invoke-function-from-resources) section later in this article.
 
 ### Understand the sample pane
 
