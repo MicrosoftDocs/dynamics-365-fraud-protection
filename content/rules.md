@@ -151,10 +151,14 @@ Any rule changes to non production branches **do not** affect the production rul
 There are two ways to test branch rule behavior: Sending traffic directly to a branch and shadowing production traffic.
 
 #### Sending traffic directly to a branch
-You can send test traffic directly to a specific branch in an assessment using the branch API endpoint found under **branch actions** -> **branch information**. This API endpoint uses the same payload structure as the assessment, and will execute the rule stack of the branch. Note: sending traffic directly to a branch has no impact on production, so velocities will not be updated and branch transactions will not be visible in search.
+You can send test traffic directly to a specific branch in an assessment using the branch API endpoint found under **branch actions** -> **branch information**. This API endpoint uses the same payload structure as the assessment, and will execute the rule stack of the branch. 
+> [!NOTE]
+> Sending traffic directly to a branch has no impact on production, so velocities will not be updated and branch transactions will not be visible in search.
 
 #### Shadowing production traffic
-You can also test branch rule behavior by shadowing production traffic. To do this, set up and start an experiment for a branch by clicking on the **Run experiment** button. Once an experiment is in progress, you can view its perfomance on the **Monitoring** tab by switching to the branch the experiment is running in. Once an experiment is in progress, its parameters cannot be edited. You can always stop an experiment to make changes and start it again. Note: shadowed traffic that executes on the branch rule stack will not have any impact on production, so velocities will not be double updated as a result of the shadow, only updated once as a result of the production execution. 
+You can also test branch rule behavior by shadowing production traffic. To do this, set up and start an experiment for a branch by clicking on the **Run experiment** button. Once an experiment is in progress, you can view its perfomance on the **Monitoring** tab by switching to the branch the experiment is running in. Once an experiment is in progress, its parameters cannot be edited. You can always stop an experiment to make changes and start it again. 
+> [!NOTE]
+> Shadowed traffic that executes on the branch rule stack will not have any impact on production, so velocities will not be double updated as a result of the shadow, only updated once as a result of the production execution. 
 
 #### Promoting branches to production
 
