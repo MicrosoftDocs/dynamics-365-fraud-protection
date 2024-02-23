@@ -10,10 +10,10 @@ Functions consist of input parameters and output properties.
 
 Functions can define parameters which can be passed to the function at the time of invocation. The input parameters are defined in the function definition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for this function. Defining input parameters are optional and the defined parameters can be used within the Output properties to return a value. For more information, see the [output properties](Functions.md#output-properties). 
 
-Input parameters section has 3 parts
+The input parameters section has 3 parts
 
 #### 1. Parameter Name
-   A name with which the parameter can be referenced
+   A name with which the parameter can be referenced.
 
 #### 2. Data Type
    Every input parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
@@ -30,7 +30,7 @@ Input parameters section has 3 parts
 #### 3. Default Value
    Every parameter requires a default value which will be used during "Function Evaluation" or if there is an issue with the function invocation. 
 
-   In the below sample, **_number1** and **_number2** are the 2 defined parameters with its corrsponding type and default value. Both these parameters should be passed to the function at the time of invocation. 
+   In the sample below, **_number1** and **_number2** are the 2 defined parameters with its corresponding type and default value. Both these parameters should be passed to the function at the time of invocation. 
    ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/9775bbfe-c31e-4b93-9f8c-17f2c7d8d9a9)
 
 
@@ -45,7 +45,7 @@ Output Properties section has 4 parts
 #### 2. Data Type
    The data type of the value that is returned from this property. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
 
-When errors are encountered either before or after the evaluation of the output property i.e. if the output property is deleted or if the caller of the function calls it with a different parameter type than the expected type, the default value of the data type will be returned from the function as the result.
+Whenever a "breaking" change is made to the output property of a function that is being referenced in other resources, the default value of the original output property "data type" is used as a fallback to proceed with the resource execution. It is recommended to update your resources post such breaking changes.
 
 #### 3. Default Value
 
@@ -55,7 +55,7 @@ When errors are encountered either before or after the evaluation of the output 
 
    The code editor is used to return a value from the function. 
 
-   In the sample below, The **MyFunction** function has 2 output properties **calculate_Sum** and **Call_WeatherService** defined with its corresponding description, data type and default value. The **Calculate_Sum** uses the input parameters to retrun a value and the **Call_weatherService** makes a call to an external service to return a value. To learn about invoking a function, see [Invoke functions from resources](Functions.md#invoke-functions-from-resources) and [Function inheritance ](Functions.md#function-inheritance) sections later in this docuemnt. 
+   In the sample below, The **MyFunction** function has 2 output properties **calculate_Sum** and **Call_WeatherService** defined with its corresponding description, data type and default value. The **Calculate_Sum** uses the input parameters to retrun a value and the **Call_weatherService** makes a call to an external service to return a value. To learn about invoking a function, see [Invoke functions from resources](Functions.md#invoke-functions-from-resources) and [Function inheritance ](Functions.md#function-inheritance) sections later in this article. 
 
    ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/648f1bb4-948c-4fa4-a22b-a1c61c8aeac6)
 
@@ -112,7 +112,7 @@ When errors are encountered either before or after the evaluation of the output 
       
       Example of a function invoking another function:
        ```FraudProtectionLanguage
-       RETURN Functions.MyFunction(5,6).Calculat_Sum
+       RETURN Functions.MyFunction(@"totalAmount", @"salesTax").Calculat_Sum
        ```
 
 ## Create a function
@@ -180,7 +180,7 @@ Functions can be invoked from any velocity within the same environment or enviro
 ```FraudProtectionLanguage
 SELECT DistinctCount(@"device.deviceContextId") AS Devices_Per_IP
 FROM AccountLogin
-WHEN Functions.MyFunction(5,5).Calculate_Sum > 5
+WHEN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum > 5
 GROUPBY @"device.ipAddress"
 ```
 
@@ -188,31 +188,31 @@ GROUPBY @"device.ipAddress"
 Functions can be invoked from any post-decision action rule (within any assessment) within the same environment or environments down the stack. To learn more about post decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
 ```FraudProtectionLanguage
 DO SetResponse()
-WHEN Functions.MyFunction(2,3).Calculate_Sum == 5
+WHEN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum == 5
 ```
 
 ### Invoking functions from Routing Rules 
 Functions can be invoked from any routing rules within the same environment or environments down the stack. To learn more about routing rules, see [Case Management](case-management-overview.md).
 ```FraudProtectionLanguage
 ROUTETO Queue("General Queue")
-WHEN Functions.MyFunction(5,5).Calculate_Sum > 5
+WHEN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum > 5
 ```
 
 ## Function inheritance 
-Functions can be invoked within the same environment and from environments down the stack. The invocation syntax depends on where the function exists and from where it is invoked. The below are the different ways to invoke functions within a multi hierarchy set up. 
+Functions can be invoked within the same environment and from environments down the stack. The invocation syntax depends on where the function exists and from where it is invoked. Below are the different ways to invoke functions within a multi hierarchy set up. 
 
 ### Invoking the functions created within the same environment
 
 Below example shows invoking function from a rule where both the rule and the function exist in the same environment.
 ```FraudProtectionLanguage
-LET $sum = Functions.MyFunction(2,3).Calculate_Sum
+LET $sum = Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
 ### Invoking the functions created within root environment
 The below example shows invoking a function that is created in the root from a child environment.
 ```FraudProtectionLanguage
-LET $sum = Functions.root.MyFunction(2,3).Calculate_Sum
+LET $sum = Functions.root.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
@@ -220,32 +220,32 @@ WHEN $sum > 5
 
 The below example shows invoking a function from the immediate parent environment.
 ```FraudProtectionLanguage
-LET $sum = Functions.parent.MyFunction(2,3).Calculate_Sum
+LET $sum = Functions.parent.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
 
 ### Invoking the functions created within any environment above the stack
 
-The below example shows invoking a function that is created in an environment above the stack and inherited from a rule within a lower environment
+The example below shows invoking a function that is created in an environment above the stack and inherited from a rule within a lower environment.
 ```FraudProtectionLanguage
-LET $sum = Functions.environment["environmentid"].MyFunction(2,3).Calculate_Sum
+LET $sum = Functions.environment["environmentid"].MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
 ## Function and resource limits
 
-Microsoft Dynamics 365 has a limit on the numbers of functions that can be created per environment and the resources that can be referenced within a function. The below are the limits
+Microsoft Dynamics 365 has a limit on the numbers of functions that can be created per environment and the resources that can be referenced within a function. The below are the limits.
 
   | Resource | Limit | 
 |----------|---------------|
 | Maximum number of functions that can be published within an environment | 30 |
-| Maximum number of output properties that can exists within a function | 30 |
+| Maximum number of output properties that can exist within a function | 30 |
 | Maximum number of velocities that a function can reference | 15 |
 | Maximum number of external calls that a function can reference |2 |
 | Maximum number lists that a function can reference | 5 |
 | Maximum number of unique external assessments that a function can reference | 2​ |
-| Maximum number of functions that a rule can invoke | 10 |​
+| Maximum number of functions that a rule-set can invoke | 10 |​
 | Maximum number of functions that a routing rule can invoke | 10 |
 | Maximum number of functions that a post decision action can invoke | 10 |
 | Maximum number of resources that a velocity can invoke | 10 |
