@@ -148,7 +148,7 @@ Below are the prerequisties for enabling client side integration:
 In order to complete the client side integration setup, you have to use a modified version of our javascript to return the encrypted response in the browser.
 
   ```JavaScript
-  <script src="https://<Your_Sub_Domain>/mdt.js?session_id=<session_id>&customerId=<customer_id>&assessment=<assessment>&requestId=<request_id>>" type="text/javascript"></script>
+  <script src="https://<Your_Sub_Domain>/mdt.js?session_id=<session_id>&customerId=<customer_id>&assessment=<assessment>&requestId=<request_id>" type="text/javascript"></script>
   ```
 
   - **Your\_Sub\_Domain** – The subdomain under your root domain.
