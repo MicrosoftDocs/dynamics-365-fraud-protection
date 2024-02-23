@@ -62,7 +62,7 @@ When errors are encountered either before or after the evaluation of the output 
 
    1. Input parameters defined within a function can be used to return values
    
-      Example of output property returning an input parameter as the retrun value. For more information on how to define input parameters, see the [Input Parameters](functions.md#input-parameters) section earlier in this article.
+      Example of output property returning an input parameter as the retrun value. For more information on how to define input parameters, see the [Input Parameters](Functions.md#input-parameters) section earlier in this article.
    
        ```FraudProtectionLanguage
        RETURN _number1 + _number2
@@ -120,7 +120,7 @@ When errors are encountered either before or after the evaluation of the output 
 
     Fraud Protection creates a draft function that is visible only to you (the creator). Note that all changes that you make to the draft are automatically saved.
 
-2. To define a new function from scratch, see the [Define a Function](functions.md#define-a-function) section earlier in this article.
+2. To define a new function from scratch, see the [Defining a Function](Functions.md#define-a-function) section earlier in this article.
 
 3. To publish the function, select **Publish**.
 4. In the confirmation dialog box, you can change the name and description. When you're ready, select **Publish**.
@@ -128,7 +128,7 @@ When errors are encountered either before or after the evaluation of the output 
 > [!NOTE]
 > After the function is published, the function is visible to all users. The function can then be invoked within other functions, rules, velocities, post-decision rules and routing rules. 
 
-For information about how to use your functions within other resources like functions, rules, velocities, post decision action and routing rules see the [Invoke function from resources](Functions.md#invoke-function-from-resources) section later in this article.
+For information about how to use your functions within other resources like functions, rules, velocities, post decision action and routing rules see the [Invoke functions from resources](Functions.md#invoke-functions-from-resources) section later in this article.
 
 ### Understand the sample pane
 
