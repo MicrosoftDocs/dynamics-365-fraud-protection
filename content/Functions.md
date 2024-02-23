@@ -74,12 +74,11 @@ Whenever a "breaking" change is made to the output property of a function that i
        ```FraudProtectionLanguage
        RETURN @"salesTax"
        ```
-   2. The scores that are generated from Fraud Protection's artificial intelligence models. For example, @"riskscore".
+   2. The scores that are generated from Fraud Protection's artificial intelligence models. For example, Model.Risk().Score
       
       Example of function using riskscore:
        ```FraudProtectionLanguage
-       LET $a = Model.Risk().Score
-       RETURN 20
+       RETURN Model.Risk().Score
        ```
    3. Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md).
       
@@ -170,7 +169,7 @@ The published functions can be invoked from resources such as rules, velocities,
 ### Invoking functions from Rules 
 Functions can be invoked from any rule (within any assessment) within the same environment or environments down the stack. To learn more about rules, see [Rules](rules.md).
 ```FraudProtectionLanguage
-LET $sum = Functions.MyFunction(5,5).Calculate_Sum
+LET $sum = Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
