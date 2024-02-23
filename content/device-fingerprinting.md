@@ -120,6 +120,19 @@ To implement device fingerprinting, follow these steps.
 3. When you submit transactions in the Fraud Protection API, set a session ID in the **deviceContextId** field. For Assessments, set a session ID in the **deviceFingerprinting.id** field.
 4. Set the **device.ipAddress** field to the customer IP address that your website receives when a customer uses your site. For Assessments, set the customer IP address in the **deviceFingerprinting.ipAddress** field. This field is optional and doesn't need to be set if you don't have it.
 
+## Enable Client Side Integration for Device Fingerprinting
+
+For certain web fingerprinting scenarios, we support a secondary class of integration called **Client Side Integration**. This integration differs from our standard integration practices where the fingerprinting response is returned directly in the browser as an encrypted payload, skipping the server-to-server assessment call.
+
+Client side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, as it is a specialized class of integration, it does come with greater restrictions.
+
+Below are the prerequisties for enabling client side integration:
+- You must be using the device fingerprinting assessment template with **only** the metadata and device fingerprinting sections.
+- You must have an external call set up that returns a response in the JWKS format. This external call will contain the key that DFP will encrypt the payload with, so you can decrypt the payload that is returned in the browser. [Learn more about external calls here](external-calls.md).
+- (insert JWKS format here).
+
+Once you set up a device fingerprinting assessment with Client side integration, you are also able to call our standard server-to-server APIs to retrieve the fingerprinting intelligence.
+
 ## Enable fingerprinting on a mobile app
 
 For mobile apps, device fingerprinting integration supports Android, iOS, and React Native platforms via software development kit (SDK) integration. For more information about the mobile reference implementation, see the following articles:
