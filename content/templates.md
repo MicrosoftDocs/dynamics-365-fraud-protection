@@ -12,12 +12,14 @@ title: Templates
 # Templates
 
 ## What is template?
-Templates allow you to save resources and configuration and duplicate them in Dynamics 365 Fraud Protection. Templates may contain multiple sub-resources so that you can easily duplicate them in a new environment, tenant without manually creating them. 
+Templates allow you to save resources (e.g. decision rules, post-decision actions, etc) and configuration (e.g. assessment configuration, Case Management configuration, etc) from your Dynamics 365 Fraud Protection portal. You can templatize multiple sub-resources together so that you can create them in a new environment or tenant without manually configurating each resource. 
 
-Templates can be created from a resource in your Fraud Protection tenant, and downloaded to your computer as a template file, or you can choose to save the template in template library where templates will be available to be used later. 
+Templates can be created from a resource in your Fraud Protection tenant, and downloaded to your computer as template files, or saved in template library where they will be available to be used later. 
 
-You can create a new resource from a template file or browse from the available templates in your environment. After you upload the template file or select a template from the library, you can create the resource from the template file. The newly created resource may contain sub-resources that were stored in the template in the same state when the template was created. You will have the capability to review what resources are contained in the template when you select the template or import the template file. 
+You can create a new resource from a template file or browse from the available templates in your environment. After you upload the template file or select a template from the library, you will have the capability to preview what resources and sub-resources are contained in the template. 
 
+> [!NOTE]
+> The newly created resource and sub-resources will be in the same state when the template was created. Any changes happened after the template being created will not be applied. 
 
 
 ## Use cases of templates
