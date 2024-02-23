@@ -29,7 +29,7 @@ Case management has several components that work together to provide an end-to-e
 - [Transaction review](#transaction-review)
 
 > [1NOTE]
-> The _Device fingerprinting_ template doesn't support case management. All other [Assessment templates](assessment-create-new.md#template) support case management, except for the reporting capabilities.
+> The _Device fingerprinting_ template doesn't support case management. All other [Assessment templates](assessment-create-new.md#template) support case management, however they are disabled by default. To enable case management for your assessment, go to assessment configuration settings to enable. 
 
 ## Cases
 
