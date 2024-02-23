@@ -8,7 +8,7 @@ Functions consist of input parameters and output properties.
 
 ### Input Parameters 
 
-Functions can define parametrs which can be passed to the function at the time of invocation. The input parameters are defined in the function defenition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for this function. Input parametrs are optional and the defined parameters can be used within the Output properties to return a value. For more information, see the [Output Properties](output-properties.md). 
+Functions can define parametrs which can be passed to the function at the time of invocation. The input parameters are defined in the function defenition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for this function. Input parametrs are optional and the defined parameters can be used within the Output properties to return a value. For more information, see the [Output Properties](functions.md#output-properties). 
 
 Input parameters section has 3 parts
 
