@@ -125,7 +125,7 @@ Assessment and associated label and observation events can be traced to event hu
 ```
 
 ##### Namespace: FraudProtection.CaseManagement.Events.
-Case management decision status and labels made from Case Management can be traced.
+Case management decision status and labels made from Case Management.
 
 ```json
 {
