@@ -137,6 +137,25 @@ This payload sample is shown every time that a new rule is created for the asses
 
 To undo all changes that you or other people have made to the payload sample, and return it to the system's default payload sample, select **Revert**.
 
+## Branches
+
+Branches allow you to safely modify rules without impacting what is happening in production. You can create branches on the rules tab, where each branch represents a collection of rules. The default branch is the **Production** branch, which is the branch of rules that is executed whenever traffic is sent to an assessment. 
+
+### Creating a branch
+To create a new branch, go to **branch action** -> **create a new branch**. You can name the branch, provide an API name, and select which rules you'd like to copy over from the source branch. The source branch is whatever branch you were on when you clicked on create a new branch, production or otherwise.
+
+### Modifying rules within branches
+Any rule changes to non production branches **do not** affect the production rule stack. You can edit rules just like normal, and publish them to the branch, where they can be seen by everyone who has access to the rules page.
+
+### Testing and Experiments
+There are two ways to test branch rule behavior: Sending traffic directly to a branch and shadowing production traffic.
+
+#### Sending 
+
+
+
+
+
 ## Components of a rule
 
 A rule consists of the following components:
