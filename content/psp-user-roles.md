@@ -318,6 +318,40 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
         </tr>
         <tr>
+            <td rowspan="3">Templates</td>
+            <td>Environment</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Assessment</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Rule</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
             <td rowspan="3">Integration</td>
             <td>Dashboard</td>
             <td>Read only</td>
