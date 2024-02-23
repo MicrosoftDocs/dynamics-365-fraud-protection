@@ -2,7 +2,7 @@
 # Functions
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create functions which are used to perform a specific task. Using functions, you can plug in groups of code that can be always run together and can be reused which can then be accessed from other places within DFP for decision making. For example, if we want to call an external service to fetch a value from it, that logic can be defined within a function and then this function can be invoked from other resources.
 
-## Defining a Function: Quick start guide
+## Defining a Function
 
 Functions consist of input parameters and output properties. 
 
@@ -120,7 +120,7 @@ When errors are encountered either before or after the evaluation of the output 
 
     Fraud Protection creates a draft function that is visible only to you (the creator). Note that all changes that you make to the draft are automatically saved.
 
-2. To define a new function from scratch, see the [Defining a Function](Functions.md#defining-a-function:-quick-start-guide) section earlier in this article.
+2. To define a new function from scratch, see the [Defining a Function](Functions.md#defining-a-function) section earlier in this article.
 
 3. To publish the function, select **Publish**.
 4. In the confirmation dialog box, you can change the name and description. When you're ready, select **Publish**.
