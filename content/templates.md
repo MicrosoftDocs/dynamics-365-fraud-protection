@@ -99,14 +99,11 @@ You can create a template from the supported resources in your Fraud Protection 
 
 > [!NOTE]
 > Template is created within the environment that user is currently navigated to. If user creates a template from another environment, the template will be available to the current environment and its children environments.
-
-> [!NOTE]
+> 
 > If the system runs into error when creating the sub-resources, the creation process will abort and some sub-resources or configuration will be missing from the newly created resource.
-
-> [!NOTE]
+> 
 > Modify the content of the downloaded template file may cause the template to be invalid or system error when importing the file to Fraud Protection portal.
-
-> [!NOTE]
+> 
 > Template file has a maximum size limit of 20MB.
 
 ## Use template to create new resources
