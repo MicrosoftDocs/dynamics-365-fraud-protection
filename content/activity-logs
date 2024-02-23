@@ -61,3 +61,5 @@ You may also type hyperlinks that are clickable after they're published.
 Export:
 Select Column options to customize the fields shown in the results grid or select Export to export the data into a CSV file.
 To further investigate a specific pattern, select Open in search to open a new tab with the appropriate search filters
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
