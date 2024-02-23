@@ -6,7 +6,7 @@ ms.date: 02/23/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
-title: Event tracing
+title: Activity Logs
 
 ---
 
@@ -23,7 +23,7 @@ First select the timeframe you want to search across. You can search between any
 Filter logs by attribute
 To find logs, you must filter by one or more attributes. You can search by the following: Operation type, Changed by, Environement ID, Log ID, Operation type, Resource ID, Resource name and Resource type. You can add up to five filters, separated by a single And or Or condition.
 
-Operation type:
+# Operation type:
 Resource type – Operation type
 Assessment – Create – Update – Delete
 Post decision action – Create – Update – Activate - Deactivate – Rename – Reorder – Delete
@@ -36,7 +36,7 @@ Transaction acceptance booster – Update
 Case – Requeue
 Routing rule – Create – Update – Activate - Deactivate – Rename – Reorder - Delete
 
-View search Activity Logs results
+## View search Activity Logs results
 After you select Search, the Results tile shows all of the events that match your specified filters. By default, logs are sorted by the Transaction date attribute, which is shown in your local time zone. The most recent event appears at the top of the grid. You can sort by other attributes by selecting the column title. However, only the events that have already loaded on the results grid are sorted. By default, 100 transactions are loaded on the page. As you scroll, more transactions are loaded.
 Change column options
 Select Column options to customize which columns are shown in the results grid. You can add or remove columns to show specific attributes, or you can drag a column to a new position. Your column settings are valid only for you, and persist if you return to the Activity logs page later. To reset your column options to the default, select Default view.
