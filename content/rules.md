@@ -137,41 +137,6 @@ This payload sample is shown every time that a new rule is created for the asses
 
 To undo all changes that you or other people have made to the payload sample, and return it to the system's default payload sample, select **Revert**.
 
-## Branches
-
-Branches allow you to safely modify rules without impacting what is happening in production. You can create branches on the rules tab, where each branch represents a collection of rules. The default branch is the **Production** branch, which is the branch of rules that is executed whenever traffic is sent to an assessment. 
-
-### Creating a branch
-
-To create a new branch, go to **branch action** -> **create a new branch**. You can name the branch, provide an API name, and select which rules you'd like to copy over from the source branch. The source branch is whatever branch you were on when you clicked on create a new branch, production or otherwise. No drafts are preserved on branch creation. 
-
-### Modifying rules within branches
-
-Any rule changes to non production branches **do not** affect the production rule stack. You can edit rules just like normal, and publish them to the branch, where they can be seen by everyone who has access to the rules page.
-
-### Testing and Experiments
-
-There are two ways to test branch rule behavior: Sending traffic directly to a branch and shadowing production traffic.
-
-#### Sending traffic directly to a branch
-
-You can send test traffic directly to a specific branch in an assessment using the branch API endpoint found under **branch actions** -> **branch information**. This API endpoint uses the same payload structure as the assessment, and will execute the rule stack of the branch. 
-> [!NOTE]
-> Sending traffic directly to a branch has no impact on production, so velocities will not be updated and branch transactions will not be visible in search.
-
-#### Shadowing production traffic
-
-You can also test branch rule behavior by shadowing production traffic. To do this, set up and start an experiment for a branch by clicking on the **Run experiment** button. Once an experiment is in progress, you can view its perfomance on the **Monitoring** tab by switching to the branch the experiment is running in. Once an experiment is in progress, its parameters cannot be edited. You can always stop an experiment to make changes and start it again. 
-> [!NOTE]
-> Shadowed traffic that executes on the branch rule stack will not have any impact on production, so velocities will not be double updated as a result of the shadow, only updated once as a result of the production execution. 
-
-### Promoting branches to production
-
-If you would like to make a branch the new production branch, you can do so by promoting a branch to production. The promotion action can be found under **branch actions** -> **promote to production**. This action will make the current branch you are promoting the new production branch. You will have the option to clone the existing production rules in a new branch to save them for reference. Drafts are preserved if the option to clone is selected. Once the promotion completes, the production branch is updated to contain the rules of the promoted branch.
-
-> [!NOTE]
-> The first time you promote a branch to production for a given assessment, you will not be able to clone the existing production rules in a new branch. If you want to save the existing production rules the first time you ever promote, make a new branch from production with those rules to preserve existing production rules. 
-
 ## Components of a rule
 
 A rule consists of the following components:
@@ -387,6 +352,41 @@ To invoke Fraud Protection’s risk and bot scores from within a rule for an ass
 
 - **Risk score**: Model.Risk().Score
 - **Bot score**: Model.Bot(@"deviceFingerprinting.id").Score
+
+## Branches
+
+Branches allow you to safely modify rules without impacting what is happening in production. You can create branches on the rules tab, where each branch represents a collection of rules. The default branch is the **Production** branch, which is the branch of rules that is executed whenever traffic is sent to an assessment. 
+
+### Creating a branch
+
+To create a new branch, go to **branch action** -> **create a new branch**. You can name the branch, provide an API name, and select which rules you'd like to copy over from the source branch. The source branch is whatever branch you were on when you clicked on create a new branch, production or otherwise. No drafts are preserved on branch creation. 
+
+### Modifying rules within branches
+
+Any rule changes to non production branches **do not** affect the production rule stack. You can edit rules just like normal, and publish them to the branch, where they can be seen by everyone who has access to the rules page.
+
+### Testing and Experiments
+
+There are two ways to test branch rule behavior: Sending traffic directly to a branch and shadowing production traffic.
+
+#### Sending traffic directly to a branch
+
+You can send test traffic directly to a specific branch in an assessment using the branch API endpoint found under **branch actions** -> **branch information**. This API endpoint uses the same payload structure as the assessment, and will execute the rule stack of the branch. 
+> [!NOTE]
+> Sending traffic directly to a branch has no impact on production, so velocities will not be updated and branch transactions will not be visible in search.
+
+#### Shadowing production traffic
+
+You can also test branch rule behavior by shadowing production traffic. To do this, set up and start an experiment for a branch by clicking on the **Run experiment** button. Once an experiment is in progress, you can view its perfomance on the **Monitoring** tab by switching to the branch the experiment is running in. Once an experiment is in progress, its parameters cannot be edited. You can always stop an experiment to make changes and start it again. 
+> [!NOTE]
+> Shadowed traffic that executes on the branch rule stack will not have any impact on production, so velocities will not be double updated as a result of the shadow, only updated once as a result of the production execution. 
+
+### Promoting branches to production
+
+If you would like to make a branch the new production branch, you can do so by promoting a branch to production. The promotion action can be found under **branch actions** -> **promote to production**. This action will make the current branch you are promoting the new production branch. You will have the option to clone the existing production rules in a new branch to save them for reference. Drafts are preserved if the option to clone is selected. Once the promotion completes, the production branch is updated to contain the rules of the promoted branch.
+
+> [!NOTE]
+> The first time you promote a branch to production for a given assessment, you will not be able to clone the existing production rules in a new branch. If you want to save the existing production rules the first time you ever promote, make a new branch from production with those rules to preserve existing production rules. 
 
 ## Manage existing rules
 
