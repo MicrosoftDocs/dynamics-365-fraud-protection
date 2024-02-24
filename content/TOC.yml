@@ -132,8 +132,8 @@
         href: configure-user-access.md
       - name: Payment service provider user roles and access 
         href: psp-user-roles.md
-   - name: Activity logs
-        href: activity-logs.md
+    - name: Activity logs
+      href: activity-logs.md
   - name: Operations
     items: 
     - name: Language reference guide
