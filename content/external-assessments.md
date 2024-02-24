@@ -17,7 +17,11 @@ An assessment can have one of two possible sharing settings:
 - Private: Accessible only in assessment’s root environment
 - Shared: Accessible in all environments in the tenant
 
-External assessment can be set up to point to any **Private** assessment, available in the same root environment, or any **Shared** assessment, available in any root environment of the tenant. After an external assessment has been set up, it can be called through a rule from any assessment in that environment. 
+External assessment can be set up to point to any **Private** assessment, available in the same root environment, or any **Shared** assessment, available in any root environment of the tenant. 
+> [!Note]
+> To learn more about how to change sharing setting of an assessment from Private to Shared or vice versa, please visit [Assessment configuration overview](assessment-configure-existing.md)
+
+After an external assessment has been set up, it can be called through a rule from any assessment in that environment. 
 
 ![External assessment flow](media/external-assessments.png)
 >*For Private Assessment: Environment Y = Environment X*
@@ -48,6 +52,7 @@ To create an External Assessment, first ensure you have the right permission to 
   > [!NOTE]
   > You can use the external assessment to call Evaluate, Observation or Label API of the shared/private assessment it is pointing to. 
 
+  - **Sample response** – This shows the sample response expected from the target assessment. The information shown here is manually provided by the target assessment admin, and is used to enable the IntelliSense, in Rule compiler, on the sample response fields
 3.	When you've finished setting the required fields, select **Create**.
 
 ## Call an External Assessment
