@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This article explains how to use event tracing in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to use activity logs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschointuch
 ms.date: 02/23/2024
 ms.topic: conceptual
