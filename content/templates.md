@@ -180,11 +180,13 @@ You can view the following information for templates:
 
 ## Template limits
 Fraud Protection has a limit on the numbers of templates that can be created per environment. The below are the limits
+
   | Template type | Limit | 
-|----------|---------------|
-| Maximum number of rule templates within an environment | 50 |
-| Maximum number of assessment templates within an environment | 20 |
-| Maximum number of environment templates within an environment | 10 |
+  |----------|---------------|  
+  | Maximum number of rule templates within an environment | 50 |  
+  | Maximum number of assessment templates within an environment | 20 |  
+  | Maximum number of environment templates within an environment | 10 |  
+
 
 ## User permission for template
 For user permission, reference [User role and access](user-roles-access.md) and [Payment service provider user roles and access](psp-user-roles.md)
