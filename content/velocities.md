@@ -207,6 +207,7 @@ The second parameter is **timeWindow**. This parameter specifies the time window
 > If a velocity fails to return a value because of an error, a default value of *0* is returned, and your rule continues to run.
 >
 > Velocities are updated with the current event after rule evaluation. Therefore, if you reference a velocity in a rule, it wouldn't include the current event being processed.
+> 
 > Velocities can also be invoked from Functions. For more information, see [Functions](Functions.md).
 
 ## Use rules to view velocity values
