@@ -12,16 +12,15 @@ title: Activity Logs
 
 # Activity logs
 
-The *event tracing* functionality in Microsoft Dynamics 365 Fraud Protection lets you establish a real-time telemetry platform that is extensible and operational outside the portal. Each event is scheduled or triggered by a user-level or system-level action. You can subscribe to events that you're interested in and forward the event payloads to Azure Event Hubs or Blob Storage. You can also request events from multiple event tracing sessions at the same time. The system will then deliver the events in chronological order.
-The Activity Logs page lets you search for and view details of who changed what and when within Microsoft Dynamics 365 Fraud Protection, based on specific filters. You can export the search results or drill into an individual activity log to show a more detailed view.
-For example, you can search for all the activity logs associated with a specific environment ID, Rules creation or changes made by a specific user. You can review the details for each activity logs such as timestamp, Attribute name, and agent name.
+The *Activity Logs* page lets you search for and view details of who changed what and when within Microsoft Dynamics 365 Fraud Protection, based on specific filters. You can export the search results or drill into an individual activity log to show a more detailed view.
+For example, you can search for all the activity logs associated with a specific environment ID and when clickin on the log, you can review the details of an individual log before and after the associated event.
+
 > [!NOTE]
 > If the environment has child environments, the search results include logs for all the child environments. To view the environment information in the search results, use Environment name or Environment ID in Column options.
+
 ## Getting started
-Select timeframe
-First select the timeframe you want to search across. You can search between any two dates within the past 13 months.
-Filter logs by attribute
-To find logs, you must filter by one or more attributes. You can search by the following: Operation type, Changed by, Environement ID, Log ID, Operation type, Resource ID, Resource name and Resource type. You can add up to five filters, separated by a single And or Or condition.
+- Select timeframe: First select the timeframe you want to search across. You can search between any two dates within the past 13 months.
+- Filter logs by attribute: To find logs, you must filter by one or more attributes. You can search by the following: Operation type, Changed by, Environement ID, Log ID, Operation type, Resource ID, Resource name and Resource type. You can add up to five filters, separated by a single And or Or condition.
 
 ## Operation type:
 <table>
@@ -108,8 +107,7 @@ To find logs, you must filter by one or more attributes. You can search by the f
 </table>
 
 ## View search Activity Logs results
-
-After you select Search, the Results tile shows all of the events that match your specified filters. By default, logs are sorted by the Transaction date attribute, which is shown in your local time zone. The most recent event appears at the top of the grid. You can sort by other attributes by selecting the column title. However, only the events that have already loaded on the results grid are sorted. By default, 100 transactions are loaded on the page. As you scroll, more transactions are loaded.
+After you select Search, the Results tile shows all of the events that match your specified filters. By default, logs are sorted by the event date/time attribute, which is shown in your local time zone. The most recent event appears at the top of the grid. You can sort by other attributes by selecting the column title. However, only the logs that have already loaded on the results grid are sorted. By default, 100 logs are loaded on the page. As you scroll, more logs are loaded.
 
 ## Change column options
 Select Column options to customize which columns are shown in the results grid. You can add or remove columns to show specific attributes, or you can drag a column to a new position. Your column settings are valid only for you, and persist if you return to the Activity logs page later. To reset your column options to the default, select Default view.
@@ -119,11 +117,24 @@ Select Export to export your search results to a comma-separated values (CSV) fi
 •	All Columns – Export all data associated with this event.
 •	Current Columns – Export only data in the columns that are currently shown in the grid.
 > [!NOTE]
-•	Another option is to create an event tracing subscription for your Activity logs event that shows the same fields as the Activity logs page.
+•	You can create an event tracing subscription for your Activity logs event that shows the same fields shown on the Activity logs page.
 •	Exports which exceed 10,000 rows, or take longer than two minutes to generate, are automatically canceled.
 
 ## Review individual activity logs
-To explore a particular activity log in more detail, choose the event ID of the event that you want to examine. On the Activity logs details page, you can see all the individual log fields at the top and click on them to open a new tab to start a related search and operation specific ones in the Change viewer. You can copy the fields in the Change viewer by clicking on "copy original" and "copy modified" buttons. You also have the option to jump to changes using the arrows button and show all fields or just the modified ones.
+To explore a particular activity log in more detail, choose the event ID of the event that you want to examine. On the Activity logs details page, at the top, you can see the individual log common fields (listed below). You may click on them to open a new tab and start a related quick search. On the change viewer, you can see the operation specific fields. You can copy the fields in the Change viewer by clicking on "copy original" and "copy modified" buttons. You also have the option to jump to changes using the arrows button and show all fields or just the modified ones.
+
+*Logs common fields:*
+- Log ID: Unique Activity log ID​
+- Changed by ID: User unique Id
+- Operation type: Create, Update or Delete​
+- Timestamp: date and time of event​
+- Resource type: (listed on slide 8: environment, external call, published rules…)​
+- Resource name: resource name (can change)​
+- Resource Id: resource unique Id
+-  Assessment name: assessment name (can change)​
+-  Assessment Id: assessment unique Id
+-  Environment name: name of environment (if resource type is not “Environment”)
+-  Environment ID: resource unique Id  (if resource type is not “Environment”)
 
 ## Notes panel
 Notes allow your team to have a rich collaboration when reviewing event details. You can create, edit, reply, delete, and tag users on the Notes panel attached to individual event details through Search and Case Management.
