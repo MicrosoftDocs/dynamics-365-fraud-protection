@@ -26,7 +26,7 @@ You can create a new resource from a template file or browse from the available 
 
 There are many use cases and scenarios where templates can be beneficial. 
 
-When FI/PSP customers are onboarding new client, they would like to save certain resources as templates so they can easily set up similar use cases by applying the template. When customers are making changes to existing environment, they would like to test the change in sandbox environment first, and promote the changes to production environment by exporting the template from sandbox and importing into the production environment. Users may want to save a rule as template so they can duplicate them in another assessment or environment. Templates can help users to share their environment or assessment configuration across environments and tenants, which greatly reduces the time to onboarding and reduce human error and manual labor during the process. 
+When financial institutions and payment servicer provier customers are onboarding new client, they would like to save certain resources as templates so they can easily set up similar configuration by applying the template. When merchants are making changes to existing environment, they would like to test the change in sandbox environment first, and promote the changes to production environment by exporting the template from sandbox and importing into the production environment. Users can save a rule as template so they can duplicate them in another assessment or environment. Templates can help users to share their environment or assessment configuration across environments and tenants, which greatly reduces the time to onboarding and reduce human error and manual labor during the process. 
 
 ## Types of templates
 In Fraud Protection, we support the following types of templates:
@@ -37,6 +37,7 @@ In Fraud Protection, we support the following types of templates:
 > Rule template does not support decision rules and post-decision actions in shadowing branches. 
 
 ###	Assessment template
+Sub-resources included:
 - Assessment API attributes, labels and observation events
 - Published decision rules and post-decision actions in production branch
 - Assessment configuration and settings
@@ -47,6 +48,7 @@ In Fraud Protection, we support the following types of templates:
 > Assessment template does not support decision rules and post-decision actions in shadowing branches. 
 
 ### Environment template
+Sub-resources included:
 -	Assessment API attributes, labels and observation events
 -	Published decision rules and post-decision actions in production branch
 -	Assessment configuration and settings
@@ -60,7 +62,8 @@ In Fraud Protection, we support the following types of templates:
 -	Environment metadata (e.g. name, description, geolocation, etc)
 
 > [!NOTE]
-> Environment template does not support decision rules and post-decision actions in shadowing branches. 
+> Environment template does not support decision rules and post-decision actions in shadowing branches.
+> In template list name and columns are included, but list will be empty without any data. 
 
 ## Create template
 
