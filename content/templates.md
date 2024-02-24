@@ -12,7 +12,7 @@ title: Templates
 # Templates
 
 ## What is template?
-Templates allow you to save resources (e.g. decision rules, post-decision actions, etc) and configuration (e.g. assessment configuration, Case Management configuration, etc) from your Dynamics 365 Fraud Protection portal. You can templatize multiple sub-resources together so that you can create them in a new environment or tenant without manually configurating each resource. 
+Templates allow you to save resources (for example, decision rules, post-decision actions, etc) and configuration (for example, assessment configuration, Case Management configuration, etc) from your Dynamics 365 Fraud Protection portal. You can templatize multiple sub-resources together so that you can create them in a new environment or tenant without manually configurating each resource. 
 
 Templates can be created from a resource in your Fraud Protection tenant, and downloaded to your computer as template files, or saved in template library where they will be available to be used later. 
 
@@ -59,7 +59,7 @@ Sub-resources included:
 -	External calls
 -	External assessments
 -	Functions
--	Environment metadata (e.g. name, description, geolocation, etc)
+-	Environment metadata (for example, name, description, geolocation, etc)
 
 > [!NOTE]
 > Environment template does not support decision rules and post-decision actions in shadowing branches.
