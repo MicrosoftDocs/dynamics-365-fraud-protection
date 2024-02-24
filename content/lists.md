@@ -65,6 +65,10 @@ In addition to using multicolumn lists to combine safe and block lists, you can 
 
 You can then configure a rule that enforces the rejection of transactions where the [risk score](ap-scorecard.md#risk-model-score) exceeds the specified threshold for the product type. For information about how to create effective rules to customize your business logic, see [Rules](rules.md).
 
+> [!NOTE]
+>
+> Lists can also be referenced within Functions. For more information, see [Functions](Functions.md).
+
 ## Upload a custom list
 
 You can upload organized data in a list file to Fraud Protection and then reference the list in a [rule](rules.md). The file must adhere to the specifications that are described in the [Format requirements](lists.md#format-requirements) section earlier in this article.
