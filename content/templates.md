@@ -26,7 +26,7 @@ You can create a new resource from a template file or browse from the available 
 
 There are many use cases and scenarios where templates can be beneficial. 
 
-When financial institutions and payment servicer provier customers are onboarding new client, they would like to save certain resources as templates so they can easily set up similar configuration by applying the template. When merchants are making changes to existing environment, they would like to test the change in sandbox environment first, and promote the changes to production environment by exporting the template from sandbox and importing into the production environment. Users can save a rule as template so they can duplicate them in another assessment or environment. Templates can help users to share their environment or assessment configuration across environments and tenants, which greatly reduces the time to onboarding and reduce human error and manual labor during the process. 
+When financial institutions and payment servicer provier customers are onboarding new client, they can set up new environments using the template. When merchants make changes to their Fraud Protection configuration, they can test in sandbox environment, and promote the changes to production environment using the template. Users can save a rule as template so they can duplicate them in another assessment or environment.
 
 ## Types of templates
 In Fraud Protection, we support the following types of templates:
