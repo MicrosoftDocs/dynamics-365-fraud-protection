@@ -44,7 +44,7 @@ Before you create an external call, you should know about the following limitati
         > [!NOTE]
         > All parameter values are interpreted as strings.
 
-    - **Add configuration** – You can also provide static data on the external call setup page that will be passed to your API endpoint. For sensitive information, you can mark a configuration to be a secret and provide a secret identifier URL from your Azure key vault instead of providing the actual value on the external call setup page.  
+    - **Add configuration** – You can also provide static data on the external call setup page that will be passed to your API endpoint. For sensitive information, you can mark a configuration to be a secret and provide a secret identifier URL from your Azure key vault instead of providing the actual value on the external call setup page. To learn how to store a secrets in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#Store-passwords-in-your-Azure-Key-Vault) section later in this article. 
 
       Like parameters, you can pass configuration values in the Header, URL, or the request body of the external call. However, unlike parameters where the actual value is passed from the rule when making the externa call, configuration values provided on the external call setup page are used when making sample or actual calls.
 
