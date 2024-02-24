@@ -101,6 +101,10 @@ OBSERVE Output(Result = $result)
 
 External Calls and External Assessments may require complex structured objects as part of their request schema. For more information on how to use JSON Arrays and Objects, please check the [Language reference guide](fpl-lang-ref.md). 
 
+> [!NOTE]
+>
+> External Assessments can also be referenced within Functions. For more information, see [Functions](Functions.md).
+
 ## Monitor external calls in the Fraud Protection portal
 
 Fraud Protection shows a tile that contains three metrics for each external assessment that you define:
