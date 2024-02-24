@@ -35,13 +35,7 @@ Before you create an external call, you should know about the following limitati
         > [!NOTE]
         > You can't change the name of an external call after you use it in a rule.
 
-    - **Description** – Add a description to help your team quickly identify the external call.
-    - **Web request** – Select the appropriate HTTP method (**GET** or **POST**), and then enter the API endpoint.
-
-        > [!NOTE]
-        > Only HTTPS endpoints are supported.
-
-    - **Authentication** – Select the method that should be used to authenticate incoming requests. For more information about authentication, authentication-specific fields, authorization, and Microsoft Entra tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this article.
+    - **Description** – Add a description to help your team quickly identify the external call
     
     - **Add parameter** – You can use parameters to pass data from Fraud Protection to your API endpoint. Depending on the HTTP method that you selected, these parameters will be sent to the endpoint either in the query string or as part of the request body.
 
@@ -50,21 +44,29 @@ Before you create an external call, you should know about the following limitati
         > [!NOTE]
         > All parameter values are interpreted as strings.
 
-   - **Add configuration** – You can also provide static data on the external call setup page that will be passed to your API endpoint. For sensitive information, you can mark a configuration to be a secret and provide a secret identifier URL from your Azure key vault instead of providing the actual value on the external call setup page.  
+    - **Add configuration** – You can also provide static data on the external call setup page that will be passed to your API endpoint. For sensitive information, you can mark a configuration to be a secret and provide a secret identifier URL from your Azure key vault instead of providing the actual value on the external call setup page.  
 
-     Like parameters, you can pass configuration values in the Header, URL, or the request body of the external call. However, unlike parameters where the actual value is passed from the rule when making the externa call, configuration values provided on the external call setup page are used when making sample or actual calls. 
+      Like parameters, you can pass configuration values in the Header, URL, or the request body of the external call. However, unlike parameters where the actual value is passed from the rule when making the externa call, configuration values provided on the external call setup page are used when making sample or actual calls.
 
+     - **Web request** – Select the appropriate HTTP method (**GET** or **POST**), and then enter the API endpoint.
 
-   - **Sample request** – Provides an example of the request that is sent to your external call. The request should reflect the parameter names and values that you specified, and it can't be edited. You can also add configurations to the request URL or body as well. 
+        > [!NOTE]
+        > Only HTTPS endpoints are supported.
 
-     For *GET* methods, the request URL is shown. For *POST* methods, the request body is shown. You can construct custom request body for a POST call by clicking on **+ Advanced build your own request**.
+    - **Authentication** – Select the method that should be used to authenticate incoming requests. For more information about authentication, authentication-specific fields, authorization, and Microsoft Entra tokens, see the [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization) section later in this article.
+
+   - **Headers** - You can provide headers as needed. Please note, the default value of Content-Type is 'application/json'. Currently Fraud Protection only supports 'application/json' and 'application/x-www-form-urlencoded' content types.
+
+    - **Sample request** – Provides an example of the request that is sent to your external call. The request should reflect the parameter names and values that you specified, and it can't be edited. You can also add configurations to the request URL or body as well. 
+
+      For *GET* methods, the request URL is shown. For *POST* methods, the request body is shown. You can construct custom request body for a POST call by clicking on **+ Advanced build your own request**.
      The sample request is used to make a sample call to your endpoint, either before creation or whenever you select **Test connection**.
 
-    - **Sample response** – Provide an example of the data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and can be referenced in your rules. The sample that you provide here is shown as you create rules.
+     - **Sample response** – Provide an example of the data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and can be referenced in your rules. The sample that you provide here is shown as you create rules.
      
-      Select **{} Get API response** to automatically enter an actual response from your API in this field.
+       Select **{} Get API response** to automatically enter an actual response from your API in this field.
 
-   - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 5000.
+    - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 5000.
     - **Default response** – Specify the default response that should be returned if your request fails or exceeds the specified time-out. The value must be valid JSON object or JSON element.
 
 4. Optional: To send a sample request to your API endpoint and view the response, select **Test connection**. For more information, see the next section, [Test an external call](external-calls.md#test-an-external-call).
@@ -260,10 +262,10 @@ If you select **OAuth (Custom token)** as the authentication method, you can con
 3.	**Token authentication** – Select either Anonymous or Basic authentication method for the token call.
 4.	**Username** – Provide Username for Basic authentication. 
 5.	**Password URL** – Provide Password identifier URL from your Azure Key Vault for Basic authentication. To learn how to store a password in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#Store-passwords-in-your-Azure-Key-Vault) section later in this article.
-6.	**Headers** – You can provide the value for Scope. 
+6.	**Headers** – You can provide headers as needed. 
 7.	**Sample request** – Provides an example of the request that is sent to your token endpoint:
-  - **Sample request URL** – This is a read-only field which shows the request URL that will be used to make the sample call.
-  - **Sample request body** – You can construct custom request body for the token call by clicking on + Advanced build your own request. 
+    - **Sample request URL** – This is a read-only field which shows the request URL that will be used to make the sample call.
+    - **Sample request body** – You can construct custom request body for the token call by clicking on + Advanced build your own request. 
 The sample request URL and body are used to make a sample call to your token endpoint, either before creation or whenever you select Test connection.
 8.	**Timeout** – Specify the timeout duration between 1 and 5000.
 
