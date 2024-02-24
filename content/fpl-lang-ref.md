@@ -407,3 +407,14 @@ LET $obj2 = {
   }
 }
 ```
+
+### FQL functions for JSON Arrays & Objects
+
+| Syntax type | Description | Example |
+|---------|-------------|-------------|
+|Access-by-index |<p>You can use this syntax to access specific array element by its index.</p><p> Always type cast at the end of the .dot chain.</p>|myArr[0]</p><p>myArr [0].property</p><p>myArr [0][0]</p><p>myArr [0][0].property</p><p>myArr [0].property[0]</p><p>myArr [0].property[0].property</p><p>Where **myArr** is an array. The source of this array can be the @@payload, External assessment response, External call response, Local variable, or a global variable|
+|<p>Access-by-condition</p><p><i>Returns a value</i></p>|<p>You can access the first array element that matches a condition.</p><p>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
+|<p>Access-by-condition</p><p><i>Returns an array</i></p>|<p>You can access a set of array elements that matches a condition.</p><p>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
+
+
+
