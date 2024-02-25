@@ -132,7 +132,7 @@ Case management decision status and labels made from Case Management.
 	"name": "FraudProtection.CaseManagement.Events",
 	"version": "1.0",
 	"metadata": {
-		"tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+		"tenantId": "<your tenantID>",
 		"timestamp": "2020-09-25T03:46:53.3716978Z"
 	},
 	"assessmentId": "<your assessment uniqueId>",
