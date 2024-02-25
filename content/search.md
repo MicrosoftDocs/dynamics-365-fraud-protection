@@ -21,7 +21,7 @@ To search events, select the **Search** page on the left navigation.
 If your Fraud Protection instance has multiple environments, **Search for each environment** can be found by using the environment switcher on the top right of the menu bar. If the environment has child environments, the search results include transactions for all the child environments. To view the environment information in the search results, use **Environment name** or **Environment ID** in **Column options**. To limit the search results to a specific environment, use **Environment ID** as an attribute in the **Search** filter.    
 
 > [1NOTE]
-> The _Device fingerprinting_ template doesn't support Search. All other [Assessment templates](assessment-create-new.md#template) support search. To check if you have enabled search for your assessment, you can go to assessment configuration setting to confirm.
+> The _Device fingerprinting_ template doesn't support Search. All other [Assessment templates](assessment-create-new.md#template) support search. To check if you have enabled search for your assessment, you can go to assessment configuration setting to confirm. Search will only find transactions that are processed after you have enabled it for your Assessment. Historical transactions that were sent before search was enabled would not be available.
 
 ## Select event type and timeframe
 
