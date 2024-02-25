@@ -113,6 +113,10 @@ Whenever a "breaking" change is made to the output property of a function that i
        ```FraudProtectionLanguage
        RETURN Functions.MyFunction(@"totalAmount", @"salesTax").Calculat_Sum
        ```
+       
+> [!NOTE]
+> Functions can be created within any environment in the multi hierarchy stack. When a function references resources like velocities, external calls, lists and external assessments which are available in that environment, the lower environments which invoke this function will also inherit the resources that the function references. For example, if a function created in the root references an external call to retrun a value, the child environment that invokes these functions will be able to access the result of that external call as well. To learn how to inherit and invoke functions, see [Function Inheritance](Functions.md#function-inheritance) section later in this article.
+
 
 ## Create a function
 
@@ -199,6 +203,8 @@ WHEN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum > 5
 
 ## Function inheritance 
 Functions can be invoked within the same environment and from environments down the stack. The invocation syntax depends on where the function exists and from where it is invoked. Below are the different ways to invoke functions within a multi hierarchy set up. 
+
+If a function references resources such as velocities, lists, external calls and external assessments, those resources will also be inherited down the stack when the function gets invoked. 
 
 ### Invoking the functions created within the same environment
 
