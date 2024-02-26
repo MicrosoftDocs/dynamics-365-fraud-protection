@@ -1,6 +1,6 @@
 
 # Functions
-Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create functions which are used to perform a specific task. Using functions, you can plug in groups of code that can be always run together and can be reused which can then be accessed from other places within DFP for decision making. For example, if we want to call an external service to fetch a value from it, that logic can be defined within a function and then this function can be invoked from other resources.
+Fraud Protection Fraud Protection gives you the flexibility to create functions which are used to perform a specific task. Using functions, you can combine groups of code that need to be executed together. Alternatively, you can also use functions to reuse code, by writing it once and accessing it from various other places. This makes it easier to maintain code that is needed in multiple places. For example, if we want to call an external service to fetch a value from it, that logic can be defined within a function and then this function can be invoked from other resources.
 
 ## Defining a Function
 
@@ -16,7 +16,7 @@ The input parameters section has 3 parts
    A name with which the parameter can be referenced.
 
 #### 2. Data Type
-   Every input parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
+   Every input parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the data types listed in the table below
 
 | Data type | Sample value | 
 |----------|---------------|
@@ -30,17 +30,14 @@ The input parameters section has 3 parts
 #### 3. Default Value
    Every parameter requires a default value which will be used during "Function Evaluation" or if there is an issue with the function invocation. 
 
-   In the sample below, **_number1** and **_number2** are the 2 defined parameters with its corresponding type and default value. Both these parameters should be passed to the function at the time of invocation. 
-   ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/9775bbfe-c31e-4b93-9f8c-17f2c7d8d9a9)
-
 
 ### Output Properties 
-The return value of a function can be defined through output properties. The Output Properties section will have the FQL logic to return a value of the function. These properties can then be accessed from within other functions, rules, velocities, post decision action rules and routing rules by invoking the function. A function can have up to 30 output properties. 
+The return value of a function can be defined through output properties. The Output Properties section will have the "Fraud Query Language (FQL)" logic to return a value of the function. These properties can then be accessed from within other functions, rules, velocities, post-decision action rules and routing rules by invoking the function. A function can have up to 30 output properties. For more information on Fraud Query Language and how to use it, see [Language reference guide](fpl-lang-ref.md)
 
 Output Properties section has 4 parts
 
 #### 1. Property Description
-   A description of the property which will be helpful for the caller. Intellisense will be able to show the property description if it was defined. Also, the description is optional. 
+   A description of the property which will be helpful for the caller. The description is optional. 
 
 #### 2. Data Type
    The data type of the value that is returned from this property. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
@@ -55,30 +52,26 @@ Whenever a "breaking" change is made to the output property of a function that i
 
    The code editor is used to return a value from the function. 
 
-   In the sample below, The **MyFunction** function has 2 output properties **calculate_Sum** and **Call_WeatherService** defined with its corresponding description, data type and default value. The **Calculate_Sum** uses the input parameters to retrun a value and the **Call_weatherService** makes a call to an external service to return a value. To learn about invoking a function, see [Invoke functions from resources](Functions.md#invoke-functions-from-resources) and [Function inheritance ](Functions.md#function-inheritance) sections later in this article. 
-
-   ![image](https://github.com/MicrosoftDocs/dynamics-365-fraud-protection-pr/assets/116034304/648f1bb4-948c-4fa4-a22b-a1c61c8aeac6)
-
    There are different ways to return an output value
 
    1. Input parameters defined within a function can be used to return values
    
-      Example of output property returning an input parameter as the retrun value. For more information on how to define input parameters, see the [Input Parameters](Functions.md#input-parameters) section earlier in this article.
+      Example of output property returning an input parameter as the return value. For more information on how to define input parameters, see the [Input Parameters](Functions.md#input-parameters) section earlier in this article.
    
        ```FraudProtectionLanguage
        RETURN _number1 + _number2
        ```
-   1. Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"salesTax".
+   1. Both request and response attributes (including custom data) of an assessment that contains the rule which is invoking the function. You can access these attributes with the @ operator. For example, @"salesTax".
      
       Example of function using request attributes:
        ```FraudProtectionLanguage
        RETURN @"salesTax"
        ```
-   2. The scores that are generated from Fraud Protection's artificial intelligence models. For example, Model.Risk().Score
+   2. The fraud protection enrichment data. For example, Geo.CountryCode()
       
       Example of function using riskscore:
        ```FraudProtectionLanguage
-       RETURN Model.Risk().Score
+       RETURN Geo.CountryCode(@"deviceContext.ipAddress")
        ```
    3. Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md).
       
@@ -105,17 +98,16 @@ Whenever a "breaking" change is made to the output property of a function that i
        LET $result = Assessments.myAssessment.Evaluate($baseInput = @@)
        RETURN $result.ToStr()
        ```
-   
-   
+          
    8. Access function within functions
       
       Example of a function invoking another function:
        ```FraudProtectionLanguage
-       RETURN Functions.MyFunction(@"totalAmount", @"salesTax").Calculat_Sum
+       RETURN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
        ```
        
 > [!NOTE]
-> Functions can be created within any environment in the multi hierarchy stack. When a function references resources like velocities, external calls, lists and external assessments which are available in that environment, the lower environments which invoke this function will also inherit the resources that the function references. For example, if a function created in the root references an external call to retrun a value, the child environment that invokes these functions will be able to access the result of that external call as well. To learn how to inherit and invoke functions, see [Function Inheritance](Functions.md#function-inheritance) section later in this article.
+> Functions can be created within any environment in the multi hierarchy stack. When a function references resources like velocities, external calls, lists and external assessments which are available in that environment, the lower environments which invoke this function will also inherit the resources that the function references. For example, if a function created in the root references an external call to return a value, the child environment that invokes these functions will be able to access the result of that external call as well. To learn how to inherit and invoke functions, see [Function Inheritance](Functions.md#function-inheritance) section later in this article.
 
 
 ## Create a function
@@ -165,13 +157,13 @@ Before you publish your new function, you can use the "Function evaluation" pane
 - To open the function evaluation pane, select **Expand** in the lower right of the **Functions** tab.
 - To close the pane, select **Collapse**.
 
-When the evaluation pane is open, you can see the list of output properties with its result. This will help you to understand if you are returning the correct values for the functions. 
+When the evaluation pane is open, you can see the list of output properties with its result. The evaluation uses "default" values for input parameters and values from the sample payload section when determining what should be returned, and if any of those values is changed then the output would also change accordingly. This will help you to understand if you are returning the correct values for each output property. 
 
 ## Invoke functions from resources
 The published functions can be invoked from resources such as rules, velocities, post-decision actions, and routing rules. All the output properties defined within a function can be accessed by invoking the function. The values can then be used for decision making. 
 
 ### Invoking functions from Rules 
-Functions can be invoked from any rule (within any assessment) within the same environment or environments down the stack. To learn more about rules, see [Rules](rules.md).
+Functions can be invoked from any rule (within any assessment) within the same environment and from child environments in the hierarchy below. To learn more about rules, see [Rules](rules.md).
 ```FraudProtectionLanguage
 LET $sum = Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
@@ -179,7 +171,7 @@ WHEN $sum > 5
 ```
 
 ### Invoking functions from Velocities 
-Functions can be invoked from any velocity within the same environment or environemnts down the stack. To learn more about velocities, see [Perform velocity checks](velocities.md).
+Functions can be invoked from any velocity within the same environment and from child environments in the hierarchy below. To learn more about velocities, see [Perform velocity checks](velocities.md).
 ```FraudProtectionLanguage
 SELECT DistinctCount(@"device.deviceContextId") AS Devices_Per_IP
 FROM AccountLogin
@@ -188,23 +180,24 @@ GROUPBY @"device.ipAddress"
 ```
 
 ### Invoking functions from Post Decision Rules
-Functions can be invoked from any post-decision action rule (within any assessment) within the same environment or environments down the stack. To learn more about post decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
+Functions can be invoked from any post-decision action rule (within any assessment) within the same environment and from child environments in the hierarchy below. To learn more about post decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
 ```FraudProtectionLanguage
 DO SetResponse()
 WHEN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum == 5
 ```
 
 ### Invoking functions from Routing Rules 
-Functions can be invoked from any routing rules within the same environment or environments down the stack. To learn more about routing rules, see [Case Management](case-management-overview.md).
+Functions can be invoked from any routing rules within the same environment and from child environments in the hierarchy below. To learn more about routing rules, see [Case Management](case-management-overview.md).
 ```FraudProtectionLanguage
 ROUTETO Queue("General Queue")
-WHEN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum > 5
+WHEN Functions.MyFunction(@"purchase.request.totalAmount", @"purchase.request.salesTax").Calculate_Sum > 5
 ```
 
 ## Function inheritance 
-Functions can be invoked within the same environment and from environments down the stack. The invocation syntax depends on where the function exists and from where it is invoked. Below are the different ways to invoke functions within a multi hierarchy set up. 
+Functions can be invoked within the same environment and from child environments in the hierarchy below. The invocation syntax depends on where the function exists and from where it is invoked. Below are the different ways to invoke functions within a multi hierarchy set up. 
 
-If a function references resources such as velocities, lists, external calls and external assessments, those resources will also be inherited down the stack when the function gets invoked. 
+> [!NOTE]
+> If a function references resources such as velocities, lists, external calls and external assessments, those resources will also be inherited from child environments in the hierarchy below when the function gets invoked. 
 
 ### Invoking the functions created within the same environment
 
@@ -240,15 +233,15 @@ WHEN $sum > 5
 ```
 ## Function and resource limits
 
-Microsoft Dynamics 365 has a limit on the numbers of functions that can be created per environment and the resources that can be referenced within a function. The below are the limits.
+Fraud Protection has a limit on the numbers of functions that can be created per environment and the resources that can be referenced within a function. The below are the limits.
 
   | Resource | Limit | 
 |----------|---------------|
 | Maximum number of functions that can be published within an environment | 30 |
 | Maximum number of output properties that can exist within a function | 30 |
-| Maximum number of velocities that a function can reference | 15 |
+| Maximum number of unique velocities that a function can reference | 15 |
 | Maximum number of external calls that a function can reference |2 |
-| Maximum number lists that a function can reference | 5 |
+| Maximum number unique list lookups that a function can reference | 5 |
 | Maximum number of unique external assessments that a function can reference | 2​ |
 | Maximum number of functions that a rule-set can invoke | 10 |​
 | Maximum number of functions that a routing rule can invoke | 10 |
