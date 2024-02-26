@@ -189,7 +189,7 @@ To ensure that data is securely accessed, APIs often authenticate the sender of 
 1.	Anonymous
 2.	Basic
 3.	Certificate
-4.	OAuth (Microsoft Entra ID)
+4.	OAuth (Microsoft Entra ID) *(formerly Azure Active Directory)*
 5.	OAuth (Generic)
 6.	OAuth (Custom token)
 
@@ -215,7 +215,7 @@ If you select **Certificate** as the authentication method, please provide the f
 
 ### OAuth (Microsoft Entra ID)
 
-If you select **OAuth (Generic)** as the authentication method, please provide the following additional information to setup the external call:
+If you select **OAuth (Microsoft Entra ID)** (formerly Azure Active Directory) as the authentication method, please provide the following additional information to setup the external call:
 1.	**Audience** - If you selected OAuth (Microsoft Entra ID) as the authentication method, you will be asked to provide an audience. You can use an existing Azure application as the audience or create a new one through the integration experience within DFP portal. Please ensure audience has permission to access the external call/service. To learn more about how to configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). 
 2.	**Application ID** – You will also need to provide the application ID of a new or existing Microsoft Entra application within your Fraud Protection subscription tenant. Generate a certificate in your Azure Key Vault. The Fraud Protection app should have read access to this Azure Key Vault. To learn how to generate a certificate in your Azure Key Vault and provide access to Fraud Protection, see [Create a certificate in your Azure Key Vault](external-calls.md#Create-a-certificate-in-your-Azure-Key-Vault) section later in this article. Load the certificate to this Microsoft Entra application. For more information about how to create and manage Microsoft Entra applications, see [Create Microsoft Entra Applications](integrate-real-time-api.md#create-microsoft-entra-applications).
 3.	**Certificate URL** – Provide the certificate identifier URL from your Azure Key Vault. This is the same certificate you loaded to the Microsoft Entra app in the previous step. 
