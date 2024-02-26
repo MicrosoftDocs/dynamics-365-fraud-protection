@@ -27,6 +27,9 @@ WHEN <condition>
 GROUPBY <attribute name>
 ```
 
+> [!NOTE]
+> Arrays can not be used to GROUPBY in a velocity definition
+
 - After **SELECT**, specify an aggregation method: *Count*, *DistinctCount*, or *Sum*. Then use the **AS** keyword to name the velocity. This name can then be used to reference the velocity in rules.
 
     Here is an explanation of the aggregation methods.
