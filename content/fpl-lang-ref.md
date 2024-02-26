@@ -428,7 +428,7 @@ Here are some more detailed examples of how to use the above syntax based on dif
 
 ### Type casting for JSON Arrays and Objects
 
-  - Following .As\<Type\>() are supported from the JsonObject:
+  - Following **.As<i>\<Type\></i>**() are supported from the JsonObject:
     -	AsString()
     -	AsInt()
     -	AsDouble()
@@ -437,14 +437,14 @@ Here are some more detailed examples of how to use the above syntax based on dif
     -	AsJsonArray()
     -	AsJsonObject()
 
-  - When you use array helper methods, .GetValue or .GetValues, you need to type cast using **.As<i>\<Type\></i>**().
+  - When you use either of the two array helper methods, .GetValue or .GetValues, you will need to type cast using **.As<i>\<Type\></i>**().
     Example:
     ```FraudProtectionLanguage
     LET $arr = {myArr:[{item1: "red", number: 45}, {item1: "blue", number: 56}, {item1: "green", number: 33}]}
     LET $sample = Array.GetValues($arr.myArr.AsJsonArray(), "item1", "blue")
     ```
 
-  - Once have converted to Array/Object explicitly, you may need to use **.As<i>\<Type\></i>**() to cast to a specific data type. 
+  - Once have have converted data to a JSON object or array explicitly, you can use **.As<i>\<Type\></i>**() to cast to a different data type subsequently, if needed. 
     Example:
     ```FraudProtectionLanguage
     RETURN Approve()
@@ -466,7 +466,7 @@ Here are some more detailed examples of how to use the above syntax based on dif
 
 > [!NOTE]
 > Type casting best practices:
->   - Always type cast at the end of the .Chain
+>   - Always type cast at the end of the **.** chain
 >    >     Example:
 >    >     LET $sample = External.myCall().data[0].Item1[0].AsJsonArray()
 >    >                                  -OR-
