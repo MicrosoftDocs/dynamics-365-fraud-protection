@@ -59,7 +59,10 @@ Before you create an external call, you should know about the following limitati
 
     - **Sample request** – Provides an example of the request that is sent to your external call. The request should reflect the parameter names and values that you specified, and it can't be edited. You can also add configurations to the request URL or body as well. 
 
-      For *GET* methods, the request URL is shown. For *POST* methods, the request body is shown. You can construct custom request body for a POST call by clicking on **+ Advanced build your own request**.
+        > [!NOTE]
+        > For *GET* method, no request body is included. 
+
+       For *POST* methods, the request body is shown. You can construct custom request body for a POST call by clicking on **+ Advanced build your own request**.
      The sample request is used to make a sample call to your endpoint, either before creation or whenever you select **Test connection**.
 
      - **Sample response** – Provide an example of the data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and can be referenced in your rules. The sample that you provide here is shown as you create rules.
