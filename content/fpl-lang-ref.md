@@ -410,11 +410,58 @@ LET $obj2 = {
 
 ### FQL functions for JSON Arrays & Objects
 
-| Syntax type | Description | Example |
+| Syntax | Description | Example |
 |---------|-------------|-------------|
-|Access-by-index |<p>You can use this syntax to access specific array element by its index.</p><p> Always type cast at the end of the .dot chain.</p>|myArr[0]</p><p>myArr [0].property</p><p>myArr [0][0]</p><p>myArr [0][0].property</p><p>myArr [0].property[0]</p><p>myArr [0].property[0].property</p><p>Where **myArr** is an array. The source of this array can be the @@payload, External assessment response, External call response, Local variable, or a global variable|
-|<p>Access-by-condition</p><p><i>Returns a value</i></p>|<p>You can access the first array element that matches a condition.</p><p>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
-|<p>Access-by-condition</p><p><i>Returns an array</i></p>|<p>You can access a set of array elements that matches a condition.</p><p>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
+|**Array.GetValue** (TargetArray **.AsJsonArray**(), matchKey, matchValue, lookupKey)|<p>With this function, you can access the first array element that matches a condition.</p><p><i>Returns a value</i></p>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
+|**Array.GetValues**(TargetArray **.AsJsonArray**(), matchKey, matchValue)|<p>With this function, you can access a set of array elements that match a condition.</p><p><i>Returns an array</i></p>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
 
+Here are some more detailed examples of how to use the above syntax based on different array sources: 
 
+| Array Source | Array.GetValue  | Array.GetValues  |
+|---------|-------------|-------------|
+|External assessments |<p>LET $a = Assessments.myAssessment.evaluate()</p><p>LET $sample = Array.GetValue($a.ruleEvaluations.AsJsonArray(), "rule", "Sample Payload Generation", "clauseNames")</p><p>RETURN Approve()</p><p>WHEN $sample[0].AsString() == "TestData"</p>|<p>LET $a = Assessments.myAssessment.evaluate()</p><p>LET $sample = Array.GetValues($a.ruleEvaluations.AsJsonArray(), "rule", "Sample Payload Generation")</p><p>RETURN Approve()</p><p>WHEN $sample[0].clauseNames[0].AsString() == "TestData"</p>|
+|Payload|<p><i>Payload sample: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p></p>LET $sample = Array.GetValue(@@"group".AsJsonArray(), "item1", "a", "item2")</p><p>RETURN Approve()WHEN $sample.AsString() == "a1"</p>|<p><i>Payload sample: { "group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p><p>LET $sample = Array.GetValues(@@"group".AsJsonArray(), "item1", "a")</p><p>RETURN Approve()</p><p>WHEN $sample[0].item2.AsString() == "a1"|
+|Global variables|<p><i>Using same payload sample as above</i></p><p>Do SetVariables(Var=@@"group")</p><p>LET $group = GetVariable("Var").AsJsonObject()</p><p>LET $value = Array.GetValue($group, "item1", "a", "item2")</p><p>RETURN Approve()</p><p>WHEN $value.AsString() == "a1"</p>|<p><i>Using same payload sample as above</i></p><p>Do SetVariables(Var=@@"group")</p><p>LET $group = GetVariable("Var").AsJsonObject()</p><p>LET $arr = Array.GetValues($group.AsJsonArray(), "item1", "a")</p><p>RETURN Approve()</p>|
+|External call|<p><i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p><p>LET $x = External.myCall().AsJsonObject()</p><p>LET $value = Array.GetValue($x.group[0].AsJsonObject(), "item1", "a", "item2")</p><p>RETURN Approve()</p><p>WHEN $value.AsString() == "a1"</p>|<p><i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p><p>LET $x = External.myCall().AsJsonObject()</p><p>LET $arr = Array.GetValues($x.group[0].AsJsonObject(), "item1", "a")</p><p>RETURN Approve()WHEN $arr[0].item2.AsString() == "a1"</p>|
+
+> [!NOTE]
+> Arrays can NOT be used as a key (Group by) in velocities
+
+### Type casting for JSON Arrays and Objects
+
+  - When you use array helper methods, .GetValue or .GetValues, you need to type cast using **.As<i><Type></i>**().
+    Example:
+    ```FraudProtectionLanguage
+    LET $arr = {myArr:[{item1: "red", number: 45}, {item1: "blue", number: 56}, {item1: "green", number: 33}]}
+    LET $sample = Array.GetValues($arr.myArr.AsJsonArray(), "item1", "blue")
+    ```
+
+  - Once have converted to Array/Object explicitly, you may need to use **.As<i><Type></i>**() to cast to a specific data type. 
+    Example:
+    ```FraudProtectionLanguage
+    RETURN Approve()
+    WHEN $sample[0].number.AsInt() == 56
+    ```
+
+  - When you use @@, it implicitly type casts the data to a JSON object. If you then want to convert the JSON Object to a different data type, you will need to use **.As<i><Type></i>**(). 
+    Example:
+    ```FraudProtectionLanguage
+    LET $sample = @@”user.addresses”.AsJsonArray()
+    ```
+  
+  - When you want to output in a certain format, you will need to use **.As<i><Type></i>**(). 
+    Example:
+    ```FraudProtectionLanguage
+    LET $sample = @@”user.addresses”
+    Output(abc = $sample.AsJsonArray())
+    ```
+
+> [!NOTE]
+> Type casting best practices:
+>   - Always type cast at the end of the .Chain
+>    >     Example:
+>    >     LET $sample = External.myCall().data[0].Item1[0].AsJsonArray()
+>    >                                  -OR-
+>    >     LET $sample = @@”accommodations[0].rooms”.AsJsonArray()
+>    - When unsure, always explicitly type cast using .As<Type>()
 
