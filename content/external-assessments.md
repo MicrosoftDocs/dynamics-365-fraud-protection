@@ -101,7 +101,16 @@ LET $result = Assessments.ExtAssessment1.Evaluate(
     user = $customUser,
     specialConsideration = true)
 OBSERVE Output(Result = $result)
+```
 
+You can also access the Diagnostics object in rules, which can enable you to discover important diagnostic and debug information from an external assessment's response. The Diagnostics object contains the Request payload, HttpStatus code, Error message, and Latency. Please note, the Diagnostics object has to be created first by using its corresponding extension method, “.GetDiagnostics()”, before the object’s fields can be used in the rules. 
+
+Below is an example of a rule using the Diagnostics object on the response of an exteral assessment named **ExtAssessment2**:
+```FraudProtectionLanguage
+LET $result = Assessments.ExtAssessment2.evaluate($baseInput =@@)
+LET $diagnostics = $result.GetDiagnostics()
+RETURN Approve(), Output (Diagnostics = $diagnostics)
+WHEN $diagnostics.httpStatusCode==200
 ```
 
 External Calls and External Assessments may require complex structured objects as part of their request schema. For more information on how to use JSON Arrays and Objects, please check the [Language reference guide](fpl-lang-ref.md). 
