@@ -122,14 +122,13 @@ To implement device fingerprinting, follow these steps.
 
 ## Enable Client Side Integration for Device Fingerprinting
 
-For certain web fingerprinting scenarios, we support a secondary class of integration called **Client Side Integration**. This integration differs from our standard integration practices where the fingerprinting response is returned directly in the browser as an encrypted payload, skipping the server-to-server assessment call.
+For certain web fingerprinting scenarios, we support an alternative class of integration called **Client Side Integration**. This integration differs from our standard integration practices where the fingerprinting response is returned directly to the client as an encrypted payload, skipping the server-to-server assessment call.
 
-Client side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, as it is a specialized class of integration, it does come with greater restrictions.
+Client side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, as it is a specialized class of integration, it simplified and secure, involving some more constraints.
 
 Below are the prerequisties for enabling client side integration:
-- You must be using the device fingerprinting assessment template with **only** the metadata and device fingerprinting sections.
-  - When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you will see the client side integration option available to you.
-- You must have an external call set up that returns a response in the JWKS format. This external call will return the key that DFP will encrypt the payload with, so you can decrypt the payload that is returned in the browser. The customer is responsible for providing the key for encryption/decryption. See below for an example of JWKS format. [Learn more about external calls here](external-calls.md).
+
+- You must have an external call set up that returns an encryption key response in the JWKS format. This external call will return the key that DFP will encrypt the payload with, so you can decrypt the payload that is returned in the browser. The customer is responsible for providing the key for encryption/decryption. See below for an example of JWKS format. [Learn more about external calls here](external-calls.md).
 
 ```json
 {
@@ -144,6 +143,8 @@ Below are the prerequisties for enabling client side integration:
   ]
 }
 ```
+- You must be using the device fingerprinting assessment template with **only** the metadata and device fingerprinting sections. If there are additional schema sections or you are not using the device fingerprinting assessment template, the client side integration option will not be available to you.
+  - When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you will see the client side integration option available to you. Upon choosing to enable the client side integration, you will select the external call you set up earlier with the JWKS response format.
 
 In order to complete the client side integration setup, you have to use a modified version of our javascript to return the encrypted response in the browser.
 
