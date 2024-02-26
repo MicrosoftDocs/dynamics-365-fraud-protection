@@ -429,27 +429,36 @@ Here are some more detailed examples of how to use the above syntax based on dif
 
 ### Type casting for JSON Arrays and Objects
 
-  - When you use array helper methods, .GetValue or .GetValues, you need to type cast using **.As<i><Type></i>**().
+  - Following .As\<Type\>() are supported from the JsonObject:
+    -	AsString()
+    -	AsInt()
+    -	AsDouble()
+    -	AsDateTime()
+    -	AsBool()
+    -	AsJsonArray()
+    -	AsJsonObject()
+
+  - When you use array helper methods, .GetValue or .GetValues, you need to type cast using **.As<i>\<Type\></i>**().
     Example:
     ```FraudProtectionLanguage
     LET $arr = {myArr:[{item1: "red", number: 45}, {item1: "blue", number: 56}, {item1: "green", number: 33}]}
     LET $sample = Array.GetValues($arr.myArr.AsJsonArray(), "item1", "blue")
     ```
 
-  - Once have converted to Array/Object explicitly, you may need to use **.As<i><Type></i>**() to cast to a specific data type. 
+  - Once have converted to Array/Object explicitly, you may need to use **.As<i>\<Type\></i>**() to cast to a specific data type. 
     Example:
     ```FraudProtectionLanguage
     RETURN Approve()
     WHEN $sample[0].number.AsInt() == 56
     ```
 
-  - When you use @@, it implicitly type casts the data to a JSON object. If you then want to convert the JSON Object to a different data type, you will need to use **.As<i><Type></i>**(). 
+  - When you use @@, it implicitly type casts the data to a JSON object. If you then want to convert the JSON Object to a different data type, you will need to use **.As<i>\<Type\></i>**(). 
     Example:
     ```FraudProtectionLanguage
     LET $sample = @@”user.addresses”.AsJsonArray()
     ```
   
-  - When you want to output in a certain format, you will need to use **.As<i><Type></i>**(). 
+  - When you want to output in a certain format, you will need to use **.As<i>\<Type\></i>**(). 
     Example:
     ```FraudProtectionLanguage
     LET $sample = @@”user.addresses”
@@ -463,5 +472,5 @@ Here are some more detailed examples of how to use the above syntax based on dif
 >    >     LET $sample = External.myCall().data[0].Item1[0].AsJsonArray()
 >    >                                  -OR-
 >    >     LET $sample = @@”accommodations[0].rooms”.AsJsonArray()
->    - When unsure, always explicitly type cast using .As<Type>()
+>    - When unsure, always explicitly type cast using .As\<Type\>()
 
