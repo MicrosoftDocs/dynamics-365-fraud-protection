@@ -415,6 +415,7 @@ LET $obj2 = {
 |**Array.GetValue** (TargetArray **.AsJsonArray**(), matchKey, matchValue, lookupKey)|<p>With this function, you can access the first array element that matches a condition.</p><p><i>Returns a value</i></p>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
 |**Array.GetValues**(TargetArray **.AsJsonArray**(), matchKey, matchValue)|<p>With this function, you can access a set of array elements that match a condition.</p><p><i>Returns an array</i></p>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
 
+
 Here are some more detailed examples of how to use the above syntax based on different array sources: 
 
 | Array Source | Array.GetValue  | Array.GetValues  |
@@ -424,8 +425,6 @@ Here are some more detailed examples of how to use the above syntax based on dif
 |Global variables|<p><i>Using same payload sample as above</i></p><p>Do SetVariables(Var=@@"group")</p><p>LET $group = GetVariable("Var").AsJsonObject()</p><p>LET $value = Array.GetValue($group, "item1", "a", "item2")</p><p>RETURN Approve()</p><p>WHEN $value.AsString() == "a1"</p>|<p><i>Using same payload sample as above</i></p><p>Do SetVariables(Var=@@"group")</p><p>LET $group = GetVariable("Var").AsJsonObject()</p><p>LET $arr = Array.GetValues($group.AsJsonArray(), "item1", "a")</p><p>RETURN Approve()</p>|
 |External call|<p><i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p><p>LET $x = External.myCall().AsJsonObject()</p><p>LET $value = Array.GetValue($x.group[0].AsJsonObject(), "item1", "a", "item2")</p><p>RETURN Approve()</p><p>WHEN $value.AsString() == "a1"</p>|<p><i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p><p>LET $x = External.myCall().AsJsonObject()</p><p>LET $arr = Array.GetValues($x.group[0].AsJsonObject(), "item1", "a")</p><p>RETURN Approve()WHEN $arr[0].item2.AsString() == "a1"</p>|
 
-> [!NOTE]
-> Arrays can NOT be used as a key (Group by) in velocities
 
 ### Type casting for JSON Arrays and Objects
 
