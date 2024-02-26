@@ -65,10 +65,13 @@ Before you create an external call, you should know about the following limitati
        For *POST* methods, the request body is shown. You can construct custom request body for a POST call by clicking on **+ Advanced build your own request**.
      The sample request is used to make a sample call to your endpoint, either before creation or whenever you select **Test connection**.
 
-     - **Sample response** – Provide an example of the data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and can be referenced in your rules. The sample that you provide here is shown as you create rules.
+     - **Sample response** – Provide an example of the data that is returned in a successful response from your API endpoint. This data should be in JavaScript Object Notation (JSON) format and can be referenced in your rules. The sample response that you provide here is shown in the rule editor and also enables autocomplete on the response fields.
      
        Select **{} Get API response** to automatically enter an actual response from your API in this field.
-
+       
+        > [!NOTE]
+        > Sample response has to be poppulated in order to successfully complete the external call setup.
+        
     - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 5000.
     - **Default response** – Specify the default response that should be returned if your request fails or exceeds the specified time-out. The value must be valid JSON object or JSON element.
 
