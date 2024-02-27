@@ -144,7 +144,7 @@ To create a new decision rule or post-decision action from a template, follow th
 1. In the Fraud Protection portal, go to **Fraud assessments**, select the assessment, and then select the **Rules** tab.
 1. On the top menu bar, select **+ New rule**, and then select **From template** from the drop-down menu.
 1. On **New rule** pane, select one of the following from the **Template** drop-down menu:
-   - Select **Load template file** to use a template file on your computer to create the new rule. Select **Browse** to select the template file and upload it to the Fraud Protection portal.
+   - Select **Load template file** to use a template file on your computer to create the new rule. Select **Browse** to select the template file, and then upload it to the Fraud Protection portal.
    - Select a template if you want to use a template already created in Fraud Protection portal.
 1. Enter a **Name** and **Description** for the new rule.
 1. Preview the template to view the list of resources included in the template.
@@ -163,7 +163,7 @@ To create a new assessment from a template, follow these steps.
 1. On the **Customer created templates** pane, select one of the following from the **Template** drop-down menu:
    - Select **Load template file** to use a template file on your computer to create the new rule. Select **Browse** to select the template file and upload it to the Fraud Protection portal.
    - Select a template if you want to use a template already created in Fraud Protection portal.
-1. Preview the template to view the the sample code and resources included in the assessment template. Select **Select** to proceed.
+1. Preview the template to view the sample code and resources included in the assessment template. Select **Select** to proceed.
 1. Enter the **Friendly name** and **API name** for the new assessment.
 1. Select **Create assessment** to create the new assessment that matches the resources of your template.
 
@@ -233,7 +233,7 @@ Fraud Protection has a limit on the numbers of templates that can be created per
 
 ## View and manage templates in parent environments
 
-In the template library for your current environment, you can only view and manage the templates created in that environment. However, if there are templates created in a parent environment to the current environment, you can view and select those templates from the **Template** drop-down menu in the **Create** resource flow. Geenrally, users in child environments can create new resources using templates from parent environments.
+In the template library for your current environment, you can only view and manage the templates created in that environment. However, if there are templates created in a parent environment to the current environment, you can view and select those templates from the **Template** drop-down menu in the **Create** resource flow. In other words, users in child environments can create new resources using templates from parent environments.
 
 ## User permissions for template
 
