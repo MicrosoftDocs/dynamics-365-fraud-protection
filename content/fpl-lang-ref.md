@@ -48,7 +48,7 @@ The guide also covers other articles. Here are some examples:
 
 - [Using external calls, external assessments and velocities](#external)
 - [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes)
-- [JSON Arrays and Objects](#arrays-objects)
+- [JSON arrays and objects](#arrays-objects)
 
 ## Statements
 
