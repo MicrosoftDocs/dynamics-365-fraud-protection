@@ -136,7 +136,7 @@ You can create a template from the supported resources in your Fraud Protection 
 > 
 > Modifying the content of a template file manually after downloading it may lead to errors when importing the template file back in the Fraud Protection portal.
 > 
-> Template file has a maximum size limit of 20MB.
+> Template file has a maximum size limit of 20MB. You will not be able to upload a file that exceeds this limit. 
 
 ## Creating new resources through templates
 
