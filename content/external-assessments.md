@@ -2,7 +2,7 @@
 author: swasif23
 description: This article provides an overview of the external assessments capability in Microsoft Dynamics 365 Fraud Protection.
 ms.author: swasif
-ms.date: 07/22/2023
+ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -14,32 +14,34 @@ title: External assessments
 
 External assessment is a mechanism to call an assessment from any other assessment. An external assessment isn't an assessment itself. Instead, it acts like a data source which allows you to send data and receive a response from a target assessment. 
 An assessment can have one of two possible sharing settings:
-- Private: Accessible only in assessment’s root environment
-- Shared: Accessible in all environments in the tenant
+- Private: Accessible only in assessment’s root environment.
+- Shared: Accessible in all environments in the tenant.
 
-External assessment can be set up to point to any **Private** assessment, available in the same root environment, or any **Shared** assessment, available in any root environment of the tenant. 
-> [!Note]
-> To learn more about how to change sharing setting of an assessment from Private to Shared or vice versa, please visit [Assessment configuration overview](assessment-configure-existing.md)
+External assessments can point to any **Private** assessment that's available in the same root environment, or any **Shared** assessment that's available in any root environment of the tenant. 
 
-After an external assessment has been set up, it can be called through a rule from any assessment in that environment. 
+> [!NOTE]
+> For more information about how to change the **Sharing** setting of an assessment from _Private_ to _Shared_ or _Shared_ to _Private_, refer to [Assessment configuration overview](assessment-configure-existing.md)
+
+After you set up an external assessment, it can be called through a rule from any assessment in that environment. 
 
 ![External assessment flow](media/external-assessments.png)
->*For Private Assessment: Environment Y = Environment X*
->
->*For Shared Assessment: Environment Y = Any root environment within the same tenant*
 
-Calling assessment refers to any assessment that calls a Private or Shared assessment, through an External assessment. Calling assessment has to have an active Use an external assessment rule set up. When the rule condition is met, the rule will call the External Assessment and perform the configured actions. Similar to External calls, External assessments are not inherited by children. Hence, to use an External assessment in a rule, External assessment must be set up in the environment you want to call it from.  
+*For Private Assessment: Environment Y = Environment X*
 
-## Create an External Assessment
+*For Shared Assessment: Environment Y = Any root environment within the same tenant*
 
-To create an External Assessment, first ensure you have the right permission to perform this operation. To learn more user roles and permissions, see [User roles and access](user-roles-access.md)
+A calling assessment refers to any assessment that calls a private or shared assessment through an external assessment. The calling assessment must have an external assessment rule set up. When the rule condition is met, the rule will call the external assessment and perform the configured actions. Similar to external calls, external assessments aren't inherited by children. To use an external assessment in a rule, you must set up the external assessment in the environment you want to call it from.  
+
+## Create an external assessment
+
+To create an external assessment, first ensure you have the right permission to perform this operation. For more information about user roles and permissions, see [User roles and access](user-roles-access.md)
 
 1.	In the Fraud Protection portal, in the left navigation, select **External Assessments**, and then select **+ New external assessment**.
 2.	On the **New external assessment** page, set the following fields:
-  - **Target assessment to call** – In the drop-down you can see all the Private assessments, set up in the same root environment, as well as any available Shared assessments, set up in any root environment of the same tenant. Select the assessment you want to target.
+  - **Target assessment to call** – In the drop-down you can see all the private assessments, set up in the same root environment, as well as any available shared assessments, set up in any root environment of the same tenant. Select the assessment you want to target.
 
   > [!NOTE]
-  > If the Shared assessment you want to point your external assessment to is not showing in the drop-down, then check the Sharing setting of the assessment and ensure it is set to Shared. To learn more on how to configure Sharing setting please visit [Assessment configuration overview](assessment-configure-existing.md).
+  > If the shared assessment you want to point your external assessment to is not showing in the drop-down, then check the **Sharing** setting of the assessment and ensure it is set to **Shared**. To learn more on how to configure the **Sharing** setting, refer to [Assessment configuration overview](assessment-configure-existing.md).
 
   - **Name** – Enter the name that you will use to reference the external assessment from your rules. The name can contain only numbers, letters, and underscores. It can't begin with a number.
 
@@ -50,15 +52,14 @@ To create an External Assessment, first ensure you have the right permission to 
   - **API to preview** – Select the API you want to preview the sample code for. The sample code is the FQL you can use in a rule to call this shared assessment
 
   > [!NOTE]
-  > You can use the external assessment to call Evaluate, Observation or Label API of the shared/private assessment it is pointing to. 
+  > You can use the external assessment to call the evaluate, observation, or label API of the shared or private assessment it points to. 
 
-  - **Sample response** – This shows the sample response expected from the target assessment. The information shown here is manually provided by the target assessment admin, and is used to enable descriptions (via tooltip) and suggestions for autocomplete when referencing it in a rule.
-3.	When you've finished setting the required fields, select **Create**.
+  - **Sample response** – This section contains the sample response expected from the target assessment. The information displayed is manually provided by the target assessment admin, and is used to enable descriptions (tooltips) and suggestions for autocomplete when the assessment isreferenced in a rule.
+3.	When you're done setting the required fields, select **Create**.
 
-## Call an External Assessment
+## Call an external assessment
 
-To use your external assessments, reference them from your rules. 
-For example, to reference an external assessment, named **myAssessment**, in your rule use the following syntax:
+To use your external assessments, reference them from your rules. For example, to reference an external assessment, named **myAssessment**, in your rule use the following syntax:
 
 ```FraudProtectionLanguage
 Assessments.myAssessment.Evaluate($baseInput = @@)
@@ -103,9 +104,9 @@ LET $result = Assessments.ExtAssessment1.Evaluate(
 OBSERVE Output(Result = $result)
 ```
 
-You can also access the Diagnostics object in rules, which can enable you to discover important diagnostic and debug information from an external assessment's response. The Diagnostics object contains the Request payload, HttpStatus code, Error message, and Latency. Please note, the Diagnostics object has to be created first by using its corresponding extension method, “.GetDiagnostics()”, before the object’s fields can be used in the rules. 
+You can also access the diagnostics object in rules, which allows you to discover important diagnostic and debug information from an external assessment's response. The diagnostics object contains the *Request* payload, *HttpStatus* code, error message, and latency. The diagnostics object must be created first by using its corresponding extension method, “.GetDiagnostics()”, before the object’s fields can be used in the rules. 
 
-Below is an example of a rule using the Diagnostics object on the response of an exteral assessment named **ExtAssessment2**:
+The following is an example of a rule using the diagnostics object on the response of an exteral assessment named **ExtAssessment2**:
 ```FraudProtectionLanguage
 LET $result = Assessments.ExtAssessment2.evaluate($baseInput =@@)
 LET $diagnostics = $result.GetDiagnostics()
