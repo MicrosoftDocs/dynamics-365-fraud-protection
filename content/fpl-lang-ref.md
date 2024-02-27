@@ -492,8 +492,12 @@ The following are some more detailed examples of how to use the above syntax bas
 > Type casting best practices:
 >   - Always type cast at the end of the **.** chain.
 >    >     Example:
+>    >     ```FraudProtectionLanguage
 >    >     LET $sample = External.myCall().data[0].Item1[0].AsJsonArray()
+>    >     ```
 >    >                                  -OR-
+>    >     ```FraudProtectionLanguage
 >    >     LET $sample = @@”accommodations[0].rooms”.AsJsonArray()
+>    >     ```
 >    - When you aren't sure, always explicitly type cast using .As\<Type\>().
 
