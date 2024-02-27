@@ -54,7 +54,7 @@ To create an external assessment, first ensure you have the right permission to 
   > [!NOTE]
   > You can use the external assessment to call the evaluate, observation, or label API of the shared or private assessment it points to. 
 
-  - **Sample response** – This section contains the sample response expected from the target assessment. The information displayed is manually provided by the target assessment admin, and is used to enable descriptions (tooltips) and suggestions for autocomplete when the assessment isreferenced in a rule.
+  - **Sample response** – This section contains the sample response expected from the target assessment. The information displayed is manually provided by the target assessment admin, and is used to enable descriptions (tooltips) and suggestions for autocomplete when the assessment is referenced in a rule.
 3.	When you're done setting the required fields, select **Create**.
 
 ## Call an external assessment
@@ -78,7 +78,7 @@ LET $response = Assessments.MicroTx.evaluate(card = $card, user = @@"user")
 OBSERVE Output(decision = $response.decisionDetails.merchantRuleDecision)
 
 ```
-You can set up a rule to call the external assessment by either using the *Use an external assessment* rule template or copy/paste the sample FQL from the external assessment page. Please be sure to use the sample code for the API (Evaluate, Observe, Label) you want to call. The sample code will show all the fields that can be sent to the shared assessment. The required fields are marked as such in the code. 
+You can set up a rule to call the external assessment by either using the *Use an external assessment* rule template or copy/paste the sample FQL from the external assessment page. Be sure to use the sample code for the API (evaluate, observe, label) you want to call. The sample code will show all the fields that can be sent to the shared assessment. The required fields are marked as such in the code. 
 
 Here is another sample FQL for calling the evaluate API of external assessment named **ExtAssessment1**:
 
@@ -106,7 +106,7 @@ OBSERVE Output(Result = $result)
 
 You can also access the diagnostics object in rules, which allows you to discover important diagnostic and debug information from an external assessment's response. The diagnostics object contains the *Request* payload, *HttpStatus* code, error message, and latency. The diagnostics object must be created first by using its corresponding extension method, “.GetDiagnostics()”, before the object’s fields can be used in the rules. 
 
-The following is an example of a rule using the diagnostics object on the response of an exteral assessment named **ExtAssessment2**:
+The following is an example of a rule using the diagnostics object on the response of an external assessment named **ExtAssessment2**:
 ```FraudProtectionLanguage
 LET $result = Assessments.ExtAssessment2.evaluate($baseInput =@@)
 LET $diagnostics = $result.GetDiagnostics()
@@ -114,14 +114,14 @@ RETURN Approve(), Output (Diagnostics = $diagnostics)
 WHEN $diagnostics.httpStatusCode==200
 ```
 
-External Calls and External Assessments may require complex structured objects as part of their request schema. For more information on how to use JSON Arrays and Objects, please check the [Language reference guide](fpl-lang-ref.md). 
+External calls and external assessments may require complex structured objects as part of their request schema. For more information on how to use JSON arrays and objects, refer to the [Language reference guide](fpl-lang-ref.md). 
 
 ## Monitor external calls in the Fraud Protection portal
 
 Fraud Protection shows a tile that contains three metrics for each external assessment that you define:
 - **Requests per second** – The total number of requests divided by the total number of minutes in the selected time frame.
 - **Average latency** – The total number of requests divided by the total number of minutes in the selected time frame.
-- **Success rate** – The total number of successful requests divided by the total number of requests that have been made.
+- **Success rate** – The total number of successful requests divided by the total number of requests that were made.
 
 The numbers and charts that are shown on this tile include only data for the time frame that you select in the drop-down list in the upper-right corner of the page.
 
@@ -138,10 +138,10 @@ In addition to HTTP client errors (400, 401, and 403), you might see the followi
 
 - **Invalid application ID** – The application ID that was provided doesn't exist in your tenant, or it isn't valid.
 - **Microsoft Entra failure** – The Microsoft Entra token could not be retrieved.
-- **Definition not found** – The external call has been deleted, but it's still referenced in a rule.
+- **Definition not found** – The external call was deleted, but it's still referenced in a rule.
 - **Timeout** – The request to the target took longer than the specified time-out.
 - **Communication failure** – No connection could be made to the target because of a network issue or because the target is unavailable.
-- **Circuit breaker** – If the external call has failed continuously and has exceeded a certain threshold, all further calls will be suspended for a short interval.
+- **Circuit breaker** – If the external call failed continuously and exceeded a certain threshold, all further calls are suspended for a short interval.
 - **Unknown Failure** – An internal Dynamics 365 failure occurred.
 
 
