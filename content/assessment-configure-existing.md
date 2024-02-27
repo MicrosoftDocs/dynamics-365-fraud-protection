@@ -25,8 +25,7 @@ If you have **Read/Write** permissions for Assessments, you can:
 - Share the assessment, allowing it to be called by another assessment, using one of the following options:
   - **Private** – Can be called only from the same root environment (_default_)
   - **Shared** – Accessible in all environments in the tenant
-  - Provide the sample response in the **Add sample response** pane, in the *Sharing* setting. The sample response must be provided in JSON format. The sample response fields you provide are used to enable descriptions (tooltips) and suggestions for autocomplete when they are referenced in a rule. For more information about how to call a shared or private assessment from another assessment, please see [External assessments](external-assessments.md)
-allowing it to be called by a second assessment from another environment using one of the following options:
+  - Provide the sample response in the **Add sample response** pane, in the *Sharing* setting. The sample response must be provided in JSON format. The sample response fields you provide are used to enable descriptions (tooltips) and suggestions for autocomplete when they are referenced in a rule. For more information about how to call a shared or private assessment from another assessment, please see [External assessments](external-assessments.md).
 - Delete the assessment:
   - An assessment can only be deleted in the root environment it was created in. An assessment can't be deleted if a velocity is referencing it, or if the assessment is being shared.
   - Deleting an assessment permanently removes the assessment and its transactional data from your environment and all its child environments. All cases associated with that assessment across all environments, including the root and children are dropped.
