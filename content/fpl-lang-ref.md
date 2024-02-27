@@ -412,15 +412,39 @@ LET $obj2 = {
 
 | Syntax | Description | Example |
 |---------|-------------|-------------|
-|**Array.GetValue** (TargetArray **.AsJsonArray**(), matchKey, matchValue, lookupKey)|<p>With this function, you can access the first array element that matches a condition.</p><p><i>Returns a value</i></p>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
-|**Array.GetValues**(TargetArray **.AsJsonArray**(), matchKey, matchValue)|<p>With this function, you can access a set of array elements that match a condition.</p><p><i>Returns an array</i></p>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
+|myArr[0] |You can use this syntax to access a specific array element by its index. |myArr [0].property</br>myArr [0][0]</br>myArr [0][0].property</br>myArr [0].property[0]</br>myArr [0].property[0].property|
+
+Where **myArr**, in the examples above, is an array. The source of this array can be the @@payloadProperty , External assessment response, External call response, Local variable, or a global variable. 
+
+Here are examples of how to use the above syntax based on different array sources: 
+  - **Array source**: Payload
+   ```FraudProtectionLanguage
+   LET $sample = @@"myArr[0]".AsJsonArray()   
+   RETURN Approve()   
+   WHEN $sample[0].AsString() == "a"
+   ```
+
+- **Array source**: Local variable
+   ```FraudProtectionLanguage
+   LET $group1 =["a", "b", "c"]
+   LET $group1 =[{ item1: "a", item2: "b"}, { item1: "c", item2: "d"}]
+   LET $group3 =[{ item1: "a", item2: "b", item3: ["c", "d"]}, {{ item1: "e", item2: "f", item3: ["g", "h"]}]
+   RETURN Approve()
+   WHEN $group1[0].AsString() == "a" && $group1[0].item2.AsString() == "b" && $group3[0].item3[0].AsString() == "c" 
+   ``` 
+
+
+| Syntax | Description | Example |
+|---------|-------------|-------------|
+|**Array.GetValue** (TargetArray **.AsJsonArray**(), matchKey, matchValue, lookupKey)|With this function, you can access the first array element that matches a condition.</p><p><i>Returns a value</i>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
+|**Array.GetValues**(TargetArray **.AsJsonArray**(), matchKey, matchValue)|With this function, you can access a set of array elements that match a condition.</p><p><i>Returns an array</i>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
 
 
 Here are some more detailed examples of how to use the above syntax based on different array sources: 
 
 | Array Source | Array.GetValue  | Array.GetValues  |
 |---------|-------------|-------------|
-|External assessments |<p>LET $a = Assessments.myAssessment.evaluate()</p><p>LET $sample = Array.GetValue($a.ruleEvaluations.AsJsonArray(), "rule", "Sample Payload Generation", "clauseNames")</p><p>RETURN Approve()</p><p>WHEN $sample[0].AsString() == "TestData"</p>|<p>LET $a = Assessments.myAssessment.evaluate()</p><p>LET $sample = Array.GetValues($a.ruleEvaluations.AsJsonArray(), "rule", "Sample Payload Generation")</p><p>RETURN Approve()</p><p>WHEN $sample[0].clauseNames[0].AsString() == "TestData"</p>|
+|External assessments |LET $a = Assessments.myAssessment.evaluate()</p><p>LET $sample = Array.GetValue($a.ruleEvaluations.AsJsonArray(), "rule", "Sample Payload Generation", "clauseNames")</p><p>RETURN Approve()</p><p>WHEN $sample[0].AsString() == "TestData"|LET $a = Assessments.myAssessment.evaluate()</p><p>LET $sample = Array.GetValues($a.ruleEvaluations.AsJsonArray(), "rule", "Sample Payload Generation")</p><p>RETURN Approve()</p><p>WHEN $sample[0].clauseNames[0].AsString() == "TestData"|
 |Payload|<p><i>Payload sample: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p></p>LET $sample = Array.GetValue(@@"group".AsJsonArray(), "item1", "a", "item2")</p><p>RETURN Approve()WHEN $sample.AsString() == "a1"</p>|<p><i>Payload sample: { "group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p><p>LET $sample = Array.GetValues(@@"group".AsJsonArray(), "item1", "a")</p><p>RETURN Approve()</p><p>WHEN $sample[0].item2.AsString() == "a1"|
 |Global variables|<p><i>Using same payload sample as above</i></p><p>Do SetVariables(Var=@@"group")</p><p>LET $group = GetVariable("Var").AsJsonObject()</p><p>LET $value = Array.GetValue($group, "item1", "a", "item2")</p><p>RETURN Approve()</p><p>WHEN $value.AsString() == "a1"</p>|<p><i>Using same payload sample as above</i></p><p>Do SetVariables(Var=@@"group")</p><p>LET $group = GetVariable("Var").AsJsonObject()</p><p>LET $arr = Array.GetValues($group.AsJsonArray(), "item1", "a")</p><p>RETURN Approve()</p>|
 |External call|<p><i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p><p>LET $x = External.myCall().AsJsonObject()</p><p>LET $value = Array.GetValue($x.group[0].AsJsonObject(), "item1", "a", "item2")</p><p>RETURN Approve()</p><p>WHEN $value.AsString() == "a1"</p>|<p><i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></p><p>LET $x = External.myCall().AsJsonObject()</p><p>LET $arr = Array.GetValues($x.group[0].AsJsonObject(), "item1", "a")</p><p>RETURN Approve()WHEN $arr[0].item2.AsString() == "a1"</p>|
