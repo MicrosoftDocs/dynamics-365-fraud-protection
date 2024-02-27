@@ -97,7 +97,7 @@ You can create a template from the supported resources in your Fraud Protection 
 > [!NOTE]
 > In a multi-hierarchy tenant, templates created in an environment are accessible to its children environments.
 > 
-> Refer to [Multi-hierarchy for templates](templates.md##multi-hierarchy-for-templates) for details.
+> Refer to [Multi-hierarchy for templates](templates.md#multi-hierarchy-for-templates) for details.
 
 ### Create rule template
 1. In Fraud Protection portal, navigate to Fraud assessments, select the assessment and go to **Rules** tab.
@@ -184,7 +184,7 @@ You can create a template from the supported resources in your Fraud Protection 
 ## Template library
 Templates created or imported in the current environment would be visible in the template library page, present in the left navigation under the **Data** menu.
 
-You can perform the following actions on templates (Refer to [User permission for templates](templates.md##user-permission-for-template)):
+You can perform the following actions on templates (Refer to [User permission for templates](templates.md#user-permission-for-template)):
 
 ### Import template
 1. On the top menu bar, select **Import template** menu.
