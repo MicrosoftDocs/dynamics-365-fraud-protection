@@ -26,13 +26,13 @@ Input parameters consist of the following three parts.
 - **Parameter name**: A name with which the parameter can be referenced.
 - **Data Type**: Every input parameter should have a data type associated to it. The data type that you specify converts the value of the parameter to the corresponding type. Functions support the data types listed in the following table.
 
-| Data type | Sample value | 
-|----------|---------------|
-| Boolean | True |
-| DateTime | Feb,22,2024 4:44PM |
-| Double | 10.0 |
-| Integer | 10 |
-| String | "Hello" |
+  | Data type | Sample value | 
+  |----------|---------------|
+  | Boolean | True |
+  | DateTime | Feb,22,2024 4:44PM |
+  | Double | 10.0 |
+  | Integer | 10 |
+  | String | "Hello" |
 
 - **Default Value**: A default value is required for every parameter. The defaukt value is used during "Function Evaluation," or if there is an issue with the function invocation. 
 
