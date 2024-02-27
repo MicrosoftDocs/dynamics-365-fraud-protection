@@ -20,7 +20,7 @@ An assessment can have one of two possible sharing settings:
 External assessments can point to any **Private** assessment that's available in the same root environment, or any **Shared** assessment that's available in any root environment of the tenant. 
 
 > [!NOTE]
-> For more information about how to change the **Sharing** setting of an assessment from _Private_ to _Shared_ or _Shared_ to _Private_, refer to [Assessment configuration overview](assessment-configure-existing.md)
+> For more information about how to change the **Sharing** setting of an assessment from _Private_ to _Shared_ or _Shared_ to _Private_, refer to [Assessment configuration overview](assessment-configure-existing.md).
 
 After you set up an external assessment, it can be called through a rule from any assessment in that environment. 
 
