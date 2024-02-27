@@ -1,3 +1,14 @@
+---
+author: josaw1
+description: This article provides an overview of how to create functions in Fraud Protection.
+ms.author: josaw
+ms.date: 02/27/2024
+ms.topic: conceptual
+search.audienceType:
+  - admin
+title: Functions
+
+---
 
 # Functions
 Fraud Protection gives you the flexibility to create functions which are used to perform a specific task. Using functions, you can combine groups of code that need to be executed together. Alternatively, you can also use functions to reuse code, by writing it once and accessing it from various other places. This makes it easier to maintain code that is needed in multiple places. For example, if we want to call an external service to fetch a value from it, that logic can be defined within a function and then this function can be invoked from other resources.
