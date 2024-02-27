@@ -151,7 +151,7 @@ Assessment and associated label and observation events can be traced to event hu
 
 ### Audit events
 
-You use audit events to track portal actions and develop an audit log. Audit events currently support new/edit/delete operations on rules, lists, velocities, and external calls.
+Use audit events to track portal actions and develop an audit log. Audit events currently support new/edit/delete operations on rules, lists, velocities, and external calls.
 
 ##### Namespace: FraudProtection.Audit.
 
@@ -185,18 +185,18 @@ There are five events generated that can be tracked by using the audit logs. Tho
 
 ### Activity logs events
 
-You use activity logs events to eventsd to get detailed record of who did what, when, and where for some actions in DFP, such as who made the last change to a rule matching Activity logs content.
+Use activity logs events to get detailed records of who did what, when, and where for some actions in DFP. For example, you can see who made the last change to a rule. Results will match the [Activity logs](activity-logs.md) search content. 
 
 ##### Namespace: FraudProtection.ActivityLog.
 
 ```json
-"eventId": "6d28c8d2-d120-4a09-bb68-e36d88357dbb",
+"eventId": "0c6e1948-75a9-4513-bb4c-4828c9a8ab05",
 "operationType": "Create",
 "resourceType": "Decision rule",
-"resourceId": "a50bd4e9-cc41-4fdc-8b63-169399c73109",
+"resourceId": "b1053216-2fc4-4ef6-94e8-c4da706d87fa",
 "resourceName": "Rule Test",
-"userId": "9234e81d-f5f2-4385-8172-56b37d63bb8d",
-[Followed by operation type specific fields]
+"userId": "fb88ba00-58e0-421c-8742-10ae04dddb86",
+[Followed by operation and resource type specific fields]
 }
 ```
 ### Monitoring events
