@@ -408,15 +408,15 @@ LET $obj2 = {
 }
 ```
 
-### FQL functions for JSON Arrays & Objects
+### FQL functions for JSON arrays and objects
 
 | Syntax | Description | Example |
 |---------|-------------|-------------|
 |myArr[0] |You can use this syntax to access a specific array element by its index. |myArr [0].property</br>myArr [0][0]</br>myArr [0][0].property</br>myArr [0].property[0]</br>myArr [0].property[0].property|
 
-Where **myArr**, in the examples above, is an array. The source of this array can be the @@payloadProperty , External assessment response, External call response, Local variable, or a global variable. 
+Where **myArr**, in the examples above, is an array. The source of this array can be the @@payloadProperty, external assessment response, external call response, local variable, or a global variable. 
 
-Here are examples of how to use the above syntax based on different array sources: 
+The following are examples of how to use the syntax based on different array sources: 
   - **Array source**: Payload
    ```FraudProtectionLanguage
    LET $sample = @@"myArr[0]".AsJsonArray()   
@@ -440,7 +440,7 @@ Here are examples of how to use the above syntax based on different array source
 |**Array.GetValues**(TargetArray **.AsJsonArray**(), matchKey, matchValue)|With this function, you can access a set of array elements that match a condition.</p><p><i>Returns an array</i>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
 
 
-Here are some more detailed examples of how to use the above syntax based on different array sources: 
+The following are some more detailed examples of how to use the above syntax based on different array sources: 
 
 | Array Source | Array.GetValue  | Array.GetValues  |
 |---------|-------------|-------------|
@@ -450,9 +450,9 @@ Here are some more detailed examples of how to use the above syntax based on dif
 |External call|<p><i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></br><br>LET $x = External.myCall().AsJsonObject()</br>LET $value = Array.GetValue($x.group[0].AsJsonObject(), "item1", "a", "item2")</br>RETURN Approve()</br>WHEN $value.AsString() == "a1"|<i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></br><br>LET $x = External.myCall().AsJsonObject()</br>LET $arr = Array.GetValues($x.group[0].AsJsonObject(), "item1", "a")</br>RETURN Approve()WHEN $arr[0].item2.AsString() == "a1"|
 
 
-### Type casting for JSON Arrays and Objects
+### Type casting for JSON arrays and objects
 
-  - Following **.As<i>\<Type\></i>**() are supported from the JsonObject:
+  - The following **.As<i>\<Type\></i>**() are supported from the JsonObject:
     -	AsString()
     -	AsInt()
     -	AsDouble()
@@ -461,27 +461,27 @@ Here are some more detailed examples of how to use the above syntax based on dif
     -	AsJsonArray()
     -	AsJsonObject()
 
-  - When you use either of the two array helper methods, .GetValue or .GetValues, you will need to type cast using **.As<i>\<Type\></i>**().
+  - When you use either of the two array helper methods, .GetValue or .GetValues, you need to type cast using **.As<i>\<Type\></i>**().
     Example:
     ```FraudProtectionLanguage
     LET $arr = {myArr:[{item1: "red", number: 45}, {item1: "blue", number: 56}, {item1: "green", number: 33}]}
     LET $sample = Array.GetValues($arr.myArr.AsJsonArray(), "item1", "blue")
     ```
 
-  - Once have have converted data to a JSON object or array explicitly, you can use **.As<i>\<Type\></i>**() to cast to a different data type subsequently, if needed. 
+  - Once you converted data to a JSON object or array explicitly, you can use **.As<i>\<Type\></i>**() to cast to a different data type, if needed. 
     Example:
     ```FraudProtectionLanguage
     RETURN Approve()
     WHEN $sample[0].number.AsInt() == 56
     ```
 
-  - When you use @@, it implicitly type casts the data to a JSON object. If you then want to convert the JSON Object to a different data type, you will need to use **.As<i>\<Type\></i>**(). 
+  - When you use @@, the data is implicitly type cast to a JSON object. If you then want to convert the JSON object to a different data type, you must use **.As<i>\<Type\></i>**(). 
     Example:
     ```FraudProtectionLanguage
     LET $sample = @@”user.addresses”.AsJsonArray()
     ```
   
-  - When you want to output in a certain format, you will need to use **.As<i>\<Type\></i>**(). 
+  - When you want to output in a certain format, you must use **.As<i>\<Type\></i>**(). 
     Example:
     ```FraudProtectionLanguage
     LET $sample = @@”user.addresses”
@@ -490,10 +490,10 @@ Here are some more detailed examples of how to use the above syntax based on dif
 
 > [!NOTE]
 > Type casting best practices:
->   - Always type cast at the end of the **.** chain
+>   - Always type cast at the end of the **.** chain.
 >    >     Example:
 >    >     LET $sample = External.myCall().data[0].Item1[0].AsJsonArray()
 >    >                                  -OR-
 >    >     LET $sample = @@”accommodations[0].rooms”.AsJsonArray()
->    - When unsure, always explicitly type cast using .As\<Type\>()
+>    - When you aren't sure, always explicitly type cast using .As\<Type\>().
 
