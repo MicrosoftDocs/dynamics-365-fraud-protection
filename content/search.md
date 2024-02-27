@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: josaw
-ms.date: 10/03/2023
+ms.date: 02/27/2024
 ms.topic: how-to
 search.audienceType:
   - admin
@@ -20,8 +20,8 @@ To search events, select the **Search** page on the left navigation.
 
 If your Fraud Protection instance has multiple environments, **Search for each environment** can be found by using the environment switcher on the top right of the menu bar. If the environment has child environments, the search results include transactions for all the child environments. To view the environment information in the search results, use **Environment name** or **Environment ID** in **Column options**. To limit the search results to a specific environment, use **Environment ID** as an attribute in the **Search** filter.    
 
-> [1NOTE]
-> The _Device fingerprinting_ template doesn't support Search. All other [Assessment templates](assessment-create-new.md#template) support search. To check if you have enabled search for your assessment, you can go to assessment configuration setting to confirm. Search will only find transactions that are processed after you have enabled it for your Assessment. Historical transactions that were sent before search was enabled would not be available.
+> [!NOTE]
+> The **Device fingerprinting** template doesn't support search. All other [Assessment templates](assessment-create-new.md#template) support search. To check if you enabled search for your assessment, go to the **Assessment configuration** setting and confirm. Search will only find transactions that are processed after you enabled the search feature for your assessment. Historical transactions that were sent before search was enabled aren't available.
 
 ## Select event type and timeframe
 
