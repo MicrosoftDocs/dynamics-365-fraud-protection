@@ -75,11 +75,11 @@ Decision functions are used in rules to specify a decision.
 
 ## Action functions
 
-Action functions are used to specify the action to be taken in a Post-decision action rule
+Action functions are used to specify the action to be taken in a Post-decision action rule.
 
 | Action type | Description | Example |
 |-------------|-------------|---------|
-|SetResponse(String sectionName, k=v)|<p>This function can be used to pass key-value pairs to the “CustomProperties” section of API response. You can specify a subsection sectionName for the key values pair to go into. </p><p>Overloads:</p>•&nbsp;&nbsp;&nbsp;SetResponse(k=v)|<p>SetResponse(“Scores”, bot = Model.Bot(@deviceContextId), risk=Model.Risk())</p><p>SetResponse(test=”123”)</p>|
+|SetResponse(String sectionName, k=v)|<p>This function can be used to pass key-value pairs to the *CustomProperties* section of API response. You can specify a subsection sectionName for the key values pair to go into. </p><p>Overloads:</p>•&nbsp;&nbsp;&nbsp;SetResponse(k=v)|<p>SetResponse("Scores", bot = Model.Bot(@deviceContextId), risk=Model.Risk())</p><p>SetResponse(test=”123”)</p>|
  
 
 ## Observation functions
@@ -101,11 +101,11 @@ Model functions run the various fraud models and are useful when your assessment
 | Bot   |   Assesses the likelihood of a session being bot-initiated. Pass in a device context ID that was sent to Fraud Protection’s device fingerprinting solution. | Model.Bot(@deviceContextId)   |
 
 ## Gibberish detection functions
-These functions help prevent fraud by quicky and efficiently detecting whether key user-input fields (such as names and addresses) contain gibberish. 
+These functions help prevent fraud by quickly and efficiently detecting whether key user-input fields (such as names and addresses) contain gibberish. 
 
 | Function     | Description | Example |
 |--------------|-------------|---------|
-| GetPattern(String).maxConsonants |  Maximum number of contiguous consonants in a string that are not separated by a vowel. For example, maxConsonants for the string “01gggyturah” is 5.   |  GetPattern(@"user.email").maxConsonants |
+| GetPattern(String).maxConsonants |  Maximum number of contiguous consonants in a string that are not separated by a vowel. For example, maxConsonants for the string "01gggyturah" is 5.   |  GetPattern(@"user.email").maxConsonants |
 | GetPattern(String).gibberScore  |  ML based score between 0 and 1; 0 means most likely to be gibberish and 1 means least likely to be gibberish.  | GetPattern(@"user.email").gibberScore  |
 
 
@@ -131,9 +131,9 @@ You can use the at sign (@) operator to reference an attribute from the current 
 | @"riskScore" | <p>For every Purchase or Account Protection event, Fraud Protection's AI models generate a risk score between 0 and 999. A higher score indicates a higher risk.</p><p>You can use *@riskScore* to reference this score in post-risk-scoring clauses.</p> | @"riskScore" |
 | @a[x\]      | <p>This variable is used to index array variables.</p><p>If the request payload for an assessment contains an array of items, you can access individual elements of the array by using the following syntax: *@"productList\[0\]"*.</p><p>To access an attribute of that element, use the following syntax: *@"productList\[0\].productId"*</p> | <p>@"productList\[0\].productId"</p><p>@"paymentInstrumentList\[3\].type"</p> |
 | Exists       | <p>This operator checks whether a variable exists in the event payload.</p><p>Exists(*String variable*)</p> | Exists(@"user.email") |
-|Response.Decision()|This function references the decision for the current assessment being evaluated.| Response.Decision() == “Approve”|
+|Response.Decision()|This function references the decision for the current assessment being evaluated.| Response.Decision() == "Approve"|
 |Request.CorrelationId()|This function references the unique Correlation ID of the event being evaluated. You can use this function to access the Correlation ID of an event in the rules experience and pass it to an external call as a parameter or a header.| External.MyExternalCall(Request.CorrelationId())|
-|.GetDiagnostics()|This function can be used to discover important diagnostic and debug information from an external call or an external assessment response. For an external call, the Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Endpoint isn't available in the Diagnostic object for an external assessment response. Any of these fields can be used in the rules once the Diagnostics object is created using its corresponding extension method, “.GetDiagnostics()”|<p>LET $extResponse = External. myCall(@"device.ipAddress")</p><p>LET $extResponseDiagnostics = $extResponse.GetDiagnostics()</p><p>OBSERVE Output(Diagnostics = $extResponseDiagnostics )</p><p>WHEN $extResponseDiagnostics. HttpStatusCode != 200|
+|.GetDiagnostics()|This function can be used to discover important diagnostic and debug information from an external call or an external assessment response. For an external call, the Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Endpoint isn't available in the Diagnostic object for an external assessment response. Any of these fields can be used in the rules once the Diagnostics object is created using its corresponding extension method, ".GetDiagnostics()"|<p>LET $extResponse = External. myCall(@"device.ipAddress")</p><p>LET $extResponseDiagnostics = $extResponse.GetDiagnostics()</p><p>OBSERVE Output(Diagnostics = $extResponseDiagnostics )</p><p>WHEN $extResponseDiagnostics. HttpStatusCode != 200|
 
 
 ## Logical operators
@@ -202,7 +202,7 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 |-----------------------------|-------------|---------|
 | Contains(String *substring*)   | <p>This operator checks whether a string contains another string.</p><p>Contains(String *substring*)</p> | @"productList`.productName".Contains("Xbox") |
 | ContainsOnly(*CharSet*) | <p> This operator checks whether a string contains only the charsets provided.</p><p>ContainsOnly(Charset1 Charset2 ...etc.)</p>|@"zipcode".ContainsOnly(CharSet.Numeric)|
-| ContainsAll(*CharSet*) |<p> This operator checks whether a string contains all the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@ “zipcode”.ContainsAll(CharSet.Numeric\|CharSet.Hypen)|
+| ContainsAll(*CharSet*) |<p> This operator checks whether a string contains all the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@ "zipcode".ContainsAll(CharSet.Numeric\|CharSet.Hypen)|
 | ContainsAny(*CharSet*)|<p> This operator checks whether a string contains any of the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hypen)|
 | StartsWith(String *prefix*) | <p>This operator checks whether a string begins with a specified prefix.</p><p>StartsWith(String *prefix*)</p> | @"user.phoneNumber".StartsWith("1-") |
 | EndsWith(String *suffix*)   | <p>This operator checks whether a string ends with a specified suffix.</p><p>EndsWith(String *suffix*)</p> | @"user.email".EndsWith("@contoso.com") |
@@ -372,7 +372,7 @@ Variable types are inferred from the context that they are used in. Here are som
 
 If there isn't enough context to infer the type of a variable, it's considered a *String* value. For example, in the expression **@"riskScore" \< @"botScore"**, both variables are interpreted as strings.
 
-To specify the type of a non-string variable, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
+To specify the type of a nonstring variable, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
 
