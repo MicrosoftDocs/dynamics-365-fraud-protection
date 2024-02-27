@@ -52,7 +52,7 @@ To create an External Assessment, first ensure you have the right permission to 
   > [!NOTE]
   > You can use the external assessment to call Evaluate, Observation or Label API of the shared/private assessment it is pointing to. 
 
-  - **Sample response** – This shows the sample response expected from the target assessment. The information shown here is manually provided by the target assessment admin, and is used to enable the IntelliSense, in Rule compiler, on the sample response fields
+  - **Sample response** – This shows the sample response expected from the target assessment. The information shown here is manually provided by the target assessment admin, and is used to enable descriptions (via tooltip) and suggestions for autocomplete when referencing it in a rule.
 3.	When you've finished setting the required fields, select **Create**.
 
 ## Call an External Assessment
