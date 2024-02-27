@@ -122,9 +122,9 @@ To implement device fingerprinting, follow these steps.
 
 ## Enable Client Side Integration for Device Fingerprinting
 
-For certain web fingerprinting scenarios, we support an alternative class of integration called **Client Side Integration**. This integration differs from our standard integration practices where the fingerprinting response is returned directly to the client as an encrypted payload, skipping the server-to-server assessment call.
+For certain web fingerprinting scenarios, we support an specialized class of integration called **Client Side Integration**. This integration differs from our standard integration practices where the fingerprinting response is returned directly to the client as an encrypted payload, skipping the server-to-server assessment call.
 
-Client side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, as it is a specialized class of integration, it simplified and secure, involving some more constraints.
+Client side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, as it is a specialized class of integration, it simplified and secure, involving some more requirements.
 
 Below are the prerequisties for enabling client side integration:
 
