@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides an overview of how to configure assessments in Fraud Protection.
 ms.author: josaw
-ms.date: 07/10/2023
+ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -25,7 +25,7 @@ If you have **Read/Write** permissions for Assessments, you can:
 - Share the assessment, allowing it to be called by another assessment, using one of the following options:
   - **Private** – Can be called only from the same root environment (_default_)
   - **Shared** – Accessible in all environments in the tenant
-  - Provide the sample response in the **Add sample response** pane, in the *Sharing* setting. Sample response must be provided in JSON format. The sample response fields provided here will be used to enable descriptions (via tooltip) and suggestions for autocomplete when referencing them in a rule.  To learn more about how to call a Shared or Private assessment from another assessment, please visit [External assessments](external-assessments.md)
+  - Provide the sample response in the **Add sample response** pane, in the *Sharing* setting. The sample response must be provided in JSON format. The sample response fields you provide are used to enable descriptions (tooltips) and suggestions for autocomplete when they are referenced in a rule. For more information about how to call a shared or private assessment from another assessment, please see [External assessments](external-assessments.md)
 allowing it to be called by a second assessment from another environment using one of the following options:
 - Delete the assessment:
   - An assessment can only be deleted in the root environment it was created in. An assessment can't be deleted if a velocity is referencing it, or if the assessment is being shared.
