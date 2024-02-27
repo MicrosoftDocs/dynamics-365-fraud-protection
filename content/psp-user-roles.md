@@ -443,8 +443,7 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
                     </tr>
         <tr>
-            <td rowspan="2">Activity logs</td>
-          <td>Environement/Children levels</td>
+            <td colspan="2">Activity logs</td>
             <td>Read only</td>
             <td>No access</td>
             <td>No access</td>
