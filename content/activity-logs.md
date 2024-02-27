@@ -13,7 +13,7 @@ title: Activity Logs
 # Activity logs
 
 The *Activity Logs* page lets you search for and view details of who changed what and when within Microsoft Dynamics 365 Fraud Protection, based on specific filters. You can export the search results or drill into an individual activity log to show a more detailed view.
-For example, you can search for all the activity logs associated with a specific environment ID and when clickin on the log, you can review the details of an individual log before and after the associated event.
+For example, you can search for all the activity logs associated with a specific environment ID and when clicking on the log, you can review the details of an individual log before and after the associated event.
 
 > [!NOTE]
 > - If the environment has child environments, the search results include logs for all the child environments. To view the environment information in the search results, use Environment name or Environment ID as search filters.
@@ -23,7 +23,7 @@ For example, you can search for all the activity logs associated with a specific
 ](psp-user-roles.md).
 - Get on the Activity logs page: You may find the tab under Settings in left and navigation
 - Select timeframe: First select the timeframe you want to search across. You can search between any two dates within the past 13 months.
-- Filter logs by attribute: To find logs, you must filter by one or more attributes. You can search by the following: Operation type, Changed by, Environement ID, Log ID, Operation type, Resource ID, Resource name and Resource type. You can add up to five filters, separated by a single And or Or condition.
+- Filter logs by attribute: To find logs, you must filter by one or more attributes. You can search by the following: Operation type, Changed by, Environement ID, Log ID, Operation type, Resource ID, Resource name and Resource type. You can use up to five filters, with an Operator between them: In, Not in, Is empty, Is not empty, Is null and Is not null.
 
 ## Operation type:
 <table>
