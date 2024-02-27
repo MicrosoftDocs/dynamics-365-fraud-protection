@@ -1,6 +1,6 @@
 
 # Functions
-Fraud Protection Fraud Protection gives you the flexibility to create functions which are used to perform a specific task. Using functions, you can combine groups of code that need to be executed together. Alternatively, you can also use functions to reuse code, by writing it once and accessing it from various other places. This makes it easier to maintain code that is needed in multiple places. For example, if we want to call an external service to fetch a value from it, that logic can be defined within a function and then this function can be invoked from other resources.
+Fraud Protection gives you the flexibility to create functions which are used to perform a specific task. Using functions, you can combine groups of code that need to be executed together. Alternatively, you can also use functions to reuse code, by writing it once and accessing it from various other places. This makes it easier to maintain code that is needed in multiple places. For example, if we want to call an external service to fetch a value from it, that logic can be defined within a function and then this function can be invoked from other resources.
 
 ## Defining a Function
 
@@ -32,7 +32,7 @@ The input parameters section has 3 parts
 
 
 ### Output Properties 
-The return value of a function can be defined through output properties. The Output Properties section will have the "Fraud Query Language (FQL)" logic to return a value of the function. These properties can then be accessed from within other functions, rules, velocities, post-decision action rules and routing rules by invoking the function. A function can have up to 30 output properties. For more information on Fraud Query Language and how to use it, see [Language reference guide](fpl-lang-ref.md)
+The return value of a function can be defined through output properties. The Output Properties section will use the "Fraud Query Language (FQL)" logic to return a value of the function. These properties can then be accessed from within other functions, rules, velocities, post-decision action rules and routing rules by invoking the function. A function can have up to 30 output properties. For more information on Fraud Query Language and how to use it, see [Language reference guide](fpl-lang-ref.md)
 
 Output Properties section has 4 parts
 
