@@ -16,7 +16,7 @@ The *Activity Logs* page lets you search for and view details of who changed wha
 For example, you can search for all the activity logs associated with a specific environment ID and when clickin on the log, you can review the details of an individual log before and after the associated event.
 
 > [!NOTE]
-> If the environment has child environments, the search results include logs for all the child environments. To view the environment information in the search results, use Environment name or Environment ID in Column options.
+> If the environment has child environments, the search results include logs for all the child environments. To view the environment information in the search results, use Environment name or Environment ID as search filters.
 
 ## Getting started
 - Select timeframe: First select the timeframe you want to search across. You can search between any two dates within the past 13 months.
