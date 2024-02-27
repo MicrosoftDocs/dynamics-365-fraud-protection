@@ -40,12 +40,12 @@ Before you create an external call, you should know about the following limitati
 
     - **Description** – Add a description to help your team quickly identify the external call
     
-    - **Add parameter** – You can use parameters to pass data from Fraud Protection to your API endpoint. Depending on the HTTP method that you selected, these parameters will be sent to the endpoint either in the query string or as part of the request body. Parameters defined in this step can be manually added to the request URL, header, and/or body using the format *{parameter.\<parameter name\>}*.
+    - **Add parameter** – You can use parameters to pass data from Fraud Protection to your API endpoint. Depending on the HTTP method that you selected, these parameters will be sent to the endpoint either in the query string or as part of the request body. Parameters defined in this step can be manually added to the request URL, header, and/or body using the format *{parameter.\<parameter name\>}*. Please note, all parameter values are interpreted as strings
 
-        You can add sample values for each parameter. Fraud Protection will use these parameter values to make a sample call to your endpoint, either before creation or whenever you select **Test**.
+        You can add sample values for each parameter. Fraud Protection will use these parameter values to make a sample call to your endpoint, either before creation or whenever you select **Test connection**.
 
         > [!NOTE]
-        > All parameter values are interpreted as strings.
+        > You can use ```Request.CorrelationId()``` function in a rule to extract Correlation ID of the incoming event and pass it as a parameter value for the external call.
 
     - **Add configuration** – You can also provide static data on the external call setup page that will be passed to your API endpoint. For sensitive information, you can mark a configuration to be a secret and provide a secret identifier URL from your Azure key vault instead of providing the actual value on the external call setup page. To learn how to store a secrets in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#Store-passwords-in-your-Azure-Key-Vault) section later in this article. 
 
