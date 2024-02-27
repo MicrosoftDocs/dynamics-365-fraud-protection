@@ -15,7 +15,7 @@ This article describes how to set up device fingerprinting in Microsoft Dynamics
 
 A *device fingerprint*, also known as a *machine fingerprint*, contains information that's collected about a remote computing device, such as a computer, Xbox, tablet, or smartphone, for the purpose of identifying that device. Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address.
 
-Fraud Protection provides a device fingerprinting feature that's based on artificial intelligence (AI), so that device identification can be used as input to the process of fraud assessment. This feature helps the Fraud Protection service track and link seemingly unrelated events in the fraud network to help identify patterns of fraud. The data collected isn't just a static list of attributes but also includes data that's dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device. When using the device ID in rules and velocities, remember that this device ID is probablistic and not deterministic. While the device ID has a high accuracy, it can still produce false positives.
+Fraud Protection provides a device fingerprinting feature that's based on artificial intelligence (AI), so that device identification can be used as input to the process of fraud assessment. This feature helps the Fraud Protection service track and link seemingly unrelated events in the fraud network to help identify patterns of fraud. The data collected isn't just a static list of attributes but also includes data that's dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device. When using the device ID in rules and velocities, remember that this device ID is probabilistic and not deterministic. While the device ID has a high accuracy, it can still produce false positives.
 
 Device fingerprinting runs on Azure, and includes benefits from proven cloud scalability, reliability, and enterprise-grade security. To help you better understand the impact that device fingerprinting has on fraud detection, this document includes some results from a study that Microsoft did. The study compared six months' worth of data for various Microsoft businesses through two different models: one that used device fingerprinting and one that didn't.
 
@@ -58,7 +58,7 @@ The setup of device fingerprinting is done in two phases.
 1. Configure the Domain Name Server (DNS) Secure Sockets Layer (SSL) certificate, and upload it to the Fraud Protection portal.
 1. Implement device fingerprinting (on a website or a mobile app).
 
-This section provides detailed instructions for both these phases. The first phase has to be completed only once. However, the second phase must be repeated once for each website or mobile app where device fingerprinting will be implemented.
+This section provides detailed instructions for both these phases. The first phase has to be completed only once. However, the second phase must be repeated once for each website or mobile app where device fingerprinting is implemented.
 
 ### Set up DNS and generate an SSL certificate
 
@@ -85,7 +85,7 @@ To generate and upload an SSL certificate, follow these steps.
 
 ## Implement device fingerprinting
 
-Your website or application must initiate device fingerprinting requests a few seconds before a transaction is sent to Fraud Protection for risk evaluation (such as a transaction for adding a payment instrument, sign-in, or checkout). This requirement ensures that Fraud Protection has received all the data that it requires to make an accurate assessment. This section provides detailed instructions for implementing device fingerprinting on websites and mobile apps. 
+Your website or application must initiate device fingerprinting requests a few seconds before a transaction is sent to Fraud Protection for risk evaluation (such as a transaction for adding a payment instrument, sign-in, or checkout). This requirement ensures that Fraud Protection receives all the data that it requires to make an accurate assessment. This section provides detailed instructions for implementing device fingerprinting on websites and mobile apps. 
 
 To implement device fingerprinting, follow these steps.
 
@@ -96,7 +96,7 @@ To implement device fingerprinting, follow these steps.
     ```
 
     - **Your\_Sub\_Domain** – The subdomain under your root domain.
-    - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID should contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although we recommend that you use a globally unique identifier (GUID) for the session ID, it isn't required.
+    - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID should contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although Microsoft recommends that you use a globally unique identifier (GUID) for the session ID, it isn't required.
     - **instance\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Device fingerprinting ID** value that's listed on the **Current environment** tile on the **Integration** page of the corresponding environment in the Fraud Protection portal.
 
     **Example**
@@ -126,7 +126,7 @@ For certain web fingerprinting scenarios, Fraud Protection supports a specialize
 
 Client side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
 
-- You must set up an external call that returns an encryption key response in the JSON Web Key Sets (JWKS) format. This external call returns the key with which Fraud Protection encrypts the payload, so you can decrypt the payload that's returned in the browser. You're responsible for providing the key for encryption and decryption. For infomation about setting up external calls, see [External calls](external-calls.md).
+- You must set up an external call that returns an encryption key response in the JSON Web Key Sets (JWKS) format. This external call returns the key with which Fraud Protection encrypts the payload, so you can decrypt the payload that's returned in the browser. You're responsible for providing the key for encryption and decryption. For information about setting up external calls, see [External calls](external-calls.md).
 
 The following code shows an example of the JWKS format.
 
@@ -143,7 +143,7 @@ The following code shows an example of the JWKS format.
   ]
 }
 ```
-- You must only use the metadata and device fingerprinting sections of the device fingerprinting assessment template. If there are additional schema sections, or if you're not using the device fingerprinting assessment template, the client side integration option won't be available to you.
+- You must only use the metadata and device fingerprinting sections of the device fingerprinting assessment template. If there are additional schema sections, or if you're not using the device fingerprinting assessment template, the client side integration option isn't available to you.
 
 When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you'll see the client side integration option available to you. After choosing to enable the client side integration, you'll select the external call with the JWKS response format that you set up.
 
@@ -177,7 +177,7 @@ For mobile apps, device fingerprinting integration supports Android, iOS, and Re
 
 ## Attribute category introduction reference
 
-The following tables show the device fingerprinting attribute categories that we try to collect for web, iOS, and Android. The description of the attributes explains how each helps detect fraud. If your organization has specific needs, and you want some categories of data not to be processed by us, reach out to customer support before onboarding. We can help you do the configuration correctly to meet your privacy needs.
+The following tables show the device fingerprinting attribute categories that we try to collect for web, iOS, and Android. The description of the attributes explains how each helps detect fraud. If your organization has specific needs, and you want some categories of data not to be processed by Fraud Protection, reach out to customer support before onboarding. Customer support can help you do the configuration correctly to meet your privacy needs.
 
 ## Device fingerprinting attribute list for web
 
@@ -189,7 +189,7 @@ The following tables show the device fingerprinting attribute categories that we
 |BrowserUserAgent|User Agent OS|Operating system parsed from user agent.|
 |BrowserUserAgent|User Agent Platform|Browser name and version parsed from user agent.|
 |BrowserUserAgent|User Agent String|User agent string from HTTP header.|
-|BrowserUserAgent|User Agent Type|User agent type (computer, mobile or spider).|
+|BrowserUserAgent|User Agent Type|User agent type (computer, mobile, or spider).|
 |Canvas/WebGL|Image Data URL Hash|Hash of image data drawn on canvas.|
 |Canvas/WebGL|Renderer|WebGL renderer.|
 |Canvas/WebGL|Unmasked Renderer|WebGL unmasked renderer.|
@@ -299,7 +299,7 @@ The following tables show the device fingerprinting attribute categories that we
 |Device Specification|Is Captured|Boolean value indicating whether the contents of the screen are being cloned to another destination. (iOS >= 11)|
 |Device Specification|Is Connected|Boolean value indicating whether the network is currently reachable.|
 |Device Specification|Is Device Emulator|Boolean value indicating whether the device is being run on a simulator. The iOS simulator allows the user to use features and run applications on the virtual iPhone on their MacBook as though it was the actual iPhone device. Also known as IsDeviceSimulator.|
-|Device Specification|Is Device Rooted|Boolean value indicating whether the device has been Jailbroken. Jailbreaking/Rooting changes the operating system running on an iPhone or iPod touch to give you more control. Also known as IsDeviceJailBroken.|
+|Device Specification|Is Device Rooted|Boolean value indicating whether the device is jailbroken. Jailbreaking/rooting changes the operating system running on an iPhone or iPod touch to give you more control. Also known as IsDeviceJailBroken.|
 |Device Specification|Is Low Power Mode Enabled|Boolean value indicating whether low power mode is enabled on an iOS device.|
 |Device Specification|Is Multitasking Supported|Boolean value indicating whether multitasking is supported on the current device. |
 |Device Specification|Kernel OS Release Name|Kernel operating system release. For example, 18.0.3.|
@@ -361,7 +361,7 @@ The following tables show the device fingerprinting attribute categories that we
 |User Preference|Is Speak Selection Enabled|Boolean value indicating whether the system preference for speak selection is enabled.|
 |User Preference|Is Switch Control Running|Boolean value indicating whether switch control is running.|
 |User Preference|Is Valid Interface Orientation|Boolean value indicating whether the specified orientation is one of the portrait or landscape orientations.|
-|User Preference|Is Video Autoplay Enabled|Boolean value indicating whether the system preference for auto-play videos is enabled.|
+|User Preference|Is Video Autoplay Enabled|Boolean value indicating whether the system preference for autoplay videos is enabled.|
 |User Preference|Passcode Or Biometry Is Enabled|Passcode or biometry authentication set by user. For example, PassCodeOrBiometrySet, BiometryNotAvailable, PassCodeNotSet.|
 |User Preference|Preferred Languages|List of the user's preferred languages.|
 |User Preference|Should Differentiate Without Color|Whether the system preference for differentiate without color is enabled.|
@@ -392,30 +392,30 @@ The following tables show the device fingerprinting attribute categories that we
 |Device Specification|Bluetooth State|Current state of the local Bluetooth adapter.|
 |Device Specification|Board|Name of the underlying board. For example, goldfish.|
 |Device Specification|Bootloader|System bootloader version number.|
-|Device Specification|Brand|Consumer-visible brand with which the product or hardware will be associated, if any.|
+|Device Specification|Brand|Consumer-visible brand with which the product or hardware is associated, if any.|
 |Device Specification|Screen Size Category|Screen size category: SMALL, NORMAL, LARGE, XLARGE, UNDEFINED.|
 |Device Specification|Cellular Data State|Current cellular data connection state: DISCONNECTED, CONNECTED, SUSPENDED.|
-|Device Specification|Charge Type|Whether the device is plugged in to a power source.  Zero (0) means it's on battery, other constants are different types of power sources.|
-|Device Specification|Code Name|Current development codename, or the string "REL" if this is a release build.|
+|Device Specification|Charge Type|Whether the device is plugged in to a power source. Zero (0) means it's on battery, other constants are different types of power sources.|
+|Device Specification|Code Name|Current development code name, or the string "REL" if this is a release build.|
 |Device Specification|Configured Networks SSIDs|List of all the networks configured SSIDs for the current foreground user.|
 |Device Specification|CPU Info Hash|CPU info hashed by MD5.|
 |Device Specification|CPU Number of Cores|Number of processors available to the Java virtual machine.|
 |Device Specification|CPU Usage|Current CPU usage by device. For example, 0.39.|
-|Device Specification|Data Network Type|Human-readable name that describes the type of the network. For example, "WI-FI", "MOBILE".|
+|Device Specification|Data Network Type|Human-readable name that describes the type of the network. For example, "WI-FI," "MOBILE."|
 |Device Specification|Device|Name of the industrial design. Device name provided by manufacturer. For example, Bravo, Passion, GT-I9000.|
 |Device Specification|Display|Build ID which is displayed.|
 |Device Specification|Display ID|Logical display ID. Each logical display has a unique ID.|
 |Device Specification|Google Services Framework ID|Google Services Framework Identifier (GSF ID) is a unique 16 character hexadecimal number that your device automatically requests from Google when log into your Google Account for the first time. For a specific device, the GSF ID only changes after a factory reset.|
 |Device Specification|Hardware|Name of the hardware from the kernel command line or /proc.|
 |Device Specification|Host|Name of the host building the ROM and kernel.|
-|Device Specification|Build ID|Build change list number or build label like "M4-rc20".|
+|Device Specification|Build ID|Build change list number or build label like "M4-rc20."|
 |Device Specification|Is Battery Charging|Boolean value indicating whether the device battery is in a charging state.|
 |Device Specification|Is External Memory Mounted|Boolean value indicating whether an external memory (SD) card is mounted. |
 |Device Specification|Is Device Connected to the Network|Boolean value indicating whether network connectivity exists, and if it's possible to establish connections and pass data.|
 |Device Specification|Is Device Roaming|Boolean value indicating whether the device is currently roaming on the network. When true, it suggests that use of data on this network may incur extra costs.|
 |Device Specification|Is Wi-Fi Enabled|Boolean value indicating whether Wi-Fi is enabled.|
 |Device Specification|Is Device Emulator|Boolean value indicating whether the device is being run on an emulator. The Android Emulator simulates Android devices on your computer so you can test your application on a variety of devices and Android API levels without needing to have each physical device. |
-|Device Specification|Is Device Rooted|Boolean value indicating if the device is rooted. Rooting is a way to unlock the operating system so you can install unapproved apps, deleted unwanted bloatware, update the OS, replace the firmware, overclock (or underclock) the processor, customize, and so on.|
+|Device Specification|Is Device Rooted|Boolean value indicating if the device is rooted. Rooting is a way to unlock the operating system so you can install unapproved apps, deleted unwanted unwanted software, update the OS, replace the firmware, overclock (or underclock) the processor, customize, and so on.|
 |Device Specification|Line Speed|Wi-Fi line speed.|
 |Device Specification|Low Memory |Indicates whether the OS considers itself to currently be in a low memory situation.|
 |Device Specification|MAC Address|MAC address of the WLAN interface/Wi-Fi network adapter MAC.|
@@ -460,7 +460,7 @@ The following tables show the device fingerprinting attribute categories that we
 |Device Specification|Total Memory|Total RAM memory on device in bytes.|
 |Device Specification|Type|Type of build. For example, user, eng.|
 |Device Specification|Unique Number|Unique device number, if available. Can be IMEI, MEID, ESN, or IMSI.|
-|Device Specification|User Serial Number|Serial number for a user. This is a device-unique number assigned to that user. If the user is deleted and a new user created, the new user won't be given the same serial number.|
+|Device Specification|User Serial Number|Serial number for a user. This is a device-unique number assigned to that user. If the user is deleted and a new user created, the new user isn't given the same serial number.|
 |Device Specification|Voltage|Current battery voltage level.|
 |Device Specification|Wi-Fi SSID|Service set identifier (SSID) of the current 802.11 network.|
 |Device Specification|IP Address V4 (IPV4)|IP address V4.|
@@ -496,17 +496,17 @@ The following tables show the device fingerprinting attribute categories that we
 |User Preference|Is Airplane Mode Enabled|Boolean value indicating whether Airplane Mode is on.|
 |User Preference|Is Auto Caps Enabled|Boolean value indicating whether the setting to enable Auto Caps in text editors is enabled.|
 |User Preference|Is Auto Punctuate Enabled|Boolean value indicating whether the setting to enable Auto Punctuate in text editors is enabled.|
-|User Preference|Is Auto Replace Enabled|Boolean value indicating indicating whether the setting to enable Auto Replace (AutoText) in text editors is enabled.|
+|User Preference|Is Auto Replace Enabled|Boolean value indicating whether the setting to enable Auto Replace (AutoText) in text editors is enabled.|
 |User Preference|Is Auto Rotate Accelerometer Enabled|Boolean value indicating whether the accelerometer is used to change screen orientation.|
 |User Preference|Is Auto Screen Brightness Enabled|Boolean value indicating whether automatic brightness mode is enabled.|
 |User Preference|Is Auto Time Enabled|Boolean value indicating whether the user prefers the date, time, and time zone to be automatically fetched from the network.|
 |User Preference|Is Auto Time Zone Enabled|Boolean value indicating whether the user prefers the time zone to be automatically fetched from the network.|
 |User Preference|Is Bluetooth Enabled|Boolean value indicating whether Bluetooth is enabled.|
-|User Preference|Is Development Setting Enabled|Boolean value indicating whether the user has enabled development settings.|
-|User Preference|Is Device Provisioned|Boolean value indicating whether the device has been provisioned. On a multi-user device with a separate system user, the screen may be locked as soon as this is set to **true** and further activities can't be launched on the system user unless they are marked to show over keyguard.|
+|User Preference|Is Development Setting Enabled|Boolean value indicating whether the user enabled development settings.|
+|User Preference|Is Device Provisioned|Boolean value indicating whether the device is provisioned. On a multiuser device with a separate system user, the screen may be locked as soon as this attribute is set to **true** and further activities can't be launched on the system user unless they're marked to show over keyguard.|
 |User Preference|Is Dial Pad Enabled|Boolean value indicating whether the audible DTMF tones are played by the dialer when dialing.|
 |User Preference|Is Haptic Feedback Enabled|Boolean value indicating whether haptic feedback is enabled.|
-|User Preference|Is Install Non-Market Apps Enabled|Boolean value indicating whether non-market applications, such as apps not from Google Play, can be installed for this user.|
+|User Preference|Is Install Non-Market Apps Enabled|Boolean value indicating whether nonmarket applications, such as apps not from Google Play, can be installed for this user.|
 |User Preference|Is Lock Pattern Enabled|Boolean value indicating whether auto lock is enabled (API <= 22).|
 |User Preference|Is Lock Pattern Visible|Boolean value indicating whether lock pattern is visible as user enters (API <= 22).|
 |User Preference|Is Show Password Enabled|Boolean value indicating whether the setting to show password characters in text editors is enabled.|
@@ -523,7 +523,7 @@ The following tables show the device fingerprinting attribute categories that we
 |User Preference|Ringer Mode|Ringer mode. For example, silent, vibrate, normal.|
 |User Preference|Screen Brightness|Screen backlight brightness value between 0 and 255.|
 |User Preference|Screen Off Timeout|Amount of time in milliseconds before the device goes to sleep or begins to dream after a period of inactivity.|
-|User Preference|Settings Class Name|Name shown when settings is clicked from **All Applications**. |
+|User Preference|Settings Class Name|Name shown when **Settings** is selected from **All Applications**. |
 |User Preference|SMS Viewer Package |Default SMS viewer app used by user.|
 |User Preference|Time Zone Offset|Amount of time in milliseconds to add to UTC to get standard time in current time zone. This value is referred to as raw offset since it's not affected by daylight saving time.|
 |User Preference|Wallpaper Package Name|.apk package that implements the wallpaper.|
@@ -536,13 +536,13 @@ There are two fields that exist in the **Account Create**, **Account Login**, an
 
   |ProxyType |Description|
   |----------|-----------|
-  | http | The proxy uses the HTTP protocol and has open ports which are accessible by any Internet user. |
+  | http | The proxy uses the HTTP protocol and has open ports, which are accessible by any Internet user. |
   | service | The proxy is operated by an organization (often for profit) that provides access to subscribers as a service. The proxy is one of an array of proxies (often internationally distributed) that are part of a Virtual Private Network (VPN) that subscribers connect to by installing an application. The network may have different proxy locations or bandwidth options depending on the user’s membership level, whether it's paid or free. |
-  | socks | The proxy uses the Socket Secure (SOCKS) protocol and has open ports which are accessible by any Internet user. |
-  | socks http | The proxy has both the HTTP and SOCKS protocols setup and has open ports which are accessible by any Internet user. |
+  | socks | The proxy uses the Socket Secure (SOCKS) protocol and has open ports, which are accessible by any Internet user. |
+  | socks http | The proxy has both the HTTP and SOCKS protocols set up and has open ports, which are accessible by any Internet user. |
   | tor | The proxy is part of the onion router (Tor) network. Encrypted user Internet traffic is routed through a regularly changing series of nodes operated by volunteers. |
   | unknown | The proxy’s type couldn't be determined. |
-  | web | The proxy operates through the use of an Internet web browser. Navigate to the web proxy website, enter the URL of the site you wish to visit, and the contents of the requested URL are returned by the web proxy website within the browser. |
+  | web | The proxy operates by using an Internet web browser. Navigate to the web proxy website, enter the URL of the site you wish to visit, and the contents of the requested URL are returned by the web proxy website within the browser. |
 
 For example, to identify a VPN, Proxy would be **TRUE** and ProxyType would be **service**.
 
