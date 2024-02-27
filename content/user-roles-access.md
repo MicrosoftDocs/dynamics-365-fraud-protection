@@ -493,7 +493,7 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 
 <tr>
-<td rowspan="3">Templates</td>
+<td rowspan="3">Templates *</td>
 <td>Environment</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
@@ -676,8 +676,7 @@ The following table shows the specific read/write permissions that users will ha
 >
 > The user who assigns roles must also be assigned the **Application Administrator**, **Cloud Application Administrator**, **Global Administrator**, **User Administrator**, or **Privileged Role Administrator** role in your Azure tenant.
 >
-> To create a template from a resource, the user needs to have both **Read** permission on the resource and **Write** permission on templates page.
-> To create a resource using a template, the user needs to have both **Write** permission on the resource and **Read** permission on template page. 
+> *To create a template from a resource, the user needs to have both **Read** permission on the resource and **Write** permission on templates page. To create a resource using a template, the user needs to have both **Write** permission on the resource and **Read** permission on template page. 
 
 ## Member access
 
