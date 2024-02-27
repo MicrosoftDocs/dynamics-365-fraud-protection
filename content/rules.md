@@ -377,7 +377,7 @@ You can send test traffic directly to a specific branch in an assessment using t
 
 #### Shadowing production traffic
 
-You can also test branch rule behavior by shadowing production traffic. To do this, set up and start an experiment for a branch by clicking on the **Run experiment** button. Once an experiment is in progress, you can view its perfomance on the **Monitoring** tab by switching to the branch the experiment is running in. Once an experiment is in progress, its parameters cannot be edited. You can always stop an experiment to make changes and start it again. 
+You can also test branch rule behavior by shadowing production traffic. To do this, set up and start an experiment for a branch by clicking on the **Run experiment** button. Once an experiment is in progress, you can view its perfomance on the **Monitoring** tab by switching to the branch the experiment is running in. Once an experiment is in progress, its parameters cannot be edited. You can always stop an experiment to make changes and start it again. On the PSP navigation view, the branch actions dropdown will only be visible on the rules page, not on the monitoring page.
 > [!NOTE]
 > Shadowed traffic that executes on the branch rule stack will not have any impact on production, so velocities will not be double updated as a result of the shadow, only updated once as a result of the production execution. 
 
