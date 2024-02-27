@@ -376,7 +376,7 @@ To specify the type of a non-string variable, use a [type casting operator](fpl-
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
 
-## <a name='arrays-objects'></a> JSON Arrays and Objects
+## <a name='arrays-objects'></a> JSON arrays and objects
 FQL has support for the construction of complex structured objects as local variables, which may be passed through to the external call or external assessment in JSON form. As with all other locals in FQL, arrays and objects are immutable once created.
 
 ### JSON arrays
