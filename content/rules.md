@@ -186,7 +186,7 @@ The score sample contains scores that are generated from Fraud Protection's AI m
 
 To verify that your rule works for various events, you can edit the sample as you require and then [evaluate](rules.md#evaluation-example) the sample data against the rule. All values in both the payload sample and the score sample can be edited. When you edit a sample, the changes don't affect which data you send (or don't send) to Fraud Protection.
 
-When you publish a rule, any changes that you made to the sample are saved and persisted as part of the rule.
+When you publish a rule, any changes made to the sample are saved and persisted as part of the rule.
 
 To undo all changes that you or other people made to the sample, select **Revert**. The score sample is reverted to the system's default score sample, and the payload sample is reverted to the user-defined payload sample in the [**Payload settings** pane](rules.md#rule-settings).
 
