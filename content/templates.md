@@ -48,17 +48,17 @@ A rule template publishes decision rules and post-decision actions in the produc
 
 Assessment template subresources include:
 
-- Assessment API attributes, labels and observation events.
+- Assessment API attributes, labels, and observation events.
 - Published decision rules and post-decision actions in production branch.
 - Assessment configuration and settings.
 - Case management queues and routing rules.
 - Case management configuration.
 
 > [!NOTE]
-> The following resources aren't included in assessment template:
+> The following resources aren't included in the assessment template:
 > - Decision rules and post-decision actions in nonproduction branches.
 > - Draft (unpublished) rules.
-> - Dependent resources for rules (for example: velocities, external calls, etc).
+> - Dependent resources for rules (for example, velocities or external calls).
 
 ### Environment template
 
@@ -77,7 +77,7 @@ Environment template subresources include:
 -	Environment metadata (for example, name, description, or geolocation metadata).
 
 > [!NOTE]
-> Following resources aren't included in environment template:
+> The following resources aren't included in environment template:
 > - Decision rules and post-decision actions in nonproduction branches.
 > - Draft (unpublished) rules.
 > - List data (list name and columns are included).
@@ -86,7 +86,7 @@ Environment template subresources include:
 > - Application ID, device fingerprint certificate, and event tracing.
 > - Tab settings.
 
-## Create template
+## Create a template
 
 You can create a template from the supported resources in your Fraud Protection portal. 
 
@@ -99,8 +99,8 @@ To create a rule template, follow these steps.
 
 1. In the Fraud Protection portal, go to **Fraud assessments**, select the assessment for which you want to create a rule template, and then go to the **Rules** tab.
 1. Select the overflow symbol for a published rule for which you want to create a rule template, and then select **Create template** from the menu options.
-1. In the **Create template** pane, enter the **Name** you want to use for the template.
-1. Preview of the template will show the list of clauses included in the rule template you are going to create.
+1. On the **Create template** pane, enter the **Name** you want to use for the template.
+1. Preview the rule template to view the list of clauses included in the template.
 1. Select either **Download** or **Add template**.
    - **Download** creates the template and downloads a template file to your computer that can be imported into Fraud Protection.
    - **Add template** creates the template and adds it to the Fraud Protection template library to make it available to users in the Fraud Protection and child environments. If you select this option, you can add a description of the template for reference.
@@ -109,80 +109,81 @@ To create a rule template, follow these steps.
 
 To create an assessment template, follow these steps.
 
-1. In Fraud Protection portal, navigate to Fraud assessments, select the assessment that you want to templatize.
-2. Go to **Configuration** tab, select **Create template** in the top menu bar.
-3. In **Create template** panel, type the **Name** of the template you want to use.
-4. Preview of the template will show the list of resources included in the assessment template you are going to create.
-5. You have the option to **Create template and download** or **Create template and add to library**.
-   - **Create template and download** will download a template file to your computer that can be imported into Fraud Protection later.
-   - **Create template and add to library** will create the template and make it available to users in the Fraud Protection environment and its children environment. If you select this option, you can give your template a **Description** for reference.
-6. Select **Download** to download template file, or select **Add template** to add template in your Fraud Protection environment.
+1. In the Fraud Protection portal, navigate to **Fraud assessments**, and then select the assessment for which you want to create a template.
+1. Go to the **Configuration** tab, and then select **Create template** on the top menu bar.
+1. On the **Create template** pane, enter the **Name** you want to use for the template.
+1. Preview the assessment template to view the list of resources included in the template.
+1. Select either **Download** or **Add template**.
+   - **Download** creates the template and downloads a template file to your computer that can be imported into Fraud Protection.
+   - **Add template** creates the template and adds it to the Fraud Protection template library to make it available to users in the Fraud Protection and child environments. If you select this option, you can add a description of the template for reference.
 
 ### Create an environment template
 
 To create an environment template, follow these steps.
 
-1. In Fraud Protection portal, use the **environment switcher** on the top menu bar, go to **Manage environments**.
-2. Go to the environment that you want to templatize, select the overflow icon, select **Create template** in the menu.
-3. In **Create template** panel, type the **Name** of the template you want to use.
-4. Preview of the template will show the list of resources included in the environment template you are going to create.
-5. You have the option to **Create template and download** or **Create template and add to library**.
-   - **Create template and download** will download a template file to your computer that can be imported into Fraud Protection later.
-   - **Create template and add to library** will create the template and make it available to users in the Fraud Protection environment and its children environment. If you select this option, you can give your template a **Description** for reference.
-6. Select **Download** to download template file, or select **Add template** to add template in your Fraud Protection environment.
+1. In the Fraud Protection portal, go to **Manage environments** using the environment switcher on the top menu bar.
+1. Go to the environment for which you want to create a template, select the overflow icon, and then select **Create template** on the top menu bar.
+1. On the **Create template** pane, enter the **Name** you want to use for the template.
+1. Preview the environment template to view the list of resources included in the template.
+1. Select either **Download** or **Add template**.
+   - **Download** creates the template and downloads a template file to your computer that can be imported into Fraud Protection.
+   - **Add template** creates the template and adds it to the Fraud Protection template library to make it available to users in the Fraud Protection and child environments. If you select this option, you can add a description of the template for reference.
 
 > [!NOTE]
-> Template is created within the environment that user is currently navigated to. If user creates a template from another environment, the template is available to the current environment and its children environments.
-> 
-> If the system runs into error when creating the subresources, the creation process will abort and some subresources or configuration will be missing from the newly created resource.
-> 
-> Modifying the content of a template file manually after downloading it may lead to errors when importing the template file back in the Fraud Protection portal.
-> 
-> Template file has a maximum size limit of 20MB. You will not be able to upload a file that exceeds this limit. 
+> - The template is created within the environment the user is currently in. If the user creates a template from another environment, the template is available to the current environment and its children environments.
+> - If the system generates errors when creating the subresources, the creation process aborts and some subresources or configurations will be missing from the newly created resource.
+> - Modifying the content of a template file manually after downloading it may lead to errors when importing the template file back into the Fraud Protection portal.
+> - A template file has a maximum size limit of 20 MB. You won't be able to upload a file that exceeds this limit. 
 
-## Creating new resources through templates
+## Create new resources using templates
 
-### New Decision Rule or Post Decision Action from a template
+### Create a new decision rule or post-decision action from a template
 
-1. In Fraud Protection portal, navigate to Fraud assessments, select the assessment and go to **Rules** tab.
-2. In the top menu bar, select **+ New rule** and then select **From template** in the drop down menu.
-3. In **New rule** panel, you will see a drop down menu for **Template**.
-   - If you want to use template file in your computer to create the new rule, select the option to **Load template file**. Select **Browse** to select the template file, upload it to Fraud Protection portal.
-   - If you want to use template created in Fraud Protection portal, select the template you want to use from the **Template** drop down menu.
-4. You can give the **Name** and **Description** you want to use for the new rule.
-5. Preview of the template will show the list of clauses included in the rule template you are using.
-6. Select **Create** to create the new rule.
-7. A new draft rule would be created matching the contents of the template. To publish this rule, you will need to select Publish.
+To create a new decision rule or post-decision action from a template, follow these steps.
 
-> [!NOTE]
-> If the rule has a reference to another resource that is not found in the environment (for example, a velocity or external call), you need to resolve the missing reference before you can successfully publish the draft rule. 
-
-### New assessment from template
-
-1. In Fraud Protection portal, navigate to Fraud assessments on the left navigation, select **+ New assessment** from the navigation menu.
-2. In **Assessment setup wizard**, select **Customer created template** from the available schema templates.
-3. In **Customer created templates** pop-up modal, you will see a list for **Template**.
-   - If you want to use template file in your computer to create the new rule, select the option to **Load template file**. Select **Browse** to select the template file, upload it to Fraud Protection portal.
-   - If you want to use template created in Fraud Protection portal, select the template you want to use from the **Template** list.
-4. Preview of the template will show the sample code and resources included in the assessment template you are using. Select **Select** to proceed.
-5. Specify the **Friendly name** and **API name** you want to use for the new assessment.
-6. Select **Create assessment** to create the new assessment.
-7. The new assessment is created with the resources from your template.
-
-### New environment from template
-
-1. In Fraud Protection portal, use the **environment switcher** on the top menu bar, go to **Manage environments**.
-2. If you want to create a root environment from template, select **+ New environment** from the top menu bar. If you want to create a child environment from template, in the overflow menu of the environment, select **New child environment** in the menu.
-3. In **New environment** panel, select the toggle to turn on **Use template**, you will see a drop down menu for **Template**.
-   - If you want to use template file in your computer to create the new rule, select the option to **Load template file**. Select **Browse** to select the template file, upload it to Fraud Protection portal.
-   - If you want to use template created in Fraud Protection portal, select the template you want to use from the **Template** list.
-4. Preview of the template will show the resources included in the environment template you are using. 
-5. You can edit the **Data storage geography**, **Name**, **Description**, **Tags**, **Azure AD application ID** and **Customer API ID** you want to use for the new environment.
-6. Select **Create** to create the new environment.
-7. The new environment is created with the resources from your template.
+1. In the Fraud Protection portal, go to **Fraud assessments**, select the assessment, and then select the **Rules** tab.
+1. On the top menu bar, select **+ New rule**, and then select **From template** from the drop-down menu.
+1. On **New rule** pane, select one of the following from the **Template** drop-down menu:
+   - Select **Load template file** to use a template file on your computer to create the new rule. Select **Browse** to select the template file and upload it to the Fraud Protection portal.
+   - Select a template if you want to use a template already created in Fraud Protection portal.
+1. Enter a **Name** and **Description** for the new rule.
+1. Preview the template to view the list of resources included in the template.
+1. Select **Create** to create a new draft rule that matches the contents of the template.
+1. Select **Publish** to publish the rule.
 
 > [!NOTE]
-> **Data storage geography** can only be edited if a root environment is being created using template. When creating child environments, the data geography would always be the same as the root environment under which the child environment is being created, which may be different from the data geography of the source environment from which the template was created.
+> If the rule has a reference to another resource that isn't found in the environment (for example, a velocity or external call), you must resolve the missing reference before you can publish the draft rule. 
+
+### Create a new assessment from a template
+
+To create a new assessment from a template, follow these steps.
+
+1. In the Fraud Protection portal, on the left navigation pane, select **Fraud assessments**, and then select **+ New assessment**.
+1. In the **Assessment setup** wizard, select **Customer created template** from the available schema templates.
+1. On the **Customer created templates** pane, select one of the following from the **Template** drop-down menu:
+   - Select **Load template file** to use a template file on your computer to create the new rule. Select **Browse** to select the template file and upload it to the Fraud Protection portal.
+   - Select a template if you want to use a template already created in Fraud Protection portal.
+1. Preview the template to view the the sample code and resources included in the assessment template. Select **Select** to proceed.
+1. Enter the **Friendly name** and **API name** for the new assessment.
+1. Select **Create assessment** to create the new assessment that matches the resources of your template.
+
+### Create a new environment from a template
+
+To create a new environment from a template, follow these steps.
+
+1. In the Fraud Protection portal, go to **Manage environments** using the environment switcher on the top menu bar.
+2. Do one of the following:
+    - Select **+ New environment** from the top menu bar if you want to create a root environment from a template.
+    - Select **New child environment** from the overflow menu of the environment if you want to create a child environment from a template.
+4. On the **New environment** pane, select the toggle to turn on the **Use template** option, and then select one of the following from the **Template** drop-down menu:
+   - Select **Load template file** to use a template file on your computer to create the new rule. Select **Browse** to select the template file and upload it to the Fraud Protection portal.
+   - Select a template if you want to use a template already created in Fraud Protection portal.
+5. Preview the template to view the list of resources included in the environment template. 
+6. Enter or edit the **Data storage geography**, **Name**, **Description**, **Tags**, **Azure AD application ID**, and **Customer API ID** settings you want to use for the new environment.
+7. Select **Create** to create the new environment that matches the resources of your template.
+
+> [!NOTE]
+> The **Data storage geography** setting can only be edited if a root environment is being created using the template. When creating child environments, the data storage geography is always the same as the root environment under which the child environment is being created, which may be different from the data storage geography of the source environment from which the template was created.
 
 ## Template library
 
@@ -193,7 +194,7 @@ You can perform the following actions on templates (Refer to [User permission fo
 ### Import template
 
 1. On the top menu bar, select **Import template** menu.
-2. In **Create template** panel,select **Browse** to select the template file, upload it to Fraud Protection portal.
+2. In **Create template** pane,select **Browse** to select the template file, upload it to Fraud Protection portal.
 3. You can give the **Name** and **Description** you want to use for the imported template.
 4. Select **Create**, the template is imported and available in template library.
 
