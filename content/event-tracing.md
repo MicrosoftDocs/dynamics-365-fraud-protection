@@ -185,7 +185,7 @@ There are five events generated that can be tracked by using the audit logs. Tho
 
 ### Activity logs events
 
-You use activity logs events to eventsd to get etailed record of who did what, when, and where for some actions in DFP, such as who made the last change to a rule matching Activity logs content.
+You use activity logs events to eventsd to get detailed record of who did what, when, and where for some actions in DFP, such as who made the last change to a rule matching Activity logs content.
 
 ##### Namespace: FraudProtection.ActivityLog.
 
