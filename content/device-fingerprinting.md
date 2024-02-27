@@ -1,8 +1,8 @@
 ---
 author: josaw1
-description: This article explains how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
+description: This article describes how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 11/08/2022
+ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -11,7 +11,7 @@ title: Set up device fingerprinting
 
 # Set up device fingerprinting
 
-This article explains how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
+This article describes how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 
 A *device fingerprint*, also known as a *machine fingerprint*, contains information that's collected about a remote computing device, such as a computer, Xbox, tablet, or smartphone, for the purpose of identifying that device. Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address.
 
@@ -120,15 +120,15 @@ To implement device fingerprinting, follow these steps.
 3. When you submit transactions in the Fraud Protection API, set a session ID in the **deviceContextId** field. For Assessments, set a session ID in the **deviceFingerprinting.id** field.
 4. Set the **device.ipAddress** field to the customer IP address that your website receives when a customer uses your site. For Assessments, set the customer IP address in the **deviceFingerprinting.ipAddress** field. This field is optional and doesn't need to be set if you don't have it.
 
-## Enable Client Side Integration for Device Fingerprinting
+## Enable client-side integration for device fingerprinting
 
-For certain web fingerprinting scenarios, we support an specialized class of integration called **Client Side Integration**. This integration differs from our standard integration practices where the fingerprinting response is returned directly to the client as an encrypted payload, skipping the server-to-server assessment call.
+For certain web fingerprinting scenarios, Fraud Protection supports a specialized class of integration called *client-side integration*. Client-side integration differs from standard integration practices because the fingerprinting response is returned directly to the client as an encrypted payload, skipping the server-to-server assessment call.
 
-Client side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, as it is a specialized class of integration, it simplified and secure, involving some more requirements.
+Client side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
 
-Below are the prerequisties for enabling client side integration:
+- You must set up an external call that returns an encryption key response in the JSON Web Key Sets (JWKS) format. This external call returns the key with which Fraud Protection encrypts the payload, so you can decrypt the payload that's returned in the browser. You're responsible for providing the key for encryption and decryption. For infomation about setting up external calls, see [External calls](external-calls.md).
 
-- You must have an external call set up that returns an encryption key response in the JWKS format. This external call will return the key that DFP will encrypt the payload with, so you can decrypt the payload that is returned in the browser. The customer is responsible for providing the key for encryption/decryption. See below for an example of JWKS format. [Learn more about external calls here](external-calls.md).
+The following code shows an example of the JWKS format.
 
 ```json
 {
@@ -143,28 +143,29 @@ Below are the prerequisties for enabling client side integration:
   ]
 }
 ```
-- You must be using the device fingerprinting assessment template with **only** the metadata and device fingerprinting sections. If there are additional schema sections or you are not using the device fingerprinting assessment template, the client side integration option will not be available to you.
-  - When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you will see the client side integration option available to you. Upon choosing to enable the client side integration, you will select the external call you set up earlier with the JWKS response format.
+- You must only use the metadata and device fingerprinting sections of the device fingerprinting assessment template. If there are additional schema sections, or if you're not using the device fingerprinting assessment template, the client side integration option won't be available to you.
 
-In order to complete the client side integration setup, you have to use a modified version of our javascript to return the encrypted response in the browser.
+When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you'll see the client side integration option available to you. After choosing to enable the client side integration, you'll select the external call with the JWKS response format that you set up.
 
-  ```JavaScript
-  <script src="https://<Your_Sub_Domain>/mdt.js?session_id=<session_id>&customerId=<customer_id>&assessment=<assessment>&requestId=<request_id>" type="text/javascript"></script>
+To complete the client-side integration setup, to return the encrypted response in the browser you must use a modified version of the following JavaScript example.
+
+```JavaScript
+<script src="https://<Your_Sub_Domain>/mdt.js?session_id=<session_id>&customerId=<customer_id>&assessment=<assessment>&requestId=<request_id>" type="text/javascript"></script>
+```
+
+- **Your\_Sub\_Domain** – The subdomain under your root domain.
+- **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can only contain the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID must contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although Microsoft recommends that you use a globally unique identifier (GUID) for the session ID, it isn't required.
+- **customer\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Environment ID** value that's listed on the **Current environment** tile of the **Integration** page of the corresponding environment in the Fraud Protection portal.
+- **assessment** – The API name of the device fingerprinting assessment set up with client-side integration enabled.
+- **request\_id** – A unique identifier for the request itself, separate from the session ID. This identifier should be a GUID of at least 32 characters in length.
+
+The following sample shows the JavaScript code with example values.
+
+```JavaScript
+<script src="https://fpt.contoso.com/mdt.js?session_id=2b2a1f5e-afa7-4c6d-a905-ebf66eaedc83&customerId=b3f6d54b-961c-4193-95ee-b6b204c7fd23&assessment=CSI&requestId=b12e86a0-37b1-43a2-958b-3f04fe7cef6c" type="text/javascript"></script>
   ```
 
-  - **Your\_Sub\_Domain** – The subdomain under your root domain.
-  - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID should contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although we recommend that you use a globally unique identifier (GUID) for the session ID, it isn't required.
-  - **customer\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Environment ID** value that's listed on the **Current environment** tile on the **Integration** page of the corresponding environment in the Fraud Protection portal.
-  - **assessment** – The API name of the device fingerprinting assessment set up with client side integration enabled.
-  - **request\_id** – Another unique identifier for the request itself, separate from the session id. This should be a GUID of at least 32 characters in length
-
-  **Example**
-
-  ```JavaScript
-  <script src="https://fpt.contoso.com/mdt.js?session_id=2b2a1f5e-afa7-4c6d-a905-ebf66eaedc83&customerId=b3f6d54b-961c-4193-95ee-b6b204c7fd23&assessment=CSI&requestId=b12e86a0-37b1-43a2-958b-3f04fe7cef6c" type="text/javascript"></script>
-  ```
-
-Once you set up a device fingerprinting assessment with client side integration, you are also able to call our standard server-to-server APIs to retrieve the fingerprinting intelligence.
+Once you set up a device fingerprinting assessment with client-side integration, you're also able to call standard Fraud Protection server-to-server APIs to retrieve the fingerprinting intelligence.
 
 ## Enable fingerprinting on a mobile app
 
