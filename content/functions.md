@@ -6,28 +6,25 @@ ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
-title: Functions
+title: Create functions
 
 ---
 
-# Functions
-Fraud Protection gives you the flexibility to create functions which are used to perform a specific task. Using functions, you can combine groups of code that need to be executed together. Alternatively, you can also use functions to reuse code, by writing it once and accessing it from various other places. This makes it easier to maintain code that is needed in multiple places. For example, if we want to call an external service to fetch a value from it, that logic can be defined within a function and then this function can be invoked from other resources.
+# Create functions
+Dynamics 365 Fraud Protection gives you the flexibility to create functions that you can use to perform a specific task. For example, you can use functions to combine groups of code that must be executed together. Or you can use functions to reuse code, where you write the code once and access it from other places, making the code easier to maintain. In that example, if you want to call an external service to fetch a value from it, the logic can be defined within a function, and the function can be invoked from other resources.
 
-## Defining a Function
+## Define a function
 
 Functions consist of input parameters and output properties. 
 
-### Input Parameters 
+### Input parameters 
 
-Functions can define parameters which can be passed to the function at the time of invocation. The input parameters are defined in the function definition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for this function. Defining input parameters are optional and the defined parameters can be used within the Output properties to return a value. For more information, see the [output properties](Functions.md#output-properties). 
+Functions can define parameters to be passed to the function at the time of invocation. Input parameters are defined in the function definition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for the function. The defined parameters can be used within the output properties to return a value. For more information, see [Output properties](Functions.md#output-properties). Defining input parameters is optional. 
 
-The input parameters section has 3 parts
+Input parameters consist of the following three parts.
 
-#### 1. Parameter Name
-   A name with which the parameter can be referenced.
-
-#### 2. Data Type
-   Every input parameter should have a type associated to it. Specifying the type converts the value of that parameter to the corresponding type. Currently functions support all the data types listed in the table below
+- **Parameter name**: A name with which the parameter can be referenced.
+- **Data Type**: Every input parameter should have a data type associated to it. The data type that you specify converts the value of the parameter to the corresponding type. Functions support the data types listed in the following table.
 
 | Data type | Sample value | 
 |----------|---------------|
@@ -37,85 +34,82 @@ The input parameters section has 3 parts
 | Integer | 10 |
 | String | "Hello" |
 
-
-#### 3. Default Value
-   Every parameter requires a default value which will be used during "Function Evaluation" or if there is an issue with the function invocation. 
+- **Default Value**: A default value is required for every parameter. The defaukt value is used during "Function Evaluation," or if there is an issue with the function invocation. 
 
 
-### Output Properties 
-The return value of a function can be defined through output properties. The Output Properties section will use the "Fraud Query Language (FQL)" logic to return a value of the function. These properties can then be accessed from within other functions, rules, velocities, post-decision action rules and routing rules by invoking the function. A function can have up to 30 output properties. For more information on Fraud Query Language and how to use it, see [Language reference guide](fpl-lang-ref.md)
+### Output properties 
+You can define the return value of a function by using output properties. Output properties use the "Fraud Query Language (FQL)" logic to return a value of the function. The output properties can then be accessed from within other functions, rules, velocities, post-decision action rules, and routing rules when the function is invoked. A function can have up to 30 output properties. For more information on FQL and how to use it, see [Language reference guide](fpl-lang-ref.md).
 
-Output Properties section has 4 parts
+Output properties consist of the following four parts.
 
-#### 1. Property Description
-   A description of the property which will be helpful for the caller. The description is optional. 
+- **Property description**: A description of the property. The description is optional. 
+- **Data type**: The data type of the value that is returned from the property. Functions support all the primitive data types, such as boolean, datetime, double, integer, and string. Whenever a breaking change is made to the output property of a function that's referenced in other resources, the default value of the original output property "data type" is used as a fallback to proceed with the resource execution. We recommend that you update your resources after breaking changes.
+- **Default value**: The default value is returned as the result of a function when an exception is encountered during the evaluation of the property. For example, division by 0, and Null Reference exceptions.
+- **Code editor to return a value**: The code editor is used to return a value from the function. The following are ways to return an output value.
 
-#### 2. Data Type
-   The data type of the value that is returned from this property. Currently functions support all the primitive types such as Boolean, DateTime, Double, Integer and String.
+   1. Input parameters defined within a function can be used to return values.
 
-Whenever a "breaking" change is made to the output property of a function that is being referenced in other resources, the default value of the original output property "data type" is used as a fallback to proceed with the resource execution. It is recommended to update your resources post such breaking changes.
+      Example of an output property returning an input parameter as the return value. For more information on how to define input parameters, see the [Input Parameters](Functions.md#input-parameters) section earlier in this article.
 
-#### 3. Default Value
+  ```FraudProtectionLanguage
+  RETURN _number1 + _number2
+  ```
 
-   The default value is very important as this value gets returned as the result of a function whenever an exception is encountered during the evaluation of the property. Some examples are division by 0 and Null Reference exceptions.
-
-#### 4. Code Editor to Return a Value
-
-   The code editor is used to return a value from the function. 
-
-   There are different ways to return an output value
-
-   1. Input parameters defined within a function can be used to return values
-   
-      Example of output property returning an input parameter as the return value. For more information on how to define input parameters, see the [Input Parameters](Functions.md#input-parameters) section earlier in this article.
-   
-       ```FraudProtectionLanguage
-       RETURN _number1 + _number2
-       ```
-   1. Both request and response attributes (including custom data) of an assessment that contains the rule which is invoking the function. You can access these attributes with the @ operator. For example, @"salesTax".
-     
+   2. Both the request and response attributes (including custom data) of an assessment that contains the rule that invokes the function. You can access these attributes with the *@* operator. For example, @"salesTax".
+      
       Example of function using request attributes:
-       ```FraudProtectionLanguage
-       RETURN @"salesTax"
-       ```
-   2. The fraud protection enrichment data. For example, Geo.CountryCode()
       
+  ```FraudProtectionLanguage
+  RETURN @"salesTax"
+  ```
+
+   3. The Fraud Protection enrichment data. For example, Geo.CountryCode().
+
       Example of function using riskscore:
-       ```FraudProtectionLanguage
-       RETURN Geo.CountryCode(@"deviceContext.ipAddress")
-       ```
-   3. Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md).
-      
+
+  ```FraudProtectionLanguage
+  RETURN Geo.CountryCode(@"deviceContext.ipAddress")
+  ```
+
+   4. Lists that you upload to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md).
+
       Example of function using list:
-       ```FraudProtectionLanguage
-       RETURN Lookup("Country_Score", "Country", "US", "ScoreCutOff")
-       ```
-   4. Velocities which you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
-      
+
+  ```FraudProtectionLanguage
+  RETURN Lookup("Country_Score", "Country", "US", "ScoreCutOff")
+  ```
+
+   5. Velocities that are defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
+
       Example of function using velocity:
-       ```FraudProtectionLanguage
-       RETURN Velocity.IPs_Per_User(@"deviceContext.ipAddress", 30s)
-       ```
-   5. External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md).
-   
-      Example of function using External calls:
-       ```FraudProtectionLanguage
-       RETURN External.weather("Seattle").id
-       ```
-   6. External assessments which you have created in Fraud Protection. For more information, see [External Assessments](external-assessments.md).
+
+  ```FraudProtectionLanguage
+  RETURN Velocity.IPs_Per_User(@"deviceContext.ipAddress", 30s)
+  ```
+
+   6. External calls that were created in Fraud Protection. For more information, see [External calls](external-calls.md).
+
+      Example of function using external calls:
       
+  ```FraudProtectionLanguage
+  RETURN External.weather("Seattle").id
+  ```
+   7. External assessments that were created in Fraud Protection. For more information, see [External Assessments](external-assessments.md).
+
       Example of a function invoking external assessment:
-       ```FraudProtectionLanguage
-       LET $result = Assessments.myAssessment.Evaluate($baseInput = @@)
-       RETURN $result.ToStr()
-       ```
-          
-   8. Access function within functions
-      
+
+  ```FraudProtectionLanguage
+  LET $result = Assessments.myAssessment.Evaluate($baseInput = @@)
+  RETURN $result.ToStr()
+  ```
+
+   8. Access function within functions.
+
       Example of a function invoking another function:
-       ```FraudProtectionLanguage
-       RETURN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
-       ```
+
+  ```FraudProtectionLanguage
+  RETURN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
+  ```
        
 > [!NOTE]
 > Functions can be created within any environment in the multi hierarchy stack. When a function references resources like velocities, external calls, lists and external assessments which are available in that environment, the lower environments which invoke this function will also inherit the resources that the function references. For example, if a function created in the root references an external call to return a value, the child environment that invokes these functions will be able to access the result of that external call as well. To learn how to inherit and invoke functions, see [Function Inheritance](Functions.md#function-inheritance) section later in this article.
