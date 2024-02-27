@@ -187,36 +187,43 @@ To create a new environment from a template, follow these steps.
 
 ## Template library
 
-Templates created or imported in the current environment would be visible in the template library page, present in the left navigation under the **Data** menu.
+Templates created or imported in the current environment are visible in the template library page, which you can access in the left navigation under pane under **Data**.
 
-You can perform the following actions on templates (Refer to [User permission for templates](templates.md#user-permission-for-template)):
+You can perform the following actions on templates. For more information, see [User permission for templates](templates.md#user-permission-for-template).
 
 ### Import template
 
-1. On the top menu bar, select **Import template** menu.
-2. In **Create template** pane,select **Browse** to select the template file, upload it to Fraud Protection portal.
-3. You can give the **Name** and **Description** you want to use for the imported template.
-4. Select **Create**, the template is imported and available in template library.
+To import a template, follow these steps.
+
+1. On the top menu bar, select **Import template**.
+2. On the **Create template** pane, select **Browse** to select the template file and upload it to Fraud Protection portal.
+3. Enter the **Name** and **Description** of the imported template.
+4. Select **Create** to import the template and make it available in template library.
 
 ### Edit template
 
-1. In the overflow menu of the template, select **Edit** in the menu.
-2. You can edit the **Name** and **Description** for the template.
-3. Select **Update** to save your changes.
+To edit a template, follow these steps.
+
+1. On the overflow menu of the template, select **Edit**.
+1. Enter the **Name** and **Description** of the template.
+1. Select **Update** to save your changes.
 
 ### Export template
 
-1. In the overflow menu of the template, select **Export** in the menu.
-2. The exported template file is downloaded to your computer that can be imported into Fraud Protection later.
+To export a template, do the following.
+
+1. On the overflow menu of the template, select **Export** to download the template file to your computer. This template can be imported back into Fraud Protection at a later time.
 
 ### Delete template
 
+To delete a template, follow these steps.
+
 1. In the overflow menu of the template, select **Delete** in the menu.
-2. Select **Delete** in the confirmation dialog. The template will be deleted permanently, i.e., this operation cannot be undone.
+1. Select **Delete** in the confirmation dialog to delete the template permanently. This operation can't be undone.
 
 ## Template limits
 
-Fraud Protection has a limit on the numbers of templates that can be created per environment. The below are the limits
+Fraud Protection has a limit on the numbers of templates that can be created per environment, as shown in the following table.
 
   | Template type | Limit | 
   |----------|---------------|  
@@ -224,10 +231,10 @@ Fraud Protection has a limit on the numbers of templates that can be created per
   | Maximum number of assessment templates within an environment | 20 |  
   | Maximum number of environment templates within an environment | 10 |  
 
-## Multi-hierarchy for template
+## View and manage templates in parent environments
 
-In template library, users can only view and manage the templates created in the current environment. However, if there are templates created in an environment that is parent to the current environment, users will be able to view and select those templates from the **Template** drop down menu in the create resource flow. In another word, users in the children environments may create new resources using the template from a parent environment.
+In the template library for your current environment, you can only view and manage the templates created in that environment. However, if there are templates created in a parent environment to the current environment, you can view and select those templates from the **Template** drop-down menu in the **Create** resource flow. Geenrally, users in child environments can create new resources using templates from parent environments.
 
-## User permission for template
+## User permissions for template
 
-For user permission, reference [User role and access](user-roles-access.md) and [Payment service provider user roles and access](psp-user-roles.md)
+For information on user permissions, see [User role and access](user-roles-access.md) and [Payment service provider user roles and access](psp-user-roles.md)
