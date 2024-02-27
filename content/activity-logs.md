@@ -16,9 +16,12 @@ The *Activity Logs* page lets you search for and view details of who changed wha
 For example, you can search for all the activity logs associated with a specific environment ID and when clickin on the log, you can review the details of an individual log before and after the associated event.
 
 > [!NOTE]
-> If the environment has child environments, the search results include logs for all the child environments. To view the environment information in the search results, use Environment name or Environment ID as search filters.
+> - If the environment has child environments, the search results include logs for all the child environments. To view the environment information in the search results, use Environment name or Environment ID as search filters.
 
 ## Getting started
+- Permissions: This setting is only accessible to users assigned the roles Product Admin and All Area Admin from [User roles and access](user-roles-access.md) as well as PSP Admin and Reporting roles from [Payment service provider user roles and access
+](psp-user-roles.md).
+- Get on the Activity logs page: You may find the tab under Settings in left and navigation
 - Select timeframe: First select the timeframe you want to search across. You can search between any two dates within the past 13 months.
 - Filter logs by attribute: To find logs, you must filter by one or more attributes. You can search by the following: Operation type, Changed by, Environement ID, Log ID, Operation type, Resource ID, Resource name and Resource type. You can add up to five filters, separated by a single And or Or condition.
 
