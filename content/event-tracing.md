@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to use event tracing in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -121,6 +121,37 @@ Assessment and associated label and observation events can be traced to event hu
     "eventId": "uniqueId",
     "assessmentApiName": "<your assessment api name>",
     "assessmentName": "<your assessment name>"
+}
+```
+
+##### Namespace: FraudProtection.CaseManagement.Events.
+Case management decision status and labels made from Case Management.
+
+```json
+{
+	"name": "FraudProtection.CaseManagement.Events",
+	"version": "1.0",
+	"metadata": {
+		"tenantId": "<your tenantID>",
+		"timestamp": "2020-09-25T03:46:53.3716978Z"
+	},
+	"assessmentId": "<your assessment uniqueId>",
+	"assessmentName": "<your assessment name>",
+	"caseId": "uniqueId of the case record",
+	"queueId": "uniqueId of the queue the case was routed to",
+	"queueName": "name of the queue the case was routed to",
+	"eventType": "<your assessment uniqueId>",
+	"eventId": "<your assessment transaction uniqueId>",
+	"creationDate": "creation datetime",
+	"reviewStartDate": "review start datetime",
+	"reviewedDate": "reviewed datetime",
+	"decision": "decision of the review agent",
+	"reason": "decision reason",
+	"reasonNote": "decision note",
+	"agentId": "uniqueId of the review agent",
+	"agentName": "name of the review agent",
+	"status": "status of the decision",
+	"fraudFlag": "fraud flag (label) of the decision"
 }
 ```
 
