@@ -120,7 +120,6 @@ Select Export to export your search results to a comma-separated values (CSV) fi
 •	All Columns – Export all data associated with this event.
 •	Current Columns – Export only data in the columns that are currently shown in the grid.
 > [!NOTE]
-•	You can create an event tracing subscription for your Activity logs event that shows the same fields shown on the Activity logs page.
 •	Exports which exceed 10,000 rows, or take longer than two minutes to generate, are automatically canceled.
 
 ## Review individual activity logs
@@ -149,9 +148,8 @@ Notes allow your team to have a rich collaboration when reviewing event details.
    
 You may also type hyperlinks that are clickable after they're published.
 
-## Export:
-Select Column options to customize the fields shown in the results grid or select Export to export the data into a CSV file.
-To further investigate a specific pattern, select Open in search to open a new tab with the appropriate search filters
+## Event Tracing:
+•	You may create an event tracing subscription for your Activity logs event that shows the same fields shown on the Activity logs page using the FraudProtection.ActivityLog namespace. See the [Event tracing](event-tracing.md) page for more details.
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
 
