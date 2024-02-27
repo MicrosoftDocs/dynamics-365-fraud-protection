@@ -91,7 +91,7 @@ Environment template subresources include:
 You can create a template from the supported resources in your Fraud Protection portal. 
 
 > [!NOTE]
-> In a multi-hierarchy tenant, templates created in an environment are accessible to its children environments. For more information, see [Multi-hierarchy for templates](templates.md#multi-hierarchy-for-template) for details.
+> In a multi-hierarchy tenant, templates created in an environment are accessible to its children environments. For more information, see [Multi-hierarchy for templates](templates.md#view-and-manage-templates-in-parent-environments) for details.
 
 ### Create a rule template
 
@@ -189,7 +189,7 @@ To create a new environment from a template, follow these steps.
 
 Templates created or imported in the current environment are visible in the template library page, which you can access in the left navigation under pane under **Data**.
 
-You can perform the following actions on templates. For more information, see [User permission for templates](templates.md#user-permission-for-template).
+You can perform the following actions on templates. For more information, see [User permission for templates](templates.md#user-permissions-for-templates).
 
 ### Import template
 
@@ -235,6 +235,6 @@ Fraud Protection has a limit on the numbers of templates that can be created per
 
 In the template library for your current environment, you can only view and manage the templates created in that environment. However, if there are templates created in a parent environment to the current environment, you can view and select those templates from the **Template** drop-down menu in the **Create** resource flow. In other words, users in child environments can create new resources using templates from parent environments.
 
-## User permissions for template
+## User permissions for templates
 
 For information on user permissions, see [User role and access](user-roles-access.md) and [Payment service provider user roles and access](psp-user-roles.md)
