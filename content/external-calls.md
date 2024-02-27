@@ -24,6 +24,9 @@ Before you create an external call, you should know about the following limitati
 - Fraud Protection currently supports only the following authentication methods: *Anonymous*, *Basic*, *Certificate*, *OAuth (Microsoft Entra ID)*, *OAuth (Generic)*, and *OAuth (Custom token)*.
 - Fraud Protection currently supports only the following HTTP methods: *GET* and *POST*.
 
+> [!NOTE]
+> To learn more about Microsoft's external data practices, please visit [External data practices](external-data-practices) section later in this article.
+
 
 ## Create an external call
 
