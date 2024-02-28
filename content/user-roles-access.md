@@ -375,6 +375,19 @@ The following table shows the specific read/write permissions that users have on
 <td>No access</td>
 </tr>
 <tr>
+<td colspan="2">Functions</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
 <td colspan="2">External calls</td>
 <td>Read/Write</td>
 <td>Read/Write</td>

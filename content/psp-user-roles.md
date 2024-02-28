@@ -1,7 +1,7 @@
 ---
 author: kha-microsoft
 description: This article describes how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
-ms.author: kfend
+ms.author: josaw
 ms.date: 02/28/2024
 ms.topic: conceptual
 search.audienceType:
@@ -216,6 +216,17 @@ The following table shows the specific read/write permissions that users have on
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
+        </tr>
+        <tr>
+          <td colspan="2">Functions</td>
+          <td>Read/Write</td>
+          <td>Read/Write</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
         </tr>
         <tr>
             <td rowspan="2">Lists</td>
