@@ -18,7 +18,7 @@ The *event tracing* functionality in Microsoft Dynamics 365 Fraud Protection let
 
 Events can be aggregated and used to define metrics that you can use to monitor and manage your service costs and usage. Events can also be used to develop custom reports that use transactional data, or to maintain system logs for actions taken in the Fraud Protection portal (for example, "*user A* edited *list B* on *date C*"). When you use the Azure Event Hubs connectors that are available in Microsoft Power Automate and Azure Logic Apps, you can also use the data that you send to Azure Event Hubs for alerting or highly customized workflows. Similarly, with Azure Blob storage you can create a new subscription that copies all historical data into your cold storage account for further analysis.
 
-If your Fraud Protection instance has multiple environments, you can find event tracing for each environment by using the environment switcher. If the environment has child environments, event tracing that's subscribed to for the parent environment will automatically include the same events for all the child environments. 
+If your Fraud Protection instance has multiple environments, you can find event tracing for each environment by using the environment switcher. If the environment has child environments, event tracing that's subscribed to for the parent environment automatically includes the same events for all the child environments. 
 
 > [!NOTE]
 > Event tracking customers must have a subscription to additional Azure services such as Event Hub or Blob storage. Contact your Microsoft account executive for details. If you have Azure global administrator credentials, sign in to the [Azure portal](https://ms.portal.azure.com/#home) to determine available subscriptions.
@@ -32,9 +32,9 @@ To start using event tracing functionality, follow these steps.
 1. Enter a subscription display name.
 1. Select a storage location:  
    1. **For Event Hubs**: Enter the connection string for the Event Hubs instance in Azure Key Vault. The Azure Key Vault should reside in the same tenant as your Fraud Protection subscription. Grant **Get Secret Access** to the Fraud Protection app to the Azure Key Vault. Enter the **Secret Identifier URL** from your Azure Key Vault in the Fraud Protection portal.  For more information, see [Get an Event Hubs connection string](/azure/event-hubs/event-hubs-get-connection-string).
-   1. **For Blob Storage**: Enter the connection string for the Azure Blob Storage account in Azure Key Vault. The Azure Key Vault should reside in the same tenant as your Fraud Protection subscription. Grant **Get Secret Access** to the Fraud Protection app to the Azure Key Vault. In the Fraud Protection portal, enter the secret identifier URL from your Azure Key Vault and a container name where your event tracing data will reside. For more information, see [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
-1. Select **Test connection**. Once the connection is successfully tested, account-related information that was extracted from the connection string in the Azure Key Vault will be displayed. For Azure Event Hubs, this read-only information will include **Event Hub Namespace** and **Event Hub Name**. For Azure Blob Storage, **Storage account name** will be displayed. Verify that this information matches the storage account you intend to use. Without a successful connection test, the **Create** button will not be enabled. 
-1. Select an event and review the description and sample of the JSON payload. Then save the subscription by selecting **Create**. Events are instantaneously sent to your Event Hubs instance from that point in time. If you selected Blob Storage, the copy process to write all historical data will begin and all events will be published to your container every 30 minutes.  
+   1. **For Blob Storage**: Enter the connection string for the Azure Blob Storage account in Azure Key Vault. The Azure Key Vault should reside in the same tenant as your Fraud Protection subscription. Grant **Get Secret Access** to the Fraud Protection app to the Azure Key Vault. In the Fraud Protection portal, enter the secret identifier URL from your Azure Key Vault and a container name where your event tracing data resides. For more information, see [View account access keys](/azure/storage/common/storage-account-keys-manage?tabs=azure-portal#view-account-access-keys).
+1. Select **Test connection**. Once the connection is successfully tested, account-related information that was extracted from the connection string in the Azure Key Vault is displayed. For Azure Event Hubs, this read-only information includes **Event Hub Namespace** and **Event Hub Name**. For Azure Blob Storage, **Storage account name** is displayed. Verify that this information matches the storage account you intend to use. Without a successful connection test, the **Create** button isn't enabled. 
+1. Select an event and review the description and sample of the JSON payload. Then save the subscription by selecting **Create**. Events are instantaneously sent to your Event Hubs instance from that point in time. If you selected Blob Storage, the copy process to write all historical data begins and all events are published to your container every 30 minutes.  
 1. Go back to the [Fraud Protection](https://dfp.microsoft.com/) portal to view the count for the **Events/Hr.** metric and make sure that data is being sent to Event Hubs and Blob Storage. The **Events/Hr** and **Failures/Hr** metrics show an average over the past 24 hours.
 
     > [!TIP]
@@ -48,7 +48,7 @@ To start using event tracing functionality, follow these steps.
 Five supported classifications of events are currently available in event tracing: *transactional events*, *trace events*, *assessment events*, *audit events*, and *monitoring events*.
 
 ### Transactional events
-Use transactional events to create custom scorecards and automated workflows using the data available in your assessment and non-assessment API calls. Using blob storage, you can also copy the data from historical API calls to create a data warehouse for your business. The payload for this event includes the entire request and response for each API call.
+Use transactional events to create custom scorecards and automated workflows using the data available in your assessment and nonassessment API calls. Using blob storage, you can also copy the data from historical API calls to create a data warehouse for your business. The payload for this event includes the entire request and response for each API call.
 
 ##### Namespace: FraudProtection.Observe.\<API Name\> or FraudProtection.Assessment.\<API Name\>
 
@@ -162,7 +162,7 @@ Use audit events to track portal actions and develop an audit log. Audit events 
 
 ### Audit log access
 
-There are two ways that you can access audit logs. You can set up event tracing, or you can request an auto-generated audit log be sent by creating a Customer support ticket. If you decide not to use event tracing and instead submit a support ticket, the support ticket is routed to the Fraud Protection engineering team. The team extracts the logs and provides them back to you. Audit logs are captured and stored in the same geo that you have chosen to provision an environment. The logs can't be edited after they are captured and the log retention period is 365 days. Logs older than 365 days are automatically deleted.
+There are two ways that you can access audit logs. You can set up event tracing, or you can request an autogenerated audit log be sent by creating a Customer support ticket. If you decide not to use event tracing and instead submit a support ticket, the support ticket is routed to the Fraud Protection engineering team. The team extracts the logs and provides them back to you. Audit logs are captured and stored in the same geo in which you provision an environment. The logs can't be edited after they're captured and the log retention period is 365 days. Logs older than 365 days are automatically deleted.
 
 There are five events generated that can be tracked by using the audit logs. Those events are:
 
@@ -193,7 +193,7 @@ The "userID" is followed by operation and specific resource type fields.
 
 ### Monitoring events
 
-You can use monitoring events for custom reporting and alerting on your API and external calls performance in conjunction with the reporting available in the Fraud Protection portal. Each of the events below will provide insight into the latency and errors for each service.
+You can use monitoring events for custom reporting and alerting on your API and external calls performance with the reporting available in the Fraud Protection portal. Each of the events below provides insight into the latency and errors for each service.
 
 ##### Namespace: FraudProtection.Monitoring.RequestLatencyMsDistribution.
 
@@ -278,7 +278,7 @@ For external calls, latency (in ms) and http status code metrics are sent with e
 
 **Namespace: FraudProtection.Errors.ExternalCalls**
 
-This event logs errors for each failed external call, and can be useful for debugging any issues you may see with your external call performance. The full request and response for the call will be logged, as well as the latency, and the rule and clause the call were triggered from.
+This event logs errors for each failed external call, and can be useful for debugging any issues you may see with your external call performance. The full request and response for the call are logged, as well as the latency and the rule and clause the call were triggered from.
 
 ```json
 
