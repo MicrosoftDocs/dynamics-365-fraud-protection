@@ -110,7 +110,7 @@ In addition to HTTP client errors (400, 401, and 403), you might see the followi
 
 - **Invalid application id** – The application ID that was provided doesn't exist in your tenant, or it isn't valid.
 - **Microsoft Entra failure** – The Microsoft Entra token couldn't be retrieved.
-- **Definition not found** – The external call was deleted, but it's still referenced in a rule.
+- **Definition not found** – The external call was deleted, but is still referenced in a rule.
 - **Timeout** – The request to the target took longer than the specified time-out.
 - **Communication failure** – No connection could be made to the target because of a network issue or because the target is unavailable.
 - **Circuit breaker** – If the external call fails repeatedly and exceeds a certain threshold, all further calls are suspended for a short interval.
@@ -158,7 +158,7 @@ If **myCall** requires a parameter, such as *IPaddress*, use the following synta
 
 External.myCall(@"device.ipAddress")
 
-You can also access the Diagnostics object in rules, which can enable you to discover important diagnostic and debug information from an external call response. The Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Any of these fields can be accessed in the rules experience and can be used with the Observe Output method to create custom properties. It's important to note that the Diagnostics object has to be created by using its corresponding extension method, “.GetDiagnostics()”, before the object’s fields can be used in the rules. 
+You can also access the Diagnostics object in rules, which can enable you to discover important diagnostic and debug information from an external call response. The Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Any of these fields can be accessed in the rules experience and can be used with the Observe Output method to create custom properties. Before the object’s fields can be used in the rules, the Diagnostics object must be created using the corresponding extension method `.GetDiagnostics()`. 
 
 The following example shows a sample rule using the Diagnostics object:
 
@@ -221,8 +221,8 @@ The following table lists the claims that you can expect in bearer tokens that F
 | Name           | Claim | Description |
 |----------------|-------|-------------|
 | Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Microsoft Entra tenant ID](/azure/active-directory/fundamentals/how-to-find-tenant). |
-| Audience       | aud   | This claim identifies the Azure application authorized to access the external service you want to call. To learn more about how configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
-| Application ID | appid | This claim identifies who is requesting a token. For more information on how to configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
+| Audience       | aud   | This claim identifies the Azure application authorized to access the external service you want to call. For information about how to configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). |
+| Application ID | appid | This claim identifies who is requesting a token. For more information on how to configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). |
 
 When your API receives a token, it should open the token and validate that each of the preceding claims matches its description.
 
@@ -300,7 +300,7 @@ For more information on how to generate a certificate in Azure Key Vault, see [C
 
 ## External data practices
 
-You acknowledge that you're responsible for adhering to all applicable laws and regulations, including without limitation data protection laws, contractual restrictions and/or policies related to data sets you provide to Microsoft through the External Calls feature of Fraud Protection. Further, you acknowledge that your use of Fraud Protection is subject to the use restrictions detailed in the [Microsoft Customer Agreement](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDynamics365Services/MCA), which states that you may not use Fraud Protection (i) as the sole factor in determining whether to proceed with a payment transaction; (ii) as a factor in determining any person's financial status, financial history, creditworthiness, or eligibility for insurance, housing, or employment; or (iii) to make decisions that produce legal effects or significantly affect a person. You're also prohibited from providing or otherwise using sensitive or highly regulated data types associated with your use of the external calls feature of Fraud Protection. Take time to review any data set or data types before you use them with the external calls feature of Fraud Protection to ensure that you're compliant with this provision. Microsoft also reserves the right to verify that you're compliant with this provision.
+You acknowledge that you're responsible for adhering to all applicable laws and regulations, including without limitation data protection laws, contractual restrictions and/or policies that are related to data sets you provide to Microsoft through the External Calls feature of Fraud Protection. Further, you acknowledge that your use of Fraud Protection is subject to the use restrictions detailed in the [Microsoft Customer Agreement](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDynamics365Services/MCA), which states that you may not use Fraud Protection (i) as the sole factor in determining whether to proceed with a payment transaction; (ii) as a factor in determining any person's financial status, financial history, creditworthiness, or eligibility for insurance, housing, or employment; or (iii) to make decisions that produce legal effects or significantly affect a person. You're also prohibited from providing or otherwise using sensitive or highly regulated data types that are associated with your use of the external calls feature of Fraud Protection. Take time to review any data set or data types before you use them with the external calls feature of Fraud Protection to ensure that you're compliant with this provision. Microsoft also reserves the right to verify that you're compliant with this provision.
 
 ## Additional resources
 
