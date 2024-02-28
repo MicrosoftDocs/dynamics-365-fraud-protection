@@ -30,12 +30,12 @@ Before you create an external call, you should know about the following limitati
 
 ## Create an external call
 
-To create an external call, follow mthese steps.
+To create an external call, follow these steps.
 
 1. In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **External Calls**, and then select **New external call**.
 1. Review and set the following fields as required:
 
-    - **Name** – Enter the name that you will use to reference the external call from your rules. The name can contain only numbers, letters, and underscores. It can't begin with a number.
+    - **Name** – Enter the name that you use to reference the external call from your rules. The name can contain only numbers, letters, and underscores. It can't begin with a number.
 
         > [!NOTE]
         > You can't change the name of an external call after you use it in a rule.
@@ -57,14 +57,14 @@ To create an external call, follow mthese steps.
 
     - **Authentication** – Select the method to use to authenticate incoming requests. For more information about authentication, authentication-specific fields, authorization, and Microsoft Entra tokens, see [Understand authentication and authorization](external-calls.md#understand-authentication-and-authorization).
    - **Headers** - You can provide headers as needed. The default value of **Content-Type** is "application/json". Currently, Fraud Protection only supports "application/json" and "application/x-www-form-urlencoded" content types.
-    - **Sample request** – Provides an example of the request that's sent to your external call. The request should reflect the parameter names and values that you specified, and it can't be edited. You can also add configurations to the request URL or body as well. 
+    - **Sample request** – An example of the request sent to your external call. The request should reflect the parameter names and values that you specified, and it can't be edited. You can also add configurations to the request URL or body as well. 
 
         > [!NOTE]
         > For the *GET* method, no request body is included. 
 
        For *POST* methods, the request body is shown. You can construct a custom request body for a POST call by selecting **+ Advanced build your own request**. The sample request is used to make a sample call to your endpoint, either before creation or whenever you select **Test connection**.
 
-     - **Sample response** – Provides an example of the data that's returned in a successful response from your API endpoint. This data must be in JavaScript Object Notation (JSON) format and can be referenced in your rules. The sample response that you provide is shown in the rule editor, and also enables autocomplete on the response fields. Select **{} Get API response** to automatically enter an actual response from your API in this field.
+     - **Sample response** – An example of the data returned in a successful response from your API endpoint. This data must be in JavaScript Object Notation (JSON) format and can be referenced in your rules. The sample response that you provide is shown in the rule editor, and also enables autocomplete on the response fields. Select **{} Get API response** to automatically enter an actual response from your API in this field.
        
         > [!NOTE]
         > Sample response has to be poppulated in order to successfully complete the external call setup.
@@ -79,7 +79,7 @@ To create an external call, follow mthese steps.
 
 To ensure that Fraud Protection can connect to your endpoint, test the connection at any point.
 
-- To test a connection while you're creating a new external call or editing an existing external call, set all the required fields, and then select **Test connection**. Fraud Protection uses the endpoint and parameters that you provided to send a request to your external call. You can also manually add configurations in the URL, header, or request body. 
+- To test a connection when you're creating a new external call or editing an existing external call, set all the required fields, and then select **Test connection**. Fraud Protection uses the endpoint and parameters that you provided to send a request to your external call. You can also manually add configurations in the URL, header, or request body. 
 - If Fraud Protection successfully reaches the target endpoint, a green message bar appears at the top of the panel to inform you that the connection was successful. To view the full response, select **See details**.
 - If Fraud Protection can't reach the target endpoint, or if it doesn't receive a response before the specified time-out, a red message bar appears at the top of the panel and shows the error that was generated. To view more information about the error, select **See details**.
 
@@ -91,7 +91,7 @@ Fraud Protection shows a tile that contains three metrics for each external call
 
 - **Requests per second** – The total number of requests divided by the total number of minutes in the selected time frame.
 - **Average latency** – The total number of requests divided by the total number of minutes in the selected time frame.
-- **Success rate** – The total number of successful requests divided by the total number of requests that have been made.
+- **Success rate** – The total number of successful requests divided by the total number of requests made.
 
 The numbers and charts that are shown on this tile include only data for the time frame that you select in the drop-down list in the upper-right corner of the page.
 
@@ -109,11 +109,11 @@ In addition to the three metrics that were described earlier, an **Error** chart
 In addition to HTTP client errors (400, 401, and 403), you might see the following errors:
 
 - **Invalid application id** – The application ID that was provided doesn't exist in your tenant, or it isn't valid.
-- **Microsoft Entra failure** – The Microsoft Entra token could not be retrieved.
-- **Definition not found** – The external call has been deleted, but it's still referenced in a rule.
+- **Microsoft Entra failure** – The Microsoft Entra token couldn't be retrieved.
+- **Definition not found** – The external call was deleted, but it's still referenced in a rule.
 - **Timeout** – The request to the target took longer than the specified time-out.
 - **Communication failure** – No connection could be made to the target because of a network issue or because the target is unavailable.
-- **Circuit breaker** – If the external call has failed continuously and has exceeded a certain threshold, all further calls will be suspended for a short interval.
+- **Circuit breaker** – If the external call fails repeatedly and exceeds a certain threshold, all further calls are suspended for a short interval.
 - **Unknown Failure** – An internal Dynamics 365 failure occurred.
 
 ### Use event tracing to monitor external calls
@@ -150,7 +150,7 @@ For information about how to integrate this data with your own organization's wo
 
 To use your external calls to make decisions, reference them from your rules.
 
-For example, to reference an external call that's named **myCall** in your rule, use the following syntax:
+For example, to reference an external call named **myCall** in your rule, use the following syntax:
 
 External.myCall()
 
@@ -160,7 +160,7 @@ External.myCall(@"device.ipAddress")
 
 You can also access the Diagnostics object in rules, which can enable you to discover important diagnostic and debug information from an external call response. The Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Any of these fields can be accessed in the rules experience and can be used with the Observe Output method to create custom properties. It's important to note that the Diagnostics object has to be created by using its corresponding extension method, “.GetDiagnostics()”, before the object’s fields can be used in the rules. 
 
-Below is a sample rule using the Diagnostic object:
+The following example shows a sample rule using the Diagnostics object:
 
 ```FraudProtectionLanguage
 LET $extResponse = External. myCall(@"device.ipAddress")
@@ -190,25 +190,25 @@ To ensure that data is securely accessed, APIs often authenticate the sender of 
 
 ### Anonymous
 
-If you select **Anonymous**, the authorization header in the HTTP request to the target endpoint will be left blank. Use this option when the target endpoint does not require an authorization header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL that you enter in the **Web Request** field. The target endpoint can then validate if the API key from the request URL is allowed, and then decide whether permission should be granted.
+If you select **Anonymous**, the authorization header in the HTTP request to the target endpoint is blank. Use this option when the target endpoint doesn't require an authorization header. For example, if your endpoint uses an API key, configure the key-value pair as part of the request URL that you enter in the **Web Request** field. The target endpoint can then validate if the API key from the request URL is allowed, and then decide whether permission should be granted.
 
 ### Basic
 
 If you select **Basic** as the authentication method, provide the following information to set up the external call:
 - **Username** – Provide the username for the URL that you're trying to connect to.
-- **Password URL** – Provide the password identifier URL from your Azure Key Vault for basic authentication. FOr information on how to store a password in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#store-passwords-in-your-Azure-Key-Vault).
+- **Password URL** – Provide the password identifier URL from your Azure Key Vault for basic authentication. For information on how to store a password in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#store-passwords-in-your-Azure-Key-Vault).
 
 ### Certificate
 
-If you select **Certificate** as the authentication method, provide the following information to setup the external call:
+If you select **Certificate** as the authentication method, provide the following information to set up the external call:
 - **Certificate URL** – Provide the certificate identifier URL from your Azure Key Vault. For information on how to generate a certificate in your Azure Key Vault and provide access to Fraud Protection, see [Create a certificate in your Azure Key Vault](external-calls.md#Create-a-certificate-in-your-Azure-Key-Vault).
 
 ### OAuth (Microsoft Entra ID)
 
-If you select **OAuth (Microsoft Entra ID)** (formerly Azure Active Directory) as the authentication method, provide the following additional information to setup the external call:
-- **Audience** - If you selected OAuth (Microsoft Entra ID) as the authentication method, you'll be asked to provide an audience. You can use an existing Azure application as the audience or create a new one through the integration experience within the Fraud Protection portal. Ensure the audience has permission to access the external call/service. For more information about how to configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). 
+If you select **OAuth (Microsoft Entra ID)** (formerly Azure Active Directory) as the authentication method, provide the following additional information to set up the external call:
+- **Audience** - If you selected OAuth (Microsoft Entra ID) as the authentication method, you're prompted to provide an audience. You can use an existing Azure application as the audience or create a new one through the integration experience within the Fraud Protection portal. Ensure the audience has permission to access the external call/service. For more information about how to configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). 
 - **Application ID** – You must provide the application ID of a new or existing Microsoft Entra application within your Fraud Protection subscription tenant. Generate a certificate in your Azure Key Vault. The Fraud Protection app should have read access to this Azure Key Vault. For information on how to generate a certificate in your Azure Key Vault and provide access to Fraud Protection, see [Create a certificate in your Azure Key Vault](external-calls.md#Create-a-certificate-in-your-Azure-Key-Vault). Load the certificate to this Microsoft Entra application. For more information about how to create and manage Microsoft Entra applications, see [Create Microsoft Entra Applications](integrate-real-time-api.md#create-microsoft-entra-applications).
-- **Certificate URL** – Provide the certificate identifier URL from your Azure Key Vault. This is the same certificate you uploaded to the Microsoft Entra app earlier. 
+- **Certificate URL** – Provide the certificate identifier URL from your Azure Key Vault, which is the same certificate you uploaded to the Microsoft Entra app earlier. 
 
 When you select **Microsoft Entra ID**, the authorization header in the HTTP request to the target endpoint includes a bearer token. A bearer token is a JSON Web Token (JWT) issued by Microsoft Entra ID. For more information about JWTs, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown in the following example:
 
@@ -216,17 +216,17 @@ Bearer \<token\>
 
 #### Token claims
 
-The following table lists the claims that you can expect in bearer tokens that are issued by Fraud Protection.
+The following table lists the claims that you can expect in bearer tokens that Fraud Protection issues.
 
 | Name           | Claim | Description |
 |----------------|-------|-------------|
-| Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that's associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Microsoft Entra tenant ID](/azure/active-directory/fundamentals/how-to-find-tenant). |
-| Audience       | aud   | This claim identifies the Azure application that's authorized to access the external service you want to call. To learn more about how configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
-| Application ID | appid | This claim identifies who is requesting a token. To learn more about how configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
+| Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Microsoft Entra tenant ID](/azure/active-directory/fundamentals/how-to-find-tenant). |
+| Audience       | aud   | This claim identifies the Azure application authorized to access the external service you want to call. To learn more about how configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
+| Application ID | appid | This claim identifies who is requesting a token. For more information on how to configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant) |
 
 When your API receives a token, it should open the token and validate that each of the preceding claims matches its description.
 
-Here is an example that shows how you can authenticate an incoming request by using [JwtSecurityTokenHandler](/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler).
+Here's an example that shows how you can authenticate an incoming request by using [JwtSecurityTokenHandler](/dotnet/api/system.identitymodel.tokens.jwt.jwtsecuritytokenhandler).
 
 ```C#
 string authHeader = "Bearer <token>"; // the Authorization header value
@@ -242,7 +242,7 @@ if(tid != "<my tenant id>" || aud != "<my audience>" || appid != "<my applicatio
 
 ### OAuth (Generic)
 
-If you select **OAuth (Generic)** as the authentication method, provide the following additional information to setup the external call:
+If you select **OAuth (Generic)** as the authentication method, provide the following additional information to set up the external call:
 - **Token URL** – The API endpoint for the token call.
 - **Token authentication** – Select either Anonymous or Basic authentication method for the token call.
 - **Client ID/Username** – The client ID for anonymous authentication, or username for basic authentication. 
@@ -259,7 +259,7 @@ If you select **OAuth (Custom token)** as the authentication method, you can con
 - **Username** – Username for basic authentication. 
 - **Password URL** – Password identifier URL from your Azure Key Vault for basic authentication. For information on how to store a password in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#Store-passwords-in-your-Azure-Key-Vault).
 - **Headers** – Header values. 
-- **Sample request** – An example of the request that's sent to your token endpoint:
+- **Sample request** – An example of the request sent to your token endpoint:
     - **Sample request URL** – A read-only field that shows the request URL used to make the sample call.
     - **Sample request body** – You can construct a custom request body for the token call by selecting **+ Advanced build your own request**. The sample request URL and body are used to make a sample call to your token endpoint, either before creation or whenever you select **Test connection**.
 - **Timeout** – Specify the timeout duration between 1 and 5000.
@@ -270,13 +270,13 @@ In accordance with Microsoft's commitment to your data security, Fraud Protectio
 
 ### Store passwords in your Azure Key Vault 
 
-To upload secrets or passwords to the Azure key vault and grant access permissions to Fraud Protection, follow these steps.
+To upload secrets or passwords to the Azure Key Vault and grant access permissions to Fraud Protection, follow these steps.
 
 1. Sign in to the [Azure portal](https://portal.azure.com/#home) using your tenant credentials.
 1. You can use an existing key vault, or create a new key vault by following the instructions in [Quickstart: Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal). Ensure that **Get** and **List** are selected in the secret permissions.
 1. In the left navigation pane, select **Secrets**, and then select **Generate/Import**.
 1. On the **Create a secret** page, enter a name for your secret. The secret value should be the password for the web URL that you want to connect to using external calls.
-1. Enter information in the required fields, and then select **Create**. Copy and save the secret identifier because you'll need it when setting up the external call in the Fraud Protection portal.
+1. Enter information in the required fields, and then select **Create**. Copy and save the secret identifier to use later when setting up the external call in the Fraud Protection portal.
 1. In the left navigation pane, under **Settings**, select **Access Policies**, and then select **Add new access policy**.
 1. In the **Secret Permissions** section, select the **Get** and **List** checkboxes.
 1. In the **Principal** and **Authorized application** fields, search for **Dynamics 365 Fraud Protection**, and then select **Select**.
@@ -284,7 +284,7 @@ To upload secrets or passwords to the Azure key vault and grant access permissio
 
 ### Create a certificate in your Azure Key Vault 
 
-Create a certificate in your Azure Key Vault, follow these steps. 
+To create a certificate in your Azure Key Vault, follow these steps. 
 
 1. Sign in to the [Azure portal](https://portal.azure.com/#home) using your tenant credentials.
 1. You can use an existing key vault, or create a new key vault by following the instructions in [Quickstart: Create a key vault using the Azure portal](/azure/key-vault/general/quick-create-portal). Make sure that **Get** and **List** are selected in the secret permissions.
@@ -298,11 +298,9 @@ Create a certificate in your Azure Key Vault, follow these steps.
 
 For more information on how to generate a certificate in Azure Key Vault, see [Creating and merging a certificate signing request in Azure Key Vault](/azure/key-vault/certificates/create-certificate-signing-request?tabs=azure-portal).
 
-
 ## External data practices
 
-You acknowledge that you are responsible for adhering to all applicable laws and regulations, including without limitation data protection laws, contractual restrictions and/or policies related to data sets you provide to Microsoft through the External Calls feature of Fraud Protection. Further, you acknowledge that your use of Fraud Protection is subject to use restrictions detailed in the [Microsoft Customer Agreement](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDynamics365Services/MCA), which states that you may not use Fraud Protection (i) as the sole factor in determining whether to proceed with a payment transaction; (ii) as a factor in determining any person's financial status, financial history, creditworthiness, or eligibility for insurance, housing, or employment; or (iii) to make decisions that produce legal effects or significantly affect a person. You are also prohibited from providing or otherwise using sensitive or highly regulated data types in connection with your use of the external calls feature of Fraud Protection. Please take time to review any data set or data types before you use them in connection with the external calls feature of Fraud Protection to ensure that you are compliant with this provision. Microsoft also reserves the right to verify that you are compliant with this provision.
-
+You acknowledge that you're responsible for adhering to all applicable laws and regulations, including without limitation data protection laws, contractual restrictions and/or policies related to data sets you provide to Microsoft through the External Calls feature of Fraud Protection. Further, you acknowledge that your use of Fraud Protection is subject to the use restrictions detailed in the [Microsoft Customer Agreement](https://www.microsoft.com/licensing/terms/productoffering/MicrosoftDynamics365Services/MCA), which states that you may not use Fraud Protection (i) as the sole factor in determining whether to proceed with a payment transaction; (ii) as a factor in determining any person's financial status, financial history, creditworthiness, or eligibility for insurance, housing, or employment; or (iii) to make decisions that produce legal effects or significantly affect a person. You're also prohibited from providing or otherwise using sensitive or highly regulated data types associated with your use of the external calls feature of Fraud Protection. Take time to review any data set or data types before you use them with the external calls feature of Fraud Protection to ensure that you're compliant with this provision. Microsoft also reserves the right to verify that you're compliant with this provision.
 
 ## Additional resources
 
