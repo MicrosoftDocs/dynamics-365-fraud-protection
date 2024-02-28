@@ -490,7 +490,9 @@ The following are some more detailed examples of how to use the above syntax bas
 
 > [!NOTE]
 > Type casting best practices:
->   - Always type cast at the end of the **.** chain. Example:
+>   - Always type cast at the end of the **.** chain.
+
+Example:
 
 ```FraudProtectionLanguage
 LET $sample = External.myCall().data[0].Item1[0].AsJsonArray()
