@@ -331,6 +331,40 @@ The following table shows the specific read/write permissions that users have on
             <td>No access</td>
         </tr>
         <tr>
+            <td rowspan="3">Templates *</td>
+            <td>Environment</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Assessment</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
+            <td>Rule</td>
+            <td>Read/Write</td>
+            <td>Read/Write</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+        </tr>
+        <tr>
             <td rowspan="3">Integration</td>
             <td>Dashboard</td>
             <td>Read only</td>
@@ -469,9 +503,10 @@ The following table shows the specific read/write permissions that users have on
     </tbody>
 </table>
 
-1. ManualReviewAgent can remove items from **Support lists** (for example, Safe, Block, and Watch) via the **Event Details** page, or add items to those lists. However, it can't read or edit the full **Support lists** page.
-2.  ManualReviewAgent can make decisions (for example, Approve, Reject, or Send back to queue) about cases in queues. However, it can't modify higher-level queue settings.
-3. To create a Microsoft Entra application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
+- Users with the Manual Review Agent role can remove items from **Support lists** (for example, Safe, Block, and Watch) via the **Event Details** page, or add items to those lists. However, they can't read or edit the full **Support lists** page.
+- Users with the Manual Review Agent role can make decisions (for example, Approve, Reject, or Send back to queue) about cases in queues. However, they can't modify higher-level queue settings.
+- To create a Microsoft Entra application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
+- To create a template from a resource, the user must have both read permission on the resource and write permission on templates page. To create a resource using a template, the user needs to have both write permission on the resource and read permission on template page. 
 
 ### Member access
 
