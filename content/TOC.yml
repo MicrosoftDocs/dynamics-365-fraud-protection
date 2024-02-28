@@ -144,7 +144,7 @@
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
-    -name: Functions
+    - name: Functions
       href: Functions.md
     - name: External calls
       href: external-calls.md
