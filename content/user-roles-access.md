@@ -2,7 +2,7 @@
 author: arj-malhotra
 description: This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/24/2023
+ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -369,6 +369,19 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>No access</td>
 <td>Read/write</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td colspan="2">Functions</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
