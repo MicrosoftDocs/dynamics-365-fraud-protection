@@ -26,7 +26,7 @@ Before you create an external call, you should know about the following limitati
 - Fraud Protection currently supports only the following HTTP methods: *GET* and *POST*.
 
 > [!NOTE]
-> To learn more about Microsoft's external data practices, see [External data practices](#external-data-practices).
+> To learn more about Microsoft's external data practices, see [External data practices](external-calls.md#external-data-practices).
 
 ## Create an external call
 
@@ -46,7 +46,7 @@ To create an external call, follow these steps.
         > [!NOTE]
         > You can use the `Request.CorrelationId()` function in a rule to extract the correlation ID of an incoming event and pass it as a parameter value for the external call.
 
-    - **Add configuration** – You can provide fixed configuration data on the external call setup page. For sensitive information, you can mark a configuration to be a secret and provide a secret identifier URL from your Azure Key Vault instead of the actual value. For information on how to store secrets in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#Store-passwords-in-your-Azure-Key-Vault). 
+    - **Add configuration** – You can provide fixed configuration data on the external call setup page. For sensitive information, you can mark a configuration to be a secret and provide a secret identifier URL from your Azure Key Vault instead of the actual value. For information on how to store secrets in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#store-passwords-in-your-azure-key-vault). 
 
     Like parameters, configurations defined in this step can be manually added to the request URL, header, and/or body using the format *{configuration.\<configuration name\>}*. However, unlike parameters where the actual value is passed from the rule, the configuration values provided on the external call setup page are used when making sample or actual calls.
 
@@ -199,18 +199,18 @@ If you select **Anonymous**, the authorization header in the HTTP request to the
 
 If you select **Basic** as the authentication method, provide the following information to set up the external call:
 - **Username** – Provide the username for the URL that you're trying to connect to.
-- **Password URL** – Provide the password identifier URL from your Azure Key Vault for basic authentication. For information on how to store a password in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#store-passwords-in-your-Azure-Key-Vault).
+- **Password URL** – Provide the password identifier URL from your Azure Key Vault for basic authentication. For information on how to store a password in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#store-passwords-in-your-azure-key-vault).
 
 ### Certificate
 
 If you select **Certificate** as the authentication method, provide the following information to set up the external call:
-- **Certificate URL** – Provide the certificate identifier URL from your Azure Key Vault. For information on how to generate a certificate in your Azure Key Vault and provide access to Fraud Protection, see [Create a certificate in your Azure Key Vault](external-calls.md#Create-a-certificate-in-your-Azure-Key-Vault).
+- **Certificate URL** – Provide the certificate identifier URL from your Azure Key Vault. For information on how to generate a certificate in your Azure Key Vault and provide access to Fraud Protection, see [Create a certificate in your Azure Key Vault](external-calls.md#create-a-certificate-in-your-azure-key-vault).
 
 ### OAuth (Microsoft Entra ID)
 
 If you select **OAuth (Microsoft Entra ID)** (formerly Azure Active Directory) as the authentication method, provide the following additional information to set up the external call:
 - **Audience** - If you selected OAuth (Microsoft Entra ID) as the authentication method, you're prompted to provide an audience. You can use an existing Azure application as the audience or create a new one through the integration experience within the Fraud Protection portal. Ensure the audience has permission to access the external call/service. For more information about how to configure Microsoft Entra authentication, see [Configure Microsoft Entra authentication](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-tenant). 
-- **Application ID** – You must provide the application ID of a new or existing Microsoft Entra application within your Fraud Protection subscription tenant. Generate a certificate in your Azure Key Vault. The Fraud Protection app should have read access to this Azure Key Vault. For information on how to generate a certificate in your Azure Key Vault and provide access to Fraud Protection, see [Create a certificate in your Azure Key Vault](external-calls.md#Create-a-certificate-in-your-Azure-Key-Vault). Load the certificate to this Microsoft Entra application. For more information about how to create and manage Microsoft Entra applications, see [Create Microsoft Entra Applications](integrate-real-time-api.md#create-microsoft-entra-applications).
+- **Application ID** – You must provide the application ID of a new or existing Microsoft Entra application within your Fraud Protection subscription tenant. Generate a certificate in your Azure Key Vault. The Fraud Protection app should have read access to this Azure Key Vault. For information on how to generate a certificate in your Azure Key Vault and provide access to Fraud Protection, see [Create a certificate in your Azure Key Vault](external-calls.md#create-a-certificate-in-your-azure-key-vault). Load the certificate to this Microsoft Entra application. For more information about how to create and manage Microsoft Entra applications, see [Create Microsoft Entra Applications](integrate-real-time-api.md#create-microsoft-entra-applications).
 - **Certificate URL** – Provide the certificate identifier URL from your Azure Key Vault, which is the same certificate you uploaded to the Microsoft Entra app earlier. 
 
 When you select **Microsoft Entra ID**, the authorization header in the HTTP request to the target endpoint includes a bearer token. A bearer token is a JSON Web Token (JWT) issued by Microsoft Entra ID. For more information about JWTs, see [Microsoft identity platform access tokens](/azure/active-directory/develop/access-tokens). Fraud Protection appends the token value to the text "Bearer" in the required format in the request authorization header as shown in the following example:
@@ -249,7 +249,7 @@ If you select **OAuth (Generic)** as the authentication method, provide the foll
 - **Token URL** – The API endpoint for the token call.
 - **Token authentication** – Select either Anonymous or Basic authentication method for the token call.
 - **Client ID/Username** – The client ID for anonymous authentication, or username for basic authentication. 
-- **Client secret/Password URL** – The client secret identifier URL from your Azure Key Vault for anonymous authentication, or password identifier URL for basic authentication. For information on how to store a secret in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#Store-passwords-in-your-Azure-Key-Vault).
+- **Client secret/Password URL** – The client secret identifier URL from your Azure Key Vault for anonymous authentication, or password identifier URL for basic authentication. For information on how to store a secret in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#store-passwords-in-your-azure-key-vault).
 - **Scope** – The scope value. 
 - **Resource** – The Resource value (if needed).
 
@@ -260,7 +260,7 @@ If you select **OAuth (Custom token)** as the authentication method, you can con
 - **Token URL** – The API endpoint for the token call.
 - **Token authentication** – Select either the anonymous or basic authentication method for the token call.
 - **Username** – Username for basic authentication. 
-- **Password URL** – Password identifier URL from your Azure Key Vault for basic authentication. For information on how to store a password in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#Store-passwords-in-your-Azure-Key-Vault).
+- **Password URL** – Password identifier URL from your Azure Key Vault for basic authentication. For information on how to store a password in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#store-passwords-in-your-azure-key-vault).
 - **Headers** – Header values. 
 - **Sample request** – An example of the request sent to your token endpoint:
     - **Sample request URL** – A read-only field that shows the request URL used to make the sample call.
