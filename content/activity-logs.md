@@ -125,7 +125,7 @@ The **Activity logs** page lets you search for and view details of who changed w
 
 ## View search activity Logs results
 
-After you select **Search**, the **Results** tile shows all of the events that match your specified filters. By default, logs are sorted by the event date/time attribute, which is shown in your local time zone. The most recent event appears at the top of the grid. You can sort by other attributes by selecting the column title, but only the logs that have already loaded on the results grid are sorted. By default, 100 logs are loaded on the page. As you scroll down, more logs are loaded.
+After you select **Search**, the **Results** tile shows all of the events that match your specified filters. By default, logs are sorted by the event date/time attribute, which is shown in your local time zone. The most recent event appears at the top of the grid. You can sort by other attributes by selecting the column title, but only logs that are already loaded on the results grid are sorted. By default, 100 logs are loaded on the page. As you scroll down, more logs are loaded.
 
 ## Change column options
 
@@ -142,7 +142,7 @@ Select **Export** to export your search results to a comma-separated values (CSV
 
 ## Review individual activity logs
 
-To explore a particular activity log in more detail, choose the event ID of the event that you want to examine. At the top of the **Activity logs** details page, you can see the individual log common fields. You can select the fields to open a new tab and start a related quick search. On the change viewer, you can see the operation specific fields. You can copy the fields in the change viewer by selecting **Copy original** and **Copy modified**. You also have the options to jump to changes using the arrows, and to show all fields or just the modified ones.
+To examine an individual activity log in more detail, select the event ID of the event that you want to examine. At the top of the **Activity logs** details page, you can see the individual log common fields. You can select the fields to open a new tab and start a related quick search. On the change viewer, you can see the operation specific fields. You can copy the fields in the change viewer by selecting **Copy original** and **Copy modified**. You also have the options to jump to changes using the arrows, and to show all fields or just the modified ones.
 
 ## Notes pane
 
