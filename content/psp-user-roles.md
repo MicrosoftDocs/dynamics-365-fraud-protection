@@ -1,8 +1,8 @@
 ---
 author: kha-microsoft
-description: This article explains how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
+description: This article describes how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kfend
-ms.date: 08/03/2022
+ms.date: 02/28/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -10,6 +10,8 @@ title: Payment service provider user roles and access
 ---
 
 # Payment service provider user roles and access
+
+This article describes how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
 
 Payment service providers (PSPs) can grant users of Microsoft Dynamics 365 Fraud Protection various levels of access, based on logical or functional roles. PSPs can include any organization that provides payment services to other organizations (also referred to as "payment gateways," "payment processors," etc.). This article applies to both PSPs and merchants that were onboarded to Fraud Protection by their PSP.
 
@@ -81,7 +83,7 @@ The following roles are available for PSP users:
 - **Manual Review Agent** – A user in this role is responsible for reviewing individual transactions and approving or declining them. Although manual review agents don't have direct access to the **Support Lists** page, they can modify the status of an entry in the support list through the **Transaction Search** page.
 - **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
 - **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
-- **Reporting** – This role provides access to event tracing and activity logs only, to read activity logs, enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
+- **Reporting** – This role only provides access to event tracing and activity logs to read activity logs and enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
 
 ### Permissions
 
