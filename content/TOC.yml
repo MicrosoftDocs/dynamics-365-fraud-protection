@@ -86,6 +86,8 @@
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
+    - name: Functions
+      href: Functions.md
     - name: External calls
       href: external-calls.md
     - name: Search
@@ -142,6 +144,8 @@
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
+    - name: Functions
+      href: Functions.md
     - name: External calls
       href: external-calls.md
     - name: Search
@@ -220,6 +224,8 @@
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
+    - name: Functions
+      href: Functions.md
     - name: External calls
       href: external-calls.md
     - name: External assessments

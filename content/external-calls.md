@@ -175,6 +175,8 @@ For information about the rules language and how you can use external calls in r
 
 > [!NOTE]
 > If external calls are used in a rule, the latency of the rule might increase.
+> 
+> External calls can also be invoked from Functions. For more information, see [Functions](Functions.md). 
 
 ## Understand authentication and authorization
 
