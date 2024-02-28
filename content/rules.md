@@ -38,7 +38,7 @@ The WHEN statement can use any of the following items:
 -	Lists that you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md). For more information on referencing these lists in your rules, see [Using Lists in rules](fpl-lang-ref.md#using-lists-in-rules).
 -	Velocities that you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
 -	External calls that you have created in Fraud Protection. For more information, see [External calls](external-calls.md).
--	Functions that you have created in Fraud Protection. For more information, see [Functions](Functions.md).
+-	Functions that you have created in Fraud Protection. For more information, see [Functions](functions.md).
 
 
 Expressions can be compared using comparison operators (such as ==, !=, >, <), and can be combined using logical operators such as **and** (&&) and **or** (||).
