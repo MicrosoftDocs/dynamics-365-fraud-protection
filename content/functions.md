@@ -222,7 +222,7 @@ RETURN Approve()
 WHEN $sum > 5
 ```
 
-### Invoke the functions created within the parent environment
+### Invoke functions created within the parent environment
 
 The example below invokes a function from the immediate parent environment.
 
