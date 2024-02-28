@@ -2,7 +2,7 @@
 author: arj-malhotra
 description: This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/24/2023
+ms.date: 02/28/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -11,6 +11,8 @@ title: User roles and access
 ---
 
 # User roles and access
+
+This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 
 Microsoft Dynamics 365 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. Users access Fraud Protection differently, depending on their user role in the organization's Azure tenant. When you add a new user to the system, you can select the roles to assign roles to the user. For information about how to set up user roles and access in Fraud Protection, see [Configure user access](configure-user-access.md).
 
