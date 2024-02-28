@@ -47,9 +47,9 @@ Before you create an external call, you should know about the following limitati
         > [!NOTE]
         > You can use ```Request.CorrelationId()``` function in a rule to extract Correlation ID of the incoming event and pass it as a parameter value for the external call.
 
-    - **Add configuration** – You can also provide static data on the external call setup page that will be passed to your API endpoint. For sensitive information, you can mark a configuration to be a secret and provide a secret identifier URL from your Azure key vault instead of providing the actual value on the external call setup page. To learn how to store a secrets in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#Store-passwords-in-your-Azure-Key-Vault) section later in this article. 
+    - **Add configuration** – You can also provide configurtion data on the external call setup page. For sensitive information, you can mark a configuration to be a secret and provide a secret identifier URL from your Azure key vault instead of the actual value. To learn how to store a secrets in your Azure Key Vault and provide access to Fraud Protection, see [Store passwords in your Azure Key Vault](external-calls.md#Store-passwords-in-your-Azure-Key-Vault) section later in this article. 
 
-      Like parameters, configurations defined in this step can be manually added to the request URL, header, and/or body using the format *{configuration.\<configuration name\>}*. However, unlike parameters where the actual value is passed from the rule when making the external call, the configuration values provided on the external call setup page are used when making sample or actual calls.
+      Like parameters, configurations defined in this step can be manually added to the request URL, header, and/or body using the format *{configuration.\<configuration name\>}*. However, unlike parameters where the actual value is passed from the rule, the configuration values provided on the external call setup page are used when making sample or actual calls.
 
      - **Web request** – Select the appropriate HTTP method (**GET** or **POST**), and then enter the API endpoint.
 
