@@ -130,53 +130,49 @@ Output properties consist of the following four parts.
 
 For information about how to use functions in other resources such as functions, rules, velocities, post decision actions, and routing rules, refer to the [Invoke functions from resources](Functions.md#invoke-functions-from-resources) section later in this article.
 
-### Use the sample pane
+### The Sample pane
 
 When you create or edit a function, the **Sample** pane appears on the side of the page.
 
-- Functions aren't tied to any assessments. The sample payload is a helpful guide for users that shows all the event properties that can be referenced in your functions. Select the event type in the **Event** field at the top of the pane.
+- Functions aren't tied to any assessments. The sample payload is presented as a helpful guide for users that shows all the event properties that can be referenced in your functions. Select the event type in the **Event** field at the top of the pane.
   
 - The **payload sample** section contains an example of the properties that can be sent in the request API for the assessment.
 
 
-## Manage your function
+## Manage a function
 
-1. To edit an existing published function, select the function, and then select **Edit**.
-
-    A draft of your published function is created and is visible only to you. All changes that you make to the draft are automatically saved.
-
-    When you're ready to push your changes into production, select **Publish**. The previously published function is overwritten with your changes.
-
-    To discard your draft, select **Discard**.
+1. To edit a previously published function, select the function and then select **Edit**. A draft of the published function is created and is available only to you. All of the changes that you make to the draft are automatically saved. To push your changes into production, select **Publish**. The previously published function is overwritten with your changes. To discard your draft, select **Discard**.
 
 2. To delete an existing function, select the ellipsis (**...**), and then select **Delete**.
 
 3. To update the name or description of a function, select the ellipsis (**...**), and then select **Rename**.
 
-4. To search for a function, enter a keyword in the **Search** field. All function names and descriptions are searched, and the results are filtered accordingly.
+4. To search for a function, enter a keyword in the **Search** field. All of the function names and descriptions are searched, and the results are filtered according to the search keywords.
 
 ## Evaluate a function
 
-Before you publish your new function, you can use the "Function evaluation" pane to make sure that it returns the results that you expect.
+Before you publish a function, you can use the **Function evaluation** pane to make sure that it returns the results that you expect.
 
-- To open the function evaluation pane, select **Expand** in the lower right of the **Functions** tab.
+- To open the function evaluation pane, select **Expand** in the **Functions** tab.
 - To close the pane, select **Collapse**.
 
-When the evaluation pane is open, you can see the list of output properties with its result. The evaluation uses "default" values for input parameters and values from the sample payload section when determining what should be returned, and if any of those values is changed then the output would also change accordingly. This will help you to understand if you are returning the correct values for each output property. 
+When the evaluation pane is open, the list of output properties is displayed with its result. The evaluation uses default values for input parameters and values from the sample payload section when determining what should be returned. If any of those values is changed, the output is also changed. That way, you can make sure that the correct values for each output property are returned. 
 
 ## Invoke functions from resources
-The published functions can be invoked from resources such as rules, velocities, post-decision actions, and routing rules. All the output properties defined within a function can be accessed by invoking the function. The values can then be used for decision making. 
+The published functions can be invoked from resources such as rules, velocities, post-decision actions, and routing rules. All of the output properties defined within a function can be accessed by invoking the function. The values can then be used for decision-making. 
 
-### Invoking functions from Rules 
-Functions can be invoked from any rule (within any assessment) within the same environment and from child environments in the hierarchy below. To learn more about rules, see [Rules](rules.md).
+### Rules 
+Functions can be invoked from any rule (within any assessment) in the same environment and from child environments in the hierarchy below. For more information about rules, see [Rules](rules.md).
+
 ```FraudProtectionLanguage
 LET $sum = Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
 
-### Invoking functions from Velocities 
-Functions can be invoked from any velocity within the same environment and from child environments in the hierarchy below. To learn more about velocities, see [Perform velocity checks](velocities.md).
+### Velocities 
+Functions can be invoked from any velocity in the same environment and from child environments in the hierarchy below. For more information about velocities, see [Perform velocity checks](velocities.md).
+
 ```FraudProtectionLanguage
 SELECT DistinctCount(@"device.deviceContextId") AS Devices_Per_IP
 FROM AccountLogin
@@ -184,63 +180,73 @@ WHEN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum > 5
 GROUPBY @"device.ipAddress"
 ```
 
-### Invoking functions from Post Decision Rules
-Functions can be invoked from any post-decision action rule (within any assessment) within the same environment and from child environments in the hierarchy below. To learn more about post decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
+### Post-decision rules
+Functions can be invoked from any post-decision action rule (within any assessment) in the same environment and from child environments in the hierarchy below. For more information about post-decision action rules, see [Post decision Action Rules](post-decision-action-rule.md).
+
 ```FraudProtectionLanguage
 DO SetResponse()
 WHEN Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum == 5
 ```
 
-### Invoking functions from Routing Rules 
-Functions can be invoked from any routing rules within the same environment and from child environments in the hierarchy below. To learn more about routing rules, see [Case Management](case-management-overview.md).
+### Routing rules 
+Functions can be invoked from any routing rules in the same environment and from child environments in the hierarchy below. For more information about routing rules, see [Case Management](case-management-overview.md).
+
 ```FraudProtectionLanguage
 ROUTETO Queue("General Queue")
 WHEN Functions.MyFunction(@"purchase.request.totalAmount", @"purchase.request.salesTax").Calculate_Sum > 5
 ```
 
 ## Function inheritance 
-Functions can be invoked within the same environment and from child environments in the hierarchy below. The invocation syntax depends on where the function exists and from where it is invoked. Below are the different ways to invoke functions within a multi hierarchy set up. 
+Functions can be invoked in the same environment and from child environments in the hierarchy below. The invocation syntax depends on where the function exists and where it is invoked from. Below are the different ways to invoke functions within a multi-hierarchy set up. 
 
 > [!NOTE]
-> If a function references resources such as velocities, lists, external calls and external assessments, those resources will also be inherited from child environments in the hierarchy below when the function gets invoked. 
+> If a function references resources such as velocities, lists, external calls, and external assessments, the resources are also inherited from child environments in the hierarchy below when the function gets invoked. 
 
-### Invoking the functions created within the same environment
+### Invoke functions created within the same environment
 
-Below example shows invoking function from a rule where both the rule and the function exist in the same environment.
+The example below invokes a function from a rule where both the rule and the function exist in the same environment.
+
 ```FraudProtectionLanguage
 LET $sum = Functions.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
-### Invoking the functions created within root environment
-The below example shows invoking a function that is created in the root from a child environment.
+
+### Invoke functions created within root environment
+
+The example below invokes a function created in the root from a child environment.
+
 ```FraudProtectionLanguage
 LET $sum = Functions.root.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
-### Invoking the functions created within the parent environment
 
-The below example shows invoking a function from the immediate parent environment.
+### Invoke the functions created within the parent environment
+
+The example below invokes a function from the immediate parent environment.
+
 ```FraudProtectionLanguage
 LET $sum = Functions.parent.MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
 
-### Invoking the functions created within any environment above the stack
+### Invoke functions created within any environment above the stack
 
-The example below shows invoking a function that is created in an environment above the stack and inherited from a rule within a lower environment.
+The example below invokes a function created in an environment above the stack and inherited from a rule within a lower environment.
+
 ```FraudProtectionLanguage
 LET $sum = Functions.environment["environmentid"].MyFunction(@"totalAmount", @"salesTax").Calculate_Sum
 RETURN Approve()
 WHEN $sum > 5
 ```
+
 ## Function and resource limits
 
-Fraud Protection has a limit on the numbers of functions that can be created per environment and the resources that can be referenced within a function. The below are the limits.
+Fraud Protection has a limit on the number of functions that can be created per environment and the number of resources that can be referenced within a function. 
 
-  | Resource | Limit | 
+| Resource | Limit | 
 |----------|---------------|
 | Maximum number of functions that can be published within an environment | 30 |
 | Maximum number of output properties that can exist within a function | 30 |
@@ -252,12 +258,4 @@ Fraud Protection has a limit on the numbers of functions that can be created per
 | Maximum number of functions that a routing rule can invoke | 10 |
 | Maximum number of functions that a post decision action can invoke | 10 |
 | Maximum number of resources that a velocity can invoke | 10 |
-
-
-
-
-
-​
-
-
 
