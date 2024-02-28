@@ -152,7 +152,7 @@ To use your external calls to make decisions, reference them from your rules.
 
 For example, to reference an external call named **myCall** in your rule, use the following syntax:
 
-External.myCall()
+`External.myCall()`
 
 If **myCall** requires a parameter, such as *IPaddress*, use the following syntax:
 
