@@ -87,7 +87,7 @@
     - name: Velocity checks
       href: velocities.md
     - name: Functions
-      href: Functions.md
+      href: functions.md
     - name: External calls
       href: external-calls.md
     - name: Search
@@ -147,7 +147,7 @@
     - name: Velocity checks
       href: velocities.md
     - name: Functions
-      href: Functions.md
+      href: functions.md
     - name: External calls
       href: external-calls.md
     - name: Search
@@ -229,7 +229,7 @@
     - name: Velocity checks
       href: velocities.md
     - name: Functions
-      href: Functions.md
+      href: functions.md
     - name: External calls
       href: external-calls.md
     - name: External assessments
