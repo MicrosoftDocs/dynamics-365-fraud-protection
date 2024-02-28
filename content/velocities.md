@@ -211,7 +211,7 @@ The second parameter is **timeWindow**. This parameter specifies the time window
 >
 > Velocities are updated with the current event after rule evaluation. Therefore, if you reference a velocity in a rule, it wouldn't include the current event being processed.
 > 
-> Velocities can also be invoked from Functions. For more information, see [Functions](Functions.md).
+> Velocities can also be invoked from Functions. For more information, see [Functions](functions.md).
 
 ## Use rules to view velocity values
 
