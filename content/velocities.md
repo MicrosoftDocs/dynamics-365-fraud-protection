@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/01/2023
+ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -26,6 +26,9 @@ FROM <event type>
 WHEN <condition>
 GROUPBY <attribute name>
 ```
+
+> [!NOTE]
+> Arrays can't be used to GROUPBY in a velocity definition.
 
 - After **SELECT**, specify an aggregation method: *Count*, *DistinctCount*, or *Sum*. Then use the **AS** keyword to name the velocity. This name can then be used to reference the velocity in rules.
 
@@ -207,6 +210,8 @@ The second parameter is **timeWindow**. This parameter specifies the time window
 > If a velocity fails to return a value because of an error, a default value of *0* is returned, and your rule continues to run.
 >
 > Velocities are updated with the current event after rule evaluation. Therefore, if you reference a velocity in a rule, it wouldn't include the current event being processed.
+> 
+> Velocities can also be invoked from Functions. For more information, see [Functions](Functions.md).
 
 ## Use rules to view velocity values
 
