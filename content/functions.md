@@ -119,7 +119,7 @@ Output properties consist of the following four parts.
 
 1. In the [Fraud Protection portal](https://dfp.microsoft.com/), select **Functions** in the navigation bar, and then select **New Function**. Fraud Protection creates a draft function that's displayed only to you (the creator of the function). All changes that you make to the draft are automatically saved.
 
-2. To define a new function from scratch, refer to the [Defining a Function](Functions.md#defining-a-function) section earlier in this article.
+2. To define a new function from scratch, refer to the [Defining a Function](Functions.md#define-a-function) section earlier in this article.
 
 3. To publish the function, select **Publish**.
   
