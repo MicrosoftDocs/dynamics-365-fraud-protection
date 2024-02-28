@@ -124,9 +124,9 @@ To implement device fingerprinting, follow these steps.
 
 For certain web fingerprinting scenarios, Fraud Protection supports a specialized class of integration called *client-side integration*. Client-side integration differs from standard integration practices because the fingerprinting response is returned directly to the client as an encrypted payload, skipping the server-to-server assessment call.
 
-Client side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
+Client-side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
 
-- You must set up an external call that returns an encryption key response in the [JSON Web Key Sets (JWKS) format](https://datatracker.ietf.org/doc/html/rfc7517). This external call returns the key with which Fraud Protection encrypts the payload, which you can later use to decrypt the DFP response server-side that you initially receive client-side. You're responsible for providing the key for encryption and decryption. For information about setting up external calls, see [External calls](external-calls.md).
+- You must set up an external call that returns an encryption key response in the [JSON Web Key Sets (JWKS) format](https://datatracker.ietf.org/doc/html/rfc7517). This external call returns the key that Fraud Protection uses to encrypt the payload. You can use this key afterward to decrypt the Fraud Protection response server-side that you initially receive client-side. You're responsible for providing the key for encryption and decryption. For information about setting up external calls, see [External calls](external-calls.md).
 
 The following code shows an example of the JWKS format.
 
@@ -143,9 +143,9 @@ The following code shows an example of the JWKS format.
   ]
 }
 ```
-- You must only use the metadata and device fingerprinting sections of the device fingerprinting assessment template. If there are additional schema sections, or if you're not using the device fingerprinting assessment template, the client side integration option isn't available to you.
+- You must only use the metadata and device fingerprinting sections of the device fingerprinting assessment template. If there are additional schema sections, or if you're not using the device fingerprinting assessment template, the client-side integration option isn't available to you.
 
-When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you'll see the client side integration option available to you. After choosing to enable the client side integration, you'll select the external call with the JWKS response format that you set up.
+When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you'll see the client-side integration option available to you. After choosing to enable the client-side integration, you'll select the external call with the JWKS response format that you set up.
 
 To complete the client-side integration setup, to return the encrypted response in the browser you must use a modified version of the following JavaScript example.
 
@@ -165,7 +165,7 @@ The following sample shows the JavaScript code with example values.
 <script src="https://fpt.contoso.com/mdt.js?session_id=2b2a1f5e-afa7-4c6d-a905-ebf66eaedc83&customerId=b3f6d54b-961c-4193-95ee-b6b204c7fd23&assessment=CSI&requestId=b12e86a0-37b1-43a2-958b-3f04fe7cef6c" type="text/javascript"></script>
   ```
 
-Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You still have to pass the payload to your server to decrypt it and use the response. We don't expect you to call the external call to get the encryption key that you host for decrypting the payload. You should store and access the key in whatever secure way you would get and treat other secrets used on your server.  
+Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You still have to pass the payload to your server to decrypt it and use the response. We don't expect you to call the external call to get the encryption key that you host for decrypting the payload. You should store and access the key in the same secure way you get and manage other secrets used on your server.  
 
 Once you set up a device fingerprinting assessment with client-side integration, you're also able to call standard Fraud Protection server-to-server APIs to retrieve the fingerprinting intelligence.
 
