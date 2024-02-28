@@ -2,7 +2,7 @@
 author: kha-microsoft
 description: This article explains how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kfend
-ms.date: 08/03/2022
+ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
