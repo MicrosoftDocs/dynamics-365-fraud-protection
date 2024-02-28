@@ -112,30 +112,30 @@ Output properties consist of the following four parts.
   ```
        
 > [!NOTE]
-> Functions can be created within any environment in the multi hierarchy stack. When a function references resources like velocities, external calls, lists and external assessments which are available in that environment, the lower environments which invoke this function will also inherit the resources that the function references. For example, if a function created in the root references an external call to return a value, the child environment that invokes these functions will be able to access the result of that external call as well. To learn how to inherit and invoke functions, see [Function Inheritance](Functions.md#function-inheritance) section later in this article.
+> You can create functions in any environment in the multi-hierarchy stack. When a function references resources such as velocities, external calls, lists, and external assessments that are available in the environment, the lower environments that invoke the function also inherit the resources that the function references. For example, if you create a function in the root that references an external call to return a value, the child environment that invokes the function can also access the result of that external call. For more information on how to inherit and invoke functions, refer to the [Function Inheritance](Functions.md#function-inheritance) section later in this article.
 
 
-## Create a function
+## Publish a function
 
-1. In the [Fraud Protection portal](https://dfp.microsoft.com/), from the left navigation, select **Functions**, and then select **New Function**.
+1. In the [Fraud Protection portal](https://dfp.microsoft.com/), select **Functions** in the navigation bar, and then select **New Function**. Fraud Protection creates a draft function that's displayed only to you (the creator of the function). All changes that you make to the draft are automatically saved.
 
-    Fraud Protection creates a draft function that is visible only to you (the creator). Note that all changes that you make to the draft are automatically saved.
-
-2. To define a new function from scratch, see the [Defining a Function](Functions.md#defining-a-function) section earlier in this article.
+2. To define a new function from scratch, refer to the [Defining a Function](Functions.md#defining-a-function) section earlier in this article.
 
 3. To publish the function, select **Publish**.
-4. In the confirmation dialog box, you can change the name and description. When you're ready, select **Publish**.
+  
+4. In the confirmation dialog box, you can change the name and description. Select **Publish**.
 
 > [!NOTE]
-> After the function is published, the function is visible to all users. The function can then be invoked within other functions, rules, velocities, post-decision rules and routing rules. 
+> After you publish the function, it's visible to all users. The function can then be invoked within other functions, rules, velocities, post-decision rules, and routing rules. 
 
-For information about how to use your functions within other resources like functions, rules, velocities, post decision action and routing rules see the [Invoke functions from resources](Functions.md#invoke-functions-from-resources) section later in this article.
+For information about how to use functions in other resources such as functions, rules, velocities, post decision actions, and routing rules, refer to the [Invoke functions from resources](Functions.md#invoke-functions-from-resources) section later in this article.
 
-### Understand the sample pane
+### Use the sample pane
 
-When you create or edit a function, the **Sample** pane appears on the right side of the page.
+When you create or edit a function, the **Sample** pane appears on the side of the page.
 
-- Functions are not tied to any assessments. The sample payload is just a helping guide for users that shows all the event properties that can be referenced in your functions. Select the event type in the **Event** field at the top of the pane.
+- Functions aren't tied to any assessments. The sample payload is a helpful guide for users that shows all the event properties that can be referenced in your functions. Select the event type in the **Event** field at the top of the pane.
+  
 - The **payload sample** section contains an example of the properties that can be sent in the request API for the assessment.
 
 
