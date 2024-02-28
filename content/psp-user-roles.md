@@ -1,8 +1,8 @@
 ---
 author: kha-microsoft
-description: This article explains how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
-ms.author: kfend
-ms.date: 02/27/2024
+description: This article describes how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
+ms.author: josaw
+ms.date: 02/28/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -10,6 +10,8 @@ title: Payment service provider user roles and access
 ---
 
 # Payment service provider user roles and access
+
+This article describes how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
 
 Payment service providers (PSPs) can grant users of Microsoft Dynamics 365 Fraud Protection various levels of access, based on logical or functional roles. PSPs can include any organization that provides payment services to other organizations (also referred to as "payment gateways," "payment processors," etc.). This article applies to both PSPs and merchants that were onboarded to Fraud Protection by their PSP.
 
@@ -28,7 +30,7 @@ Roles can be assigned to either of the following types of users:
 > [!IMPORTANT]
 > Users inside the organization's Azure tenant who are member users can view a list of all other users in the tenant. By contrast, users outside the tenant who join as guest users can view only users who are in the same Fraud Protection environment that they have access to. Assign member or guest roles to users according to your business privacy requirements.
 
-For more information about how to directly add users to your Microsoft Entra tenant as members or non-guest users, see [Create a user account in Microsoft Entra ID](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
+For more information about how to directly add users to your Microsoft Entra tenant as members or nonguest users, see [Create a user account in Microsoft Entra ID](/azure/active-directory/manage-apps/add-application-portal-assign-users#create-a-user-account).
 
 ### Assign PSP roles to users in Fraud Protection
 
@@ -40,7 +42,7 @@ To assign PSP roles to users in Fraud Protection, follow these steps.
 1. Enter the name or email address of the person or group that you want to assign a Fraud Protection PSP role to.
 
     > [!NOTE]
-    > In the Azure tenant, suggestions for users will appear while you type. Select a suggestion if it matches the user that you want to assign a user role to. Otherwise, a message informs you that an invitation email will be sent to the person or group that you entered, so that the person or group can join the Fraud Protection environment.
+    > In the Azure tenant, suggestions for users will appear while you type. Select a suggestion if it matches the user that you want to assign a user role to. Otherwise, a message informs you that an invitation email is sent to the person or group that you entered, so that the person or group can join the Fraud Protection environment.
 
 1. In the **Roles** field, select one or more defined roles that you want to assign to the user.
 1. Select **Assign role(s)**.
@@ -77,21 +79,21 @@ The following roles are available for PSP users:
 - **PSP Admin** – This role is a high-level administrative account that has full access to all PSP-related features. A user in this role can manage Fraud Protection for a PSP and its merchant customers.
 - **Fraud Manager** – This role is an internal role in a PSP. A user in this role is intended to manage Fraud Protection for the PSP's merchant customers.
 - **Fraud Supervisor** – This role provides the highest level of authority in a PSP's merchant customer. A user in this role can access merchant-facing functions that the PSP delegates to them.
-- **Fraud Analyst** – This role is intended for a PSP's merchant customer who will run analysis and reports. A user in this role has read-only access to the merchant customer's data.
+- **Fraud Analyst** – This role is intended for a PSP's merchant customer who runs analysis and reports. A user in this role has read-only access to the merchant customer's data.
 - **Manual Review Agent** – A user in this role is responsible for reviewing individual transactions and approving or declining them. Although manual review agents don't have direct access to the **Support Lists** page, they can modify the status of an entry in the support list through the **Transaction Search** page.
 - **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
 - **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
-- **Reporting** – This role provides access to event tracing only, to enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
+- **Reporting** – This role only provides access to event tracing and activity logs to read activity logs and enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
 
 ### Permissions
 
-The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles.
+The following table shows the specific read/write permissions that users have on each page in the Fraud Protection portal, depending on their roles.
 
 <table>
     <thead>
         <tr>
             <th>Section</th>
-            <th>Sub-page (tab)</th>
+            <th>Subpage (tab)</th>
             <th>PSP Admin</th>
             <th>Fraud Manager</th>
             <th>Fraud Supervisor</th>
@@ -214,6 +216,17 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
+        </tr>
+        <tr>
+          <td colspan="2">Functions</td>
+          <td>Read/Write</td>
+          <td>Read/Write</td>
+          <td>Read only</td>
+          <td>Read only</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
+          <td>No access</td>
         </tr>
         <tr>
             <td rowspan="2">Lists</td>
@@ -475,6 +488,17 @@ The following table shows the specific read/write permissions that users will ha
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
+                    </tr>
+        <tr>
+            <td colspan="2">Activity logs</td>
+            <td>Read only</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>No access</td>
+            <td>Read only</td>
         </tr>
     </tbody>
 </table>
@@ -497,16 +521,16 @@ To accept an invitation to Fraud Protection, follow these steps.
 1. Check your email inbox for an email that has the subject line "\<Name\> invited you to access applications within their organization."
 1. Select **Accept invitation**.
 1. If an existing Microsoft account or related account uses your email address, you're prompted to use that account to sign in. Otherwise, follow the setup process to sign up for a new account. After you're fully signed in, you should have access to Fraud Protection.
-1. Return to the invitation email, and write down or bookmark the exact link that appears after the text "If you accept this invitation, you will be sent to...." This link will be in the format `https://dfp.microsoft.com/.../...`. Each time that you access Fraud Protection, you must use this exact link.
+1. Return to the invitation email, and write down or bookmark the exact link that appears after the text "If you accept this invitation, you will be sent to...." This link is in the format `https://dfp.microsoft.com/.../...`. Each time that you access Fraud Protection, you must use this exact link.
 1. For future access, go to [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and sign in with the guest user account.
 
 ### Switch between tenants
 
 You can use the tenant picker to select which tenant you want to be in, provided you have multiple tenants with Fraud Protection provisioned.
 
-The tenant picker can be found by clicking the profile icon on the top right of the dashboard, there is a link called **switch tenant**. The tenant picker will give you a set of options to pick from. The options are only tenants that you, as a guest or admin, have access to. To change to a different tenant, select the tenant name you want to be in and you will be redirected.
+The tenant picker can be found by selecting the profile symbol on the top right of the dashboard, and then selecting **Switch tenant**. The tenant picker gives you a set of options to pick from. The options are only tenants that you, as a guest or administrator, have access to. To change to a different tenant, select the tenant name you want to be in to be redirected.
 
-If you receive an error that says global administrator privileges are required, select **Switch tenant** at the bottom of the screen. The tenant picker will open and you can select the proper tenant.
+If you receive an error that says global administrator privileges are required, select **Switch tenant** at the bottom of the screen. The tenant picker opens and you can select the proper tenant.
 
 ## Additional resources
 
