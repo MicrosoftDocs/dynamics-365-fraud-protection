@@ -2,7 +2,7 @@
 author: arj-malhotra
 description: This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/24/2023
+ms.date: 02/28/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -12,9 +12,11 @@ title: User roles and access
 
 # User roles and access
 
+This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
+
 Microsoft Dynamics 365 Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. Users access Fraud Protection differently, depending on their user role in the organization's Azure tenant. When you add a new user to the system, you can select the roles to assign roles to the user. For information about how to set up user roles and access in Fraud Protection, see [Configure user access](configure-user-access.md).
 
-All the roles in the following list are named as they will be named in your production environment. To grant users access to these roles in your sandbox environment, select the version of the role that begins with "Sandbox_". For example, **Sandbox_AllAreas_Admin**.
+All the roles in the following list are named as they are named in your production environment. To grant users access to these roles in your sandbox environment, select the version of the role that begins with "Sandbox_". For example, **Sandbox_AllAreas_Admin**.
 
 > [!NOTE]
 > If the selection of roles that's shown to you differs from the following list, you might be using the payment service provider version of Fraud Protection. In this case, see [Payment service provider user roles and access](psp-user-roles.md) for the list of roles.
@@ -23,7 +25,7 @@ All the roles in the following list are named as they will be named in your prod
 
 - **Product admin** – This top-level administrative account has full access to your Fraud Protection instance and all the environments in the hierarchy.
 - **AllAreas_Admin** – This high-level administrative account has full access to an environment and its child environments Fraud Protection.
-- **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools in an environment and its child environments. However, this role doesn't give access to make user role assignements.
+- **AllAreasEditor** – A user in this role is a power user who can view all areas and has permissions to use key Fraud Protection tools in an environment and its child environments. However, this role doesn't give access to make user role assignments.
 - **AllAreasViewer** – A user in this role can view all areas of Fraud Protection and learn from the data, but can't do uploads or change settings in an environment and its child environments.
 - **SupportAgent** – This role provides tailored access to Fraud Protection for support agents who work with your customers. A user in this role can view and work in the support tool, view the ontology, and assign customers to safe lists or block lists in an environment and its child environments.
 - **FraudEngineer** – This role provides tailored access for fraud analysts and engineers in your organization who work with Fraud Protection. A user in this role has similar access to a user in the **AllAreasEditor** role. This user can access the data engineering information but doesn't have access to some configuration options in an environment and its child environments.
@@ -35,13 +37,13 @@ All the roles in the following list are named as they will be named in your prod
 
 ## Permissions
 
-The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles. Along with the sections listed in the table, **Product admin** also has Read/Write permission to the **Admin settings** page, including the **Configuration**, **Search**, **Billing**, and **Subscription** tabs.
+The following table shows the specific read/write permissions that users have on each page in the Fraud Protection portal, depending on their roles. Along with the sections listed in the table, **Product admin** also has Read/Write permission to the **Admin settings** page, including the **Configuration**, **Search**, **Billing**, and **Subscription** tabs.
 
 <table>
 <thead>
 <tr>
 <th>Section</th>
-<th>Sub-page (tab)</th>
+<th>Subpage (tab)</th>
 <th>Product Admin</th>
 <th>AllAreas_Admin</th>
 <th>AllAreasEditor</th>
@@ -373,6 +375,19 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 </tr>
 <tr>
+<td colspan="2">Functions</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
 <td colspan="2">External calls</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
@@ -624,6 +639,19 @@ The following table shows the specific read/write permissions that users will ha
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
+  </tr>
+<tr>
+<td colspan="2">Activity logs</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
 </tr>
 </tbody>
 </table>
@@ -647,8 +675,8 @@ To accept an invitation to Fraud Protection, follow these steps.
 
 1. Check your email inbox for an email that has the subject line "\<Name> invited you to access applications within their organization."
 2. Select **Accept invitation**.
-3. If an existing Microsoft account or related account uses your email address, you'll be prompted to use that account to sign in. Otherwise, follow the steps to sign up for a new account. After you're signed in, you should have access to Fraud Protection.
-4. Return to the invitation email, and write down or bookmark the exact link that appears after the text, "If you accept this invitation, you will be sent to...." This link will be in the format https://dfp.microsoft.com/.../.... 
+3. If an existing Microsoft account or related account uses your email address, you are prompted to use that account to sign in. Otherwise, follow the steps to sign up for a new account. After you're signed in, you should have access to Fraud Protection.
+4. Return to the invitation email, and write down or bookmark the exact link that appears after the text, "If you accept this invitation, you'll be sent to...." This link is in the format `https://dfp.microsoft.com/.../...`. 
 Each time that you access Fraud Protection, you must use this exact link.
 
 

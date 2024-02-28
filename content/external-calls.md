@@ -171,7 +171,10 @@ WHEN $extResponseDiagnostics.HttpStatusCode != 200
 For information about the rules language and how you can use external calls in rules, see the [Language reference guide](fpl-lang-ref.md).
 
 > [!NOTE]
-> If you use external calls in a rule, the latency of the rule might increase.
+> If external calls are used in a rule, the latency of the rule might increase.
+> 
+> External calls can also be invoked from Functions. For more information, see [Functions](Functions.md). 
+
 
 ## Understand authentication and authorization
 
