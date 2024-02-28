@@ -156,7 +156,7 @@ To complete the client-side integration setup, to return the encrypted response 
 - **Your\_Sub\_Domain** – The subdomain under your root domain.
 - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can only contain the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID must contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although Microsoft recommends that you use a globally unique identifier (GUID) for the session ID, it isn't required.
 - **customer\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Environment ID** value that's listed on the **Current environment** tile of the **Integration** page of the corresponding environment in the Fraud Protection portal.
-- **assessment** – The API name of the device fingerprinting assessment set up with client-side integration enabled. The API name is case sensitive and pulled from the assessment configuration page.
+- **assessment** – The API name of the device fingerprinting assessment set up with client-side integration enabled. The API name is case-sensitive and pulled from the assessment configuration page.
 - **request\_id** – A unique identifier for the request itself, separate from the session ID. This identifier should be a GUID of at least 32 characters in length.
 
 The following sample shows the JavaScript code with example values.
