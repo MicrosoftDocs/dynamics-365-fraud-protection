@@ -147,7 +147,7 @@ The following code shows an example of the JWKS format.
 
 When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you'll see the client-side integration option available to you. After choosing to enable the client-side integration, you'll select the external call with the JWKS response format that you set up.
 
-To complete the client-side integration setup, to return the encrypted response in the browser you must use a modified version of the following JavaScript example.
+To complete the client-side integration setup, to return the encrypted response in the browser, you must use a modified version of the following JavaScript example.
 
 ```JavaScript
 <script src="https://<Your_Sub_Domain>/mdt.js?session_id=<session_id>&customerId=<customer_id>&assessment=<assessment>&requestId=<request_id>" type="text/javascript"></script>
