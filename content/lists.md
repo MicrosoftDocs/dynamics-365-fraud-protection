@@ -67,7 +67,7 @@ You can then configure a rule that enforces the rejection of transactions where 
 
 > [!NOTE]
 >
-> Lists can also be referenced within Functions. For more information, see [Functions](Functions.md).
+> Lists can also be referenced within Functions. For more information, see [Functions](functions.md).
 
 ## Upload a custom list
 

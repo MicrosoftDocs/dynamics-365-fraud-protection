@@ -6,11 +6,11 @@ ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
-title: Create functions
+title: Functions
 
 ---
 
-# Create functions
+# Functions
 Dynamics 365 Fraud Protection gives you the flexibility to create functions that you can use to perform a specific task. For example, you can use functions to combine groups of code that must be executed together. Or you can use functions to reuse code, where you write the code once and access it from other places, making the code easier to maintain. In that example, if you want to call an external service to fetch a value from it, the logic can be defined within a function, and the function can be invoked from other resources.
 
 ## Define a function
@@ -19,7 +19,7 @@ Functions consist of input parameters and output properties.
 
 ### Input parameters 
 
-Functions can define parameters to be passed to the function at the time of invocation. Input parameters are defined in the function definition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for the function. The defined parameters can be used within the output properties to return a value. For more information, see [Output properties](Functions.md#output-properties). Defining input parameters is optional. 
+Functions can define parameters to be passed to the function at the time of invocation. Input parameters are defined in the function definition. The number of parameters passed into the function at invocation should exactly match the number of parameters defined for the function. The defined parameters can be used within the output properties to return a value. For more information, see [Output properties](functions.md#output-properties). Defining input parameters is optional. 
 
 Input parameters consist of the following three parts.
 
@@ -49,7 +49,7 @@ Output properties consist of the following four parts.
 
    1. Input parameters defined within a function can be used to return values.
 
-      Example of an output property returning an input parameter as the return value. For more information on how to define input parameters, see the [Input Parameters](Functions.md#input-parameters) section earlier in this article.
+      Example of an output property returning an input parameter as the return value. For more information on how to define input parameters, see the [Input Parameters](functions.md#input-parameters) section earlier in this article.
 
   ```FraudProtectionLanguage
   RETURN _number1 + _number2
@@ -112,14 +112,14 @@ Output properties consist of the following four parts.
   ```
        
 > [!NOTE]
-> You can create functions in any environment in the multi-hierarchy stack. When a function references resources such as velocities, external calls, lists, and external assessments that are available in the environment, the lower environments that invoke the function also inherit the resources that the function references. For example, if you create a function in the root that references an external call to return a value, the child environment that invokes the function can also access the result of that external call. For more information on how to inherit and invoke functions, refer to the [Function Inheritance](Functions.md#function-inheritance) section later in this article.
+> You can create functions in any environment in the multi-hierarchy stack. When a function references resources such as velocities, external calls, lists, and external assessments that are available in the environment, the lower environments that invoke the function also inherit the resources that the function references. For example, if you create a function in the root that references an external call to return a value, the child environment that invokes the function can also access the result of that external call. For more information on how to inherit and invoke functions, refer to the [Function Inheritance](functions.md#function-inheritance) section later in this article.
 
 
 ## Publish a function
 
 1. In the [Fraud Protection portal](https://dfp.microsoft.com/), select **Functions** in the navigation bar, and then select **New Function**. Fraud Protection creates a draft function that's displayed only to you (the creator of the function). All changes that you make to the draft are automatically saved.
 
-2. To define a new function from scratch, refer to the [Defining a Function](Functions.md#define-a-function) section earlier in this article.
+2. To define a new function from scratch, refer to the [Defining a Function](functions.md#define-a-function) section earlier in this article.
 
 3. To publish the function, select **Publish**.
   
@@ -128,7 +128,7 @@ Output properties consist of the following four parts.
 > [!NOTE]
 > After you publish the function, it's visible to all users. The function can then be invoked within other functions, rules, velocities, post-decision rules, and routing rules. 
 
-For information about how to use functions in other resources such as functions, rules, velocities, post decision actions, and routing rules, refer to the [Invoke functions from resources](Functions.md#invoke-functions-from-resources) section later in this article.
+For information about how to use functions in other resources such as functions, rules, velocities, post decision actions, and routing rules, refer to the [Invoke functions from resources](functions.md#invoke-functions-from-resources) section later in this article.
 
 ### The Sample pane
 

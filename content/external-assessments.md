@@ -118,7 +118,7 @@ External calls and external assessments may require complex structured objects a
 
 > [!NOTE]
 >
-> External Assessments can also be referenced within Functions. For more information, see [Functions](Functions.md).
+> External Assessments can also be referenced within Functions. For more information, see [Functions](functions.md).
 
 ## Monitor external calls in the Fraud Protection portal
 

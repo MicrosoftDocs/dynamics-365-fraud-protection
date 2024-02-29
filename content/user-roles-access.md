@@ -506,6 +506,47 @@ The following table shows the specific read/write permissions that users have on
 <td>No access</td>
 <td>No access</td>
 </tr>
+
+<tr>
+<td rowspan="3">Templates *</td>
+<td>Environment</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Assessment</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
+<tr>
+<td>Rule</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read/Write</td>
+<td>Read only</td>
+<td>No access</td>
+<td>Read/Write</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+<td>No access</td>
+</tr>
 <tr>
 <td rowspan="3">Integration</td>
 <td>Dashboard</td>
@@ -657,11 +698,10 @@ The following table shows the specific read/write permissions that users have on
 </table>
 
 > [!NOTE]
-> The **SupportAgent**, **ManualReviewAnalyst**, and **ManualReviewSeniorAnalyst** roles can add items to, or remove items from, **Support lists** (for example, Safe, Block, and Watch) by using the **Event Details** page. However, they can't read or edit the full Support lists page.
-> 
-> To create a Microsoft Entra application, the user must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
->
-> The user who assigns roles must also be assigned the **Application Administrator**, **Cloud Application Administrator**, **Global Administrator**, **User Administrator**, or **Privileged Role Administrator** role in your Azure tenant.
+> - The **SupportAgent**, **ManualReviewAnalyst**, and **ManualReviewSeniorAnalyst** roles can add items to, or remove items from, **Support lists** (for example, Safe, Block, and Watch) by using the **Event Details** page. However, they can't read or edit the full Support lists page.
+> - To create a Microsoft Entra application, the user must also be assigned the **Application Administrator**, **Cloud Application Administrator**, or **Global Administrator** role in your Azure tenant.
+> - The user who assigns roles must also be assigned the **Application Administrator**, **Cloud Application Administrator**, **Global Administrator**, **User Administrator**, or **Privileged Role Administrator** role in your Azure tenant.
+> - To create a template from a resource, the user needs to have both read permission on the resource and write permission on templates page. To create a resource using a template, the user needs to have both write permission on the resource and read permission on template page. 
 
 ## Member access
 
