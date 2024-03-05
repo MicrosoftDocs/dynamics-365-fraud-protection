@@ -34,7 +34,7 @@ Input parameters consist of the following three parts.
   | Integer | 10 |
   | String | "Hello" |
 
-- **Default Value**: A default value is required for every parameter. The defaukt value is used during "Function Evaluation," or if there is an issue with the function invocation. 
+- **Default Value**: A default value is required for every parameter. The default value is used during "Function Evaluation," or if there is an issue with the function invocation. 
 
 
 ### Output properties 
