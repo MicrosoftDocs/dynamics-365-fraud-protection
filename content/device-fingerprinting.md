@@ -126,7 +126,7 @@ For certain web fingerprinting scenarios, Fraud Protection supports a specialize
 
 Client-side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
 
-- You can only be in a root environment of a Fraud Protection tenant.
+- You must be in a root environment of a Fraud Protection tenant.
 - You must set up an external call that returns an encryption key response in the [JSON Web Key Sets (JWKS) format](https://datatracker.ietf.org/doc/html/rfc7517). This external call returns the key that Fraud Protection uses to encrypt the payload. You can use this key afterward to decrypt the Fraud Protection response server-side that you initially receive client-side. You're responsible for providing the key for encryption and decryption. For information about setting up external calls, see [External calls](external-calls.md).
 
 The following code shows an example of the JWKS format.
