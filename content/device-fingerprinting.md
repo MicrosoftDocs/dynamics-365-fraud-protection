@@ -336,7 +336,7 @@ The following tables show the device fingerprinting attribute categories that we
 |Location|Location Data|Current location data (latitude, longitude).|
 |Location|Vertical Accuracy|Vertical accuracy of the location in meters.|
 |Model Output|Bot Score|Score from Bot model.|
-|User Preference|Auto Updating Current Locale|Locale which tracks the user's current preferences.|
+|User Preference|Auto Updating Current Locale|Locale that tracks the user's current preferences.|
 |User Preference|Auto Updating Current Time Zone|Time zone currently used by the system, automatically updating to the user's current preference.|
 |User Preference|Brightness|Screen brightness.|
 |User Preference|Can Send Mail|Identifies if the user has set up the device for sending email.|
@@ -404,7 +404,7 @@ The following tables show the device fingerprinting attribute categories that we
 |Device Specification|CPU Usage|Current CPU usage by device. For example, 0.39.|
 |Device Specification|Data Network Type|Human-readable name that describes the type of the network. For example, "WI-FI," "MOBILE."|
 |Device Specification|Device|Name of the industrial design. Device name provided by manufacturer. For example, Bravo, Passion, GT-I9000.|
-|Device Specification|Display|Build ID which is displayed.|
+|Device Specification|Display|Build ID that is displayed.|
 |Device Specification|Display ID|Logical display ID. Each logical display has a unique ID.|
 |Device Specification|Google Services Framework ID|Google Services Framework Identifier (GSF ID) is a unique 16 character hexadecimal number that your device automatically requests from Google when log into your Google Account for the first time. For a specific device, the GSF ID only changes after a factory reset.|
 |Device Specification|Hardware|Name of the hardware from the kernel command line or /proc.|
@@ -416,7 +416,7 @@ The following tables show the device fingerprinting attribute categories that we
 |Device Specification|Is Device Roaming|Boolean value indicating whether the device is currently roaming on the network. When true, it suggests that use of data on this network may incur extra costs.|
 |Device Specification|Is Wi-Fi Enabled|Boolean value indicating whether Wi-Fi is enabled.|
 |Device Specification|Is Device Emulator|Boolean value indicating whether the device is being run on an emulator. The Android Emulator simulates Android devices on your computer so you can test your application on a variety of devices and Android API levels without needing to have each physical device. |
-|Device Specification|Is Device Rooted|Boolean value indicating if the device is rooted. Rooting is a way to unlock the operating system so you can install unapproved apps, deleted unwanted unwanted software, update the OS, replace the firmware, overclock (or underclock) the processor, customize, and so on.|
+|Device Specification|Is Device Rooted|Boolean value indicating if the device is rooted. Rooting is a way to unlock the operating system so you can install unapproved apps, deleted unwanted software, update the OS, replace the firmware, overclock (or underclock) the processor, customize, and so on.|
 |Device Specification|Line Speed|Wi-Fi line speed.|
 |Device Specification|Low Memory |Indicates whether the OS considers itself to currently be in a low memory situation.|
 |Device Specification|MAC Address|MAC address of the WLAN interface/Wi-Fi network adapter MAC.|
