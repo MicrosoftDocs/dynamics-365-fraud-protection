@@ -126,6 +126,7 @@ For certain web fingerprinting scenarios, Fraud Protection supports a specialize
 
 Client-side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
 
+- You must only be in a root environment of a DFP tenant.
 - You must set up an external call that returns an encryption key response in the [JSON Web Key Sets (JWKS) format](https://datatracker.ietf.org/doc/html/rfc7517). This external call returns the key that Fraud Protection uses to encrypt the payload. You can use this key afterward to decrypt the Fraud Protection response server-side that you initially receive client-side. You're responsible for providing the key for encryption and decryption. For information about setting up external calls, see [External calls](external-calls.md).
 
 The following code shows an example of the JWKS format.
@@ -155,7 +156,7 @@ To complete the client-side integration setup, to return the encrypted response 
 
 - **Your\_Sub\_Domain** – The subdomain under your root domain.
 - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can only contain the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID must contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although Microsoft recommends that you use a globally unique identifier (GUID) for the session ID, it isn't required.
-- **customer\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Environment ID** value that's listed on the **Current environment** tile of the **Integration** page of the corresponding environment in the Fraud Protection portal.
+- **customer\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Environment ID** value that's listed on the **Current environment** tile of the **Integration** page of the corresponding environment in the Fraud Protection portal. You must be in a root environment for client-side integration to work.
 - **assessment** – The API name of the device fingerprinting assessment set up with client-side integration enabled. The API name is case-sensitive and pulled from the assessment configuration page.
 - **request\_id** – A unique identifier for the request itself, separate from the session ID. This identifier should be a GUID of at least 32 characters in length.
 
@@ -166,8 +167,6 @@ The following sample shows the JavaScript code with example values.
   ```
 
 Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You still have to pass the payload to your server to decrypt it and use the response. We don't expect you to call the external call to get the encryption key that you host for decrypting the payload. You should store and access the key in the same secure way you get and manage other secrets used on your server.  
-
-Once you set up a device fingerprinting assessment with client-side integration, you're also able to call standard Fraud Protection server-to-server APIs to retrieve the fingerprinting intelligence.
 
 ## Enable fingerprinting on a mobile app
 
