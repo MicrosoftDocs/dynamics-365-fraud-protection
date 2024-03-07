@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/27/2024
+ms.date: 03/06/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -126,6 +126,7 @@ For certain web fingerprinting scenarios, Fraud Protection supports a specialize
 
 Client-side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
 
+- You must be in a root environment of a Fraud Protection tenant.
 - You must set up an external call that returns an encryption key response in the [JSON Web Key Sets (JWKS) format](https://datatracker.ietf.org/doc/html/rfc7517). This external call returns the key that Fraud Protection uses to encrypt the payload. You can use this key afterward to decrypt the Fraud Protection response server-side that you initially receive client-side. You're responsible for providing the key for encryption and decryption. For information about setting up external calls, see [External calls](external-calls.md).
 
 The following code shows an example of the JWKS format.
@@ -155,7 +156,7 @@ To complete the client-side integration setup, to return the encrypted response 
 
 - **Your\_Sub\_Domain** – The subdomain under your root domain.
 - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can only contain the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID must contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although Microsoft recommends that you use a globally unique identifier (GUID) for the session ID, it isn't required.
-- **customer\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Environment ID** value that's listed on the **Current environment** tile of the **Integration** page of the corresponding environment in the Fraud Protection portal.
+- **customer\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Environment ID** value that's listed on the **Current environment** tile of the **Integration** page of the corresponding environment in the Fraud Protection portal. You must be in a root environment for client-side integration to work.
 - **assessment** – The API name of the device fingerprinting assessment set up with client-side integration enabled. The API name is case-sensitive and pulled from the assessment configuration page.
 - **request\_id** – A unique identifier for the request itself, separate from the session ID. This identifier should be a GUID of at least 32 characters in length.
 
@@ -166,8 +167,6 @@ The following sample shows the JavaScript code with example values.
   ```
 
 Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You still have to pass the payload to your server to decrypt it and use the response. We don't expect you to call the external call to get the encryption key that you host for decrypting the payload. You should store and access the key in the same secure way you get and manage other secrets used on your server.  
-
-Once you set up a device fingerprinting assessment with client-side integration, you're also able to call standard Fraud Protection server-to-server APIs to retrieve the fingerprinting intelligence.
 
 ## Enable fingerprinting on a mobile app
 
@@ -337,7 +336,7 @@ The following tables show the device fingerprinting attribute categories that we
 |Location|Location Data|Current location data (latitude, longitude).|
 |Location|Vertical Accuracy|Vertical accuracy of the location in meters.|
 |Model Output|Bot Score|Score from Bot model.|
-|User Preference|Auto Updating Current Locale|Locale which tracks the user's current preferences.|
+|User Preference|Auto Updating Current Locale|Locale that tracks the user's current preferences.|
 |User Preference|Auto Updating Current Time Zone|Time zone currently used by the system, automatically updating to the user's current preference.|
 |User Preference|Brightness|Screen brightness.|
 |User Preference|Can Send Mail|Identifies if the user has set up the device for sending email.|
@@ -405,7 +404,7 @@ The following tables show the device fingerprinting attribute categories that we
 |Device Specification|CPU Usage|Current CPU usage by device. For example, 0.39.|
 |Device Specification|Data Network Type|Human-readable name that describes the type of the network. For example, "WI-FI," "MOBILE."|
 |Device Specification|Device|Name of the industrial design. Device name provided by manufacturer. For example, Bravo, Passion, GT-I9000.|
-|Device Specification|Display|Build ID which is displayed.|
+|Device Specification|Display|Build ID that is displayed.|
 |Device Specification|Display ID|Logical display ID. Each logical display has a unique ID.|
 |Device Specification|Google Services Framework ID|Google Services Framework Identifier (GSF ID) is a unique 16 character hexadecimal number that your device automatically requests from Google when log into your Google Account for the first time. For a specific device, the GSF ID only changes after a factory reset.|
 |Device Specification|Hardware|Name of the hardware from the kernel command line or /proc.|
@@ -417,7 +416,7 @@ The following tables show the device fingerprinting attribute categories that we
 |Device Specification|Is Device Roaming|Boolean value indicating whether the device is currently roaming on the network. When true, it suggests that use of data on this network may incur extra costs.|
 |Device Specification|Is Wi-Fi Enabled|Boolean value indicating whether Wi-Fi is enabled.|
 |Device Specification|Is Device Emulator|Boolean value indicating whether the device is being run on an emulator. The Android Emulator simulates Android devices on your computer so you can test your application on a variety of devices and Android API levels without needing to have each physical device. |
-|Device Specification|Is Device Rooted|Boolean value indicating if the device is rooted. Rooting is a way to unlock the operating system so you can install unapproved apps, deleted unwanted unwanted software, update the OS, replace the firmware, overclock (or underclock) the processor, customize, and so on.|
+|Device Specification|Is Device Rooted|Boolean value indicating if the device is rooted. Rooting is a way to unlock the operating system so you can install unapproved apps, deleted unwanted software, update the OS, replace the firmware, overclock (or underclock) the processor, customize, and so on.|
 |Device Specification|Line Speed|Wi-Fi line speed.|
 |Device Specification|Low Memory |Indicates whether the OS considers itself to currently be in a low memory situation.|
 |Device Specification|MAC Address|MAC address of the WLAN interface/Wi-Fi network adapter MAC.|
