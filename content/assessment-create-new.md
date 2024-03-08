@@ -202,7 +202,7 @@ The available features  and their default settings vary based on the fraud asses
 
 For **Search** to work at an assessment level, ensure you have it enabled at the tenant level.
 
-If you decide to disable **Search** and **Case Management** for your assessment after these features were enabled, any transactions that were indexed for **Search** and any support cases that were active within **Case Management** will continue to exist for the time periods that these features were enabled.
+If you choose to disable the **Search**, **Case Management**, and **Reporting** features for your assessment after they have been activated, be aware that the indexed transactions in **Search**, any active support cases in **Case Management**, and all data generated in **Reporting** will be preserved for the duration for which these features were active.
 
 ### Data subject IDs
 
