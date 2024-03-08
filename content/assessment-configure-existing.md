@@ -30,7 +30,6 @@ If you have **Read/Write** permissions for Assessments, you can:
   - Deleting an assessment permanently removes the assessment and its transactional data from your environment and all its child environments. All cases associated with that assessment across all environments, including the root and children are dropped.
   - If an assessment and associated data like rules are deleted in the root environment, the velocities that reference this assessment in child environments show an error on the [Velocities](velocities.md) page. 
 - Reporting
-  - Enabling or re-enabling the report can take up to 24 hours for the reports to be displayed. Disabling reports will hide the "Reporting" section.
   - You can setup data filters   to match your business needs, allowing you to analyze your data in various ways within the reports. A default set of data filters will be assigned automatically based on your assessment configuration.
   - You can setup data fields from observation events and labels to show distribution metrics as needed.  
   - By enabling or disabling the "Amount" option, you can choose to show the Amount metric in the reports. You can select specific data attributes to determine how amounts are aggregated for reporting. The “txnAmount” in monetary templates like Purchase, Money Transfer, and Card Payment is considered as the default amount attributes. These default amount attributes will be converted  to USD for aggregation, specifically to unify the currency representation.
