@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how payment service providers (PSPs) can manage environments in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 03/08/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -18,7 +18,7 @@ By creating additional new environments, customers can have greater flexibility 
 To create a new environment, or switch between environments, select **Manage environments** under the environment switcher in the upper right of the Fraud Protection portal page. 
 
 > [!NOTE]
-> A root environment is an environment that's at the top level of the Fraud Protection tenant and that has no parent environment. There can be multiple root environments in the Fraud Protection tenant. The **Product admin** role is required to create a new root environment. For more information, see [NEED A LINK]().
+> A root environment is an environment that's at the top level of the Fraud Protection tenant and that has no parent environment. There can be multiple root environments in the Fraud Protection tenant. The **Product admin** role is required to create a new root environment. For more information, see [Configure user access](configure-user-access.md).
 
 To create a new environment, select **New environment** at the top, and then enter the following information: 
 
