@@ -187,17 +187,18 @@ Fraud Protection supports the following settings for three different assessment 
 
 - **Case management** – Manage and take action on transactions that require a review by human subject matter experts. For more information, see [Case management overview](case-management-overview.md).
 - **Search** – Find and view details associated with specific transactions. To learn more, see [Search](search.md).
+- **Reporting** - Reporting provides a historical view of your data and helps you conduct fraud analysis to optimize your business. To learn more, see [Reporting](virtual-fraud-analyst-reporting.md)
 
 The available features  and their default settings vary based on the fraud assessment template you selected in the **Select template** step. The following table is a summary of the assessment feature default settings broken down by assessment template:
 
-| Template | Case management | Search |
-|----------|-----------------|--------|
-| Card payment | Enabled | Enabled |
-| Device fingerprinting | N/A | N/A |
-| Loyalty program | Enabled | Enabled |
-| Money transfer | Enabled | Enabled |
-| Software piracy | Disabled | Disabled |
-| Custom | Disabled | Disabled |
+| Template | Case management | Search | Reporting |
+|----------|-----------------|--------|--------|
+| Card payment | Enabled | Enabled | Enabled |
+| Device fingerprinting | N/A | N/A | N/A |
+| Loyalty program | Enabled | Enabled | Enabled |
+| Money transfer | Enabled | Enabled | Enabled |
+| Software piracy | Disabled | Disabled | Enabled |
+| Custom | Disabled | Disabled | Disabled |
 
 For **Search** to work at an assessment level, ensure you have it enabled at the tenant level.
 
