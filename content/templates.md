@@ -51,12 +51,12 @@ Assessment template subresources include:
 - Assessment API attributes, labels, and observation events.
 - Published decision rules and post-decision actions in production branch.
 - Assessment configuration and settings.
-- Case management queues and routing rules.
 - Case management configuration.
 
 > [!NOTE]
 > The following resources aren't included in the assessment template:
 > - Decision rules and post-decision actions in nonproduction branches.
+> - Case management queues and routing rules.
 > - Draft (unpublished) rules.
 > - Dependent resources for rules (for example, velocities or external calls).
 
@@ -67,7 +67,6 @@ Environment template subresources include:
 -	Assessment application programming interface (API) attributes, labels, and observation events.
 -	Published decision rules and post-decision actions in the production branch.
 -	Assessment configurations and settings.
--	Case management queues and routing rules.
 -	Case management configurations.
 -	Velocities.
 -	List metadata without list data.
@@ -80,6 +79,7 @@ Environment template subresources include:
 > The following resources aren't included in environment template:
 > - Decision rules and post-decision actions in nonproduction branches.
 > - Draft (unpublished) rules.
+> - Case management queues and routing rules.
 > - List data (list name and columns are included).
 > - User permission data.
 > - Child environments and hierarchy structure.
@@ -152,7 +152,7 @@ To create a new decision rule or post-decision action from a template, follow th
 1. Select **Publish** to publish the rule.
 
 > [!NOTE]
-> If the rule has a reference to another resource that isn't found in the environment (for example, a velocity or external call), you must resolve the missing reference before you can publish the draft rule. 
+> If the rule has a reference to another resource that isn't found in the environment (for example, a velocity, external call or function), you must resolve the missing reference before you can publish the draft rule. 
 
 ### Create a new assessment from a template
 
@@ -166,6 +166,7 @@ To create a new assessment from a template, follow these steps.
 1. Preview the template to view the sample code and resources included in the assessment template. Select **Select** to proceed.
 1. Enter the **Friendly name** and **API name** for the new assessment.
 1. Select **Create assessment** to create the new assessment that matches the resources of your template.
+
 
 ### Create a new environment from a template
 
@@ -184,6 +185,13 @@ To create a new environment from a template, follow these steps.
 
 > [!NOTE]
 > The **Data storage geography** setting can only be edited if a root environment is being created using the template. When creating child environments, the data storage geography is always the same as the root environment under which the child environment is being created, which may be different from the data storage geography of the source environment from which the template was created.
+> 
+> If the environment template contains a sub-resource that has missing dependencies (for example, a velocity, external call or function) or duplicated name with existing resources (for example, an exernal call that has duplicated name with a parent external call), the environment creation will fail. If you run into this issue, please remove the decision rule or post-decision action that reference to the missing dependency, and/or remove the external call with duplicated name and try again.
+
+### Partial success when creating assessment using template
+
+> [!NOTE]
+> If the assessment template contains a sub-resource that has missing dependencies (for example, a velocity external call or function), the assessment creation will be partially successful. This means some of the assessment definition, and some sub-resources are successfully created but some settings and sub-resources are not created successfully. If you run into this issue, please remove the decision rule or post-decision action that reference to the missing dependency and try again.
 
 ## Template library
 
