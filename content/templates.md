@@ -85,6 +85,9 @@ Environment template subresources include:
 > - Child environments and hierarchy structure.
 > - Application ID, device fingerprint certificate, and event tracing.
 > - Tab settings.
+> - Custom assessment (legacy)*
+>
+> - *If the environment contains custom assessment (legacy), you will not be able to create a template from the environment. Please remove the custom assessment (legacy) and try again.
 
 ## Create a template
 
@@ -133,7 +136,9 @@ To create an environment template, follow these steps.
 > - The template is created within the environment the user is currently in. If the user creates a template from another environment, the template is available to the current environment and its children environments.
 > - If the system generates errors when creating the subresources, the creation process aborts and some subresources or configurations will be missing from the newly created resource.
 > - Modifying the content of a template file manually after downloading it may lead to errors when importing the template file back into the Fraud Protection portal.
-> - A template file has a maximum size limit of 20 MB. You won't be able to upload a file that exceeds this limit. 
+> - A template file has a maximum size limit of 20 MB. You won't be able to upload a file that exceeds this limit.
+>
+> - If the environment contains custom assessment (legacy), you will not be able to create a template from the environment. Please remove the custom assessment (legacy) and try again.
 
 ## Create new resources using templates
 
@@ -180,7 +185,7 @@ To create a new environment from a template, follow these steps.
    - Select **Load template file** to use a template file on your computer to create the new rule. Select **Browse** to select the template file and upload it to the Fraud Protection portal.
    - Select a template if you want to use a template already created in Fraud Protection portal.
 5. Preview the template to view the list of resources included in the environment template. 
-6. Enter or edit the **Data storage geography**, **Name**, **Description**, **Tags**, **Azure AD application ID**, and **Customer API ID** settings you want to use for the new environment.
+6. Enter or edit the **Data storage geography**, **Name**, **Description**, **Tags**, **Azure Entra ID**, and **Customer API ID** settings you want to use for the new environment.
 7. Select **Create** to create the new environment that matches the resources of your template.
 
 > [!NOTE]
