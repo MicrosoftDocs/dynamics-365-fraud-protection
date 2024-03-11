@@ -210,7 +210,7 @@ You can perform the following actions on templates. For more information, see [U
 To import a template, follow these steps.
 
 1. On the top menu bar, select **Import template**.
-2. On the **Create template** pane, select **Browse** to select the template file and upload it to Fraud Protection portal.
+2. On the **Create template** pane, select **Browse** to select the template file, and upload it to the Fraud Protection portal.
 3. Enter the **Name** and **Description** of the imported template.
 4. Select **Create** to import the template and make it available in template library.
 
