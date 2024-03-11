@@ -60,6 +60,7 @@ Assessment template subresources include:
 > - Draft (unpublished) rules.
 > - Dependent resources for rules (for example, velocities or external calls).
 
+
 ### Environment template
 
 Environment template subresources include:
@@ -86,6 +87,7 @@ Environment template subresources include:
 > - Application ID, device fingerprint certificate, and event tracing.
 > - Tab settings.
 > - Custom assessment (legacy)*
+> - Client-side integration
 >
 > - *If the environment contains custom assessment (legacy), you will not be able to create a template from the environment. Please remove the custom assessment (legacy) and try again.
 
