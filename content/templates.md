@@ -2,7 +2,7 @@
 author: zhuoche
 description: This article describes how to create and use templates in Microsoft Dynamics 365 Fraud Protection.
 ms.author: zhuoche
-ms.date: 02/27/2024
+ms.date: 03/14/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -89,7 +89,7 @@ Environment template subresources include:
 > - Custom assessment (legacy)*
 > - Client-side integration
 >
-> - *If the environment contains custom assessment (legacy), you will not be able to create a template from the environment. Please remove the custom assessment (legacy) and try again.
+> - *If the environment contains custom assessment (legacy), you won't be able to create a template from the environment. Remove the custom assessment (legacy) and try again.
 
 ## Create a template
 
@@ -135,12 +135,11 @@ To create an environment template, follow these steps.
    - **Add template** creates the template and adds it to the Fraud Protection template library to make it available to users in the Fraud Protection and child environments. If you select this option, you can add a description of the template for reference.
 
 > [!NOTE]
-> - The template is created within the environment the user is currently in. If the user creates a template from another environment, the template is available to the current environment and its children environments.
-> - If the system generates errors when creating the subresources, the creation process aborts and some subresources or configurations will be missing from the newly created resource.
-> - Modifying the content of a template file manually after downloading it may lead to errors when importing the template file back into the Fraud Protection portal.
+> - The template is created within the environment you are currently in. If you create a template from another environment, the template is available to the current environment and its children environments.
+> - If the system generates errors when creating the subresources, the creation process closes. Some subresources or configurations will be missing from the newly-created resource.
+> - Manually modifying the content of a template file after you download it may lead to errors when you import the template file back into the Fraud Protection portal.
 > - A template file has a maximum size limit of 20 MB. You won't be able to upload a file that exceeds this limit.
->
-> - If the environment contains custom assessment (legacy), you will not be able to create a template from the environment. Please remove the custom assessment (legacy) and try again.
+> - If the environment contains custom assessment (legacy), you won't be able to create a template from the environment. Remove the custom assessment (legacy) and try again.
 
 ## Create new resources using templates
 
@@ -191,9 +190,9 @@ To create a new environment from a template, follow these steps.
 7. Select **Create** to create the new environment that matches the resources of your template.
 
 > [!NOTE]
-> The **Data storage geography** setting can only be edited if a root environment is being created using the template. When creating child environments, the data storage geography is always the same as the root environment under which the child environment is being created, which may be different from the data storage geography of the source environment from which the template was created.
+> The **Data storage geography** setting can only be edited if a root environment is created using the template. When creating child environments, the data storage geography of the child environment is always the same as the root environment under which the child environment is created. The data storage geography of the root and child environments may be different from the data storage geography of the source environment from which the template was created.
 > 
-> If the environment template contains a sub-resource that has missing dependencies (for example, a velocity, external call or function) or duplicated name with existing resources (for example, an exernal call that has duplicated name with a parent external call), the environment creation will fail. If you run into this issue, please remove the decision rule or post-decision action that reference to the missing dependency, and/or remove the external call with duplicated name and try again.
+> If the environment template contains a sub-resource that has missing dependencies (for example, a velocity, external call, or function) or duplicate name with existing resources (for example, an exernal call that has duplicate name with a parent external call), the environment creation fails. Remove the decision rule or post-decision action that references the missing dependency, and remove the external call with duplicate name, and try again.
 
 ### Partial success when creating assessment using template
 
