@@ -158,7 +158,8 @@ To create a new decision rule or post-decision action from a template, follow th
 1. Select **Publish** to publish the rule.
 
 > [!NOTE]
-> If the rule has a reference to another resource that isn't found in the environment (for example, a velocity, external call or function), you must resolve the missing reference before you can publish the draft rule. 
+> If the rule has a reference to another resource that isn't found in the environment (for example, a velocity, external call or function), you must resolve the missing reference before you can publish the draft rule.
+> If the rule template was created from legacy Account creation, Account login or Purchase assessments and creates a mordern assessment rule using the rule template, the user will get an error and some of the rule's clauses will not be created correctly.  
 
 ### Create a new assessment from a template
 
