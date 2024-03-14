@@ -11,11 +11,6 @@
       "redirect_document_id": "false"
     },
     {
-      "source_path": "content/templates.md",
-      "redirect_url": "/dynamics365/fraud-protection/index",
-      "redirect_document_id": "false"
-    },
-    {
       "source_path": "content/account-protection-protect-experience.md",
       "redirect_url": "ap-overview",
       "redirect_document_id": "false"
