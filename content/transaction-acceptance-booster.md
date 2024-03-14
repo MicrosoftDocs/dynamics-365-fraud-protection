@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about how you can boost bank acceptance rates.
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 3/14/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
