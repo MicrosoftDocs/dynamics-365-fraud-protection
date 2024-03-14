@@ -90,6 +90,8 @@
       href: functions.md
     - name: External calls
       href: external-calls.md
+    - name: Templates
+      href: templates.md
     - name: Search
       href: search.md
     - name: AI and insights from the Fraud Protection Network
@@ -150,6 +152,8 @@
       href: functions.md
     - name: External calls
       href: external-calls.md
+    - name: Templates
+      href: templates.md
     - name: Search
       href: search.md
     - name: Upload historical data
@@ -234,6 +238,8 @@
       href: external-calls.md
     - name: External assessments
       href: external-assessments.md
+    - name: Templates
+      href: templates.md
     - name: Search
       href: search.md
     - name: AI and insights from the Fraud Protection Network
