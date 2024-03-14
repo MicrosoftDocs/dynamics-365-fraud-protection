@@ -2,7 +2,7 @@
 author: zhuoche
 description: This article describes how to create and use templates in Microsoft Dynamics 365 Fraud Protection.
 ms.author: zhuoche
-ms.date: 03/14/2024
+ms.date: 3/14/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -158,8 +158,8 @@ To create a new decision rule or post-decision action from a template, follow th
 1. Select **Publish** to publish the rule.
 
 > [!NOTE]
-> If the rule has a reference to another resource that isn't found in the environment (for example, a velocity, external call or function), you must resolve the missing reference before you can publish the draft rule.
-> If the rule template was created from legacy Account creation, Account login or Purchase assessments and creates a mordern assessment rule using the rule template, the user will get an error and some of the rule's clauses will not be created correctly.  
+> If the rule includes a reference to another resource that isn't found in the environment (for example, a velocity, external call, or function), you must resolve the missing reference before you can publish the draft rule.
+> If the rule template was created from legacy account creation, account login, or purchase assessments, and creates a modern assessment rule using the rule template, an error will be displayed and some of the clauses won't be created correctly.  
 
 ### Create a new assessment from a template
 
