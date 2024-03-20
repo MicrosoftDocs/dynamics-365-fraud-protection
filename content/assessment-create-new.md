@@ -60,10 +60,7 @@ The device fingerprinting template has some special settings designed to keep th
 
 To use the full suite of device attributes in rules and velocities, call the **Device.GetFullAttributes** FQL function. When you create a new API based on the device fingerprinting template, a default sample rule is created that references this function. To learn more about this function, see [Language reference](fpl-lang-ref.md) guide. For more details on default sample rules, see [Assessment (default) rules](rules.md#assessment-default-rules).
 
-See [Set up device fingerprinting](device-fingerprinting.md) for more details on setting up and enabling device fingerprinting for web and mobile. The following sections detail the device fingerprinting attribute fields Fraud Protection attempts to collect:
-- [Web](device-fingerprinting.md#device-fingerprinting-attribute-list-for-web)
-- [iOS](device-fingerprinting.md#device-fingerprinting-attribute-list-for-ios)
-- [Android](device-fingerprinting.md#device-fingerprinting-attribute-list-for-android)
+See [Overview of device fingerprinting](device-fingerprinting.md) for more information. [Attributes in device fingerprinting](df-attribute.md) details the device fingerprinting attribute fields Fraud Protection attempts to collect.
 
 ### Loyalty program template
 The **Loyalty program template** allows you to assess the fraud risk of activity within loyalty programs. This template is recommended for scenarios involving rewards redemption and loyalty program enrollment.

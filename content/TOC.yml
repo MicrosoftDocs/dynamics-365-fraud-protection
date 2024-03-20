@@ -74,7 +74,7 @@
       href: promocode-set-up-account-protection.md
     - name: Configure user roles and access
       href: configure-user-access.md
-    - name: Set up device fingerprinting 
+    - name: Device fingerprinting 
       href: device-fingerprinting.md
   - name: Operations
     items: 
@@ -206,6 +206,22 @@
       href: configure-user-access.md
     - name: Integration with Dynamics 365 Commerce
       href: loss-prevention-integration-with-commerce.md
+- name: Device fingerprinting
+  items:
+  - name: Overview
+    href: device-fingerprinting.md
+  - name: Attribute categories
+    href: df-attribute.md
+  - name: Integration and setup
+    items:
+    - name: Web setup
+      href: df-web.md
+    - name: Mobile SDK for iOS
+      href: mobile-sdk-ios.md
+    - name: Mobile SDK for Android
+      href: mobile-sdk-android.md
+    - name: Mobile SDK for React Native
+      href: mobile-sdk-react-native.md
 - name: Assessments
   items:
   - name: Create a new assessment
