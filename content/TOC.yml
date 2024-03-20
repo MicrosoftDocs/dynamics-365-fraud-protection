@@ -214,8 +214,6 @@
     href: df-attribute.md
   - name: Integration and setup
     items:
-    - name: Overview
-      href: df-setup-overview.md
     - name: Web setup
       href: df-web.md
     - name: Mobile SDK for iOS
