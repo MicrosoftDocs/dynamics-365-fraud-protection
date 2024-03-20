@@ -210,7 +210,7 @@
   items:
   - name: Overview
     href: device-fingerprinting.md
-  - name: Attribute lists
+  - name: Attribute categories
     href: df-attribute.md
   - name: Integration and setup
     items:
