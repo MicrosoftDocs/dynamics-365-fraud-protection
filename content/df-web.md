@@ -56,3 +56,15 @@ The following sample shows the JavaScript code with example values.
   ```
 
 Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You still have to pass the payload to your server to decrypt it and use the response. We don't expect you to call the external call to get the encryption key that you host for decrypting the payload. You should store and access the key in the same secure way you get and manage other secrets used on your server.  
+
+
+
+
+## Additional resources
+- [Overview of device fingerprinting](device-fingerprinting.md)
+- [Attributes in device fingerprinting](df-attribute.md)
+- [Set up and implement device fingerprinting](df-setup-overview.md)
+  - [Mobile SDK for iOS](mobile-sdk-ios.md)
+  - [Mobile SDK for Android](mobile-sdk-android.md)
+  - [Mobile SDK for React Native](mobile-sdk-react-native.md)
+- Training: [Implement device fingerprinting in Dynamics 365 Fraud Protection](/training/modules/device-fingerprint-fraud-protection/).
