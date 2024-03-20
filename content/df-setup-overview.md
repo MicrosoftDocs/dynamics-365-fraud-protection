@@ -77,3 +77,13 @@ To implement device fingerprinting, follow these steps.
 
 3. When you submit transactions in the Fraud Protection API, set a session ID in the **deviceContextId** field. For Assessments, set a session ID in the **deviceFingerprinting.id** field.
 4. Set the **device.ipAddress** field to the customer IP address that your website receives when a customer uses your site. For Assessments, set the customer IP address in the **deviceFingerprinting.ipAddress** field. This field is optional and doesn't need to be set if you don't have it.
+
+## Additional resources
+- [Attribute categories](df-attribute.md)
+- [Web setup of device fingerprinting](df-web.md)
+- [Mobile SDK for iOS](mobile-sdk-ios.md)
+- [Mobile SDK for Android](mobile-sdk-android.md)
+- [Mobile SDK for React Native](mobile-sdk-react-native.md)
+- Training: [Implement device fingerprinting in Dynamics 365 Fraud Protection](/training/modules/device-fingerprint-fraud-protection/).
+
+[!INCLUDE[footer-include](includes/footer-banner.md)]
