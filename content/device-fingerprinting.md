@@ -53,7 +53,7 @@ Cookies are used in Fraud Protection to collect information for a device, not fo
 
 ## Additional resources
 - [Attribute categories](df-attribute.md)
-- [Set up and implement device fingerprinting](df-setup-overview.md)
+- Set up and implement device fingerprinting
   - [Web setup of device fingerprinting](df-web.md)
   - [Mobile SDK for iOS](mobile-sdk-ios.md)
   - [Mobile SDK for Android](mobile-sdk-android.md)
