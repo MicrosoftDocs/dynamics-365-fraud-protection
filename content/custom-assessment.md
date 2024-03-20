@@ -91,7 +91,7 @@ To implement custom assessments with device fingerprinting, follow the steps bel
 
 1. To implement device fingerprinting on the relevant pages in your app or website, refer to the appropriate instructions on the following pages.
 
-    - For web pages, see [Set up device fingerprinting](device-fingerprinting.md#implement-device-fingerprinting).
+    - For web pages, see [Web set up of device fingerprinting](df-web.md).
 
     - For Android apps, see [Fraud Protection mobile SDK for Android](mobile-sdk-android.md).
 
