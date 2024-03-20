@@ -130,7 +130,7 @@ Once this script is set up and client-side integration is enabled, the fingerpri
 ## Additional resources
 - [Overview of device fingerprinting](device-fingerprinting.md)
 - [Attributes in device fingerprinting](df-attribute.md)
-- [Set up and implement device fingerprinting](df-setup-overview.md)
+- Set up and implement device fingerprinting
   - [Mobile SDK for iOS](mobile-sdk-ios.md)
   - [Mobile SDK for Android](mobile-sdk-android.md)
   - [Mobile SDK for React Native](mobile-sdk-react-native.md)
