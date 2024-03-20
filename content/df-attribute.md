@@ -382,7 +382,7 @@ For example, to identify a VPN, Proxy would be **TRUE** and ProxyType would be *
 
 ## Additional resources
 - [Overview of device fingerprinting](device-fingerprinting.md)
-- [Set up and implement device fingerprinting](df-setup-overview.md)
+- Set up and implement device fingerprinting
   - [Web setup of device fingerprinting](df-web.md)
   - [Mobile SDK for iOS](mobile-sdk-ios.md)
   - [Mobile SDK for Android](mobile-sdk-android.md)
