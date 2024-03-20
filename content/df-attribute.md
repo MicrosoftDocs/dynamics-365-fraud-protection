@@ -379,3 +379,12 @@ There are two fields that exist in the **Account Create**, **Account Login**, an
   | web | The proxy operates by using an Internet web browser. Navigate to the web proxy website, enter the URL of the site you wish to visit, and the contents of the requested URL are returned by the web proxy website within the browser. |
 
 For example, to identify a VPN, Proxy would be **TRUE** and ProxyType would be **service**.
+
+## Additional resources
+- [Overview of device fingerprinting](device-fingerprinting.md)
+- [Set up and implement device fingerprinting](df-setup-overview.md)
+  - [Web setup of device fingerprinting](df-web.md)
+  - [Mobile SDK for iOS](mobile-sdk-ios.md)
+  - [Mobile SDK for Android](mobile-sdk-android.md)
+  - [Mobile SDK for React Native](mobile-sdk-react-native.md)
+- Training: [Implement device fingerprinting in Dynamics 365 Fraud Protection](/training/modules/device-fingerprint-fraud-protection/).
