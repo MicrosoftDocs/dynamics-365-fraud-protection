@@ -142,7 +142,7 @@ window.dfp.doFpt(document, function (response) {
     if(response == null || response.startsWith('ServerError'))
         console.log("Error Scenario");
     else
-        console.log("Success Scenario");
+        console.log("Success Scenario"); // pass to server so it can decrypt and use response
 });
   ```
 
