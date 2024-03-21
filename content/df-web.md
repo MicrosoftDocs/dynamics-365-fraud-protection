@@ -135,7 +135,21 @@ The following sample shows the JavaScript code with example values.
 <script src="https://fpt.contoso.com/mdt.js?session_id=2b2a1f5e-afa7-4c6d-a905-ebf66eaedc83&customerId=b3f6d54b-961c-4193-95ee-b6b204c7fd23&assessment=CSI&requestId=b12e86a0-37b1-43a2-958b-3f04fe7cef6c" type="text/javascript"></script>
   ```
 
-Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You still have to pass the payload to your server to decrypt it and use the response. We don't expect you to call the external call to get the encryption key that you host for decrypting the payload. You should store and access the key in the same secure way you get and manage other secrets used on your server.  
+Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You can use the following callback function example to validate that client-side integration is working in your browser:
+
+```JavaScript
+window.dfp.doFpt(document, function (response) {
+    if(response == null || response.startsWith('ServerError'))
+        console.log("Error Scenario");
+    else
+        console.log("Success Scenario");
+});
+  ```
+
+
+You still have to pass the payload to your server to decrypt it and use the response. We don't expect you to call the external call to get the encryption key that you host for decrypting the payload. You should store and access the key in the same secure way you get and manage other secrets used on your server.  
+
+
 
 
 ## Additional resources
