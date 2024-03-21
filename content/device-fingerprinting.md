@@ -51,6 +51,10 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 
 Cookies are used in Fraud Protection to collect information for a device, not for a particular individual. You can opt out of using cookies, but that degrades the device fingerprinting.
 
+### Obtaining device fingerprinting data
+
+Once you follow the steps outlined in the **Integration and setup** section to integrate device fingerprinting into your website or app, you then must call an assessment with the device fingerprinting section as part of the request payload to retrieve the device fingerprinting data and enrichments. See [Create a new assessment](assessment-create-new.md) for details on how to set up an assessment with device fingerprinting.
+
 ## Additional resources
 - [Attribute categories](df-attribute.md)
 - Set up and implement device fingerprinting
