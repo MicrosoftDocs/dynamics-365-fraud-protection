@@ -82,7 +82,16 @@ To implement device fingerprinting, follow these steps.
 
 For certain web fingerprinting scenarios, Fraud Protection supports a specialized class of integration called *client-side integration*. Client-side integration differs from standard integration practices because the fingerprinting response is returned directly to the client as an encrypted payload, skipping the server-to-server assessment call.
 
-Client-side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
+
+Client-side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. To determine whether or not client-side integration is the right fit for your scenario, look through the following question guide.
+
+1. **Is my scenario device fingerprinting only?** If your scenario is not device fingerprinting only, then client-side integration is not a fit for your scenario.
+
+2. **Do I want my fingerprinting data to be in the browser as opposed to my server fetching it?** This is the time save associated with client-side integration that makes it useful for specific low latency scenarios. In traditional server-to-server integration, once attribute collection is complete on the website, the data is pushed to Fraud Protection's servers, where you can obtain the data on your server by making the standard assessment API call. In client-side integration however, when the attribute collection data is pushed to Fraud Protection's servers, the assessment response comes back through and is returned directly in the browser. This way, the server can extract the assessment response from the browser itself instead of making the server-to-server call. If your scenario benefits from the data already being present in the browser, then client-side integration may be right for you.
+
+
+
+However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
 
 - You must be in a root environment of a Fraud Protection tenant.
 - You must set up an external call that returns an encryption key response in the [JSON Web Key Sets (JWKS) format](https://datatracker.ietf.org/doc/html/rfc7517). This external call returns the key that Fraud Protection uses to encrypt the payload. You can use this key afterward to decrypt the Fraud Protection response server-side that you initially receive client-side. You're responsible for providing the key for encryption and decryption. For information about setting up external calls, see [External calls](external-calls.md).
