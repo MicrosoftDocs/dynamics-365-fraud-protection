@@ -14,7 +14,7 @@ title: Web setup of device fingerprinting
 The setup of device fingerprinting is done in two phases.
 
 1. Configure the Domain Name Server (DNS) Secure Sockets Layer (SSL) certificate, and upload it to the Fraud Protection portal.
-1. Implement device fingerprinting (on a website or a mobile app).
+1. Implement device fingerprinting.
 
 This section provides detailed instructions for both these phases. The first phase has to be completed only once. However, the second phase must be repeated once for each website or mobile app where device fingerprinting is implemented.
 
