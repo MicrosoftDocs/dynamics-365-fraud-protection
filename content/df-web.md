@@ -135,7 +135,7 @@ The following sample shows the JavaScript code with example values.
 <script src="https://fpt.contoso.com/mdt.js?session_id=2b2a1f5e-afa7-4c6d-a905-ebf66eaedc83&customerId=b3f6d54b-961c-4193-95ee-b6b204c7fd23&assessment=CSI&requestId=b12e86a0-37b1-43a2-958b-3f04fe7cef6c" type="text/javascript"></script>
   ```
 
-Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You can use the following callback function example to grab the encrypted response payload. The example below shows the callback function in use:
+Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You can use a callback function to grab the encrypted response payload. The example below shows the callback function in use:
 
 ```JavaScript
 window.dfp.doFpt(document, function (response) {
