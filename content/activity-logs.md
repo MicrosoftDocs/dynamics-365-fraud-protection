@@ -148,28 +148,25 @@ The **Activity logs** page lets you search for and view details of who changed w
 <td>Templates</td>
         </tr>
       <tr>
-<td>Branches</td>
-        </tr>
-           <tr>
-<td>Support List</td>
-        </tr>
-     <tr>
 <td>Branching</td>
         </tr>
+           <tr>
+<td>Support list</td>
+        </tr>
      <tr>
-<td>Data Upload</td>
+<td>Data upload</td>
         </tr>
         <tr>
 <td>Pay-as-you-go billing</td>
         </tr>
       <tr>
-<td>User Access</td>
+<td>User access</td>
         </tr>
            <tr>
 <td>Device fingerprinting certificate</td>
         </tr>
      <tr>
-<td>Environment Management</td>
+<td>Environment management</td>
         </tr>
      <tr>
 <td>Application Id assignment</td>
