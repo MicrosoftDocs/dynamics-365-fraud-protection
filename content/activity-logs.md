@@ -38,13 +38,13 @@ The **Activity logs** page lets you search for and view details of who changed w
     - Environment name: Friendly name of the environment (as of the time the operation completed).
     - Environment ID: GUID of the environment the user was in.
 
-## Operation type:
+## Supported resources and operation types:
 
 <table>
     <thead>
         <tr>
-            <th>Resource type</th>
-            <td colspan="5">Operation type</th>
+          <th>Resource type</th>
+          <th>Operation type</th>
         </tr>
     </thead>
     <tbody>
@@ -113,6 +113,18 @@ The **Activity logs** page lets you search for and view details of who changed w
             <td>Delete</td>
         </tr>
         <tr>
+          <td>Functions</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+          <td>External Calls</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
           <td>Transaction acceptance booster</td>
             <td>Update</td>
                  </tr>
@@ -123,6 +135,51 @@ The **Activity logs** page lets you search for and view details of who changed w
     </tbody>
 </table>
 
+## Un-Supported resources:
+
+<table>
+    <thead>
+        <tr>
+          <th>Resource type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td>Templates</td>
+        </tr>
+      <tr>
+<td>Branches</td>
+        </tr>
+           <tr>
+<td>Support List</td>
+        </tr>
+     <tr>
+<td>Branching</td>
+        </tr>
+     <tr>
+<td>Data Upload</td>
+        </tr>
+        <tr>
+<td>Pay-as-you-go billing</td>
+        </tr>
+      <tr>
+<td>User Access</td>
+        </tr>
+           <tr>
+<td>Device fingerprinting certificate</td>
+        </tr>
+     <tr>
+<td>Environment Management</td>
+        </tr>
+     <tr>
+<td>Application Id assignment</td>
+        </tr>
+        <tr>
+<td>Actions</td>
+        </tr>
+   </tbody>
+</table>
+      
 ## View search activity Logs results
 
 After you select **Search**, the **Results** tile shows all of the events that match your specified filters. By default, logs are sorted by the event date/time attribute, which is shown in your local time zone. The most recent event appears at the top of the grid. You can sort by other attributes by selecting the column title, but only logs that are already loaded on the results grid are sorted. By default, 100 logs are loaded on the page. As you scroll down, more logs are loaded.
