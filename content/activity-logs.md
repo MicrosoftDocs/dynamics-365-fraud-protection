@@ -135,7 +135,7 @@ The **Activity logs** page lets you search for and view details of who changed w
     </tbody>
 </table>
 
-## Resources planned for future
+## Resources not supported yet
 
 <table>
     <thead>
