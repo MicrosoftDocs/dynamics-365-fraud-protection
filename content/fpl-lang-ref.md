@@ -2,7 +2,7 @@
 author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
-ms.date: 02/24/2024
+ms.date: 03/28/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -105,7 +105,7 @@ These functions help prevent fraud by quickly and efficiently detecting whether 
 
 | Function     | Description | Example |
 |--------------|-------------|---------|
-| GetPattern(String).maxConsonants |  Maximum number of contiguous consonants in a string that are not separated by a vowel. For example, maxConsonants for the string "01gggyturah" is 5.   |  GetPattern(@"user.email").maxConsonants |
+| GetPattern(String).maxConsonants |  Maximum number of contiguous consonants in a string that aren't separated by a vowel. For example, maxConsonants for the string "01gggyturah" is 5.   |  GetPattern(@"user.email").maxConsonants |
 | GetPattern(String).gibberScore  |  ML based score between 0 and 1; 0 means most likely to be gibberish and 1 means least likely to be gibberish.  | GetPattern(@"user.email").gibberScore  |
 
 
@@ -133,7 +133,7 @@ You can use the at sign (@) operator to reference an attribute from the current 
 | Exists       | <p>This operator checks whether a variable exists in the event payload.</p><p>Exists(*String variable*)</p> | Exists(@"user.email") |
 |Response.Decision()|This function references the decision for the current assessment being evaluated.| Response.Decision() == "Approve"|
 |Request.CorrelationId()|This function references the unique Correlation ID of the event being evaluated. You can use this function to access the Correlation ID of an event in the rules experience and pass it to an external call as a parameter or a header.| External.MyExternalCall(Request.CorrelationId())|
-|.GetDiagnostics()|This function can be used to discover important diagnostic and debug information from an external call or an external assessment response. For an external call, the Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Endpoint isn't available in the Diagnostic object for an external assessment response. Any of these fields can be used in the rules once the Diagnostics object is created using its corresponding extension method, ".GetDiagnostics()"|<p>LET $extResponse = External. myCall(@"device.ipAddress")</p><p>LET $extResponseDiagnostics = $extResponse.GetDiagnostics()</p><p>OBSERVE Output(Diagnostics = $extResponseDiagnostics )</p><p>WHEN $extResponseDiagnostics. HttpStatusCode != 200|
+|.GetDiagnostics()|This function can be used to discover important diagnostic and debug information from an external call or an external assessment response. For an external call, the Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Endpoint isn't available in the Diagnostic object for an external assessment response. Any of these fields can be used in the rules once the Diagnostics object is created using its corresponding extension method".GetDiagnostics()"|<p>LET $extResponse = External. myCall(@"device.ipAddress")</p><p>LET $extResponseDiagnostics = $extResponse.GetDiagnostics()</p><p>OBSERVE Output(Diagnostics = $extResponseDiagnostics )</p><p>WHEN $extResponseDiagnostics. HttpStatusCode != 200|
 
 
 ## Logical operators
@@ -171,15 +171,16 @@ Fraud Protection supports all standard C# [comparison](/dotnet/csharp/language-r
 | \<=      | This operator checks whether the first value is less than or equal to the second value. | @"riskScore" \<= 500 |
 
 ## BIN Lookup functions
-BIN Lookup functions provide payment card account information (for example, card network, card type, card country code) based on bank identification number (BIN). Data for BIN Lookup is sourced from leading third-party BIN data providers and then curated by Microsoft Fraud Protection.
+BIN Lookup functions provide payment card account information (for example, card network, card type, card country code, card category) based on bank identification number (BIN). Data for BIN Lookup is sourced from leading third-party BIN data providers and then curated by Fraud Protection.
 
 | Operator                       | Description | Example |
 |--------------------------------|-------------|---------|
-|BIN.Lookup(String *BIN*).cardNetwork|<p> This function looks up BIN and returns card's network (for example, Visa, Mastercard).|BIN.Lookup(@"card.bin").cardNetwork|
+|BIN.Lookup(String *BIN*).cardNetwork|<p> This function looks up BIN and returns card network (for example, Visa, Mastercard).|BIN.Lookup(@"card.bin").cardNetwork|
 |BIN.Lookup(String *BIN*).cardType|<p> This operator looks up BIN and returns card type (for example, Debit, Credit).|BIN.Lookup(@"card.bin").cardType|
 |BIN.Lookup(String *BIN*).issuer|<p> This operator looks up BIN and returns issuing organization.|BIN.Lookup(@"card.bin").issuer|
 |BIN.Lookup(String *BIN*).countryCode|<p> This operator looks up BIN and returns ISO two-letter country code of the card.|BIN.Lookup(@"card.bin").countryCode|
-|BIN.Lookup(String *BIN*).error|<p> This operator looks up BIN and returns an error message if the BIN could not be found.|BIN.Lookup(@"card.bin").error|
+|BIN.Lookup(String *BIN*).cardCategory|<p> This operator looks up BIN and returns card category (for example, Prepaid, Corporate, Rewards).|BIN.Lookup(@"card.bin").cardCategory|
+|BIN.Lookup(String *BIN*).error|<p> This operator looks up BIN and returns an error message if the BIN couldn't be found.|BIN.Lookup(@"card.bin").error|
 
 ## Geo functions
 
@@ -202,7 +203,7 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 |-----------------------------|-------------|---------|
 | Contains(String *substring*)   | <p>This operator checks whether a string contains another string.</p><p>Contains(String *substring*)</p> | @"productList`.productName".Contains("Xbox") |
 | ContainsOnly(*CharSet*) | <p> This operator checks whether a string contains only the charsets provided.</p><p>ContainsOnly(Charset1 Charset2 ...etc.)</p>|@"zipcode".ContainsOnly(CharSet.Numeric)|
-| ContainsAll(*CharSet*) |<p> This operator checks whether a string contains all the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@ "zipcode".ContainsAll(CharSet.Numeric\|CharSet.Hypen)|
+| ContainsAll(*CharSet*) |<p> This operator checks whether a string contains all the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@"zipcode".ContainsAll(CharSet.Numeric\|CharSet.Hypen)|
 | ContainsAny(*CharSet*)|<p> This operator checks whether a string contains any of the charsets provided.</p><p>ContainsAll(Charset1 Charset2 ...etc.)</p>|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hypen)|
 | StartsWith(String *prefix*) | <p>This operator checks whether a string begins with a specified prefix.</p><p>StartsWith(String *prefix*)</p> | @"user.phoneNumber".StartsWith("1-") |
 | EndsWith(String *suffix*)   | <p>This operator checks whether a string ends with a specified suffix.</p><p>EndsWith(String *suffix*)</p> | @"user.email".EndsWith("@contoso.com") |
@@ -272,12 +273,12 @@ For information about type inferencing, see the [Type inference of attributes](f
 
 ## Global Variables functions
 
-Global Variables functions can be used to set and get global variables within rules, velocities, routing rules, and post-decision action rules. The variables that are set can be accessed from within the same environment or from environments down the stack. For example, if you set global variables in a rule within the root environment, the variables can be accessed within the rules from the same environment or from their children. Also, global variables are specific to an assessment. A variable set within one assessment can't be accessed from another assessment. 
+Global Variables functions can be used to set and get global variables within rules, velocities, routing rules, and post-decision action rules. The variables that are set can be accessed from within the same environment or from environments down the stack. For example, if you set global variables in a rule within the root environment, the variables can be accessed within the rules from the same environment or from their children. Also, global variables are specific to an assessment. A variable set within one assessment can't Hypen be accessed from another assessment. 
 
 | Operator | Description | Example |
 |-------------|-------------|---------|
 | SetVariables(k=v)  | This function can be used to set key-value pairs, that is, set values to variables. | Do SetVariables(key= 123, email=@"user.email") |
-| GetVariable("k")   | This function can be used to access the variables that are already set. In cases where we access variables that is never set, a default value is returned.| <p>GetVariable("key").AsInt()</p><p>GetVariable("email").AsString()<p>GetVariable("key").AsDouble()</p><p>GetVariable("key").AsBool()</p><p>GetVariable("key").AsDateTime()<p>GetVariable("key").AsJsonObject()</p><p>GetVariable("key").AsJsonArray()</p> |
+| GetVariable("k")   | This function can be used to access the variables that are already set. In cases where we access variables that are never set, a default value is returned.| <p>GetVariable("key").AsInt()</p><p>GetVariable("email").AsString()<p>GetVariable("key").AsDouble()</p><p>GetVariable("key").AsBool()</p><p>GetVariable("key").AsDateTime()<p>GetVariable("key").AsJsonObject()</p><p>GetVariable("key").AsJsonArray()</p> |
 
 ## Defining your own variables
 
@@ -364,7 +365,7 @@ The **Lookup** operator always returns a *String* value. To convert this value t
 
 ## Type inference of attributes
 
-Variable types are inferred from the context that they are used in. Here are some examples:
+Variable types are inferred from the context that they're used in. Here are some examples:
 
 - In the expression **WHEN \@isEmailValidated**, the variable is interpreted as a *Boolean* value.
 - In the expression **@"riskScore" \> 500**, the variable is interpreted as a *Double* value.
