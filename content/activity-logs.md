@@ -124,6 +124,12 @@ The **Activity logs** page lets you search for and view details of who changed w
             <td>Update</td>
             <td>Delete</td>
         </tr>
+      <tr>
+          <td>External Assessments</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
         <tr>
           <td>Transaction acceptance booster</td>
             <td>Update</td>
@@ -156,20 +162,35 @@ The **Activity logs** page lets you search for and view details of who changed w
      <tr>
 <td>Data upload</td>
         </tr>
+      <tr>
+<td>Notification subscription</td>
+        </tr>
+      <tr>
+<td>Data upload</td>
+        </tr>
         <tr>
-<td>Pay-as-you-go billing</td>
+<td>Pay-as-you-go</td>
         </tr>
       <tr>
 <td>User access</td>
         </tr>
            <tr>
-<td>Device fingerprinting certificate</td>
+<td>Device fingerprinting certificate setup</td>
         </tr>
      <tr>
 <td>Environment management</td>
         </tr>
      <tr>
-<td>Application Id assignment</td>
+<td>Application Id creation</td>
+        </tr>
+      <tr>
+<td>Subject request</td>
+        </tr>
+      <tr>
+<td>Search</td>
+        </tr>
+      <tr>
+<td>FCRA</td>
         </tr>
         <tr>
 <td>Actions</td>
