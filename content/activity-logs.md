@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to use activity logs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschointuch
-ms.date: 02/28/2024
+ms.date: 03/28/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -38,13 +38,13 @@ The **Activity logs** page lets you search for and view details of who changed w
     - Environment name: Friendly name of the environment (as of the time the operation completed).
     - Environment ID: GUID of the environment the user was in.
 
-## Operation type:
+## Supported resources and operation types:
 
 <table>
     <thead>
         <tr>
-            <th>Resource type</th>
-            <td colspan="5">Operation type</th>
+          <th>Resource type</th>
+          <th>Operation type</th>
         </tr>
     </thead>
     <tbody>
@@ -113,6 +113,24 @@ The **Activity logs** page lets you search for and view details of who changed w
             <td>Delete</td>
         </tr>
         <tr>
+          <td>Functions</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
+          <td>External Calls</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+      <tr>
+          <td>External Assessments</td>
+            <td>Create</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+        <tr>
           <td>Transaction acceptance booster</td>
             <td>Update</td>
                  </tr>
@@ -123,6 +141,60 @@ The **Activity logs** page lets you search for and view details of who changed w
     </tbody>
 </table>
 
+## Resources not yet supported
+
+<table>
+    <thead>
+        <tr>
+          <th>Resource type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+<td>Templates</td>
+        </tr>
+      <tr>
+<td>Branching</td>
+        </tr>
+           <tr>
+<td>Support list</td>
+        </tr>
+     <tr>
+<td>Data upload</td>
+        </tr>
+      <tr>
+<td>Notification subscription</td>
+        </tr>
+        <tr>
+<td>Pay-as-you-go</td>
+        </tr>
+      <tr>
+<td>User access</td>
+        </tr>
+           <tr>
+<td>Device fingerprinting certificate setup</td>
+        </tr>
+     <tr>
+<td>Environment management</td>
+        </tr>
+     <tr>
+<td>Application Id creation</td>
+        </tr>
+      <tr>
+<td>Subject request</td>
+        </tr>
+      <tr>
+<td>Search</td>
+        </tr>
+      <tr>
+<td>FCRA</td>
+        </tr>
+        <tr>
+<td>Actions</td>
+        </tr>
+   </tbody>
+</table>
+      
 ## View search activity Logs results
 
 After you select **Search**, the **Results** tile shows all of the events that match your specified filters. By default, logs are sorted by the event date/time attribute, which is shown in your local time zone. The most recent event appears at the top of the grid. You can sort by other attributes by selecting the column title, but only logs that are already loaded on the results grid are sorted. By default, 100 logs are loaded on the page. As you scroll down, more logs are loaded.
