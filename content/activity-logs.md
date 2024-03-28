@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to use activity logs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschointuch
-ms.date: 02/28/2024
+ms.date: 03/28/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -141,7 +141,7 @@ The **Activity logs** page lets you search for and view details of who changed w
     </tbody>
 </table>
 
-## Resources not supported yet
+## Resources not yet supported
 
 <table>
     <thead>
