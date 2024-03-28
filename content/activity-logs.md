@@ -165,9 +165,6 @@ The **Activity logs** page lets you search for and view details of who changed w
       <tr>
 <td>Notification subscription</td>
         </tr>
-      <tr>
-<td>Data upload</td>
-        </tr>
         <tr>
 <td>Pay-as-you-go</td>
         </tr>
