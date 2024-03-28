@@ -14,7 +14,7 @@ title: Web setup of device fingerprinting
 The setup of device fingerprinting is done in two phases.
 
 1. Configure the Domain Name Server (DNS) Secure Sockets Layer (SSL) certificate, and upload it to the Fraud Protection portal.
-1. Implement device fingerprinting (on a website or a mobile app).
+1. Implement device fingerprinting.
 
 This section provides detailed instructions for both these phases. The first phase has to be completed only once. However, the second phase must be repeated once for each website or mobile app where device fingerprinting is implemented.
 
@@ -82,7 +82,18 @@ To implement device fingerprinting, follow these steps.
 
 For certain web fingerprinting scenarios, Fraud Protection supports a specialized class of integration called *client-side integration*. Client-side integration differs from standard integration practices because the fingerprinting response is returned directly to the client as an encrypted payload, skipping the server-to-server assessment call.
 
-Client-side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. However, because client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
+
+Client-side integration is useful for low latency scenarios where skipping the server-to-server call is advantageous. To determine whether or not client-side integration is the right fit for your scenario, look through the following question guide.
+
+1. **Is my scenario device fingerprinting only?**
+
+   If your scenario is not device fingerprinting only, then client-side integration is not a fit for your scenario.
+
+2. **Do I want my fingerprinting data to be in the browser as opposed to my server fetching it?**
+
+   In traditional server-to-server integration, once attribute collection is complete on the website, the data is pushed to Fraud Protection's servers, where you can obtain the assessment response on your server by making the standard assessment API call. In client-side integration however, when the attribute collection data is pushed to Fraud Protection's servers, the assessment response comes back and is returned directly in the browser. This way, your server can extract the assessment response from the browser itself instead of making the server-to-server call, thereby saving some time. Keep in mind that the fingerprinting itself takes a couple of seconds, so the assessment response will only be present in the browser if the user is on the page for a few seconds. If your scenario benefits from the data already being present in the browser, then client-side integration may be right for you.
+
+In general, the majority of fingerprinting scenarios are solved by the standard server-to-server integration, and client-side integration is beneficial for a few specific scenarios where the latency decrease is critical. Since client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
 
 - You must be in a root environment of a Fraud Protection tenant.
 - You must set up an external call that returns an encryption key response in the [JSON Web Key Sets (JWKS) format](https://datatracker.ietf.org/doc/html/rfc7517). This external call returns the key that Fraud Protection uses to encrypt the payload. You can use this key afterward to decrypt the Fraud Protection response server-side that you initially receive client-side. You're responsible for providing the key for encryption and decryption. For information about setting up external calls, see [External calls](external-calls.md).
@@ -124,7 +135,21 @@ The following sample shows the JavaScript code with example values.
 <script src="https://fpt.contoso.com/mdt.js?session_id=2b2a1f5e-afa7-4c6d-a905-ebf66eaedc83&customerId=b3f6d54b-961c-4193-95ee-b6b204c7fd23&assessment=CSI&requestId=b12e86a0-37b1-43a2-958b-3f04fe7cef6c" type="text/javascript"></script>
   ```
 
-Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You still have to pass the payload to your server to decrypt it and use the response. We don't expect you to call the external call to get the encryption key that you host for decrypting the payload. You should store and access the key in the same secure way you get and manage other secrets used on your server.  
+Once this script is set up and client-side integration is enabled, the fingerprinting response is returned as an encrypted payload in the client's browser. You can use a callback function to grab the encrypted response payload. The example below shows the callback function in use:
+
+```JavaScript
+window.dfp.doFpt(document, function (response) {
+    if(response == null || response.startsWith('ServerError'))
+        console.log("Error Scenario");
+    else
+        console.log("Success Scenario"); // pass to server so it can decrypt and use response
+});
+  ```
+
+
+You still have to pass the payload to your server to decrypt it and use the response. We don't expect you to call the external call to get the encryption key that you host for decrypting the payload. You should store and access the key in the same secure way you get and manage other secrets used on your server.  
+
+
 
 
 ## Additional resources

@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/20/2024
+ms.date: 03/28/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -50,6 +50,10 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 - Network attributes, such as IP address, signature hash, and so on.
 
 Cookies are used in Fraud Protection to collect information for a device, not for a particular individual. You can opt out of using cookies, but that degrades the device fingerprinting.
+
+### Obtain device fingerprinting data
+
+Follow the steps detailed in the integration and setup article that is relevant to your scenario in the [Additional resources](#additional-resources) section below. To integrate device fingerprinting into your website or app, you must then call an assessment with the device fingerprinting section as part of the request payload to retrieve the device fingerprinting data and enrichments. See [Create a new assessment](assessment-create-new.md) for details on how to set up an assessment with device fingerprinting.
 
 ## Additional resources
 - [Attribute categories](df-attribute.md)
