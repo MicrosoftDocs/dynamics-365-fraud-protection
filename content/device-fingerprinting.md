@@ -53,7 +53,7 @@ Cookies are used in Fraud Protection to collect information for a device, not fo
 
 ### Obtain device fingerprinting data
 
-Follow the steps detailed in the integration and setup article that is relevant to your scenario in the [Additional resources](#Additional-resources) section below. To integrate device fingerprinting into your website or app, you must then call an assessment with the device fingerprinting section as part of the request payload to retrieve the device fingerprinting data and enrichments. See [Create a new assessment](assessment-create-new.md) for details on how to set up an assessment with device fingerprinting.
+Follow the steps detailed in the integration and setup article that is relevant to your scenario in the [Additional resources](#additional-resources) section below. To integrate device fingerprinting into your website or app, you must then call an assessment with the device fingerprinting section as part of the request payload to retrieve the device fingerprinting data and enrichments. See [Create a new assessment](assessment-create-new.md) for details on how to set up an assessment with device fingerprinting.
 
 ## Additional resources
 - [Attribute categories](df-attribute.md)
