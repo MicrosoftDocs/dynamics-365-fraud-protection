@@ -38,7 +38,7 @@ The **Activity logs** page lets you search for and view details of who changed w
     - Environment name: Friendly name of the environment (as of the time the operation completed).
     - Environment ID: GUID of the environment the user was in.
 
-## Supported resources and operation types:
+## Supported resources and operation types
 
 <table>
     <thead>
@@ -195,7 +195,9 @@ The **Activity logs** page lets you search for and view details of who changed w
    </tbody>
 </table>
       
-## View search activity Logs results
+
+
+## View search activity logs results
 
 After you select **Search**, the **Results** tile shows all of the events that match your specified filters. By default, logs are sorted by the event date/time attribute, which is shown in your local time zone. The most recent event appears at the top of the grid. You can sort by other attributes by selecting the column title, but only logs that are already loaded on the results grid are sorted. By default, 100 logs are loaded on the page. As you scroll down, more logs are loaded.
 
