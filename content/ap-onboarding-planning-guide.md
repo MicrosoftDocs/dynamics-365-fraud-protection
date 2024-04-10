@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article describes onboarding planning for Microsoft Dynamics 365 Fraud Protection account protection.
 ms.author: cschlegel
-ms.date: 10/28/2022
+ms.date: 04/10/2024
 ms.topic: reference
 search.audienceType:
   - Admin

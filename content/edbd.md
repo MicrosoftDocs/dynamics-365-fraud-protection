@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides an overview of data egress outside of the European Union that occurs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 12/14/2022
+ms.date: 04/10/2024
 ms.topic: overview
 search.audienceType:
   - admin

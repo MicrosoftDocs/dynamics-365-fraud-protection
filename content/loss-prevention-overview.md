@@ -2,7 +2,7 @@
 author: josaw1
 description: This article outlines the tools, systems, and procedures that can help prevent fraud in brick-and-mortar stores.
 ms.author: josaw
-ms.date: 07/09/2020
+ms.date: 04/10/2024
 ms.topic: overview
 search.audienceType:
   - admin

@@ -1,8 +1,8 @@
 ---
 author: yvonnedeq
 description: This article provides information about the Score analyst reports Dynamics 365 Fraud Protection.
-ms.author: kfend
-ms.date: 02/08/2023
+ms.author: josaw
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
