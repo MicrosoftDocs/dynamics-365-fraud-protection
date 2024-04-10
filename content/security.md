@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how security in Microsoft Dynamics 365 Fraud Protection is implemented.
 ms.author: josaw
-ms.date: 04/02/2021
+ms.date: 04/10/2024
 ms.topic: overview
 search.audienceType:
   - admin
