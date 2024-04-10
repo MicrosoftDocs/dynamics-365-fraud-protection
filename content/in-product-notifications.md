@@ -2,7 +2,7 @@
 author: kelsiefu
 description: This article explains how to work with in-product notifications in Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/05/2023
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
