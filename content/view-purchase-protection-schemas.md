@@ -2,7 +2,7 @@
 author: josaw1
 description: This article outlines the schemas that are required for historical data upload.
 ms.author: josaw
-ms.date: 05/04/2022
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
