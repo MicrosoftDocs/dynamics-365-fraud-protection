@@ -1,12 +1,13 @@
 ---
-author: josaw1
-description: This article explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
-ms.author: josaw
-ms.date: 02/27/2024
+author: cschlegel2
+description: This article explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.  We're adding a few revisions to the existing doc for how to enable search and a note on Eport Transactions.
+ms.author: cschlegel
+ms.date: 04/28/2024
 ms.topic: how-to
 search.audienceType:
   - admin
-title: Search
+title: Search Revisions
+ms.custom
 ---
 
 # Search
@@ -23,6 +24,16 @@ If your Fraud Protection instance has multiple environments, **Search for each e
 > [!NOTE]
 > The **Device fingerprinting** template doesn't support search. All other [Assessment templates](assessment-create-new.md#template) support search. To check if you enabled search for your assessment, go to the **Assessment configuration** setting and confirm. Search will only find transactions that are processed after you enabled the search feature for your assessment. Historical transactions that were sent before search was enabled aren't available.
 
+> [!NOTE]  
+Before you can use the “Search” feature, you need to first enable Search in the Admin Settings. Also, you need to have the ‘Product Admin’ role permissions to access the Search tab in Admin settings. ‘AllAreasAdmin’ role does not have access to enable Search. 
+
+### How to enable the Search 
+To enable the Search, follow these steps: 
+1.	Sign in to the dynamics 365 fraud protection portal with your Product Admin role credentials. 
+2.	Go to the settings page and select the **Search** tab. 
+3.	Toggle the switch to **on** to provision Search for your DFP tenant.  
+You can now use the Search feature to find and review transactions and events in Dynamics 365 Fraud Protection. You cannot turn the Search feature off once you enable it.  
+ 
 ## Select event type and timeframe
 
 First select which assessment event you want to search for: purchase, account creation, or account login. 
@@ -156,6 +167,9 @@ If your results include multi-value columns, only the first value is shown. For 
 Select **Column options** to customize which columns are shown in the results grid. You can add or remove columns to show specific attributes, or you can drag a column to a new position. Your column settings are  valid only for you, and persist if you return to the **Search** page later. To reset your column options to the default, select **Default view**. 
 
 ## Export transactions
+
+> [!NOTE]  
+If you do not see the exported CSV file, it is possible you may need to consent to allow pop-ups in your browser to view the export results. 
 
 Select **Export** to export your search results to a comma-separated values (CSV) file on your computer. You can select one of the following export options.
 
