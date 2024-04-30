@@ -6,7 +6,7 @@ ms.date: 04/28/2024
 ms.topic: how-to
 search.audienceType:
   - admin
-title: Search Revisions
+title: Search
 ms.custom
 ---
 
