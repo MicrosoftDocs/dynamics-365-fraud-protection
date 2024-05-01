@@ -29,9 +29,9 @@ If your Fraud Protection instance has multiple environments, **Search for each e
 
 ### Enable search 
 To enable search, complete the following steps.
-1.	Sign in to the Dynamics 365 Fraud Protection portal with your Product Admin role credentials. 
-2.	Go to **Settings** and select the **Search** tab. 
-3.	Toggle the switch to **On** to provision search for your Fraud Protection tenant.  
+1. Sign in to the Dynamics 365 Fraud Protection portal with your Product Admin role credentials. 
+1. Go to **Settings** and select the **Search** tab. 
+1. Toggle the switch to **On** to provision search for your Fraud Protection tenant.  
 You can now use search to find and review transactions and events in Fraud Protection.
 
 > [!NOTE]  
