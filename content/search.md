@@ -1,12 +1,13 @@
 ---
-author: josaw1
+author: cschlegel2
 description: This article explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
-ms.author: josaw
-ms.date: 02/27/2024
+ms.author: cschlegel
+ms.date: 05/01/2024
 ms.topic: how-to
 search.audienceType:
   - admin
 title: Search
+
 ---
 
 # Search
@@ -23,6 +24,19 @@ If your Fraud Protection instance has multiple environments, **Search for each e
 > [!NOTE]
 > The **Device fingerprinting** template doesn't support search. All other [Assessment templates](assessment-create-new.md#template) support search. To check if you enabled search for your assessment, go to the **Assessment configuration** setting and confirm. Search will only find transactions that are processed after you enabled the search feature for your assessment. Historical transactions that were sent before search was enabled aren't available.
 
+> [!NOTE]  
+> Before you can use the search feature, you must enable **Search** in the **Admin Settings**. To enable search, you must have Product Admin role permissions.  The AllAreasAdmin role doesn't have the correct access. 
+
+### Enable search 
+To enable search, complete the following steps.
+1. Sign in to the Dynamics 365 Fraud Protection portal with your Product Admin role credentials. 
+1. Go to **Settings** and select the **Search** tab. 
+1. Toggle the switch to **On** to provision search for your Fraud Protection tenant.  
+You can now use search to find and review transactions and events in Fraud Protection.
+
+> [!NOTE]  
+> You can't turn search off after you enable it.  
+ 
 ## Select event type and timeframe
 
 First select which assessment event you want to search for: purchase, account creation, or account login. 
@@ -163,7 +177,10 @@ Select **Export** to export your search results to a comma-separated values (CSV
 - **Current Columns** – Export only data in the columns that are currently shown in the grid.
 
 > [!IMPORTANT]
-> Exports which exceed 10,000 rows, or take longer than two minutes, are automatically canceled. 
+> Exports that exceed 10,000 rows, or take longer than two minutes, are automatically canceled. 
+
+> [!NOTE]  
+> If you do not see the exported CSV file, it is possible you may need to consent to allow pop-ups in your browser to view the export results. 
 
 
 ## Review individual events
