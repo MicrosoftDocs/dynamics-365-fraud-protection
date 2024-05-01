@@ -171,16 +171,16 @@ Select **Column options** to customize which columns are shown in the results gr
 
 ## Export transactions
 
-> [!NOTE]  
-If you do not see the exported CSV file, it is possible you may need to consent to allow pop-ups in your browser to view the export results. 
-
 Select **Export** to export your search results to a comma-separated values (CSV) file on your computer. You can select one of the following export options.
 
 - **All Columns** – Export all data associated with this event. This includes all attributes in the API request and API response, and any attributes from related events.  
 - **Current Columns** – Export only data in the columns that are currently shown in the grid.
 
 > [!IMPORTANT]
-> Exports which exceed 10,000 rows, or take longer than two minutes, are automatically canceled. 
+> Exports that exceed 10,000 rows, or take longer than two minutes, are automatically canceled. 
+
+> [!NOTE]  
+> If you do not see the exported CSV file, it is possible you may need to consent to allow pop-ups in your browser to view the export results. 
 
 
 ## Review individual events
