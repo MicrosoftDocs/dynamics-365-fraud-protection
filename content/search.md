@@ -1,8 +1,8 @@
 ---
 author: cschlegel2
-description: This article explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.  We're adding a few revisions to the existing doc for how to enable search and a note on Eport Transactions.
+description: This article explains how to search for a transaction in Microsoft Dynamics 365 Fraud Protection and how you can use the search results.
 ms.author: cschlegel
-ms.date: 04/28/2024
+ms.date: 05/01/2024
 ms.topic: how-to
 search.audienceType:
   - admin
@@ -25,14 +25,17 @@ If your Fraud Protection instance has multiple environments, **Search for each e
 > The **Device fingerprinting** template doesn't support search. All other [Assessment templates](assessment-create-new.md#template) support search. To check if you enabled search for your assessment, go to the **Assessment configuration** setting and confirm. Search will only find transactions that are processed after you enabled the search feature for your assessment. Historical transactions that were sent before search was enabled aren't available.
 
 > [!NOTE]  
-Before you can use the “Search” feature, you need to first enable Search in the Admin Settings. Also, you need to have the ‘Product Admin’ role permissions to access the Search tab in Admin settings. ‘AllAreasAdmin’ role does not have access to enable Search. 
+> Before you can use the search feature, you must enable **Search** in the **Admin Settings**. To enable search, you must have Product Admin role permissions.  The AllAreasAdmin role doesn't have the correct access. 
 
-### How to enable the Search 
-To enable the Search, follow these steps: 
-1.	Sign in to the dynamics 365 fraud protection portal with your Product Admin role credentials. 
-2.	Go to the settings page and select the **Search** tab. 
-3.	Toggle the switch to **on** to provision Search for your DFP tenant.  
-You can now use the Search feature to find and review transactions and events in Dynamics 365 Fraud Protection. You cannot turn the Search feature off once you enable it.  
+### Enable search 
+To enable search, complete the following steps.
+1.	Sign in to the Dynamics 365 Fraud Protection portal with your Product Admin role credentials. 
+2.	Go to **Settings** and select the **Search** tab. 
+3.	Toggle the switch to **On** to provision search for your Fraud Protection tenant.  
+You can now use search to find and review transactions and events in Fraud Protection.
+
+> [!NOTE]  
+> You can't turn search off after you enable it.  
  
 ## Select event type and timeframe
 
