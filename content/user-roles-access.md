@@ -313,7 +313,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
-<td>Read only</td>
+<td>No access</td>
 <td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
@@ -326,7 +326,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
-<td>Read only</td>
+<td>No access</td>
 <td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
@@ -339,7 +339,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
-<td>Read only</td>
+<td>No access</td>
 <td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
@@ -352,7 +352,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
-<td>Read only</td>
+<td>No access</td>
 <td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
@@ -365,7 +365,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read only</td>
-<td>Read only</td>
+<td>No access</td>
 <td>Read only</td>
 <td>No access</td>
 <td>Read only</td>
