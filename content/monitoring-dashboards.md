@@ -35,7 +35,7 @@ The monitor shows volume and distribution metrics of assessment events such as A
 - **Rule decision distribution** - The rule decision percentage.
 - **Decision rule/clause distribution** - The distribution of the decision rule/clauses. It only shows the top 20 decision rule/clauses. The rest are grouped into “others”.
 - **Device country/region code distribution** – The distribution of device country/region codes. It is available only when device fingerprinting from Dynamics 365 Fraud Protection is enabled. It only shows the top 20 device country/region codes. The rest are grouped into “others”.
-- **Bot score distribution** - The distribution of pre-defined bot score buckets. i\It is only available for Account Creation, Account Login and Device Fingerprinting.
+- **Bot score distribution** - The distribution of pre-defined bot score buckets. It is only available for Account Creation, Account Login and Device Fingerprinting.
 
 ## Observation events monitor
 The monitor shows volume and distribution metrics of observation events such as status, bank event, chargeback and label by received date. On a selected timescale:
