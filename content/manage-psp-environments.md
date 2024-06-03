@@ -30,7 +30,7 @@ To create a new environment, select **New environment** at the top, and then ent
 - **Create API ID (optional)** – You can enter an identifier that should be used instead of the Fraud Protection environment ID when events are sent to Fraud Protection.
 
 > [!NOTE]
-> You must have the Global Admin role to create Microsoft Entra applications. For more information about Microsoft Entra applications and integration, see [Integrate purchase protection API](integrate-real-time-api.md) and [Integrate account protection APIs](faq/data-residency-faq.md). 
+> To create a Microsoft Entra application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Microsoft Entra tenant. For more information about Microsoft Entra applications and integration, see [Integrate purchase protection API](integrate-real-time-api.md) and [Integrate account protection APIs](faq/data-residency-faq.md). 
 >
 > After you create the environment, you can't change the customer API ID.
 

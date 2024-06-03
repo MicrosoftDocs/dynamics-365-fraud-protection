@@ -120,7 +120,7 @@ External calls and external assessments may require complex structured objects a
 >
 > External Assessments can also be referenced within Functions. For more information, see [Functions](functions.md).
 
-## Monitor external calls in the Fraud Protection portal
+## Monitor external assessments in the Fraud Protection portal
 
 Fraud Protection shows a tile that contains three metrics for each external assessment that you define:
 - **Requests per second** – The total number of requests divided by the total number of minutes in the selected time frame.
