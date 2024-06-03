@@ -40,9 +40,8 @@ To assign PSP roles to users in Fraud Protection, follow these steps.
 1. In the left navigation pane, select **Settings**, and then select **User access**.
 1. Select **Assign role(s)**.
 1. Enter the name or email address of the person or group that you want to assign a Fraud Protection PSP role to.
-
-    > [!NOTE]
-    > In the Azure tenant, suggestions for users will appear while you type. Select a suggestion if it matches the user that you want to assign a user role to. Otherwise, a message informs you that an invitation email is sent to the person or group that you entered, so that the person or group can join the Fraud Protection environment.
+> [!NOTE]
+> In the Azure tenant, suggestions for users will appear while you type. Select a suggestion if it matches the user that you want to assign a user role to. Otherwise, a message informs you that an invitation email is sent to the person or group that you entered, so that the person or group can join the Fraud Protection environment.
 
 1. In the **Roles** field, select one or more defined roles that you want to assign to the user.
 1. Select **Assign role(s)**.
@@ -67,14 +66,7 @@ To revoke a user's access to the current environment, select the user in the mem
 
 ## PSP user roles and access
 
-Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select the features and functions when you assign a user to the system.
-
-> [!NOTE]
-> If you are shown a different selection of roles than those detailed below, you may be using the standard version of Fraud Protection. Go to [Configure user roles and access](configure-user-access.md) instead.
-
-### Roles
-
-The following roles are available for PSP users:
+Fraud Protection offers a defined set of user roles, each of which has access to specific features and functions. You can select the appropriate role when you assign a user to the system. The following roles are available:
 
 - **PSP Admin** – This role is a high-level administrative account that has full access to all PSP-related features. A user in this role can manage Fraud Protection for a PSP and its merchant customers.
 - **Fraud Manager** – This role is an internal role in a PSP. A user in this role is intended to manage Fraud Protection for the PSP's merchant customers.
@@ -83,440 +75,235 @@ The following roles are available for PSP users:
 - **Manual Review Agent** – A user in this role is responsible for reviewing individual transactions and approving or declining them. Although manual review agents don't have direct access to the **Support Lists** page, they can modify the status of an entry in the support list through the **Transaction Search** page.
 - **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
 - **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
-- **Reporting** – This role only provides access to event tracing and activity logs to read activity logs and enable Fraud Protection events and data to be consumed into the PSP's internal reporting infrastructure. 
+- **Reporting** – A user in this role can view the reports such as Virtual Fraud Analyst and also access activity logs. 
 
-### Permissions
+> [!NOTE]
+> If you are shown a different selection of roles than those detailed below, you may be using the standard version of Fraud Protection. Go to [Configure user roles and access](configure-user-access.md) instead.
+ 
 
-The following table shows the specific read/write permissions that users have on each page in the Fraud Protection portal, depending on their roles.
+## Permissions
+Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and using a Microsoft Entra account to sign in. Tables below describe permissions that different roles have on various functionalities within Fraud Protection.
 
-<table>
-    <thead>
-        <tr>
-            <th>Section</th>
-            <th>Subpage (tab)</th>
-            <th>PSP Admin</th>
-            <th>Fraud Manager</th>
-            <th>Fraud Supervisor</th>
-            <th>Fraud Analyst</th>
-            <th>Manual Review Agent</th>
-            <th>Technical Developer</th>
-            <th>Customer Service Support</th>
-            <th>Reporting</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td rowspan="5">Virtual fraud analyst</td>
-            <td>Summary</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-          <td>Rule analyst</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-        </tr>
-        <tr>
-          <td>Threat analyst</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-        </tr>
-        <tr>
-          <td>Score analyst</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-        </tr>
-        <tr>
-          <td>Monitoring</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Search</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Event Details</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read/Write<sup>1</sup></td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Rules</td>
-            <td>Performance</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-          <td>Rule management</td>
-          <td>Read/Write</td>
-          <td>Read/Write</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Velocities</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-          <td colspan="2">Functions</td>
-          <td>Read/Write</td>
-          <td>Read/Write</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-          <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Lists</td>
-            <td>Custom</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Support</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read/Write<sup>1</sup></td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">External calls</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="3">Case management</td>
-            <td>Queues</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read/Write<sup>2</sup></td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Report</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Routing rules</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-          <tr>
-            <td rowspan="3">API Management</td>
-            <td>API requests</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Errors</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Ontology</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="3">Templates *</td>
-            <td>Environment</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Assessment</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Rule</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="3">Integration</td>
-            <td>Dashboard</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Microsoft Entra Apps<sup>3</sup></td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Device Fingerprinting</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">Event tracing</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>Read/Write</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Subscription</td>
-            <td>Summary</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Details</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td colspan="2">User access</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Subject requests</td>
-            <td>Search</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Requests</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td rowspan="2">Transaction acceptance booster</td>
-            <td>Opt in</td>
-            <td>Read/Write</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-        </tr>
-        <tr>
-            <td>Report</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-                    </tr>
-        <tr>
-            <td colspan="2">Activity logs</td>
-            <td>Read only</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>No access</td>
-            <td>Read only</td>
-        </tr>
-    </tbody>
-</table>
+### Virtual Fraud Analyst - Summary, Rule analyst,  Threat analyst & Monitoring
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor, Fraud Analyst, Reporting|
+|No access|Manual Review Agent, Technical Developer, Customer Service Support|
 
-- Users with the Manual Review Agent role can remove items from **Support lists** (for example, Safe, Block, and Watch) via the **Event Details** page, or add items to those lists. However, they can't read or edit the full **Support lists** page.
-- Users with the Manual Review Agent role can make decisions (for example, Approve, Reject, or Send back to queue) about cases in queues. However, they can't modify higher-level queue settings.
-- To create a Microsoft Entra application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
-- To create a template from a resource, the user must have both read permission on the resource and write permission on templates page. To create a resource using a template, the user needs to have both write permission on the resource and read permission on template page. 
 
-### Member access
+### Virtual Fraud Analyst -Score analyst
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin, Fraud Manager, Reporting|
+|No access|Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support|
 
-Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and using a Microsoft account to sign in.
 
-### Guest user access
+### Search, View Transaction Details & Export
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Customer Service Support|
+|No access|Technical Developer, Reporting|
 
-Guest users can access Fraud Protection after they accept an email invitation and sign up (or sign in).
 
-To accept an invitation to Fraud Protection, follow these steps.
+### Notes
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor, Manual Review Agent, Customer Service Support|
+|Read only|Fraud Analyst|
+|No access|Technical Developer, Reporting|
+
+
+### Decision Rules, Branches, Functions & Velocities
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Fraud Manager|
+|Read only|Fraud Supervisor, Fraud Analyst|
+|No access|Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### Custom Lists & Support Lists
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor|
+|Read only|Fraud Analyst|
+|No access|Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+> [!NOTE]
+> Users with the Manual Review Age** role can add or remove items to the **Support list** on the **Transaction details** page. However, they can't access the full **Support lists** page.
+
+
+### External Calls & Event Tracing
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### Routing rules
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor|
+|Read only|Fraud Analyst|
+|No access|Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### Queues
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor|
+|Read only|Fraud Analyst, Manual Review Agent|
+|No access|Technical Developer, Customer Service Support, Reporting|
+> [!NOTE]
+> Users with the Manual Review Agent role can make decisions (for example, Approve, Reject, or Send back to queue) on cases in queues. However, they can't modify queue settings.
+
+
+### Assign users to queues
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor|
+|No access|Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### Case Review
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor, Manual Review Agent|
+|Read only|Fraud Analyst|
+|No access|Technical Developer, Customer Service Support, Reporting|
+
+
+### Case Review Reports
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor|
+|No access|Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### Data Upload
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Fraud Manager|
+|No access|Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### API Management
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin, Technical Developer|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Customer Service Support, Reporting|
+
+
+### Templates
+|Template Type|Permission | Roles |
+|-------------|-------------|-------------|
+|Rules|Read/Write/Export|Product Admin, PSP Admin, Fraud Manager|
+|Rules|No access|Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+|Environment|Read/Write/Export|Product Admin, PSP Admin|
+|Environment|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+  > [!NOTE]
+  > - To create a template from a resource, the user must have read permission on the resource as well as write permission on the template.
+  > - To create a resource using a template, the user must have write permission on the resource as well as read permission on the template. 
+
+
+### Integration - Dashboard
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin, Technical Developer|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Customer Service Support, Reporting|
+
+
+### Integration - Entra Applications and SSL Certificate
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Technical Developer|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Customer Service Support, Reporting|
+> [!NOTE]
+> To create a Microsoft Entra application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Microsoft Entra tenant.
+
+
+### Settings - Usage
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### Settings - Activity Logs
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin, Reporting|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support|
+
+
+### Settings - Access Management (Users & Entra Groups)
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor|
+|No access|Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+  > [!NOTE]
+  > - PSP Admin can assign all roles except Product Admin.
+  > - Fraud Manager can assign all roles except Product Admin, PSP Admin, and Reporting.
+  > - Fraud Supervisor can assign all roles except Product Admin, PSP Admin, Reporting, and Fraud Manager.
+
+
+### Settings - Subject Requests
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### Settings - Transaction acceptance booster
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### Notifications
+|Notification Type | Roles that have permissions to view and dismiss |
+|-------------|-------------|
+|Environment Management, Event tracing, Subscription Expiry, Subject requests, SSL certificate & External call|Product Admin, PSP Admin|
+|Actions|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor, Fraud Analyst|
+|Search & Notes|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Customer Service Support|
+
+
+
+### Manage Environments - Create and Delete Environments
+|Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+> [!NOTE]
+> PSP Admin can't create root (top-level) environments. They can only create children environments.
+
+
+### Manage Environments - Update Environments
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin, Fraud Manager|
+|No access|Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+> [!NOTE]
+> Update includes updating name and tags, and assigning APIs.
+
+
+### Admin Settings - Subscription
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin|
+|No access|PSP Admin, Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+### Admin Settings - Configuration
+|Permission | Roles |
+|-------------|-------------|
+|Read only|Product Admin, PSP Admin|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+
+
+
+## Guest user access
+
+Guest users can access Fraud Protection after they accept an email invitation and sign up (or sign in). To accept an invitation to Fraud Protection, follow these steps.
 
 1. Check your email inbox for an email that has the subject line "\<Name\> invited you to access applications within their organization."
 1. Select **Accept invitation**.
