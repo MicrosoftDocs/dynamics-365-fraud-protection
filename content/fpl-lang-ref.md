@@ -2,7 +2,7 @@
 author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
-ms.date: 03/28/2024
+ms.date: 06/03/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -43,12 +43,13 @@ This language reference guide includes the complete list of operators, functions
 - [Using external calls, external assessments and velocities](#external)
 - [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes)
 - [JSON arrays and objects](#arrays-objects)
-- [Functions available within Post Decision Actions](#post-decision-action-functions)
+- [Functions available within Post Decision Actions](#functions-available-within-post-decision-actions)
 
 ## Statements
+
 | Statement syntax | Description | Example |
 |---------|-------------|-------------|
-| LET <i>\<VariableName\></i> = <i>\<Expression\></i> | <p>A **LET** statement is used to define a new variable. The scope of the variable is the rule or velocity set it's defined in. Variable names should be prefixed with a dollar sign ($).</p><p>For more information, see [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables).</p><p>Any number of **LET** statements can be used in the Condition section and the clauses of all rule types and velocity sets.</p> | LET $fullName = @"user.firstName" + @"user.lastName" |
+| LET <i>\<VariableName\></i> = <i>\<Expression\></i> | <p>A **LET** statement is used to define a new variable. The scope of the variable is the rule or velocity set the variable is defined in. Variable names should be prefixed with a dollar sign ($).</p><p>For more information, see [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables).</p><p>Any number of **LET** statements can be used in the Condition section and the clauses of all rule types and velocity sets.</p> | LET $fullName = @"user.firstName" + @"user.lastName" |
 | <p>OBSERVE</p><p>OBSERVE \<<i>ObservationFunction</i>\>(\<<i>KeyValuePairs</i>\>)<br>[ WHEN \<<i>BooleanExpression</i>\></p> ]| <p>An **OBSERVE** statement doesn't terminate rule execution with a decision. It merely logs key-value pairs to either the API response or trace logs. Subsequent rules and rule clauses continues to run until a **RETURN** statement is reached.</p><p>An **OBSERVE** statement must be followed by one or more [observation functions](fpl-lang-ref.md#observation-functions).</p><p>If a **WHEN** clause is present and is evaluated to **False**, the **OBSERVE** statement isn't logged.</p><p>A maximum of one can be used for each clause in the following rules:</p><ul><li>Purchase rules</li><li>Custom Assessment rules</li><li>Account Protection rules</li><ul> | <p>OBSERVE Output(reason="high score")</p><p>OBSERVE TRACE(ip=@"device.ipAddress") WHEN Model.Risk().Score \> 400 | 
 | RETURN \<<i>DecisionFunction</i>\><br>[ ,\<<i>ObservationFunction</i>\>(\<<i>KeyValuePairs</i>\>) ]<br>[ WHEN \<<i>BooleanExpression</i>\> ] | <p>A **RETURN** statement terminates rule execution with a decision.</p><p>The statement must specify a valid [decision function](fpl-lang-ref.md#decision-functions): **Approve()**, **Reject()**, **Challenge()**, or **Review()**.</p><p>The statement can also specify one or more [observation functions](fpl-lang-ref.md#observation-functions): **Output()** or **Trace()**</p><p>Finally, the statement can include a **WHEN** clause to specify the condition under which it should do any of the preceding.</p><p>A maximum of one can be used per clause in the following rules:</p><ul><li>Purchase rules</li><li>Custom Assessment rules</li><li>Account Protection rules</li><ul> | <p>RETURN Review()<br>WHEN IsWatch("Device Support List", @"deviceAttributes.deviceId") \|\|<br>IsWatch("Payment Support List", @"paymentInstrumentList.merchantPaymentInstrumentId")</p><p>RETURN Reject(), Trace(ip=@"device.ipAddress") WHEN Model.Risk().Score \> 400</p> |
 | ROUTETO QUEUE <i>\<QueueName\></i><br>[ WHEN \<<i>BooleanExpression</i>\> ] | <p>The **ROUTETO** command is used in routing rules to direct matching assessments to [case management queues](case-management-administrator.md).</p><p>The optional **WHEN** clause can be used to describe the conditions under which the command should perform the routing.</p><p>A maximum of one can be used per clause in routing rules.</p> | ROUTETO Queue("High Value Queue")<br>WHEN @"purchase.request.totalAmount" \> 500 | 
@@ -56,12 +57,13 @@ This language reference guide includes the complete list of operators, functions
 | WHEN \<<i>BooleanExpression</i>\> | <p>The **WHEN** statement is like the **WHEN** clauses on the other statements, but it stands alone in the Condition section of rules and velocity sets. It specifies a Boolean condition that determines whether the whole rule, velocity set, or routing rule should run.</p><p>A maximum of one can be used in the Condition section of all rule types and velocity sets.</p> | WHEN Model.Risk().Score \> 400 |
 |DO \<<i>Action function</i>\>|A **DO** statement is used to perform some action at the end of rule execution. This statement can only be used in Post-decision actions|DO SetResponse(name = @”firstname” + @”lastname”)|
 
-
 ## Referencing attributes and variables
+
 You can use the at sign (@) operator to reference an attribute from the current event.
+
 | Variable     | Description | Example |
 |--------------|-------------|---------|
-| @            | <p>An at sign (@) is used to reference an attribute from the incoming event. The attribute might be sent as part of the request payload, or it might be generated by Microsoft Dynamics 365 Fraud Protection.</p><p>After the at sign (@), specify the full path of the attribute that you want to reference. Enclose the path in quotation marks (for example, *@"address.city"*).</p><p>If the referenced attribute isn't part of the event payload, the default value for that type is returned: 0.0 for doubles, an empty string for strings, and so on.</p><p>The type of the attribute is inferred from the context it's used in. If not enough context is provided, the *String* type is used by default.</p><p>For information about type inference, see [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes).</p> | <p>@"address.city"</p> |
+| @            | <p>An at sign (@) is used to reference an attribute from the incoming event. The attribute might be sent as part of the request payload, or Microsoft Dynamics 365 Fraud Protection might generate it.</p><p>After the at sign (@), specify the full path of the attribute that you want to reference. Enclose the path in quotation marks (for example, *@"address.city"*).</p><p>If the referenced attribute isn't part of the event payload, the default value for that type is returned: 0.0 for doubles, an empty string for strings, and so on.</p><p>The type of the attribute is inferred from the context the attribute is used in. If not enough context is provided, the *String* type is used by default.</p><p>For information about type inference, see [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes).</p> | <p>@"address.city"</p> |
 | $            | A dollar sign ($) is used to reference a variable that is defined in a **LET** statement. For more information, see [Defining your own variables](fpl-lang-ref.md#defining-your-own-variables). | $fullName |
 | @a[x\]      | <p>This variable is used to index array variables.</p><p>If the request payload for an assessment contains an array of items, you can access individual elements of the array by using the following syntax: *@"productList\[0\]"*.</p><p>To access an attribute of that element, use the following syntax: *@"productList\[0\].productId"*</p> | <p>@"productList\[0\].productId"</p><p>@"paymentInstrumentList\[3\].type"</p> |
 | Exists       | <p>This operator checks whether a variable exists in the event payload.</p><p>Exists(*String variable*)</p> | Exists(@"user.email") |
@@ -69,6 +71,7 @@ You can use the at sign (@) operator to reference an attribute from the current 
 |.GetDiagnostics()|This function can be used to discover important diagnostic and debug information from an external call or an external assessment response. For an external call, the Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Endpoint isn't available in the Diagnostic object for an external assessment response. Any of these fields can be used in the rules once the Diagnostics object is created using its corresponding extension method".GetDiagnostics()"|<p>LET $extResponse = External. myCall(@"device.ipAddress")</p><p>LET $extResponseDiagnostics = $extResponse.GetDiagnostics()</p><p>OBSERVE Output(Diagnostics = $extResponseDiagnostics )</p><p>WHEN $extResponseDiagnostics. HttpStatusCode != 200|
 
 ## Defining your own variables
+
 You can use the **LET** keyword to define a variable. That variable can then be referenced in other places in the rule. Prefix all variables by a dollar sign ($).
 For example, you declare the following variable.
 
@@ -88,16 +91,20 @@ WHEN $fullName == "Kayla Goderich"
 > After a variable is defined, it can't be updated with a new value.
 
 ## Global Variables functions
-Global Variables functions can be used to set and get variables within rules. Global variables once set, can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments in the hierarchy below. For example, if you set global variables in a rule within the root environment, it's value can be retrieved within any other rule within the same assessment in the same environment or any children environments.  
+
+Global Variables functions can be used to set and get variables within rules. Global variables once set, can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments in the hierarchy in the following table. For example, if you set global variables in a rule within the root environment, its value can be retrieved within any other rule within the same assessment in the same environment, or any children environments.  
+
 | Operator | Description | Example |
 |-------------|-------------|---------|
 | SetVariables(k=v)  | This function can be used to set key-value pairs, that is, set values to variables. | Do SetVariables(key= 123, email=@"user.email") |
 | GetVariable("k")   | This function can be used to access the variables that are already set. In cases where we access variables that are never set, a default value is returned.| <p>GetVariable("key").AsInt()</p><p>GetVariable("email").AsString()<p>GetVariable("key").AsDouble()</p><p>GetVariable("key").AsBool()</p><p>GetVariable("key").AsDateTime()<p>GetVariable("key").AsJsonObject()</p><p>GetVariable("key").AsJsonArray()</p> |
 > [!NOTE]
-> Global variables are specific to a single transaction for a given assessment. A variable set within one transaction can't be retreieved from another transaction or another assessment.
+> Global variables are specific to a single transaction for a given assessment. A variable set within one transaction can't be retrieved from another transaction or another assessment.
 
 ## Decision functions
+
 Decision functions are used in rules to specify a decision.
+
 | Decision type                     | Description | Example |
 |-----------------------------------|-------------|---------|
 | Approve()                         | <p>This type specifies a decision of *Approve*. It can include a reason for the approval and another supporting message.</p><p>Overloads:</p><ul><li>Approve(String *reason*)</li><li>Approve(String *reason*, String *supportMessage*)</li></ul> | <p>RETURN Approve()</p><p>RETURN Approve("on safe list")</p><p>RETURN Approve ("on safe list", "do not escalate")</p> |
@@ -105,35 +112,37 @@ Decision functions are used in rules to specify a decision.
 | Review()                          | <p>This type specifies a decision of *Review*. It can include a reason for the review and another supporting message.</p><p>Overloads:</p><ul><li>Review(String *reason*)</li><li>Review(String *reason*, String *supportMessage*)</li></ul> | <p>RETURN Review()</p><p>RETURN Review("user on watch list")</p><p>RETURN Review("user on watch list", "do not escalate")</p> |
 | Challenge(String *challengeType*) | <p>This type specifies a decision of *Challenge* and a challenge type. It can also include a reason for the challenge and another supporting message.</p><p>Overloads:</p><ul><li>Challenge(String *challengeType*, String *reason*)</li><li>Challenge(String *challengeType*, String *reason*, String *supportMessage*)</li></ul> | <p>RETURN Challenge ("SMS")</p><p>RETURN Challenge ("SMS", "suspected bot")</p><p>RETURN Challenge ("SMS", suspected bot", "do not escalate")</p> |
 
-
 ## Observation functions
+
 Observation functions can be used to take data from the current context and write it somewhere else.
+
 | Return type | Description | Example |
 |-------------|-------------|---------|
 | Output(k=v)  | This function can be used to pass key-value pairs to the *CustomProperties* section of API response. The key-value pair would be nested within an object whose name would be the same as the name of the clause containing the Output() statement. | Output(key="test", email=@"user.email", countryRegion=Geo.CountryRegion(@"device.ipAddress")) |
 |Trace(k=v)   | This function can be used to trigger a Trace event and send key-value pairs to the FraudProtection.Trace.Rule [Event Tracing namespace](event-tracing.md#event-schemas). | Trace(key="Manual Review", ip=@"device.ipAddress") |
-|SetResponse(String sectionName, k=v)|This function can be used to pass key-value pairs to the *CustomProperties* section of API response. The sectionName is an optional parameter which can be skipped. This function can only be used within Post Decision Actions, it is not available within Decision Rule|<p>SetResponse("Scores", bot = Model.Bot(@deviceContextId), risk=Model.Risk())</p><p>SetResponse(test=”123”)</p>|
+|SetResponse(String sectionName, k=v)|This function can be used to pass key-value pairs to the *CustomProperties* section of API response. The sectionName is an optional parameter that can be skipped. This function can only be used within Post Decision Actions; it isn't available within Decision Rule|<p>SetResponse("Scores", bot = Model.Bot(@deviceContextId), risk=Model.Risk())</p><p>SetResponse(test=”123”)</p>|
 |Response.Decision()|This function references the decision for the current assessment being evaluated.| Response.Decision() == "Approve"|
 
-
 ## Aggregation functions
+
 | Function                    | Description | Example |
 |-----------------------------|-------------|---------|
 | Count()                     | This function returns the number of times that an event occurred. | SELECT Count() AS numPurchases |
 | DistinctCount(String *key*) | This function returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event doesn't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPs |
 | Sum(Double *value*)         | This function returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
-
 ## Logical operators
+
 | Operator  | Description | Example |
 |-----------|-------------|---------|
 | and (&&)  | Logical **And** | <p>Model.Risk().Score > 500 && Model.Risk().Score \< 800</p><p>Model.Risk().Score \> 500 and Model.Risk().Score \< 800</p> |
 | or (\|\|) | Logical **Or** | <p>@"email.isEmailUsername" == false \|\| @"email.isEmailValidated" == false</p><p>@"email.isEmailUsername" == false or @"email.isEmailValidated" == false</p> |
 | not       | Logical negation | @"email.isEmailUsername" not(!) @"email.isEmailUsername" |
 
-
 ## Comparison operators
+
 Fraud Protection supports all standard C# [comparison](/dotnet/csharp/language-reference/operators/comparison-operators) and [equality](/dotnet/csharp/language-reference/operators/equality-operators) operations. This table includes some examples of operators that you might find useful. If you apply these operators to strings, lexicographic comparisons occur.
+
 | Operator | Description | Example |
 |----------|-------------|---------|
 | ==       | This operator checks for equality. | @"user.countryRegion" == @"shippingAddress.countryRegion" |
@@ -142,20 +151,22 @@ Fraud Protection supports all standard C# [comparison](/dotnet/csharp/language-r
 | \<       | This operator checks whether the first value is less than the second value. | Model.Risk().Score \< 500 |
 | \>=      | This operator checks whether the first value is greater than or equal to the second value. | Model.Risk().Score \>= 500 |
 | \<=      | This operator checks whether the first value is less than or equal to the second value. | Model.Risk().Score \<= 500 |
-| X ? Y : Z| This operator checks whether condition X is true or not. If it is true, the statement Y is executed and it's result is returned, otherwise statement Z is executed and it's result is returned. Multiple logical checks can also be combined together using brackets, to define a nested IF <> THEN <> ELSE <> logic | LET $riskbucket = Model.Risk().Score \> 500 ? "High" : (Model.Risk().Score \> 300 ? "Medium" : "Low")|
-
+| X ? Y : Z| This operator checks whether condition X is true or not. If it's true, the statement Y is executed and its result is returned. Otherwise, statement Z is executed and its result is returned. Multiple logical checks can also be combined together using brackets, to define a nested IF <> THEN <> ELSE <> logic | LET $riskbucket = Model.Risk().Score \> 500 ? "High" : (Model.Risk().Score \> 300 ? "Medium" : "Low")|
 
 ## Math functions
+
 Fraud Protection supports all standard C# [math methods](/dotnet/api/system.math?view=netframework-4.8&preserve-view=true) and [arithmetic operators](/dotnet/csharp/language-reference/operators/arithmetic-operators). This table includes some examples of methods that you might find useful.
+
 | Operator                                   | Description | Example |
 |--------------------------------------------|-------------|---------|
 | Math.Min(Double *value1*, Double *value*2) | This operator computes the minimum of two values. | Math.Min(Model.Risk().Score,Model.Bot(@"deviceFingerprinting.id").Score) |
 | Math.Max(Double *value1*, Double *value*2) | This operator computes the maximum of two values. | Math.Max(Model.Risk().Score,Model.Bot(@"deviceFingerprinting.id").Score) |
 | RandomInt(Integer *min*, Integer *max*) | This operator returns a random integer in the range provided, including the minimum value and excluding the maximum value. | RandomInt(0, 100) |
 
-
 ## DateTime operators
+
 Fraud Protection supports the standard C# [DateTime](/dotnet/api/system.datetime?view=netframework-4.8&preserve-view=true) properties, methods, and operators. This table includes some examples of functions and properties that you might find useful.
+
 | Operator                   | Description | Example |
 |----------------------------|-------------|---------|
 | UtcNow                     | This operator gets a DateTime object that is set to the current date and time on the computer, expressed as UTC. | DateTime.UtcNow |
@@ -165,24 +176,26 @@ Fraud Protection supports the standard C# [DateTime](/dotnet/api/system.datetime
 | Year                       | This operator gets the year component of the date represented by this instance. | @"user.creationDate".Year |
 | Date                       | This operator gets a new object that has the same date as this instance, but where the time value is set to 00:00:00 (midnight). | @"user.creationDate".Date |
 
-
 ## Type casting operators
+
 For information about type inferencing, see the [Type inference of attributes](fpl-lang-ref.md#type-inference-of-attributes) section later in this article.
+
 | Operator     | Description | Example |
 |--------------|-------------|---------|
 | Convert.ToDateTime  | <p>This operator converts the string to datetime and converts datetime to a string using the given format.| Convert.ToDateTime(@"user.creationDate").ToString("yyyy-MM-dd") |
 | Convert.ToInt32  | <p>This operator converts the specified value to Int32.| Convert.ToInt32(@var) |
 | Convert.ToDouble  | <p>This operator converts the specified value to Double.| Convert.ToDouble(@var) |
 
-
 ## String functions
+
 Fraud Protection supports the standard C# [string class](/dotnet/api/system.string?view=netframework-4.8&preserve-view=true). This table includes some examples of functions and operators that you might find useful.
+
 | Operator                    | Description | Example |
 |-----------------------------|-------------|---------|
 | StartsWith() | This operator checks whether a string begins with a specified prefix. | @"user.phoneNumber".StartsWith("1-") |
 | EndsWith()   | This operator checks whether a string ends with a specified suffix. | @"user.email".EndsWith("@contoso.com") |
 | IsNumeric()  | This operator checks whether a string is a numeric value. | @"user.email".IsNumeric() |
-| Length  | <p>This operator returns the number of characters in the string.  | @"user.username".Length |
+| Length  | <p>This operator returns the number of characters in the string. | @"user.username".Length |
 | ToDateTime() | This operator converts a string to a *DateTime* object. | @"user.creationDate".ToDateTime() |
 | ToDouble()   | This operator converts a string to a *Double* value. | @"productList.purchasePrice".ToDouble() |
 | ToInt32()    | This operator converts a string to an *Int32* value. | @"zipcode".ToInt32() |
@@ -199,7 +212,9 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 | ContainsAny()| This operator checks whether a string contains any of the charsets provided.|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hypen)|
 
 ### Using CharSet in ContainsOnly, ContainsAll, and ContainsAny
+
 The following character types can be used in ContainsOnly, ContainsAll, and ContainsAny.
+
 | Character Type | Description |
 |----------------|-------------|
 | Alphabetic | a-z, A-Z |
@@ -215,7 +230,9 @@ The following character types can be used in ContainsOnly, ContainsAll, and Cont
 | WhiteSpace |	Single space |
 
 ## Gibberish detection functions
+
 These functions help prevent fraud by quickly and efficiently detecting whether key user-input fields (such as names and addresses) contain gibberish. 
+
 | Function     | Description | Example |
 |--------------|-------------|---------|
 | GetPattern(String).maxConsonants |  Maximum number of contiguous consonants in a string that aren't separated by a vowel. For example, maxConsonants for the string "01gggyturah" is 5.   |  GetPattern(@"user.email").maxConsonants |
@@ -224,17 +241,19 @@ These functions help prevent fraud by quickly and efficiently detecting whether 
 > [!NOTE]
 > Gibberish detection model is based on the frequency of two consecutive alphanumeric characters in publicly available english documents. It is assumed that the more frequently two consecutive alphanumeric characters appear in public documents, less likely that they are gibberish. The model should provide reasonable scores for english texts, and can be used to detect if the names or addresses contains gibberish. However, the model might not be suitable for abbreviations, such as short form for states (AZ, TX, etc.) and it also can't be used to validate names or addresses. Lastly, the model has not been tested for non-English texts.
 
-
 ## Model functions
-Model functions run the various fraud models and are useful when your assessment does not automatically run one or more fraud models. When model functions run, information about the model running during rule evaluation is output in the fraud assessment API call. Then, the rule gets access to the model result, including score, reasons, and more, that can be used for further rule processing and decision making.
+
+Model functions run the various fraud models and are useful when your assessment doesn't automatically run one or more fraud models. When model functions run, information about the model running during rule evaluation is output in the fraud assessment API call. Then, the rule gets access to the model result, including score, reasons, and more, that can be used for further rule processing and decision making.
+
 | Model type     | Description | Example |
 |--------------|-------------|---------|
 |  Risk  |  Assesses the likelihood of a session being risky. | Model.Risk()  |
 | Bot   |   Assesses the likelihood of a session being bot-initiated. Pass in a device context ID that was sent to Fraud Protection’s device fingerprinting solution. | Model.Bot(@deviceContextId)   |
 
-
 ## Geo functions
+
 Geo functions provide resolution by converting an IP address to a geographical address. Geo functions can be invoked in rules only by using IPs that are part of transaction payload or collected by Fraud Protection by using Device Fingerprinting. Geo functions can't be invoked for arbitrary IP values.
+
 | Operator                       | Description | Example |
 |--------------------------------|-------------|---------|
 | Geo.RegionCode(String *ip*)    | <p>This operator converts an IPv4 address to its US region code (that is, the abbreviation for the name of the US state or territory).</p><p>For example, for an IP address in Washington state, "WA" is returned.</p> | Geo.RegionCode(@"device.ipAddress") |
@@ -244,17 +263,18 @@ Geo functions provide resolution by converting an IP address to a geographical a
 | Geo.City(String *ip*)          | <p>This operator converts an IPv4 address to a city name.</p><p>For example, for an IP address in New York City, "New York City" is returned.</p> | Geo.City(@"device.ipAddress") |
 | Geo.MarketCode(String *ip*)    | <p>This operator converts an IPv4 address to the market code of the IP address.</p><p>For example, for an IP address from Canada, "NA" (North America) is returned.</p> | Geo.MarketCode(@"device.ipAddress") |
 
-
 ## Device attribute functions
+
 | Operator     | Description | Example |
 |--------------|-------------|---------|
 | Device.GetFullAttributes(String _sessionId_)   | Returns a full set of device attributes for the specified device fingerprinting session. See [Set up device fingerprinting](device-fingerprinting.md) to view the full set of device attributes | Device.GetFullAttributes(@"deviceFingerprinting.id")|
 | Device.GetAttributes(String _sessionId_)  | Returns a smaller subset of device attributes for the specified device fingerprinting session. The subset is a list curated by Fraud Protection and contains the most commonly used attributes. | Device.GetAttributes(@"deviceFingerprinting.id")|
 | Device.GetSelectedAttributes(String _sessionId_)   | Returns up to 20 device attributes for the specified device fingerprinting session. The list of desired attributes is to be specified as comma separated parameters | Device.GetSelectedAttributes(@"deviceFingerprinting.id", "deviceAsn","deviceCountryCode")  |
 
-
 ## BIN Lookup functions
+
 BIN Lookup functions provide payment card account information (for example, card network, card type, card country code, card category) based on bank identification number (BIN). Data for BIN Lookup is sourced from leading third-party BIN data providers and then curated by Fraud Protection.
+
 | Operator                       | Description | Example |
 |--------------------------------|-------------|---------|
 |BIN.Lookup(String *BIN*).cardNetwork|<p> This function looks up BIN and returns card network (for example, Visa, Mastercard).|BIN.Lookup(@"card.bin").cardNetwork|
@@ -264,10 +284,11 @@ BIN Lookup functions provide payment card account information (for example, card
 |BIN.Lookup(String *BIN*).cardCategory|<p> This operator looks up BIN and returns card category (for example, Prepaid, Corporate, Rewards).|BIN.Lookup(@"card.bin").cardCategory|
 |BIN.Lookup(String *BIN*).error|<p> This operator looks up BIN and returns an error message if the BIN couldn't be found.|BIN.Lookup(@"card.bin").error|
 
-
 ## List functions
+
 Fraud Protection lets you upload custom lists and reference them in the language. 
 For information about how to upload these lists, see [Manage lists](lists.md). For more information about how to use lists in rules, see the [Using lists in rules](fpl-lang-ref.md#using-lists-in-rules) section later in this article.
+
 | Operator | Description | Example |
 |----------|-------------|---------|
 | ContainsKey(<br>String *listName*,<br>String *columnName*,<br>String *key*) | This operator checks whether a key is contained in the specified column in a Fraud Protection [list](lists.md).<p>The example in the next column checks whether the "Emails" column in the "Email Support List" list contains the *@"user.email"* variable.</p> | ContainsKey("Email Support List", "Emails", @"user.email") |
@@ -277,7 +298,6 @@ For information about how to upload these lists, see [Manage lists](lists.md). F
 | IsSafe| This operator checks if an entity is marked as Safe on a Support List. | IsSafe('Email Support List', @"user.email") |
 | IsBlock| This operator checks if an entity is marked as Block on a Support List. | IsBlock('Email Support List', @"user.email") |
 | IsWatch| This operator checks if an entity is marked as Watch on a Support List. | IsWatch('Email Support List', @"user.email") |
-
 
 ## Using lists in rules
 
@@ -334,13 +354,11 @@ You can also specify your own default value as the fifth parameter. For more inf
 
 The **Lookup** operator always returns a *String* value. To convert this value to an *Int*, *Double*, or *DateTime* value, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
-
 ## <a name='external'></a> Using external calls, external assessments and velocities
 
 - To reference an external call, type **External**, followed by the external call that you want to reference. For more information, see [Use an external call in rules](external-calls.md#use-an-external-call-in-rules).
 - To reference an external assessment, type **Assessments**, followed by the external assessment that you want to reference. For more information, see [Use an external assessment in rules](external-assessments.md).
 - To reference a velocity, type **Velocity**, followed by the velocity that you want to reference. For more information, see [Use a velocity in rules](velocities.md#use-a-velocity-in-rules).
-
 
 ## Type inference of attributes
 
@@ -354,11 +372,11 @@ If there isn't enough context to infer the type of a variable, it's considered a
 
 To specify the type of a nonstring variable, use a [type casting operator](fpl-lang-ref.md#type-casting-operators).
 
-
 ## <a name='arrays-objects'></a> JSON arrays and objects
-FQL has support for the construction of complex structured objects as local variables, which may be passed through to the external call or external assessment in JSON form. As with all other locals in FQL, arrays and objects are immutable once created.
+FQL has support for the construction of complex structured objects as local variables, which can be passed through to the external call or external assessment in JSON form. As with all other locals in FQL, arrays and objects are immutable once created.
 
 ### JSON arrays
+
 Arrays are created by enclosing expressions in a pair of brackets:
 ```FraudProtectionLanguage
 LET $arr1 = [ "hello", "world" ]
@@ -372,6 +390,7 @@ LET $arr2 = [
 ```
 
 ### JSON objects
+
 Objects are created with braces:
 ```FraudProtectionLanguage
 LET $obj1 = { isObject: true }
@@ -424,7 +443,6 @@ The following are some more detailed examples of how to use the above syntax bas
 |Payload|<i>Payload sample: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></br><br>LET $sample = Array.GetValue(@@"group".AsJsonArray(), "item1", "a", "item2")</br>RETURN Approve()WHEN $sample.AsString() == "a1"|<i>Payload sample: { "group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></br><br>LET $sample = Array.GetValues(@@"group".AsJsonArray(), "item1", "a")</br>RETURN Approve()</p><p>WHEN $sample[0].item2.AsString() == "a1"|
 |Global variables|<i>Using same payload sample as above</i></br><br>Do SetVariables(Var=@@"group")</br>LET $group = GetVariable("Var").AsJsonObject()</br>LET $value = Array.GetValue($group, "item1", "a", "item2")</br>RETURN Approve()</br>WHEN $value.AsString() == "a1"|<i>Using same payload sample as above</i></br><br>Do SetVariables(Var=@@"group")</br>LET $group = GetVariable("Var").AsJsonObject()</br>LET $arr = Array.GetValues($group.AsJsonArray(), "item1", "a")</br>RETURN Approve()|
 |External call|<p><i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></br><br>LET $x = External.myCall().AsJsonObject()</br>LET $value = Array.GetValue($x.group[0].AsJsonObject(), "item1", "a", "item2")</br>RETURN Approve()</br>WHEN $value.AsString() == "a1"|<i>External call (**myCall**) response: {"group":[{"item1": "a", "item2": "a1"}, {"item1": "b", "item2": "b1"}]}</i></br><br>LET $x = External.myCall().AsJsonObject()</br>LET $arr = Array.GetValues($x.group[0].AsJsonObject(), "item1", "a")</br>RETURN Approve()WHEN $arr[0].item2.AsString() == "a1"|
-
 
 ### Type casting for JSON arrays and objects
 
@@ -479,10 +497,12 @@ LET $sample = @@”accommodations[0].rooms”.AsJsonArray()
 ```
 
 ## Functions available within Post Decision Actions
-Following functions can be used within Post Decision Actions only. They are not available within Decision Rules
+
+Following functions can be used within Post Decision Actions only. They aren't available within Decision Rules
+
 | Syntax | Description | Example |
 |-------------|-------------|---------|
-|SetResponse(String sectionName, k=v)|This function can be used to pass key-value pairs to the *CustomProperties* section of API response. The sectionName is an optional parameter which can be skipped.|SetResponse("Scores", bot = Model.Bot(@deviceContextId), risk=Model.Risk())<p>SetResponse(test=”123”)</p>|
+|SetResponse(String sectionName, k=v)|This function can be used to pass key-value pairs to the *CustomProperties* section of API response. The sectionName is an optional parameter that can be skipped.|SetResponse("Scores", bot = Model.Bot(@deviceContextId), risk=Model.Risk())<p>SetResponse(test=”123”)</p>|
 |Response.Decision()|This function references the decision for the current assessment being evaluated.| Response.Decision() == "Approve"|
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
