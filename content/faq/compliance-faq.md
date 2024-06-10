@@ -73,6 +73,10 @@ Please note that Microsoft employees, including Microsoft-approved subcontractor
 
 Yes. Fraud Protection uses cookies to collect information for a device, not for a particular individual. To opt out of using cookies you can, but it would degrade the device fingerprinting.
 
+#### Does Fraud Protection device fingerprinting get affected by ad blockers?
+
+If DNS/SSL certificate information is properly set up for [web integration](../df-web.md), then the fingerprinting script will be considered a first party integration and would be excluded from most ad blockers. 
+
 ## Additional resources
 
 [EU Data Boundary exceptions for Fraud Protection](../edbd.md)
