@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions (FAQ) about compliance in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 12/09/2022
+ms.date: 06/19/2024
 ms.topic: faq
 search.audienceType:
   - admin
@@ -73,9 +73,9 @@ Please note that Microsoft employees, including Microsoft-approved subcontractor
 
 Yes. Fraud Protection uses cookies to collect information for a device, not for a particular individual. To opt out of using cookies you can, but it would degrade the device fingerprinting.
 
-#### Does Fraud Protection device fingerprinting get affected by ad blockers?
+#### Is Fraud Protection device fingerprinting affected by ad blockers?
 
-If DNS/SSL certificate information is properly set up for [web integration](../df-web.md), then the fingerprinting script will be considered a first party integration and would be excluded from most ad blockers. 
+If DNS/SSL certificate information is properly set up for [web integration](../df-web.md), then the fingerprinting script will be considered a first party integration and will be excluded from most ad blockers. 
 
 ## Additional resources
 
