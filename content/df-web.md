@@ -20,7 +20,7 @@ This section provides detailed instructions for both these phases. The first pha
 
 ## Set up DNS and generate an SSL certificate
 
-Complete the following procedures to set up DNS and generate an SSL certificate.
+Complete the following procedures to set up DNS and generate an SSL certificate. The DNS and SSL setup, while optional, is strongly recommended to ensure optimal fingerprinting coverage and performance. DNS and SSL setup allows for the fingerprinting script to be considered a first party integration, not a third party cookie.
 
 ### Set up DNS
 
