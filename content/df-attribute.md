@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes attribute categories collected by device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/20/2024
+ms.date: 06/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -364,7 +364,7 @@ The following tables show the device fingerprinting attribute categories that we
 
 ## Interpreting fingerprinting response to detect VPNs
 
-There is a field that exists in the **Account Create**, **Account Login**, and **Purchase API** response that can be used to identify VPNs:
+There is a field in the **Account Create**, **Account Login**, and **Purchase API** response that can be used to identify VPNs:
 - ProxyType: An enum. The following table provides the enum values for each ProxyType.
 
   |ProxyType |Description|
@@ -376,7 +376,7 @@ There is a field that exists in the **Account Create**, **Account Login**, and *
   | tor | The proxy is part of the onion router (Tor) network. Encrypted user Internet traffic is routed through a regularly changing series of nodes operated by volunteers. |
   | unknown | The proxy’s type couldn't be determined. |
   | web | The proxy operates by using an Internet web browser. Navigate to the web proxy website, enter the URL of the site you wish to visit, and the contents of the requested URL are returned by the web proxy website within the browser. |
-  | privacy proxy | The proxy is utilized by a Privacy Proxy Service Provider to provide additional privacy protections for end users. The end user traffic is proxied through additional IPs, masking the end user’s IP. The end user does not have the ability to change the country for the IP, but the postal code, city, state, or region may be different from the end user’s location.|
+  | privacy proxy | The proxy is used by a Privacy Proxy Service Provider to provide additional privacy protections for end users. The end user traffic is proxied through additional IPs, masking the end user’s IP. The end user can't change the country for the IP, but the postal code, city, state, or region may be different from the end user’s location.|
 
 For example, to identify a VPN, ProxyType would be **service**.
 
