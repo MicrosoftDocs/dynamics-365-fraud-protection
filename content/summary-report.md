@@ -33,4 +33,4 @@ Fraud Protection provides a Summary report that's designed to show fraud KPI met
 - **Fraud chargeback volume and rate by transaction date (when applies)** – The volume of fraud chargebacks and the percentage of fraud chargebacks out of the total volume that was settled by banks on the transaction date.
 - **Fraud chargeback volume and rate by receive date (when applies)** – The volume of fraud chargebacks based on the receive date, and the percentage of fraud chargebacks on the receive date out of the total fraud chargebacks on the receive date and total volume that was settled by banks on the same day.
 - **Transaction status(when applies)** – The percentage distribution of the latest status of transactions, based on selected filters.
--	**Status distribution from latest observation event (when applies)** – The percentage distribution of the status of transactions from the latest observation events or label events.
+- **Status distribution from latest observation event (when applies)** – The percentage distribution of the status of transactions from the latest observation events or label events.
