@@ -159,8 +159,8 @@ Fraud Protection supports all standard C# [math methods](/dotnet/api/system.math
 
 | Operator                                   | Description | Example |
 |--------------------------------------------|-------------|---------|
-| Math.Min(Double *value1*, Double *value*2) | This operator computes the minimum of two values. | Math.Min(Model.Risk().Score,Model.Bot(@"deviceFingerprinting.id").Score) |
-| Math.Max(Double *value1*, Double *value*2) | This operator computes the maximum of two values. | Math.Max(Model.Risk().Score,Model.Bot(@"deviceFingerprinting.id").Score) |
+| Math.Min(Double *value1*, Double *value*2) | This operator computes the minimum of two values. | Math.Min(Model.Risk().Score, Model.Bot(@"deviceFingerprinting.id").Score) |
+| Math.Max(Double *value1*, Double *value*2) | This operator computes the maximum of two values. | Math.Max(Model.Risk().Score, Model.Bot(@"deviceFingerprinting.id").Score) |
 | RandomInt(Integer *min*, Integer *max*) | This operator returns a random integer in the range provided, including the minimum value and excluding the maximum value. | RandomInt(0, 100) |
 
 ## DateTime operators
