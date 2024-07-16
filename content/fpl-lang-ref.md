@@ -432,8 +432,8 @@ The following are examples of how to use the syntax based on different array sou
 
 | Syntax | Description | Example |
 |---------|-------------|-------------|
-|**Array.GetValue** (TargetArray**.AsJsonArray**(), matchKey, matchValue, lookupKey)|With this function, you can access the first array element that matches a condition.</p><p><i>Returns a value</i>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
-|**Array.GetValues**(TargetArray**.AsJsonArray**(), matchKey, matchValue)|With this function, you can access a set of array elements that match a condition.</p><p><i>Returns an array</i>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
+|**Array.GetValue** (TargetArray **.AsJsonArray**(), matchKey, matchValue, lookupKey)|With this function, you can access the first array element that matches a condition.</p><p><i>Returns a value</i>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
+|**Array.GetValues**(TargetArray **.AsJsonArray**(), matchKey, matchValue)|With this function, you can access a set of array elements that match a condition.</p><p><i>Returns an array</i>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
 
 
 The following are some more detailed examples of how to use the above syntax based on different array sources: 
