@@ -208,8 +208,8 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 | IgnoreCaseEquals()   | This operator returns true if the two strings are equal, regardless of casing differences. Returns false otherwise. | @"user.username".IgnoreCaseEquals(@"user.email") |
 | Contains()   | This operator checks whether a string contains another string. | @"productList.productName".Contains("Xbox") |
 | ContainsOnly() | This operator checks whether a string contains only the charsets provided. |@"zipcode".ContainsOnly(CharSet.Numeric)|
-| ContainsAll() | This operator checks whether a string contains all the charsets provided.|@"zipcode".ContainsAll(CharSet.Numeric\|CharSet.Hypen)|
-| ContainsAny()| This operator checks whether a string contains any of the charsets provided.|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hypen)|
+| ContainsAll() | This operator checks whether a string contains all the charsets provided.|@"zipcode".ContainsAll(CharSet.Numeric\|CharSet.Hyphen)|
+| ContainsAny()| This operator checks whether a string contains any of the charsets provided.|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hyphen)|
 
 ### Using CharSet in ContainsOnly, ContainsAll, and ContainsAny
 
@@ -222,7 +222,7 @@ The following character types can be used in ContainsOnly, ContainsAll, and Cont
 | Asperand	| @ |
 | Backslash |	\ |
 | Comma	| , |
-| Hypen	| - |
+| Hyphen	| - |
 | Numeric	| 0-9 |
 | Period	| . |
 | Slash	| / |
