@@ -293,7 +293,7 @@ For information about how to upload these lists, see [Manage lists](lists.md). F
 | Operator | Description | Example |
 |----------|-------------|---------|
 | ContainsKey(<br>String *listName*,<br>String *columnName*,<br>String *key*) | This operator checks whether a key is contained in the specified column in a Fraud Protection [list](lists.md).<p>The example in the next column checks whether the "Emails" column in the "Email Support List" list contains the *@"user.email"* variable.</p> | ContainsKey("Email Support List", "Emails", @"user.email") |
-| Lookup(<br>String *listName*,<br>String *keyColName*,<br>String *valueColName*) | This operator looks up the value of a key in a Fraud Protection list. Both the name of the column that contains the key and the name of the column that contains the value must be specified.</p><p>The value is always returned as a string.If the key isn't found, and if the **defaultValue** parameter isn't specified, "Unknown" is returned.<p>The example in the next column looks for the value of *@"user.email"* variable in the "Emails" column of the "Email Support List" list. If a match is found, the function would return the value of the "Status" column from the matching row in the list. If a match isn't found, the function would return 0. | Lookup("Email Support List", "Emails", @"user.email", "Status",0) |
+| Lookup(<br>String *listName*,<br>String *keyColName*,<br>String *valueColName*) | This operator looks up the value of a key in a Fraud Protection list. Both the name of the column that contains the key and the name of the column that contains the value must be specified.</p><p>The value is always returned as a string. If the key isn't found, and if the **defaultValue** parameter isn't specified, "Unknown" is returned.<p>The example in the next column looks for the value of *@"user.email"* variable in the "Emails" column of the "Email Support List" list. If a match is found, the function would return the value of the "Status" column from the matching row in the list. If a match isn't found, the function would return 0. | Lookup("Email Support List", "Emails", @"user.email", "Status",0) |
 | In | This operator checks whether a key is contained in a comma-separated list of values. | In(@"user.countryRegion", "US, MX, CA") |
 | InSupportList| This operator checks if an attribute is on a Support List. | InSupportList('Email Support List', @"user.email") |
 | IsSafe| This operator checks if an entity is marked as Safe on a Support List. | IsSafe('Email Support List', @"user.email") |
@@ -432,8 +432,8 @@ The following are examples of how to use the syntax based on different array sou
 
 | Syntax | Description | Example |
 |---------|-------------|-------------|
-|**Array.GetValue** (TargetArray **.AsJsonArray**(), matchKey, matchValue, lookupKey)|With this function, you can access the first array element that matches a condition.</p><p><i>Returns a value</i>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
-|**Array.GetValues**(TargetArray **.AsJsonArray**(), matchKey, matchValue)|With this function, you can access a set of array elements that match a condition.</p><p><i>Returns an array</i>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
+|**Array.GetValue** (TargetArray**.AsJsonArray**(), matchKey, matchValue, lookupKey)|With this function, you can access the first array element that matches a condition.</p><p><i>Returns a value</i>|**Array.GetValue**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue, lookupKey)|
+|**Array.GetValues**(TargetArray**.AsJsonArray**(), matchKey, matchValue)|With this function, you can access a set of array elements that match a condition.</p><p><i>Returns an array</i>|**Array.GetValues**(@@"payloadProperty"**.AsJsonArray**(), matchKey, matchValue)|
 
 
 The following are some more detailed examples of how to use the above syntax based on different array sources: 
