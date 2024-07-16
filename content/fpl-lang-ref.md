@@ -456,7 +456,7 @@ The following are some more detailed examples of how to use the above syntax bas
     -	AsJsonArray()
     -	AsJsonObject()
 
-  - When you use either of the two array helper methods, .GetValue or .GetValues, you need to type cast using **.As<i>\<Type\></i>**().
+  - When you use either of the two array helper methods, Array.GetValue or Arrays.GetValues, you need to type cast using **.As<i>\<Type\></i>**().
     Example:
     ```FraudProtectionLanguage
     LET $arr = {myArr:[{item1: "red", number: 45}, {item1: "blue", number: 56}, {item1: "green", number: 33}]}
