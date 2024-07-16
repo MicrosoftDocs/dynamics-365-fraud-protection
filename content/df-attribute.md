@@ -20,7 +20,7 @@ The following tables show the device fingerprinting attribute categories that we
 |Anomalies|Screen Resolution Anomaly|Anomaly detected in the device screen resolution.|
 |Anomalies|Session Anomaly|Anomaly detected in the session behavior.|
 |Anomalies|User Agent Browser Anomaly|Anomaly detected in the browser user agent.|
-|Anomalies|User Agent Languages Anomaly|Anomaly detected in the languages.|
+|Anomalies|User Agent Languages Anomaly|Anomaly detected in the browser languages.|
 |Anomalies|Time Zone Mismatch|Mismatch between device time zone and IP time zone.|
 |Anomalies|OS Mismatch|Mismatch between device OS and user agent OS.|
 |BrowserUserAgent|User Agent Browser |Browser name parsed from user agent.|
