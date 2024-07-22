@@ -22,7 +22,7 @@ For applicable capabilities, such as purchases, you can switch between the Count
 The following interactive reports make up the reporting suite:
 
   - **Summary report** – This report is designed to show metrics for key performance indicators (KPIs) that are related to fraud. Use this report to learn the statistics of rule decision distributions, fraud rates, and available bank acceptance rates over time for various reporting purposes.
-  - **Rule reports** – This reports are designed to do a deep dive into the performance of decision rules and observe rules. Use these reports to optimize your rules based on performance.
+  - **Rule reports** – These reports are designed to do a deep dive into the performance of decision rules and observe rules. Use these reports to optimize your rules based on performance.
   - **Score reports** – This reports are designed to analyze Fraud Protection's machine learning (ML) scores. Use these reports to determine the score threshold. The configuration experience tests the risk score threshold, reject rate, fraud rate, and profit margin against historical transactions to estimate the risk impact on the detection rate, the net profit that's achieved, and other values.
   - **Threat report** – This reprot is designed to show fraud insights on predefined entities, such as payment card type. Use this report to find distribution changes and identify anomalies on the entities. You can also use this tool to define score segments and further optimize your score rules.
   - **Observation event report** – The observation event report is designed to showcase insights from observation events or labeled events for [Assessments](assessment-create-new.md) only.
