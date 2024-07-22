@@ -12,10 +12,10 @@ ms.custom: bap-template
 
 # Rule reports
 
-Fraud Protection provides Rule reports that are designed to track the impact of Fraud Protection rules that you've enabled. The reports help you understand the transaction volume, distribution, and potential fraud trends by rule and clause. You can also use them to analyze decisions and performance by rule segment, and to compare the impact of observe rules and decision rules.
+Fraud Protection provides Rule reports that are designed to track the impact of Fraud Protection rules that you enabld. The reports help you understand the transaction volume, distribution, and potential fraud trends by rule and clause. You can also use them to analyze decisions and performance by rule segment, and to compare the impact of observe rules and decision rules.
 
 ## Decision rule report
-You can use KPIs to filter and further analyze your decision rules. Based on the filters you have selected, the following metrics are available:
+You can use KPIs to filter and further analyze your decision rules. Based on the filters you selected, the following metrics are available:
 
 - **Transaction volume** – The number of transactions that were assessed by the selected decision rules.
 - **Rule approval rate** – The transactions that were assessed by the selected decision rules and approved, out of all transactions that were assessed by the decision rules. 
@@ -26,7 +26,7 @@ You can use KPIs to filter and further analyze your decision rules. Based on the
 - **Bank acceptance rate (when applies)** – The percentage of bank-approved transactions out of the total transactions that were sent to the bank on the selected decision rules.
 
 ### Decision rule performance table view
-Decision rules are the rules that have activated for real-time decisioning by using the Fraud Protection rule engine. The table view shows the following metrics on each decision rule and clause on selected filters:
+Decision rules are the rules that are activated for real-time decisioning by using the Fraud Protection rule engine. The table view shows the following metrics on each decision rule and clause on selected filters:
 
 - **Transaction volume** – The number of transactions that were assessed by the decision rule.
 - **Transaction distribution** – The transaction percentage of the decision rule out of all decision rules.
@@ -39,7 +39,7 @@ Decision rules are the rules that have activated for real-time decisioning by us
 - **Bank acceptance rate (when applies)** – The percentage of bank-approved transactions out of the total transactions that were sent to the bank on the decision rule.
 
 ### Decision rule performance time series view
-Based on the filters you have selected, the following metrics are available for analysis.
+Based on the filters you selected, the following metrics are available for analysis.
 
 - **Transaction volume** – The transactions that were assessed by the decision rules.
 - **Fraud rate** – The percentage of confirmed fraudulent transactions out of the total confirmed fraud and non-fraud transactions on the decision rules.
@@ -51,7 +51,7 @@ Based on the filters you have selected, the following metrics are available for 
 Fraud Protection's Observe rule analysis report shows the distribution percentage for the observe rule as it's overlapped by a decision rule. The report also shows the transaction status and confirmed fraud metrics by the observe rule and clause segments.
 
 ### Observe rule performance table view
-Based on the filters you have selected, the following metrics are available for analysis.
+Based on the filters you selected, the following metrics are available for analysis.
 
 - **Transaction volume** – The transaction volume that was assessed by the observe rule.
 - **Manual review rate** – The amount of transactions that were assessed by the decision rule and sent for review.
@@ -68,7 +68,7 @@ This view shows the percentage of overlap between the observe rule and clause an
 - **Percentage** – The overlap percentage between the observe rule and clause and the decision rule and clause.
 
 ### Decision rule performance time series view
-Based on the filters you have selected, the following metrics are available for analysis.
+Based on the filters you selected, the following metrics are available for analysis.
 
 - **Transaction volume** – The volume that was assessed by the observe rules.
 - **Fraud rate** – The percentage of fraud transactions out of the total confirmed transactions that were assessed on the observe rules.
