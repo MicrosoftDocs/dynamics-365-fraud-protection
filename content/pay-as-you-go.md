@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to enable Pay as you go billing for Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -23,7 +23,7 @@ If you are an existing Fraud Protection customer and want to switch to Pay as yo
 
 With Pay as you go, your total bill amount every month is determined based on how many Fraud Protection transactions you processed that month per capability. Prices become more favorable as your monthly usage grows. The following tables provide detailed pricing for each capability of Fraud Protection.
 
-**Fixed monthly fee:** $12 per month per Microsoft Azure Active Directory (Azure AD) tenant.
+**Fixed monthly fee:** $12 per month per Microsoft Microsoft Entra tenant.
 
 ### Pricing tiers for account protection
 
@@ -54,11 +54,11 @@ With Pay as you go, your total bill amount every month is determined based on ho
 To enable Pay as you go billing, you need the following subscriptions. 
 
 - Monthly subscription for the Fraud Protection Pay as you go SKU.
-- Azure Active Directory (Azure AD) subscription.
+- Microsoft Entra subscription.
 
 You also need the following permissions.
 
-- Global administrator permissions for Fraud Protection in an existing Azure AD tenant.
+- Global administrator permissions for Fraud Protection in an existing Microsoft Entra tenant.
 - Contributor permissions for a Microsoft Azure subscription.
 
 ## Enable Pay as you go billing
@@ -68,12 +68,12 @@ To enable Pay as you go billing, complete the following steps.
 1. Set up a monthly subscription for Fraud Protection.
 
     1. Go to the [Dynamics 365 Fraud Protection website](https://dynamics.microsoft.com/ai/fraud-protection/) and select **Buy Now**.
-    1. Sign in as the global administrator of the same Azure AD tenant that you want to use with Fraud Protection. If you don't have an Azure AD tenant, you can sign up by following the instructions on the page.
+    1. Sign in as the global administrator of the same Microsoft Entra tenant that you want to use with Fraud Protection. If you don't have an Microsoft Entra tenant, you can sign up by following the instructions on the page.
     1. Complete the steps in the purchase flow. You'll receive confirmation that your monthly subscription for Fraud Protection Pay as you go is successfully set up. You'll then be redirected to the Fraud Protection portal. 
 
 2. Set up your Fraud Protection environment.
 
-    1. In the [Fraud Protection portal](https://dfp.microsoft.com/), sign in as the global administrator of the Azure AD tenant that you used in step 1.
+    1. In the [Fraud Protection portal](https://dfp.microsoft.com/), sign in as the global administrator of the Microsoft Entra tenant that you used in step 1.
     1. If you've already set up the Fraud Protection environment for your free trial, the Fraud Protection portal will be loaded after you sign in. You can then move on to the next step. If you haven't set up your environment, follow the instructions in [Set up a purchased version of Dynamics 365 Fraud Protection](promocode-set-up-dfp-purchased-version.md#complete-the-setup-process).
 
 3. Configure an Azure subscription for Fraud Protection billing.

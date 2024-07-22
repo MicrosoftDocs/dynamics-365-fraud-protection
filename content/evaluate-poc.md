@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article explains how to evaluate proof of concept options in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschlegel
-ms.date: 11/03/2022
+ms.date: 04/10/2024
 ms.topic: reference
 search.audienceType:
   - Administrator
@@ -19,7 +19,7 @@ Fraud Protection lets you evaluate a POC to determine whether a proposed fraud s
 
 ## Prerequisites
 
-- To participate in a Fraud Protection POC, you must have an Azure Active Directory (Azure AD) tenant. If you don't already have an Azure AD tenant, you can sign up for one.
+- To participate in a Fraud Protection POC, you must have a Microsoft Entra tenant. If you don't already have an Microsoft Entra tenant, you can sign up for one.
 - Before you can start a Fraud Protection POC, Microsoft or a Microsoft authorized partner must provide a promotion code to you. If you don't have a promotion code, see [Get started with Fraud Protection](https://dynamics.microsoft.com/get-started/?appname=fraudprotection) to contact a partner and request one.
 
 ## Fraud Protection POC capabilities 

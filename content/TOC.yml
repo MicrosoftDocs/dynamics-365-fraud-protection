@@ -74,7 +74,7 @@
       href: promocode-set-up-account-protection.md
     - name: Configure user roles and access
       href: configure-user-access.md
-    - name: Set up device fingerprinting 
+    - name: Device fingerprinting 
       href: device-fingerprinting.md
   - name: Operations
     items: 
@@ -86,8 +86,12 @@
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
+    - name: Functions
+      href: functions.md
     - name: External calls
       href: external-calls.md
+    - name: Templates
+      href: templates.md
     - name: Search
       href: search.md
     - name: AI and insights from the Fraud Protection Network
@@ -132,6 +136,8 @@
         href: configure-user-access.md
       - name: Payment service provider user roles and access 
         href: psp-user-roles.md
+    - name: Activity logs
+      href: activity-logs.md
   - name: Operations
     items: 
     - name: Language reference guide
@@ -142,8 +148,12 @@
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
+    - name: Functions
+      href: functions.md
     - name: External calls
       href: external-calls.md
+    - name: Templates
+      href: templates.md
     - name: Search
       href: search.md
     - name: Upload historical data
@@ -196,6 +206,22 @@
       href: configure-user-access.md
     - name: Integration with Dynamics 365 Commerce
       href: loss-prevention-integration-with-commerce.md
+- name: Device fingerprinting
+  items:
+  - name: Overview
+    href: device-fingerprinting.md
+  - name: Attribute categories
+    href: df-attribute.md
+  - name: Integration and setup
+    items:
+    - name: Web setup
+      href: df-web.md
+    - name: Mobile SDK for iOS
+      href: mobile-sdk-ios.md
+    - name: Mobile SDK for Android
+      href: mobile-sdk-android.md
+    - name: Mobile SDK for React Native
+      href: mobile-sdk-react-native.md
 - name: Assessments
   items:
   - name: Create a new assessment
@@ -210,6 +236,8 @@
       href: configure-user-access.md
     - name: Payment service provider user roles and access 
       href: psp-user-roles.md
+    - name: Activity logs
+      href: activity-logs.md
   - name: Operations
     items: 
     - name: Language reference guide
@@ -220,10 +248,14 @@
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
+    - name: Functions
+      href: functions.md
     - name: External calls
       href: external-calls.md
     - name: External assessments
       href: external-assessments.md
+    - name: Templates
+      href: templates.md
     - name: Search
       href: search.md
     - name: AI and insights from the Fraud Protection Network
@@ -254,7 +286,6 @@
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
-
 - name: Reporting and monitoring
   items:
   - name: Reporting
@@ -303,6 +334,8 @@
         href: https://go.microsoft.com/fwlink/?linkid=2134792
       - name: Fraud Protection model audit reports
         href: https://go.microsoft.com/fwlink/?linkid=2132646
+- name: Product support
+  href: dfp-css-product-support.md
 - name: Community
   items:
   - name: Join Dynamics 365 Community

@@ -2,7 +2,7 @@
 author: swasif23
 description: This article provides an overview of the Post-decision action rules feature in Microsoft Dynamics 365 Fraud Protection.
 ms.author: swasif
-ms.date: 07/31/2023
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin

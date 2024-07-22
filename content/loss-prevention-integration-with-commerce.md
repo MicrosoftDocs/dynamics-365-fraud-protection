@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to integrate loss prevention with Microsoft Dynamics 365 Commerce.
 ms.author: josaw
-ms.date: 01/28/2020
+ms.date: 04/10/2024
 
 ms.topic: conceptual
 search.audienceType:
@@ -36,7 +36,7 @@ For information about how to turn on the Azure Data Lake Storage service for you
 
 Next, you must add a service account by registering the application ID for Fraud Protection in the Commerce environment.
 
-1. Select **Finance and Operations Preview**, and then select **Azure Active Directory applications**.
+1. Select **Finance and Operations Preview**, and then select **Microsoft Entra applications**.
 1. To create a new first-party app identity for Fraud Protection, select **New**.
 1. In the **Client ID** field, enter **bf04bdab-e06f-44f3-9821-d3af64fc93a9**.
 1. In the **RetailServiceAccount** field, enter the user ID.

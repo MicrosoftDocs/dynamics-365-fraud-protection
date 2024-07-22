@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about custom assessments, and explains how to create and define them.
 ms.author: josaw
-ms.date: 06/28/2022
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -91,7 +91,7 @@ To implement custom assessments with device fingerprinting, follow the steps bel
 
 1. To implement device fingerprinting on the relevant pages in your app or website, refer to the appropriate instructions on the following pages.
 
-    - For web pages, see [Set up device fingerprinting](device-fingerprinting.md#implement-device-fingerprinting).
+    - For web pages, see [Web set up of device fingerprinting](df-web.md).
 
     - For Android apps, see [Fraud Protection mobile SDK for Android](mobile-sdk-android.md).
 

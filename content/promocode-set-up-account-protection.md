@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to set up customer accounts protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/16/2022
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -27,7 +27,7 @@ Account protection covers three types of account lifecycle events: *account crea
 This document guides you through the following activities:
 
 -	[Step 1: Implement account protection APIs](promocode-set-up-account-protection.md#step-1-implement-account-protection-apis)
--	[Step 2: Create Azure Active Directory (Azure AD) apps](promocode-set-up-account-protection.md#step-2-create-azure-ad-apps)
+-	[Step 2: Create Microsoft Entra apps](promocode-set-up-account-protection.md#step-2-create-microsoft-entra-apps)
 -	[Step 3: Understand account protection events](promocode-set-up-account-protection.md#step-3-understand-account-protection-events)
 
     After you complete these activities, you will be able to use account protection to block or challenge suspicious attempts to compromise existing accounts.
@@ -36,7 +36,7 @@ This document guides you through the following activities:
 
 Before you begin the activities in this document, you must complete the following tasks:
 
--	Set up Fraud Protection in an Azure AD tenant as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
+-	Set up Fraud Protection in an Microsoft Entra tenant as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
 -	[Set up device fingerprinting](device-fingerprinting.md).
 
 ## Step 1: Implement account protection APIs
@@ -50,14 +50,14 @@ You can use different **account protection APIs** depending on how you want to u
 
 For more information about supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 
-## Step 2: Create Azure AD apps
+## Step 2: Create Microsoft Entra apps
 
 > [!IMPORTANT]
-> To complete this step, you must be an application administrator, a cloud application administrator, or a global administrator in your Azure AD tenant.
+> To complete this step, you must be an application administrator, a cloud application administrator, or a global administrator in your Microsoft Entra tenant.
 
-To acquire the tokens that are required to call the APIs, use Fraud Protection to configure Azure AD applications.
+To acquire the tokens that are required to call the APIs, use Fraud Protection to configure Microsoft Entra applications.
 
-### Configure an Azure AD app
+### Configure a Microsoft Entra app
 
 1.	In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **Data**, and then select **API management**.
 2.	On the **API management** page, select **Configuration**.
@@ -92,7 +92,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 
 -	**API Endpoint** – The URI for your environment appears on the **Account information** tile on the Fraud Protection dashboard.
 -	**Directory (tenant) ID** – The directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard.
--	**Application (client) ID** – The application ID identifies the Azure AD app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **API Management** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you create.
+-	**Application (client) ID** – The application ID identifies the Microsoft Entra app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **API Management** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you create.
 -	**Certificate thumbprint or secret** – You can find the certificate thumbprint or the secret on the confirmation page that appears after you select **Create application** on the **API Management** page.
 -	**Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
@@ -150,7 +150,7 @@ Behind the scenes, the preceding code generates an HTTP request and receives a r
 
 For more information about access tokens, see the following Azure documentation:
 
-- [Use client assertion to get access tokens from Azure AD](/azure/architecture/multitenant-identity/client-assertion)
+- [Use client assertion to get access tokens from Microsoft Entra ID](/azure/architecture/multitenant-identity/client-assertion)
 - [Cache access tokens](/azure/architecture/multitenant-identity/token-cache)
 
 ### Call the APIs
@@ -159,7 +159,7 @@ For more information about access tokens, see the following Azure documentation:
 
 | Header name	| Header value|
 |----------------|------------------|
-| Authorization	| <p>Use the following format for this header: Bearer *accesstoken*</p><p>In this format, accesstoken is the token that is returned by Azure AD.</p>| 
+| Authorization	| <p>Use the following format for this header: Bearer *accesstoken*</p><p>In this format, accesstoken is the token that is returned by Microsoft Entra ID.</p>| 
 | x-ms-correlation-id	| Send a new GUID value on each set of API calls that are made together.| 
 | Content-Type	| application/json| 
 | x-ms-dfpenvid       | Send the GUID value of your Instance ID. |

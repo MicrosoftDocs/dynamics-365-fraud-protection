@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic provides troubleshooting guidance for when a global administrator encounters an error while attempting to redeem a Microsoft Dynamics 365 Fraud Protection promotion code.
 ms.author: josaw
-ms.date: 06/09/2022
+ms.date: 04/10/2024
 ms.topic: reference
 search.audienceType:
   - admin

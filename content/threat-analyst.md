@@ -1,8 +1,8 @@
 ---
 author: yvonnedeq
 description: This article explains how to utilize the Threat report in Microsoft Dynamics 365 Fraud Protection.
-ms.author: kfend
-ms.date: 02/08/2023
+ms.author: josaw
+ms.date: 07/22/2024
 ms.topic: conceptual
 search.audienceType:
   - admin

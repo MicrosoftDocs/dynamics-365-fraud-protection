@@ -2,7 +2,7 @@
 author: yvonnedeq
 description: This article explains how to utilize the Rule reports in Microsoft Dynamics 365 Fraud Protection.
 ms.author: kfend
-ms.date: 02/09/2023
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin

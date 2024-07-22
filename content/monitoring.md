@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to monitor API calls in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -47,5 +47,25 @@ The full list of errors shows HTTP status descriptions and codes, the APIs to wh
 - Filter results by selecting any of the column headers. 
 - Select a line to find that error in the chart, and click it again to deselect. Results may take a few seconds to render. 
 
+## Health ping to online URL
+
+Fraud Protection provides a health ping endpoint which allows customers to verify connectivity from any client to the Web Service. The health ping endpoints is a basic check for latency and availability at the network layer.  
+
+The endpoint returns zero bytes payload along with a 200 HTTP status code.
+
+### Curl
+
+```
+curl https://contoso-guid.api.dfp.dynamics.com/api/v1/health 2>&1 | grep HTTP
+> GET /api/v1/health HTTP/1.1
+< HTTP/1.1 200 OK
+```
+
+### PowerShell
+
+```
+(Invoke-WebRequest https://contoso-guid.dfp.dynamics.com/api/v1/health).StatusCode
+200
+```
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to complete manual reviews in Case management for Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 11/03/2022
+ms.date: 04/10/2024
 ms.topic: reference
 search.audienceType:
   - developer
@@ -50,13 +50,16 @@ After you've reviewed the details of the transaction and are ready to make a dec
 > [!NOTE]
 > The **Transaction review** page monitors the amount of time that you spend reviewing cases. If you've been reviewing a case for 30 minutes, you'll receive an alert. If you're still reviewing the case, you can extend the time for another 30 minutes by selecting **Continue reviewing** in the message. If you don't make a selection in the message, the case will be sent back to the queue and made available for another agent to review.
 
-## Add notes without reviewing a case
+## Notes panel
 
-If you can't complete a review of a case, you can leave notes for the next reviewer.
+Notes allow your team to have a rich collaboration when reviewing event details. You can create, edit, reply, delete, and tag users on the **Notes** panel attached to individual event details through **Search and Case Management**.
 
-1. Select **Notes** in the upper-right corner of the **Transaction review** page.
-1. Select **Note** to add a note that will be associated with the transaction. Anyone who views the transaction in the future will be able to view this note.
-1. Select **Send back to queue** to send the case back to the queue and make it available for another agent to review. 
+1. To create a new note, select **+ New Note** in the upper-right corner, enter your text in the text box, and then select the blue paper plane icon at the bottom right to publish your draft. To delete your draft, select the blue cross at the bottom right.
+2. To edit or delete a note, select the vertical ellipsis to view the menu, and select the desired command.
+3. To reply, enter your text in the **Reply** text box below the note you are replying to.
+4. To tag a user in your note, type the **@** symbol followed by the users name or email alias with tenant access. After the note is published, the tagged user receives an in-product notification.
+
+You may also type hyperlinks that are clickable after they're published.
 
 ## Make bulk decisions
 
