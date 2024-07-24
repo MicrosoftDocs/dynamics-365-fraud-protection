@@ -288,13 +288,13 @@
       href: dfp-notifications.md
 - name: Reporting and monitoring
   items:
-  - name: Reporting
+  - name: Reporting overview
     href: virtual-fraud-analyst-reporting.md
   - name: Summary report
     href: summary-report.md
-  - name: Score reports
+  - name: Score report
     href: score-analyst.md
-  - name: Rule reports
+  - name: Rule report
     href: rule-analyst.md
   - name: Threat report
     href: threat-analyst.md
