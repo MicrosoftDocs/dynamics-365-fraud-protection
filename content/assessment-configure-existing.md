@@ -31,10 +31,10 @@ If you have **Read/Write** permissions for Assessments, you can:
   - Deleting an assessment permanently removes the assessment and its transactional data from your environment and all its child environments. All cases associated with that assessment across all environments, including the root and children are dropped.
   - If an assessment and associated data like rules are deleted in the root environment, the velocities that reference this assessment in child environments show an error on the [Velocities](velocities.md) page. 
 - Create reports:
-  - You can set up data filters to match your business needs, allowing you to analyze your data in various ways within the reports. A default set of data filters are automatically assigned based on your assessment configuration.
-  - You can setup data fields from observation events and labels to show distribution metrics as needed.  
-  - By enabling or disabling the "Amount" option, you can choose to show the Amount metric in the reports. You can select specific data attributes to determine how amounts are aggregated for reporting. The “txnAmount” in monetary templates like Purchase, Money Transfer, and Card Payment is considered as the default amount attributes.
-  - A limit has been set on report configuration changes to 5 times every 90 days to ensure the highest quality of performance and a consistent user experience. This has been implemented to maintain the integrity and responsiveness of the reports. It may take up to 24 hours for reports to be generated following the initial transaction. Similarly, enabling or re-enabling a report can result in up to a 24-hour delay before the reports become visible.
+  - You can set up data filters to match your business needs. Data filters enable you to analyze your data in various ways within reports. Default data filters are automatically assigned based on your assessment configuration.
+  - You can set up data fields from observation events and labels to display distribution metrics as needed.  
+  - By enabling or disabling the **Amount** option, you can display the Amount metric in your reports. You can select specific data attributes to determine how amounts are aggregated for reporting. The **txnAmount** in monetary templates like Purchase, Money Transfer, and Card Payment is considered to be default Amount attributes.
+  - Report configuration changes are limited to five times every 90 days to ensure the highest quality of performance and a consistent user experience. This limit maintains the integrity and responsiveness of the reports. It may take up to 24 hours to generate reports after the initial transaction. Similarly, if you enable or re-enable a report, a 24-hour delay may result in when the reports are visible.
 
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
