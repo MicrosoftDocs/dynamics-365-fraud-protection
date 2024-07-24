@@ -2,7 +2,7 @@
 author: kha-microsoft
 description: This article describes how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/28/2024
+ms.date: 07/24/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -79,7 +79,7 @@ Fraud Protection offers a defined set of user roles, each of which has access to
 
 ### Permissions
 
-The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles.
+The following table includes the specific read/write permissions that users have on each page in the Fraud Protection portal, depending on their roles.
 
 <table>
     <thead>
