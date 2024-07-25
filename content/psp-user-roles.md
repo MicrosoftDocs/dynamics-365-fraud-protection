@@ -100,68 +100,68 @@ The following table includes the specific read/write permissions that users have
         <tr>
             <td rowspan="5">Reporting</td>
             <td>Summary</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
-            <td>Read only</td>
+            <td>Read-only</td>
         </tr>
         <tr>
           <td>Rule reports</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
           <td>No access</td>
           <td>No access</td>
           <td>No access</td>
-          <td>Read only</td>
+          <td>Read-only</td>
         </tr>
         <tr>
           <td>Threat report</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
           <td>No access</td>
           <td>No access</td>
           <td>No access</td>
-          <td>Read only</td>
+          <td>Read-only</td>
         </tr>
         <tr>
           <td>Score reports</td>
-          <td>Read only</td>
-          <td>Read only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
           <td>No access</td>
           <td>No access</td>
           <td>No access</td>
           <td>No access</td>
           <td>No access</td>
-          <td>Read only</td>
+          <td>Read-only</td>
         </tr>
         <tr>
           <td>Monitoring</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
-          <td>Read only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
           <td>No access</td>
           <td>No access</td>
           <td>No access</td>
-          <td>Read only</td>
+          <td>Read-only</td>
         </tr>
         <tr>
             <td colspan="2">Search</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
             <td>No access</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
         </tr>
         <tr>
@@ -169,17 +169,17 @@ The following table includes the specific read/write permissions that users have
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>Read/Write<sup>1</sup></td>
             <td>No access</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
         </tr>
         <tr>
             <td rowspan="2">Rules</td>
             <td>Performance</td>
-            <td>Read only</td>
-            <td>Read only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -191,8 +191,8 @@ The following table includes the specific read/write permissions that users have
           <td>Rule management</td>
           <td>Read/Write</td>
           <td>Read/Write</td>
-          <td>Read only</td>
-          <td>Read only</td>
+          <td>Read-only</td>
+          <td>Read-only</td>
           <td>No access</td>
           <td>No access</td>
           <td>No access</td>
@@ -202,8 +202,8 @@ The following table includes the specific read/write permissions that users have
             <td colspan="2">Velocities</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
-            <td>Read only</td>
-            <td>Read only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -215,7 +215,7 @@ The following table includes the specific read/write permissions that users have
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -226,10 +226,10 @@ The following table includes the specific read/write permissions that users have
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>Read/Write<sup>1</sup></td>
             <td>No access</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
         </tr>
         <tr>
@@ -249,7 +249,7 @@ The following table includes the specific read/write permissions that users have
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>Read/Write<sup>2</sup></td>
             <td>No access</td>
             <td>No access</td>
@@ -257,9 +257,9 @@ The following table includes the specific read/write permissions that users have
         </tr>
         <tr>
             <td>Report</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -271,7 +271,7 @@ The following table includes the specific read/write permissions that users have
             <td>Read/Write</td>
             <td>Read/Write</td>
             <td>Read/Write</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -280,46 +280,46 @@ The following table includes the specific read/write permissions that users have
           <tr>
             <td rowspan="3">API Management</td>
             <td>API requests</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>Errors</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
         <tr>
             <td>Ontology</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
-            <td>Read only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
+            <td>Read-only</td>
             <td>No access</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
         <tr>
             <td rowspan="3">Integration</td>
             <td>Dashboard</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
         </tr>
@@ -359,7 +359,7 @@ The following table includes the specific read/write permissions that users have
         <tr>
             <td rowspan="2">Subscription</td>
             <td>Summary</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -370,7 +370,7 @@ The following table includes the specific read/write permissions that users have
         </tr>
         <tr>
             <td>Details</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
@@ -427,7 +427,7 @@ The following table includes the specific read/write permissions that users have
         </tr>
         <tr>
             <td>Report</td>
-            <td>Read only</td>
+            <td>Read-only</td>
             <td>No access</td>
             <td>No access</td>
             <td>No access</td>
