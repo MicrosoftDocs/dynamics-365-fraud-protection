@@ -439,13 +439,13 @@ The following table includes the specific read/write permissions that users have
     </tbody>
 </table>
 
-1. ManualReviewAgent can remove items from **Support lists** (for example, Safe, Block, and Watch) via the **Event Details** page, or add items to those lists. However, it can't read or edit the full **Support lists** page.
-2.  ManualReviewAgent can make decisions (for example, Approve, Reject, or Send back to queue) about cases in queues. However, it can't modify higher-level queue settings.
+1. ManualReviewAgent can remove or add items from/to **Support lists** (for example, Safe, Block, and Watch) on the **Event Details** page. However, ManualReviewAgent can't read or edit the full **Support lists** page.
+2. ManualReviewAgent can make decisions (for example, Approve, Reject, or Send back to queue) about cases in queues. However, ManualReviewAgent can't modify higher-level queue settings.
 3. To create an Azure AD application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
 
 ### Member access
 
-Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and using a Microsoft account to sign in.
+Members can access Fraud Protection at [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and by using a Microsoft account to sign in.
 
 ### Guest user access
 
@@ -453,7 +453,7 @@ Guest users can access Fraud Protection after they accept an email invitation an
 
 To accept an invitation to Fraud Protection, follow these steps.
 
-1. Check your email inbox for an email that has the subject line "\<Name\> invited you to access applications within their organization."
+1. Check your inbox for an email that has the subject line "\<Name\> invited you to access applications within their organization."
 1. Select **Accept invitation**.
 1. If an existing Microsoft account or related account uses your email address, you're prompted to use that account to sign in. Otherwise, follow the setup process to sign up for a new account. After you're fully signed in, you should have access to Fraud Protection.
 1. Return to the invitation email, and write down or bookmark the exact link that appears after the text "If you accept this invitation, you will be sent to...." This link is in the format `https://dfp.microsoft.com/.../...`. Each time that you access Fraud Protection, you must use this exact link.
