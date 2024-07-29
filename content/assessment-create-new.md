@@ -180,13 +180,13 @@ This setting determines the order in which the rules are evaluated for your asse
 
 ### Additional features
 
-Fraud Protection supports the following settings for three different assessment features:
+Fraud Protection supports the following settings for three different assessment features.
 
 - **Case management** – Manage and take action on transactions that require a review by human subject matter experts. For more information, see [Case management overview](case-management-overview.md).
 - **Search** – Find and view details associated with specific transactions. To learn more, see [Search](search.md).
 - **Reporting** - Reporting provides a historical view of your data and helps you conduct fraud analysis to optimize your business. To learn more, see [Reporting](virtual-fraud-analyst-reporting.md).
 
-The available features  and their default settings vary based on the fraud assessment template you selected in the **Select template** step. The following table is a summary of the assessment feature default settings broken down by assessment template:
+The available features  and their default settings vary based on the fraud assessment template you selected in the **Select template** step. The following table is a summary of the assessment feature default settings broken down by assessment template.
 
 
 | Template | Case management | Search | Reporting |
