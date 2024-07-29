@@ -332,8 +332,8 @@
         href: https://go.microsoft.com/fwlink/?linkid=2135033
       - name: Fraud Protection mobile reference
         href: https://go.microsoft.com/fwlink/?linkid=2134792
-      - name: Fraud Protection model audit reports
-        href: https://go.microsoft.com/fwlink/?linkid=2132646
+      - name: Fraud Protection model explainability
+        href: https://go.microsoft.com/fwlink/?linkid=2280357
 - name: Product support
   href: dfp-css-product-support.md
 - name: Community
