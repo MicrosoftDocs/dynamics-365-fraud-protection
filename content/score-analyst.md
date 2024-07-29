@@ -1,8 +1,8 @@
 ---
 author: yvonnedeq
 description: This article provides information about the Score reports of Dynamics 365 Fraud Protection.
-ms.author: kfend
-ms.date: 02/08/2023
+ms.author: josaw
+ms.date: 07/29/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -12,12 +12,12 @@ ms.custom: bap-template
 
 # Score reports
 
-Fraud Protection provides Score reports that use innovative artificial intelligence (AI) technology to analyze historical views of your data, and to help you set up and adjust optimal risk score thresholds. This information can then be transformed into rules that help you decide, in real time, whether to accept or reject customer transactions.
+Dynamics 365 Fraud Protection provides Score reports that use innovative artificial intelligence (AI) technology to analyze historical views of your data, and to help you set up and adjust optimal risk score thresholds. This information can then be transformed into rules that help you decide, in real time, whether to accept or reject customer transactions.
 
 Advanced adaptive AI and other state-of-the-art AI technologies are used to generate a risk score on every transaction. The higher the risk score, the higher the perceived risk. The ML model uses a range of risk scores from 0 through 999. The score is aggregated in increments of 10. The lower bound is rounded down, and upper bound is rounded up. For example, if you select a score from 35 through 64, the metrics and charts on the report show data that has a score range from 30 through 69.
 
 ## KPIs
-The following KPIs are included:
+The following KPIs are included.
 
 - **Transaction volume** – The transaction volume at or above the score during the selected date range, by count or amount.
 - **Rule approval rate** – The percentage of transactions at or above the score by count or amount that was approved by the decision rules.
@@ -31,7 +31,7 @@ The following KPIs are included:
 Fraud control professionals can use the **Distribution and performance** report to analyze the relationship between Fraud Protection scores and other segments of the data, such as decisions, rule clauses, and transaction status.
 
 ### Score view
-When you select the **Score** view, based on the filters you have selected, the following metrics are available:
+When you select the **Score** view, based on the filters you select, the following metrics are available.
 
 - **Transaction volume by score** – The transaction volume in each score.
 - **Fraud rate by score**
@@ -45,7 +45,7 @@ When you select the **Score** view, based on the filters you have selected, the 
 
     - **Bank approved volume** – The bank-approved transactions in each score.
     - **Bank approved rate** – The percentage of bank-approved transactions out of the total that were sent to the bank in each score.
-- **Transaction status by score(when applies)** – The percentage of latest transaction statuses in each score.
+- **Transaction status by score (when applies)** – The percentage of latest transaction statuses in each score.
 - **Status distribution from latest observation event (when applies)** – The percentage distribution of the status of transactions from the latest observation events or label events by score.
 
 ### Time series view
@@ -60,18 +60,18 @@ When you select the Time series view, based on the filters you have selected, th
 - **Rule decision distribution** – The rule decision percentage. (The rule decisions include **Approve**, **Reject**, **Review**, and **Challenge**.)
 - **Rule decision rate** – The percentage distribution of rule decisions.
 - **Bank acceptance volume and rate** – The volume of bank-approved transactions, and the percentage of bank-approved transactions out of the total transactions that were sent to the bank.
-- **Transaction status(when applies)** – The percentage distribution of the latest status of transactions.
+- **Transaction status (when applies)** – The percentage distribution of the latest status of transactions.
 - **Status distribution from latest observation event (when applies)** – The percentage distribution of the status of transactions from the latest observation events or label events.
 
 ### Table view
-The statistical table view shows the following metrics for each score range, based on the selected filters:
+The statistical table view shows the following metrics for each score range, based on the selected filters.
 
 - Transaction volume
 - Reject rate
 - Non-Fraud volume
 - Fraud volume
 - Fraud rate
-- Send to bank volume(when applies)
+- Send to bank volume (when applies)
 - Bank acceptance rate (when applies)
 
 ## Operation analysis report
@@ -98,7 +98,7 @@ The **Operation analysis** report calculates statistics of score thresholds, bas
 
 ## Profit optimizer report  
 
-The **Profit optimizer** report calculates net profit and cumulative net profit achieved percentages based on the given estimated percentage of profit margin and score range (in increments of 10). The report is designed for purchase and it requires to enable amount calculation.
+The **Profit optimizer** report calculates net profit and cumulative net profit achieved percentages based on the given estimated percentage of profit margin and score range (in increments of 10). The report is designed for purchase and it requires amount calculation to be enabled.
 
   - **Net profit** – The profit of non-fraud transactions minus the cost of goods of fraud transactions.
   - **Cumulative net profits achieved percentage** – The percentage of net profit at or under a score bin out of the total possible non-fraud profit.
@@ -108,10 +108,10 @@ The **Profit optimizer** report calculates net profit and cumulative net profit 
 In addition to the common filters, the following filters are available for you to further analyze your data. You can select different filters and check the metrics for your analysis.
 
 - **Score** – Use the text box or the scroll bar to select the desired score range. The score is aggregated in increments of 10. For the digit in the ones place, the lower bound is rounded down to 0 (zero), and the upper bound is rounded up to 9. For example, if you select a score from 35 through 64, the metrics and charts on the report show data that has a score range from 30 through 69.
-- **Merchant rule decision** – The decisions that were made by Fraud Protection rules. The rule decisions include **Approve**, **Reject**, **Review**, and **Challenge**.
-- **Merchant final decision** – The final decisions that were shared through the Fraud Protection status API.
-- **Decision rule/clause** – The decision rule and clauses that were created through the Fraud Protection rule engine.
+- **Merchant rule decision** – The decisions made by Fraud Protection rules. The rule decisions include **Approve**, **Reject**, **Review**, and **Challenge**.
+- **Merchant final decision** – The final decisions shared through the Fraud Protection status API.
+- **Decision rule/clause** – The decision rule and clauses created through the Fraud Protection rule engine.
 - **Score type** – The available Fraud Protection score types.
-- **Transaction status(when applies)** – The latest status of transactions.
-- **Latest event, status (when applies)** – the status of transactions from the latest label or observation event.  
-- **Latest fraud event, fraud flag (when applies)** – the fraudflag value from the latest label or observation event.
+- **Transaction status (when applies)** – The latest status of transactions.
+- **Latest event, status (when applies)** – The status of transactions from the latest label or observation event.  
+- **Latest fraud event, fraud flag (when applies)** – The fraudflag value from the latest label or observation event.
