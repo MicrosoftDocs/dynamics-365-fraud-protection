@@ -2,7 +2,7 @@
 author: arj-malhotra
 description: This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/28/2024
+ms.date: 07/29/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -42,7 +42,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 |Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer|
-|Read only|All Areas Viewer, Manual Review Fraud Manager|
+|Read-only|All Areas Viewer, Manual Review Fraud Manager|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 
 
@@ -50,14 +50,14 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer, Manual Review Fraud Manager|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 
 
 ### Monitoring Report (Assessments)
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer, Manual Review Fraud Manager|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer, Manual Review Fraud Manager|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 
 
@@ -65,14 +65,14 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor|
-|Read only|All Areas Viewer, Fraud Engineer, Manual Review Fraud Manager|
+|Read-only|All Areas Viewer, Fraud Engineer, Manual Review Fraud Manager|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 
 
 ### Search, View Transaction Details & Export
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 The following table shows the specific read/write permissions that users will have on each page in the Fraud Protection portal, depending on their roles. Along with the sections listed in the table, **Product admin** also has Read/Write permission to the **Admin settings** page, including the **Configuration**, **Search**, **Billing**, and **Subscription** tabs.
@@ -111,14 +111,14 @@ The following table shows the specific read/write permissions that users will ha
 <tr>
 <td rowspan="2">Account creation</td>
 <td>Monitoring</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -127,7 +127,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -138,14 +138,14 @@ The following table shows the specific read/write permissions that users will ha
 <tr>
 <td rowspan="2">Account login</td>
 <td>Monitoring</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -154,7 +154,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -165,14 +165,14 @@ The following table shows the specific read/write permissions that users will ha
 <tr>
 <td rowspan="3">Purchase</td>
 <td>Monitoring</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -181,7 +181,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -191,25 +191,25 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Support</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
 <tr>
 <td colspan="2">Loss Prevention</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -220,24 +220,24 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
 <tr>
 <td colspan="2">Assessments monitoring</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -246,7 +246,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -269,23 +269,23 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td colspan="2">Search</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 </tr>
 <tr>
 <td colspan="2">Event Details</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>Read/write</td>
 <td>Read/write</td>
 <td>No access</td>
@@ -299,7 +299,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -312,7 +312,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -322,14 +322,14 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Report</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -338,7 +338,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -352,11 +352,11 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -365,11 +365,11 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -378,11 +378,11 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -391,11 +391,11 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -404,11 +404,11 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 </tr>
@@ -417,7 +417,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -430,7 +430,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -444,7 +444,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -457,7 +457,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -467,12 +467,12 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td colspan="2">Graph explorer</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
@@ -482,8 +482,8 @@ The following table shows the specific read/write permissions that users will ha
 <td colspan="2">Event tracing</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -496,7 +496,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -507,10 +507,10 @@ The following table shows the specific read/write permissions that users will ha
 <tr>
 <td rowspan="3">API management</td>
 <td>API requests</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -520,10 +520,10 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Errors</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -533,12 +533,12 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Ontology</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -550,7 +550,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -563,7 +563,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -576,7 +576,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -587,10 +587,10 @@ The following table shows the specific read/write permissions that users will ha
 <tr>
 <td rowspan="2">Usage</td>
 <td>Summary</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -600,10 +600,10 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Details</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -615,8 +615,8 @@ The following table shows the specific read/write permissions that users will ha
 <td colspan="2">User access</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -630,7 +630,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -643,7 +643,7 @@ The following table shows the specific read/write permissions that users will ha
 <td>Read/Write</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>Read/Write</td>
 <td>No access</td>
@@ -656,8 +656,8 @@ The following table shows the specific read/write permissions that users will ha
 <td>Opt in</td>
 <td>Read/Write</td>
 <td>Read/Write</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -667,10 +667,10 @@ The following table shows the specific read/write permissions that users will ha
 </tr>
 <tr>
 <td>Report</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
-<td>Read only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
+<td>Read-only</td>
 <td>No access</td>
 <td>No access</td>
 <td>No access</td>
@@ -686,7 +686,7 @@ The following table shows the specific read/write permissions that users will ha
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Fraud Engineer|
 
 
@@ -701,14 +701,14 @@ The following table shows the specific read/write permissions that users will ha
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Fraud Engineer|
 
 
 ### Case Management - Report
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Manual Review Fraud Manager|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Manual Review Fraud Manager|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst|
 
 
@@ -716,7 +716,7 @@ The following table shows the specific read/write permissions that users will ha
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer, Manual Review Fraud Manager|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 > [!NOTE]
 > The Support Agent role can't access the **Support list** page, but can modify the list from **Transaction detail** page, on the **Support** tab under **Purchase assessment**.
@@ -726,7 +726,7 @@ The following table shows the specific read/write permissions that users will ha
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin|
-|Read only|All Areas Editor, All Areas Viewer|
+|Read-only|All Areas Editor, All Areas Viewer|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -740,7 +740,7 @@ The following table shows the specific read/write permissions that users will ha
 ### API Management
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -748,13 +748,13 @@ The following table shows the specific read/write permissions that users will ha
 |Template Type| Permission | Roles |
 |-------------|-------------|-------------|
 |Rule|Read/Write/Export|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer, Manual Review Fraud Manager|
-|Rule|Read only|All Areas Viewer|
+|Rule|Read-only|All Areas Viewer|
 |Rule|No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 |Assessment|Read/Write/Export|Product Admin, All Areas Admin, All Areas Editor|
-|Assessment|Read only|All Areas Viewer, Manual Review Fraud Manager|
+|Assessment|Read-only|All Areas Viewer, Manual Review Fraud Manager|
 |Assessment|No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst|
 |Environment|Read/Write/Export|Product Admin, All Areas Admin, All Areas Editor|
-|Environment|Read only|All Areas Viewer|
+|Environment|Read-only|All Areas Viewer|
 |Environment|No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
   > [!NOTE]
   > - To create a template from a resource, user must have read permission on the resource as well as write permission on the template.
@@ -763,14 +763,14 @@ The following table shows the specific read/write permissions that users will ha
 ### Graph Explorer
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer|
 |No access|Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 ### Integration-Dashboard
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -778,7 +778,7 @@ The following table shows the specific read/write permissions that users will ha
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 > [!NOTE]
 > To create a Microsoft Entra application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
@@ -787,14 +787,14 @@ The following table shows the specific read/write permissions that users will ha
 ### Settings - Usage
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 ### Settings - Activity Logs
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin|
+|Read-only|Product Admin, All Areas Admin|
 |No access|All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -802,7 +802,7 @@ The following table shows the specific read/write permissions that users will ha
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, Manual Review Fraud Manager|
-|Read only|All Areas Editor, All Areas Viewer|
+|Read-only|All Areas Editor, All Areas Viewer|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst|
 > [!NOTE]
 > All Areas Admin can assign all roles except Product Admin.
@@ -819,7 +819,7 @@ The following table shows the specific read/write permissions that users will ha
 ### Settings - Subject Requests:  View previous requests
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -827,7 +827,7 @@ The following table shows the specific read/write permissions that users will ha
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin|
-|Read only|All Areas Editor, All Areas Viewer|
+|Read-only|All Areas Editor, All Areas Viewer|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -853,7 +853,7 @@ The following table shows the specific read/write permissions that users will ha
 ### Manage Environments - Update Environments
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor|
 |No access|All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 > [!NOTE]
 > Updates include updating name and tags, and assigning APIs.
@@ -862,21 +862,21 @@ The following table shows the specific read/write permissions that users will ha
 ### Admin Settings - Subscription & Billing
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin|
+|Read-only|Product Admin|
 |No access|All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 ### Admin Settings - Configuration
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin|
+|Read-only|Product Admin, All Areas Admin|
 |No access|All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 ### Loss Prevention
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
