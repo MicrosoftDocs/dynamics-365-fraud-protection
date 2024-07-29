@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This article provides information about the Assessment wizard and how to create customized real-time APIs in Fraud Protection.
+description: This article provides information about the Assessment wizard and how to create customized real-time APIs in Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 07/24/2024
 ms.topic: conceptual
