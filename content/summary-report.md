@@ -1,8 +1,8 @@
 ---
 author: yvonnedeq
-description: This article explains how to utilize the Summary report in Microsoft Dynamics 365 Fraud Protection.
+description: This article explains how to use the Summary report in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/10/2024
+ms.date: 7/29/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -27,7 +27,7 @@ Fraud Protection provides a Summary report that's designed to show fraud KPI met
 ## Time series metrics
 - **Transaction volume** – The transaction volume, based on the selected filters.
 - **Fraud volume and fraud rate** – The fraudulent transaction volume and fraud rate, based on the selected filters.
-- **Rule decision distribution** – The rule decision percentage, based on the selected filters. (The rule decisions include Approve, Reject, Review, and Challenge.)
+- **Rule decision distribution** – The rule decision percentage, based on the selected filters. (The rule decisions include **Approve**, **Reject**, **Review**, and **Challenge**.)
 - **Rule rejection volume and rate** – The volume of rejected transactions and the rejected rate.
 - **Bank acceptance volume and rate** – The volume of bank-approved transactions and the bank-approved rate.
 - **Fraud chargeback volume and rate by transaction date (when applies)** – The volume of fraud chargebacks and the percentage of fraud chargebacks out of the total volume that was settled by banks on the transaction date.
