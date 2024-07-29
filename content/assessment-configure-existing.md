@@ -1,6 +1,6 @@
 ---
 author: josaw1
-description: This article provides an overview of how to configure assessments in Fraud Protection.
+description: This article provides an overview of how to configure assessments in Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 07/24/2024
 ms.topic: conceptual
