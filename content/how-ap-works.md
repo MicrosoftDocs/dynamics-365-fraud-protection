@@ -7,10 +7,10 @@ ms.topic: reference
 search.audienceType:
   - Admin
   - IT Pro
-title: Account protection overview
+title: How account protection works
 ---
 
-# Account protection overview
+# How account protection works
 
 This article describes how Microsoft Dynamics 365 Fraud Protection account protection works.
 
