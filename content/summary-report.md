@@ -12,7 +12,7 @@ ms.custom: bap-template
 
 # Summary report
 
-Fraud Protection provides a Summary report that's designed to show fraud KPI metrics. Use this report to find out the statistics of rule decision distributions, fraud rates, and available bank acceptance rates over time for reporting purposes. The following KPIs and time series metrics are included.
+Dynamics 365 Fraud Protection provides a Summary report that's designed to show fraud KPI metrics. Use this report to find out the statistics of rule decision distributions, fraud rates, and available bank acceptance rates over time for reporting purposes. The following KPIs and time series metrics are included.
 
 ## KPIs
 - **Transaction volume** – The transaction volume, by count or amount, that was assessed by Fraud Protection.
