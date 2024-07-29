@@ -2,12 +2,12 @@
 author: cschlegel2
 description: This article describes how Microsoft Dynamics 365 Fraud Protection account protection works.
 ms.author: cschlegel
-ms.date: 04/10/2024
+ms.date: 07/29/2024
 ms.topic: reference
 search.audienceType:
   - Admin
   - IT Pro
-title: How account protection works
+title: Account protection overview
 ---
 
 # Account protection overview
