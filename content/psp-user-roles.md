@@ -75,7 +75,7 @@ Fraud Protection offers a defined set of user roles, each of which has access to
 - **Manual Review Agent** – A user in this role is responsible for reviewing individual transactions and approving or declining them. Although manual review agents don't have direct access to the **Support Lists** page, they can modify the status of an entry in the support list through the **Transaction Search** page.
 - **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
 - **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
-- **Reporting** – A user in this role can view the reports such as Virtual Fraud Analyst and also access activity logs. 
+- **Reporting** – A user in this role can view reports and access activity logs. 
 
 > [!NOTE]
 > If you are shown a different selection of roles than those detailed below, you may be using the standard version of Fraud Protection. Go to [Configure user roles and access](configure-user-access.md) instead.
