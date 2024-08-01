@@ -1,8 +1,8 @@
 ---
 author: josaw1
-description: This article provides information about the Assessment wizard and how to create customized real-time APIs in Fraud Protection.
+description: This article provides information about the Assessment wizard and how to create customized real-time APIs in Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/27/2024
+ms.date: 07/24/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -180,25 +180,27 @@ This setting determines the order in which the rules are evaluated for your asse
 
 ### Additional features
 
-Fraud Protection supports the following settings for three different assessment features:
+Fraud Protection supports the following settings for three different assessment features.
 
 - **Case management** – Manage and take action on transactions that require a review by human subject matter experts. For more information, see [Case management overview](case-management-overview.md).
 - **Search** – Find and view details associated with specific transactions. To learn more, see [Search](search.md).
+- **Reporting** - Reporting provides a historical view of your data and helps you conduct fraud analysis to optimize your business. To learn more, see [Reporting](virtual-fraud-analyst-reporting.md).
 
-The available features  and their default settings vary based on the fraud assessment template you selected in the **Select template** step. The following table is a summary of the assessment feature default settings broken down by assessment template:
+The available features  and their default settings vary based on the fraud assessment template you selected in the **Select template** step. The following table is a summary of the assessment feature default settings broken down by assessment template.
 
-| Template | Case management | Search |
-|----------|-----------------|--------|
-| Card payment | Disabled | Enabled |
-| Device fingerprinting | N/A | N/A |
-| Loyalty program | Disabled | Enabled |
-| Money transfer | Disabled | Enabled |
-| Software piracy | Disabled | Disabled |
-| Custom | Disabled | Disabled |
+
+| Template | Case management | Search | Reporting |
+|----------|-----------------|--------|--------|
+| Card payment | Enabled | Enabled | Enabled |
+| Device fingerprinting | N/A | N/A | N/A |
+| Loyalty program | Enabled | Enabled | Enabled |
+| Money transfer | Enabled | Enabled | Enabled |
+| Software piracy | Disabled | Disabled | Enabled |
+| Custom | Disabled | Disabled | Disabled |
 
 For **Search** to work at an assessment level, ensure it's enabled at the tenant level.
 
-If you decide to disable **Search** and **Case Management** for your assessment after these features were enabled, any transactions that were indexed for **Search** and any support cases that were active within **Case Management** will continue to exist for the time periods that these features were enabled.
+If you choose to disable the **Search**, **Case Management**, and **Reporting** features for your assessment after they have been activated, be aware that the indexed transactions in **Search**, any active support cases in **Case Management**, and all data generated in **Reporting** will be preserved for the duration for which these features were active.
 
 ### Data subject IDs
 
