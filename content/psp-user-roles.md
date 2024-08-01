@@ -2,7 +2,7 @@
 author: kha-microsoft
 description: This article describes how to configure user access for payment service provider (PSP) roles in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/28/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -75,7 +75,7 @@ Fraud Protection offers a defined set of user roles, each of which has access to
 - **Manual Review Agent** – A user in this role is responsible for reviewing individual transactions and approving or declining them. Although manual review agents don't have direct access to the **Support Lists** page, they can modify the status of an entry in the support list through the **Transaction Search** page.
 - **Technical Developer** – A user in this role is responsible for managing the technical configurations and integrations of a Fraud Protection instance for a PSP.
 - **Customer Service Support** – A user in this role can view the transaction details and is provided with information that is required to handle customer queries.
-- **Reporting** – A user in this role can view the reports such as Virtual Fraud Analyst and also access activity logs. 
+- **Reporting** – A user in this role can view reports and access activity logs. 
 
 > [!NOTE]
 > If you are shown a different selection of roles than those detailed below, you may be using the standard version of Fraud Protection. Go to [Configure user roles and access](configure-user-access.md) instead.
@@ -84,14 +84,14 @@ Fraud Protection offers a defined set of user roles, each of which has access to
 ## Permissions
 Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and using a Microsoft Entra account to sign in. Tables below describe permissions that different roles have on various functionalities within Fraud Protection.
 
-### Virtual Fraud Analyst - Summary, Rule analyst,  Threat analyst & Monitoring
+### Summary report, Rule report, Threat report & Monitoring
 |Permission | Roles |
 |-------------|-------------|
 |Read only|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor, Fraud Analyst, Reporting|
 |No access|Manual Review Agent, Technical Developer, Customer Service Support|
 
 
-### Virtual Fraud Analyst -Score analyst
+### Score report
 |Permission | Roles |
 |-------------|-------------|
 |Read only|Product Admin, PSP Admin, Fraud Manager, Reporting|
@@ -299,7 +299,9 @@ Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](htt
 |Read only|Product Admin, PSP Admin|
 |No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
 
+## Member access
 
+Members can access Fraud Protection at [https://dfp.microsoft.com/](https://dfp.microsoft.com/) and by using a Microsoft account to sign in.
 
 ## Guest user access
 

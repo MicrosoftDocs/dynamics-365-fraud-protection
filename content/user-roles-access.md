@@ -2,7 +2,7 @@
 author: arj-malhotra
 description: This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/28/2024
+ms.date: 08/01/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -42,7 +42,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 |Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer|
-|Read only|All Areas Viewer, Manual Review Fraud Manager|
+|Read-only|All Areas Viewer, Manual Review Fraud Manager|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 
 
@@ -50,43 +50,43 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer, Manual Review Fraud Manager|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 
 
 ### Monitoring Report (Assessments)
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer, Manual Review Fraud Manager|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer, Manual Review Fraud Manager|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 
 
-### Virtual Fraud Analyst
+### Reporting
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor|
-|Read only|All Areas Viewer, Fraud Engineer, Manual Review Fraud Manager|
+|Read-only|All Areas Viewer, Fraud Engineer, Manual Review Fraud Manager|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 
 
 ### Search, View Transaction Details & Export
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 ### Notes
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 
 
 ### Case Management - Queues
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Fraud Engineer|
 
 
@@ -101,14 +101,14 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Fraud Engineer|
 
 
 ### Case Management - Report
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Manual Review Fraud Manager|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Manual Review Fraud Manager|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst|
 
 
@@ -116,7 +116,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer, Manual Review Fraud Manager|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 > [!NOTE]
 > The Support Agent role can't access the **Support list** page, but can modify the list from **Transaction detail** page, on the **Support** tab under **Purchase assessment**.
@@ -126,7 +126,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin|
-|Read only|All Areas Editor, All Areas Viewer|
+|Read-only|All Areas Editor, All Areas Viewer|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -140,7 +140,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 ### API Management
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -148,13 +148,13 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 |Template Type| Permission | Roles |
 |-------------|-------------|-------------|
 |Rule|Read/Write/Export|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer, Manual Review Fraud Manager|
-|Rule|Read only|All Areas Viewer|
+|Rule|Read-only|All Areas Viewer|
 |Rule|No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst|
 |Assessment|Read/Write/Export|Product Admin, All Areas Admin, All Areas Editor|
-|Assessment|Read only|All Areas Viewer, Manual Review Fraud Manager|
+|Assessment|Read-only|All Areas Viewer, Manual Review Fraud Manager|
 |Assessment|No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst|
 |Environment|Read/Write/Export|Product Admin, All Areas Admin, All Areas Editor|
-|Environment|Read only|All Areas Viewer|
+|Environment|Read-only|All Areas Viewer|
 |Environment|No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
   > [!NOTE]
   > - To create a template from a resource, user must have read permission on the resource as well as write permission on the template.
@@ -163,14 +163,14 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 ### Graph Explorer
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer|
 |No access|Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 ### Integration-Dashboard
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -178,7 +178,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, All Areas Editor, Fraud Engineer|
-|Read only|All Areas Viewer|
+|Read-only|All Areas Viewer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 > [!NOTE]
 > To create a Microsoft Entra application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Azure tenant.
@@ -187,14 +187,14 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 ### Settings - Usage
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 ### Settings - Activity Logs
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin|
+|Read-only|Product Admin, All Areas Admin|
 |No access|All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -202,7 +202,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, Manual Review Fraud Manager|
-|Read only|All Areas Editor, All Areas Viewer|
+|Read-only|All Areas Editor, All Areas Viewer|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst|
 > [!NOTE]
 > All Areas Admin can assign all roles except Product Admin.
@@ -219,7 +219,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 ### Settings - Subject Requests:  View previous requests
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -227,7 +227,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin|
-|Read only|All Areas Editor, All Areas Viewer|
+|Read-only|All Areas Editor, All Areas Viewer|
 |No access|Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
@@ -253,7 +253,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 ### Manage Environments - Update Environments
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor|
 |No access|All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 > [!NOTE]
 > Updates include updating name and tags, and assigning APIs.
@@ -262,21 +262,21 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 ### Admin Settings - Subscription & Billing
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin|
+|Read-only|Product Admin|
 |No access|All Areas Admin, All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 ### Admin Settings - Configuration
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin|
+|Read-only|Product Admin, All Areas Admin|
 |No access|All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
 ### Loss Prevention
 | Permission | Roles |
 |-------------|-------------|
-|Read only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
+|Read-only|Product Admin, All Areas Admin, All Areas Editor, All Areas Viewer, Fraud Engineer|
 |No access|Support Agent, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
