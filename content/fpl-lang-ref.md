@@ -2,7 +2,7 @@
 author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
-ms.date: 06/03/2024
+ms.date: 08/06/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -270,7 +270,7 @@ Geo functions provide resolution by converting an IP address to a geographical a
 | Device.GetFullAttributes(String _sessionId_)   | Returns a full set of device attributes for the specified device fingerprinting session. See [Set up device fingerprinting](device-fingerprinting.md) to view the full set of device attributes | Device.GetFullAttributes(@"deviceFingerprinting.id")|
 | Device.GetAttributes(String _sessionId_)  | Returns a smaller subset of device attributes for the specified device fingerprinting session. The subset is a list curated by Fraud Protection and contains the most commonly used attributes. | Device.GetAttributes(@"deviceFingerprinting.id")|
 | Device.GetSelectedAttributes(String _sessionId_, String _attributeName_)   | Returns up to 20 device attributes for the specified device fingerprinting session. The list of desired attributes is to be specified as comma separated parameters | Device.GetSelectedAttributes(@"deviceFingerprinting.id", "deviceAsn","deviceCountryCode")  |
-| Device.GetSpeedOfTravel(String _sessionId_)   | Returns the maximum travel speed of a device in miles per hour. The maximum speed is determined by looking at the last five consecutive fingerprinting sessions and calculating the speed of the device from session to session, returning the maximum. The device is identified over sessions using the cookie id. | Device.GetSpeedOfTravel(@"deviceFingerprinting.id")  |
+| Device.GetSpeedOfTravel(String _sessionId_)   | Returns the maximum travel speed of a device in miles per hour. The maximum speed is determined by looking at the last five consecutive fingerprinting sessions and calculating the speed of the device from session to session, returning the maximum. The device is identified over sessions using the cookie ID. | Device.GetSpeedOfTravel(@"deviceFingerprinting.id")  |
 
 ## BIN Lookup functions
 
@@ -293,7 +293,7 @@ For information about how to upload these lists, see [Manage lists](lists.md). F
 | Operator | Description | Example |
 |----------|-------------|---------|
 | ContainsKey(<br>String *listName*,<br>String *columnName*,<br>String *key*) | This operator checks whether a key is contained in the specified column in a Fraud Protection [list](lists.md).<p>The example in the next column checks whether the "Emails" column in the "Email Support List" list contains the *@"user.email"* variable.</p> | ContainsKey("Email Support List", "Emails", @"user.email") |
-| Lookup(<br>String *listName*,<br>String *keyColName*,<br>String *valueColName*) | This operator looks up the value of a key in a Fraud Protection list. Both the name of the column that contains the key and the name of the column that contains the value must be specified.</p><p>The value is always returned as a string. If the key isn't found, and if the **defaultValue** parameter isn't specified, "Unknown" is returned.<p>The example in the next column looks for the value of *@"user.email"* variable in the "Emails" column of the "Email Support List" list. If a match is found, the function would return the value of the "Status" column from the matching row in the list. If a match isn't found, the function would return 0. | Lookup("Email Support List", "Emails", @"user.email", "Status",0) |
+| Lookup(<br>String *listName*,<br>String *keyColName*,<br>String *valueColName*) | This operator looks up the value of a key in a Fraud Protection list. Both the name of the column that contains the key and the name of the column that contains the value must be specified.</p><p>The value is always returned as a string. If the key isn't found, and if the **defaultValue** parameter isn't specified, "Unknown" is returned.<p>The example in the next column looks for the value of *@"user.email"* variable in the **Emails** column of the **Email Support List** list. If a match is found, the function returns the value of the **Status** column from the matching row in the list. If a match isn't found, the function returns 0. | Lookup("Email Support List", "Emails", @"user.email", "Status",0) |
 | In | This operator checks whether a key is contained in a comma-separated list of values. | In(@"user.countryRegion", "US, MX, CA") |
 | InSupportList| This operator checks if an attribute is on a Support List. | InSupportList('Email Support List', @"user.email") |
 | IsSafe| This operator checks if an entity is marked as Safe on a Support List. | IsSafe('Email Support List', @"user.email") |
