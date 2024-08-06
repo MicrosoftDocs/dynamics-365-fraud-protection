@@ -2,7 +2,7 @@
 author: arj-malhotra
 description: This article explains how to configure user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/10/2024
+ms.date: 08/06/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -27,12 +27,7 @@ Member users inside the organization's Azure tenant can view a list of all other
 You can invite colleagues to use Fraud Protection or change their role assignments if one or both of the following conditions are met for your account:
 
 - You're a global administrator of the Microsoft Entra tenant where Fraud Protection is set up. 
-- You have **AllAreas_Admin** or **Product admin** permission for Fraud Protection, and you have one of the following permissions in the Microsoft Entra tenant where Fraud Protection is set up: 
-
-    - Application administrator
-    - Cloud application administrator
-    - User administrator
-    - Privileged role administrator
+- You have one of these Fraud Protection roles assigned to you: **Product Admin**, **AllAreas_Admin**, or **Manual Review Fraud Manager**. You can only assign roles to other colleagues that have the same or lesser permissions than the role you have.
 
 Administrator roles are asked to attest to usage disclaimers and play a brief educational video during their first-run experience in Fraud Protection.
 
