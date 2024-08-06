@@ -334,15 +334,9 @@
         href: https://go.microsoft.com/fwlink/?linkid=2134792
       - name: Fraud Protection model explainability
         href: https://go.microsoft.com/fwlink/?linkid=2280357
-- name: Product support
-  href: dfp-css-product-support.md
-- name: Community
+- name: Contact us
   items:
-  - name: Join Dynamics 365 Community
-    href: https://www.yammer.com/dynamicsaxfeedbackprograms/#/threads/inGroup?type=in_group&feedId=52719501312
-  - name: Contact us
-    items:
-    - name: Share your ideas
-      href: https://experience.dynamics.com/ideas/categories/?forum=d4171bdb-9e54-e911-a963-000d3a4f33c1&forumName=Dynamics%20365%20Fraud%20Protection
-    - name: Report an issue
-      href: https://support.microsoft.com/   
+  - name: Dynamics 365 Fraud Protection community
+    href: https://techcommunity.microsoft.com/t5/microsoft-d365-fraud-protection/bd-p/MicrosoftD365FraudProtection
+  - name: Product support
+    href: dfp-css-product-support.md
