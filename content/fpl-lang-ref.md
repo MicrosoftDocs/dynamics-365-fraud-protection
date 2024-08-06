@@ -2,7 +2,7 @@
 author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
-ms.date: 06/03/2024
+ms.date: 08/06/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -68,7 +68,7 @@ You can use the at sign (@) operator to reference an attribute from the current 
 | @a[x\]      | <p>This variable is used to index array variables.</p><p>If the request payload for an assessment contains an array of items, you can access individual elements of the array by using the following syntax: *@"productList\[0\]"*.</p><p>To access an attribute of that element, use the following syntax: *@"productList\[0\].productId"*</p> | <p>@"productList\[0\].productId"</p><p>@"paymentInstrumentList\[3\].type"</p> |
 | Exists       | <p>This operator checks whether a variable exists in the event payload.</p><p>Exists(*String variable*)</p> | Exists(@"user.email") |
 |Request.CorrelationId()|This function references the unique Correlation ID of the event being evaluated. You can use this function to access the Correlation ID of an event in the rules experience and pass it to an external call as a parameter or a header.| External.MyExternalCall(Request.CorrelationId())|
-|.GetDiagnostics()|This function can be used to discover important diagnostic and debug information from an external call or an external assessment response. For an external call, the Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Endpoint isn't available in the Diagnostic object for an external assessment response. Any of these fields can be used in the rules once the Diagnostics object is created using its corresponding extension method".GetDiagnostics()"|<p>LET $extResponse = External. myCall(@"device.ipAddress")</p><p>LET $extResponseDiagnostics = $extResponse.GetDiagnostics()</p><p>OBSERVE Output(Diagnostics = $extResponseDiagnostics )</p><p>WHEN $extResponseDiagnostics. HttpStatusCode != 200|
+|.GetDiagnostics()|This function can be used to discover important diagnostic and debug information from an external call or an external assessment response. For an external call, the Diagnostics object contains the Request payload, Endpoint, HttpStatus code, Error message, and Latency. Endpoint isn't available in the Diagnostic object for an external assessment response. Any of these fields can be used in the rules once the Diagnostics object is created using its corresponding extension method".GetDiagnostics()"|<p>LET $extResponse = External. myCall(@"device.ipAddress")</p><p>LET $extResponseDiagnostics = $extResponse.GetDiagnostics()</p><p>OBSERVE Output(Diagnostics = $extResponseDiagnostics)</p><p>WHEN $extResponseDiagnostics. HttpStatusCode != 200|
 
 ## Defining your own variables
 
@@ -159,8 +159,8 @@ Fraud Protection supports all standard C# [math methods](/dotnet/api/system.math
 
 | Operator                                   | Description | Example |
 |--------------------------------------------|-------------|---------|
-| Math.Min(Double *value1*, Double *value*2) | This operator computes the minimum of two values. | Math.Min(Model.Risk().Score,Model.Bot(@"deviceFingerprinting.id").Score) |
-| Math.Max(Double *value1*, Double *value*2) | This operator computes the maximum of two values. | Math.Max(Model.Risk().Score,Model.Bot(@"deviceFingerprinting.id").Score) |
+| Math.Min(Double *value1*, Double *value*2) | This operator computes the minimum of two values. | Math.Min(Model.Risk().Score, Model.Bot(@"deviceFingerprinting.id").Score) |
+| Math.Max(Double *value1*, Double *value*2) | This operator computes the maximum of two values. | Math.Max(Model.Risk().Score, Model.Bot(@"deviceFingerprinting.id").Score) |
 | RandomInt(Integer *min*, Integer *max*) | This operator returns a random integer in the range provided, including the minimum value and excluding the maximum value. | RandomInt(0, 100) |
 
 ## DateTime operators
@@ -208,8 +208,8 @@ Fraud Protection supports the standard C# [string class](/dotnet/api/system.stri
 | IgnoreCaseEquals()   | This operator returns true if the two strings are equal, regardless of casing differences. Returns false otherwise. | @"user.username".IgnoreCaseEquals(@"user.email") |
 | Contains()   | This operator checks whether a string contains another string. | @"productList.productName".Contains("Xbox") |
 | ContainsOnly() | This operator checks whether a string contains only the charsets provided. |@"zipcode".ContainsOnly(CharSet.Numeric)|
-| ContainsAll() | This operator checks whether a string contains all the charsets provided.|@"zipcode".ContainsAll(CharSet.Numeric\|CharSet.Hypen)|
-| ContainsAny()| This operator checks whether a string contains any of the charsets provided.|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hypen)|
+| ContainsAll() | This operator checks whether a string contains all the charsets provided.|@"zipcode".ContainsAll(CharSet.Numeric\|CharSet.Hyphen)|
+| ContainsAny()| This operator checks whether a string contains any of the charsets provided.|@”zipcode”.ContainsAny(CharSet.Numeric\|CharSet.Hyphen)|
 
 ### Using CharSet in ContainsOnly, ContainsAll, and ContainsAny
 
@@ -222,7 +222,7 @@ The following character types can be used in ContainsOnly, ContainsAll, and Cont
 | Asperand	| @ |
 | Backslash |	\ |
 | Comma	| , |
-| Hypen	| - |
+| Hyphen	| - |
 | Numeric	| 0-9 |
 | Period	| . |
 | Slash	| / |
@@ -269,7 +269,8 @@ Geo functions provide resolution by converting an IP address to a geographical a
 |--------------|-------------|---------|
 | Device.GetFullAttributes(String _sessionId_)   | Returns a full set of device attributes for the specified device fingerprinting session. See [Set up device fingerprinting](device-fingerprinting.md) to view the full set of device attributes | Device.GetFullAttributes(@"deviceFingerprinting.id")|
 | Device.GetAttributes(String _sessionId_)  | Returns a smaller subset of device attributes for the specified device fingerprinting session. The subset is a list curated by Fraud Protection and contains the most commonly used attributes. | Device.GetAttributes(@"deviceFingerprinting.id")|
-| Device.GetSelectedAttributes(String _sessionId_)   | Returns up to 20 device attributes for the specified device fingerprinting session. The list of desired attributes is to be specified as comma separated parameters | Device.GetSelectedAttributes(@"deviceFingerprinting.id", "deviceAsn","deviceCountryCode")  |
+| Device.GetSelectedAttributes(String _sessionId_, String _attributeName_)   | Returns up to 20 device attributes for the specified device fingerprinting session. The list of desired attributes is to be specified as comma separated parameters | Device.GetSelectedAttributes(@"deviceFingerprinting.id", "deviceAsn","deviceCountryCode")  |
+| Device.GetSpeedOfTravel(String _sessionId_)   | Returns the maximum travel speed of a device in miles per hour. The maximum speed is determined by looking at the last five consecutive fingerprinting sessions and calculating the speed of the device from session to session, returning the maximum. The device is identified over sessions using the cookie ID. | Device.GetSpeedOfTravel(@"deviceFingerprinting.id")  |
 
 ## BIN Lookup functions
 
@@ -292,7 +293,7 @@ For information about how to upload these lists, see [Manage lists](lists.md). F
 | Operator | Description | Example |
 |----------|-------------|---------|
 | ContainsKey(<br>String *listName*,<br>String *columnName*,<br>String *key*) | This operator checks whether a key is contained in the specified column in a Fraud Protection [list](lists.md).<p>The example in the next column checks whether the "Emails" column in the "Email Support List" list contains the *@"user.email"* variable.</p> | ContainsKey("Email Support List", "Emails", @"user.email") |
-| Lookup(<br>String *listName*,<br>String *keyColName*,<br>String *valueColName*) | This operator looks up the value of a key in a Fraud Protection list. Both the name of the column that contains the key and the name of the column that contains the value must be specified.</p><p>The value is always returned as a string.If the key isn't found, and if the **defaultValue** parameter isn't specified, "Unknown" is returned.<p>The example in the next column looks for the value of *@"user.email"* variable in the "Emails" column of the "Email Support List" list. If a match is found, the function would return the value of the "Status" column from the matching row in the list. If a match isn't found, the function would return 0. | Lookup("Email Support List", "Emails", @"user.email", "Status",0) |
+| Lookup(<br>String *listName*,<br>String *keyColName*,<br>String *valueColName*) | This operator looks up the value of a key in a Fraud Protection list. Both the name of the column that contains the key and the name of the column that contains the value must be specified.</p><p>The value is always returned as a string. If the key isn't found, and if the **defaultValue** parameter isn't specified, "Unknown" is returned.<p>The example in the next column looks for the value of *@"user.email"* variable in the **Emails** column of the **Email Support List** list. If a match is found, the function returns the value of the **Status** column from the matching row in the list. If a match isn't found, the function returns 0. | Lookup("Email Support List", "Emails", @"user.email", "Status",0) |
 | In | This operator checks whether a key is contained in a comma-separated list of values. | In(@"user.countryRegion", "US, MX, CA") |
 | InSupportList| This operator checks if an attribute is on a Support List. | InSupportList('Email Support List', @"user.email") |
 | IsSafe| This operator checks if an entity is marked as Safe on a Support List. | IsSafe('Email Support List', @"user.email") |
@@ -455,7 +456,7 @@ The following are some more detailed examples of how to use the above syntax bas
     -	AsJsonArray()
     -	AsJsonObject()
 
-  - When you use either of the two array helper methods, .GetValue or .GetValues, you need to type cast using **.As<i>\<Type\></i>**().
+  - When you use either of the two array helper methods, Array.GetValue or Arrays.GetValues, you need to type cast using **.As<i>\<Type\></i>**().
     Example:
     ```FraudProtectionLanguage
     LET $arr = {myArr:[{item1: "red", number: 45}, {item1: "blue", number: 56}, {item1: "green", number: 33}]}
