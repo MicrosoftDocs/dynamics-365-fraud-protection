@@ -198,7 +198,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 |No access|All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 
 
-### Settings - Access Management (Users & Microsoft Entra Groups)
+### Settings - Access Control (Users & Microsoft Entra Groups)
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin, Manual Review Fraud Manager|
@@ -207,6 +207,14 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 > [!NOTE]
 > All Areas Admin can assign all roles except Product Admin.
 > Manual Review Fraud Manager can only assign these roles: ManualReviewFraudManager, ManualReviewAnalyst, ManualReviewSeniorAnalyst.
+
+
+### Settings - Access Control (API roles for Microsoft Entra applications)
+| Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, All Areas Admin|
+|Read-only|All Areas Editor, All Areas Viewer|
+|No access|Support Agent, Fraud Engineer, Manual Review Fraud Manager, Manual Review Analyst, Manual Review Senior Analyst|
 
 
 ### Settings - Subject Requests: Submit new requests
@@ -241,7 +249,7 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 |Notes|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Customer Service Support|
 
 
-### Manage Environments - Create and Delete Environments
+### Manage Environments - Create and delete root environments
 | Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, All Areas Admin|
@@ -250,13 +258,22 @@ Members can access their [Fraud Protection account](https://dfp.microsoft.com/) 
 > All Areas Admin can't create root (top-level) environments. They can only create children environments.
 
 
-### Manage Environments - Update Environments
+### Manage Environments - Update root environments
 | Permission | Roles |
 |-------------|-------------|
 |Read-only|Product Admin, All Areas Admin, All Areas Editor|
 |No access|All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
 > [!NOTE]
 > Updates include updating name and tags, and assigning APIs.
+
+
+### Manage Environments - Create, update and delete non-root environments
+| Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, All Areas Admin, Provisioning_API (under the root environment the Entra application is authorized for)|
+|No access|All Areas Editor, All Areas Viewer, Support Agent, Fraud Engineer, Manual Review Analyst, Manual Review Senior Analyst, Manual Review Fraud Manager|
+> [!NOTE]
+> Entra application with an assigned Provisioning_API role can be used to create, update, or delete non-root environments via API call. To learn how to assign API roles to Entra applications please visit [Configure application access](configure-application-access.md)
 
 
 ### Admin Settings - Subscription & Billing
