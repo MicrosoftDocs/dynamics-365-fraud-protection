@@ -128,12 +128,14 @@
       href: promocode-set-up-DFP-purchased-version.md
     - name: Set up Purchase Protection 
       href: promocode-set-up-purchase-protection.md
-    - name: User access
+    - name: Access control
       items:
       - name: User roles and access
         href: user-roles-access.md
       - name: Configure user roles and access
         href: configure-user-access.md
+      - name: Configure application access
+        href: configure-application-access.md
       - name: Payment service provider user roles and access 
         href: psp-user-roles.md
     - name: Activity logs
