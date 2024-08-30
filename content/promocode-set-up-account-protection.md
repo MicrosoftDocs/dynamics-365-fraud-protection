@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to set up customer accounts protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/10/2024
+ms.date: 08/30/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -60,27 +60,27 @@ To acquire the tokens that are required to call the APIs, use Fraud Protection t
 ### Configure a Microsoft Entra app
 
 1.	In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **Settings**, and then select **Access control**.
-2.	Select **Application Access**. From the **+ Assign application role(s)** drop-down, on the top navigation, select **Create new application**, and then fill in the fields to create your app. The following fields are required:
+2.	Select **Application Access**. From the **+ Assign application role(s)** drop-down, select **Create new application**, and then fill in the fields to create your app. The following fields are required:
    
     - **Application display name** – Enter a descriptive name for your app. The maximum length is 93 characters.
     - **Authentication method** – Select whether a certificate or a secret (password protected) is used for authentication.
     
-      - Select **Certificate**, and then select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
-      - Select **Secret** to automatically generate a password after the application has been created. Please note, secrets are not as secure as certificates. 
+      - Select **Certificate**, and then select **Choose file** to upload the public key. When you acquire tokens, you need the matching private key.
+      - Select **Secret** to automatically generate a password after the app is created. Secrets are not as secure as certificates. 
 
-3.	Select the API roles you want to assign to this application from the **Roles** drop-down at the bottom. Risk_API role is selected by default. API roles can be edited at any time. 
-  - **Risk_API** – Entra applications assigned Risk_API roles can call DFP assessment and observation events API endpoints.
-  - **Provisioning_API** – Entra applications assigned Provisioning_API roles can call DFP Provisioning API endpoint allowing creation, update, and deletion of non-root environments.
+3.	Select the API roles you want to assign to this app from the **Roles** drop-down. The Risk_API role is selected by default. You can edit API roles at any time. 
+  - **Risk_API** – Entra apps assigned Risk_API roles can call Fraud Protection assessment and observation events API endpoints.
+  - **Provisioning_API** – Entra apps assigned Provisioning_API roles can call the Fraud Protection provisioning API endpoint, which allows the creation, update, and deletion of non-root environments.
 
 > [!IMPORTANT]
-> API roles for an existing Entra application can be edited at any time. To learn more, please visit [Configure application access](configure-application-access.md)   
+> You can edit API roles for an existing Entra app at any time. To learn more, refer to the [Configure Microsoft Entra app access](configure-application-access.md) article.  
  
-4.	When you've finished filling in the fields, select **Create application**.
+4.	When you've completed filling in the fields, select **Create application**.
 
-The confirmation page summarizes the app's name and ID, and either the certificate thumbprint or the secret, depending on the authentication method that you selected.
+The **Confirmation** page summarizes the app's name and ID, and either the certificate thumbprint or the secret, depending on the authentication method that you selected.
 
 > [!IMPORTANT]
-> Save the information about your certificate thumbprint or secret for future reference. This information will be shown only once.
+> Save the information about your certificate thumbprint or secret for future reference. This information is shown only once.
 
 #### Create additional apps
 
