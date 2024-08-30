@@ -76,7 +76,7 @@ You can delete an environment only if it has no child environments. If you want 
 
 ## Create, update, or delete non-root environments by using API call
 
-Instead of using the Fraud Protection portal, you can create, update, or delete non-root environments via an API call to the provisioning API endpoint. You must use a Microsoft Entra application with the correct API role to authenticate this API call. To learn how to set up Entra application access, refer to the [Configure application access](configure-application-access.md) article. You can learn more about the provisioning API endpoint and schema by visiting [Swagger UI documentation for Dynamics 365 Fraud Protection](https://dfpswagger.azurewebsites.net/index.html).
+Instead of using the Fraud Protection portal, you can create, update, or delete non-root environments via an API call to the provisioning API endpoint. You must use a Microsoft Entra app with the correct API role to authenticate this API call. To learn how to set up Entra app, refer to the [Configure Microsoft Entra app access](configure-application-access.md) article. You can learn more about the provisioning API endpoint and schema by visiting [Swagger UI documentation for Dynamics 365 Fraud Protection](https://dfpswagger.azurewebsites.net/index.html).
 
 
 ## Additional resources
