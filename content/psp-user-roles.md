@@ -300,7 +300,7 @@ Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](htt
 |Read/Write|Product Admin, PSP Admin, Provisioning_API (under the root environment the Entra application is authorized for)|
 |No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
 > [!NOTE]
-> You can use an Entra application with an assigned Provisioning_API role to create, update, or delete non-root environments via an API call. To learn how to assign API roles to Entra applications, refer to the [Configure application access](configure-application-access.md) article.
+> You can use an Entra application with an assigned Provisioning_API role to create, update, or delete non-root environments via an API call. To learn how to assign API roles to Entra applications, refer to the [Configure Microsoft Entra app access](configure-application-access.md) article.
 
 
 
