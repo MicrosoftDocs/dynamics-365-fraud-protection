@@ -234,7 +234,7 @@ Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](htt
 |No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support|
 
 
-### Settings - Access Management (Users & Entra Groups)
+### Settings - Access Control (Users & Entra Groups)
 |Permission | Roles |
 |-------------|-------------|
 |Read/Write|Product Admin, PSP Admin, Fraud Manager, Fraud Supervisor|
@@ -243,6 +243,14 @@ Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](htt
   > - PSP Admin can assign all roles except Product Admin.
   > - Fraud Manager can assign all roles except Product Admin, PSP Admin, and Reporting.
   > - Fraud Supervisor can assign all roles except Product Admin, PSP Admin, Reporting, and Fraud Manager.
+
+
+### Settings - Access Control (API roles for Microsoft Entra applications)
+| Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin|
+|Read-only|PSP Admin, Technical Developer|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Customer Service Support, Reporting|
 
 
 ### Settings - Subject Requests
@@ -268,22 +276,32 @@ Members can access Fraud Protection by visiting [https://dfp.microsoft.com/](htt
 
 
 
-### Manage Environments - Create and Delete Environments
+### Manage Environments - Create and delete root environments
 |Permission | Roles |
 |-------------|-------------|
-|Read/Write|Product Admin, PSP Admin|
-|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+|Read/Write|Product Admin|
+|No access|PSP Admin, Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
 > [!NOTE]
-> PSP Admin can't create root (top-level) environments. They can only create children environments.
+> PSP Admin can't create or delete root (top-level) environments. They can only create or delete children environments.
 
 
-### Manage Environments - Update Environments
+### Manage Environments - Update root environments
 |Permission | Roles |
 |-------------|-------------|
 |Read only|Product Admin, PSP Admin, Fraud Manager|
 |No access|Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
 > [!NOTE]
 > Update includes updating name and tags, and assigning APIs.
+
+
+### Manage Environments - Create, update and delete non-root environments
+| Permission | Roles |
+|-------------|-------------|
+|Read/Write|Product Admin, PSP Admin, Provisioning_API (under the root environment the Entra application is authorized for)|
+|No access|Fraud Manager, Fraud Supervisor, Fraud Analyst, Manual Review Agent, Technical Developer, Customer Service Support, Reporting|
+> [!NOTE]
+> You can use an Entra application with an assigned Provisioning_API role to create, update, or delete non-root environments via an API call. To learn how to assign API roles to Entra applications, refer to the [Configure Microsoft Entra app access](configure-application-access.md) article.
+
 
 
 ### Admin Settings - Subscription
