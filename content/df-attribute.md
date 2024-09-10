@@ -86,9 +86,9 @@ The following tables show the device fingerprinting attribute categories that we
 |JavaScript Collected Info|Screen Color Depth|Screen color depth.|
 |JavaScript Collected Info|Screen Resolution|Screen resolution.|
 |JavaScript Collected Info|Script IP|IP address from JavaScript callback.|
-|JavaScript Collected Info|Script OS|Operating system detected by JavaScript.|
+|JavaScript Collected Info|platform|Operating system detected by JavaScript.|
 |JavaScript Collected Info|Script User Agent|User agent string detected by JavaScript.|
-|JavaScript Collected Info|Script User Agent Languages|Browser languages detected by JavaScript.|
+|JavaScript Collected Info|scriptUserAgentLanguages|Browser languages detected by JavaScript.|
 |JavaScript Collected Info|Time Zone Offset|Time zone offset.|
 |Model Output|Bot Score|Score from Bot model.|
 |Network Stack|TCP Distance|TCP distance computed from TTL.|
@@ -104,14 +104,15 @@ The following tables show the device fingerprinting attribute categories that we
 |TCP Signature|TTL|Time-To-Live from IP packet.|
 |TCP Signature|Window Scaling Factor|TCP window scale factor.|
 |TCP Signature|Window Size|TCP window size.|
-|User Agent Client Hints|Architecture|Platform architecture.|
-|User Agent Client Hints|Bitness|Architecture bitness ("32" or "64").|
-|User Agent Client Hints|Mobile|Boolean value indicating whether the device is mobile from client hint.|
-|User Agent Client Hints|Model|Model of mobile device.|
-|User Agent Client Hints|Platform|Operating system from client hint.|
-|User Agent Client Hints|Platform Version|Operating system version from client hint.|
-|User Agent Client Hints|User Agent|Browser name and major version from client hint.|
-|User Agent Client Hints|User Agent Full Version List|Full browser version list from client hint.|
+|User Agent Client Hints|userAgentHintArchitecture|Platform architecture.|
+|User Agent Client Hints|userAgentHintBitness|Architecture bitness ("32" or "64").|
+|User Agent Client Hints|userAgentHintMobile|Boolean value indicating whether the device is mobile from client hint.|
+|User Agent Client Hints|userAgentHintModel|Model of mobile device.|
+|User Agent Client Hints|userAgentHintPlatform|Operating system from client hint.|
+|User Agent Client Hints|userAgentHintPlatformVersion|Operating system version from client hint.|
+|User Agent Client Hints|userAgentHintBrowser|Browser name from client hint.|
+|User Agent Client Hints|userAgentHintBrowserMajorVersion|Browser major version from client hint.|
+|User Agent Client Hints|userAgentHintFullVersionList|Full browser version list from client hint.|
 
 ## Attribute list for iOS
 
