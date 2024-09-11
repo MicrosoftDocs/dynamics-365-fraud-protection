@@ -50,13 +50,13 @@ Follow these steps to create a queue.
 
 1. In the left navigation pane, select **Case management \> Queues**, and then select **New queue**.
 1. Select the assessment type.
-1. Enter a name that will help you identify the purpose of the queue.
+1. Enter a name that helps you identify the purpose of the queue.
 1. Enter a description that explains the types of cases that are stored in this queue.
 1. Select your preference for the review sequence. If you select **Unrestricted queue**, you can review any case in the queue in any order. If you select **Restricted queue**, you must review cases in a predefined order.
 1. Select the default ordering and order by to define the order in which cases appear and are presented to review agents. In a restricted queue, your selections define the order in which agents can review the cases.
 1. Select the time-out duration and default action to define the maximum amount of time that a case can be in the queue without being reviewed and the default action that is taken when that time is reached.
-1. You can also assign this queue to a specific set of Microsoft Entra users and groups by adding them to the queue. When users go to their **Case management \> Queues** page from the left nav, they will see all the queues assigned to them. The “Queues assigned to me” filter will be selected by default. The filter can help users to focus and work on the queues that are assigned to them. 
-Users can view all the available queues by applying the “All queues” filter in the Queues page.  
+1. You can also assign this queue to a specific set of Microsoft Entra users and groups by adding them to the queue. When users go to their **Case management \> Queues** page from the left nav, all the queues assigned to them are displayed. The “Queues assigned to me” filter is selected by default. The filter can help users to focus and work on the queues that are assigned to them. 
+Users can view all the available queues by applying the “All queues” filter in the **Queues** page.  
 
 You can edit or delete any queue that you created. You can also add or remove the assigned users and groups from the queue. To edit the name of a queue or delete a queue, remove the routing rules that have a dependency on the queue. For more information about routing rules, refer to the next section.
 
@@ -77,7 +77,7 @@ These settings can't be edited.
 
 After the queues are created, define the criteria that will be used to route cases to them. These criteria make up the routing rules. Routing rules resemble assessment rules, but they don't result in a decision. Instead, they result in a routing action. Although each queue can have multiple cases, each case can be routed to only one queue. You can write multiple routing rules for the same queue.
 
-After cases pass through the routing rules, there's a five-minute hold before they appear in the appropriate queue. During this time, the cases are updated with supplementary events. If a supplementary event that has any **statusType** value is received through the **purchaseStatus** application programming interface (API), the case won't be routed to a queue. In this case, the **statusType** value that is received in the **purchaseStatus** API event will be recorded as the transaction's latest status.
+After cases pass through the routing rules, there's a five-minute hold before they appear in the appropriate queue. During this time, the cases are updated with supplementary events. If a supplementary event that has any **statusType** value is received through the **purchaseStatus** application programming interface (API), the case isn't routed to a queue. In this case, the **statusType** value that is received in the **purchaseStatus** API event is recorded as the transaction's latest status.
 
 Routing rules can be created in either a visual editor or a code editor. In the code editor, you can create routing rules by using the Fraud Protection language. For more information, see [Language reference guide](fpl-lang-ref.md).
 
@@ -100,7 +100,7 @@ Follow these steps to create a routing rule.
 > [!NOTE]
 > The routing rules that you create by using the visual editor are translated to the code view when you switch to the code editor. However, after you edit the rules by using the code editor, you can't switch back to the visual view.
 
-To customize the order of execution for routing rules, drag the routing rules to define which rules must be executed first. When you've finished, select **Save** on the **Routing rules** page.
+To customize the order of execution for routing rules, drag the routing rules to define which rules must be executed first. When you are done, select **Save** on the **Routing rules** page.
 
 ## View the case management report dashboard
 
