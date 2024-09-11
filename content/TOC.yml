@@ -16,46 +16,42 @@
     href: promocode-redemption-error.md
 - name: Transaction acceptance booster (TAB)
   href: transaction-acceptance-booster.md
-- name: APIs and extensibility
+- name: APIs
   items:
-  - name: Language reference guide
+  - name: Fraud language reference
     href: fpl-lang-ref.md
-  - name: Set up extensibility via Event Hubs   
-    href: extensibility-via-event-hubs-overview.md
-  - name: Work with code
-    href: extensibility-with-code.md
-  - name: Work with Logic Apps/Power Automate
-    href: extensibility-with-power-automate.md   
-  - name: Work with Power BI
-    href: extensibility-with-power-bi.md  
-  - name: Work with Power Apps
-    href: extensibility-with-power-apps.md
-  - name: Mobile SDK for Android
-    href: mobile-sdk-android.md
-  - name: Mobile SDK for iOS
-    href: mobile-sdk-ios.md
-  - name: Mobile SDK for React Native
-    href: mobile-sdk-react-native.md
-  - name: APIs
+  - name: Swagger UI
+    href: swagger.md
+  - name: Account protection schemas
+    href: ap-schema.md
+  - name: Purchase protection schemas
+    href: view-purchase-protection-schemas.md
+  - name: Loss prevention schemas
+    href: view-loss-prevent-schemas.md
+  - name: Labels API	
+    href: labels-api.md        
+  - name: Integrate account protection APIs
+    href: integrate-ap-api.md 
+  - name: Integrate purchase protection APIs
+    href: integrate-real-time-api.md 
+  - name: Custom assessments
+    href: custom-assessment.md
+  - name: Monitor API calls
+    href: monitoring.md
+- name: Extensibility
+  items:
+  - name: Azure Event Hubs
     items:
-    - name: Swagger UI
-      href: swagger.md
-    - name: Account protection schemas
-      href: ap-schema.md
-    - name: Purchase protection schemas
-      href: view-purchase-protection-schemas.md
-    - name: Loss prevention schemas
-      href: view-loss-prevent-schemas.md
-    - name: Labels API	
-      href: labels-api.md        
-    - name: Integrate account protection APIs
-      href: integrate-ap-api.md 
-    - name: Integrate purchase protection APIs
-      href: integrate-real-time-api.md 
-    - name: Custom assessments
-      href: custom-assessment.md
-    - name: Monitor API calls
-      href: monitoring.md
+    - name: Setup and overview
+      href: extensibility-via-event-hubs-overview.md
+    - name: Via code
+      href: extensibility-with-code.md
+    - name: Via Logic Apps / Power Automate
+      href: extensibility-with-power-automate.md   
+    - name: Via Power BI
+      href: extensibility-with-power-bi.md  
+    - name: Via Power Apps
+      href: extensibility-with-power-apps.md
 - name: Account protection
   items: 
   - name: Overview
