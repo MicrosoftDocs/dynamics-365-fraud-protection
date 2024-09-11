@@ -74,7 +74,7 @@
       href: device-fingerprinting.md
   - name: Operations
     items: 
-    - name: Language reference guide
+    - name: Fraud language reference
       href: fpl-lang-ref.md
     - name: Configuration
       href: configuration.md
@@ -138,7 +138,7 @@
       href: activity-logs.md
   - name: Operations
     items: 
-    - name: Language reference guide
+    - name: Fraud language reference
       href: fpl-lang-ref.md
     - name: Configuration
       href: configuration.md
@@ -238,7 +238,7 @@
       href: activity-logs.md
   - name: Operations
     items: 
-    - name: Language reference guide
+    - name: Fraud language reference
       href: fpl-lang-ref.md
     - name: Configuration
       href: configuration.md
