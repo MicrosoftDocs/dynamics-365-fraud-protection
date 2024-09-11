@@ -42,8 +42,10 @@
   items:
   - name: Azure Event Hubs
     items:
-    - name: Setup and overview
+    - name: Extensibility via Event Hubs
       href: extensibility-via-event-hubs-overview.md
+    - name: Set up extensibility via Event Hubs
+      href: extensibility-setup.md
     - name: Via code
       href: extensibility-with-code.md
     - name: Via Logic Apps / Power Automate
