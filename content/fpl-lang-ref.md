@@ -92,7 +92,7 @@ WHEN $fullName == "Kayla Goderich"
 
 ## Global Variables functions
 
-Global Variables functions can be used to set and get variables within rules. Global variables once set, can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments in the hierarchy in the following table. For example, if you set global variables in a rule within the root environment, its value can be retrieved within any other rule within the same assessment in the same environment, or any children environments.  
+Global Variables functions can be used to set and get variables within rules. Once global variables are set, they can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments in the hierarchy in the following table. For example, if you set global variables in a rule within the root environment, its value can be retrieved within any other rule within the same assessment in the same environment, or any children environments.  
 
 | Operator | Description | Example |
 |-------------|-------------|---------|
