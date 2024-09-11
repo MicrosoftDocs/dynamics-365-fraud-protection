@@ -6,17 +6,17 @@ ms.date: 08/06/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
-title: Language reference guide
+title: Fraud language reference
 
 ---
 
-# Language reference guide
+# Fraud language reference
 
 Microsoft Dynamics 365 has its own rich and expressive language to help you define and express your fraud strategy. This language has many similarities to C# and SQL, and is designed to give you the flexibility that you need to address fraud for your unique business scenarios.
 
 You can use this language today to define rules and velocities. For more information, see [Manage rules](rules.md) and [Perform velocity checks](velocities.md).
 
-This language reference guide includes the complete list of operators, functions, and statements that make up the language:
+This fraud language reference guide includes the complete list of operators, functions, and statements that make up the language:
 
 - [Statements](fpl-lang-ref.md#statements)
 - [Referencing attributes and variables](fpl-lang-ref.md#referencing-attributes-and-variables)
