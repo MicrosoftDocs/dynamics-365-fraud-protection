@@ -6,17 +6,17 @@ ms.date: 08/06/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
-title: Language reference guide
+title: Fraud language reference
 
 ---
 
-# Language reference guide
+# Fraud language reference
 
 Microsoft Dynamics 365 has its own rich and expressive language to help you define and express your fraud strategy. This language has many similarities to C# and SQL, and is designed to give you the flexibility that you need to address fraud for your unique business scenarios.
 
 You can use this language today to define rules and velocities. For more information, see [Manage rules](rules.md) and [Perform velocity checks](velocities.md).
 
-This language reference guide includes the complete list of operators, functions, and statements that make up the language:
+This fraud language reference guide includes the complete list of operators, functions, and statements that make up the language:
 
 - [Statements](fpl-lang-ref.md#statements)
 - [Referencing attributes and variables](fpl-lang-ref.md#referencing-attributes-and-variables)
@@ -92,7 +92,7 @@ WHEN $fullName == "Kayla Goderich"
 
 ## Global Variables functions
 
-Global Variables functions can be used to set and get variables within rules. Global variables once set, can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments in the hierarchy in the following table. For example, if you set global variables in a rule within the root environment, its value can be retrieved within any other rule within the same assessment in the same environment, or any children environments.  
+Global Variables functions can be used to set and get variables within rules. Once global variables are set, they can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments in the hierarchy in the following table. For example, if you set global variables in a rule within the root environment, its value can be retrieved within any other rule within the same assessment in the same environment, or any children environments.  
 
 | Operator | Description | Example |
 |-------------|-------------|---------|
