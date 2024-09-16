@@ -32,6 +32,7 @@ This fraud language reference guide includes the complete list of operators, fun
 - [Type casting operators](fpl-lang-ref.md#type-casting-operators)
 - [String functions](fpl-lang-ref.md#string-functions)
 - [Gibberish detection functions](fpl-lang-ref.md#gibberish-detection-functions)
+- [Pattern detection functions](fpl-lang-ref.md#pattern-detection-functions)
 - [Model functions](fpl-lang-ref.md#model-functions)
 - [Geo functions](fpl-lang-ref.md#geo-functions)
 - [Device attribute functions](fpl-lang-ref.md#device-attribute-functions)
@@ -241,7 +242,21 @@ These functions help prevent fraud by quickly and efficiently detecting whether 
 > [!NOTE]
 > Gibberish detection model is based on the frequency of two consecutive alphanumeric characters in publicly available english documents. It is assumed that the more frequently two consecutive alphanumeric characters appear in public documents, less likely that they are gibberish. The model should provide reasonable scores for english texts, and can be used to detect if the names or addresses contains gibberish. However, the model might not be suitable for abbreviations, such as short form for states (AZ, TX, etc.) and it also can't be used to validate names or addresses. Lastly, the model has not been tested for non-English texts.
 
-## Model functions
+## Pattern detection functions
+
+These functions help prevent fraud by quickly and efficiently detecting whether key user-input fields (such as names and addresses) contain gibberish. 
+
+| Function     | Description | Example |
+|--------------|-------------|---------|
+| Patterns.IsRegexMatch(string pattern, string source) |  Performs a Regular Expression (regex) match of string pattern against a String source. The result is a boolean, i.e. either true (indicating the given string matched the pattern) or false (indicating no match)   |  Patterns.IsRegexMatch(“^.*com$”, @ “user.email”) Patterns.IsRegexMatch( “^.*[aAeEiIoOuU]+.*$”, @ “user.firstname”) |
+
+
+> [!NOTE]
+1. String pattern must be a constant input.
+2. Function will return false (default result) if evaluation time exceeds 10 milliseconds.
+3. All [limitations](https://learn.microsoft.com/en-us/dotnet/standard/base-types/regular-expression-options#nonbacktracking-mode) that do not support NonBacktracking also apply to IsRegexMatch Function.
+
+> ## Model functions
 
 Model functions run the various fraud models and are useful when your assessment doesn't automatically run one or more fraud models. When model functions run, information about the model running during rule evaluation is output in the fraud assessment API call. Then, the rule gets access to the model result, including score, reasons, and more, that can be used for further rule processing and decision making.
 
