@@ -93,7 +93,7 @@ WHEN $fullName == "Kayla Goderich"
 
 ## Global Variables functions
 
-Global Variables functions can be used to set and get variables within rules. Once global variables are set, they can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments in the hierarchy in the following table. For example, if you set global variables in a rule within the root environment, its value can be retrieved within any other rule within the same assessment in the same environment, or any children environments.  
+You can use Global Variables functions to set and get variables within rules. Once global variables are set, they can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments. The hierarchy Fraud Protection uses is listed in the following table. For example, if you set global variables in a rule within the root environment, Fraud Protection can retrieve its value within any other rule in the same assessment in the same environment, or any children environments.  
 
 | Operator | Description | Example |
 |-------------|-------------|---------|
@@ -252,9 +252,9 @@ These functions help prevent fraud by quickly and efficiently detecting whether 
 
 
 > [!NOTE]
-1. The string pattern must be a constant input.
-2. The function returns false (the default result) if the evaluation time exceeds 10 milliseconds.
-3. All [limitations](/dotnet/standard/base-types/regular-expression-options#nonbacktracking-mode) that do not support NonBacktracking also apply to IsRegexMatch Function.
+> - The string pattern must be a constant input.
+> - The function returns false (the default result) if the evaluation time exceeds 10 milliseconds. 
+> - All [limitations](/dotnet/standard/base-types/regular-expression-options#nonbacktracking-mode) that do not support NonBacktracking also apply to IsRegexMatch Function.
 
 > ## Model functions
 
