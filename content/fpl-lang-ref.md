@@ -254,7 +254,7 @@ These functions help prevent fraud by quickly and efficiently detecting whether 
 > [!NOTE]
 1. String pattern must be a constant input.
 2. Function will return false (default result) if evaluation time exceeds 10 milliseconds.
-3. All [limitations](/dotnet/standard/base-types/regular-expression-options.md#nonbacktracking-mode) that do not support NonBacktracking also apply to IsRegexMatch Function.
+3. All [limitations](/dotnet/standard/base-types/regular-expression-options#nonbacktracking-mode) that do not support NonBacktracking also apply to IsRegexMatch Function.
 
 > ## Model functions
 
