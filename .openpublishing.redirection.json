@@ -96,6 +96,11 @@
       "redirect_document_id": "false"
     },  
     {
+      "source_path": "content/understand-business.md",
+      "redirect_url": "index",
+      "redirect_document_id": "false"
+    },  
+    {
       "source_path": "content/diagnose-experience.md",
       "redirect_url": "purchase-protection",
       "redirect_document_id": "false"
@@ -162,6 +167,11 @@
     {
       "source_path": "content/signup.md",
       "redirect_url": "provision-azure-tenant",
+      "redirect_document_id": "false"
+    },
+    {
+      "source_path": "content/extensibility-pricing.md",
+      "redirect_url": "index",
       "redirect_document_id": "false"
     },
     {
