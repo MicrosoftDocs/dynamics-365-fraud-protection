@@ -29,7 +29,7 @@ On the **Usage** page, the information is divided between two tabs:
 
 ## Assessments purchased metric
 
-The **Assessments purchased** metric reflects the total number of assessments that is available to you for each capability, based on the Fraud Protection stock keeping units (SKUs) that you purchased. For more information about Fraud Protection SKUs and the number of assessments that they provide access to, see [Dynamics 365 Fraud Protection](https://dynamics.microsoft.com/ai/fraud-protection/).
+The **Assessments purchased** metric reflects the total number of assessments that is available to you for each capability, based on the Fraud Protection stock keeping units (SKUs) that you purchased.
 
 ## Assessments used metric
 

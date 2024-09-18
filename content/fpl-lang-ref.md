@@ -2,7 +2,7 @@
 author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
-ms.date: 08/06/2024
+ms.date: 09/18/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -32,6 +32,7 @@ This fraud language reference guide includes the complete list of operators, fun
 - [Type casting operators](fpl-lang-ref.md#type-casting-operators)
 - [String functions](fpl-lang-ref.md#string-functions)
 - [Gibberish detection functions](fpl-lang-ref.md#gibberish-detection-functions)
+- [Pattern detection functions](fpl-lang-ref.md#pattern-detection-functions)
 - [Model functions](fpl-lang-ref.md#model-functions)
 - [Geo functions](fpl-lang-ref.md#geo-functions)
 - [Device attribute functions](fpl-lang-ref.md#device-attribute-functions)
@@ -92,7 +93,7 @@ WHEN $fullName == "Kayla Goderich"
 
 ## Global Variables functions
 
-Global Variables functions can be used to set and get variables within rules. Once global variables are set, they can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments in the hierarchy in the following table. For example, if you set global variables in a rule within the root environment, its value can be retrieved within any other rule within the same assessment in the same environment, or any children environments.  
+You can use Global Variables functions to set and get variables within rules. Once global variables are set, they can be accessed within a decision rule, velocity, routing rules, and post-decision actions within the same environment or children environments. The hierarchy Fraud Protection uses is listed in the following table. For example, if you set global variables in a rule within the root environment, Fraud Protection can retrieve its value within any other rule in the same assessment in the same environment, or any children environments.  
 
 | Operator | Description | Example |
 |-------------|-------------|---------|
@@ -241,7 +242,21 @@ These functions help prevent fraud by quickly and efficiently detecting whether 
 > [!NOTE]
 > Gibberish detection model is based on the frequency of two consecutive alphanumeric characters in publicly available english documents. It is assumed that the more frequently two consecutive alphanumeric characters appear in public documents, less likely that they are gibberish. The model should provide reasonable scores for english texts, and can be used to detect if the names or addresses contains gibberish. However, the model might not be suitable for abbreviations, such as short form for states (AZ, TX, etc.) and it also can't be used to validate names or addresses. Lastly, the model has not been tested for non-English texts.
 
-## Model functions
+## Pattern detection functions
+
+These functions help prevent fraud by quickly and efficiently detecting whether key user-input fields (such as names and addresses) contain gibberish. 
+
+| Function     | Description | Example |
+|--------------|-------------|---------|
+| Patterns.IsRegexMatch(string pattern, string source) |  Performs a Regular Expression (regex) match of string pattern against a String source. The result is a boolean, that is, either true (indicating the given string matched the pattern) or false (indicating no match)   |  Patterns.IsRegexMatch(“^.*com$”, @ “user.email”) Patterns.IsRegexMatch( “^.*[aAeEiIoOuU]+.*$”, @ “user.firstname”) |
+
+
+> [!NOTE]
+> - The string pattern must be a constant input.
+> - The function returns false (the default result) if the evaluation time exceeds 10 milliseconds. 
+> - All [limitations](/dotnet/standard/base-types/regular-expression-options#nonbacktracking-mode) that do not support NonBacktracking also apply to IsRegexMatch Function.
+
+> ## Model functions
 
 Model functions run the various fraud models and are useful when your assessment doesn't automatically run one or more fraud models. When model functions run, information about the model running during rule evaluation is output in the fraud assessment API call. Then, the rule gets access to the model result, including score, reasons, and more, that can be used for further rule processing and decision making.
 
@@ -270,7 +285,7 @@ Geo functions provide resolution by converting an IP address to a geographical a
 | Device.GetFullAttributes(String _sessionId_)   | Returns a full set of device attributes for the specified device fingerprinting session. See [Set up device fingerprinting](device-fingerprinting.md) to view the full set of device attributes | Device.GetFullAttributes(@"deviceFingerprinting.id")|
 | Device.GetAttributes(String _sessionId_)  | Returns a smaller subset of device attributes for the specified device fingerprinting session. The subset is a list curated by Fraud Protection and contains the most commonly used attributes. | Device.GetAttributes(@"deviceFingerprinting.id")|
 | Device.GetSelectedAttributes(String _sessionId_, String _attributeName_)   | Returns up to 20 device attributes for the specified device fingerprinting session. The list of desired attributes is to be specified as comma separated parameters | Device.GetSelectedAttributes(@"deviceFingerprinting.id", "deviceAsn","deviceCountryCode")  |
-| Device.GetSpeedOfTravel(String _sessionId_)   | Returns the maximum travel speed of a device in miles per hour. The maximum speed is determined by looking at the last five consecutive fingerprinting sessions and calculating the speed of the device from session to session, returning the maximum. The device is identified over sessions using the cookie ID. | Device.GetSpeedOfTravel(@"deviceFingerprinting.id")  |
+| Device.GetSpeedOfTravel(String _sessionId_)   | Returns the maximum travel speed of a device in miles per hour. Fraud Protection determines the maximum speed by taking the last five consecutive fingerprinting sessions and calculating the speed of the device from session to session, returning the maximum. The device is identified over sessions using the cookie ID. | Device.GetSpeedOfTravel(@"deviceFingerprinting.id")  |
 
 ## BIN Lookup functions
 
