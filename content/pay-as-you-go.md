@@ -11,11 +11,7 @@ title: Pay as you go billing
 
 # Pay as you go billing
 
-This article describes how to get started with Pay as you go billing for Dynamics 365 Fraud Protection. With Pay as you go billing, you can use Fraud Protection as much or as little as you need, and you pay only for what you use. Service interruptions will be minimized and you won't overpay as a result of forecasted transaction volumes. 
-
-For more information or to purchase Pay as you go billing, see the [Dynamics 365 Fraud Protection pay-as-you-go pricing](https://dynamics.microsoft.com/ai/fraud-protection/pricing/) page.
-
-Pay as you go billing can be enabled (or not enabled) only for all the environments in the Fraud Protection tenant.
+This article describes how to get started with Pay as you go billing for Dynamics 365 Fraud Protection. With Pay as you go billing, you can use Fraud Protection as much or as little as you need, and you pay only for what you use. Service interruptions will be minimized and you won't overpay as a result of forecasted transaction volumes. If Pay as you go billing option is chosen, then it applies to all the environments in the Fraud Protection tenant.
 
 ## Pricing
 
@@ -67,7 +63,7 @@ To enable Pay as you go billing, complete the following steps.
 
 1. Set up a monthly subscription for Fraud Protection.
 
-    1. Go to the [Dynamics 365 Fraud Protection website](https://dynamics.microsoft.com/ai/fraud-protection/) and select **Buy Now**.
+    1. Open [this page](https://signup.microsoft.com/get-started/signup?products=3cec0759-69e5-4cc4-940c-0760556f4b80) in an inPrivate browser tab.
     1. Sign in as the global administrator of the same Microsoft Entra tenant that you want to use with Fraud Protection. If you don't have an Microsoft Entra tenant, you can sign up by following the instructions on the page.
     1. Complete the steps in the purchase flow. You'll receive confirmation that your monthly subscription for Fraud Protection Pay as you go is successfully set up. You'll then be redirected to the Fraud Protection portal. 
 
