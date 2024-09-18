@@ -248,12 +248,12 @@ These functions help prevent fraud by quickly and efficiently detecting whether 
 
 | Function     | Description | Example |
 |--------------|-------------|---------|
-| Patterns.IsRegexMatch(string pattern, string source) |  Performs a Regular Expression (regex) match of string pattern against a String source. The result is a boolean, i.e. either true (indicating the given string matched the pattern) or false (indicating no match)   |  Patterns.IsRegexMatch(“^.*com$”, @ “user.email”) Patterns.IsRegexMatch( “^.*[aAeEiIoOuU]+.*$”, @ “user.firstname”) |
+| Patterns.IsRegexMatch(string pattern, string source) |  Performs a Regular Expression (regex) match of string pattern against a String source. The result is a boolean, that is, either true (indicating the given string matched the pattern) or false (indicating no match)   |  Patterns.IsRegexMatch(“^.*com$”, @ “user.email”) Patterns.IsRegexMatch( “^.*[aAeEiIoOuU]+.*$”, @ “user.firstname”) |
 
 
 > [!NOTE]
-1. String pattern must be a constant input.
-2. Function will return false (default result) if evaluation time exceeds 10 milliseconds.
+1. The string pattern must be a constant input.
+2. The function returns false (the default result) if the evaluation time exceeds 10 milliseconds.
 3. All [limitations](/dotnet/standard/base-types/regular-expression-options#nonbacktracking-mode) that do not support NonBacktracking also apply to IsRegexMatch Function.
 
 > ## Model functions
@@ -285,7 +285,7 @@ Geo functions provide resolution by converting an IP address to a geographical a
 | Device.GetFullAttributes(String _sessionId_)   | Returns a full set of device attributes for the specified device fingerprinting session. See [Set up device fingerprinting](device-fingerprinting.md) to view the full set of device attributes | Device.GetFullAttributes(@"deviceFingerprinting.id")|
 | Device.GetAttributes(String _sessionId_)  | Returns a smaller subset of device attributes for the specified device fingerprinting session. The subset is a list curated by Fraud Protection and contains the most commonly used attributes. | Device.GetAttributes(@"deviceFingerprinting.id")|
 | Device.GetSelectedAttributes(String _sessionId_, String _attributeName_)   | Returns up to 20 device attributes for the specified device fingerprinting session. The list of desired attributes is to be specified as comma separated parameters | Device.GetSelectedAttributes(@"deviceFingerprinting.id", "deviceAsn","deviceCountryCode")  |
-| Device.GetSpeedOfTravel(String _sessionId_)   | Returns the maximum travel speed of a device in miles per hour. The maximum speed is determined by looking at the last five consecutive fingerprinting sessions and calculating the speed of the device from session to session, returning the maximum. The device is identified over sessions using the cookie ID. | Device.GetSpeedOfTravel(@"deviceFingerprinting.id")  |
+| Device.GetSpeedOfTravel(String _sessionId_)   | Returns the maximum travel speed of a device in miles per hour. Fraud Protection determines the maximum speed by taking the last five consecutive fingerprinting sessions and calculating the speed of the device from session to session, returning the maximum. The device is identified over sessions using the cookie ID. | Device.GetSpeedOfTravel(@"deviceFingerprinting.id")  |
 
 ## BIN Lookup functions
 
