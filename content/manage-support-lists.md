@@ -56,7 +56,7 @@ To add, remove, or edit entries in support lists from the **Lists** page, you ca
 ## Add or remove multiple support list entries
 
 1. Select a support list, and then select **Edit**.
-1. Copy and paste the list of entries that you want to add or remove.
+1. Add your multiple entries, one per line.
 1. Select a status for the entries, or select **Remove** to remove the entries from the list.
 1. Optional: Update the **Reason**, **Expiration date**, and **Comments** fields.
 1. When you've finished, select **Update**.
