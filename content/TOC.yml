@@ -6,8 +6,6 @@
   items: 
   - name: Evaluate proof of concept options
     href: evaluate-poc.md
-  - name: Pay as you go billing
-    href: pay-as-you-go.md
   - name: Assessment and usage metering
     href: metering.md
   - name: Service FAQ
