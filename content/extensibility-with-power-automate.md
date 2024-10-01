@@ -54,8 +54,6 @@ By storing event data in Common Data Service as it comes through your event hub,
 
 7. Confirm that event data is being stored correctly in Common Data Service. In [Power Apps](https://make.preview.powerapps.com/), look in the **Data** section of your entity. Be sure to switch the view to **Custom fields**.
 
-    ![Common Data Service data.](media/eventhubs/cds-data.png)
-
 You now have a constantly updated database in Common Data Service that contains your event data. Therefore, you can now interact with this database through Microsoft Power Platform tools such as Power BI and Power Apps.
 
 ## Related articles
