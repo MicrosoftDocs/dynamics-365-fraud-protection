@@ -46,11 +46,7 @@ By storing event data in Common Data Service as it comes through your event hub,
 4. Select your environment and the entity name. The information that you enter in the **Environment** field must be specific to your own setup.
 5. Set the parameters that you want to store. Use the dynamic data fields from the previous step, **ParseEvent**.
 
-    Here is an example.
-
-    ![Parameters for the new step.](media/eventhubs/filled-fields.png)
-
-    Note that you might have to select **See More** when you load in dynamic content.
+   Note that you might have to select **See More** when you load in dynamic content.
 
 6. Confirm that your logic app is running correctly. In the left navigation, select **Overview**, and then select **Runs history**.
 
