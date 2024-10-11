@@ -64,7 +64,7 @@ Use transactional events to create custom scorecards and automated workflows usi
     "name": "FraudProtection.Observe.AccountLabel",
     "version": "1.0",
     "metadata": {
-        "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+        "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
         "timestamp": "2020-09-25T03:46:53.3716978Z"
     }
 }
@@ -82,12 +82,12 @@ You use trace events to report and monitor the performance for all rules that in
     "version": "1.0",
     "metadata":
 {
-    "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+    "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
     "timestamp": "2020-06-10T23:43:33.4526859Z" 
 }
     "ruleName": "Risk Score Policy",
     "eventType": "Purchase",
-    "correlationId": "e49319e6-0bea-4567-9f3e-c9f873fc958a",
+    "correlationId": "aaaa0000-bb11-2222-33cc-444444dddddd",
     "eventId": "e75e703c-1e54-4d41-af4b-a4c1b8866f02",
     "attributes":
 {
@@ -177,7 +177,7 @@ Use audit events to track portal actions and develop an audit log. Audit events 
 
 ```json
 "audit": {
-    "entityId": "cde1518f-305e-42e8-8d05-9b955efe3f46",
+    "entityId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
     "entityName": "Manual Review Rule",
     "entityType": "Rule",
     "operationName": "NewRule",
@@ -186,7 +186,7 @@ Use audit events to track portal actions and develop an audit log. Audit events 
 "name": "FraudProtection.Audit",
 "version": "1.0",
 "metadata": {
-    "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+    "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
     "timestamp": "2020-06-10T23:43:33.4526859Z"
 }
 ```
@@ -214,9 +214,9 @@ Use activity logs events to get detailed records of who did what, when, and wher
 "eventId": "0c6e1948-75a9-4513-bb4c-4828c9a8ab05",
 "operationType": "Create",
 "resourceType": "Decision rule",
-"resourceId": "b1053216-2fc4-4ef6-94e8-c4da706d87fa",
+"resourceId": "a0a0a0a0-bbbb-cccc-dddd-e1e1e1e1e1e1",
 "resourceName": "Rule Test",
-"userId": "fb88ba00-58e0-421c-8742-10ae04dddb86"
+"userId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
 }
 ```
 
@@ -254,8 +254,8 @@ For API calls, request counts and latency distributions (in ms) are sent every 2
    "HttpStatusCode"
 ],
 "DimensionValues": [
-   "63f55d63-9653-4ed9-be77-294da21202ae",
-   "63f55d63-9653-4ed9-be77-294da21202ae",
+   "aaaabbbb-0000-cccc-1111-dddd2222eeee",
+   "aaaabbbb-0000-cccc-1111-dddd2222eeee",
    "v1.0/Observe/Create",
    "N/A",
    "False",
@@ -271,7 +271,7 @@ For API calls, request counts and latency distributions (in ms) are sent every 2
 "name": "FraudProtection.Monitoring.RequestLatencyMsDistribution",
 "version": "1.0",
 "metadata": {
-   "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+   "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
    "timestamp": "2020-06-22T23:43:20.0947542Z"
 }
 }
@@ -292,13 +292,13 @@ For external calls, latency (in ms) and http status code metrics are sent with e
     "name": "FraudProtection.Monitoring.ExternalCalls",
     "version": "1.0",
     "metadata": {
-        "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+        "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
         "timestamp": "2020-06-10T23:43:33.4526859Z"
     },
     "externalCallName": "SampleExternalCall",
     "requestStatus": "Success",
     "httpStatusCode": 200,
-    "correlationId": "50BFA0D6-1E3D-4700-A2B3-1DD01162C08A",
+    "correlationId": "bbbb1111-cc22-3333-44dd-555555eeeeee",
     "latencyMs": 123,
     "assessment": "PURCHASE",
     "rule": "SampleRule",
@@ -317,13 +317,13 @@ This event logs errors for each failed external call, and can be useful for debu
     "name": "FraudProtection.Errors.ExternalCalls",
     "version": "1.0",
     "metadata": {
-        "tenantId": "63f55d63-9653-4ed9-be77-294da21202ae",
+        "tenantId": "aaaabbbb-0000-cccc-1111-dddd2222eeee",
         "timestamp": "2020-06-10T23:43:33.4526859Z"
     },
     "externalCallName": "SampleExternalCall",
     "requestStatus": "ResponseFailure",
     "httpStatusCode": 404,
-    "correlationId": "50BFA0D6-1E3D-4700-A2B3-1DD01162C08A",
+    "correlationId": "bbbb1111-cc22-3333-44dd-555555eeeeee",
     "latencyMs": 123,
     "assessment": "PURCHASE",
     "rule": "SampleRule",

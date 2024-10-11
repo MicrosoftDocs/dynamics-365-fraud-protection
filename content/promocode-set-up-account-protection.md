@@ -201,7 +201,7 @@ The value of **signUpId** should be unique per request. It should match the valu
                "externalDeviceType": "Tablet"
      },
      "user": {
-          "userId": " cf4e1d39-1100-4791-a6cf-98580f3d91cb",
+          "userId": " 00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
           "userType": "Consumer",
           "username": "kayla@contoso.com",
           "firstName": "Kayla",
@@ -294,7 +294,7 @@ The value of userId must match the value in the payload. Each user must have a u
      "externalDeviceType": "Computer"
      },
      "user": {
-          "userId": "cf4e1d39-1100-4791-a6cf-98580f3d91cb",
+          "userId": "00aa00aa-bb11-cc22-dd33-44ee44ee44ee",
           "userType": "Consumer",
           "username": "kayla@contoso.com",
           "firstName": "Kayla",
@@ -343,7 +343,7 @@ The value of **userId** must match the value in the payload. Each user must have
   {
      "metadata":{
           "signUpId":"a6221a3f-c38c-429e-8fde-3026d8c29ed3",
-          "userId":"34f47dc4-9781-4033-99fd-185649c4b001",
+          "userId":"11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
           "trackingId":"697a6bee-2d30-4132-92a6-c137aaf49c0a",
           "merchantTimeStamp":"2020-04-03T13:23:32.3226335-07:00"
      },
@@ -372,7 +372,7 @@ The value of **signUpId** must match the value in the payload. Each must have a 
   {
      "metadata":{
           "loginId":"dc4ea331-a6e5-4aa0-8eba-16b4d516a07d",
-          "userId":"34f47dc4-9781-4033-99fd-185649c4b001",
+          "userId":"11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
           "trackingId":"dcd65c87-d3db-4a42-8ed3-3e59f443b994",
           "merchantTimeStamp":"2020-04-03T13:23:32.3759321-07:00"
      },
@@ -401,9 +401,9 @@ The value of **userId** must match the value in the corresponding Account Login 
   {
      "metadata": {
           "name": "AP.Label.Metadata",
-          "userId": "34f47dc4-9781-4033-99fd-185649c4b001",
+          "userId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff",
           "merchantTimeStamp": "2020-06-14T21:53:27.8822492-08:00",
-          "trackingId": "34f47dc4-9781-4033-99fd-185649c4b001"
+          "trackingId": "11bb11bb-cc22-dd33-ee44-55ff55ff55ff"
      },
      "label": {
           "eventTimeStamp": "2020-02-21T21:53:27.8822492-08:00",
