@@ -38,7 +38,7 @@ Next, you must add a service account by registering the application ID for Fraud
 
 1. Select **Finance and Operations Preview**, and then select **Microsoft Entra applications**.
 1. To create a new first-party app identity for Fraud Protection, select **New**.
-1. In the **Client ID** field, enter **00001111-aaaa-2222-bbbb-3333cccc4444**.
+1. In the **Client ID** field, enter ** bf04bdab-e06f-44f3-9821-d3af64fc93a9**.
 1. In the **RetailServiceAccount** field, enter the user ID.
 
 ## Configure loss prevention settings in Fraud Protection
