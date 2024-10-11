@@ -201,7 +201,7 @@ var jwt = new JwtSecurityTokenHandler().ReadJwtToken(token);
 string tid = jwt.Claims.Where(c => c.Type == "tid").FirstOrDefault()?.Value;
 string aud = jwt.Claims.Where(c => c.Type == "aud").FirstOrDefault()?.Value;
 string appid = jwt.Claims.Where(c => c.Type == "appid").FirstOrDefault()?.Value;
-if(tid != "<my tenant id>" || aud != "<my application id>" || appid != "00001111-aaaa-2222-bbbb-3333cccc4444")
+if(tid != "<my tenant id>" || aud != "<my application id>" || appid != "bf04bdab-e06f-44f3-9821-d3af64fc93a9")
 {
     throw new Exception("the token is not authorized.");
 }
