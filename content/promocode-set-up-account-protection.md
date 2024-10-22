@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to set up customer accounts protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/16/2022
+ms.date: 08/30/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -15,7 +15,7 @@ Microsoft Dynamics 365 Fraud Protection includes account protection capabilities
 
 -	APIs for real-time risk assessment
 -	A rule and list experience that you can use to optimize your risk strategy according to your business needs
--	A scorecard that you can use to monitor fraud protection effectiveness and trends in your ecosystem
+-	Monitoring dashboards that you can use to monitor fraud protection effectiveness and trends in your ecosystem
 
 Account protection covers three types of account lifecycle events: *account creation*, *account login*, and *custom assessment*. For each event type, there are multiple lines of defense:
 
@@ -27,7 +27,7 @@ Account protection covers three types of account lifecycle events: *account crea
 This document guides you through the following activities:
 
 -	[Step 1: Implement account protection APIs](promocode-set-up-account-protection.md#step-1-implement-account-protection-apis)
--	[Step 2: Create Azure Active Directory (Azure AD) apps](promocode-set-up-account-protection.md#step-2-create-azure-ad-apps)
+-	[Step 2: Create Microsoft Entra apps](promocode-set-up-account-protection.md#step-2-create-microsoft-entra-apps)
 -	[Step 3: Understand account protection events](promocode-set-up-account-protection.md#step-3-understand-account-protection-events)
 
     After you complete these activities, you will be able to use account protection to block or challenge suspicious attempts to compromise existing accounts.
@@ -36,7 +36,7 @@ This document guides you through the following activities:
 
 Before you begin the activities in this document, you must complete the following tasks:
 
--	Set up Fraud Protection in an Azure AD tenant as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
+-	Set up Fraud Protection in an Microsoft Entra tenant as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
 -	[Set up device fingerprinting](device-fingerprinting.md).
 
 ## Step 1: Implement account protection APIs
@@ -50,38 +50,43 @@ You can use different **account protection APIs** depending on how you want to u
 
 For more information about supported events, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 
-## Step 2: Create Azure AD apps
+## Step 2: Create Microsoft Entra apps
 
 > [!IMPORTANT]
-> To complete this step, you must be an application administrator, a cloud application administrator, or a global administrator in your Azure AD tenant.
+> To complete this step, you must be an application administrator, a cloud application administrator, or a global administrator in your Microsoft Entra tenant.
 
-To acquire the tokens that are required to call the APIs, use Fraud Protection to configure Azure AD applications.
+To acquire the tokens that are required to call the APIs, use Fraud Protection to configure Microsoft Entra applications.
 
-### Configure an Azure AD app
+### Configure a Microsoft Entra app
 
-1.	In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **Data**, and then select **API management**.
-2.	On the **API management** page, select **Configuration**.
-3.	Select **Creating applications**, and then fill in the fields to create your app. The following fields are required:
-
+1.	In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **Settings**, and then select **Access control**.
+2.	Select **Application Access**. From the **+ Assign application role(s)** drop-down, select **Create new application**, and then fill in the fields to create your app. The following fields are required:
+   
     - **Application display name** – Enter a descriptive name for your app. The maximum length is 93 characters.
-    - **Environment** – Select the production endpoint.
     - **Authentication method** – Select whether a certificate or a secret (password protected) is used for authentication.
     
-      - Select **Certificate**, and then select **Choose file** to upload the public key. When you acquire tokens, you will need the matching private key.
-      - Select **Secret** to automatically generate a password after the application has been created.
+      - Select **Certificate**, and then select **Choose file** to upload the public key. When you acquire tokens, you need the matching private key.
+      - Select **Secret** to automatically generate a password after the app is created. Secrets are not as secure as certificates. 
 
-4.	When you've finished filling in the fields, select **Create application**.
-
-    The confirmation page summarizes the app's name and ID, and either the certificate thumbprint or the secret, depending on the authentication method that you selected.
+3.	Select the API roles you want to assign to this app from the **Roles** drop-down. The Risk_API role is selected by default. You can edit API roles at any time. 
+  - **Risk_API** – Entra apps assigned Risk_API roles can call Fraud Protection assessment and observation events API endpoints.
+  - **Provisioning_API** – Entra apps assigned Provisioning_API roles can call the Fraud Protection provisioning API endpoint, which allows the creation, update, and deletion of non-root environments.
 
 > [!IMPORTANT]
-> Save the information about your certificate thumbprint or secret for future reference. This information will be shown only once.
+> You can edit API roles for an existing Entra app at any time. To learn more, refer to the [Configure Microsoft Entra app access](configure-application-access.md) article.  
+ 
+4.	When you've completed filling in the fields, select **Create application**.
+
+The **Confirmation** page summarizes the app's name and ID, and either the certificate thumbprint or the secret, depending on the authentication method that you selected.
+
+> [!IMPORTANT]
+> Save the information about your certificate thumbprint or secret for future reference. This information is shown only once.
 
 #### Create additional apps
 
 You can create as many apps as you require to run API calls in your production environments.
 
-1.	On the **Configuration** tab, select **Create another application**.
+1.	On the **Application access** tab, select **Create new application** from the **Assign application role(s)** drop-down in the top navigation bar.
 2.	Fill in the fields to create your app, and then select **Create application**.
 
 ### Call the Fraud Protection real-time APIs
@@ -92,7 +97,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 
 -	**API Endpoint** – The URI for your environment appears on the **Account information** tile on the Fraud Protection dashboard.
 -	**Directory (tenant) ID** – The directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard.
--	**Application (client) ID** – The application ID identifies the Azure AD app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **API Management** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you create.
+-	**Application (client) ID** – The application ID identifies the Microsoft Entra app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **API Management** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you create.
 -	**Certificate thumbprint or secret** – You can find the certificate thumbprint or the secret on the confirmation page that appears after you select **Create application** on the **API Management** page.
 -	**Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
@@ -150,7 +155,7 @@ Behind the scenes, the preceding code generates an HTTP request and receives a r
 
 For more information about access tokens, see the following Azure documentation:
 
-- [Use client assertion to get access tokens from Azure AD](/azure/architecture/multitenant-identity/client-assertion)
+- [Use client assertion to get access tokens from Microsoft Entra ID](/azure/architecture/multitenant-identity/client-assertion)
 - [Cache access tokens](/azure/architecture/multitenant-identity/token-cache)
 
 ### Call the APIs
@@ -159,7 +164,7 @@ For more information about access tokens, see the following Azure documentation:
 
 | Header name	| Header value|
 |----------------|------------------|
-| Authorization	| <p>Use the following format for this header: Bearer *accesstoken*</p><p>In this format, accesstoken is the token that is returned by Azure AD.</p>| 
+| Authorization	| <p>Use the following format for this header: Bearer *accesstoken*</p><p>In this format, accesstoken is the token that is returned by Microsoft Entra ID.</p>| 
 | x-ms-correlation-id	| Send a new GUID value on each set of API calls that are made together.| 
 | Content-Type	| application/json| 
 | x-ms-dfpenvid       | Send the GUID value of your Instance ID. |
@@ -384,7 +389,7 @@ The value of **signUpId** must match the value in the payload. Each must have a 
 
 ### Label
 
-Use the **Label** event to send additional information to Fraud Protection, besides the data that informs the virtual fraud analyst and scorecard features. The **Labe**l API provides the additional information for model training that is based on an additional set of fraud signals. It also sends information about transactions, account or payment instrument details, and reversals.
+Use the **Label** event to send additional information to Fraud Protection, besides the data that informs the virtual fraud analyst and monitoring features. The **Labe**l API provides the additional information for model training that is based on an additional set of fraud signals. It also sends information about transactions, account or payment instrument details, and reversals.
 
 **URI**: \<API Endpoint>/v1.0/label/account/create/<userId\>
 

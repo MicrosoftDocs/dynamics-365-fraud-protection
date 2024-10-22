@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article describes how Microsoft Dynamics 365 Fraud Protection purchase protection interacts with different entities, such as customers and banks.
 ms.author: cschlegel
-ms.date: 11/03/2022
+ms.date: 04/10/2024
 ms.topic: reference
 search.audienceType:
   - Admin

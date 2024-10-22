@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to use event hubs with Microsoft Azure Logic Apps or Power Automate to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
 ms.author: josaw
-ms.date: 10/23/2020
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -46,19 +46,13 @@ By storing event data in Common Data Service as it comes through your event hub,
 4. Select your environment and the entity name. The information that you enter in the **Environment** field must be specific to your own setup.
 5. Set the parameters that you want to store. Use the dynamic data fields from the previous step, **ParseEvent**.
 
-    Here is an example.
-
-    ![Parameters for the new step.](media/eventhubs/filled-fields.png)
-
-    Note that you might have to select **See More** when you load in dynamic content.
+   Note that you might have to select **See More** when you load in dynamic content.
 
 6. Confirm that your logic app is running correctly. In the left navigation, select **Overview**, and then select **Runs history**.
 
     ![Runs history.](media/eventhubs/runs-history.png)
 
 7. Confirm that event data is being stored correctly in Common Data Service. In [Power Apps](https://make.preview.powerapps.com/), look in the **Data** section of your entity. Be sure to switch the view to **Custom fields**.
-
-    ![Common Data Service data.](media/eventhubs/cds-data.png)
 
 You now have a constantly updated database in Common Data Service that contains your event data. Therefore, you can now interact with this database through Microsoft Power Platform tools such as Power BI and Power Apps.
 

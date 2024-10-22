@@ -1,21 +1,21 @@
 ---
 author: josaw1
-description: This article explains how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
+description: This article describes device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 11/08/2022
+ms.date: 03/28/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
-title: Set up device fingerprinting
+title: Overview of device fingerprinting
 ---
 
-# Set up device fingerprinting
+# Overview of device fingerprinting
 
-This article explains how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
+This article describes how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 
 A *device fingerprint*, also known as a *machine fingerprint*, contains information that's collected about a remote computing device, such as a computer, Xbox, tablet, or smartphone, for the purpose of identifying that device. Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address.
 
-Fraud Protection provides a device fingerprinting feature that's based on artificial intelligence (AI), so that device identification can be used as input to the process of fraud assessment. This feature helps the Fraud Protection service track and link seemingly unrelated events in the fraud network to help identify patterns of fraud. The data collected isn't just a static list of attributes but also includes data that's dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device.
+Fraud Protection provides a device fingerprinting feature that's based on artificial intelligence (AI), so that device identification can be used as input to the process of fraud assessment. This feature helps the Fraud Protection service track and link seemingly unrelated events in the fraud network to help identify patterns of fraud. The data collected isn't just a static list of attributes but also includes data that's dynamically captured based on the evaluation of specific combinations of attributes, such as browser, system, network, and geo-location attributes. When device characteristics and attributes are collected, the device fingerprinting service uses machine learning to probabilistically identify the device. When using the device ID in rules and velocities, remember that this device ID is probabilistic and not deterministic. While the device ID has a high accuracy, it can still produce false positives.
 
 Device fingerprinting runs on Azure, and includes benefits from proven cloud scalability, reliability, and enterprise-grade security. To help you better understand the impact that device fingerprinting has on fraud detection, this document includes some results from a study that Microsoft did. The study compared six months' worth of data for various Microsoft businesses through two different models: one that used device fingerprinting and one that didn't.
 
@@ -31,10 +31,11 @@ The purpose of this setup guide is to help you understand how you can:
 
 ## Prerequisites
 
-Before you begin the tasks in this document, you must set up Fraud Protection in an Azure Active Directory (Azure AD) tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md) and [Set up a purchased version of Fraud Protection](promocode-set-up-DFP-purchased-version.md).
+Before you begin the tasks in this document, you must set up Fraud Protection in a Microsoft Entra tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md) and [Set up a purchased version of Fraud Protection](promocode-set-up-DFP-purchased-version.md).
 
 It's your responsibility to:
 
+- Receive consent from your users to collect and allow Microsoft to process the device fingerprinting data.
 - Inform your customers of your data processing practices by, for example, disclosing the data that you collect and how it's used. 
 - Disclose your use of third parties working on your behalf to process the data you collect, including Fraud Protection service providers. 
 - Comply with all laws and regulations applicable to its use of Fraud Protection, including data protection laws. 
@@ -48,103 +49,19 @@ When you implement Fraud Protection device fingerprinting by integrating the scr
 - Browser-related attributes if applicable such as browser language, font, and so on.
 - Network attributes, such as IP address, signature hash, and so on.
 
-## Set up device fingerprinting
+Cookies are used in Fraud Protection to collect information for a device, not for a particular individual. You can opt out of using cookies, but that degrades the device fingerprinting.
 
-The setup of device fingerprinting is done in two phases.
+### Obtain device fingerprinting data
 
-1. Configure the Domain Name Server (DNS) Secure Sockets Layer (SSL) certificate, and upload it to the Fraud Protection portal.
-1. Implement device fingerprinting (on a website or a mobile app).
-
-This section provides detailed instructions for both these phases. The first phase has to be completed only once. However, the second phase must be repeated once for each website or mobile app where device fingerprinting will be implemented.
-
-### Set up DNS and generate an SSL certificate
-
-Complete the following procedures to set up DNS and generate an SSL certificate.
-
-#### Set up DNS
-
-To set up DNS, follow these steps.
-
-1. Select a subdomain under your root domain, such as `fpt.contoso.com`. Any prefix can be used.
-1. For the selected subdomain, create a canonical name (CNAME) that points to `fpt.dfp.microsoft.com`.
-
-#### Generate and upload an SSL certificate
-
-To generate and upload an SSL certificate, follow these steps.
-
-1. For back-end onboarding, generate the SSL certificate for the selected subdomain. You can create one SSL certificate and add all the subdomains in the **Certificate's Subject Alternative Name** field.
-2. Go to the [Fraud Protection portal](https://dfp.microsoft.com), and then, in the left navigation pane, select **Integration**.
-3. On the **Integration** page, select **Edit**, and then, on the next page, select **Next** to open the **Upload SSL certificate** page.
-4. Select **Select Certificate**, and then upload the SSL certificate that you generated. If your certificate has a password, enter it in the text box. Then select **Upload**.
-
-> [!NOTE]
-> Only .pfx files are supported. Propagation of the certificate to the device fingerprinting servers might take a few minutes. 
-
-## Implement device fingerprinting
-
-Your website or application must initiate device fingerprinting requests a few seconds before a transaction is sent to Fraud Protection for risk evaluation (such as a transaction for adding a payment instrument, sign-in, or checkout). This requirement ensures that Fraud Protection has received all the data that it requires to make an accurate assessment. This section provides detailed instructions for implementing device fingerprinting on websites and mobile apps. 
-
-To implement device fingerprinting, follow these steps.
-
-1. Modify the following JavaScript script code, and insert it on the webpage or in the application where you want to collect device fingerprinting information.
-
-    ```JavaScript
-    <script src="https://<Your_Sub_Domain>/mdt.js?session_id=<session_id>&instanceId=<instance_id>" type="text/javascript"></script>
-    ```
-
-    - **Your\_Sub\_Domain** – The subdomain under your root domain.
-    - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). Although we recommend that you use a globally unique identifier (GUID) for the session ID, it isn't required.
-    - **instance\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Device fingerprinting ID** value that's listed on the **Current environment** tile on the **Integration** page of the corresponding environment in the Fraud Protection portal.
-
-    **Example**
-
-    ```JavaScript
-    <script src="https://fpt.contoso.com/mdt.js?session_id=211d403b-2e65-480c-a231-fd1626c2560e&instanceId=b472dbc3-0928-4577-a589-b80090117691" type="text/javascript"></script>
-    ```
-
-    Here's an example of a response for mdt.js.
-
-    ```JavaScript
-    window.dfp={url:"https://fpt.contoso.com/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",sessionId:"211d403b-2e65-480c-a231-fd1626c2560e",customerId:"b472dbc3-0928-4577-a589-b80090117691",dc:"uswest"};window.dfp.doFpt=function(doc){var frm,src;true&&(frm=doc.createElement("IFRAME"),frm.id="fpt_frame",frm.style.width="1px",frm.style.height="1px",frm.style.position="absolute",frm.style.visibility="hidden",frm.style.left="10px",frm.style.bottom="0px",frm.setAttribute("style","color:#000000;float:left;visibility:hidden;position:absolute;top:-100;left:-200;border:0px"),src="https://Your_Sub_Domain/?session_id=211d403b-2e65-480c-a231-fd1626c2560e&CustomerId=b472dbc3-0928-4577-a589-b80090117691",frm.setAttribute("src",src),doc.body.appendChild(frm))};
-    ```
-
-2. Load device fingerprinting after the page's elements are loaded.
-
-    ```JavaScript
-    window.dfp.doFpt(this.document);
-    ```
-
-3. When you submit transactions in the Fraud Protection API, set a session ID in the **deviceContextId** field.
-4. Set the **device.ipAddress** field to the customer IP address that your website receives when a customer uses your site.
-
-## Enable fingerprinting on a mobile app
-
-For mobile apps, device fingerprinting integration supports Android, iOS, and React Native platforms via software development kit (SDK) integration. For more information about the mobile reference implementation, see the following articles:
-
-- [Dynamics 365 Fraud Protection mobile SDK for Android](mobile-sdk-android.md)
-- [Dynamics 365 Fraud Protection mobile SDK for iOS](mobile-sdk-ios.md)
-- [Dynamics 365 Fraud Protection mobile SDK for React Native](mobile-sdk-react-native.md)
-
-## Interpreting fingerprinting response to detect VPNs
-
-There are two fields that exist in the **Account Create**, **Account Login**, and **Purchase API** response that can be used to identify VPNs:
-- Proxy: A boolean indicating if Fraud Protection detected a proxy or not.
-- ProxyType: An enum. The following table provides the enum values for each ProxyType.
-
-  |ProxyType |Description|
-  |----------|-----------|
-  | http | The proxy uses the HTTP protocol and has open ports which are accessible by any Internet user. |
-  | service | The proxy is operated by an organization (often for profit) that provides access to subscribers as a service. The proxy is one of an array of proxies (often internationally distributed) that are part of a Virtual Private Network (VPN) that subscribers connect to by installing an application. The network may have different proxy locations or bandwidth options depending on the user’s membership level, whether it's paid or free. |
-  | socks | The proxy uses the Socket Secure (SOCKS) protocol and has open ports which are accessible by any Internet user. |
-  | socks http | The proxy has both the HTTP and SOCKS protocols setup and has open ports which are accessible by any Internet user. |
-  | tor | The proxy is part of the onion router (Tor) network. Encrypted user Internet traffic is routed through a regularly changing series of nodes operated by volunteers. |
-  | unknown | The proxy’s type couldn't be determined. |
-  | web | The proxy operates through the use of an Internet web browser. Navigate to the web proxy website, enter the URL of the site you wish to visit, and the contents of the requested URL are returned by the web proxy website within the browser. |
-
-For example, to identify a VPN, Proxy would be **TRUE** and ProxyType would be **service**.
+Follow the steps detailed in the integration and setup article that is relevant to your scenario in the [Additional resources](#additional-resources) section below. To integrate device fingerprinting into your website or app, you must then call an assessment with the device fingerprinting section as part of the request payload to retrieve the device fingerprinting data and enrichments. See [Create a new assessment](assessment-create-new.md) for details on how to set up an assessment with device fingerprinting.
 
 ## Additional resources
-
-[Implement device fingerprinting in Dynamics 365 Fraud Protection](/training/modules/device-fingerprint-fraud-protection/).
+- [Attribute categories](df-attribute.md)
+- Set up and implement device fingerprinting
+  - [Web setup of device fingerprinting](df-web.md)
+  - [Mobile SDK for iOS](mobile-sdk-ios.md)
+  - [Mobile SDK for Android](mobile-sdk-android.md)
+  - [Mobile SDK for React Native](mobile-sdk-react-native.md)
+- Training: [Implement device fingerprinting in Dynamics 365 Fraud Protection](/training/modules/device-fingerprint-fraud-protection/).
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]

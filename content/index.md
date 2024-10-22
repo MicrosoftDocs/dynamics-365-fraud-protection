@@ -3,7 +3,7 @@ author: josaw1
 description: This article provides an overview of Microsoft Dynamics 365 Fraud Protection and its mission.
 
 ms.author: josaw
-ms.date: 05/04/2022
+ms.date: 04/10/2024
 ms.topic: overview
 search.audienceType:
   - admin
@@ -31,7 +31,7 @@ By using Fraud Protection, you can help protect your business from fraud through
 - Help protect accounts with device fingerprinting - Detect fraud patterns and identify returning devices with high fidelity using AI models that collect device and location attributes.
 - Adaptable account rules engine fits your needs - Minimize customer delays and friction by configuring specialized rules and policies.
 - Help defend accounts with bot protection - Help protect against bot networks attempting to create synthetic accounts or gain access to accounts using stolen credentials.
-- Configure the engine to match your business needs - Enable customers to send custom payloads and configure real-time decision policies with an engine that helps protect specialized account activity scenarios, with scorecards and trends.
+- Configure the engine to match your business needs - Enable customers to send custom payloads and configure real-time decision policies with an engine that helps protect specialized account activity scenarios, with monitoring dashboards.
 
 ## Loss prevention
 - Detect transactional anomalies with intelligent machine learning - Empower store managers to act quickly and mitigate losses by identifying anomalies and potential fraud on returns and discounts.

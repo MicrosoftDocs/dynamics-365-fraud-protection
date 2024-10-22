@@ -22,7 +22,8 @@
       {
         "files": [
           "**/*.png",
-          "**/*.jpg"
+          "**/*.jpg",
+          "**/*.svg"
         ],
         "exclude": [
           "**/obj/**",
@@ -44,15 +45,16 @@
         "marycc",
         "tinaburden",
         "almostdunh",
-        "AshleyWoodruff"
+        "AshleyWoodruff",
+        "kimberleybrown",
+        "nathlaroche"
       ],
       "search.app": [
         "fraudprotection-docs"
       ],
       "breadcrumb_path": "/dynamics365/fraud-protection/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "GitHub",
-      "feedback_github_repo": "MicrosoftDocs/dynamics-365-fraud-protection",
+      "feedback_system": "Standard",
       "recommendations": "true"
     },
     "fileMetadata": {

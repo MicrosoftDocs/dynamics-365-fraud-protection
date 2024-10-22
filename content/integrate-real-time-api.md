@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to integrate real-time APIs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: cschlegel
-ms.date: 01/18/2023
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -30,7 +30,7 @@ Depending on how you use Fraud Protection, you might use different sets of the f
 
 The integration of purchase protection APIs occurs in three phases: 
 
-1. [Create Azure Active Directory (Azure AD) applications](#create-azure-ad-applications) via Fraud Protection. 
+1. [Create Microsoft Entra applications](#create-microsoft-entra-applications) via Fraud Protection. 
 1. [Generate an access token](#generate-an-access-token).
 1. [Call the APIs](#call-the-apis).
 
@@ -44,23 +44,22 @@ Visit the following portals for each environment that you intend to use. Sign in
 - [Sandbox environment](https://dfp.microsoft-int.com) 
 - [Production environment](https://dfp.microsoft.com) (You might already have completed this step in production during initial sign-up.)
 
-## Create Azure AD applications
+## Create Microsoft Entra applications
 
 > [!IMPORTANT]
 > You must be an application administrator, cloud application administrator, or global administrator in your Azure tenant to complete this step.
 
-To acquire the tokens that are required to call the APIs, you must configure and use Azure AD applications as described in this section.
+To acquire the tokens that are required to call the APIs, you must configure and use Microsoft Entra applications as described in this section.
 
-### Configure Azure AD applications
+### Configure Microsoft Entra applications
 
-To configure Azure AD applications, follow these steps.
+To configure Microsoft Entra applications, follow these steps.
 
-1. In the Fraud Protection portal, in the left navigation pane, select **Integration \> Create Azure AD Application \> Setup now**. 
-1. Complete the page to create your app. We recommend that you create one Azure AD application for each environment that you want to integrate with Fraud Protection. 
+1. In the Fraud Protection portal, in the left navigation pane, select **Integration \> Create Microsoft Entra Application \> Setup now**. 
+1. Complete the page to create your app. We recommend that you create one Microsoft Entra application for each environment that you want to integrate with Fraud Protection. 
 1. Enter or select values for the following required fields: 
 
     - **Application display name** – Give your application a descriptive name. The maximum length is 93 characters. 
-    - **Environment** – Select whether the application should call your production or integration (sandbox) endpoint. 
     - **Authentication method** – Select whether you want to authenticate via a certificate or a secret (password). 
 
 1. If you selected the certificate authentication method, follow these steps: 
@@ -71,19 +70,19 @@ To configure Azure AD applications, follow these steps.
 1. When you've finished setting the required fields, select **Create application**. The confirmation page summarizes your app's name, ID, and certificate thumbprint or secret, depending on the authentication method that you selected.
 
 > [!IMPORTANT]
-> Please save your secret or certificate thumbprint information for future reference. The secret will only be displayed once.
+> Save your secret or certificate thumbprint information for future reference. The secret will only be displayed once.
 
 ### Create another application
 
 To create another application, select **Create another application**. You can create as many apps as you require to run API calls in each of your environments. 
 
-### Manage existing Azure AD applications 
+### Manage existing Microsoft Entra applications 
 
-After you create your Azure AD apps, you can manage them through the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps). For more information, see [How and why applications are added to Azure AD](/azure/active-directory/develop/active-directory-how-applications-are-added). 
+After you create your Microsoft Entra apps, you can manage them through the [Azure portal](https://portal.azure.com/#blade/Microsoft_Microsoft Entra ID_IAM/ActiveDirectoryMenuBlade/RegisteredApps). For more information, see [How and why applications are added to Microsoft Entra ID](/azure/active-directory/develop/active-directory-how-applications-are-added). 
 
 ## Generate an access token
 
-To securely integrate your systems with Fraud Protection, obtain an Azure AD token, and provide it in the header of each API call.
+To securely integrate your systems with Fraud Protection, obtain a Microsoft Entra token, and provide it in the header of each API call.
 
 > [!NOTE]
 > Access tokens have a limited lifespan of 60 minutes. We recommend that you cache and reuse a token until it's close to expiring. You can then get a new access token.
@@ -94,7 +93,7 @@ The following information is needed to obtain a token.
 
 - **Environment URI** – The URIs for your sandbox or production environment appear on the **Configuration** tab of the **API Management** page in the Fraud Protection portal.
 - **Directory (tenant) ID** – This ID is the globally unique identifier (GUID) of a tenant's domain in Azure. It appears in the Azure portal and on the **Configuration** tab of the **API Management** page in the Fraud Protection portal. 
-- **Application (client) ID** – This ID identifies the Azure AD app that you've created to call APIs. Get the ID from the **Real-time APIs** confirmation page, or find it later under **App registrations** in the Azure portal. There will be one ID for each app that you created.
+- **Application (client) ID** – This ID identifies the Microsoft Entra app that you've created to call APIs. Get the ID from the **Real-time APIs** confirmation page, or find it later under **App registrations** in the Azure portal. There will be one ID for each app that you created.
 - **Certificate thumbprint or secret** – Get the thumbprint or secret from the Real-time APIs confirmation page.
 - **Instance ID** – This ID is the GUID of your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
@@ -113,7 +112,7 @@ For samples in other languages, see https://aka.ms/aaddev.
 /// </summary>
 /// <param name="tenantId">Directory (tenant) ID, in GUID format</param>
 /// <param name="clientId">Application (client) ID</param>
-/// <param name="certPath">File path to the certificate file (pfx) used to authenticate your application to Azure AD</param>
+/// <param name="certPath">File path to the certificate file (pfx) used to authenticate your application to Microsoft Entra ID</param>
 /// <param name="certPassword">Password to access to the certificate file's private key</param>
 public async Task<string> AcquireTokenWithCertificate(string tenantId, string clientId, string certPath, string certPassword)
 {
@@ -175,7 +174,7 @@ The **AuthenticationResult** object in each case contains the **AccessToken** va
 
 - POST request to:
 
-    - `https://login.microsoftonline.com/<Azure AD tenant ID>/oauth2/token`
+    - `https://login.microsoftonline.com/<Microsoft Entra tenant ID>/oauth2/token`
 
 - Headers:
 
@@ -205,7 +204,7 @@ To call the APIs, follow these steps.
 
     | Header name | Header value |
     |-------------|--------------|
-    | Authorization | <p>Use the following format for this header. (Replace *accesstoken* with the actual token value that's returned by Azure AD.)</p><p>Bearer *accesstoken* |
+    | Authorization | <p>Use the following format for this header. (Replace *accesstoken* with the actual token value that's returned by Microsoft Entra ID.)</p><p>Bearer *accesstoken* |
     | x-ms-correlation-id | Send a new GUID value on each set of API calls that are made together. |
     | x-ms-dfpenvid | Send the GUID value of your instance ID. |
 
@@ -240,7 +239,7 @@ To specify the customer API ID when you creat an environment, see the article, [
   
 ## Best practices 
 
-- Each Azure AD token remains valid for 60 minutes. We recommend that you cache it for a shorter duration and reuse it. 
+- Each Microsoft Entra token remains valid for 60 minutes. We recommend that you cache it for a shorter duration and reuse it. 
 - Ensure that your HttpClient has keep-alive connections. 
 - Always pass the **x-ms-dfpenvid** header, and ensure that it points to the environment of the merchant that you want to send transactions on behalf of. 
 - Store the secret in a secret store. 

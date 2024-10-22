@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about the components of case management in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 02/27/2024
 ms.topic: reference
 search.audienceType:
   - developer
@@ -27,6 +27,9 @@ Case management has several components that work together to provide an end-to-e
 - [Queues](#queues)
 - [Routing rules](#routing-rules)
 - [Transaction review](#transaction-review)
+
+> [1NOTE]
+> The **Device fingerprinting** template doesn't support case management. All other [Assessment templates](assessment-create-new.md#template) support case management, but they're disabled by default. To enable case management for your assessment, go to **Assessment configuration** settings to enable. 
 
 ## Cases
 

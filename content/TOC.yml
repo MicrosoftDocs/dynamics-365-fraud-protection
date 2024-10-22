@@ -4,66 +4,54 @@
   href: global-availability.md  
 - name: Get started
   items: 
-  - name: Get started training module
-    href: /training/modules/get-started-fraud-protection/
   - name: Evaluate proof of concept options
     href: evaluate-poc.md
-  - name: Pay as you go billing
-    href: pay-as-you-go.md
   - name: Assessment and usage metering
     href: metering.md
   - name: Service FAQ
     href: faq/service-faq.md
-  - name: Provision Fraud Protection training module
-    href: /training/modules/provision-fraud-protection/
   - name: Promotion code redemption error
     href: promocode-redemption-error.md
 - name: Transaction acceptance booster (TAB)
   href: transaction-acceptance-booster.md
-- name: APIs and extensibility
+- name: APIs
   items:
-  - name: Language reference guide
+  - name: Fraud language reference
     href: fpl-lang-ref.md
-  - name: Set up extensibility via Event Hubs   
-    href: extensibility-via-event-hubs-overview.md
-  - name: Work with code
-    href: extensibility-with-code.md
-  - name: Work with Logic Apps/Power Automate
-    href: extensibility-with-power-automate.md   
-  - name: Work with Power BI
-    href: extensibility-with-power-bi.md  
-  - name: Work with Power Apps
-    href: extensibility-with-power-apps.md
-  - name: Mobile SDK for Android
-    href: mobile-sdk-android.md
-  - name: Mobile SDK for iOS
-    href: mobile-sdk-ios.md
-  - name: Mobile SDK for React Native
-    href: mobile-sdk-react-native.md
-  - name: APIs
+  - name: Swagger UI
+    href: swagger.md
+  - name: Account protection schemas
+    href: ap-schema.md
+  - name: Purchase protection schemas
+    href: view-purchase-protection-schemas.md
+  - name: Loss prevention schemas
+    href: view-loss-prevent-schemas.md
+  - name: Labels API	
+    href: labels-api.md        
+  - name: Integrate account protection APIs
+    href: integrate-ap-api.md 
+  - name: Integrate purchase protection APIs
+    href: integrate-real-time-api.md 
+  - name: Custom assessments
+    href: custom-assessment.md
+  - name: Monitor API calls
+    href: monitoring.md
+- name: Extensibility
+  items:
+  - name: Azure Event Hubs
     items:
-    - name: Swagger UI
-      href: swagger.md
-    - name: Call real-time APIs training module
-      href: /training/modules/call-real-item-apis/
-    - name: Configure sample app data training module
-      href: /training/modules/configure-sample-app-fraud-protection/
-    - name: Account protection schemas
-      href: ap-schema.md
-    - name: Purchase protection schemas
-      href: view-purchase-protection-schemas.md
-    - name: Loss prevention schemas
-      href: view-loss-prevent-schemas.md
-    - name: Labels API	
-      href: labels-api.md        
-    - name: Integrate account protection APIs
-      href: integrate-ap-api.md 
-    - name: Integrate purchase protection APIs
-      href: integrate-real-time-api.md 
-    - name: Custom assessment
-      href: custom-assessment.md
-    - name: Monitor API calls
-      href: monitoring.md
+    - name: Extensibility via Event Hubs
+      href: extensibility-via-event-hubs-overview.md
+    - name: Set up extensibility via Event Hubs
+      href: extensibility-setup.md
+    - name: Via code
+      href: extensibility-with-code.md
+    - name: Via Logic Apps / Power Automate
+      href: extensibility-with-power-automate.md   
+    - name: Via Power BI
+      href: extensibility-with-power-bi.md  
+    - name: Via Power Apps
+      href: extensibility-with-power-apps.md
 - name: Account protection
   items: 
   - name: Overview
@@ -82,23 +70,27 @@
       href: promocode-set-up-account-protection.md
     - name: Configure user roles and access
       href: configure-user-access.md
-    - name: Set up device fingerprinting 
+    - name: Device fingerprinting 
       href: device-fingerprinting.md
-    - name: Deploy and work with account protection and purchase protection learning path
-      href: /training/paths/deploy-work-account-purchase-protection/
   - name: Operations
     items: 
-    - name: Language reference guide
+    - name: Fraud language reference
       href: fpl-lang-ref.md
+    - name: Configuration
+      href: configuration.md
     - name: Event tracing
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
+    - name: Functions
+      href: functions.md
     - name: External calls
       href: external-calls.md
+    - name: Templates
+      href: templates.md
     - name: Search
       href: search.md
-    - name: AI and insights from the fraud protection network
+    - name: AI and insights from the Fraud Protection Network
       href: fraud-protection-network.md  
     - name: Rules
       items:
@@ -134,26 +126,34 @@
       href: promocode-set-up-DFP-purchased-version.md
     - name: Set up Purchase Protection 
       href: promocode-set-up-purchase-protection.md
-    - name: User access
+    - name: Access control
       items:
       - name: User roles and access
         href: user-roles-access.md
       - name: Configure user roles and access
         href: configure-user-access.md
+      - name: Configure application access
+        href: configure-application-access.md
       - name: Payment service provider user roles and access 
         href: psp-user-roles.md
-    - name: Deploy and work with account protection and purchase protection learning path
-      href: /training/paths/deploy-work-account-purchase-protection/
+    - name: Activity logs
+      href: activity-logs.md
   - name: Operations
     items: 
-    - name: Language reference guide
+    - name: Fraud language reference
       href: fpl-lang-ref.md
+    - name: Configuration
+      href: configuration.md
     - name: Event tracing
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
+    - name: Functions
+      href: functions.md
     - name: External calls
       href: external-calls.md
+    - name: Templates
+      href: templates.md
     - name: Search
       href: search.md
     - name: Upload historical data
@@ -162,7 +162,7 @@
       href: risk-support.md
     - name: In-product notifications
       href: in-product-notifications.md
-    - name: AI and insights from the fraud protection network
+    - name: AI and insights from the Fraud Protection Network
       href: fraud-protection-network.md  
     - name: Rules
       items:
@@ -206,30 +206,68 @@
       href: promocode-set-up-loss-prevention.md
     - name: Configure user roles and access
       href: configure-user-access.md
-    - name: Deploy and work with loss prevention learning path
-      href: /training/paths/deploy-work-loss-prevention-fraud-protection/
     - name: Integration with Dynamics 365 Commerce
       href: loss-prevention-integration-with-commerce.md
+- name: Device fingerprinting
+  items:
+  - name: Overview
+    href: device-fingerprinting.md
+  - name: Attribute categories
+    href: df-attribute.md
+  - name: Integration and setup
+    items:
+    - name: Web setup
+      href: df-web.md
+    - name: Mobile SDK for iOS
+      href: mobile-sdk-ios.md
+    - name: Mobile SDK for Android
+      href: mobile-sdk-android.md
+    - name: Mobile SDK for React Native
+      href: mobile-sdk-react-native.md
+- name: Assessments
+  items:
+  - name: Create a new assessment
+    href: assessment-create-new.md
+  - name: Configure an existing assessment
+    href: assessment-configure-existing.md
+  - name: User access
+    items:
+    - name: User roles and access
+      href: user-roles-access.md
+    - name: Configure user roles and access
+      href: configure-user-access.md
+    - name: Payment service provider user roles and access 
+      href: psp-user-roles.md
+    - name: Activity logs
+      href: activity-logs.md
   - name: Operations
     items: 
-    - name: Language reference guide
+    - name: Fraud language reference
       href: fpl-lang-ref.md
+    - name: Configuration
+      href: configuration.md
     - name: Event tracing
       href: event-tracing.md
     - name: Velocity checks
       href: velocities.md
+    - name: Functions
+      href: functions.md
     - name: External calls
       href: external-calls.md
+    - name: External assessments
+      href: external-assessments.md
+    - name: Templates
+      href: templates.md
     - name: Search
       href: search.md
-    - name: Upload historical data
-      href: loss-prevention-data-upload.md
-    - name: AI and insights from the fraud protection network
+    - name: AI and insights from the Fraud Protection Network
       href: fraud-protection-network.md  
     - name: Rules
       items:
       - name: Manage rules
         href: rules.md
+      - name: Post-decision action rules
+        href: post-decision-action-rule.md
     - name: Lists
       items:
       - name: Lists overview
@@ -240,28 +278,34 @@
         href: lists.md
       - name: Manage custom Cosmos DB lists
         href: manage-cosmos-db-lists.md
-    - name: Reporting
+    - name: Case management
       items:
-      - name: Loss prevention reports
-        href: reports.md
-      - name: Generate a loss prevention report training module
-        href: /training/modules/loss-prevention-report-fraud-protection/
+      - name: Case management overview
+        href: case-management-overview.md
+      - name: Case management for administrators
+        href: case-management-administrator.md
+      - name: Case management for manual reviewers
+        href: case-management-manual-review.md 
     - name: Manage environments
       href: manage-psp-environments.md
     - name: Notifications for Fraud Protection service
       href: dfp-notifications.md
-- name: Reporting
+- name: Reporting and monitoring
   items:
-  - name: Virtual fraud analyst reporting
+  - name: Reporting overview
     href: virtual-fraud-analyst-reporting.md
   - name: Summary report
     href: summary-report.md
-  - name: Score analyst reports
+  - name: Score report
     href: score-analyst.md
-  - name: Rule analayst reports
+  - name: Rule report
     href: rule-analyst.md
-  - name: Threat analyst reports
+  - name: Threat report
     href: threat-analyst.md
+  - name: Observation event report
+    href: observation-event-report.md
+  - name: Monitoring
+    href: monitoring-dashboards.md
 - name: Compliance, privacy, security
   items:
   - name: Compliance overview
@@ -292,17 +336,11 @@
         href: https://go.microsoft.com/fwlink/?linkid=2135033
       - name: Fraud Protection mobile reference
         href: https://go.microsoft.com/fwlink/?linkid=2134792
-      - name: Fraud Protection model audit reports
-        href: https://go.microsoft.com/fwlink/?linkid=2132646
-- name: Community, training, contact us
+      - name: Fraud Protection model explainability
+        href: https://go.microsoft.com/fwlink/?linkid=2280357
+- name: Contact us
   items:
-  - name: Join Dynamics 365 Community
-    href: https://www.yammer.com/dynamicsaxfeedbackprograms/#/threads/inGroup?type=in_group&feedId=52719501312
-  - name: Training learning paths and modules
-    href: /training/browse/?expanded=dynamics-365&products=dynamics-fraud-protection
-  - name: Contact us
-    items:
-    - name: Share your ideas
-      href: https://experience.dynamics.com/ideas/categories/?forum=d4171bdb-9e54-e911-a963-000d3a4f33c1&forumName=Dynamics%20365%20Fraud%20Protection
-    - name: Report an issue
-      href: https://support.microsoft.com/   
+  - name: Dynamics 365 Fraud Protection community
+    href: https://techcommunity.microsoft.com/t5/microsoft-d365-fraud-protection/bd-p/MicrosoftD365FraudProtection
+  - name: Product support
+    href: dfp-css-product-support.md

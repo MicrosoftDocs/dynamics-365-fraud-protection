@@ -11,6 +11,11 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "content/pay-as-you-go.md",
+      "redirect_url": "/dynamics365/fraud-protection/index",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "content/account-protection-protect-experience.md",
       "redirect_url": "ap-overview",
       "redirect_document_id": "false"
@@ -97,7 +102,7 @@
     },  
     {
       "source_path": "content/understand-business.md",
-      "redirect_url": "https://dynamics.microsoft.com/ai/fraud-protection/",
+      "redirect_url": "index",
       "redirect_document_id": "false"
     },  
     {
@@ -171,7 +176,7 @@
     },
     {
       "source_path": "content/extensibility-pricing.md",
-      "redirect_url": "https://dynamics.microsoft.com/ai/fraud-protection/",
+      "redirect_url": "index",
       "redirect_document_id": "false"
     },
     {

@@ -2,7 +2,7 @@
 author: josaw1
 description: This topic provides information that is required for device fingerprinting in a mobile device implementation of Microsoft Dynamics 365 Fraud Protection for React Native.
 ms.author: josaw
-ms.date: 05/26/2022
+ms.date: 04/10/2024
 ms.topic: reference
 search.audienceType:
   - developer
@@ -29,14 +29,6 @@ You have the following responsibilities:
 - To inform your customers about your data collection and processing practices (for example, disclosing what data you collect and how the data are used).
 - To disclose your use of third parties that work on your behalf to process the data that you collect. These third parties include Fraud Protection service providers.
 - To comply with all laws and regulations that are applicable to the use of Fraud Protection. These laws and regulations include data protection laws.
-
-## Attribute category introduction reference
-
-The following list shows the device fingerprinting attribute categories that Fraud Protection tries to collect and explains how each category helps detect fraud. If your organization has specific needs and you want some categories of data to not be processed by Fraud Protection, contact customer support prior to onboarding to get help implementing the correct configuration that meets your privacy needs.
-
-- **Core Features** – This group of attributes is core to Fraud Protection's ability to predict patterns of fraud. Based on previous experience, it is believed that these attributes will be highly accretive to Fraud Protection's model performance and ability to discern distinctive patterns of fraud. If these attributes aren't supplied, the device fingerprinting will be inaccurate.
-- **Investigative Features** – This group of attributes has the potential to add or enhance Fraud Protection's ability to predict patterns of fraud more accurately. Statistical analysis of collected data is the only definitive way to determine whether these attributes are strong predictors of patterns of fraud. If the predictive capability of these attributes doesn't meet expectations, they'll no longer be used. Although this group of attributes can help determine whether they'll be strong predictors of patterns of fraud, they're optional and don't need to be supplied.
-- **Potential Label** – This group of attributes is used for model supervision and labeling purposes. There's a probability that each of these attributes on its own won't provide ground truth. However, the combination of these attributes increases the likelihood that the label that is used to train Fraud Protection's model will become ground truth, and helps improve model performance.
 
 ## React Native library technical reference
 

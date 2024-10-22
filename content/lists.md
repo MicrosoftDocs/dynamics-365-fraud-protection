@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to add, manage, and use custom lists to manage information, fight fraud, and enforce business policies in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 09/24/2021
+ms.date: 02/27/2024
 ms.topic: how-to
 search.audienceType:
   - admin
@@ -64,6 +64,10 @@ In addition to using multicolumn lists to combine safe and block lists, you can 
 | Physical | 750 |
 
 You can then configure a rule that enforces the rejection of transactions where the [risk score](ap-scorecard.md#risk-model-score) exceeds the specified threshold for the product type. For information about how to create effective rules to customize your business logic, see [Rules](rules.md).
+
+> [!NOTE]
+>
+> Lists can also be referenced within Functions. For more information, see [Functions](functions.md).
 
 ## Upload a custom list
 

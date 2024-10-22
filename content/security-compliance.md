@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about security, compliance, and data subject requests.
 ms.author: josaw
-ms.date: 04/17/2023
+ms.date: 04/10/2024
 ms.topic: overview
 search.audienceType:
   - admin
@@ -55,8 +55,8 @@ A data subject request (DSR) is a request asking for modification of personal da
    You can make requests for each assessment. For a request, select the assessment, the Data subject ID, and the value for the Data subject ID.
 
     - For Account Creation, Account Login, and Purchase Protection, the Data subject ID is user.userId.
+    - For more information on the data subject IDs for assessments created using the [Assessment wizard](assessment-create-new.md#assessment-wizard-overview), see [Data subject IDs](assessment-create-new.md#data-subject-ids).
    
-
 1. Select the type of request you would like to make (export or delete), and then review and confirm.
 
    The **Requests** table identifies the following properties for your requests. The log will retain exported data links and information for 28 days.
@@ -72,12 +72,19 @@ A data subject request (DSR) is a request asking for modification of personal da
 
 Fraud Protection allows you to programmatically honor data subject requests using our API. Below is the schema for our GDPR APIs.
 
+GDPR API payload. The GDPR API is used for [Account protection](ap-overview.md) and [Purchase protection](purchase-protection.md).
 
 | Attribute                   | Type     | Description | Required? |
 |-----------------------------|----------|-------------|---------|
 | SubjectID                   | string   | Takes the form of "**User**:userId", where userId is an attribute of the User object. | Yes |
 
+Subject Request API payload. The subject request API is used for [Assessments](assessment-create-new.md#assessment-wizard-overview).
 
+| Attribute                   | Type     | Description | Required? |
+|-----------------------------|----------|-------------|-----------|
+| AssessmentName              | string   | The name of the assessment. | Yes |
+| PropertyName                | string   | The name of the property that's the data subject ID. For example **user.id**,. | Yes |
+| PropertyValue               | string   | The value of the property that's the data subject ID you're making the request on. For example, **user123**. | Yes |
 
 For further documentation about this and other Fraud Protection APIs, see [Dynamics 365 Fraud Protection API](https://go.microsoft.com/fwlink/?linkid=2084942).
 

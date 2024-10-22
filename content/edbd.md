@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides an overview of data egress outside of the European Union that occurs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 12/14/2022
+ms.date: 04/10/2024
 ms.topic: overview
 search.audienceType:
   - admin
@@ -15,7 +15,7 @@ title: EU Data Boundary exceptions for Dynamics 365 Fraud Protection
 > [!IMPORTANT]
 > For comprehensive details about Microsoft's EU Data Boundary commitment, refer to [Microsoft's EU Data Boundary documentation](/privacy/eudb/eu-data-boundary-learn).
 
-The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, serious threats of fraud from sophisticated attackers are not constrained by national or geographic boundaries. Malicious actors operate on a worldwide basis leveraging known and newly discovered technical or socially engineered vulnerabilities. Therefore, limiting the scope of a fraud detection technology to any given region compromises its ability to offer the best intelligence to detect and prevent online fraud. Fraud protection technologies and professionals are only sufficiently equipped when their scope is enabled to identify patterns, behaviors, and practices on a worldwide basis. 
+The goal of the EU Data Boundary is to minimize cases where EU customers’ Customer Data or Personal Data leaves the EU. However, serious threats of fraud from sophisticated attackers are not constrained by national/regional or geographic boundaries. Malicious actors operate on a worldwide basis leveraging known and newly discovered technical or socially engineered vulnerabilities. Therefore, limiting the scope of a fraud detection technology to any given region compromises its ability to offer the best intelligence to detect and prevent online fraud. Fraud protection technologies and professionals are only sufficiently equipped when their scope is enabled to identify patterns, behaviors, and practices on a worldwide basis. 
 
 The scenarios supported by Fraud Protection on a global basis to meet these highly demanding operational standards are detailed in the following sections. 
 

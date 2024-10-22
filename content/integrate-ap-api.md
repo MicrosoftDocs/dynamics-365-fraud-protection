@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to integrate Microsoft Dynamics 365 Fraud Protection real-time application programming interfaces (APIs).
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -32,14 +32,14 @@ For information about all supported events, see [Dynamics 365 Fraud Protection A
 
     This step ensures that Fraud Protection is correctly configured in your Azure tenant. (You might already have completed this step during initial sign-up.)
 
-### Create Azure Active Directory applications
+### Create Microsoft Entra applications
 
 > [!IMPORTANT]
 > To complete this step, you must be an Application Administrator, a Cloud Application Administrator, or a Global Administrator in your Azure tenant.
 
-To acquire the tokens that are required to call the APIs, you must use Azure Active Directory (Azure AD) applications. You can configure these apps by using the **Real-time APIs** page in Fraud Protection.
+To acquire the tokens that are required to call the APIs, you must use Microsoft Entra applications. You can configure these apps by using the **Real-time APIs** page in Fraud Protection.
 
-#### To configure Azure AD apps:
+#### To configure Microsoft Entra apps:
 
 1. In the left navigation pane, select **Configuration**, and then select **Real-time APIs**. 
 
@@ -63,9 +63,9 @@ You can create as many apps as you require to run API calls in your production e
 1. Select **Create another application**. 
 2. Fill in the fields to create your app, and then select **Create application**.
 
-### Manage existing Azure AD applications
+### Manage existing Microsoft Entra applications
 
-After you've created your Azure AD apps, you can manage them through the [Azure portal](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps). For more information, see the [Azure documentation site](/azure/active-directory/develop/active-directory-how-applications-are-added).
+After you've created your Microsoft Entra apps, you can manage them through the [Azure portal](https://portal.azure.com/#blade/Microsoft_Microsoft Entra ID_IAM/ActiveDirectoryMenuBlade/RegisteredApps). For more information, see the [Azure documentation site](/azure/active-directory/develop/active-directory-how-applications-are-added).
 
 
 ## Call the Fraud Protection real-time APIs
@@ -76,7 +76,7 @@ Use the information in this section to integrate your systems with Fraud Protect
 
 - **API Endpoint** – The URI for your environment appears on the **Account information** tile on the Fraud Protection dashboard.
 - **Directory (tenant) ID** – The directory ID is the globally unique identifier (GUID) for a tenant's domain in Azure. It appears in the Azure portal and on the **Account information** tile on the Fraud Protection dashboard.
-- **Application (client) ID** – The application ID identifies the Azure AD app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **Real-time APIs** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you created.
+- **Application (client) ID** – The application ID identifies the Microsoft Entra app that you created to call APIs. You can find this ID on the confirmation page that appears after you select **Create application** on the **Real-time APIs** page. You can also find it later, under **App registrations** in the Azure portal. There will be one ID for each app that you created.
 - **Certificate thumbprint or secret** – You can find the certificate thumbprint or the secret on the confirmation page that appears after you select **Create application** on the **Real-time APIs** page.
 - **Instance ID** - The instance ID is the globally unique identifier (GUID) for your environment in Fraud Protection. It appears in the **Integration** tile on the Fraud Protection dashboard.
 
@@ -136,7 +136,7 @@ Content-Length: <content length>
 
 For more information, see the Azure documentation:
 
-- [Use client assertion to get access tokens from Azure AD](/azure/architecture/multitenant-identity/client-assertion)
+- [Use client assertion to get access tokens from Microsoft Entra ID](/azure/architecture/multitenant-identity/client-assertion)
 - [Cache access tokens](/azure/architecture/multitenant-identity/token-cache)
 
 ### Call the APIs
@@ -147,7 +147,7 @@ To call the APIs, follow these steps.
 
     | Header name         | Header value |
     |---------------------|--------------|
-    | Authorization       | Use the following format for this header: **Bearer *accesstoken***, where *accesstoken* is the token that is returned by Azure AD. |
+    | Authorization       | Use the following format for this header: **Bearer *accesstoken***, where *accesstoken* is the token that is returned by Microsoft Entra ID. |
     | x-ms-correlation-id | Send a new GUID value on each set of API calls that are made together. |
     | x-ms-dfpenvid       | Send the GUID value of your Instance ID. |
 

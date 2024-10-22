@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information about custom assessments, and explains how to create and define them.
 ms.author: josaw
-ms.date: 06/28/2022
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -10,7 +10,10 @@ title: Custom assessment
 
 ---
 
-# Custom assessment
+# Custom assessments
+
+> [!IMPORTANT]
+> Custom assessments will be deprecated in a future release of Fraud Protection and will be replaced by the more comprehensive [Assessments](assessment-create-new.md#assessment-wizard-overview) offering. Custom assessments will continue to work and be fully supported until the deprecation date.  Deprecation can take months and this notification is intended to allow you sufficient time to plan and update your implementation of Dynamics 365 Fraud Protection before deprecation. You will be notified when the deprecation date is set.
 
 Effective fraud management is a multi-tier strategy. To maximize fraud detection and minimize customer friction, you must assess interactions at various phases of a user's journey, and decide whether the interactions should be allowed, challenged, or prevented. Every business is different, and so are the associated user interactions that transmit signals about potential fraud. For example, profile updates, such as changes to a user's address or payment information, might be a key event for an e-commerce business. Other examples of user interactions that might be key events, depending on the business model, include submission of reviews, updates of seat preferences on a travel site, the addition of family and friends on a subscription or gaming service, and submission of a service support ticket or a complaint.
 
@@ -67,7 +70,7 @@ At any time, you can change the name, API name, or sample payload for an assessm
 Currently, you can create up to three distinct assessments under custom assessments. If your business priorities or user scenarios have changed, and you no longer want to use an assessment that you've created, you can delete it.
 
 > [!NOTE]
-> If you delete an assessment, the rules and scorecard that are associated with it are also deleted and can't be restored. If you continue to make API calls that use the name of the deleted assessment, the API calls can't be resolved and will fail.
+> If you delete an assessment, the rules and monitoring data that are associated with it are also deleted and can't be restored. If you continue to make API calls that use the name of the deleted assessment, the API calls can't be resolved and will fail.
 
 1. In the [Fraud Protection](https://dfp.microsoft.com/) portal, in the left navigation, select **Custom assessments**.
 
@@ -88,7 +91,7 @@ To implement custom assessments with device fingerprinting, follow the steps bel
 
 1. To implement device fingerprinting on the relevant pages in your app or website, refer to the appropriate instructions on the following pages.
 
-    - For web pages, see [Set up device fingerprinting](device-fingerprinting.md#implement-device-fingerprinting).
+    - For web pages, see [Web set up of device fingerprinting](df-web.md).
 
     - For Android apps, see [Fraud Protection mobile SDK for Android](mobile-sdk-android.md).
 
@@ -120,7 +123,7 @@ To implement custom assessments with device fingerprinting, follow the steps bel
 - [Account protection overview](ap-overview.md)
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
-- [Learn from the account protection scorecard](ap-scorecard.md)
+- [Account protection monitoring dashboards](monitoring-dashboards.md)
 - [Account protection schemas](ap-schema.md)
 
 

@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides an overview of the account protection experience in the Microsoft Dynamics 365 Fraud Protection system.
 ms.author: josaw
-ms.date: 03/05/2021
+ms.date: 04/10/2024
 ms.topic: overview
 search.audienceType:
   - admin
@@ -14,7 +14,7 @@ title: Account protection overview
 
 Microsoft Dynamics 365 Fraud Protection provides merchants the capability to assess if the risk of attempts to create new accounts and attempts to log in on merchant’s ecosystem are fraudulent. Risk assessment in Fraud Protection can be used by the customer to block or challenge suspicious attempts to create new fake accounts or to compromise existing accounts.    
 
-Account protection includes APIs for real-time risk assessment, rule, and list experience to optimize risk strategy as per your business needs, and a scorecard to monitor fraud protection effectiveness and trends in your ecosystem.
+Account protection includes APIs for real-time risk assessment, rule, and list experience to optimize risk strategy as per your business needs, and monitoring dashboards to monitor fraud protection effectiveness and trends in your ecosystem.
 
 ## Account lifecycle event types
 
@@ -36,7 +36,7 @@ Each event type has multiple layers of defense:
 - [Integrate account protection APIs](integrate-ap-api.md)
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
-- [Learn from the account protection scorecard](ap-scorecard.md)
+- [Account protection monitoring dashboards](monitoring-dashboards.md)
 - [Account protection schemas](ap-schema.md)
 
 

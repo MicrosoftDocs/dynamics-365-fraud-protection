@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to create and manage rules that protect account and purchase data in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 01/17/2023
+ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -14,7 +14,7 @@ title: Manage rules
 
 Microsoft Dynamics 365 Fraud Protection gives you the flexibility to create rules that use the score that Fraud Protection's state-of-the-art artificial intelligence (AI) model generates, together with additional parameters from the request payload. Based on these inputs, rules can convert an assessment into a decision, such as **Approve**, **Reject**, **Review**, or **Challenge**.
 
-If your Fraud Protection instance has multiple environments, you can manage rules in a specific environment by using the environment switcher. If the environment has parent environments, the rules in the top-level parent environment will be evaluated first. If the rule settings for the top-level parent environment are set to **Run all matching rules until a decision is made**, the rules in the second-level parent environment will be evaluated next. This process continues unless the rule settings for an environment are set to **Run only the first matching rule**, or until all the rules for the parent environment and the current environment have been evaluated.  
+If your Fraud Protection instance has multiple environments, you can manage rules in a specific environment by using the environment switcher. If the environment has parent environments, the rules in the top-level parent environment are evaluated first. If the rule settings for the top-level parent environment are set to **Run all matching rules until a decision is made**, the rules in the second-level parent environment are evaluated next. This process continues unless the rule settings for an environment are set to **Run only the first matching rule**, or until all the rules for the parent environment and the current environment are evaluated.  
 
 ## Defining a rule: Quick start guide
 
@@ -25,19 +25,21 @@ RETURN <decision>
 WHEN <condition>
 
 ```
-The RETURN statement will only be executed if the WHEN statement evaluates to True. The RETURN statement will terminate rule execution and must specify a valid decision function: *Approve*, *Reject*, *Challenge*, or *Review*. Each decision function also accepts an optional parameter, allowing you to express the *reason* for the decision. To learn more, see [Decision functions](fpl-lang-ref.md#decision-functions). 
+The RETURN statement is only executed if the WHEN statement evaluates to True. The RETURN statement terminates rule execution and must specify a valid decision function: *Approve*, *Reject*, *Challenge*, or *Review*. Each decision function also accepts an optional parameter, allowing you to express the *reason* for the decision. To learn more, see [Decision functions](fpl-lang-ref.md#decision-functions). 
 
 In addition to a decision, the RETURN statement can also be used to write data to the API response or to event tracing. To learn more, see [Observation functions](fpl-lang-ref.md#observation-functions). 
 
-The WHEN statement specifies a Boolean condition, which determines if the RETURN statement will execute. 
+The WHEN statement specifies a Boolean condition that determines if the RETURN statement executes. 
 
-The WHEN statement can utilize any of the following:
+The WHEN statement can use any of the following items:
 
 -	Any attributes that are sent in the API request for the assessment, including custom data. You can access these attributes with the @ operator. For example, @"user.userId".
 -	The scores that are generated from Fraud Protection's artificial intelligence models. For example, @"riskscore".
--	Lists which you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md). For more information on referencing these lists in your rules, see [Using Lists in rules](fpl-lang-ref.md#using-lists-in-rules).
--	Velocities which you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
--	External calls which you have created in Fraud Protection. For more information, see [External calls](external-calls.md). 
+-	Lists that you have uploaded to Fraud Protection. For more information on how to upload lists, see [Manage lists](lists.md). For more information on referencing these lists in your rules, see [Using Lists in rules](fpl-lang-ref.md#using-lists-in-rules).
+-	Velocities that you have defined in Fraud Protection. For more information, see [Perform velocity checks](velocities.md).
+-	External calls that you have created in Fraud Protection. For more information, see [External calls](external-calls.md).
+-	Functions that you have created in Fraud Protection. For more information, see [Functions](functions.md).
+
 
 Expressions can be compared using comparison operators (such as ==, !=, >, <), and can be combined using logical operators such as **and** (&&) and **or** (||).
 
@@ -100,7 +102,7 @@ You can create custom rules and manage existing rules on the **Rules** tab.
 - To create and manage rules that are related to accounts, select **Account creation** or **Account login**, and then select the **Rules** tab.
 - To create and manage rules that are related to a custom assessment, select **Custom assessments**, select a custom assessment, and then select the **Rules** tab.
 
-The **Rules** tab shows a list of the rules that have been configured for an assessment type. These rules are divided into two sections: **Published Rules** and **Drafts**. For information about drafts, see the [Drafts](rules.md#drafts) section later in this article.
+The **Rules** tab shows a list of the rules that are configured for an assessment type. These rules are divided into two sections: **Published Rules** and **Drafts**. For information about drafts, see the [Drafts](rules.md#drafts) section later in this article.
 
 You can view the following information for each rule or draft:
 
@@ -117,25 +119,25 @@ You can also select the tile for each rule to expand it and show additional info
 
 
 > [!NOTE]
-> On the **Rules** tab, published rules are listed in the order that they are run in.
+> On the **Rules** tab, published rules are listed in the order that they're run in.
 
 ### Rule settings
 
-You can access the rule settings on the **Rules** tab for a specific assessment. There, you can change the rule evaluation behavior and the sample payload. Note that these changes apply to rules only for the assessment that you're editing. 
+You can access the rule settings on the **Rules** tab for a specific assessment. There, you can change the rule evaluation behavior and the sample payload. These changes apply to rules only for the assessment that you're editing. 
 
 ### Rule evaluation behavior
 
-You can update how your rules are evaluated. If you select **Run the first matching rule**, only one rule will ever be evaluated per transaction. If that rule doesn't return a decision, no further rules will be evaluated, and a default decision of *Approve* is returned. If you select **Run all matching rules until a decision is made**, multiple rules can be evaluated for a single transaction. If the first rule that is evaluated doesn't return a decision, each subsequent matching rule will be evaluated until a decision is returned. 
+You can update how your rules are evaluated. If you select **Run the first matching rule**, only one rule is evaluated per transaction. If that rule doesn't return a decision, no further rules are evaluated, and a default decision of *Approve* is returned. If you select **Run all matching rules until a decision is made**, multiple rules can be evaluated for a single transaction. If the first rule that is evaluated doesn't return a decision, each subsequent matching rule is evaluated until a decision is returned. 
 
 ### Sample payload
 
-In the **Payload settings** pane, you can define the sample payload for the assessment type. The sample payload is intended to contain an example of the fields that will be sent in the request API for the assessment and can be used in your rule.
+In the **Payload settings** pane, you can define the sample payload for the assessment type. The sample payload is intended to contain an example of the fields that are sent in the request API for the assessment and can be used in your rule.
 
 In the API request, you might choose not to send optional fields from the assessment schema. Alternatively, you might choose to send additional custom fields. In both cases, be sure to update the payload sample that is shown in the **Payload settings** pane, so that it reflects the specific fields that you're sending.
 
-This payload sample is shown every time that a new rule is created for the assessment (see the [Payload sample](rules.md#payload-sample) section later in this article). Note that any changes that you make apply only to rules that you create from that time onward.
+This payload sample is shown every time that a new rule is created for the assessment (see the [Payload sample](rules.md#payload-sample) section later in this article). Any changes that you make apply only to rules that you create from that time onward.
 
-To undo all changes that you or other people have made to the payload sample, and return it to the system's default payload sample, select **Revert**.
+To undo all changes that you or other people made to the payload sample, and return it to the system's default payload sample, select **Revert**.
 
 ## Components of a rule
 
@@ -145,10 +147,8 @@ A rule consists of the following components:
 - The current [status](rules.md#status) of the rule: **Active** or **Inactive**
 - A [sample](rules.md#samples) of fields, to help you write and evaluate the rule
 - Components that help you build the logic that automatically approves, rejects, challenges, or reviews events:
-
     - A [condition](rules.md#conditions)
     - One or more of the following types of [clauses](rules.md#clauses):
-
         - [Prior to all scoring clauses](rules.md#prior-to-all-scoring-clauses)
         - [Post-bot-scoring clauses](rules.md#post-bot-scoring-clauses)
         - [Post-risk-scoring clauses](rules.md#post-risk-scoring-clauses)
@@ -157,11 +157,11 @@ A published rule can also have a [draft version](rules.md#drafts).
 
 ### Name and description
 
-When you create a rule, you can add a name and description to help yourself and your team easily identify the rule. Rule names must be unique, and they are case-insensitive.
+When you create a rule, you can add a name and description to help yourself and your team easily identify the rule. Rule names must be unique, and they're case-insensitive.
 
 ### Status
 
-When you first create a rule, before it's published, the status is set to **Draft only**.
+When you first create a rule, the status is set to **Draft only** before it's published.
 
 When you publish a rule, you can set the status to either **Active** or **Inactive**.
 
@@ -182,15 +182,15 @@ The payload sample contains an example of the fields that can be sent in the req
 
 #### Score sample
 
-The score sample contains scores that are generated from Fraud Protection's AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use *@"botScore"* after the bot evaluation has been run, and you can use *@"riskScore"* after the risk evaluation has been run. For more information, see the [Clauses](rules.md#clauses) section later in this article.
+The score sample contains scores that are generated from Fraud Protection's AI models. You can reference score variables in rules after you run the associated AI model and generate the score. For example, you can use *@"botScore"* after the bot evaluation is run, and you can use *@"riskScore"* after the risk evaluation is run. For more information, see the [Clauses](rules.md#clauses) section later in this article.
 
 #### Editing the sample
 
-To verify that your rule works for a variety of events, you can edit the sample as you require and then [evaluate](rules.md#evaluation-example) the sample data against the rule. All values in both the payload sample and the score sample can be edited. When you edit a sample, the changes don't affect which data you send (or don't send) to Fraud Protection.
+To verify that your rule works for various events, you can edit the sample as you require and then [evaluate](rules.md#evaluation-example) the sample data against the rule. All values in both the payload sample and the score sample can be edited. When you edit a sample, the changes don't affect which data you send (or don't send) to Fraud Protection.
 
-When you publish a rule, any changes that you've made to the sample are saved and persisted as part of the rule.
+When you publish a rule, any changes made to the sample are saved and persisted as part of the rule.
 
-To undo all changes that you or other people have made to the sample, select **Revert**. The score sample will be reverted to the system's default score sample, and the payload sample will be reverted to the user-defined payload sample in the [**Payload settings** pane](rules.md#rule-settings).
+To undo all changes that you or other people made to the sample, select **Revert**. The score sample is reverted to the system's default score sample, and the payload sample is reverted to the user-defined payload sample in the [**Payload settings** pane](rules.md#rule-settings).
 
 ### Conditions
 
@@ -236,10 +236,11 @@ Clauses are organized into sections. AI models are run based on these sections a
 - For purchase protection, an AI risk model is run that generates a risk score for the transaction. Therefore, these rules contain both prior-to-all-scoring clauses and post-risk scoring clauses.
 - For account protection, a bot model is run in addition to a risk model. These models generate a bot score and risk score, respectively. Therefore, these rules contain prior-to-all-scoring clauses, post-bot-scoring clauses, and post-risk-scoring clauses.
 - For custom assessments, no AI models are run, and these rules contain only prior-to-all-scoring clauses.
+- Assessments created using the [Assessment wizard](assessment-create-new.md#assessment-wizard-overview) don’t have a concept of prior-to-scoring and post-scoring clauses. Instead, all clauses are executed sequentially (top to bottom) based on the order they're listed in the rule.
 
 #### Prior-to-all-scoring clauses
 
-Prior-to-all-scoring clauses are run before Fraud Protection's AI models are run. Therefore, they are run before any bot or risk assessment scores have been generated. These clauses can use any combination of fields that are sent as part of the event payload and contained in [lists](lists.md). They can be configured to implement embargo, geofencing, or other business policies.
+Prior-to-all-scoring clauses are run before Fraud Protection's AI models are run. Therefore, they're run before any bot or risk assessment scores have been generated. These clauses can use any combination of fields that are sent as part of the event payload and contained in [lists](lists.md). They can be configured to implement embargo, geofencing, or other business policies.
 
 The following example helps you review purchases when users buy a product in a market outside their geographical location.
 
@@ -259,7 +260,7 @@ For information about the syntax that is used to reference lists in rules, see t
 
 #### Post-bot-scoring clauses
 
-Post-bot-scoring clauses are run after Fraud Protection's AI models have generated a bot score for an event. This score represents the probability that a bot initiated the event. It's a number between 0 and 999. A higher score indicates a higher bot probability.
+Post-bot-scoring clauses are run after Fraud Protection's AI models generate a bot score for an event. This score represents the probability that a bot initiated the event. It's a number between 0 and 999. A higher score indicates a higher bot probability.
 
 In post-bot-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You reference this score by using the *@botScore* variable. For example, the following clause rejects events from a specific email domain that has a bot score that is more than 700.
 
@@ -270,7 +271,7 @@ WHEN @"user.email".EndsWith("@contoso.com") && @"botScore" > 700
 
 #### Post-risk-scoring clauses
 
-Post-risk-scoring clauses are run after Fraud Protection's AI models have generated a risk assessment score for an event. This score is a number between 0 and 999. A higher score indicates a higher perceived risk.
+Post-risk-scoring clauses are run after Fraud Protection's AI models generate a risk assessment score for an event. This score is a number between 0 and 999. A higher score indicates a higher perceived risk.
 
 In post-risk-scoring clauses, you can use this score together with fields from the payload and lists to make decisions. You reference this score by using the *@riskScore* variable. For example, the following clause rejects expensive transactions that have a risk score that is more than 700.
 
@@ -278,6 +279,7 @@ In post-risk-scoring clauses, you can use this score together with fields from t
 RETURN Reject("high price and risk score")
 WHEN @purchasePrice >= 199.99 && @riskScore > 700
 ```
+
 ### Drafts
 
 A rule can have both a *published* version and a *draft* version. Both versions can be viewed as side-by-side tabs on the **Rules** tab.
@@ -291,10 +293,9 @@ When you publish a draft, Fraud Protection overwrites the published version of t
 
 ## Rule ordering
 
-The **Rules** tab shows a list of the published rules that are configured for the assessment. The order that the rules are listed in affects the order that they are evaluated in. To reorder the rules, just drag a rule to its desired position, and then select **Save**.
+The **Rules** tab shows a list of the published rules that are configured for the assessment. The order that the rules are listed in affects the order that they're evaluated in. To reorder the rules, just drag a rule to its desired position, and then select **Save**.
 
-An event is evaluated against each rule condition, in order, until a condition returns **True**. Each clause in the selected rule is then evaluated. If one of these clauses returns a decision, no further rules are evaluated. If none of these clauses returns a decision, either the transaction will be approved by default, or the next published rule that has a matching condition will be evaluated. The behavior depends on the [rule evaluation behavior](rules.md#rule-evaluation-behavior) that is selected in the rule settings.
-
+An event is evaluated against each rule condition, in order, until a condition returns **True**. Each clause in the selected rule is then evaluated. If one of these clauses returns a decision, no further rules are evaluated. If none of these clauses returns a decision, either the transaction is approved by default, or the next published rule that has a matching condition is evaluated. The behavior depends on the [rule evaluation behavior](rules.md#rule-evaluation-behavior) that is selected in the rule settings.
 
 ## Create a new rule
 
@@ -321,13 +322,75 @@ You can create rules that make decisions that are related to purchase, account c
 
 ## System-defined (default) rules
 
-Rules may be created by Fraud Protection per environment. For example, the following default rule may be created.
+Fraud Protection may create rules per environment. For example, the following default rule may be created.
 
 - **Default Support Rule**
 
 Some Fraud Protection functionality relies on default rules. After you add an email, IP address, or other known list content to a support list (safe, watch, or reject), this default rule ensures that the lists are checked during assessment evaluation.
 
 You can edit, delete, and deactivate system-defined rules. As a best practice, consider creating or editing a different rule unless you want to change the default behavior.
+
+## Assessment (default) rules
+
+Each assessment template mentioned in the [Select template](assessment-create-new.md#template) step of the **Assessment wizard** comes predefined with one or both of the following default rules:
+
+- **Sample template rule** – This rule contains a series of sample clauses that serve as the building blocks for defining your own logic for making decisions based on values like risk score, bot score, and device attributes where applicable. None of these clauses make decisions by default, however they can quickly be altered to do so using the samples provided.
+- **Support list rule** – This rule consists of a series of clauses that use Fraud Protection’s support lists (safe, block, watch) to help you make informed decisions (accept, reject, review) based on entities in those lists.
+
+Where applicable, these default rules show up as active under **Published Rules** immediately after an assessment is created. The following table is a summary of the default rules supported by assessment template:
+
+| Template | Template rule | Support list rule |
+|----------|---------------|-------------------|
+| Card payment | Supported | Supported |
+| Device fingerprinting | Supported | N/A |
+| Loyalty program | Supported | Supported |
+| Money transfer | Supported | Supported |
+| Software piracy | Supported | Supported |
+| Custom | N/A | Supported |
+
+Additional rules and clauses can be manually added to an assessment in both its root and child environments.
+
+To invoke Fraud Protection’s risk and bot scores from within a rule for an assessment created using one of the templates, the following [Model functions](fpl-lang-ref.md#model-functions) must be used:
+
+- **Risk score**: Model.Risk().Score
+- **Bot score**: Model.Bot(@"deviceFingerprinting.id").Score
+
+## Branches
+
+Branches allow you to safely modify rules without impacting what is happening in production. You can create branches on the **Rules** tab, where each branch represents a collection of rules. The default branch is the **Production** branch, which is the branch of rules that is executed whenever traffic is sent to an assessment. 
+
+### Create a branch
+
+To create a new branch, go to **Branch action \> Create a new branch**. You can name the branch, provide an API name, and select which rules you want to copy over from the source branch. The source branch is whatever branch you were on when you selected **Create a new branch**, production or otherwise. No drafts are preserved during branch creation. 
+
+### Modify rules within branches
+
+Any rule changes to nonproduction branches don't affect the production rule stack. You can edit rules normally and publish them to the branch, where they can be seen by everyone who has access to the rules page.
+
+### Testing and experiments
+
+There are two ways to test branch rule behavior: sending traffic directly to a branch and shadowing production traffic.
+
+#### Send traffic directly to a branch
+
+You can send test traffic directly to a specific branch in an assessment using the branch API endpoint found under **Branch actions \> Branch information**. This API endpoint uses the same payload structure as the assessment, and executes the rule stack of the branch. 
+
+> [!NOTE]
+> Sending traffic directly to a branch has no impact on production, so velocities aren't updated and branch transactions aren't visible in search.
+
+#### Shadow production traffic
+
+You can also test branch rule behavior by shadowing production traffic. To shadow production traffic, set up and start an experiment for a branch by selecting on **Run experiment**. Once an experiment is in progress, you can view its performance on the **Monitoring** tab by switching to the branch the experiment is running in. Once an experiment is in progress, its parameters can't be edited, but you can always stop an experiment to make changes and start it again. On the payment service provider (PSP) navigation view, the **Branch actions** drop-down menu is only visible on the rules page, not on the monitoring page.
+
+> [!NOTE]
+> Shadowed traffic that executes on the branch rule stack doesn't have any impact on production, so velocities won't be updated twice as a result of the shadow, but only updated once as a result of the production execution. 
+
+### Promote branches to production
+
+If you want to make a branch the production branch, you can do so by promoting a branch to production. The promotion action can be found under **Branch actions \> Promote to production**. This action makes the current branch you're promoting the new production branch. You can clone the existing production rules in a new branch to save them for reference. Drafts are preserved if the option to clone is selected. Once the promotion completes, the production branch is updated to contain the rules of the promoted branch.
+
+> [!NOTE]
+> The first time you promote a branch to production for a given assessment, you'ren't able to clone the existing production rules in a new branch. If you want to save the existing production rules the first time you ever promote, make a new branch from production with those rules to preserve existing production rules. 
 
 ## Manage existing rules
 
@@ -348,11 +411,11 @@ To change the status of a rule, select the rule, and then select **Activate** or
 
 ### Delete a rule
 
-To delete a rule, select it, and then select **Delete**. Be aware that this operation can't be undone.
+To delete a rule, select it, and then select **Delete**. This operation can't be undone.
 
 ### Edit an existing rule
 
-When you edit a rule that has been published, Fraud Protection saves your changes as a draft until you publish them. Both the published version of the selected rule and the draft version can be viewed as side-by-side tabs. Until a draft is published, it's visible only to the person who creates it. For more information, see the [Drafts](rules.md#drafts) section earlier in this article.
+When you edit a rule that is published, Fraud Protection saves your changes as a draft until you publish them. Both the published version of the selected rule and the draft version can be viewed as side-by-side tabs. Until a draft is published, it's visible only to the person who creates it. For more information, see the [Drafts](rules.md#drafts) section earlier in this article.
 
 1. Select the rule, and then select **Edit**.
 
@@ -371,7 +434,7 @@ When you edit a rule that has been published, Fraud Protection saves your change
     If a teammate updates and publishes a rule while you're still editing it, your changes might be out of date. In this case, you receive a warning message that asks whether you still want to publish your changes.
 
     - If you select **Publish**, your changes overwrite all changes that were previously made.
-    - If you select **Cancel**, you can review the changes that other people have made before you publish your version.
+    - If you select **Cancel**, you can review the changes that other people made before you publish your version.
 
 ### Search for a rule
 
@@ -383,7 +446,7 @@ To remove a filter, delete the keyword from the **Search** field, or select the 
 
 ### Change the order of a rule
 
-Because published rules appear on the **Rules** tab in the order that they are run in, the position of a published rule significantly affects how events are evaluated.
+Because published rules appear on the **Rules** tab in the order that they're run in, the position of a published rule significantly affects how events are evaluated.
 
 
 #### Reorder a published rule

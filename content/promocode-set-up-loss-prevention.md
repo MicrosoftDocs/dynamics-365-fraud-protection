@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to set up loss prevention in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/02/2021
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -38,7 +38,7 @@ After you complete these steps in your own system by using your own data, you wi
 
 Before you begin the tasks in this document, you must:
 
-- Set up Fraud Protection in an AAD tenant, as described in [Set up a trial instance](promocode-set-up-dfp-trial-version.md).
+- Set up Fraud Protection in a Microsoft Entra tenant, as described in [Set up a trial instance](promocode-set-up-dfp-trial-version.md).
 
 ## Step 1: Prepare your historical data (data mapping)
 
@@ -126,7 +126,7 @@ To connect your retail data to Fraud Protection, make sure that you have all thr
 9. In the **Feature management** workspace, find the **Dynamics 365 Fraud Protection (DFP) Loss Prevention** feature, and enable it.
 10. Register the Fraud Protection app ID in the dashboard:
 
-       1. Open the **Azure Active Directory applications** page.
+       1. Open the **Microsoft Entra applications** page.
        
        2. Create an entry for the first-party app ID for Fraud Protection. (For example, **bf04bdab-e06f44f3-9821-d3af64fc93a9**.)
        

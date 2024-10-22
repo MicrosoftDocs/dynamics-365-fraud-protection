@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article describes how Microsoft Dynamics 365 Fraud Protection account protection works.
 ms.author: cschlegel
-ms.date: 11/03/2022
+ms.date: 07/29/2024
 ms.topic: reference
 search.audienceType:
   - Admin
@@ -34,7 +34,7 @@ The following APIs and components are required to take advantage of Fraud Protec
 - **Account creation and/or account sign-in API** – This API passes data attributes that are related to the account creation or account sign-in from clients to Fraud Protection. This data is compared to data that is already in the fraud protection network, and machine learning searches for linkages.
 - **Rules or policies** – You can use the predefined rules in the account protection solution, or you can set up custom rules that are based on your policies. Rule scoring can tell you the probability of fraud risk, or the likelihood of fraud that you might want to review or reject.
 - **Account status API** – This API is used to inform Fraud Protection of a client's final decision about a transaction. For example, did a sign-in transaction actually occur, or was it rejected (and if so, for what reason)? Fraud Protection adapts and learns from client fraud patterns.
-- **Account label API** – This API lets you send information for model training to Fraud Protection, in addition to the data that informs the virtual fraud analyst and scorecard features.
+- **Account label API** – This API lets you send information for model training to Fraud Protection, in addition to the data that informs the reporting and monitoring features.
 
 ## How Fraud Protection account protection connects with clients
 
@@ -55,6 +55,6 @@ Here is an explanation of the numbered elements in the illustration:
 - **Dynamics Fraud Protection AI model (4, 5)** – Within a few milliseconds after the data attributes pass through the AI models, a response is processed by Fraud Protection rules and decisions. Fraud Protection then provides a bot and risk score (5, back end) in the response, based on the machine learning scores.
 - **Rules engine (6)** – The output of the scores and decisions depends on the client policies that are set in the Fraud Protection rules engine. The scores that are provided are based on a risk or bot scale, where a lower score indicates less likelihood of fraud, and a higher score indicates more likelihood of fraud. There are four decisions that you can make: approve, reject, challenge, or review. A challenge decision indicates that you should possibly implement a capture or some other type of verification challenge. A review decision typically indicates that you should do a manual review. The decisions are recommendations from Fraud Protection and are based on the policies that have been configured in the rules engine. It's up to you to decide what rules or decisions you want to set up or activate.
 - **Account sign-in or account creation status API (7)** – Fraud Protection needs to know the final status decision that you made about the account attempt. For example, did you approve or reject the attempt? The account status that you send back to Fraud Protection helps ensure that machine learning considers the correct information in the future.
-- **Scorecards (8)** – Transactions that come from clients to Fraud Protection also make their way onto scorecard dashboards. The scorecard dashboards aren't updated in real time. Instead, they are updated every few minutes to show you the aggregated data and trends that Fraud Protection has received.
-- **Rules updates (9)** – You might decide that you must update some of your rules or policies. For example, a member of your team reviews the scorecard dashboards, and you decide to update rules or policies, based on what you see on the scorecards.
-- **Label API (10)** – The label API lets you send additional information to Fraud Protection about account sign-in attempts, instrument details, and reversals, in addition to the data that informs the virtual fraud analyst and scorecard features. The labels API provides knowledge for model training that is based on a set of fraud signals.
+- **Monitoring dashboards (8)** – Transactions that come from clients to Fraud Protection also make their way onto monitoring dashboards.
+- **Rules updates (9)** – You might decide that you must update some of your rules or policies. For example, a member of your team reviews the monitoring dashboards, and you decide to update rules or policies, based on what you see on the monitoring dashboards.
+- **Label API (10)** – The label API lets you send additional information to Fraud Protection about account sign-in attempts, instrument details, and reversals, in addition to the data that informs the reporting and monitoring features. The labels API provides knowledge for model training that is based on a set of fraud signals.

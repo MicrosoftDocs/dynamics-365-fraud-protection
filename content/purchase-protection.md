@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains the purchase protection capability of Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/02/2021
+ms.date: 07/29/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -25,8 +25,8 @@ Learn more about the following features used in purchase protection:
 - [View purchase protection schemas](view-purchase-protection-schemas.md)
 - [Manage lists](lists.md)
 - [Manage rules](rules.md)
-- [Use the virtual fraud analyst](virtual-fraud-analyst.md)
-- [Learn from the scorecard](scorecard.md)
+- [Use the reporting dashboards](virtual-fraud-analyst.md)
+- [Learn from the monitoring dashboards](monitoring-dashboards.md)
 - [Boost bank acceptance rates](transaction-acceptance-booster.md)
 - [Support your customers](risk-support.md)
 - [Monitor API calls](monitoring.md)

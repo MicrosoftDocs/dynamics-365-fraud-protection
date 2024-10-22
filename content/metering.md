@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to meter your usage of Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 04/10/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -29,7 +29,7 @@ On the **Usage** page, the information is divided between two tabs:
 
 ## Assessments purchased metric
 
-The **Assessments purchased** metric reflects the total number of assessments that is available to you for each capability, based on the Fraud Protection stock keeping units (SKUs) that you purchased. For more information about Fraud Protection SKUs and the number of assessments that they provide access to, see [Dynamics 365 Fraud Protection](https://dynamics.microsoft.com/ai/fraud-protection/).
+The **Assessments purchased** metric reflects the total number of assessments that is available to you for each capability, based on the Fraud Protection stock keeping units (SKUs) that you purchased.
 
 ## Assessments used metric
 
@@ -49,6 +49,23 @@ The **Accumulated Consumption %** metric shows the ratio of the total number of 
 
 > [!NOTE]
 > Billing arrangements are made via your Microsoft Account Executive or Microsoft Cloud Solution Provider partner. You will receive notifications from them if your accumulated consumption approaches 100 percent before the end of the current billing cycle. Therefore, you will have an opportunity to adjust your subscription as required.
+
+### Assessment to SKU mapping
+
+The following table shows which Fraud Protection SKU each assessment maps to:
+
+| Assessment | SKU |
+|------------|-----|
+| [Account creation](ap-overview.md) | Account protection |
+| [Account login](ap-overview.md) | Account protection |
+| [Purchase](purchase-protection.md) | Purchase protection |
+| [Loss prevention](loss-prevention-overview.md) | Loss prevention |
+| [Card payment](assessment-create-new.md#card-payment-template) | Purchase protection |
+| [Device fingerprinting](assessment-create-new.md#device-fingerprinting-template) | Account protection |
+| [Loyalty program](assessment-create-new.md#loyalty-program-template) | Loss prevention |
+| [Money transfer](assessment-create-new.md#money-transfer-template) | Purchase protection |
+| [Software piracy](assessment-create-new.md#software-piracy-template) | Loss prevention |
+| [Custom](assessment-create-new.md#custom-template) | Account protection |
 
 ## Additional notes about assessment usage and metering
 

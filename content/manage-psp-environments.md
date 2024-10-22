@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how payment service providers (PSPs) can manage environments in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/02/2023
+ms.date: 08/30/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -18,7 +18,7 @@ By creating additional new environments, customers can have greater flexibility 
 To create a new environment, or switch between environments, select **Manage environments** under the environment switcher in the upper right of the Fraud Protection portal page. 
 
 > [!NOTE]
-> A root environment is an environment that's at the top level of the Fraud Protection tenant and that has no parent environment. There can be multiple root environments in the Fraud Protection tenant. The **Product admin** role is required to create a new root environment. For more information, see [NEED A LINK]().
+> A root environment is an environment that's at the top level of the Fraud Protection tenant and that has no parent environment. There can be multiple root environments in the Fraud Protection tenant. The **Product admin** role is required to create a new root environment. For more information, see [Configure user access](configure-user-access.md).
 
 To create a new environment, select **New environment** at the top, and then enter the following information: 
 
@@ -26,11 +26,11 @@ To create a new environment, select **New environment** at the top, and then ent
 - **Name** – Enter the name of the environment that you want to create.
 - **Description (optional)** – You can add some information to help identify the environment.
 - **Tags (optional)** – You can use tags to specify any generic information that's related to the environment, such as the industry vertical.
-- **Azure AD application ID (optional)** – If you want an existing Azure Active Directory (Azure AD) application ID to access the environment, paste the application ID here. This approach is recommended if you plan to reuse API access credentials across two or more environments. For a list of available applications, go to **Create Azure AD applications** or **Azure AD** on the **Integration** page.
+- **Microsoft Entra application ID (optional)** – If you want an existing Microsoft Entra application ID to access the environment, paste the application ID here. This approach is recommended if you plan to reuse API access credentials across two or more environments. For a list of available applications, go to **Create Microsoft Entra applications** or **Microsoft Entra ID** on the **Integration** page.
 - **Create API ID (optional)** – You can enter an identifier that should be used instead of the Fraud Protection environment ID when events are sent to Fraud Protection.
 
 > [!NOTE]
-> You must have the Global Admin role to create Azure AD applications. For more information about Azure AD applications and integration, see [Integrate purchase protection API](integrate-real-time-api.md) and [Integrate account protection APIs](faq/data-residency-faq.md). 
+> To create a Microsoft Entra application, the user must also be assigned the Application Administrator, Cloud Application Administrator, or Global Administrator role in your Microsoft Entra tenant. For more information about Microsoft Entra applications and integration, see [Integrate purchase protection API](integrate-real-time-api.md) and [Integrate account protection APIs](faq/data-residency-faq.md). 
 >
 > After you create the environment, you can't change the customer API ID.
 
@@ -72,6 +72,12 @@ You can delete an environment only if it has no child environments. If you want 
 
 > [!IMPORTANT]
 > You must have at least one environment in your tenant.
+
+
+## Create, update, or delete non-root environments by using API call
+
+Instead of using the Fraud Protection portal, you can create, update, or delete non-root environments via an API call to the provisioning API endpoint. You must use a Microsoft Entra app with the correct API role to authenticate this API call. To learn how to set up Entra app, refer to the [Configure Microsoft Entra app access](configure-application-access.md) article. You can learn more about the provisioning API endpoint and schema by visiting [Swagger UI documentation for Dynamics 365 Fraud Protection](https://dfpswagger.azurewebsites.net/index.html).
+
 
 ## Additional resources
 

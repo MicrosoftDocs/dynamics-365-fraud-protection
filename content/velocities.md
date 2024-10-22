@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to use velocities to examine user and entity patterns to flag potential fraud in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 02/01/2023
+ms.date: 02/27/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -27,6 +27,9 @@ WHEN <condition>
 GROUPBY <attribute name>
 ```
 
+> [!NOTE]
+> Arrays can't be used to GROUPBY in a velocity definition.
+
 - After **SELECT**, specify an aggregation method: *Count*, *DistinctCount*, or *Sum*. Then use the **AS** keyword to name the velocity. This name can then be used to reference the velocity in rules.
 
     Here is an explanation of the aggregation methods.
@@ -37,7 +40,7 @@ GROUPBY <attribute name>
     | DistinctCount      | This method returns the number of distinct values for the specified property. If the specified property is null or empty for an incoming event, the event won't contribute to the aggregation. | SELECT DistinctCount(@"device.ipAddress") AS distinctIPaddresses |
     | Sum                | This method returns the sum of values for a specified numeric property. | SELECT Sum(@"totalAmount") AS totalSpending |
 
-- After **FROM**, specify an assessment to observe the velocity on: *Purchase, AccountLogin, AccountCreation, Chargeback, BankEvent, or Custom Assessment*.
+- After **FROM**, specify an assessment or observation event to observe the velocity on. Th field you want to observe velocity for, or group by, must be part of the API call. To observe a cross-event velocity, specify multiple events across assessments or observation events.
 - *The **WHEN** statement is optional.* After **WHEN**, you can type a Boolean expression. Only events that match the condition are considered in the aggregation. Other events are ignored. The expression is used to filter the events that are considered in the velocity.
 - After **GROUPBY**, specify a property or an expression. The property or expression is then evaluated for every event that is processed. All events that are evaluated to the same value in the **GROUPBY** statement are combined to calculate the aggregation that is specified in the **SELECT** statement. If the **GROUPBY** expression is null or empty for an incoming event, the event won't contribute to the aggregation.
 
@@ -93,6 +96,14 @@ WHEN @"user.country" != "US" and ContainsKey("Risky Products", "Product ID", @"P
 GROUPBY @"user.userId
 ```
 
+#### For each user, the number of unique custom emails that were used across an assessment and observation event
+
+```FraudProtectionLanguage
+SELECT DistinctCount(@"custom.email") AS uniqueEmails_perUser
+FROM Assessment_A1, Assessment_A1:status
+GROUPBY @"custom.userId"
+```
+
 ## Create a velocity set
 
 1. In the [Fraud Protection portal](https://dfp.microsoft.com/), in the left navigation, select **Velocities**, and then select **New velocity set**.
@@ -142,7 +153,7 @@ Fraud Protection creates several system-defined velocities per environment. For 
 
 Some Fraud Protection functionality relies on the default velocities, such as the **Search results** page for purchase protection. 
 
-You can't edit, delete, or deactivate system-defined velocities. However, you can clone them and then edit, delete, or deactive the clones. 
+You can't edit or delete system-defined velocities. However, you can clone them and then edit or delete the clones. 
 
 ## Manage your velocity sets
 
@@ -199,6 +210,8 @@ The second parameter is **timeWindow**. This parameter specifies the time window
 > If a velocity fails to return a value because of an error, a default value of *0* is returned, and your rule continues to run.
 >
 > Velocities are updated with the current event after rule evaluation. Therefore, if you reference a velocity in a rule, it wouldn't include the current event being processed.
+> 
+> Velocities can also be invoked from Functions. For more information, see [Functions](functions.md).
 
 ## Use rules to view velocity values
 

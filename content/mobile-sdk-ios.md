@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides information that is required for device fingerprinting in a mobile device implementation of Microsoft Dynamics 365 Fraud Protection for iOS.
 ms.author: josaw
-ms.date: 03/29/2022
+ms.date: 04/10/2024
 ms.topic: reference
 search.audienceType:
   - developer
@@ -26,14 +26,6 @@ You have the following responsibilities:
 - Inform your customers about your data collection and processing practices. For example, disclose what data you collect and how it's used.
 - Disclose your use of third parties that work on your behalf to process the data that you collect. These third parties include Fraud Protection service providers.
 - Comply with all laws and regulations that are applicable to the use of Fraud Protection. These laws and regulations include data protection laws.
-
-## Attribute category introduction reference
-
-The following list shows the device fingerprinting attribute categories that we try to collect and explains how each helps detect fraud. If your organization has specific needs, and you want some categories of data not to be processed by us, reach out to customer support before onboarding. We can help you do the configuration correctly to meet your privacy needs.
-
-- **Core Features** – This group of attributes is core to Fraud Protection's ability to predict patterns of fraud. Based on our previous experience, we believe that these attributes will be highly accretive to Fraud Protection's model performance and ability to discern distinctive patterns of fraud. If these attributes aren't supplied, the device fingerprinting will be inaccurate.
-- **Investigative Features** – This group of attributes has the potential to add or enhance Fraud Protection's ability to predict patterns of fraud more accurately. Statistical analysis of collected data is the only definitive way to determine whether these attributes are strong predictors of patterns of fraud. If the predictive capability of these attributes doesn't meet our expectations, we will no longer use them. Although this group of attributes will enable us to determine whether they will be strong predictors of patterns of fraud, they are optional and don't have to be supplied.
-- **Potential Label** – This group of attributes is used for model supervision and labeling purposes. There is a probability that each of these attributes, by itself, won't provide ground truth. However, the combination of these attributes increases the likelihood that the label that is used to train Fraud Protection's model will become ground truth and helps improve model performance.
 
 ## iOS technical reference
 [![Fraud Protection](https://img.shields.io/cocoapods/v/FraudProtection?label=Latest%20Version&style=for-the-badge)](https://github.com/CocoaPods/Specs/blob/master/Specs/6/e/f/FraudProtection/2.2.1/FraudProtection.podspec.json)

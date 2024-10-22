@@ -2,7 +2,7 @@
 author: josaw1
 description: This article provides answers to frequently asked questions (FAQ) about compliance in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 12/09/2022
+ms.date: 06/19/2024
 ms.topic: faq
 search.audienceType:
   - admin
@@ -33,7 +33,7 @@ Microsoft uses industry-standard processes to delete customer data and professio
 
 #### How is data confidentiality ensured in Fraud Protection?
 
-Fraud Protection requires that all access be authenticated with Azure Active Directory (Azure AD) and implements role-based access control to prevent unauthorized access by other customers. Fraud Protection also follows many internal security procedures to authorize and audit all access to data by Microsoft personnel, and to allow access only when it's required to ensure service stability and resolve issues.
+Fraud Protection requires that all access be authenticated with Microsoft Entra and implements role-based access control to prevent unauthorized access by other customers. Fraud Protection also follows many internal security procedures to authorize and audit all access to data by Microsoft personnel, and to allow access only when it's required to ensure service stability and resolve issues.
 
 As is stated in the Microsoft data protection addendum on the [Licensing Documents](https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA) page of the Microsoft Licensing Resources and Documents site:
 
@@ -69,6 +69,13 @@ Data processed within the Fraud Protection network is pseudonymized and retained
 
 Please note that Microsoft employees, including Microsoft-approved subcontractors, may access Customer Data with the permission of the Customer for the purposes of providing Online Services or Professional Services. Data related to a transaction is deidentified and aggregated prior to transmission into the fraud network. Microsoft employees may access aggregated data related to a transaction in the fraud network for the purposes of improving the Online Services. 
 
+#### Does Fraud Protection use cookies in device fingerprinting?
+
+Yes. Fraud Protection uses cookies to collect information for a device, not for a particular individual. To opt out of using cookies you can, but it would degrade the device fingerprinting.
+
+#### Is Fraud Protection device fingerprinting affected by ad blockers?
+
+If DNS/SSL certificate information is properly set up for [web integration](../df-web.md), then the fingerprinting script will be considered a first party integration and will be excluded from most ad blockers. 
 
 ## Additional resources
 
