@@ -16,15 +16,15 @@ Custom lists are created and defined by you. You have the ability to create cust
 
 ## Prerequisites
 
-- To create a custom list using Cosmos DB in Microsoft Dynamics 365 Fraud Protection, you must first [create a container in Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-create-container) and [choose a partition key that's appropriate for your data structure](https://learn.microsoft.com/en-us/azure/cosmos-db/partitioning-overview#choose-partitionkey).
-- You can store your connection string securely in Azure Key Vault, which will be used later in the list definition. For more information, see [About Azure Key Vault managed storage account keys](https://learn.microsoft.com/en-us/azure/key-vault/secrets/about-managed-storage-account-keys).
-- Add a role assignment to grant "Key Vault Secrets User" access for "Dynamics 365 Fraud Protection". For more information, see [Assign Azure roles using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal).
+- To create a custom list using Cosmos DB in Microsoft Dynamics 365 Fraud Protection, you must first [create a container in Azure Cosmos DB](/azure/cosmos-db/nosql/how-to-create-container) and [choose a partition key that's appropriate for your data structure](/azure/cosmos-db/partitioning-overview#choose-partitionkey).
+- You can store your connection string securely in Azure Key Vault, which will be used later in the list definition. For more information, see [About Azure Key Vault managed storage account keys](/azure/key-vault/secrets/about-managed-storage-account-keys).
+- Add a role assignment to grant "Key Vault Secrets User" access for "Dynamics 365 Fraud Protection". For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
 
 ## Use custom lists
 
 [Rules](rules.md) define custom logic that automates business decisions. To help define this logic, you can take advantage of any list in a rule. For example, you can create one list of email addresses that you consider risky and another list of email addresses that you consider safe. You can then configure a rule so that all sign-in attempts that use an email address in the **Risky Emails** list are rejected, whereas sign-in attempts that use an email address in the **Safe Emails** list are approved.
 
-## Single-column and multicolumn lists
+## Single-column and multi-column lists
 
 The following example shows two separate lists, **Risky Emails** and **Safe Emails**. In both lists, a single column of values represents a key (in this case, the email address).
 
@@ -40,7 +40,7 @@ The following example shows two separate lists, **Risky Emails** and **Safe Emai
 | `Miguel@proseware.com` |
 | `Tyler@contoso.com` |
 
-However, you can use additional columns to hold values that are relevant to the key. For example, instead of using two separate lists, you can combine the same information into one multicolumn list, as shown here.
+However, you can use additional columns to hold values that are relevant to the key. For example, instead of using two separate lists, you can combine the same information into one multi-column list, as shown here.
 
 | Email address | Status |
 |---------------|--------|
@@ -53,7 +53,7 @@ However, you can use additional columns to hold values that are relevant to the 
 
 You can then configure your rule so that all sign-in attempts that use an email address that appears in this list and has a status of *Risky* are rejected, whereas attempts that use an email address that has a status of *Safe* are approved.
 
-In addition to using multicolumn lists to combine safe and block lists, you can use them to specify the unique levels of risk that are associated with a set of products, email addresses, or countries/regions. For example, if specific product types present different levels of risk to your business, you can make decisions for those products differently. Specifically, you can evaluate each product against its own score threshold. To use this approach, you must first create a list that represents this information, as shown in the following example.
+In addition to using multi-column lists to combine safe and block lists, you can use them to specify the unique levels of risk that are associated with a set of products, email addresses, or countries/regions. For example, if specific product types present different levels of risk to your business, you can make decisions for those products differently. Specifically, you can evaluate each product against its own score threshold. To use this approach, you must first create a list that represents this information, as shown in the following example.
 
 | Product type | Score threshold |
 |--------------|-----------------|
