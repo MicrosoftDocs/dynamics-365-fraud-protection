@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to add, manage, and use custom Cosmos DB lists to manage information, fight fraud, and enforce business policies in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 06/01/2023
+ms.date: 10/22/2023
 ms.topic: how-to
 search.audienceType:
   - admin
@@ -16,7 +16,9 @@ Custom lists are created and defined by you. You have the ability to create cust
 
 ## Prerequisites
 
-To create a custom list using Cosmos DB in Microsoft Dynamics 365 Fraud Protection, you must first [create a container in Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-create-container) and [choose a partition key that's appropriate for your data structure](https://learn.microsoft.com/en-us/azure/cosmos-db/partitioning-overview#choose-partitionkey).
+- To create a custom list using Cosmos DB in Microsoft Dynamics 365 Fraud Protection, you must first [create a container in Azure Cosmos DB](https://learn.microsoft.com/en-us/azure/cosmos-db/nosql/how-to-create-container) and [choose a partition key that's appropriate for your data structure](https://learn.microsoft.com/en-us/azure/cosmos-db/partitioning-overview#choose-partitionkey).
+- You can store your connection string securely in Azure Key Vault, which will be used later in the list definition. For more information, see [About Azure Key Vault managed storage account keys](https://learn.microsoft.com/en-us/azure/key-vault/secrets/about-managed-storage-account-keys).
+- Add a role assignment to grant "Key Vault Secrets User" access for "Dynamics 365 Fraud Protection". For more information, see [Assign Azure roles using the Azure portal](https://learn.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal).
 
 ## Use custom lists
 
@@ -75,7 +77,7 @@ To create a list definition, follow these steps.
 1. Add **Azure key vault URL** which contains the connection string to the Azure Cosmos DB. The connection string should be stored as a secret in the key vault. An example of such a connection string is: `AccountEndpoint=<EndpointUrl>;AccountKey=<AccessKey>`.
 1. You can now add a timeout and select **Test connection** to check your database connection. A list of containers will appear after a successful connection.
 1. Choose a container from the dropdown menu. Once you select a container, properties from the first document in the container will be auto-populated as columns.
-1. To add more columns, select  **Add column**. You can either select a column from the dropdown menu, if available, or enter a custom one.
+1. To add more columns, select  **Add column**. You can either select a column from the dropdown menu, if available, or enter a custom column name which will be added to the Cosmos DB container later.
 1. You can select **Preview** to preview the list data..
 1. Select **Create**.
 
@@ -126,7 +128,7 @@ You can preview a list in Fraud Protection. The preview pane shows a maximum of 
 ## Monitor custom lists in the Fraud Protection portal
 
 > [!NOTE]
-> Metrics are shown only when your list is used in an active rule.
+> Metrics are shown only when you test connections by selecting "Test connection" or when your list is used in an active rule.
 
 1. To dive into the metrics about your Cosmos DB list, select the list from the lists page. Then, select **Performance** either from the command bar at the top of the page or from the dropdown menu that appears after right-clicking.
 
@@ -147,6 +149,8 @@ In addition to HTTP client errors (400, 401, and 403), you might see the followi
 ## Additional resources
 
 [Lists overview](lists-overview.md)
+
+[Manage custom CSV lists](lists.md)
 
 [Manage support lists](manage-support-lists.md)
 
