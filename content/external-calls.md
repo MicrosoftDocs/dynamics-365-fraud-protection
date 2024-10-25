@@ -189,7 +189,7 @@ The following table lists the claims that you can expect in bearer tokens that a
 |----------------|-------|-------------|
 | Tenant ID      | tid   | This claim identifies the Azure tenant ID of the subscription that is associated with your Fraud Protection account. For information about how to find your tenant ID in the Fraud Protection portal, see [Required IDs and information](integrate-real-time-api.md#required-ids-and-information). For information about how to find your tenant ID in the Azure portal, see [How to find your Azure Active Directory tenant ID](/azure/active-directory/fundamentals/active-directory-how-to-find-tenant). |
 | Audience       | aud   | This claim identifies the intended recipient of the token. The value exactly reflects the application ID that you provided when you configured your external call in the Fraud Protection portal. |
-| Application ID | appid | This claim is Fraud Protection's application ID: *bf04bdab-e06f-44f3-9821-d3af64fc93a9*. This ID is owned solely by Fraud Protection and only Microsoft can request a token on its behalf. |
+| Application ID | appid | This claim is Fraud Protection's application ID: * bf04bdab-e06f-44f3-9821-d3af64fc93a9*. This ID is owned solely by Fraud Protection and only Microsoft can request a token on its behalf. |
 
 When your API receives a token, it should open the token and validate that each of the preceding claims matches its description.
 
