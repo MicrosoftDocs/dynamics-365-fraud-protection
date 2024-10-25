@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to enable client-side integration for device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/20/2024
+ms.date: 10/25/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -37,6 +37,17 @@ To generate and upload an SSL certificate, follow these steps.
 2. Go to the [Fraud Protection portal](https://dfp.microsoft.com), and then, in the left navigation pane, select **Integration**.
 3. On the **Integration** page, select **Edit**, and then, on the next page, select **Next** to open the **Upload SSL certificate** page.
 4. Select **Select Certificate**, and then upload the SSL certificate that you generated. If your certificate has a password, enter it in the text box. Then select **Upload**.
+
+### Validate the SSL certificate
+
+There are two ways to verify that the SSL certificate is successfully deployed.
+
+- Go to "https://<hostname>/health/ping" and [check the validity of the certificate](https://answers.microsoft.com/en-us/microsoftedge/forum/all/how-do-i-check-the-validity-of-an-ssl-certificate/b62e098d-2a8d-4d1e-a854-66cbbbc20ea9).
+
+OR
+
+-	Go to "https://www.sslshopper.com/ssl-checker.html". Enter the server hostname, select **Check SSL**, and review the SSL certificate information displayed on the page.
+
 
 > [!NOTE]
 > Only .pfx files are supported. Propagation of the certificate to the device fingerprinting servers might take a few minutes. 
