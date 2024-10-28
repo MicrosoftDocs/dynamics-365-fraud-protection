@@ -74,7 +74,7 @@ Before you create an external call, you should know about the following limitati
 
         Select **Test** to automatically enter a real response from your API in this field.
 
-    - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 1000.
+    - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 5000.
     - **Default response** – Specify the default response that should be returned if your request fails or exceeds the specified time-out. The value must be valid JSON object or JSON element.
 
 1. Optional: To send a sample request to your API endpoint and view the response, select **Test**. For more information, see the next section, [Test an external call](external-calls.md#test-an-external-call).

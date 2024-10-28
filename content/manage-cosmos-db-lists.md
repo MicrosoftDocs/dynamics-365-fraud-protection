@@ -84,7 +84,7 @@ To create a list definition, follow these steps.
     Because of caching, it might take up to two minutes for the list to become active.
 
 > [!IMPORTANT]
-> Don't include the following sensitive personal data or highly regulated data types in the files that you upload:
+> Don't include the following sensitive personal data or highly regulated data types in the Cosmos DB container:
 >
 > - Biometric data, genetic data, or any data that is related to health
 > - Personal data that reveals racial or ethnic origin, or religious views
@@ -141,7 +141,7 @@ In addition to the three metrics that were described earlier, an **Error** chart
 In addition to HTTP client errors (400, 401, and 403), you might see the following errors:
 
 - **Definition not found** – The list has been deleted, but it's still referenced in a rule.
-- **Timeout** – The request to the target took longer than the specified time-out.
+- **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 5000.
 - **Communication failure** – No connection could be made to the target because of a network issue or because the target is unavailable.
 - **Circuit breaker** – If the list has failed continuously and has exceeded a certain threshold, all further calls will be suspended for a short interval.
 - **Unknown Failure** – An internal Dynamics 365 failure occurred.
