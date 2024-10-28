@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to enable client-side integration for device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 03/20/2024
+ms.date: 10/25/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -38,6 +38,17 @@ To generate and upload an SSL certificate, follow these steps.
 3. On the **Integration** page, select **Edit**, and then, on the next page, select **Next** to open the **Upload SSL certificate** page.
 4. Select **Select Certificate**, and then upload the SSL certificate that you generated. If your certificate has a password, enter it in the text box. Then select **Upload**.
 
+### Validate the SSL certificate
+
+There are two ways to verify that the SSL certificate is successfully deployed.
+
+- Go to "https://<hostname>/health/ping" and [check the validity of the certificate](https://answers.microsoft.com/en-us/microsoftedge/forum/all/how-do-i-check-the-validity-of-an-ssl-certificate/b62e098d-2a8d-4d1e-a854-66cbbbc20ea9).
+
+OR
+
+-	Go to "https://www.sslshopper.com/ssl-checker.html". Enter the server hostname, select **Check SSL**, and review the SSL certificate information displayed on the page.
+
+
 > [!NOTE]
 > Only .pfx files are supported. Propagation of the certificate to the device fingerprinting servers might take a few minutes. 
 
@@ -55,7 +66,7 @@ To implement device fingerprinting, follow these steps.
 
     - **Your\_Sub\_Domain** – The subdomain under your root domain.
     - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can contain only the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID should contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although Microsoft recommends that you use a globally unique identifier (GUID) for the session ID, it isn't required.
-    - **instance\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Device fingerprinting ID** value that's listed on the **Current environment** tile on the **Integration** page of the corresponding environment in the Fraud Protection portal.
+    - **instance\_id** – A required value to integrate your website with device fingerprinting. Use the **Device fingerprinting ID** value that's listed on the **Current environment** tile on the **Integration** page of the corresponding environment in the Fraud Protection portal.
 
     **Example**
 
@@ -91,9 +102,9 @@ Client-side integration is useful for low latency scenarios where skipping the s
 
 2. **Do I want my fingerprinting data to be in the browser as opposed to my server fetching it?**
 
-   In traditional server-to-server integration, once attribute collection is complete on the website, the data is pushed to Fraud Protection's servers, where you can obtain the assessment response on your server by making the standard assessment API call. In client-side integration however, when the attribute collection data is pushed to Fraud Protection's servers, the assessment response comes back and is returned directly in the browser. This way, your server can extract the assessment response from the browser itself instead of making the server-to-server call, thereby saving some time. Keep in mind that the fingerprinting itself takes a couple of seconds, so the assessment response will only be present in the browser if the user is on the page for a few seconds. If your scenario benefits from the data already being present in the browser, then client-side integration may be right for you.
+   In traditional server-to-server integration, once attribute collection is complete on the website, the data is pushed to Fraud Protection's servers, where you can obtain the assessment response on your server by making the standard assessment API call. In client-side integration however, when the attribute collection data is pushed to Fraud Protection's servers, the assessment response comes back and is returned directly in the browser. This way, your server can extract the assessment response from the browser itself instead of making the server-to-server call, saving some time. Keep in mind that the fingerprinting itself takes a couple of seconds, so the assessment response is only present in the browser if the user is on the page for a few seconds. If your scenario benefits from the data already being present in the browser, then client-side integration may be right for you.
 
-In general, the majority of fingerprinting scenarios are solved by the standard server-to-server integration, and client-side integration is beneficial for a few specific scenarios where the latency decrease is critical. Since client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
+In general, most fingerprinting scenarios are solved by the standard server-to-server integration, and client-side integration is beneficial for a few specific scenarios where the latency decrease is critical. Since client-side integration is a specialized class of integration that's simplified and secure, the following prerequisites must be met to enable it.
 
 - You must be in a root environment of a Fraud Protection tenant.
 - You must set up an external call that returns an encryption key response in the [JSON Web Key Sets (JWKS) format](https://datatracker.ietf.org/doc/html/rfc7517). This external call returns the key that Fraud Protection uses to encrypt the payload. You can use this key afterward to decrypt the Fraud Protection response server-side that you initially receive client-side. You're responsible for providing the key for encryption and decryption. For information about setting up external calls, see [External calls](external-calls.md).
@@ -115,7 +126,7 @@ The following code shows an example of the JWKS format.
 ```
 - You must only use the metadata and device fingerprinting sections of the device fingerprinting assessment template. If there are additional schema sections, or if you're not using the device fingerprinting assessment template, the client-side integration option isn't available to you.
 
-When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, you'll see the client-side integration option available to you. After choosing to enable the client-side integration, you'll select the external call with the JWKS response format that you set up.
+When you reach the **Settings** page of the assessment wizard for a device fingerprinting template, the client-side integration option is available to you. After choosing to enable the client-side integration, you'll select the external call with the JWKS response format that you set up.
 
 To complete the client-side integration setup, to return the encrypted response in the browser, you must use a modified version of the following JavaScript example.
 
@@ -125,7 +136,7 @@ To complete the client-side integration setup, to return the encrypted response 
 
 - **Your\_Sub\_Domain** – The subdomain under your root domain.
 - **session\_id** – The unique session identifier of the device that was created by the client. It can be up to 128 characters long and can only contain the following characters: uppercase and lowercase Roman letters, digits, underscore characters, and hyphens (a–z, A–Z, 0–9, \_, -). The session ID must contain at least 16 bytes of randomly generated data. When using hexadecimal encoding, this translates to 32 hexadecimal characters. Although Microsoft recommends that you use a globally unique identifier (GUID) for the session ID, it isn't required.
-- **customer\_id** – This is a required value to integrate your website with device fingerprinting. Use the **Environment ID** value that's listed on the **Current environment** tile of the **Integration** page of the corresponding environment in the Fraud Protection portal. You must be in a root environment for client-side integration to work.
+- **customer\_id** – A required value to integrate your website with device fingerprinting. Use the **Environment ID** value listed on the **Current environment** tile of the **Integration** page of the corresponding environment in the Fraud Protection portal. You must be in a root environment for client-side integration to work.
 - **assessment** – The API name of the device fingerprinting assessment set up with client-side integration enabled. The API name is case-sensitive and pulled from the assessment configuration page.
 - **request\_id** – A unique identifier for the request itself, separate from the session ID. This identifier should be a GUID of at least 32 characters in length.
 
