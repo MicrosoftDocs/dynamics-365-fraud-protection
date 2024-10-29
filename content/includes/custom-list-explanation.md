@@ -1,6 +1,6 @@
 ## Use custom lists
 
-[Rules](rules.md) define custom logic that automates business decisions. To help define this logic, you can take advantage of any list in a rule. For example, you can create one list of email addresses that you consider risky and another list of email addresses that you consider safe. You can then configure a rule so that all sign-in attempts that use an email address in the **Risky Emails** list are rejected, whereas sign-in attempts that use an email address in the **Safe Emails** list are approved.
+[Rules](../rules.md) define custom logic that automates business decisions. To help define this logic, you can take advantage of any list in a rule. For example, you can create one list of email addresses that you consider risky and another list of email addresses that you consider safe. You can then configure a rule so that all sign-in attempts that use an email address in the **Risky Emails** list are rejected, whereas sign-in attempts that use an email address in the **Safe Emails** list are approved.
 
 ## Single-column and multicolumn lists
 
@@ -39,8 +39,8 @@ In addition to using multicolumn lists to combine safe and block lists, you can 
 | Consumable | 600 |
 | Physical | 750 |
 
-You can then configure a rule that enforces the rejection of transactions where the [risk score](ap-scorecard.md#risk-model-score) exceeds the specified threshold for the product type. For information about how to create effective rules to customize your business logic, see [Rules](rules.md).
+You can then configure a rule that enforces the rejection of transactions where the [risk score](../ap-scorecard.md#risk-model-score) exceeds the specified threshold for the product type. For information about how to create effective rules to customize your business logic, see [Rules](../rules.md).
 
 > [!NOTE]
 >
-> Lists can also be referenced within Functions. For more information, see [Functions](functions.md).
+> Lists can also be referenced within Functions. For more information, see [Functions](../functions.md).
