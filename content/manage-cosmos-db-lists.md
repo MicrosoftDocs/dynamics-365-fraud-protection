@@ -18,7 +18,7 @@ Custom lists are created and defined by you. You have the ability to create cust
 
 - To create a custom list using Cosmos DB in Microsoft Dynamics 365 Fraud Protection, you must first [create a container in Azure Cosmos DB](/azure/cosmos-db/nosql/how-to-create-container) and [choose a partition key that's appropriate for your data structure](/azure/cosmos-db/partitioning-overview#choose-partitionkey).
 - You can store your connection string securely in Azure Key Vault, which will be used later in the list definition. For more information, see [About Azure Key Vault managed storage account keys](/azure/key-vault/secrets/about-managed-storage-account-keys).
-- Add a role assignment to grant "Key Vault Secrets User" access for "Dynamics 365 Fraud Protection". For more information, see [Assign Azure roles using the Azure portal](/azure/role-based-access-control/role-assignments-portal).
+- Add a role assignment to grant "Key Vault Secrets User" access for "Dynamics 365 Fraud Protection". For more information, see [Use an Azure RBAC for managing access](/azure/key-vault/general/rbac-guide#best-practices-for-individual-keys-secrets-and-certificates-role-assignments).
 
 [!INCLUDE[custom-list-explanation](includes/custom-list-explanation.md)]
 
@@ -38,9 +38,7 @@ To create a list definition, follow these steps.
 1. Choose a container from the dropdown menu. Once you select a container, properties from the first document in the container will be auto-populated as columns.
 1. To add more columns, select  **Add column**. You can either select a column from the dropdown menu, if available, or enter a custom column name which will be added to the Cosmos DB container later.
 1. You can select **Preview** to preview the list data..
-1. Select **Create**.
-
-    Because of caching, it might take up to two minutes for the list to become active.
+1. Select **Create**. Because of caching, it might take up to two minutes for the list to become active.
 
 > [!IMPORTANT]
 > Don't include the following sensitive personal data or highly regulated data types in the Cosmos DB container:
@@ -85,6 +83,10 @@ You can preview a list in Fraud Protection. The preview pane shows a maximum of 
 - To preview a list, select it, and then select **Preview**.
 
 ## Monitor custom lists in the Fraud Protection portal
+
+Fraud Protection shows a tile that contains three metrics for each Cosmos DB list that you define:
+
+[!INCLUDE[external-call-metrics](includes/external-call-metrics.md)]
 
 > [!NOTE]
 > Metrics are shown only when you test connections by selecting "Test connection" or when your list is used in an active rule.
