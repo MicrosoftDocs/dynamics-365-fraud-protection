@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to add, manage, and use custom Cosmos DB lists to manage information, fight fraud, and enforce business policies in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 10/22/2023
+ms.date: 11/15/2024
 ms.topic: how-to
 search.audienceType:
   - admin
