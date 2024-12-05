@@ -18,7 +18,7 @@ Support lists are predefined lists that are included in Microsoft Dynamic 365 Fr
 - **Payment instrument (@"paymentInstrumentList.merchantPaymentInstrumentId")** – This entity is the payment method that is associated with a transaction.
 - **IP address (@"deviceContext.ipAddress")** – This entity is the IP address where the payment originates.
 - **User ID (@"user.userId")** – This entity is the unique ID that is assigned to the user from a transaction.
-- **Device ID (@"deviceContext.externalDeviceId")** – This entity is the device ID that is associated with a transaction.
+- **Device ID (@"deviceContext.externalDeviceId")** or **(@"deviceAttributes.cookieDeviceId")**– This entity is the device ID or the cookie device ID that is associated with a transaction.
 
 Support lists can be modified on the **Support** page or the **Lists** page.
 
