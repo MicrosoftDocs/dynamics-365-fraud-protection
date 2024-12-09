@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to add, manage, and use custom Cosmos DB lists to manage information, fight fraud, and enforce business policies in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 11/15/2024
+ms.date: 12/9/2024
 ms.topic: how-to
 search.audienceType:
   - admin
@@ -91,9 +91,7 @@ Fraud Protection shows a tile that contains three metrics for each Cosmos DB lis
 > [!NOTE]
 > Metrics are shown only when you test connections by selecting "Test connection" or when your list is used in an active rule.
 
-1. To dive into the metrics about your Cosmos DB list, select the list from the lists page. Then, select **Performance** either from the command bar at the top of the page or from the dropdown menu that appears after right-clicking.
-
-    Fraud Protection shows a new page that has a more detailed view of the metrics.
+1. To dive into the metrics about your Cosmos DB list, select the list from the lists page. Then, select **Performance** either from the command bar at the top of the page or from the dropdown menu that appears after right-clicking. Fraud Protection shows a new page that has a more detailed view of the metrics.
 
 2. To view metrics for any time frame in the last three months, adjust the **Date range** setting at the top of the page.
 
@@ -105,14 +103,14 @@ In addition to HTTP client errors (400, 401, and 403), you might see the followi
 - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 5000.
 - **Communication failure** – No connection could be made to the target because of a network issue or because the target is unavailable.
 - **Circuit breaker** – If the list has failed continuously and has exceeded a certain threshold, all further calls will be suspended for a short interval.
-- **Unknown Failure** – An internal Dynamics 365 failure occurred.
+- **Unknown Failure** – An internal Fraud Protection failure occurred.
 
 ## Additional resources
 
 [Lists overview](lists-overview.md)
 
-[Manage custom CSV lists](lists.md)
-
 [Manage support lists](manage-support-lists.md)
+
+[Manage custom CSV lists](lists.md)
 
 [!INCLUDE[footer-include](includes/footer-banner.md)]
