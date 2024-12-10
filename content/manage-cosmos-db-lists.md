@@ -12,7 +12,7 @@ title: Manage custom Cosmos DB lists
 
 # Manage custom Cosmos DB lists
 
-Custom lists are created and defined by you. You can create custom lists that use Cosmos DB as a data source, tailored to your specific business needs or fraud protection strategy. For example, you can create a custom list containing email addresses, IP addresses, or product IDs, along with additional values associated with each entry. This option is ideal for large and complex datasets that require real-time updates and access. Moreover, you can maintain all list data in one place within your Cosmos DB database.
+Custom lists are created and defined by you. You can create custom lists that use Cosmos DB as a data source, tailored to your specific business needs or fraud protection strategy. For example, you can create a custom list containing email addresses, IP addresses, or product IDs, along with other values associated with each entry. This option is ideal for large and complex datasets that require real-time updates and access. Moreover, you can maintain all list data in one place within your Cosmos DB database.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ To create a list definition, follow these steps.
 1. Add the **Azure key vault URL** that contains the connection string to the Azure Cosmos DB. The connection string should be stored as a secret in the key vault. An example of a connection string is: `AccountEndpoint=<EndpointUrl>;AccountKey=<AccessKey>`.
 1. Add a timeout and select **Test connection** to check your database connection. A list of containers appears after a successful connection.
 1. Choose a container from the dropdown menu. Once you select a container, properties from the first document in the container are auto-populated as columns.
-1. To add more columns, select  **Add column**. You can either select a column from the dropdown menu, if available, or enter a custom column name which will be added to the Cosmos DB container later.
+1. To add more columns, select  **Add column**. You can either select a column from the dropdown menu, if available, or enter a custom column name to be added to the Cosmos DB container later.
 1. You can select **Preview** to preview the list data.
 1. Select **Create**. Because of caching, it may take up to two minutes for the list to become active.
 
