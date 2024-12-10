@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to add, manage, and use custom lists to manage information, fight fraud, and enforce business policies in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 12/9/2024
+ms.date: 12/11/2024
 ms.topic: how-to
 search.audienceType:
   - admin
@@ -12,7 +12,7 @@ title: Manage custom CSV lists
 
 # Manage custom CSV lists
 
-Custom lists are created and defined by you. You have the ability to create custom lists, utilizing comma-separated value (CSV) files, and populate them with data tailored to your specific business needs or fraud protection strategy. For instance, you can create a custom list that includes email addresses, IP addresses, or product IDs, along with additional values associated with each entry. This approach is recommended when dealing with relatively smaller datasets that do not necessitate real-time updates.
+Custom lists are created and defined by you. You can create custom lists using comma-separated value (CSV) files, and populate them with data tailored to your specific business needs or fraud protection strategy. For example, you can create a custom list that includes email addresses, IP addresses, or product IDs, along with additional values associated with each entry. CSV lists are recommended when you're dealing with relatively smaller datasets that don't require real-time updates.
 
 ## Format requirements
 
