@@ -2,18 +2,6 @@
   href: index.md
 - name: Regional availability
   href: global-availability.md  
-- name: Get started
-  items: 
-  - name: Evaluate proof of concept options
-    href: evaluate-poc.md
-  - name: Assessment and usage metering
-    href: metering.md
-  - name: Service FAQ
-    href: faq/service-faq.md
-  - name: Promotion code redemption error
-    href: promocode-redemption-error.md
-- name: Transaction acceptance booster (TAB)
-  href: transaction-acceptance-booster.md
 - name: APIs
   items:
   - name: Fraud language reference
@@ -138,6 +126,8 @@
       href: activity-logs.md
   - name: Operations
     items: 
+    - name: Transaction acceptance booster (TAB)
+      href: transaction-acceptance-booster.md
     - name: Fraud language reference
       href: fpl-lang-ref.md
     - name: Configuration
@@ -314,6 +304,8 @@
     href: edbd.md
   - name: FAQs
     items:
+    - name: Service FAQ
+      href: faq/service-faq.md
     - name: Legal considerations FAQ
       href: faq/legal-faq.md
     - name: Security assessment FAQ
