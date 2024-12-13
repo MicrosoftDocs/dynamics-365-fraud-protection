@@ -80,7 +80,6 @@ The following resources provide more information for the integration steps that 
 
 - [Fraud Protection overview](/dynamics365/fraud-protection/)
 - [Create and provision your Azure tenant](promocode-set-up-dfp-purchased-version.md)
-- [Set up a trial instance of Fraud Protection](promocode-set-up-dfp-trial-version.md)
 - [Set up a purchased instance of Fraud Protection](promocode-set-up-dfp-purchased-version.md)
 - [Configure user access](configure-user-access.md)
 - [Set up purchased protection](promocode-set-up-purchase-protection.md)
