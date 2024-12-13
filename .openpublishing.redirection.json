@@ -11,6 +11,11 @@
       "redirect_document_id": "false"
     },
     {
+      "source_path": "content/promocode-set-up-DFP-trial-version.md",
+      "redirect_url": "/dynamics365/fraud-protection/promocode-set-up-DFP-purchased-version",
+      "redirect_document_id": "false"
+    },
+    {
       "source_path": "content/pay-as-you-go.md",
       "redirect_url": "/dynamics365/fraud-protection/index",
       "redirect_document_id": "false"
