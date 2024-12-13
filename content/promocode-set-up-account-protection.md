@@ -36,7 +36,7 @@ This document guides you through the following activities:
 
 Before you begin the activities in this document, you must complete the following tasks:
 
--	Set up Fraud Protection in an Microsoft Entra tenant as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md).
+-	Set up Fraud Protection in an Microsoft Entra tenant.
 -	[Set up device fingerprinting](device-fingerprinting.md).
 
 ## Step 1: Implement account protection APIs
