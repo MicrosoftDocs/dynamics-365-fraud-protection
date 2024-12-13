@@ -2,7 +2,7 @@
 author: josaw1
 description: This article describes how to set up loss prevention in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 04/10/2024
+ms.date: 12/13/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -38,7 +38,7 @@ After you complete these steps in your own system by using your own data, you wi
 
 Before you begin the tasks in this document, you must:
 
-- Set up Fraud Protection in a Microsoft Entra tenant, as described in [Set up a trial instance](promocode-set-up-dfp-trial-version.md).
+- Set up Fraud Protection in a Microsoft Entra tenant.
 
 ## Step 1: Prepare your historical data (data mapping)
 

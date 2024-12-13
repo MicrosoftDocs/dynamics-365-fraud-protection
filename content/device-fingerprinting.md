@@ -31,7 +31,7 @@ The purpose of this setup guide is to help you understand how you can:
 
 ## Prerequisites
 
-Before you begin the tasks in this document, you must set up Fraud Protection in a Microsoft Entra tenant, as described in [Set up a trial version of Fraud Protection](promocode-set-up-dfp-trial-version.md) and [Set up a purchased version of Fraud Protection](promocode-set-up-DFP-purchased-version.md).
+Before you begin the tasks in this document, you must set up Fraud Protection in a Microsoft Entra tenant, as described in [Set up a purchased version of Fraud Protection](promocode-set-up-DFP-purchased-version.md).
 
 It's your responsibility to:
 
