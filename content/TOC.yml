@@ -50,8 +50,6 @@
     href: ap-onboarding-planning-guide.md
   - name: Set up account protection
     items: 
-    - name: Set up a trial instance of Fraud Protection
-      href: promocode-set-up-DFP-trial-version.md
     - name: Set up a purchased instance of Fraud Protection
       href: promocode-set-up-DFP-purchased-version.md
     - name: Set up your account protection service
@@ -108,8 +106,6 @@
     href: pp-onboarding-planning-guide.md
   - name: Setting up purchase protection
     items: 
-    - name: Set up a trial instance of Fraud Protection
-      href: promocode-set-up-DFP-trial-version.md
     - name: Set up a purchased instance of Fraud Protection
       href: promocode-set-up-DFP-purchased-version.md
     - name: Set up Purchase Protection 
@@ -188,8 +184,6 @@
     href: loss-prevention-data-access-and-privacy.md
   - name: Set up loss prevention
     items: 
-    - name: Set up a trial instance of Fraud Protection
-      href: promocode-set-up-DFP-trial-version.md
     - name: Set up a purchased instance of Fraud Protection
       href: promocode-set-up-DFP-purchased-version.md
     - name: Set up your loss prevention service
