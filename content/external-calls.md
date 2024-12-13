@@ -2,7 +2,7 @@
 author: josaw1
 description: This article explains how to use external calls to ingest data from APIs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
-ms.date: 07/29/2022
+ms.date: 12/11/2024
 ms.topic: conceptual
 search.audienceType:
   - admin
@@ -74,7 +74,7 @@ Before you create an external call, you should know about the following limitati
 
         Select **Test** to automatically enter a real response from your API in this field.
 
-    - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 1000.
+    - **Timeout** – Specify how long, in milliseconds, the request should wait before it times out. You must specify a number between 1 and 5000.
     - **Default response** – Specify the default response that should be returned if your request fails or exceeds the specified time-out. The value must be valid JSON object or JSON element.
 
 1. Optional: To send a sample request to your API endpoint and view the response, select **Test**. For more information, see the next section, [Test an external call](external-calls.md#test-an-external-call).
@@ -97,11 +97,7 @@ To ensure that Fraud Protection can connect to your endpoint, test the connectio
 
 Fraud Protection shows a tile that contains three metrics for each external call that you define:
 
-- **Requests per second** – The total number of requests divided by the total number of minutes in the selected time frame.
-- **Average latency** – The total number of requests divided by the total number of minutes in the selected time frame.
-- **Success rate** – The total number of successful requests divided by the total number of requests that are made.
-
-The numbers and charts that are shown on this tile include only data for the time frame that you select in the drop-down list in the upper-right corner of the page.
+[!INCLUDE[external-call-metrics](includes/external-call-metrics.md)]
 
 > [!NOTE]
 > Metrics are shown only when your external call is used in an active rule.
@@ -215,4 +211,4 @@ You acknowledge that you are responsible for adhering to all applicable laws and
 
 - Video: [Learn about the new external calls feature in Dynamics 365 Fraud Protection](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DJM3KpsGYaag&data=04%7C01%7Cv-madeq%40microsoft.com%7C25acb8fe676d47dd48bb08d908cb2c10%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C637550490968730638%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&sdata=7ePFKAsF4XwuaFur9WBmSRa0fDdCHDFbA%2FzQHOuoeLE%3D&reserved=0)
 - Blog: [Customize your protection with new features in the Dynamics 365 Fraud Protection preview: Make informed decisions in real-time with external calls](https://cloudblogs.microsoft.com/dynamics365/bdm/2021/04/14/customize-your-protection-with-new-features-in-the-dynamics-365-fraud-protection-preview/)
-- 
+
