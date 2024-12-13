@@ -2,7 +2,7 @@
 author: cschlegel2
 description: This article explains how to set up Microsoft Dynamics 365 Purchase Protection.
 ms.author: cschlegel
-ms.date: 04/10/2024
+ms.date: 12/13/2024
 ms.topic: reference
 search.audienceType:
   - Developer, IT PRO, Fraud Manager
@@ -39,7 +39,7 @@ Onboarding planning helps you understand and plan for the project implementation
 
 ## <a name="provision"></a>3. Provision Fraud Protection in INT (sandbox) and production environments
 
-Fraud Protection is provisioned in an Microsoft Entra tenant. You can provision it in your existing Microsoft Entra tenant or a new Microsoft Entra tenant. To learn more, see [Set up a trial instance of Fraud Protection](promocode-set-up-dfp-trial-version.md) and [Set up a purchased instance of Fraud Protection](promocode-set-up-dfp-purchased-version.md).
+Fraud Protection is provisioned in an Microsoft Entra tenant. You can provision it in your existing Microsoft Entra tenant or a new Microsoft Entra tenant. To learn more, refer to [Set up a purchased instance of Fraud Protection](promocode-set-up-dfp-purchased-version.md).
 
 Fraud Protection gives you the option to create multiple environments and lets you customize the setup in a way that meets your specific needs. This feature gives you the flexibility to establish a hierarchy that's suitable for your requirements. To learn more, see [Manage environments](manage-psp-environments.md).
 
