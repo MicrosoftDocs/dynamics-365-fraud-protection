@@ -12,6 +12,8 @@ title: Data access and privacy for loss prevention
 
 # Data access and privacy for loss prevention
 
+[!include[deprecation](includes/deprecation.md)]
+
 The loss prevention feature in Microsoft Dynamics 365 Fraud Protection identifies anomalies and patterns to help store managers investigate in-store fraud. It uses adaptive artificial intelligence (AI) models to analyze historical data and identify patterns of anomalies. The reports that are generated from this analysis provide trend analysis, based on the return rate, the discount rate, and other key performance indicators (KPIs). Store managers can use these reports to focus on anomalies that, according to the risk scores that the adaptive AI models generate, might be associated with fraud.
 
 > [!IMPORTANT]

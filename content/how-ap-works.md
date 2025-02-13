@@ -12,6 +12,8 @@ title: How account protection works
 
 # How account protection works
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article describes how Microsoft Dynamics 365 Fraud Protection account protection works.
 
 Dynamics 365 Fraud Protection helps clients assess whether attempts to create new accounts and attempts to sign in to a client's ecosystem are fraudulent. Clients can use Fraud Protection risk assessment to block or challenge suspicious attempts to create new fake accounts or compromise existing accounts.

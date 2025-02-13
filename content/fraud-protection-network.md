@@ -7,11 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: AI and insights from the fraud protection network
-
 ---
 
-
 # AI and insights from the Fraud Protection Network
+
+[!include[deprecation](includes/deprecation.md)]
 
 Microsoft Dynamics 365 Fraud Protection takes advantage of the industry-leading Microsoft artificial intelligence (AI) platform to assess the likelihood that a transaction is fraudulent. The AI platform uses historical data about the results of a card-not-present transactions and event data to train machine learning models and detect linkages of fraud that occur across all merchants in the Fraud Protection Network.
 

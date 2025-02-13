@@ -11,6 +11,8 @@ title: Legal considerations FAQ
 
 # Legal considerations FAQ
 
+[!include[deprecation](../includes/deprecation.md)]
+
 This article provides answers to frequently asked questions (FAQ) about legal considerations in Microsoft Dynamics 365 Fraud Protection.
 
 #### How does Fraud Protection ensure that it doesn't collect data from users who are under the minimum age that is legally allowed in connection with data profiling and collection?

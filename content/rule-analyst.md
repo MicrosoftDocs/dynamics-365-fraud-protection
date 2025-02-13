@@ -12,6 +12,8 @@ ms.custom: bap-template
 
 # Rule reports
 
+[!include[deprecation](includes/deprecation.md)]
+
 Dynamics 365 Fraud Protection provides Rule reports that are designed to track the impact of Fraud Protection rules that you enabled. The reports help you understand the transaction volume, distribution, and potential fraud trends by rule and clause. You can also use them to analyze decisions and performance by rule segment, and to compare the impact of observe rules and decision rules.
 
 ## Decision rule report

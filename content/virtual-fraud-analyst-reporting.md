@@ -12,6 +12,8 @@ ms.custom: bap-template
 
 # Reporting
 
+[!include[deprecation](includes/deprecation.md)]
+
 Dynamics 365 Fraud Protection includes a suite of fraud analysis reports. The reports provide a historical view of your data, and are designed to enable fraud analysts and fraud managers to conduct fraud analysis, define fraud control strategies, and optimize your business.
 
 The reports are updated every 24 hours, and use the last four months of data. The time stamp on the report shows the time when the report was last updated in Coordinated Universal Time.

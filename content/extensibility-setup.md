@@ -7,11 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Set up extensibility via Event Hubs
-
 ---
 
-
 # Set up extensibility via Event Hubs
+
+[!include[deprecation](includes/deprecation.md)]
 
 > [!NOTE]
 > This article provides text-based instructions and links to relevant information. If you prefer a visual video format, watch the [setup tutorial series](https://vimeo.com/showcase/7308527).

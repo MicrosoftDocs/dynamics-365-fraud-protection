@@ -10,6 +10,9 @@ title: Prevent loss with Dynamics 365 Fraud Protection
 ---
 
 # Set up loss prevention
+
+[!include[deprecation](includes/deprecation.md)]
+
 The loss prevention capability in Microsoft Dynamics 365 Fraud Protection uses adaptive artificial intelligence (AI) to generate risk scores, and to identify data anomalies and patterns in historical transaction data. You can then use these risk scores, anomalies, and patterns to generate reports that provide a detailed trend analysis, based on the return rate, the discount rate, and other key performance indicators (KPIs) that might indicate in-store fraud.
 
 ## Identifying fraudulent activity

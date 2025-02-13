@@ -11,6 +11,8 @@ title: Data residency FAQ
 
 # Data residency FAQ
 
+[!include[deprecation](../includes/deprecation.md)]
+
 This article provides answers to frequently asked questions (FAQ) about data residency in Microsoft Dynamics 365 Fraud Protection.
 
 >[!NOTE]

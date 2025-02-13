@@ -7,10 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Event tracing
-
 ---
 
 # Event tracing
+
+[!include[deprecation](includes/deprecation.md)]
 
 This article describes how to use event tracing in Microsoft Dynamics 365 Fraud Protection.
 

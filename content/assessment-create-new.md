@@ -12,6 +12,8 @@ title: Assessment wizard overview
 
 # Assessment wizard overview
 
+[!include[deprecation](includes/deprecation.md)]
+
 If you have a fraud scenario that can't be addressed using the [Account creation](ap-overview.md), [Account login](ap-overview.md), or [Purchase](purchase-protection.md) APIs, the Assessment wizard provides you with the tools to create your own customized real-time Dynamics 365 Fraud Protection APIs.
 
 After you identify the specific fraud scenario you want to protect your business against, and the data to evaluate the scenario, select **+ New assessment** to open the **Assessment wizard**.

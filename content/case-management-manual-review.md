@@ -12,6 +12,8 @@ ms.custom:
 
 # Case management for manual reviewers
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article explains how to complete manual reviews in Case management for Microsoft Dynamics 365 Fraud Protection.
 
 To complete a manual review of a case in Case management for Microsoft Dynamics 365 Fraud Protection, you must be assigned one of the following roles:

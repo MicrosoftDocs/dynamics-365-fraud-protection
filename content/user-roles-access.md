@@ -7,10 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: User roles and access
-
 ---
 
 # User roles and access
+
+[!include[deprecation](includes/deprecation.md)]
 
 This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 

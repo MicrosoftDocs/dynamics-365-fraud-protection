@@ -11,6 +11,8 @@ title: Support your customers with Dynamics 365 Fraud Protection
 
 # Support your customers with Dynamics 365 Fraud Protection
 
+[!include[deprecation](includes/deprecation.md)]
+
 Risk support in Microsoft Dynamics 365 Fraud Protection lets your agents evaluate customer escalations, unblock customers whose purchase attempts are being incorrectly declined, and block future purchases from suspicious users, as appropriate. Your fraud investigators can search and investigate the history of your customers' past transactions with your business. Therefore, they can provide faster turnaround for decisions.
 
 If your Fraud Protection instance has multiple environments, you can access **Risk support** in a specific environment by using the environment switcher. You can only search for transactions in the same environment. 

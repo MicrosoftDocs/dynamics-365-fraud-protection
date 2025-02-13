@@ -11,8 +11,9 @@ title: Privacy and security FAQ
 
 # Privacy and security FAQ
 
-This article provides answers to frequently asked questions (FAQ) about privacy and security in Microsoft Dynamics 365 Fraud Protection.
+[!include[deprecation](../includes/deprecation.md)]
 
+This article provides answers to frequently asked questions (FAQ) about privacy and security in Microsoft Dynamics 365 Fraud Protection.
 
 #### Has Fraud Protection experienced a security breach in the last 12 months? What are the breach notification process and timelines? 
 

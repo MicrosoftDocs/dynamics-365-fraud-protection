@@ -11,6 +11,8 @@ title: Configure Microsoft Entra app access
 
 # Configure Microsoft Entra app access
 
+[!include[deprecation](includes/deprecation.md)]
+
 In Microsoft Dynamics 365 Fraud Protection, administrators can grant API roles to Microsoft Entra apps through the **Application access** section on the **Access control** page. For more information about the available roles, refer to the [User roles and access](user-roles-access.md) article. 
 
 You can assign API roles to a new or existing Microsoft Entra apps. 

@@ -7,10 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Configuration
-
 ---
 
 # Configuration overview
+
+[!include[deprecation](includes/deprecation.md)]
 
 Configuration allows you greater flexibility and extensibility to modify UI elements or interfaces within Microsoft Dynamics 365 Fraud Protection to fit your business needs. Configuration currently supports the following feature areas:
 

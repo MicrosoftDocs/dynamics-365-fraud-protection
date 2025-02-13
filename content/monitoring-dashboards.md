@@ -9,7 +9,11 @@ search.audienceType:
 title: Monitoring
 ms.custom: bap-template
 ---
+
 # Monitoring
+
+[!include[deprecation](includes/deprecation.md)]
+
 Monitoring of Dynamics 365 Fraud Protection provides a set of metrics that refresh close to real-time. These monitors assist fraud professionals in detecting unusual transaction patterns or anomalies in observation events, such as fraud attacks and faulty rule releases.
 
 The metrics in these monitors are measured by the count of received transactions or observation events. The time stamp on the monitors shows the time when the monitor was last updated, in Coordinated Universal Time (UTC). You can switch between a percentage view and an absolute volume view of the distribution metrics by toggling the "Show absolute volume" button. Since the charts are updated near real-time, the last bar is lightly colored to signify that the metrics for the most recent minute's transactions or percentage are being aggregated and not finalized yet.

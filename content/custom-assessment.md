@@ -7,10 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Custom assessment
-
 ---
 
 # Custom assessments
+
+[!include[deprecation](includes/deprecation.md)]
 
 > [!IMPORTANT]
 > Custom assessments will be deprecated in a future release of Fraud Protection and will be replaced by the more comprehensive [Assessments](assessment-create-new.md#assessment-wizard-overview) offering. Custom assessments will continue to work and be fully supported until the deprecation date.  Deprecation can take months and this notification is intended to allow you sufficient time to plan and update your implementation of Dynamics 365 Fraud Protection before deprecation. You will be notified when the deprecation date is set.

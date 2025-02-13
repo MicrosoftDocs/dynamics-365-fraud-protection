@@ -12,6 +12,8 @@ ms.custom: bap-template
 
 # Threat report
 
+[!include[deprecation](includes/deprecation.md)]
+
 Dynamics 365 Fraud Protection provides a Threat report designed to show fraud insights into entities such as payment card type. You can use this report to find distribution changes and identify anomalies on the entities. You can also use it to further optimize rules.
 
 ## Fraud views

@@ -10,8 +10,9 @@ title: Monitor API calls
 ms.collection: get-started
 ---
 
-
 # Monitor API calls
+
+[!include[deprecation](includes/deprecation.md)]
 
 The API monitoring tools in Microsoft Dynamics 365 Fraud Protection provide data about the API calls you have made to the service. You can also consult the error logs to aid in identifying any issues. 
 

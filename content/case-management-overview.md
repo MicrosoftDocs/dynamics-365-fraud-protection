@@ -12,6 +12,8 @@ ms.custom:
 
 # Case management overview
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article provides information about the components of case management in Microsoft Dynamics 365 Fraud Protection.
 
 Fraud Protection offers a suite of capabilities that you can use to enhance AI-based assessments with the subject matter expertise of human reviewers.

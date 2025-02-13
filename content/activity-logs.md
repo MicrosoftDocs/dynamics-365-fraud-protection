@@ -12,6 +12,8 @@ title: Activity Logs
 
 # Activity logs
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article describes how to use activity logs in Microsoft Dynamics 365 Fraud Protection.
 
 The **Activity logs** page lets you search for and view details of who changed what and when within Microsoft Dynamics 365 Fraud Protection, based on specific filters. You can export the search results or select an individual activity log to show a more detailed view. For example, you can search for all the activity logs associated with a specific environment ID and then select a specific activity log to review the details of the log before and after the associated event.

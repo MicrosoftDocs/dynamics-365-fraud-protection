@@ -7,10 +7,11 @@ ms.topic: overview
 search.audienceType:
   - admin
 title: Lists overview
-
 ---
 
 # Lists overview
+
+[!include[deprecation](includes/deprecation.md)]
 
 Lists help you manage information that you use to fight fraud and enforce business policies. For example, you can create a list to track payment instruments that you consider risky or user email addresses that you consider safe. You can then upload the list as a comma-separated values (CSV) file and reference it in a [rule](rules.md) to help automate decisions.
 

@@ -11,6 +11,8 @@ title: Account protection schemas
 
 # Account protection schemas
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article outlines the schema via the application programming interface (API). For more information, see [Integrate Dynamics 365 Fraud Protection real-time APIs](/dynamics365/fraud-protection/integrate-real-time-api).
 
 

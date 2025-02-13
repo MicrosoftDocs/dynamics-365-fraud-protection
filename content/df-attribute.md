@@ -11,6 +11,8 @@ title: Attributes in device fingerprinting
 
 # Attributes in device fingerprinting
 
+[!include[deprecation](includes/deprecation.md)]
+
 The following tables show the device fingerprinting attribute categories that we try to collect for web, iOS, and Android. The description of the attributes explains how each helps detect fraud. If your organization has specific needs, and you want some categories of data not to be processed by Fraud Protection, reach out to customer support before onboarding. Customer support can help you do the configuration correctly to meet your privacy needs.
 
 ## Attribute list for web
