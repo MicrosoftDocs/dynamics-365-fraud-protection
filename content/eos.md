@@ -20,7 +20,7 @@ As of February 3, 2025, Dynamics 365 Fraud Protection is no longer available for
 ## How does this affect me?
 No new features will be released to Fraud Protection as of February 3, 2025. Service updates will be provided.
  
-Microsoft is committed to ensuring a smooth transition for you and your team. We'll work closely with you and other customers to determine how Microsoft and third-party products can meet the anti-fraud requirements of your business as we continue to build anti-fraud protection capabilities within our own products and platforms.
+Microsoft is committed to ensuring a smooth transition for you and your team. We are working closely with customers to determine how Microsoft and third-party products can meet the anti-fraud requirements of your business as we continue to build anti-fraud protection capabilities within our own products and platforms.
 
 ## What action do I need to take?
 Please contact our business development team and account team for assistance transitioning to alternative products or services that may meet your needs. Additional details about alternative fraud solutions will be available by the end of February 2025.
