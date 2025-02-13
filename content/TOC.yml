@@ -1,5 +1,7 @@
 - name: Dynamics 365 Fraud Protection home page
   href: index.md
+- name: End of support for Dynamics 365 Fraud Protection
+  href: eos.md
 - name: Regional availability
   href: global-availability.md  
 - name: APIs
