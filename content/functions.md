@@ -248,7 +248,7 @@ WHEN $sum > 5
 
 Fraud Protection has a limit on the number of functions that can be created per environment and the number of resources that can be referenced within a function. 
 
-| Resource | Limit         | 
+| Resource | Limit         |
 |----------|---------------|
 | Maximum number of functions that can be published within an environment | 30 |
 | Maximum number of output properties that can exist within a function | 30 |
