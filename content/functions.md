@@ -246,10 +246,10 @@ WHEN $sum > 5
 
 ## Function and resource limits
 
-Fraud Protection has a limit on the number of functions that can be created per environment and the number of resources that can be referenced within a function. 
+Fraud Protection has a limit on the number of functions that can be created per environment and the number of resources that can be referenced within a function.
 
-| Resource | Limit         |
-|----------|---------------|
+| Resource | Limit |
+|----------|-------|
 | Maximum number of functions that can be published within an environment | 30 |
 | Maximum number of output properties that can exist within a function | 30 |
 | Maximum number of unique velocities that a function can reference | 15 |

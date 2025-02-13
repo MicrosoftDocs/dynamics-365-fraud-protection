@@ -44,7 +44,7 @@ To generate and upload an SSL certificate, follow these steps.
 
 There are two ways to verify that the SSL certificate is successfully deployed.
 
-- Go to `https://<hostname>/health/ping` and [check the validity of the certificate](https://answers.microsoft.com/microsoftedge/forum/all/how-do-i-check-the-validity-of-an-ssl-certificate/b62e098d-2a8d-4d1e-a854-66cbbbc20ea9).
+- Go to `https://<hostname>/health/ping` and [check the validity of the certificate](https://answers.microsoft.com/en-us/microsoftedge/forum/all/how-do-i-check-the-validity-of-an-ssl-certificate/b62e098d-2a8d-4d1e-a854-66cbbbc20ea9).
 
 OR
 
