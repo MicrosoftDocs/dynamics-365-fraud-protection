@@ -11,6 +11,8 @@ title: Upload historical data for loss prevention
 
 # Upload historical data for loss prevention
 
+[!include[deprecation](includes/deprecation.md)]
+
 You can upload historical data from transactions, sales, payments, and payment methods into the system, so that the adaptive artificial intelligence (AI) models can look for anomalies. The historical data is processed and used to generate reports that show trends and anomalies. These reports provide actionable insights about any anomalies that the AI models detected.
 
 The historical data must be imported from four entities:

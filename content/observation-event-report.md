@@ -12,6 +12,8 @@ ms.custom: bap-template
 
 # Observation event report
 
+[!include[deprecation](includes/deprecation.md)]
+
 Dynamics 365 Fraud Protection provides an observation event report that is designed to showcase insights from observation events or labeled events for [Assessments](assessment-create-new.md). To activate the observation event report, go to the **[Assessment configuration](assessment-configure-existing.md)** page, select the observation event, and then select the relevant data fields to set up the metrics. Changes you make to the report configuration can take up to 24 hours to be displayed.   
 
 You can select **Time series** view or **Score view** in the report. Based on the filters you select, the following metrics are available. 

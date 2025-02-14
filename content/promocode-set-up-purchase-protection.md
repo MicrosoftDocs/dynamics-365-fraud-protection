@@ -10,8 +10,9 @@ title: Set up Purchase Protection
 ms.custom:
 ---
 
-
 # Set up Purchase Protection
+
+[!include[deprecation](includes/deprecation.md)]
 
 This article provides an overview of the process for setting up Purchase Protection functionality in Microsoft Dynamics 365 Fraud Protection. To help you get started, we've provided a list of steps together with links to related onboarding and integration documents for quick reference. Use the following links to go through the provisioning, integration, and key features:
 

@@ -7,9 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Work with Logic Apps or Power Automate
-
 ---
+
 # Work with Logic Apps or Power Automate
+
+[!include[deprecation](includes/deprecation.md)]
 
 Microsoft Azure Logic Apps and Power Automate flows offer low-code user interfaces (UIs) for building automated processes. Both types of flow include hundreds of built-in connectors (such as connectors for Teams and Outlook) for fast development.
 

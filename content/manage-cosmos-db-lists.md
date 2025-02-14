@@ -7,10 +7,11 @@ ms.topic: how-to
 search.audienceType:
   - admin
 title: Manage custom Cosmos DB lists
-
 ---
 
 # Manage custom Cosmos DB lists
+
+[!include[deprecation](includes/deprecation.md)]
 
 Custom lists are created and defined by you. You can create custom lists that use Cosmos DB as a data source, tailored to your specific business needs or fraud protection strategy. For example, you can create a custom list containing email addresses, IP addresses, or product IDs, along with other values associated with each entry. This option is ideal for large and complex datasets that require real-time updates and access. Moreover, you can maintain all list data in one place within your Cosmos DB database.
 

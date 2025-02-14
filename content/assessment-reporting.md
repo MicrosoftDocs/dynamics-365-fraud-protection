@@ -9,7 +9,10 @@ search.audienceType:
 title: Assessment reporting
 
 ---
+
 # Assessment reporting
+
+[!include[deprecation](includes/deprecation.md)]
 
 Reporting is currently limited to the following three real-time scorecards for assessments created using the [Assessment wizard](assessment-create-new.md#assessment-wizard-overview):
 

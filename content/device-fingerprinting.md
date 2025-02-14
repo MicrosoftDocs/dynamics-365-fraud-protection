@@ -11,6 +11,8 @@ title: Overview of device fingerprinting
 
 # Overview of device fingerprinting
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article describes how to set up device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 
 A *device fingerprint*, also known as a *machine fingerprint*, contains information that's collected about a remote computing device, such as a computer, Xbox, tablet, or smartphone, for the purpose of identifying that device. Device fingerprinting lets you collect crucial device telemetry during online actions. This information includes hardware information, browser information, geographic information, and the Internet Protocol (IP) address.

@@ -7,10 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Post-decision Rules
-
 ---
 
 # Post-decision Action Rules
+
+[!include[deprecation](includes/deprecation.md)]
 
 In addition to Decision rules [Manage rules](rules.md), Fraud Protection also allows you to configure Post-decision action rules for an assessment. Post-decision action rules are evaluated after Decision rules, but before the API response has been returned. These rules can be used to perform actions that you want to take **each time an assessment is evaluated**. You can use the decision of the assessment call in an action rule also. For example, if you always send additional information as part of your API response anytime a particular decision is taken, or if you always send or receive data from an External Call every time assessment is evaluated. 
 

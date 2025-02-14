@@ -7,10 +7,11 @@ ms.topic: how-to
 search.audienceType:
   - admin
 title: Manage custom CSV lists
-
 ---
 
 # Manage custom CSV lists
+
+[!include[deprecation](includes/deprecation.md)]
 
 Custom lists are created and defined by you. You can create custom lists using comma-separated value (CSV) files, and populate them with data tailored to your specific business needs or fraud protection strategy. For example, you can create a custom list that includes email addresses, IP addresses, or product IDs, along with additional values associated with each entry. CSV lists are recommended when you're dealing with relatively smaller datasets that don't require real-time updates.
 

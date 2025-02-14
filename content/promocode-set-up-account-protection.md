@@ -11,6 +11,8 @@ title: Set up customer accounts protection
 
 # Set up customer accounts protection
 
+[!include[deprecation](includes/deprecation.md)]
+
 Microsoft Dynamics 365 Fraud Protection includes account protection capabilities to help you assess whether any suspicious activity is occurring in your business ecosystem. These capabilities include risk assessment capabilities that you can use to block or challenge fraudulent attempts to create accounts or compromise existing accounts. Here are some examples:
 
 -	APIs for real-time risk assessment

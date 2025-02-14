@@ -11,6 +11,8 @@ title: Security assessment FAQ
 
 # Security assessment FAQ
 
+[!include[deprecation](../includes/deprecation.md)]
+
 This article provides answers to frequently asked questions about security assessment in Microsoft Dynamics 365 Fraud Protection.
 
 ## Authentication and administration

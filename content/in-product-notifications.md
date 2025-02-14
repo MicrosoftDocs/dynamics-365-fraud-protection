@@ -11,6 +11,8 @@ title: In-product notifications
 
 # In-product notifications
 
+[!include[deprecation](includes/deprecation.md)]
+
 In the **Notification Center** of the Microsoft Dynamics 365 Fraud Protection portal, you can view critical and non-critical notifications. Notifications are listed in order from newest to oldest. You can also view critical notifications on the **Notification Message Bar** that's located under the page header of every portal page.
 
 The notification icon in the upper-right corner of the portal shows the count of unread notifications. You can filter notifications by type, including **Critical**, **Error**, **Information**, **Success**, or **Warning**. Select the link in a notification to go to the related feature page, where you can learn more or take required action. 

@@ -11,6 +11,8 @@ title: Service FAQ
 
 # Service FAQ
 
+[!include[deprecation](../includes/deprecation.md)]
+
 This article provides answers to frequently asked questions (FAQ) about the Microsoft Dynamics 365 Fraud Protection service.
 
 #### What types of fraud is Fraud Protection designed to mitigate?

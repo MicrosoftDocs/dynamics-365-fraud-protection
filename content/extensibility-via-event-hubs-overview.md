@@ -7,10 +7,11 @@ ms.topic: overview
 search.audienceType:
   - admin
 title: Extensibility via Event Hubs
-
 ---
 
 # Extensibility via Event Hubs
+
+[!include[deprecation](includes/deprecation.md)]
 
 This content guides you through the process of setting up and using the *event tracing data* that is available from Microsoft Dynamics 365 Fraud Protection. This data includes, but isn't limited to, data for *audit log events*, *latency events*, and *trace events*.
 

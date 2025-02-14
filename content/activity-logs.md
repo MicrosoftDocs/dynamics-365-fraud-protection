@@ -1,7 +1,7 @@
 ---
 author: josaw1
 description: This article describes how to use activity logs in Microsoft Dynamics 365 Fraud Protection.
-ms.author: cschointuch
+ms.author: josaw
 ms.date: 03/28/2024
 ms.topic: conceptual
 search.audienceType:
@@ -11,6 +11,8 @@ title: Activity Logs
 ---
 
 # Activity logs
+
+[!include[deprecation](includes/deprecation.md)]
 
 This article describes how to use activity logs in Microsoft Dynamics 365 Fraud Protection.
 

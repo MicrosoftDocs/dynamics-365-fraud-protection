@@ -11,6 +11,8 @@ title: Upload historical data for purchase protection
 
 # Upload historical data for purchase protection 
 
+[!include[deprecation](includes/deprecation.md)]
+
 In Microsoft Dynamics 365 Fraud Protection's evaluate and protect experiences, you can upload your purchase protection historical data into the system to help train and improve the accuracy of the machine learning models. The uploads can include data for purchases, chargebacks, merchant and bank decisions, and accounts.
 
 For the best results, we recommend that you upload at least six months' worth of historical data.

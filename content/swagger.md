@@ -7,10 +7,12 @@ ms.topic: overview
 search.audienceType:
   - admin
 title: Swagger UI
-
 ---
 
 # Swagger UI
+
+[!include[deprecation](includes/deprecation.md)]
+
 Swagger (OpenAPI) is a language-agnostic specification for describing REST APIs. It allows both computers and humans to understand the capabilities of a REST API without direct access to the source code.
 
 [Swagger UI](https://swagger.io/tools/swagger-ui/) offers a web-based UI that provides information about a service, using the generated [OpenAPI specification](https://swagger.io/specification/). 

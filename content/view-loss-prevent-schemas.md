@@ -11,6 +11,8 @@ title: Data schemas for loss prevention
 
 # Data schemas for loss prevention
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article outlines the data schemas used to generate models and determine risk assessments.
 
 Follow these requirements:

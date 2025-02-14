@@ -7,9 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Configure user access
-
 ---
+
 # Configure user access
+
+[!include[deprecation](includes/deprecation.md)]
 
 In Microsoft Dynamics 365 Fraud Protection, you can grant users different levels of access to the service, based on logical or functional roles. Administrators can use the **User access** section to assign these roles. For more information about the available roles, see [User roles and access](user-roles-access.md).
 

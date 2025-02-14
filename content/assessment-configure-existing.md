@@ -12,6 +12,8 @@ title: Assessment configuration overview
 
 # Assessment configuration overview
 
+[!include[deprecation](includes/deprecation.md)]
+
 To configure an existing assessment, in the left navigation bar, select the assessment and then select the **Configuration** tab. The **Configuration** tab only applies to assessments created using [templates](assessment-create-new.md#template) and is only visible to users with a minimum of **Read** permissions for **Assessments** as defined in [User roles and access](user-roles-access.md).
 
 If you have **Read/Write** permissions for Assessments, you can:

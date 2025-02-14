@@ -7,10 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: External assessments
-
 ---
 
 # External assessments
+
+[!include[deprecation](includes/deprecation.md)]
 
 External assessment is a mechanism to call an assessment from any other assessment. An external assessment isn't an assessment itself. Instead, it acts like a data source which allows you to send data and receive a response from a target assessment. 
 An assessment can have one of two possible sharing settings:
