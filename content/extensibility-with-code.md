@@ -7,10 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Work with code
-
 ---
 
 # Work with code
+
+[!include[deprecation](includes/deprecation.md)]
 
 You can use code for the following purposes:
 

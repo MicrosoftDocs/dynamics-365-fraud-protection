@@ -12,6 +12,8 @@ title: Integrate purchase protection APIs
 
 # Integrate purchase protection APIs
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article explains how to integrate real-time application programming interfaces (APIs) in Microsoft Dynamics 365 Fraud Protection.
 
 To take advantage of the full suite of Fraud Protection features, you must send your transaction data to the real-time Fraud Protection APIs. In the evaluate experience, sending your transaction data enables you to analyze the results of using Fraud Protection. In the protect experience, you can also honor decisions, based on the rules that you've configured.

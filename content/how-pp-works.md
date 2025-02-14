@@ -12,6 +12,8 @@ title: How purchase protection works
 
 # How purchase protection works 
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article describes how Microsoft Dynamics 365 Fraud Protection purchase protection interacts with different entities, such as customers and banks.
 
 The following illustration highlights some of Fraud Protection's purchase protection capabilities and application programming interfaces (APIs), to help you better understand risk assessment interactions.

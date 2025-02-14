@@ -11,6 +11,8 @@ title: Manage environments
 
 # Manage environments
 
+[!include[deprecation](includes/deprecation.md)]
+
 By creating additional new environments, customers can have greater flexibility and enhance the functionality that's provided by Microsoft Dynamics 365 Fraud Protection to scale the solution to support their other business units. For example, customers can create organizations or divisions as root environments, and configure their child environments as different departments, business, or product types. In this way, rules, user access, configuration, and other fraud protection settings can be inherited from the parent level. Transaction data and reports will then be aggregated at the parent environment, so that business leaders can get an overview of an organization's or division's performance.
 
 ## Create a new environment

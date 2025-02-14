@@ -7,10 +7,12 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Functions
-
 ---
 
 # Functions
+
+[!include[deprecation](includes/deprecation.md)]
+
 Dynamics 365 Fraud Protection gives you the flexibility to create functions that you can use to perform a specific task. For example, you can use functions to combine groups of code that must be executed together. Or you can use functions to reuse code, where you write the code once and access it from other places, making the code easier to maintain. In that example, if you want to call an external service to fetch a value from it, the logic can be defined within a function, and the function can be invoked from other resources.
 
 ## Define a function
@@ -244,10 +246,10 @@ WHEN $sum > 5
 
 ## Function and resource limits
 
-Fraud Protection has a limit on the number of functions that can be created per environment and the number of resources that can be referenced within a function. 
+Fraud Protection has a limit on the number of functions that can be created per environment and the number of resources that can be referenced within a function.
 
-| Resource | Limit         | 
-|----------|---------------|
+| Resource | Limit |
+|----------|-------|
 | Maximum number of functions that can be published within an environment | 30 |
 | Maximum number of output properties that can exist within a function | 30 |
 | Maximum number of unique velocities that a function can reference | 15 |

@@ -7,10 +7,11 @@ ms.topic: overview
 search.audienceType:
   - admin
 title: Loss prevention overview
-
 ---
 
 # Loss prevention overview
+
+[!include[deprecation](includes/deprecation.md)]
 
 > [!IMPORTANT]
 > Loss prevention will be moved to support-only mode over the next several months due to decline in customer demand.

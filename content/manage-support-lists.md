@@ -7,10 +7,11 @@ ms.topic: how-to
 search.audienceType:
   - admin
 title: Manage support lists
-
 ---
 
 # Manage support lists
+
+[!include[deprecation](includes/deprecation.md)]
 
 Support lists are predefined lists that are included in Microsoft Dynamic 365 Fraud Protection to help you get started. There are support lists for each of the following entities. You can assign entities a status of *Safe*, *Block*, or *Watch*.
 

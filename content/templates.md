@@ -11,6 +11,8 @@ title: Templates
 
 # Templates
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article describes how to create and use templates in Microsoft Dynamics 365 Fraud Protection.
 
 Templates allow you to save resources (for example, decision rules or post-decision actions) and configurations (for example, assessment or case management configurations) from your Fraud Protection portal. You can include multiple subresources in the same template so that you can use it in a new environment or tenant without manually configuring each resource. 

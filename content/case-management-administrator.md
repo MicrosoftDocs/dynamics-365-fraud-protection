@@ -12,6 +12,8 @@ ms.custom:
 
 # Case management for administrators
 
+[!include[deprecation](includes/deprecation.md)]
+
 This article explains how to work with case management as an administrator in Microsoft Dynamics 365 Fraud Protection.
 
 To complete administrator-specific tasks in case management for Fraud Protection, you must be assigned one of the following roles:

@@ -11,6 +11,8 @@ title: Regional availability of Dynamics 365 Fraud Protection services
 
 # Regional availability of Dynamics 365 Fraud Protection services
 
+[!include[deprecation](includes/deprecation.md)]
+
 Microsoft Dynamics 365 Fraud Protection provides the English, French, German, Brazilian Portuguese, Italian, Spanish, and Dutch languages, and is currently supported in the following regions:
 
 - United States

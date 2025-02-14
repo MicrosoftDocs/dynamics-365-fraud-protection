@@ -9,8 +9,10 @@ search.audienceType:
 title: Set up a purchased instance
 ---
 
-
 # Set up a purchased instance
+
+[!include[deprecation](includes/deprecation.md)]
+
 This document guides you through setting up a purchased version of Microsoft Dynamics 365 Fraud Protection. After you complete the tasks in this document, you'll be ready to use Fraud Protection to protect your business.
 
 ## Prerequisites

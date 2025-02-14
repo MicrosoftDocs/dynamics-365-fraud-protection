@@ -7,10 +7,11 @@ ms.topic: conceptual
 search.audienceType:
   - admin
 title: Fraud language reference
-
 ---
 
 # Fraud language reference
+
+[!include[deprecation](includes/deprecation.md)]
 
 Microsoft Dynamics 365 has its own rich and expressive language to help you define and express your fraud strategy. This language has many similarities to C# and SQL, and is designed to give you the flexibility that you need to address fraud for your unique business scenarios.
 

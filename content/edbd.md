@@ -7,10 +7,11 @@ ms.topic: overview
 search.audienceType:
   - admin
 title: EU Data Boundary exceptions for Dynamics 365 Fraud Protection
-
 ---
 
 # EU Data Boundary exceptions for Dynamics 365 Fraud Protection
+
+[!include[deprecation](includes/deprecation.md)]
 
 > [!IMPORTANT]
 > For comprehensive details about Microsoft's EU Data Boundary commitment, refer to [Microsoft's EU Data Boundary documentation](/privacy/eudb/eu-data-boundary-learn).

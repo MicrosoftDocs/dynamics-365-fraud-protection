@@ -12,6 +12,8 @@ ms.custom: bap-template
 
 # Score reports
 
+[!include[deprecation](includes/deprecation.md)]
+
 Dynamics 365 Fraud Protection provides Score reports that use innovative artificial intelligence (AI) technology to analyze historical views of your data, and to help you set up and adjust optimal risk score thresholds. This information can then be transformed into rules that help you decide, in real time, whether to accept or reject customer transactions.
 
 Advanced adaptive AI and other state-of-the-art AI technologies are used to generate a risk score on every transaction. The higher the risk score, the higher the perceived risk. The ML model uses a range of risk scores from 0 through 999. The score is aggregated in increments of 10. The lower bound is rounded down, and upper bound is rounded up. For example, if you select a score from 35 through 64, the metrics and charts on the report show data that has a score range from 30 through 69.
