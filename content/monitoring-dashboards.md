@@ -3,7 +3,7 @@ author: zhangleoMS
 description: This article provides information about monitoring dashboards in Dynamics 365 Fraud Protection.
 ms.author: zhangleo
 ms.date: 05/24/2024
-ms.topic: conceptual
+ms.topic: concept-article
 search.audienceType:
   - admin
 title: Monitoring
