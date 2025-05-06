@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This article provides information about the Score reports in Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 07/29/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Score reports
