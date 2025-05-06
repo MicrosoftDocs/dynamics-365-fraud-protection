@@ -3,7 +3,7 @@ author: josaw1
 description: This article is a language reference guide for Microsoft Dynamics 365 Fraud Protection rules.
 ms.author: josaw
 ms.date: 09/18/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Fraud language reference

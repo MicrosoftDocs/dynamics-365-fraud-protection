@@ -3,7 +3,7 @@ author: josaw1
 description: This article provides a list of real-time scorecards used for reporting assessments.
 ms.author: josaw
 ms.date: 04/10/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Assessment reporting

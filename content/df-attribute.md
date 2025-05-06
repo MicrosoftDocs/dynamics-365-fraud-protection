@@ -3,7 +3,7 @@ author: josaw1
 description: This article describes attribute categories collected by device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 08/06/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Attributes in device fingerprinting

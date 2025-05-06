@@ -4,7 +4,7 @@ description: This article explains how to integrate loss prevention with Microso
 ms.author: josaw
 ms.date: 04/10/2024
 
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Loss prevention integration with Dynamics 365 Commerce

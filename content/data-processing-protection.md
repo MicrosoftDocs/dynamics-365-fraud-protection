@@ -3,7 +3,7 @@ author: josaw1
 description: This article describes how payment transaction, account activity, and device data are protected.
 ms.author: josaw
 ms.date: 04/10/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Privacy protection for customer data

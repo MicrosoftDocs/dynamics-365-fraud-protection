@@ -3,7 +3,7 @@ author: josaw1
 description: This article describes device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 03/28/2024
-ms.topic: conceptual
+ms.topic: concept-article
 search.audienceType:
   - admin
 title: Overview of device fingerprinting

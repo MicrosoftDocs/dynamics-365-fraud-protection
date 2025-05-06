@@ -3,7 +3,7 @@ author: josaw1
 description: This article describes how to enable client-side integration for device fingerprinting in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 10/25/2024
-ms.topic: conceptual
+ms.topic: install-set-up-deploy
 search.audienceType:
   - admin
 title: Web setup of device fingerprinting

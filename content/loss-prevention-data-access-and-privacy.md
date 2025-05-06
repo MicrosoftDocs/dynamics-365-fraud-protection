@@ -4,7 +4,7 @@ description: This article explains how Microsoft Dynamics 365 Fraud Protection i
 ms.author: josaw
 ms.date: 04/10/2024
 
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Data access and privacy for loss prevention
