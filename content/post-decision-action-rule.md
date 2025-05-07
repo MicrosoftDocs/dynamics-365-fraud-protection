@@ -78,7 +78,7 @@ You can also select the tile for each rule to expand it and show additional info
 -	When the rule was last updated
 
 > [!NOTE]
-> On the **Rules** tab, published rules are listed in the order that they are run in.
+> On the **Rules** tab, published rules are listed in the order that the're run in.
 
 ## Rule evaluation behavior 
 
