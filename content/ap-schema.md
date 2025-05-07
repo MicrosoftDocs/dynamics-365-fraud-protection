@@ -3,7 +3,7 @@ author: yvonnedeq
 description: This article outlines the account protection schemas for data uploaded in bulk as CSV files.
 ms.author: josaw 
 ms.date: 04/10/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Account protection schemas
