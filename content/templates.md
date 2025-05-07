@@ -3,7 +3,7 @@ author: zhuoche
 description: This article describes how to create and use templates in Microsoft Dynamics 365 Fraud Protection.
 ms.author: zhuoche
 ms.date: 3/14/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Templates 
