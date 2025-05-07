@@ -3,7 +3,7 @@ author: josaw1
 description: This article provides answers to frequently asked questions about security assessment in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 12/02/2022
-ms.topic: conceptual
+ms.topic: faq
 search.audienceType:
  - admin
 title: Security assessment FAQ 

@@ -3,7 +3,7 @@ author: josaw1
 description: This article describes how to set up customer accounts protection in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 12/13/2024
-ms.topic: conceptual
+ms.topic: how-to
 search.audienceType:
   - admin
 title: Set up customer accounts protection

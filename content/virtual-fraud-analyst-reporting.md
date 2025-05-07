@@ -3,7 +3,7 @@ author: josaw1
 description: This article provides information about reporting and what reports are available in Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 07/29/2024
-ms.topic: conceptual
+ms.topic: concept-article
 search.audienceType:
   - admin
 title: Reporting

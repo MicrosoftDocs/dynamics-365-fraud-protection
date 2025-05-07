@@ -3,7 +3,7 @@ author: josaw1
 description: This article explains the global availability of Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 04/10/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Regional availability of Dynamics 365 Fraud Protection services

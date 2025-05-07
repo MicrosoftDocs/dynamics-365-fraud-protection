@@ -3,7 +3,7 @@ author: josaw1
 description: This article provides information about artificial intelligence (AI) and insights from the fraud protection network.
 ms.author: josaw
 ms.date: 04/10/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: AI and insights from the fraud protection network

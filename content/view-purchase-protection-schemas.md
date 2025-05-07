@@ -3,7 +3,7 @@ author: josaw1
 description: This article outlines the schemas that are required for historical data upload.
 ms.author: josaw
 ms.date: 04/10/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: View purchase protection schemas
