@@ -3,7 +3,7 @@ author: swasif
 description: This article explains how to create and configure API roles for Microsoft Entra applications.
 ms.author: josaw
 ms.date: 08/30/2024
-ms.topic: conceptual
+ms.topic: how-to
 search.audienceType:
   - admin
 title: Configure Microsoft Entra app access
