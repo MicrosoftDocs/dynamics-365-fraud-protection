@@ -3,7 +3,7 @@ author: josaw1
 description: This article provides information about how to set up event hubs to extend the functionality of Microsoft Dynamics 365 Fraud Protection and incorporate its data into an organization's processes and workflows.
 ms.author: josaw
 ms.date: 04/10/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Set up extensibility via Event Hubs

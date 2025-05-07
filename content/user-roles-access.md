@@ -3,7 +3,7 @@ author: arj-malhotra
 description: This article provides information about roles and user access to Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 08/30/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: User roles and access

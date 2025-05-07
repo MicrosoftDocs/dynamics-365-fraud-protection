@@ -3,7 +3,7 @@ author: josaw1
 description: This article describes how to use event tracing in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 02/28/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: Event tracing

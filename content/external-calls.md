@@ -3,7 +3,7 @@ author: josaw1
 description: This article explains how to use external calls to ingest data from APIs in Microsoft Dynamics 365 Fraud Protection.
 ms.author: josaw
 ms.date: 12/11/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: External calls
