@@ -3,7 +3,7 @@ author: swasif23
 description: This article provides an overview of the external assessments capability in Microsoft Dynamics 365 Fraud Protection.
 ms.author: swasif
 ms.date: 02/27/2024
-ms.topic: conceptual
+ms.topic: article
 search.audienceType:
   - admin
 title: External assessments
