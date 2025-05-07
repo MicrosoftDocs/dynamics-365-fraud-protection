@@ -3,7 +3,7 @@ author: weiswang
 description: This article provides information about the Configuration.
 ms.author: weiswang
 ms.date: 01/22/2024
-ms.topic: conceptual
+ms.topic: concept-article
 search.audienceType:
   - admin
 title: Configuration
