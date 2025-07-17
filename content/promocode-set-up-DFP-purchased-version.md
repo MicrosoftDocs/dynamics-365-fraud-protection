@@ -7,6 +7,7 @@ ms.topic: article
 search.audienceType:
   - admin
 title: Set up a purchased instance
+ms.custom: sfi-ga-nochange
 ---
 
 # Set up a purchased instance

@@ -8,6 +8,7 @@ search.audienceType:
   - developer
 title: Get support for Dynamics 365 Fraud Protection
 ms.custom:
+  - sfi-ga-nochange
 ---
 
 # Get support for Dynamics 365 Fraud Protection

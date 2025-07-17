@@ -7,6 +7,7 @@ ms.topic: how-to
 search.audienceType:
   - admin
 title: Work with Logic Apps or Power Automate
+ms.custom: sfi-image-nochange
 ---
 
 # Work with Logic Apps or Power Automate

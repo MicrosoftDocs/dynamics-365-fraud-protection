@@ -8,6 +8,7 @@ search.audienceType:
   - admin
   - IT Pro
 title: Integrate purchase protection APIs
+ms.custom: sfi-ga-nochange
 ---
 
 # Integrate purchase protection APIs

@@ -8,6 +8,7 @@ search.audienceType:
   - Developer, IT PRO, Fraud Manager
 title: Set up Purchase Protection
 ms.custom:
+  - sfi-ga-nochange
 ---
 
 # Set up Purchase Protection

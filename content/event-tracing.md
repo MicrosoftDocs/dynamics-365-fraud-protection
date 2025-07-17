@@ -7,6 +7,7 @@ ms.topic: article
 search.audienceType:
   - admin
 title: Event tracing
+ms.custom: sfi-ga-nochange
 ---
 
 # Event tracing
