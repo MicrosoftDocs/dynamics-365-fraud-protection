@@ -1,7 +1,7 @@
 ---
-author: cschlegel2
+author: josaw1
 description: This article explains how to set up Microsoft Dynamics 365 Purchase Protection.
-ms.author: cschlegel
+ms.author: josaw
 ms.date: 12/13/2024
 ms.topic: reference
 search.audienceType:
