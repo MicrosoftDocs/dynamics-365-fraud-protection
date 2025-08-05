@@ -7,6 +7,7 @@ ms.topic: how-to
 search.audienceType:
   - admin
 title: Boost bank acceptance rates
+ms.custom: sfi-ga-nochange
 ---
 
 # Boost bank acceptance rates

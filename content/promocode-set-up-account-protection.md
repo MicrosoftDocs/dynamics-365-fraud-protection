@@ -7,6 +7,7 @@ ms.topic: how-to
 search.audienceType:
   - admin
 title: Set up customer accounts protection
+ms.custom: sfi-ga-nochange
 ---
 
 # Set up customer accounts protection

@@ -7,6 +7,7 @@ ms.topic: article
 search.audienceType:
   - admin
 title: User roles and access
+ms.custom: sfi-ga-nochange
 ---
 
 # User roles and access

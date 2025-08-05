@@ -7,6 +7,7 @@ ms.topic: overview
 search.audienceType:
   - admin
 title: Extensibility via Event Hubs
+ms.custom: sfi-ga-nochange
 ---
 
 # Extensibility via Event Hubs

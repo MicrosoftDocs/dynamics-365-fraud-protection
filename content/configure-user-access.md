@@ -7,6 +7,7 @@ ms.topic: how-to
 search.audienceType:
   - admin
 title: Configure user access
+ms.custom: sfi-ga-nochange
 ---
 
 # Configure user access
