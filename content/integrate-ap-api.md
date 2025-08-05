@@ -7,6 +7,7 @@ ms.topic: how-to
 search.audienceType:
   - admin
 title: Integrate account protection APIs 
+ms.custom: sfi-ga-nochange
 ---
 
 # Integrate account protection APIs

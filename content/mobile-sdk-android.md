@@ -8,6 +8,7 @@ search.audienceType:
   - developer
 title: Dynamics 365 Fraud Protection mobile SDK for Android
 ms.custom:
+  - sfi-ga-nochange
 ---
 
 # Dynamics 365 Fraud Protection mobile SDK for Android

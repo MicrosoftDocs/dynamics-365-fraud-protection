@@ -7,6 +7,7 @@ ms.topic: overview
 search.audienceType:
   - admin
 title: Compliance overview
+ms.custom: sfi-ga-nochange
 ---
 
 # Compliance overview

@@ -7,6 +7,7 @@ ms.topic: article
 search.audienceType:
   - admin
 title: Payment service provider user roles and access 
+ms.custom: sfi-ga-nochange
 ---
 
 # Payment service provider user roles and access
