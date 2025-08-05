@@ -1,7 +1,7 @@
 ---
-author: sbrzezinski1
+author: josaw1
 description: This article explains how to get support for Dynamics 365 Fraud Protection. 
-ms.author: sbrzezinski
+ms.author: josaw
 ms.date: 02/14/2024
 ms.topic: reference
 search.audienceType:
