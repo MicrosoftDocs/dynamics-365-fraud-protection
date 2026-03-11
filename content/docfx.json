@@ -54,7 +54,7 @@
       ],
       "breadcrumb_path": "/previous-versions/dynamics365/fraud-protection/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "recommendations": "true,
+      "recommendations": true,
       "ROBOTS": "NOINDEX,NOFOLLOW",
       "is_archived": true,
       "feedback_system": "None",
@@ -75,4 +75,5 @@
     "markdownEngineName": "markdig"
   }
 }
+
 
