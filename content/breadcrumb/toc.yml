@@ -1,7 +1,15 @@
-- name: Dynamics 365
-  tocHref: /dynamics365/
-  articleHref: /dynamics365/
+- name: Learn
+  tocHref: /
+  topicHref: /
   items:
-  - name: Fraud Protection
-    tocHref: /dynamics365/fraud-protection/
-    articleHref: /dynamics365/fraud-protection/overview
+  - name: Previous Versions
+    tocHref: /previous-versions/
+    topicHref: /previous-versions/
+    items:
+    - name: Dynamics 365
+      tocHref: /previous-versions/dynamics365/
+      articleHref: /previous-versions/dynamics365/
+      items:
+      - name: Fraud Protection
+        tocHref: /previous-versions/dynamics365/fraud-protection/
+        articleHref: /previous-versions/dynamics365/fraud-protection/overview
