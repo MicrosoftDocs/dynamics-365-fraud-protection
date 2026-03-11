@@ -52,10 +52,13 @@
       "search.app": [
         "fraudprotection-docs"
       ],
-      "breadcrumb_path": "/dynamics365/fraud-protection/breadcrumb/toc.json",
+      "breadcrumb_path": "/previous-versions/dynamics365/fraud-protection/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "Standard",
-      "recommendations": "true"
+      "recommendations": "true,
+      "ROBOTS": "NOINDEX,NOFOLLOW",
+      "is_archived": true,
+      "feedback_system": "None",
+      "learn_archive": "manual"
     },
     "fileMetadata": {
       "searchScope": {
@@ -72,3 +75,4 @@
     "markdownEngineName": "markdig"
   }
 }
+
